@@ -1,0 +1,200 @@
+\hypertarget{a00616}{
+\section{gsn\_\-xml.h File Reference}
+\label{a00616}\index{gsn\_\-xml.h@{gsn\_\-xml.h}}
+}
+
+
+GSN XML public header. This file contains the public APIs and structures of XML module.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+Include dependency graph for gsn\_\-xml.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{a00865}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=356pt]{a00866}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00434}{GSN\_\-XML\_\-NODE}
+\begin{DoxyCompactList}\small\item\em Xml node structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00431}{GSN\_\-XML\_\-DATE}
+\begin{DoxyCompactList}\small\item\em Xml date structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00437}{GSN\_\-XML\_\-TIME}
+\begin{DoxyCompactList}\small\item\em Xml time structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00432}{GSN\_\-XML\_\-DATE\_\-TIME}
+\begin{DoxyCompactList}\small\item\em Xml date and time structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00433}{GSN\_\-XML\_\-DURATION}
+\begin{DoxyCompactList}\small\item\em Xml duration structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00436}{GSN\_\-XML\_\-STRING}
+\begin{DoxyCompactList}\small\item\em Xml string structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00435}{GSN\_\-XML\_\-OBJ}
+\begin{DoxyCompactList}\small\item\em Xml simple object structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00429}{GSN\_\-XML\_\-COMPLEX\_\-INFO}
+\begin{DoxyCompactList}\small\item\em Xml complex info structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00430}{GSN\_\-XML\_\-COMPLEX\_\-OBJ}
+\begin{DoxyCompactList}\small\item\em Xml complex structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00616_a32c1a252fccb70a1e2b8824f282a30ef}{Local\_\-Decoder\_\-Buffer}~128
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00434}{GSN\_\-XML\_\-NODE} \hyperlink{a00679_gafab64ea302554cb05912c7c04d943fe8}{GSN\_\-XML\_\-NODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Xml node structure. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00679_ga0ed9af8f445f8406f6a0a2a84e40eb81}{GSN\_\-XML\_\-DATA\_\-TYPE} \hyperlink{a00679_ga481bc889c92734a49552fb759166b14a}{GSN\_\-XML\_\-DATA\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Xml data type enum. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00431}{GSN\_\-XML\_\-DATE} \hyperlink{a00679_ga3faa58b86cf0dbe597351c634a76b044}{GSN\_\-XML\_\-DATE\_\-T}
+\begin{DoxyCompactList}\small\item\em Xml date structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00437}{GSN\_\-XML\_\-TIME} \hyperlink{a00679_ga227674b6a3bbe3f3ce354c361344dacc}{GSN\_\-XML\_\-TIME\_\-T}
+\begin{DoxyCompactList}\small\item\em Xml time structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00432}{GSN\_\-XML\_\-DATE\_\-TIME} \hyperlink{a00679_ga6a6787f5abff9dee0723c437f3ce3fb4}{GSN\_\-XML\_\-DATE\_\-TIME\_\-T}
+\begin{DoxyCompactList}\small\item\em Xml date and time structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00433}{GSN\_\-XML\_\-DURATION} \hyperlink{a00679_ga86881eeaa017b4544baa061c52d6cd63}{GSN\_\-XML\_\-DURATION\_\-T}
+\begin{DoxyCompactList}\small\item\em Xml duration structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00436}{GSN\_\-XML\_\-STRING} \hyperlink{a00679_ga463f36b04e13c9f42e702c5a53312da8}{GSN\_\-XML\_\-STRING\_\-T}
+\begin{DoxyCompactList}\small\item\em Xml string structure. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00679_gad31ca0a5bf81e8fbb6c9a048ef2c02c8}{GSN\_\-XML\_\-OBJ\_\-TYPE} \hyperlink{a00679_gaa26694299ab465dbf5806f74d06aedc9}{GSN\_\-XML\_\-OBJ\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Xml object type enum. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00435}{GSN\_\-XML\_\-OBJ} \hyperlink{a00679_ga158eab6806ea5fb00bc315226103c20a}{GSN\_\-XML\_\-OBJ\_\-T}
+\begin{DoxyCompactList}\small\item\em Xml simple object structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00429}{GSN\_\-XML\_\-COMPLEX\_\-INFO} \hyperlink{a00679_gaa0d09c1190da464d384f10b95b4860eb}{GSN\_\-XML\_\-COMPLEX\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em Xml complex info structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00430}{GSN\_\-XML\_\-COMPLEX\_\-OBJ} \hyperlink{a00679_gacbfb0f478c8c0a699ae348b9ed1e5133}{GSN\_\-XML\_\-COMPLEX\_\-OBJ\_\-T}
+\begin{DoxyCompactList}\small\item\em Xml complex structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00679_ga0ed9af8f445f8406f6a0a2a84e40eb81}{GSN\_\-XML\_\-DATA\_\-TYPE} \{ \par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81afc9b8ccb7858d607cd53d3e41145e32b}{XML\_\-DT\_\-NONE}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81a60e3e47677a1dd025834628166ccfb24}{XML\_\-DT\_\-UINT8}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81a82d517683d4a958cfcd302a597a82e67}{XML\_\-DT\_\-INT8}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81a89cb1abbe0ec9c682632214fa5a7df9e}{XML\_\-DT\_\-UINT16}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81a5427e90384a785eb7815463e9d1d991b}{XML\_\-DT\_\-INT16}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81a9f52a5bb732ae4a44d6c6a846b69f1ef}{XML\_\-DT\_\-UINT32}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81a6b68de8e8a34b7b10685b55447ded0ce}{XML\_\-DT\_\-INT32}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81abc67dfacd76d8cee6a8d31d715a0bcbc}{XML\_\-DT\_\-UINT64}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81a9cc3700c840532a660a7e0d5b0a86761}{XML\_\-DT\_\-INT64}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81aa965dba205752a07f8681207e697a402}{XML\_\-DT\_\-FLOAT}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81acd1dc0c36bd9f15a092c3361e3b57887}{XML\_\-DT\_\-DOUBLE}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81ad40e2d5e29871b4108b77dba152d8ee6}{XML\_\-DT\_\-STR}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81aca534cfe240273ec8435e79a461c372f}{XML\_\-DT\_\-TOKEN}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81aa423e45d9e655512957c45e84164fdf3}{XML\_\-DT\_\-BASE64BIN}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81a2ff4ed47ada2c00692c9c9a0655b823b}{XML\_\-DT\_\-HEXBIN}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81ad3f04967ac31dc26af9e1ec7171827f3}{XML\_\-DT\_\-DATE}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81a9ce6a274f7a3d44c40d2bb63097bd074}{XML\_\-DT\_\-TIME}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81a921e2ecef629b6ed3e2f92d381d61689}{XML\_\-DT\_\-DATE\_\-TIME}, 
+\par
+\hyperlink{a00679_gga0ed9af8f445f8406f6a0a2a84e40eb81a6b0ea3e9030744edfc1e553b0ebfa84a}{XML\_\-DT\_\-DURATION}
+ \}
+\begin{DoxyCompactList}\small\item\em Xml data type enum. \end{DoxyCompactList}\item 
+enum \hyperlink{a00679_gad31ca0a5bf81e8fbb6c9a048ef2c02c8}{GSN\_\-XML\_\-OBJ\_\-TYPE} \{ \par
+\hyperlink{a00679_ggad31ca0a5bf81e8fbb6c9a048ef2c02c8ae9a01607ca73e1f0ebf307899ae2400a}{XML\_\-COMPLEX\_\-ELEMENT}, 
+\par
+\hyperlink{a00679_ggad31ca0a5bf81e8fbb6c9a048ef2c02c8ad6cf8f62803b9d25b393076d1b9c8b19}{XML\_\-SIMPLE\_\-ELEMENT}, 
+\par
+\hyperlink{a00679_ggad31ca0a5bf81e8fbb6c9a048ef2c02c8ab9f76b8e78f34714cff0acfdd5f411f0}{XML\_\-ATTRIBUTE}, 
+\par
+\hyperlink{a00679_ggad31ca0a5bf81e8fbb6c9a048ef2c02c8a8fa6be1d81686913a2ab22707fa18e4c}{XML\_\-NONE}
+ \}
+\begin{DoxyCompactList}\small\item\em Xml object type enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00679_ga63f420980b051030cf42aba37139d27c}{GsnXml\_\-Encode} (\hyperlink{a00430}{GSN\_\-XML\_\-COMPLEX\_\-OBJ\_\-T} $\ast$XML\_\-Schema, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$User\_\-Struct, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$XML\_\-File\_\-Buffer, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} XML\_\-File\_\-Buffer\_\-Size, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$Len\_\-Of\_\-XML\_\-Written)
+\begin{DoxyCompactList}\small\item\em Encode API for XML module. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00679_ga47406fd5baaf0dff016d539afa016b0c}{GsnXml\_\-Decode} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ParentStart, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ParentEnd, \hyperlink{a00430}{GSN\_\-XML\_\-COMPLEX\_\-OBJ\_\-T} $\ast$XML\_\-Schema, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$Return\_\-Struct)
+\begin{DoxyCompactList}\small\item\em Decode API for XML module. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00679_ga8617ee56599bff50a73b55c1d04919a5}{GsnXml\_\-NodeGet} (\hyperlink{a00434}{GSN\_\-XML\_\-NODE\_\-T} $\ast$ChildNode, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ParentNodeStart, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ParentNodeEnd)
+\begin{DoxyCompactList}\small\item\em Node get API. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00616_a09e3a24a2a4f90e105d7511072b9192c}{GsnXml\_\-StrGet} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ChildNodepName, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ParentNodeStart, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ParentNodeEnd)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00616_a2e812d6ec943c8265a66a5273d1821ea}{GsnXml\_\-DecodePreDefEntity} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$bufferIn, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} len)
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00616_ae9419a52a2ce213dcaec7517e1d5b532}{GsnXml\_\-GetEncodedValueLen} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$bufferIn, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN XML public header. This file contains the public APIs and structures of XML module. 
+
+Definition in file \hyperlink{a00616_source}{gsn\_\-xml.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00616_a32c1a252fccb70a1e2b8824f282a30ef}{
+\index{gsn\_\-xml.h@{gsn\_\-xml.h}!Local\_\-Decoder\_\-Buffer@{Local\_\-Decoder\_\-Buffer}}
+\index{Local\_\-Decoder\_\-Buffer@{Local\_\-Decoder\_\-Buffer}!gsn_xml.h@{gsn\_\-xml.h}}
+\subsubsection[{Local\_\-Decoder\_\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define Local\_\-Decoder\_\-Buffer~128}}
+\label{a00616_a32c1a252fccb70a1e2b8824f282a30ef}
+END of Modules group include 
+
+Definition at line 80 of file gsn\_\-xml.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00616_a2e812d6ec943c8265a66a5273d1821ea}{
+\index{gsn\_\-xml.h@{gsn\_\-xml.h}!GsnXml\_\-DecodePreDefEntity@{GsnXml\_\-DecodePreDefEntity}}
+\index{GsnXml\_\-DecodePreDefEntity@{GsnXml\_\-DecodePreDefEntity}!gsn_xml.h@{gsn\_\-xml.h}}
+\subsubsection[{GsnXml\_\-DecodePreDefEntity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnXml\_\-DecodePreDefEntity (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{bufferIn, }
+\item[{{\bf UINT8}}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{a00616_a2e812d6ec943c8265a66a5273d1821ea}
+\hypertarget{a00616_ae9419a52a2ce213dcaec7517e1d5b532}{
+\index{gsn\_\-xml.h@{gsn\_\-xml.h}!GsnXml\_\-GetEncodedValueLen@{GsnXml\_\-GetEncodedValueLen}}
+\index{GsnXml\_\-GetEncodedValueLen@{GsnXml\_\-GetEncodedValueLen}!gsn_xml.h@{gsn\_\-xml.h}}
+\subsubsection[{GsnXml\_\-GetEncodedValueLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} GsnXml\_\-GetEncodedValueLen (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{bufferIn, }
+\item[{{\bf UINT16}}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{a00616_ae9419a52a2ce213dcaec7517e1d5b532}
+\hypertarget{a00616_a09e3a24a2a4f90e105d7511072b9192c}{
+\index{gsn\_\-xml.h@{gsn\_\-xml.h}!GsnXml\_\-StrGet@{GsnXml\_\-StrGet}}
+\index{GsnXml\_\-StrGet@{GsnXml\_\-StrGet}!gsn_xml.h@{gsn\_\-xml.h}}
+\subsubsection[{GsnXml\_\-StrGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ GsnXml\_\-StrGet (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{ChildNodepName, }
+\item[{{\bf UINT8} $\ast$}]{ParentNodeStart, }
+\item[{{\bf UINT8} $\ast$}]{ParentNodeEnd}
+\end{DoxyParamCaption}
+)}}
+\label{a00616_a09e3a24a2a4f90e105d7511072b9192c}

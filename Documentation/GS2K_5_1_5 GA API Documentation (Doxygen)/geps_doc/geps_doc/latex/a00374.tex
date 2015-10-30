@@ -1,0 +1,242 @@
+\hypertarget{a00374}{
+\section{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S Struct Reference}
+\label{a00374}\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+}
+
+
+Connect request.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wif\_\-wlan\_\-defs.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_aafc3f3af3f4d3ef964d5a573dc140bfa}{nwType}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_a382a496c170fb8bfac376161ed8d00e6}{hiddenSsid}
+\item 
+\hyperlink{a00417}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} \hyperlink{a00374_a9bcb2e5a0dbdd5461faec24950cf7459}{ssid}
+\item 
+\hyperlink{a00416}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T} \hyperlink{a00374_a1d70c2c8895c2763bdede85266c38318}{bssid}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_a52d69a3bd7bdfdfc6f9e40f4962c575d}{channel}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00374_a54a6c03695574d9381214937f9dc6d57}{beaconInterval}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_a299cd846e383cf8f77d0c2e71083caba}{dtimPeriod}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00374_a6429fe517dc48f11feaf8351ddf5c934}{listenInterval}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_a3c016113d244f6915211b9103557ac84}{numRatesValid}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_a67df6ac936e9a7862c722c4633410edc}{rateSet} \mbox{[}GSN\_\-WIF\_\-WLAN\_\-MAX\_\-RATES\mbox{]}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_aae6f1d203042b11df814ffc52e3bb9df}{dot11authtype}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_a9e91fd4de1668c3ea9ad4281963d2e7b}{authtype}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_aea9ac9a7170aa6715444395f9b97f1ca}{pairwiseCrypto}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_ada57203c7d5f11c7d66faf0a7d619b99}{groupCrypto}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00374_a6f21209eb61935400e9b58ac8c43913c}{inactivityTimeoutInSec}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_a56182cfaceef2b0b98b4597289a33965}{rsnWpaIeLen}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_ab8ff673f336eaf307e4cd9b42e71e2d6}{rsnWpaIe} \mbox{[}GSN\_\-WIF\_\-WLAN\_\-RSN\_\-WPA\_\-IE\_\-LEN\_\-MAX\mbox{]}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00374_ad7d37183f86bdd7a3c11db21c3301b32}{frameLen}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00374_a48225b5f4127dffd17119dcdce7ad5b6}{frame} \mbox{[}512\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Connect request. 
+
+This structure defines the connect request structure. 
+
+Definition at line 660 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00374_a9e91fd4de1668c3ea9ad4281963d2e7b}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!authtype@{authtype}}
+\index{authtype@{authtype}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{authtype}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf authtype}}}
+\label{a00374_a9e91fd4de1668c3ea9ad4281963d2e7b}
+GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-T 
+
+Definition at line 678 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a54a6c03695574d9381214937f9dc6d57}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!beaconInterval@{beaconInterval}}
+\index{beaconInterval@{beaconInterval}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{beaconInterval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf beaconInterval}}}
+\label{a00374_a54a6c03695574d9381214937f9dc6d57}
+Beacon interval. 
+
+Definition at line 668 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a1d70c2c8895c2763bdede85266c38318}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!bssid@{bssid}}
+\index{bssid@{bssid}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{bssid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T} {\bf bssid}}}
+\label{a00374_a1d70c2c8895c2763bdede85266c38318}
+BSSID to connect to. 
+
+Definition at line 666 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a52d69a3bd7bdfdfc6f9e40f4962c575d}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!channel@{channel}}
+\index{channel@{channel}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{channel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf channel}}}
+\label{a00374_a52d69a3bd7bdfdfc6f9e40f4962c575d}
+Channel on which to connect. 
+
+Definition at line 667 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_aae6f1d203042b11df814ffc52e3bb9df}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!dot11authtype@{dot11authtype}}
+\index{dot11authtype@{dot11authtype}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{dot11authtype}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf dot11authtype}}}
+\label{a00374_aae6f1d203042b11df814ffc52e3bb9df}
+GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-T 
+
+Definition at line 677 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a299cd846e383cf8f77d0c2e71083caba}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!dtimPeriod@{dtimPeriod}}
+\index{dtimPeriod@{dtimPeriod}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{dtimPeriod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf dtimPeriod}}}
+\label{a00374_a299cd846e383cf8f77d0c2e71083caba}
+DTIM period. 
+
+Definition at line 669 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a48225b5f4127dffd17119dcdce7ad5b6}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!frame@{frame}}
+\index{frame@{frame}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf frame}\mbox{[}512\mbox{]}}}
+\label{a00374_a48225b5f4127dffd17119dcdce7ad5b6}
+Frame 
+
+Definition at line 691 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_ad7d37183f86bdd7a3c11db21c3301b32}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!frameLen@{frameLen}}
+\index{frameLen@{frameLen}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{frameLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf frameLen}}}
+\label{a00374_ad7d37183f86bdd7a3c11db21c3301b32}
+Len of the frame. 0 means frame not valid 
+
+Definition at line 690 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_ada57203c7d5f11c7d66faf0a7d619b99}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!groupCrypto@{groupCrypto}}
+\index{groupCrypto@{groupCrypto}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{groupCrypto}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf groupCrypto}}}
+\label{a00374_ada57203c7d5f11c7d66faf0a7d619b99}
+GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-T 
+
+Definition at line 680 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a382a496c170fb8bfac376161ed8d00e6}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!hiddenSsid@{hiddenSsid}}
+\index{hiddenSsid@{hiddenSsid}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{hiddenSsid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf hiddenSsid}}}
+\label{a00374_a382a496c170fb8bfac376161ed8d00e6}
+indicates if the SSID should be masked out in beacons 
+
+Definition at line 663 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a6f21209eb61935400e9b58ac8c43913c}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!inactivityTimeoutInSec@{inactivityTimeoutInSec}}
+\index{inactivityTimeoutInSec@{inactivityTimeoutInSec}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{inactivityTimeoutInSec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf inactivityTimeoutInSec}}}
+\label{a00374_a6f21209eb61935400e9b58ac8c43913c}
+valid in AP mode only. if connected STA is inactive for this many seconds, AP will de-\/auth that STA. 
+
+Definition at line 682 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a6429fe517dc48f11feaf8351ddf5c934}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!listenInterval@{listenInterval}}
+\index{listenInterval@{listenInterval}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{listenInterval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf listenInterval}}}
+\label{a00374_a6429fe517dc48f11feaf8351ddf5c934}
+Listen interval to be set in association request. 
+
+Definition at line 670 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a3c016113d244f6915211b9103557ac84}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!numRatesValid@{numRatesValid}}
+\index{numRatesValid@{numRatesValid}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{numRatesValid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf numRatesValid}}}
+\label{a00374_a3c016113d244f6915211b9103557ac84}
+Number of rates valid in rate set. 
+
+Definition at line 673 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_aafc3f3af3f4d3ef964d5a573dc140bfa}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!nwType@{nwType}}
+\index{nwType@{nwType}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{nwType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf nwType}}}
+\label{a00374_aafc3f3af3f4d3ef964d5a573dc140bfa}
+GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-T 
+
+Definition at line 662 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_aea9ac9a7170aa6715444395f9b97f1ca}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!pairwiseCrypto@{pairwiseCrypto}}
+\index{pairwiseCrypto@{pairwiseCrypto}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{pairwiseCrypto}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf pairwiseCrypto}}}
+\label{a00374_aea9ac9a7170aa6715444395f9b97f1ca}
+GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-T 
+
+Definition at line 679 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a67df6ac936e9a7862c722c4633410edc}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!rateSet@{rateSet}}
+\index{rateSet@{rateSet}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{rateSet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf rateSet}\mbox{[}GSN\_\-WIF\_\-WLAN\_\-MAX\_\-RATES\mbox{]}}}
+\label{a00374_a67df6ac936e9a7862c722c4633410edc}
+Array containing rates. 
+
+Definition at line 675 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_ab8ff673f336eaf307e4cd9b42e71e2d6}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!rsnWpaIe@{rsnWpaIe}}
+\index{rsnWpaIe@{rsnWpaIe}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{rsnWpaIe}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf rsnWpaIe}\mbox{[}GSN\_\-WIF\_\-WLAN\_\-RSN\_\-WPA\_\-IE\_\-LEN\_\-MAX\mbox{]}}}
+\label{a00374_ab8ff673f336eaf307e4cd9b42e71e2d6}
+
+
+Definition at line 688 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a56182cfaceef2b0b98b4597289a33965}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!rsnWpaIeLen@{rsnWpaIeLen}}
+\index{rsnWpaIeLen@{rsnWpaIeLen}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{rsnWpaIeLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf rsnWpaIeLen}}}
+\label{a00374_a56182cfaceef2b0b98b4597289a33965}
+
+
+Definition at line 687 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00374_a9bcb2e5a0dbdd5461faec24950cf7459}{
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}!ssid@{ssid}}
+\index{ssid@{ssid}!GSN_WIF_WLAN_CONNECT_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}}
+\subsubsection[{ssid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} {\bf ssid}}}
+\label{a00374_a9bcb2e5a0dbdd5461faec24950cf7459}
+SSID to connect to. 
+
+Definition at line 665 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00613}{gsn\_\-wif\_\-wlan\_\-defs.h}\end{DoxyCompactItemize}

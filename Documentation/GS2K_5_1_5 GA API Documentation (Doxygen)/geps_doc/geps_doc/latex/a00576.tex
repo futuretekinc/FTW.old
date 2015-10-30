@@ -1,0 +1,439 @@
+\hypertarget{a00576}{
+\section{gsn\_\-reg\_\-wdog\_\-op.h File Reference}
+\label{a00576}\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00576_a62daf76738a22db0fea0c140b1b62ed0}{WDOG\_\-LOAD\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD))
+\item 
+\#define \hyperlink{a00576_ad2e757d74989659e292f7ead2f180848}{WDOG\_\-LOAD\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD, (value))
+\item 
+\#define \hyperlink{a00576_aa697221d121331fd5c41f10ed142ddcb}{WDOG\_\-LOAD\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD) $|$ (value))
+\item 
+\#define \hyperlink{a00576_a6cb3bc63297c50ae2b02bab9e591dadb}{WDOG\_\-LOAD\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00576_ad543aa011f99f3d61abd3dbcadb06266}{WDOG\_\-LOAD\_\-VAL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-LOAD\_\-VAL)
+\item 
+\#define \hyperlink{a00576_a36aa66cf4045d921a59ca73c5a3a6890}{WDOG\_\-LOAD\_\-VAL\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-LOAD\_\-VAL, (value))
+\item 
+\#define \hyperlink{a00576_a97eccb8eca6eedd6074ba99268db2b9b}{WDOG\_\-COUNTER\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-COUNTER))
+\item 
+\#define \hyperlink{a00576_adb303b9dc72aff7ada2bdc5cc6d125de}{WDOG\_\-COUNTER\_\-VAL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-COUNTER\_\-VAL)
+\item 
+\#define \hyperlink{a00576_a22ae6e6efb16a7f7eefbb53405e772a3}{WDOG\_\-CONTROL\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-CONTROL))
+\item 
+\#define \hyperlink{a00576_ad7cbc538b39864878aa31245e17f840d}{WDOG\_\-INT\_\-EN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-INT\_\-EN)
+\item 
+\#define \hyperlink{a00576_af60b57cf896d0df67d960c8a0738110a}{WDOG\_\-INT\_\-EN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-INT\_\-EN, 1)
+\item 
+\#define \hyperlink{a00576_a223dc67c8a74230826b6381b81d16521}{WDOG\_\-INT\_\-EN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-INT\_\-EN, 0)
+\item 
+\#define \hyperlink{a00576_a742f0d30b6b71738bb10b8cb78a0e691}{WDOG\_\-RESET\_\-EN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-RESET\_\-EN)
+\item 
+\#define \hyperlink{a00576_a3676cfcb7b8e0694fa5ba69479dc7c07}{WDOG\_\-RESET\_\-EN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-RESET\_\-EN, 1)
+\item 
+\#define \hyperlink{a00576_adf9e5a22f0186e71214bbba8ddbe4dfb}{WDOG\_\-RESET\_\-EN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-RESET\_\-EN, 0)
+\item 
+\#define \hyperlink{a00576_ab9f9d827e06463837a9fac3c93b6937f}{WDOG\_\-INT\_\-CLR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-INT\_\-CLR))
+\item 
+\#define \hyperlink{a00576_a4a42aa88584d207ac3078fa13363d0a7}{WDOG\_\-INT\_\-CLEAR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-INT\_\-CLEAR)
+\item 
+\#define \hyperlink{a00576_a2654f4935bcaaff4b0a01ea8c8553258}{WDOG\_\-INT\_\-CLEAR\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-INT\_\-CLEAR, (value))
+\item 
+\#define \hyperlink{a00576_a678c7ac43c1771176300ea5980cc4624}{WDOG\_\-RAW\_\-INT\_\-STAT\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-RAW\_\-INT\_\-STAT))
+\item 
+\#define \hyperlink{a00576_ac1614e6c96a1c2864e93f3cbb6aeeceb}{WDOG\_\-RAW\_\-INT\_\-STATUS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-RAW\_\-INT\_\-STATUS)
+\item 
+\#define \hyperlink{a00576_aa0814dfdeb3fe59154b19d56f7f0dcd8}{WDOG\_\-MASKED\_\-INT\_\-STAT\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-MASKED\_\-INT\_\-STAT))
+\item 
+\#define \hyperlink{a00576_a3c4c54c54fcc5b53ff45289b218ff178}{WDOG\_\-MASKED\_\-INT\_\-STATUS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-MASKED\_\-INT\_\-STATUS)
+\item 
+\#define \hyperlink{a00576_abeaa01cf95da51f7c5efc52f667dd80e}{WDOG\_\-LOCK\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK))
+\item 
+\#define \hyperlink{a00576_a57246adf9efe64c05bcf84ef4eb1035c}{WDOG\_\-LOCK\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK, (value))
+\item 
+\#define \hyperlink{a00576_a6e13737b48f196b84cda621e3869d707}{WDOG\_\-LOCK\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK) $|$ (value))
+\item 
+\#define \hyperlink{a00576_ad44b9f37c3f630df3ceb955ecdc4ab22}{WDOG\_\-LOCK\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00576_a98df4d79a04809a952d05df67d67ee0b}{WDOG\_\-LOCK\_\-VAL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-LOCK\_\-VAL)
+\item 
+\#define \hyperlink{a00576_a33895c37d0196740f320030619cdb181}{WDOG\_\-LOCK\_\-VAL\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-LOCK\_\-VAL, (value))
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00576_a22ae6e6efb16a7f7eefbb53405e772a3}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-CONTROL\_\-GET@{WDOG\_\-CONTROL\_\-GET}}
+\index{WDOG\_\-CONTROL\_\-GET@{WDOG\_\-CONTROL\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-CONTROL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-CONTROL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-CONTROL))}}
+\label{a00576_a22ae6e6efb16a7f7eefbb53405e772a3}
+
+
+Definition at line 85 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a97eccb8eca6eedd6074ba99268db2b9b}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-COUNTER\_\-GET@{WDOG\_\-COUNTER\_\-GET}}
+\index{WDOG\_\-COUNTER\_\-GET@{WDOG\_\-COUNTER\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-COUNTER\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-COUNTER\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-COUNTER))}}
+\label{a00576_a97eccb8eca6eedd6074ba99268db2b9b}
+
+
+Definition at line 70 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_adb303b9dc72aff7ada2bdc5cc6d125de}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-COUNTER\_\-VAL\_\-GET@{WDOG\_\-COUNTER\_\-VAL\_\-GET}}
+\index{WDOG\_\-COUNTER\_\-VAL\_\-GET@{WDOG\_\-COUNTER\_\-VAL\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-COUNTER\_\-VAL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-COUNTER\_\-VAL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-COUNTER\_\-VAL)}}
+\label{a00576_adb303b9dc72aff7ada2bdc5cc6d125de}
+
+
+Definition at line 77 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a4a42aa88584d207ac3078fa13363d0a7}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-INT\_\-CLEAR\_\-GET@{WDOG\_\-INT\_\-CLEAR\_\-GET}}
+\index{WDOG\_\-INT\_\-CLEAR\_\-GET@{WDOG\_\-INT\_\-CLEAR\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-INT\_\-CLEAR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-INT\_\-CLEAR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-INT\_\-CLEAR)}}
+\label{a00576_a4a42aa88584d207ac3078fa13363d0a7}
+
+
+Definition at line 122 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a2654f4935bcaaff4b0a01ea8c8553258}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-INT\_\-CLEAR\_\-SET@{WDOG\_\-INT\_\-CLEAR\_\-SET}}
+\index{WDOG\_\-INT\_\-CLEAR\_\-SET@{WDOG\_\-INT\_\-CLEAR\_\-SET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-INT\_\-CLEAR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-INT\_\-CLEAR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-INT\_\-CLEAR, (value))}}
+\label{a00576_a2654f4935bcaaff4b0a01ea8c8553258}
+
+
+Definition at line 124 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_ab9f9d827e06463837a9fac3c93b6937f}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-INT\_\-CLR\_\-GET@{WDOG\_\-INT\_\-CLR\_\-GET}}
+\index{WDOG\_\-INT\_\-CLR\_\-GET@{WDOG\_\-INT\_\-CLR\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-INT\_\-CLR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-INT\_\-CLR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-INT\_\-CLR))}}
+\label{a00576_ab9f9d827e06463837a9fac3c93b6937f}
+
+
+Definition at line 115 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a223dc67c8a74230826b6381b81d16521}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-INT\_\-EN\_\-CLEAR@{WDOG\_\-INT\_\-EN\_\-CLEAR}}
+\index{WDOG\_\-INT\_\-EN\_\-CLEAR@{WDOG\_\-INT\_\-EN\_\-CLEAR}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-INT\_\-EN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-INT\_\-EN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-INT\_\-EN, 0)}}
+\label{a00576_a223dc67c8a74230826b6381b81d16521}
+
+
+Definition at line 96 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_ad7cbc538b39864878aa31245e17f840d}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-INT\_\-EN\_\-GET@{WDOG\_\-INT\_\-EN\_\-GET}}
+\index{WDOG\_\-INT\_\-EN\_\-GET@{WDOG\_\-INT\_\-EN\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-INT\_\-EN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-INT\_\-EN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-INT\_\-EN)}}
+\label{a00576_ad7cbc538b39864878aa31245e17f840d}
+
+
+Definition at line 92 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_af60b57cf896d0df67d960c8a0738110a}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-INT\_\-EN\_\-SET@{WDOG\_\-INT\_\-EN\_\-SET}}
+\index{WDOG\_\-INT\_\-EN\_\-SET@{WDOG\_\-INT\_\-EN\_\-SET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-INT\_\-EN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-INT\_\-EN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-INT\_\-EN, 1)}}
+\label{a00576_af60b57cf896d0df67d960c8a0738110a}
+
+
+Definition at line 94 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a6cb3bc63297c50ae2b02bab9e591dadb}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOAD\_\-CLEARBIT@{WDOG\_\-LOAD\_\-CLEARBIT}}
+\index{WDOG\_\-LOAD\_\-CLEARBIT@{WDOG\_\-LOAD\_\-CLEARBIT}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOAD\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOAD\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD) \& ($\sim$(value)))}}
+\label{a00576_a6cb3bc63297c50ae2b02bab9e591dadb}
+
+
+Definition at line 53 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a62daf76738a22db0fea0c140b1b62ed0}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOAD\_\-GET@{WDOG\_\-LOAD\_\-GET}}
+\index{WDOG\_\-LOAD\_\-GET@{WDOG\_\-LOAD\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOAD\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOAD\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD))}}
+\label{a00576_a62daf76738a22db0fea0c140b1b62ed0}
+
+
+Definition at line 47 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_ad2e757d74989659e292f7ead2f180848}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOAD\_\-SET@{WDOG\_\-LOAD\_\-SET}}
+\index{WDOG\_\-LOAD\_\-SET@{WDOG\_\-LOAD\_\-SET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOAD\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOAD\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD, (value))}}
+\label{a00576_ad2e757d74989659e292f7ead2f180848}
+
+
+Definition at line 49 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_aa697221d121331fd5c41f10ed142ddcb}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOAD\_\-SETBIT@{WDOG\_\-LOAD\_\-SETBIT}}
+\index{WDOG\_\-LOAD\_\-SETBIT@{WDOG\_\-LOAD\_\-SETBIT}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOAD\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOAD\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOAD) $|$ (value))}}
+\label{a00576_aa697221d121331fd5c41f10ed142ddcb}
+
+
+Definition at line 51 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_ad543aa011f99f3d61abd3dbcadb06266}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOAD\_\-VAL\_\-GET@{WDOG\_\-LOAD\_\-VAL\_\-GET}}
+\index{WDOG\_\-LOAD\_\-VAL\_\-GET@{WDOG\_\-LOAD\_\-VAL\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOAD\_\-VAL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOAD\_\-VAL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-LOAD\_\-VAL)}}
+\label{a00576_ad543aa011f99f3d61abd3dbcadb06266}
+
+
+Definition at line 60 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a36aa66cf4045d921a59ca73c5a3a6890}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOAD\_\-VAL\_\-SET@{WDOG\_\-LOAD\_\-VAL\_\-SET}}
+\index{WDOG\_\-LOAD\_\-VAL\_\-SET@{WDOG\_\-LOAD\_\-VAL\_\-SET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOAD\_\-VAL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOAD\_\-VAL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-LOAD\_\-VAL, (value))}}
+\label{a00576_a36aa66cf4045d921a59ca73c5a3a6890}
+
+
+Definition at line 62 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_ad44b9f37c3f630df3ceb955ecdc4ab22}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOCK\_\-CLEARBIT@{WDOG\_\-LOCK\_\-CLEARBIT}}
+\index{WDOG\_\-LOCK\_\-CLEARBIT@{WDOG\_\-LOCK\_\-CLEARBIT}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOCK\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOCK\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK) \& ($\sim$(value)))}}
+\label{a00576_ad44b9f37c3f630df3ceb955ecdc4ab22}
+
+
+Definition at line 168 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_abeaa01cf95da51f7c5efc52f667dd80e}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOCK\_\-GET@{WDOG\_\-LOCK\_\-GET}}
+\index{WDOG\_\-LOCK\_\-GET@{WDOG\_\-LOCK\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOCK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOCK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK))}}
+\label{a00576_abeaa01cf95da51f7c5efc52f667dd80e}
+
+
+Definition at line 162 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a57246adf9efe64c05bcf84ef4eb1035c}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOCK\_\-SET@{WDOG\_\-LOCK\_\-SET}}
+\index{WDOG\_\-LOCK\_\-SET@{WDOG\_\-LOCK\_\-SET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOCK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOCK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK, (value))}}
+\label{a00576_a57246adf9efe64c05bcf84ef4eb1035c}
+
+
+Definition at line 164 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a6e13737b48f196b84cda621e3869d707}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOCK\_\-SETBIT@{WDOG\_\-LOCK\_\-SETBIT}}
+\index{WDOG\_\-LOCK\_\-SETBIT@{WDOG\_\-LOCK\_\-SETBIT}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOCK\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOCK\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-LOCK) $|$ (value))}}
+\label{a00576_a6e13737b48f196b84cda621e3869d707}
+
+
+Definition at line 166 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a98df4d79a04809a952d05df67d67ee0b}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOCK\_\-VAL\_\-GET@{WDOG\_\-LOCK\_\-VAL\_\-GET}}
+\index{WDOG\_\-LOCK\_\-VAL\_\-GET@{WDOG\_\-LOCK\_\-VAL\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOCK\_\-VAL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOCK\_\-VAL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-LOCK\_\-VAL)}}
+\label{a00576_a98df4d79a04809a952d05df67d67ee0b}
+
+
+Definition at line 175 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a33895c37d0196740f320030619cdb181}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-LOCK\_\-VAL\_\-SET@{WDOG\_\-LOCK\_\-VAL\_\-SET}}
+\index{WDOG\_\-LOCK\_\-VAL\_\-SET@{WDOG\_\-LOCK\_\-VAL\_\-SET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-LOCK\_\-VAL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-LOCK\_\-VAL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-LOCK\_\-VAL, (value))}}
+\label{a00576_a33895c37d0196740f320030619cdb181}
+
+
+Definition at line 177 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_aa0814dfdeb3fe59154b19d56f7f0dcd8}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-MASKED\_\-INT\_\-STAT\_\-GET@{WDOG\_\-MASKED\_\-INT\_\-STAT\_\-GET}}
+\index{WDOG\_\-MASKED\_\-INT\_\-STAT\_\-GET@{WDOG\_\-MASKED\_\-INT\_\-STAT\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-MASKED\_\-INT\_\-STAT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-MASKED\_\-INT\_\-STAT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-MASKED\_\-INT\_\-STAT))}}
+\label{a00576_aa0814dfdeb3fe59154b19d56f7f0dcd8}
+
+
+Definition at line 147 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a3c4c54c54fcc5b53ff45289b218ff178}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-MASKED\_\-INT\_\-STATUS\_\-GET@{WDOG\_\-MASKED\_\-INT\_\-STATUS\_\-GET}}
+\index{WDOG\_\-MASKED\_\-INT\_\-STATUS\_\-GET@{WDOG\_\-MASKED\_\-INT\_\-STATUS\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-MASKED\_\-INT\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-MASKED\_\-INT\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-MASKED\_\-INT\_\-STATUS)}}
+\label{a00576_a3c4c54c54fcc5b53ff45289b218ff178}
+
+
+Definition at line 154 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a678c7ac43c1771176300ea5980cc4624}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-RAW\_\-INT\_\-STAT\_\-GET@{WDOG\_\-RAW\_\-INT\_\-STAT\_\-GET}}
+\index{WDOG\_\-RAW\_\-INT\_\-STAT\_\-GET@{WDOG\_\-RAW\_\-INT\_\-STAT\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-RAW\_\-INT\_\-STAT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-RAW\_\-INT\_\-STAT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, WDOG\_\-RAW\_\-INT\_\-STAT))}}
+\label{a00576_a678c7ac43c1771176300ea5980cc4624}
+
+
+Definition at line 132 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_ac1614e6c96a1c2864e93f3cbb6aeeceb}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-RAW\_\-INT\_\-STATUS\_\-GET@{WDOG\_\-RAW\_\-INT\_\-STATUS\_\-GET}}
+\index{WDOG\_\-RAW\_\-INT\_\-STATUS\_\-GET@{WDOG\_\-RAW\_\-INT\_\-STATUS\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-RAW\_\-INT\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-RAW\_\-INT\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-RAW\_\-INT\_\-STATUS)}}
+\label{a00576_ac1614e6c96a1c2864e93f3cbb6aeeceb}
+
+
+Definition at line 139 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_adf9e5a22f0186e71214bbba8ddbe4dfb}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-RESET\_\-EN\_\-CLEAR@{WDOG\_\-RESET\_\-EN\_\-CLEAR}}
+\index{WDOG\_\-RESET\_\-EN\_\-CLEAR@{WDOG\_\-RESET\_\-EN\_\-CLEAR}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-RESET\_\-EN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-RESET\_\-EN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-RESET\_\-EN, 0)}}
+\label{a00576_adf9e5a22f0186e71214bbba8ddbe4dfb}
+
+
+Definition at line 107 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a742f0d30b6b71738bb10b8cb78a0e691}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-RESET\_\-EN\_\-GET@{WDOG\_\-RESET\_\-EN\_\-GET}}
+\index{WDOG\_\-RESET\_\-EN\_\-GET@{WDOG\_\-RESET\_\-EN\_\-GET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-RESET\_\-EN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-RESET\_\-EN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-RESET\_\-EN)}}
+\label{a00576_a742f0d30b6b71738bb10b8cb78a0e691}
+
+
+Definition at line 103 of file gsn\_\-reg\_\-wdog\_\-op.h.
+
+\hypertarget{a00576_a3676cfcb7b8e0694fa5ba69479dc7c07}{
+\index{gsn\_\-reg\_\-wdog\_\-op.h@{gsn\_\-reg\_\-wdog\_\-op.h}!WDOG\_\-RESET\_\-EN\_\-SET@{WDOG\_\-RESET\_\-EN\_\-SET}}
+\index{WDOG\_\-RESET\_\-EN\_\-SET@{WDOG\_\-RESET\_\-EN\_\-SET}!gsn_reg_wdog_op.h@{gsn\_\-reg\_\-wdog\_\-op.h}}
+\subsubsection[{WDOG\_\-RESET\_\-EN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDOG\_\-RESET\_\-EN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, WDOG\_\-RESET\_\-EN, 1)}}
+\label{a00576_a3676cfcb7b8e0694fa5ba69479dc7c07}
+
+
+Definition at line 105 of file gsn\_\-reg\_\-wdog\_\-op.h.
+

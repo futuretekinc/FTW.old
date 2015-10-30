@@ -1,0 +1,3434 @@
+\hypertarget{a00574}{
+\section{gsn\_\-reg\_\-uart\_\-op.h File Reference}
+\label{a00574}\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00811}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00574_a1d8113f4e7065c73a0830eee47762811}{UART\_\-DR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR))
+\item 
+\#define \hyperlink{a00574_aaa39ce24dd66798e268a66c42dbe4961}{UART\_\-DR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR, (value))
+\item 
+\#define \hyperlink{a00574_a2a2a0b19691877ef94be7d5c3c01945c}{UART\_\-DR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR) $|$ (value))
+\item 
+\#define \hyperlink{a00574_a52b94e3d89d86370ae52c4e04774d557}{UART\_\-DR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00574_a9510e01c634417acb8476623a9c7e6f4}{UART\_\-DATA\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DATA)
+\item 
+\#define \hyperlink{a00574_a2964caa0a4c0bce21281bf7b843e0b8c}{UART\_\-DATA\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DATA, (value))
+\item 
+\#define \hyperlink{a00574_a59e91148121bbfe62d10638b6742bb02}{UART\_\-RSR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR))
+\item 
+\#define \hyperlink{a00574_ab38497bbc86f69b045a191b87aae0096}{UART\_\-RSR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR, (value))
+\item 
+\#define \hyperlink{a00574_ad6fbebd3cbcf52aafa8f296f31d77140}{UART\_\-RSR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR) $|$ (value))
+\item 
+\#define \hyperlink{a00574_a86bbbc8297f0ed57f7d97278a6c9f457}{UART\_\-RSR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00574_a21eb57f2c5878c538af90df2f4aac0c4}{UART\_\-OE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OE)
+\item 
+\#define \hyperlink{a00574_a8b171166c4db597319c52bd7ce0db19b}{UART\_\-OE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OE, 1)
+\item 
+\#define \hyperlink{a00574_adff95df497c0d84f3b84a33817c21946}{UART\_\-OE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OE, 0)
+\item 
+\#define \hyperlink{a00574_a673b158301f6a41e9de23240653b4e89}{UART\_\-BE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BE)
+\item 
+\#define \hyperlink{a00574_ab3100468f8ba2ecddae1f81273d5a1d4}{UART\_\-BE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BE, 1)
+\item 
+\#define \hyperlink{a00574_a7af854e5e671bdf003ccdab1cf25b178}{UART\_\-BE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BE, 0)
+\item 
+\#define \hyperlink{a00574_a6b04a2cd34d39821aade0deb38c2e20e}{UART\_\-PE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PE)
+\item 
+\#define \hyperlink{a00574_a886dd141399dd904249e158bdb153052}{UART\_\-PE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PE, 1)
+\item 
+\#define \hyperlink{a00574_a074beef3eb921e338268d56736dbf703}{UART\_\-PE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PE, 0)
+\item 
+\#define \hyperlink{a00574_a086b2b679bfb8cb167e59fe9f1b72770}{UART\_\-FE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FE)
+\item 
+\#define \hyperlink{a00574_a92703cfac93b7d472dfcd1f16571e000}{UART\_\-FE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FE, 1)
+\item 
+\#define \hyperlink{a00574_a68334c700afa7a7d7be462606e367367}{UART\_\-FE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FE, 0)
+\item 
+\#define \hyperlink{a00574_ad98157501cc1e5568a64c002dda86f2f}{UART\_\-ECR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR))
+\item 
+\#define \hyperlink{a00574_ad8d03659fd0fd2ab0119e27e7bc98eab}{UART\_\-ECR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR, (value))
+\item 
+\#define \hyperlink{a00574_a6dc9e6f27ee41aabe956cfc85f4d4a1c}{UART\_\-ECR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR) $|$ (value))
+\item 
+\#define \hyperlink{a00574_a6a2e3ea81b308ed0e9440f744786afa8}{UART\_\-ECR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00574_a826fbf4e30942e2a0faf64178f3bedd1}{UART\_\-ECRVAL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-ECRVAL)
+\item 
+\#define \hyperlink{a00574_ae72373dbf8d365634638451ff0e70b5e}{UART\_\-ECRVAL\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-ECRVAL, (value))
+\item 
+\#define \hyperlink{a00574_a4a122f9696a50c598b77ff463bdfc200}{UART\_\-FR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FR))
+\item 
+\#define \hyperlink{a00574_aad61e84962dcd537b492d111b05af3d0}{UART\_\-RI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RI)
+\item 
+\#define \hyperlink{a00574_ad6dab2f4bd05bd28fe33932b9b325321}{UART\_\-TXFE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXFE)
+\item 
+\#define \hyperlink{a00574_a16f24023aaca99afd9fae91bd2f0845c}{UART\_\-RXFF\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXFF)
+\item 
+\#define \hyperlink{a00574_a8527a74451b956051de082c3e34c6fad}{UART\_\-TXFF\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXFF)
+\item 
+\#define \hyperlink{a00574_ae4d9e87a86e2554fd3af6bf44ca67d5f}{UART\_\-RXFE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXFE)
+\item 
+\#define \hyperlink{a00574_a71136411098634d7f5cdb3a94829fcea}{UART\_\-BUSY\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BUSY)
+\item 
+\#define \hyperlink{a00574_ac6535cf274edfd27edb161b786aa3181}{UART\_\-DCD\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCD)
+\item 
+\#define \hyperlink{a00574_af6a01634c9aaba643a1d743849e0cce8}{UART\_\-DSR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSR)
+\item 
+\#define \hyperlink{a00574_aa4d31557b710bc9778d606462fc38033}{UART\_\-CTS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTS)
+\item 
+\#define \hyperlink{a00574_a1e543971ca5bd95ea46c433d44ac0e88}{UART\_\-IBRD\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD))
+\item 
+\#define \hyperlink{a00574_a5edf79cd6262923c0d0095b732f1b500}{UART\_\-IBRD\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD, (value))
+\item 
+\#define \hyperlink{a00574_a76ff208baa443c4ca9ac9be248a31c42}{UART\_\-IBRD\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD) $|$ (value))
+\item 
+\#define \hyperlink{a00574_a2aeaeae5fa01baff2036b2f69a6227b3}{UART\_\-IBRD\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00574_adaea16bc2af912f2a78969adeb342886}{UART\_\-BAUD\_\-DIVINT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BAUD\_\-DIVINT)
+\item 
+\#define \hyperlink{a00574_ac43be9df78e43d43af6e496e92ba1f5f}{UART\_\-BAUD\_\-DIVINT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BAUD\_\-DIVINT, (value))
+\item 
+\#define \hyperlink{a00574_a278ed165bc638ea90fe9f4f0608b0935}{UART\_\-FBRD\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD))
+\item 
+\#define \hyperlink{a00574_a6e00dac8fbda5f0be9705fff2411244e}{UART\_\-FBRD\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD, (value))
+\item 
+\#define \hyperlink{a00574_a14b475e226dfabfa15cb555d869e1430}{UART\_\-FBRD\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD) $|$ (value))
+\item 
+\#define \hyperlink{a00574_a46f19fc1c5d7d7c2c304501c37397ee9}{UART\_\-FBRD\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00574_a809ff5608d0a4b99fa19b375fa328bd0}{UART\_\-BAUD\_\-DIVFRAC\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BAUD\_\-DIVFRAC)
+\item 
+\#define \hyperlink{a00574_a9afa1a2e58a3ba7a83808c3cda341961}{UART\_\-BAUD\_\-DIVFRAC\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BAUD\_\-DIVFRAC, (value))
+\item 
+\#define \hyperlink{a00574_a2bed098287965a87f7600e13e3c91dce}{UART\_\-LCR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR))
+\item 
+\#define \hyperlink{a00574_a324e133c9a4cf00615cf81a2da8d243f}{UART\_\-LCR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR, (value))
+\item 
+\#define \hyperlink{a00574_a3c280befd8d13561e20416b077555a44}{UART\_\-LCR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR) $|$ (value))
+\item 
+\#define \hyperlink{a00574_a3240b5250caba195183915991f416b80}{UART\_\-LCR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00574_a93be51ca6a0b6ce3670723527801c1fd}{UART\_\-SPS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SPS)
+\item 
+\#define \hyperlink{a00574_a28b6108a1fa346fe294fd464428047df}{UART\_\-SPS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SPS, 1)
+\item 
+\#define \hyperlink{a00574_ad1ed03dfcd83b9eb152fdb526f07467e}{UART\_\-SPS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SPS, 0)
+\item 
+\#define \hyperlink{a00574_aa12d4cd328a29366016f10e5b1c10b0b}{UART\_\-WLEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-WLEN)
+\item 
+\#define \hyperlink{a00574_aba35e0a8c90cc1d9af87159e574966d7}{UART\_\-WLEN\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-WLEN, (value))
+\item 
+\#define \hyperlink{a00574_a05cd9bf41e6a1757bd7252e993bf1b98}{UART\_\-FEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEN)
+\item 
+\#define \hyperlink{a00574_ac21afe1751f775576ff38c9b2aad1b9a}{UART\_\-FEN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEN, 1)
+\item 
+\#define \hyperlink{a00574_ab935fd37c6016293216400d069e1066e}{UART\_\-FEN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEN, 0)
+\item 
+\#define \hyperlink{a00574_acdc7faca57e22cc5bf2c85cb9307af01}{UART\_\-STP2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-STP2)
+\item 
+\#define \hyperlink{a00574_a9505710cf5fff75d03b84463cccbc3c6}{UART\_\-STP2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-STP2, 1)
+\item 
+\#define \hyperlink{a00574_a9a1979c7d57e8800f1b4c0b36b8ed7ac}{UART\_\-STP2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-STP2, 0)
+\item 
+\#define \hyperlink{a00574_a7d15fcced44d24014b289cf6d86756c2}{UART\_\-EPS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-EPS)
+\item 
+\#define \hyperlink{a00574_a7bd79d501de8f661ee2ac7689781e421}{UART\_\-EPS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-EPS, 1)
+\item 
+\#define \hyperlink{a00574_a4934cd274b04c728ac448f383b773ccb}{UART\_\-EPS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-EPS, 0)
+\item 
+\#define \hyperlink{a00574_a4d70d0b49ce15fb60f2cb085638de0a9}{UART\_\-PEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEN)
+\item 
+\#define \hyperlink{a00574_af7c2b96d9df8e948e1d594035225cadf}{UART\_\-PEN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEN, 1)
+\item 
+\#define \hyperlink{a00574_a7a9977a0f0bde9729b9b15a23430b5fc}{UART\_\-PEN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEN, 0)
+\item 
+\#define \hyperlink{a00574_af4bc639007e8f0e45c52a22f1e6a0252}{UART\_\-BRK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BRK)
+\item 
+\#define \hyperlink{a00574_a3f03e69529e75854f7a3aefc628aeb71}{UART\_\-BRK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BRK, 1)
+\item 
+\#define \hyperlink{a00574_afcd8550d5f745b0cd8e971e0f46f92ed}{UART\_\-BRK\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BRK, 0)
+\item 
+\#define \hyperlink{a00574_abac5e7165d232cd48f2045a0d0bfa3f5}{UART\_\-CR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR))
+\item 
+\#define \hyperlink{a00574_a796c27b723205e131ea614caccb1add0}{UART\_\-CR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR, (value))
+\item 
+\#define \hyperlink{a00574_a6722fba270992d6e126c07b70f395cbb}{UART\_\-CR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR) $|$ (value))
+\item 
+\#define \hyperlink{a00574_aed8539f210ad9a5b33fb21ee09d866b7}{UART\_\-CR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00574_a334e7a89445e0c2c19ad77d695686531}{UART\_\-CTSEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSEN)
+\item 
+\#define \hyperlink{a00574_af7c724ef0e6b402b9fc5e025d7dbc9fe}{UART\_\-CTSEN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSEN, 1)
+\item 
+\#define \hyperlink{a00574_ab7d94465632c8f5d8d71ff06ab55bbd3}{UART\_\-CTSEN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSEN, 0)
+\item 
+\#define \hyperlink{a00574_ab741bf76e9275d6099bbe2029d13bee0}{UART\_\-RTSEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTSEN)
+\item 
+\#define \hyperlink{a00574_ac1fe85f27040aa47c3bbbb93650265bb}{UART\_\-RTSEN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTSEN, 1)
+\item 
+\#define \hyperlink{a00574_aaa58e49f6d0e233ddfe04583fc44ef4c}{UART\_\-RTSEN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTSEN, 0)
+\item 
+\#define \hyperlink{a00574_a915133c5bcda60b5f3cc432fd790e73d}{UART\_\-OUT2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT2)
+\item 
+\#define \hyperlink{a00574_a07bf858f9fc378827448ea3daf75b524}{UART\_\-OUT2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT2, 1)
+\item 
+\#define \hyperlink{a00574_affe12b1eded41a7de880979833728aba}{UART\_\-OUT2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT2, 0)
+\item 
+\#define \hyperlink{a00574_a90b247e009c20ffa2bc6881e9b277e08}{UART\_\-OUT1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT1)
+\item 
+\#define \hyperlink{a00574_aaac01b860127b0d118b6a7209c635e10}{UART\_\-OUT1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT1, 1)
+\item 
+\#define \hyperlink{a00574_a9f755ef40051a60a6ca368b3efdd906e}{UART\_\-OUT1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT1, 0)
+\item 
+\#define \hyperlink{a00574_a02290a2b85a1fed0687a904272cc112d}{UART\_\-RTS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTS)
+\item 
+\#define \hyperlink{a00574_af62447cbaf8c7b06ab6fb13ca1e2f1e2}{UART\_\-RTS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTS, 1)
+\item 
+\#define \hyperlink{a00574_aefdef042b6fb1efad027ac193d2b7a3b}{UART\_\-RTS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTS, 0)
+\item 
+\#define \hyperlink{a00574_a4f22fb546681f9356fcd18a7e354755b}{UART\_\-DTR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DTR)
+\item 
+\#define \hyperlink{a00574_ae70cc2d2b236a37296021a501ed44cb2}{UART\_\-DTR\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DTR, 1)
+\item 
+\#define \hyperlink{a00574_aa302538eedc5511a5a8a94c158901cdf}{UART\_\-DTR\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DTR, 0)
+\item 
+\#define \hyperlink{a00574_a6f031f0926b4032f41626cf3676cc68d}{UART\_\-RXE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXE)
+\item 
+\#define \hyperlink{a00574_ae65679e54509853ec4db15e5817d05db}{UART\_\-RXE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXE, 1)
+\item 
+\#define \hyperlink{a00574_abf470a0e05af7aea82580fa1579fc852}{UART\_\-RXE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXE, 0)
+\item 
+\#define \hyperlink{a00574_a0aa4847b6a01148e017a4bb252927d41}{UART\_\-TXE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXE)
+\item 
+\#define \hyperlink{a00574_a8b5f06173197bb6522cc46dfaa635526}{UART\_\-TXE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXE, 1)
+\item 
+\#define \hyperlink{a00574_a9192d2c1e600e5cb81944d4da976d4fa}{UART\_\-TXE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXE, 0)
+\item 
+\#define \hyperlink{a00574_afb1d90ab1d8482830605b76992c5e73b}{UART\_\-LBE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-LBE)
+\item 
+\#define \hyperlink{a00574_a52ba028b2971108b7ba9495a5ea678e2}{UART\_\-LBE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-LBE, 1)
+\item 
+\#define \hyperlink{a00574_a6dae1642debf63fba61364ca9e662474}{UART\_\-LBE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-LBE, 0)
+\item 
+\#define \hyperlink{a00574_ace7bddf7f2d97a56e93aa3c88047d699}{UART\_\-SIRLP\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIRLP)
+\item 
+\#define \hyperlink{a00574_afde966fdf51c16690eb6b97a444f885a}{UART\_\-SIRLP\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIRLP, 1)
+\item 
+\#define \hyperlink{a00574_acfbaa1ceb4e148b162fc91fff3dca699}{UART\_\-SIRLP\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIRLP, 0)
+\item 
+\#define \hyperlink{a00574_a56373d08b42de59742e2597e2ab85369}{UART\_\-SIREN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIREN)
+\item 
+\#define \hyperlink{a00574_a6f306ed90fc4daa5606446f2e689b83a}{UART\_\-SIREN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIREN, 1)
+\item 
+\#define \hyperlink{a00574_a5128620e2afe5b1f1bb5086ffebdfb22}{UART\_\-SIREN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIREN, 0)
+\item 
+\#define \hyperlink{a00574_a9bdc141e04b9b0000d9f0b7b16fdfa96}{UART\_\-UARTEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-UARTEN)
+\item 
+\#define \hyperlink{a00574_ad28385ab9f4ae17c2b4bc088a36a89d5}{UART\_\-UARTEN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-UARTEN, 1)
+\item 
+\#define \hyperlink{a00574_a07c838fb402471965d94eae07f2bacfa}{UART\_\-UARTEN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-UARTEN, 0)
+\item 
+\#define \hyperlink{a00574_af6712af1cc5e0e834ca903d331131f3b}{UART\_\-IFLS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS))
+\item 
+\#define \hyperlink{a00574_acd6cd4dab9f2d867a1affecf2a4266e8}{UART\_\-IFLS\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS, (value))
+\item 
+\#define \hyperlink{a00574_a67ee2cf34975a67d93b44b127ebacb4d}{UART\_\-IFLS\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS) $|$ (value))
+\item 
+\#define \hyperlink{a00574_a41f00a9ee2f44e6b642037ba20957394}{UART\_\-IFLS\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00574_a8bbb55671dd08e8fa41ad421fef06566}{UART\_\-RXIFLSEL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIFLSEL)
+\item 
+\#define \hyperlink{a00574_a78f4b7284b1b663f5bdbaa5ee42da1f9}{UART\_\-RXIFLSEL\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIFLSEL, (value))
+\item 
+\#define \hyperlink{a00574_ae64e7038eae2a9d5521b413a7bef6067}{UART\_\-TXIFLSEL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIFLSEL)
+\item 
+\#define \hyperlink{a00574_a7fd002c965d993ab2d20a6458b229419}{UART\_\-TXIFLSEL\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIFLSEL, (value))
+\item 
+\#define \hyperlink{a00574_a71e8a3267dad46da30ce2dc07f6f2d5f}{UART\_\-IMSC\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC))
+\item 
+\#define \hyperlink{a00574_ab489702c7cbb5ee411f36479edb49206}{UART\_\-IMSC\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC, (value))
+\item 
+\#define \hyperlink{a00574_a73ea305b3734ac284769169a2af8a2de}{UART\_\-IMSC\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC) $|$ (value))
+\item 
+\#define \hyperlink{a00574_a13022875024a6a3dd73b1ca624a29e1f}{UART\_\-IMSC\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00574_a3be979ad6767513240b26887f6a67cd3}{UART\_\-IM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IM)
+\item 
+\#define \hyperlink{a00574_a52abd86bd49f6d4e2fd58559e332a26b}{UART\_\-IM\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IM, (value))
+\item 
+\#define \hyperlink{a00574_a18620c7110898a589701aee276e0fa91}{UART\_\-OEIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEIM)
+\item 
+\#define \hyperlink{a00574_a677cd40be31faba1ef6bacbbd9fbe1c0}{UART\_\-OEIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEIM, 1)
+\item 
+\#define \hyperlink{a00574_ae8c8c1306290e03b74ace24480f25e29}{UART\_\-OEIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEIM, 0)
+\item 
+\#define \hyperlink{a00574_a46c83d8c4594c65bfd0ac5aca260adc4}{UART\_\-BEIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEIM)
+\item 
+\#define \hyperlink{a00574_a85239b1b893177e75e9dffbe69dc5dd7}{UART\_\-BEIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEIM, 1)
+\item 
+\#define \hyperlink{a00574_ab8ba0f5e2fd9277176d15acf1942240e}{UART\_\-BEIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEIM, 0)
+\item 
+\#define \hyperlink{a00574_ac866082a48e69b48a49df42bbde2e533}{UART\_\-PEIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEIM)
+\item 
+\#define \hyperlink{a00574_ab83659159c8cbf408bae27d06499ca39}{UART\_\-PEIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEIM, 1)
+\item 
+\#define \hyperlink{a00574_ace582efae78172d5819ed6acdb163a17}{UART\_\-PEIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEIM, 0)
+\item 
+\#define \hyperlink{a00574_a41226a93a0b0227501bcfe6cd4325405}{UART\_\-FEIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEIM)
+\item 
+\#define \hyperlink{a00574_a97ed1f3d9ca7cf909dc5fb42ae9090b5}{UART\_\-FEIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEIM, 1)
+\item 
+\#define \hyperlink{a00574_ac5beee28297b025672a5c5d155721a38}{UART\_\-FEIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEIM, 0)
+\item 
+\#define \hyperlink{a00574_ab40db3e6439105826dc0783131e126d2}{UART\_\-RTIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTIM)
+\item 
+\#define \hyperlink{a00574_a2ed6310e5bd686ba726fd16e68a9df7e}{UART\_\-RTIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTIM, 1)
+\item 
+\#define \hyperlink{a00574_a84e3b437bdc9d5ff25c8857d0224c2e0}{UART\_\-RTIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTIM, 0)
+\item 
+\#define \hyperlink{a00574_abeb9a0d139eb9fefe0b4cff9b62d7c16}{UART\_\-TXIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIM)
+\item 
+\#define \hyperlink{a00574_a1c948a1c01205a867db8652ecc121154}{UART\_\-TXIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIM, 1)
+\item 
+\#define \hyperlink{a00574_ad5534bc5b17edf5ff3baca7cdfce7b78}{UART\_\-TXIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIM, 0)
+\item 
+\#define \hyperlink{a00574_aa753d86115948fd71b875d10fa0e9567}{UART\_\-RXIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIM)
+\item 
+\#define \hyperlink{a00574_a8be1e38869327fe2cfbe27db7b42caad}{UART\_\-RXIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIM, 1)
+\item 
+\#define \hyperlink{a00574_a5daad78a3faec5dc0b33d06bd6a27875}{UART\_\-RXIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIM, 0)
+\item 
+\#define \hyperlink{a00574_af6d43618b702b10f05dc7ca17a872a27}{UART\_\-DSRMIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMIM)
+\item 
+\#define \hyperlink{a00574_a058b7b6302034b4ab5950084fbdaab7c}{UART\_\-DSRMIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMIM, 1)
+\item 
+\#define \hyperlink{a00574_a0b1a313a097217345967d9594325c57a}{UART\_\-DSRMIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMIM, 0)
+\item 
+\#define \hyperlink{a00574_a324c7bcbc770358c6555400262e57f1a}{UART\_\-DCDMIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMIM)
+\item 
+\#define \hyperlink{a00574_a5dd0cf665d56421dee7261eb2b39ea4e}{UART\_\-DCDMIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMIM, 1)
+\item 
+\#define \hyperlink{a00574_ab4ee25e11ecb7975cc5825da030ac5b5}{UART\_\-DCDMIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMIM, 0)
+\item 
+\#define \hyperlink{a00574_a803bfe863274411bc5616bba9d105b54}{UART\_\-CTSMIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMIM)
+\item 
+\#define \hyperlink{a00574_a983594d6ada51277fb64429aa1db015b}{UART\_\-CTSMIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMIM, 1)
+\item 
+\#define \hyperlink{a00574_a4e971ae05db6023ec286ed9c1cbece8b}{UART\_\-CTSMIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMIM, 0)
+\item 
+\#define \hyperlink{a00574_afd495a43904675e8440c83d38571fe05}{UART\_\-RIMIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMIM)
+\item 
+\#define \hyperlink{a00574_a4bc5f6d434ec2f458aae73e01cbc996e}{UART\_\-RIMIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMIM, 1)
+\item 
+\#define \hyperlink{a00574_a5e20ab421499418ea6163602faffc670}{UART\_\-RIMIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMIM, 0)
+\item 
+\#define \hyperlink{a00574_a3aa030fc86cba2342e11f303387c7c72}{UART\_\-RIS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RIS))
+\item 
+\#define \hyperlink{a00574_a23932a287037838eea3947d6947fa4ca}{UART\_\-IS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IS)
+\item 
+\#define \hyperlink{a00574_aaaed4c92076b7668406ffd76a535f74c}{UART\_\-IS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IS, (value))
+\item 
+\#define \hyperlink{a00574_abd67135524d46ce6e12d64586411dd7a}{UART\_\-OERIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OERIS)
+\item 
+\#define \hyperlink{a00574_a87c63bf98689fe1d6611c0db2019be8f}{UART\_\-BERIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BERIS)
+\item 
+\#define \hyperlink{a00574_a8ee607fae24b6c224644ac590d2d5297}{UART\_\-PERIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PERIS)
+\item 
+\#define \hyperlink{a00574_a88473271ee7f6c673d16bec62e8c2edf}{UART\_\-FERIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FERIS)
+\item 
+\#define \hyperlink{a00574_a89b823686f833500ef5044a2d7abacd9}{UART\_\-RTRIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTRIS)
+\item 
+\#define \hyperlink{a00574_a953f50feb39157ec4fb9fadb8d2bf4f5}{UART\_\-TXRIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXRIS)
+\item 
+\#define \hyperlink{a00574_a59c19cf9c7ed304e67e9b10c089ea65e}{UART\_\-RXRIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXRIS)
+\item 
+\#define \hyperlink{a00574_a9e46034f883cff218a4c8239deb2e4af}{UART\_\-DSRRMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRRMIS)
+\item 
+\#define \hyperlink{a00574_a3429fb5e1490462ebe55e2e7b152d740}{UART\_\-DCDRMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDRMIS)
+\item 
+\#define \hyperlink{a00574_a107c7a41cdbbf26682238894b7d72c7c}{UART\_\-CTSRMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSRMIS)
+\item 
+\#define \hyperlink{a00574_adc6f2cf3c162676200b613e19acfb902}{UART\_\-RIRMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIRMIS)
+\item 
+\#define \hyperlink{a00574_aeb1ec386d9a7c8ce0f7099f4e406d465}{UART\_\-MIS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-MIS))
+\item 
+\#define \hyperlink{a00574_a9ae46d845f60ef0adcf34f8e8dae3150}{UART\_\-OEMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEMIS)
+\item 
+\#define \hyperlink{a00574_a9423f302bad1bbc22902cff6f7224d47}{UART\_\-BEMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEMIS)
+\item 
+\#define \hyperlink{a00574_a7eb85fed74ec6944ab5054939e419389}{UART\_\-PEMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEMIS)
+\item 
+\#define \hyperlink{a00574_a1a493a42ad5e68de1bc6363306a7b242}{UART\_\-FEMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEMIS)
+\item 
+\#define \hyperlink{a00574_a3cb0733497409389437f3ced760d10c0}{UART\_\-RTMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTMIS)
+\item 
+\#define \hyperlink{a00574_aa0f8a32dde91d7e07bb9433cb6805ea2}{UART\_\-TXMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXMIS)
+\item 
+\#define \hyperlink{a00574_a32be686f14f4b5ac22c1e35cb1bba5cf}{UART\_\-RXMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXMIS)
+\item 
+\#define \hyperlink{a00574_a06fcfccf9b7d94169d88beb6a8947db3}{UART\_\-DSRMMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMMIS)
+\item 
+\#define \hyperlink{a00574_aab8f8b83c05403e2c0f1cdba2c1539c7}{UART\_\-DCDMMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMMIS)
+\item 
+\#define \hyperlink{a00574_a405554bd21eb2bfb359dec0537a13b45}{UART\_\-CTSMMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMMIS)
+\item 
+\#define \hyperlink{a00574_a8e89cf226b9493b2d84443c53ae32cbc}{UART\_\-RIMMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMMIS)
+\item 
+\#define \hyperlink{a00574_a8cbc5c63fc5f959d586ae627a7744f70}{UART\_\-ICR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ICR, (value))
+\item 
+\#define \hyperlink{a00574_a8db54d92cfb1297ccd3e3fae4f483ede}{UART\_\-IC\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IC)
+\item 
+\#define \hyperlink{a00574_ad8d2b33dacf491f941c7004f930f1f2d}{UART\_\-IC\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IC, (value))
+\item 
+\#define \hyperlink{a00574_ac27b58af5f16c6f2f0f3a277fbf491b4}{UART\_\-OEIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEIC, 1)
+\item 
+\#define \hyperlink{a00574_ac79f5de0852ba43fbbcba5fcc25ef3dd}{UART\_\-OEIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEIC, 0)
+\item 
+\#define \hyperlink{a00574_a6f89511650131e55525f4b3ce44aaeac}{UART\_\-BEIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEIC, 1)
+\item 
+\#define \hyperlink{a00574_a2fe6a5b9b8d622862710f18395e2a68b}{UART\_\-BEIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEIC, 0)
+\item 
+\#define \hyperlink{a00574_a31221af0455f1b0b09c782522b0d1421}{UART\_\-PEIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEIC, 1)
+\item 
+\#define \hyperlink{a00574_a10803e8fb8e63903989bcc54b87ca660}{UART\_\-PEIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEIC, 0)
+\item 
+\#define \hyperlink{a00574_a50da925bada325a53ec755bfad576875}{UART\_\-FEIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEIC, 1)
+\item 
+\#define \hyperlink{a00574_ace5782d6a44a46860fe6216de19f0fb2}{UART\_\-FEIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEIC, 0)
+\item 
+\#define \hyperlink{a00574_a369013adf0059b6d0858209c03b769de}{UART\_\-RTIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTIC, 1)
+\item 
+\#define \hyperlink{a00574_abfadd16075328fc3bfad7a0a3e127e21}{UART\_\-RTIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTIC, 0)
+\item 
+\#define \hyperlink{a00574_ae05b8b2631240bff089e9cf8b270a8a4}{UART\_\-TXIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIC, 1)
+\item 
+\#define \hyperlink{a00574_ae181600bb9e658cbd4e59e16a8380ece}{UART\_\-TXIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIC, 0)
+\item 
+\#define \hyperlink{a00574_a8ef21c239c0d4e06fd78cd165a5cf320}{UART\_\-RXIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIC, 1)
+\item 
+\#define \hyperlink{a00574_aec21d16f4be96392cfe45938ba917945}{UART\_\-RXIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIC, 0)
+\item 
+\#define \hyperlink{a00574_ae72fae3e2843a70b7ad5ddfa46c6b8fd}{UART\_\-DSRMIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMIC, 1)
+\item 
+\#define \hyperlink{a00574_a7e2a4a0588a7547d1b4b29fb7caf1c19}{UART\_\-DSRMIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMIC, 0)
+\item 
+\#define \hyperlink{a00574_a3f21957c589303570b2f1dd3f524b2c8}{UART\_\-DCDMIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMIC, 1)
+\item 
+\#define \hyperlink{a00574_a0bf6758439bdd7dedb9614e61d8094b0}{UART\_\-DCDMIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMIC, 0)
+\item 
+\#define \hyperlink{a00574_ad6023d98be64e07a7b03994a5a774461}{UART\_\-CTSMIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMIC, 1)
+\item 
+\#define \hyperlink{a00574_ac1df5c5374715b4cd72a89c69b28c8f5}{UART\_\-CTSMIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMIC, 0)
+\item 
+\#define \hyperlink{a00574_a21ef8919737be7cb35e3ea6ed8d68a2f}{UART\_\-RIMIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMIC, 1)
+\item 
+\#define \hyperlink{a00574_af33fb1c594367695ad7a02bfd6863691}{UART\_\-RIMIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMIC, 0)
+\item 
+\#define \hyperlink{a00574_a7b298ebbaeb1a5f069dcd8079d1902ac}{UART\_\-DMACR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR))
+\item 
+\#define \hyperlink{a00574_a8488b0a51afd7bfdc0022b64ba38e26e}{UART\_\-DMACR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR, (value))
+\item 
+\#define \hyperlink{a00574_a926d96c8cda5524ada676ffabf7a4258}{UART\_\-DMACR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR) $|$ (value))
+\item 
+\#define \hyperlink{a00574_ac722dbafce1f72a1142e01fb0f45db30}{UART\_\-DMACR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00574_a8e5ca2c73568f2b65074993bbb6d3832}{UART\_\-DMAONERR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DMAONERR)
+\item 
+\#define \hyperlink{a00574_ad3d61f6795d2941fe444d12bb92095ec}{UART\_\-DMAONERR\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DMAONERR, 1)
+\item 
+\#define \hyperlink{a00574_a379cea2a12ec7ad843bb50220bc0b644}{UART\_\-DMAONERR\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DMAONERR, 0)
+\item 
+\#define \hyperlink{a00574_ad849b4c51f81adc8bc89b2f6afbd3fc5}{UART\_\-TXDMAE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXDMAE)
+\item 
+\#define \hyperlink{a00574_aaf51915322f8cbe480fa10387f7c1d33}{UART\_\-TXDMAE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXDMAE, 1)
+\item 
+\#define \hyperlink{a00574_ad50d9549842e48e955a7272022b531da}{UART\_\-TXDMAE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXDMAE, 0)
+\item 
+\#define \hyperlink{a00574_a514f406062f2d6e9418e2bcc2122db60}{UART\_\-RXDMAE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXDMAE)
+\item 
+\#define \hyperlink{a00574_a092c7eaf4506648a885ce75f9df06075}{UART\_\-RXDMAE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXDMAE, 1)
+\item 
+\#define \hyperlink{a00574_aef8801a775001a6853999fa830d6e6f2}{UART\_\-RXDMAE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXDMAE, 0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00574_a809ff5608d0a4b99fa19b375fa328bd0}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BAUD\_\-DIVFRAC\_\-GET@{UART\_\-BAUD\_\-DIVFRAC\_\-GET}}
+\index{UART\_\-BAUD\_\-DIVFRAC\_\-GET@{UART\_\-BAUD\_\-DIVFRAC\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BAUD\_\-DIVFRAC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BAUD\_\-DIVFRAC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BAUD\_\-DIVFRAC)}}
+\label{a00574_a809ff5608d0a4b99fa19b375fa328bd0}
+
+
+Definition at line 260 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a9afa1a2e58a3ba7a83808c3cda341961}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BAUD\_\-DIVFRAC\_\-SET@{UART\_\-BAUD\_\-DIVFRAC\_\-SET}}
+\index{UART\_\-BAUD\_\-DIVFRAC\_\-SET@{UART\_\-BAUD\_\-DIVFRAC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BAUD\_\-DIVFRAC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BAUD\_\-DIVFRAC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BAUD\_\-DIVFRAC, (value))}}
+\label{a00574_a9afa1a2e58a3ba7a83808c3cda341961}
+
+
+Definition at line 262 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_adaea16bc2af912f2a78969adeb342886}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BAUD\_\-DIVINT\_\-GET@{UART\_\-BAUD\_\-DIVINT\_\-GET}}
+\index{UART\_\-BAUD\_\-DIVINT\_\-GET@{UART\_\-BAUD\_\-DIVINT\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BAUD\_\-DIVINT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BAUD\_\-DIVINT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BAUD\_\-DIVINT)}}
+\label{a00574_adaea16bc2af912f2a78969adeb342886}
+
+
+Definition at line 237 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ac43be9df78e43d43af6e496e92ba1f5f}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BAUD\_\-DIVINT\_\-SET@{UART\_\-BAUD\_\-DIVINT\_\-SET}}
+\index{UART\_\-BAUD\_\-DIVINT\_\-SET@{UART\_\-BAUD\_\-DIVINT\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BAUD\_\-DIVINT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BAUD\_\-DIVINT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BAUD\_\-DIVINT, (value))}}
+\label{a00574_ac43be9df78e43d43af6e496e92ba1f5f}
+
+
+Definition at line 239 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a7af854e5e671bdf003ccdab1cf25b178}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BE\_\-CLEAR@{UART\_\-BE\_\-CLEAR}}
+\index{UART\_\-BE\_\-CLEAR@{UART\_\-BE\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BE, 0)}}
+\label{a00574_a7af854e5e671bdf003ccdab1cf25b178}
+
+
+Definition at line 100 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a673b158301f6a41e9de23240653b4e89}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BE\_\-GET@{UART\_\-BE\_\-GET}}
+\index{UART\_\-BE\_\-GET@{UART\_\-BE\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BE)}}
+\label{a00574_a673b158301f6a41e9de23240653b4e89}
+
+
+Definition at line 96 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ab3100468f8ba2ecddae1f81273d5a1d4}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BE\_\-SET@{UART\_\-BE\_\-SET}}
+\index{UART\_\-BE\_\-SET@{UART\_\-BE\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BE, 1)}}
+\label{a00574_ab3100468f8ba2ecddae1f81273d5a1d4}
+
+
+Definition at line 98 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a2fe6a5b9b8d622862710f18395e2a68b}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BEIC\_\-CLEAR@{UART\_\-BEIC\_\-CLEAR}}
+\index{UART\_\-BEIC\_\-CLEAR@{UART\_\-BEIC\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BEIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BEIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEIC, 0)}}
+\label{a00574_a2fe6a5b9b8d622862710f18395e2a68b}
+
+
+Definition at line 887 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a6f89511650131e55525f4b3ce44aaeac}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BEIC\_\-SET@{UART\_\-BEIC\_\-SET}}
+\index{UART\_\-BEIC\_\-SET@{UART\_\-BEIC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BEIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BEIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEIC, 1)}}
+\label{a00574_a6f89511650131e55525f4b3ce44aaeac}
+
+
+Definition at line 885 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ab8ba0f5e2fd9277176d15acf1942240e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BEIM\_\-CLEAR@{UART\_\-BEIM\_\-CLEAR}}
+\index{UART\_\-BEIM\_\-CLEAR@{UART\_\-BEIM\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BEIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BEIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEIM, 0)}}
+\label{a00574_ab8ba0f5e2fd9277176d15acf1942240e}
+
+
+Definition at line 574 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a46c83d8c4594c65bfd0ac5aca260adc4}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BEIM\_\-GET@{UART\_\-BEIM\_\-GET}}
+\index{UART\_\-BEIM\_\-GET@{UART\_\-BEIM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BEIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BEIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEIM)}}
+\label{a00574_a46c83d8c4594c65bfd0ac5aca260adc4}
+
+
+Definition at line 570 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a85239b1b893177e75e9dffbe69dc5dd7}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BEIM\_\-SET@{UART\_\-BEIM\_\-SET}}
+\index{UART\_\-BEIM\_\-SET@{UART\_\-BEIM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BEIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BEIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEIM, 1)}}
+\label{a00574_a85239b1b893177e75e9dffbe69dc5dd7}
+
+
+Definition at line 572 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a9423f302bad1bbc22902cff6f7224d47}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BEMIS\_\-GET@{UART\_\-BEMIS\_\-GET}}
+\index{UART\_\-BEMIS\_\-GET@{UART\_\-BEMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BEMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BEMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BEMIS)}}
+\label{a00574_a9423f302bad1bbc22902cff6f7224d47}
+
+
+Definition at line 789 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a87c63bf98689fe1d6611c0db2019be8f}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BERIS\_\-GET@{UART\_\-BERIS\_\-GET}}
+\index{UART\_\-BERIS\_\-GET@{UART\_\-BERIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BERIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BERIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BERIS)}}
+\label{a00574_a87c63bf98689fe1d6611c0db2019be8f}
+
+
+Definition at line 704 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_afcd8550d5f745b0cd8e971e0f46f92ed}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BRK\_\-CLEAR@{UART\_\-BRK\_\-CLEAR}}
+\index{UART\_\-BRK\_\-CLEAR@{UART\_\-BRK\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BRK\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BRK\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BRK, 0)}}
+\label{a00574_afcd8550d5f745b0cd8e971e0f46f92ed}
+
+
+Definition at line 351 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_af4bc639007e8f0e45c52a22f1e6a0252}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BRK\_\-GET@{UART\_\-BRK\_\-GET}}
+\index{UART\_\-BRK\_\-GET@{UART\_\-BRK\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BRK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BRK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BRK)}}
+\label{a00574_af4bc639007e8f0e45c52a22f1e6a0252}
+
+
+Definition at line 347 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a3f03e69529e75854f7a3aefc628aeb71}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BRK\_\-SET@{UART\_\-BRK\_\-SET}}
+\index{UART\_\-BRK\_\-SET@{UART\_\-BRK\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BRK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BRK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BRK, 1)}}
+\label{a00574_a3f03e69529e75854f7a3aefc628aeb71}
+
+
+Definition at line 349 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a71136411098634d7f5cdb3a94829fcea}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-BUSY\_\-GET@{UART\_\-BUSY\_\-GET}}
+\index{UART\_\-BUSY\_\-GET@{UART\_\-BUSY\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-BUSY\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-BUSY\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-BUSY)}}
+\label{a00574_a71136411098634d7f5cdb3a94829fcea}
+
+
+Definition at line 195 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aed8539f210ad9a5b33fb21ee09d866b7}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CR\_\-CLEARBIT@{UART\_\-CR\_\-CLEARBIT}}
+\index{UART\_\-CR\_\-CLEARBIT@{UART\_\-CR\_\-CLEARBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR) \& ($\sim$(value)))}}
+\label{a00574_aed8539f210ad9a5b33fb21ee09d866b7}
+
+
+Definition at line 365 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_abac5e7165d232cd48f2045a0d0bfa3f5}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CR\_\-GET@{UART\_\-CR\_\-GET}}
+\index{UART\_\-CR\_\-GET@{UART\_\-CR\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR))}}
+\label{a00574_abac5e7165d232cd48f2045a0d0bfa3f5}
+
+
+Definition at line 359 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a796c27b723205e131ea614caccb1add0}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CR\_\-SET@{UART\_\-CR\_\-SET}}
+\index{UART\_\-CR\_\-SET@{UART\_\-CR\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR, (value))}}
+\label{a00574_a796c27b723205e131ea614caccb1add0}
+
+
+Definition at line 361 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a6722fba270992d6e126c07b70f395cbb}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CR\_\-SETBIT@{UART\_\-CR\_\-SETBIT}}
+\index{UART\_\-CR\_\-SETBIT@{UART\_\-CR\_\-SETBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-CR) $|$ (value))}}
+\label{a00574_a6722fba270992d6e126c07b70f395cbb}
+
+
+Definition at line 363 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aa4d31557b710bc9778d606462fc38033}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CTS\_\-GET@{UART\_\-CTS\_\-GET}}
+\index{UART\_\-CTS\_\-GET@{UART\_\-CTS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CTS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CTS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTS)}}
+\label{a00574_aa4d31557b710bc9778d606462fc38033}
+
+
+Definition at line 216 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ab7d94465632c8f5d8d71ff06ab55bbd3}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CTSEN\_\-CLEAR@{UART\_\-CTSEN\_\-CLEAR}}
+\index{UART\_\-CTSEN\_\-CLEAR@{UART\_\-CTSEN\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CTSEN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CTSEN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSEN, 0)}}
+\label{a00574_ab7d94465632c8f5d8d71ff06ab55bbd3}
+
+
+Definition at line 376 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a334e7a89445e0c2c19ad77d695686531}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CTSEN\_\-GET@{UART\_\-CTSEN\_\-GET}}
+\index{UART\_\-CTSEN\_\-GET@{UART\_\-CTSEN\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CTSEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CTSEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSEN)}}
+\label{a00574_a334e7a89445e0c2c19ad77d695686531}
+
+
+Definition at line 372 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_af7c724ef0e6b402b9fc5e025d7dbc9fe}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CTSEN\_\-SET@{UART\_\-CTSEN\_\-SET}}
+\index{UART\_\-CTSEN\_\-SET@{UART\_\-CTSEN\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CTSEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CTSEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSEN, 1)}}
+\label{a00574_af7c724ef0e6b402b9fc5e025d7dbc9fe}
+
+
+Definition at line 374 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ac1df5c5374715b4cd72a89c69b28c8f5}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CTSMIC\_\-CLEAR@{UART\_\-CTSMIC\_\-CLEAR}}
+\index{UART\_\-CTSMIC\_\-CLEAR@{UART\_\-CTSMIC\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CTSMIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CTSMIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMIC, 0)}}
+\label{a00574_ac1df5c5374715b4cd72a89c69b28c8f5}
+
+
+Definition at line 959 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad6023d98be64e07a7b03994a5a774461}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CTSMIC\_\-SET@{UART\_\-CTSMIC\_\-SET}}
+\index{UART\_\-CTSMIC\_\-SET@{UART\_\-CTSMIC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CTSMIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CTSMIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMIC, 1)}}
+\label{a00574_ad6023d98be64e07a7b03994a5a774461}
+
+
+Definition at line 957 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a4e971ae05db6023ec286ed9c1cbece8b}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CTSMIM\_\-CLEAR@{UART\_\-CTSMIM\_\-CLEAR}}
+\index{UART\_\-CTSMIM\_\-CLEAR@{UART\_\-CTSMIM\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CTSMIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CTSMIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMIM, 0)}}
+\label{a00574_a4e971ae05db6023ec286ed9c1cbece8b}
+
+
+Definition at line 662 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a803bfe863274411bc5616bba9d105b54}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CTSMIM\_\-GET@{UART\_\-CTSMIM\_\-GET}}
+\index{UART\_\-CTSMIM\_\-GET@{UART\_\-CTSMIM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CTSMIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CTSMIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMIM)}}
+\label{a00574_a803bfe863274411bc5616bba9d105b54}
+
+
+Definition at line 658 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a983594d6ada51277fb64429aa1db015b}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CTSMIM\_\-SET@{UART\_\-CTSMIM\_\-SET}}
+\index{UART\_\-CTSMIM\_\-SET@{UART\_\-CTSMIM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CTSMIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CTSMIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMIM, 1)}}
+\label{a00574_a983594d6ada51277fb64429aa1db015b}
+
+
+Definition at line 660 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a405554bd21eb2bfb359dec0537a13b45}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CTSMMIS\_\-GET@{UART\_\-CTSMMIS\_\-GET}}
+\index{UART\_\-CTSMMIS\_\-GET@{UART\_\-CTSMMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CTSMMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CTSMMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSMMIS)}}
+\label{a00574_a405554bd21eb2bfb359dec0537a13b45}
+
+
+Definition at line 845 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a107c7a41cdbbf26682238894b7d72c7c}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-CTSRMIS\_\-GET@{UART\_\-CTSRMIS\_\-GET}}
+\index{UART\_\-CTSRMIS\_\-GET@{UART\_\-CTSRMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-CTSRMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-CTSRMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-CTSRMIS)}}
+\label{a00574_a107c7a41cdbbf26682238894b7d72c7c}
+
+
+Definition at line 760 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a9510e01c634417acb8476623a9c7e6f4}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DATA\_\-GET@{UART\_\-DATA\_\-GET}}
+\index{UART\_\-DATA\_\-GET@{UART\_\-DATA\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DATA)}}
+\label{a00574_a9510e01c634417acb8476623a9c7e6f4}
+
+
+Definition at line 62 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a2964caa0a4c0bce21281bf7b843e0b8c}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DATA\_\-SET@{UART\_\-DATA\_\-SET}}
+\index{UART\_\-DATA\_\-SET@{UART\_\-DATA\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DATA, (value))}}
+\label{a00574_a2964caa0a4c0bce21281bf7b843e0b8c}
+
+
+Definition at line 64 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ac6535cf274edfd27edb161b786aa3181}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DCD\_\-GET@{UART\_\-DCD\_\-GET}}
+\index{UART\_\-DCD\_\-GET@{UART\_\-DCD\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DCD\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DCD\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCD)}}
+\label{a00574_ac6535cf274edfd27edb161b786aa3181}
+
+
+Definition at line 202 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a0bf6758439bdd7dedb9614e61d8094b0}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DCDMIC\_\-CLEAR@{UART\_\-DCDMIC\_\-CLEAR}}
+\index{UART\_\-DCDMIC\_\-CLEAR@{UART\_\-DCDMIC\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DCDMIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DCDMIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMIC, 0)}}
+\label{a00574_a0bf6758439bdd7dedb9614e61d8094b0}
+
+
+Definition at line 950 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a3f21957c589303570b2f1dd3f524b2c8}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DCDMIC\_\-SET@{UART\_\-DCDMIC\_\-SET}}
+\index{UART\_\-DCDMIC\_\-SET@{UART\_\-DCDMIC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DCDMIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DCDMIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMIC, 1)}}
+\label{a00574_a3f21957c589303570b2f1dd3f524b2c8}
+
+
+Definition at line 948 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ab4ee25e11ecb7975cc5825da030ac5b5}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DCDMIM\_\-CLEAR@{UART\_\-DCDMIM\_\-CLEAR}}
+\index{UART\_\-DCDMIM\_\-CLEAR@{UART\_\-DCDMIM\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DCDMIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DCDMIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMIM, 0)}}
+\label{a00574_ab4ee25e11ecb7975cc5825da030ac5b5}
+
+
+Definition at line 651 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a324c7bcbc770358c6555400262e57f1a}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DCDMIM\_\-GET@{UART\_\-DCDMIM\_\-GET}}
+\index{UART\_\-DCDMIM\_\-GET@{UART\_\-DCDMIM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DCDMIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DCDMIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMIM)}}
+\label{a00574_a324c7bcbc770358c6555400262e57f1a}
+
+
+Definition at line 647 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a5dd0cf665d56421dee7261eb2b39ea4e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DCDMIM\_\-SET@{UART\_\-DCDMIM\_\-SET}}
+\index{UART\_\-DCDMIM\_\-SET@{UART\_\-DCDMIM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DCDMIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DCDMIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMIM, 1)}}
+\label{a00574_a5dd0cf665d56421dee7261eb2b39ea4e}
+
+
+Definition at line 649 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aab8f8b83c05403e2c0f1cdba2c1539c7}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DCDMMIS\_\-GET@{UART\_\-DCDMMIS\_\-GET}}
+\index{UART\_\-DCDMMIS\_\-GET@{UART\_\-DCDMMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DCDMMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DCDMMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDMMIS)}}
+\label{a00574_aab8f8b83c05403e2c0f1cdba2c1539c7}
+
+
+Definition at line 838 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a3429fb5e1490462ebe55e2e7b152d740}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DCDRMIS\_\-GET@{UART\_\-DCDRMIS\_\-GET}}
+\index{UART\_\-DCDRMIS\_\-GET@{UART\_\-DCDRMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DCDRMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DCDRMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DCDRMIS)}}
+\label{a00574_a3429fb5e1490462ebe55e2e7b152d740}
+
+
+Definition at line 753 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ac722dbafce1f72a1142e01fb0f45db30}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DMACR\_\-CLEARBIT@{UART\_\-DMACR\_\-CLEARBIT}}
+\index{UART\_\-DMACR\_\-CLEARBIT@{UART\_\-DMACR\_\-CLEARBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DMACR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DMACR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR) \& ($\sim$(value)))}}
+\label{a00574_ac722dbafce1f72a1142e01fb0f45db30}
+
+
+Definition at line 982 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a7b298ebbaeb1a5f069dcd8079d1902ac}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DMACR\_\-GET@{UART\_\-DMACR\_\-GET}}
+\index{UART\_\-DMACR\_\-GET@{UART\_\-DMACR\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DMACR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DMACR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR))}}
+\label{a00574_a7b298ebbaeb1a5f069dcd8079d1902ac}
+
+
+Definition at line 976 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8488b0a51afd7bfdc0022b64ba38e26e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DMACR\_\-SET@{UART\_\-DMACR\_\-SET}}
+\index{UART\_\-DMACR\_\-SET@{UART\_\-DMACR\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DMACR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DMACR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR, (value))}}
+\label{a00574_a8488b0a51afd7bfdc0022b64ba38e26e}
+
+
+Definition at line 978 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a926d96c8cda5524ada676ffabf7a4258}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DMACR\_\-SETBIT@{UART\_\-DMACR\_\-SETBIT}}
+\index{UART\_\-DMACR\_\-SETBIT@{UART\_\-DMACR\_\-SETBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DMACR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DMACR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DMACR) $|$ (value))}}
+\label{a00574_a926d96c8cda5524ada676ffabf7a4258}
+
+
+Definition at line 980 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a379cea2a12ec7ad843bb50220bc0b644}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DMAONERR\_\-CLEAR@{UART\_\-DMAONERR\_\-CLEAR}}
+\index{UART\_\-DMAONERR\_\-CLEAR@{UART\_\-DMAONERR\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DMAONERR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DMAONERR\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DMAONERR, 0)}}
+\label{a00574_a379cea2a12ec7ad843bb50220bc0b644}
+
+
+Definition at line 993 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8e5ca2c73568f2b65074993bbb6d3832}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DMAONERR\_\-GET@{UART\_\-DMAONERR\_\-GET}}
+\index{UART\_\-DMAONERR\_\-GET@{UART\_\-DMAONERR\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DMAONERR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DMAONERR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DMAONERR)}}
+\label{a00574_a8e5ca2c73568f2b65074993bbb6d3832}
+
+
+Definition at line 989 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad3d61f6795d2941fe444d12bb92095ec}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DMAONERR\_\-SET@{UART\_\-DMAONERR\_\-SET}}
+\index{UART\_\-DMAONERR\_\-SET@{UART\_\-DMAONERR\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DMAONERR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DMAONERR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DMAONERR, 1)}}
+\label{a00574_ad3d61f6795d2941fe444d12bb92095ec}
+
+
+Definition at line 991 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a52b94e3d89d86370ae52c4e04774d557}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DR\_\-CLEARBIT@{UART\_\-DR\_\-CLEARBIT}}
+\index{UART\_\-DR\_\-CLEARBIT@{UART\_\-DR\_\-CLEARBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR) \& ($\sim$(value)))}}
+\label{a00574_a52b94e3d89d86370ae52c4e04774d557}
+
+
+Definition at line 55 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a1d8113f4e7065c73a0830eee47762811}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DR\_\-GET@{UART\_\-DR\_\-GET}}
+\index{UART\_\-DR\_\-GET@{UART\_\-DR\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR))}}
+\label{a00574_a1d8113f4e7065c73a0830eee47762811}
+
+
+Definition at line 49 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aaa39ce24dd66798e268a66c42dbe4961}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DR\_\-SET@{UART\_\-DR\_\-SET}}
+\index{UART\_\-DR\_\-SET@{UART\_\-DR\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR, (value))}}
+\label{a00574_aaa39ce24dd66798e268a66c42dbe4961}
+
+
+Definition at line 51 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a2a2a0b19691877ef94be7d5c3c01945c}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DR\_\-SETBIT@{UART\_\-DR\_\-SETBIT}}
+\index{UART\_\-DR\_\-SETBIT@{UART\_\-DR\_\-SETBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-DR) $|$ (value))}}
+\label{a00574_a2a2a0b19691877ef94be7d5c3c01945c}
+
+
+Definition at line 53 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_af6a01634c9aaba643a1d743849e0cce8}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DSR\_\-GET@{UART\_\-DSR\_\-GET}}
+\index{UART\_\-DSR\_\-GET@{UART\_\-DSR\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DSR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DSR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSR)}}
+\label{a00574_af6a01634c9aaba643a1d743849e0cce8}
+
+
+Definition at line 209 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a7e2a4a0588a7547d1b4b29fb7caf1c19}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DSRMIC\_\-CLEAR@{UART\_\-DSRMIC\_\-CLEAR}}
+\index{UART\_\-DSRMIC\_\-CLEAR@{UART\_\-DSRMIC\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DSRMIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DSRMIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMIC, 0)}}
+\label{a00574_a7e2a4a0588a7547d1b4b29fb7caf1c19}
+
+
+Definition at line 941 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ae72fae3e2843a70b7ad5ddfa46c6b8fd}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DSRMIC\_\-SET@{UART\_\-DSRMIC\_\-SET}}
+\index{UART\_\-DSRMIC\_\-SET@{UART\_\-DSRMIC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DSRMIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DSRMIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMIC, 1)}}
+\label{a00574_ae72fae3e2843a70b7ad5ddfa46c6b8fd}
+
+
+Definition at line 939 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a0b1a313a097217345967d9594325c57a}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DSRMIM\_\-CLEAR@{UART\_\-DSRMIM\_\-CLEAR}}
+\index{UART\_\-DSRMIM\_\-CLEAR@{UART\_\-DSRMIM\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DSRMIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DSRMIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMIM, 0)}}
+\label{a00574_a0b1a313a097217345967d9594325c57a}
+
+
+Definition at line 640 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_af6d43618b702b10f05dc7ca17a872a27}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DSRMIM\_\-GET@{UART\_\-DSRMIM\_\-GET}}
+\index{UART\_\-DSRMIM\_\-GET@{UART\_\-DSRMIM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DSRMIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DSRMIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMIM)}}
+\label{a00574_af6d43618b702b10f05dc7ca17a872a27}
+
+
+Definition at line 636 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a058b7b6302034b4ab5950084fbdaab7c}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DSRMIM\_\-SET@{UART\_\-DSRMIM\_\-SET}}
+\index{UART\_\-DSRMIM\_\-SET@{UART\_\-DSRMIM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DSRMIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DSRMIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMIM, 1)}}
+\label{a00574_a058b7b6302034b4ab5950084fbdaab7c}
+
+
+Definition at line 638 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a06fcfccf9b7d94169d88beb6a8947db3}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DSRMMIS\_\-GET@{UART\_\-DSRMMIS\_\-GET}}
+\index{UART\_\-DSRMMIS\_\-GET@{UART\_\-DSRMMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DSRMMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DSRMMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRMMIS)}}
+\label{a00574_a06fcfccf9b7d94169d88beb6a8947db3}
+
+
+Definition at line 831 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a9e46034f883cff218a4c8239deb2e4af}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DSRRMIS\_\-GET@{UART\_\-DSRRMIS\_\-GET}}
+\index{UART\_\-DSRRMIS\_\-GET@{UART\_\-DSRRMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DSRRMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DSRRMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DSRRMIS)}}
+\label{a00574_a9e46034f883cff218a4c8239deb2e4af}
+
+
+Definition at line 746 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aa302538eedc5511a5a8a94c158901cdf}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DTR\_\-CLEAR@{UART\_\-DTR\_\-CLEAR}}
+\index{UART\_\-DTR\_\-CLEAR@{UART\_\-DTR\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DTR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DTR\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DTR, 0)}}
+\label{a00574_aa302538eedc5511a5a8a94c158901cdf}
+
+
+Definition at line 431 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a4f22fb546681f9356fcd18a7e354755b}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DTR\_\-GET@{UART\_\-DTR\_\-GET}}
+\index{UART\_\-DTR\_\-GET@{UART\_\-DTR\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DTR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DTR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DTR)}}
+\label{a00574_a4f22fb546681f9356fcd18a7e354755b}
+
+
+Definition at line 427 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ae70cc2d2b236a37296021a501ed44cb2}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-DTR\_\-SET@{UART\_\-DTR\_\-SET}}
+\index{UART\_\-DTR\_\-SET@{UART\_\-DTR\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-DTR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-DTR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-DTR, 1)}}
+\label{a00574_ae70cc2d2b236a37296021a501ed44cb2}
+
+
+Definition at line 429 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a6a2e3ea81b308ed0e9440f744786afa8}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-ECR\_\-CLEARBIT@{UART\_\-ECR\_\-CLEARBIT}}
+\index{UART\_\-ECR\_\-CLEARBIT@{UART\_\-ECR\_\-CLEARBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-ECR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-ECR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR) \& ($\sim$(value)))}}
+\label{a00574_a6a2e3ea81b308ed0e9440f744786afa8}
+
+
+Definition at line 136 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad98157501cc1e5568a64c002dda86f2f}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-ECR\_\-GET@{UART\_\-ECR\_\-GET}}
+\index{UART\_\-ECR\_\-GET@{UART\_\-ECR\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-ECR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-ECR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR))}}
+\label{a00574_ad98157501cc1e5568a64c002dda86f2f}
+
+
+Definition at line 130 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad8d03659fd0fd2ab0119e27e7bc98eab}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-ECR\_\-SET@{UART\_\-ECR\_\-SET}}
+\index{UART\_\-ECR\_\-SET@{UART\_\-ECR\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-ECR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-ECR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR, (value))}}
+\label{a00574_ad8d03659fd0fd2ab0119e27e7bc98eab}
+
+
+Definition at line 132 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a6dc9e6f27ee41aabe956cfc85f4d4a1c}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-ECR\_\-SETBIT@{UART\_\-ECR\_\-SETBIT}}
+\index{UART\_\-ECR\_\-SETBIT@{UART\_\-ECR\_\-SETBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-ECR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-ECR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ECR) $|$ (value))}}
+\label{a00574_a6dc9e6f27ee41aabe956cfc85f4d4a1c}
+
+
+Definition at line 134 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a826fbf4e30942e2a0faf64178f3bedd1}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-ECRVAL\_\-GET@{UART\_\-ECRVAL\_\-GET}}
+\index{UART\_\-ECRVAL\_\-GET@{UART\_\-ECRVAL\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-ECRVAL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-ECRVAL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-ECRVAL)}}
+\label{a00574_a826fbf4e30942e2a0faf64178f3bedd1}
+
+
+Definition at line 143 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ae72373dbf8d365634638451ff0e70b5e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-ECRVAL\_\-SET@{UART\_\-ECRVAL\_\-SET}}
+\index{UART\_\-ECRVAL\_\-SET@{UART\_\-ECRVAL\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-ECRVAL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-ECRVAL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-ECRVAL, (value))}}
+\label{a00574_ae72373dbf8d365634638451ff0e70b5e}
+
+
+Definition at line 145 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a4934cd274b04c728ac448f383b773ccb}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-EPS\_\-CLEAR@{UART\_\-EPS\_\-CLEAR}}
+\index{UART\_\-EPS\_\-CLEAR@{UART\_\-EPS\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-EPS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-EPS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-EPS, 0)}}
+\label{a00574_a4934cd274b04c728ac448f383b773ccb}
+
+
+Definition at line 329 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a7d15fcced44d24014b289cf6d86756c2}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-EPS\_\-GET@{UART\_\-EPS\_\-GET}}
+\index{UART\_\-EPS\_\-GET@{UART\_\-EPS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-EPS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-EPS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-EPS)}}
+\label{a00574_a7d15fcced44d24014b289cf6d86756c2}
+
+
+Definition at line 325 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a7bd79d501de8f661ee2ac7689781e421}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-EPS\_\-SET@{UART\_\-EPS\_\-SET}}
+\index{UART\_\-EPS\_\-SET@{UART\_\-EPS\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-EPS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-EPS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-EPS, 1)}}
+\label{a00574_a7bd79d501de8f661ee2ac7689781e421}
+
+
+Definition at line 327 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a46f19fc1c5d7d7c2c304501c37397ee9}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FBRD\_\-CLEARBIT@{UART\_\-FBRD\_\-CLEARBIT}}
+\index{UART\_\-FBRD\_\-CLEARBIT@{UART\_\-FBRD\_\-CLEARBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FBRD\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FBRD\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD) \& ($\sim$(value)))}}
+\label{a00574_a46f19fc1c5d7d7c2c304501c37397ee9}
+
+
+Definition at line 253 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a278ed165bc638ea90fe9f4f0608b0935}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FBRD\_\-GET@{UART\_\-FBRD\_\-GET}}
+\index{UART\_\-FBRD\_\-GET@{UART\_\-FBRD\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FBRD\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FBRD\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD))}}
+\label{a00574_a278ed165bc638ea90fe9f4f0608b0935}
+
+
+Definition at line 247 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a6e00dac8fbda5f0be9705fff2411244e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FBRD\_\-SET@{UART\_\-FBRD\_\-SET}}
+\index{UART\_\-FBRD\_\-SET@{UART\_\-FBRD\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FBRD\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FBRD\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD, (value))}}
+\label{a00574_a6e00dac8fbda5f0be9705fff2411244e}
+
+
+Definition at line 249 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a14b475e226dfabfa15cb555d869e1430}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FBRD\_\-SETBIT@{UART\_\-FBRD\_\-SETBIT}}
+\index{UART\_\-FBRD\_\-SETBIT@{UART\_\-FBRD\_\-SETBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FBRD\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FBRD\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FBRD) $|$ (value))}}
+\label{a00574_a14b475e226dfabfa15cb555d869e1430}
+
+
+Definition at line 251 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a68334c700afa7a7d7be462606e367367}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FE\_\-CLEAR@{UART\_\-FE\_\-CLEAR}}
+\index{UART\_\-FE\_\-CLEAR@{UART\_\-FE\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FE, 0)}}
+\label{a00574_a68334c700afa7a7d7be462606e367367}
+
+
+Definition at line 122 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a086b2b679bfb8cb167e59fe9f1b72770}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FE\_\-GET@{UART\_\-FE\_\-GET}}
+\index{UART\_\-FE\_\-GET@{UART\_\-FE\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FE)}}
+\label{a00574_a086b2b679bfb8cb167e59fe9f1b72770}
+
+
+Definition at line 118 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a92703cfac93b7d472dfcd1f16571e000}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FE\_\-SET@{UART\_\-FE\_\-SET}}
+\index{UART\_\-FE\_\-SET@{UART\_\-FE\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FE, 1)}}
+\label{a00574_a92703cfac93b7d472dfcd1f16571e000}
+
+
+Definition at line 120 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ace5782d6a44a46860fe6216de19f0fb2}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FEIC\_\-CLEAR@{UART\_\-FEIC\_\-CLEAR}}
+\index{UART\_\-FEIC\_\-CLEAR@{UART\_\-FEIC\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FEIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FEIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEIC, 0)}}
+\label{a00574_ace5782d6a44a46860fe6216de19f0fb2}
+
+
+Definition at line 905 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a50da925bada325a53ec755bfad576875}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FEIC\_\-SET@{UART\_\-FEIC\_\-SET}}
+\index{UART\_\-FEIC\_\-SET@{UART\_\-FEIC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FEIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FEIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEIC, 1)}}
+\label{a00574_a50da925bada325a53ec755bfad576875}
+
+
+Definition at line 903 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ac5beee28297b025672a5c5d155721a38}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FEIM\_\-CLEAR@{UART\_\-FEIM\_\-CLEAR}}
+\index{UART\_\-FEIM\_\-CLEAR@{UART\_\-FEIM\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FEIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FEIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEIM, 0)}}
+\label{a00574_ac5beee28297b025672a5c5d155721a38}
+
+
+Definition at line 596 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a41226a93a0b0227501bcfe6cd4325405}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FEIM\_\-GET@{UART\_\-FEIM\_\-GET}}
+\index{UART\_\-FEIM\_\-GET@{UART\_\-FEIM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FEIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FEIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEIM)}}
+\label{a00574_a41226a93a0b0227501bcfe6cd4325405}
+
+
+Definition at line 592 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a97ed1f3d9ca7cf909dc5fb42ae9090b5}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FEIM\_\-SET@{UART\_\-FEIM\_\-SET}}
+\index{UART\_\-FEIM\_\-SET@{UART\_\-FEIM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FEIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FEIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEIM, 1)}}
+\label{a00574_a97ed1f3d9ca7cf909dc5fb42ae9090b5}
+
+
+Definition at line 594 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a1a493a42ad5e68de1bc6363306a7b242}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FEMIS\_\-GET@{UART\_\-FEMIS\_\-GET}}
+\index{UART\_\-FEMIS\_\-GET@{UART\_\-FEMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FEMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FEMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEMIS)}}
+\label{a00574_a1a493a42ad5e68de1bc6363306a7b242}
+
+
+Definition at line 803 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ab935fd37c6016293216400d069e1066e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FEN\_\-CLEAR@{UART\_\-FEN\_\-CLEAR}}
+\index{UART\_\-FEN\_\-CLEAR@{UART\_\-FEN\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FEN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FEN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEN, 0)}}
+\label{a00574_ab935fd37c6016293216400d069e1066e}
+
+
+Definition at line 307 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a05cd9bf41e6a1757bd7252e993bf1b98}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FEN\_\-GET@{UART\_\-FEN\_\-GET}}
+\index{UART\_\-FEN\_\-GET@{UART\_\-FEN\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEN)}}
+\label{a00574_a05cd9bf41e6a1757bd7252e993bf1b98}
+
+
+Definition at line 303 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ac21afe1751f775576ff38c9b2aad1b9a}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FEN\_\-SET@{UART\_\-FEN\_\-SET}}
+\index{UART\_\-FEN\_\-SET@{UART\_\-FEN\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FEN, 1)}}
+\label{a00574_ac21afe1751f775576ff38c9b2aad1b9a}
+
+
+Definition at line 305 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a88473271ee7f6c673d16bec62e8c2edf}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FERIS\_\-GET@{UART\_\-FERIS\_\-GET}}
+\index{UART\_\-FERIS\_\-GET@{UART\_\-FERIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FERIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FERIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-FERIS)}}
+\label{a00574_a88473271ee7f6c673d16bec62e8c2edf}
+
+
+Definition at line 718 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a4a122f9696a50c598b77ff463bdfc200}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-FR\_\-GET@{UART\_\-FR\_\-GET}}
+\index{UART\_\-FR\_\-GET@{UART\_\-FR\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-FR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-FR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-FR))}}
+\label{a00574_a4a122f9696a50c598b77ff463bdfc200}
+
+
+Definition at line 153 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a2aeaeae5fa01baff2036b2f69a6227b3}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IBRD\_\-CLEARBIT@{UART\_\-IBRD\_\-CLEARBIT}}
+\index{UART\_\-IBRD\_\-CLEARBIT@{UART\_\-IBRD\_\-CLEARBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IBRD\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IBRD\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD) \& ($\sim$(value)))}}
+\label{a00574_a2aeaeae5fa01baff2036b2f69a6227b3}
+
+
+Definition at line 230 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a1e543971ca5bd95ea46c433d44ac0e88}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IBRD\_\-GET@{UART\_\-IBRD\_\-GET}}
+\index{UART\_\-IBRD\_\-GET@{UART\_\-IBRD\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IBRD\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IBRD\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD))}}
+\label{a00574_a1e543971ca5bd95ea46c433d44ac0e88}
+
+
+Definition at line 224 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a5edf79cd6262923c0d0095b732f1b500}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IBRD\_\-SET@{UART\_\-IBRD\_\-SET}}
+\index{UART\_\-IBRD\_\-SET@{UART\_\-IBRD\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IBRD\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IBRD\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD, (value))}}
+\label{a00574_a5edf79cd6262923c0d0095b732f1b500}
+
+
+Definition at line 226 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a76ff208baa443c4ca9ac9be248a31c42}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IBRD\_\-SETBIT@{UART\_\-IBRD\_\-SETBIT}}
+\index{UART\_\-IBRD\_\-SETBIT@{UART\_\-IBRD\_\-SETBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IBRD\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IBRD\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IBRD) $|$ (value))}}
+\label{a00574_a76ff208baa443c4ca9ac9be248a31c42}
+
+
+Definition at line 228 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8db54d92cfb1297ccd3e3fae4f483ede}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IC\_\-GET@{UART\_\-IC\_\-GET}}
+\index{UART\_\-IC\_\-GET@{UART\_\-IC\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IC)}}
+\label{a00574_a8db54d92cfb1297ccd3e3fae4f483ede}
+
+
+Definition at line 867 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad8d2b33dacf491f941c7004f930f1f2d}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IC\_\-SET@{UART\_\-IC\_\-SET}}
+\index{UART\_\-IC\_\-SET@{UART\_\-IC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IC, (value))}}
+\label{a00574_ad8d2b33dacf491f941c7004f930f1f2d}
+
+
+Definition at line 869 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8cbc5c63fc5f959d586ae627a7744f70}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-ICR\_\-SET@{UART\_\-ICR\_\-SET}}
+\index{UART\_\-ICR\_\-SET@{UART\_\-ICR\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-ICR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-ICR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-ICR, (value))}}
+\label{a00574_a8cbc5c63fc5f959d586ae627a7744f70}
+
+
+Definition at line 860 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a41f00a9ee2f44e6b642037ba20957394}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IFLS\_\-CLEARBIT@{UART\_\-IFLS\_\-CLEARBIT}}
+\index{UART\_\-IFLS\_\-CLEARBIT@{UART\_\-IFLS\_\-CLEARBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IFLS\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IFLS\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS) \& ($\sim$(value)))}}
+\label{a00574_a41f00a9ee2f44e6b642037ba20957394}
+
+
+Definition at line 511 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_af6712af1cc5e0e834ca903d331131f3b}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IFLS\_\-GET@{UART\_\-IFLS\_\-GET}}
+\index{UART\_\-IFLS\_\-GET@{UART\_\-IFLS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IFLS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IFLS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS))}}
+\label{a00574_af6712af1cc5e0e834ca903d331131f3b}
+
+
+Definition at line 505 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_acd6cd4dab9f2d867a1affecf2a4266e8}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IFLS\_\-SET@{UART\_\-IFLS\_\-SET}}
+\index{UART\_\-IFLS\_\-SET@{UART\_\-IFLS\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IFLS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IFLS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS, (value))}}
+\label{a00574_acd6cd4dab9f2d867a1affecf2a4266e8}
+
+
+Definition at line 507 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a67ee2cf34975a67d93b44b127ebacb4d}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IFLS\_\-SETBIT@{UART\_\-IFLS\_\-SETBIT}}
+\index{UART\_\-IFLS\_\-SETBIT@{UART\_\-IFLS\_\-SETBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IFLS\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IFLS\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IFLS) $|$ (value))}}
+\label{a00574_a67ee2cf34975a67d93b44b127ebacb4d}
+
+
+Definition at line 509 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a3be979ad6767513240b26887f6a67cd3}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IM\_\-GET@{UART\_\-IM\_\-GET}}
+\index{UART\_\-IM\_\-GET@{UART\_\-IM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IM)}}
+\label{a00574_a3be979ad6767513240b26887f6a67cd3}
+
+
+Definition at line 550 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a52abd86bd49f6d4e2fd58559e332a26b}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IM\_\-SET@{UART\_\-IM\_\-SET}}
+\index{UART\_\-IM\_\-SET@{UART\_\-IM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IM, (value))}}
+\label{a00574_a52abd86bd49f6d4e2fd58559e332a26b}
+
+
+Definition at line 552 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a13022875024a6a3dd73b1ca624a29e1f}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IMSC\_\-CLEARBIT@{UART\_\-IMSC\_\-CLEARBIT}}
+\index{UART\_\-IMSC\_\-CLEARBIT@{UART\_\-IMSC\_\-CLEARBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IMSC\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IMSC\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC) \& ($\sim$(value)))}}
+\label{a00574_a13022875024a6a3dd73b1ca624a29e1f}
+
+
+Definition at line 543 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a71e8a3267dad46da30ce2dc07f6f2d5f}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IMSC\_\-GET@{UART\_\-IMSC\_\-GET}}
+\index{UART\_\-IMSC\_\-GET@{UART\_\-IMSC\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IMSC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IMSC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC))}}
+\label{a00574_a71e8a3267dad46da30ce2dc07f6f2d5f}
+
+
+Definition at line 537 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ab489702c7cbb5ee411f36479edb49206}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IMSC\_\-SET@{UART\_\-IMSC\_\-SET}}
+\index{UART\_\-IMSC\_\-SET@{UART\_\-IMSC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IMSC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IMSC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC, (value))}}
+\label{a00574_ab489702c7cbb5ee411f36479edb49206}
+
+
+Definition at line 539 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a73ea305b3734ac284769169a2af8a2de}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IMSC\_\-SETBIT@{UART\_\-IMSC\_\-SETBIT}}
+\index{UART\_\-IMSC\_\-SETBIT@{UART\_\-IMSC\_\-SETBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IMSC\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IMSC\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-IMSC) $|$ (value))}}
+\label{a00574_a73ea305b3734ac284769169a2af8a2de}
+
+
+Definition at line 541 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a23932a287037838eea3947d6947fa4ca}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IS\_\-GET@{UART\_\-IS\_\-GET}}
+\index{UART\_\-IS\_\-GET@{UART\_\-IS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IS)}}
+\label{a00574_a23932a287037838eea3947d6947fa4ca}
+
+
+Definition at line 688 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aaaed4c92076b7668406ffd76a535f74c}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-IS\_\-SET@{UART\_\-IS\_\-SET}}
+\index{UART\_\-IS\_\-SET@{UART\_\-IS\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-IS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-IS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-IS, (value))}}
+\label{a00574_aaaed4c92076b7668406ffd76a535f74c}
+
+
+Definition at line 690 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a6dae1642debf63fba61364ca9e662474}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-LBE\_\-CLEAR@{UART\_\-LBE\_\-CLEAR}}
+\index{UART\_\-LBE\_\-CLEAR@{UART\_\-LBE\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-LBE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-LBE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-LBE, 0)}}
+\label{a00574_a6dae1642debf63fba61364ca9e662474}
+
+
+Definition at line 464 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_afb1d90ab1d8482830605b76992c5e73b}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-LBE\_\-GET@{UART\_\-LBE\_\-GET}}
+\index{UART\_\-LBE\_\-GET@{UART\_\-LBE\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-LBE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-LBE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-LBE)}}
+\label{a00574_afb1d90ab1d8482830605b76992c5e73b}
+
+
+Definition at line 460 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a52ba028b2971108b7ba9495a5ea678e2}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-LBE\_\-SET@{UART\_\-LBE\_\-SET}}
+\index{UART\_\-LBE\_\-SET@{UART\_\-LBE\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-LBE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-LBE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-LBE, 1)}}
+\label{a00574_a52ba028b2971108b7ba9495a5ea678e2}
+
+
+Definition at line 462 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a3240b5250caba195183915991f416b80}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-LCR\_\-CLEARBIT@{UART\_\-LCR\_\-CLEARBIT}}
+\index{UART\_\-LCR\_\-CLEARBIT@{UART\_\-LCR\_\-CLEARBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-LCR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-LCR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR) \& ($\sim$(value)))}}
+\label{a00574_a3240b5250caba195183915991f416b80}
+
+
+Definition at line 276 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a2bed098287965a87f7600e13e3c91dce}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-LCR\_\-GET@{UART\_\-LCR\_\-GET}}
+\index{UART\_\-LCR\_\-GET@{UART\_\-LCR\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-LCR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-LCR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR))}}
+\label{a00574_a2bed098287965a87f7600e13e3c91dce}
+
+
+Definition at line 270 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a324e133c9a4cf00615cf81a2da8d243f}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-LCR\_\-SET@{UART\_\-LCR\_\-SET}}
+\index{UART\_\-LCR\_\-SET@{UART\_\-LCR\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-LCR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-LCR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR, (value))}}
+\label{a00574_a324e133c9a4cf00615cf81a2da8d243f}
+
+
+Definition at line 272 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a3c280befd8d13561e20416b077555a44}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-LCR\_\-SETBIT@{UART\_\-LCR\_\-SETBIT}}
+\index{UART\_\-LCR\_\-SETBIT@{UART\_\-LCR\_\-SETBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-LCR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-LCR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-LCR) $|$ (value))}}
+\label{a00574_a3c280befd8d13561e20416b077555a44}
+
+
+Definition at line 274 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aeb1ec386d9a7c8ce0f7099f4e406d465}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-MIS\_\-GET@{UART\_\-MIS\_\-GET}}
+\index{UART\_\-MIS\_\-GET@{UART\_\-MIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-MIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-MIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-MIS))}}
+\label{a00574_aeb1ec386d9a7c8ce0f7099f4e406d465}
+
+
+Definition at line 775 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_adff95df497c0d84f3b84a33817c21946}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OE\_\-CLEAR@{UART\_\-OE\_\-CLEAR}}
+\index{UART\_\-OE\_\-CLEAR@{UART\_\-OE\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OE, 0)}}
+\label{a00574_adff95df497c0d84f3b84a33817c21946}
+
+
+Definition at line 89 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a21eb57f2c5878c538af90df2f4aac0c4}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OE\_\-GET@{UART\_\-OE\_\-GET}}
+\index{UART\_\-OE\_\-GET@{UART\_\-OE\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OE)}}
+\label{a00574_a21eb57f2c5878c538af90df2f4aac0c4}
+
+
+Definition at line 85 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8b171166c4db597319c52bd7ce0db19b}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OE\_\-SET@{UART\_\-OE\_\-SET}}
+\index{UART\_\-OE\_\-SET@{UART\_\-OE\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OE, 1)}}
+\label{a00574_a8b171166c4db597319c52bd7ce0db19b}
+
+
+Definition at line 87 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ac79f5de0852ba43fbbcba5fcc25ef3dd}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OEIC\_\-CLEAR@{UART\_\-OEIC\_\-CLEAR}}
+\index{UART\_\-OEIC\_\-CLEAR@{UART\_\-OEIC\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OEIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OEIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEIC, 0)}}
+\label{a00574_ac79f5de0852ba43fbbcba5fcc25ef3dd}
+
+
+Definition at line 878 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ac27b58af5f16c6f2f0f3a277fbf491b4}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OEIC\_\-SET@{UART\_\-OEIC\_\-SET}}
+\index{UART\_\-OEIC\_\-SET@{UART\_\-OEIC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OEIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OEIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEIC, 1)}}
+\label{a00574_ac27b58af5f16c6f2f0f3a277fbf491b4}
+
+
+Definition at line 876 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ae8c8c1306290e03b74ace24480f25e29}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OEIM\_\-CLEAR@{UART\_\-OEIM\_\-CLEAR}}
+\index{UART\_\-OEIM\_\-CLEAR@{UART\_\-OEIM\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OEIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OEIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEIM, 0)}}
+\label{a00574_ae8c8c1306290e03b74ace24480f25e29}
+
+
+Definition at line 563 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a18620c7110898a589701aee276e0fa91}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OEIM\_\-GET@{UART\_\-OEIM\_\-GET}}
+\index{UART\_\-OEIM\_\-GET@{UART\_\-OEIM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OEIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OEIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEIM)}}
+\label{a00574_a18620c7110898a589701aee276e0fa91}
+
+
+Definition at line 559 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a677cd40be31faba1ef6bacbbd9fbe1c0}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OEIM\_\-SET@{UART\_\-OEIM\_\-SET}}
+\index{UART\_\-OEIM\_\-SET@{UART\_\-OEIM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OEIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OEIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEIM, 1)}}
+\label{a00574_a677cd40be31faba1ef6bacbbd9fbe1c0}
+
+
+Definition at line 561 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a9ae46d845f60ef0adcf34f8e8dae3150}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OEMIS\_\-GET@{UART\_\-OEMIS\_\-GET}}
+\index{UART\_\-OEMIS\_\-GET@{UART\_\-OEMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OEMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OEMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OEMIS)}}
+\label{a00574_a9ae46d845f60ef0adcf34f8e8dae3150}
+
+
+Definition at line 782 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_abd67135524d46ce6e12d64586411dd7a}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OERIS\_\-GET@{UART\_\-OERIS\_\-GET}}
+\index{UART\_\-OERIS\_\-GET@{UART\_\-OERIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OERIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OERIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OERIS)}}
+\label{a00574_abd67135524d46ce6e12d64586411dd7a}
+
+
+Definition at line 697 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a9f755ef40051a60a6ca368b3efdd906e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OUT1\_\-CLEAR@{UART\_\-OUT1\_\-CLEAR}}
+\index{UART\_\-OUT1\_\-CLEAR@{UART\_\-OUT1\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OUT1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OUT1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT1, 0)}}
+\label{a00574_a9f755ef40051a60a6ca368b3efdd906e}
+
+
+Definition at line 409 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a90b247e009c20ffa2bc6881e9b277e08}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OUT1\_\-GET@{UART\_\-OUT1\_\-GET}}
+\index{UART\_\-OUT1\_\-GET@{UART\_\-OUT1\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OUT1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OUT1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT1)}}
+\label{a00574_a90b247e009c20ffa2bc6881e9b277e08}
+
+
+Definition at line 405 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aaac01b860127b0d118b6a7209c635e10}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OUT1\_\-SET@{UART\_\-OUT1\_\-SET}}
+\index{UART\_\-OUT1\_\-SET@{UART\_\-OUT1\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OUT1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OUT1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT1, 1)}}
+\label{a00574_aaac01b860127b0d118b6a7209c635e10}
+
+
+Definition at line 407 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_affe12b1eded41a7de880979833728aba}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OUT2\_\-CLEAR@{UART\_\-OUT2\_\-CLEAR}}
+\index{UART\_\-OUT2\_\-CLEAR@{UART\_\-OUT2\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OUT2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OUT2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT2, 0)}}
+\label{a00574_affe12b1eded41a7de880979833728aba}
+
+
+Definition at line 398 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a915133c5bcda60b5f3cc432fd790e73d}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OUT2\_\-GET@{UART\_\-OUT2\_\-GET}}
+\index{UART\_\-OUT2\_\-GET@{UART\_\-OUT2\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OUT2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OUT2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT2)}}
+\label{a00574_a915133c5bcda60b5f3cc432fd790e73d}
+
+
+Definition at line 394 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a07bf858f9fc378827448ea3daf75b524}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-OUT2\_\-SET@{UART\_\-OUT2\_\-SET}}
+\index{UART\_\-OUT2\_\-SET@{UART\_\-OUT2\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-OUT2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-OUT2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-OUT2, 1)}}
+\label{a00574_a07bf858f9fc378827448ea3daf75b524}
+
+
+Definition at line 396 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a074beef3eb921e338268d56736dbf703}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PE\_\-CLEAR@{UART\_\-PE\_\-CLEAR}}
+\index{UART\_\-PE\_\-CLEAR@{UART\_\-PE\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PE, 0)}}
+\label{a00574_a074beef3eb921e338268d56736dbf703}
+
+
+Definition at line 111 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a6b04a2cd34d39821aade0deb38c2e20e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PE\_\-GET@{UART\_\-PE\_\-GET}}
+\index{UART\_\-PE\_\-GET@{UART\_\-PE\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PE)}}
+\label{a00574_a6b04a2cd34d39821aade0deb38c2e20e}
+
+
+Definition at line 107 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a886dd141399dd904249e158bdb153052}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PE\_\-SET@{UART\_\-PE\_\-SET}}
+\index{UART\_\-PE\_\-SET@{UART\_\-PE\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PE, 1)}}
+\label{a00574_a886dd141399dd904249e158bdb153052}
+
+
+Definition at line 109 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a10803e8fb8e63903989bcc54b87ca660}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PEIC\_\-CLEAR@{UART\_\-PEIC\_\-CLEAR}}
+\index{UART\_\-PEIC\_\-CLEAR@{UART\_\-PEIC\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PEIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PEIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEIC, 0)}}
+\label{a00574_a10803e8fb8e63903989bcc54b87ca660}
+
+
+Definition at line 896 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a31221af0455f1b0b09c782522b0d1421}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PEIC\_\-SET@{UART\_\-PEIC\_\-SET}}
+\index{UART\_\-PEIC\_\-SET@{UART\_\-PEIC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PEIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PEIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEIC, 1)}}
+\label{a00574_a31221af0455f1b0b09c782522b0d1421}
+
+
+Definition at line 894 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ace582efae78172d5819ed6acdb163a17}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PEIM\_\-CLEAR@{UART\_\-PEIM\_\-CLEAR}}
+\index{UART\_\-PEIM\_\-CLEAR@{UART\_\-PEIM\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PEIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PEIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEIM, 0)}}
+\label{a00574_ace582efae78172d5819ed6acdb163a17}
+
+
+Definition at line 585 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ac866082a48e69b48a49df42bbde2e533}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PEIM\_\-GET@{UART\_\-PEIM\_\-GET}}
+\index{UART\_\-PEIM\_\-GET@{UART\_\-PEIM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PEIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PEIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEIM)}}
+\label{a00574_ac866082a48e69b48a49df42bbde2e533}
+
+
+Definition at line 581 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ab83659159c8cbf408bae27d06499ca39}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PEIM\_\-SET@{UART\_\-PEIM\_\-SET}}
+\index{UART\_\-PEIM\_\-SET@{UART\_\-PEIM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PEIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PEIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEIM, 1)}}
+\label{a00574_ab83659159c8cbf408bae27d06499ca39}
+
+
+Definition at line 583 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a7eb85fed74ec6944ab5054939e419389}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PEMIS\_\-GET@{UART\_\-PEMIS\_\-GET}}
+\index{UART\_\-PEMIS\_\-GET@{UART\_\-PEMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PEMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PEMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEMIS)}}
+\label{a00574_a7eb85fed74ec6944ab5054939e419389}
+
+
+Definition at line 796 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a7a9977a0f0bde9729b9b15a23430b5fc}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PEN\_\-CLEAR@{UART\_\-PEN\_\-CLEAR}}
+\index{UART\_\-PEN\_\-CLEAR@{UART\_\-PEN\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PEN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PEN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEN, 0)}}
+\label{a00574_a7a9977a0f0bde9729b9b15a23430b5fc}
+
+
+Definition at line 340 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a4d70d0b49ce15fb60f2cb085638de0a9}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PEN\_\-GET@{UART\_\-PEN\_\-GET}}
+\index{UART\_\-PEN\_\-GET@{UART\_\-PEN\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEN)}}
+\label{a00574_a4d70d0b49ce15fb60f2cb085638de0a9}
+
+
+Definition at line 336 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_af7c2b96d9df8e948e1d594035225cadf}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PEN\_\-SET@{UART\_\-PEN\_\-SET}}
+\index{UART\_\-PEN\_\-SET@{UART\_\-PEN\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PEN, 1)}}
+\label{a00574_af7c2b96d9df8e948e1d594035225cadf}
+
+
+Definition at line 338 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8ee607fae24b6c224644ac590d2d5297}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-PERIS\_\-GET@{UART\_\-PERIS\_\-GET}}
+\index{UART\_\-PERIS\_\-GET@{UART\_\-PERIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-PERIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-PERIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-PERIS)}}
+\label{a00574_a8ee607fae24b6c224644ac590d2d5297}
+
+
+Definition at line 711 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aad61e84962dcd537b492d111b05af3d0}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RI\_\-GET@{UART\_\-RI\_\-GET}}
+\index{UART\_\-RI\_\-GET@{UART\_\-RI\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RI)}}
+\label{a00574_aad61e84962dcd537b492d111b05af3d0}
+
+
+Definition at line 160 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_af33fb1c594367695ad7a02bfd6863691}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RIMIC\_\-CLEAR@{UART\_\-RIMIC\_\-CLEAR}}
+\index{UART\_\-RIMIC\_\-CLEAR@{UART\_\-RIMIC\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RIMIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RIMIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMIC, 0)}}
+\label{a00574_af33fb1c594367695ad7a02bfd6863691}
+
+
+Definition at line 968 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a21ef8919737be7cb35e3ea6ed8d68a2f}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RIMIC\_\-SET@{UART\_\-RIMIC\_\-SET}}
+\index{UART\_\-RIMIC\_\-SET@{UART\_\-RIMIC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RIMIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RIMIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMIC, 1)}}
+\label{a00574_a21ef8919737be7cb35e3ea6ed8d68a2f}
+
+
+Definition at line 966 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a5e20ab421499418ea6163602faffc670}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RIMIM\_\-CLEAR@{UART\_\-RIMIM\_\-CLEAR}}
+\index{UART\_\-RIMIM\_\-CLEAR@{UART\_\-RIMIM\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RIMIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RIMIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMIM, 0)}}
+\label{a00574_a5e20ab421499418ea6163602faffc670}
+
+
+Definition at line 673 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_afd495a43904675e8440c83d38571fe05}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RIMIM\_\-GET@{UART\_\-RIMIM\_\-GET}}
+\index{UART\_\-RIMIM\_\-GET@{UART\_\-RIMIM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RIMIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RIMIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMIM)}}
+\label{a00574_afd495a43904675e8440c83d38571fe05}
+
+
+Definition at line 669 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a4bc5f6d434ec2f458aae73e01cbc996e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RIMIM\_\-SET@{UART\_\-RIMIM\_\-SET}}
+\index{UART\_\-RIMIM\_\-SET@{UART\_\-RIMIM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RIMIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RIMIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMIM, 1)}}
+\label{a00574_a4bc5f6d434ec2f458aae73e01cbc996e}
+
+
+Definition at line 671 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8e89cf226b9493b2d84443c53ae32cbc}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RIMMIS\_\-GET@{UART\_\-RIMMIS\_\-GET}}
+\index{UART\_\-RIMMIS\_\-GET@{UART\_\-RIMMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RIMMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RIMMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIMMIS)}}
+\label{a00574_a8e89cf226b9493b2d84443c53ae32cbc}
+
+
+Definition at line 852 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_adc6f2cf3c162676200b613e19acfb902}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RIRMIS\_\-GET@{UART\_\-RIRMIS\_\-GET}}
+\index{UART\_\-RIRMIS\_\-GET@{UART\_\-RIRMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RIRMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RIRMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RIRMIS)}}
+\label{a00574_adc6f2cf3c162676200b613e19acfb902}
+
+
+Definition at line 767 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a3aa030fc86cba2342e11f303387c7c72}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RIS\_\-GET@{UART\_\-RIS\_\-GET}}
+\index{UART\_\-RIS\_\-GET@{UART\_\-RIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RIS))}}
+\label{a00574_a3aa030fc86cba2342e11f303387c7c72}
+
+
+Definition at line 681 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a86bbbc8297f0ed57f7d97278a6c9f457}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RSR\_\-CLEARBIT@{UART\_\-RSR\_\-CLEARBIT}}
+\index{UART\_\-RSR\_\-CLEARBIT@{UART\_\-RSR\_\-CLEARBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RSR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RSR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR) \& ($\sim$(value)))}}
+\label{a00574_a86bbbc8297f0ed57f7d97278a6c9f457}
+
+
+Definition at line 78 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a59e91148121bbfe62d10638b6742bb02}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RSR\_\-GET@{UART\_\-RSR\_\-GET}}
+\index{UART\_\-RSR\_\-GET@{UART\_\-RSR\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RSR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RSR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR))}}
+\label{a00574_a59e91148121bbfe62d10638b6742bb02}
+
+
+Definition at line 72 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ab38497bbc86f69b045a191b87aae0096}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RSR\_\-SET@{UART\_\-RSR\_\-SET}}
+\index{UART\_\-RSR\_\-SET@{UART\_\-RSR\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RSR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RSR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR, (value))}}
+\label{a00574_ab38497bbc86f69b045a191b87aae0096}
+
+
+Definition at line 74 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad6fbebd3cbcf52aafa8f296f31d77140}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RSR\_\-SETBIT@{UART\_\-RSR\_\-SETBIT}}
+\index{UART\_\-RSR\_\-SETBIT@{UART\_\-RSR\_\-SETBIT}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RSR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RSR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, UART\_\-RSR) $|$ (value))}}
+\label{a00574_ad6fbebd3cbcf52aafa8f296f31d77140}
+
+
+Definition at line 76 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_abfadd16075328fc3bfad7a0a3e127e21}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTIC\_\-CLEAR@{UART\_\-RTIC\_\-CLEAR}}
+\index{UART\_\-RTIC\_\-CLEAR@{UART\_\-RTIC\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTIC, 0)}}
+\label{a00574_abfadd16075328fc3bfad7a0a3e127e21}
+
+
+Definition at line 914 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a369013adf0059b6d0858209c03b769de}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTIC\_\-SET@{UART\_\-RTIC\_\-SET}}
+\index{UART\_\-RTIC\_\-SET@{UART\_\-RTIC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTIC, 1)}}
+\label{a00574_a369013adf0059b6d0858209c03b769de}
+
+
+Definition at line 912 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a84e3b437bdc9d5ff25c8857d0224c2e0}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTIM\_\-CLEAR@{UART\_\-RTIM\_\-CLEAR}}
+\index{UART\_\-RTIM\_\-CLEAR@{UART\_\-RTIM\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTIM, 0)}}
+\label{a00574_a84e3b437bdc9d5ff25c8857d0224c2e0}
+
+
+Definition at line 607 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ab40db3e6439105826dc0783131e126d2}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTIM\_\-GET@{UART\_\-RTIM\_\-GET}}
+\index{UART\_\-RTIM\_\-GET@{UART\_\-RTIM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTIM)}}
+\label{a00574_ab40db3e6439105826dc0783131e126d2}
+
+
+Definition at line 603 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a2ed6310e5bd686ba726fd16e68a9df7e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTIM\_\-SET@{UART\_\-RTIM\_\-SET}}
+\index{UART\_\-RTIM\_\-SET@{UART\_\-RTIM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTIM, 1)}}
+\label{a00574_a2ed6310e5bd686ba726fd16e68a9df7e}
+
+
+Definition at line 605 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a3cb0733497409389437f3ced760d10c0}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTMIS\_\-GET@{UART\_\-RTMIS\_\-GET}}
+\index{UART\_\-RTMIS\_\-GET@{UART\_\-RTMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTMIS)}}
+\label{a00574_a3cb0733497409389437f3ced760d10c0}
+
+
+Definition at line 810 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a89b823686f833500ef5044a2d7abacd9}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTRIS\_\-GET@{UART\_\-RTRIS\_\-GET}}
+\index{UART\_\-RTRIS\_\-GET@{UART\_\-RTRIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTRIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTRIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTRIS)}}
+\label{a00574_a89b823686f833500ef5044a2d7abacd9}
+
+
+Definition at line 725 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aefdef042b6fb1efad027ac193d2b7a3b}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTS\_\-CLEAR@{UART\_\-RTS\_\-CLEAR}}
+\index{UART\_\-RTS\_\-CLEAR@{UART\_\-RTS\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTS, 0)}}
+\label{a00574_aefdef042b6fb1efad027ac193d2b7a3b}
+
+
+Definition at line 420 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a02290a2b85a1fed0687a904272cc112d}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTS\_\-GET@{UART\_\-RTS\_\-GET}}
+\index{UART\_\-RTS\_\-GET@{UART\_\-RTS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTS)}}
+\label{a00574_a02290a2b85a1fed0687a904272cc112d}
+
+
+Definition at line 416 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_af62447cbaf8c7b06ab6fb13ca1e2f1e2}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTS\_\-SET@{UART\_\-RTS\_\-SET}}
+\index{UART\_\-RTS\_\-SET@{UART\_\-RTS\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTS, 1)}}
+\label{a00574_af62447cbaf8c7b06ab6fb13ca1e2f1e2}
+
+
+Definition at line 418 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aaa58e49f6d0e233ddfe04583fc44ef4c}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTSEN\_\-CLEAR@{UART\_\-RTSEN\_\-CLEAR}}
+\index{UART\_\-RTSEN\_\-CLEAR@{UART\_\-RTSEN\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTSEN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTSEN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTSEN, 0)}}
+\label{a00574_aaa58e49f6d0e233ddfe04583fc44ef4c}
+
+
+Definition at line 387 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ab741bf76e9275d6099bbe2029d13bee0}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTSEN\_\-GET@{UART\_\-RTSEN\_\-GET}}
+\index{UART\_\-RTSEN\_\-GET@{UART\_\-RTSEN\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTSEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTSEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTSEN)}}
+\label{a00574_ab741bf76e9275d6099bbe2029d13bee0}
+
+
+Definition at line 383 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ac1fe85f27040aa47c3bbbb93650265bb}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RTSEN\_\-SET@{UART\_\-RTSEN\_\-SET}}
+\index{UART\_\-RTSEN\_\-SET@{UART\_\-RTSEN\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RTSEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RTSEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RTSEN, 1)}}
+\label{a00574_ac1fe85f27040aa47c3bbbb93650265bb}
+
+
+Definition at line 385 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aef8801a775001a6853999fa830d6e6f2}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXDMAE\_\-CLEAR@{UART\_\-RXDMAE\_\-CLEAR}}
+\index{UART\_\-RXDMAE\_\-CLEAR@{UART\_\-RXDMAE\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXDMAE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXDMAE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXDMAE, 0)}}
+\label{a00574_aef8801a775001a6853999fa830d6e6f2}
+
+
+Definition at line 1015 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a514f406062f2d6e9418e2bcc2122db60}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXDMAE\_\-GET@{UART\_\-RXDMAE\_\-GET}}
+\index{UART\_\-RXDMAE\_\-GET@{UART\_\-RXDMAE\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXDMAE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXDMAE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXDMAE)}}
+\label{a00574_a514f406062f2d6e9418e2bcc2122db60}
+
+
+Definition at line 1011 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a092c7eaf4506648a885ce75f9df06075}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXDMAE\_\-SET@{UART\_\-RXDMAE\_\-SET}}
+\index{UART\_\-RXDMAE\_\-SET@{UART\_\-RXDMAE\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXDMAE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXDMAE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXDMAE, 1)}}
+\label{a00574_a092c7eaf4506648a885ce75f9df06075}
+
+
+Definition at line 1013 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_abf470a0e05af7aea82580fa1579fc852}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXE\_\-CLEAR@{UART\_\-RXE\_\-CLEAR}}
+\index{UART\_\-RXE\_\-CLEAR@{UART\_\-RXE\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXE, 0)}}
+\label{a00574_abf470a0e05af7aea82580fa1579fc852}
+
+
+Definition at line 442 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a6f031f0926b4032f41626cf3676cc68d}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXE\_\-GET@{UART\_\-RXE\_\-GET}}
+\index{UART\_\-RXE\_\-GET@{UART\_\-RXE\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXE)}}
+\label{a00574_a6f031f0926b4032f41626cf3676cc68d}
+
+
+Definition at line 438 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ae65679e54509853ec4db15e5817d05db}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXE\_\-SET@{UART\_\-RXE\_\-SET}}
+\index{UART\_\-RXE\_\-SET@{UART\_\-RXE\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXE, 1)}}
+\label{a00574_ae65679e54509853ec4db15e5817d05db}
+
+
+Definition at line 440 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ae4d9e87a86e2554fd3af6bf44ca67d5f}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXFE\_\-GET@{UART\_\-RXFE\_\-GET}}
+\index{UART\_\-RXFE\_\-GET@{UART\_\-RXFE\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXFE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXFE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXFE)}}
+\label{a00574_ae4d9e87a86e2554fd3af6bf44ca67d5f}
+
+
+Definition at line 188 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a16f24023aaca99afd9fae91bd2f0845c}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXFF\_\-GET@{UART\_\-RXFF\_\-GET}}
+\index{UART\_\-RXFF\_\-GET@{UART\_\-RXFF\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXFF\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXFF\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXFF)}}
+\label{a00574_a16f24023aaca99afd9fae91bd2f0845c}
+
+
+Definition at line 174 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aec21d16f4be96392cfe45938ba917945}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXIC\_\-CLEAR@{UART\_\-RXIC\_\-CLEAR}}
+\index{UART\_\-RXIC\_\-CLEAR@{UART\_\-RXIC\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIC, 0)}}
+\label{a00574_aec21d16f4be96392cfe45938ba917945}
+
+
+Definition at line 932 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8ef21c239c0d4e06fd78cd165a5cf320}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXIC\_\-SET@{UART\_\-RXIC\_\-SET}}
+\index{UART\_\-RXIC\_\-SET@{UART\_\-RXIC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIC, 1)}}
+\label{a00574_a8ef21c239c0d4e06fd78cd165a5cf320}
+
+
+Definition at line 930 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8bbb55671dd08e8fa41ad421fef06566}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXIFLSEL\_\-GET@{UART\_\-RXIFLSEL\_\-GET}}
+\index{UART\_\-RXIFLSEL\_\-GET@{UART\_\-RXIFLSEL\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXIFLSEL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXIFLSEL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIFLSEL)}}
+\label{a00574_a8bbb55671dd08e8fa41ad421fef06566}
+
+
+Definition at line 518 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a78f4b7284b1b663f5bdbaa5ee42da1f9}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXIFLSEL\_\-SET@{UART\_\-RXIFLSEL\_\-SET}}
+\index{UART\_\-RXIFLSEL\_\-SET@{UART\_\-RXIFLSEL\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXIFLSEL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXIFLSEL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIFLSEL, (value))}}
+\label{a00574_a78f4b7284b1b663f5bdbaa5ee42da1f9}
+
+
+Definition at line 520 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a5daad78a3faec5dc0b33d06bd6a27875}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXIM\_\-CLEAR@{UART\_\-RXIM\_\-CLEAR}}
+\index{UART\_\-RXIM\_\-CLEAR@{UART\_\-RXIM\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIM, 0)}}
+\label{a00574_a5daad78a3faec5dc0b33d06bd6a27875}
+
+
+Definition at line 629 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aa753d86115948fd71b875d10fa0e9567}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXIM\_\-GET@{UART\_\-RXIM\_\-GET}}
+\index{UART\_\-RXIM\_\-GET@{UART\_\-RXIM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIM)}}
+\label{a00574_aa753d86115948fd71b875d10fa0e9567}
+
+
+Definition at line 625 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8be1e38869327fe2cfbe27db7b42caad}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXIM\_\-SET@{UART\_\-RXIM\_\-SET}}
+\index{UART\_\-RXIM\_\-SET@{UART\_\-RXIM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXIM, 1)}}
+\label{a00574_a8be1e38869327fe2cfbe27db7b42caad}
+
+
+Definition at line 627 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a32be686f14f4b5ac22c1e35cb1bba5cf}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXMIS\_\-GET@{UART\_\-RXMIS\_\-GET}}
+\index{UART\_\-RXMIS\_\-GET@{UART\_\-RXMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXMIS)}}
+\label{a00574_a32be686f14f4b5ac22c1e35cb1bba5cf}
+
+
+Definition at line 824 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a59c19cf9c7ed304e67e9b10c089ea65e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-RXRIS\_\-GET@{UART\_\-RXRIS\_\-GET}}
+\index{UART\_\-RXRIS\_\-GET@{UART\_\-RXRIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-RXRIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-RXRIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-RXRIS)}}
+\label{a00574_a59c19cf9c7ed304e67e9b10c089ea65e}
+
+
+Definition at line 739 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a5128620e2afe5b1f1bb5086ffebdfb22}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-SIREN\_\-CLEAR@{UART\_\-SIREN\_\-CLEAR}}
+\index{UART\_\-SIREN\_\-CLEAR@{UART\_\-SIREN\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-SIREN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-SIREN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIREN, 0)}}
+\label{a00574_a5128620e2afe5b1f1bb5086ffebdfb22}
+
+
+Definition at line 486 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a56373d08b42de59742e2597e2ab85369}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-SIREN\_\-GET@{UART\_\-SIREN\_\-GET}}
+\index{UART\_\-SIREN\_\-GET@{UART\_\-SIREN\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-SIREN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-SIREN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIREN)}}
+\label{a00574_a56373d08b42de59742e2597e2ab85369}
+
+
+Definition at line 482 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a6f306ed90fc4daa5606446f2e689b83a}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-SIREN\_\-SET@{UART\_\-SIREN\_\-SET}}
+\index{UART\_\-SIREN\_\-SET@{UART\_\-SIREN\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-SIREN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-SIREN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIREN, 1)}}
+\label{a00574_a6f306ed90fc4daa5606446f2e689b83a}
+
+
+Definition at line 484 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_acfbaa1ceb4e148b162fc91fff3dca699}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-SIRLP\_\-CLEAR@{UART\_\-SIRLP\_\-CLEAR}}
+\index{UART\_\-SIRLP\_\-CLEAR@{UART\_\-SIRLP\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-SIRLP\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-SIRLP\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIRLP, 0)}}
+\label{a00574_acfbaa1ceb4e148b162fc91fff3dca699}
+
+
+Definition at line 475 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ace7bddf7f2d97a56e93aa3c88047d699}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-SIRLP\_\-GET@{UART\_\-SIRLP\_\-GET}}
+\index{UART\_\-SIRLP\_\-GET@{UART\_\-SIRLP\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-SIRLP\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-SIRLP\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIRLP)}}
+\label{a00574_ace7bddf7f2d97a56e93aa3c88047d699}
+
+
+Definition at line 471 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_afde966fdf51c16690eb6b97a444f885a}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-SIRLP\_\-SET@{UART\_\-SIRLP\_\-SET}}
+\index{UART\_\-SIRLP\_\-SET@{UART\_\-SIRLP\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-SIRLP\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-SIRLP\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SIRLP, 1)}}
+\label{a00574_afde966fdf51c16690eb6b97a444f885a}
+
+
+Definition at line 473 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad1ed03dfcd83b9eb152fdb526f07467e}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-SPS\_\-CLEAR@{UART\_\-SPS\_\-CLEAR}}
+\index{UART\_\-SPS\_\-CLEAR@{UART\_\-SPS\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-SPS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-SPS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SPS, 0)}}
+\label{a00574_ad1ed03dfcd83b9eb152fdb526f07467e}
+
+
+Definition at line 287 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a93be51ca6a0b6ce3670723527801c1fd}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-SPS\_\-GET@{UART\_\-SPS\_\-GET}}
+\index{UART\_\-SPS\_\-GET@{UART\_\-SPS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-SPS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-SPS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SPS)}}
+\label{a00574_a93be51ca6a0b6ce3670723527801c1fd}
+
+
+Definition at line 283 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a28b6108a1fa346fe294fd464428047df}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-SPS\_\-SET@{UART\_\-SPS\_\-SET}}
+\index{UART\_\-SPS\_\-SET@{UART\_\-SPS\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-SPS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-SPS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-SPS, 1)}}
+\label{a00574_a28b6108a1fa346fe294fd464428047df}
+
+
+Definition at line 285 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a9a1979c7d57e8800f1b4c0b36b8ed7ac}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-STP2\_\-CLEAR@{UART\_\-STP2\_\-CLEAR}}
+\index{UART\_\-STP2\_\-CLEAR@{UART\_\-STP2\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-STP2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-STP2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-STP2, 0)}}
+\label{a00574_a9a1979c7d57e8800f1b4c0b36b8ed7ac}
+
+
+Definition at line 318 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_acdc7faca57e22cc5bf2c85cb9307af01}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-STP2\_\-GET@{UART\_\-STP2\_\-GET}}
+\index{UART\_\-STP2\_\-GET@{UART\_\-STP2\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-STP2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-STP2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-STP2)}}
+\label{a00574_acdc7faca57e22cc5bf2c85cb9307af01}
+
+
+Definition at line 314 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a9505710cf5fff75d03b84463cccbc3c6}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-STP2\_\-SET@{UART\_\-STP2\_\-SET}}
+\index{UART\_\-STP2\_\-SET@{UART\_\-STP2\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-STP2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-STP2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-STP2, 1)}}
+\label{a00574_a9505710cf5fff75d03b84463cccbc3c6}
+
+
+Definition at line 316 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad50d9549842e48e955a7272022b531da}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXDMAE\_\-CLEAR@{UART\_\-TXDMAE\_\-CLEAR}}
+\index{UART\_\-TXDMAE\_\-CLEAR@{UART\_\-TXDMAE\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXDMAE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXDMAE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXDMAE, 0)}}
+\label{a00574_ad50d9549842e48e955a7272022b531da}
+
+
+Definition at line 1004 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad849b4c51f81adc8bc89b2f6afbd3fc5}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXDMAE\_\-GET@{UART\_\-TXDMAE\_\-GET}}
+\index{UART\_\-TXDMAE\_\-GET@{UART\_\-TXDMAE\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXDMAE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXDMAE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXDMAE)}}
+\label{a00574_ad849b4c51f81adc8bc89b2f6afbd3fc5}
+
+
+Definition at line 1000 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aaf51915322f8cbe480fa10387f7c1d33}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXDMAE\_\-SET@{UART\_\-TXDMAE\_\-SET}}
+\index{UART\_\-TXDMAE\_\-SET@{UART\_\-TXDMAE\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXDMAE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXDMAE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXDMAE, 1)}}
+\label{a00574_aaf51915322f8cbe480fa10387f7c1d33}
+
+
+Definition at line 1002 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a9192d2c1e600e5cb81944d4da976d4fa}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXE\_\-CLEAR@{UART\_\-TXE\_\-CLEAR}}
+\index{UART\_\-TXE\_\-CLEAR@{UART\_\-TXE\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXE, 0)}}
+\label{a00574_a9192d2c1e600e5cb81944d4da976d4fa}
+
+
+Definition at line 453 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a0aa4847b6a01148e017a4bb252927d41}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXE\_\-GET@{UART\_\-TXE\_\-GET}}
+\index{UART\_\-TXE\_\-GET@{UART\_\-TXE\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXE)}}
+\label{a00574_a0aa4847b6a01148e017a4bb252927d41}
+
+
+Definition at line 449 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8b5f06173197bb6522cc46dfaa635526}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXE\_\-SET@{UART\_\-TXE\_\-SET}}
+\index{UART\_\-TXE\_\-SET@{UART\_\-TXE\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXE, 1)}}
+\label{a00574_a8b5f06173197bb6522cc46dfaa635526}
+
+
+Definition at line 451 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad6dab2f4bd05bd28fe33932b9b325321}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXFE\_\-GET@{UART\_\-TXFE\_\-GET}}
+\index{UART\_\-TXFE\_\-GET@{UART\_\-TXFE\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXFE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXFE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXFE)}}
+\label{a00574_ad6dab2f4bd05bd28fe33932b9b325321}
+
+
+Definition at line 167 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a8527a74451b956051de082c3e34c6fad}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXFF\_\-GET@{UART\_\-TXFF\_\-GET}}
+\index{UART\_\-TXFF\_\-GET@{UART\_\-TXFF\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXFF\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXFF\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXFF)}}
+\label{a00574_a8527a74451b956051de082c3e34c6fad}
+
+
+Definition at line 181 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ae181600bb9e658cbd4e59e16a8380ece}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXIC\_\-CLEAR@{UART\_\-TXIC\_\-CLEAR}}
+\index{UART\_\-TXIC\_\-CLEAR@{UART\_\-TXIC\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIC, 0)}}
+\label{a00574_ae181600bb9e658cbd4e59e16a8380ece}
+
+
+Definition at line 923 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ae05b8b2631240bff089e9cf8b270a8a4}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXIC\_\-SET@{UART\_\-TXIC\_\-SET}}
+\index{UART\_\-TXIC\_\-SET@{UART\_\-TXIC\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIC, 1)}}
+\label{a00574_ae05b8b2631240bff089e9cf8b270a8a4}
+
+
+Definition at line 921 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ae64e7038eae2a9d5521b413a7bef6067}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXIFLSEL\_\-GET@{UART\_\-TXIFLSEL\_\-GET}}
+\index{UART\_\-TXIFLSEL\_\-GET@{UART\_\-TXIFLSEL\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXIFLSEL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXIFLSEL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIFLSEL)}}
+\label{a00574_ae64e7038eae2a9d5521b413a7bef6067}
+
+
+Definition at line 527 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a7fd002c965d993ab2d20a6458b229419}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXIFLSEL\_\-SET@{UART\_\-TXIFLSEL\_\-SET}}
+\index{UART\_\-TXIFLSEL\_\-SET@{UART\_\-TXIFLSEL\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXIFLSEL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXIFLSEL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIFLSEL, (value))}}
+\label{a00574_a7fd002c965d993ab2d20a6458b229419}
+
+
+Definition at line 529 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad5534bc5b17edf5ff3baca7cdfce7b78}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXIM\_\-CLEAR@{UART\_\-TXIM\_\-CLEAR}}
+\index{UART\_\-TXIM\_\-CLEAR@{UART\_\-TXIM\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIM, 0)}}
+\label{a00574_ad5534bc5b17edf5ff3baca7cdfce7b78}
+
+
+Definition at line 618 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_abeb9a0d139eb9fefe0b4cff9b62d7c16}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXIM\_\-GET@{UART\_\-TXIM\_\-GET}}
+\index{UART\_\-TXIM\_\-GET@{UART\_\-TXIM\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIM)}}
+\label{a00574_abeb9a0d139eb9fefe0b4cff9b62d7c16}
+
+
+Definition at line 614 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a1c948a1c01205a867db8652ecc121154}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXIM\_\-SET@{UART\_\-TXIM\_\-SET}}
+\index{UART\_\-TXIM\_\-SET@{UART\_\-TXIM\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXIM, 1)}}
+\label{a00574_a1c948a1c01205a867db8652ecc121154}
+
+
+Definition at line 616 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aa0f8a32dde91d7e07bb9433cb6805ea2}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXMIS\_\-GET@{UART\_\-TXMIS\_\-GET}}
+\index{UART\_\-TXMIS\_\-GET@{UART\_\-TXMIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXMIS)}}
+\label{a00574_aa0f8a32dde91d7e07bb9433cb6805ea2}
+
+
+Definition at line 817 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a953f50feb39157ec4fb9fadb8d2bf4f5}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-TXRIS\_\-GET@{UART\_\-TXRIS\_\-GET}}
+\index{UART\_\-TXRIS\_\-GET@{UART\_\-TXRIS\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-TXRIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-TXRIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-TXRIS)}}
+\label{a00574_a953f50feb39157ec4fb9fadb8d2bf4f5}
+
+
+Definition at line 732 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a07c838fb402471965d94eae07f2bacfa}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-UARTEN\_\-CLEAR@{UART\_\-UARTEN\_\-CLEAR}}
+\index{UART\_\-UARTEN\_\-CLEAR@{UART\_\-UARTEN\_\-CLEAR}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-UARTEN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-UARTEN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-UARTEN, 0)}}
+\label{a00574_a07c838fb402471965d94eae07f2bacfa}
+
+
+Definition at line 497 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_a9bdc141e04b9b0000d9f0b7b16fdfa96}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-UARTEN\_\-GET@{UART\_\-UARTEN\_\-GET}}
+\index{UART\_\-UARTEN\_\-GET@{UART\_\-UARTEN\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-UARTEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-UARTEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-UARTEN)}}
+\label{a00574_a9bdc141e04b9b0000d9f0b7b16fdfa96}
+
+
+Definition at line 493 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_ad28385ab9f4ae17c2b4bc088a36a89d5}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-UARTEN\_\-SET@{UART\_\-UARTEN\_\-SET}}
+\index{UART\_\-UARTEN\_\-SET@{UART\_\-UARTEN\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-UARTEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-UARTEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-UARTEN, 1)}}
+\label{a00574_ad28385ab9f4ae17c2b4bc088a36a89d5}
+
+
+Definition at line 495 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aa12d4cd328a29366016f10e5b1c10b0b}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-WLEN\_\-GET@{UART\_\-WLEN\_\-GET}}
+\index{UART\_\-WLEN\_\-GET@{UART\_\-WLEN\_\-GET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-WLEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-WLEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-WLEN)}}
+\label{a00574_aa12d4cd328a29366016f10e5b1c10b0b}
+
+
+Definition at line 294 of file gsn\_\-reg\_\-uart\_\-op.h.
+
+\hypertarget{a00574_aba35e0a8c90cc1d9af87159e574966d7}{
+\index{gsn\_\-reg\_\-uart\_\-op.h@{gsn\_\-reg\_\-uart\_\-op.h}!UART\_\-WLEN\_\-SET@{UART\_\-WLEN\_\-SET}}
+\index{UART\_\-WLEN\_\-SET@{UART\_\-WLEN\_\-SET}!gsn_reg_uart_op.h@{gsn\_\-reg\_\-uart\_\-op.h}}
+\subsubsection[{UART\_\-WLEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART\_\-WLEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, UART\_\-WLEN, (value))}}
+\label{a00574_aba35e0a8c90cc1d9af87159e574966d7}
+
+
+Definition at line 296 of file gsn\_\-reg\_\-uart\_\-op.h.
+

@@ -1,0 +1,874 @@
+\hypertarget{a00604}{
+\section{gsn\_\-wdd\_\-security.h File Reference}
+\label{a00604}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}
+}
+
+
+GSN WDD security definitions. This file contains WDD security related definitions.  
+
+
+{\ttfamily \#include $<$stddef.h$>$}\par
+Include dependency graph for gsn\_\-wdd\_\-security.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{a00850}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00851}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00295}{GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY}
+\begin{DoxyCompactList}\small\item\em WEP key structure. This structure defines the WEP key. \end{DoxyCompactList}\item 
+struct \hyperlink{a00293}{GSN\_\-WDD\_\-SEC\_\-PSK}
+\begin{DoxyCompactList}\small\item\em PSK Passphrase. This structure defines the passphrase type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00290}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME}
+\begin{DoxyCompactList}\small\item\em EAP username structure. This structure defines the EAP FAST user name type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00289}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD}
+\begin{DoxyCompactList}\small\item\em EAP password structure. This structure defines the EAP FAST password type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00294}{GSN\_\-WDD\_\-SEC\_\-PSK\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em Security PSK Configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00288}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PAC}
+\begin{DoxyCompactList}\small\item\em EAP FAST PAC structure. This structure defines the EAP FAST PAC structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00291}{GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA}
+\begin{DoxyCompactList}\small\item\em Group Key update data structure. This structure defines structure for storing information to update group key used in 2-\/way handshake. \end{DoxyCompactList}\item 
+struct \hyperlink{a00287}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em Security EAP FAST Configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00296}{GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em WPAIF WPS configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00297}{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em WLAN Security configuration. This structure defines the security configuration used by the Wireless Device Driver (WDD). \end{DoxyCompactList}\item 
+struct \hyperlink{a00298}{GSN\_\-WDD\_\-STA\_\-CONCTED\_\-INFO}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00604_ad56583332743d373461e38f481a6a417}{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-NONE}~WPA\_\-CIPHER\_\-NONE
+\begin{DoxyCompactList}\small\item\em Bitmask for supported ciphers. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_ad934eadbb32639568234455fb01545b5}{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP40}~WPA\_\-CIPHER\_\-WEP40
+\item 
+\#define \hyperlink{a00604_a75410ead00825fdb1501f9559cb0e96f}{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP104}~WPA\_\-CIPHER\_\-WEP104
+\item 
+\#define \hyperlink{a00604_a48db4b5683dca1d4d74573b6cd1a1380}{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-TKIP}~WPA\_\-CIPHER\_\-TKIP
+\item 
+\#define \hyperlink{a00604_a05b7168f2cc6e831dd8855633e4741c3}{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-CCMP}~WPA\_\-CIPHER\_\-CCMP
+\item 
+\#define \hyperlink{a00604_a1abb34c938af83c33fb62cb19d7aca8b}{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-IEEE8021X}~WPA\_\-KEY\_\-MGMT\_\-IEEE8021X
+\begin{DoxyCompactList}\small\item\em Bitmask for supported key management protocols. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_a448137180afc88b52d94479e7c40b08a}{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-PSK}~WPA\_\-KEY\_\-MGMT\_\-PSK
+\item 
+\#define \hyperlink{a00604_a0043f53b892145ca8db0bf60faa9e0a4}{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-NONE}~WPA\_\-KEY\_\-MGMT\_\-NONE
+\item 
+\#define \hyperlink{a00604_abf0fb4b161dfe7d73925179a0e056b66}{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPA}~WPA\_\-PROTO\_\-WPA
+\begin{DoxyCompactList}\small\item\em Bitmask for Supported protocols. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_a623ba5d123546d9c09c0e8297656ee6d}{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-RSN}~WPA\_\-PROTO\_\-RSN
+\item 
+\#define \hyperlink{a00604_a7b2c83606d076c8c709d84768c8dc4a9}{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPS}~WPA\_\-PROTO\_\-WPS
+\item 
+\#define \hyperlink{a00678_gabd73b0f9f75c95ccd502804aaf00897f}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PAC\_\-KEY\_\-LEN}~32
+\begin{DoxyCompactList}\small\item\em EAP FAST PAC key length. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_ad4bdfab3bec6e6e53d234319b63b904b}{GSN\_\-WDD\_\-SEC\_\-PASSPHRASE\_\-LEN}~64
+\begin{DoxyCompactList}\small\item\em WPA PSK Passphrase length. Passphrase cannot be longer than 63 chars as per standard but we define one more here for NULL char. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_a321137b997df37274a82b1bfa7f766cb}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-UNAME\_\-LEN}~32
+\begin{DoxyCompactList}\small\item\em EAP FAST User name length. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_a502f775f90fe2c3b3792bd7b203980ff}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PWD\_\-LEN}~32
+\begin{DoxyCompactList}\small\item\em EAP FAST Password length. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_a092fca8a7c994f74280b9a72d5eb45d0}{GSN\_\-WDD\_\-SEC\_\-MAX\_\-WEP\_\-KEY\_\-LEN}~GSN\_\-WDD\_\-SEC\_\-WEP104\_\-KEY\_\-LEN
+\begin{DoxyCompactList}\small\item\em Maximum WEP Key length in bytes. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_ae8c55ea06d8f6eabb46d267a1b04137c}{GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-OPEN}~BIT(0)
+\begin{DoxyCompactList}\small\item\em Bitmask for open system authentication. Needed for WPA/RSN. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_a699d18cd8487ece2da4aa073f60ab6af}{GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-SHARED}~BIT(1)
+\begin{DoxyCompactList}\small\item\em Bitmask for shared authentication. Requires WEP keys. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_aae41cfc2009ee669de847fcc20cc8a89}{GSN\_\-WDD\_\-SEC\_\-PMK\_\-LEN}~32
+\begin{DoxyCompactList}\small\item\em PSK PMK length. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_a0543ca4fa6aef9e51599f017617e33f7}{GSN\_\-WDD\_\-SEC\_\-WPS\_\-PIN\_\-LEN}~8
+\begin{DoxyCompactList}\small\item\em WPS Pin Length. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_ab538c64b36b514b7b60ca80f37a5b9f0}{GSN\_\-WDD\_\-SEC\_\-WPS\_\-KEY\_\-LEN}~192
+\begin{DoxyCompactList}\small\item\em WPS Private and Public Key Length in bytes. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00604_afe238c1f37fdcbfd10782721ac17bdfa}{GSN\_\-WDD\_\-SEC\_\-WPS\_\-UUID\_\-LEN}~16
+\begin{DoxyCompactList}\small\item\em WPS UUID Length in bytes. \end{DoxyCompactList}\item 
+enum \hyperlink{a00604_a1bc8fa529d709c2a8a87aee6038fb7ec}{GSN\_\-WDD\_\-SEC\_\-MODE} \{ \par
+\hyperlink{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca249e6dd79026205da4f5c39c3ada48a1}{GSN\_\-WDD\_\-SEC\_\-MODE\_\-DISABLE} =  BIT(0), 
+\par
+\hyperlink{a00604_a1bc8fa529d709c2a8a87aee6038fb7ecabc23a52453e87dd40ebccfaa8a3262b5}{GSN\_\-WDD\_\-SEC\_\-MODE\_\-ANY} =  BIT(1), 
+\par
+\hyperlink{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca43baa8602e403e63e4b59d3dd5d43021}{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WEP} =  BIT(2), 
+\par
+\hyperlink{a00604_a1bc8fa529d709c2a8a87aee6038fb7ecae09bcc425e00171bcca5694b587c50d9}{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-PERSONAL} =  BIT(3), 
+\par
+\hyperlink{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca544dbf7fe51f4eb4c3310ad9b63185ee}{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-ENTERPRISE} =  BIT(4), 
+\par
+\hyperlink{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca4bd0ebdd88069db215dff62e5c34f60c}{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-PERSONAL} =  BIT(5), 
+\par
+\hyperlink{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca5724b55751f957d7794f8e075efd4fef}{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-ENTERPRISE} =  BIT(6)
+ \}
+\begin{DoxyCompactList}\small\item\em Security mode. This enum defines the security mode to be used. \end{DoxyCompactList}\item 
+enum \hyperlink{a00604_a2f5e27be6ba83f628dd6ee8f2becf7ba}{GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN} \{ \par
+\hyperlink{a00604_a2f5e27be6ba83f628dd6ee8f2becf7baa17b74eb88779b1c1830b4aa2a68f55f8}{GSN\_\-WDD\_\-SEC\_\-WEP40\_\-KEY\_\-LEN} =  5, 
+\par
+\hyperlink{a00604_a2f5e27be6ba83f628dd6ee8f2becf7baa5f85d918ca6a35cf52f0776ebb929e71}{GSN\_\-WDD\_\-SEC\_\-WEP104\_\-KEY\_\-LEN} =  13
+ \}
+\begin{DoxyCompactList}\small\item\em WEP key length. This enum defines the WEP key length to be used. \end{DoxyCompactList}\item 
+enum \hyperlink{a00604_a4e509d9d0746f0bdbd70053f516ce369}{GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE} \{ \par
+\hyperlink{a00604_a4e509d9d0746f0bdbd70053f516ce369a05e7c4c5f53b8618867d07a7931292c0}{GSN\_\-WDD\_\-SEC\_\-WEP\_\-OPEN}, 
+\par
+\hyperlink{a00604_a4e509d9d0746f0bdbd70053f516ce369a393e4efd39580b13e3bbbc4cc94ca131}{GSN\_\-WDD\_\-SEC\_\-WEP\_\-SHARED}
+ \}
+\begin{DoxyCompactList}\small\item\em WEP authentication mode. This enum defines the authentication mode to be used. \end{DoxyCompactList}\item 
+enum \hyperlink{a00604_aecc980a483691db1cb8b70fed3fdb438}{GSN\_\-WDD\_\-WPA\_\-ALGO} \{ \par
+\hyperlink{a00604_aecc980a483691db1cb8b70fed3fdb438a0be5e8a9efe38814726fb10810bdf1b9}{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-AES}, 
+\par
+\hyperlink{a00604_aecc980a483691db1cb8b70fed3fdb438a542301d6dc2756a85f5e7c0e3a15275a}{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-TKIP}, 
+\par
+\hyperlink{a00604_aecc980a483691db1cb8b70fed3fdb438ab9cb0f7e5557d31af8e2ea242bff74d6}{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-MIXED}
+ \}
+\begin{DoxyCompactList}\small\item\em Encryption Algorith. This enum defines the Encryption algorithm. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga95dd88b436cd52a999dda3865de87fe3}{GSN\_\-EAP\_\-TYPE} \{ \par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3abe0aad22dfe29df06d642a306ebea61f}{GSN\_\-EAP\_\-TYPE\_\-NONE} =  0, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a116e2184b38ca7e0eb952b9be5b975ef}{GSN\_\-EAP\_\-TYPE\_\-IDENTITY} =  1, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a1c5e86e2dd8dc6a75aa824180eb6d81a}{GSN\_\-EAP\_\-TYPE\_\-NOTIFICATION} =  2, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3aa0773e1531c4773594843e21419f2449}{GSN\_\-EAP\_\-TYPE\_\-NAK} =  3, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a6d97051449aa52519e58503a62a14f81}{GSN\_\-EAP\_\-TYPE\_\-MD5} =  4, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a89d3a5b0415ab9ee2e618e8b460f0a77}{GSN\_\-EAP\_\-TYPE\_\-OTP} =  5, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3aac896151ff0f797a5945568067ccc447}{GSN\_\-EAP\_\-TYPE\_\-GTC} =  6, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a98d9efa2ad5fc25861e94d798f8d0c6d}{GSN\_\-EAP\_\-TYPE\_\-TLS} =  13, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a200b79ff7784577162769d8220d3e8dc}{GSN\_\-EAP\_\-TYPE\_\-LEAP} =  17, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a8e248c53ed18eda883ff8c941f965dff}{GSN\_\-EAP\_\-TYPE\_\-SIM} =  18, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3ace25bc6165848efaf175e46bc1726545}{GSN\_\-EAP\_\-TYPE\_\-TTLS} =  21, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a45c1efd67509ef6d8336fe27ac7edad3}{GSN\_\-EAP\_\-TYPE\_\-AKA} =  23, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a1db5c2e5d5e25299136905db4b3d8d50}{GSN\_\-EAP\_\-TYPE\_\-PEAP} =  25, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3af1cfe046287df0339dfb800b7013f206}{GSN\_\-EAP\_\-TYPE\_\-MSCHAPV2} =  26, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a391fcb8cd2a4e6472d2de2d093000f0f}{GSN\_\-EAP\_\-TYPE\_\-TLV} =  33, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a85869e32e8a1a16c23d3618b3ed8e225}{GSN\_\-EAP\_\-TYPE\_\-FAST} =  43, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a18705e60681f53a9f9550f584565e1c1}{GSN\_\-EAP\_\-TYPE\_\-PAX} =  46, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3af59bb05974539c2b256d125605d7ff05}{GSN\_\-EAP\_\-TYPE\_\-PSK} =  47, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a19b63475d3d86f29ca46bddd9d67560f}{GSN\_\-EAP\_\-TYPE\_\-SAKE} =  48, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3a16b771a66d69fdda57d88bb29de8e0fc}{GSN\_\-EAP\_\-TYPE\_\-EXPANDED} =  254, 
+\par
+\hyperlink{a00677_gga95dd88b436cd52a999dda3865de87fe3acc47d3f1a6153d01478076025df045f9}{GSN\_\-EAP\_\-TYPE\_\-GPSK} =  255
+ \}
+\begin{DoxyCompactList}\small\item\em Security EAP Types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00604_ab0a95842655918bdbd767751d8abb95d}{GSN\_\-WDD\_\-WPS\_\-RF} \{ \par
+\hyperlink{a00604_ab0a95842655918bdbd767751d8abb95da7b068fc232863052eff874c02e216092}{GSN\_\-WDD\_\-WPS\_\-RF\_\-24GHZ}, 
+\par
+\hyperlink{a00604_ab0a95842655918bdbd767751d8abb95da90aaaeefa5d06360615d9a976afcb9ac}{GSN\_\-WDD\_\-WPS\_\-RF\_\-50GHZ}
+ \}
+\begin{DoxyCompactList}\small\item\em RF Bands used in WPS. This enum defines the RF band used. \end{DoxyCompactList}\item 
+enum \hyperlink{a00604_aaf56a679ef5989460c2d2bad97d4c353}{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD} \{ \par
+\hyperlink{a00604_aaf56a679ef5989460c2d2bad97d4c353aa84f0cd36d3a83757189450bbbf7d26d}{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-LABEL} =  0x0004, 
+\par
+\hyperlink{a00604_aaf56a679ef5989460c2d2bad97d4c353aab1edda457f858557986fa954172ead6}{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-DISPLAY} =  0x0008, 
+\par
+\hyperlink{a00604_aaf56a679ef5989460c2d2bad97d4c353ada7a318dba43d889333f8677743b2c6b}{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-PUSHBUTTON} =  0x0080, 
+\par
+\hyperlink{a00604_aaf56a679ef5989460c2d2bad97d4c353a01795f1b0ebe3c7bbc2b79b378432472}{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-KEYPAD} =  0x0100, 
+\par
+\hyperlink{a00604_aaf56a679ef5989460c2d2bad97d4c353a820ca1ca950bddb2407e6fcde41fc5b0}{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-VIRT\_\-PUSHBUTTON} =  0x0280
+ \}
+\begin{DoxyCompactList}\small\item\em Config Methods used in WPS. This enum defines the config Methods used in WPS. \end{DoxyCompactList}\item 
+typedef void $\ast$ \hyperlink{a00604_abe0c512b373bf02e6fb6185079cb6f0c}{GSN\_\-WDD\_\-WPAIF\_\-HANDLE\_\-T}
+\item 
+typedef enum \hyperlink{a00604_a1bc8fa529d709c2a8a87aee6038fb7ec}{GSN\_\-WDD\_\-SEC\_\-MODE} \hyperlink{a00604_a99d01b68f744000378664161f66e73c9}{GSN\_\-WDD\_\-SEC\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Security mode. This enum defines the security mode to be used. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00604_a2f5e27be6ba83f628dd6ee8f2becf7ba}{GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN} \hyperlink{a00604_a8c3a847d44b6c5df18ed812cf0efca62}{GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN\_\-T}
+\begin{DoxyCompactList}\small\item\em WEP key length. This enum defines the WEP key length to be used. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00604_a4e509d9d0746f0bdbd70053f516ce369}{GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE} \hyperlink{a00604_a6ac85e9527841d5a5c60fcd76a0c5100}{GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em WEP authentication mode. This enum defines the authentication mode to be used. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00295}{GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY} \hyperlink{a00604_ad403eea763b418200b48fca5debb58bd}{GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY\_\-T}
+\begin{DoxyCompactList}\small\item\em WEP key structure. This structure defines the WEP key. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00293}{GSN\_\-WDD\_\-SEC\_\-PSK} \hyperlink{a00604_aa76fb465fe2fea1c3dbb630fefe969b8}{GSN\_\-WDD\_\-SEC\_\-PSK\_\-T}
+\begin{DoxyCompactList}\small\item\em PSK Passphrase. This structure defines the passphrase type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00290}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME} \hyperlink{a00604_ae39e817c2244f895c6f66f5154508933}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME\_\-T}
+\begin{DoxyCompactList}\small\item\em EAP username structure. This structure defines the EAP FAST user name type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00289}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD} \hyperlink{a00604_a24b6b0a6365311f34b8e8af6acf64711}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD\_\-T}
+\begin{DoxyCompactList}\small\item\em EAP password structure. This structure defines the EAP FAST password type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00604_aecc980a483691db1cb8b70fed3fdb438}{GSN\_\-WDD\_\-WPA\_\-ALGO} \hyperlink{a00604_ae6d4a101986255ba5cb98e42ff3fb2ef}{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-T}
+\begin{DoxyCompactList}\small\item\em Encryption Algorith. This enum defines the Encryption algorithm. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00294}{GSN\_\-WDD\_\-SEC\_\-PSK\_\-CONFIG} \hyperlink{a00677_ga08bfb38518da7f8041c06cb1a661f471}{GSN\_\-WDD\_\-SEC\_\-PSK\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em Security PSK Configuration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga95dd88b436cd52a999dda3865de87fe3}{GSN\_\-EAP\_\-TYPE} \hyperlink{a00677_ga89d1dbb13f1366a19aef9782b2190e36}{GSN\_\-EAP\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Security EAP Types. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00288}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PAC} \hyperlink{a00604_a7ad60b3114dc38d0bf169e200f3c81df}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PAC\_\-T}
+\begin{DoxyCompactList}\small\item\em EAP FAST PAC structure. This structure defines the EAP FAST PAC structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00291}{GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA} \hyperlink{a00604_af4786e836347b389816820cfbc8dc2a3}{GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA\_\-T}
+\begin{DoxyCompactList}\small\item\em Group Key update data structure. This structure defines structure for storing information to update group key used in 2-\/way handshake. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00287}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG} \hyperlink{a00604_ae505f6660ee9d5572054b161a620bc52}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em Security EAP FAST Configuration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00604_ab0a95842655918bdbd767751d8abb95d}{GSN\_\-WDD\_\-WPS\_\-RF} \hyperlink{a00604_a68fdeea2986eb4735ca5fcd6f45d3d1c}{GSN\_\-WDD\_\-WPS\_\-RF\_\-T}
+\begin{DoxyCompactList}\small\item\em RF Bands used in WPS. This enum defines the RF band used. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00604_aaf56a679ef5989460c2d2bad97d4c353}{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD} \hyperlink{a00604_af1a232708dd0046ccf280fe0ce117171}{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD\_\-T}
+\begin{DoxyCompactList}\small\item\em Config Methods used in WPS. This enum defines the config Methods used in WPS. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00296}{GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG} \hyperlink{a00604_a3186abec212969b8d5fd2f8c920bdc70}{GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF WPS configuration. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00297}{GSN\_\-WDD\_\-SECURITY\_\-CONFIG} \hyperlink{a00604_ab50f348fec494c964d4301472eee16de}{GSN\_\-WDD\_\-SECURITY\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em WLAN Security configuration. This structure defines the security configuration used by the Wireless Device Driver (WDD). \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00298}{GSN\_\-WDD\_\-STA\_\-CONCTED\_\-INFO} \hyperlink{a00604_a59d65918cc1820c2c0edfb9df7202cfa}{GSN\_\-WDD\_\-STA\_\-CONCTED\_\-INFO\_\-T}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN WDD security definitions. This file contains WDD security related definitions. 
+
+Definition in file \hyperlink{a00604_source}{gsn\_\-wdd\_\-security.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00604_a05b7168f2cc6e831dd8855633e4741c3}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-CCMP@{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-CCMP}}
+\index{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-CCMP@{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-CCMP}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-CCMP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-CCMP~WPA\_\-CIPHER\_\-CCMP}}
+\label{a00604_a05b7168f2cc6e831dd8855633e4741c3}
+
+
+Definition at line 78 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_ad56583332743d373461e38f481a6a417}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-NONE@{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-NONE}}
+\index{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-NONE@{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-NONE}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-NONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-NONE~WPA\_\-CIPHER\_\-NONE}}
+\label{a00604_ad56583332743d373461e38f481a6a417}
+
+
+Bitmask for supported ciphers. 
+
+
+
+Definition at line 74 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a48db4b5683dca1d4d74573b6cd1a1380}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-TKIP@{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-TKIP}}
+\index{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-TKIP@{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-TKIP}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-TKIP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-TKIP~WPA\_\-CIPHER\_\-TKIP}}
+\label{a00604_a48db4b5683dca1d4d74573b6cd1a1380}
+
+
+Definition at line 77 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a75410ead00825fdb1501f9559cb0e96f}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP104@{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP104}}
+\index{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP104@{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP104}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP104}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP104~WPA\_\-CIPHER\_\-WEP104}}
+\label{a00604_a75410ead00825fdb1501f9559cb0e96f}
+
+
+Definition at line 76 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_ad934eadbb32639568234455fb01545b5}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP40@{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP40}}
+\index{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP40@{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP40}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP40}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-CIPHER\_\-WEP40~WPA\_\-CIPHER\_\-WEP40}}
+\label{a00604_ad934eadbb32639568234455fb01545b5}
+
+
+Definition at line 75 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a502f775f90fe2c3b3792bd7b203980ff}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PWD\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PWD\_\-LEN}}
+\index{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PWD\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PWD\_\-LEN}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PWD\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PWD\_\-LEN~32}}
+\label{a00604_a502f775f90fe2c3b3792bd7b203980ff}
+
+
+EAP FAST Password length. 
+
+
+
+Definition at line 127 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a321137b997df37274a82b1bfa7f766cb}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-UNAME\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-UNAME\_\-LEN}}
+\index{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-UNAME\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-UNAME\_\-LEN}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-UNAME\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-UNAME\_\-LEN~32}}
+\label{a00604_a321137b997df37274a82b1bfa7f766cb}
+
+
+EAP FAST User name length. 
+
+
+
+Definition at line 120 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a1abb34c938af83c33fb62cb19d7aca8b}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-IEEE8021X@{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-IEEE8021X}}
+\index{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-IEEE8021X@{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-IEEE8021X}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-IEEE8021X}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-IEEE8021X~WPA\_\-KEY\_\-MGMT\_\-IEEE8021X}}
+\label{a00604_a1abb34c938af83c33fb62cb19d7aca8b}
+
+
+Bitmask for supported key management protocols. 
+
+
+
+Definition at line 86 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a0043f53b892145ca8db0bf60faa9e0a4}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-NONE@{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-NONE}}
+\index{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-NONE@{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-NONE}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-NONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-NONE~WPA\_\-KEY\_\-MGMT\_\-NONE}}
+\label{a00604_a0043f53b892145ca8db0bf60faa9e0a4}
+
+
+Definition at line 88 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a448137180afc88b52d94479e7c40b08a}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-PSK@{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-PSK}}
+\index{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-PSK@{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-PSK}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-PSK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-KEY\_\-MGMT\_\-PSK~WPA\_\-KEY\_\-MGMT\_\-PSK}}
+\label{a00604_a448137180afc88b52d94479e7c40b08a}
+
+
+Definition at line 87 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a092fca8a7c994f74280b9a72d5eb45d0}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-MAX\_\-WEP\_\-KEY\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-MAX\_\-WEP\_\-KEY\_\-LEN}}
+\index{GSN\_\-WDD\_\-SEC\_\-MAX\_\-WEP\_\-KEY\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-MAX\_\-WEP\_\-KEY\_\-LEN}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-MAX\_\-WEP\_\-KEY\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-MAX\_\-WEP\_\-KEY\_\-LEN~GSN\_\-WDD\_\-SEC\_\-WEP104\_\-KEY\_\-LEN}}
+\label{a00604_a092fca8a7c994f74280b9a72d5eb45d0}
+
+
+Maximum WEP Key length in bytes. 
+
+
+
+Definition at line 134 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_ad4bdfab3bec6e6e53d234319b63b904b}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-PASSPHRASE\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-PASSPHRASE\_\-LEN}}
+\index{GSN\_\-WDD\_\-SEC\_\-PASSPHRASE\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-PASSPHRASE\_\-LEN}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-PASSPHRASE\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-PASSPHRASE\_\-LEN~64}}
+\label{a00604_ad4bdfab3bec6e6e53d234319b63b904b}
+
+
+WPA PSK Passphrase length. Passphrase cannot be longer than 63 chars as per standard but we define one more here for NULL char. 
+
+
+
+Definition at line 113 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_aae41cfc2009ee669de847fcc20cc8a89}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-PMK\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-PMK\_\-LEN}}
+\index{GSN\_\-WDD\_\-SEC\_\-PMK\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-PMK\_\-LEN}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-PMK\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-PMK\_\-LEN~32}}
+\label{a00604_aae41cfc2009ee669de847fcc20cc8a89}
+
+
+PSK PMK length. 
+
+
+
+Definition at line 155 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a623ba5d123546d9c09c0e8297656ee6d}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-PROTO\_\-RSN@{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-RSN}}
+\index{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-RSN@{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-RSN}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-RSN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-PROTO\_\-RSN~WPA\_\-PROTO\_\-RSN}}
+\label{a00604_a623ba5d123546d9c09c0e8297656ee6d}
+
+
+Definition at line 97 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_abf0fb4b161dfe7d73925179a0e056b66}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPA@{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPA}}
+\index{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPA@{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPA}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPA~WPA\_\-PROTO\_\-WPA}}
+\label{a00604_abf0fb4b161dfe7d73925179a0e056b66}
+
+
+Bitmask for Supported protocols. 
+
+
+
+Definition at line 96 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a7b2c83606d076c8c709d84768c8dc4a9}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPS@{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPS}}
+\index{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPS@{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPS}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-PROTO\_\-WPS~WPA\_\-PROTO\_\-WPS}}
+\label{a00604_a7b2c83606d076c8c709d84768c8dc4a9}
+
+
+Definition at line 98 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_ae8c55ea06d8f6eabb46d267a1b04137c}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-OPEN@{GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-OPEN}}
+\index{GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-OPEN@{GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-OPEN}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-OPEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-OPEN~BIT(0)}}
+\label{a00604_ae8c55ea06d8f6eabb46d267a1b04137c}
+
+
+Bitmask for open system authentication. Needed for WPA/RSN. 
+
+
+
+Definition at line 141 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a699d18cd8487ece2da4aa073f60ab6af}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-SHARED@{GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-SHARED}}
+\index{GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-SHARED@{GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-SHARED}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-SHARED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-WPA\_\-AUTH\_\-ALG\_\-SHARED~BIT(1)}}
+\label{a00604_a699d18cd8487ece2da4aa073f60ab6af}
+
+
+Bitmask for shared authentication. Requires WEP keys. 
+
+
+
+Definition at line 148 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_ab538c64b36b514b7b60ca80f37a5b9f0}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-WPS\_\-KEY\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-WPS\_\-KEY\_\-LEN}}
+\index{GSN\_\-WDD\_\-SEC\_\-WPS\_\-KEY\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-WPS\_\-KEY\_\-LEN}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-WPS\_\-KEY\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-WPS\_\-KEY\_\-LEN~192}}
+\label{a00604_ab538c64b36b514b7b60ca80f37a5b9f0}
+
+
+WPS Private and Public Key Length in bytes. 
+
+
+
+Definition at line 169 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a0543ca4fa6aef9e51599f017617e33f7}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-WPS\_\-PIN\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-WPS\_\-PIN\_\-LEN}}
+\index{GSN\_\-WDD\_\-SEC\_\-WPS\_\-PIN\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-WPS\_\-PIN\_\-LEN}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-WPS\_\-PIN\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-WPS\_\-PIN\_\-LEN~8}}
+\label{a00604_a0543ca4fa6aef9e51599f017617e33f7}
+
+
+WPS Pin Length. 
+
+
+
+Definition at line 162 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_afe238c1f37fdcbfd10782721ac17bdfa}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-WPS\_\-UUID\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-WPS\_\-UUID\_\-LEN}}
+\index{GSN\_\-WDD\_\-SEC\_\-WPS\_\-UUID\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-WPS\_\-UUID\_\-LEN}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-WPS\_\-UUID\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-SEC\_\-WPS\_\-UUID\_\-LEN~16}}
+\label{a00604_afe238c1f37fdcbfd10782721ac17bdfa}
+
+
+WPS UUID Length in bytes. 
+
+
+
+Definition at line 177 of file gsn\_\-wdd\_\-security.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00604_ae505f6660ee9d5572054b161a620bc52}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG\_\-T@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG\_\-T}}
+\index{GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG\_\-T@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG}  {\bf GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG\_\-T}}}
+\label{a00604_ae505f6660ee9d5572054b161a620bc52}
+
+
+Security EAP FAST Configuration. 
+
+This structure defines the EAP-\/FAST configuration used for configuring the WDD for connecting to a WLAN with EAP-\/FAST key mgmt. \begin{DoxySeeAlso}{See also}
+\hyperlink{a00604_ab50f348fec494c964d4301472eee16de}{GSN\_\-WDD\_\-SECURITY\_\-CONFIG\_\-T} and GSN\_\-WDD\_\-WLAN\_\-CONFIG\_\-T. 
+\end{DoxySeeAlso}
+\hypertarget{a00604_a7ad60b3114dc38d0bf169e200f3c81df}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PAC\_\-T@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PAC\_\-T}}
+\index{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PAC\_\-T@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PAC\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PAC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PAC}  {\bf GSN\_\-WDD\_\-SEC\_\-EAP\_\-FAST\_\-PAC\_\-T}}}
+\label{a00604_a7ad60b3114dc38d0bf169e200f3c81df}
+
+
+EAP FAST PAC structure. This structure defines the EAP FAST PAC structure. 
+
+\hypertarget{a00604_a24b6b0a6365311f34b8e8af6acf64711}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD\_\-T@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD\_\-T}}
+\index{GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD\_\-T@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD}  {\bf GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD\_\-T}}}
+\label{a00604_a24b6b0a6365311f34b8e8af6acf64711}
+
+
+EAP password structure. This structure defines the EAP FAST password type. 
+
+\hypertarget{a00604_ae39e817c2244f895c6f66f5154508933}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME\_\-T@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME\_\-T}}
+\index{GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME\_\-T@{GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME}  {\bf GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME\_\-T}}}
+\label{a00604_ae39e817c2244f895c6f66f5154508933}
+
+
+EAP username structure. This structure defines the EAP FAST user name type. 
+
+\hypertarget{a00604_af4786e836347b389816820cfbc8dc2a3}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA\_\-T@{GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA\_\-T}}
+\index{GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA\_\-T@{GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA} {\bf GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA\_\-T}}}
+\label{a00604_af4786e836347b389816820cfbc8dc2a3}
+
+
+Group Key update data structure. This structure defines structure for storing information to update group key used in 2-\/way handshake. 
+
+\hypertarget{a00604_a99d01b68f744000378664161f66e73c9}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-MODE\_\-T@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-T}}
+\index{GSN\_\-WDD\_\-SEC\_\-MODE\_\-T@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-MODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-SEC\_\-MODE} {\bf GSN\_\-WDD\_\-SEC\_\-MODE\_\-T}}}
+\label{a00604_a99d01b68f744000378664161f66e73c9}
+
+
+Security mode. This enum defines the security mode to be used. 
+
+\hypertarget{a00604_aa76fb465fe2fea1c3dbb630fefe969b8}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-PSK\_\-T@{GSN\_\-WDD\_\-SEC\_\-PSK\_\-T}}
+\index{GSN\_\-WDD\_\-SEC\_\-PSK\_\-T@{GSN\_\-WDD\_\-SEC\_\-PSK\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-PSK\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-SEC\_\-PSK}  {\bf GSN\_\-WDD\_\-SEC\_\-PSK\_\-T}}}
+\label{a00604_aa76fb465fe2fea1c3dbb630fefe969b8}
+
+
+PSK Passphrase. This structure defines the passphrase type. 
+
+\hypertarget{a00604_ad403eea763b418200b48fca5debb58bd}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY\_\-T@{GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY\_\-T}}
+\index{GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY\_\-T@{GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY}  {\bf GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY\_\-T}}}
+\label{a00604_ad403eea763b418200b48fca5debb58bd}
+
+
+WEP key structure. This structure defines the WEP key. 
+
+\hypertarget{a00604_a3186abec212969b8d5fd2f8c920bdc70}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG\_\-T@{GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG\_\-T}}
+\index{GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG\_\-T@{GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG} {\bf GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG\_\-T}}}
+\label{a00604_a3186abec212969b8d5fd2f8c920bdc70}
+
+
+WPAIF WPS configuration. 
+
+This structure defines the WPS configuration. All the pointers should be NULL terminated. \hypertarget{a00604_ab50f348fec494c964d4301472eee16de}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SECURITY\_\-CONFIG\_\-T@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG\_\-T}}
+\index{GSN\_\-WDD\_\-SECURITY\_\-CONFIG\_\-T@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SECURITY\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-SECURITY\_\-CONFIG}  {\bf GSN\_\-WDD\_\-SECURITY\_\-CONFIG\_\-T}}}
+\label{a00604_ab50f348fec494c964d4301472eee16de}
+
+
+WLAN Security configuration. This structure defines the security configuration used by the Wireless Device Driver (WDD). 
+
+\begin{DoxyVerb}
+ *
+ * User can select one of the secutiy mode it wants to operate:
+ *
+ *  These values have the following significance:
+ *
+ *  GSN_WDD_SEC_MODE_DISABLE - Connects/Forms Network with open security.In
+ *  this case user need not provide any of the other information in this
+ *  structure.
+ *
+ *  GSN_WDD_SEC_MODE_ANY - Connects to any network security with the specified
+ *  SSID and channel. For this user has to give all the information in this
+ *  structure. Based on the security mode of the network, WDD will select
+ *  appropriate configuration.
+ *
+ *  GSN_WDD_SEC_MODE_WEP - Connects/Forms Network with WEP security.In
+ *  this case user need to provide WEP field information in this
+ *  structure.
+ *
+ *  GSN_WDD_SEC_MODE_WPA_PERSONAL or GSN_WDD_SEC_MODE_WPA2_PERSONAL -
+ *  Connects/Forms Network with WPS PSK security. In this case user need to
+ *  provide PSK field information in this structure.
+ *
+ *  GSN_WDD_SEC_MODE_WPA_ENTERPRISE or GSN_WDD_SEC_MODE_WPA2_ENTERPRISE -
+ *  Connects Network with WPS Enterprise security. In this case user need to
+ *  provide EAP field information in this structure.
+ *
+ *
+ * \end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+GSN\_\-WDD\_\-WLAN\_\-CONFIG\_\-T. 
+\end{DoxySeeAlso}
+\hypertarget{a00604_a59d65918cc1820c2c0edfb9df7202cfa}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-STA\_\-CONCTED\_\-INFO\_\-T@{GSN\_\-WDD\_\-STA\_\-CONCTED\_\-INFO\_\-T}}
+\index{GSN\_\-WDD\_\-STA\_\-CONCTED\_\-INFO\_\-T@{GSN\_\-WDD\_\-STA\_\-CONCTED\_\-INFO\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-STA\_\-CONCTED\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-STA\_\-CONCTED\_\-INFO} {\bf GSN\_\-WDD\_\-STA\_\-CONCTED\_\-INFO\_\-T}}}
+\label{a00604_a59d65918cc1820c2c0edfb9df7202cfa}
+\hypertarget{a00604_a6ac85e9527841d5a5c60fcd76a0c5100}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE\_\-T@{GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE\_\-T}}
+\index{GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE\_\-T@{GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE} {\bf GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE\_\-T}}}
+\label{a00604_a6ac85e9527841d5a5c60fcd76a0c5100}
+
+
+WEP authentication mode. This enum defines the authentication mode to be used. 
+
+\hypertarget{a00604_a8c3a847d44b6c5df18ed812cf0efca62}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN\_\-T@{GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN\_\-T}}
+\index{GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN\_\-T@{GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN} {\bf GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN\_\-T}}}
+\label{a00604_a8c3a847d44b6c5df18ed812cf0efca62}
+
+
+WEP key length. This enum defines the WEP key length to be used. 
+
+\hypertarget{a00604_ae6d4a101986255ba5cb98e42ff3fb2ef}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPA\_\-ALGO\_\-T@{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-T}}
+\index{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-T@{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-WPA\_\-ALGO} {\bf GSN\_\-WDD\_\-WPA\_\-ALGO\_\-T}}}
+\label{a00604_ae6d4a101986255ba5cb98e42ff3fb2ef}
+
+
+Encryption Algorith. This enum defines the Encryption algorithm. 
+
+\hypertarget{a00604_abe0c512b373bf02e6fb6185079cb6f0c}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPAIF\_\-HANDLE\_\-T@{GSN\_\-WDD\_\-WPAIF\_\-HANDLE\_\-T}}
+\index{GSN\_\-WDD\_\-WPAIF\_\-HANDLE\_\-T@{GSN\_\-WDD\_\-WPAIF\_\-HANDLE\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-WPAIF\_\-HANDLE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf GSN\_\-WDD\_\-WPAIF\_\-HANDLE\_\-T}}}
+\label{a00604_abe0c512b373bf02e6fb6185079cb6f0c}
+
+
+Definition at line 66 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_af1a232708dd0046ccf280fe0ce117171}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD\_\-T@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD\_\-T}}
+\index{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD\_\-T@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD} {\bf GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD\_\-T}}}
+\label{a00604_af1a232708dd0046ccf280fe0ce117171}
+
+
+Config Methods used in WPS. This enum defines the config Methods used in WPS. 
+
+\hypertarget{a00604_a68fdeea2986eb4735ca5fcd6f45d3d1c}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPS\_\-RF\_\-T@{GSN\_\-WDD\_\-WPS\_\-RF\_\-T}}
+\index{GSN\_\-WDD\_\-WPS\_\-RF\_\-T@{GSN\_\-WDD\_\-WPS\_\-RF\_\-T}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-WPS\_\-RF\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-WPS\_\-RF} {\bf GSN\_\-WDD\_\-WPS\_\-RF\_\-T}}}
+\label{a00604_a68fdeea2986eb4735ca5fcd6f45d3d1c}
+
+
+RF Bands used in WPS. This enum defines the RF band used. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00604_a1bc8fa529d709c2a8a87aee6038fb7ec}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-MODE@{GSN\_\-WDD\_\-SEC\_\-MODE}}
+\index{GSN\_\-WDD\_\-SEC\_\-MODE@{GSN\_\-WDD\_\-SEC\_\-MODE}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-SEC\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-SEC\_\-MODE}}}
+\label{a00604_a1bc8fa529d709c2a8a87aee6038fb7ec}
+
+
+Security mode. This enum defines the security mode to be used. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-SEC\_\-MODE\_\-DISABLE@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-DISABLE}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-MODE\_\-DISABLE@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-DISABLE}}\item[{\em 
+\hypertarget{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca249e6dd79026205da4f5c39c3ada48a1}{
+GSN\_\-WDD\_\-SEC\_\-MODE\_\-DISABLE}
+\label{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca249e6dd79026205da4f5c39c3ada48a1}
+}]\index{GSN\_\-WDD\_\-SEC\_\-MODE\_\-ANY@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-ANY}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-MODE\_\-ANY@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-ANY}}\item[{\em 
+\hypertarget{a00604_a1bc8fa529d709c2a8a87aee6038fb7ecabc23a52453e87dd40ebccfaa8a3262b5}{
+GSN\_\-WDD\_\-SEC\_\-MODE\_\-ANY}
+\label{a00604_a1bc8fa529d709c2a8a87aee6038fb7ecabc23a52453e87dd40ebccfaa8a3262b5}
+}]\index{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WEP@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WEP}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-MODE\_\-WEP@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WEP}}\item[{\em 
+\hypertarget{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca43baa8602e403e63e4b59d3dd5d43021}{
+GSN\_\-WDD\_\-SEC\_\-MODE\_\-WEP}
+\label{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca43baa8602e403e63e4b59d3dd5d43021}
+}]\index{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-PERSONAL@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-PERSONAL}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-PERSONAL@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-PERSONAL}}\item[{\em 
+\hypertarget{a00604_a1bc8fa529d709c2a8a87aee6038fb7ecae09bcc425e00171bcca5694b587c50d9}{
+GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-PERSONAL}
+\label{a00604_a1bc8fa529d709c2a8a87aee6038fb7ecae09bcc425e00171bcca5694b587c50d9}
+}]\index{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-ENTERPRISE@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-ENTERPRISE}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-ENTERPRISE@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-ENTERPRISE}}\item[{\em 
+\hypertarget{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca544dbf7fe51f4eb4c3310ad9b63185ee}{
+GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA\_\-ENTERPRISE}
+\label{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca544dbf7fe51f4eb4c3310ad9b63185ee}
+}]\index{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-PERSONAL@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-PERSONAL}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-PERSONAL@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-PERSONAL}}\item[{\em 
+\hypertarget{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca4bd0ebdd88069db215dff62e5c34f60c}{
+GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-PERSONAL}
+\label{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca4bd0ebdd88069db215dff62e5c34f60c}
+}]\index{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-ENTERPRISE@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-ENTERPRISE}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-ENTERPRISE@{GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-ENTERPRISE}}\item[{\em 
+\hypertarget{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca5724b55751f957d7794f8e075efd4fef}{
+GSN\_\-WDD\_\-SEC\_\-MODE\_\-WPA2\_\-ENTERPRISE}
+\label{a00604_a1bc8fa529d709c2a8a87aee6038fb7eca5724b55751f957d7794f8e075efd4fef}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 191 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a4e509d9d0746f0bdbd70053f516ce369}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE@{GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE}}
+\index{GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE@{GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-WEP\_\-AUTH\_\-TYPE}}}
+\label{a00604_a4e509d9d0746f0bdbd70053f516ce369}
+
+
+WEP authentication mode. This enum defines the authentication mode to be used. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-SEC\_\-WEP\_\-OPEN@{GSN\_\-WDD\_\-SEC\_\-WEP\_\-OPEN}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-WEP\_\-OPEN@{GSN\_\-WDD\_\-SEC\_\-WEP\_\-OPEN}}\item[{\em 
+\hypertarget{a00604_a4e509d9d0746f0bdbd70053f516ce369a05e7c4c5f53b8618867d07a7931292c0}{
+GSN\_\-WDD\_\-SEC\_\-WEP\_\-OPEN}
+\label{a00604_a4e509d9d0746f0bdbd70053f516ce369a05e7c4c5f53b8618867d07a7931292c0}
+}]\index{GSN\_\-WDD\_\-SEC\_\-WEP\_\-SHARED@{GSN\_\-WDD\_\-SEC\_\-WEP\_\-SHARED}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-WEP\_\-SHARED@{GSN\_\-WDD\_\-SEC\_\-WEP\_\-SHARED}}\item[{\em 
+\hypertarget{a00604_a4e509d9d0746f0bdbd70053f516ce369a393e4efd39580b13e3bbbc4cc94ca131}{
+GSN\_\-WDD\_\-SEC\_\-WEP\_\-SHARED}
+\label{a00604_a4e509d9d0746f0bdbd70053f516ce369a393e4efd39580b13e3bbbc4cc94ca131}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 220 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_a2f5e27be6ba83f628dd6ee8f2becf7ba}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN@{GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN}}
+\index{GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN@{GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-WEP\_\-KEY\_\-LEN}}}
+\label{a00604_a2f5e27be6ba83f628dd6ee8f2becf7ba}
+
+
+WEP key length. This enum defines the WEP key length to be used. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-SEC\_\-WEP40\_\-KEY\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-WEP40\_\-KEY\_\-LEN}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-WEP40\_\-KEY\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-WEP40\_\-KEY\_\-LEN}}\item[{\em 
+\hypertarget{a00604_a2f5e27be6ba83f628dd6ee8f2becf7baa17b74eb88779b1c1830b4aa2a68f55f8}{
+GSN\_\-WDD\_\-SEC\_\-WEP40\_\-KEY\_\-LEN}
+\label{a00604_a2f5e27be6ba83f628dd6ee8f2becf7baa17b74eb88779b1c1830b4aa2a68f55f8}
+}]\index{GSN\_\-WDD\_\-SEC\_\-WEP104\_\-KEY\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-WEP104\_\-KEY\_\-LEN}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-SEC\_\-WEP104\_\-KEY\_\-LEN@{GSN\_\-WDD\_\-SEC\_\-WEP104\_\-KEY\_\-LEN}}\item[{\em 
+\hypertarget{a00604_a2f5e27be6ba83f628dd6ee8f2becf7baa5f85d918ca6a35cf52f0776ebb929e71}{
+GSN\_\-WDD\_\-SEC\_\-WEP104\_\-KEY\_\-LEN}
+\label{a00604_a2f5e27be6ba83f628dd6ee8f2becf7baa5f85d918ca6a35cf52f0776ebb929e71}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 208 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_aecc980a483691db1cb8b70fed3fdb438}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPA\_\-ALGO@{GSN\_\-WDD\_\-WPA\_\-ALGO}}
+\index{GSN\_\-WDD\_\-WPA\_\-ALGO@{GSN\_\-WDD\_\-WPA\_\-ALGO}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-WPA\_\-ALGO}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-WPA\_\-ALGO}}}
+\label{a00604_aecc980a483691db1cb8b70fed3fdb438}
+
+
+Encryption Algorith. This enum defines the Encryption algorithm. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-AES@{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-AES}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPA\_\-ALGO\_\-AES@{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-AES}}\item[{\em 
+\hypertarget{a00604_aecc980a483691db1cb8b70fed3fdb438a0be5e8a9efe38814726fb10810bdf1b9}{
+GSN\_\-WDD\_\-WPA\_\-ALGO\_\-AES}
+\label{a00604_aecc980a483691db1cb8b70fed3fdb438a0be5e8a9efe38814726fb10810bdf1b9}
+}]\index{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-TKIP@{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-TKIP}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPA\_\-ALGO\_\-TKIP@{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-TKIP}}\item[{\em 
+\hypertarget{a00604_aecc980a483691db1cb8b70fed3fdb438a542301d6dc2756a85f5e7c0e3a15275a}{
+GSN\_\-WDD\_\-WPA\_\-ALGO\_\-TKIP}
+\label{a00604_aecc980a483691db1cb8b70fed3fdb438a542301d6dc2756a85f5e7c0e3a15275a}
+}]\index{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-MIXED@{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-MIXED}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPA\_\-ALGO\_\-MIXED@{GSN\_\-WDD\_\-WPA\_\-ALGO\_\-MIXED}}\item[{\em 
+\hypertarget{a00604_aecc980a483691db1cb8b70fed3fdb438ab9cb0f7e5557d31af8e2ea242bff74d6}{
+GSN\_\-WDD\_\-WPA\_\-ALGO\_\-MIXED}
+\label{a00604_aecc980a483691db1cb8b70fed3fdb438ab9cb0f7e5557d31af8e2ea242bff74d6}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 285 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_aaf56a679ef5989460c2d2bad97d4c353}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD}}
+\index{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-METHOD}}}
+\label{a00604_aaf56a679ef5989460c2d2bad97d4c353}
+
+
+Config Methods used in WPS. This enum defines the config Methods used in WPS. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-LABEL@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-LABEL}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-LABEL@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-LABEL}}\item[{\em 
+\hypertarget{a00604_aaf56a679ef5989460c2d2bad97d4c353aa84f0cd36d3a83757189450bbbf7d26d}{
+GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-LABEL}
+\label{a00604_aaf56a679ef5989460c2d2bad97d4c353aa84f0cd36d3a83757189450bbbf7d26d}
+}]\index{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-DISPLAY@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-DISPLAY}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-DISPLAY@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-DISPLAY}}\item[{\em 
+\hypertarget{a00604_aaf56a679ef5989460c2d2bad97d4c353aab1edda457f858557986fa954172ead6}{
+GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-DISPLAY}
+\label{a00604_aaf56a679ef5989460c2d2bad97d4c353aab1edda457f858557986fa954172ead6}
+}]\index{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-PUSHBUTTON@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-PUSHBUTTON}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-PUSHBUTTON@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-PUSHBUTTON}}\item[{\em 
+\hypertarget{a00604_aaf56a679ef5989460c2d2bad97d4c353ada7a318dba43d889333f8677743b2c6b}{
+GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-PUSHBUTTON}
+\label{a00604_aaf56a679ef5989460c2d2bad97d4c353ada7a318dba43d889333f8677743b2c6b}
+}]\index{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-KEYPAD@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-KEYPAD}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-KEYPAD@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-KEYPAD}}\item[{\em 
+\hypertarget{a00604_aaf56a679ef5989460c2d2bad97d4c353a01795f1b0ebe3c7bbc2b79b378432472}{
+GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-KEYPAD}
+\label{a00604_aaf56a679ef5989460c2d2bad97d4c353a01795f1b0ebe3c7bbc2b79b378432472}
+}]\index{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-VIRT\_\-PUSHBUTTON@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-VIRT\_\-PUSHBUTTON}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-VIRT\_\-PUSHBUTTON@{GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-VIRT\_\-PUSHBUTTON}}\item[{\em 
+\hypertarget{a00604_aaf56a679ef5989460c2d2bad97d4c353a820ca1ca950bddb2407e6fcde41fc5b0}{
+GSN\_\-WDD\_\-WPS\_\-CONFIG\_\-VIRT\_\-PUSHBUTTON}
+\label{a00604_aaf56a679ef5989460c2d2bad97d4c353a820ca1ca950bddb2407e6fcde41fc5b0}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 413 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00604_ab0a95842655918bdbd767751d8abb95d}{
+\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPS\_\-RF@{GSN\_\-WDD\_\-WPS\_\-RF}}
+\index{GSN\_\-WDD\_\-WPS\_\-RF@{GSN\_\-WDD\_\-WPS\_\-RF}!gsn_wdd_security.h@{gsn\_\-wdd\_\-security.h}}
+\subsubsection[{GSN\_\-WDD\_\-WPS\_\-RF}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-WPS\_\-RF}}}
+\label{a00604_ab0a95842655918bdbd767751d8abb95d}
+
+
+RF Bands used in WPS. This enum defines the RF band used. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-WPS\_\-RF\_\-24GHZ@{GSN\_\-WDD\_\-WPS\_\-RF\_\-24GHZ}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPS\_\-RF\_\-24GHZ@{GSN\_\-WDD\_\-WPS\_\-RF\_\-24GHZ}}\item[{\em 
+\hypertarget{a00604_ab0a95842655918bdbd767751d8abb95da7b068fc232863052eff874c02e216092}{
+GSN\_\-WDD\_\-WPS\_\-RF\_\-24GHZ}
+\label{a00604_ab0a95842655918bdbd767751d8abb95da7b068fc232863052eff874c02e216092}
+}]\index{GSN\_\-WDD\_\-WPS\_\-RF\_\-50GHZ@{GSN\_\-WDD\_\-WPS\_\-RF\_\-50GHZ}!gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}}\index{gsn\_\-wdd\_\-security.h@{gsn\_\-wdd\_\-security.h}!GSN\_\-WDD\_\-WPS\_\-RF\_\-50GHZ@{GSN\_\-WDD\_\-WPS\_\-RF\_\-50GHZ}}\item[{\em 
+\hypertarget{a00604_ab0a95842655918bdbd767751d8abb95da90aaaeefa5d06360615d9a976afcb9ac}{
+GSN\_\-WDD\_\-WPS\_\-RF\_\-50GHZ}
+\label{a00604_ab0a95842655918bdbd767751d8abb95da90aaaeefa5d06360615d9a976afcb9ac}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 401 of file gsn\_\-wdd\_\-security.h.
+

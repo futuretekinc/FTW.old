@@ -1,0 +1,104 @@
+\hypertarget{a00662}{
+\section{GSN DNS Server}
+\label{a00662}\index{GSN DNS Server@{GSN DNS Server}}
+}
+
+
+DNS Server API's.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00055}{GSN\_\-DNS\_\-SERVER}
+\begin{DoxyCompactList}\small\item\em DNS Server Structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00055}{GSN\_\-DNS\_\-SERVER} \hyperlink{a00662_ga85fc2373f7b6a2cfb0ebbbddb036c503}{GSN\_\-DNS\_\-SERVER\_\-T}
+\begin{DoxyCompactList}\small\item\em DNS Server Structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00662_gab5a185ee52c26ad8cc547eff1f40bd9c}{GsnDnsSrvr\_\-Start} (\hyperlink{a00055}{GSN\_\-DNS\_\-SERVER\_\-T} $\ast$pDnsSrvr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$dnsName, \hyperlink{a00054}{GSN\_\-DNS\_\-INIT\_\-PARAM\_\-T} $\ast$initParams)
+\begin{DoxyCompactList}\small\item\em Start DNS server. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00662_ga61e9319652de6fc7065c3779896c4188}{GsnDnsSrvr\_\-Stop} (\hyperlink{a00055}{GSN\_\-DNS\_\-SERVER\_\-T} $\ast$pDnsSrvr)
+\begin{DoxyCompactList}\small\item\em Stop DNS server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+DNS Server API's. This file contains public definitions and API's for DNS Server. \par
+
+
+\par
+ This file contains public definitions and API's for DNS Server. DNS server is started when node acting as a Limited AP. After association user can open web provision page using node domain name and configure the node. This DNS server has limited capabilities and only resolves nodes domain name to its IP address. The API GsnDnsSrvr\_\-Start starts DNS server and GsnDnsSrvr\_\-Stop stops server. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00662_ga85fc2373f7b6a2cfb0ebbbddb036c503}{
+\index{GSN DNS Server@{GSN DNS Server}!GSN\_\-DNS\_\-SERVER\_\-T@{GSN\_\-DNS\_\-SERVER\_\-T}}
+\index{GSN\_\-DNS\_\-SERVER\_\-T@{GSN\_\-DNS\_\-SERVER\_\-T}!GSN DNS Server@{GSN DNS Server}}
+\subsubsection[{GSN\_\-DNS\_\-SERVER\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DNS\_\-SERVER} {\bf GSN\_\-DNS\_\-SERVER\_\-T}}}
+\label{a00662_ga85fc2373f7b6a2cfb0ebbbddb036c503}
+
+
+DNS Server Structure. 
+
+This Structure defines IP address, Domain Name and socket descriptor of DNS server. 
+
+\subsection{Function Documentation}
+\hypertarget{a00662_gab5a185ee52c26ad8cc547eff1f40bd9c}{
+\index{GSN DNS Server@{GSN DNS Server}!GsnDnsSrvr\_\-Start@{GsnDnsSrvr\_\-Start}}
+\index{GsnDnsSrvr\_\-Start@{GsnDnsSrvr\_\-Start}!GSN DNS Server@{GSN DNS Server}}
+\subsubsection[{GsnDnsSrvr\_\-Start}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnDnsSrvr\_\-Start (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DNS\_\-SERVER\_\-T} $\ast$}]{pDnsSrvr, }
+\item[{{\bf UINT8} $\ast$}]{dnsName, }
+\item[{{\bf GSN\_\-DNS\_\-INIT\_\-PARAM\_\-T} $\ast$}]{initParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00662_gab5a185ee52c26ad8cc547eff1f40bd9c}
+
+
+Start DNS server. 
+
+This function initializes the DNS server, creates a socket, binds to it and waits for messages on the socket. 
+\begin{DoxyParams}{Parameters}
+{\em pDnsSrvr} & -\/ IN Pointer to DNS context provided by user. \\
+\hline
+{\em dnsName} & -\/ IN Pointer to Domain Name. \\
+\hline
+{\em initParams} & -\/ IN Pointer to Initialization Parameters \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-FAILURE} & Operation failed. \\
+\hline
+{\em GSN\_\-SUCCESS} & DHCP server started successfully. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00662_ga61e9319652de6fc7065c3779896c4188}{
+\index{GSN DNS Server@{GSN DNS Server}!GsnDnsSrvr\_\-Stop@{GsnDnsSrvr\_\-Stop}}
+\index{GsnDnsSrvr\_\-Stop@{GsnDnsSrvr\_\-Stop}!GSN DNS Server@{GSN DNS Server}}
+\subsubsection[{GsnDnsSrvr\_\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnDnsSrvr\_\-Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DNS\_\-SERVER\_\-T} $\ast$}]{pDnsSrvr}
+\end{DoxyParamCaption}
+)}}
+\label{a00662_ga61e9319652de6fc7065c3779896c4188}
+
+
+Stop DNS server. 
+
+This function stops DNS server. 
+\begin{DoxyParams}{Parameters}
+{\em pDnsSrvr} & -\/ IN Pointer to DNS context provided by user. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & DHCP server stoped successfully. \\
+\hline
+{\em GSN\_\-FAILURE} & DHCP server stop Failed. \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,247 @@
+\hypertarget{a00140}{
+\section{GSN\_\-MDNS Struct Reference}
+\label{a00140}\index{GSN\_\-MDNS@{GSN\_\-MDNS}}
+}
+
+
+mDns module context  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-mdns.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00140_a6e9c4cbd32a1178b12f3a61f6855c896}{state}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00140_a0bf759fe262766b44a9b023c66f75f07}{noSeparatetsk}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00140_ae88d491fc834aaae7cc9c066719d285b}{blockingOn}
+\item 
+\hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T} \hyperlink{a00140_a3525baeed8d9f795ed0c44437f548da2}{msgQueue}
+\item 
+\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} \hyperlink{a00140_afb7d19983a90716b80a2f4dbfbf7b0c8}{protectionLock}
+\item 
+\hyperlink{a00668_ga9bb465f57992212c58689c8cf593e0e7}{GSN\_\-MDNS\_\-MSG\_\-POST\_\-CB} \hyperlink{a00140_a6adb3a11c7d8acfbd87e34dca64c8117}{msgPostCb}
+\item 
+VOID $\ast$ \hyperlink{a00140_a87ae49d5f0fac444209c04cb6498bf36}{msgPostcbCtx}
+\item 
+\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$ \hyperlink{a00140_a162db5da6960431ec48a784907bd6fb9}{pNwIf}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00140_aebd7988998f79a395deb1e0738c0c3b3}{mdnsSock6}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00140_aab3ddd12f9ecd58385cb87b01cd0f436}{mdnsSock4}
+\item 
+\hyperlink{a00457}{RR\_\-T} $\ast$ \hyperlink{a00140_a6b87b871f0ae4ed5b3264b278492b7a9}{regstdRrList}
+\item 
+\hyperlink{a00457}{RR\_\-T} $\ast$ \hyperlink{a00140_a97a30be7d167f7f9475f806a189936b4}{respRrList}
+\item 
+\hyperlink{a00455}{QUESTION\_\-T} $\ast$ \hyperlink{a00140_af05820673f965263d157f684be0c1144}{questList}
+\item 
+\hyperlink{a00455}{QUESTION\_\-T} $\ast$ \hyperlink{a00140_a707cebeea24bf8ac244d818c020c02c8}{queryList}
+\item 
+\hyperlink{a00455}{QUESTION\_\-T} $\ast$ \hyperlink{a00140_adc2ceee26fcd1703b832c55805ec0fd6}{probeList}
+\item 
+\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} \hyperlink{a00140_a2c92e0949538471898a153c53e505bed}{rrLock}
+\item 
+\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} \hyperlink{a00140_a86a9d3f0aacce7c9dda5a46ab2b5a48c}{qstnLock}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct sockaddr\_in6 \hyperlink{a00140_a57fce45abb176348c2c580b064621a65}{fromAddr6}\\
+\>struct sockaddr\_in \hyperlink{a00140_adef8b394e1fd1701cf1f63d24339e665}{fromAddr4}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+mDns module context 
+
+Definition at line 330 of file gsn\_\-mdns.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00140_a827dc0f063136bdf421d27f40f2f3fd4}{
+\subsubsection[{"@15}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}
+\label{a00140_a827dc0f063136bdf421d27f40f2f3fd4}
+\hypertarget{a00140_ae88d491fc834aaae7cc9c066719d285b}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!blockingOn@{blockingOn}}
+\index{blockingOn@{blockingOn}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{blockingOn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf blockingOn}}}
+\label{a00140_ae88d491fc834aaae7cc9c066719d285b}
+
+
+Definition at line 334 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_adef8b394e1fd1701cf1f63d24339e665}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!fromAddr4@{fromAddr4}}
+\index{fromAddr4@{fromAddr4}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{fromAddr4}]{\setlength{\rightskip}{0pt plus 5cm}struct sockaddr\_\-in {\bf fromAddr4}}}
+\label{a00140_adef8b394e1fd1701cf1f63d24339e665}
+
+
+Definition at line 363 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a57fce45abb176348c2c580b064621a65}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!fromAddr6@{fromAddr6}}
+\index{fromAddr6@{fromAddr6}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{fromAddr6}]{\setlength{\rightskip}{0pt plus 5cm}struct sockaddr\_\-in6 {\bf fromAddr6}}}
+\label{a00140_a57fce45abb176348c2c580b064621a65}
+
+
+Definition at line 362 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_aab3ddd12f9ecd58385cb87b01cd0f436}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!mdnsSock4@{mdnsSock4}}
+\index{mdnsSock4@{mdnsSock4}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{mdnsSock4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf mdnsSock4}}}
+\label{a00140_aab3ddd12f9ecd58385cb87b01cd0f436}
+
+
+Definition at line 346 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_aebd7988998f79a395deb1e0738c0c3b3}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!mdnsSock6@{mdnsSock6}}
+\index{mdnsSock6@{mdnsSock6}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{mdnsSock6}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf mdnsSock6}}}
+\label{a00140_aebd7988998f79a395deb1e0738c0c3b3}
+
+
+Definition at line 345 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a6adb3a11c7d8acfbd87e34dca64c8117}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!msgPostCb@{msgPostCb}}
+\index{msgPostCb@{msgPostCb}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{msgPostCb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-MDNS\_\-MSG\_\-POST\_\-CB} {\bf msgPostCb}}}
+\label{a00140_a6adb3a11c7d8acfbd87e34dca64c8117}
+
+
+Definition at line 341 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a87ae49d5f0fac444209c04cb6498bf36}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!msgPostcbCtx@{msgPostcbCtx}}
+\index{msgPostcbCtx@{msgPostcbCtx}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{msgPostcbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf msgPostcbCtx}}}
+\label{a00140_a87ae49d5f0fac444209c04cb6498bf36}
+
+
+Definition at line 342 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a3525baeed8d9f795ed0c44437f548da2}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!msgQueue@{msgQueue}}
+\index{msgQueue@{msgQueue}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{msgQueue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-QUEUE\_\-T} {\bf msgQueue}}}
+\label{a00140_a3525baeed8d9f795ed0c44437f548da2}
+message queue handle 
+
+Definition at line 335 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a0bf759fe262766b44a9b023c66f75f07}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!noSeparatetsk@{noSeparatetsk}}
+\index{noSeparatetsk@{noSeparatetsk}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{noSeparatetsk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf noSeparatetsk}}}
+\label{a00140_a0bf759fe262766b44a9b023c66f75f07}
+
+
+Definition at line 333 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a162db5da6960431ec48a784907bd6fb9}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!pNwIf@{pNwIf}}
+\index{pNwIf@{pNwIf}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{pNwIf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-CTX\_\-T}$\ast$ {\bf pNwIf}}}
+\label{a00140_a162db5da6960431ec48a784907bd6fb9}
+
+
+Definition at line 344 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_adc2ceee26fcd1703b832c55805ec0fd6}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!probeList@{probeList}}
+\index{probeList@{probeList}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{probeList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf QUESTION\_\-T}$\ast$ {\bf probeList}}}
+\label{a00140_adc2ceee26fcd1703b832c55805ec0fd6}
+
+
+Definition at line 354 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_afb7d19983a90716b80a2f4dbfbf7b0c8}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!protectionLock@{protectionLock}}
+\index{protectionLock@{protectionLock}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{protectionLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} {\bf protectionLock}}}
+\label{a00140_afb7d19983a90716b80a2f4dbfbf7b0c8}
+
+
+Definition at line 338 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a86a9d3f0aacce7c9dda5a46ab2b5a48c}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!qstnLock@{qstnLock}}
+\index{qstnLock@{qstnLock}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{qstnLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} {\bf qstnLock}}}
+\label{a00140_a86a9d3f0aacce7c9dda5a46ab2b5a48c}
+
+
+Definition at line 357 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a707cebeea24bf8ac244d818c020c02c8}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!queryList@{queryList}}
+\index{queryList@{queryList}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{queryList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf QUESTION\_\-T}$\ast$ {\bf queryList}}}
+\label{a00140_a707cebeea24bf8ac244d818c020c02c8}
+
+
+Definition at line 352 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_af05820673f965263d157f684be0c1144}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!questList@{questList}}
+\index{questList@{questList}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{questList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf QUESTION\_\-T}$\ast$ {\bf questList}}}
+\label{a00140_af05820673f965263d157f684be0c1144}
+
+
+Definition at line 351 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a6b87b871f0ae4ed5b3264b278492b7a9}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!regstdRrList@{regstdRrList}}
+\index{regstdRrList@{regstdRrList}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{regstdRrList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RR\_\-T}$\ast$ {\bf regstdRrList}}}
+\label{a00140_a6b87b871f0ae4ed5b3264b278492b7a9}
+
+
+Definition at line 348 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a97a30be7d167f7f9475f806a189936b4}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!respRrList@{respRrList}}
+\index{respRrList@{respRrList}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{respRrList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RR\_\-T}$\ast$ {\bf respRrList}}}
+\label{a00140_a97a30be7d167f7f9475f806a189936b4}
+
+
+Definition at line 349 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a2c92e0949538471898a153c53e505bed}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!rrLock@{rrLock}}
+\index{rrLock@{rrLock}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{rrLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} {\bf rrLock}}}
+\label{a00140_a2c92e0949538471898a153c53e505bed}
+
+
+Definition at line 356 of file gsn\_\-mdns.h.
+
+\hypertarget{a00140_a6e9c4cbd32a1178b12f3a61f6855c896}{
+\index{GSN\_\-MDNS@{GSN\_\-MDNS}!state@{state}}
+\index{state@{state}!GSN_MDNS@{GSN\_\-MDNS}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf state}}}
+\label{a00140_a6e9c4cbd32a1178b12f3a61f6855c896}
+
+
+Definition at line 332 of file gsn\_\-mdns.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00526}{gsn\_\-mdns.h}\end{DoxyCompactItemize}

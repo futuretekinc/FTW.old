@@ -1,0 +1,89 @@
+\hypertarget{a00588}{
+\section{gsn\_\-spi\_\-poll.h File Reference}
+\label{a00588}\index{gsn\_\-spi\_\-poll.h@{gsn\_\-spi\_\-poll.h}}
+}
+
+
+GSN SPI API definitions. This file contains the private (low-\/level) definitions and structures for the SPI driver.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+Include dependency graph for gsn\_\-spi\_\-poll.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{a00828}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00829}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00655_gab8f70d3f443325f36ae63f19133e3adf}{GsnSpiPoll\_\-Open} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00587_a8158d263babcdfe1b3b113e23acd1bf7}{GSN\_\-SPI\_\-NUM\_\-T} spiPortNumber, \hyperlink{a00231}{GSN\_\-SPI\_\-CONFIG\_\-T} $\ast$gsnSpiConfig)
+\begin{DoxyCompactList}\small\item\em Polling SPI Driver open. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00655_ga92f3c7ce5633d6ae76f1d37062716676}{GsnSpiPoll\_\-MasterReadWrite} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00239}{GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} $\ast$spiRW)
+\begin{DoxyCompactList}\small\item\em Polling method SPI Read and write through specified port in master mode. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00588_a22ea418a4fbf324bee4eec6fb437d3ce}{GsnSpiPoll\_\-TxProcessing} (\hyperlink{a00230}{GSN\_\-SPI\_\-T} $\ast$spiThis)
+\item 
+PUBLIC VOID \hyperlink{a00588_a5f72b98eb2afbbdd4230f1cd26214a40}{GsnSpiPoll\_\-RxProcessing} (\hyperlink{a00230}{GSN\_\-SPI\_\-T} $\ast$spiThis)
+\item 
+INLINE \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00588_a1fedcea7942556146c9295dc2700b7b8}{GsnSpiPoll\_\-Rx} (\hyperlink{a00230}{GSN\_\-SPI\_\-T} $\ast$spiThis)
+\item 
+INLINE \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00588_a10071588969eaa36836f01ae5526d043}{GsnSpiPoll\_\-Tx} (\hyperlink{a00230}{GSN\_\-SPI\_\-T} $\ast$spiThis)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN SPI API definitions. This file contains the private (low-\/level) definitions and structures for the SPI driver. 
+
+Definition in file \hyperlink{a00588_source}{gsn\_\-spi\_\-poll.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00588_a1fedcea7942556146c9295dc2700b7b8}{
+\index{gsn\_\-spi\_\-poll.h@{gsn\_\-spi\_\-poll.h}!GsnSpiPoll\_\-Rx@{GsnSpiPoll\_\-Rx}}
+\index{GsnSpiPoll\_\-Rx@{GsnSpiPoll\_\-Rx}!gsn_spi_poll.h@{gsn\_\-spi\_\-poll.h}}
+\subsubsection[{GsnSpiPoll\_\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT8} GsnSpiPoll\_\-Rx (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SPI\_\-T} $\ast$}]{spiThis}
+\end{DoxyParamCaption}
+)}}
+\label{a00588_a1fedcea7942556146c9295dc2700b7b8}
+\hypertarget{a00588_a5f72b98eb2afbbdd4230f1cd26214a40}{
+\index{gsn\_\-spi\_\-poll.h@{gsn\_\-spi\_\-poll.h}!GsnSpiPoll\_\-RxProcessing@{GsnSpiPoll\_\-RxProcessing}}
+\index{GsnSpiPoll\_\-RxProcessing@{GsnSpiPoll\_\-RxProcessing}!gsn_spi_poll.h@{gsn\_\-spi\_\-poll.h}}
+\subsubsection[{GsnSpiPoll\_\-RxProcessing}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnSpiPoll\_\-RxProcessing (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SPI\_\-T} $\ast$}]{spiThis}
+\end{DoxyParamCaption}
+)}}
+\label{a00588_a5f72b98eb2afbbdd4230f1cd26214a40}
+\hypertarget{a00588_a10071588969eaa36836f01ae5526d043}{
+\index{gsn\_\-spi\_\-poll.h@{gsn\_\-spi\_\-poll.h}!GsnSpiPoll\_\-Tx@{GsnSpiPoll\_\-Tx}}
+\index{GsnSpiPoll\_\-Tx@{GsnSpiPoll\_\-Tx}!gsn_spi_poll.h@{gsn\_\-spi\_\-poll.h}}
+\subsubsection[{GsnSpiPoll\_\-Tx}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT8} GsnSpiPoll\_\-Tx (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SPI\_\-T} $\ast$}]{spiThis}
+\end{DoxyParamCaption}
+)}}
+\label{a00588_a10071588969eaa36836f01ae5526d043}
+\hypertarget{a00588_a22ea418a4fbf324bee4eec6fb437d3ce}{
+\index{gsn\_\-spi\_\-poll.h@{gsn\_\-spi\_\-poll.h}!GsnSpiPoll\_\-TxProcessing@{GsnSpiPoll\_\-TxProcessing}}
+\index{GsnSpiPoll\_\-TxProcessing@{GsnSpiPoll\_\-TxProcessing}!gsn_spi_poll.h@{gsn\_\-spi\_\-poll.h}}
+\subsubsection[{GsnSpiPoll\_\-TxProcessing}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnSpiPoll\_\-TxProcessing (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SPI\_\-T} $\ast$}]{spiThis}
+\end{DoxyParamCaption}
+)}}
+\label{a00588_a22ea418a4fbf324bee4eec6fb437d3ce}

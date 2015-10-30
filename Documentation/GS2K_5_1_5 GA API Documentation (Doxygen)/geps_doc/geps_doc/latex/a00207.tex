@@ -1,0 +1,107 @@
+\hypertarget{a00207}{
+\section{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO Struct Reference}
+\label{a00207}\index{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}}
+}
+
+
+{\ttfamily \#include $<$gsn\_\-rpl\_\-netx\_\-if.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00207_a9d6f28faefcf4436d36ac3e698e1ce50}{pBuf}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00207_ab3bcead9c261261394a5d9b3bf8f95cb}{len}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00207_a30d3105211b3a23fe982def9305f4c40}{lenUsed}
+\item 
+VOID $\ast$ \hyperlink{a00207_a034966600aedf93f9197ac55b467812a}{pIp}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00207_a714cd2aa6239909d5ceaf8b1e62f2f78}{pBufStart}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00207_aed7b3a60a222f1e6c2e1207b2d05aef7}{pBufEnd}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+$<$ To add IPv6 optional herader the following things has to be taken care.
+\begin{DoxyItemize}
+\item A instance of type GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T has to be defined.
+\item The pBufEnd has to be initialized to the pkt pointer of the IPv6 frame.
+\item A new net packet has to be allocated and the address of this has to be put in pBufStart.
+\item The IPv6 header alone has to be copied to the prepend location in the new net packet and the prepend point has to be updated.
+\item The prepend pointer of the original IPv6 pakcet has to be advanced by IPv6 header size.
+\item The new optional header has to be written at the append location of the new net packet.
+\item If the buffer space is not enough for the written the new optional header, then, more net packet call be allocated using GsnRpl\_\-AllocNetBuf, which will allocate a new net packet and chain the packet to the orignal IPv6 packet.
+\end{DoxyItemize}
+
+To generate a new packet the following steps has to be folloews.
+\begin{DoxyItemize}
+\item A instance of type GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T has to be defined and all elements has to be initialized to zero.
+\item Call GsnRpl\_\-AllocNetBuf to allocate packet. If the buffer space is not enough call again GsnRpl\_\-AllocNetBuf to get a new buffer space. GsnRpl\_\-AllocNetBuf takes care of chaining all the packets. 
+\end{DoxyItemize}
+
+Definition at line 71 of file gsn\_\-rpl\_\-netx\_\-if.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00207_ab3bcead9c261261394a5d9b3bf8f95cb}{
+\index{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}!len@{len}}
+\index{len@{len}!GSN_RPL_NET_BUF_INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}}
+\subsubsection[{len}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf len}}}
+\label{a00207_ab3bcead9c261261394a5d9b3bf8f95cb}
+
+
+Definition at line 74 of file gsn\_\-rpl\_\-netx\_\-if.h.
+
+\hypertarget{a00207_a30d3105211b3a23fe982def9305f4c40}{
+\index{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}!lenUsed@{lenUsed}}
+\index{lenUsed@{lenUsed}!GSN_RPL_NET_BUF_INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}}
+\subsubsection[{lenUsed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf lenUsed}}}
+\label{a00207_a30d3105211b3a23fe982def9305f4c40}
+
+
+Definition at line 75 of file gsn\_\-rpl\_\-netx\_\-if.h.
+
+\hypertarget{a00207_a9d6f28faefcf4436d36ac3e698e1ce50}{
+\index{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}!pBuf@{pBuf}}
+\index{pBuf@{pBuf}!GSN_RPL_NET_BUF_INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}}
+\subsubsection[{pBuf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf pBuf}}}
+\label{a00207_a9d6f28faefcf4436d36ac3e698e1ce50}
+
+
+Definition at line 73 of file gsn\_\-rpl\_\-netx\_\-if.h.
+
+\hypertarget{a00207_aed7b3a60a222f1e6c2e1207b2d05aef7}{
+\index{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}!pBufEnd@{pBufEnd}}
+\index{pBufEnd@{pBufEnd}!GSN_RPL_NET_BUF_INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}}
+\subsubsection[{pBufEnd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf pBufEnd}}}
+\label{a00207_aed7b3a60a222f1e6c2e1207b2d05aef7}
+
+
+Definition at line 78 of file gsn\_\-rpl\_\-netx\_\-if.h.
+
+\hypertarget{a00207_a714cd2aa6239909d5ceaf8b1e62f2f78}{
+\index{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}!pBufStart@{pBufStart}}
+\index{pBufStart@{pBufStart}!GSN_RPL_NET_BUF_INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}}
+\subsubsection[{pBufStart}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf pBufStart}}}
+\label{a00207_a714cd2aa6239909d5ceaf8b1e62f2f78}
+
+
+Definition at line 77 of file gsn\_\-rpl\_\-netx\_\-if.h.
+
+\hypertarget{a00207_a034966600aedf93f9197ac55b467812a}{
+\index{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}!pIp@{pIp}}
+\index{pIp@{pIp}!GSN_RPL_NET_BUF_INFO@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}}
+\subsubsection[{pIp}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf pIp}}}
+\label{a00207_a034966600aedf93f9197ac55b467812a}
+
+
+Definition at line 76 of file gsn\_\-rpl\_\-netx\_\-if.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00580}{gsn\_\-rpl\_\-netx\_\-if.h}\end{DoxyCompactItemize}

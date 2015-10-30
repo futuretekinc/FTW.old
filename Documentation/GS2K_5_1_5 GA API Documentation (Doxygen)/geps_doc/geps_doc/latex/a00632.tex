@@ -1,0 +1,135 @@
+\hypertarget{a00632}{
+\section{GSN Ring Buffer Utilities}
+\label{a00632}\index{GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00191}{GSN\_\-RING\_\-BUF}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00191}{GSN\_\-RING\_\-BUF} \hyperlink{a00632_gaca5ec9760102d4664831e7f6614766bc}{GSN\_\-RING\_\-BUF\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} \hyperlink{a00632_ga5a3a10cb80523bff48cbf73776e47864}{GsnRingBuf\_\-Init} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-T} $\ast$ringBuf, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} entrySize, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ringSize, VOID $\ast$buf)
+\begin{DoxyCompactList}\small\item\em Initialize ring buffer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00632_ga4a6b45d6cdeafb52618c83f7e4493248}{GsnRingBuf\_\-Put} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} ringBuf, VOID $\ast$pData)
+\begin{DoxyCompactList}\small\item\em Put data in the buffer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00632_gab599ebf3ae090c745e3e027fedf8ed3e}{GsnRingBuf\_\-Get} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} ringBuf, VOID $\ast$pData)
+\begin{DoxyCompactList}\small\item\em Get data from the buffer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00632_ga39019b55b74ef1ef4d385a40d347e96e}{GsnRingBuf\_\-IsMsgQueued} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} ringBuf, VOID $\ast$pData)
+\begin{DoxyCompactList}\small\item\em Check message queue. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00632_ga28df066aa6f2af6fc0d50fb4402de208}{GsnRingBuf\_\-Reset} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} ringBuf)
+\begin{DoxyCompactList}\small\item\em Reset ring buffer. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00632_ga03d18f6d7018fa9b86172970abab664b}{GsnRingBuf\_\-MsgCount} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} ringBuf)
+\begin{DoxyCompactList}\small\item\em Get message count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group contains ring buffer implementation. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00632_gaca5ec9760102d4664831e7f6614766bc}{
+\index{GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}!GSN\_\-RING\_\-BUF\_\-T@{GSN\_\-RING\_\-BUF\_\-T}}
+\index{GSN\_\-RING\_\-BUF\_\-T@{GSN\_\-RING\_\-BUF\_\-T}!GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}}
+\subsubsection[{GSN\_\-RING\_\-BUF\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RING\_\-BUF}  {\bf GSN\_\-RING\_\-BUF\_\-T}}}
+\label{a00632_gaca5ec9760102d4664831e7f6614766bc}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00632_gab599ebf3ae090c745e3e027fedf8ed3e}{
+\index{GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}!GsnRingBuf\_\-Get@{GsnRingBuf\_\-Get}}
+\index{GsnRingBuf\_\-Get@{GsnRingBuf\_\-Get}!GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}}
+\subsubsection[{GsnRingBuf\_\-Get}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnRingBuf\_\-Get (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RING\_\-BUF\_\-HNDL\_\-T}}]{ringBuf, }
+\item[{VOID $\ast$}]{pData}
+\end{DoxyParamCaption}
+)}}
+\label{a00632_gab599ebf3ae090c745e3e027fedf8ed3e}
+
+
+Get data from the buffer. 
+
+\hypertarget{a00632_ga5a3a10cb80523bff48cbf73776e47864}{
+\index{GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}!GsnRingBuf\_\-Init@{GsnRingBuf\_\-Init}}
+\index{GsnRingBuf\_\-Init@{GsnRingBuf\_\-Init}!GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}}
+\subsubsection[{GsnRingBuf\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} GsnRingBuf\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RING\_\-BUF\_\-T} $\ast$}]{ringBuf, }
+\item[{{\bf UINT8}}]{entrySize, }
+\item[{{\bf UINT8}}]{ringSize, }
+\item[{VOID $\ast$}]{buf}
+\end{DoxyParamCaption}
+)}}
+\label{a00632_ga5a3a10cb80523bff48cbf73776e47864}
+
+
+Initialize ring buffer. 
+
+\hypertarget{a00632_ga39019b55b74ef1ef4d385a40d347e96e}{
+\index{GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}!GsnRingBuf\_\-IsMsgQueued@{GsnRingBuf\_\-IsMsgQueued}}
+\index{GsnRingBuf\_\-IsMsgQueued@{GsnRingBuf\_\-IsMsgQueued}!GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}}
+\subsubsection[{GsnRingBuf\_\-IsMsgQueued}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf BOOL} GsnRingBuf\_\-IsMsgQueued (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RING\_\-BUF\_\-HNDL\_\-T}}]{ringBuf, }
+\item[{VOID $\ast$}]{pData}
+\end{DoxyParamCaption}
+)}}
+\label{a00632_ga39019b55b74ef1ef4d385a40d347e96e}
+
+
+Check message queue. 
+
+\hypertarget{a00632_ga03d18f6d7018fa9b86172970abab664b}{
+\index{GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}!GsnRingBuf\_\-MsgCount@{GsnRingBuf\_\-MsgCount}}
+\index{GsnRingBuf\_\-MsgCount@{GsnRingBuf\_\-MsgCount}!GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}}
+\subsubsection[{GsnRingBuf\_\-MsgCount}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf UINT8} GsnRingBuf\_\-MsgCount (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RING\_\-BUF\_\-HNDL\_\-T}}]{ringBuf}
+\end{DoxyParamCaption}
+)}}
+\label{a00632_ga03d18f6d7018fa9b86172970abab664b}
+
+
+Get message count. 
+
+
+
+Definition at line 173 of file gsn\_\-ring\_\-buf.h.
+
+\hypertarget{a00632_ga4a6b45d6cdeafb52618c83f7e4493248}{
+\index{GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}!GsnRingBuf\_\-Put@{GsnRingBuf\_\-Put}}
+\index{GsnRingBuf\_\-Put@{GsnRingBuf\_\-Put}!GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}}
+\subsubsection[{GsnRingBuf\_\-Put}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS\_\-T} GsnRingBuf\_\-Put (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RING\_\-BUF\_\-HNDL\_\-T}}]{ringBuf, }
+\item[{VOID $\ast$}]{pData}
+\end{DoxyParamCaption}
+)}}
+\label{a00632_ga4a6b45d6cdeafb52618c83f7e4493248}
+
+
+Put data in the buffer. 
+
+\hypertarget{a00632_ga28df066aa6f2af6fc0d50fb4402de208}{
+\index{GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}!GsnRingBuf\_\-Reset@{GsnRingBuf\_\-Reset}}
+\index{GsnRingBuf\_\-Reset@{GsnRingBuf\_\-Reset}!GSN Ring Buffer Utilities@{GSN Ring Buffer Utilities}}
+\subsubsection[{GsnRingBuf\_\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnRingBuf\_\-Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RING\_\-BUF\_\-HNDL\_\-T}}]{ringBuf}
+\end{DoxyParamCaption}
+)}}
+\label{a00632_ga28df066aa6f2af6fc0d50fb4402de208}
+
+
+Reset ring buffer. 
+
+
+
+Definition at line 159 of file gsn\_\-ring\_\-buf.h.
+

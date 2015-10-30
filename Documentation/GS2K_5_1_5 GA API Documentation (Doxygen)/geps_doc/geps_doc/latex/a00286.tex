@@ -1,0 +1,86 @@
+\hypertarget{a00286}{
+\section{GSN\_\-WDD\_\-SCAN\_\-PARAMS Struct Reference}
+\label{a00286}\index{GSN\_\-WDD\_\-SCAN\_\-PARAMS@{GSN\_\-WDD\_\-SCAN\_\-PARAMS}}
+}
+
+
+Scan parameters. This structure defines the scan configuration used for scanning the WLAN. The scan configuration is filled up and passed to scan API for scanning one or more channels.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wdd.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00286_aff576da693a444e63d8375c2b7c71df6}{flags}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00286_a000a5568cb4c2c12ad873696b2d6f83e}{scanType}
+\item 
+\hyperlink{a00417}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} \hyperlink{a00286_a9bcb2e5a0dbdd5461faec24950cf7459}{ssid}
+\item 
+\hyperlink{a00416}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T} \hyperlink{a00286_a1d70c2c8895c2763bdede85266c38318}{bssid}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00286_ad3776fa16ca5b00d270cd6365ac42a6f}{channel} \mbox{[}GSN\_\-WDD\_\-WLAN\_\-MAX\_\-CHNLS+1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Scan parameters. This structure defines the scan configuration used for scanning the WLAN. The scan configuration is filled up and passed to scan API for scanning one or more channels. 
+
+Definition at line 740 of file gsn\_\-wdd.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00286_a1d70c2c8895c2763bdede85266c38318}{
+\index{GSN\_\-WDD\_\-SCAN\_\-PARAMS@{GSN\_\-WDD\_\-SCAN\_\-PARAMS}!bssid@{bssid}}
+\index{bssid@{bssid}!GSN_WDD_SCAN_PARAMS@{GSN\_\-WDD\_\-SCAN\_\-PARAMS}}
+\subsubsection[{bssid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T} {\bf bssid}}}
+\label{a00286_a1d70c2c8895c2763bdede85266c38318}
+BSSID to scan. 
+
+Definition at line 746 of file gsn\_\-wdd.h.
+
+\hypertarget{a00286_ad3776fa16ca5b00d270cd6365ac42a6f}{
+\index{GSN\_\-WDD\_\-SCAN\_\-PARAMS@{GSN\_\-WDD\_\-SCAN\_\-PARAMS}!channel@{channel}}
+\index{channel@{channel}!GSN_WDD_SCAN_PARAMS@{GSN\_\-WDD\_\-SCAN\_\-PARAMS}}
+\subsubsection[{channel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf channel}\mbox{[}GSN\_\-WDD\_\-WLAN\_\-MAX\_\-CHNLS+1\mbox{]}}}
+\label{a00286_ad3776fa16ca5b00d270cd6365ac42a6f}
+List of channels to search SSID/BSSID on. Channels in list must be contiguous. Channel list ends at first entry in list containing zero. 
+
+Definition at line 748 of file gsn\_\-wdd.h.
+
+\hypertarget{a00286_aff576da693a444e63d8375c2b7c71df6}{
+\index{GSN\_\-WDD\_\-SCAN\_\-PARAMS@{GSN\_\-WDD\_\-SCAN\_\-PARAMS}!flags@{flags}}
+\index{flags@{flags}!GSN_WDD_SCAN_PARAMS@{GSN\_\-WDD\_\-SCAN\_\-PARAMS}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf flags}}}
+\label{a00286_aff576da693a444e63d8375c2b7c71df6}
+
+
+Definition at line 742 of file gsn\_\-wdd.h.
+
+\hypertarget{a00286_a000a5568cb4c2c12ad873696b2d6f83e}{
+\index{GSN\_\-WDD\_\-SCAN\_\-PARAMS@{GSN\_\-WDD\_\-SCAN\_\-PARAMS}!scanType@{scanType}}
+\index{scanType@{scanType}!GSN_WDD_SCAN_PARAMS@{GSN\_\-WDD\_\-SCAN\_\-PARAMS}}
+\subsubsection[{scanType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf scanType}}}
+\label{a00286_a000a5568cb4c2c12ad873696b2d6f83e}
+GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-T 
+
+Definition at line 743 of file gsn\_\-wdd.h.
+
+\hypertarget{a00286_a9bcb2e5a0dbdd5461faec24950cf7459}{
+\index{GSN\_\-WDD\_\-SCAN\_\-PARAMS@{GSN\_\-WDD\_\-SCAN\_\-PARAMS}!ssid@{ssid}}
+\index{ssid@{ssid}!GSN_WDD_SCAN_PARAMS@{GSN\_\-WDD\_\-SCAN\_\-PARAMS}}
+\subsubsection[{ssid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} {\bf ssid}}}
+\label{a00286_a9bcb2e5a0dbdd5461faec24950cf7459}
+SSID to scan. This can be set to NULL string if broadcast SSID is desired. 
+
+Definition at line 744 of file gsn\_\-wdd.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00603}{gsn\_\-wdd.h}\end{DoxyCompactItemize}

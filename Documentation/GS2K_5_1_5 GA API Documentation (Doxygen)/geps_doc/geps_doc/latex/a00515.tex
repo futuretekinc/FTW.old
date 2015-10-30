@@ -1,0 +1,393 @@
+\hypertarget{a00515}{
+\section{gsn\_\-hw\_\-engine\_\-if.h File Reference}
+\label{a00515}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+}
+
+
+GSN HEIF module. This file contains the HW Engine IF specific definitions.  
+
+
+{\ttfamily \#include $<$stdarg.h$>$}\par
+{\ttfamily \#include $<$stddef.h$>$}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include \char`\"{}hw\_\-engine\_\-if$\backslash$driver$\backslash$inc$\backslash$elpspacc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}hw\_\-engine\_\-if$\backslash$driver$\backslash$src$\backslash$inc$\backslash$elppka.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}hw\_\-engine\_\-if$\backslash$driver$\backslash$src$\backslash$inc$\backslash$elptrng.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+Include dependency graph for gsn\_\-hw\_\-engine\_\-if.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00747}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00748}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6}{GSN\_\-CRYPTO\_\-MODE} \hyperlink{a00515_ab9bcbd29c0f7622f387e4b527acef326}{GSN\_\-CRYPTO\_\-MODE\_\-T}
+\item 
+typedef enum \hyperlink{a00515_ab25cef7ae4e4b592cba2ee9ee33d2979}{GSN\_\-CRYPTO\_\-OP} \hyperlink{a00515_aee4f8acfc5b53a56d0710713c26a5fd6}{GSN\_\-CRYPTO\_\-OP\_\-T}
+\item 
+typedef enum \hyperlink{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583}{GSN\_\-HASH\_\-MODE} \hyperlink{a00515_afadc6098eee5910bf340f390d3e0b9f3}{GSN\_\-HASH\_\-MODE\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6}{GSN\_\-CRYPTO\_\-MODE} \{ \par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6a89c77f46105bcddc1146af4425937a86}{GSN\_\-CRYPTO\_\-MODE\_\-NULL} =  CRYPTO\_\-MODE\_\-NULL, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6a761a8be09455508a138890bee8175061}{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-40} =  CRYPTO\_\-MODE\_\-RC4\_\-40, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6ac5a15f253983545af169abdf59e34c22}{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-128} =  CRYPTO\_\-MODE\_\-RC4\_\-128, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6ac8b646b119cc253f058d0965525b4023}{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-KS} =  CRYPTO\_\-MODE\_\-RC4\_\-KS, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6a9b8309f309b6eed10211bf3d5e0d7c09}{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-ECB} =  CRYPTO\_\-MODE\_\-AES\_\-ECB, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6aa5fb38dfa23f8d88b69432ffbc3e3aae}{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CBC} =  CRYPTO\_\-MODE\_\-AES\_\-CBC, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6a7a2b02552f0d209dea3a0755dbb67996}{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CTR} =  CRYPTO\_\-MODE\_\-AES\_\-CTR, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6a40d31f05684483147babce0620baa63c}{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CCM} =  CRYPTO\_\-MODE\_\-AES\_\-CCM, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6a68bb9327cd3f01d06e2e524ab9f59b2d}{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-GCM} =  CRYPTO\_\-MODE\_\-AES\_\-GCM, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6acc5b0be980efdaac27f2eaae46aa760d}{GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-CBC} =  CRYPTO\_\-MODE\_\-3DES\_\-CBC, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6ab81972739240be2d2d402fa0e41eba56}{GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-ECB} =  CRYPTO\_\-MODE\_\-3DES\_\-ECB, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6a77d35039842ced178b7bdbfd2e0107e0}{GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-CBC} =  CRYPTO\_\-MODE\_\-DES\_\-CBC, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6a11ae2a27f4db712aced5f4afd0579bf3}{GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-ECB} =  CRYPTO\_\-MODE\_\-DES\_\-ECB, 
+\par
+\hyperlink{a00515_a3010ebd2596d115219b29d0a14c1f3f6a8344fda34ccbd513fff9e432bee546c4}{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-256} =  CRYPTO\_\-MODE\_\-RC4\_\-256
+ \}
+\item 
+enum \hyperlink{a00515_ab25cef7ae4e4b592cba2ee9ee33d2979}{GSN\_\-CRYPTO\_\-OP} \{ \par
+\hyperlink{a00515_ab25cef7ae4e4b592cba2ee9ee33d2979a065ab93fddceb23cd177bde38bcbb7df}{GSN\_\-CRYPTO\_\-OP\_\-ENCRYPT}, 
+\par
+\hyperlink{a00515_ab25cef7ae4e4b592cba2ee9ee33d2979aa480bc17092102bfb2f5b99ef42a292c}{GSN\_\-CRYPTO\_\-OP\_\-DECRYPT}
+ \}
+\item 
+enum \hyperlink{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583}{GSN\_\-HASH\_\-MODE} \{ \par
+\hyperlink{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a1fe114b2620507a863bbe6e7a61f622e}{GSN\_\-HASH\_\-MODE\_\-SHA1} =  CRYPTO\_\-MODE\_\-HASH\_\-SHA1, 
+\par
+\hyperlink{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a32aaf6de96662e4fcb3d99f354cac82e}{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA1} =  CRYPTO\_\-MODE\_\-HMAC\_\-SHA1, 
+\par
+\hyperlink{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583ab6b59dffc007f95a722710fa7c8499b7}{GSN\_\-HASH\_\-MODE\_\-MD5} =  CRYPTO\_\-MODE\_\-HASH\_\-MD5, 
+\par
+\hyperlink{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583aeb1b747aa268916d0ae5893ee4d01387}{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-MD5} =  CRYPTO\_\-MODE\_\-HMAC\_\-MD5, 
+\par
+\hyperlink{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a7f1eeb9878c24046e45c487c876c6ed1}{GSN\_\-HASH\_\-MODE\_\-SHA256} =  CRYPTO\_\-MODE\_\-HASH\_\-SHA256, 
+\par
+\hyperlink{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a0828d0200d6113ba7db3b9c7693f5657}{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA256} =  CRYPTO\_\-MODE\_\-HMAC\_\-SHA256, 
+\par
+\hyperlink{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a45ec081160b3950e6035e43b486b7c5e}{GSN\_\-HASH\_\-MODE\_\-MAC\_\-XCBC} =  CRYPTO\_\-MODE\_\-MAC\_\-XCBC, 
+\par
+\hyperlink{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a97c4a7807ca086f1b83bd03fd25358f6}{GSN\_\-HASE\_\-MODE\_\-MAC\_\-CMAC} =  CRYPTO\_\-MODE\_\-MAC\_\-CMAC
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00515_a614612ab6385203620ae02c109ba81e2}{GsnHeIf\_\-DriverInit} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} seed\mbox{[}TRNG\_\-NONCE\_\-SIZE\_\-WORDS\mbox{]})
+\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00515_a753f5c9638475251276c863916b39f9e}{GsnHeIf\_\-CryptoInit} (\hyperlink{a00515_ab9bcbd29c0f7622f387e4b527acef326}{GSN\_\-CRYPTO\_\-MODE\_\-T} cModes, \hyperlink{a00515_aee4f8acfc5b53a56d0710713c26a5fd6}{GSN\_\-CRYPTO\_\-OP\_\-T} op, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pKey, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} keySize, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pIv, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ivSize)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00515_aa2d5e199d4c4268266b9275ac76dd7c7}{GsnHeIf\_\-CryptoProcess} (\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} handle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pSrc, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pDst)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00515_aa50658eebede268579c8e426d648ba38}{GsnHeIf\_\-CryptoDeInit} (\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} handle)
+\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00515_a541d5261ef4b436f3deb2f75afe15968}{GsnHeIf\_\-HashInit} (\hyperlink{a00515_afadc6098eee5910bf340f390d3e0b9f3}{GSN\_\-HASH\_\-MODE\_\-T} hMode, \hyperlink{a00515_aee4f8acfc5b53a56d0710713c26a5fd6}{GSN\_\-CRYPTO\_\-OP\_\-T} op, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pKey, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} keySize, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pIv, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ivSize)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00515_a9d2d2836900aac1e510334558bfb1968}{GsnHeIf\_\-HashProcess} (\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} handle, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} num\_\-elem, const \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pSrc\mbox{[}$\,$\mbox{]}, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pLen, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pDst, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} destBuflen)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00515_adf6fefbded5b91ff78abe169efaeeaca}{GsnHeIf\_\-HashDeInit} (\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} handle)
+\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00515_a2f28d0043a37512b3888c93a069630a6}{GsnHeIf\_\-TrangGenerate} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} length)
+\item 
+PUBLIC VOID \hyperlink{a00515_a6684b0bb0468e7bfeacb71d8a2a8d19d}{GsnHeIf\_\-DriverDeinit} (VOID)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN HEIF module. This file contains the HW Engine IF specific definitions. 
+
+Definition in file \hyperlink{a00515_source}{gsn\_\-hw\_\-engine\_\-if.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00515_ab9bcbd29c0f7622f387e4b527acef326}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-T@{GSN\_\-CRYPTO\_\-MODE\_\-T}}
+\index{GSN\_\-CRYPTO\_\-MODE\_\-T@{GSN\_\-CRYPTO\_\-MODE\_\-T}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GSN\_\-CRYPTO\_\-MODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-CRYPTO\_\-MODE} {\bf GSN\_\-CRYPTO\_\-MODE\_\-T}}}
+\label{a00515_ab9bcbd29c0f7622f387e4b527acef326}
+\hypertarget{a00515_aee4f8acfc5b53a56d0710713c26a5fd6}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-OP\_\-T@{GSN\_\-CRYPTO\_\-OP\_\-T}}
+\index{GSN\_\-CRYPTO\_\-OP\_\-T@{GSN\_\-CRYPTO\_\-OP\_\-T}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GSN\_\-CRYPTO\_\-OP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-CRYPTO\_\-OP} {\bf GSN\_\-CRYPTO\_\-OP\_\-T}}}
+\label{a00515_aee4f8acfc5b53a56d0710713c26a5fd6}
+\hypertarget{a00515_afadc6098eee5910bf340f390d3e0b9f3}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-HASH\_\-MODE\_\-T@{GSN\_\-HASH\_\-MODE\_\-T}}
+\index{GSN\_\-HASH\_\-MODE\_\-T@{GSN\_\-HASH\_\-MODE\_\-T}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GSN\_\-HASH\_\-MODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-HASH\_\-MODE} {\bf GSN\_\-HASH\_\-MODE\_\-T}}}
+\label{a00515_afadc6098eee5910bf340f390d3e0b9f3}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE@{GSN\_\-CRYPTO\_\-MODE}}
+\index{GSN\_\-CRYPTO\_\-MODE@{GSN\_\-CRYPTO\_\-MODE}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GSN\_\-CRYPTO\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-CRYPTO\_\-MODE}}}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-CRYPTO\_\-MODE\_\-NULL@{GSN\_\-CRYPTO\_\-MODE\_\-NULL}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-NULL@{GSN\_\-CRYPTO\_\-MODE\_\-NULL}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6a89c77f46105bcddc1146af4425937a86}{
+GSN\_\-CRYPTO\_\-MODE\_\-NULL}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6a89c77f46105bcddc1146af4425937a86}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-40@{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-40}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-40@{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-40}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6a761a8be09455508a138890bee8175061}{
+GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-40}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6a761a8be09455508a138890bee8175061}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-128@{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-128}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-128@{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-128}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6ac5a15f253983545af169abdf59e34c22}{
+GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-128}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6ac5a15f253983545af169abdf59e34c22}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-KS@{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-KS}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-KS@{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-KS}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6ac8b646b119cc253f058d0965525b4023}{
+GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-KS}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6ac8b646b119cc253f058d0965525b4023}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-ECB@{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-ECB}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-ECB@{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-ECB}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6a9b8309f309b6eed10211bf3d5e0d7c09}{
+GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-ECB}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6a9b8309f309b6eed10211bf3d5e0d7c09}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CBC@{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CBC}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CBC@{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CBC}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6aa5fb38dfa23f8d88b69432ffbc3e3aae}{
+GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CBC}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6aa5fb38dfa23f8d88b69432ffbc3e3aae}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CTR@{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CTR}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CTR@{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CTR}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6a7a2b02552f0d209dea3a0755dbb67996}{
+GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CTR}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6a7a2b02552f0d209dea3a0755dbb67996}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CCM@{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CCM}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CCM@{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CCM}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6a40d31f05684483147babce0620baa63c}{
+GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-CCM}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6a40d31f05684483147babce0620baa63c}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-GCM@{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-GCM}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-GCM@{GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-GCM}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6a68bb9327cd3f01d06e2e524ab9f59b2d}{
+GSN\_\-CRYPTO\_\-MODE\_\-AES\_\-GCM}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6a68bb9327cd3f01d06e2e524ab9f59b2d}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-CBC@{GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-CBC}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-CBC@{GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-CBC}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6acc5b0be980efdaac27f2eaae46aa760d}{
+GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-CBC}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6acc5b0be980efdaac27f2eaae46aa760d}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-ECB@{GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-ECB}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-ECB@{GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-ECB}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6ab81972739240be2d2d402fa0e41eba56}{
+GSN\_\-CRYPTO\_\-MODE\_\-3DES\_\-ECB}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6ab81972739240be2d2d402fa0e41eba56}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-CBC@{GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-CBC}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-CBC@{GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-CBC}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6a77d35039842ced178b7bdbfd2e0107e0}{
+GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-CBC}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6a77d35039842ced178b7bdbfd2e0107e0}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-ECB@{GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-ECB}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-ECB@{GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-ECB}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6a11ae2a27f4db712aced5f4afd0579bf3}{
+GSN\_\-CRYPTO\_\-MODE\_\-DES\_\-ECB}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6a11ae2a27f4db712aced5f4afd0579bf3}
+}]\index{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-256@{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-256}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-256@{GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-256}}\item[{\em 
+\hypertarget{a00515_a3010ebd2596d115219b29d0a14c1f3f6a8344fda34ccbd513fff9e432bee546c4}{
+GSN\_\-CRYPTO\_\-MODE\_\-RC4\_\-256}
+\label{a00515_a3010ebd2596d115219b29d0a14c1f3f6a8344fda34ccbd513fff9e432bee546c4}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 82 of file gsn\_\-hw\_\-engine\_\-if.h.
+
+\hypertarget{a00515_ab25cef7ae4e4b592cba2ee9ee33d2979}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-OP@{GSN\_\-CRYPTO\_\-OP}}
+\index{GSN\_\-CRYPTO\_\-OP@{GSN\_\-CRYPTO\_\-OP}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GSN\_\-CRYPTO\_\-OP}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-CRYPTO\_\-OP}}}
+\label{a00515_ab25cef7ae4e4b592cba2ee9ee33d2979}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-CRYPTO\_\-OP\_\-ENCRYPT@{GSN\_\-CRYPTO\_\-OP\_\-ENCRYPT}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-OP\_\-ENCRYPT@{GSN\_\-CRYPTO\_\-OP\_\-ENCRYPT}}\item[{\em 
+\hypertarget{a00515_ab25cef7ae4e4b592cba2ee9ee33d2979a065ab93fddceb23cd177bde38bcbb7df}{
+GSN\_\-CRYPTO\_\-OP\_\-ENCRYPT}
+\label{a00515_ab25cef7ae4e4b592cba2ee9ee33d2979a065ab93fddceb23cd177bde38bcbb7df}
+}]\index{GSN\_\-CRYPTO\_\-OP\_\-DECRYPT@{GSN\_\-CRYPTO\_\-OP\_\-DECRYPT}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-CRYPTO\_\-OP\_\-DECRYPT@{GSN\_\-CRYPTO\_\-OP\_\-DECRYPT}}\item[{\em 
+\hypertarget{a00515_ab25cef7ae4e4b592cba2ee9ee33d2979aa480bc17092102bfb2f5b99ef42a292c}{
+GSN\_\-CRYPTO\_\-OP\_\-DECRYPT}
+\label{a00515_ab25cef7ae4e4b592cba2ee9ee33d2979aa480bc17092102bfb2f5b99ef42a292c}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 102 of file gsn\_\-hw\_\-engine\_\-if.h.
+
+\hypertarget{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-HASH\_\-MODE@{GSN\_\-HASH\_\-MODE}}
+\index{GSN\_\-HASH\_\-MODE@{GSN\_\-HASH\_\-MODE}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GSN\_\-HASH\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-HASH\_\-MODE}}}
+\label{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-HASH\_\-MODE\_\-SHA1@{GSN\_\-HASH\_\-MODE\_\-SHA1}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-HASH\_\-MODE\_\-SHA1@{GSN\_\-HASH\_\-MODE\_\-SHA1}}\item[{\em 
+\hypertarget{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a1fe114b2620507a863bbe6e7a61f622e}{
+GSN\_\-HASH\_\-MODE\_\-SHA1}
+\label{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a1fe114b2620507a863bbe6e7a61f622e}
+}]\index{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA1@{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA1}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA1@{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA1}}\item[{\em 
+\hypertarget{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a32aaf6de96662e4fcb3d99f354cac82e}{
+GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA1}
+\label{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a32aaf6de96662e4fcb3d99f354cac82e}
+}]\index{GSN\_\-HASH\_\-MODE\_\-MD5@{GSN\_\-HASH\_\-MODE\_\-MD5}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-HASH\_\-MODE\_\-MD5@{GSN\_\-HASH\_\-MODE\_\-MD5}}\item[{\em 
+\hypertarget{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583ab6b59dffc007f95a722710fa7c8499b7}{
+GSN\_\-HASH\_\-MODE\_\-MD5}
+\label{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583ab6b59dffc007f95a722710fa7c8499b7}
+}]\index{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-MD5@{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-MD5}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-HASH\_\-MODE\_\-HMAC\_\-MD5@{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-MD5}}\item[{\em 
+\hypertarget{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583aeb1b747aa268916d0ae5893ee4d01387}{
+GSN\_\-HASH\_\-MODE\_\-HMAC\_\-MD5}
+\label{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583aeb1b747aa268916d0ae5893ee4d01387}
+}]\index{GSN\_\-HASH\_\-MODE\_\-SHA256@{GSN\_\-HASH\_\-MODE\_\-SHA256}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-HASH\_\-MODE\_\-SHA256@{GSN\_\-HASH\_\-MODE\_\-SHA256}}\item[{\em 
+\hypertarget{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a7f1eeb9878c24046e45c487c876c6ed1}{
+GSN\_\-HASH\_\-MODE\_\-SHA256}
+\label{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a7f1eeb9878c24046e45c487c876c6ed1}
+}]\index{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA256@{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA256}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA256@{GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA256}}\item[{\em 
+\hypertarget{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a0828d0200d6113ba7db3b9c7693f5657}{
+GSN\_\-HASH\_\-MODE\_\-HMAC\_\-SHA256}
+\label{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a0828d0200d6113ba7db3b9c7693f5657}
+}]\index{GSN\_\-HASH\_\-MODE\_\-MAC\_\-XCBC@{GSN\_\-HASH\_\-MODE\_\-MAC\_\-XCBC}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-HASH\_\-MODE\_\-MAC\_\-XCBC@{GSN\_\-HASH\_\-MODE\_\-MAC\_\-XCBC}}\item[{\em 
+\hypertarget{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a45ec081160b3950e6035e43b486b7c5e}{
+GSN\_\-HASH\_\-MODE\_\-MAC\_\-XCBC}
+\label{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a45ec081160b3950e6035e43b486b7c5e}
+}]\index{GSN\_\-HASE\_\-MODE\_\-MAC\_\-CMAC@{GSN\_\-HASE\_\-MODE\_\-MAC\_\-CMAC}!gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}}\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GSN\_\-HASE\_\-MODE\_\-MAC\_\-CMAC@{GSN\_\-HASE\_\-MODE\_\-MAC\_\-CMAC}}\item[{\em 
+\hypertarget{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a97c4a7807ca086f1b83bd03fd25358f6}{
+GSN\_\-HASE\_\-MODE\_\-MAC\_\-CMAC}
+\label{a00515_a9f050c027d3a6f0f6ea0e5cf4c5b4583a97c4a7807ca086f1b83bd03fd25358f6}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 108 of file gsn\_\-hw\_\-engine\_\-if.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00515_aa50658eebede268579c8e426d648ba38}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GsnHeIf\_\-CryptoDeInit@{GsnHeIf\_\-CryptoDeInit}}
+\index{GsnHeIf\_\-CryptoDeInit@{GsnHeIf\_\-CryptoDeInit}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GsnHeIf\_\-CryptoDeInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnHeIf\_\-CryptoDeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf INT32}}]{handle}
+\end{DoxyParamCaption}
+)}}
+\label{a00515_aa50658eebede268579c8e426d648ba38}
+\hypertarget{a00515_a753f5c9638475251276c863916b39f9e}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GsnHeIf\_\-CryptoInit@{GsnHeIf\_\-CryptoInit}}
+\index{GsnHeIf\_\-CryptoInit@{GsnHeIf\_\-CryptoInit}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GsnHeIf\_\-CryptoInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnHeIf\_\-CryptoInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CRYPTO\_\-MODE\_\-T}}]{cModes, }
+\item[{{\bf GSN\_\-CRYPTO\_\-OP\_\-T}}]{op, }
+\item[{{\bf UINT8} $\ast$}]{pKey, }
+\item[{{\bf UINT32}}]{keySize, }
+\item[{{\bf UINT8} $\ast$}]{pIv, }
+\item[{{\bf UINT32}}]{ivSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00515_a753f5c9638475251276c863916b39f9e}
+\hypertarget{a00515_aa2d5e199d4c4268266b9275ac76dd7c7}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GsnHeIf\_\-CryptoProcess@{GsnHeIf\_\-CryptoProcess}}
+\index{GsnHeIf\_\-CryptoProcess@{GsnHeIf\_\-CryptoProcess}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GsnHeIf\_\-CryptoProcess}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnHeIf\_\-CryptoProcess (
+\begin{DoxyParamCaption}
+\item[{{\bf INT32}}]{handle, }
+\item[{{\bf UINT8} $\ast$}]{pSrc, }
+\item[{{\bf UINT32}}]{len, }
+\item[{{\bf UINT8} $\ast$}]{pDst}
+\end{DoxyParamCaption}
+)}}
+\label{a00515_aa2d5e199d4c4268266b9275ac76dd7c7}
+\hypertarget{a00515_a6684b0bb0468e7bfeacb71d8a2a8d19d}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GsnHeIf\_\-DriverDeinit@{GsnHeIf\_\-DriverDeinit}}
+\index{GsnHeIf\_\-DriverDeinit@{GsnHeIf\_\-DriverDeinit}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GsnHeIf\_\-DriverDeinit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnHeIf\_\-DriverDeinit (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00515_a6684b0bb0468e7bfeacb71d8a2a8d19d}
+\hypertarget{a00515_a614612ab6385203620ae02c109ba81e2}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GsnHeIf\_\-DriverInit@{GsnHeIf\_\-DriverInit}}
+\index{GsnHeIf\_\-DriverInit@{GsnHeIf\_\-DriverInit}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GsnHeIf\_\-DriverInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnHeIf\_\-DriverInit (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{seed\mbox{[}TRNG\_\-NONCE\_\-SIZE\_\-WORDS\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{a00515_a614612ab6385203620ae02c109ba81e2}
+\hypertarget{a00515_adf6fefbded5b91ff78abe169efaeeaca}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GsnHeIf\_\-HashDeInit@{GsnHeIf\_\-HashDeInit}}
+\index{GsnHeIf\_\-HashDeInit@{GsnHeIf\_\-HashDeInit}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GsnHeIf\_\-HashDeInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnHeIf\_\-HashDeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf INT32}}]{handle}
+\end{DoxyParamCaption}
+)}}
+\label{a00515_adf6fefbded5b91ff78abe169efaeeaca}
+\hypertarget{a00515_a541d5261ef4b436f3deb2f75afe15968}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GsnHeIf\_\-HashInit@{GsnHeIf\_\-HashInit}}
+\index{GsnHeIf\_\-HashInit@{GsnHeIf\_\-HashInit}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GsnHeIf\_\-HashInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnHeIf\_\-HashInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HASH\_\-MODE\_\-T}}]{hMode, }
+\item[{{\bf GSN\_\-CRYPTO\_\-OP\_\-T}}]{op, }
+\item[{{\bf UINT8} $\ast$}]{pKey, }
+\item[{{\bf UINT32}}]{keySize, }
+\item[{{\bf UINT8} $\ast$}]{pIv, }
+\item[{{\bf UINT32}}]{ivSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00515_a541d5261ef4b436f3deb2f75afe15968}
+\hypertarget{a00515_a9d2d2836900aac1e510334558bfb1968}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GsnHeIf\_\-HashProcess@{GsnHeIf\_\-HashProcess}}
+\index{GsnHeIf\_\-HashProcess@{GsnHeIf\_\-HashProcess}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GsnHeIf\_\-HashProcess}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnHeIf\_\-HashProcess (
+\begin{DoxyParamCaption}
+\item[{{\bf INT32}}]{handle, }
+\item[{{\bf UINT32}}]{num\_\-elem, }
+\item[{const {\bf UINT8} $\ast$}]{pSrc\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf UINT32} $\ast$}]{pLen, }
+\item[{{\bf UINT8} $\ast$}]{pDst, }
+\item[{{\bf UINT32}}]{destBuflen}
+\end{DoxyParamCaption}
+)}}
+\label{a00515_a9d2d2836900aac1e510334558bfb1968}
+\hypertarget{a00515_a2f28d0043a37512b3888c93a069630a6}{
+\index{gsn\_\-hw\_\-engine\_\-if.h@{gsn\_\-hw\_\-engine\_\-if.h}!GsnHeIf\_\-TrangGenerate@{GsnHeIf\_\-TrangGenerate}}
+\index{GsnHeIf\_\-TrangGenerate@{GsnHeIf\_\-TrangGenerate}!gsn_hw_engine_if.h@{gsn\_\-hw\_\-engine\_\-if.h}}
+\subsubsection[{GsnHeIf\_\-TrangGenerate}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnHeIf\_\-TrangGenerate (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{pBuf, }
+\item[{{\bf UINT32}}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{a00515_a2f28d0043a37512b3888c93a069630a6}

@@ -1,0 +1,312 @@
+\hypertarget{a00605}{
+\section{gsn\_\-wif.h File Reference}
+\label{a00605}\index{gsn\_\-wif.h@{gsn\_\-wif.h}}
+}
+
+
+GSN WIF public header. This file contains public function prototypes and data structure definitions for wlan interface module.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00852}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00323}{GSN\_\-WIF\_\-CTX}
+\begin{DoxyCompactList}\small\item\em GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the wif interface will have its own context defined here. \end{DoxyCompactList}\item 
+struct \hyperlink{a00338}{GSN\_\-WIF\_\-INIT\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em Wif context init function parameter data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00342}{GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em Wif context init function parameter data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00323}{GSN\_\-WIF\_\-CTX} \hyperlink{a00635_ga7a8bd94a4326b0ff61696008eda89228}{GSN\_\-WIF\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the wif interface will have its own context defined here. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00338}{GSN\_\-WIF\_\-INIT\_\-PARAM} \hyperlink{a00635_gaf24820ac43e65f03340551f2b579f6f5}{GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Wif context init function parameter data structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00342}{GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM} \hyperlink{a00635_ga3af1a4583d80b21b8aa4274a01ca7ad7}{GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Wif context init function parameter data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00635_ga1ffa97473da0d308f2f3d214c775c8da}{GsnWif\_\-Init} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00338}{GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Initialize WLAN IF. This function initializes the WLAN IF instance. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00605_a585055eb6eb3ace4e68ae9064372f765}{GsnWif\_\-Reinit} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00342}{GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+INLINE VOID \hyperlink{a00605_aaa5125848d544a020aeb27a068b0f4fc}{GsnWif\_\-WlanCtrlIndCbReg} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00635_ga1a6c66e709c29a827dc0c07e40f4b9aa}{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} ind)
+\item 
+INLINE VOID \hyperlink{a00605_a5a748562dc49c19d203f0ba8fc213c21}{GsnWif\_\-CalCtrlIndCbReg} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00635_ga1a6c66e709c29a827dc0c07e40f4b9aa}{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} ind)
+\item 
+INLINE VOID \hyperlink{a00605_ac51cadef467511106c44f9bdd2caf325}{GsnWif\_\-DataIndCbReg} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00635_gad46de129691b078bd6ff8df7f46318d2}{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx)
+\item 
+INLINE VOID $\ast$ \hyperlink{a00605_a6671a7e2a8f70bf6a480f6ce80555289}{GsnWif\_\-ReqBuffGet} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} reqSize)
+\item 
+INLINE VOID $\ast$ \hyperlink{a00605_a8af797eb7346dc831aabb64057406cd3}{GsnWif\_\-DataTxBuffGet} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataSize)
+\item 
+INLINE \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00605_a4192624248f21f0d8d02527671c4fb4d}{GsnWif\_\-WlanCtrlSend} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} reqAPI, VOID $\ast$pReq, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} reqSize)
+\item 
+INLINE \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00605_adf5513ce548ac0e71b01b4b0ef3b75ce}{GsnWif\_\-CalCtrlSend} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} reqAPI, VOID $\ast$pReq, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} reqSize)
+\item 
+INLINE \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00605_a32b31dc339922071e25bd581987f8f5f}{GsnWif\_\-DataSend} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$data, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} sizeOfData, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} pktId)
+\item 
+INLINE \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00605_ad87f9bd3e0b2f7fc8e6a771b36d486b0}{GsnWif\_\-154DataSend} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$data, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} sizeOfData, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} pktId)
+\item 
+INLINE \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00605_a0a8a9ba656a608d910401da40fd63196}{GsnWif\_\-UnassocDataSend} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$data, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} sizeOfData, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} pktId)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN WIF public header. This file contains public function prototypes and data structure definitions for wlan interface module. \begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition in file \hyperlink{a00605_source}{gsn\_\-wif.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00605_ad87f9bd3e0b2f7fc8e6a771b36d486b0}{
+\index{gsn\_\-wif.h@{gsn\_\-wif.h}!GsnWif\_\-154DataSend@{GsnWif\_\-154DataSend}}
+\index{GsnWif\_\-154DataSend@{GsnWif\_\-154DataSend}!gsn_wif.h@{gsn\_\-wif.h}}
+\subsubsection[{GsnWif\_\-154DataSend}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-STATUS} GsnWif\_\-154DataSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf INT8} $\ast$}]{data, }
+\item[{{\bf UINT32}}]{sizeOfData, }
+\item[{{\bf UINT8}}]{pktId}
+\end{DoxyParamCaption}
+)}}
+\label{a00605_ad87f9bd3e0b2f7fc8e6a771b36d486b0}
+
+
+Definition at line 226 of file gsn\_\-wif.h.
+
+\hypertarget{a00605_a5a748562dc49c19d203f0ba8fc213c21}{
+\index{gsn\_\-wif.h@{gsn\_\-wif.h}!GsnWif\_\-CalCtrlIndCbReg@{GsnWif\_\-CalCtrlIndCbReg}}
+\index{GsnWif\_\-CalCtrlIndCbReg@{GsnWif\_\-CalCtrlIndCbReg}!gsn_wif.h@{gsn\_\-wif.h}}
+\subsubsection[{GsnWif\_\-CalCtrlIndCbReg}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnWif\_\-CalCtrlIndCbReg (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T}}]{cb, }
+\item[{VOID $\ast$}]{ctx, }
+\item[{{\bf UINT16}}]{ind}
+\end{DoxyParamCaption}
+)}}
+\label{a00605_a5a748562dc49c19d203f0ba8fc213c21}
+
+
+Definition at line 165 of file gsn\_\-wif.h.
+
+\hypertarget{a00605_adf5513ce548ac0e71b01b4b0ef3b75ce}{
+\index{gsn\_\-wif.h@{gsn\_\-wif.h}!GsnWif\_\-CalCtrlSend@{GsnWif\_\-CalCtrlSend}}
+\index{GsnWif\_\-CalCtrlSend@{GsnWif\_\-CalCtrlSend}!gsn_wif.h@{gsn\_\-wif.h}}
+\subsubsection[{GsnWif\_\-CalCtrlSend}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-STATUS} GsnWif\_\-CalCtrlSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf UINT32}}]{reqAPI, }
+\item[{VOID $\ast$}]{pReq, }
+\item[{{\bf UINT16}}]{reqSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00605_adf5513ce548ac0e71b01b4b0ef3b75ce}
+
+
+Definition at line 213 of file gsn\_\-wif.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=356pt]{a00605_adf5513ce548ac0e71b01b4b0ef3b75ce_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00605_ac51cadef467511106c44f9bdd2caf325}{
+\index{gsn\_\-wif.h@{gsn\_\-wif.h}!GsnWif\_\-DataIndCbReg@{GsnWif\_\-DataIndCbReg}}
+\index{GsnWif\_\-DataIndCbReg@{GsnWif\_\-DataIndCbReg}!gsn_wif.h@{gsn\_\-wif.h}}
+\subsubsection[{GsnWif\_\-DataIndCbReg}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnWif\_\-DataIndCbReg (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-T}}]{cb, }
+\item[{VOID $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}
+\label{a00605_ac51cadef467511106c44f9bdd2caf325}
+
+
+Definition at line 181 of file gsn\_\-wif.h.
+
+\hypertarget{a00605_a32b31dc339922071e25bd581987f8f5f}{
+\index{gsn\_\-wif.h@{gsn\_\-wif.h}!GsnWif\_\-DataSend@{GsnWif\_\-DataSend}}
+\index{GsnWif\_\-DataSend@{GsnWif\_\-DataSend}!gsn_wif.h@{gsn\_\-wif.h}}
+\subsubsection[{GsnWif\_\-DataSend}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-STATUS} GsnWif\_\-DataSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf INT8} $\ast$}]{data, }
+\item[{{\bf UINT32}}]{sizeOfData, }
+\item[{{\bf UINT8}}]{pktId}
+\end{DoxyParamCaption}
+)}}
+\label{a00605_a32b31dc339922071e25bd581987f8f5f}
+
+
+Definition at line 220 of file gsn\_\-wif.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=352pt]{a00605_a32b31dc339922071e25bd581987f8f5f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00605_a8af797eb7346dc831aabb64057406cd3}{
+\index{gsn\_\-wif.h@{gsn\_\-wif.h}!GsnWif\_\-DataTxBuffGet@{GsnWif\_\-DataTxBuffGet}}
+\index{GsnWif\_\-DataTxBuffGet@{GsnWif\_\-DataTxBuffGet}!gsn_wif.h@{gsn\_\-wif.h}}
+\subsubsection[{GsnWif\_\-DataTxBuffGet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID$\ast$ GsnWif\_\-DataTxBuffGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf UINT32}}]{dataSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00605_a8af797eb7346dc831aabb64057406cd3}
+
+
+Definition at line 200 of file gsn\_\-wif.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00605_a8af797eb7346dc831aabb64057406cd3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00605_a585055eb6eb3ace4e68ae9064372f765}{
+\index{gsn\_\-wif.h@{gsn\_\-wif.h}!GsnWif\_\-Reinit@{GsnWif\_\-Reinit}}
+\index{GsnWif\_\-Reinit@{GsnWif\_\-Reinit}!gsn_wif.h@{gsn\_\-wif.h}}
+\subsubsection[{GsnWif\_\-Reinit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWif\_\-Reinit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00605_a585055eb6eb3ace4e68ae9064372f765}
+\hypertarget{a00605_a6671a7e2a8f70bf6a480f6ce80555289}{
+\index{gsn\_\-wif.h@{gsn\_\-wif.h}!GsnWif\_\-ReqBuffGet@{GsnWif\_\-ReqBuffGet}}
+\index{GsnWif\_\-ReqBuffGet@{GsnWif\_\-ReqBuffGet}!gsn_wif.h@{gsn\_\-wif.h}}
+\subsubsection[{GsnWif\_\-ReqBuffGet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID$\ast$ GsnWif\_\-ReqBuffGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf UINT32}}]{reqSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00605_a6671a7e2a8f70bf6a480f6ce80555289}
+
+
+Definition at line 191 of file gsn\_\-wif.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00605_a6671a7e2a8f70bf6a480f6ce80555289_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00605_a0a8a9ba656a608d910401da40fd63196}{
+\index{gsn\_\-wif.h@{gsn\_\-wif.h}!GsnWif\_\-UnassocDataSend@{GsnWif\_\-UnassocDataSend}}
+\index{GsnWif\_\-UnassocDataSend@{GsnWif\_\-UnassocDataSend}!gsn_wif.h@{gsn\_\-wif.h}}
+\subsubsection[{GsnWif\_\-UnassocDataSend}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-STATUS} GsnWif\_\-UnassocDataSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf INT8} $\ast$}]{data, }
+\item[{{\bf UINT32}}]{sizeOfData, }
+\item[{{\bf UINT8}}]{pktId}
+\end{DoxyParamCaption}
+)}}
+\label{a00605_a0a8a9ba656a608d910401da40fd63196}
+
+
+Definition at line 232 of file gsn\_\-wif.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00605_a0a8a9ba656a608d910401da40fd63196_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00605_aaa5125848d544a020aeb27a068b0f4fc}{
+\index{gsn\_\-wif.h@{gsn\_\-wif.h}!GsnWif\_\-WlanCtrlIndCbReg@{GsnWif\_\-WlanCtrlIndCbReg}}
+\index{GsnWif\_\-WlanCtrlIndCbReg@{GsnWif\_\-WlanCtrlIndCbReg}!gsn_wif.h@{gsn\_\-wif.h}}
+\subsubsection[{GsnWif\_\-WlanCtrlIndCbReg}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnWif\_\-WlanCtrlIndCbReg (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T}}]{cb, }
+\item[{VOID $\ast$}]{ctx, }
+\item[{{\bf UINT16}}]{ind}
+\end{DoxyParamCaption}
+)}}
+\label{a00605_aaa5125848d544a020aeb27a068b0f4fc}
+
+
+Definition at line 149 of file gsn\_\-wif.h.
+
+\hypertarget{a00605_a4192624248f21f0d8d02527671c4fb4d}{
+\index{gsn\_\-wif.h@{gsn\_\-wif.h}!GsnWif\_\-WlanCtrlSend@{GsnWif\_\-WlanCtrlSend}}
+\index{GsnWif\_\-WlanCtrlSend@{GsnWif\_\-WlanCtrlSend}!gsn_wif.h@{gsn\_\-wif.h}}
+\subsubsection[{GsnWif\_\-WlanCtrlSend}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-STATUS\_\-T} GsnWif\_\-WlanCtrlSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf UINT32}}]{reqAPI, }
+\item[{VOID $\ast$}]{pReq, }
+\item[{{\bf UINT16}}]{reqSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00605_a4192624248f21f0d8d02527671c4fb4d}
+
+
+Definition at line 206 of file gsn\_\-wif.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=368pt]{a00605_a4192624248f21f0d8d02527671c4fb4d_cgraph}
+\end{center}
+\end{figure}
+
+

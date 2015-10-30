@@ -1,0 +1,227 @@
+\hypertarget{a00059}{
+\section{GSN\_\-EMU\_\-CTX Struct Reference}
+\label{a00059}\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}}
+}
+
+
+EMU Context.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-emu.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00663_gab09444b3018b5461230d789c746b56a0}{GSN\_\-EMU\_\-STATE\_\-T} \hyperlink{a00059_a8e4e413d6cdd8ed5d0b00352c705e870}{state}
+\item 
+\hyperlink{a00663_gafbaa4d30aa4b736f3465344d6a5935b0}{GSN\_\-EMU\_\-MODE\_\-T} \hyperlink{a00059_a1174c25ab9eb5a4d0559dc01ef4362d4}{mode}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{a00065}{GSN\_EMU\_PL722X\_CTX\_T} \hyperlink{a00059_a3b1676d377e919c2a6e4e2de63885f5a}{pl722xCtx}\\
+\>\hyperlink{a00066}{GSN\_EMU\_SDADC\_CTX\_T} \hyperlink{a00059_a1ecea336f1ec46a2bc1fe898b676a533}{sdAdcCtx}\\
+\} \hyperlink{a00059_add10e330d91fd521da66792db609c654}{moduleCtx}\\
+
+\end{tabbing}\item 
+\hyperlink{a00061}{GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR\_\-T} \hyperlink{a00059_a12640fd70a84f1a68ebb56a244c86722}{moduleFnPtr}
+\item 
+\hyperlink{a00489_ab0fa7e48e947d0a8dd37314d7aee6ba7}{GSN\_\-EMU\_\-APPNOTIFICATION\_\-FUNC\_\-T} \hyperlink{a00059_a8a951fbafe874586d5d1a95ac1bda95e}{appCbFnPtr}
+\item 
+VOID $\ast$ \hyperlink{a00059_a42247110483322db37439434ae8e03cc}{appCbCtx}
+\item 
+\hyperlink{a00060}{GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS\_\-T} \hyperlink{a00059_ad4623a728b040b714e8b17d138d2e774}{elecParams}
+\item 
+\hyperlink{a00058}{GSN\_\-EMU\_\-CONF\_\-VALUE\_\-T} \hyperlink{a00059_a836176d32d447038bb88414b377b0695}{confValue}
+\item 
+\hyperlink{a00490_a05b3306759ea16994bc2d9055424367e}{GSN\_\-EMU\_\-TASKNOTIFICATION\_\-FUNC\_\-T} \hyperlink{a00059_a36ee45c72f5016b9cadd6800fe182bb8}{taskNotifier}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00059_aa8c6b643ee8938831977aa4738b52955}{attenuationConstFp}
+\item 
+float \hyperlink{a00059_adcad7e1a1f80df210c106db80efce24c}{g\_\-IiFp}
+\item 
+float \hyperlink{a00059_a6fd1e0e5fd1f3b6d85711578d367360f}{g\_\-EnergyFp}
+\item 
+float \hyperlink{a00059_abaff361f11436fef9186f8372635f88f}{g\_\-Raw\_\-EnergyFp}
+\item 
+float \hyperlink{a00059_a1c6c6aff6522961bb66f41aa1c81a675}{lastinputFp}
+\item 
+float \hyperlink{a00059_a69a4982d994b218ddb7ed81c02dfc28b}{lastoutputFp}
+\item 
+float \hyperlink{a00059_a74170e1238d96263904d2c5e2b638994}{g\_\-Power\_\-FactorFp}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+EMU Context. 
+
+Definition at line 264 of file gsn\_\-emu.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00059_a42247110483322db37439434ae8e03cc}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!appCbCtx@{appCbCtx}}
+\index{appCbCtx@{appCbCtx}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{appCbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf appCbCtx}}}
+\label{a00059_a42247110483322db37439434ae8e03cc}
+
+
+Definition at line 279 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_a8a951fbafe874586d5d1a95ac1bda95e}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!appCbFnPtr@{appCbFnPtr}}
+\index{appCbFnPtr@{appCbFnPtr}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{appCbFnPtr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-EMU\_\-APPNOTIFICATION\_\-FUNC\_\-T} {\bf appCbFnPtr}}}
+\label{a00059_a8a951fbafe874586d5d1a95ac1bda95e}
+
+
+Definition at line 278 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_aa8c6b643ee8938831977aa4738b52955}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!attenuationConstFp@{attenuationConstFp}}
+\index{attenuationConstFp@{attenuationConstFp}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{attenuationConstFp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf attenuationConstFp}}}
+\label{a00059_aa8c6b643ee8938831977aa4738b52955}
+
+
+Definition at line 288 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_a836176d32d447038bb88414b377b0695}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!confValue@{confValue}}
+\index{confValue@{confValue}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{confValue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-EMU\_\-CONF\_\-VALUE\_\-T} {\bf confValue}}}
+\label{a00059_a836176d32d447038bb88414b377b0695}
+
+
+Definition at line 283 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_ad4623a728b040b714e8b17d138d2e774}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!elecParams@{elecParams}}
+\index{elecParams@{elecParams}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{elecParams}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS\_\-T} {\bf elecParams}}}
+\label{a00059_ad4623a728b040b714e8b17d138d2e774}
+
+
+Definition at line 281 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_a6fd1e0e5fd1f3b6d85711578d367360f}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!g\_\-EnergyFp@{g\_\-EnergyFp}}
+\index{g\_\-EnergyFp@{g\_\-EnergyFp}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{g\_\-EnergyFp}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf g\_\-EnergyFp}}}
+\label{a00059_a6fd1e0e5fd1f3b6d85711578d367360f}
+
+
+Definition at line 290 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_adcad7e1a1f80df210c106db80efce24c}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!g\_\-IiFp@{g\_\-IiFp}}
+\index{g\_\-IiFp@{g\_\-IiFp}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{g\_\-IiFp}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf g\_\-IiFp}}}
+\label{a00059_adcad7e1a1f80df210c106db80efce24c}
+
+
+Definition at line 289 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_a74170e1238d96263904d2c5e2b638994}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!g\_\-Power\_\-FactorFp@{g\_\-Power\_\-FactorFp}}
+\index{g\_\-Power\_\-FactorFp@{g\_\-Power\_\-FactorFp}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{g\_\-Power\_\-FactorFp}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf g\_\-Power\_\-FactorFp}}}
+\label{a00059_a74170e1238d96263904d2c5e2b638994}
+
+
+Definition at line 295 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_abaff361f11436fef9186f8372635f88f}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!g\_\-Raw\_\-EnergyFp@{g\_\-Raw\_\-EnergyFp}}
+\index{g\_\-Raw\_\-EnergyFp@{g\_\-Raw\_\-EnergyFp}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{g\_\-Raw\_\-EnergyFp}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf g\_\-Raw\_\-EnergyFp}}}
+\label{a00059_abaff361f11436fef9186f8372635f88f}
+
+
+Definition at line 291 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_a1c6c6aff6522961bb66f41aa1c81a675}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!lastinputFp@{lastinputFp}}
+\index{lastinputFp@{lastinputFp}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{lastinputFp}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf lastinputFp}}}
+\label{a00059_a1c6c6aff6522961bb66f41aa1c81a675}
+
+
+Definition at line 293 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_a69a4982d994b218ddb7ed81c02dfc28b}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!lastoutputFp@{lastoutputFp}}
+\index{lastoutputFp@{lastoutputFp}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{lastoutputFp}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf lastoutputFp}}}
+\label{a00059_a69a4982d994b218ddb7ed81c02dfc28b}
+
+
+Definition at line 294 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_a1174c25ab9eb5a4d0559dc01ef4362d4}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!mode@{mode}}
+\index{mode@{mode}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-EMU\_\-MODE\_\-T} {\bf mode}}}
+\label{a00059_a1174c25ab9eb5a4d0559dc01ef4362d4}
+
+
+Definition at line 268 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_add10e330d91fd521da66792db609c654}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!moduleCtx@{moduleCtx}}
+\index{moduleCtx@{moduleCtx}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{moduleCtx}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}  {\bf moduleCtx}}}
+\label{a00059_add10e330d91fd521da66792db609c654}
+\hypertarget{a00059_a12640fd70a84f1a68ebb56a244c86722}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!moduleFnPtr@{moduleFnPtr}}
+\index{moduleFnPtr@{moduleFnPtr}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{moduleFnPtr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR\_\-T} {\bf moduleFnPtr}}}
+\label{a00059_a12640fd70a84f1a68ebb56a244c86722}
+
+
+Definition at line 276 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_a3b1676d377e919c2a6e4e2de63885f5a}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!pl722xCtx@{pl722xCtx}}
+\index{pl722xCtx@{pl722xCtx}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{pl722xCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-EMU\_\-PL722X\_\-CTX\_\-T} {\bf pl722xCtx}}}
+\label{a00059_a3b1676d377e919c2a6e4e2de63885f5a}
+
+
+Definition at line 272 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_a1ecea336f1ec46a2bc1fe898b676a533}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!sdAdcCtx@{sdAdcCtx}}
+\index{sdAdcCtx@{sdAdcCtx}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{sdAdcCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-EMU\_\-SDADC\_\-CTX\_\-T} {\bf sdAdcCtx}}}
+\label{a00059_a1ecea336f1ec46a2bc1fe898b676a533}
+
+
+Definition at line 273 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_a8e4e413d6cdd8ed5d0b00352c705e870}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!state@{state}}
+\index{state@{state}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-EMU\_\-STATE\_\-T} {\bf state}}}
+\label{a00059_a8e4e413d6cdd8ed5d0b00352c705e870}
+
+
+Definition at line 266 of file gsn\_\-emu.h.
+
+\hypertarget{a00059_a36ee45c72f5016b9cadd6800fe182bb8}{
+\index{GSN\_\-EMU\_\-CTX@{GSN\_\-EMU\_\-CTX}!taskNotifier@{taskNotifier}}
+\index{taskNotifier@{taskNotifier}!GSN_EMU_CTX@{GSN\_\-EMU\_\-CTX}}
+\subsubsection[{taskNotifier}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-EMU\_\-TASKNOTIFICATION\_\-FUNC\_\-T} {\bf taskNotifier}}}
+\label{a00059_a36ee45c72f5016b9cadd6800fe182bb8}
+
+
+Definition at line 286 of file gsn\_\-emu.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00489}{gsn\_\-emu.h}\end{DoxyCompactItemize}

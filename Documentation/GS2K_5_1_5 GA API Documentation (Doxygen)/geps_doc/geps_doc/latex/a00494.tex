@@ -1,0 +1,41 @@
+\hypertarget{a00494}{
+\section{gsn\_\-event\_\-handler.h File Reference}
+\label{a00494}\index{gsn\_\-event\_\-handler.h@{gsn\_\-event\_\-handler.h}}
+}
+
+
+GSN Event Handler public declaration. This file contains the public API declaration.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER}
+\begin{DoxyCompactList}\small\item\em GSN Event Handler context. type definition of the Event handler context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00622_ga570a795e4730bcaa1c17b58223336526}{GSN\_\-EVENT\_\-HANDLER\_\-CB\_\-T} )(\hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$)
+\begin{DoxyCompactList}\small\item\em GSN Event Handler callback type. type definition of the handler used in Event handler. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER} \hyperlink{a00622_ga6b24ca227651d8ca08bb5e95b709dc49}{GSN\_\-EVENT\_\-HANDLER\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Event Handler context. type definition of the Event handler context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00622_ga1444fb0959aa0a4116350050672123e8}{GsnEventHandler\_\-Create} (\hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$pEventHandler)
+\begin{DoxyCompactList}\small\item\em Create Event Handler. This function is used to create a Event handler group. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00622_gad6d98740195b5df6efecc955027ca980}{GsnEventHandler\_\-EventGet} (\hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$pEventHandler, ULONG requested\_\-flags, \hyperlink{a00536_a3782687de549490574b44f3374fb5731}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T} get\_\-option, ULONG $\ast$pActualFlags, ULONG wait\_\-option)
+\begin{DoxyCompactList}\small\item\em gets the Events. This function is used to get the events. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00622_ga4303e460164a4a63050c356c1d9e7371}{GsnEventHandler\_\-EventSet} (\hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$pEventHandler, ULONG flags\_\-to\_\-set, \hyperlink{a00536_a3782687de549490574b44f3374fb5731}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T} set\_\-option)
+\begin{DoxyCompactList}\small\item\em Sets Events . This function is used to set the events. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00622_ga838bf8879aab1d57f5ef7981f9a5e3d0}{GsnEventHandler\_\-EventNotifyCb} (\hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$pEventHandler, \hyperlink{a00622_ga570a795e4730bcaa1c17b58223336526}{GSN\_\-EVENT\_\-HANDLER\_\-CB\_\-T} events\_\-set\_\-notify\_\-cb)
+\begin{DoxyCompactList}\small\item\em registers call back for events group. This function is used to register call back for events group. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00622_gaae25cea2c623ec738b13c0b039151e3a}{GsnEventHandler\_\-Delete} (\hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$pEventHandler)
+\begin{DoxyCompactList}\small\item\em deletes event group. This function is used to delet events group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN Event Handler public declaration. This file contains the public API declaration. 
+
+Definition in file \hyperlink{a00494_source}{gsn\_\-event\_\-handler.h}.
+

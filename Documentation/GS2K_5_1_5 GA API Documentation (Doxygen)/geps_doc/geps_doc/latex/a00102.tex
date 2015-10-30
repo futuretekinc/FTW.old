@@ -1,0 +1,125 @@
+\hypertarget{a00102}{
+\section{GSN\_\-ISOTX\_\-CTX Struct Reference}
+\label{a00102}\index{GSN\_\-ISOTX\_\-CTX@{GSN\_\-ISOTX\_\-CTX}}
+}
+
+
+{\ttfamily \#include $<$gsn\_\-isotx.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00102_ae57ae92e651751e7978e237c55133b4c}{macIfNum}
+\item 
+\hyperlink{a00105}{GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$ \hyperlink{a00102_afffdfa8aef1548f076e03123267d83d6}{pIsotxifCtx}
+\item 
+\hyperlink{a00101}{GSN\_\-ISOTX\_\-CTL\_\-NOTIF\_\-T} \hyperlink{a00102_a5bbfd95e414448e1b9d5e929adaf91ee}{ctrlNotif}
+\item 
+\hyperlink{a00103}{GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-T} \hyperlink{a00102_a774a8c18138a261927600b915c5296c1}{dataNotif}
+\item 
+\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} \hyperlink{a00102_a1375db10dcc5c2669543b8bdea7c9294}{blockngApiEntryLock}
+\item 
+\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} \hyperlink{a00102_ad31b28c2c1d66a49676adefa0939184e}{blockngApiExitLock}
+\item 
+VOID $\ast$ \hyperlink{a00102_a578079528c6283b8779beb3a12945bf9}{blockngApiUserBuf}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00102_ad828642fbf78687924f94c89931c9e13}{blockngApiUserBufSize}
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00102_a9058d044509dc3901de07c426d816472}{blockngApiStatus}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 119 of file gsn\_\-isotx.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00102_a1375db10dcc5c2669543b8bdea7c9294}{
+\index{GSN\_\-ISOTX\_\-CTX@{GSN\_\-ISOTX\_\-CTX}!blockngApiEntryLock@{blockngApiEntryLock}}
+\index{blockngApiEntryLock@{blockngApiEntryLock}!GSN_ISOTX_CTX@{GSN\_\-ISOTX\_\-CTX}}
+\subsubsection[{blockngApiEntryLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-SEM\_\-T} {\bf blockngApiEntryLock}}}
+\label{a00102_a1375db10dcc5c2669543b8bdea7c9294}
+Multiple Tasks may pend on thi ssemaphore 
+
+Definition at line 125 of file gsn\_\-isotx.h.
+
+\hypertarget{a00102_ad31b28c2c1d66a49676adefa0939184e}{
+\index{GSN\_\-ISOTX\_\-CTX@{GSN\_\-ISOTX\_\-CTX}!blockngApiExitLock@{blockngApiExitLock}}
+\index{blockngApiExitLock@{blockngApiExitLock}!GSN_ISOTX_CTX@{GSN\_\-ISOTX\_\-CTX}}
+\subsubsection[{blockngApiExitLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-SEM\_\-T} {\bf blockngApiExitLock}}}
+\label{a00102_ad31b28c2c1d66a49676adefa0939184e}
+Only a single task pend on this at a time 
+
+Definition at line 126 of file gsn\_\-isotx.h.
+
+\hypertarget{a00102_a9058d044509dc3901de07c426d816472}{
+\index{GSN\_\-ISOTX\_\-CTX@{GSN\_\-ISOTX\_\-CTX}!blockngApiStatus@{blockngApiStatus}}
+\index{blockngApiStatus@{blockngApiStatus}!GSN_ISOTX_CTX@{GSN\_\-ISOTX\_\-CTX}}
+\subsubsection[{blockngApiStatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} {\bf blockngApiStatus}}}
+\label{a00102_a9058d044509dc3901de07c426d816472}
+
+
+Definition at line 129 of file gsn\_\-isotx.h.
+
+\hypertarget{a00102_a578079528c6283b8779beb3a12945bf9}{
+\index{GSN\_\-ISOTX\_\-CTX@{GSN\_\-ISOTX\_\-CTX}!blockngApiUserBuf@{blockngApiUserBuf}}
+\index{blockngApiUserBuf@{blockngApiUserBuf}!GSN_ISOTX_CTX@{GSN\_\-ISOTX\_\-CTX}}
+\subsubsection[{blockngApiUserBuf}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf blockngApiUserBuf}}}
+\label{a00102_a578079528c6283b8779beb3a12945bf9}
+
+
+Definition at line 127 of file gsn\_\-isotx.h.
+
+\hypertarget{a00102_ad828642fbf78687924f94c89931c9e13}{
+\index{GSN\_\-ISOTX\_\-CTX@{GSN\_\-ISOTX\_\-CTX}!blockngApiUserBufSize@{blockngApiUserBufSize}}
+\index{blockngApiUserBufSize@{blockngApiUserBufSize}!GSN_ISOTX_CTX@{GSN\_\-ISOTX\_\-CTX}}
+\subsubsection[{blockngApiUserBufSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf blockngApiUserBufSize}}}
+\label{a00102_ad828642fbf78687924f94c89931c9e13}
+
+
+Definition at line 128 of file gsn\_\-isotx.h.
+
+\hypertarget{a00102_a5bbfd95e414448e1b9d5e929adaf91ee}{
+\index{GSN\_\-ISOTX\_\-CTX@{GSN\_\-ISOTX\_\-CTX}!ctrlNotif@{ctrlNotif}}
+\index{ctrlNotif@{ctrlNotif}!GSN_ISOTX_CTX@{GSN\_\-ISOTX\_\-CTX}}
+\subsubsection[{ctrlNotif}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ISOTX\_\-CTL\_\-NOTIF\_\-T} {\bf ctrlNotif}}}
+\label{a00102_a5bbfd95e414448e1b9d5e929adaf91ee}
+
+
+Definition at line 123 of file gsn\_\-isotx.h.
+
+\hypertarget{a00102_a774a8c18138a261927600b915c5296c1}{
+\index{GSN\_\-ISOTX\_\-CTX@{GSN\_\-ISOTX\_\-CTX}!dataNotif@{dataNotif}}
+\index{dataNotif@{dataNotif}!GSN_ISOTX_CTX@{GSN\_\-ISOTX\_\-CTX}}
+\subsubsection[{dataNotif}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-T} {\bf dataNotif}}}
+\label{a00102_a774a8c18138a261927600b915c5296c1}
+
+
+Definition at line 124 of file gsn\_\-isotx.h.
+
+\hypertarget{a00102_ae57ae92e651751e7978e237c55133b4c}{
+\index{GSN\_\-ISOTX\_\-CTX@{GSN\_\-ISOTX\_\-CTX}!macIfNum@{macIfNum}}
+\index{macIfNum@{macIfNum}!GSN_ISOTX_CTX@{GSN\_\-ISOTX\_\-CTX}}
+\subsubsection[{macIfNum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf macIfNum}}}
+\label{a00102_ae57ae92e651751e7978e237c55133b4c}
+
+
+Definition at line 121 of file gsn\_\-isotx.h.
+
+\hypertarget{a00102_afffdfa8aef1548f076e03123267d83d6}{
+\index{GSN\_\-ISOTX\_\-CTX@{GSN\_\-ISOTX\_\-CTX}!pIsotxifCtx@{pIsotxifCtx}}
+\index{pIsotxifCtx@{pIsotxifCtx}!GSN_ISOTX_CTX@{GSN\_\-ISOTX\_\-CTX}}
+\subsubsection[{pIsotxifCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ISOTXIF\_\-CTX\_\-T}$\ast$ {\bf pIsotxifCtx}}}
+\label{a00102_afffdfa8aef1548f076e03123267d83d6}
+
+
+Definition at line 122 of file gsn\_\-isotx.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00520}{gsn\_\-isotx.h}\end{DoxyCompactItemize}

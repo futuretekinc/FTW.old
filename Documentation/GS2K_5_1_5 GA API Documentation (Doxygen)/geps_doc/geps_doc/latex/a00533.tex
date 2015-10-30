@@ -1,0 +1,140 @@
+\hypertarget{a00533}{
+\section{gsn\_\-nw\_\-defines.h File Reference}
+\label{a00533}\index{gsn\_\-nw\_\-defines.h@{gsn\_\-nw\_\-defines.h}}
+}
+
+
+GSN Network definitions. This file contains definitions commonly used by nw layer and the wdd module.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+Include dependency graph for gsn\_\-nw\_\-defines.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{a00767}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00768}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00068}{GSN\_\-ETHERNET\_\-FRAME}
+\begin{DoxyCompactList}\small\item\em GSN Ethernet frame format. This structue defines the format for the data frames between APP and WLAN. \end{DoxyCompactList}\item 
+struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV}
+\begin{DoxyCompactList}\small\item\em Layer 2 device open type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00533_a44848f957b5ff584fc8df72c554e9283}{GSN\_\-NW\_\-ETHER2\_\-HEADER\_\-SIZE}~14
+\item 
+\#define \hyperlink{a00533_a8909f0df52e224e9ffd677ca79cf88e5}{GSN\_\-NW\_\-ETHER\_\-MTU}~1500;
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00670_ga5be81e41aa75406c2f3b778aa073e052}{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE} \hyperlink{a00670_ga0144cadb46845e8150cdf57ae4a57ca5}{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Ethernet frame protocol field values. This enum contains the relevant ethernet protocol field values. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00068}{GSN\_\-ETHERNET\_\-FRAME} \hyperlink{a00670_ga4c2283c8c30055ade4fd96a34a9110aa}{GSN\_\-ETHERNET\_\-FRAME\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Ethernet frame format. This structue defines the format for the data frames between APP and WLAN. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00670_ga8d699f24bea4c9cf889e2cd1e854d06e}{GSN\_\-L2DEV\_\-IOCTL\_\-CODE} \hyperlink{a00670_ga462b6ae25d126945eeb2bc9743ca3288}{GSN\_\-L2DEV\_\-IOCTL\_\-CODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Layer 2 device I/O control (assumes a wireless L2 device). \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00670_ga528d617c85be4b1aed82ce677f941587}{GSN\_\-L2\_\-DEV\_\-RX\_\-CB\_\-T} )(VOID $\ast$pL3Ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} frameLen, VOID $\ast$pFrame)
+\begin{DoxyCompactList}\small\item\em Receive callback type. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00670_ga4d5db18667f665fc99ec6171cf27b5be}{GSN\_\-L2\_\-DEV\_\-TX\_\-DONE\_\-CB\_\-T} )(VOID $\ast$pL3Ctx, VOID $\ast$pData)
+\begin{DoxyCompactList}\small\item\em Transmit done callback type. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00670_ga6c639d0fa9b75482d68bfa97834a0ca9}{GSN\_\-L2\_\-DEV\_\-SEND\_\-PKT\_\-COPY\_\-CB} )(VOID $\ast$pL3Ctx, VOID $\ast$inBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} inLen, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$outBuf)
+\begin{DoxyCompactList}\small\item\em L2Dev will call this call back to copy the data to be sent by L3, in to its own buffer. Different Nw stack has different packet mechnisms. For example, in cae of NetX the out going packet may be really a chain of packets and need to call special PAI to copy data from chain of packets in to a single buffer to be sent. This function may do as simple as a memcpy... \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_gaea3ffbbb6ea57c5335f9011b4dcfe651}{GSN\_\-L2\_\-DEV\_\-OPEN\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev, VOID $\ast$l3Hndl, \hyperlink{a00670_ga528d617c85be4b1aed82ce677f941587}{GSN\_\-L2\_\-DEV\_\-RX\_\-CB\_\-T} rxCb, \hyperlink{a00670_ga4d5db18667f665fc99ec6171cf27b5be}{GSN\_\-L2\_\-DEV\_\-TX\_\-DONE\_\-CB\_\-T} txDoneCb, \hyperlink{a00670_ga6c639d0fa9b75482d68bfa97834a0ca9}{GSN\_\-L2\_\-DEV\_\-SEND\_\-PKT\_\-COPY\_\-CB} sendPktCopyCb)
+\begin{DoxyCompactList}\small\item\em Layer 2 device open type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_ga76681abc89c36ea37c57cedb070f1ec2}{GSN\_\-L2\_\-DEV\_\-CLOSE\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev)
+\begin{DoxyCompactList}\small\item\em Layer 2 device close type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_gab40e032c5bca66cf4f59d6c8cfa82e0a}{GSN\_\-L2\_\-DEV\_\-SEND\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev, \hyperlink{a00068}{GSN\_\-ETHERNET\_\-FRAME\_\-T} $\ast$pFrame, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} frameLen)
+\begin{DoxyCompactList}\small\item\em Layer 2 device send frame type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_ga6bea88ae2a22023e68f1b064e1455411}{GSN\_\-L2\_\-DEV\_\-SEND2\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev, \hyperlink{a00068}{GSN\_\-ETHERNET\_\-FRAME\_\-T} $\ast$pFrame, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rxOnTime)
+\begin{DoxyCompactList}\small\item\em Layer 2 device send frame 2 type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_gaffd1598183dbe1898e975c2993aa4966}{GSN\_\-L2\_\-DEV\_\-RECEIVE\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev, \hyperlink{a00068}{GSN\_\-ETHERNET\_\-FRAME\_\-T} $\ast$pFrame)
+\begin{DoxyCompactList}\small\item\em Layer 2 device receive frame type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_gaeb9c0acdcf9376e138e61f00a424042a}{GSN\_\-L2\_\-DEV\_\-IOCTL\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} cmd, void $\ast$pData)
+\begin{DoxyCompactList}\small\item\em Layer 2 device I/O control type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} \hyperlink{a00670_ga215517eb3a6f411a5378158abec2f574}{GSN\_\-L2\_\-DEV\_\-T}
+\begin{DoxyCompactList}\small\item\em Layer 2 device open type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00670_ga5be81e41aa75406c2f3b778aa073e052}{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE} \{ \par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052a97192703872038779e4de9e92df50b06}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IP} =  0x0800, 
+\par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052aafef0478501576893ebb9786b441130e}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-ARP} =  0x0806, 
+\par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052a26245450afddbdbad797e8eb9a3344b1}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RARP} =  0x0835, 
+\par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052a5e2c8dbf59e0d7a50f91e1132cbdd462}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IPv6} =  0x86dd, 
+\par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052a9a560452870b9062c401688e7c6a133d}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-EAPOL} =  0x888E, 
+\par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052aa6085d61a973526b9a05262cd6c301b2}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RSN\_\-PREAUTH} =  0x888C
+ \}
+\begin{DoxyCompactList}\small\item\em Ethernet frame protocol field values. This enum contains the relevant ethernet protocol field values. \end{DoxyCompactList}\item 
+enum \hyperlink{a00670_ga8d699f24bea4c9cf889e2cd1e854d06e}{GSN\_\-L2DEV\_\-IOCTL\_\-CODE} \{ \par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea409e1730531dd9d13865f463c790e9af}{GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-ON} =  0, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea4a8743a76cfc411624f4628f99e6a16a}{GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ead2aa23f87d755f6451f1a57b1277d041}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea84400faa87927ff618b22b1fd9f3a3dc}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea91a8bb3cf452c123d373d10055b3056c}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa8650c6bbf86242e8d10384073894f4d}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea41e5f14dfcdd5084cccdfdcf188c9c12}{GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea22b65238a5b76daf10c1c8dfa51374a5}{GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa9cbcab3a1533297188cbb315c2525d3}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa7cefeecba35a72029c8318038a52e6f}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-OFF}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea9cd933f898f7daf3dc334f75fc9d9577}{GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-SET}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea50d8640fbca1d94a5c60aa20034b20c0}{GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-GET}
+ \}
+\begin{DoxyCompactList}\small\item\em Layer 2 device I/O control (assumes a wireless L2 device). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN Network definitions. This file contains definitions commonly used by nw layer and the wdd module. 
+
+Definition in file \hyperlink{a00533_source}{gsn\_\-nw\_\-defines.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00533_a44848f957b5ff584fc8df72c554e9283}{
+\index{gsn\_\-nw\_\-defines.h@{gsn\_\-nw\_\-defines.h}!GSN\_\-NW\_\-ETHER2\_\-HEADER\_\-SIZE@{GSN\_\-NW\_\-ETHER2\_\-HEADER\_\-SIZE}}
+\index{GSN\_\-NW\_\-ETHER2\_\-HEADER\_\-SIZE@{GSN\_\-NW\_\-ETHER2\_\-HEADER\_\-SIZE}!gsn_nw_defines.h@{gsn\_\-nw\_\-defines.h}}
+\subsubsection[{GSN\_\-NW\_\-ETHER2\_\-HEADER\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ETHER2\_\-HEADER\_\-SIZE~14}}
+\label{a00533_a44848f957b5ff584fc8df72c554e9283}
+
+
+Definition at line 45 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00533_a8909f0df52e224e9ffd677ca79cf88e5}{
+\index{gsn\_\-nw\_\-defines.h@{gsn\_\-nw\_\-defines.h}!GSN\_\-NW\_\-ETHER\_\-MTU@{GSN\_\-NW\_\-ETHER\_\-MTU}}
+\index{GSN\_\-NW\_\-ETHER\_\-MTU@{GSN\_\-NW\_\-ETHER\_\-MTU}!gsn_nw_defines.h@{gsn\_\-nw\_\-defines.h}}
+\subsubsection[{GSN\_\-NW\_\-ETHER\_\-MTU}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ETHER\_\-MTU~1500;}}
+\label{a00533_a8909f0df52e224e9ffd677ca79cf88e5}
+
+
+Definition at line 46 of file gsn\_\-nw\_\-defines.h.
+

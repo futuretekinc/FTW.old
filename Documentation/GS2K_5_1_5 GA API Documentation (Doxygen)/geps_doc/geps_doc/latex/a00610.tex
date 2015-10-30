@@ -1,0 +1,229 @@
+\hypertarget{a00610}{
+\section{gsn\_\-wif\_\-defs.h File Reference}
+\label{a00610}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}
+}
+
+
+GSN WIF definitions public header.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00857}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00337}{GSN\_\-WIF\_\-HIF\_\-HDR\_\-S}
+\begin{DoxyCompactList}\small\item\em GSN WIF Hi header. \end{DoxyCompactList}\item 
+struct \hyperlink{a00322}{GSN\_\-WIF\_\-CTL\_\-TD\_\-S}
+\begin{DoxyCompactList}\small\item\em GSN WIF control transfer descriptor. \end{DoxyCompactList}\item 
+struct \hyperlink{a00325}{GSN\_\-WIF\_\-DATA\_\-TD\_\-S}
+\begin{DoxyCompactList}\small\item\em GSN WIF data transfer descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00610_a227770e4a8a8653b7e1335fbe857bf83}{GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM}~3
+\item 
+\#define \hyperlink{a00610_ad58fc93b48c98eed4245b922b60b9398}{GSN\_\-WIF\_\-CTL\_\-TD\_\-SIZE}~sizeof(\hyperlink{a00322}{GSN\_\-WIF\_\-CTL\_\-TD\_\-T})
+\item 
+\#define \hyperlink{a00610_a2a36db8c9237847322be3065c9ed0aa3}{GSN\_\-WIF\_\-DATA\_\-TD\_\-SIZE}~sizeof(\hyperlink{a00325}{GSN\_\-WIF\_\-DATA\_\-TD\_\-T})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-T} \hyperlink{a00638_ga0cd2d946cd64e99973998fcac7dfc244}{GSN\_\-WIF\_\-Q\_\-DESC\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WIF Queue descriptor structure. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} \hyperlink{a00610_a1e30dabd05f45e796a3062085160d2a2}{GSN\_\-WIF\_\-Q\_\-DESC\_\-HNDL\_\-T}
+\item 
+typedef struct \hyperlink{a00337}{GSN\_\-WIF\_\-HIF\_\-HDR\_\-S} \hyperlink{a00638_gaccb177e96466ed182b099685113c9f70}{GSN\_\-WIF\_\-HIF\_\-HDR\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WIF Hi header. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00322}{GSN\_\-WIF\_\-CTL\_\-TD\_\-S} \hyperlink{a00638_ga4b386895f3f1c0f28cd895ffd1e5fdfb}{GSN\_\-WIF\_\-CTL\_\-TD\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WIF control transfer descriptor. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00325}{GSN\_\-WIF\_\-DATA\_\-TD\_\-S} \hyperlink{a00638_ga906c7cc219265ee9c61f1487fcd1bfcd}{GSN\_\-WIF\_\-DATA\_\-TD\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WIF data transfer descriptor. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61}{GSN\_\-WIF\_\-QS} \hyperlink{a00610_a9d0e09456a07b17acc24bc23a4cd6318}{GSN\_\-WIF\_\-QS\_\-T}
+\item 
+typedef enum \hyperlink{a00610_abba8f1513c3343135d9334609ba7176a}{GSN\_\-WIF\_\-Q\_\-TYPES} \hyperlink{a00610_a70356467b56b9a88e2cf3d803b52d44d}{GSN\_\-WIF\_\-Q\_\-TYPES\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61}{GSN\_\-WIF\_\-QS} \{ \par
+\hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a5c8c66abd08e60202da3d9f8e4270801}{GSN\_\-WIF\_\-D\_\-TXRDY\_\-QDESC\_\-INDEX} =  0, 
+\par
+\hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a6e987ed002de284ea46178c563ef76aa}{GSN\_\-WIF\_\-D\_\-TXDONE\_\-QDESC\_\-INDEX}, 
+\par
+\hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a4cce71a50f9641c549170ac32e3291c9}{GSN\_\-WIF\_\-D\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX}, 
+\par
+\hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a07a7118d8f24d38c0c8b9cbb6df0cfd2}{GSN\_\-WIF\_\-D\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX}, 
+\par
+\hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61aa3298c9b628984234d4f063edb697df9}{GSN\_\-WIF\_\-D\_\-RXDONE\_\-QDESC\_\-INDEX}, 
+\par
+\hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61ac464a0e18929b65df95a0e6267f83eb4}{GSN\_\-WIF\_\-C\_\-TXRDY\_\-QDESC\_\-INDEX}, 
+\par
+\hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a07223913664f49f02e1436fd5f3ffe44}{GSN\_\-WIF\_\-C\_\-TXDONE\_\-QDESC\_\-INDEX}, 
+\par
+\hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a6f1d2235daf2d502c9b0fd1bfd4368fc}{GSN\_\-WIF\_\-C\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX}, 
+\par
+\hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61afd202c746a2da58f35224fbcb5e5c558}{GSN\_\-WIF\_\-C\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX}, 
+\par
+\hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61aa33d4c073688e3c1fdf1f305d79e1e49}{GSN\_\-WIF\_\-C\_\-RXDONE\_\-QDESC\_\-INDEX}, 
+\par
+\hyperlink{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a9abe369d68f8b2f766e406e2f065495d}{GSN\_\-WIF\_\-MAX\_\-QS}
+ \}
+\item 
+enum \hyperlink{a00610_abba8f1513c3343135d9334609ba7176a}{GSN\_\-WIF\_\-Q\_\-TYPES} \{ \par
+\hyperlink{a00610_abba8f1513c3343135d9334609ba7176aa61955dccf6bab002433fe205c24c370d}{GSN\_\-WIF\_\-Q\_\-TYPE\_\-CTL} =  1, 
+\par
+\hyperlink{a00610_abba8f1513c3343135d9334609ba7176aab0f73b73e52c44915fbc8381a4efd091}{GSN\_\-WIF\_\-Q\_\-TYPE\_\-DATA}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN WIF definitions public header. This file contains the public definitions of WIF. 
+
+Definition in file \hyperlink{a00610_source}{gsn\_\-wif\_\-defs.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00610_ad58fc93b48c98eed4245b922b60b9398}{
+\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-CTL\_\-TD\_\-SIZE@{GSN\_\-WIF\_\-CTL\_\-TD\_\-SIZE}}
+\index{GSN\_\-WIF\_\-CTL\_\-TD\_\-SIZE@{GSN\_\-WIF\_\-CTL\_\-TD\_\-SIZE}!gsn_wif_defs.h@{gsn\_\-wif\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-CTL\_\-TD\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-CTL\_\-TD\_\-SIZE~sizeof({\bf GSN\_\-WIF\_\-CTL\_\-TD\_\-T})}}
+\label{a00610_ad58fc93b48c98eed4245b922b60b9398}
+
+
+Definition at line 138 of file gsn\_\-wif\_\-defs.h.
+
+\hypertarget{a00610_a2a36db8c9237847322be3065c9ed0aa3}{
+\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-DATA\_\-TD\_\-SIZE@{GSN\_\-WIF\_\-DATA\_\-TD\_\-SIZE}}
+\index{GSN\_\-WIF\_\-DATA\_\-TD\_\-SIZE@{GSN\_\-WIF\_\-DATA\_\-TD\_\-SIZE}!gsn_wif_defs.h@{gsn\_\-wif\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-DATA\_\-TD\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-DATA\_\-TD\_\-SIZE~sizeof({\bf GSN\_\-WIF\_\-DATA\_\-TD\_\-T})}}
+\label{a00610_a2a36db8c9237847322be3065c9ed0aa3}
+
+
+Definition at line 139 of file gsn\_\-wif\_\-defs.h.
+
+\hypertarget{a00610_a227770e4a8a8653b7e1335fbe857bf83}{
+\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM@{GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM}}
+\index{GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM@{GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM}!gsn_wif_defs.h@{gsn\_\-wif\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM~3}}
+\label{a00610_a227770e4a8a8653b7e1335fbe857bf83}
+
+
+Definition at line 73 of file gsn\_\-wif\_\-defs.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00610_a1e30dabd05f45e796a3062085160d2a2}{
+\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-Q\_\-DESC\_\-HNDL\_\-T@{GSN\_\-WIF\_\-Q\_\-DESC\_\-HNDL\_\-T}}
+\index{GSN\_\-WIF\_\-Q\_\-DESC\_\-HNDL\_\-T@{GSN\_\-WIF\_\-Q\_\-DESC\_\-HNDL\_\-T}!gsn_wif_defs.h@{gsn\_\-wif\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-Q\_\-DESC\_\-HNDL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} {\bf GSN\_\-WIF\_\-Q\_\-DESC\_\-HNDL\_\-T}}}
+\label{a00610_a1e30dabd05f45e796a3062085160d2a2}
+
+
+Definition at line 83 of file gsn\_\-wif\_\-defs.h.
+
+\hypertarget{a00610_a70356467b56b9a88e2cf3d803b52d44d}{
+\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-Q\_\-TYPES\_\-T@{GSN\_\-WIF\_\-Q\_\-TYPES\_\-T}}
+\index{GSN\_\-WIF\_\-Q\_\-TYPES\_\-T@{GSN\_\-WIF\_\-Q\_\-TYPES\_\-T}!gsn_wif_defs.h@{gsn\_\-wif\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-Q\_\-TYPES\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-Q\_\-TYPES}  {\bf GSN\_\-WIF\_\-Q\_\-TYPES\_\-T}}}
+\label{a00610_a70356467b56b9a88e2cf3d803b52d44d}
+\hypertarget{a00610_a9d0e09456a07b17acc24bc23a4cd6318}{
+\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-QS\_\-T@{GSN\_\-WIF\_\-QS\_\-T}}
+\index{GSN\_\-WIF\_\-QS\_\-T@{GSN\_\-WIF\_\-QS\_\-T}!gsn_wif_defs.h@{gsn\_\-wif\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-QS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-QS}  {\bf GSN\_\-WIF\_\-QS\_\-T}}}
+\label{a00610_a9d0e09456a07b17acc24bc23a4cd6318}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00610_abba8f1513c3343135d9334609ba7176a}{
+\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-Q\_\-TYPES@{GSN\_\-WIF\_\-Q\_\-TYPES}}
+\index{GSN\_\-WIF\_\-Q\_\-TYPES@{GSN\_\-WIF\_\-Q\_\-TYPES}!gsn_wif_defs.h@{gsn\_\-wif\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-Q\_\-TYPES}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-Q\_\-TYPES}}}
+\label{a00610_abba8f1513c3343135d9334609ba7176a}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-Q\_\-TYPE\_\-CTL@{GSN\_\-WIF\_\-Q\_\-TYPE\_\-CTL}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-Q\_\-TYPE\_\-CTL@{GSN\_\-WIF\_\-Q\_\-TYPE\_\-CTL}}\item[{\em 
+\hypertarget{a00610_abba8f1513c3343135d9334609ba7176aa61955dccf6bab002433fe205c24c370d}{
+GSN\_\-WIF\_\-Q\_\-TYPE\_\-CTL}
+\label{a00610_abba8f1513c3343135d9334609ba7176aa61955dccf6bab002433fe205c24c370d}
+}]\index{GSN\_\-WIF\_\-Q\_\-TYPE\_\-DATA@{GSN\_\-WIF\_\-Q\_\-TYPE\_\-DATA}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-Q\_\-TYPE\_\-DATA@{GSN\_\-WIF\_\-Q\_\-TYPE\_\-DATA}}\item[{\em 
+\hypertarget{a00610_abba8f1513c3343135d9334609ba7176aab0f73b73e52c44915fbc8381a4efd091}{
+GSN\_\-WIF\_\-Q\_\-TYPE\_\-DATA}
+\label{a00610_abba8f1513c3343135d9334609ba7176aab0f73b73e52c44915fbc8381a4efd091}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 159 of file gsn\_\-wif\_\-defs.h.
+
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61}{
+\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-QS@{GSN\_\-WIF\_\-QS}}
+\index{GSN\_\-WIF\_\-QS@{GSN\_\-WIF\_\-QS}!gsn_wif_defs.h@{gsn\_\-wif\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-QS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-QS}}}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-D\_\-TXRDY\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-D\_\-TXRDY\_\-QDESC\_\-INDEX}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-D\_\-TXRDY\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-D\_\-TXRDY\_\-QDESC\_\-INDEX}}\item[{\em 
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a5c8c66abd08e60202da3d9f8e4270801}{
+GSN\_\-WIF\_\-D\_\-TXRDY\_\-QDESC\_\-INDEX}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a5c8c66abd08e60202da3d9f8e4270801}
+}]\index{GSN\_\-WIF\_\-D\_\-TXDONE\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-D\_\-TXDONE\_\-QDESC\_\-INDEX}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-D\_\-TXDONE\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-D\_\-TXDONE\_\-QDESC\_\-INDEX}}\item[{\em 
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a6e987ed002de284ea46178c563ef76aa}{
+GSN\_\-WIF\_\-D\_\-TXDONE\_\-QDESC\_\-INDEX}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a6e987ed002de284ea46178c563ef76aa}
+}]\index{GSN\_\-WIF\_\-D\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-D\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-D\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-D\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX}}\item[{\em 
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a4cce71a50f9641c549170ac32e3291c9}{
+GSN\_\-WIF\_\-D\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a4cce71a50f9641c549170ac32e3291c9}
+}]\index{GSN\_\-WIF\_\-D\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-D\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-D\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-D\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX}}\item[{\em 
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a07a7118d8f24d38c0c8b9cbb6df0cfd2}{
+GSN\_\-WIF\_\-D\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a07a7118d8f24d38c0c8b9cbb6df0cfd2}
+}]\index{GSN\_\-WIF\_\-D\_\-RXDONE\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-D\_\-RXDONE\_\-QDESC\_\-INDEX}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-D\_\-RXDONE\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-D\_\-RXDONE\_\-QDESC\_\-INDEX}}\item[{\em 
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61aa3298c9b628984234d4f063edb697df9}{
+GSN\_\-WIF\_\-D\_\-RXDONE\_\-QDESC\_\-INDEX}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61aa3298c9b628984234d4f063edb697df9}
+}]\index{GSN\_\-WIF\_\-C\_\-TXRDY\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-C\_\-TXRDY\_\-QDESC\_\-INDEX}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-C\_\-TXRDY\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-C\_\-TXRDY\_\-QDESC\_\-INDEX}}\item[{\em 
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61ac464a0e18929b65df95a0e6267f83eb4}{
+GSN\_\-WIF\_\-C\_\-TXRDY\_\-QDESC\_\-INDEX}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61ac464a0e18929b65df95a0e6267f83eb4}
+}]\index{GSN\_\-WIF\_\-C\_\-TXDONE\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-C\_\-TXDONE\_\-QDESC\_\-INDEX}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-C\_\-TXDONE\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-C\_\-TXDONE\_\-QDESC\_\-INDEX}}\item[{\em 
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a07223913664f49f02e1436fd5f3ffe44}{
+GSN\_\-WIF\_\-C\_\-TXDONE\_\-QDESC\_\-INDEX}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a07223913664f49f02e1436fd5f3ffe44}
+}]\index{GSN\_\-WIF\_\-C\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-C\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-C\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-C\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX}}\item[{\em 
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a6f1d2235daf2d502c9b0fd1bfd4368fc}{
+GSN\_\-WIF\_\-C\_\-RXRDY\_\-SBUF\_\-QDESC\_\-INDEX}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a6f1d2235daf2d502c9b0fd1bfd4368fc}
+}]\index{GSN\_\-WIF\_\-C\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-C\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-C\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-C\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX}}\item[{\em 
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61afd202c746a2da58f35224fbcb5e5c558}{
+GSN\_\-WIF\_\-C\_\-RXRDY\_\-LBUF\_\-QDESC\_\-INDEX}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61afd202c746a2da58f35224fbcb5e5c558}
+}]\index{GSN\_\-WIF\_\-C\_\-RXDONE\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-C\_\-RXDONE\_\-QDESC\_\-INDEX}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-C\_\-RXDONE\_\-QDESC\_\-INDEX@{GSN\_\-WIF\_\-C\_\-RXDONE\_\-QDESC\_\-INDEX}}\item[{\em 
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61aa33d4c073688e3c1fdf1f305d79e1e49}{
+GSN\_\-WIF\_\-C\_\-RXDONE\_\-QDESC\_\-INDEX}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61aa33d4c073688e3c1fdf1f305d79e1e49}
+}]\index{GSN\_\-WIF\_\-MAX\_\-QS@{GSN\_\-WIF\_\-MAX\_\-QS}!gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}}\index{gsn\_\-wif\_\-defs.h@{gsn\_\-wif\_\-defs.h}!GSN\_\-WIF\_\-MAX\_\-QS@{GSN\_\-WIF\_\-MAX\_\-QS}}\item[{\em 
+\hypertarget{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a9abe369d68f8b2f766e406e2f065495d}{
+GSN\_\-WIF\_\-MAX\_\-QS}
+\label{a00610_a5b8e1c6bdba07349b5bd789fe8517c61a9abe369d68f8b2f766e406e2f065495d}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 142 of file gsn\_\-wif\_\-defs.h.
+

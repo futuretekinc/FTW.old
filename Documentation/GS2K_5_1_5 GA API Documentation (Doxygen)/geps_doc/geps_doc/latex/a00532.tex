@@ -1,0 +1,426 @@
+\hypertarget{a00532}{
+\section{gsn\_\-nw.h File Reference}
+\label{a00532}\index{gsn\_\-nw.h@{gsn\_\-nw.h}}
+}
+
+
+GSN IP NW module public header. This file contains the IP NW glue related definitions.  
+
+
+{\ttfamily \#include \char`\"{}netx/nx\_\-api.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}netx/netx\_\-applications/dhcp/nxd\_\-dhcp\_\-client.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}netx/netx\_\-applications/dns/nxd\_\-dns.h\char`\"{}}\par
+Include dependency graph for gsn\_\-nw.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00765}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00766}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00164}{GSN\_\-NW\_\-CTX}
+\begin{DoxyCompactList}\small\item\em Network structure type, including a message handler, stack timer, ARP context structure, and a pointer for the network interface in use. \end{DoxyCompactList}\item 
+struct \hyperlink{a00165}{GSN\_\-NW\_\-INIT\_\-PARAMS}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00532_ad16a74995519cf1e9a0582465b6940fd}{GSN\_\-NW\_\-ARP\_\-TAGET\_\-IP\_\-OFFSET}~24
+\item 
+\#define \hyperlink{a00532_abdfd0939d6b0f786637f26a1c943865c}{GSN\_\-NW\_\-ARP\_\-PEER\_\-IP\_\-OFFSET}~14
+\item 
+\#define \hyperlink{a00532_a9b5b58bcdadeeab74b1deef43d795355}{GSN\_\-NW\_\-ARP\_\-PEER\_\-MAC\_\-OFFSET}~8
+\item 
+\#define \hyperlink{a00532_a3e00b78ae8a5afbd08f41fffd9acc20f}{GSN\_\-NW\_\-ARP\_\-OP\_\-OFFSET}~6
+\item 
+\#define \hyperlink{a00532_a9e91355342fa43502e204bfbfb645f79}{GSN\_\-NW\_\-ARP\_\-RESPONSE}~0x02
+\item 
+\#define \hyperlink{a00532_a7b44cb1dd0d6ce46cea9ef963a33140b}{GSN\_\-NW\_\-ARP\_\-REQUEST}~0x01
+\item 
+\#define \hyperlink{a00532_a0c03d87409256ce8a7b5162a21abd999}{GSN\_\-NW\_\-IP\_\-HEADER\_\-LEN}~20
+\item 
+\#define \hyperlink{a00532_a99679d7963b105a5cd3e5147d7e9a975}{GSN\_\-NW\_\-IP\_\-PROTO\_\-OFFSET}~9
+\item 
+\#define \hyperlink{a00532_ae53b9a1d86963af5d24f245c8895ef39}{GSN\_\-NW\_\-ICMP\_\-PROTO}~0x01
+\item 
+\#define \hyperlink{a00532_a9e1d162e9273038a81a8df526cdad4f6}{GSN\_\-NW\_\-ICMP\_\-ECHO}~0x08
+\item 
+\#define \hyperlink{a00532_afe27d1a9e2891e6939362b0ad9ea8430}{GSN\_\-NW\_\-TCP\_\-PROTO}~6
+\item 
+\#define \hyperlink{a00532_a71538a17a95630ca5c9571eafc64e3f2}{GSN\_\-NW\_\-UDP\_\-PROTO}~17
+\item 
+\#define \hyperlink{a00532_aff1de9469dd7dfe4602cf6f1ec811fc1}{GSN\_\-NW\_\-UDP\_\-DST\_\-PORT\_\-OFFSET}~2
+\item 
+\#define \hyperlink{a00532_aa423d3b52e047f9e63851c51c661af6f}{GSN\_\-NW\_\-UDP\_\-SRC\_\-PORT\_\-OFFSET}~0
+\item 
+\#define \hyperlink{a00532_a4d69f6d33a61ac5637e874ff68bfa566}{GSN\_\-NW\_\-BOOTP\_\-PORT}~68
+\item 
+\#define \hyperlink{a00532_ab42745a3d96ab5a190e78201bcdcf6f3}{GSN\_\-NW\_\-BOOTPS\_\-PORT}~67
+\item 
+\#define \hyperlink{a00532_ad2c6776a539c7076331f15008f5a9969}{GSN\_\-NW\_\-IPV6\_\-HEADER\_\-LEN}~20
+\item 
+\#define \hyperlink{a00532_a0a016de722e22e498dadfba1abaa4bc3}{GSN\_\-NW\_\-IPV6\_\-NXT\_\-HDR\_\-OFFSET}~6
+\item 
+\#define \hyperlink{a00532_ab5593226f9c55aedd8d3c609b37fc253}{GSN\_\-NW\_\-IPV6\_\-DEST\_\-ADDR\_\-OFFSET}~24
+\item 
+\#define \hyperlink{a00532_aa45655995857c7f814122d96de2edf55}{GSN\_\-NW\_\-ICMPV6\_\-PROTO}~58
+\item 
+\#define \hyperlink{a00532_aa0aa9e2bbc754e9b936e74bf3ca029da}{GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-NEIGHBOR\_\-ADVTSMNT}~136
+\item 
+\#define \hyperlink{a00532_a27f5c9b5b802b99a08e3e43e2714e66d}{GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-ROUTER\_\-ADVTSMNT}~134
+\item 
+\#define \hyperlink{a00532_a331459b3ebb4da867a8ff8590ea407c4}{GSN\_\-NW\_\-IPV6\_\-DHCPV6\_\-CLI\_\-PORT}~546
+\item 
+\#define \hyperlink{a00532_a19fbfe0b325520621e45e19eb9aa9111}{GSN\_\-NW\_\-HTTP\_\-PORT}~80
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef NX\_\-PACKET\_\-POOL \hyperlink{a00532_afccc5835aa5e2916600678de68186848}{GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE}
+\item 
+typedef enum \hyperlink{a00532_a75dd2f792a21a6b414daffe98e4b656b}{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE} \hyperlink{a00532_a777bb6c45bce65d3ede8311de122d451}{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE\_\-T}
+\item 
+typedef struct \hyperlink{a00164}{GSN\_\-NW\_\-CTX} \hyperlink{a00670_ga086f6dd63b1ad2f2008312cc8c24b606}{GSN\_\-NW\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em Network structure type, including a message handler, stack timer, ARP context structure, and a pointer for the network interface in use. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00165}{GSN\_\-NW\_\-INIT\_\-PARAMS} \hyperlink{a00532_ad66a56e7fe3cb8fa6e4a36b1cc90c781}{GSN\_\-NW\_\-INIT\_\-PARAMS\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00532_a75dd2f792a21a6b414daffe98e4b656b}{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE} \{ \par
+\hyperlink{a00532_a75dd2f792a21a6b414daffe98e4b656baa10a1e47e3cffb5cf03841925e7ca4f1}{GSN\_\-NW\_\-SBUF\_\-PKT\_\-POOL}, 
+\par
+\hyperlink{a00532_a75dd2f792a21a6b414daffe98e4b656ba17d1ee18e10830176ee8135e0a764d6d}{GSN\_\-NW\_\-LBUF\_\-PKT\_\-POOL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00670_ga86680611203d42252fc6f05608b7d75d}{GsnNw\_\-Init} (\hyperlink{a00164}{GSN\_\-NW\_\-CTX\_\-T} $\ast$pNwCtx, \hyperlink{a00165}{GSN\_\-NW\_\-INIT\_\-PARAMS\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em NW Initialization. This function initializes the NW module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00532_aaf3761589da5907fb80f1597fcbcc842}{GsnNw\_\-PktPoolCreate} (\hyperlink{a00532_afccc5835aa5e2916600678de68186848}{GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE} $\ast$pPktPoolHndl, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} pktSize, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$poolArea, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} poolSize)
+\item 
+PUBLIC \hyperlink{a00532_afccc5835aa5e2916600678de68186848}{GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE} $\ast$ \hyperlink{a00532_ae993be1fc8812d9a500164aecdbfebf3}{GsnNw\_\-PktPoolHndlGet} (\hyperlink{a00164}{GSN\_\-NW\_\-CTX\_\-T} $\ast$pNwCtx, \hyperlink{a00532_a777bb6c45bce65d3ede8311de122d451}{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE\_\-T} poolType)
+\item 
+PUBLIC NX\_\-PACKET $\ast$ \hyperlink{a00532_a3c21661b119048d9cb48f42c09d2a45f}{GsnNw\_\-PoolPacketGet} (\hyperlink{a00164}{GSN\_\-NW\_\-CTX\_\-T} $\ast$pNwCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN IP NW module public header. This file contains the IP NW glue related definitions. 
+
+Definition in file \hyperlink{a00532_source}{gsn\_\-nw.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00532_a3e00b78ae8a5afbd08f41fffd9acc20f}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-ARP\_\-OP\_\-OFFSET@{GSN\_\-NW\_\-ARP\_\-OP\_\-OFFSET}}
+\index{GSN\_\-NW\_\-ARP\_\-OP\_\-OFFSET@{GSN\_\-NW\_\-ARP\_\-OP\_\-OFFSET}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-ARP\_\-OP\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ARP\_\-OP\_\-OFFSET~6}}
+\label{a00532_a3e00b78ae8a5afbd08f41fffd9acc20f}
+
+
+Definition at line 91 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_abdfd0939d6b0f786637f26a1c943865c}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-ARP\_\-PEER\_\-IP\_\-OFFSET@{GSN\_\-NW\_\-ARP\_\-PEER\_\-IP\_\-OFFSET}}
+\index{GSN\_\-NW\_\-ARP\_\-PEER\_\-IP\_\-OFFSET@{GSN\_\-NW\_\-ARP\_\-PEER\_\-IP\_\-OFFSET}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-ARP\_\-PEER\_\-IP\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ARP\_\-PEER\_\-IP\_\-OFFSET~14}}
+\label{a00532_abdfd0939d6b0f786637f26a1c943865c}
+
+
+Definition at line 89 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a9b5b58bcdadeeab74b1deef43d795355}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-ARP\_\-PEER\_\-MAC\_\-OFFSET@{GSN\_\-NW\_\-ARP\_\-PEER\_\-MAC\_\-OFFSET}}
+\index{GSN\_\-NW\_\-ARP\_\-PEER\_\-MAC\_\-OFFSET@{GSN\_\-NW\_\-ARP\_\-PEER\_\-MAC\_\-OFFSET}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-ARP\_\-PEER\_\-MAC\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ARP\_\-PEER\_\-MAC\_\-OFFSET~8}}
+\label{a00532_a9b5b58bcdadeeab74b1deef43d795355}
+
+
+Definition at line 90 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a7b44cb1dd0d6ce46cea9ef963a33140b}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-ARP\_\-REQUEST@{GSN\_\-NW\_\-ARP\_\-REQUEST}}
+\index{GSN\_\-NW\_\-ARP\_\-REQUEST@{GSN\_\-NW\_\-ARP\_\-REQUEST}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-ARP\_\-REQUEST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ARP\_\-REQUEST~0x01}}
+\label{a00532_a7b44cb1dd0d6ce46cea9ef963a33140b}
+
+
+Definition at line 93 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a9e91355342fa43502e204bfbfb645f79}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-ARP\_\-RESPONSE@{GSN\_\-NW\_\-ARP\_\-RESPONSE}}
+\index{GSN\_\-NW\_\-ARP\_\-RESPONSE@{GSN\_\-NW\_\-ARP\_\-RESPONSE}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-ARP\_\-RESPONSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ARP\_\-RESPONSE~0x02}}
+\label{a00532_a9e91355342fa43502e204bfbfb645f79}
+
+
+Definition at line 92 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_ad16a74995519cf1e9a0582465b6940fd}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-ARP\_\-TAGET\_\-IP\_\-OFFSET@{GSN\_\-NW\_\-ARP\_\-TAGET\_\-IP\_\-OFFSET}}
+\index{GSN\_\-NW\_\-ARP\_\-TAGET\_\-IP\_\-OFFSET@{GSN\_\-NW\_\-ARP\_\-TAGET\_\-IP\_\-OFFSET}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-ARP\_\-TAGET\_\-IP\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ARP\_\-TAGET\_\-IP\_\-OFFSET~24}}
+\label{a00532_ad16a74995519cf1e9a0582465b6940fd}
+
+
+Definition at line 88 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a4d69f6d33a61ac5637e874ff68bfa566}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-BOOTP\_\-PORT@{GSN\_\-NW\_\-BOOTP\_\-PORT}}
+\index{GSN\_\-NW\_\-BOOTP\_\-PORT@{GSN\_\-NW\_\-BOOTP\_\-PORT}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-BOOTP\_\-PORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-BOOTP\_\-PORT~68}}
+\label{a00532_a4d69f6d33a61ac5637e874ff68bfa566}
+
+
+Definition at line 106 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_ab42745a3d96ab5a190e78201bcdcf6f3}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-BOOTPS\_\-PORT@{GSN\_\-NW\_\-BOOTPS\_\-PORT}}
+\index{GSN\_\-NW\_\-BOOTPS\_\-PORT@{GSN\_\-NW\_\-BOOTPS\_\-PORT}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-BOOTPS\_\-PORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-BOOTPS\_\-PORT~67}}
+\label{a00532_ab42745a3d96ab5a190e78201bcdcf6f3}
+
+
+Definition at line 107 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a19fbfe0b325520621e45e19eb9aa9111}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-HTTP\_\-PORT@{GSN\_\-NW\_\-HTTP\_\-PORT}}
+\index{GSN\_\-NW\_\-HTTP\_\-PORT@{GSN\_\-NW\_\-HTTP\_\-PORT}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-HTTP\_\-PORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-HTTP\_\-PORT~80}}
+\label{a00532_a19fbfe0b325520621e45e19eb9aa9111}
+
+
+Definition at line 117 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a9e1d162e9273038a81a8df526cdad4f6}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-ICMP\_\-ECHO@{GSN\_\-NW\_\-ICMP\_\-ECHO}}
+\index{GSN\_\-NW\_\-ICMP\_\-ECHO@{GSN\_\-NW\_\-ICMP\_\-ECHO}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-ICMP\_\-ECHO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ICMP\_\-ECHO~0x08}}
+\label{a00532_a9e1d162e9273038a81a8df526cdad4f6}
+
+
+Definition at line 99 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_ae53b9a1d86963af5d24f245c8895ef39}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-ICMP\_\-PROTO@{GSN\_\-NW\_\-ICMP\_\-PROTO}}
+\index{GSN\_\-NW\_\-ICMP\_\-PROTO@{GSN\_\-NW\_\-ICMP\_\-PROTO}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-ICMP\_\-PROTO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ICMP\_\-PROTO~0x01}}
+\label{a00532_ae53b9a1d86963af5d24f245c8895ef39}
+
+
+Definition at line 98 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_aa0aa9e2bbc754e9b936e74bf3ca029da}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-NEIGHBOR\_\-ADVTSMNT@{GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-NEIGHBOR\_\-ADVTSMNT}}
+\index{GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-NEIGHBOR\_\-ADVTSMNT@{GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-NEIGHBOR\_\-ADVTSMNT}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-NEIGHBOR\_\-ADVTSMNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-NEIGHBOR\_\-ADVTSMNT~136}}
+\label{a00532_aa0aa9e2bbc754e9b936e74bf3ca029da}
+
+
+Definition at line 114 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a27f5c9b5b802b99a08e3e43e2714e66d}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-ROUTER\_\-ADVTSMNT@{GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-ROUTER\_\-ADVTSMNT}}
+\index{GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-ROUTER\_\-ADVTSMNT@{GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-ROUTER\_\-ADVTSMNT}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-ROUTER\_\-ADVTSMNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ICMPV6\_\-MSG\_\-ROUTER\_\-ADVTSMNT~134}}
+\label{a00532_a27f5c9b5b802b99a08e3e43e2714e66d}
+
+
+Definition at line 115 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_aa45655995857c7f814122d96de2edf55}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-ICMPV6\_\-PROTO@{GSN\_\-NW\_\-ICMPV6\_\-PROTO}}
+\index{GSN\_\-NW\_\-ICMPV6\_\-PROTO@{GSN\_\-NW\_\-ICMPV6\_\-PROTO}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-ICMPV6\_\-PROTO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ICMPV6\_\-PROTO~58}}
+\label{a00532_aa45655995857c7f814122d96de2edf55}
+
+
+Definition at line 113 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a0c03d87409256ce8a7b5162a21abd999}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-IP\_\-HEADER\_\-LEN@{GSN\_\-NW\_\-IP\_\-HEADER\_\-LEN}}
+\index{GSN\_\-NW\_\-IP\_\-HEADER\_\-LEN@{GSN\_\-NW\_\-IP\_\-HEADER\_\-LEN}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-IP\_\-HEADER\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-IP\_\-HEADER\_\-LEN~20}}
+\label{a00532_a0c03d87409256ce8a7b5162a21abd999}
+
+
+Definition at line 95 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a99679d7963b105a5cd3e5147d7e9a975}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-IP\_\-PROTO\_\-OFFSET@{GSN\_\-NW\_\-IP\_\-PROTO\_\-OFFSET}}
+\index{GSN\_\-NW\_\-IP\_\-PROTO\_\-OFFSET@{GSN\_\-NW\_\-IP\_\-PROTO\_\-OFFSET}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-IP\_\-PROTO\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-IP\_\-PROTO\_\-OFFSET~9}}
+\label{a00532_a99679d7963b105a5cd3e5147d7e9a975}
+
+
+Definition at line 96 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_ab5593226f9c55aedd8d3c609b37fc253}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-IPV6\_\-DEST\_\-ADDR\_\-OFFSET@{GSN\_\-NW\_\-IPV6\_\-DEST\_\-ADDR\_\-OFFSET}}
+\index{GSN\_\-NW\_\-IPV6\_\-DEST\_\-ADDR\_\-OFFSET@{GSN\_\-NW\_\-IPV6\_\-DEST\_\-ADDR\_\-OFFSET}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-IPV6\_\-DEST\_\-ADDR\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-IPV6\_\-DEST\_\-ADDR\_\-OFFSET~24}}
+\label{a00532_ab5593226f9c55aedd8d3c609b37fc253}
+
+
+Definition at line 111 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a331459b3ebb4da867a8ff8590ea407c4}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-IPV6\_\-DHCPV6\_\-CLI\_\-PORT@{GSN\_\-NW\_\-IPV6\_\-DHCPV6\_\-CLI\_\-PORT}}
+\index{GSN\_\-NW\_\-IPV6\_\-DHCPV6\_\-CLI\_\-PORT@{GSN\_\-NW\_\-IPV6\_\-DHCPV6\_\-CLI\_\-PORT}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-IPV6\_\-DHCPV6\_\-CLI\_\-PORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-IPV6\_\-DHCPV6\_\-CLI\_\-PORT~546}}
+\label{a00532_a331459b3ebb4da867a8ff8590ea407c4}
+
+
+Definition at line 116 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_ad2c6776a539c7076331f15008f5a9969}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-IPV6\_\-HEADER\_\-LEN@{GSN\_\-NW\_\-IPV6\_\-HEADER\_\-LEN}}
+\index{GSN\_\-NW\_\-IPV6\_\-HEADER\_\-LEN@{GSN\_\-NW\_\-IPV6\_\-HEADER\_\-LEN}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-IPV6\_\-HEADER\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-IPV6\_\-HEADER\_\-LEN~20}}
+\label{a00532_ad2c6776a539c7076331f15008f5a9969}
+
+
+Definition at line 109 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a0a016de722e22e498dadfba1abaa4bc3}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-IPV6\_\-NXT\_\-HDR\_\-OFFSET@{GSN\_\-NW\_\-IPV6\_\-NXT\_\-HDR\_\-OFFSET}}
+\index{GSN\_\-NW\_\-IPV6\_\-NXT\_\-HDR\_\-OFFSET@{GSN\_\-NW\_\-IPV6\_\-NXT\_\-HDR\_\-OFFSET}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-IPV6\_\-NXT\_\-HDR\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-IPV6\_\-NXT\_\-HDR\_\-OFFSET~6}}
+\label{a00532_a0a016de722e22e498dadfba1abaa4bc3}
+
+
+Definition at line 110 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_afe27d1a9e2891e6939362b0ad9ea8430}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-TCP\_\-PROTO@{GSN\_\-NW\_\-TCP\_\-PROTO}}
+\index{GSN\_\-NW\_\-TCP\_\-PROTO@{GSN\_\-NW\_\-TCP\_\-PROTO}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-TCP\_\-PROTO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-TCP\_\-PROTO~6}}
+\label{a00532_afe27d1a9e2891e6939362b0ad9ea8430}
+
+
+Definition at line 100 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_aff1de9469dd7dfe4602cf6f1ec811fc1}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-UDP\_\-DST\_\-PORT\_\-OFFSET@{GSN\_\-NW\_\-UDP\_\-DST\_\-PORT\_\-OFFSET}}
+\index{GSN\_\-NW\_\-UDP\_\-DST\_\-PORT\_\-OFFSET@{GSN\_\-NW\_\-UDP\_\-DST\_\-PORT\_\-OFFSET}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-UDP\_\-DST\_\-PORT\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-UDP\_\-DST\_\-PORT\_\-OFFSET~2}}
+\label{a00532_aff1de9469dd7dfe4602cf6f1ec811fc1}
+
+
+Definition at line 103 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a71538a17a95630ca5c9571eafc64e3f2}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-UDP\_\-PROTO@{GSN\_\-NW\_\-UDP\_\-PROTO}}
+\index{GSN\_\-NW\_\-UDP\_\-PROTO@{GSN\_\-NW\_\-UDP\_\-PROTO}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-UDP\_\-PROTO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-UDP\_\-PROTO~17}}
+\label{a00532_a71538a17a95630ca5c9571eafc64e3f2}
+
+
+Definition at line 102 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_aa423d3b52e047f9e63851c51c661af6f}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-UDP\_\-SRC\_\-PORT\_\-OFFSET@{GSN\_\-NW\_\-UDP\_\-SRC\_\-PORT\_\-OFFSET}}
+\index{GSN\_\-NW\_\-UDP\_\-SRC\_\-PORT\_\-OFFSET@{GSN\_\-NW\_\-UDP\_\-SRC\_\-PORT\_\-OFFSET}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-UDP\_\-SRC\_\-PORT\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-UDP\_\-SRC\_\-PORT\_\-OFFSET~0}}
+\label{a00532_aa423d3b52e047f9e63851c51c661af6f}
+
+
+Definition at line 104 of file gsn\_\-nw.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00532_ad66a56e7fe3cb8fa6e4a36b1cc90c781}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-INIT\_\-PARAMS\_\-T@{GSN\_\-NW\_\-INIT\_\-PARAMS\_\-T}}
+\index{GSN\_\-NW\_\-INIT\_\-PARAMS\_\-T@{GSN\_\-NW\_\-INIT\_\-PARAMS\_\-T}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-INIT\_\-PARAMS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NW\_\-INIT\_\-PARAMS} {\bf GSN\_\-NW\_\-INIT\_\-PARAMS\_\-T}}}
+\label{a00532_ad66a56e7fe3cb8fa6e4a36b1cc90c781}
+\hypertarget{a00532_afccc5835aa5e2916600678de68186848}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE@{GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE}}
+\index{GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE@{GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE}]{\setlength{\rightskip}{0pt plus 5cm}typedef NX\_\-PACKET\_\-POOL {\bf GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE}}}
+\label{a00532_afccc5835aa5e2916600678de68186848}
+
+
+Definition at line 122 of file gsn\_\-nw.h.
+
+\hypertarget{a00532_a777bb6c45bce65d3ede8311de122d451}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE\_\-T@{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE\_\-T}}
+\index{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE\_\-T@{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE\_\-T}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE} {\bf GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE\_\-T}}}
+\label{a00532_a777bb6c45bce65d3ede8311de122d451}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00532_a75dd2f792a21a6b414daffe98e4b656b}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE@{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE}}
+\index{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE@{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE}}}
+\label{a00532_a75dd2f792a21a6b414daffe98e4b656b}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-NW\_\-SBUF\_\-PKT\_\-POOL@{GSN\_\-NW\_\-SBUF\_\-PKT\_\-POOL}!gsn\_\-nw.h@{gsn\_\-nw.h}}\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-SBUF\_\-PKT\_\-POOL@{GSN\_\-NW\_\-SBUF\_\-PKT\_\-POOL}}\item[{\em 
+\hypertarget{a00532_a75dd2f792a21a6b414daffe98e4b656baa10a1e47e3cffb5cf03841925e7ca4f1}{
+GSN\_\-NW\_\-SBUF\_\-PKT\_\-POOL}
+\label{a00532_a75dd2f792a21a6b414daffe98e4b656baa10a1e47e3cffb5cf03841925e7ca4f1}
+}]\index{GSN\_\-NW\_\-LBUF\_\-PKT\_\-POOL@{GSN\_\-NW\_\-LBUF\_\-PKT\_\-POOL}!gsn\_\-nw.h@{gsn\_\-nw.h}}\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GSN\_\-NW\_\-LBUF\_\-PKT\_\-POOL@{GSN\_\-NW\_\-LBUF\_\-PKT\_\-POOL}}\item[{\em 
+\hypertarget{a00532_a75dd2f792a21a6b414daffe98e4b656ba17d1ee18e10830176ee8135e0a764d6d}{
+GSN\_\-NW\_\-LBUF\_\-PKT\_\-POOL}
+\label{a00532_a75dd2f792a21a6b414daffe98e4b656ba17d1ee18e10830176ee8135e0a764d6d}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 124 of file gsn\_\-nw.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00532_aaf3761589da5907fb80f1597fcbcc842}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GsnNw\_\-PktPoolCreate@{GsnNw\_\-PktPoolCreate}}
+\index{GsnNw\_\-PktPoolCreate@{GsnNw\_\-PktPoolCreate}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GsnNw\_\-PktPoolCreate}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNw\_\-PktPoolCreate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE} $\ast$}]{pPktPoolHndl, }
+\item[{{\bf UINT32}}]{pktSize, }
+\item[{{\bf UINT8} $\ast$}]{poolArea, }
+\item[{{\bf UINT32}}]{poolSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00532_aaf3761589da5907fb80f1597fcbcc842}
+\hypertarget{a00532_ae993be1fc8812d9a500164aecdbfebf3}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GsnNw\_\-PktPoolHndlGet@{GsnNw\_\-PktPoolHndlGet}}
+\index{GsnNw\_\-PktPoolHndlGet@{GsnNw\_\-PktPoolHndlGet}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GsnNw\_\-PktPoolHndlGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE}$\ast$ GsnNw\_\-PktPoolHndlGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NW\_\-CTX\_\-T} $\ast$}]{pNwCtx, }
+\item[{{\bf GSN\_\-NW\_\-PKT\_\-POOL\_\-TYPE\_\-T}}]{poolType}
+\end{DoxyParamCaption}
+)}}
+\label{a00532_ae993be1fc8812d9a500164aecdbfebf3}
+\hypertarget{a00532_a3c21661b119048d9cb48f42c09d2a45f}{
+\index{gsn\_\-nw.h@{gsn\_\-nw.h}!GsnNw\_\-PoolPacketGet@{GsnNw\_\-PoolPacketGet}}
+\index{GsnNw\_\-PoolPacketGet@{GsnNw\_\-PoolPacketGet}!gsn_nw.h@{gsn\_\-nw.h}}
+\subsubsection[{GsnNw\_\-PoolPacketGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC NX\_\-PACKET$\ast$ GsnNw\_\-PoolPacketGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NW\_\-CTX\_\-T} $\ast$}]{pNwCtx, }
+\item[{{\bf UINT32}}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{a00532_a3c21661b119048d9cb48f42c09d2a45f}

@@ -1,0 +1,243 @@
+\hypertarget{a00500}{
+\section{gsn\_\-flash\_\-cache.h File Reference}
+\label{a00500}\index{gsn\_\-flash\_\-cache.h@{gsn\_\-flash\_\-cache.h}}
+}
+
+
+GSN Flash Cache public header. This file contains the public APIs and structures of Flash Cache driver module.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-op.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$util$\backslash$gsn\_\-ring\_\-buf.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}drivers$\backslash$reg$\backslash$gsn\_\-reg\_\-flashcache\_\-spec.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}drivers$\backslash$reg$\backslash$gsn\_\-reg\_\-flashcache\_\-op.h\char`\"{}}\par
+Include dependency graph for gsn\_\-flash\_\-cache.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00729}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00730}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00074}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-S}
+\begin{DoxyCompactList}\small\item\em GSN Flash Cache Block Re-\/Map structure. This structure defines flash cache block remap. \end{DoxyCompactList}\item 
+struct \hyperlink{a00075}{GSN\_\-FLASHCACHE\_\-CPU\_\-DMAREQ\_\-S}
+\begin{DoxyCompactList}\small\item\em GSN FlashCache Cpu DMA Request structure. This structure defines CPU dma request for FlashCache. \end{DoxyCompactList}\item 
+struct \hyperlink{a00076}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-S}
+\begin{DoxyCompactList}\small\item\em GSN FlashCache Patch Cache Tag structure. This structure defines FlashCache patch cache tag. \end{DoxyCompactList}\item 
+struct \hyperlink{a00077}{GSN\_\-FLASHCACHE\_\-S}
+\begin{DoxyCompactList}\small\item\em GSN FlashCache structure. This structure defines FlashCache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00500_a8af8595e379f890168b49ba2376a87ce}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE1}~256
+\item 
+\#define \hyperlink{a00500_afd0152a2c7a39f147acee0691804f5b8}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE2}~512
+\item 
+\#define \hyperlink{a00500_af657535573b5a6523955a1e187345d0d}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-FLASH\_\-SIZE}~(128 $\ast$ 1024)
+\item 
+\#define \hyperlink{a00500_a3ed82b9373946674a9f90d538d304eac}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-SRAM\_\-SIZE}~(16 $\ast$ 1024)
+\item 
+\#define \hyperlink{a00500_a6d2c7c1c216f85daa43a7b75844df869}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-NUM}~64
+\item 
+\#define \hyperlink{a00500_af3160a4e153bab80e59b398e9ea629b7}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-FIRST}~0
+\item 
+\#define \hyperlink{a00500_a49b308aa9ae943d2cd70bf768959427e}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-LAST}~(GSN\_\-FLASHCACHE\_\-PATCH\_\-CACHETAG\_\-NUM-\/1)
+\item 
+\#define \hyperlink{a00500_a6cf076bff36a8025789760126f41979c}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-REG\_\-OFFSET}~(3 $\ast$ sizeof(\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32}))
+\item 
+\#define \hyperlink{a00500_aed0d954ce7759195185a61a38f3c313c}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-REG\_\-OFFSET}~(1 $\ast$ sizeof(\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32}))
+\item 
+\#define \hyperlink{a00500_ab1c5953ab32b32e1274fe9053eff3839}{GSN\_\-FLASHCACHE\_\-CPU\_\-DMAREQ\_\-Q\_\-SIZE}~8
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00646_ga758188ba46d386fb37d18abf22002f9f}{GSN\_\-FLASHCACHE\_\-INTR\_\-E} \hyperlink{a00646_gae440995d29864b6ceac3862a7d41a3d9}{GSN\_\-FLASHCACHE\_\-INTR\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN FLASHCACHE Interrupt Mode Type. This enum defines Interrupt for FLASHCACHE. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00646_ga2fbb2a317075d9d8046e4586d991856b}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-INDEX\_\-E} \hyperlink{a00646_ga3d33b7f8285642e9406d19bb0af79b2f}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-INDEX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Flash Cache Block Re-\/Map Index. This enum defines flash cache block remap index. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00074}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-S} \hyperlink{a00646_gaae9fda1c44c958d868f7cf116897bfc5}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Flash Cache Block Re-\/Map structure. This structure defines flash cache block remap. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00075}{GSN\_\-FLASHCACHE\_\-CPU\_\-DMAREQ\_\-S} \hyperlink{a00646_ga83166ab55332496f41890f891c0be919}{GSN\_\-FLASHCACHE\_\-CPU\_\-DMAREQ\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN FlashCache Cpu DMA Request structure. This structure defines CPU dma request for FlashCache. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00076}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-S} \hyperlink{a00646_ga72a3a7e800a6f22cbb3fa9b744a51a72}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN FlashCache Patch Cache Tag structure. This structure defines FlashCache patch cache tag. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00077}{GSN\_\-FLASHCACHE\_\-S} \hyperlink{a00646_gab86e11d61e9a3e75985fb1ef6a081165}{GSN\_\-FLASHCACHE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN FlashCache structure. This structure defines FlashCache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00646_ga758188ba46d386fb37d18abf22002f9f}{GSN\_\-FLASHCACHE\_\-INTR\_\-E} \{ \par
+\hyperlink{a00646_gga758188ba46d386fb37d18abf22002f9fa7538ed6774e229b6d7fd6e6f097dd68e}{GSN\_\-FLASHCACHE\_\-INTR\_\-UNMAPPED\_\-ACCESS\_\-ERR} =  0, 
+\par
+\hyperlink{a00646_gga758188ba46d386fb37d18abf22002f9fabbd2a56a6ba2342a88f5658cc66ba50d}{GSN\_\-FLASHCACHE\_\-INTR\_\-CPU\_\-DMA\_\-DONE}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN FLASHCACHE Interrupt Mode Type. This enum defines Interrupt for FLASHCACHE. \end{DoxyCompactList}\item 
+enum \hyperlink{a00646_ga2fbb2a317075d9d8046e4586d991856b}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-INDEX\_\-E} \{ \par
+\hyperlink{a00646_gga2fbb2a317075d9d8046e4586d991856ba6b9536b09ca4255dd858668a57c809d8}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-INDEX\_\-0} =  0, 
+\par
+\hyperlink{a00646_gga2fbb2a317075d9d8046e4586d991856bad0ea966e72c0762fe3336e22464a40ce}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-INDEX\_\-1}, 
+\par
+\hyperlink{a00646_gga2fbb2a317075d9d8046e4586d991856bad28b96c859d35df3e557a4827031f8e7}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-INDEX\_\-2}, 
+\par
+\hyperlink{a00646_gga2fbb2a317075d9d8046e4586d991856ba634c9b4878dfb8547ebb82c2553eafe7}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-INDEX\_\-3}, 
+\par
+\hyperlink{a00646_gga2fbb2a317075d9d8046e4586d991856ba50de5128f4772952fd8881ce918349cd}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-INDEX\_\-4}, 
+\par
+\hyperlink{a00646_gga2fbb2a317075d9d8046e4586d991856baea17183b62f36d59877877f33ffd88b3}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-INDEX\_\-5}, 
+\par
+\hyperlink{a00646_gga2fbb2a317075d9d8046e4586d991856ba65bc7ca914deefef9d628a7326c0f43b}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-INDEX\_\-6}, 
+\par
+\hyperlink{a00646_gga2fbb2a317075d9d8046e4586d991856bab9d1feeea8ca5fc6d9f0c81ec463b486}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-INDEX\_\-7}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN Flash Cache Block Re-\/Map Index. This enum defines flash cache block remap index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00646_gac7d33f32920ee2ba878185838df0a101}{GsnFlashCache\_\-VersionGet} ()
+\begin{DoxyCompactList}\small\item\em FlashCache Version Get API. This function called to get the FlashCache Version. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00646_gabda7a7203bb87e7f0b2b567bb44dd980}{GsnFlashCache\_\-IntEnable} (\hyperlink{a00646_gae440995d29864b6ceac3862a7d41a3d9}{GSN\_\-FLASHCACHE\_\-INTR\_\-T} intr)
+\begin{DoxyCompactList}\small\item\em FlashCache Interrupt Enable API . This function called to Enable FlashCache Interrupt. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00646_ga4c03d4a8a408ccfd0a4b406cdfd12c36}{GsnFlashCache\_\-IntDisable} (\hyperlink{a00646_gae440995d29864b6ceac3862a7d41a3d9}{GSN\_\-FLASHCACHE\_\-INTR\_\-T} intr)
+\begin{DoxyCompactList}\small\item\em FlashCache Interrupt Disable API . This function called to Disable FlashCache Interrupts. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00646_gadedea6cd7372380413c6aa789848ce6d}{GsnFlashCache\_\-IntStatusGet} ()
+\begin{DoxyCompactList}\small\item\em FlashCache Interrupt Status Get API . This function called to Get FlashCache Interrupt Status. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00646_gae032f2e5e9de499ddebeb492bfc8234e}{GsnFlashCache\_\-BlkRemapEnable} ()
+\begin{DoxyCompactList}\small\item\em FlashCache Block Remap Enable API . This function called for Block Remap Enable. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00646_gab4aea75e2ad9062fc5e173a184b6147d}{GsnFlashCache\_\-BlkRemapStatus} ()
+\begin{DoxyCompactList}\small\item\em FlashCache Block Remap Status Get API . This function called to Get FlashCache Block Remap Status. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00646_ga4f71563aa7e0fb1d3cc5ca450a509156}{GsnFlashCache\_\-DmaStatusGet} ()
+\begin{DoxyCompactList}\small\item\em FlashCache DMA Status Get API . This function called to Get DMA Status. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00646_gae01f01a23743ccf476aa0b1fecb59cf6}{GsnFlashCache\_\-CpuDmaDoneCheck} ()
+\begin{DoxyCompactList}\small\item\em FlashCache CPU DMA Done Check API . This function called to check if CPU DMA is done. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00646_gaeb1ae8648522192f59d1c29052fcc20a}{GsnFlashCache\_\-Init} ()
+\begin{DoxyCompactList}\small\item\em FlashCache Init API . This function called to Initialize FlashCache. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00646_gacb35895791747971616aabc3efd9942a}{GsnFlashCache\_\-PatchTagSet} (\hyperlink{a00076}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-T} tag)
+\begin{DoxyCompactList}\small\item\em FlashCache Patch Tag Set API . This function called to set patch tag. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00076}{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-T} \hyperlink{a00646_ga36e922df26120cd6c62009c66be2fbb5}{GsnFlashCache\_\-PatchTagGet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} cacheIndex)
+\begin{DoxyCompactList}\small\item\em FlashCache Patch Tag Get API . This function called to Get the patch tag. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00646_ga99b3dc41971d1f1f697e1f34327ec67a}{GsnFlashCache\_\-PatchCtlSet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} flashAddr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} codeAddr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} sramAddr)
+\begin{DoxyCompactList}\small\item\em FlashCache Patch Control Set API . This function called to Set the patch control. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00646_gab5bdf5d796b051886522ef35896af58d}{GsnFlashCache\_\-BlkRemapSet} (\hyperlink{a00074}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-T} $\ast$remap)
+\begin{DoxyCompactList}\small\item\em FlashCache Block Remap Set API . This function called to set block remapping. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00646_gad138b011fece31ba57b80a7958cf0f2e}{GsnFlashCache\_\-BlkFetch} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} flashAddr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} sramAddr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} blkSize, \hyperlink{a00036}{GSN\_\-CB\_\-T} $\ast$pCb)
+\begin{DoxyCompactList}\small\item\em FlashCache Block Fetch API . This function called to Set the patch control. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00646_gaa5de2c0431007a1e0955a3e9eb64dbd4}{GsnFlashCache\_\-BlkFetchRemap} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} flashAddr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} blkSize, \hyperlink{a00074}{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-T} $\ast$remap)
+\begin{DoxyCompactList}\small\item\em FlashCache Block Fetch API . This function called to Set the patch control. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00646_gac5cd525683f7c493ae58ab5bd13aa583}{GsnFlashCache\_\-Isr} ()
+\begin{DoxyCompactList}\small\item\em FlashCache ISR. This function called when interrupt occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN Flash Cache public header. This file contains the public APIs and structures of Flash Cache driver module. 
+
+Definition in file \hyperlink{a00500_source}{gsn\_\-flash\_\-cache.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00500_a6cf076bff36a8025789760126f41979c}{
+\index{gsn\_\-flash\_\-cache.h@{gsn\_\-flash\_\-cache.h}!GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-REG\_\-OFFSET@{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-REG\_\-OFFSET}}
+\index{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-REG\_\-OFFSET@{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-REG\_\-OFFSET}!gsn_flash_cache.h@{gsn\_\-flash\_\-cache.h}}
+\subsubsection[{GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-REG\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHCACHE\_\-BLK\_\-REMAP\_\-REG\_\-OFFSET~(3 $\ast$ sizeof({\bf UINT32}))}}
+\label{a00500_a6cf076bff36a8025789760126f41979c}
+
+
+Definition at line 93 of file gsn\_\-flash\_\-cache.h.
+
+\hypertarget{a00500_ab1c5953ab32b32e1274fe9053eff3839}{
+\index{gsn\_\-flash\_\-cache.h@{gsn\_\-flash\_\-cache.h}!GSN\_\-FLASHCACHE\_\-CPU\_\-DMAREQ\_\-Q\_\-SIZE@{GSN\_\-FLASHCACHE\_\-CPU\_\-DMAREQ\_\-Q\_\-SIZE}}
+\index{GSN\_\-FLASHCACHE\_\-CPU\_\-DMAREQ\_\-Q\_\-SIZE@{GSN\_\-FLASHCACHE\_\-CPU\_\-DMAREQ\_\-Q\_\-SIZE}!gsn_flash_cache.h@{gsn\_\-flash\_\-cache.h}}
+\subsubsection[{GSN\_\-FLASHCACHE\_\-CPU\_\-DMAREQ\_\-Q\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHCACHE\_\-CPU\_\-DMAREQ\_\-Q\_\-SIZE~8}}
+\label{a00500_ab1c5953ab32b32e1274fe9053eff3839}
+
+
+Definition at line 192 of file gsn\_\-flash\_\-cache.h.
+
+\hypertarget{a00500_af657535573b5a6523955a1e187345d0d}{
+\index{gsn\_\-flash\_\-cache.h@{gsn\_\-flash\_\-cache.h}!GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-FLASH\_\-SIZE@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-FLASH\_\-SIZE}}
+\index{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-FLASH\_\-SIZE@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-FLASH\_\-SIZE}!gsn_flash_cache.h@{gsn\_\-flash\_\-cache.h}}
+\subsubsection[{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-FLASH\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-FLASH\_\-SIZE~(128 $\ast$ 1024)}}
+\label{a00500_af657535573b5a6523955a1e187345d0d}
+
+
+Definition at line 84 of file gsn\_\-flash\_\-cache.h.
+
+\hypertarget{a00500_a8af8595e379f890168b49ba2376a87ce}{
+\index{gsn\_\-flash\_\-cache.h@{gsn\_\-flash\_\-cache.h}!GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE1@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE1}}
+\index{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE1@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE1}!gsn_flash_cache.h@{gsn\_\-flash\_\-cache.h}}
+\subsubsection[{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE1~256}}
+\label{a00500_a8af8595e379f890168b49ba2376a87ce}
+
+
+Definition at line 82 of file gsn\_\-flash\_\-cache.h.
+
+\hypertarget{a00500_afd0152a2c7a39f147acee0691804f5b8}{
+\index{gsn\_\-flash\_\-cache.h@{gsn\_\-flash\_\-cache.h}!GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE2@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE2}}
+\index{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE2@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE2}!gsn_flash_cache.h@{gsn\_\-flash\_\-cache.h}}
+\subsubsection[{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-LINE\_\-SIZE2~512}}
+\label{a00500_afd0152a2c7a39f147acee0691804f5b8}
+
+
+Definition at line 83 of file gsn\_\-flash\_\-cache.h.
+
+\hypertarget{a00500_a3ed82b9373946674a9f90d538d304eac}{
+\index{gsn\_\-flash\_\-cache.h@{gsn\_\-flash\_\-cache.h}!GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-SRAM\_\-SIZE@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-SRAM\_\-SIZE}}
+\index{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-SRAM\_\-SIZE@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-SRAM\_\-SIZE}!gsn_flash_cache.h@{gsn\_\-flash\_\-cache.h}}
+\subsubsection[{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-SRAM\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-SRAM\_\-SIZE~(16 $\ast$ 1024)}}
+\label{a00500_a3ed82b9373946674a9f90d538d304eac}
+
+
+Definition at line 85 of file gsn\_\-flash\_\-cache.h.
+
+\hypertarget{a00500_af3160a4e153bab80e59b398e9ea629b7}{
+\index{gsn\_\-flash\_\-cache.h@{gsn\_\-flash\_\-cache.h}!GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-FIRST@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-FIRST}}
+\index{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-FIRST@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-FIRST}!gsn_flash_cache.h@{gsn\_\-flash\_\-cache.h}}
+\subsubsection[{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-FIRST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-FIRST~0}}
+\label{a00500_af3160a4e153bab80e59b398e9ea629b7}
+
+
+Definition at line 88 of file gsn\_\-flash\_\-cache.h.
+
+\hypertarget{a00500_a49b308aa9ae943d2cd70bf768959427e}{
+\index{gsn\_\-flash\_\-cache.h@{gsn\_\-flash\_\-cache.h}!GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-LAST@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-LAST}}
+\index{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-LAST@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-LAST}!gsn_flash_cache.h@{gsn\_\-flash\_\-cache.h}}
+\subsubsection[{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-LAST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-LAST~(GSN\_\-FLASHCACHE\_\-PATCH\_\-CACHETAG\_\-NUM-\/1)}}
+\label{a00500_a49b308aa9ae943d2cd70bf768959427e}
+
+
+Definition at line 89 of file gsn\_\-flash\_\-cache.h.
+
+\hypertarget{a00500_a6d2c7c1c216f85daa43a7b75844df869}{
+\index{gsn\_\-flash\_\-cache.h@{gsn\_\-flash\_\-cache.h}!GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-NUM@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-NUM}}
+\index{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-NUM@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-NUM}!gsn_flash_cache.h@{gsn\_\-flash\_\-cache.h}}
+\subsubsection[{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-NUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-NUM~64}}
+\label{a00500_a6d2c7c1c216f85daa43a7b75844df869}
+
+
+Definition at line 87 of file gsn\_\-flash\_\-cache.h.
+
+\hypertarget{a00500_aed0d954ce7759195185a61a38f3c313c}{
+\index{gsn\_\-flash\_\-cache.h@{gsn\_\-flash\_\-cache.h}!GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-REG\_\-OFFSET@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-REG\_\-OFFSET}}
+\index{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-REG\_\-OFFSET@{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-REG\_\-OFFSET}!gsn_flash_cache.h@{gsn\_\-flash\_\-cache.h}}
+\subsubsection[{GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-REG\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHCACHE\_\-PATCHCACHE\_\-TAG\_\-REG\_\-OFFSET~(1 $\ast$ sizeof({\bf UINT32}))}}
+\label{a00500_aed0d954ce7759195185a61a38f3c313c}
+
+
+Definition at line 96 of file gsn\_\-flash\_\-cache.h.
+

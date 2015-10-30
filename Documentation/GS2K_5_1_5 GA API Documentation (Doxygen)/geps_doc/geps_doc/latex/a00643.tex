@@ -1,0 +1,1962 @@
+\hypertarget{a00643}{
+\section{GSN ADC API}
+\label{a00643}\index{GSN ADC API@{GSN ADC API}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00026}{GSN\_\-ADC\_\-THRESH0}
+\begin{DoxyCompactList}\small\item\em GSN ADC Structure. This Structure defines ADC thresholds . \end{DoxyCompactList}\item 
+struct \hyperlink{a00023}{GSN\_\-ADC\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em GSN ADC Configuration Structure. This structure defines ADC configuration parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{a00025}{GSN\_\-ADC\_\-RW\_\-ARGS\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Read and Write Structure. This structure defines ADC read and DAC write data. \end{DoxyCompactList}\item 
+struct \hyperlink{a00022}{GSN\_\-ADC}
+\begin{DoxyCompactList}\small\item\em GSN ADC Structure. This structure defines an ADC data pointer, base register and synchronous semaphore. \end{DoxyCompactList}\item 
+struct \hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE}
+\begin{DoxyCompactList}\small\item\em GSN ADC Handle Structure The handle contains configuration and other parameters for ADC operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00643_ga757ecde6d25c53dab837e48c83a16b46}{GSN\_\-ADC\_\-FIFOTHR\_\-VALUE}~4
+\begin{DoxyCompactList}\small\item\em Initial FIFO Threshold Set to 4. FIFO threshold is dynamically changed internally depending on the number of samples. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00643_ga988a548c116a5b35c3725a268f74519a}{GSN\_\-ADC\_\-CALLBACK\_\-FUNC\_\-T} )(\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} status, VOID $\ast$context)
+\begin{DoxyCompactList}\small\item\em GSN ADC Callback Function. This callback function accepts two arguments,. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_ga16deea942d0f1d07a971516149233bb4}{GSN\_\-ADC\_\-PDPOLARITY} \hyperlink{a00643_gadc237f56f621b5000b7ed2b2617ff364}{GSN\_\-ADC\_\-PDPOLARITY\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Power Save Mode Type. This enum defines ADC power save mode type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_ga8371c67f612ecadda1e42fa07f34a967}{GSN\_\-ADC\_\-REF\_\-VOLTAGE} \hyperlink{a00643_ga560e320e7f3b88d78bb8d8766a8c7445}{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Reference Voltage Type. This enum defines ADC reference voltage. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_ga2f2a2e534be6515e903852c38803c75f}{GSN\_\-ADC\_\-CLK\_\-SEL} \hyperlink{a00643_ga36798ea9dfbf3935126b374c4dba00dd}{GSN\_\-ADC\_\-CLK\_\-SEL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Clock Selection Type. This enum defines ADC Clock Selection. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_gad3668c4c0f4514808fad4505e4f42900}{GSN\_\-ADC\_\-SOURCE} \hyperlink{a00643_gab77114095147b118ac43431055973712}{GSN\_\-ADC\_\-SOURCE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Source Type. This enum defines ADC Analog Source Selection. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_gaac5e6c70aa098ca208218da35914fa93}{GSN\_\-ADCN\_\-STATUS} \hyperlink{a00643_gac8232626400d1264d361acee029bc36f}{GSN\_\-ADCN\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Types. This enum defines ADC return values. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_ga008458c1074bf0e3aace6adfc8a9a7d7}{GSN\_\-ADCN\_\-LIMIT\_\-STATUS} \hyperlink{a00643_gadcd568439f5ada07d7d96a582f37096f}{GSN\_\-ADCN\_\-LIMIT\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Limit Status Type. This enum defines ADC limit status. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_ga99061f6e0169c89e57e4cd5d5ce1596c}{GSN\_\-ADC\_\-READ\_\-MODE} \hyperlink{a00643_ga67df3ab0d6b619d585d941ad1f3f0233}{GSN\_\-ADC\_\-READ\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Read Operation Mode Type. This enum defines an ADC Read Operating Mode. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_gadc3afaf6a966c7c6199e4d8f37da8b73}{GSN\_\-ADC\_\-SUP1P8} \hyperlink{a00643_ga79b5244aa923d094c80c37462b10dded}{GSN\_\-ADC\_\-SUP1P8\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC SUP1P8 Mode Type. This enum defines an ADC SUP1P8 Mode. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_ga3309e4e970c6632c63ec80fb739e7c0e}{GSN\_\-ADC\_\-LVL} \hyperlink{a00643_ga5a94fb4298f40809bab65da9dd446da7}{GSN\_\-ADC\_\-LVL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC LVL Type. This enum defines an ADC LVL. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_gae153aad95b81d706fe521df66b313c27}{GSN\_\-ADC\_\-ENDVDD} \hyperlink{a00643_ga704b8e4a05f99219d70f32cbf2fb4ca5}{GSN\_\-ADC\_\-ENDVDD\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC DVDD Type. This enum defines an ADC external source core supply is used or not. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_gab6f216973f783f72673e41fefdcd0019}{GSN\_\-ADC\_\-PCOUNTER} \hyperlink{a00643_ga61aa307a5df8fedd147de04bbdb9a36d}{GSN\_\-ADC\_\-PCOUNTER\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC PERIODIC COUNTER Type. This enum defines an ADC PERIODIC COUNTER to enable or not. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_ga35058132ca643890ae11c73b8a157dcb}{GSN\_\-ADC\_\-EN100Khz} \hyperlink{a00643_gacdca24ad9324635589139ad12ce67090}{GSN\_\-ADC\_\-EN100Khz\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC EN100K Type. This enum defines an ADC Enable low frequency mode -\/$>$ This bit is used to reduce the power-\/up time to 15 cycles for Fs$<$100KHz when internal reference is being used. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_gae2b441d4a96a542d5d290e1454fbaa1d}{GSN\_\-ADC\_\-TRIM} \hyperlink{a00643_gace83cba6b68fe265f09d30cda1ef0e63}{GSN\_\-ADC\_\-TRIM\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC TRIM Type. This enum defines Enable trim of Internal Reference. When EN\_\-TRIM='1', REF\_\-TRIM$<$3:0$>$ can be used to trim the reference. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_ga1ce87a8054fcb9ddfc65af6e2ceae738}{GSN\_\-ADC\_\-THRESHSELSET} \hyperlink{a00643_gaaac97c7455490c22d89a3f33ab7355d2}{GSN\_\-ADC\_\-THRESHSELSET\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Types. This enum defines ADC THRESH select. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_ga412edebebb3303e32a1c0c0bcab46d04}{GSN\_\-ADC\_\-THRESHSET} \hyperlink{a00643_ga5a5c60aaf9f413612a6b37d0eb136c48}{GSN\_\-ADC\_\-THRESHSET\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Types. This enum defines ADC THRESH select. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00026}{GSN\_\-ADC\_\-THRESH0} \hyperlink{a00643_ga67dc995f7880016f896f0fdf6b61309b}{GSN\_\-ADC\_\-TRESH0\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Structure. This Structure defines ADC thresholds . \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00643_ga022c151fd88b9ea5c11ad9fbfb415a18}{GSN\_\-ADC\_\-STARTPOLARITY} \hyperlink{a00643_gaaafebe738a6902a342c1226ce5ea8598}{GSN\_\-ADC\_\-STARTPOLARITY\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Start Polarity Type. This enum defines ADC start polarity type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00023}{GSN\_\-ADC\_\-CONFIG} \hyperlink{a00643_ga791ca7ba8984ef3e22b1790a1abd2bb4}{GSN\_\-ADC\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Configuration Structure. This structure defines ADC configuration parameters. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00025}{GSN\_\-ADC\_\-RW\_\-ARGS\_\-T} \hyperlink{a00643_ga7e5745ca697790cb2b29c94299ab6070}{GSN\_\-ADC\_\-RW\_\-ARGS\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Read and Write Structure. This structure defines ADC read and DAC write data. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00022}{GSN\_\-ADC} \hyperlink{a00643_ga9f5c392bf9244880ab92d22101c6131d}{GSN\_\-ADC\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Structure. This structure defines an ADC data pointer, base register and synchronous semaphore. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE} \hyperlink{a00643_gac0da2e000e8dd65d554e2edf7cca8330}{GSN\_\-ADC\_\-HANDLE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN ADC Handle Structure The handle contains configuration and other parameters for ADC operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00643_ga16deea942d0f1d07a971516149233bb4}{GSN\_\-ADC\_\-PDPOLARITY} \{ \par
+\hyperlink{a00643_gga16deea942d0f1d07a971516149233bb4a4c93f28c10b8dac170fba58a41df9699}{GSN\_\-ADC\_\-PDPOLARITY\_\-L}, 
+\par
+\hyperlink{a00643_gga16deea942d0f1d07a971516149233bb4a4b2e65383baf79d5342d80ad2deeb622}{GSN\_\-ADC\_\-PDPOLARITY\_\-H}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC Power Save Mode Type. This enum defines ADC power save mode type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_ga8371c67f612ecadda1e42fa07f34a967}{GSN\_\-ADC\_\-REF\_\-VOLTAGE} \{ \par
+\hyperlink{a00643_gga8371c67f612ecadda1e42fa07f34a967a1b5fc32b474b38286caf602cad737ed3}{GSN\_\-ADC\_\-REF\_\-INTERNAL}, 
+\par
+\hyperlink{a00643_gga8371c67f612ecadda1e42fa07f34a967a096151b970157e924b648e02bac39dbc}{GSN\_\-ADC\_\-REF\_\-EXTERNAL}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC Reference Voltage Type. This enum defines ADC reference voltage. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_ga2f2a2e534be6515e903852c38803c75f}{GSN\_\-ADC\_\-CLK\_\-SEL} \{ \par
+\hyperlink{a00643_gga2f2a2e534be6515e903852c38803c75fa85f23e9c8ebcb6440fde408550d8b740}{GSN\_\-ADC\_\-CLK\_\-SEL\_\-RC}, 
+\par
+\hyperlink{a00643_gga2f2a2e534be6515e903852c38803c75fa0e0217d2862f545db0a2a03f9f495805}{GSN\_\-ADC\_\-CLK\_\-SEL\_\-XTAL}, 
+\par
+\hyperlink{a00643_gga2f2a2e534be6515e903852c38803c75facdcf3e29cb98a2bb7378bff0c6b240d5}{GSN\_\-ADC\_\-CLK\_\-SEL\_\-PLL}, 
+\par
+\hyperlink{a00643_gga2f2a2e534be6515e903852c38803c75fa8e772ffe7936534a384abd3153507b79}{GSN\_\-ADC\_\-CLK\_\-SEL\_\-LP}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC Clock Selection Type. This enum defines ADC Clock Selection. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_gad3668c4c0f4514808fad4505e4f42900}{GSN\_\-ADC\_\-SOURCE} \{ \par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a94890b29f4c209c4f8377f31532db30b}{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-0} =  0x0, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a368bd714313cd29ab90c2ebb182d5c12}{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-1} =  0x1, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a43a2addba7b2659e6f29891f17406afe}{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-2} =  0x2, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a0ad3e77e9d12c42ee6eae08cbe589636}{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-3} =  0x3, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900ac5aadbacf0fe4844379d6dcfab228b0c}{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-4} =  0x4, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a5a730c419b93d956a50e9faf80a1d0f3}{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-5} =  0x5, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900acc8ef128dce725e52823e7f47142029a}{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-6} =  0x6, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a0e5b6484a45d46b6693c5beea0a5765f}{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-7} =  0x7, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900aac0748d6eb68a63f011c31c949bf435f}{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-END} =  0xF, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a8d23bfcbb9b3d6767c5a5053877e2b04}{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-0} =  0xF0, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900af5680594fe1ad117fb9345552bddb789}{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-1} =  0xF1, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a43ba07a7aaabaa5303ad12680b5b2349}{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-2} =  0xF2, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a09aa2a8cf22ad1c2a7f234732c6b8845}{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-3} =  0xF3, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a7e7d99676c3e1f9ad28ddc2ff46a3c5d}{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-4} =  0xF4, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a664f1699626935ac95cb2d64f5aaeb4b}{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-5} =  0xF5, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a27306be8486f6001ccd2ee7a5af9dbc1}{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-6} =  0xF6, 
+\par
+\hyperlink{a00643_ggad3668c4c0f4514808fad4505e4f42900a0da0c487fb87c351a41bcd520776ef94}{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-7} =  0xF7
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC Source Type. This enum defines ADC Analog Source Selection. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_gaac5e6c70aa098ca208218da35914fa93}{GSN\_\-ADCN\_\-STATUS} \{ \par
+\hyperlink{a00643_ggaac5e6c70aa098ca208218da35914fa93adbb40d9448e43738b36788b24f808126}{GSN\_\-ADCN\_\-STATUS\_\-OK}, 
+\par
+\hyperlink{a00643_ggaac5e6c70aa098ca208218da35914fa93a818eeb0196c46ccd15fd2466e33d72aa}{GSN\_\-ADCN\_\-STATUS\_\-BUSY}, 
+\par
+\hyperlink{a00643_ggaac5e6c70aa098ca208218da35914fa93a9825134b8cab6b2508116fc76d8427e8}{GSN\_\-ADCN\_\-STATUS\_\-ERROR}, 
+\par
+\hyperlink{a00643_ggaac5e6c70aa098ca208218da35914fa93a5395f0e21865dde1f046f32ae3193d0c}{GSN\_\-ADCN\_\-LOCK\_\-UNAVAILABLE}, 
+\par
+\hyperlink{a00643_ggaac5e6c70aa098ca208218da35914fa93a5768864cc8f5ad3f704d4c0b8b749730}{GSN\_\-ADCN\_\-FIFO\_\-OVERFLOW}, 
+\par
+\hyperlink{a00643_ggaac5e6c70aa098ca208218da35914fa93a9fe258a564ec0cde287fa9d878205dc5}{GSN\_\-ADCN\_\-FIFO\_\-EMPTY}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC Types. This enum defines ADC return values. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_ga008458c1074bf0e3aace6adfc8a9a7d7}{GSN\_\-ADCN\_\-LIMIT\_\-STATUS} \{ \par
+\hyperlink{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7ac13b4f783887c707e52bcb6f0457686b}{GSN\_\-ADCN\_\-LIMIT1UNDERFLOW}, 
+\par
+\hyperlink{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7aa577450c68918f0bbe5cc14ebc9e2fbc}{GSN\_\-ADCN\_\-LIMIT1OVERFLOW}, 
+\par
+\hyperlink{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7ae3a69ffc7ed81e40e16dfbeaf19d6592}{GSN\_\-ADCN\_\-LIMIT2UNDERFLOW}, 
+\par
+\hyperlink{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7a91ae8ee73c44297fccb90a87179e0cb5}{GSN\_\-ADCN\_\-LIMIT2OVERFLOW}, 
+\par
+\hyperlink{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7abb7b627990963a89988d038df6e5312e}{GSN\_\-ADCN\_\-LIMIT3UNDERFLOW}, 
+\par
+\hyperlink{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7a3af86d6a8baa35510a3d4a1775d11fac}{GSN\_\-ADCN\_\-LIMIT3OVERFLOW}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC Limit Status Type. This enum defines ADC limit status. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_ga99061f6e0169c89e57e4cd5d5ce1596c}{GSN\_\-ADC\_\-READ\_\-MODE} \{ \par
+\hyperlink{a00643_gga99061f6e0169c89e57e4cd5d5ce1596ca71c38b7f173fdbaa4614d5acfc5b0042}{GSN\_\-ADC\_\-MODE\_\-CONTINUOUS}, 
+\par
+\hyperlink{a00643_gga99061f6e0169c89e57e4cd5d5ce1596ca6901743892c2226928dd4cd0d1a166cf}{GSN\_\-ADC\_\-MODE\_\-SINGLE}, 
+\par
+\hyperlink{a00643_gga99061f6e0169c89e57e4cd5d5ce1596ca3a8232d0d78017fdf697c629c66098a6}{GSN\_\-ADC\_\-MODE\_\-PERIODIC}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC Read Operation Mode Type. This enum defines an ADC Read Operating Mode. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_gadc3afaf6a966c7c6199e4d8f37da8b73}{GSN\_\-ADC\_\-SUP1P8} \{ \par
+\hyperlink{a00643_ggadc3afaf6a966c7c6199e4d8f37da8b73a373a83a479cc10783a719934a63cd5a4}{GSN\_\-ADC\_\-AVDD\_\-3Vrange}, 
+\par
+\hyperlink{a00643_ggadc3afaf6a966c7c6199e4d8f37da8b73a780aa6f8661d3d07f2a1d2368c377673}{GSN\_\-ADC\_\-AVDD\_\-2Vrange}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC SUP1P8 Mode Type. This enum defines an ADC SUP1P8 Mode. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_ga3309e4e970c6632c63ec80fb739e7c0e}{GSN\_\-ADC\_\-LVL} \{ \par
+\hyperlink{a00643_gga3309e4e970c6632c63ec80fb739e7c0ea98944ab6c93079772221f5026e13f5fb}{GSN\_\-ADC\_\-LVL\_\-DISABLE}, 
+\par
+\hyperlink{a00643_gga3309e4e970c6632c63ec80fb739e7c0eab638d1688bcb28d51c197aa91dff4c15}{GSN\_\-ADC\_\-LVL\_\-ENABLE}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC LVL Type. This enum defines an ADC LVL. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_gae153aad95b81d706fe521df66b313c27}{GSN\_\-ADC\_\-ENDVDD} \{ \par
+\hyperlink{a00643_ggae153aad95b81d706fe521df66b313c27a7e7c28a508615505b2a64081a84e6663}{GSN\_\-ADC\_\-DVDD\_\-DISABLE}, 
+\par
+\hyperlink{a00643_ggae153aad95b81d706fe521df66b313c27a64f119159e0b2d5752a2bbc189a53af5}{GSN\_\-ADC\_\-DVDD\_\-ENABLE}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC DVDD Type. This enum defines an ADC external source core supply is used or not. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_gab6f216973f783f72673e41fefdcd0019}{GSN\_\-ADC\_\-PCOUNTER} \{ \par
+\hyperlink{a00643_ggab6f216973f783f72673e41fefdcd0019aaeda64087d3a4710d38a483efcd80301}{GSN\_\-ADC\_\-PCOUNTER\_\-DISABLE}, 
+\par
+\hyperlink{a00643_ggab6f216973f783f72673e41fefdcd0019a6b3ae43107cef561827087593f54a1bf}{GSN\_\-ADC\_\-PCOUNTER\_\-ENABLE}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC PERIODIC COUNTER Type. This enum defines an ADC PERIODIC COUNTER to enable or not. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_ga35058132ca643890ae11c73b8a157dcb}{GSN\_\-ADC\_\-EN100Khz} \{ \par
+\hyperlink{a00643_gga35058132ca643890ae11c73b8a157dcba872d9cbb58db19da770013c1c7859ac3}{GSN\_\-ADC\_\-EN100K\_\-DISABLE}, 
+\par
+\hyperlink{a00643_gga35058132ca643890ae11c73b8a157dcbae3bad7e5407e3d785b7fbabac512bba0}{GSN\_\-ADC\_\-EN100K\_\-ENABLE}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC EN100K Type. This enum defines an ADC Enable low frequency mode -\/$>$ This bit is used to reduce the power-\/up time to 15 cycles for Fs$<$100KHz when internal reference is being used. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_gae2b441d4a96a542d5d290e1454fbaa1d}{GSN\_\-ADC\_\-TRIM} \{ \par
+\hyperlink{a00643_ggae2b441d4a96a542d5d290e1454fbaa1da3a85d4591047f6621e3d6299a52424f8}{GSN\_\-ADC\_\-TRIM\_\-DISABLE}, 
+\par
+\hyperlink{a00643_ggae2b441d4a96a542d5d290e1454fbaa1da4120ed751791cc81cc336e056a238a77}{GSN\_\-ADC\_\-TRIM\_\-ENABLE}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC TRIM Type. This enum defines Enable trim of Internal Reference. When EN\_\-TRIM='1', REF\_\-TRIM$<$3:0$>$ can be used to trim the reference. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_ga1ce87a8054fcb9ddfc65af6e2ceae738}{GSN\_\-ADC\_\-THRESHSELSET} \{ \par
+\hyperlink{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738af35f8db45787b131df842e6fb9abccba}{GSN\_\-ADC\_\-NO\_\-THRESH\_\-SEL}, 
+\par
+\hyperlink{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738ae1e1c872747c0a609a58f6b4b2eefaa2}{GSN\_\-ADC\_\-SET0\_\-THRESH\_\-SEL}, 
+\par
+\hyperlink{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738aabc7778dd334edf63537e39b93c90530}{GSN\_\-ADC\_\-SET1\_\-THRESH\_\-SEL}, 
+\par
+\hyperlink{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738a3c928a7ab37c22ab75687e22b251e77c}{GSN\_\-ADC\_\-SET2\_\-THRESH\_\-SEL}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC Types. This enum defines ADC THRESH select. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_ga412edebebb3303e32a1c0c0bcab46d04}{GSN\_\-ADC\_\-THRESHSET} \{ \par
+\hyperlink{a00643_gga412edebebb3303e32a1c0c0bcab46d04a3cdc08dc4139f4f9310caeb3d6881a38}{GSN\_\-ADC\_\-SET0\_\-THRESH}, 
+\par
+\hyperlink{a00643_gga412edebebb3303e32a1c0c0bcab46d04a44567e2eee607e94b007a7fe60674690}{GSN\_\-ADC\_\-SET1\_\-THRESH}, 
+\par
+\hyperlink{a00643_gga412edebebb3303e32a1c0c0bcab46d04acc8e285524bd52bae7583dac070985b2}{GSN\_\-ADC\_\-SET2\_\-THRESH}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC Types. This enum defines ADC THRESH select. \end{DoxyCompactList}\item 
+enum \hyperlink{a00643_ga022c151fd88b9ea5c11ad9fbfb415a18}{GSN\_\-ADC\_\-STARTPOLARITY} \{ \par
+\hyperlink{a00643_gga022c151fd88b9ea5c11ad9fbfb415a18a2a1cdbf6fdf55211555c08781bc4cf10}{GSN\_\-ADC\_\-STARTPOLARITY\_\-L}, 
+\par
+\hyperlink{a00643_gga022c151fd88b9ea5c11ad9fbfb415a18a01cee9ab8e124df14e2f98208e763730}{GSN\_\-ADC\_\-STARTPOLARITY\_\-H}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN ADC Start Polarity Type. This enum defines ADC start polarity type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00643_gab7891ae2a7fb8ec386a686c3cc80895a}{GsnADC\_\-LockCreate} (VOID)
+\begin{DoxyCompactList}\small\item\em ADC Driver Lock Create This function creates the semaphore for ADC. Use the function GsnAdc\_\-Lock to reserve the ADC and GsnAdc\_\-Unlock to release the ADC. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_gab45b8c7fc60c498bcca45dd93db4c94e}{GsnADC\_\-Lock} (\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} waitForEver)
+\begin{DoxyCompactList}\small\item\em ADC Driver Lock. This function acquires the semaphore, and blocks access to the ADC by other tasks. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_gaf67c439ea766aac8b8667664015d3256}{GsnADC\_\-Unlock} (VOID)
+\begin{DoxyCompactList}\small\item\em ADC Driver Unlock. This function releases the semaphore acquired by the GsnAdc\_\-Lock. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_gaacf2fdb41466506928299a106b96def3}{GsnADC\_\-Open} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00023}{GSN\_\-ADC\_\-CONFIG\_\-T} $\ast$adcConfig)
+\begin{DoxyCompactList}\small\item\em ADC Driver Open. This function initializes the ADC with specified parameters. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_gaac999315de0fc641a16931aaf7894e99}{GsnADC\_\-Close} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle)
+\begin{DoxyCompactList}\small\item\em ADC Driver Close. This function closes the ADC operation . \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_gaecd2ed2c0404fbe7c9b5f698c8a98121}{GsnADC\_\-PowerdownPolaritySet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00643_gadc237f56f621b5000b7ed2b2617ff364}{GSN\_\-ADC\_\-PDPOLARITY\_\-T} pdPolarity)
+\begin{DoxyCompactList}\small\item\em Set ADC Supply power down polarity This function sets the Power down polarity (initially the Powerdown polarity is high ) \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_ga8d0ddb6ead557188cc145cd7e4eec3a2}{GsnADC\_\-SupplyIndicationSet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00643_ga79b5244aa923d094c80c37462b10dded}{GSN\_\-ADC\_\-SUP1P8\_\-T} sup1p8)
+\begin{DoxyCompactList}\small\item\em Set ADC Supply indication mode This function sets the Supply indication-\/D mode (sup1p8 is 1 when I/O supply for ADC is in 1.8v range \& 0 when it is in 2.5v/3.3v range ). \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_ga98cbb8990fd557a4ceb4fe7eb47760b6}{GsnADC\_\-ExternalSupplyEnable} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00643_ga704b8e4a05f99219d70f32cbf2fb4ca5}{GSN\_\-ADC\_\-ENDVDD\_\-T} enDvdd)
+\begin{DoxyCompactList}\small\item\em Set ADC Enable DVDD mode(external supply used) This function sets the DVDD mode indicating external or internal supply used(enable DVDD is 1 when external core supply is used \& 0 when internal core supply is used ) \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_ga18046da986a3d13cb32ac35e7b0b08a5}{GsnADC\_\-Enable100Khz} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00643_gacdca24ad9324635589139ad12ce67090}{GSN\_\-ADC\_\-EN100Khz\_\-T} en100kHz)
+\begin{DoxyCompactList}\small\item\em Set ADC Enable or disable 100Khz freq mode This function sets or clears 100Khz freq mode. (enable low freq mode is 1 when Fs $<$100khz and 0 when Fs $>$100Khz) \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_ga7f7da5a1332ee93571a95c3134eb11cf}{GsnADC\_\-EnableLVL} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00643_ga5a94fb4298f40809bab65da9dd446da7}{GSN\_\-ADC\_\-LVL\_\-T} enlvl)
+\begin{DoxyCompactList}\small\item\em Set ADC LVL mode This function sets or clears LVL mode(enlvl is 1 when DVDD i.e core supply for ADC reaches 1.2v ) \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_ga3f3ed3a3fb1e0edd943038284a38be06}{GsnADC\_\-EnableTrim} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$aadcHandle, \hyperlink{a00643_gace83cba6b68fe265f09d30cda1ef0e63}{GSN\_\-ADC\_\-TRIM\_\-T} enTrim)
+\begin{DoxyCompactList}\small\item\em Set ADC Internal Reference Trim mode This function sets or clears Internal Reference Trim mode (enTrim is 1 indicates Trim is enabled and the internal reference voltage can be trimmed ) \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_ga1351ae6a56f6941c316e11d119052da1}{GsnADC\_\-TrimValueSet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} trimValue)
+\begin{DoxyCompactList}\small\item\em Set ADC Internal Reference Trim value This function sets Internal Reference Trim value(enTrim must be enabled and the value of trim must be increased in steps of 1 till the adc buffer shows a transition from 12'b111111111110 to 12'b111111111111) \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_gae764f1e683cbcaaf264da5f24fdca6c4}{GsnADC\_\-ChannelSet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelSel)
+\begin{DoxyCompactList}\small\item\em Set ADC channels This function sets or clears the channels. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00643_gae6a05c80cfcf90573932cc6495d652ca}{GsnADC\_\-ChannelGet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle)
+\begin{DoxyCompactList}\small\item\em Set ADC channels This function Gets the Channels selected. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00643_ga560e320e7f3b88d78bb8d8766a8c7445}{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T} \hyperlink{a00643_gae339df3cf9425d6e0b9f71aeee2cb245}{GsnADC\_\-RefVoltageGet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle)
+\begin{DoxyCompactList}\small\item\em Get Reference Voltage This function returns the configured reference voltage. The reference is either bandgap (1.2V) or 1.8V. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_gabd7bfb49431b859872e1c3becce3ce1a}{GsnADC\_\-RefVoltageSet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00643_ga560e320e7f3b88d78bb8d8766a8c7445}{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T} refVoltage)
+\begin{DoxyCompactList}\small\item\em Set Reference Voltage This function sets the reference voltage. The reference is either external or internal(This function allows to select between internal \& external reference ) \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00643_ga0770bf992078873341c561c186b7dce0}{GsnADC\_\-PeriodGet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle)
+\begin{DoxyCompactList}\small\item\em Get the Periodic counter This function returns the periodic counter value . The unit for period is the ADC clock count. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_ga969dac4b6fcd50ed0cc861adcfe6c9d5}{GsnADC\_\-PeriodSet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} Period)
+\begin{DoxyCompactList}\small\item\em Set the Interval Between Measurements This function allows setting the interval between two measurements. The unit for period is ADC clock count. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_ga32c8846f78b01c95ae454f5532568163}{GsnADC\_\-StartCycleSet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} startcycles)
+\begin{DoxyCompactList}\small\item\em Set the number of start cycles. This function allows setting the number of start cycles . \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_gaee01f7aa2010bd9a4e5f9d8bc7f3bea4}{GsnADC\_\-PowerCycleSet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} powercycl)
+\begin{DoxyCompactList}\small\item\em Set the number of power cycles. This function allows setting the number of power cycles . \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_gadf20d396265cb22adb23ae34d3bc9701}{GsnADC\_\-Read} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00643_ga67df3ab0d6b619d585d941ad1f3f0233}{GSN\_\-ADC\_\-READ\_\-MODE\_\-T} adcmode, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} chnSel, \hyperlink{a00025}{GSN\_\-ADC\_\-RW\_\-ARGS\_\-T} $\ast$adcRW, \hyperlink{a00643_ga560e320e7f3b88d78bb8d8766a8c7445}{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T} adcRefVoltage)
+\begin{DoxyCompactList}\small\item\em ADC Read Starts read and returns the result in buffer. The ADC is shut down after the read is done. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_ga9924b69851adbdeef7d743825fe30c7a}{GsnADC\_\-AdcStepSet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle)
+\begin{DoxyCompactList}\small\item\em Set the value of adc\_\-step parameter. This function sets the adc\_\-step for the ADC clock. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_gad9bcae203930867c8bbae3d9a007764b}{GsnADC\_\-StopMeasure} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle)
+\begin{DoxyCompactList}\small\item\em Stop Periodic Read Operation Stop the periodic read and power down the ADC. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_ga3b40bffec1620eff298e1fec173295fc}{GsnADC\_\-isr} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle)
+\begin{DoxyCompactList}\small\item\em ADC ISR This function is called by the interrupt handler whenever an ADC interrupt occurs. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_ga2d67f9e3d0bb9310a26cd3508f485816}{\_\-\_\-ADCMainIsr} ()
+\begin{DoxyCompactList}\small\item\em ADC Main ISR This function is called by the GsnAdc\_\-isr whenever an ADC interrupt occurs. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00643_gaea1be2fe47893500462843eec695e904}{GsnADC\_\-StartPolaritySet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00643_gaaafebe738a6902a342c1226ce5ea8598}{GSN\_\-ADC\_\-STARTPOLARITY\_\-T} startPolarity)
+\begin{DoxyCompactList}\small\item\em Set ADC Start polarity This function sets the Start polarity (initially the Start polarity ) \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_ga8a1e2ad9db2c132be29bd129fa22436b}{GsnADC\_\-AdcSamplingRateSet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} samplingRate)
+\begin{DoxyCompactList}\small\item\em Set ADC Sampling Rate This function sets the Sampling Rate. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_gac19751aaeabd7689d2f173a7f848511d}{GsnADC\_\-ThresholdAllSet} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00026}{GSN\_\-ADC\_\-TRESH0\_\-T} thr0, \hyperlink{a00026}{GSN\_\-ADC\_\-TRESH0\_\-T} thr1, \hyperlink{a00026}{GSN\_\-ADC\_\-TRESH0\_\-T} thr2)
+\begin{DoxyCompactList}\small\item\em Set ADC Threshold This function sets the Threshold. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_gaab53aee6b55a63e421310ec8a818dcb1}{GsnADC\_\-PollRead} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00643_ga67df3ab0d6b619d585d941ad1f3f0233}{GSN\_\-ADC\_\-READ\_\-MODE\_\-T} adcmode, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} chnSel, \hyperlink{a00025}{GSN\_\-ADC\_\-RW\_\-ARGS\_\-T} $\ast$adcRW, \hyperlink{a00643_ga560e320e7f3b88d78bb8d8766a8c7445}{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T} adcRefVoltage)
+\begin{DoxyCompactList}\small\item\em ADC Polling Read Starts read by polling method and returns the result in buffer. The ADC is shutdown after the read is done. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00643_gab93bdcc54f8ab4870ef3b5a12ac1c920}{GsnADC\_\-StartMeasure} (\hyperlink{a00024}{GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$adcHandle, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} chnSel, \hyperlink{a00643_ga67df3ab0d6b619d585d941ad1f3f0233}{GSN\_\-ADC\_\-READ\_\-MODE\_\-T} adcmode, \hyperlink{a00643_ga560e320e7f3b88d78bb8d8766a8c7445}{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T} adcRefVoltage, VOID $\ast$contextCB, \hyperlink{a00643_ga988a548c116a5b35c3725a268f74519a}{GSN\_\-ADC\_\-CALLBACK\_\-FUNC\_\-T} funcCB, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$data)
+\begin{DoxyCompactList}\small\item\em GsnAdc\_\-StartMeasure Starts continuous read. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group contains public definitions and functions providing access to the GS2000's internal ADC. 
+
+\subsection{Define Documentation}
+\hypertarget{a00643_ga757ecde6d25c53dab837e48c83a16b46}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-FIFOTHR\_\-VALUE@{GSN\_\-ADC\_\-FIFOTHR\_\-VALUE}}
+\index{GSN\_\-ADC\_\-FIFOTHR\_\-VALUE@{GSN\_\-ADC\_\-FIFOTHR\_\-VALUE}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-FIFOTHR\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ADC\_\-FIFOTHR\_\-VALUE~4}}
+\label{a00643_ga757ecde6d25c53dab837e48c83a16b46}
+
+
+Initial FIFO Threshold Set to 4. FIFO threshold is dynamically changed internally depending on the number of samples. 
+
+\begin{DoxyNote}{Note}
+FIFO size for ADC is 12 (it also includes the channel information ). 
+\end{DoxyNote}
+
+
+Definition at line 112 of file gsn\_\-adc.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00643_ga988a548c116a5b35c3725a268f74519a}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-CALLBACK\_\-FUNC\_\-T@{GSN\_\-ADC\_\-CALLBACK\_\-FUNC\_\-T}}
+\index{GSN\_\-ADC\_\-CALLBACK\_\-FUNC\_\-T@{GSN\_\-ADC\_\-CALLBACK\_\-FUNC\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-CALLBACK\_\-FUNC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf GSN\_\-ADC\_\-CALLBACK\_\-FUNC\_\-T})({\bf UINT32} status, VOID $\ast$context)}}
+\label{a00643_ga988a548c116a5b35c3725a268f74519a}
+
+
+GSN ADC Callback Function. This callback function accepts two arguments,. 
+
+
+\begin{DoxyItemize}
+\item argument 1 is status
+\item argument 2 is context pointer
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/IN ADC status \\
+\hline
+{\em context} & -\/IN callback context pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga988a548c116a5b35c3725a268f74519a}{GSN\_\-ADC\_\-CALLBACK\_\-FUNC\_\-T}. 
+\end{DoxySeeAlso}
+
+
+Definition at line 132 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_ga36798ea9dfbf3935126b374c4dba00dd}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-CLK\_\-SEL\_\-T@{GSN\_\-ADC\_\-CLK\_\-SEL\_\-T}}
+\index{GSN\_\-ADC\_\-CLK\_\-SEL\_\-T@{GSN\_\-ADC\_\-CLK\_\-SEL\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-CLK\_\-SEL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-CLK\_\-SEL}  {\bf GSN\_\-ADC\_\-CLK\_\-SEL\_\-T}}}
+\label{a00643_ga36798ea9dfbf3935126b374c4dba00dd}
+
+
+GSN ADC Clock Selection Type. This enum defines ADC Clock Selection. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga36798ea9dfbf3935126b374c4dba00dd}{GSN\_\-ADC\_\-CLK\_\-SEL\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_ga791ca7ba8984ef3e22b1790a1abd2bb4}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-CONFIG\_\-T@{GSN\_\-ADC\_\-CONFIG\_\-T}}
+\index{GSN\_\-ADC\_\-CONFIG\_\-T@{GSN\_\-ADC\_\-CONFIG\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ADC\_\-CONFIG}  {\bf GSN\_\-ADC\_\-CONFIG\_\-T}}}
+\label{a00643_ga791ca7ba8984ef3e22b1790a1abd2bb4}
+
+
+GSN ADC Configuration Structure. This structure defines ADC configuration parameters. 
+
+refVoltage -\/ the reference voltage for ADC(internal or external) readMode -\/ select the mode of operation ppCounter -\/ parameter for periodic measurement pdPolarity -\/ power down polarity sup1p8 -\/ supply range indication enlvl -\/ enable level enDvdd -\/ enable core supply for ADC en100khz -\/ enable low frequency mode enTrim -\/ enable trim chnSel -\/ channel selection refVoltageTrim-\/ Trim value to trim the reference voltage fifoThr -\/ FIFO threshold value startCycles -\/ value of Start cycles powerCycles -\/ value of PowerCycles samplePeriod -\/ the clock period, for periodic operation(Periodic Timer Expiry Value) adcStep -\/ Step value clockSelect -\/ clock selection; refer to GSN\_\-ADC\_\-CLK\_\-SEL\_\-T
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga791ca7ba8984ef3e22b1790a1abd2bb4}{GSN\_\-ADC\_\-CONFIG\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_gacdca24ad9324635589139ad12ce67090}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-EN100Khz\_\-T@{GSN\_\-ADC\_\-EN100Khz\_\-T}}
+\index{GSN\_\-ADC\_\-EN100Khz\_\-T@{GSN\_\-ADC\_\-EN100Khz\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-EN100Khz\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-EN100Khz}  {\bf GSN\_\-ADC\_\-EN100Khz\_\-T}}}
+\label{a00643_gacdca24ad9324635589139ad12ce67090}
+
+
+GSN ADC EN100K Type. This enum defines an ADC Enable low frequency mode -\/$>$ This bit is used to reduce the power-\/up time to 15 cycles for Fs$<$100KHz when internal reference is being used. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_gacdca24ad9324635589139ad12ce67090}{GSN\_\-ADC\_\-EN100Khz\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_ga704b8e4a05f99219d70f32cbf2fb4ca5}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-ENDVDD\_\-T@{GSN\_\-ADC\_\-ENDVDD\_\-T}}
+\index{GSN\_\-ADC\_\-ENDVDD\_\-T@{GSN\_\-ADC\_\-ENDVDD\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-ENDVDD\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-ENDVDD}  {\bf GSN\_\-ADC\_\-ENDVDD\_\-T}}}
+\label{a00643_ga704b8e4a05f99219d70f32cbf2fb4ca5}
+
+
+GSN ADC DVDD Type. This enum defines an ADC external source core supply is used or not. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga704b8e4a05f99219d70f32cbf2fb4ca5}{GSN\_\-ADC\_\-ENDVDD\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_gac0da2e000e8dd65d554e2edf7cca8330}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-HANDLE\_\-T@{GSN\_\-ADC\_\-HANDLE\_\-T}}
+\index{GSN\_\-ADC\_\-HANDLE\_\-T@{GSN\_\-ADC\_\-HANDLE\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-HANDLE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ADC\_\-HANDLE} {\bf GSN\_\-ADC\_\-HANDLE\_\-T}}}
+\label{a00643_gac0da2e000e8dd65d554e2edf7cca8330}
+
+
+GSN ADC Handle Structure The handle contains configuration and other parameters for ADC operation. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_gac0da2e000e8dd65d554e2edf7cca8330}{GSN\_\-ADC\_\-HANDLE\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_ga5a94fb4298f40809bab65da9dd446da7}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-LVL\_\-T@{GSN\_\-ADC\_\-LVL\_\-T}}
+\index{GSN\_\-ADC\_\-LVL\_\-T@{GSN\_\-ADC\_\-LVL\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-LVL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-LVL}  {\bf GSN\_\-ADC\_\-LVL\_\-T}}}
+\label{a00643_ga5a94fb4298f40809bab65da9dd446da7}
+
+
+GSN ADC LVL Type. This enum defines an ADC LVL. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga5a94fb4298f40809bab65da9dd446da7}{GSN\_\-ADC\_\-LVL\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_ga61aa307a5df8fedd147de04bbdb9a36d}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-PCOUNTER\_\-T@{GSN\_\-ADC\_\-PCOUNTER\_\-T}}
+\index{GSN\_\-ADC\_\-PCOUNTER\_\-T@{GSN\_\-ADC\_\-PCOUNTER\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-PCOUNTER\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-PCOUNTER}  {\bf GSN\_\-ADC\_\-PCOUNTER\_\-T}}}
+\label{a00643_ga61aa307a5df8fedd147de04bbdb9a36d}
+
+
+GSN ADC PERIODIC COUNTER Type. This enum defines an ADC PERIODIC COUNTER to enable or not. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga61aa307a5df8fedd147de04bbdb9a36d}{GSN\_\-ADC\_\-PCOUNTER\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_gadc237f56f621b5000b7ed2b2617ff364}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-PDPOLARITY\_\-T@{GSN\_\-ADC\_\-PDPOLARITY\_\-T}}
+\index{GSN\_\-ADC\_\-PDPOLARITY\_\-T@{GSN\_\-ADC\_\-PDPOLARITY\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-PDPOLARITY\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-PDPOLARITY}  {\bf GSN\_\-ADC\_\-PDPOLARITY\_\-T}}}
+\label{a00643_gadc237f56f621b5000b7ed2b2617ff364}
+
+
+GSN ADC Power Save Mode Type. This enum defines ADC power save mode type. 
+
+\begin{DoxySeeAlso}{See also}
+GSN\_\-ADC\_\-PDMODE\_\-T. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_ga67df3ab0d6b619d585d941ad1f3f0233}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-READ\_\-MODE\_\-T@{GSN\_\-ADC\_\-READ\_\-MODE\_\-T}}
+\index{GSN\_\-ADC\_\-READ\_\-MODE\_\-T@{GSN\_\-ADC\_\-READ\_\-MODE\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-READ\_\-MODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-READ\_\-MODE}  {\bf GSN\_\-ADC\_\-READ\_\-MODE\_\-T}}}
+\label{a00643_ga67df3ab0d6b619d585d941ad1f3f0233}
+
+
+GSN ADC Read Operation Mode Type. This enum defines an ADC Read Operating Mode. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga67df3ab0d6b619d585d941ad1f3f0233}{GSN\_\-ADC\_\-READ\_\-MODE\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_ga560e320e7f3b88d78bb8d8766a8c7445}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T@{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T}}
+\index{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T@{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-REF\_\-VOLTAGE}  {\bf GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T}}}
+\label{a00643_ga560e320e7f3b88d78bb8d8766a8c7445}
+
+
+GSN ADC Reference Voltage Type. This enum defines ADC reference voltage. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga560e320e7f3b88d78bb8d8766a8c7445}{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_ga7e5745ca697790cb2b29c94299ab6070}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-RW\_\-ARGS\_\-T@{GSN\_\-ADC\_\-RW\_\-ARGS\_\-T}}
+\index{GSN\_\-ADC\_\-RW\_\-ARGS\_\-T@{GSN\_\-ADC\_\-RW\_\-ARGS\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-RW\_\-ARGS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ADC\_\-RW\_\-ARGS\_\-T}  {\bf GSN\_\-ADC\_\-RW\_\-ARGS\_\-T}}}
+\label{a00643_ga7e5745ca697790cb2b29c94299ab6070}
+
+
+GSN ADC Read and Write Structure. This structure defines ADC read and DAC write data. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00025}{GSN\_\-ADC\_\-RW\_\-ARGS\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_gab77114095147b118ac43431055973712}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SOURCE\_\-T@{GSN\_\-ADC\_\-SOURCE\_\-T}}
+\index{GSN\_\-ADC\_\-SOURCE\_\-T@{GSN\_\-ADC\_\-SOURCE\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-SOURCE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-SOURCE}  {\bf GSN\_\-ADC\_\-SOURCE\_\-T}}}
+\label{a00643_gab77114095147b118ac43431055973712}
+
+
+GSN ADC Source Type. This enum defines ADC Analog Source Selection. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_gab77114095147b118ac43431055973712}{GSN\_\-ADC\_\-SOURCE\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_gaaafebe738a6902a342c1226ce5ea8598}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-STARTPOLARITY\_\-T@{GSN\_\-ADC\_\-STARTPOLARITY\_\-T}}
+\index{GSN\_\-ADC\_\-STARTPOLARITY\_\-T@{GSN\_\-ADC\_\-STARTPOLARITY\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-STARTPOLARITY\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-STARTPOLARITY}  {\bf GSN\_\-ADC\_\-STARTPOLARITY\_\-T}}}
+\label{a00643_gaaafebe738a6902a342c1226ce5ea8598}
+
+
+GSN ADC Start Polarity Type. This enum defines ADC start polarity type. 
+
+\begin{DoxySeeAlso}{See also}
+GSN\_\-ADC\_\-PDMODE\_\-T. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_ga79b5244aa923d094c80c37462b10dded}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SUP1P8\_\-T@{GSN\_\-ADC\_\-SUP1P8\_\-T}}
+\index{GSN\_\-ADC\_\-SUP1P8\_\-T@{GSN\_\-ADC\_\-SUP1P8\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-SUP1P8\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-SUP1P8}  {\bf GSN\_\-ADC\_\-SUP1P8\_\-T}}}
+\label{a00643_ga79b5244aa923d094c80c37462b10dded}
+
+
+GSN ADC SUP1P8 Mode Type. This enum defines an ADC SUP1P8 Mode. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga79b5244aa923d094c80c37462b10dded}{GSN\_\-ADC\_\-SUP1P8\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_ga9f5c392bf9244880ab92d22101c6131d}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-T@{GSN\_\-ADC\_\-T}}
+\index{GSN\_\-ADC\_\-T@{GSN\_\-ADC\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ADC}  {\bf GSN\_\-ADC\_\-T}}}
+\label{a00643_ga9f5c392bf9244880ab92d22101c6131d}
+
+
+GSN ADC Structure. This structure defines an ADC data pointer, base register and synchronous semaphore. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga9f5c392bf9244880ab92d22101c6131d}{GSN\_\-ADC\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_gaaac97c7455490c22d89a3f33ab7355d2}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-THRESHSELSET\_\-T@{GSN\_\-ADC\_\-THRESHSELSET\_\-T}}
+\index{GSN\_\-ADC\_\-THRESHSELSET\_\-T@{GSN\_\-ADC\_\-THRESHSELSET\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-THRESHSELSET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-THRESHSELSET} {\bf GSN\_\-ADC\_\-THRESHSELSET\_\-T}}}
+\label{a00643_gaaac97c7455490c22d89a3f33ab7355d2}
+
+
+GSN ADC Types. This enum defines ADC THRESH select. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga5a5c60aaf9f413612a6b37d0eb136c48}{GSN\_\-ADC\_\-THRESHSET\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_ga5a5c60aaf9f413612a6b37d0eb136c48}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-THRESHSET\_\-T@{GSN\_\-ADC\_\-THRESHSET\_\-T}}
+\index{GSN\_\-ADC\_\-THRESHSET\_\-T@{GSN\_\-ADC\_\-THRESHSET\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-THRESHSET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-THRESHSET} {\bf GSN\_\-ADC\_\-THRESHSET\_\-T}}}
+\label{a00643_ga5a5c60aaf9f413612a6b37d0eb136c48}
+
+
+GSN ADC Types. This enum defines ADC THRESH select. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga5a5c60aaf9f413612a6b37d0eb136c48}{GSN\_\-ADC\_\-THRESHSET\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_ga67dc995f7880016f896f0fdf6b61309b}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-TRESH0\_\-T@{GSN\_\-ADC\_\-TRESH0\_\-T}}
+\index{GSN\_\-ADC\_\-TRESH0\_\-T@{GSN\_\-ADC\_\-TRESH0\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-TRESH0\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ADC\_\-THRESH0}  {\bf GSN\_\-ADC\_\-TRESH0\_\-T}}}
+\label{a00643_ga67dc995f7880016f896f0fdf6b61309b}
+
+
+GSN ADC Structure. This Structure defines ADC thresholds . 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga67dc995f7880016f896f0fdf6b61309b}{GSN\_\-ADC\_\-TRESH0\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_gace83cba6b68fe265f09d30cda1ef0e63}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-TRIM\_\-T@{GSN\_\-ADC\_\-TRIM\_\-T}}
+\index{GSN\_\-ADC\_\-TRIM\_\-T@{GSN\_\-ADC\_\-TRIM\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-TRIM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADC\_\-TRIM}  {\bf GSN\_\-ADC\_\-TRIM\_\-T}}}
+\label{a00643_gace83cba6b68fe265f09d30cda1ef0e63}
+
+
+GSN ADC TRIM Type. This enum defines Enable trim of Internal Reference. When EN\_\-TRIM='1', REF\_\-TRIM$<$3:0$>$ can be used to trim the reference. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_gace83cba6b68fe265f09d30cda1ef0e63}{GSN\_\-ADC\_\-TRIM\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_gadcd568439f5ada07d7d96a582f37096f}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-LIMIT\_\-STATUS\_\-T@{GSN\_\-ADCN\_\-LIMIT\_\-STATUS\_\-T}}
+\index{GSN\_\-ADCN\_\-LIMIT\_\-STATUS\_\-T@{GSN\_\-ADCN\_\-LIMIT\_\-STATUS\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADCN\_\-LIMIT\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADCN\_\-LIMIT\_\-STATUS} {\bf GSN\_\-ADCN\_\-LIMIT\_\-STATUS\_\-T}}}
+\label{a00643_gadcd568439f5ada07d7d96a582f37096f}
+
+
+GSN ADC Limit Status Type. This enum defines ADC limit status. 
+
+\begin{DoxySeeAlso}{See also}
+GSN\_\-ADC\_\-LIMIT\_\-STATUS\_\-T. 
+\end{DoxySeeAlso}
+\hypertarget{a00643_gac8232626400d1264d361acee029bc36f}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-STATUS\_\-T@{GSN\_\-ADCN\_\-STATUS\_\-T}}
+\index{GSN\_\-ADCN\_\-STATUS\_\-T@{GSN\_\-ADCN\_\-STATUS\_\-T}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADCN\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ADCN\_\-STATUS}  {\bf GSN\_\-ADCN\_\-STATUS\_\-T}}}
+\label{a00643_gac8232626400d1264d361acee029bc36f}
+
+
+GSN ADC Types. This enum defines ADC return values. 
+
+\begin{DoxySeeAlso}{See also}
+GSN\_\-ADC\_\-STATUS\_\-T. 
+\end{DoxySeeAlso}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00643_ga2f2a2e534be6515e903852c38803c75f}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-CLK\_\-SEL@{GSN\_\-ADC\_\-CLK\_\-SEL}}
+\index{GSN\_\-ADC\_\-CLK\_\-SEL@{GSN\_\-ADC\_\-CLK\_\-SEL}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-CLK\_\-SEL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-CLK\_\-SEL}}}
+\label{a00643_ga2f2a2e534be6515e903852c38803c75f}
+
+
+GSN ADC Clock Selection Type. This enum defines ADC Clock Selection. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga36798ea9dfbf3935126b374c4dba00dd}{GSN\_\-ADC\_\-CLK\_\-SEL\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-CLK\_\-SEL\_\-RC@{GSN\_\-ADC\_\-CLK\_\-SEL\_\-RC}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-CLK\_\-SEL\_\-RC@{GSN\_\-ADC\_\-CLK\_\-SEL\_\-RC}}\item[{\em 
+\hypertarget{a00643_gga2f2a2e534be6515e903852c38803c75fa85f23e9c8ebcb6440fde408550d8b740}{
+GSN\_\-ADC\_\-CLK\_\-SEL\_\-RC}
+\label{a00643_gga2f2a2e534be6515e903852c38803c75fa85f23e9c8ebcb6440fde408550d8b740}
+}]\index{GSN\_\-ADC\_\-CLK\_\-SEL\_\-XTAL@{GSN\_\-ADC\_\-CLK\_\-SEL\_\-XTAL}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-CLK\_\-SEL\_\-XTAL@{GSN\_\-ADC\_\-CLK\_\-SEL\_\-XTAL}}\item[{\em 
+\hypertarget{a00643_gga2f2a2e534be6515e903852c38803c75fa0e0217d2862f545db0a2a03f9f495805}{
+GSN\_\-ADC\_\-CLK\_\-SEL\_\-XTAL}
+\label{a00643_gga2f2a2e534be6515e903852c38803c75fa0e0217d2862f545db0a2a03f9f495805}
+}]\index{GSN\_\-ADC\_\-CLK\_\-SEL\_\-PLL@{GSN\_\-ADC\_\-CLK\_\-SEL\_\-PLL}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-CLK\_\-SEL\_\-PLL@{GSN\_\-ADC\_\-CLK\_\-SEL\_\-PLL}}\item[{\em 
+\hypertarget{a00643_gga2f2a2e534be6515e903852c38803c75facdcf3e29cb98a2bb7378bff0c6b240d5}{
+GSN\_\-ADC\_\-CLK\_\-SEL\_\-PLL}
+\label{a00643_gga2f2a2e534be6515e903852c38803c75facdcf3e29cb98a2bb7378bff0c6b240d5}
+}]\index{GSN\_\-ADC\_\-CLK\_\-SEL\_\-LP@{GSN\_\-ADC\_\-CLK\_\-SEL\_\-LP}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-CLK\_\-SEL\_\-LP@{GSN\_\-ADC\_\-CLK\_\-SEL\_\-LP}}\item[{\em 
+\hypertarget{a00643_gga2f2a2e534be6515e903852c38803c75fa8e772ffe7936534a384abd3153507b79}{
+GSN\_\-ADC\_\-CLK\_\-SEL\_\-LP}
+\label{a00643_gga2f2a2e534be6515e903852c38803c75fa8e772ffe7936534a384abd3153507b79}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 175 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_ga35058132ca643890ae11c73b8a157dcb}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-EN100Khz@{GSN\_\-ADC\_\-EN100Khz}}
+\index{GSN\_\-ADC\_\-EN100Khz@{GSN\_\-ADC\_\-EN100Khz}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-EN100Khz}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-EN100Khz}}}
+\label{a00643_ga35058132ca643890ae11c73b8a157dcb}
+
+
+GSN ADC EN100K Type. This enum defines an ADC Enable low frequency mode -\/$>$ This bit is used to reduce the power-\/up time to 15 cycles for Fs$<$100KHz when internal reference is being used. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_gacdca24ad9324635589139ad12ce67090}{GSN\_\-ADC\_\-EN100Khz\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-EN100K\_\-DISABLE@{GSN\_\-ADC\_\-EN100K\_\-DISABLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-EN100K\_\-DISABLE@{GSN\_\-ADC\_\-EN100K\_\-DISABLE}}\item[{\em 
+\hypertarget{a00643_gga35058132ca643890ae11c73b8a157dcba872d9cbb58db19da770013c1c7859ac3}{
+GSN\_\-ADC\_\-EN100K\_\-DISABLE}
+\label{a00643_gga35058132ca643890ae11c73b8a157dcba872d9cbb58db19da770013c1c7859ac3}
+}]\index{GSN\_\-ADC\_\-EN100K\_\-ENABLE@{GSN\_\-ADC\_\-EN100K\_\-ENABLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-EN100K\_\-ENABLE@{GSN\_\-ADC\_\-EN100K\_\-ENABLE}}\item[{\em 
+\hypertarget{a00643_gga35058132ca643890ae11c73b8a157dcbae3bad7e5407e3d785b7fbabac512bba0}{
+GSN\_\-ADC\_\-EN100K\_\-ENABLE}
+\label{a00643_gga35058132ca643890ae11c73b8a157dcbae3bad7e5407e3d785b7fbabac512bba0}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 343 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_gae153aad95b81d706fe521df66b313c27}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-ENDVDD@{GSN\_\-ADC\_\-ENDVDD}}
+\index{GSN\_\-ADC\_\-ENDVDD@{GSN\_\-ADC\_\-ENDVDD}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-ENDVDD}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-ENDVDD}}}
+\label{a00643_gae153aad95b81d706fe521df66b313c27}
+
+
+GSN ADC DVDD Type. This enum defines an ADC external source core supply is used or not. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga704b8e4a05f99219d70f32cbf2fb4ca5}{GSN\_\-ADC\_\-ENDVDD\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-DVDD\_\-DISABLE@{GSN\_\-ADC\_\-DVDD\_\-DISABLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-DVDD\_\-DISABLE@{GSN\_\-ADC\_\-DVDD\_\-DISABLE}}\item[{\em 
+\hypertarget{a00643_ggae153aad95b81d706fe521df66b313c27a7e7c28a508615505b2a64081a84e6663}{
+GSN\_\-ADC\_\-DVDD\_\-DISABLE}
+\label{a00643_ggae153aad95b81d706fe521df66b313c27a7e7c28a508615505b2a64081a84e6663}
+}]\index{GSN\_\-ADC\_\-DVDD\_\-ENABLE@{GSN\_\-ADC\_\-DVDD\_\-ENABLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-DVDD\_\-ENABLE@{GSN\_\-ADC\_\-DVDD\_\-ENABLE}}\item[{\em 
+\hypertarget{a00643_ggae153aad95b81d706fe521df66b313c27a64f119159e0b2d5752a2bbc189a53af5}{
+GSN\_\-ADC\_\-DVDD\_\-ENABLE}
+\label{a00643_ggae153aad95b81d706fe521df66b313c27a64f119159e0b2d5752a2bbc189a53af5}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 309 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_ga3309e4e970c6632c63ec80fb739e7c0e}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-LVL@{GSN\_\-ADC\_\-LVL}}
+\index{GSN\_\-ADC\_\-LVL@{GSN\_\-ADC\_\-LVL}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-LVL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-LVL}}}
+\label{a00643_ga3309e4e970c6632c63ec80fb739e7c0e}
+
+
+GSN ADC LVL Type. This enum defines an ADC LVL. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga5a94fb4298f40809bab65da9dd446da7}{GSN\_\-ADC\_\-LVL\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-LVL\_\-DISABLE@{GSN\_\-ADC\_\-LVL\_\-DISABLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-LVL\_\-DISABLE@{GSN\_\-ADC\_\-LVL\_\-DISABLE}}\item[{\em 
+\hypertarget{a00643_gga3309e4e970c6632c63ec80fb739e7c0ea98944ab6c93079772221f5026e13f5fb}{
+GSN\_\-ADC\_\-LVL\_\-DISABLE}
+\label{a00643_gga3309e4e970c6632c63ec80fb739e7c0ea98944ab6c93079772221f5026e13f5fb}
+}]\index{GSN\_\-ADC\_\-LVL\_\-ENABLE@{GSN\_\-ADC\_\-LVL\_\-ENABLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-LVL\_\-ENABLE@{GSN\_\-ADC\_\-LVL\_\-ENABLE}}\item[{\em 
+\hypertarget{a00643_gga3309e4e970c6632c63ec80fb739e7c0eab638d1688bcb28d51c197aa91dff4c15}{
+GSN\_\-ADC\_\-LVL\_\-ENABLE}
+\label{a00643_gga3309e4e970c6632c63ec80fb739e7c0eab638d1688bcb28d51c197aa91dff4c15}
+}]DVDD reaches 1.2V \end{description}
+\end{Desc}
+
+
+
+Definition at line 294 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_gab6f216973f783f72673e41fefdcd0019}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-PCOUNTER@{GSN\_\-ADC\_\-PCOUNTER}}
+\index{GSN\_\-ADC\_\-PCOUNTER@{GSN\_\-ADC\_\-PCOUNTER}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-PCOUNTER}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-PCOUNTER}}}
+\label{a00643_gab6f216973f783f72673e41fefdcd0019}
+
+
+GSN ADC PERIODIC COUNTER Type. This enum defines an ADC PERIODIC COUNTER to enable or not. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga61aa307a5df8fedd147de04bbdb9a36d}{GSN\_\-ADC\_\-PCOUNTER\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-PCOUNTER\_\-DISABLE@{GSN\_\-ADC\_\-PCOUNTER\_\-DISABLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-PCOUNTER\_\-DISABLE@{GSN\_\-ADC\_\-PCOUNTER\_\-DISABLE}}\item[{\em 
+\hypertarget{a00643_ggab6f216973f783f72673e41fefdcd0019aaeda64087d3a4710d38a483efcd80301}{
+GSN\_\-ADC\_\-PCOUNTER\_\-DISABLE}
+\label{a00643_ggab6f216973f783f72673e41fefdcd0019aaeda64087d3a4710d38a483efcd80301}
+}]\index{GSN\_\-ADC\_\-PCOUNTER\_\-ENABLE@{GSN\_\-ADC\_\-PCOUNTER\_\-ENABLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-PCOUNTER\_\-ENABLE@{GSN\_\-ADC\_\-PCOUNTER\_\-ENABLE}}\item[{\em 
+\hypertarget{a00643_ggab6f216973f783f72673e41fefdcd0019a6b3ae43107cef561827087593f54a1bf}{
+GSN\_\-ADC\_\-PCOUNTER\_\-ENABLE}
+\label{a00643_ggab6f216973f783f72673e41fefdcd0019a6b3ae43107cef561827087593f54a1bf}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 324 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_ga16deea942d0f1d07a971516149233bb4}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-PDPOLARITY@{GSN\_\-ADC\_\-PDPOLARITY}}
+\index{GSN\_\-ADC\_\-PDPOLARITY@{GSN\_\-ADC\_\-PDPOLARITY}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-PDPOLARITY}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-PDPOLARITY}}}
+\label{a00643_ga16deea942d0f1d07a971516149233bb4}
+
+
+GSN ADC Power Save Mode Type. This enum defines ADC power save mode type. 
+
+\begin{DoxySeeAlso}{See also}
+GSN\_\-ADC\_\-PDMODE\_\-T. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-PDPOLARITY\_\-L@{GSN\_\-ADC\_\-PDPOLARITY\_\-L}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-PDPOLARITY\_\-L@{GSN\_\-ADC\_\-PDPOLARITY\_\-L}}\item[{\em 
+\hypertarget{a00643_gga16deea942d0f1d07a971516149233bb4a4c93f28c10b8dac170fba58a41df9699}{
+GSN\_\-ADC\_\-PDPOLARITY\_\-L}
+\label{a00643_gga16deea942d0f1d07a971516149233bb4a4c93f28c10b8dac170fba58a41df9699}
+}]Adc power down is low \index{GSN\_\-ADC\_\-PDPOLARITY\_\-H@{GSN\_\-ADC\_\-PDPOLARITY\_\-H}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-PDPOLARITY\_\-H@{GSN\_\-ADC\_\-PDPOLARITY\_\-H}}\item[{\em 
+\hypertarget{a00643_gga16deea942d0f1d07a971516149233bb4a4b2e65383baf79d5342d80ad2deeb622}{
+GSN\_\-ADC\_\-PDPOLARITY\_\-H}
+\label{a00643_gga16deea942d0f1d07a971516149233bb4a4b2e65383baf79d5342d80ad2deeb622}
+}]Adc power down is high \end{description}
+\end{Desc}
+
+
+
+Definition at line 143 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_ga99061f6e0169c89e57e4cd5d5ce1596c}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-READ\_\-MODE@{GSN\_\-ADC\_\-READ\_\-MODE}}
+\index{GSN\_\-ADC\_\-READ\_\-MODE@{GSN\_\-ADC\_\-READ\_\-MODE}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-READ\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-READ\_\-MODE}}}
+\label{a00643_ga99061f6e0169c89e57e4cd5d5ce1596c}
+
+
+GSN ADC Read Operation Mode Type. This enum defines an ADC Read Operating Mode. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga67df3ab0d6b619d585d941ad1f3f0233}{GSN\_\-ADC\_\-READ\_\-MODE\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-MODE\_\-CONTINUOUS@{GSN\_\-ADC\_\-MODE\_\-CONTINUOUS}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-MODE\_\-CONTINUOUS@{GSN\_\-ADC\_\-MODE\_\-CONTINUOUS}}\item[{\em 
+\hypertarget{a00643_gga99061f6e0169c89e57e4cd5d5ce1596ca71c38b7f173fdbaa4614d5acfc5b0042}{
+GSN\_\-ADC\_\-MODE\_\-CONTINUOUS}
+\label{a00643_gga99061f6e0169c89e57e4cd5d5ce1596ca71c38b7f173fdbaa4614d5acfc5b0042}
+}]continous mode \index{GSN\_\-ADC\_\-MODE\_\-SINGLE@{GSN\_\-ADC\_\-MODE\_\-SINGLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-MODE\_\-SINGLE@{GSN\_\-ADC\_\-MODE\_\-SINGLE}}\item[{\em 
+\hypertarget{a00643_gga99061f6e0169c89e57e4cd5d5ce1596ca6901743892c2226928dd4cd0d1a166cf}{
+GSN\_\-ADC\_\-MODE\_\-SINGLE}
+\label{a00643_gga99061f6e0169c89e57e4cd5d5ce1596ca6901743892c2226928dd4cd0d1a166cf}
+}]Single mode \index{GSN\_\-ADC\_\-MODE\_\-PERIODIC@{GSN\_\-ADC\_\-MODE\_\-PERIODIC}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-MODE\_\-PERIODIC@{GSN\_\-ADC\_\-MODE\_\-PERIODIC}}\item[{\em 
+\hypertarget{a00643_gga99061f6e0169c89e57e4cd5d5ce1596ca3a8232d0d78017fdf697c629c66098a6}{
+GSN\_\-ADC\_\-MODE\_\-PERIODIC}
+\label{a00643_gga99061f6e0169c89e57e4cd5d5ce1596ca3a8232d0d78017fdf697c629c66098a6}
+}]Periodic mode \end{description}
+\end{Desc}
+
+
+
+Definition at line 263 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_ga8371c67f612ecadda1e42fa07f34a967}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-REF\_\-VOLTAGE@{GSN\_\-ADC\_\-REF\_\-VOLTAGE}}
+\index{GSN\_\-ADC\_\-REF\_\-VOLTAGE@{GSN\_\-ADC\_\-REF\_\-VOLTAGE}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-REF\_\-VOLTAGE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-REF\_\-VOLTAGE}}}
+\label{a00643_ga8371c67f612ecadda1e42fa07f34a967}
+
+
+GSN ADC Reference Voltage Type. This enum defines ADC reference voltage. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga560e320e7f3b88d78bb8d8766a8c7445}{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-REF\_\-INTERNAL@{GSN\_\-ADC\_\-REF\_\-INTERNAL}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-REF\_\-INTERNAL@{GSN\_\-ADC\_\-REF\_\-INTERNAL}}\item[{\em 
+\hypertarget{a00643_gga8371c67f612ecadda1e42fa07f34a967a1b5fc32b474b38286caf602cad737ed3}{
+GSN\_\-ADC\_\-REF\_\-INTERNAL}
+\label{a00643_gga8371c67f612ecadda1e42fa07f34a967a1b5fc32b474b38286caf602cad737ed3}
+}]Adc internal voltage reference \index{GSN\_\-ADC\_\-REF\_\-EXTERNAL@{GSN\_\-ADC\_\-REF\_\-EXTERNAL}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-REF\_\-EXTERNAL@{GSN\_\-ADC\_\-REF\_\-EXTERNAL}}\item[{\em 
+\hypertarget{a00643_gga8371c67f612ecadda1e42fa07f34a967a096151b970157e924b648e02bac39dbc}{
+GSN\_\-ADC\_\-REF\_\-EXTERNAL}
+\label{a00643_gga8371c67f612ecadda1e42fa07f34a967a096151b970157e924b648e02bac39dbc}
+}]Adc external voltage reference \end{description}
+\end{Desc}
+
+
+
+Definition at line 159 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_gad3668c4c0f4514808fad4505e4f42900}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SOURCE@{GSN\_\-ADC\_\-SOURCE}}
+\index{GSN\_\-ADC\_\-SOURCE@{GSN\_\-ADC\_\-SOURCE}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-SOURCE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-SOURCE}}}
+\label{a00643_gad3668c4c0f4514808fad4505e4f42900}
+
+
+GSN ADC Source Type. This enum defines ADC Analog Source Selection. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_gab77114095147b118ac43431055973712}{GSN\_\-ADC\_\-SOURCE\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-0@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-0}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SOURCE\_\-CH\_\-0@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-0}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a94890b29f4c209c4f8377f31532db30b}{
+GSN\_\-ADC\_\-SOURCE\_\-CH\_\-0}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a94890b29f4c209c4f8377f31532db30b}
+}]\index{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-1@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-1}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SOURCE\_\-CH\_\-1@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-1}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a368bd714313cd29ab90c2ebb182d5c12}{
+GSN\_\-ADC\_\-SOURCE\_\-CH\_\-1}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a368bd714313cd29ab90c2ebb182d5c12}
+}]\index{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-2@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-2}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SOURCE\_\-CH\_\-2@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-2}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a43a2addba7b2659e6f29891f17406afe}{
+GSN\_\-ADC\_\-SOURCE\_\-CH\_\-2}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a43a2addba7b2659e6f29891f17406afe}
+}]\index{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-3@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-3}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SOURCE\_\-CH\_\-3@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-3}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a0ad3e77e9d12c42ee6eae08cbe589636}{
+GSN\_\-ADC\_\-SOURCE\_\-CH\_\-3}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a0ad3e77e9d12c42ee6eae08cbe589636}
+}]\index{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-4@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-4}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SOURCE\_\-CH\_\-4@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-4}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900ac5aadbacf0fe4844379d6dcfab228b0c}{
+GSN\_\-ADC\_\-SOURCE\_\-CH\_\-4}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900ac5aadbacf0fe4844379d6dcfab228b0c}
+}]\index{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-5@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-5}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SOURCE\_\-CH\_\-5@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-5}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a5a730c419b93d956a50e9faf80a1d0f3}{
+GSN\_\-ADC\_\-SOURCE\_\-CH\_\-5}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a5a730c419b93d956a50e9faf80a1d0f3}
+}]\index{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-6@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-6}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SOURCE\_\-CH\_\-6@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-6}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900acc8ef128dce725e52823e7f47142029a}{
+GSN\_\-ADC\_\-SOURCE\_\-CH\_\-6}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900acc8ef128dce725e52823e7f47142029a}
+}]\index{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-7@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-7}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SOURCE\_\-CH\_\-7@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-7}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a0e5b6484a45d46b6693c5beea0a5765f}{
+GSN\_\-ADC\_\-SOURCE\_\-CH\_\-7}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a0e5b6484a45d46b6693c5beea0a5765f}
+}]\index{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-END@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-END}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SOURCE\_\-CH\_\-END@{GSN\_\-ADC\_\-SOURCE\_\-CH\_\-END}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900aac0748d6eb68a63f011c31c949bf435f}{
+GSN\_\-ADC\_\-SOURCE\_\-CH\_\-END}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900aac0748d6eb68a63f011c31c949bf435f}
+}]\index{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-0@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-0}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-0@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-0}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a8d23bfcbb9b3d6767c5a5053877e2b04}{
+GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-0}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a8d23bfcbb9b3d6767c5a5053877e2b04}
+}]\index{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-1@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-1}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-1@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-1}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900af5680594fe1ad117fb9345552bddb789}{
+GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-1}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900af5680594fe1ad117fb9345552bddb789}
+}]\index{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-2@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-2}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-2@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-2}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a43ba07a7aaabaa5303ad12680b5b2349}{
+GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-2}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a43ba07a7aaabaa5303ad12680b5b2349}
+}]\index{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-3@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-3}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-3@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-3}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a09aa2a8cf22ad1c2a7f234732c6b8845}{
+GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-3}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a09aa2a8cf22ad1c2a7f234732c6b8845}
+}]\index{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-4@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-4}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-4@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-4}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a7e7d99676c3e1f9ad28ddc2ff46a3c5d}{
+GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-4}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a7e7d99676c3e1f9ad28ddc2ff46a3c5d}
+}]\index{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-5@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-5}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-5@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-5}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a664f1699626935ac95cb2d64f5aaeb4b}{
+GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-5}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a664f1699626935ac95cb2d64f5aaeb4b}
+}]\index{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-6@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-6}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-6@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-6}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a27306be8486f6001ccd2ee7a5af9dbc1}{
+GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-6}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a27306be8486f6001ccd2ee7a5af9dbc1}
+}]\index{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-7@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-7}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-7@{GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-7}}\item[{\em 
+\hypertarget{a00643_ggad3668c4c0f4514808fad4505e4f42900a0da0c487fb87c351a41bcd520776ef94}{
+GSN\_\-ADC\_\-SINGLE\_\-SOURCE\_\-CH\_\-7}
+\label{a00643_ggad3668c4c0f4514808fad4505e4f42900a0da0c487fb87c351a41bcd520776ef94}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 192 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_ga022c151fd88b9ea5c11ad9fbfb415a18}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-STARTPOLARITY@{GSN\_\-ADC\_\-STARTPOLARITY}}
+\index{GSN\_\-ADC\_\-STARTPOLARITY@{GSN\_\-ADC\_\-STARTPOLARITY}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-STARTPOLARITY}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-STARTPOLARITY}}}
+\label{a00643_ga022c151fd88b9ea5c11ad9fbfb415a18}
+
+
+GSN ADC Start Polarity Type. This enum defines ADC start polarity type. 
+
+\begin{DoxySeeAlso}{See also}
+GSN\_\-ADC\_\-PDMODE\_\-T. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-STARTPOLARITY\_\-L@{GSN\_\-ADC\_\-STARTPOLARITY\_\-L}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-STARTPOLARITY\_\-L@{GSN\_\-ADC\_\-STARTPOLARITY\_\-L}}\item[{\em 
+\hypertarget{a00643_gga022c151fd88b9ea5c11ad9fbfb415a18a2a1cdbf6fdf55211555c08781bc4cf10}{
+GSN\_\-ADC\_\-STARTPOLARITY\_\-L}
+\label{a00643_gga022c151fd88b9ea5c11ad9fbfb415a18a2a1cdbf6fdf55211555c08781bc4cf10}
+}]Adc start polarity is low \index{GSN\_\-ADC\_\-STARTPOLARITY\_\-H@{GSN\_\-ADC\_\-STARTPOLARITY\_\-H}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-STARTPOLARITY\_\-H@{GSN\_\-ADC\_\-STARTPOLARITY\_\-H}}\item[{\em 
+\hypertarget{a00643_gga022c151fd88b9ea5c11ad9fbfb415a18a01cee9ab8e124df14e2f98208e763730}{
+GSN\_\-ADC\_\-STARTPOLARITY\_\-H}
+\label{a00643_gga022c151fd88b9ea5c11ad9fbfb415a18a01cee9ab8e124df14e2f98208e763730}
+}]Adc start polarity is high \end{description}
+\end{Desc}
+
+
+
+Definition at line 419 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_gadc3afaf6a966c7c6199e4d8f37da8b73}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SUP1P8@{GSN\_\-ADC\_\-SUP1P8}}
+\index{GSN\_\-ADC\_\-SUP1P8@{GSN\_\-ADC\_\-SUP1P8}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-SUP1P8}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-SUP1P8}}}
+\label{a00643_gadc3afaf6a966c7c6199e4d8f37da8b73}
+
+
+GSN ADC SUP1P8 Mode Type. This enum defines an ADC SUP1P8 Mode. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga79b5244aa923d094c80c37462b10dded}{GSN\_\-ADC\_\-SUP1P8\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-AVDD\_\-3Vrange@{GSN\_\-ADC\_\-AVDD\_\-3Vrange}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-AVDD\_\-3Vrange@{GSN\_\-ADC\_\-AVDD\_\-3Vrange}}\item[{\em 
+\hypertarget{a00643_ggadc3afaf6a966c7c6199e4d8f37da8b73a373a83a479cc10783a719934a63cd5a4}{
+GSN\_\-ADC\_\-AVDD\_\-3Vrange}
+\label{a00643_ggadc3afaf6a966c7c6199e4d8f37da8b73a373a83a479cc10783a719934a63cd5a4}
+}]sup1p8 2.5/3.3V range \index{GSN\_\-ADC\_\-AVDD\_\-2Vrange@{GSN\_\-ADC\_\-AVDD\_\-2Vrange}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-AVDD\_\-2Vrange@{GSN\_\-ADC\_\-AVDD\_\-2Vrange}}\item[{\em 
+\hypertarget{a00643_ggadc3afaf6a966c7c6199e4d8f37da8b73a780aa6f8661d3d07f2a1d2368c377673}{
+GSN\_\-ADC\_\-AVDD\_\-2Vrange}
+\label{a00643_ggadc3afaf6a966c7c6199e4d8f37da8b73a780aa6f8661d3d07f2a1d2368c377673}
+}]sup1p8 1.8V range \end{description}
+\end{Desc}
+
+
+
+Definition at line 279 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_ga1ce87a8054fcb9ddfc65af6e2ceae738}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-THRESHSELSET@{GSN\_\-ADC\_\-THRESHSELSET}}
+\index{GSN\_\-ADC\_\-THRESHSELSET@{GSN\_\-ADC\_\-THRESHSELSET}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-THRESHSELSET}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-THRESHSELSET}}}
+\label{a00643_ga1ce87a8054fcb9ddfc65af6e2ceae738}
+
+
+GSN ADC Types. This enum defines ADC THRESH select. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga5a5c60aaf9f413612a6b37d0eb136c48}{GSN\_\-ADC\_\-THRESHSET\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-NO\_\-THRESH\_\-SEL@{GSN\_\-ADC\_\-NO\_\-THRESH\_\-SEL}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-NO\_\-THRESH\_\-SEL@{GSN\_\-ADC\_\-NO\_\-THRESH\_\-SEL}}\item[{\em 
+\hypertarget{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738af35f8db45787b131df842e6fb9abccba}{
+GSN\_\-ADC\_\-NO\_\-THRESH\_\-SEL}
+\label{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738af35f8db45787b131df842e6fb9abccba}
+}]\index{GSN\_\-ADC\_\-SET0\_\-THRESH\_\-SEL@{GSN\_\-ADC\_\-SET0\_\-THRESH\_\-SEL}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SET0\_\-THRESH\_\-SEL@{GSN\_\-ADC\_\-SET0\_\-THRESH\_\-SEL}}\item[{\em 
+\hypertarget{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738ae1e1c872747c0a609a58f6b4b2eefaa2}{
+GSN\_\-ADC\_\-SET0\_\-THRESH\_\-SEL}
+\label{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738ae1e1c872747c0a609a58f6b4b2eefaa2}
+}]\index{GSN\_\-ADC\_\-SET1\_\-THRESH\_\-SEL@{GSN\_\-ADC\_\-SET1\_\-THRESH\_\-SEL}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SET1\_\-THRESH\_\-SEL@{GSN\_\-ADC\_\-SET1\_\-THRESH\_\-SEL}}\item[{\em 
+\hypertarget{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738aabc7778dd334edf63537e39b93c90530}{
+GSN\_\-ADC\_\-SET1\_\-THRESH\_\-SEL}
+\label{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738aabc7778dd334edf63537e39b93c90530}
+}]\index{GSN\_\-ADC\_\-SET2\_\-THRESH\_\-SEL@{GSN\_\-ADC\_\-SET2\_\-THRESH\_\-SEL}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SET2\_\-THRESH\_\-SEL@{GSN\_\-ADC\_\-SET2\_\-THRESH\_\-SEL}}\item[{\em 
+\hypertarget{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738a3c928a7ab37c22ab75687e22b251e77c}{
+GSN\_\-ADC\_\-SET2\_\-THRESH\_\-SEL}
+\label{a00643_gga1ce87a8054fcb9ddfc65af6e2ceae738a3c928a7ab37c22ab75687e22b251e77c}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 373 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_ga412edebebb3303e32a1c0c0bcab46d04}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-THRESHSET@{GSN\_\-ADC\_\-THRESHSET}}
+\index{GSN\_\-ADC\_\-THRESHSET@{GSN\_\-ADC\_\-THRESHSET}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-THRESHSET}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-THRESHSET}}}
+\label{a00643_ga412edebebb3303e32a1c0c0bcab46d04}
+
+
+GSN ADC Types. This enum defines ADC THRESH select. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga5a5c60aaf9f413612a6b37d0eb136c48}{GSN\_\-ADC\_\-THRESHSET\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-SET0\_\-THRESH@{GSN\_\-ADC\_\-SET0\_\-THRESH}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SET0\_\-THRESH@{GSN\_\-ADC\_\-SET0\_\-THRESH}}\item[{\em 
+\hypertarget{a00643_gga412edebebb3303e32a1c0c0bcab46d04a3cdc08dc4139f4f9310caeb3d6881a38}{
+GSN\_\-ADC\_\-SET0\_\-THRESH}
+\label{a00643_gga412edebebb3303e32a1c0c0bcab46d04a3cdc08dc4139f4f9310caeb3d6881a38}
+}]\index{GSN\_\-ADC\_\-SET1\_\-THRESH@{GSN\_\-ADC\_\-SET1\_\-THRESH}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SET1\_\-THRESH@{GSN\_\-ADC\_\-SET1\_\-THRESH}}\item[{\em 
+\hypertarget{a00643_gga412edebebb3303e32a1c0c0bcab46d04a44567e2eee607e94b007a7fe60674690}{
+GSN\_\-ADC\_\-SET1\_\-THRESH}
+\label{a00643_gga412edebebb3303e32a1c0c0bcab46d04a44567e2eee607e94b007a7fe60674690}
+}]\index{GSN\_\-ADC\_\-SET2\_\-THRESH@{GSN\_\-ADC\_\-SET2\_\-THRESH}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-SET2\_\-THRESH@{GSN\_\-ADC\_\-SET2\_\-THRESH}}\item[{\em 
+\hypertarget{a00643_gga412edebebb3303e32a1c0c0bcab46d04acc8e285524bd52bae7583dac070985b2}{
+GSN\_\-ADC\_\-SET2\_\-THRESH}
+\label{a00643_gga412edebebb3303e32a1c0c0bcab46d04acc8e285524bd52bae7583dac070985b2}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 389 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_gae2b441d4a96a542d5d290e1454fbaa1d}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-TRIM@{GSN\_\-ADC\_\-TRIM}}
+\index{GSN\_\-ADC\_\-TRIM@{GSN\_\-ADC\_\-TRIM}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADC\_\-TRIM}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADC\_\-TRIM}}}
+\label{a00643_gae2b441d4a96a542d5d290e1454fbaa1d}
+
+
+GSN ADC TRIM Type. This enum defines Enable trim of Internal Reference. When EN\_\-TRIM='1', REF\_\-TRIM$<$3:0$>$ can be used to trim the reference. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_gace83cba6b68fe265f09d30cda1ef0e63}{GSN\_\-ADC\_\-TRIM\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADC\_\-TRIM\_\-DISABLE@{GSN\_\-ADC\_\-TRIM\_\-DISABLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-TRIM\_\-DISABLE@{GSN\_\-ADC\_\-TRIM\_\-DISABLE}}\item[{\em 
+\hypertarget{a00643_ggae2b441d4a96a542d5d290e1454fbaa1da3a85d4591047f6621e3d6299a52424f8}{
+GSN\_\-ADC\_\-TRIM\_\-DISABLE}
+\label{a00643_ggae2b441d4a96a542d5d290e1454fbaa1da3a85d4591047f6621e3d6299a52424f8}
+}]\index{GSN\_\-ADC\_\-TRIM\_\-ENABLE@{GSN\_\-ADC\_\-TRIM\_\-ENABLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADC\_\-TRIM\_\-ENABLE@{GSN\_\-ADC\_\-TRIM\_\-ENABLE}}\item[{\em 
+\hypertarget{a00643_ggae2b441d4a96a542d5d290e1454fbaa1da4120ed751791cc81cc336e056a238a77}{
+GSN\_\-ADC\_\-TRIM\_\-ENABLE}
+\label{a00643_ggae2b441d4a96a542d5d290e1454fbaa1da4120ed751791cc81cc336e056a238a77}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 360 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_ga008458c1074bf0e3aace6adfc8a9a7d7}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-LIMIT\_\-STATUS@{GSN\_\-ADCN\_\-LIMIT\_\-STATUS}}
+\index{GSN\_\-ADCN\_\-LIMIT\_\-STATUS@{GSN\_\-ADCN\_\-LIMIT\_\-STATUS}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADCN\_\-LIMIT\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADCN\_\-LIMIT\_\-STATUS}}}
+\label{a00643_ga008458c1074bf0e3aace6adfc8a9a7d7}
+
+
+GSN ADC Limit Status Type. This enum defines ADC limit status. 
+
+\begin{DoxySeeAlso}{See also}
+GSN\_\-ADC\_\-LIMIT\_\-STATUS\_\-T. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADCN\_\-LIMIT1UNDERFLOW@{GSN\_\-ADCN\_\-LIMIT1UNDERFLOW}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-LIMIT1UNDERFLOW@{GSN\_\-ADCN\_\-LIMIT1UNDERFLOW}}\item[{\em 
+\hypertarget{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7ac13b4f783887c707e52bcb6f0457686b}{
+GSN\_\-ADCN\_\-LIMIT1UNDERFLOW}
+\label{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7ac13b4f783887c707e52bcb6f0457686b}
+}]\index{GSN\_\-ADCN\_\-LIMIT1OVERFLOW@{GSN\_\-ADCN\_\-LIMIT1OVERFLOW}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-LIMIT1OVERFLOW@{GSN\_\-ADCN\_\-LIMIT1OVERFLOW}}\item[{\em 
+\hypertarget{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7aa577450c68918f0bbe5cc14ebc9e2fbc}{
+GSN\_\-ADCN\_\-LIMIT1OVERFLOW}
+\label{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7aa577450c68918f0bbe5cc14ebc9e2fbc}
+}]\index{GSN\_\-ADCN\_\-LIMIT2UNDERFLOW@{GSN\_\-ADCN\_\-LIMIT2UNDERFLOW}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-LIMIT2UNDERFLOW@{GSN\_\-ADCN\_\-LIMIT2UNDERFLOW}}\item[{\em 
+\hypertarget{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7ae3a69ffc7ed81e40e16dfbeaf19d6592}{
+GSN\_\-ADCN\_\-LIMIT2UNDERFLOW}
+\label{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7ae3a69ffc7ed81e40e16dfbeaf19d6592}
+}]\index{GSN\_\-ADCN\_\-LIMIT2OVERFLOW@{GSN\_\-ADCN\_\-LIMIT2OVERFLOW}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-LIMIT2OVERFLOW@{GSN\_\-ADCN\_\-LIMIT2OVERFLOW}}\item[{\em 
+\hypertarget{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7a91ae8ee73c44297fccb90a87179e0cb5}{
+GSN\_\-ADCN\_\-LIMIT2OVERFLOW}
+\label{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7a91ae8ee73c44297fccb90a87179e0cb5}
+}]\index{GSN\_\-ADCN\_\-LIMIT3UNDERFLOW@{GSN\_\-ADCN\_\-LIMIT3UNDERFLOW}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-LIMIT3UNDERFLOW@{GSN\_\-ADCN\_\-LIMIT3UNDERFLOW}}\item[{\em 
+\hypertarget{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7abb7b627990963a89988d038df6e5312e}{
+GSN\_\-ADCN\_\-LIMIT3UNDERFLOW}
+\label{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7abb7b627990963a89988d038df6e5312e}
+}]\index{GSN\_\-ADCN\_\-LIMIT3OVERFLOW@{GSN\_\-ADCN\_\-LIMIT3OVERFLOW}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-LIMIT3OVERFLOW@{GSN\_\-ADCN\_\-LIMIT3OVERFLOW}}\item[{\em 
+\hypertarget{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7a3af86d6a8baa35510a3d4a1775d11fac}{
+GSN\_\-ADCN\_\-LIMIT3OVERFLOW}
+\label{a00643_gga008458c1074bf0e3aace6adfc8a9a7d7a3af86d6a8baa35510a3d4a1775d11fac}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 242 of file gsn\_\-adc.h.
+
+\hypertarget{a00643_gaac5e6c70aa098ca208218da35914fa93}{
+\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-STATUS@{GSN\_\-ADCN\_\-STATUS}}
+\index{GSN\_\-ADCN\_\-STATUS@{GSN\_\-ADCN\_\-STATUS}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GSN\_\-ADCN\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ADCN\_\-STATUS}}}
+\label{a00643_gaac5e6c70aa098ca208218da35914fa93}
+
+
+GSN ADC Types. This enum defines ADC return values. 
+
+\begin{DoxySeeAlso}{See also}
+GSN\_\-ADC\_\-STATUS\_\-T. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ADCN\_\-STATUS\_\-OK@{GSN\_\-ADCN\_\-STATUS\_\-OK}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-STATUS\_\-OK@{GSN\_\-ADCN\_\-STATUS\_\-OK}}\item[{\em 
+\hypertarget{a00643_ggaac5e6c70aa098ca208218da35914fa93adbb40d9448e43738b36788b24f808126}{
+GSN\_\-ADCN\_\-STATUS\_\-OK}
+\label{a00643_ggaac5e6c70aa098ca208218da35914fa93adbb40d9448e43738b36788b24f808126}
+}]\index{GSN\_\-ADCN\_\-STATUS\_\-BUSY@{GSN\_\-ADCN\_\-STATUS\_\-BUSY}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-STATUS\_\-BUSY@{GSN\_\-ADCN\_\-STATUS\_\-BUSY}}\item[{\em 
+\hypertarget{a00643_ggaac5e6c70aa098ca208218da35914fa93a818eeb0196c46ccd15fd2466e33d72aa}{
+GSN\_\-ADCN\_\-STATUS\_\-BUSY}
+\label{a00643_ggaac5e6c70aa098ca208218da35914fa93a818eeb0196c46ccd15fd2466e33d72aa}
+}]\index{GSN\_\-ADCN\_\-STATUS\_\-ERROR@{GSN\_\-ADCN\_\-STATUS\_\-ERROR}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-STATUS\_\-ERROR@{GSN\_\-ADCN\_\-STATUS\_\-ERROR}}\item[{\em 
+\hypertarget{a00643_ggaac5e6c70aa098ca208218da35914fa93a9825134b8cab6b2508116fc76d8427e8}{
+GSN\_\-ADCN\_\-STATUS\_\-ERROR}
+\label{a00643_ggaac5e6c70aa098ca208218da35914fa93a9825134b8cab6b2508116fc76d8427e8}
+}]\index{GSN\_\-ADCN\_\-LOCK\_\-UNAVAILABLE@{GSN\_\-ADCN\_\-LOCK\_\-UNAVAILABLE}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-LOCK\_\-UNAVAILABLE@{GSN\_\-ADCN\_\-LOCK\_\-UNAVAILABLE}}\item[{\em 
+\hypertarget{a00643_ggaac5e6c70aa098ca208218da35914fa93a5395f0e21865dde1f046f32ae3193d0c}{
+GSN\_\-ADCN\_\-LOCK\_\-UNAVAILABLE}
+\label{a00643_ggaac5e6c70aa098ca208218da35914fa93a5395f0e21865dde1f046f32ae3193d0c}
+}]\index{GSN\_\-ADCN\_\-FIFO\_\-OVERFLOW@{GSN\_\-ADCN\_\-FIFO\_\-OVERFLOW}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-FIFO\_\-OVERFLOW@{GSN\_\-ADCN\_\-FIFO\_\-OVERFLOW}}\item[{\em 
+\hypertarget{a00643_ggaac5e6c70aa098ca208218da35914fa93a5768864cc8f5ad3f704d4c0b8b749730}{
+GSN\_\-ADCN\_\-FIFO\_\-OVERFLOW}
+\label{a00643_ggaac5e6c70aa098ca208218da35914fa93a5768864cc8f5ad3f704d4c0b8b749730}
+}]\index{GSN\_\-ADCN\_\-FIFO\_\-EMPTY@{GSN\_\-ADCN\_\-FIFO\_\-EMPTY}!GSN ADC API@{GSN ADC API}}\index{GSN ADC API@{GSN ADC API}!GSN\_\-ADCN\_\-FIFO\_\-EMPTY@{GSN\_\-ADCN\_\-FIFO\_\-EMPTY}}\item[{\em 
+\hypertarget{a00643_ggaac5e6c70aa098ca208218da35914fa93a9fe258a564ec0cde287fa9d878205dc5}{
+GSN\_\-ADCN\_\-FIFO\_\-EMPTY}
+\label{a00643_ggaac5e6c70aa098ca208218da35914fa93a9fe258a564ec0cde287fa9d878205dc5}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 222 of file gsn\_\-adc.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00643_ga2d67f9e3d0bb9310a26cd3508f485816}{
+\index{GSN ADC API@{GSN ADC API}!\_\-\_\-ADCMainIsr@{\_\-\_\-ADCMainIsr}}
+\index{\_\-\_\-ADCMainIsr@{\_\-\_\-ADCMainIsr}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{\_\-\_\-ADCMainIsr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-ADCMainIsr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga2d67f9e3d0bb9310a26cd3508f485816}
+
+
+ADC Main ISR This function is called by the GsnAdc\_\-isr whenever an ADC interrupt occurs. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00643_ga8a1e2ad9db2c132be29bd129fa22436b}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-AdcSamplingRateSet@{GsnADC\_\-AdcSamplingRateSet}}
+\index{GsnADC\_\-AdcSamplingRateSet@{GsnADC\_\-AdcSamplingRateSet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-AdcSamplingRateSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-AdcSamplingRateSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf UINT32}}]{samplingRate}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga8a1e2ad9db2c132be29bd129fa22436b}
+
+
+Set ADC Sampling Rate This function sets the Sampling Rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em samplingRate} & -\/ IN supply indication mode settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS Operation is successful 
+\end{DoxyReturn}
+\hypertarget{a00643_ga9924b69851adbdeef7d743825fe30c7a}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-AdcStepSet@{GsnADC\_\-AdcStepSet}}
+\index{GsnADC\_\-AdcStepSet@{GsnADC\_\-AdcStepSet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-AdcStepSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-AdcStepSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga9924b69851adbdeef7d743825fe30c7a}
+
+
+Set the value of adc\_\-step parameter. This function sets the adc\_\-step for the ADC clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & IN pointer to handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-ADC\_\-STATUS\_\-ERROR step value is incorrect or out of range . 
+
+GSN\_\-SUCCESS -\/ In case Operation is successful 
+\end{DoxyReturn}
+\hypertarget{a00643_gae6a05c80cfcf90573932cc6495d652ca}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-ChannelGet@{GsnADC\_\-ChannelGet}}
+\index{GsnADC\_\-ChannelGet@{GsnADC\_\-ChannelGet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-ChannelGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT32} GsnADC\_\-ChannelGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gae6a05c80cfcf90573932cc6495d652ca}
+
+
+Set ADC channels This function Gets the Channels selected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+UINT32(The value which gives the channels selected). 
+\end{DoxyReturn}
+\hypertarget{a00643_gae764f1e683cbcaaf264da5f24fdca6c4}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-ChannelSet@{GsnADC\_\-ChannelSet}}
+\index{GsnADC\_\-ChannelSet@{GsnADC\_\-ChannelSet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-ChannelSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-ChannelSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf UINT32}}]{channelSel}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gae764f1e683cbcaaf264da5f24fdca6c4}
+
+
+Set ADC channels This function sets or clears the channels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em channelSel} & -\/ IN Channel selection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS Close successful. 
+
+GSN\_\-FAILURE Close failed. 
+\end{DoxyReturn}
+\hypertarget{a00643_gaac999315de0fc641a16931aaf7894e99}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-Close@{GsnADC\_\-Close}}
+\index{GsnADC\_\-Close@{GsnADC\_\-Close}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-Close}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-Close (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gaac999315de0fc641a16931aaf7894e99}
+
+
+ADC Driver Close. This function closes the ADC operation . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS Close successful. 
+
+GSN\_\-FAILURE Close failed. 
+\end{DoxyReturn}
+\hypertarget{a00643_ga18046da986a3d13cb32ac35e7b0b08a5}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-Enable100Khz@{GsnADC\_\-Enable100Khz}}
+\index{GsnADC\_\-Enable100Khz@{GsnADC\_\-Enable100Khz}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-Enable100Khz}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-Enable100Khz (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-EN100Khz\_\-T}}]{en100kHz}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga18046da986a3d13cb32ac35e7b0b08a5}
+
+
+Set ADC Enable or disable 100Khz freq mode This function sets or clears 100Khz freq mode. (enable low freq mode is 1 when Fs $<$100khz and 0 when Fs $>$100Khz) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em en100kHz} & -\/ IN supply indication mode settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{a00643_ga7f7da5a1332ee93571a95c3134eb11cf}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-EnableLVL@{GsnADC\_\-EnableLVL}}
+\index{GsnADC\_\-EnableLVL@{GsnADC\_\-EnableLVL}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-EnableLVL}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-EnableLVL (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-LVL\_\-T}}]{enlvl}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga7f7da5a1332ee93571a95c3134eb11cf}
+
+
+Set ADC LVL mode This function sets or clears LVL mode(enlvl is 1 when DVDD i.e core supply for ADC reaches 1.2v ) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em enlvl} & -\/ IN supply indication mode settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{a00643_ga3f3ed3a3fb1e0edd943038284a38be06}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-EnableTrim@{GsnADC\_\-EnableTrim}}
+\index{GsnADC\_\-EnableTrim@{GsnADC\_\-EnableTrim}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-EnableTrim}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-EnableTrim (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{aadcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-TRIM\_\-T}}]{enTrim}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga3f3ed3a3fb1e0edd943038284a38be06}
+
+
+Set ADC Internal Reference Trim mode This function sets or clears Internal Reference Trim mode (enTrim is 1 indicates Trim is enabled and the internal reference voltage can be trimmed ) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aadcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em enTrim} & -\/ IN supply indication mode settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{a00643_ga98cbb8990fd557a4ceb4fe7eb47760b6}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-ExternalSupplyEnable@{GsnADC\_\-ExternalSupplyEnable}}
+\index{GsnADC\_\-ExternalSupplyEnable@{GsnADC\_\-ExternalSupplyEnable}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-ExternalSupplyEnable}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-ExternalSupplyEnable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-ENDVDD\_\-T}}]{enDvdd}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga98cbb8990fd557a4ceb4fe7eb47760b6}
+
+
+Set ADC Enable DVDD mode(external supply used) This function sets the DVDD mode indicating external or internal supply used(enable DVDD is 1 when external core supply is used \& 0 when internal core supply is used ) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em enDvdd} & -\/ IN supply indication mode settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{a00643_ga3b40bffec1620eff298e1fec173295fc}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-isr@{GsnADC\_\-isr}}
+\index{GsnADC\_\-isr@{GsnADC\_\-isr}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-isr (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga3b40bffec1620eff298e1fec173295fc}
+
+
+ADC ISR This function is called by the interrupt handler whenever an ADC interrupt occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & IN pointer to handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00643_gab45b8c7fc60c498bcca45dd93db4c94e}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-Lock@{GsnADC\_\-Lock}}
+\index{GsnADC\_\-Lock@{GsnADC\_\-Lock}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-Lock (
+\begin{DoxyParamCaption}
+\item[{{\bf BOOL}}]{waitForEver}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gab45b8c7fc60c498bcca45dd93db4c94e}
+
+
+ADC Driver Lock. This function acquires the semaphore, and blocks access to the ADC by other tasks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em waitForEver} & -\/ IN Boolean to indicate wait for ever\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00643_gab7891ae2a7fb8ec386a686c3cc80895a}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-LockCreate@{GsnADC\_\-LockCreate}}
+\index{GsnADC\_\-LockCreate@{GsnADC\_\-LockCreate}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-LockCreate}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-LockCreate (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gab7891ae2a7fb8ec386a686c3cc80895a}
+
+
+ADC Driver Lock Create This function creates the semaphore for ADC. Use the function GsnAdc\_\-Lock to reserve the ADC and GsnAdc\_\-Unlock to release the ADC. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00643_gaacf2fdb41466506928299a106b96def3}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-Open@{GsnADC\_\-Open}}
+\index{GsnADC\_\-Open@{GsnADC\_\-Open}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-Open}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-Open (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-CONFIG\_\-T} $\ast$}]{adcConfig}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gaacf2fdb41466506928299a106b96def3}
+
+
+ADC Driver Open. This function initializes the ADC with specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em adcConfig} & -\/ IN ADC configuration.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS -\/ Initialization successful. 
+
+GSN\_\-FAILURE -\/ Initialization failed. 
+\end{DoxyReturn}
+\hypertarget{a00643_ga0770bf992078873341c561c186b7dce0}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-PeriodGet@{GsnADC\_\-PeriodGet}}
+\index{GsnADC\_\-PeriodGet@{GsnADC\_\-PeriodGet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-PeriodGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT32} GsnADC\_\-PeriodGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga0770bf992078873341c561c186b7dce0}
+
+
+Get the Periodic counter This function returns the periodic counter value . The unit for period is the ADC clock count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+UINT32 interval from ADCPER reg 
+\end{DoxyReturn}
+\hypertarget{a00643_ga969dac4b6fcd50ed0cc861adcfe6c9d5}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-PeriodSet@{GsnADC\_\-PeriodSet}}
+\index{GsnADC\_\-PeriodSet@{GsnADC\_\-PeriodSet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-PeriodSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-PeriodSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf UINT32}}]{Period}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga969dac4b6fcd50ed0cc861adcfe6c9d5}
+
+
+Set the Interval Between Measurements This function allows setting the interval between two measurements. The unit for period is ADC clock count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em Period} & -\/ IN periodic timer expiry value (The counter runs on the ADC clk)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-ADC\_\-STATUS\_\-BUSY If ADC is already in use 
+
+GSN\_\-SUCCESS Operation is successful 
+\end{DoxyReturn}
+\hypertarget{a00643_gaab53aee6b55a63e421310ec8a818dcb1}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-PollRead@{GsnADC\_\-PollRead}}
+\index{GsnADC\_\-PollRead@{GsnADC\_\-PollRead}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-PollRead}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-PollRead (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-READ\_\-MODE\_\-T}}]{adcmode, }
+\item[{{\bf UINT32}}]{chnSel, }
+\item[{{\bf GSN\_\-ADC\_\-RW\_\-ARGS\_\-T} $\ast$}]{adcRW, }
+\item[{{\bf GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T}}]{adcRefVoltage}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gaab53aee6b55a63e421310ec8a818dcb1}
+
+
+ADC Polling Read Starts read by polling method and returns the result in buffer. The ADC is shutdown after the read is done. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & IN pointer to handle. \\
+\hline
+{\em adcmode} & IN adc mode \\
+\hline
+{\em chnSel} & IN channel selection \\
+\hline
+{\em adcRW} & OUT pointer to read write structure. \\
+\hline
+{\em adcRefVoltage} & IN reference voltage\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-ADC\_\-STATUS\_\-ERROR -\/ In case of buffer pointer is NULL or data size is zero or data pointer is NULL 
+
+GSN\_\-ADC\_\-STATUS\_\-BUSY -\/ In case ADC is already in use. 
+
+GSN\_\-SUCCESS -\/ In case operation is successful. 
+\end{DoxyReturn}
+\hypertarget{a00643_gaee01f7aa2010bd9a4e5f9d8bc7f3bea4}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-PowerCycleSet@{GsnADC\_\-PowerCycleSet}}
+\index{GsnADC\_\-PowerCycleSet@{GsnADC\_\-PowerCycleSet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-PowerCycleSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-PowerCycleSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf UINT8}}]{powercycl}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gaee01f7aa2010bd9a4e5f9d8bc7f3bea4}
+
+
+Set the number of power cycles. This function allows setting the number of power cycles . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em powercycl} & -\/ IN cyclic interval between two measure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS Operation is successful 
+\end{DoxyReturn}
+\hypertarget{a00643_gaecd2ed2c0404fbe7c9b5f698c8a98121}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-PowerdownPolaritySet@{GsnADC\_\-PowerdownPolaritySet}}
+\index{GsnADC\_\-PowerdownPolaritySet@{GsnADC\_\-PowerdownPolaritySet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-PowerdownPolaritySet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-PowerdownPolaritySet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-PDPOLARITY\_\-T}}]{pdPolarity}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gaecd2ed2c0404fbe7c9b5f698c8a98121}
+
+
+Set ADC Supply power down polarity This function sets the Power down polarity (initially the Powerdown polarity is high ) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em pdPolarity} & -\/ IN supply indication mode settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{a00643_gadf20d396265cb22adb23ae34d3bc9701}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-Read@{GsnADC\_\-Read}}
+\index{GsnADC\_\-Read@{GsnADC\_\-Read}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-Read}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-READ\_\-MODE\_\-T}}]{adcmode, }
+\item[{{\bf UINT32}}]{chnSel, }
+\item[{{\bf GSN\_\-ADC\_\-RW\_\-ARGS\_\-T} $\ast$}]{adcRW, }
+\item[{{\bf GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T}}]{adcRefVoltage}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gadf20d396265cb22adb23ae34d3bc9701}
+
+
+ADC Read Starts read and returns the result in buffer. The ADC is shut down after the read is done. 
+
+Start Periodic Operation Starts a continuous periodic read and executes the callback function after every read. The read value is passed with data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & IN pointer to handle. \\
+\hline
+{\em adcmode} & IN adc mode \\
+\hline
+{\em chnSel} & IN channel selection \\
+\hline
+{\em adcRW} & OUT pointer to read write structure. \\
+\hline
+{\em adcRefVoltage} & IN reference voltage\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-ADC\_\-STATUS\_\-ERROR -\/ In case of buffer pointer is NULL or data size is zero or data pointer is NULL 
+
+GSN\_\-ADC\_\-STATUS\_\-BUSY -\/ In case ADC is already in use. 
+
+GSN\_\-SUCCESS -\/ In case operation is successful.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Sampling period can be set as part of the GsnAdc\_\-Open or by using GsnAdc\_\-CyclPeriodSet function. Periodic operation of ADC is possible on External ADC 1 , External ADC 2 and External ADC 3 only.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & IN pointer to handle. \\
+\hline
+{\em adcmode} & IN mode \\
+\hline
+{\em chnSel} & IN channel selected \\
+\hline
+{\em adcRW} & IN ADC Read Write Arg \\
+\hline
+{\em adcRefVoltage} & IN reference voltage\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-ADC\_\-STATUS\_\-ERROR -\/ In case callback function pointer is NULL 
+
+GSN\_\-ADC\_\-STATUS\_\-BUSY -\/ In case adc is already in use 
+
+GSN\_\-SUCCESS -\/ In case operation is successful 
+\end{DoxyReturn}
+\hypertarget{a00643_gae339df3cf9425d6e0b9f71aeee2cb245}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-RefVoltageGet@{GsnADC\_\-RefVoltageGet}}
+\index{GsnADC\_\-RefVoltageGet@{GsnADC\_\-RefVoltageGet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-RefVoltageGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T} GsnADC\_\-RefVoltageGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gae339df3cf9425d6e0b9f71aeee2cb245}
+
+
+Get Reference Voltage This function returns the configured reference voltage. The reference is either bandgap (1.2V) or 1.8V. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T Reference voltage. 
+\end{DoxyReturn}
+\hypertarget{a00643_gabd7bfb49431b859872e1c3becce3ce1a}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-RefVoltageSet@{GsnADC\_\-RefVoltageSet}}
+\index{GsnADC\_\-RefVoltageSet@{GsnADC\_\-RefVoltageSet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-RefVoltageSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-RefVoltageSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T}}]{refVoltage}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gabd7bfb49431b859872e1c3becce3ce1a}
+
+
+Set Reference Voltage This function sets the reference voltage. The reference is either external or internal(This function allows to select between internal \& external reference ) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em refVoltage} & -\/ IN reference voltage\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-ADC\_\-STATUS\_\-BUSY If ADC is already in use 
+
+GSN\_\-SUCCESS Operation is successful 
+\end{DoxyReturn}
+\hypertarget{a00643_ga32c8846f78b01c95ae454f5532568163}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-StartCycleSet@{GsnADC\_\-StartCycleSet}}
+\index{GsnADC\_\-StartCycleSet@{GsnADC\_\-StartCycleSet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-StartCycleSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-StartCycleSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf UINT8}}]{startcycles}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga32c8846f78b01c95ae454f5532568163}
+
+
+Set the number of start cycles. This function allows setting the number of start cycles . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em startcycles} & -\/ IN cyclic interval between two measure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS Operation is successful 
+\end{DoxyReturn}
+\hypertarget{a00643_gab93bdcc54f8ab4870ef3b5a12ac1c920}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-StartMeasure@{GsnADC\_\-StartMeasure}}
+\index{GsnADC\_\-StartMeasure@{GsnADC\_\-StartMeasure}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-StartMeasure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnADC\_\-StartMeasure (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf UINT32}}]{chnSel, }
+\item[{{\bf GSN\_\-ADC\_\-READ\_\-MODE\_\-T}}]{adcmode, }
+\item[{{\bf GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T}}]{adcRefVoltage, }
+\item[{VOID $\ast$}]{contextCB, }
+\item[{{\bf GSN\_\-ADC\_\-CALLBACK\_\-FUNC\_\-T}}]{funcCB, }
+\item[{{\bf UINT32} $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gab93bdcc54f8ab4870ef3b5a12ac1c920}
+
+
+GsnAdc\_\-StartMeasure Starts continuous read. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & IN pointer to handle. \\
+\hline
+{\em chnSel} & IN channel selection \\
+\hline
+{\em adcmode} & IN adc mode \\
+\hline
+{\em adcRefVoltage} & IN adc reference voltage \\
+\hline
+{\em contextCB} & IN callback context. \\
+\hline
+{\em funcCB} & IN function call back \\
+\hline
+{\em data} & IN app data buff\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-ADC\_\-STATUS\_\-ERROR -\/ In case of buffer pointer is NULL or data size is zero or data pointer is NULL 
+
+GSN\_\-ADC\_\-STATUS\_\-BUSY -\/ In case ADC is already in use. 
+
+GSN\_\-SUCCESS -\/ In case operation is successful. 
+\end{DoxyReturn}
+\hypertarget{a00643_gaea1be2fe47893500462843eec695e904}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-StartPolaritySet@{GsnADC\_\-StartPolaritySet}}
+\index{GsnADC\_\-StartPolaritySet@{GsnADC\_\-StartPolaritySet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-StartPolaritySet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-StartPolaritySet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-STARTPOLARITY\_\-T}}]{startPolarity}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gaea1be2fe47893500462843eec695e904}
+
+
+Set ADC Start polarity This function sets the Start polarity (initially the Start polarity ) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em startPolarity} & -\/ IN start polarity\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{a00643_gad9bcae203930867c8bbae3d9a007764b}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-StopMeasure@{GsnADC\_\-StopMeasure}}
+\index{GsnADC\_\-StopMeasure@{GsnADC\_\-StopMeasure}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-StopMeasure}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-StopMeasure (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gad9bcae203930867c8bbae3d9a007764b}
+
+
+Stop Periodic Read Operation Stop the periodic read and power down the ADC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & IN pointer to handle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Handle should not be NULL 
+\end{DoxyNote}
+\hypertarget{a00643_ga8d0ddb6ead557188cc145cd7e4eec3a2}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-SupplyIndicationSet@{GsnADC\_\-SupplyIndicationSet}}
+\index{GsnADC\_\-SupplyIndicationSet@{GsnADC\_\-SupplyIndicationSet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-SupplyIndicationSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-SupplyIndicationSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-SUP1P8\_\-T}}]{sup1p8}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga8d0ddb6ead557188cc145cd7e4eec3a2}
+
+
+Set ADC Supply indication mode This function sets the Supply indication-\/D mode (sup1p8 is 1 when I/O supply for ADC is in 1.8v range \& 0 when it is in 2.5v/3.3v range ). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em sup1p8} & -\/ IN supply indication mode settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{a00643_gac19751aaeabd7689d2f173a7f848511d}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-ThresholdAllSet@{GsnADC\_\-ThresholdAllSet}}
+\index{GsnADC\_\-ThresholdAllSet@{GsnADC\_\-ThresholdAllSet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-ThresholdAllSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnADC\_\-ThresholdAllSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf GSN\_\-ADC\_\-TRESH0\_\-T}}]{thr0, }
+\item[{{\bf GSN\_\-ADC\_\-TRESH0\_\-T}}]{thr1, }
+\item[{{\bf GSN\_\-ADC\_\-TRESH0\_\-T}}]{thr2}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gac19751aaeabd7689d2f173a7f848511d}
+
+
+Set ADC Threshold This function sets the Threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em thr0} & -\/ IN Threshold for channel 0 \\
+\hline
+{\em thr1} & -\/ IN Threshold for channel 1 \\
+\hline
+{\em thr2} & -\/ IN Threshold for channel 2\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS Operation is successful 
+\end{DoxyReturn}
+\hypertarget{a00643_ga1351ae6a56f6941c316e11d119052da1}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-TrimValueSet@{GsnADC\_\-TrimValueSet}}
+\index{GsnADC\_\-TrimValueSet@{GsnADC\_\-TrimValueSet}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-TrimValueSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-TrimValueSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ADC\_\-HANDLE\_\-T} $\ast$}]{adcHandle, }
+\item[{{\bf UINT16}}]{trimValue}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_ga1351ae6a56f6941c316e11d119052da1}
+
+
+Set ADC Internal Reference Trim value This function sets Internal Reference Trim value(enTrim must be enabled and the value of trim must be increased in steps of 1 till the adc buffer shows a transition from 12'b111111111110 to 12'b111111111111) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adcHandle} & -\/ IN pointer to handle. \\
+\hline
+{\em trimValue} & -\/ IN supply indication mode settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{a00643_gaf67c439ea766aac8b8667664015d3256}{
+\index{GSN ADC API@{GSN ADC API}!GsnADC\_\-Unlock@{GsnADC\_\-Unlock}}
+\index{GsnADC\_\-Unlock@{GsnADC\_\-Unlock}!GSN ADC API@{GSN ADC API}}
+\subsubsection[{GsnADC\_\-Unlock}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnADC\_\-Unlock (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00643_gaf67c439ea766aac8b8667664015d3256}
+
+
+ADC Driver Unlock. This function releases the semaphore acquired by the GsnAdc\_\-Lock. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}

@@ -1,0 +1,2079 @@
+\hypertarget{a00557}{
+\section{gsn\_\-reg\_\-i2c\_\-op.h File Reference}
+\label{a00557}\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00793}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00557_a678cf4a9a6e98a9964d048ea219f7c8d}{I2C\_\-I2CSLAD0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0))
+\item 
+\#define \hyperlink{a00557_a1a05ea903a1388421250fb9c8e4fcd00}{I2C\_\-I2CSLAD0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0, (value))
+\item 
+\#define \hyperlink{a00557_af7b059d9b09b72d944ad47c64cf675b1}{I2C\_\-I2CSLAD0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0) $|$ (value))
+\item 
+\#define \hyperlink{a00557_a980d4fb5a97e37a67ca0818730a1cdbb}{I2C\_\-I2CSLAD0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_aecdf7c72858cee7fda3e1e110af2d570}{I2C\_\-SLAD0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SLAD0)
+\item 
+\#define \hyperlink{a00557_a51c1f2368f2f33bd18d0e4f31c45edfb}{I2C\_\-SLAD0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SLAD0, (value))
+\item 
+\#define \hyperlink{a00557_a59b592bcf65ca5c6e8a03032cb6ab6e2}{I2C\_\-I2CSLAD1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1))
+\item 
+\#define \hyperlink{a00557_a1860ff0daa3ac5fbb6ce5f326b1936c6}{I2C\_\-I2CSLAD1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1, (value))
+\item 
+\#define \hyperlink{a00557_a3fdd2abbeb3157e401984092ee6e0dd3}{I2C\_\-I2CSLAD1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1) $|$ (value))
+\item 
+\#define \hyperlink{a00557_a6f3c9e7b4353987b8353cff7e573acfb}{I2C\_\-I2CSLAD1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_adee2f89ed4bbb8e708904ad67ef57ec1}{I2C\_\-SLAD1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SLAD1)
+\item 
+\#define \hyperlink{a00557_aefe155d4adfd1c93191432c808afe917}{I2C\_\-SLAD1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SLAD1, (value))
+\item 
+\#define \hyperlink{a00557_a4947c959c02bbb9a5068746a88597a29}{I2C\_\-ADMOD\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ADMOD)
+\item 
+\#define \hyperlink{a00557_a89071ae1cac238f0603d983dc1c46e6e}{I2C\_\-ADMOD\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ADMOD, 1)
+\item 
+\#define \hyperlink{a00557_a66f94d42b2fe4030db0b71f417b5d5ed}{I2C\_\-ADMOD\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ADMOD, 0)
+\item 
+\#define \hyperlink{a00557_a869678c81dae39a776dddce1806eeca7}{I2C\_\-MNS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MNS)
+\item 
+\#define \hyperlink{a00557_a0bf93b3893ecf1c5b32875ca767a7a2e}{I2C\_\-MNS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MNS, 1)
+\item 
+\#define \hyperlink{a00557_a3ede580f616b526a55ddf5a8dfdceb34}{I2C\_\-MNS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MNS, 0)
+\item 
+\#define \hyperlink{a00557_a0ebc0775e5dd6a203bf81b1600914a83}{I2C\_\-HSE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-HSE)
+\item 
+\#define \hyperlink{a00557_a4f25bdfeb3d78fbc92e493eeeed7bf67}{I2C\_\-HSE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-HSE, 1)
+\item 
+\#define \hyperlink{a00557_a43c9660ebcfcf6076f31500eb5817f62}{I2C\_\-HSE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-HSE, 0)
+\item 
+\#define \hyperlink{a00557_a7c2bbd1a8eaa0a03dbf446580a8c5a1b}{I2C\_\-I2CIER\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER))
+\item 
+\#define \hyperlink{a00557_a66f9af47f156ad6e961b2fa0f7e4f928}{I2C\_\-I2CIER\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER, (value))
+\item 
+\#define \hyperlink{a00557_a193eb86dd18ba6d1e92efa94bcea861b}{I2C\_\-I2CIER\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER) $|$ (value))
+\item 
+\#define \hyperlink{a00557_a3cda761dfd54278a935592f6e37d6ef6}{I2C\_\-I2CIER\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_a30ed062be285789e5e9acfbf701c1f52}{I2C\_\-EFEI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFEI)
+\item 
+\#define \hyperlink{a00557_a5f5b7430895f653f33813cad3eb74486}{I2C\_\-EFEI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFEI, 1)
+\item 
+\#define \hyperlink{a00557_ac7b88246cb8076cc9d40cc36ada7a97e}{I2C\_\-EFEI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFEI, 0)
+\item 
+\#define \hyperlink{a00557_aea95c0e54fc6ed4081c9b201a7ec6d5c}{I2C\_\-EBI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EBI)
+\item 
+\#define \hyperlink{a00557_a78c5899dc7d924f91cae19f26a102217}{I2C\_\-EBI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EBI, 1)
+\item 
+\#define \hyperlink{a00557_a3ea13f736c32406dd17ec49b8de56cae}{I2C\_\-EBI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EBI, 0)
+\item 
+\#define \hyperlink{a00557_ad00d47f511a206ff2b3dc82d990c5402}{I2C\_\-EFFI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFFI)
+\item 
+\#define \hyperlink{a00557_af1d96c7cdccf4aec409ac59ea796dcce}{I2C\_\-EFFI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFFI, 1)
+\item 
+\#define \hyperlink{a00557_aea13878544893de80735e8d6526eebef}{I2C\_\-EFFI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFFI, 0)
+\item 
+\#define \hyperlink{a00557_a154c3bebeb34f12a73b3f1257832023c}{I2C\_\-EOCI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EOCI)
+\item 
+\#define \hyperlink{a00557_a80a73be7417385b58a0c43d5c181389a}{I2C\_\-EOCI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EOCI, 1)
+\item 
+\#define \hyperlink{a00557_a337089d0348581359ef90040d012b580}{I2C\_\-EOCI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EOCI, 0)
+\item 
+\#define \hyperlink{a00557_a45ef4166156ddcb6a1c57ba7215b50da}{I2C\_\-ENAEI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ENAEI)
+\item 
+\#define \hyperlink{a00557_ac6a0a1598876d35ee562e18d405ceb4c}{I2C\_\-ENAEI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ENAEI, 1)
+\item 
+\#define \hyperlink{a00557_a67d9effe2a18828a9bf120183cba35f1}{I2C\_\-ENAEI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ENAEI, 0)
+\item 
+\#define \hyperlink{a00557_aae37b7f7c613083bae858762383eb06d}{I2C\_\-EAFI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EAFI)
+\item 
+\#define \hyperlink{a00557_a8f143ff62fb1f672ba84802986cca4c6}{I2C\_\-EAFI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EAFI, 1)
+\item 
+\#define \hyperlink{a00557_a7f98892ee9583b6fba1ea99464430fa1}{I2C\_\-EAFI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EAFI, 0)
+\item 
+\#define \hyperlink{a00557_a8299b6ce82e25e6d8785b4f71b153673}{I2C\_\-I2CISR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR))
+\item 
+\#define \hyperlink{a00557_a7c690454184cc937bd3a2a9408a466bc}{I2C\_\-I2CISR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR, (value))
+\item 
+\#define \hyperlink{a00557_a6f4cc69a3aab506bb5180fbda6a55074}{I2C\_\-I2CISR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR) $|$ (value))
+\item 
+\#define \hyperlink{a00557_a8f0a3ac0da5029d17c62098299ab18b0}{I2C\_\-I2CISR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_aebe4b3be48d93e354dfc9ff0ce43984d}{I2C\_\-FEI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FEI)
+\item 
+\#define \hyperlink{a00557_a9ab640cf4d737afa4340098f93780894}{I2C\_\-FEI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FEI, 1)
+\item 
+\#define \hyperlink{a00557_abae2f8bed5812e2bd247e60035186a24}{I2C\_\-FEI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FEI, 1)
+\item 
+\#define \hyperlink{a00557_a11d88f82de4bc914a5fecbcc1b9a08ef}{I2C\_\-BI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BI)
+\item 
+\#define \hyperlink{a00557_ab4f22fce079d9e7f2e6a00d6474419d8}{I2C\_\-BI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BI, 1)
+\item 
+\#define \hyperlink{a00557_a27929ad546bf86420b629cc3e4fe70a5}{I2C\_\-BI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BI, 1)
+\item 
+\#define \hyperlink{a00557_a44c4c8439e54a02fe1a1aeb9c075138e}{I2C\_\-FFI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FFI)
+\item 
+\#define \hyperlink{a00557_ab7a0f8a427047a6baffba612cdabe6b5}{I2C\_\-FFI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FFI, 1)
+\item 
+\#define \hyperlink{a00557_a3432b3b1e71ea4ab097a7618e90adaae}{I2C\_\-FFI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FFI, 1)
+\item 
+\#define \hyperlink{a00557_a5a0cfd394f6f0acaf6f42d2f590b1b86}{I2C\_\-OCI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-OCI)
+\item 
+\#define \hyperlink{a00557_a4c3754351c38a068068f2b57b998f4fa}{I2C\_\-OCI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-OCI, 1)
+\item 
+\#define \hyperlink{a00557_a2de1f2f9051d65ff929b43024b56fe21}{I2C\_\-OCI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-OCI, 1)
+\item 
+\#define \hyperlink{a00557_ae37c16731a571cea677fc1bbf9cee301}{I2C\_\-NAEI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-NAEI)
+\item 
+\#define \hyperlink{a00557_a1908022e9df0ab35ad2436195057ed3c}{I2C\_\-NAEI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-NAEI, 1)
+\item 
+\#define \hyperlink{a00557_ad4127ea6eed444cd1332aacc07b70209}{I2C\_\-NAEI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-NAEI, 1)
+\item 
+\#define \hyperlink{a00557_a651fee5fb0b4b386c4d973bb9cefebc2}{I2C\_\-AFI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AFI)
+\item 
+\#define \hyperlink{a00557_ab17b9914eba8ae1ae5bbceea8e849696}{I2C\_\-AFI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AFI, 1)
+\item 
+\#define \hyperlink{a00557_a9f3693240475d38b55546d0742763a75}{I2C\_\-AFI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AFI, 1)
+\item 
+\#define \hyperlink{a00557_ac7eb4cfcc847a767d0b4131ce8ba66b2}{I2C\_\-I2CAPBADDRLSB\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB))
+\item 
+\#define \hyperlink{a00557_af33f32f9043bc7d3d3eb0da9becefde6}{I2C\_\-I2CAPBADDRLSB\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB, (value))
+\item 
+\#define \hyperlink{a00557_ab9025f6cad0783a9510bad7296184466}{I2C\_\-I2CAPBADDRLSB\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB) $|$ (value))
+\item 
+\#define \hyperlink{a00557_ad00ecf6a4d0b8589053e51db1b557426}{I2C\_\-I2CAPBADDRLSB\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_a8940d9e715350807d9a81492742472ed}{I2C\_\-I2CAPBADDRMSB\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB))
+\item 
+\#define \hyperlink{a00557_aec8a2700e51ebc1c540b2efda2e04835}{I2C\_\-I2CAPBADDRMSB\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB, (value))
+\item 
+\#define \hyperlink{a00557_a2df4b9ec1bd041019b6b1c2e545391a6}{I2C\_\-I2CAPBADDRMSB\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB) $|$ (value))
+\item 
+\#define \hyperlink{a00557_a50592d68b6380d8625cbaa1ae373b90c}{I2C\_\-I2CAPBADDRMSB\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_a96356b3ea9acf5ae75c2389b46e214d6}{I2C\_\-I2CDACNTLSB\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB))
+\item 
+\#define \hyperlink{a00557_a42eb65c4566b317032e595c95312ac96}{I2C\_\-I2CDACNTLSB\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB, (value))
+\item 
+\#define \hyperlink{a00557_afa4b14f469f1a70a8d9e8a1bcbf4340e}{I2C\_\-I2CDACNTLSB\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB) $|$ (value))
+\item 
+\#define \hyperlink{a00557_a1fb006220cf2477abc844382ae68acbb}{I2C\_\-I2CDACNTLSB\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_a1e98d9878c4ccb026322d2dae0d4af3d}{I2C\_\-DACNT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-DACNT)
+\item 
+\#define \hyperlink{a00557_a0461b9da89519b85968824aac8731aa0}{I2C\_\-DACNT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-DACNT, (value))
+\item 
+\#define \hyperlink{a00557_a0b2ee8e4e39acec922378091e0df1d84}{I2C\_\-I2CDATA\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA))
+\item 
+\#define \hyperlink{a00557_aa043aead41630635b1bbdc6bcb3fb2ce}{I2C\_\-I2CDATA\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA, (value))
+\item 
+\#define \hyperlink{a00557_af9ad9a745b59992004def998623cf88a}{I2C\_\-I2CDATA\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA) $|$ (value))
+\item 
+\#define \hyperlink{a00557_aa02ac2b185cda7638ab5af269bf2886b}{I2C\_\-I2CDATA\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_aa3015dbe0e0d6531e0ac9be9a5c6d770}{I2C\_\-DATA\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-DATA)
+\item 
+\#define \hyperlink{a00557_aee6980b8d1c1920064a393a49cd10c85}{I2C\_\-DATA\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-DATA, (value))
+\item 
+\#define \hyperlink{a00557_a7a8c59cc409e719ac210133eb6e8e9d2}{I2C\_\-I2CCR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR))
+\item 
+\#define \hyperlink{a00557_a2a2d7c99edc72acb5c73072afd705f82}{I2C\_\-I2CCR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR, (value))
+\item 
+\#define \hyperlink{a00557_ad6ed3bb6eef103433e586a787690523a}{I2C\_\-I2CCR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR) $|$ (value))
+\item 
+\#define \hyperlink{a00557_a4c22cbe1a177546f33e4296ec7c6f1b7}{I2C\_\-I2CCR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_a10684a1b0667ecf54bcdbf057dfb5cbf}{I2C\_\-RWOP\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RWOP)
+\item 
+\#define \hyperlink{a00557_a5a950fb1fa612890885c4ac64b367bfe}{I2C\_\-RWOP\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RWOP, 1)
+\item 
+\#define \hyperlink{a00557_a9ee2809f7dffd805ef13ca1a00990bf8}{I2C\_\-RWOP\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RWOP, 0)
+\item 
+\#define \hyperlink{a00557_ab418dc6ee3f64159c412fc98d27e866e}{I2C\_\-AOP\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AOP)
+\item 
+\#define \hyperlink{a00557_adb0d7b5581fadd10e44b3f1e760ca06d}{I2C\_\-AOP\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AOP, 1)
+\item 
+\#define \hyperlink{a00557_a766df40e32affbcd213e8a69d81a7db2}{I2C\_\-AOP\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AOP, 0)
+\item 
+\#define \hyperlink{a00557_aa25ca95618e07481409413545e64f068}{I2C\_\-BCO\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BCO)
+\item 
+\#define \hyperlink{a00557_ae0317af97485573bf70c59d547aec4ba}{I2C\_\-BCO\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BCO, 1)
+\item 
+\#define \hyperlink{a00557_a64d527aeb4e475b188d59493c4fd5ab7}{I2C\_\-BCO\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BCO, 0)
+\item 
+\#define \hyperlink{a00557_a640014c27b2834f376cc482f847ec5c6}{I2C\_\-RCAS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RCAS)
+\item 
+\#define \hyperlink{a00557_a50eb6d27bc38281b31c421f3c47ce364}{I2C\_\-RCAS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RCAS, 1)
+\item 
+\#define \hyperlink{a00557_a394992b0631d8b5120984de42b1392f6}{I2C\_\-RCAS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RCAS, 0)
+\item 
+\#define \hyperlink{a00557_a3342a2d9077b3370426e419b476b9ed6}{I2C\_\-MAS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MAS)
+\item 
+\#define \hyperlink{a00557_aeb24282b8212aa301e882f01f5095530}{I2C\_\-MAS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MAS, 1)
+\item 
+\#define \hyperlink{a00557_a5f774c19bde66978bd546c0fa80bc329}{I2C\_\-MAS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MAS, 0)
+\item 
+\#define \hyperlink{a00557_ad30f12598a025bf39ae94fba0321454c}{I2C\_\-I2CADDRLSB\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB))
+\item 
+\#define \hyperlink{a00557_a43523c6228f8a23711eb17e71acc91ff}{I2C\_\-I2CADDRLSB\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB, (value))
+\item 
+\#define \hyperlink{a00557_a4551347f7b9dda948878fc6e37fe4370}{I2C\_\-I2CADDRLSB\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB) $|$ (value))
+\item 
+\#define \hyperlink{a00557_a0dcf201bcd0928382c78f1a2be622ebe}{I2C\_\-I2CADDRLSB\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_a4227216b259d552fa00679e55afb1ad6}{I2C\_\-SADDRLSB\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SADDRLSB)
+\item 
+\#define \hyperlink{a00557_ad30491528a15715d07180256a66ef237}{I2C\_\-SADDRLSB\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SADDRLSB, (value))
+\item 
+\#define \hyperlink{a00557_ab6a41270eb4dd576a417213ae9281136}{I2C\_\-I2CADDRMSB\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB))
+\item 
+\#define \hyperlink{a00557_a88cdfc26372e3b34f2bbe1987cdeff04}{I2C\_\-I2CADDRMSB\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB, (value))
+\item 
+\#define \hyperlink{a00557_a955fcf9bafc256b424d55871ef869472}{I2C\_\-I2CADDRMSB\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB) $|$ (value))
+\item 
+\#define \hyperlink{a00557_a3e58fb7eb88b89043385d583deb08331}{I2C\_\-I2CADDRMSB\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_a028c22c4f45ab4afe67db915c1b5470d}{I2C\_\-SADDRMSB\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SADDRMSB)
+\item 
+\#define \hyperlink{a00557_a8f90c2257f55c950c78f4d5cfc7a2bcc}{I2C\_\-SADDRMSB\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SADDRMSB, (value))
+\item 
+\#define \hyperlink{a00557_a75cba065bd14a4538de96443831700b1}{I2C\_\-I2CDACNTR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR))
+\item 
+\#define \hyperlink{a00557_a7ec11053a59653070d3486d755c68e58}{I2C\_\-I2CDACNTR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR, (value))
+\item 
+\#define \hyperlink{a00557_a8637501292f196be88a7c2eb66c8b339}{I2C\_\-I2CDACNTR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR) $|$ (value))
+\item 
+\#define \hyperlink{a00557_a28e15fab811cb025a2592701540d47e3}{I2C\_\-I2CDACNTR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_aad7bea7abe15582f3ebd2634d563500e}{I2C\_\-SDACNT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SDACNT)
+\item 
+\#define \hyperlink{a00557_ad68f96139a457db2ee866b0e5ebd1076}{I2C\_\-SDACNT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SDACNT, (value))
+\item 
+\#define \hyperlink{a00557_a45191201f41d29d637195abfabf08914}{I2C\_\-I2CMCR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR))
+\item 
+\#define \hyperlink{a00557_a28f67409f8a0a2020bd510e5d49525ae}{I2C\_\-I2CMCR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR, (value))
+\item 
+\#define \hyperlink{a00557_a342032ce78ac85bfe5edb9eddbe89079}{I2C\_\-I2CMCR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR) $|$ (value))
+\item 
+\#define \hyperlink{a00557_a737eaf86494321643708c504d59d4c59}{I2C\_\-I2CMCR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_a4f6556222fe9ece21afde6e04de601e1}{I2C\_\-MCODE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MCODE)
+\item 
+\#define \hyperlink{a00557_a07087b2343b2297e115d2b75916879ff}{I2C\_\-MCODE\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MCODE, (value))
+\item 
+\#define \hyperlink{a00557_ae47a2b26db2373e699681f30fb207558}{I2C\_\-I2CHCCR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR))
+\item 
+\#define \hyperlink{a00557_a9d630e6bfd908ea3abb540ca98f84266}{I2C\_\-I2CHCCR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR, (value))
+\item 
+\#define \hyperlink{a00557_a60743dfca505e76c897317369af6b483}{I2C\_\-I2CHCCR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR) $|$ (value))
+\item 
+\#define \hyperlink{a00557_ac8b46962fb7d26d8252cd3e979c72e82}{I2C\_\-I2CHCCR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00557_af41aff3f2606d478d96eb765f78e103e}{I2C\_\-CCOUNT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-CCOUNT)
+\item 
+\#define \hyperlink{a00557_ae39613b9ce5d41991e4fb856da571ddd}{I2C\_\-CCOUNT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-CCOUNT, (value))
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00557_a66f94d42b2fe4030db0b71f417b5d5ed}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-ADMOD\_\-CLEAR@{I2C\_\-ADMOD\_\-CLEAR}}
+\index{I2C\_\-ADMOD\_\-CLEAR@{I2C\_\-ADMOD\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-ADMOD\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-ADMOD\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ADMOD, 0)}}
+\label{a00557_a66f94d42b2fe4030db0b71f417b5d5ed}
+
+
+Definition at line 83 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a4947c959c02bbb9a5068746a88597a29}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-ADMOD\_\-GET@{I2C\_\-ADMOD\_\-GET}}
+\index{I2C\_\-ADMOD\_\-GET@{I2C\_\-ADMOD\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-ADMOD\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-ADMOD\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ADMOD)}}
+\label{a00557_a4947c959c02bbb9a5068746a88597a29}
+
+
+Definition at line 79 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a89071ae1cac238f0603d983dc1c46e6e}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-ADMOD\_\-SET@{I2C\_\-ADMOD\_\-SET}}
+\index{I2C\_\-ADMOD\_\-SET@{I2C\_\-ADMOD\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-ADMOD\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-ADMOD\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ADMOD, 1)}}
+\label{a00557_a89071ae1cac238f0603d983dc1c46e6e}
+
+
+Definition at line 81 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a9f3693240475d38b55546d0742763a75}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-AFI\_\-CLEAR@{I2C\_\-AFI\_\-CLEAR}}
+\index{I2C\_\-AFI\_\-CLEAR@{I2C\_\-AFI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-AFI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-AFI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AFI, 1)}}
+\label{a00557_a9f3693240475d38b55546d0742763a75}
+
+
+Definition at line 265 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a651fee5fb0b4b386c4d973bb9cefebc2}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-AFI\_\-GET@{I2C\_\-AFI\_\-GET}}
+\index{I2C\_\-AFI\_\-GET@{I2C\_\-AFI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-AFI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-AFI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AFI)}}
+\label{a00557_a651fee5fb0b4b386c4d973bb9cefebc2}
+
+
+Definition at line 261 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ab17b9914eba8ae1ae5bbceea8e849696}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-AFI\_\-SET@{I2C\_\-AFI\_\-SET}}
+\index{I2C\_\-AFI\_\-SET@{I2C\_\-AFI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-AFI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-AFI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AFI, 1)}}
+\label{a00557_ab17b9914eba8ae1ae5bbceea8e849696}
+
+
+Definition at line 263 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a766df40e32affbcd213e8a69d81a7db2}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-AOP\_\-CLEAR@{I2C\_\-AOP\_\-CLEAR}}
+\index{I2C\_\-AOP\_\-CLEAR@{I2C\_\-AOP\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-AOP\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-AOP\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AOP, 0)}}
+\label{a00557_a766df40e32affbcd213e8a69d81a7db2}
+
+
+Definition at line 375 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ab418dc6ee3f64159c412fc98d27e866e}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-AOP\_\-GET@{I2C\_\-AOP\_\-GET}}
+\index{I2C\_\-AOP\_\-GET@{I2C\_\-AOP\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-AOP\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-AOP\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AOP)}}
+\label{a00557_ab418dc6ee3f64159c412fc98d27e866e}
+
+
+Definition at line 371 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_adb0d7b5581fadd10e44b3f1e760ca06d}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-AOP\_\-SET@{I2C\_\-AOP\_\-SET}}
+\index{I2C\_\-AOP\_\-SET@{I2C\_\-AOP\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-AOP\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-AOP\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-AOP, 1)}}
+\label{a00557_adb0d7b5581fadd10e44b3f1e760ca06d}
+
+
+Definition at line 373 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a64d527aeb4e475b188d59493c4fd5ab7}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-BCO\_\-CLEAR@{I2C\_\-BCO\_\-CLEAR}}
+\index{I2C\_\-BCO\_\-CLEAR@{I2C\_\-BCO\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-BCO\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-BCO\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BCO, 0)}}
+\label{a00557_a64d527aeb4e475b188d59493c4fd5ab7}
+
+
+Definition at line 386 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aa25ca95618e07481409413545e64f068}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-BCO\_\-GET@{I2C\_\-BCO\_\-GET}}
+\index{I2C\_\-BCO\_\-GET@{I2C\_\-BCO\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-BCO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-BCO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BCO)}}
+\label{a00557_aa25ca95618e07481409413545e64f068}
+
+
+Definition at line 382 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ae0317af97485573bf70c59d547aec4ba}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-BCO\_\-SET@{I2C\_\-BCO\_\-SET}}
+\index{I2C\_\-BCO\_\-SET@{I2C\_\-BCO\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-BCO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-BCO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BCO, 1)}}
+\label{a00557_ae0317af97485573bf70c59d547aec4ba}
+
+
+Definition at line 384 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a27929ad546bf86420b629cc3e4fe70a5}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-BI\_\-CLEAR@{I2C\_\-BI\_\-CLEAR}}
+\index{I2C\_\-BI\_\-CLEAR@{I2C\_\-BI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-BI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-BI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BI, 1)}}
+\label{a00557_a27929ad546bf86420b629cc3e4fe70a5}
+
+
+Definition at line 221 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a11d88f82de4bc914a5fecbcc1b9a08ef}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-BI\_\-GET@{I2C\_\-BI\_\-GET}}
+\index{I2C\_\-BI\_\-GET@{I2C\_\-BI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-BI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-BI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BI)}}
+\label{a00557_a11d88f82de4bc914a5fecbcc1b9a08ef}
+
+
+Definition at line 217 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ab4f22fce079d9e7f2e6a00d6474419d8}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-BI\_\-SET@{I2C\_\-BI\_\-SET}}
+\index{I2C\_\-BI\_\-SET@{I2C\_\-BI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-BI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-BI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-BI, 1)}}
+\label{a00557_ab4f22fce079d9e7f2e6a00d6474419d8}
+
+
+Definition at line 219 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_af41aff3f2606d478d96eb765f78e103e}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-CCOUNT\_\-GET@{I2C\_\-CCOUNT\_\-GET}}
+\index{I2C\_\-CCOUNT\_\-GET@{I2C\_\-CCOUNT\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-CCOUNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-CCOUNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-CCOUNT)}}
+\label{a00557_af41aff3f2606d478d96eb765f78e103e}
+
+
+Definition at line 521 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ae39613b9ce5d41991e4fb856da571ddd}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-CCOUNT\_\-SET@{I2C\_\-CCOUNT\_\-SET}}
+\index{I2C\_\-CCOUNT\_\-SET@{I2C\_\-CCOUNT\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-CCOUNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-CCOUNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-CCOUNT, (value))}}
+\label{a00557_ae39613b9ce5d41991e4fb856da571ddd}
+
+
+Definition at line 523 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a1e98d9878c4ccb026322d2dae0d4af3d}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-DACNT\_\-GET@{I2C\_\-DACNT\_\-GET}}
+\index{I2C\_\-DACNT\_\-GET@{I2C\_\-DACNT\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-DACNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-DACNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-DACNT)}}
+\label{a00557_a1e98d9878c4ccb026322d2dae0d4af3d}
+
+
+Definition at line 313 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a0461b9da89519b85968824aac8731aa0}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-DACNT\_\-SET@{I2C\_\-DACNT\_\-SET}}
+\index{I2C\_\-DACNT\_\-SET@{I2C\_\-DACNT\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-DACNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-DACNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-DACNT, (value))}}
+\label{a00557_a0461b9da89519b85968824aac8731aa0}
+
+
+Definition at line 315 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aa3015dbe0e0d6531e0ac9be9a5c6d770}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-DATA\_\-GET@{I2C\_\-DATA\_\-GET}}
+\index{I2C\_\-DATA\_\-GET@{I2C\_\-DATA\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-DATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-DATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-DATA)}}
+\label{a00557_aa3015dbe0e0d6531e0ac9be9a5c6d770}
+
+
+Definition at line 337 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aee6980b8d1c1920064a393a49cd10c85}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-DATA\_\-SET@{I2C\_\-DATA\_\-SET}}
+\index{I2C\_\-DATA\_\-SET@{I2C\_\-DATA\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-DATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-DATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-DATA, (value))}}
+\label{a00557_aee6980b8d1c1920064a393a49cd10c85}
+
+
+Definition at line 339 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a7f98892ee9583b6fba1ea99464430fa1}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EAFI\_\-CLEAR@{I2C\_\-EAFI\_\-CLEAR}}
+\index{I2C\_\-EAFI\_\-CLEAR@{I2C\_\-EAFI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EAFI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EAFI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EAFI, 0)}}
+\label{a00557_a7f98892ee9583b6fba1ea99464430fa1}
+
+
+Definition at line 185 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aae37b7f7c613083bae858762383eb06d}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EAFI\_\-GET@{I2C\_\-EAFI\_\-GET}}
+\index{I2C\_\-EAFI\_\-GET@{I2C\_\-EAFI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EAFI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EAFI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EAFI)}}
+\label{a00557_aae37b7f7c613083bae858762383eb06d}
+
+
+Definition at line 181 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a8f143ff62fb1f672ba84802986cca4c6}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EAFI\_\-SET@{I2C\_\-EAFI\_\-SET}}
+\index{I2C\_\-EAFI\_\-SET@{I2C\_\-EAFI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EAFI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EAFI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EAFI, 1)}}
+\label{a00557_a8f143ff62fb1f672ba84802986cca4c6}
+
+
+Definition at line 183 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a3ea13f736c32406dd17ec49b8de56cae}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EBI\_\-CLEAR@{I2C\_\-EBI\_\-CLEAR}}
+\index{I2C\_\-EBI\_\-CLEAR@{I2C\_\-EBI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EBI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EBI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EBI, 0)}}
+\label{a00557_a3ea13f736c32406dd17ec49b8de56cae}
+
+
+Definition at line 141 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aea95c0e54fc6ed4081c9b201a7ec6d5c}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EBI\_\-GET@{I2C\_\-EBI\_\-GET}}
+\index{I2C\_\-EBI\_\-GET@{I2C\_\-EBI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EBI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EBI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EBI)}}
+\label{a00557_aea95c0e54fc6ed4081c9b201a7ec6d5c}
+
+
+Definition at line 137 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a78c5899dc7d924f91cae19f26a102217}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EBI\_\-SET@{I2C\_\-EBI\_\-SET}}
+\index{I2C\_\-EBI\_\-SET@{I2C\_\-EBI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EBI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EBI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EBI, 1)}}
+\label{a00557_a78c5899dc7d924f91cae19f26a102217}
+
+
+Definition at line 139 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ac7b88246cb8076cc9d40cc36ada7a97e}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EFEI\_\-CLEAR@{I2C\_\-EFEI\_\-CLEAR}}
+\index{I2C\_\-EFEI\_\-CLEAR@{I2C\_\-EFEI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EFEI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EFEI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFEI, 0)}}
+\label{a00557_ac7b88246cb8076cc9d40cc36ada7a97e}
+
+
+Definition at line 130 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a30ed062be285789e5e9acfbf701c1f52}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EFEI\_\-GET@{I2C\_\-EFEI\_\-GET}}
+\index{I2C\_\-EFEI\_\-GET@{I2C\_\-EFEI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EFEI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EFEI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFEI)}}
+\label{a00557_a30ed062be285789e5e9acfbf701c1f52}
+
+
+Definition at line 126 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a5f5b7430895f653f33813cad3eb74486}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EFEI\_\-SET@{I2C\_\-EFEI\_\-SET}}
+\index{I2C\_\-EFEI\_\-SET@{I2C\_\-EFEI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EFEI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EFEI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFEI, 1)}}
+\label{a00557_a5f5b7430895f653f33813cad3eb74486}
+
+
+Definition at line 128 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aea13878544893de80735e8d6526eebef}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EFFI\_\-CLEAR@{I2C\_\-EFFI\_\-CLEAR}}
+\index{I2C\_\-EFFI\_\-CLEAR@{I2C\_\-EFFI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EFFI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EFFI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFFI, 0)}}
+\label{a00557_aea13878544893de80735e8d6526eebef}
+
+
+Definition at line 152 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ad00d47f511a206ff2b3dc82d990c5402}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EFFI\_\-GET@{I2C\_\-EFFI\_\-GET}}
+\index{I2C\_\-EFFI\_\-GET@{I2C\_\-EFFI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EFFI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EFFI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFFI)}}
+\label{a00557_ad00d47f511a206ff2b3dc82d990c5402}
+
+
+Definition at line 148 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_af1d96c7cdccf4aec409ac59ea796dcce}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EFFI\_\-SET@{I2C\_\-EFFI\_\-SET}}
+\index{I2C\_\-EFFI\_\-SET@{I2C\_\-EFFI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EFFI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EFFI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EFFI, 1)}}
+\label{a00557_af1d96c7cdccf4aec409ac59ea796dcce}
+
+
+Definition at line 150 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a67d9effe2a18828a9bf120183cba35f1}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-ENAEI\_\-CLEAR@{I2C\_\-ENAEI\_\-CLEAR}}
+\index{I2C\_\-ENAEI\_\-CLEAR@{I2C\_\-ENAEI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-ENAEI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-ENAEI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ENAEI, 0)}}
+\label{a00557_a67d9effe2a18828a9bf120183cba35f1}
+
+
+Definition at line 174 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a45ef4166156ddcb6a1c57ba7215b50da}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-ENAEI\_\-GET@{I2C\_\-ENAEI\_\-GET}}
+\index{I2C\_\-ENAEI\_\-GET@{I2C\_\-ENAEI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-ENAEI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-ENAEI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ENAEI)}}
+\label{a00557_a45ef4166156ddcb6a1c57ba7215b50da}
+
+
+Definition at line 170 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ac6a0a1598876d35ee562e18d405ceb4c}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-ENAEI\_\-SET@{I2C\_\-ENAEI\_\-SET}}
+\index{I2C\_\-ENAEI\_\-SET@{I2C\_\-ENAEI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-ENAEI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-ENAEI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-ENAEI, 1)}}
+\label{a00557_ac6a0a1598876d35ee562e18d405ceb4c}
+
+
+Definition at line 172 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a337089d0348581359ef90040d012b580}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EOCI\_\-CLEAR@{I2C\_\-EOCI\_\-CLEAR}}
+\index{I2C\_\-EOCI\_\-CLEAR@{I2C\_\-EOCI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EOCI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EOCI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EOCI, 0)}}
+\label{a00557_a337089d0348581359ef90040d012b580}
+
+
+Definition at line 163 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a154c3bebeb34f12a73b3f1257832023c}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EOCI\_\-GET@{I2C\_\-EOCI\_\-GET}}
+\index{I2C\_\-EOCI\_\-GET@{I2C\_\-EOCI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EOCI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EOCI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EOCI)}}
+\label{a00557_a154c3bebeb34f12a73b3f1257832023c}
+
+
+Definition at line 159 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a80a73be7417385b58a0c43d5c181389a}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-EOCI\_\-SET@{I2C\_\-EOCI\_\-SET}}
+\index{I2C\_\-EOCI\_\-SET@{I2C\_\-EOCI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-EOCI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-EOCI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-EOCI, 1)}}
+\label{a00557_a80a73be7417385b58a0c43d5c181389a}
+
+
+Definition at line 161 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_abae2f8bed5812e2bd247e60035186a24}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-FEI\_\-CLEAR@{I2C\_\-FEI\_\-CLEAR}}
+\index{I2C\_\-FEI\_\-CLEAR@{I2C\_\-FEI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-FEI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-FEI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FEI, 1)}}
+\label{a00557_abae2f8bed5812e2bd247e60035186a24}
+
+
+Definition at line 210 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aebe4b3be48d93e354dfc9ff0ce43984d}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-FEI\_\-GET@{I2C\_\-FEI\_\-GET}}
+\index{I2C\_\-FEI\_\-GET@{I2C\_\-FEI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-FEI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-FEI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FEI)}}
+\label{a00557_aebe4b3be48d93e354dfc9ff0ce43984d}
+
+
+Definition at line 206 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a9ab640cf4d737afa4340098f93780894}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-FEI\_\-SET@{I2C\_\-FEI\_\-SET}}
+\index{I2C\_\-FEI\_\-SET@{I2C\_\-FEI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-FEI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-FEI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FEI, 1)}}
+\label{a00557_a9ab640cf4d737afa4340098f93780894}
+
+
+Definition at line 208 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a3432b3b1e71ea4ab097a7618e90adaae}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-FFI\_\-CLEAR@{I2C\_\-FFI\_\-CLEAR}}
+\index{I2C\_\-FFI\_\-CLEAR@{I2C\_\-FFI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-FFI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-FFI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FFI, 1)}}
+\label{a00557_a3432b3b1e71ea4ab097a7618e90adaae}
+
+
+Definition at line 232 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a44c4c8439e54a02fe1a1aeb9c075138e}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-FFI\_\-GET@{I2C\_\-FFI\_\-GET}}
+\index{I2C\_\-FFI\_\-GET@{I2C\_\-FFI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-FFI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-FFI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FFI)}}
+\label{a00557_a44c4c8439e54a02fe1a1aeb9c075138e}
+
+
+Definition at line 228 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ab7a0f8a427047a6baffba612cdabe6b5}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-FFI\_\-SET@{I2C\_\-FFI\_\-SET}}
+\index{I2C\_\-FFI\_\-SET@{I2C\_\-FFI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-FFI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-FFI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-FFI, 1)}}
+\label{a00557_ab7a0f8a427047a6baffba612cdabe6b5}
+
+
+Definition at line 230 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a43c9660ebcfcf6076f31500eb5817f62}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-HSE\_\-CLEAR@{I2C\_\-HSE\_\-CLEAR}}
+\index{I2C\_\-HSE\_\-CLEAR@{I2C\_\-HSE\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-HSE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-HSE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-HSE, 0)}}
+\label{a00557_a43c9660ebcfcf6076f31500eb5817f62}
+
+
+Definition at line 105 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a0ebc0775e5dd6a203bf81b1600914a83}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-HSE\_\-GET@{I2C\_\-HSE\_\-GET}}
+\index{I2C\_\-HSE\_\-GET@{I2C\_\-HSE\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-HSE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-HSE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-HSE)}}
+\label{a00557_a0ebc0775e5dd6a203bf81b1600914a83}
+
+
+Definition at line 101 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a4f25bdfeb3d78fbc92e493eeeed7bf67}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-HSE\_\-SET@{I2C\_\-HSE\_\-SET}}
+\index{I2C\_\-HSE\_\-SET@{I2C\_\-HSE\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-HSE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-HSE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-HSE, 1)}}
+\label{a00557_a4f25bdfeb3d78fbc92e493eeeed7bf67}
+
+
+Definition at line 103 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a0dcf201bcd0928382c78f1a2be622ebe}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CADDRLSB\_\-CLEARBIT@{I2C\_\-I2CADDRLSB\_\-CLEARBIT}}
+\index{I2C\_\-I2CADDRLSB\_\-CLEARBIT@{I2C\_\-I2CADDRLSB\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CADDRLSB\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CADDRLSB\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB) \& ($\sim$(value)))}}
+\label{a00557_a0dcf201bcd0928382c78f1a2be622ebe}
+
+
+Definition at line 422 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ad30f12598a025bf39ae94fba0321454c}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CADDRLSB\_\-GET@{I2C\_\-I2CADDRLSB\_\-GET}}
+\index{I2C\_\-I2CADDRLSB\_\-GET@{I2C\_\-I2CADDRLSB\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CADDRLSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CADDRLSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB))}}
+\label{a00557_ad30f12598a025bf39ae94fba0321454c}
+
+
+Definition at line 416 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a43523c6228f8a23711eb17e71acc91ff}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CADDRLSB\_\-SET@{I2C\_\-I2CADDRLSB\_\-SET}}
+\index{I2C\_\-I2CADDRLSB\_\-SET@{I2C\_\-I2CADDRLSB\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CADDRLSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CADDRLSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB, (value))}}
+\label{a00557_a43523c6228f8a23711eb17e71acc91ff}
+
+
+Definition at line 418 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a4551347f7b9dda948878fc6e37fe4370}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CADDRLSB\_\-SETBIT@{I2C\_\-I2CADDRLSB\_\-SETBIT}}
+\index{I2C\_\-I2CADDRLSB\_\-SETBIT@{I2C\_\-I2CADDRLSB\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CADDRLSB\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CADDRLSB\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRLSB) $|$ (value))}}
+\label{a00557_a4551347f7b9dda948878fc6e37fe4370}
+
+
+Definition at line 420 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a3e58fb7eb88b89043385d583deb08331}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CADDRMSB\_\-CLEARBIT@{I2C\_\-I2CADDRMSB\_\-CLEARBIT}}
+\index{I2C\_\-I2CADDRMSB\_\-CLEARBIT@{I2C\_\-I2CADDRMSB\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CADDRMSB\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CADDRMSB\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB) \& ($\sim$(value)))}}
+\label{a00557_a3e58fb7eb88b89043385d583deb08331}
+
+
+Definition at line 445 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ab6a41270eb4dd576a417213ae9281136}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CADDRMSB\_\-GET@{I2C\_\-I2CADDRMSB\_\-GET}}
+\index{I2C\_\-I2CADDRMSB\_\-GET@{I2C\_\-I2CADDRMSB\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CADDRMSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CADDRMSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB))}}
+\label{a00557_ab6a41270eb4dd576a417213ae9281136}
+
+
+Definition at line 439 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a88cdfc26372e3b34f2bbe1987cdeff04}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CADDRMSB\_\-SET@{I2C\_\-I2CADDRMSB\_\-SET}}
+\index{I2C\_\-I2CADDRMSB\_\-SET@{I2C\_\-I2CADDRMSB\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CADDRMSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CADDRMSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB, (value))}}
+\label{a00557_a88cdfc26372e3b34f2bbe1987cdeff04}
+
+
+Definition at line 441 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a955fcf9bafc256b424d55871ef869472}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CADDRMSB\_\-SETBIT@{I2C\_\-I2CADDRMSB\_\-SETBIT}}
+\index{I2C\_\-I2CADDRMSB\_\-SETBIT@{I2C\_\-I2CADDRMSB\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CADDRMSB\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CADDRMSB\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CADDRMSB) $|$ (value))}}
+\label{a00557_a955fcf9bafc256b424d55871ef869472}
+
+
+Definition at line 443 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ad00ecf6a4d0b8589053e51db1b557426}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CAPBADDRLSB\_\-CLEARBIT@{I2C\_\-I2CAPBADDRLSB\_\-CLEARBIT}}
+\index{I2C\_\-I2CAPBADDRLSB\_\-CLEARBIT@{I2C\_\-I2CAPBADDRLSB\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CAPBADDRLSB\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CAPBADDRLSB\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB) \& ($\sim$(value)))}}
+\label{a00557_ad00ecf6a4d0b8589053e51db1b557426}
+
+
+Definition at line 279 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ac7eb4cfcc847a767d0b4131ce8ba66b2}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CAPBADDRLSB\_\-GET@{I2C\_\-I2CAPBADDRLSB\_\-GET}}
+\index{I2C\_\-I2CAPBADDRLSB\_\-GET@{I2C\_\-I2CAPBADDRLSB\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CAPBADDRLSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CAPBADDRLSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB))}}
+\label{a00557_ac7eb4cfcc847a767d0b4131ce8ba66b2}
+
+
+Definition at line 273 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_af33f32f9043bc7d3d3eb0da9becefde6}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CAPBADDRLSB\_\-SET@{I2C\_\-I2CAPBADDRLSB\_\-SET}}
+\index{I2C\_\-I2CAPBADDRLSB\_\-SET@{I2C\_\-I2CAPBADDRLSB\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CAPBADDRLSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CAPBADDRLSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB, (value))}}
+\label{a00557_af33f32f9043bc7d3d3eb0da9becefde6}
+
+
+Definition at line 275 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ab9025f6cad0783a9510bad7296184466}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CAPBADDRLSB\_\-SETBIT@{I2C\_\-I2CAPBADDRLSB\_\-SETBIT}}
+\index{I2C\_\-I2CAPBADDRLSB\_\-SETBIT@{I2C\_\-I2CAPBADDRLSB\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CAPBADDRLSB\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CAPBADDRLSB\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRLSB) $|$ (value))}}
+\label{a00557_ab9025f6cad0783a9510bad7296184466}
+
+
+Definition at line 277 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a50592d68b6380d8625cbaa1ae373b90c}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CAPBADDRMSB\_\-CLEARBIT@{I2C\_\-I2CAPBADDRMSB\_\-CLEARBIT}}
+\index{I2C\_\-I2CAPBADDRMSB\_\-CLEARBIT@{I2C\_\-I2CAPBADDRMSB\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CAPBADDRMSB\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CAPBADDRMSB\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB) \& ($\sim$(value)))}}
+\label{a00557_a50592d68b6380d8625cbaa1ae373b90c}
+
+
+Definition at line 292 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a8940d9e715350807d9a81492742472ed}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CAPBADDRMSB\_\-GET@{I2C\_\-I2CAPBADDRMSB\_\-GET}}
+\index{I2C\_\-I2CAPBADDRMSB\_\-GET@{I2C\_\-I2CAPBADDRMSB\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CAPBADDRMSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CAPBADDRMSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB))}}
+\label{a00557_a8940d9e715350807d9a81492742472ed}
+
+
+Definition at line 286 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aec8a2700e51ebc1c540b2efda2e04835}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CAPBADDRMSB\_\-SET@{I2C\_\-I2CAPBADDRMSB\_\-SET}}
+\index{I2C\_\-I2CAPBADDRMSB\_\-SET@{I2C\_\-I2CAPBADDRMSB\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CAPBADDRMSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CAPBADDRMSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB, (value))}}
+\label{a00557_aec8a2700e51ebc1c540b2efda2e04835}
+
+
+Definition at line 288 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a2df4b9ec1bd041019b6b1c2e545391a6}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CAPBADDRMSB\_\-SETBIT@{I2C\_\-I2CAPBADDRMSB\_\-SETBIT}}
+\index{I2C\_\-I2CAPBADDRMSB\_\-SETBIT@{I2C\_\-I2CAPBADDRMSB\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CAPBADDRMSB\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CAPBADDRMSB\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CAPBADDRMSB) $|$ (value))}}
+\label{a00557_a2df4b9ec1bd041019b6b1c2e545391a6}
+
+
+Definition at line 290 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a4c22cbe1a177546f33e4296ec7c6f1b7}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CCR\_\-CLEARBIT@{I2C\_\-I2CCR\_\-CLEARBIT}}
+\index{I2C\_\-I2CCR\_\-CLEARBIT@{I2C\_\-I2CCR\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CCR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CCR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR) \& ($\sim$(value)))}}
+\label{a00557_a4c22cbe1a177546f33e4296ec7c6f1b7}
+
+
+Definition at line 353 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a7a8c59cc409e719ac210133eb6e8e9d2}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CCR\_\-GET@{I2C\_\-I2CCR\_\-GET}}
+\index{I2C\_\-I2CCR\_\-GET@{I2C\_\-I2CCR\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CCR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CCR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR))}}
+\label{a00557_a7a8c59cc409e719ac210133eb6e8e9d2}
+
+
+Definition at line 347 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a2a2d7c99edc72acb5c73072afd705f82}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CCR\_\-SET@{I2C\_\-I2CCR\_\-SET}}
+\index{I2C\_\-I2CCR\_\-SET@{I2C\_\-I2CCR\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CCR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CCR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR, (value))}}
+\label{a00557_a2a2d7c99edc72acb5c73072afd705f82}
+
+
+Definition at line 349 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ad6ed3bb6eef103433e586a787690523a}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CCR\_\-SETBIT@{I2C\_\-I2CCR\_\-SETBIT}}
+\index{I2C\_\-I2CCR\_\-SETBIT@{I2C\_\-I2CCR\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CCR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CCR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CCR) $|$ (value))}}
+\label{a00557_ad6ed3bb6eef103433e586a787690523a}
+
+
+Definition at line 351 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a1fb006220cf2477abc844382ae68acbb}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDACNTLSB\_\-CLEARBIT@{I2C\_\-I2CDACNTLSB\_\-CLEARBIT}}
+\index{I2C\_\-I2CDACNTLSB\_\-CLEARBIT@{I2C\_\-I2CDACNTLSB\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDACNTLSB\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDACNTLSB\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB) \& ($\sim$(value)))}}
+\label{a00557_a1fb006220cf2477abc844382ae68acbb}
+
+
+Definition at line 305 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a96356b3ea9acf5ae75c2389b46e214d6}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDACNTLSB\_\-GET@{I2C\_\-I2CDACNTLSB\_\-GET}}
+\index{I2C\_\-I2CDACNTLSB\_\-GET@{I2C\_\-I2CDACNTLSB\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDACNTLSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDACNTLSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB))}}
+\label{a00557_a96356b3ea9acf5ae75c2389b46e214d6}
+
+
+Definition at line 299 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a42eb65c4566b317032e595c95312ac96}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDACNTLSB\_\-SET@{I2C\_\-I2CDACNTLSB\_\-SET}}
+\index{I2C\_\-I2CDACNTLSB\_\-SET@{I2C\_\-I2CDACNTLSB\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDACNTLSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDACNTLSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB, (value))}}
+\label{a00557_a42eb65c4566b317032e595c95312ac96}
+
+
+Definition at line 301 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_afa4b14f469f1a70a8d9e8a1bcbf4340e}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDACNTLSB\_\-SETBIT@{I2C\_\-I2CDACNTLSB\_\-SETBIT}}
+\index{I2C\_\-I2CDACNTLSB\_\-SETBIT@{I2C\_\-I2CDACNTLSB\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDACNTLSB\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDACNTLSB\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTLSB) $|$ (value))}}
+\label{a00557_afa4b14f469f1a70a8d9e8a1bcbf4340e}
+
+
+Definition at line 303 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a28e15fab811cb025a2592701540d47e3}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDACNTR\_\-CLEARBIT@{I2C\_\-I2CDACNTR\_\-CLEARBIT}}
+\index{I2C\_\-I2CDACNTR\_\-CLEARBIT@{I2C\_\-I2CDACNTR\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDACNTR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDACNTR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR) \& ($\sim$(value)))}}
+\label{a00557_a28e15fab811cb025a2592701540d47e3}
+
+
+Definition at line 468 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a75cba065bd14a4538de96443831700b1}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDACNTR\_\-GET@{I2C\_\-I2CDACNTR\_\-GET}}
+\index{I2C\_\-I2CDACNTR\_\-GET@{I2C\_\-I2CDACNTR\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDACNTR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDACNTR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR))}}
+\label{a00557_a75cba065bd14a4538de96443831700b1}
+
+
+Definition at line 462 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a7ec11053a59653070d3486d755c68e58}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDACNTR\_\-SET@{I2C\_\-I2CDACNTR\_\-SET}}
+\index{I2C\_\-I2CDACNTR\_\-SET@{I2C\_\-I2CDACNTR\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDACNTR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDACNTR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR, (value))}}
+\label{a00557_a7ec11053a59653070d3486d755c68e58}
+
+
+Definition at line 464 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a8637501292f196be88a7c2eb66c8b339}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDACNTR\_\-SETBIT@{I2C\_\-I2CDACNTR\_\-SETBIT}}
+\index{I2C\_\-I2CDACNTR\_\-SETBIT@{I2C\_\-I2CDACNTR\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDACNTR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDACNTR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDACNTR) $|$ (value))}}
+\label{a00557_a8637501292f196be88a7c2eb66c8b339}
+
+
+Definition at line 466 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aa02ac2b185cda7638ab5af269bf2886b}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDATA\_\-CLEARBIT@{I2C\_\-I2CDATA\_\-CLEARBIT}}
+\index{I2C\_\-I2CDATA\_\-CLEARBIT@{I2C\_\-I2CDATA\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDATA\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDATA\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA) \& ($\sim$(value)))}}
+\label{a00557_aa02ac2b185cda7638ab5af269bf2886b}
+
+
+Definition at line 328 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a0b2ee8e4e39acec922378091e0df1d84}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDATA\_\-GET@{I2C\_\-I2CDATA\_\-GET}}
+\index{I2C\_\-I2CDATA\_\-GET@{I2C\_\-I2CDATA\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA))}}
+\label{a00557_a0b2ee8e4e39acec922378091e0df1d84}
+
+
+Definition at line 322 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aa043aead41630635b1bbdc6bcb3fb2ce}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDATA\_\-SET@{I2C\_\-I2CDATA\_\-SET}}
+\index{I2C\_\-I2CDATA\_\-SET@{I2C\_\-I2CDATA\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA, (value))}}
+\label{a00557_aa043aead41630635b1bbdc6bcb3fb2ce}
+
+
+Definition at line 324 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_af9ad9a745b59992004def998623cf88a}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CDATA\_\-SETBIT@{I2C\_\-I2CDATA\_\-SETBIT}}
+\index{I2C\_\-I2CDATA\_\-SETBIT@{I2C\_\-I2CDATA\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CDATA\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CDATA\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CDATA) $|$ (value))}}
+\label{a00557_af9ad9a745b59992004def998623cf88a}
+
+
+Definition at line 326 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ac8b46962fb7d26d8252cd3e979c72e82}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CHCCR\_\-CLEARBIT@{I2C\_\-I2CHCCR\_\-CLEARBIT}}
+\index{I2C\_\-I2CHCCR\_\-CLEARBIT@{I2C\_\-I2CHCCR\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CHCCR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CHCCR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR) \& ($\sim$(value)))}}
+\label{a00557_ac8b46962fb7d26d8252cd3e979c72e82}
+
+
+Definition at line 514 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ae47a2b26db2373e699681f30fb207558}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CHCCR\_\-GET@{I2C\_\-I2CHCCR\_\-GET}}
+\index{I2C\_\-I2CHCCR\_\-GET@{I2C\_\-I2CHCCR\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CHCCR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CHCCR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR))}}
+\label{a00557_ae47a2b26db2373e699681f30fb207558}
+
+
+Definition at line 508 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a9d630e6bfd908ea3abb540ca98f84266}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CHCCR\_\-SET@{I2C\_\-I2CHCCR\_\-SET}}
+\index{I2C\_\-I2CHCCR\_\-SET@{I2C\_\-I2CHCCR\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CHCCR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CHCCR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR, (value))}}
+\label{a00557_a9d630e6bfd908ea3abb540ca98f84266}
+
+
+Definition at line 510 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a60743dfca505e76c897317369af6b483}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CHCCR\_\-SETBIT@{I2C\_\-I2CHCCR\_\-SETBIT}}
+\index{I2C\_\-I2CHCCR\_\-SETBIT@{I2C\_\-I2CHCCR\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CHCCR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CHCCR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CHCCR) $|$ (value))}}
+\label{a00557_a60743dfca505e76c897317369af6b483}
+
+
+Definition at line 512 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a3cda761dfd54278a935592f6e37d6ef6}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CIER\_\-CLEARBIT@{I2C\_\-I2CIER\_\-CLEARBIT}}
+\index{I2C\_\-I2CIER\_\-CLEARBIT@{I2C\_\-I2CIER\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CIER\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CIER\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER) \& ($\sim$(value)))}}
+\label{a00557_a3cda761dfd54278a935592f6e37d6ef6}
+
+
+Definition at line 119 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a7c2bbd1a8eaa0a03dbf446580a8c5a1b}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CIER\_\-GET@{I2C\_\-I2CIER\_\-GET}}
+\index{I2C\_\-I2CIER\_\-GET@{I2C\_\-I2CIER\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CIER\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CIER\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER))}}
+\label{a00557_a7c2bbd1a8eaa0a03dbf446580a8c5a1b}
+
+
+Definition at line 113 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a66f9af47f156ad6e961b2fa0f7e4f928}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CIER\_\-SET@{I2C\_\-I2CIER\_\-SET}}
+\index{I2C\_\-I2CIER\_\-SET@{I2C\_\-I2CIER\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CIER\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CIER\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER, (value))}}
+\label{a00557_a66f9af47f156ad6e961b2fa0f7e4f928}
+
+
+Definition at line 115 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a193eb86dd18ba6d1e92efa94bcea861b}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CIER\_\-SETBIT@{I2C\_\-I2CIER\_\-SETBIT}}
+\index{I2C\_\-I2CIER\_\-SETBIT@{I2C\_\-I2CIER\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CIER\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CIER\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CIER) $|$ (value))}}
+\label{a00557_a193eb86dd18ba6d1e92efa94bcea861b}
+
+
+Definition at line 117 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a8f0a3ac0da5029d17c62098299ab18b0}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CISR\_\-CLEARBIT@{I2C\_\-I2CISR\_\-CLEARBIT}}
+\index{I2C\_\-I2CISR\_\-CLEARBIT@{I2C\_\-I2CISR\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CISR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CISR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR) \& ($\sim$(value)))}}
+\label{a00557_a8f0a3ac0da5029d17c62098299ab18b0}
+
+
+Definition at line 199 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a8299b6ce82e25e6d8785b4f71b153673}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CISR\_\-GET@{I2C\_\-I2CISR\_\-GET}}
+\index{I2C\_\-I2CISR\_\-GET@{I2C\_\-I2CISR\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CISR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CISR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR))}}
+\label{a00557_a8299b6ce82e25e6d8785b4f71b153673}
+
+
+Definition at line 193 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a7c690454184cc937bd3a2a9408a466bc}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CISR\_\-SET@{I2C\_\-I2CISR\_\-SET}}
+\index{I2C\_\-I2CISR\_\-SET@{I2C\_\-I2CISR\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CISR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CISR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR, (value))}}
+\label{a00557_a7c690454184cc937bd3a2a9408a466bc}
+
+
+Definition at line 195 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a6f4cc69a3aab506bb5180fbda6a55074}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CISR\_\-SETBIT@{I2C\_\-I2CISR\_\-SETBIT}}
+\index{I2C\_\-I2CISR\_\-SETBIT@{I2C\_\-I2CISR\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CISR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CISR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CISR) $|$ (value))}}
+\label{a00557_a6f4cc69a3aab506bb5180fbda6a55074}
+
+
+Definition at line 197 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a737eaf86494321643708c504d59d4c59}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CMCR\_\-CLEARBIT@{I2C\_\-I2CMCR\_\-CLEARBIT}}
+\index{I2C\_\-I2CMCR\_\-CLEARBIT@{I2C\_\-I2CMCR\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CMCR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CMCR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR) \& ($\sim$(value)))}}
+\label{a00557_a737eaf86494321643708c504d59d4c59}
+
+
+Definition at line 491 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a45191201f41d29d637195abfabf08914}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CMCR\_\-GET@{I2C\_\-I2CMCR\_\-GET}}
+\index{I2C\_\-I2CMCR\_\-GET@{I2C\_\-I2CMCR\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CMCR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CMCR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR))}}
+\label{a00557_a45191201f41d29d637195abfabf08914}
+
+
+Definition at line 485 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a28f67409f8a0a2020bd510e5d49525ae}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CMCR\_\-SET@{I2C\_\-I2CMCR\_\-SET}}
+\index{I2C\_\-I2CMCR\_\-SET@{I2C\_\-I2CMCR\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CMCR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CMCR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR, (value))}}
+\label{a00557_a28f67409f8a0a2020bd510e5d49525ae}
+
+
+Definition at line 487 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a342032ce78ac85bfe5edb9eddbe89079}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CMCR\_\-SETBIT@{I2C\_\-I2CMCR\_\-SETBIT}}
+\index{I2C\_\-I2CMCR\_\-SETBIT@{I2C\_\-I2CMCR\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CMCR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CMCR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CMCR) $|$ (value))}}
+\label{a00557_a342032ce78ac85bfe5edb9eddbe89079}
+
+
+Definition at line 489 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a980d4fb5a97e37a67ca0818730a1cdbb}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CSLAD0\_\-CLEARBIT@{I2C\_\-I2CSLAD0\_\-CLEARBIT}}
+\index{I2C\_\-I2CSLAD0\_\-CLEARBIT@{I2C\_\-I2CSLAD0\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CSLAD0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CSLAD0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0) \& ($\sim$(value)))}}
+\label{a00557_a980d4fb5a97e37a67ca0818730a1cdbb}
+
+
+Definition at line 40 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a678cf4a9a6e98a9964d048ea219f7c8d}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CSLAD0\_\-GET@{I2C\_\-I2CSLAD0\_\-GET}}
+\index{I2C\_\-I2CSLAD0\_\-GET@{I2C\_\-I2CSLAD0\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CSLAD0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CSLAD0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0))}}
+\label{a00557_a678cf4a9a6e98a9964d048ea219f7c8d}
+
+
+Definition at line 34 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a1a05ea903a1388421250fb9c8e4fcd00}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CSLAD0\_\-SET@{I2C\_\-I2CSLAD0\_\-SET}}
+\index{I2C\_\-I2CSLAD0\_\-SET@{I2C\_\-I2CSLAD0\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CSLAD0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CSLAD0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0, (value))}}
+\label{a00557_a1a05ea903a1388421250fb9c8e4fcd00}
+
+
+Definition at line 36 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_af7b059d9b09b72d944ad47c64cf675b1}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CSLAD0\_\-SETBIT@{I2C\_\-I2CSLAD0\_\-SETBIT}}
+\index{I2C\_\-I2CSLAD0\_\-SETBIT@{I2C\_\-I2CSLAD0\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CSLAD0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CSLAD0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD0) $|$ (value))}}
+\label{a00557_af7b059d9b09b72d944ad47c64cf675b1}
+
+
+Definition at line 38 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a6f3c9e7b4353987b8353cff7e573acfb}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CSLAD1\_\-CLEARBIT@{I2C\_\-I2CSLAD1\_\-CLEARBIT}}
+\index{I2C\_\-I2CSLAD1\_\-CLEARBIT@{I2C\_\-I2CSLAD1\_\-CLEARBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CSLAD1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CSLAD1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1) \& ($\sim$(value)))}}
+\label{a00557_a6f3c9e7b4353987b8353cff7e573acfb}
+
+
+Definition at line 63 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a59b592bcf65ca5c6e8a03032cb6ab6e2}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CSLAD1\_\-GET@{I2C\_\-I2CSLAD1\_\-GET}}
+\index{I2C\_\-I2CSLAD1\_\-GET@{I2C\_\-I2CSLAD1\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CSLAD1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CSLAD1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1))}}
+\label{a00557_a59b592bcf65ca5c6e8a03032cb6ab6e2}
+
+
+Definition at line 57 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a1860ff0daa3ac5fbb6ce5f326b1936c6}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CSLAD1\_\-SET@{I2C\_\-I2CSLAD1\_\-SET}}
+\index{I2C\_\-I2CSLAD1\_\-SET@{I2C\_\-I2CSLAD1\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CSLAD1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CSLAD1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1, (value))}}
+\label{a00557_a1860ff0daa3ac5fbb6ce5f326b1936c6}
+
+
+Definition at line 59 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a3fdd2abbeb3157e401984092ee6e0dd3}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-I2CSLAD1\_\-SETBIT@{I2C\_\-I2CSLAD1\_\-SETBIT}}
+\index{I2C\_\-I2CSLAD1\_\-SETBIT@{I2C\_\-I2CSLAD1\_\-SETBIT}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-I2CSLAD1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-I2CSLAD1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, I2C\_\-I2CSLAD1) $|$ (value))}}
+\label{a00557_a3fdd2abbeb3157e401984092ee6e0dd3}
+
+
+Definition at line 61 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a5f774c19bde66978bd546c0fa80bc329}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-MAS\_\-CLEAR@{I2C\_\-MAS\_\-CLEAR}}
+\index{I2C\_\-MAS\_\-CLEAR@{I2C\_\-MAS\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-MAS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-MAS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MAS, 0)}}
+\label{a00557_a5f774c19bde66978bd546c0fa80bc329}
+
+
+Definition at line 408 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a3342a2d9077b3370426e419b476b9ed6}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-MAS\_\-GET@{I2C\_\-MAS\_\-GET}}
+\index{I2C\_\-MAS\_\-GET@{I2C\_\-MAS\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-MAS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-MAS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MAS)}}
+\label{a00557_a3342a2d9077b3370426e419b476b9ed6}
+
+
+Definition at line 404 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aeb24282b8212aa301e882f01f5095530}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-MAS\_\-SET@{I2C\_\-MAS\_\-SET}}
+\index{I2C\_\-MAS\_\-SET@{I2C\_\-MAS\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-MAS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-MAS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MAS, 1)}}
+\label{a00557_aeb24282b8212aa301e882f01f5095530}
+
+
+Definition at line 406 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a4f6556222fe9ece21afde6e04de601e1}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-MCODE\_\-GET@{I2C\_\-MCODE\_\-GET}}
+\index{I2C\_\-MCODE\_\-GET@{I2C\_\-MCODE\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-MCODE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-MCODE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MCODE)}}
+\label{a00557_a4f6556222fe9ece21afde6e04de601e1}
+
+
+Definition at line 498 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a07087b2343b2297e115d2b75916879ff}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-MCODE\_\-SET@{I2C\_\-MCODE\_\-SET}}
+\index{I2C\_\-MCODE\_\-SET@{I2C\_\-MCODE\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-MCODE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-MCODE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MCODE, (value))}}
+\label{a00557_a07087b2343b2297e115d2b75916879ff}
+
+
+Definition at line 500 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a3ede580f616b526a55ddf5a8dfdceb34}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-MNS\_\-CLEAR@{I2C\_\-MNS\_\-CLEAR}}
+\index{I2C\_\-MNS\_\-CLEAR@{I2C\_\-MNS\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-MNS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-MNS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MNS, 0)}}
+\label{a00557_a3ede580f616b526a55ddf5a8dfdceb34}
+
+
+Definition at line 94 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a869678c81dae39a776dddce1806eeca7}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-MNS\_\-GET@{I2C\_\-MNS\_\-GET}}
+\index{I2C\_\-MNS\_\-GET@{I2C\_\-MNS\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-MNS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-MNS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MNS)}}
+\label{a00557_a869678c81dae39a776dddce1806eeca7}
+
+
+Definition at line 90 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a0bf93b3893ecf1c5b32875ca767a7a2e}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-MNS\_\-SET@{I2C\_\-MNS\_\-SET}}
+\index{I2C\_\-MNS\_\-SET@{I2C\_\-MNS\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-MNS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-MNS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-MNS, 1)}}
+\label{a00557_a0bf93b3893ecf1c5b32875ca767a7a2e}
+
+
+Definition at line 92 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ad4127ea6eed444cd1332aacc07b70209}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-NAEI\_\-CLEAR@{I2C\_\-NAEI\_\-CLEAR}}
+\index{I2C\_\-NAEI\_\-CLEAR@{I2C\_\-NAEI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-NAEI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-NAEI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-NAEI, 1)}}
+\label{a00557_ad4127ea6eed444cd1332aacc07b70209}
+
+
+Definition at line 254 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ae37c16731a571cea677fc1bbf9cee301}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-NAEI\_\-GET@{I2C\_\-NAEI\_\-GET}}
+\index{I2C\_\-NAEI\_\-GET@{I2C\_\-NAEI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-NAEI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-NAEI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-NAEI)}}
+\label{a00557_ae37c16731a571cea677fc1bbf9cee301}
+
+
+Definition at line 250 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a1908022e9df0ab35ad2436195057ed3c}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-NAEI\_\-SET@{I2C\_\-NAEI\_\-SET}}
+\index{I2C\_\-NAEI\_\-SET@{I2C\_\-NAEI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-NAEI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-NAEI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-NAEI, 1)}}
+\label{a00557_a1908022e9df0ab35ad2436195057ed3c}
+
+
+Definition at line 252 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a2de1f2f9051d65ff929b43024b56fe21}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-OCI\_\-CLEAR@{I2C\_\-OCI\_\-CLEAR}}
+\index{I2C\_\-OCI\_\-CLEAR@{I2C\_\-OCI\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-OCI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-OCI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-OCI, 1)}}
+\label{a00557_a2de1f2f9051d65ff929b43024b56fe21}
+
+
+Definition at line 243 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a5a0cfd394f6f0acaf6f42d2f590b1b86}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-OCI\_\-GET@{I2C\_\-OCI\_\-GET}}
+\index{I2C\_\-OCI\_\-GET@{I2C\_\-OCI\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-OCI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-OCI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-OCI)}}
+\label{a00557_a5a0cfd394f6f0acaf6f42d2f590b1b86}
+
+
+Definition at line 239 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a4c3754351c38a068068f2b57b998f4fa}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-OCI\_\-SET@{I2C\_\-OCI\_\-SET}}
+\index{I2C\_\-OCI\_\-SET@{I2C\_\-OCI\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-OCI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-OCI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-OCI, 1)}}
+\label{a00557_a4c3754351c38a068068f2b57b998f4fa}
+
+
+Definition at line 241 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a394992b0631d8b5120984de42b1392f6}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-RCAS\_\-CLEAR@{I2C\_\-RCAS\_\-CLEAR}}
+\index{I2C\_\-RCAS\_\-CLEAR@{I2C\_\-RCAS\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-RCAS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-RCAS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RCAS, 0)}}
+\label{a00557_a394992b0631d8b5120984de42b1392f6}
+
+
+Definition at line 397 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a640014c27b2834f376cc482f847ec5c6}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-RCAS\_\-GET@{I2C\_\-RCAS\_\-GET}}
+\index{I2C\_\-RCAS\_\-GET@{I2C\_\-RCAS\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-RCAS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-RCAS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RCAS)}}
+\label{a00557_a640014c27b2834f376cc482f847ec5c6}
+
+
+Definition at line 393 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a50eb6d27bc38281b31c421f3c47ce364}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-RCAS\_\-SET@{I2C\_\-RCAS\_\-SET}}
+\index{I2C\_\-RCAS\_\-SET@{I2C\_\-RCAS\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-RCAS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-RCAS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RCAS, 1)}}
+\label{a00557_a50eb6d27bc38281b31c421f3c47ce364}
+
+
+Definition at line 395 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a9ee2809f7dffd805ef13ca1a00990bf8}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-RWOP\_\-CLEAR@{I2C\_\-RWOP\_\-CLEAR}}
+\index{I2C\_\-RWOP\_\-CLEAR@{I2C\_\-RWOP\_\-CLEAR}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-RWOP\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-RWOP\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RWOP, 0)}}
+\label{a00557_a9ee2809f7dffd805ef13ca1a00990bf8}
+
+
+Definition at line 364 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a10684a1b0667ecf54bcdbf057dfb5cbf}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-RWOP\_\-GET@{I2C\_\-RWOP\_\-GET}}
+\index{I2C\_\-RWOP\_\-GET@{I2C\_\-RWOP\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-RWOP\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-RWOP\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RWOP)}}
+\label{a00557_a10684a1b0667ecf54bcdbf057dfb5cbf}
+
+
+Definition at line 360 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a5a950fb1fa612890885c4ac64b367bfe}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-RWOP\_\-SET@{I2C\_\-RWOP\_\-SET}}
+\index{I2C\_\-RWOP\_\-SET@{I2C\_\-RWOP\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-RWOP\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-RWOP\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-RWOP, 1)}}
+\label{a00557_a5a950fb1fa612890885c4ac64b367bfe}
+
+
+Definition at line 362 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a4227216b259d552fa00679e55afb1ad6}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-SADDRLSB\_\-GET@{I2C\_\-SADDRLSB\_\-GET}}
+\index{I2C\_\-SADDRLSB\_\-GET@{I2C\_\-SADDRLSB\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-SADDRLSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-SADDRLSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SADDRLSB)}}
+\label{a00557_a4227216b259d552fa00679e55afb1ad6}
+
+
+Definition at line 429 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ad30491528a15715d07180256a66ef237}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-SADDRLSB\_\-SET@{I2C\_\-SADDRLSB\_\-SET}}
+\index{I2C\_\-SADDRLSB\_\-SET@{I2C\_\-SADDRLSB\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-SADDRLSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-SADDRLSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SADDRLSB, (value))}}
+\label{a00557_ad30491528a15715d07180256a66ef237}
+
+
+Definition at line 431 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a028c22c4f45ab4afe67db915c1b5470d}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-SADDRMSB\_\-GET@{I2C\_\-SADDRMSB\_\-GET}}
+\index{I2C\_\-SADDRMSB\_\-GET@{I2C\_\-SADDRMSB\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-SADDRMSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-SADDRMSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SADDRMSB)}}
+\label{a00557_a028c22c4f45ab4afe67db915c1b5470d}
+
+
+Definition at line 452 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a8f90c2257f55c950c78f4d5cfc7a2bcc}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-SADDRMSB\_\-SET@{I2C\_\-SADDRMSB\_\-SET}}
+\index{I2C\_\-SADDRMSB\_\-SET@{I2C\_\-SADDRMSB\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-SADDRMSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-SADDRMSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SADDRMSB, (value))}}
+\label{a00557_a8f90c2257f55c950c78f4d5cfc7a2bcc}
+
+
+Definition at line 454 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aad7bea7abe15582f3ebd2634d563500e}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-SDACNT\_\-GET@{I2C\_\-SDACNT\_\-GET}}
+\index{I2C\_\-SDACNT\_\-GET@{I2C\_\-SDACNT\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-SDACNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-SDACNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SDACNT)}}
+\label{a00557_aad7bea7abe15582f3ebd2634d563500e}
+
+
+Definition at line 475 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_ad68f96139a457db2ee866b0e5ebd1076}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-SDACNT\_\-SET@{I2C\_\-SDACNT\_\-SET}}
+\index{I2C\_\-SDACNT\_\-SET@{I2C\_\-SDACNT\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-SDACNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-SDACNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SDACNT, (value))}}
+\label{a00557_ad68f96139a457db2ee866b0e5ebd1076}
+
+
+Definition at line 477 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aecdf7c72858cee7fda3e1e110af2d570}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-SLAD0\_\-GET@{I2C\_\-SLAD0\_\-GET}}
+\index{I2C\_\-SLAD0\_\-GET@{I2C\_\-SLAD0\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-SLAD0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-SLAD0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SLAD0)}}
+\label{a00557_aecdf7c72858cee7fda3e1e110af2d570}
+
+
+Definition at line 47 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_a51c1f2368f2f33bd18d0e4f31c45edfb}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-SLAD0\_\-SET@{I2C\_\-SLAD0\_\-SET}}
+\index{I2C\_\-SLAD0\_\-SET@{I2C\_\-SLAD0\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-SLAD0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-SLAD0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SLAD0, (value))}}
+\label{a00557_a51c1f2368f2f33bd18d0e4f31c45edfb}
+
+
+Definition at line 49 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_adee2f89ed4bbb8e708904ad67ef57ec1}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-SLAD1\_\-GET@{I2C\_\-SLAD1\_\-GET}}
+\index{I2C\_\-SLAD1\_\-GET@{I2C\_\-SLAD1\_\-GET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-SLAD1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-SLAD1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SLAD1)}}
+\label{a00557_adee2f89ed4bbb8e708904ad67ef57ec1}
+
+
+Definition at line 70 of file gsn\_\-reg\_\-i2c\_\-op.h.
+
+\hypertarget{a00557_aefe155d4adfd1c93191432c808afe917}{
+\index{gsn\_\-reg\_\-i2c\_\-op.h@{gsn\_\-reg\_\-i2c\_\-op.h}!I2C\_\-SLAD1\_\-SET@{I2C\_\-SLAD1\_\-SET}}
+\index{I2C\_\-SLAD1\_\-SET@{I2C\_\-SLAD1\_\-SET}!gsn_reg_i2c_op.h@{gsn\_\-reg\_\-i2c\_\-op.h}}
+\subsubsection[{I2C\_\-SLAD1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-SLAD1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, I2C\_\-SLAD1, (value))}}
+\label{a00557_aefe155d4adfd1c93191432c808afe917}
+
+
+Definition at line 72 of file gsn\_\-reg\_\-i2c\_\-op.h.
+

@@ -1,0 +1,47 @@
+\hypertarget{a00676}{
+\section{GSN Task Utilities}
+\label{a00676}\index{GSN Task Utilities@{GSN Task Utilities}}
+}
+
+
+This module contains utilities for working with active tasks.  
+
+
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00676_ga365e30b1ad7fac264343ca6217816486}{GsnTaskSleep} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} period)
+\begin{DoxyCompactList}\small\item\em Sleep for given amount of time in mSec. This function function causes the calling task to sleep for specified time in milliseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module contains utilities for working with active tasks. 
+
+\subsection{Function Documentation}
+\hypertarget{a00676_ga365e30b1ad7fac264343ca6217816486}{
+\index{GSN Task Utilities@{GSN Task Utilities}!GsnTaskSleep@{GsnTaskSleep}}
+\index{GsnTaskSleep@{GsnTaskSleep}!GSN Task Utilities@{GSN Task Utilities}}
+\subsubsection[{GsnTaskSleep}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnTaskSleep (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{period}
+\end{DoxyParamCaption}
+)}}
+\label{a00676_ga365e30b1ad7fac264343ca6217816486}
+
+
+Sleep for given amount of time in mSec. This function function causes the calling task to sleep for specified time in milliseconds. 
+
+end Modules group inclusion
+
+
+\begin{DoxyParams}{Parameters}
+{\em period} & -\/ IN amount of time to sleep specified in milliseconds. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-FAILURE} & if failed else GSN\_\-SUCCESS. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This is a blocking call. It will come out only after specified time is elapsed. However it returns immediately in case of failure. This function should be called only from a task context. 
+\end{DoxyNote}

@@ -1,0 +1,270 @@
+\hypertarget{a00487}{
+\section{gsn\_\-dtls.h File Reference}
+\label{a00487}\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}}
+}
+
+
+GSN DTLS public API implementation. This file contains the public APIs and structures of DTLS module.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-includes.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}modules/ssl/gsn\_\-ssl.h\char`\"{}}\par
+Include dependency graph for gsn\_\-dtls.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00717}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00460}{SOCKET\_\-INFO}
+\begin{DoxyCompactList}\small\item\em GSN DTLS Structure to define socket information. Structure definition for socket information. \end{DoxyCompactList}\item 
+struct \hyperlink{a00057}{GSN\_\-DTLS\_\-CONN}
+\begin{DoxyCompactList}\small\item\em GSN DTLS Connection Structure. Structure definition of DTLS context. \end{DoxyCompactList}\item 
+struct \hyperlink{a00056}{GSN\_\-DTLS\_\-CONFIG\_\-PARAM}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00487_ab67365eb248a84bc175c126841099a48}{GSN\_\-SSL\_\-STATE\_\-INIT}~0
+\item 
+\#define \hyperlink{a00487_a4a58c10b1fe6239becbe4c24ace70aef}{GSN\_\-SSL\_\-CONN\_\-CLOSING}~1
+\item 
+\#define \hyperlink{a00487_a39e3d43d3d0cb8d8acafb3d7e30faa57}{GSN\_\-DTLS\_\-HANDSHAKE\_\-DONE}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00460}{SOCKET\_\-INFO} \hyperlink{a00487_a8218fb3cf5e30d88bc41ef9985ff24dd}{SOCKET\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DTLS Structure to define socket information. Structure definition for socket information. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00487_a5d2b26f5083cf0fda1a5356fe26ad9c3}{GSN\_\-DTLS\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} event)
+\begin{DoxyCompactList}\small\item\em GSN DTLS cb. Callback function type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00057}{GSN\_\-DTLS\_\-CONN} \hyperlink{a00487_a00df65ee6cb0fc35ab9eb7a55d7d5aef}{GSN\_\-DTLS\_\-CONN\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DTLS Connection Structure. Structure definition of DTLS context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00056}{GSN\_\-DTLS\_\-CONFIG\_\-PARAM} \hyperlink{a00487_ae3680440931131b5203c5e0217bfec16}{GSN\_\-DTLS\_\-CONFIG\_\-PARAM\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00487_a4b80534a49bac971da7b857cbb860a79}{GsnDtls\_\-Open} (\hyperlink{a00057}{GSN\_\-DTLS\_\-CONN\_\-T} $\ast$pDtlsConn, \hyperlink{a00460}{SOCKET\_\-INFO\_\-T} $\ast$pSockDes, \hyperlink{a00242}{GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T} $\ast$dtlsConParams)
+\begin{DoxyCompactList}\small\item\em DTLS Open connection API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00487_a053c8f25766c5ce72505e0afc318918f}{GsnDtls\_\-Close} (\hyperlink{a00057}{GSN\_\-DTLS\_\-CONN\_\-T} $\ast$dtlsConn)
+\begin{DoxyCompactList}\small\item\em DTLS Close connection API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00487_a79e3c8e7498aeecbf59cf946afc6818c}{GsnDtls\_\-Receive} (\hyperlink{a00057}{GSN\_\-DTLS\_\-CONN\_\-T} $\ast$dtlsConn, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pInData, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pInDataLen, int recvFlag, VOID $\ast$pRecvAddr, int $\ast$pAddrLen)
+\begin{DoxyCompactList}\small\item\em DTLS Receive API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00487_a3e2664c021f4da0a87318641bff2ffb3}{GsnDtls\_\-Send} (\hyperlink{a00057}{GSN\_\-DTLS\_\-CONN\_\-T} $\ast$dtlsConn, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pInData, size\_\-t inLen, int sendFlag)
+\begin{DoxyCompactList}\small\item\em DTLS Send API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN DTLS public API implementation. This file contains the public APIs and structures of DTLS module. 
+
+Definition in file \hyperlink{a00487_source}{gsn\_\-dtls.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00487_a39e3d43d3d0cb8d8acafb3d7e30faa57}{
+\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}!GSN\_\-DTLS\_\-HANDSHAKE\_\-DONE@{GSN\_\-DTLS\_\-HANDSHAKE\_\-DONE}}
+\index{GSN\_\-DTLS\_\-HANDSHAKE\_\-DONE@{GSN\_\-DTLS\_\-HANDSHAKE\_\-DONE}!gsn_dtls.h@{gsn\_\-dtls.h}}
+\subsubsection[{GSN\_\-DTLS\_\-HANDSHAKE\_\-DONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DTLS\_\-HANDSHAKE\_\-DONE~1}}
+\label{a00487_a39e3d43d3d0cb8d8acafb3d7e30faa57}
+
+
+Definition at line 72 of file gsn\_\-dtls.h.
+
+\hypertarget{a00487_a4a58c10b1fe6239becbe4c24ace70aef}{
+\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}!GSN\_\-SSL\_\-CONN\_\-CLOSING@{GSN\_\-SSL\_\-CONN\_\-CLOSING}}
+\index{GSN\_\-SSL\_\-CONN\_\-CLOSING@{GSN\_\-SSL\_\-CONN\_\-CLOSING}!gsn_dtls.h@{gsn\_\-dtls.h}}
+\subsubsection[{GSN\_\-SSL\_\-CONN\_\-CLOSING}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-CONN\_\-CLOSING~1}}
+\label{a00487_a4a58c10b1fe6239becbe4c24ace70aef}
+
+
+Definition at line 54 of file gsn\_\-dtls.h.
+
+\hypertarget{a00487_ab67365eb248a84bc175c126841099a48}{
+\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}!GSN\_\-SSL\_\-STATE\_\-INIT@{GSN\_\-SSL\_\-STATE\_\-INIT}}
+\index{GSN\_\-SSL\_\-STATE\_\-INIT@{GSN\_\-SSL\_\-STATE\_\-INIT}!gsn_dtls.h@{gsn\_\-dtls.h}}
+\subsubsection[{GSN\_\-SSL\_\-STATE\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-STATE\_\-INIT~0}}
+\label{a00487_ab67365eb248a84bc175c126841099a48}
+
+
+Definition at line 53 of file gsn\_\-dtls.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00487_a5d2b26f5083cf0fda1a5356fe26ad9c3}{
+\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}!GSN\_\-DTLS\_\-CB\_\-T@{GSN\_\-DTLS\_\-CB\_\-T}}
+\index{GSN\_\-DTLS\_\-CB\_\-T@{GSN\_\-DTLS\_\-CB\_\-T}!gsn_dtls.h@{gsn\_\-dtls.h}}
+\subsubsection[{GSN\_\-DTLS\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-DTLS\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT8} event)}}
+\label{a00487_a5d2b26f5083cf0fda1a5356fe26ad9c3}
+
+
+GSN DTLS cb. Callback function type. 
+
+
+
+Definition at line 79 of file gsn\_\-dtls.h.
+
+\hypertarget{a00487_ae3680440931131b5203c5e0217bfec16}{
+\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}!GSN\_\-DTLS\_\-CONFIG\_\-PARAM\_\-T@{GSN\_\-DTLS\_\-CONFIG\_\-PARAM\_\-T}}
+\index{GSN\_\-DTLS\_\-CONFIG\_\-PARAM\_\-T@{GSN\_\-DTLS\_\-CONFIG\_\-PARAM\_\-T}!gsn_dtls.h@{gsn\_\-dtls.h}}
+\subsubsection[{GSN\_\-DTLS\_\-CONFIG\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DTLS\_\-CONFIG\_\-PARAM} {\bf GSN\_\-DTLS\_\-CONFIG\_\-PARAM\_\-T}}}
+\label{a00487_ae3680440931131b5203c5e0217bfec16}
+\hypertarget{a00487_a00df65ee6cb0fc35ab9eb7a55d7d5aef}{
+\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}!GSN\_\-DTLS\_\-CONN\_\-T@{GSN\_\-DTLS\_\-CONN\_\-T}}
+\index{GSN\_\-DTLS\_\-CONN\_\-T@{GSN\_\-DTLS\_\-CONN\_\-T}!gsn_dtls.h@{gsn\_\-dtls.h}}
+\subsubsection[{GSN\_\-DTLS\_\-CONN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DTLS\_\-CONN} {\bf GSN\_\-DTLS\_\-CONN\_\-T}}}
+\label{a00487_a00df65ee6cb0fc35ab9eb7a55d7d5aef}
+
+
+GSN DTLS Connection Structure. Structure definition of DTLS context. 
+
+\hypertarget{a00487_a8218fb3cf5e30d88bc41ef9985ff24dd}{
+\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}!SOCKET\_\-INFO\_\-T@{SOCKET\_\-INFO\_\-T}}
+\index{SOCKET\_\-INFO\_\-T@{SOCKET\_\-INFO\_\-T}!gsn_dtls.h@{gsn\_\-dtls.h}}
+\subsubsection[{SOCKET\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf SOCKET\_\-INFO} {\bf SOCKET\_\-INFO\_\-T}}}
+\label{a00487_a8218fb3cf5e30d88bc41ef9985ff24dd}
+
+
+GSN DTLS Structure to define socket information. Structure definition for socket information. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00487_a053c8f25766c5ce72505e0afc318918f}{
+\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}!GsnDtls\_\-Close@{GsnDtls\_\-Close}}
+\index{GsnDtls\_\-Close@{GsnDtls\_\-Close}!gsn_dtls.h@{gsn\_\-dtls.h}}
+\subsubsection[{GsnDtls\_\-Close}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnDtls\_\-Close (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DTLS\_\-CONN\_\-T} $\ast$}]{dtlsConn}
+\end{DoxyParamCaption}
+)}}
+\label{a00487_a053c8f25766c5ce72505e0afc318918f}
+
+
+DTLS Close connection API. 
+
+This function closes the SSL session
+
+
+\begin{DoxyParams}{Parameters}
+{\em dtlsConn} & -\/ IN Context of DTLS module.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & if Operation successful, else GSN\_\-FAILURE. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00487_a4b80534a49bac971da7b857cbb860a79}{
+\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}!GsnDtls\_\-Open@{GsnDtls\_\-Open}}
+\index{GsnDtls\_\-Open@{GsnDtls\_\-Open}!gsn_dtls.h@{gsn\_\-dtls.h}}
+\subsubsection[{GsnDtls\_\-Open}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnDtls\_\-Open (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DTLS\_\-CONN\_\-T} $\ast$}]{pDtlsConn, }
+\item[{{\bf SOCKET\_\-INFO\_\-T} $\ast$}]{pSockDes, }
+\item[{{\bf GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T} $\ast$}]{dtlsConParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00487_a4b80534a49bac971da7b857cbb860a79}
+
+
+DTLS Open connection API. 
+
+This function opens up the DTLS session. User has to create a socket and pass the certificate details to open up the DTSL connection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pDtlsConn} & -\/ IN Context of DTSL module. \\
+\hline
+{\em pSockDes} & -\/ IN Socket descriptor on which the DTLS connection has to be established. \\
+\hline
+{\em dtlsConParams} & -\/ IN Pointer to structure of type GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & if Operation successful, else GSN\_\-FAILURE. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00487_a79e3c8e7498aeecbf59cf946afc6818c}{
+\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}!GsnDtls\_\-Receive@{GsnDtls\_\-Receive}}
+\index{GsnDtls\_\-Receive@{GsnDtls\_\-Receive}!gsn_dtls.h@{gsn\_\-dtls.h}}
+\subsubsection[{GsnDtls\_\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnDtls\_\-Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DTLS\_\-CONN\_\-T} $\ast$}]{dtlsConn, }
+\item[{{\bf UINT8} $\ast$}]{pInData, }
+\item[{{\bf UINT32} $\ast$}]{pInDataLen, }
+\item[{int}]{recvFlag, }
+\item[{VOID $\ast$}]{pRecvAddr, }
+\item[{int $\ast$}]{pAddrLen}
+\end{DoxyParamCaption}
+)}}
+\label{a00487_a79e3c8e7498aeecbf59cf946afc6818c}
+
+
+DTLS Receive API. 
+
+This function Processes the data received from the socket descriptor given in GsnDtls\_\-Open API. If received data contains user data, it updates the pInDataLen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dtlsConn} & -\/ IN Context of DTLS module. \\
+\hline
+{\em pInData} & -\/ IN Pointer to input data. \\
+\hline
+{\em pInDataLen} & -\/ IN/OUT Pointer containing the input data length. This pointer is updated to the length of the user data receieved else to 0. \\
+\hline
+{\em recvFlag} & -\/ IN flag to use for socket receive API call. \\
+\hline
+{\em pRecvAddr} & -\/ OUT Pointer to store the address of the Source device. \\
+\hline
+{\em pAddrLen} & -\/ IN/OUT Size of the recvAddr.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & if Operation successful, else GSN\_\-FAILURE. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00487_a3e2664c021f4da0a87318641bff2ffb3}{
+\index{gsn\_\-dtls.h@{gsn\_\-dtls.h}!GsnDtls\_\-Send@{GsnDtls\_\-Send}}
+\index{GsnDtls\_\-Send@{GsnDtls\_\-Send}!gsn_dtls.h@{gsn\_\-dtls.h}}
+\subsubsection[{GsnDtls\_\-Send}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnDtls\_\-Send (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DTLS\_\-CONN\_\-T} $\ast$}]{dtlsConn, }
+\item[{{\bf UINT8} $\ast$}]{pInData, }
+\item[{size\_\-t}]{inLen, }
+\item[{int}]{sendFlag}
+\end{DoxyParamCaption}
+)}}
+\label{a00487_a3e2664c021f4da0a87318641bff2ffb3}
+
+
+DTLS Send API. 
+
+This function Send the user data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dtlsConn} & -\/ IN Context of DTLS module. \\
+\hline
+{\em pInData} & -\/ IN Pointer to input data. \\
+\hline
+{\em inLen} & -\/ IN input data length. \\
+\hline
+{\em sendFlag} & -\/ IN flag to use for socket send API call.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & if Operation successful, else GSN\_\-FAILURE. \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,40 @@
+GainSpan's System-\/on-\/Chip (SOC) and modules, currently exemplified by the GS2011M or GS2100M, enables low-\/power Wi-\/Fi applications. In order to provide user applications with access to the SOC's numerous capabilities, GainSpan provides WLAN Firmware (WFW) and GainSpan Embedded Platform Software (GEPS). These packages manage the 802.11 radio and protocol operation, system power optimization, real-\/time operating system interactions, and provide peripheral drivers, so that the user application can focus on those functions unique to a specific usage model.\hypertarget{main_mainpage-SOC-architecture}{}\section{GainSpan System-\/on-\/Chip Architecture}\label{main_mainpage-SOC-architecture}
+GEPS 5.1.0 is designed to run on the GainSpan System-\/on-\/Chip dual-\/processor architecture.
+
+
+
+The GainSpan SoC contains two ARM Cortex-\/M3 processors, the APP CPU (which acts as the master CPU at bootup) and the WLAN CPU. Also incorporated in the SoC are a Real-\/Time-\/Clock (RTC) with persistent RAM, flash memory controller (for on-\/module flash memory), and a number of peripherals whose control can be allocated to either CPU: UART, SPI, SDIO, PWM, SAR-\/ADC, SD-\/ADC, GPIO, I2S and I2C. The WLAN CPU controls the 802.11 radio transceiver and implements the 802.11 PHY and MAC protocols, including quality-\/of-\/service and encryption/decryption.
+
+The two CPU's communicate using a Host Interface (HI) protocol. In the default configuration, where both CPU's are on the same chip, HI messages are passed using a Mailbox physical layer, consisting of registers set aside for this use. It is also possible to control the APP CPU from a remote host, using HI-\/over-\/serial communications through the UART or SPI ports. For a more detailed discussion of the chip architecture, see the GS2011M or GS2100M Datasheet (www.gainspan.com).
+
+GainSpan's APP CPU software architecture is designed to work with ThreadX Real Time Operating System (RTOS). The RTOS manages CPU resource allocation to multiple simultaneous tasks, using semaphores, message queues, and other standard RTOS capabilities. The third-\/party network stack is also used to provide standard network sockets and functions. GainSpan Embedded Platform Software runs on top of the RTOS. GEPS provides the User Application with a number of API functions and structures to greatly simplify access to the various capabilities of the SOC.
+
+
+
+\hypertarget{main_geps-main}{}\section{GEPS 5.1.0}\label{main_geps-main}
+\hypertarget{main_mainpage-geps-architecture}{}\section{GEPS Architecture}\label{main_mainpage-geps-architecture}
+GEPS 5.1.0 is organized into five basic service groups:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{a00681}{Core}
+\item \hyperlink{a00685}{Modules}
+\item \hyperlink{a00682}{Drivers}
+\item \hyperlink{a00683}{Supplicant (security)}
+\item \hyperlink{a00684}{GEPS Support}
+\end{DoxyItemize}
+
+
+
+These modules make use of the real-\/time-\/operating system (RTOS), and the network stack socket utilities. An optional \hyperlink{a00680}{Add-\/on Services} group may provide for specialized or unusual requirements.
+
+Core services manage communications with the WLAN CPU, and thus provides the foundation for the other Service Groups. The Drivers group manages interactions with peripheral devices. (Note that we use the term here from the point of view of the CPU, as some of these \char`\"{}peripheral\char`\"{} devices are actually on-\/chip.) Modules provide a variety of helpful functions that enable the User Application to take advantage of the various capabilities of the SOC, including versatile power management, interaction with the 802.11 radio functions, and networking over the 802.11 link or a serial connection.
+
+GEPS 5.1.0 is designed as an object-\/oriented environment. Since C does not provide native support for classes and instantiation, each object's properties are explicitly defined as a structured type, the \char`\"{}context\char`\"{} type for that object, with specific instances of the context type representing object instances. A specific instance of the object structure can be passed into asynchronous function calls, so that when an operation is completed and the callback function is called, it is associated with the appropriate instance of the calling object.\hypertarget{main_mainpage-networking-architecture}{}\section{Networking Architecture}\label{main_mainpage-networking-architecture}
+GEPS 5.1.0 supports conventional TCP/IP networking over 802.11 links. In addition, it is possible to use a serial connection to transport Ethernet packets encapsulated in Host Interface (HI) messages, if appropriate translation software is present at the remote host.
+
+In the default configuration, GEPS is resident on the APP CPU, and interacts with the WLAN CPU on the same chip. The GSN Network Initialization functions create an instance of the third-\/party network stack. This stack instance is bound to a specific physical connection (typically an 802.11 link, or a serial connection running network emulation). For 802.11 connections, the Wireless Device Driver uses WLAN Firmware Interface (WIF) objects to manage the transmission and reception of data packets over the 802.11 link, using the Mailbox registers for inter-\/processor communications. A Serial Device Driver is provided for UART-\/based connections. Once the stack has been bound to a layer-\/2 device, the User Application can employ standard socket functions to send and receive IP data.
+
+
+
+ 

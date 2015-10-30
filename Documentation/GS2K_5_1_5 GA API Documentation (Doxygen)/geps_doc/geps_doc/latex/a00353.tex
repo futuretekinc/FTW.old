@@ -1,0 +1,99 @@
+\hypertarget{a00353}{
+\section{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S Struct Reference}
+\label{a00353}\index{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}}
+}
+
+
+Start Interface Message.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wif\_\-sys\_\-defs.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00353_ae57ae92e651751e7978e237c55133b4c}{macIfNum}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00353_ae22f1eeffa8ecf759f18f577db286c8d}{macIfType}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00353_a99a9e67e9bebdcb1824766965c98af8f}{wlanStaType}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00353_aaade074f9f5d2a057d4c1c1a98b1dc5d}{wlanApNumSta}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00353_ae8f42a0ee7b57763cd16c0ee167535d6}{dTxRdyQFrameTO}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00353_ab6636d92a45a0b1933fe21f421453f22}{reserved} \mbox{[}16\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Start Interface Message. 
+
+APP sends this message to WFW to start an interface. 
+
+Definition at line 329 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00353_ae8f42a0ee7b57763cd16c0ee167535d6}{
+\index{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}!dTxRdyQFrameTO@{dTxRdyQFrameTO}}
+\index{dTxRdyQFrameTO@{dTxRdyQFrameTO}!GSN_WIF_SYS_IF_START_REQ_S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}}
+\subsubsection[{dTxRdyQFrameTO}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf dTxRdyQFrameTO}}}
+\label{a00353_ae8f42a0ee7b57763cd16c0ee167535d6}
+Time (ms) after which the Tx frames are returned to APP if still in HI queues waiting for i/f switch, etc 
+
+Definition at line 339 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00353_ae57ae92e651751e7978e237c55133b4c}{
+\index{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}!macIfNum@{macIfNum}}
+\index{macIfNum@{macIfNum}!GSN_WIF_SYS_IF_START_REQ_S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}}
+\subsubsection[{macIfNum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf macIfNum}}}
+\label{a00353_ae57ae92e651751e7978e237c55133b4c}
+Interface number, this is the value that will be passed in all messages between APP and WLAN CPU to identify the interface to which the message belongs 
+
+Definition at line 331 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00353_ae22f1eeffa8ecf759f18f577db286c8d}{
+\index{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}!macIfType@{macIfType}}
+\index{macIfType@{macIfType}!GSN_WIF_SYS_IF_START_REQ_S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}}
+\subsubsection[{macIfType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf macIfType}}}
+\label{a00353_ae22f1eeffa8ecf759f18f577db286c8d}
+Type of interface, see GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-T 
+
+Definition at line 336 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00353_ab6636d92a45a0b1933fe21f421453f22}{
+\index{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}!reserved@{reserved}}
+\index{reserved@{reserved}!GSN_WIF_SYS_IF_START_REQ_S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}}
+\subsubsection[{reserved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf reserved}\mbox{[}16\mbox{]}}}
+\label{a00353_ab6636d92a45a0b1933fe21f421453f22}
+
+
+Definition at line 342 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00353_aaade074f9f5d2a057d4c1c1a98b1dc5d}{
+\index{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}!wlanApNumSta@{wlanApNumSta}}
+\index{wlanApNumSta@{wlanApNumSta}!GSN_WIF_SYS_IF_START_REQ_S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}}
+\subsubsection[{wlanApNumSta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf wlanApNumSta}}}
+\label{a00353_aaade074f9f5d2a057d4c1c1a98b1dc5d}
+Number of stations to support in AP mode 
+
+Definition at line 338 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00353_a99a9e67e9bebdcb1824766965c98af8f}{
+\index{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}!wlanStaType@{wlanStaType}}
+\index{wlanStaType@{wlanStaType}!GSN_WIF_SYS_IF_START_REQ_S@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}}
+\subsubsection[{wlanStaType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf wlanStaType}}}
+\label{a00353_a99a9e67e9bebdcb1824766965c98af8f}
+see GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-T above 
+
+Definition at line 337 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00612}{gsn\_\-wif\_\-sys\_\-defs.h}\end{DoxyCompactItemize}

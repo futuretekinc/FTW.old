@@ -1,0 +1,229 @@
+\hypertarget{a00158}{
+\section{GSN\_\-NCM\_\-CTX Struct Reference}
+\label{a00158}\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}}
+}
+
+
+Ncm object structure.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-ncm.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00158_a6e9c4cbd32a1178b12f3a61f6855c896}{state}
+\item 
+\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} \hyperlink{a00158_a5d664c13d9e783d00d5cfc011cd1b61f}{connMgrTmr}
+\item 
+\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} \hyperlink{a00158_a5c4fd3c07583992a7b7b769bb0e1a950}{connMgrTmrHndl}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00158_ae88d491fc834aaae7cc9c066719d285b}{blockingOn}
+\item 
+\hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T} \hyperlink{a00158_a3525baeed8d9f795ed0c44437f548da2}{msgQueue}
+\item 
+\hyperlink{a00668_gaf3a0737ada4d7a112e4fff6779bc8162}{GSN\_\-NCM\_\-CTX\_\-EXECUTE\_\-MSG\_\-POST\_\-CB} \hyperlink{a00158_a5603e3f15c0a3cf1d8b11f8d09853a34}{execMsgPostCb}
+\item 
+VOID $\ast$ \hyperlink{a00158_aa13ea63dd76c4df311eda6a811d384f5}{execMsgPostCbCtx}
+\item 
+\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$ \hyperlink{a00158_a97684b58b7a05f9b282a86a26929e1ba}{pWdd}
+\item 
+\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$ \hyperlink{a00158_a98d510676ecd134a5e9ac61bf222cded}{pNwif}
+\item 
+\hyperlink{a00157}{GSN\_\-NCM\_\-CONFIG\_\-T} \hyperlink{a00158_a5c9f4a124595ac5b08eebf1fd8ee601c}{config}
+\item 
+\hyperlink{a00668_ga9fb71d435556873549a9da8758741a14}{GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB} \hyperlink{a00158_a8b4a72e6fff7893cb12d41268dcdbdf7}{notifCb}
+\item 
+VOID $\ast$ \hyperlink{a00158_a3b4dee05b0f332ef6668c044d86f1b28}{notifCbCtx}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00158_af4d92408837352462c289af3d51b75d0}{scanKnownChCnt}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00158_a6c1e7888f31f25a07d24138a8eea18ea}{scanSpecChCnt}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00158_a6b765a8738e9378533592c4280256ca6}{scanAllChCnt}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00158_ad41ce430e6b594b9786b7f4445b96ca2}{L3ConnectCnt}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00158_afbd204c961f5e9d7f9c19ed7bcedee06}{L3ConnFailed}
+\item 
+\hyperlink{a00400}{GSN\_\-WDD\_\-SCAN\_\-ENTRY\_\-T} \hyperlink{a00158_a6333e5f0ce7c1941fa1c766004fedf07}{scanResults}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ncm object structure. 
+
+Definition at line 348 of file gsn\_\-ncm.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00158_ae88d491fc834aaae7cc9c066719d285b}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!blockingOn@{blockingOn}}
+\index{blockingOn@{blockingOn}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{blockingOn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf blockingOn}}}
+\label{a00158_ae88d491fc834aaae7cc9c066719d285b}
+
+
+Definition at line 353 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a5c9f4a124595ac5b08eebf1fd8ee601c}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!config@{config}}
+\index{config@{config}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NCM\_\-CONFIG\_\-T} {\bf config}}}
+\label{a00158_a5c9f4a124595ac5b08eebf1fd8ee601c}
+
+
+Definition at line 359 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a5d664c13d9e783d00d5cfc011cd1b61f}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!connMgrTmr@{connMgrTmr}}
+\index{connMgrTmr@{connMgrTmr}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{connMgrTmr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SOFT\_\-TMR\_\-T} {\bf connMgrTmr}}}
+\label{a00158_a5d664c13d9e783d00d5cfc011cd1b61f}
+
+
+Definition at line 351 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a5c4fd3c07583992a7b7b769bb0e1a950}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!connMgrTmrHndl@{connMgrTmrHndl}}
+\index{connMgrTmrHndl@{connMgrTmrHndl}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{connMgrTmrHndl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} {\bf connMgrTmrHndl}}}
+\label{a00158_a5c4fd3c07583992a7b7b769bb0e1a950}
+
+
+Definition at line 352 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a5603e3f15c0a3cf1d8b11f8d09853a34}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!execMsgPostCb@{execMsgPostCb}}
+\index{execMsgPostCb@{execMsgPostCb}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{execMsgPostCb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NCM\_\-CTX\_\-EXECUTE\_\-MSG\_\-POST\_\-CB} {\bf execMsgPostCb}}}
+\label{a00158_a5603e3f15c0a3cf1d8b11f8d09853a34}
+
+
+Definition at line 355 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_aa13ea63dd76c4df311eda6a811d384f5}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!execMsgPostCbCtx@{execMsgPostCbCtx}}
+\index{execMsgPostCbCtx@{execMsgPostCbCtx}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{execMsgPostCbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf execMsgPostCbCtx}}}
+\label{a00158_aa13ea63dd76c4df311eda6a811d384f5}
+
+
+Definition at line 356 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_ad41ce430e6b594b9786b7f4445b96ca2}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!L3ConnectCnt@{L3ConnectCnt}}
+\index{L3ConnectCnt@{L3ConnectCnt}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{L3ConnectCnt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf L3ConnectCnt}}}
+\label{a00158_ad41ce430e6b594b9786b7f4445b96ca2}
+
+
+Definition at line 366 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_afbd204c961f5e9d7f9c19ed7bcedee06}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!L3ConnFailed@{L3ConnFailed}}
+\index{L3ConnFailed@{L3ConnFailed}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{L3ConnFailed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf L3ConnFailed}}}
+\label{a00158_afbd204c961f5e9d7f9c19ed7bcedee06}
+
+
+Definition at line 367 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a3525baeed8d9f795ed0c44437f548da2}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!msgQueue@{msgQueue}}
+\index{msgQueue@{msgQueue}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{msgQueue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-QUEUE\_\-T} {\bf msgQueue}}}
+\label{a00158_a3525baeed8d9f795ed0c44437f548da2}
+message queue handle 
+
+Definition at line 354 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a8b4a72e6fff7893cb12d41268dcdbdf7}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!notifCb@{notifCb}}
+\index{notifCb@{notifCb}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{notifCb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB} {\bf notifCb}}}
+\label{a00158_a8b4a72e6fff7893cb12d41268dcdbdf7}
+
+
+Definition at line 360 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a3b4dee05b0f332ef6668c044d86f1b28}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!notifCbCtx@{notifCbCtx}}
+\index{notifCbCtx@{notifCbCtx}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{notifCbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf notifCbCtx}}}
+\label{a00158_a3b4dee05b0f332ef6668c044d86f1b28}
+
+
+Definition at line 361 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a98d510676ecd134a5e9ac61bf222cded}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!pNwif@{pNwif}}
+\index{pNwif@{pNwif}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{pNwif}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-CTX\_\-T}$\ast$ {\bf pNwif}}}
+\label{a00158_a98d510676ecd134a5e9ac61bf222cded}
+
+
+Definition at line 358 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a97684b58b7a05f9b282a86a26929e1ba}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!pWdd@{pWdd}}
+\index{pWdd@{pWdd}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{pWdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WDD\_\-CTX\_\-T}$\ast$ {\bf pWdd}}}
+\label{a00158_a97684b58b7a05f9b282a86a26929e1ba}
+Pointer to WDD L2 context 
+
+Definition at line 357 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a6b765a8738e9378533592c4280256ca6}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!scanAllChCnt@{scanAllChCnt}}
+\index{scanAllChCnt@{scanAllChCnt}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{scanAllChCnt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf scanAllChCnt}}}
+\label{a00158_a6b765a8738e9378533592c4280256ca6}
+
+
+Definition at line 365 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_af4d92408837352462c289af3d51b75d0}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!scanKnownChCnt@{scanKnownChCnt}}
+\index{scanKnownChCnt@{scanKnownChCnt}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{scanKnownChCnt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf scanKnownChCnt}}}
+\label{a00158_af4d92408837352462c289af3d51b75d0}
+
+
+Definition at line 363 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a6333e5f0ce7c1941fa1c766004fedf07}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!scanResults@{scanResults}}
+\index{scanResults@{scanResults}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{scanResults}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WDD\_\-SCAN\_\-ENTRY\_\-T} {\bf scanResults}}}
+\label{a00158_a6333e5f0ce7c1941fa1c766004fedf07}
+
+
+Definition at line 374 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a6c1e7888f31f25a07d24138a8eea18ea}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!scanSpecChCnt@{scanSpecChCnt}}
+\index{scanSpecChCnt@{scanSpecChCnt}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{scanSpecChCnt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf scanSpecChCnt}}}
+\label{a00158_a6c1e7888f31f25a07d24138a8eea18ea}
+
+
+Definition at line 364 of file gsn\_\-ncm.h.
+
+\hypertarget{a00158_a6e9c4cbd32a1178b12f3a61f6855c896}{
+\index{GSN\_\-NCM\_\-CTX@{GSN\_\-NCM\_\-CTX}!state@{state}}
+\index{state@{state}!GSN_NCM_CTX@{GSN\_\-NCM\_\-CTX}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf state}}}
+\label{a00158_a6e9c4cbd32a1178b12f3a61f6855c896}
+
+
+Definition at line 350 of file gsn\_\-ncm.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00529}{gsn\_\-ncm.h}\end{DoxyCompactItemize}

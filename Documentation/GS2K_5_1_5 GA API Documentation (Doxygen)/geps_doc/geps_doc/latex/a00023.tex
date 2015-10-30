@@ -1,0 +1,280 @@
+\hypertarget{a00023}{
+\section{GSN\_\-ADC\_\-CONFIG Struct Reference}
+\label{a00023}\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+}
+
+
+GSN ADC Configuration Structure. This structure defines ADC configuration parameters.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-adc.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00643_ga560e320e7f3b88d78bb8d8766a8c7445}{GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T} \hyperlink{a00023_ac0bb9f5eae3d25dcaba26a215085973c}{refVoltage}
+\item 
+\hyperlink{a00643_ga67df3ab0d6b619d585d941ad1f3f0233}{GSN\_\-ADC\_\-READ\_\-MODE\_\-T} \hyperlink{a00023_adc1c91e0c2cb5edf545342b449c9d8c3}{readMode}
+\item 
+\hyperlink{a00643_gadc237f56f621b5000b7ed2b2617ff364}{GSN\_\-ADC\_\-PDPOLARITY\_\-T} \hyperlink{a00023_aa94e3208ee17e78caee4087b51935b6f}{pdPolarity}
+\item 
+\hyperlink{a00643_ga79b5244aa923d094c80c37462b10dded}{GSN\_\-ADC\_\-SUP1P8\_\-T} \hyperlink{a00023_a3414254e0076bc624e0d9343307efbbf}{sup1p8}
+\item 
+\hyperlink{a00643_ga5a94fb4298f40809bab65da9dd446da7}{GSN\_\-ADC\_\-LVL\_\-T} \hyperlink{a00023_a0864e408c6d88b47673b06c8049431c2}{enlvl}
+\item 
+\hyperlink{a00643_ga704b8e4a05f99219d70f32cbf2fb4ca5}{GSN\_\-ADC\_\-ENDVDD\_\-T} \hyperlink{a00023_ac7b39aee6c3743b4051577764b29a1c6}{enDvdd}
+\item 
+\hyperlink{a00643_gacdca24ad9324635589139ad12ce67090}{GSN\_\-ADC\_\-EN100Khz\_\-T} \hyperlink{a00023_a743957855a5247965447d3b99e55b55b}{en100kHz}
+\item 
+\hyperlink{a00643_gace83cba6b68fe265f09d30cda1ef0e63}{GSN\_\-ADC\_\-TRIM\_\-T} \hyperlink{a00023_ad3101adef29a907da1ad8cbf7f5921a4}{enTrim}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00023_aaee241ccf09d4b6bb1c7096fb0348538}{refVoltageTrim}
+\item 
+\hyperlink{a00643_gaaac97c7455490c22d89a3f33ab7355d2}{GSN\_\-ADC\_\-THRESHSELSET\_\-T} \hyperlink{a00023_ae653bd57e4610763a968fdc6e2b6c1e1}{threshselect}
+\item 
+\hyperlink{a00026}{GSN\_\-ADC\_\-TRESH0\_\-T} \hyperlink{a00023_ad1b0e41c7d61cf5641accdee6717ea86}{thresh0}
+\item 
+\hyperlink{a00026}{GSN\_\-ADC\_\-TRESH0\_\-T} \hyperlink{a00023_a93585db848a7e64a531a78ccf0902baa}{thresh1}
+\item 
+\hyperlink{a00026}{GSN\_\-ADC\_\-TRESH0\_\-T} \hyperlink{a00023_a1aea5536e1a51f77062869186dda5dc7}{thresh2}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00023_abcb04a8b2727d552feab58429746beae}{fifoThr}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00023_a73879b0147fa5bccf8426e7ed992152c}{startCycles}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00023_aa408128ec811f37d608a5367f1adc0b3}{powerCycles}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00023_a0751375e87151bb22632378129ce9257}{samplePeriod}
+\item 
+\hyperlink{a00643_ga36798ea9dfbf3935126b374c4dba00dd}{GSN\_\-ADC\_\-CLK\_\-SEL\_\-T} \hyperlink{a00023_a21f435c73f7e12852654e0d864ef487f}{adcClk}
+\item 
+\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} \hyperlink{a00023_adf21af1b4c3574ceee0672561eecb346}{inputFreq}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00023_a39c59a3009220218e522b97f632699ea}{samplingfreq}
+\item 
+\hyperlink{a00643_gaaafebe738a6902a342c1226ce5ea8598}{GSN\_\-ADC\_\-STARTPOLARITY\_\-T} \hyperlink{a00023_a54eafd5eda44389c4f6b5c87ca3cfcdc}{startPolarity}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00023_a4626fcb8594673b9212d4e9284b8b36c}{singlePolling}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN ADC Configuration Structure. This structure defines ADC configuration parameters. 
+
+refVoltage -\/ the reference voltage for ADC(internal or external) readMode -\/ select the mode of operation ppCounter -\/ parameter for periodic measurement pdPolarity -\/ power down polarity sup1p8 -\/ supply range indication enlvl -\/ enable level enDvdd -\/ enable core supply for ADC en100khz -\/ enable low frequency mode enTrim -\/ enable trim chnSel -\/ channel selection refVoltageTrim-\/ Trim value to trim the reference voltage fifoThr -\/ FIFO threshold value startCycles -\/ value of Start cycles powerCycles -\/ value of PowerCycles samplePeriod -\/ the clock period, for periodic operation(Periodic Timer Expiry Value) adcStep -\/ Step value clockSelect -\/ clock selection; refer to GSN\_\-ADC\_\-CLK\_\-SEL\_\-T
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00643_ga791ca7ba8984ef3e22b1790a1abd2bb4}{GSN\_\-ADC\_\-CONFIG\_\-T}. 
+\end{DoxySeeAlso}
+
+
+Definition at line 452 of file gsn\_\-adc.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00023_a21f435c73f7e12852654e0d864ef487f}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!adcClk@{adcClk}}
+\index{adcClk@{adcClk}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{adcClk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-CLK\_\-SEL\_\-T} {\bf adcClk}}}
+\label{a00023_a21f435c73f7e12852654e0d864ef487f}
+
+
+Definition at line 471 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_a743957855a5247965447d3b99e55b55b}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!en100kHz@{en100kHz}}
+\index{en100kHz@{en100kHz}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{en100kHz}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-EN100Khz\_\-T} {\bf en100kHz}}}
+\label{a00023_a743957855a5247965447d3b99e55b55b}
+
+
+Definition at line 460 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_ac7b39aee6c3743b4051577764b29a1c6}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!enDvdd@{enDvdd}}
+\index{enDvdd@{enDvdd}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{enDvdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-ENDVDD\_\-T} {\bf enDvdd}}}
+\label{a00023_ac7b39aee6c3743b4051577764b29a1c6}
+
+
+Definition at line 459 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_a0864e408c6d88b47673b06c8049431c2}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!enlvl@{enlvl}}
+\index{enlvl@{enlvl}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{enlvl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-LVL\_\-T} {\bf enlvl}}}
+\label{a00023_a0864e408c6d88b47673b06c8049431c2}
+
+
+Definition at line 458 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_ad3101adef29a907da1ad8cbf7f5921a4}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!enTrim@{enTrim}}
+\index{enTrim@{enTrim}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{enTrim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-TRIM\_\-T} {\bf enTrim}}}
+\label{a00023_ad3101adef29a907da1ad8cbf7f5921a4}
+
+
+Definition at line 461 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_abcb04a8b2727d552feab58429746beae}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!fifoThr@{fifoThr}}
+\index{fifoThr@{fifoThr}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{fifoThr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf fifoThr}}}
+\label{a00023_abcb04a8b2727d552feab58429746beae}
+
+
+Definition at line 467 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_adf21af1b4c3574ceee0672561eecb346}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!inputFreq@{inputFreq}}
+\index{inputFreq@{inputFreq}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{inputFreq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LONG64} {\bf inputFreq}}}
+\label{a00023_adf21af1b4c3574ceee0672561eecb346}
+
+
+Definition at line 472 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_aa94e3208ee17e78caee4087b51935b6f}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!pdPolarity@{pdPolarity}}
+\index{pdPolarity@{pdPolarity}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{pdPolarity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-PDPOLARITY\_\-T} {\bf pdPolarity}}}
+\label{a00023_aa94e3208ee17e78caee4087b51935b6f}
+
+
+Definition at line 456 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_aa408128ec811f37d608a5367f1adc0b3}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!powerCycles@{powerCycles}}
+\index{powerCycles@{powerCycles}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{powerCycles}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf powerCycles}}}
+\label{a00023_aa408128ec811f37d608a5367f1adc0b3}
+
+
+Definition at line 469 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_adc1c91e0c2cb5edf545342b449c9d8c3}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!readMode@{readMode}}
+\index{readMode@{readMode}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{readMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-READ\_\-MODE\_\-T} {\bf readMode}}}
+\label{a00023_adc1c91e0c2cb5edf545342b449c9d8c3}
+
+
+Definition at line 455 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_ac0bb9f5eae3d25dcaba26a215085973c}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!refVoltage@{refVoltage}}
+\index{refVoltage@{refVoltage}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{refVoltage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-REF\_\-VOLTAGE\_\-T} {\bf refVoltage}}}
+\label{a00023_ac0bb9f5eae3d25dcaba26a215085973c}
+
+
+Definition at line 454 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_aaee241ccf09d4b6bb1c7096fb0348538}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!refVoltageTrim@{refVoltageTrim}}
+\index{refVoltageTrim@{refVoltageTrim}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{refVoltageTrim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf refVoltageTrim}}}
+\label{a00023_aaee241ccf09d4b6bb1c7096fb0348538}
+
+
+Definition at line 462 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_a0751375e87151bb22632378129ce9257}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!samplePeriod@{samplePeriod}}
+\index{samplePeriod@{samplePeriod}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{samplePeriod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf samplePeriod}}}
+\label{a00023_a0751375e87151bb22632378129ce9257}
+
+
+Definition at line 470 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_a39c59a3009220218e522b97f632699ea}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!samplingfreq@{samplingfreq}}
+\index{samplingfreq@{samplingfreq}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{samplingfreq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf samplingfreq}}}
+\label{a00023_a39c59a3009220218e522b97f632699ea}
+
+
+Definition at line 473 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_a4626fcb8594673b9212d4e9284b8b36c}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!singlePolling@{singlePolling}}
+\index{singlePolling@{singlePolling}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{singlePolling}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf singlePolling}}}
+\label{a00023_a4626fcb8594673b9212d4e9284b8b36c}
+
+
+Definition at line 475 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_a73879b0147fa5bccf8426e7ed992152c}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!startCycles@{startCycles}}
+\index{startCycles@{startCycles}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{startCycles}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf startCycles}}}
+\label{a00023_a73879b0147fa5bccf8426e7ed992152c}
+
+
+Definition at line 468 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_a54eafd5eda44389c4f6b5c87ca3cfcdc}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!startPolarity@{startPolarity}}
+\index{startPolarity@{startPolarity}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{startPolarity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-STARTPOLARITY\_\-T} {\bf startPolarity}}}
+\label{a00023_a54eafd5eda44389c4f6b5c87ca3cfcdc}
+
+
+Definition at line 474 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_a3414254e0076bc624e0d9343307efbbf}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!sup1p8@{sup1p8}}
+\index{sup1p8@{sup1p8}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{sup1p8}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-SUP1P8\_\-T} {\bf sup1p8}}}
+\label{a00023_a3414254e0076bc624e0d9343307efbbf}
+
+
+Definition at line 457 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_ad1b0e41c7d61cf5641accdee6717ea86}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!thresh0@{thresh0}}
+\index{thresh0@{thresh0}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{thresh0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-TRESH0\_\-T} {\bf thresh0}}}
+\label{a00023_ad1b0e41c7d61cf5641accdee6717ea86}
+
+
+Definition at line 464 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_a93585db848a7e64a531a78ccf0902baa}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!thresh1@{thresh1}}
+\index{thresh1@{thresh1}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{thresh1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-TRESH0\_\-T} {\bf thresh1}}}
+\label{a00023_a93585db848a7e64a531a78ccf0902baa}
+
+
+Definition at line 465 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_a1aea5536e1a51f77062869186dda5dc7}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!thresh2@{thresh2}}
+\index{thresh2@{thresh2}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{thresh2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-TRESH0\_\-T} {\bf thresh2}}}
+\label{a00023_a1aea5536e1a51f77062869186dda5dc7}
+
+
+Definition at line 466 of file gsn\_\-adc.h.
+
+\hypertarget{a00023_ae653bd57e4610763a968fdc6e2b6c1e1}{
+\index{GSN\_\-ADC\_\-CONFIG@{GSN\_\-ADC\_\-CONFIG}!threshselect@{threshselect}}
+\index{threshselect@{threshselect}!GSN_ADC_CONFIG@{GSN\_\-ADC\_\-CONFIG}}
+\subsubsection[{threshselect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ADC\_\-THRESHSELSET\_\-T} {\bf threshselect}}}
+\label{a00023_ae653bd57e4610763a968fdc6e2b6c1e1}
+
+
+Definition at line 463 of file gsn\_\-adc.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00474}{gsn\_\-adc.h}\end{DoxyCompactItemize}

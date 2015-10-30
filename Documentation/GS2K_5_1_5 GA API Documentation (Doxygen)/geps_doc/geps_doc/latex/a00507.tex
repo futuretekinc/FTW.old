@@ -1,0 +1,185 @@
+\hypertarget{a00507}{
+\section{gsn\_\-httpc.h File Reference}
+\label{a00507}\index{gsn\_\-httpc.h@{gsn\_\-httpc.h}}
+}
+
+
+GSN HTTP public header. This file contains the public APIs and structures of HTTP module.  
+
+
+{\ttfamily \#include \char`\"{}netx\_\-bsd\_\-layer$\backslash$nxd\_\-bsd.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}..$\backslash$..$\backslash$..$\backslash$src$\backslash$modules$\backslash$http$\backslash$include$\backslash$trsocket.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}..$\backslash$..$\backslash$..$\backslash$src$\backslash$modules$\backslash$http$\backslash$include$\backslash$trmacro.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}..$\backslash$..$\backslash$..$\backslash$src$\backslash$modules$\backslash$http$\backslash$include$\backslash$trtype.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}..$\backslash$..$\backslash$..$\backslash$src$\backslash$modules$\backslash$http$\backslash$include$\backslash$trhttpc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}nx\_\-api.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}modules$\backslash$ssl$\backslash$gsn\_\-ssl.h\char`\"{}}\par
+Include dependency graph for gsn\_\-httpc.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00738}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00094}{GSN\_\-HTTPC\_\-CONN\_\-PARAMS}
+\begin{DoxyCompactList}\small\item\em Http open parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{a00093}{GSN\_\-HTTPC\_\-CONF\_\-INFO}
+\begin{DoxyCompactList}\small\item\em Http Config structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{a00665_ga873d4cd3603c5dd91494d571445cc7f7}{GSN\_\-HTTPC\_\-CONN\_\-HANDLE}
+\begin{DoxyCompactList}\small\item\em Http Connection handle. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00507_ac8f1951ac3188114d05c988f1c689b0f}{GSN\_\-HTTP\_\-RX\_\-HDRS\_\-CB\_\-T} )(\hyperlink{a00665_ga873d4cd3603c5dd91494d571445cc7f7}{GSN\_\-HTTPC\_\-CONN\_\-HANDLE} conHandle, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} statusCode, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$reasonPhrase, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$$\ast$resHeadersPtr, ttHttpcCustomHdr $\ast$customHdrPtr)
+\item 
+typedef VOID($\ast$ \hyperlink{a00665_ga4f384de3cef47243fc55fee382201152}{GSN\_\-HTTP\_\-RX\_\-BUFFER\_\-MGMT\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00665_ga873d4cd3603c5dd91494d571445cc7f7}{GSN\_\-HTTPC\_\-CONN\_\-HANDLE} conHandle, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$httpRxDataBuf, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} httpRxDataLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} $\ast$rxBufferMgmtstatus)
+\begin{DoxyCompactList}\small\item\em Http Rx Buffer Mgmt Callback. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00665_ga918ab72c19100d330e6d4854b0ac0612}{GSN\_\-HTTP\_\-TYPE} \hyperlink{a00665_ga72317a89375e9f3d889df0439bff53ba}{GSN\_\-HTTP\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Http type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00665_ga91d9306148208fe7d577c525bc69fb3b}{GSN\_\-HTTP\_\-USER\_\-VERSION} \hyperlink{a00665_ga8a5357a42219f22430d5bf97d136092d}{GSN\_\-HTTP\_\-USER\_\-VERSION\_\-T}
+\begin{DoxyCompactList}\small\item\em Http version. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00665_ga23245efd9f2c5fead55d4b1f075bd6bf}{GSN\_\-HTTP\_\-USER\_\-METHOD} \hyperlink{a00665_ga19c754176c7cf6f41749aa60c125ee7e}{GSN\_\-HTTP\_\-USER\_\-METHOD\_\-T}
+\begin{DoxyCompactList}\small\item\em Http user method. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00665_ga46b2de5d0afbd35d93a0426f601866d9}{GSN\_\-HTTP\_\-USER\_\-HEADER\_\-TYPE} \hyperlink{a00665_gacdf2ed5f026ce7b549a8151c0a5f0129}{GSN\_\-HTTP\_\-USER\_\-HEADER\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Http user header types. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00094}{GSN\_\-HTTPC\_\-CONN\_\-PARAMS} \hyperlink{a00665_ga5e3ebb30a4f8cfd9e99f04e17839d148}{GSN\_\-HTTPC\_\-CONN\_\-PARAMS\_\-T}
+\begin{DoxyCompactList}\small\item\em Http open parameters. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00093}{GSN\_\-HTTPC\_\-CONF\_\-INFO} \hyperlink{a00665_gaaf13b52fc631f1baf542db4a4403369c}{GSN\_\-HTTPC\_\-CONF\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em Http Config structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00665_ga918ab72c19100d330e6d4854b0ac0612}{GSN\_\-HTTP\_\-TYPE} \{ \par
+\hyperlink{a00665_gga918ab72c19100d330e6d4854b0ac0612ad5a7b6c3a067d880ff872f888605566a}{GSN\_\-HTTP} =  0, 
+\par
+\hyperlink{a00665_gga918ab72c19100d330e6d4854b0ac0612a6f80dcbc6ec710a3a2eee0b1708a4f31}{GSN\_\-HTTPS}
+ \}
+\begin{DoxyCompactList}\small\item\em Http type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00665_ga91d9306148208fe7d577c525bc69fb3b}{GSN\_\-HTTP\_\-USER\_\-VERSION} \{ \par
+\hyperlink{a00665_gga91d9306148208fe7d577c525bc69fb3baf9cfc0ba598908f2ac7fab810fc9cadd}{GSN\_\-HTTP\_\-VERSION\_\-INVAL} =  TM\_\-HTTP\_\-VERSION\_\-INVAL, 
+\par
+\hyperlink{a00665_gga91d9306148208fe7d577c525bc69fb3bad3d536f3c887d1afaa75dab1b08c4c0e}{GSN\_\-HTTP\_\-VERSION\_\-0\_\-9} =  TM\_\-HTTP\_\-VERSION\_\-0\_\-9, 
+\par
+\hyperlink{a00665_gga91d9306148208fe7d577c525bc69fb3ba098eec93f90919d1eb1c7ca06ea3f7cb}{GSN\_\-HTTP\_\-VERSION\_\-1\_\-0} =  TM\_\-HTTP\_\-VERSION\_\-1\_\-0, 
+\par
+\hyperlink{a00665_gga91d9306148208fe7d577c525bc69fb3babb3791e6d15e2dfc0cf2411b7c78d9f5}{GSN\_\-HTTP\_\-VERSION\_\-1\_\-1} =  TM\_\-HTTP\_\-VERSION\_\-1\_\-1
+ \}
+\begin{DoxyCompactList}\small\item\em Http version. \end{DoxyCompactList}\item 
+enum \hyperlink{a00665_ga23245efd9f2c5fead55d4b1f075bd6bf}{GSN\_\-HTTP\_\-USER\_\-METHOD} \{ \par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfa62b503fb340f576919bded9653868e69}{GSN\_\-HTTP\_\-METHOD\_\-INVAL} =  TM\_\-HTTP\_\-METHOD\_\-INVAL, 
+\par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfa07b58e80949a13512a72f1fd80253cc5}{GSN\_\-HTTP\_\-METHOD\_\-GET} =  TM\_\-HTTP\_\-METHOD\_\-GET, 
+\par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfaed6349d77721f0a2def48104a9b2e126}{GSN\_\-HTTP\_\-METHOD\_\-HEAD} =  TM\_\-HTTP\_\-METHOD\_\-HEAD, 
+\par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfafe5aa62ce75366be5c4fff7fa6f41692}{GSN\_\-HTTP\_\-METHOD\_\-POST} =  TM\_\-HTTP\_\-METHOD\_\-POST, 
+\par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfa49471c632c648bd36514d1aca91d6c1b}{GSN\_\-HTTP\_\-METHOD\_\-CONNECT} =  TM\_\-HTTP\_\-METHOD\_\-CONNECT, 
+\par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfa3186edc861824d93546e002761b4f8a5}{GSN\_\-HTTP\_\-METHOD\_\-PUT} =  TM\_\-HTTP\_\-METHOD\_\-PUT, 
+\par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfa7206136b25faed7aa7a4b858c422fda4}{GSN\_\-HTTP\_\-METHOD\_\-DELETE} =  TM\_\-HTTP\_\-METHOD\_\-DELETE, 
+\par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfac3fddab110406469374570885eca7e6c}{GSN\_\-HTTP\_\-METHOD\_\-COUNT} =  TM\_\-HTTP\_\-METHOD\_\-COUNT, 
+\par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfa905b4fed44395aff4dd725dfae44b4a6}{GSN\_\-HTTP\_\-METHOD\_\-GETRESP}, 
+\par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfab8e063b00065703cbb762ac8e3368cf7}{GSN\_\-HTTP\_\-METHOD\_\-POSTRESP}, 
+\par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfa60ce87d9a4055e7ca2f270c284887772}{GSN\_\-HTTP\_\-METHOD\_\-PUTRESP}, 
+\par
+\hyperlink{a00665_gga23245efd9f2c5fead55d4b1f075bd6bfa7a79063e9170111025817a4be8b1ce82}{GSN\_\-HTTP\_\-METHOD\_\-DELETERESP}
+ \}
+\begin{DoxyCompactList}\small\item\em Http user method. \end{DoxyCompactList}\item 
+enum \hyperlink{a00665_ga46b2de5d0afbd35d93a0426f601866d9}{GSN\_\-HTTP\_\-USER\_\-HEADER\_\-TYPE} \{ \par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9ab68113bc844e4b59876e58347aaa94ad}{GSN\_\-HTTP\_\-HEADER\_\-INVAL} =  TM\_\-HTTP\_\-HEADER\_\-INVAL, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9ae759d9154bcb437a72cfd523760fc09c}{GSN\_\-HTTP\_\-HEADER\_\-ALLOW} =  TM\_\-HTTP\_\-HEADER\_\-ALLOW, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a9b11b60fe52d9c14a7ef06c761ddcce6}{GSN\_\-HTTP\_\-HEADER\_\-AUTHORIZATION} =  TM\_\-HTTP\_\-HEADER\_\-AUTHORIZATION, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a9d21b3c05d210927fcb202ddd663387d}{GSN\_\-HTTP\_\-HEADER\_\-CONNECTION} =  TM\_\-HTTP\_\-HEADER\_\-CONNECTION, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9acad0f6aa40ef1d57670b23a6b3731803}{GSN\_\-HTTP\_\-HEADER\_\-CONTENT\_\-ENCODING} =  TM\_\-HTTP\_\-HEADER\_\-CONTENT\_\-ENCODING, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9ad65a9f445a4f849993a146435bd4fe62}{GSN\_\-HTTP\_\-HEADER\_\-CONTENT\_\-LENGTH} =  TM\_\-HTTP\_\-HEADER\_\-CONTENT\_\-LENGTH, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9ace5b9560efddf28d46f88a3a307ee9cc}{GSN\_\-HTTP\_\-HEADER\_\-CONTENT\_\-RANGE} =  TM\_\-HTTP\_\-HEADER\_\-CONTENT\_\-RANGE, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a41e0c48678f057a903472aa3d9d411d2}{GSN\_\-HTTP\_\-HEADER\_\-CONTENT\_\-TYPE} =  TM\_\-HTTP\_\-HEADER\_\-CONTENT\_\-TYPE, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9aba0d523897285b1cd639d7e7451ada60}{GSN\_\-HTTP\_\-HEADER\_\-COOKIE} =  TM\_\-HTTP\_\-HEADER\_\-COOKIE, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a9fe9812a4b8449ef704ae6a1bcfba380}{GSN\_\-HTTP\_\-HEADER\_\-COOKIE2} =  TM\_\-HTTP\_\-HEADER\_\-COOKIE2, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a07d5377552d44adf62b3c2800a0b9246}{GSN\_\-HTTP\_\-HEADER\_\-DATE} =  TM\_\-HTTP\_\-HEADER\_\-DATE, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a4112f66e4022a8294f847e0737d97917}{GSN\_\-HTTP\_\-HEADER\_\-EXPIRES} =  TM\_\-HTTP\_\-HEADER\_\-EXPIRES, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a6d3bf025c58069b6aeeb8d57bc703422}{GSN\_\-HTTP\_\-HEADER\_\-FROM} =  TM\_\-HTTP\_\-HEADER\_\-FROM, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a349cb2dd2ec9621b83a391f7e2f32fa3}{GSN\_\-HTTP\_\-HEADER\_\-HOST} =  TM\_\-HTTP\_\-HEADER\_\-HOST, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a718ced6afeff6b6d172da428c8a10559}{GSN\_\-HTTP\_\-HEADER\_\-IF\_\-MODIFIED\_\-SINCE} =  TM\_\-HTTP\_\-HEADER\_\-IF\_\-MODIFIED\_\-SINCE, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9ad5ceed23d52b9e9019edc16f8707e6b0}{GSN\_\-HTTP\_\-HEADER\_\-LAST\_\-MODIFIED} =  TM\_\-HTTP\_\-HEADER\_\-LAST\_\-MODIFIED, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9ab3d733364eb5c459ce08ebc2699db553}{GSN\_\-HTTP\_\-HEADER\_\-LOCATION} =  TM\_\-HTTP\_\-HEADER\_\-LOCATION, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a6d00784bfa262bc4b8f39d7429797ebf}{GSN\_\-HTTP\_\-HEADER\_\-PRAGMA} =  TM\_\-HTTP\_\-HEADER\_\-PRAGMA, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9adad6f1341e717b66b4ead62db3ceb05e}{GSN\_\-HTTP\_\-HEADER\_\-RANGE} =  TM\_\-HTTP\_\-HEADER\_\-RANGE, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9adf7b5ae4cef8e8227033722bb22d5b3d}{GSN\_\-HTTP\_\-HEADER\_\-REFERER} =  TM\_\-HTTP\_\-HEADER\_\-REFERER, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a9ffaa43740888a39e84f5b1d2e15d51a}{GSN\_\-HTTP\_\-HEADER\_\-SERVER} =  TM\_\-HTTP\_\-HEADER\_\-SERVER, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a12f9de4127ca315ca5f5114ffd7630b5}{GSN\_\-HTTP\_\-HEADER\_\-SET\_\-COOKIE} =  TM\_\-HTTP\_\-HEADER\_\-SET\_\-COOKIE, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a90bff9b550346f429f9e82a474a2d62f}{GSN\_\-HTTP\_\-HEADER\_\-TRANSFER\_\-ENCODING} =  TM\_\-HTTP\_\-HEADER\_\-TRANSFER\_\-ENCODING, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a5875dadf3bebd9cd712b7c5368d26604}{GSN\_\-HTTP\_\-HEADER\_\-USER\_\-AGENT} =  TM\_\-HTTP\_\-HEADER\_\-USER\_\-AGENT, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a4b5354945516b484ca5c496f76aa2c78}{GSN\_\-HTTP\_\-HEADER\_\-WWW\_\-AUTHENTICATE} =  TM\_\-HTTP\_\-HEADER\_\-WWW\_\-AUTHENTICATE, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a8ff33526c071a88b7a22876c9fb5d7f6}{GSN\_\-HTTP\_\-HEADER\_\-COUNT} =  TM\_\-HTTP\_\-HEADER\_\-COUNT, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9a8ce106e14e33a8cab07986f230295322}{GSN\_\-HTTP\_\-HEADER\_\-ALL} =  TM\_\-HTTP\_\-HEADER\_\-ALL, 
+\par
+\hyperlink{a00665_gga46b2de5d0afbd35d93a0426f601866d9aba6837662f218a5fe683e9a30ff58a91}{GSN\_\-HTTP\_\-HEADER\_\-CUSTOM} =  TM\_\-HTTP\_\-HEADER\_\-CUSTOM
+ \}
+\begin{DoxyCompactList}\small\item\em Http user header types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00665_gafac7279103004f23215fe92a28ed0331}{GsnHttp\_\-Start} (\hyperlink{a00665_ga873d4cd3603c5dd91494d571445cc7f7}{GSN\_\-HTTPC\_\-CONN\_\-HANDLE} $\ast$pHttpConnHandle, struct sockaddr\_\-storage $\ast$pSockAddr, \hyperlink{a00094}{GSN\_\-HTTPC\_\-CONN\_\-PARAMS\_\-T} $\ast$pHttpcConnParams, \hyperlink{a00093}{GSN\_\-HTTPC\_\-CONF\_\-INFO\_\-T} $\ast$pHttpConfInfo)
+\begin{DoxyCompactList}\small\item\em GSN HTTP Start. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00665_ga588ccc3a99fdf23a18c4878cbb0676f1}{GsnHttp\_\-Send} (\hyperlink{a00665_ga873d4cd3603c5dd91494d571445cc7f7}{GSN\_\-HTTPC\_\-CONN\_\-HANDLE} conHandle, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$respBuff, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$respBuffLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} timeOut, \hyperlink{a00093}{GSN\_\-HTTPC\_\-CONF\_\-INFO\_\-T} $\ast$pHttpConfInfo)
+\begin{DoxyCompactList}\small\item\em GSN HTTP Send. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00665_ga8169ad9597abcfa2dff5ecdca26f1163}{GsnHttp\_\-Close} (\hyperlink{a00665_ga873d4cd3603c5dd91494d571445cc7f7}{GSN\_\-HTTPC\_\-CONN\_\-HANDLE} conHandle)
+\begin{DoxyCompactList}\small\item\em GSN Http close. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00665_ga3a85b2994357240f240544aa83f738e9}{GsnHttp\_\-Alert} (\hyperlink{a00665_ga873d4cd3603c5dd91494d571445cc7f7}{GSN\_\-HTTPC\_\-CONN\_\-HANDLE} conHandle)
+\begin{DoxyCompactList}\small\item\em GSN Http close. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN HTTP public header. This file contains the public APIs and structures of HTTP module. 
+
+Definition in file \hyperlink{a00507_source}{gsn\_\-httpc.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00507_ac8f1951ac3188114d05c988f1c689b0f}{
+\index{gsn\_\-httpc.h@{gsn\_\-httpc.h}!GSN\_\-HTTP\_\-RX\_\-HDRS\_\-CB\_\-T@{GSN\_\-HTTP\_\-RX\_\-HDRS\_\-CB\_\-T}}
+\index{GSN\_\-HTTP\_\-RX\_\-HDRS\_\-CB\_\-T@{GSN\_\-HTTP\_\-RX\_\-HDRS\_\-CB\_\-T}!gsn_httpc.h@{gsn\_\-httpc.h}}
+\subsubsection[{GSN\_\-HTTP\_\-RX\_\-HDRS\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$  {\bf GSN\_\-HTTP\_\-RX\_\-HDRS\_\-CB\_\-T})({\bf GSN\_\-HTTPC\_\-CONN\_\-HANDLE} conHandle, {\bf INT32} statusCode, {\bf INT8} $\ast$reasonPhrase, {\bf INT8} $\ast$$\ast$resHeadersPtr, ttHttpcCustomHdr $\ast$customHdrPtr)}}
+\label{a00507_ac8f1951ac3188114d05c988f1c689b0f}
+
+
+Definition at line 93 of file gsn\_\-httpc.h.
+

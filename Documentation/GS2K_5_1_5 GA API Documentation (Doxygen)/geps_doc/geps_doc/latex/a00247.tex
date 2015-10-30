@@ -1,0 +1,141 @@
+\hypertarget{a00247}{
+\section{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM Struct Reference}
+\label{a00247}\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}}
+}
+
+
+Boot Request Parameter This defines the Boot request API parameter structure.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-sys\_\-ctl.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00247_a790d16551427558514773e316e68adc8}{bootReason}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00247_afd8f781bf6ef91de8ce1bdcf53047bb4}{bootSubreason}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00247_a3396d2d09670a292ab8f4d6a9e8d75fb}{confLost}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00247_a5d8ffa77e8421c84687b597a75ed84e7}{numIfs}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00247_a9cbf66db07b0b8d7e92f702d2e6896a8}{ifTypes} \mbox{[}GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM\mbox{]}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00247_ac4320494d78b18891e3da4896e6ab01d}{bootTimeLow}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00247_ab360fb81514af95b2c567b11bc326d72}{bootTimeHigh}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00247_a227fcb5ac22283fc4d90e07a8363f7a5}{fwFlashAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00247_a5ef40f19e5c99b132dc4a5f1b59d9529}{stdbyCtxLen}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00247_a8945797439cfd2e3c2039f70561948c7}{pStdbyCtx}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Boot Request Parameter This defines the Boot request API parameter structure. 
+
+Definition at line 164 of file gsn\_\-sys\_\-ctl.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00247_a790d16551427558514773e316e68adc8}{
+\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}!bootReason@{bootReason}}
+\index{bootReason@{bootReason}!GSN_SYS_CTL_BOOT_REQ_PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}}
+\subsubsection[{bootReason}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf bootReason}}}
+\label{a00247_a790d16551427558514773e316e68adc8}
+Boot 
+
+Definition at line 166 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00247_afd8f781bf6ef91de8ce1bdcf53047bb4}{
+\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}!bootSubreason@{bootSubreason}}
+\index{bootSubreason@{bootSubreason}!GSN_SYS_CTL_BOOT_REQ_PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}}
+\subsubsection[{bootSubreason}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf bootSubreason}}}
+\label{a00247_afd8f781bf6ef91de8ce1bdcf53047bb4}
+Boot Subreason 
+
+Definition at line 167 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00247_ab360fb81514af95b2c567b11bc326d72}{
+\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}!bootTimeHigh@{bootTimeHigh}}
+\index{bootTimeHigh@{bootTimeHigh}!GSN_SYS_CTL_BOOT_REQ_PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}}
+\subsubsection[{bootTimeHigh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf bootTimeHigh}}}
+\label{a00247_ab360fb81514af95b2c567b11bc326d72}
+system time at boot -\/ upper 4 bytes 
+
+Definition at line 172 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00247_ac4320494d78b18891e3da4896e6ab01d}{
+\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}!bootTimeLow@{bootTimeLow}}
+\index{bootTimeLow@{bootTimeLow}!GSN_SYS_CTL_BOOT_REQ_PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}}
+\subsubsection[{bootTimeLow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf bootTimeLow}}}
+\label{a00247_ac4320494d78b18891e3da4896e6ab01d}
+system time at boot -\/ lower 4 bytes 
+
+Definition at line 171 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00247_a3396d2d09670a292ab8f4d6a9e8d75fb}{
+\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}!confLost@{confLost}}
+\index{confLost@{confLost}!GSN_SYS_CTL_BOOT_REQ_PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}}
+\subsubsection[{confLost}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf confLost}}}
+\label{a00247_a3396d2d09670a292ab8f4d6a9e8d75fb}
+configurartion is lost or not. 0/1 
+
+Definition at line 168 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00247_a227fcb5ac22283fc4d90e07a8363f7a5}{
+\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}!fwFlashAddr@{fwFlashAddr}}
+\index{fwFlashAddr@{fwFlashAddr}!GSN_SYS_CTL_BOOT_REQ_PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}}
+\subsubsection[{fwFlashAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf fwFlashAddr}}}
+\label{a00247_a227fcb5ac22283fc4d90e07a8363f7a5}
+address in flash of fw image 
+
+Definition at line 173 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00247_a9cbf66db07b0b8d7e92f702d2e6896a8}{
+\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}!ifTypes@{ifTypes}}
+\index{ifTypes@{ifTypes}!GSN_SYS_CTL_BOOT_REQ_PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}}
+\subsubsection[{ifTypes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf ifTypes}\mbox{[}GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM\mbox{]}}}
+\label{a00247_a9cbf66db07b0b8d7e92f702d2e6896a8}
+
+
+Definition at line 170 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00247_a5d8ffa77e8421c84687b597a75ed84e7}{
+\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}!numIfs@{numIfs}}
+\index{numIfs@{numIfs}!GSN_SYS_CTL_BOOT_REQ_PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}}
+\subsubsection[{numIfs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf numIfs}}}
+\label{a00247_a5d8ffa77e8421c84687b597a75ed84e7}
+Number of interfaces to be supported 
+
+Definition at line 169 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00247_a8945797439cfd2e3c2039f70561948c7}{
+\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}!pStdbyCtx@{pStdbyCtx}}
+\index{pStdbyCtx@{pStdbyCtx}!GSN_SYS_CTL_BOOT_REQ_PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}}
+\subsubsection[{pStdbyCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf pStdbyCtx}}}
+\label{a00247_a8945797439cfd2e3c2039f70561948c7}
+
+
+Definition at line 175 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00247_a5ef40f19e5c99b132dc4a5f1b59d9529}{
+\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}!stdbyCtxLen@{stdbyCtxLen}}
+\index{stdbyCtxLen@{stdbyCtxLen}!GSN_SYS_CTL_BOOT_REQ_PARAM@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}}
+\subsubsection[{stdbyCtxLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf stdbyCtxLen}}}
+\label{a00247_a5ef40f19e5c99b132dc4a5f1b59d9529}
+
+
+Definition at line 174 of file gsn\_\-sys\_\-ctl.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00592}{gsn\_\-sys\_\-ctl.h}\end{DoxyCompactItemize}

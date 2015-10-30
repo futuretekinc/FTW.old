@@ -1,0 +1,198 @@
+\hypertarget{a00169}{
+\section{GSN\_\-NWIF\_\-INIT\_\-PARAMS Struct Reference}
+\label{a00169}\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+}
+
+
+Info required by NWIF.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-nwif.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00670_ga2c209f2b9b6b2b6b0b2e1132acd45891}{GSN\_\-NWIF\_\-FLAGS\_\-T} \hyperlink{a00169_a4767d0f6570f98849cacbfa9a18ab612}{flags}
+\item 
+char $\ast$ \hyperlink{a00169_a34883f8c4ec77659710bb1b1e8f7ccae}{nwIfName}
+\item 
+\hyperlink{a00164}{GSN\_\-NW\_\-CTX\_\-T} $\ast$ \hyperlink{a00169_a4ab8e1b7273bd13fb04f9726ebf1d430}{pNwCtx}
+\item 
+\hyperlink{a00107}{GSN\_\-L2\_\-DEV\_\-T} $\ast$ \hyperlink{a00169_a26c032e68793c08c6f4c3509dee1e4f2}{pL2Dev}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00169_a29e099f0875d30b6a75ee68c747dde11}{mtu}
+\item 
+\hyperlink{a00534_a2ab3fab7c51c5e11d061387dd44a2381}{GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T} \hyperlink{a00169_ab32f7d6fb4fbd0d87bb049ea5f1e07fa}{ipRecvFilter}
+\item 
+\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$ \hyperlink{a00169_add3f3ec534fd1f44097468966f12316e}{ipTskStack}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00169_a921646fe063cf448e229e452b74cc2ac}{ipTskStackSize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00169_a003165255dc4d674fa820b252cede443}{ipTskPrio}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00169_ac3725e3448e4a6cab8f95add0cba081d}{ipTskSysQualID}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00169_a48d8468fd7b93150628214b3bea70853}{ipTskSysQualTicks}
+\item 
+\hyperlink{a00532_afccc5835aa5e2916600678de68186848}{GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE} $\ast$ \hyperlink{a00169_a4cdcdc7a80f5e9b124e3cdff24cdcaec}{pIpPktPoolHndl}
+\item 
+\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$ \hyperlink{a00169_a2ae59862bdce0fe08b549447e6b710be}{arpCache}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00169_a5c94de6f5334be42b93b4d8a8c751253}{arpCacheSize}
+\item 
+\hyperlink{a00176}{GSN\_\-NWIF\_\-STATS\_\-T} $\ast$ \hyperlink{a00169_aec0dbb062c1551edeb82d3a45c451e01}{pStats}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Info required by NWIF. 
+
+This structure defines info needed by NWIF and need to be passed in Init function. 
+
+Definition at line 361 of file gsn\_\-nwif.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00169_a2ae59862bdce0fe08b549447e6b710be}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!arpCache@{arpCache}}
+\index{arpCache@{arpCache}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{arpCache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT8}$\ast$ {\bf arpCache}}}
+\label{a00169_a2ae59862bdce0fe08b549447e6b710be}
+Pointer to ARP cache area 
+
+Definition at line 381 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_a5c94de6f5334be42b93b4d8a8c751253}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!arpCacheSize@{arpCacheSize}}
+\index{arpCacheSize@{arpCacheSize}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{arpCacheSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf arpCacheSize}}}
+\label{a00169_a5c94de6f5334be42b93b4d8a8c751253}
+ARP cache size 
+
+Definition at line 382 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_a4767d0f6570f98849cacbfa9a18ab612}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!flags@{flags}}
+\index{flags@{flags}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-FLAGS\_\-T} {\bf flags}}}
+\label{a00169_a4767d0f6570f98849cacbfa9a18ab612}
+
+
+Definition at line 363 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_ab32f7d6fb4fbd0d87bb049ea5f1e07fa}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!ipRecvFilter@{ipRecvFilter}}
+\index{ipRecvFilter@{ipRecvFilter}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{ipRecvFilter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T} {\bf ipRecvFilter}}}
+\label{a00169_ab32f7d6fb4fbd0d87bb049ea5f1e07fa}
+Receive Filter Each IP instance will run its own thread. Fill in this thread related parameters 
+
+Definition at line 369 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_a003165255dc4d674fa820b252cede443}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!ipTskPrio@{ipTskPrio}}
+\index{ipTskPrio@{ipTskPrio}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{ipTskPrio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf ipTskPrio}}}
+\label{a00169_a003165255dc4d674fa820b252cede443}
+
+
+Definition at line 373 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_add3f3ec534fd1f44097468966f12316e}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!ipTskStack@{ipTskStack}}
+\index{ipTskStack@{ipTskStack}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{ipTskStack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT8}$\ast$ {\bf ipTskStack}}}
+\label{a00169_add3f3ec534fd1f44097468966f12316e}
+
+
+Definition at line 371 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_a921646fe063cf448e229e452b74cc2ac}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!ipTskStackSize@{ipTskStackSize}}
+\index{ipTskStackSize@{ipTskStackSize}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{ipTskStackSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf ipTskStackSize}}}
+\label{a00169_a921646fe063cf448e229e452b74cc2ac}
+
+
+Definition at line 372 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_ac3725e3448e4a6cab8f95add0cba081d}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!ipTskSysQualID@{ipTskSysQualID}}
+\index{ipTskSysQualID@{ipTskSysQualID}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{ipTskSysQualID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf ipTskSysQualID}}}
+\label{a00169_ac3725e3448e4a6cab8f95add0cba081d}
+sys qual task ID for the IP task 
+
+Definition at line 374 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_a48d8468fd7b93150628214b3bea70853}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!ipTskSysQualTicks@{ipTskSysQualTicks}}
+\index{ipTskSysQualTicks@{ipTskSysQualTicks}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{ipTskSysQualTicks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf ipTskSysQualTicks}}}
+\label{a00169_a48d8468fd7b93150628214b3bea70853}
+sys qual ticks Each IP instance will have its own memory pool 
+
+Definition at line 375 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_a29e099f0875d30b6a75ee68c747dde11}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!mtu@{mtu}}
+\index{mtu@{mtu}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{mtu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf mtu}}}
+\label{a00169_a29e099f0875d30b6a75ee68c747dde11}
+$<$ Power management object for power save MTU for this interface 
+
+Definition at line 368 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_a34883f8c4ec77659710bb1b1e8f7ccae}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!nwIfName@{nwIfName}}
+\index{nwIfName@{nwIfName}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{nwIfName}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf nwIfName}}}
+\label{a00169_a34883f8c4ec77659710bb1b1e8f7ccae}
+NWIF name 
+
+Definition at line 364 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_a4cdcdc7a80f5e9b124e3cdff24cdcaec}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!pIpPktPoolHndl@{pIpPktPoolHndl}}
+\index{pIpPktPoolHndl@{pIpPktPoolHndl}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{pIpPktPoolHndl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE}$\ast$ {\bf pIpPktPoolHndl}}}
+\label{a00169_a4cdcdc7a80f5e9b124e3cdff24cdcaec}
+IP instatnce memory pool handle Each IP instance will have its own ARP cache. Fill info related to ARP cache 
+
+Definition at line 378 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_a26c032e68793c08c6f4c3509dee1e4f2}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!pL2Dev@{pL2Dev}}
+\index{pL2Dev@{pL2Dev}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{pL2Dev}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-L2\_\-DEV\_\-T}$\ast$ {\bf pL2Dev}}}
+\label{a00169_a26c032e68793c08c6f4c3509dee1e4f2}
+L2 device object for data transmit and receive 
+
+Definition at line 366 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_a4ab8e1b7273bd13fb04f9726ebf1d430}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!pNwCtx@{pNwCtx}}
+\index{pNwCtx@{pNwCtx}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{pNwCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NW\_\-CTX\_\-T}$\ast$ {\bf pNwCtx}}}
+\label{a00169_a4ab8e1b7273bd13fb04f9726ebf1d430}
+Pointer to the Nw module context 
+
+Definition at line 365 of file gsn\_\-nwif.h.
+
+\hypertarget{a00169_aec0dbb062c1551edeb82d3a45c451e01}{
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}!pStats@{pStats}}
+\index{pStats@{pStats}!GSN_NWIF_INIT_PARAMS@{GSN\_\-NWIF\_\-INIT\_\-PARAMS}}
+\subsubsection[{pStats}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-STATS\_\-T}$\ast$ {\bf pStats}}}
+\label{a00169_aec0dbb062c1551edeb82d3a45c451e01}
+
+
+Definition at line 383 of file gsn\_\-nwif.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00534}{gsn\_\-nwif.h}\end{DoxyCompactItemize}

@@ -1,0 +1,54 @@
+\hypertarget{a00602}{
+\section{gsn\_\-util.h File Reference}
+\label{a00602}\index{gsn\_\-util.h@{gsn\_\-util.h}}
+}
+
+
+GSN defines. This file contains bit and byte utilities.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00848}
+\end{center}
+\end{figure}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00634_gab2242ecb8ffd8b5fb6a1647a5b1c9f2a}{swap\_\-16}(x)
+\item 
+\#define \hyperlink{a00634_ga1eb2a90e9ab14824a64a2f6a62b37890}{GSN\_\-MAX}(a, b)~((( a ) $>$= ( b )) ? ( a ) : ( b ))
+\item 
+\#define \hyperlink{a00634_gaca41fe743680cba6df3cbecbc9ab08a9}{GSN\_\-MIN}(a, b)~((( a ) $<$= ( b )) ? ( a ) : ( b ))
+\item 
+\#define \hyperlink{a00634_ga98384a3c4b654dfd7254b0ff4cfb425b}{GSN\_\-NB\_\-ELT}(array)~( sizeof( array )/sizeof(( array )\mbox{[} 0 \mbox{]}))
+\item 
+\#define \hyperlink{a00634_ga3f85373e426f9724f7a911dfbd36e090}{GSN\_\-ALIGN4\_\-SUP}(a)~((( a ) + 3 ) \& ( $\sim$3 ))
+\item 
+\#define \hyperlink{a00634_ga38c4278d40641d58d348be55a4fd91da}{GSN\_\-ALIGN4\_\-INF}(a)~(( a ) \& ( $\sim$3 ))
+\item 
+INLINE VOID \hyperlink{a00634_ga93c806730a69f0c559fda3ef2e14ff8e}{GSN\_\-WR\_\-LITEND\_\-U16} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr, const \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} value)
+\begin{DoxyCompactList}\small\item\em This function places the parts of a UINT16 value in two UINT8 buffer slots. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00634_gab1d0f5affe1791a54558477434c44f81}{GSN\_\-WR\_\-LITEND\_\-U32} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr, const \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} value)
+\begin{DoxyCompactList}\small\item\em This function places the parts of a UINT32 value in four UINT8 buffer slots. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00634_ga93374a2fc02fc77a519bb8c23b9968a5}{GSN\_\-RD\_\-LITEND\_\-U16} (const \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr)
+\begin{DoxyCompactList}\small\item\em This function constructs a UINT16 value from two UINT8 buffer slots. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00634_gaa66275afb4728d1a19813412f1867b38}{GSN\_\-RD\_\-LITEND\_\-U32} (const \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr)
+\begin{DoxyCompactList}\small\item\em This function constructs a UINT32 value from four UINT8 buffer slots. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00634_ga33948c00f14501bc1db7b052d0c5f349}{GSN\_\-WR\_\-BIGEND\_\-U16} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr, const \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} value)
+\begin{DoxyCompactList}\small\item\em This function writes a UINT16 to buffer slots in BIG ENDIAN format. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00634_ga60ab53941c9f097c11682045248d549d}{GSN\_\-WR\_\-BIGEND\_\-U32} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr, const \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} value)
+\begin{DoxyCompactList}\small\item\em This function writes a UINT32 to buffer slots in BIG ENDIAN format. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00634_ga56b3884cf803598729efac09feda672e}{GSN\_\-RD\_\-BIGEND\_\-U16} (const \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr)
+\begin{DoxyCompactList}\small\item\em This function reads a UINT16 from buffer slots in BIG ENDIAN format. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00634_gae9bb82c2969564282b416ad9981dc542}{GSN\_\-RD\_\-BIGEND\_\-U32} (const \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr)
+\begin{DoxyCompactList}\small\item\em This function reads a UINT32 from buffer slots in BIG ENDIAN format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN defines. This file contains bit and byte utilities. 
+
+Definition in file \hyperlink{a00602_source}{gsn\_\-util.h}.
+

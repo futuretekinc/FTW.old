@@ -1,0 +1,2896 @@
+\hypertarget{a00548}{
+\section{gsn\_\-reg\_\-dma\_\-spec.h File Reference}
+\label{a00548}\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00548_a536a0569b69b2338c968d3e3e95713a1}{DMA\_\-STATUS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-STATUS))
+\item 
+\#define \hyperlink{a00548_abdc028e92c227552bee727cf38356929}{DMA\_\-TS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-TS)
+\item 
+\#define \hyperlink{a00548_a1b007103ced38b2b77dd52ba31b76167}{DMA\_\-TS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-TS, (value))
+\item 
+\#define \hyperlink{a00548_a9ac3aef833176207d89dff7ec7065b4b}{DMA\_\-CHS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-CHS)
+\item 
+\#define \hyperlink{a00548_a4ed4b36a06e05d67902bc528e6f1969e}{DMA\_\-CHS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-CHS, (value))
+\item 
+\#define \hyperlink{a00548_add7dbff5a0618ca68dec41b3e0a95753}{DMA\_\-ST\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ST)
+\item 
+\#define \hyperlink{a00548_a354e7e406e1cc9173fe0abc7926801bb}{DMA\_\-ST\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ST, (value))
+\item 
+\#define \hyperlink{a00548_a284df5222e8635cdaca838a0493e83f0}{DMA\_\-ME\_\-RO\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ME)
+\item 
+\#define \hyperlink{a00548_a836a53f2c52eb0f10e7c96a3da460d0b}{DMA\_\-CONFIG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG))
+\item 
+\#define \hyperlink{a00548_a87ad40f87384a6dc99d9abe0c3323106}{DMA\_\-CONFIG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG, (value))
+\item 
+\#define \hyperlink{a00548_ab9c443bb7343ab2814c3b333453892d5}{DMA\_\-CONFIG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG) $|$ (value))
+\item 
+\#define \hyperlink{a00548_ad9714742278aa51bd20bdf26b22ee34f}{DMA\_\-CONFIG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_a4ef686d4b0bc296072ffa2d83212fb9c}{DMA\_\-CPC\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-CPC)
+\item 
+\#define \hyperlink{a00548_a9de192e72c2b760971246d0b06c82c4c}{DMA\_\-CPC\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-CPC, (value))
+\item 
+\#define \hyperlink{a00548_a4d85df1d844d1958a17d6a4cf36ed5d5}{DMA\_\-ME\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ME)
+\item 
+\#define \hyperlink{a00548_a99d75fb26d17d099a9108b36e11ee967}{DMA\_\-ME\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ME, 1)
+\item 
+\#define \hyperlink{a00548_a4fb304164bef9d46b9b4eaa9a9b62ba2}{DMA\_\-ME\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ME, 0)
+\item 
+\#define \hyperlink{a00548_af08c5f01241dfd9397695ad11800b1d2}{DMA\_\-CCDBP\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP))
+\item 
+\#define \hyperlink{a00548_a63e776d59e351bd8c67c44f3082cb463}{DMA\_\-CCDBP\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP, (value))
+\item 
+\#define \hyperlink{a00548_afcdef45bee8e9610a1177e2764aab4ca}{DMA\_\-CCDBP\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP) $|$ (value))
+\item 
+\#define \hyperlink{a00548_abf1cf0c117fa8d9804f689144d60c9c3}{DMA\_\-CCDBP\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_ad655c530be11e49d8a5309a267d317a3}{DMA\_\-ECRVAL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ECRVAL)
+\item 
+\#define \hyperlink{a00548_a5b8d95da76ea102538d293f2e9e7404e}{DMA\_\-ECRVAL\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ECRVAL, (value))
+\item 
+\#define \hyperlink{a00548_a85feec50364f750c4544956b6958073d}{DMA\_\-CACDBP\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CACDBP))
+\item 
+\#define \hyperlink{a00548_a220b0aabe103f3c9f9b391748a2f8770}{DMA\_\-BP\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-BP)
+\item 
+\#define \hyperlink{a00548_ac3ec9d44e2d1359fc7e25a35b9ccc60d}{DMA\_\-BP\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-BP, (value))
+\item 
+\#define \hyperlink{a00548_aa1af6663d5da77c5b8c5075ef603cf6e}{DMA\_\-CWRS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS))
+\item 
+\#define \hyperlink{a00548_a131e5865c587b465550343b69eeaabd5}{DMA\_\-CWRS\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS, (value))
+\item 
+\#define \hyperlink{a00548_a122f3d891cc104f1f3572648359c4637}{DMA\_\-CWRS\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS) $|$ (value))
+\item 
+\#define \hyperlink{a00548_abfa6eead7bfc7a1844e6d3518c48dac8}{DMA\_\-CWRS\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_a80c2ed408c1d84abcc8cd48b1ea47a76}{DMA\_\-RS2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS2)
+\item 
+\#define \hyperlink{a00548_a3c74db6964b09cf9d719e23e0b6f418d}{DMA\_\-RS2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS2, 1)
+\item 
+\#define \hyperlink{a00548_a56cf33a3ff47843e93b59f3c9215c190}{DMA\_\-RS2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS2, 0)
+\item 
+\#define \hyperlink{a00548_a243abce1dd03462aa4c984c6b6aed39a}{DMA\_\-RS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS1)
+\item 
+\#define \hyperlink{a00548_a58d011526951b33ac0311ea6a8840a17}{DMA\_\-RS1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS1, 1)
+\item 
+\#define \hyperlink{a00548_a21294fb718648778a6767230ceaad1d9}{DMA\_\-RS1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS1, 0)
+\item 
+\#define \hyperlink{a00548_a9c003228c85e73de0b8b08124317287c}{DMA\_\-RS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS0)
+\item 
+\#define \hyperlink{a00548_a405e50e0d82f06f31cc26bd6abb25aa1}{DMA\_\-RS0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS0, 1)
+\item 
+\#define \hyperlink{a00548_ab1bef8eff2e945a03db0642820b23ba6}{DMA\_\-RS0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS0, 0)
+\item 
+\#define \hyperlink{a00548_ac6fba8704e4ad783344aa8a3459de1db}{DMA\_\-CSR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR))
+\item 
+\#define \hyperlink{a00548_a39477dbaf722884857acb86eb854b3d1}{DMA\_\-CSR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR, (value))
+\item 
+\#define \hyperlink{a00548_a86f03526e65a0c94c41811b42b29502f}{DMA\_\-CSR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR) $|$ (value))
+\item 
+\#define \hyperlink{a00548_a3134019b92da9996f5e151ac91155dad}{DMA\_\-CSR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_a03df77af38fb3a79c6cb5f7f5f6f7be2}{DMA\_\-SR2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR2)
+\item 
+\#define \hyperlink{a00548_a2883d819b72adb613c5ebfa2b41d400d}{DMA\_\-SR2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR2, 1)
+\item 
+\#define \hyperlink{a00548_ae84ab428a3f36df085c382892929d627}{DMA\_\-SR2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR2, 0)
+\item 
+\#define \hyperlink{a00548_ae3221e389cb363ca48d3499b8bd0c341}{DMA\_\-SR1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR1)
+\item 
+\#define \hyperlink{a00548_a41d19b9fc911cc3609371241f106d8e3}{DMA\_\-SR1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR1, 1)
+\item 
+\#define \hyperlink{a00548_abb047fba877eb77ea1cc366961dde56a}{DMA\_\-SR1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR1, 0)
+\item 
+\#define \hyperlink{a00548_aba854eaaf11af9996e84b5b8b8b071a3}{DMA\_\-SR0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR0)
+\item 
+\#define \hyperlink{a00548_a1e6689ee1e23c15db22d1f9c0498da6c}{DMA\_\-SR0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR0, 1)
+\item 
+\#define \hyperlink{a00548_a6ed9c3f99fc66201bac0fc50d6efe249}{DMA\_\-SR0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR0, 0)
+\item 
+\#define \hyperlink{a00548_a729523d4e3b2ca9eaf8a0ed7faf26c9d}{DMA\_\-CUBS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS))
+\item 
+\#define \hyperlink{a00548_a6790a7f19d06b4e196652bdee042c3c8}{DMA\_\-CUBS\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS, (value))
+\item 
+\#define \hyperlink{a00548_aa88b225f0c11d08955defee38a8b453e}{DMA\_\-CUBS\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS) $|$ (value))
+\item 
+\#define \hyperlink{a00548_aa96e108383b17ccb560d36bf9e3693c4}{DMA\_\-CUBS\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_aca560f96ccd5a71c7d17c4c6bd98b426}{DMA\_\-UBS2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS2)
+\item 
+\#define \hyperlink{a00548_adfd9f0e8ea6fa2bc57ac05a5bd9010d0}{DMA\_\-UBS2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS2, 1)
+\item 
+\#define \hyperlink{a00548_ad4b0a2f591848dc34930a15a5da579db}{DMA\_\-UBS2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS2, 0)
+\item 
+\#define \hyperlink{a00548_ad97649b40805962ebf3746e2c6a6e6af}{DMA\_\-UBS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS1)
+\item 
+\#define \hyperlink{a00548_a7a0a7628f63721dc31523f7eb190a0c5}{DMA\_\-UBS1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS1, 1)
+\item 
+\#define \hyperlink{a00548_ab677f8c07aac916c791e5dcd4089d98d}{DMA\_\-UBS1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS1, 0)
+\item 
+\#define \hyperlink{a00548_addcdeeb513c806d7788d37dcaada5111}{DMA\_\-UBS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS0)
+\item 
+\#define \hyperlink{a00548_a72b0dfbac2f270a03fc1c8ab2be235a0}{DMA\_\-UBS0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS0, 1)
+\item 
+\#define \hyperlink{a00548_a05872cb711a77e489d1f480df93bbe58}{DMA\_\-UBS0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS0, 0)
+\item 
+\#define \hyperlink{a00548_a1b0eafa3e6668d850bb5b39c7094a888}{DMA\_\-CUBC\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC))
+\item 
+\#define \hyperlink{a00548_a2c3a7360c4e6c81e6a5e2e8802ea771c}{DMA\_\-CUBC\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC, (value))
+\item 
+\#define \hyperlink{a00548_a24d9609e7cf23368d2f032b2626b40ad}{DMA\_\-CUBC\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC) $|$ (value))
+\item 
+\#define \hyperlink{a00548_a6b29a90a6eaaf4516d7b1811f324dcea}{DMA\_\-CUBC\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_a7543f13f6e938c8f56c00c4937771bf0}{DMA\_\-UBC2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC2)
+\item 
+\#define \hyperlink{a00548_a1e93cafa4ff512c5786b3f06693fe904}{DMA\_\-UBC2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC2, 1)
+\item 
+\#define \hyperlink{a00548_af0cd9df92303f02e79bf5f8c768f887e}{DMA\_\-UBC2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC2, 0)
+\item 
+\#define \hyperlink{a00548_ab40c738d0f30bd17e298fb4d7c25cf90}{DMA\_\-UBC1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC1)
+\item 
+\#define \hyperlink{a00548_a62a22d5adbb6b7667b6554bece8a9869}{DMA\_\-UBC1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC1, 1)
+\item 
+\#define \hyperlink{a00548_a334e451bd305502bd002d7353d7c8835}{DMA\_\-UBC1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC1, 0)
+\item 
+\#define \hyperlink{a00548_a2a90400bc44a1cad0fee54fff1bc3a2f}{DMA\_\-UBC0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC0)
+\item 
+\#define \hyperlink{a00548_a3ecc19116e71cc2320727a303dee2634}{DMA\_\-UBC0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC0, 1)
+\item 
+\#define \hyperlink{a00548_a6ae3d579ebb21f3a99df20964e414f82}{DMA\_\-UBC0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC0, 0)
+\item 
+\#define \hyperlink{a00548_aae488d47faa4bf49ffeeee8e7e079568}{DMA\_\-CRMS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS))
+\item 
+\#define \hyperlink{a00548_a619c2f69f427670dcad8dedb0edb67cb}{DMA\_\-CRMS\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS, (value))
+\item 
+\#define \hyperlink{a00548_ab03d36c6275bb08d248021da031fb826}{DMA\_\-CRMS\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS) $|$ (value))
+\item 
+\#define \hyperlink{a00548_aa46de22d629552f1da9ddb756538d0bd}{DMA\_\-CRMS\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_a51ef19a37266d47fdd73e13b7e5929aa}{DMA\_\-RMS2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS2)
+\item 
+\#define \hyperlink{a00548_a8f057811e9148d71087f3abdf22e318f}{DMA\_\-RMS2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS2, 1)
+\item 
+\#define \hyperlink{a00548_ae667fd9a1539d06789244a6ab6357188}{DMA\_\-RMS2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS2, 0)
+\item 
+\#define \hyperlink{a00548_a72ebaa02529a20255673fab6b6ce9053}{DMA\_\-RMS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS1)
+\item 
+\#define \hyperlink{a00548_ac5da6f34fc8d1ff8e87dcace7cc2922b}{DMA\_\-RMS1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS1, 1)
+\item 
+\#define \hyperlink{a00548_a598af5bcbff4dd3dd99bd3fec64b5b0d}{DMA\_\-RMS1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS1, 0)
+\item 
+\#define \hyperlink{a00548_a6b3a3aefa0268529da37432009a1baa5}{DMA\_\-RMS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS0)
+\item 
+\#define \hyperlink{a00548_af01cf37d6a84fc67cbb6d0af265b9134}{DMA\_\-RMS0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS0, 1)
+\item 
+\#define \hyperlink{a00548_aa92e745c7a4342d38933f9bb81337d1c}{DMA\_\-RMS0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS0, 0)
+\item 
+\#define \hyperlink{a00548_a6135e6905edc5f9a913e95e57c3b5b33}{DMA\_\-CRMC\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC))
+\item 
+\#define \hyperlink{a00548_ae6a9fc60182aaa29027e9888b4236f16}{DMA\_\-CRMC\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC, (value))
+\item 
+\#define \hyperlink{a00548_ac16b4596853d4a2c9623ac5d8f14cff9}{DMA\_\-CRMC\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC) $|$ (value))
+\item 
+\#define \hyperlink{a00548_adede5a3763b5950ea2271757eca51612}{DMA\_\-CRMC\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_a572273adc2b054690d82f7d0ea842945}{DMA\_\-RMC2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC2)
+\item 
+\#define \hyperlink{a00548_ad7b812ee3d9158b52f8848cf8eefd03d}{DMA\_\-RMC2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC2, 1)
+\item 
+\#define \hyperlink{a00548_a2686543b586c17ef646bdf8a8cd7589f}{DMA\_\-RMC2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC2, 0)
+\item 
+\#define \hyperlink{a00548_afd6a33a9ad2fd40ca1c8367b4081fd86}{DMA\_\-RMC1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC1)
+\item 
+\#define \hyperlink{a00548_a896f1f2b4fd36790fdd1724db11af9bf}{DMA\_\-RMC1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC1, 1)
+\item 
+\#define \hyperlink{a00548_aba25198ba7aa003a855d63a6225eb4c0}{DMA\_\-RMC1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC1, 0)
+\item 
+\#define \hyperlink{a00548_a060a6ebd83671f9795c0675e7f731d45}{DMA\_\-RMC0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC0)
+\item 
+\#define \hyperlink{a00548_ad92ae525a798d1227a947e4c26534154}{DMA\_\-RMC0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC0, 1)
+\item 
+\#define \hyperlink{a00548_a6955922a392f4112276c59daaa5453b6}{DMA\_\-RMC0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC0, 0)
+\item 
+\#define \hyperlink{a00548_a424d59ef61a3b99f116138df706f6a62}{DMA\_\-CES\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES))
+\item 
+\#define \hyperlink{a00548_a4dcfbea0b74402793c20596add2d7fce}{DMA\_\-CES\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES, (value))
+\item 
+\#define \hyperlink{a00548_a57edd45383f1e44efa579b9167aecb7f}{DMA\_\-CES\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES) $|$ (value))
+\item 
+\#define \hyperlink{a00548_a5f4dfe1e49bc70afe3c317bc1f5c0ffc}{DMA\_\-CES\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_a38882dccbd2e7802c29e37ac3de3a168}{DMA\_\-ENS2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS2)
+\item 
+\#define \hyperlink{a00548_a0282b9ae556284ebf1c06bd12effc453}{DMA\_\-ENS2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS2, 1)
+\item 
+\#define \hyperlink{a00548_ac9866b36e3744a82d5f8342f88da2e2d}{DMA\_\-ENS2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS2, 0)
+\item 
+\#define \hyperlink{a00548_a5cf74b54c9041035ef4f26e02d0683ee}{DMA\_\-ENS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS1)
+\item 
+\#define \hyperlink{a00548_a1cadacbe67cd725331c88a0dfc0c1746}{DMA\_\-ENS1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS1, 1)
+\item 
+\#define \hyperlink{a00548_a005c10da097b9d409cdf8ceb3d2f5afe}{DMA\_\-ENS1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS1, 0)
+\item 
+\#define \hyperlink{a00548_a9a9f65fc6921c6b20f6112ee01863235}{DMA\_\-ENS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS0)
+\item 
+\#define \hyperlink{a00548_af49c8e8663414abf6f5e9007a889fa5f}{DMA\_\-ENS0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS0, 1)
+\item 
+\#define \hyperlink{a00548_a70f55805dd2fc681ed2289e29d5f1b2d}{DMA\_\-ENS0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS0, 0)
+\item 
+\#define \hyperlink{a00548_a269cbc0629e6042bf6f2528137a9b864}{DMA\_\-CEC\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC))
+\item 
+\#define \hyperlink{a00548_a548b2ba277c28c50cdc294d73915c23e}{DMA\_\-CEC\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC, (value))
+\item 
+\#define \hyperlink{a00548_adcf9b500b8dc261816e1c05c0d14092e}{DMA\_\-CEC\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC) $|$ (value))
+\item 
+\#define \hyperlink{a00548_ac1de8cc43903ea23c5ff08b46719b4c7}{DMA\_\-CEC\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_a1d45150ecdbb5678c4f0f1b94cd9d211}{DMA\_\-ENC2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC2)
+\item 
+\#define \hyperlink{a00548_a5830682e0f6d0775e86038f300f526c0}{DMA\_\-ENC2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC2, 1)
+\item 
+\#define \hyperlink{a00548_a3d7bae7d8611a3ea67dda337eaea5912}{DMA\_\-ENC2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC2, 0)
+\item 
+\#define \hyperlink{a00548_a19d3acb49f816f017a7eba379bd4ba93}{DMA\_\-ENC1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC1)
+\item 
+\#define \hyperlink{a00548_a6e9013321326fa464ab5cd3820ac66af}{DMA\_\-ENC1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC1, 1)
+\item 
+\#define \hyperlink{a00548_aef875b21847dd1aabf126824f66853b6}{DMA\_\-ENC1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC1, 0)
+\item 
+\#define \hyperlink{a00548_af28c4945a846a696abf296dba71f7f6e}{DMA\_\-ENC0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC0)
+\item 
+\#define \hyperlink{a00548_a41816e1e2d17581d6d4e39c3f8e5fa3b}{DMA\_\-ENC0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC0, 1)
+\item 
+\#define \hyperlink{a00548_a05477e1d32364f3028faf9583a0ecc4a}{DMA\_\-ENC0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC0, 0)
+\item 
+\#define \hyperlink{a00548_a06ec213c4739ce129c412bdc07da32de}{DMA\_\-CPAS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS))
+\item 
+\#define \hyperlink{a00548_aec46117ebb2484e01b1c6ec08e34e0bd}{DMA\_\-CPAS\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS, (value))
+\item 
+\#define \hyperlink{a00548_a17ff472cf476515ca65930ad761be2c8}{DMA\_\-CPAS\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS) $|$ (value))
+\item 
+\#define \hyperlink{a00548_a5640a97bbded69a94b64dbdf58558012}{DMA\_\-CPAS\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_ab869c659c2deb25530ceafb62cab2a07}{DMA\_\-PAS2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS2)
+\item 
+\#define \hyperlink{a00548_ada0633045910c4a0babd3fcd18496499}{DMA\_\-PAS2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS2, 1)
+\item 
+\#define \hyperlink{a00548_a51d218ed474b3e25ff16449483527f43}{DMA\_\-PAS2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS2, 0)
+\item 
+\#define \hyperlink{a00548_a5656f7b79aa5b43b4b4c34ace9cacf25}{DMA\_\-PAS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS1)
+\item 
+\#define \hyperlink{a00548_aab0938f2db8d35f71d29b176c34e53b0}{DMA\_\-PAS1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS1, 1)
+\item 
+\#define \hyperlink{a00548_afc7af68efd018a1416d6e107403e64ed}{DMA\_\-PAS1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS1, 0)
+\item 
+\#define \hyperlink{a00548_a634350a396d214f4538b39c3784e0950}{DMA\_\-PAS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS0)
+\item 
+\#define \hyperlink{a00548_a724f2c84929237bd30050d5792de6b37}{DMA\_\-PAS0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS0, 1)
+\item 
+\#define \hyperlink{a00548_a0dae61123f7a0f7e433c311ea092eac7}{DMA\_\-PAS0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS0, 0)
+\item 
+\#define \hyperlink{a00548_ad8060272a0870f6e387d3aa46539c841}{DMA\_\-CPAC\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC))
+\item 
+\#define \hyperlink{a00548_a1d10f528943027cbe1fcc023ba7d1512}{DMA\_\-CPAC\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC, (value))
+\item 
+\#define \hyperlink{a00548_a00cee8fe4bce780bd54648a387a77eb9}{DMA\_\-CPAC\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC) $|$ (value))
+\item 
+\#define \hyperlink{a00548_a009642cf1c8d8e5fa2c5afbcc9404cad}{DMA\_\-CPAC\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_a450a2afb92b982db469cf354c017e5ff}{DMA\_\-PAC2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC2)
+\item 
+\#define \hyperlink{a00548_a61bffa5c88f1bae12709c82fcdbb3562}{DMA\_\-PAC2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC2, 1)
+\item 
+\#define \hyperlink{a00548_a03ff670aac2787fa3cd5e166084c536a}{DMA\_\-PAC2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC2, 0)
+\item 
+\#define \hyperlink{a00548_a47c650006678c017be504ee066ffa5ce}{DMA\_\-PAC1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC1)
+\item 
+\#define \hyperlink{a00548_ae18810592d235c74b3d396a71786faf9}{DMA\_\-PAC1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC1, 1)
+\item 
+\#define \hyperlink{a00548_a630b641b9f18deccd59c0578c07e13b2}{DMA\_\-PAC1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC1, 0)
+\item 
+\#define \hyperlink{a00548_a1dfa2a75850e01863b6391d790c50278}{DMA\_\-PAC0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC0)
+\item 
+\#define \hyperlink{a00548_a809f1a41769df621b9bf85118417aead}{DMA\_\-PAC0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC0, 1)
+\item 
+\#define \hyperlink{a00548_a93fe244c6a0c9ef73aa92a36be2c748c}{DMA\_\-PAC0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC0, 0)
+\item 
+\#define \hyperlink{a00548_a169ed308c36229f24441a8614cbbc2cf}{DMA\_\-CPS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS))
+\item 
+\#define \hyperlink{a00548_a744373977e8cbcc6d5263f50e1fe7f42}{DMA\_\-CPS\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS, (value))
+\item 
+\#define \hyperlink{a00548_ac64cdaf9695273a449900f061ce289a7}{DMA\_\-CPS\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS) $|$ (value))
+\item 
+\#define \hyperlink{a00548_a79f22b64e8b8e5ecd11360619e9ad26c}{DMA\_\-CPS\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_a7abbeae1bdf88c7d2d4802063647bf13}{DMA\_\-PS2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS2)
+\item 
+\#define \hyperlink{a00548_abf0646f81e1da097e411ca4953db96f3}{DMA\_\-PS2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS2, 1)
+\item 
+\#define \hyperlink{a00548_a32b673c4554064d6b42ec9d796422b7d}{DMA\_\-PS2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS2, 0)
+\item 
+\#define \hyperlink{a00548_a9ecfcd0fb0dccbc2574cc7560fd10ded}{DMA\_\-PS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS1)
+\item 
+\#define \hyperlink{a00548_aa66a4e7b7029da48f273ce578b9daf70}{DMA\_\-PS1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS1, 1)
+\item 
+\#define \hyperlink{a00548_acf18b684a19a037c1120f7e2860ed7ab}{DMA\_\-PS1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS1, 0)
+\item 
+\#define \hyperlink{a00548_a1a2f592c3d02ac5355fd65baf03c8176}{DMA\_\-PS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS0)
+\item 
+\#define \hyperlink{a00548_a76dae545125f04dce616b888baf3c619}{DMA\_\-PS0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS0, 1)
+\item 
+\#define \hyperlink{a00548_adb3e73956a89bb0ac70a73ba632d2611}{DMA\_\-PS0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS0, 0)
+\item 
+\#define \hyperlink{a00548_a020fea1a6e5f0f82eec4362afec320f3}{DMA\_\-CPRC\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC))
+\item 
+\#define \hyperlink{a00548_ab43e122bc16208d364b5d5058f5b13a4}{DMA\_\-CPRC\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC, (value))
+\item 
+\#define \hyperlink{a00548_ae06c6a8958375162211bd2b815903500}{DMA\_\-CPRC\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC) $|$ (value))
+\item 
+\#define \hyperlink{a00548_a009d80fc7e4b926fa86f2795184f4313}{DMA\_\-CPRC\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_a5f10a162baaa08223ec6e2b92d716b8d}{DMA\_\-PC2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC2)
+\item 
+\#define \hyperlink{a00548_ac7deac44e697ec30a701b55a793a0e21}{DMA\_\-PC2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC2, 1)
+\item 
+\#define \hyperlink{a00548_ac6a7bf06471e64496a88456f842e5145}{DMA\_\-PC2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC2, 0)
+\item 
+\#define \hyperlink{a00548_aa03053ca00d868bf0d653b39c0a3a3c9}{DMA\_\-PC1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC1)
+\item 
+\#define \hyperlink{a00548_a0fb27f20646291025550ca311d8e2bb9}{DMA\_\-PC1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC1, 1)
+\item 
+\#define \hyperlink{a00548_a700fe1ec8617eaed6c5560ed6294ffcd}{DMA\_\-PC1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC1, 0)
+\item 
+\#define \hyperlink{a00548_a0502743d830bbd67012ae305271e7433}{DMA\_\-PC0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC0)
+\item 
+\#define \hyperlink{a00548_aed6320f09ab94693c563d3e717e67696}{DMA\_\-PC0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC0, 1)
+\item 
+\#define \hyperlink{a00548_acc3e5c85c32f5a95428259462c969cac}{DMA\_\-PC0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC0, 0)
+\item 
+\#define \hyperlink{a00548_adfb48b172eb958d13fe8fda863b2df3e}{DMA\_\-BEC\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC))
+\item 
+\#define \hyperlink{a00548_a933c8e725369b8c218651da8f5288b38}{DMA\_\-BEC\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC, (value))
+\item 
+\#define \hyperlink{a00548_af37807320d737a65993efe3783e96ae3}{DMA\_\-BEC\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC) $|$ (value))
+\item 
+\#define \hyperlink{a00548_a609db07d11f1e915861653b2e47e7c2b}{DMA\_\-BEC\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00548_adac27351442a993164be2d5e8c4848ae}{DMA\_\-EC\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-EC)
+\item 
+\#define \hyperlink{a00548_a8855b29e0cb4f393f7316421e034658e}{DMA\_\-EC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-EC, 1)
+\item 
+\#define \hyperlink{a00548_a0a6f41b7a1ba5d0e7540c206683acd66}{DMA\_\-EC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-EC, 0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00548_a609db07d11f1e915861653b2e47e7c2b}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-BEC\_\-CLEARBIT@{DMA\_\-BEC\_\-CLEARBIT}}
+\index{DMA\_\-BEC\_\-CLEARBIT@{DMA\_\-BEC\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-BEC\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BEC\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC) \& ($\sim$(value)))}}
+\label{a00548_a609db07d11f1e915861653b2e47e7c2b}
+
+
+Definition at line 735 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_adfb48b172eb958d13fe8fda863b2df3e}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-BEC\_\-GET@{DMA\_\-BEC\_\-GET}}
+\index{DMA\_\-BEC\_\-GET@{DMA\_\-BEC\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-BEC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BEC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC))}}
+\label{a00548_adfb48b172eb958d13fe8fda863b2df3e}
+
+
+Definition at line 729 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a933c8e725369b8c218651da8f5288b38}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-BEC\_\-SET@{DMA\_\-BEC\_\-SET}}
+\index{DMA\_\-BEC\_\-SET@{DMA\_\-BEC\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-BEC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BEC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC, (value))}}
+\label{a00548_a933c8e725369b8c218651da8f5288b38}
+
+
+Definition at line 731 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_af37807320d737a65993efe3783e96ae3}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-BEC\_\-SETBIT@{DMA\_\-BEC\_\-SETBIT}}
+\index{DMA\_\-BEC\_\-SETBIT@{DMA\_\-BEC\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-BEC\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BEC\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-BEC) $|$ (value))}}
+\label{a00548_af37807320d737a65993efe3783e96ae3}
+
+
+Definition at line 733 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a220b0aabe103f3c9f9b391748a2f8770}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-BP\_\-GET@{DMA\_\-BP\_\-GET}}
+\index{DMA\_\-BP\_\-GET@{DMA\_\-BP\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-BP\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BP\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-BP)}}
+\label{a00548_a220b0aabe103f3c9f9b391748a2f8770}
+
+
+Definition at line 155 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ac3ec9d44e2d1359fc7e25a35b9ccc60d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-BP\_\-SET@{DMA\_\-BP\_\-SET}}
+\index{DMA\_\-BP\_\-SET@{DMA\_\-BP\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-BP\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BP\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-BP, (value))}}
+\label{a00548_ac3ec9d44e2d1359fc7e25a35b9ccc60d}
+
+
+Definition at line 157 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a85feec50364f750c4544956b6958073d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CACDBP\_\-GET@{DMA\_\-CACDBP\_\-GET}}
+\index{DMA\_\-CACDBP\_\-GET@{DMA\_\-CACDBP\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CACDBP\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CACDBP\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CACDBP))}}
+\label{a00548_a85feec50364f750c4544956b6958073d}
+
+
+Definition at line 148 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_abf1cf0c117fa8d9804f689144d60c9c3}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CCDBP\_\-CLEARBIT@{DMA\_\-CCDBP\_\-CLEARBIT}}
+\index{DMA\_\-CCDBP\_\-CLEARBIT@{DMA\_\-CCDBP\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CCDBP\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CCDBP\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP) \& ($\sim$(value)))}}
+\label{a00548_abf1cf0c117fa8d9804f689144d60c9c3}
+
+
+Definition at line 131 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_af08c5f01241dfd9397695ad11800b1d2}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CCDBP\_\-GET@{DMA\_\-CCDBP\_\-GET}}
+\index{DMA\_\-CCDBP\_\-GET@{DMA\_\-CCDBP\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CCDBP\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CCDBP\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP))}}
+\label{a00548_af08c5f01241dfd9397695ad11800b1d2}
+
+
+Definition at line 125 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a63e776d59e351bd8c67c44f3082cb463}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CCDBP\_\-SET@{DMA\_\-CCDBP\_\-SET}}
+\index{DMA\_\-CCDBP\_\-SET@{DMA\_\-CCDBP\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CCDBP\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CCDBP\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP, (value))}}
+\label{a00548_a63e776d59e351bd8c67c44f3082cb463}
+
+
+Definition at line 127 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_afcdef45bee8e9610a1177e2764aab4ca}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CCDBP\_\-SETBIT@{DMA\_\-CCDBP\_\-SETBIT}}
+\index{DMA\_\-CCDBP\_\-SETBIT@{DMA\_\-CCDBP\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CCDBP\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CCDBP\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CCDBP) $|$ (value))}}
+\label{a00548_afcdef45bee8e9610a1177e2764aab4ca}
+
+
+Definition at line 129 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ac1de8cc43903ea23c5ff08b46719b4c7}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CEC\_\-CLEARBIT@{DMA\_\-CEC\_\-CLEARBIT}}
+\index{DMA\_\-CEC\_\-CLEARBIT@{DMA\_\-CEC\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CEC\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CEC\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC) \& ($\sim$(value)))}}
+\label{a00548_ac1de8cc43903ea23c5ff08b46719b4c7}
+
+
+Definition at line 500 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a269cbc0629e6042bf6f2528137a9b864}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CEC\_\-GET@{DMA\_\-CEC\_\-GET}}
+\index{DMA\_\-CEC\_\-GET@{DMA\_\-CEC\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CEC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CEC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC))}}
+\label{a00548_a269cbc0629e6042bf6f2528137a9b864}
+
+
+Definition at line 494 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a548b2ba277c28c50cdc294d73915c23e}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CEC\_\-SET@{DMA\_\-CEC\_\-SET}}
+\index{DMA\_\-CEC\_\-SET@{DMA\_\-CEC\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CEC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CEC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC, (value))}}
+\label{a00548_a548b2ba277c28c50cdc294d73915c23e}
+
+
+Definition at line 496 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_adcf9b500b8dc261816e1c05c0d14092e}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CEC\_\-SETBIT@{DMA\_\-CEC\_\-SETBIT}}
+\index{DMA\_\-CEC\_\-SETBIT@{DMA\_\-CEC\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CEC\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CEC\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CEC) $|$ (value))}}
+\label{a00548_adcf9b500b8dc261816e1c05c0d14092e}
+
+
+Definition at line 498 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a5f4dfe1e49bc70afe3c317bc1f5c0ffc}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CES\_\-CLEARBIT@{DMA\_\-CES\_\-CLEARBIT}}
+\index{DMA\_\-CES\_\-CLEARBIT@{DMA\_\-CES\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CES\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CES\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES) \& ($\sim$(value)))}}
+\label{a00548_a5f4dfe1e49bc70afe3c317bc1f5c0ffc}
+
+
+Definition at line 453 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a424d59ef61a3b99f116138df706f6a62}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CES\_\-GET@{DMA\_\-CES\_\-GET}}
+\index{DMA\_\-CES\_\-GET@{DMA\_\-CES\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CES\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CES\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES))}}
+\label{a00548_a424d59ef61a3b99f116138df706f6a62}
+
+
+Definition at line 447 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a4dcfbea0b74402793c20596add2d7fce}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CES\_\-SET@{DMA\_\-CES\_\-SET}}
+\index{DMA\_\-CES\_\-SET@{DMA\_\-CES\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CES\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CES\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES, (value))}}
+\label{a00548_a4dcfbea0b74402793c20596add2d7fce}
+
+
+Definition at line 449 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a57edd45383f1e44efa579b9167aecb7f}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CES\_\-SETBIT@{DMA\_\-CES\_\-SETBIT}}
+\index{DMA\_\-CES\_\-SETBIT@{DMA\_\-CES\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CES\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CES\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CES) $|$ (value))}}
+\label{a00548_a57edd45383f1e44efa579b9167aecb7f}
+
+
+Definition at line 451 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a9ac3aef833176207d89dff7ec7065b4b}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CHS\_\-GET@{DMA\_\-CHS\_\-GET}}
+\index{DMA\_\-CHS\_\-GET@{DMA\_\-CHS\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CHS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CHS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-CHS)}}
+\label{a00548_a9ac3aef833176207d89dff7ec7065b4b}
+
+
+Definition at line 65 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a4ed4b36a06e05d67902bc528e6f1969e}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CHS\_\-SET@{DMA\_\-CHS\_\-SET}}
+\index{DMA\_\-CHS\_\-SET@{DMA\_\-CHS\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CHS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CHS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-CHS, (value))}}
+\label{a00548_a4ed4b36a06e05d67902bc528e6f1969e}
+
+
+Definition at line 67 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ad9714742278aa51bd20bdf26b22ee34f}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CONFIG\_\-CLEARBIT@{DMA\_\-CONFIG\_\-CLEARBIT}}
+\index{DMA\_\-CONFIG\_\-CLEARBIT@{DMA\_\-CONFIG\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CONFIG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CONFIG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG) \& ($\sim$(value)))}}
+\label{a00548_ad9714742278aa51bd20bdf26b22ee34f}
+
+
+Definition at line 97 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a836a53f2c52eb0f10e7c96a3da460d0b}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CONFIG\_\-GET@{DMA\_\-CONFIG\_\-GET}}
+\index{DMA\_\-CONFIG\_\-GET@{DMA\_\-CONFIG\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CONFIG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CONFIG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG))}}
+\label{a00548_a836a53f2c52eb0f10e7c96a3da460d0b}
+
+
+Definition at line 91 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a87ad40f87384a6dc99d9abe0c3323106}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CONFIG\_\-SET@{DMA\_\-CONFIG\_\-SET}}
+\index{DMA\_\-CONFIG\_\-SET@{DMA\_\-CONFIG\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CONFIG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CONFIG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG, (value))}}
+\label{a00548_a87ad40f87384a6dc99d9abe0c3323106}
+
+
+Definition at line 93 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ab9c443bb7343ab2814c3b333453892d5}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CONFIG\_\-SETBIT@{DMA\_\-CONFIG\_\-SETBIT}}
+\index{DMA\_\-CONFIG\_\-SETBIT@{DMA\_\-CONFIG\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CONFIG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CONFIG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CONFIG) $|$ (value))}}
+\label{a00548_ab9c443bb7343ab2814c3b333453892d5}
+
+
+Definition at line 95 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a009642cf1c8d8e5fa2c5afbcc9404cad}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPAC\_\-CLEARBIT@{DMA\_\-CPAC\_\-CLEARBIT}}
+\index{DMA\_\-CPAC\_\-CLEARBIT@{DMA\_\-CPAC\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPAC\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAC\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC) \& ($\sim$(value)))}}
+\label{a00548_a009642cf1c8d8e5fa2c5afbcc9404cad}
+
+
+Definition at line 594 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ad8060272a0870f6e387d3aa46539c841}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPAC\_\-GET@{DMA\_\-CPAC\_\-GET}}
+\index{DMA\_\-CPAC\_\-GET@{DMA\_\-CPAC\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPAC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC))}}
+\label{a00548_ad8060272a0870f6e387d3aa46539c841}
+
+
+Definition at line 588 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a1d10f528943027cbe1fcc023ba7d1512}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPAC\_\-SET@{DMA\_\-CPAC\_\-SET}}
+\index{DMA\_\-CPAC\_\-SET@{DMA\_\-CPAC\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPAC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC, (value))}}
+\label{a00548_a1d10f528943027cbe1fcc023ba7d1512}
+
+
+Definition at line 590 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a00cee8fe4bce780bd54648a387a77eb9}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPAC\_\-SETBIT@{DMA\_\-CPAC\_\-SETBIT}}
+\index{DMA\_\-CPAC\_\-SETBIT@{DMA\_\-CPAC\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPAC\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAC\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAC) $|$ (value))}}
+\label{a00548_a00cee8fe4bce780bd54648a387a77eb9}
+
+
+Definition at line 592 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a5640a97bbded69a94b64dbdf58558012}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPAS\_\-CLEARBIT@{DMA\_\-CPAS\_\-CLEARBIT}}
+\index{DMA\_\-CPAS\_\-CLEARBIT@{DMA\_\-CPAS\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPAS\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAS\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS) \& ($\sim$(value)))}}
+\label{a00548_a5640a97bbded69a94b64dbdf58558012}
+
+
+Definition at line 547 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a06ec213c4739ce129c412bdc07da32de}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPAS\_\-GET@{DMA\_\-CPAS\_\-GET}}
+\index{DMA\_\-CPAS\_\-GET@{DMA\_\-CPAS\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPAS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS))}}
+\label{a00548_a06ec213c4739ce129c412bdc07da32de}
+
+
+Definition at line 541 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aec46117ebb2484e01b1c6ec08e34e0bd}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPAS\_\-SET@{DMA\_\-CPAS\_\-SET}}
+\index{DMA\_\-CPAS\_\-SET@{DMA\_\-CPAS\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPAS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS, (value))}}
+\label{a00548_aec46117ebb2484e01b1c6ec08e34e0bd}
+
+
+Definition at line 543 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a17ff472cf476515ca65930ad761be2c8}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPAS\_\-SETBIT@{DMA\_\-CPAS\_\-SETBIT}}
+\index{DMA\_\-CPAS\_\-SETBIT@{DMA\_\-CPAS\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPAS\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAS\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPAS) $|$ (value))}}
+\label{a00548_a17ff472cf476515ca65930ad761be2c8}
+
+
+Definition at line 545 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a4ef686d4b0bc296072ffa2d83212fb9c}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPC\_\-GET@{DMA\_\-CPC\_\-GET}}
+\index{DMA\_\-CPC\_\-GET@{DMA\_\-CPC\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-CPC)}}
+\label{a00548_a4ef686d4b0bc296072ffa2d83212fb9c}
+
+
+Definition at line 104 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a9de192e72c2b760971246d0b06c82c4c}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPC\_\-SET@{DMA\_\-CPC\_\-SET}}
+\index{DMA\_\-CPC\_\-SET@{DMA\_\-CPC\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-CPC, (value))}}
+\label{a00548_a9de192e72c2b760971246d0b06c82c4c}
+
+
+Definition at line 106 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a009d80fc7e4b926fa86f2795184f4313}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPRC\_\-CLEARBIT@{DMA\_\-CPRC\_\-CLEARBIT}}
+\index{DMA\_\-CPRC\_\-CLEARBIT@{DMA\_\-CPRC\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPRC\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPRC\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC) \& ($\sim$(value)))}}
+\label{a00548_a009d80fc7e4b926fa86f2795184f4313}
+
+
+Definition at line 688 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a020fea1a6e5f0f82eec4362afec320f3}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPRC\_\-GET@{DMA\_\-CPRC\_\-GET}}
+\index{DMA\_\-CPRC\_\-GET@{DMA\_\-CPRC\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPRC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPRC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC))}}
+\label{a00548_a020fea1a6e5f0f82eec4362afec320f3}
+
+
+Definition at line 682 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ab43e122bc16208d364b5d5058f5b13a4}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPRC\_\-SET@{DMA\_\-CPRC\_\-SET}}
+\index{DMA\_\-CPRC\_\-SET@{DMA\_\-CPRC\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPRC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPRC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC, (value))}}
+\label{a00548_ab43e122bc16208d364b5d5058f5b13a4}
+
+
+Definition at line 684 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ae06c6a8958375162211bd2b815903500}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPRC\_\-SETBIT@{DMA\_\-CPRC\_\-SETBIT}}
+\index{DMA\_\-CPRC\_\-SETBIT@{DMA\_\-CPRC\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPRC\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPRC\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPC) $|$ (value))}}
+\label{a00548_ae06c6a8958375162211bd2b815903500}
+
+
+Definition at line 686 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a79f22b64e8b8e5ecd11360619e9ad26c}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPS\_\-CLEARBIT@{DMA\_\-CPS\_\-CLEARBIT}}
+\index{DMA\_\-CPS\_\-CLEARBIT@{DMA\_\-CPS\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPS\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPS\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS) \& ($\sim$(value)))}}
+\label{a00548_a79f22b64e8b8e5ecd11360619e9ad26c}
+
+
+Definition at line 641 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a169ed308c36229f24441a8614cbbc2cf}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPS\_\-GET@{DMA\_\-CPS\_\-GET}}
+\index{DMA\_\-CPS\_\-GET@{DMA\_\-CPS\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS))}}
+\label{a00548_a169ed308c36229f24441a8614cbbc2cf}
+
+
+Definition at line 635 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a744373977e8cbcc6d5263f50e1fe7f42}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPS\_\-SET@{DMA\_\-CPS\_\-SET}}
+\index{DMA\_\-CPS\_\-SET@{DMA\_\-CPS\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS, (value))}}
+\label{a00548_a744373977e8cbcc6d5263f50e1fe7f42}
+
+
+Definition at line 637 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ac64cdaf9695273a449900f061ce289a7}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CPS\_\-SETBIT@{DMA\_\-CPS\_\-SETBIT}}
+\index{DMA\_\-CPS\_\-SETBIT@{DMA\_\-CPS\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CPS\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPS\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CPS) $|$ (value))}}
+\label{a00548_ac64cdaf9695273a449900f061ce289a7}
+
+
+Definition at line 639 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_adede5a3763b5950ea2271757eca51612}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CRMC\_\-CLEARBIT@{DMA\_\-CRMC\_\-CLEARBIT}}
+\index{DMA\_\-CRMC\_\-CLEARBIT@{DMA\_\-CRMC\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CRMC\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMC\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC) \& ($\sim$(value)))}}
+\label{a00548_adede5a3763b5950ea2271757eca51612}
+
+
+Definition at line 406 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a6135e6905edc5f9a913e95e57c3b5b33}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CRMC\_\-GET@{DMA\_\-CRMC\_\-GET}}
+\index{DMA\_\-CRMC\_\-GET@{DMA\_\-CRMC\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CRMC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC))}}
+\label{a00548_a6135e6905edc5f9a913e95e57c3b5b33}
+
+
+Definition at line 400 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ae6a9fc60182aaa29027e9888b4236f16}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CRMC\_\-SET@{DMA\_\-CRMC\_\-SET}}
+\index{DMA\_\-CRMC\_\-SET@{DMA\_\-CRMC\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CRMC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC, (value))}}
+\label{a00548_ae6a9fc60182aaa29027e9888b4236f16}
+
+
+Definition at line 402 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ac16b4596853d4a2c9623ac5d8f14cff9}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CRMC\_\-SETBIT@{DMA\_\-CRMC\_\-SETBIT}}
+\index{DMA\_\-CRMC\_\-SETBIT@{DMA\_\-CRMC\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CRMC\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMC\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMC) $|$ (value))}}
+\label{a00548_ac16b4596853d4a2c9623ac5d8f14cff9}
+
+
+Definition at line 404 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aa46de22d629552f1da9ddb756538d0bd}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CRMS\_\-CLEARBIT@{DMA\_\-CRMS\_\-CLEARBIT}}
+\index{DMA\_\-CRMS\_\-CLEARBIT@{DMA\_\-CRMS\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CRMS\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMS\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS) \& ($\sim$(value)))}}
+\label{a00548_aa46de22d629552f1da9ddb756538d0bd}
+
+
+Definition at line 359 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aae488d47faa4bf49ffeeee8e7e079568}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CRMS\_\-GET@{DMA\_\-CRMS\_\-GET}}
+\index{DMA\_\-CRMS\_\-GET@{DMA\_\-CRMS\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CRMS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS))}}
+\label{a00548_aae488d47faa4bf49ffeeee8e7e079568}
+
+
+Definition at line 353 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a619c2f69f427670dcad8dedb0edb67cb}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CRMS\_\-SET@{DMA\_\-CRMS\_\-SET}}
+\index{DMA\_\-CRMS\_\-SET@{DMA\_\-CRMS\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CRMS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS, (value))}}
+\label{a00548_a619c2f69f427670dcad8dedb0edb67cb}
+
+
+Definition at line 355 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ab03d36c6275bb08d248021da031fb826}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CRMS\_\-SETBIT@{DMA\_\-CRMS\_\-SETBIT}}
+\index{DMA\_\-CRMS\_\-SETBIT@{DMA\_\-CRMS\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CRMS\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMS\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CRMS) $|$ (value))}}
+\label{a00548_ab03d36c6275bb08d248021da031fb826}
+
+
+Definition at line 357 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a3134019b92da9996f5e151ac91155dad}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CSR\_\-CLEARBIT@{DMA\_\-CSR\_\-CLEARBIT}}
+\index{DMA\_\-CSR\_\-CLEARBIT@{DMA\_\-CSR\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CSR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CSR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR) \& ($\sim$(value)))}}
+\label{a00548_a3134019b92da9996f5e151ac91155dad}
+
+
+Definition at line 218 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ac6fba8704e4ad783344aa8a3459de1db}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CSR\_\-GET@{DMA\_\-CSR\_\-GET}}
+\index{DMA\_\-CSR\_\-GET@{DMA\_\-CSR\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CSR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CSR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR))}}
+\label{a00548_ac6fba8704e4ad783344aa8a3459de1db}
+
+
+Definition at line 212 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a39477dbaf722884857acb86eb854b3d1}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CSR\_\-SET@{DMA\_\-CSR\_\-SET}}
+\index{DMA\_\-CSR\_\-SET@{DMA\_\-CSR\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CSR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CSR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR, (value))}}
+\label{a00548_a39477dbaf722884857acb86eb854b3d1}
+
+
+Definition at line 214 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a86f03526e65a0c94c41811b42b29502f}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CSR\_\-SETBIT@{DMA\_\-CSR\_\-SETBIT}}
+\index{DMA\_\-CSR\_\-SETBIT@{DMA\_\-CSR\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CSR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CSR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CSR) $|$ (value))}}
+\label{a00548_a86f03526e65a0c94c41811b42b29502f}
+
+
+Definition at line 216 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a6b29a90a6eaaf4516d7b1811f324dcea}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CUBC\_\-CLEARBIT@{DMA\_\-CUBC\_\-CLEARBIT}}
+\index{DMA\_\-CUBC\_\-CLEARBIT@{DMA\_\-CUBC\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CUBC\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBC\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC) \& ($\sim$(value)))}}
+\label{a00548_a6b29a90a6eaaf4516d7b1811f324dcea}
+
+
+Definition at line 312 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a1b0eafa3e6668d850bb5b39c7094a888}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CUBC\_\-GET@{DMA\_\-CUBC\_\-GET}}
+\index{DMA\_\-CUBC\_\-GET@{DMA\_\-CUBC\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CUBC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC))}}
+\label{a00548_a1b0eafa3e6668d850bb5b39c7094a888}
+
+
+Definition at line 306 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a2c3a7360c4e6c81e6a5e2e8802ea771c}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CUBC\_\-SET@{DMA\_\-CUBC\_\-SET}}
+\index{DMA\_\-CUBC\_\-SET@{DMA\_\-CUBC\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CUBC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC, (value))}}
+\label{a00548_a2c3a7360c4e6c81e6a5e2e8802ea771c}
+
+
+Definition at line 308 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a24d9609e7cf23368d2f032b2626b40ad}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CUBC\_\-SETBIT@{DMA\_\-CUBC\_\-SETBIT}}
+\index{DMA\_\-CUBC\_\-SETBIT@{DMA\_\-CUBC\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CUBC\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBC\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBC) $|$ (value))}}
+\label{a00548_a24d9609e7cf23368d2f032b2626b40ad}
+
+
+Definition at line 310 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aa96e108383b17ccb560d36bf9e3693c4}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CUBS\_\-CLEARBIT@{DMA\_\-CUBS\_\-CLEARBIT}}
+\index{DMA\_\-CUBS\_\-CLEARBIT@{DMA\_\-CUBS\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CUBS\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBS\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS) \& ($\sim$(value)))}}
+\label{a00548_aa96e108383b17ccb560d36bf9e3693c4}
+
+
+Definition at line 265 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a729523d4e3b2ca9eaf8a0ed7faf26c9d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CUBS\_\-GET@{DMA\_\-CUBS\_\-GET}}
+\index{DMA\_\-CUBS\_\-GET@{DMA\_\-CUBS\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CUBS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS))}}
+\label{a00548_a729523d4e3b2ca9eaf8a0ed7faf26c9d}
+
+
+Definition at line 259 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a6790a7f19d06b4e196652bdee042c3c8}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CUBS\_\-SET@{DMA\_\-CUBS\_\-SET}}
+\index{DMA\_\-CUBS\_\-SET@{DMA\_\-CUBS\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CUBS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS, (value))}}
+\label{a00548_a6790a7f19d06b4e196652bdee042c3c8}
+
+
+Definition at line 261 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aa88b225f0c11d08955defee38a8b453e}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CUBS\_\-SETBIT@{DMA\_\-CUBS\_\-SETBIT}}
+\index{DMA\_\-CUBS\_\-SETBIT@{DMA\_\-CUBS\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CUBS\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBS\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CUBS) $|$ (value))}}
+\label{a00548_aa88b225f0c11d08955defee38a8b453e}
+
+
+Definition at line 263 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_abfa6eead7bfc7a1844e6d3518c48dac8}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CWRS\_\-CLEARBIT@{DMA\_\-CWRS\_\-CLEARBIT}}
+\index{DMA\_\-CWRS\_\-CLEARBIT@{DMA\_\-CWRS\_\-CLEARBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CWRS\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CWRS\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS) \& ($\sim$(value)))}}
+\label{a00548_abfa6eead7bfc7a1844e6d3518c48dac8}
+
+
+Definition at line 171 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aa1af6663d5da77c5b8c5075ef603cf6e}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CWRS\_\-GET@{DMA\_\-CWRS\_\-GET}}
+\index{DMA\_\-CWRS\_\-GET@{DMA\_\-CWRS\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CWRS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CWRS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS))}}
+\label{a00548_aa1af6663d5da77c5b8c5075ef603cf6e}
+
+
+Definition at line 165 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a131e5865c587b465550343b69eeaabd5}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CWRS\_\-SET@{DMA\_\-CWRS\_\-SET}}
+\index{DMA\_\-CWRS\_\-SET@{DMA\_\-CWRS\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CWRS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CWRS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS, (value))}}
+\label{a00548_a131e5865c587b465550343b69eeaabd5}
+
+
+Definition at line 167 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a122f3d891cc104f1f3572648359c4637}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-CWRS\_\-SETBIT@{DMA\_\-CWRS\_\-SETBIT}}
+\index{DMA\_\-CWRS\_\-SETBIT@{DMA\_\-CWRS\_\-SETBIT}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-CWRS\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CWRS\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-CWRS) $|$ (value))}}
+\label{a00548_a122f3d891cc104f1f3572648359c4637}
+
+
+Definition at line 169 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a0a6f41b7a1ba5d0e7540c206683acd66}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-EC\_\-CLEAR@{DMA\_\-EC\_\-CLEAR}}
+\index{DMA\_\-EC\_\-CLEAR@{DMA\_\-EC\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-EC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-EC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-EC, 0)}}
+\label{a00548_a0a6f41b7a1ba5d0e7540c206683acd66}
+
+
+Definition at line 746 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_adac27351442a993164be2d5e8c4848ae}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-EC\_\-GET@{DMA\_\-EC\_\-GET}}
+\index{DMA\_\-EC\_\-GET@{DMA\_\-EC\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-EC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-EC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-EC)}}
+\label{a00548_adac27351442a993164be2d5e8c4848ae}
+
+
+Definition at line 742 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a8855b29e0cb4f393f7316421e034658e}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-EC\_\-SET@{DMA\_\-EC\_\-SET}}
+\index{DMA\_\-EC\_\-SET@{DMA\_\-EC\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-EC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-EC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-EC, 1)}}
+\label{a00548_a8855b29e0cb4f393f7316421e034658e}
+
+
+Definition at line 744 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ad655c530be11e49d8a5309a267d317a3}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ECRVAL\_\-GET@{DMA\_\-ECRVAL\_\-GET}}
+\index{DMA\_\-ECRVAL\_\-GET@{DMA\_\-ECRVAL\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ECRVAL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ECRVAL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ECRVAL)}}
+\label{a00548_ad655c530be11e49d8a5309a267d317a3}
+
+
+Definition at line 138 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a5b8d95da76ea102538d293f2e9e7404e}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ECRVAL\_\-SET@{DMA\_\-ECRVAL\_\-SET}}
+\index{DMA\_\-ECRVAL\_\-SET@{DMA\_\-ECRVAL\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ECRVAL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ECRVAL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ECRVAL, (value))}}
+\label{a00548_a5b8d95da76ea102538d293f2e9e7404e}
+
+
+Definition at line 140 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a05477e1d32364f3028faf9583a0ecc4a}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENC0\_\-CLEAR@{DMA\_\-ENC0\_\-CLEAR}}
+\index{DMA\_\-ENC0\_\-CLEAR@{DMA\_\-ENC0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENC0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC0, 0)}}
+\label{a00548_a05477e1d32364f3028faf9583a0ecc4a}
+
+
+Definition at line 533 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_af28c4945a846a696abf296dba71f7f6e}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENC0\_\-GET@{DMA\_\-ENC0\_\-GET}}
+\index{DMA\_\-ENC0\_\-GET@{DMA\_\-ENC0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENC0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC0)}}
+\label{a00548_af28c4945a846a696abf296dba71f7f6e}
+
+
+Definition at line 529 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a41816e1e2d17581d6d4e39c3f8e5fa3b}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENC0\_\-SET@{DMA\_\-ENC0\_\-SET}}
+\index{DMA\_\-ENC0\_\-SET@{DMA\_\-ENC0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENC0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC0, 1)}}
+\label{a00548_a41816e1e2d17581d6d4e39c3f8e5fa3b}
+
+
+Definition at line 531 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aef875b21847dd1aabf126824f66853b6}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENC1\_\-CLEAR@{DMA\_\-ENC1\_\-CLEAR}}
+\index{DMA\_\-ENC1\_\-CLEAR@{DMA\_\-ENC1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENC1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC1, 0)}}
+\label{a00548_aef875b21847dd1aabf126824f66853b6}
+
+
+Definition at line 522 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a19d3acb49f816f017a7eba379bd4ba93}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENC1\_\-GET@{DMA\_\-ENC1\_\-GET}}
+\index{DMA\_\-ENC1\_\-GET@{DMA\_\-ENC1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENC1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC1)}}
+\label{a00548_a19d3acb49f816f017a7eba379bd4ba93}
+
+
+Definition at line 518 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a6e9013321326fa464ab5cd3820ac66af}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENC1\_\-SET@{DMA\_\-ENC1\_\-SET}}
+\index{DMA\_\-ENC1\_\-SET@{DMA\_\-ENC1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENC1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC1, 1)}}
+\label{a00548_a6e9013321326fa464ab5cd3820ac66af}
+
+
+Definition at line 520 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a3d7bae7d8611a3ea67dda337eaea5912}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENC2\_\-CLEAR@{DMA\_\-ENC2\_\-CLEAR}}
+\index{DMA\_\-ENC2\_\-CLEAR@{DMA\_\-ENC2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENC2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC2, 0)}}
+\label{a00548_a3d7bae7d8611a3ea67dda337eaea5912}
+
+
+Definition at line 511 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a1d45150ecdbb5678c4f0f1b94cd9d211}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENC2\_\-GET@{DMA\_\-ENC2\_\-GET}}
+\index{DMA\_\-ENC2\_\-GET@{DMA\_\-ENC2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENC2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC2)}}
+\label{a00548_a1d45150ecdbb5678c4f0f1b94cd9d211}
+
+
+Definition at line 507 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a5830682e0f6d0775e86038f300f526c0}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENC2\_\-SET@{DMA\_\-ENC2\_\-SET}}
+\index{DMA\_\-ENC2\_\-SET@{DMA\_\-ENC2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENC2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENC2, 1)}}
+\label{a00548_a5830682e0f6d0775e86038f300f526c0}
+
+
+Definition at line 509 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a70f55805dd2fc681ed2289e29d5f1b2d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENS0\_\-CLEAR@{DMA\_\-ENS0\_\-CLEAR}}
+\index{DMA\_\-ENS0\_\-CLEAR@{DMA\_\-ENS0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENS0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS0, 0)}}
+\label{a00548_a70f55805dd2fc681ed2289e29d5f1b2d}
+
+
+Definition at line 486 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a9a9f65fc6921c6b20f6112ee01863235}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENS0\_\-GET@{DMA\_\-ENS0\_\-GET}}
+\index{DMA\_\-ENS0\_\-GET@{DMA\_\-ENS0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS0)}}
+\label{a00548_a9a9f65fc6921c6b20f6112ee01863235}
+
+
+Definition at line 482 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_af49c8e8663414abf6f5e9007a889fa5f}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENS0\_\-SET@{DMA\_\-ENS0\_\-SET}}
+\index{DMA\_\-ENS0\_\-SET@{DMA\_\-ENS0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENS0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS0, 1)}}
+\label{a00548_af49c8e8663414abf6f5e9007a889fa5f}
+
+
+Definition at line 484 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a005c10da097b9d409cdf8ceb3d2f5afe}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENS1\_\-CLEAR@{DMA\_\-ENS1\_\-CLEAR}}
+\index{DMA\_\-ENS1\_\-CLEAR@{DMA\_\-ENS1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENS1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS1, 0)}}
+\label{a00548_a005c10da097b9d409cdf8ceb3d2f5afe}
+
+
+Definition at line 475 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a5cf74b54c9041035ef4f26e02d0683ee}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENS1\_\-GET@{DMA\_\-ENS1\_\-GET}}
+\index{DMA\_\-ENS1\_\-GET@{DMA\_\-ENS1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS1)}}
+\label{a00548_a5cf74b54c9041035ef4f26e02d0683ee}
+
+
+Definition at line 471 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a1cadacbe67cd725331c88a0dfc0c1746}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENS1\_\-SET@{DMA\_\-ENS1\_\-SET}}
+\index{DMA\_\-ENS1\_\-SET@{DMA\_\-ENS1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENS1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS1, 1)}}
+\label{a00548_a1cadacbe67cd725331c88a0dfc0c1746}
+
+
+Definition at line 473 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ac9866b36e3744a82d5f8342f88da2e2d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENS2\_\-CLEAR@{DMA\_\-ENS2\_\-CLEAR}}
+\index{DMA\_\-ENS2\_\-CLEAR@{DMA\_\-ENS2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENS2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS2, 0)}}
+\label{a00548_ac9866b36e3744a82d5f8342f88da2e2d}
+
+
+Definition at line 464 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a38882dccbd2e7802c29e37ac3de3a168}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENS2\_\-GET@{DMA\_\-ENS2\_\-GET}}
+\index{DMA\_\-ENS2\_\-GET@{DMA\_\-ENS2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS2)}}
+\label{a00548_a38882dccbd2e7802c29e37ac3de3a168}
+
+
+Definition at line 460 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a0282b9ae556284ebf1c06bd12effc453}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ENS2\_\-SET@{DMA\_\-ENS2\_\-SET}}
+\index{DMA\_\-ENS2\_\-SET@{DMA\_\-ENS2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ENS2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ENS2, 1)}}
+\label{a00548_a0282b9ae556284ebf1c06bd12effc453}
+
+
+Definition at line 462 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a4fb304164bef9d46b9b4eaa9a9b62ba2}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ME\_\-CLEAR@{DMA\_\-ME\_\-CLEAR}}
+\index{DMA\_\-ME\_\-CLEAR@{DMA\_\-ME\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ME\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ME, 0)}}
+\label{a00548_a4fb304164bef9d46b9b4eaa9a9b62ba2}
+
+
+Definition at line 117 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a4d85df1d844d1958a17d6a4cf36ed5d5}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ME\_\-GET@{DMA\_\-ME\_\-GET}}
+\index{DMA\_\-ME\_\-GET@{DMA\_\-ME\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ME\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ME)}}
+\label{a00548_a4d85df1d844d1958a17d6a4cf36ed5d5}
+
+
+Definition at line 113 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a284df5222e8635cdaca838a0493e83f0}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ME\_\-RO\_\-GET@{DMA\_\-ME\_\-RO\_\-GET}}
+\index{DMA\_\-ME\_\-RO\_\-GET@{DMA\_\-ME\_\-RO\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ME\_\-RO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-RO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ME)}}
+\label{a00548_a284df5222e8635cdaca838a0493e83f0}
+
+
+Definition at line 83 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a99d75fb26d17d099a9108b36e11ee967}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ME\_\-SET@{DMA\_\-ME\_\-SET}}
+\index{DMA\_\-ME\_\-SET@{DMA\_\-ME\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ME\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ME, 1)}}
+\label{a00548_a99d75fb26d17d099a9108b36e11ee967}
+
+
+Definition at line 115 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a93fe244c6a0c9ef73aa92a36be2c748c}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAC0\_\-CLEAR@{DMA\_\-PAC0\_\-CLEAR}}
+\index{DMA\_\-PAC0\_\-CLEAR@{DMA\_\-PAC0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAC0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC0, 0)}}
+\label{a00548_a93fe244c6a0c9ef73aa92a36be2c748c}
+
+
+Definition at line 627 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a1dfa2a75850e01863b6391d790c50278}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAC0\_\-GET@{DMA\_\-PAC0\_\-GET}}
+\index{DMA\_\-PAC0\_\-GET@{DMA\_\-PAC0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAC0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC0)}}
+\label{a00548_a1dfa2a75850e01863b6391d790c50278}
+
+
+Definition at line 623 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a809f1a41769df621b9bf85118417aead}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAC0\_\-SET@{DMA\_\-PAC0\_\-SET}}
+\index{DMA\_\-PAC0\_\-SET@{DMA\_\-PAC0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAC0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC0, 1)}}
+\label{a00548_a809f1a41769df621b9bf85118417aead}
+
+
+Definition at line 625 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a630b641b9f18deccd59c0578c07e13b2}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAC1\_\-CLEAR@{DMA\_\-PAC1\_\-CLEAR}}
+\index{DMA\_\-PAC1\_\-CLEAR@{DMA\_\-PAC1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAC1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC1, 0)}}
+\label{a00548_a630b641b9f18deccd59c0578c07e13b2}
+
+
+Definition at line 616 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a47c650006678c017be504ee066ffa5ce}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAC1\_\-GET@{DMA\_\-PAC1\_\-GET}}
+\index{DMA\_\-PAC1\_\-GET@{DMA\_\-PAC1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAC1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC1)}}
+\label{a00548_a47c650006678c017be504ee066ffa5ce}
+
+
+Definition at line 612 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ae18810592d235c74b3d396a71786faf9}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAC1\_\-SET@{DMA\_\-PAC1\_\-SET}}
+\index{DMA\_\-PAC1\_\-SET@{DMA\_\-PAC1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAC1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC1, 1)}}
+\label{a00548_ae18810592d235c74b3d396a71786faf9}
+
+
+Definition at line 614 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a03ff670aac2787fa3cd5e166084c536a}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAC2\_\-CLEAR@{DMA\_\-PAC2\_\-CLEAR}}
+\index{DMA\_\-PAC2\_\-CLEAR@{DMA\_\-PAC2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAC2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC2, 0)}}
+\label{a00548_a03ff670aac2787fa3cd5e166084c536a}
+
+
+Definition at line 605 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a450a2afb92b982db469cf354c017e5ff}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAC2\_\-GET@{DMA\_\-PAC2\_\-GET}}
+\index{DMA\_\-PAC2\_\-GET@{DMA\_\-PAC2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAC2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC2)}}
+\label{a00548_a450a2afb92b982db469cf354c017e5ff}
+
+
+Definition at line 601 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a61bffa5c88f1bae12709c82fcdbb3562}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAC2\_\-SET@{DMA\_\-PAC2\_\-SET}}
+\index{DMA\_\-PAC2\_\-SET@{DMA\_\-PAC2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAC2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAC2, 1)}}
+\label{a00548_a61bffa5c88f1bae12709c82fcdbb3562}
+
+
+Definition at line 603 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a0dae61123f7a0f7e433c311ea092eac7}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAS0\_\-CLEAR@{DMA\_\-PAS0\_\-CLEAR}}
+\index{DMA\_\-PAS0\_\-CLEAR@{DMA\_\-PAS0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAS0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS0, 0)}}
+\label{a00548_a0dae61123f7a0f7e433c311ea092eac7}
+
+
+Definition at line 580 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a634350a396d214f4538b39c3784e0950}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAS0\_\-GET@{DMA\_\-PAS0\_\-GET}}
+\index{DMA\_\-PAS0\_\-GET@{DMA\_\-PAS0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS0)}}
+\label{a00548_a634350a396d214f4538b39c3784e0950}
+
+
+Definition at line 576 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a724f2c84929237bd30050d5792de6b37}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAS0\_\-SET@{DMA\_\-PAS0\_\-SET}}
+\index{DMA\_\-PAS0\_\-SET@{DMA\_\-PAS0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAS0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS0, 1)}}
+\label{a00548_a724f2c84929237bd30050d5792de6b37}
+
+
+Definition at line 578 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_afc7af68efd018a1416d6e107403e64ed}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAS1\_\-CLEAR@{DMA\_\-PAS1\_\-CLEAR}}
+\index{DMA\_\-PAS1\_\-CLEAR@{DMA\_\-PAS1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAS1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS1, 0)}}
+\label{a00548_afc7af68efd018a1416d6e107403e64ed}
+
+
+Definition at line 569 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a5656f7b79aa5b43b4b4c34ace9cacf25}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAS1\_\-GET@{DMA\_\-PAS1\_\-GET}}
+\index{DMA\_\-PAS1\_\-GET@{DMA\_\-PAS1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS1)}}
+\label{a00548_a5656f7b79aa5b43b4b4c34ace9cacf25}
+
+
+Definition at line 565 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aab0938f2db8d35f71d29b176c34e53b0}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAS1\_\-SET@{DMA\_\-PAS1\_\-SET}}
+\index{DMA\_\-PAS1\_\-SET@{DMA\_\-PAS1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAS1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS1, 1)}}
+\label{a00548_aab0938f2db8d35f71d29b176c34e53b0}
+
+
+Definition at line 567 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a51d218ed474b3e25ff16449483527f43}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAS2\_\-CLEAR@{DMA\_\-PAS2\_\-CLEAR}}
+\index{DMA\_\-PAS2\_\-CLEAR@{DMA\_\-PAS2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAS2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS2, 0)}}
+\label{a00548_a51d218ed474b3e25ff16449483527f43}
+
+
+Definition at line 558 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ab869c659c2deb25530ceafb62cab2a07}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAS2\_\-GET@{DMA\_\-PAS2\_\-GET}}
+\index{DMA\_\-PAS2\_\-GET@{DMA\_\-PAS2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS2)}}
+\label{a00548_ab869c659c2deb25530ceafb62cab2a07}
+
+
+Definition at line 554 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ada0633045910c4a0babd3fcd18496499}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PAS2\_\-SET@{DMA\_\-PAS2\_\-SET}}
+\index{DMA\_\-PAS2\_\-SET@{DMA\_\-PAS2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PAS2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PAS2, 1)}}
+\label{a00548_ada0633045910c4a0babd3fcd18496499}
+
+
+Definition at line 556 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_acc3e5c85c32f5a95428259462c969cac}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PC0\_\-CLEAR@{DMA\_\-PC0\_\-CLEAR}}
+\index{DMA\_\-PC0\_\-CLEAR@{DMA\_\-PC0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PC0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC0, 0)}}
+\label{a00548_acc3e5c85c32f5a95428259462c969cac}
+
+
+Definition at line 721 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a0502743d830bbd67012ae305271e7433}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PC0\_\-GET@{DMA\_\-PC0\_\-GET}}
+\index{DMA\_\-PC0\_\-GET@{DMA\_\-PC0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PC0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC0)}}
+\label{a00548_a0502743d830bbd67012ae305271e7433}
+
+
+Definition at line 717 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aed6320f09ab94693c563d3e717e67696}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PC0\_\-SET@{DMA\_\-PC0\_\-SET}}
+\index{DMA\_\-PC0\_\-SET@{DMA\_\-PC0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PC0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC0, 1)}}
+\label{a00548_aed6320f09ab94693c563d3e717e67696}
+
+
+Definition at line 719 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a700fe1ec8617eaed6c5560ed6294ffcd}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PC1\_\-CLEAR@{DMA\_\-PC1\_\-CLEAR}}
+\index{DMA\_\-PC1\_\-CLEAR@{DMA\_\-PC1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PC1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC1, 0)}}
+\label{a00548_a700fe1ec8617eaed6c5560ed6294ffcd}
+
+
+Definition at line 710 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aa03053ca00d868bf0d653b39c0a3a3c9}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PC1\_\-GET@{DMA\_\-PC1\_\-GET}}
+\index{DMA\_\-PC1\_\-GET@{DMA\_\-PC1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PC1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC1)}}
+\label{a00548_aa03053ca00d868bf0d653b39c0a3a3c9}
+
+
+Definition at line 706 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a0fb27f20646291025550ca311d8e2bb9}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PC1\_\-SET@{DMA\_\-PC1\_\-SET}}
+\index{DMA\_\-PC1\_\-SET@{DMA\_\-PC1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PC1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC1, 1)}}
+\label{a00548_a0fb27f20646291025550ca311d8e2bb9}
+
+
+Definition at line 708 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ac6a7bf06471e64496a88456f842e5145}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PC2\_\-CLEAR@{DMA\_\-PC2\_\-CLEAR}}
+\index{DMA\_\-PC2\_\-CLEAR@{DMA\_\-PC2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PC2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC2, 0)}}
+\label{a00548_ac6a7bf06471e64496a88456f842e5145}
+
+
+Definition at line 699 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a5f10a162baaa08223ec6e2b92d716b8d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PC2\_\-GET@{DMA\_\-PC2\_\-GET}}
+\index{DMA\_\-PC2\_\-GET@{DMA\_\-PC2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PC2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC2)}}
+\label{a00548_a5f10a162baaa08223ec6e2b92d716b8d}
+
+
+Definition at line 695 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ac7deac44e697ec30a701b55a793a0e21}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PC2\_\-SET@{DMA\_\-PC2\_\-SET}}
+\index{DMA\_\-PC2\_\-SET@{DMA\_\-PC2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PC2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PC2, 1)}}
+\label{a00548_ac7deac44e697ec30a701b55a793a0e21}
+
+
+Definition at line 697 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_adb3e73956a89bb0ac70a73ba632d2611}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PS0\_\-CLEAR@{DMA\_\-PS0\_\-CLEAR}}
+\index{DMA\_\-PS0\_\-CLEAR@{DMA\_\-PS0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PS0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS0, 0)}}
+\label{a00548_adb3e73956a89bb0ac70a73ba632d2611}
+
+
+Definition at line 674 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a1a2f592c3d02ac5355fd65baf03c8176}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PS0\_\-GET@{DMA\_\-PS0\_\-GET}}
+\index{DMA\_\-PS0\_\-GET@{DMA\_\-PS0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS0)}}
+\label{a00548_a1a2f592c3d02ac5355fd65baf03c8176}
+
+
+Definition at line 670 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a76dae545125f04dce616b888baf3c619}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PS0\_\-SET@{DMA\_\-PS0\_\-SET}}
+\index{DMA\_\-PS0\_\-SET@{DMA\_\-PS0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PS0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS0, 1)}}
+\label{a00548_a76dae545125f04dce616b888baf3c619}
+
+
+Definition at line 672 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_acf18b684a19a037c1120f7e2860ed7ab}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PS1\_\-CLEAR@{DMA\_\-PS1\_\-CLEAR}}
+\index{DMA\_\-PS1\_\-CLEAR@{DMA\_\-PS1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PS1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS1, 0)}}
+\label{a00548_acf18b684a19a037c1120f7e2860ed7ab}
+
+
+Definition at line 663 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a9ecfcd0fb0dccbc2574cc7560fd10ded}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PS1\_\-GET@{DMA\_\-PS1\_\-GET}}
+\index{DMA\_\-PS1\_\-GET@{DMA\_\-PS1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS1)}}
+\label{a00548_a9ecfcd0fb0dccbc2574cc7560fd10ded}
+
+
+Definition at line 659 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aa66a4e7b7029da48f273ce578b9daf70}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PS1\_\-SET@{DMA\_\-PS1\_\-SET}}
+\index{DMA\_\-PS1\_\-SET@{DMA\_\-PS1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PS1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS1, 1)}}
+\label{a00548_aa66a4e7b7029da48f273ce578b9daf70}
+
+
+Definition at line 661 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a32b673c4554064d6b42ec9d796422b7d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PS2\_\-CLEAR@{DMA\_\-PS2\_\-CLEAR}}
+\index{DMA\_\-PS2\_\-CLEAR@{DMA\_\-PS2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PS2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS2, 0)}}
+\label{a00548_a32b673c4554064d6b42ec9d796422b7d}
+
+
+Definition at line 652 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a7abbeae1bdf88c7d2d4802063647bf13}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PS2\_\-GET@{DMA\_\-PS2\_\-GET}}
+\index{DMA\_\-PS2\_\-GET@{DMA\_\-PS2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS2)}}
+\label{a00548_a7abbeae1bdf88c7d2d4802063647bf13}
+
+
+Definition at line 648 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_abf0646f81e1da097e411ca4953db96f3}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-PS2\_\-SET@{DMA\_\-PS2\_\-SET}}
+\index{DMA\_\-PS2\_\-SET@{DMA\_\-PS2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-PS2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-PS2, 1)}}
+\label{a00548_abf0646f81e1da097e411ca4953db96f3}
+
+
+Definition at line 650 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a6955922a392f4112276c59daaa5453b6}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMC0\_\-CLEAR@{DMA\_\-RMC0\_\-CLEAR}}
+\index{DMA\_\-RMC0\_\-CLEAR@{DMA\_\-RMC0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMC0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC0, 0)}}
+\label{a00548_a6955922a392f4112276c59daaa5453b6}
+
+
+Definition at line 439 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a060a6ebd83671f9795c0675e7f731d45}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMC0\_\-GET@{DMA\_\-RMC0\_\-GET}}
+\index{DMA\_\-RMC0\_\-GET@{DMA\_\-RMC0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMC0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC0)}}
+\label{a00548_a060a6ebd83671f9795c0675e7f731d45}
+
+
+Definition at line 435 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ad92ae525a798d1227a947e4c26534154}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMC0\_\-SET@{DMA\_\-RMC0\_\-SET}}
+\index{DMA\_\-RMC0\_\-SET@{DMA\_\-RMC0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMC0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC0, 1)}}
+\label{a00548_ad92ae525a798d1227a947e4c26534154}
+
+
+Definition at line 437 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aba25198ba7aa003a855d63a6225eb4c0}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMC1\_\-CLEAR@{DMA\_\-RMC1\_\-CLEAR}}
+\index{DMA\_\-RMC1\_\-CLEAR@{DMA\_\-RMC1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMC1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC1, 0)}}
+\label{a00548_aba25198ba7aa003a855d63a6225eb4c0}
+
+
+Definition at line 428 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_afd6a33a9ad2fd40ca1c8367b4081fd86}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMC1\_\-GET@{DMA\_\-RMC1\_\-GET}}
+\index{DMA\_\-RMC1\_\-GET@{DMA\_\-RMC1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMC1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC1)}}
+\label{a00548_afd6a33a9ad2fd40ca1c8367b4081fd86}
+
+
+Definition at line 424 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a896f1f2b4fd36790fdd1724db11af9bf}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMC1\_\-SET@{DMA\_\-RMC1\_\-SET}}
+\index{DMA\_\-RMC1\_\-SET@{DMA\_\-RMC1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMC1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC1, 1)}}
+\label{a00548_a896f1f2b4fd36790fdd1724db11af9bf}
+
+
+Definition at line 426 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a2686543b586c17ef646bdf8a8cd7589f}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMC2\_\-CLEAR@{DMA\_\-RMC2\_\-CLEAR}}
+\index{DMA\_\-RMC2\_\-CLEAR@{DMA\_\-RMC2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMC2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC2, 0)}}
+\label{a00548_a2686543b586c17ef646bdf8a8cd7589f}
+
+
+Definition at line 417 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a572273adc2b054690d82f7d0ea842945}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMC2\_\-GET@{DMA\_\-RMC2\_\-GET}}
+\index{DMA\_\-RMC2\_\-GET@{DMA\_\-RMC2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMC2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC2)}}
+\label{a00548_a572273adc2b054690d82f7d0ea842945}
+
+
+Definition at line 413 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ad7b812ee3d9158b52f8848cf8eefd03d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMC2\_\-SET@{DMA\_\-RMC2\_\-SET}}
+\index{DMA\_\-RMC2\_\-SET@{DMA\_\-RMC2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMC2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMC2, 1)}}
+\label{a00548_ad7b812ee3d9158b52f8848cf8eefd03d}
+
+
+Definition at line 415 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aa92e745c7a4342d38933f9bb81337d1c}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMS0\_\-CLEAR@{DMA\_\-RMS0\_\-CLEAR}}
+\index{DMA\_\-RMS0\_\-CLEAR@{DMA\_\-RMS0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMS0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS0, 0)}}
+\label{a00548_aa92e745c7a4342d38933f9bb81337d1c}
+
+
+Definition at line 392 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a6b3a3aefa0268529da37432009a1baa5}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMS0\_\-GET@{DMA\_\-RMS0\_\-GET}}
+\index{DMA\_\-RMS0\_\-GET@{DMA\_\-RMS0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS0)}}
+\label{a00548_a6b3a3aefa0268529da37432009a1baa5}
+
+
+Definition at line 388 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_af01cf37d6a84fc67cbb6d0af265b9134}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMS0\_\-SET@{DMA\_\-RMS0\_\-SET}}
+\index{DMA\_\-RMS0\_\-SET@{DMA\_\-RMS0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMS0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS0, 1)}}
+\label{a00548_af01cf37d6a84fc67cbb6d0af265b9134}
+
+
+Definition at line 390 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a598af5bcbff4dd3dd99bd3fec64b5b0d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMS1\_\-CLEAR@{DMA\_\-RMS1\_\-CLEAR}}
+\index{DMA\_\-RMS1\_\-CLEAR@{DMA\_\-RMS1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMS1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS1, 0)}}
+\label{a00548_a598af5bcbff4dd3dd99bd3fec64b5b0d}
+
+
+Definition at line 381 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a72ebaa02529a20255673fab6b6ce9053}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMS1\_\-GET@{DMA\_\-RMS1\_\-GET}}
+\index{DMA\_\-RMS1\_\-GET@{DMA\_\-RMS1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS1)}}
+\label{a00548_a72ebaa02529a20255673fab6b6ce9053}
+
+
+Definition at line 377 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ac5da6f34fc8d1ff8e87dcace7cc2922b}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMS1\_\-SET@{DMA\_\-RMS1\_\-SET}}
+\index{DMA\_\-RMS1\_\-SET@{DMA\_\-RMS1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMS1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS1, 1)}}
+\label{a00548_ac5da6f34fc8d1ff8e87dcace7cc2922b}
+
+
+Definition at line 379 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ae667fd9a1539d06789244a6ab6357188}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMS2\_\-CLEAR@{DMA\_\-RMS2\_\-CLEAR}}
+\index{DMA\_\-RMS2\_\-CLEAR@{DMA\_\-RMS2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMS2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS2, 0)}}
+\label{a00548_ae667fd9a1539d06789244a6ab6357188}
+
+
+Definition at line 370 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a51ef19a37266d47fdd73e13b7e5929aa}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMS2\_\-GET@{DMA\_\-RMS2\_\-GET}}
+\index{DMA\_\-RMS2\_\-GET@{DMA\_\-RMS2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS2)}}
+\label{a00548_a51ef19a37266d47fdd73e13b7e5929aa}
+
+
+Definition at line 366 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a8f057811e9148d71087f3abdf22e318f}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RMS2\_\-SET@{DMA\_\-RMS2\_\-SET}}
+\index{DMA\_\-RMS2\_\-SET@{DMA\_\-RMS2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RMS2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RMS2, 1)}}
+\label{a00548_a8f057811e9148d71087f3abdf22e318f}
+
+
+Definition at line 368 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ab1bef8eff2e945a03db0642820b23ba6}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RS0\_\-CLEAR@{DMA\_\-RS0\_\-CLEAR}}
+\index{DMA\_\-RS0\_\-CLEAR@{DMA\_\-RS0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RS0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS0, 0)}}
+\label{a00548_ab1bef8eff2e945a03db0642820b23ba6}
+
+
+Definition at line 204 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a9c003228c85e73de0b8b08124317287c}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RS0\_\-GET@{DMA\_\-RS0\_\-GET}}
+\index{DMA\_\-RS0\_\-GET@{DMA\_\-RS0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS0)}}
+\label{a00548_a9c003228c85e73de0b8b08124317287c}
+
+
+Definition at line 200 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a405e50e0d82f06f31cc26bd6abb25aa1}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RS0\_\-SET@{DMA\_\-RS0\_\-SET}}
+\index{DMA\_\-RS0\_\-SET@{DMA\_\-RS0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RS0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS0, 1)}}
+\label{a00548_a405e50e0d82f06f31cc26bd6abb25aa1}
+
+
+Definition at line 202 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a21294fb718648778a6767230ceaad1d9}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RS1\_\-CLEAR@{DMA\_\-RS1\_\-CLEAR}}
+\index{DMA\_\-RS1\_\-CLEAR@{DMA\_\-RS1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RS1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS1, 0)}}
+\label{a00548_a21294fb718648778a6767230ceaad1d9}
+
+
+Definition at line 193 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a243abce1dd03462aa4c984c6b6aed39a}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RS1\_\-GET@{DMA\_\-RS1\_\-GET}}
+\index{DMA\_\-RS1\_\-GET@{DMA\_\-RS1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS1)}}
+\label{a00548_a243abce1dd03462aa4c984c6b6aed39a}
+
+
+Definition at line 189 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a58d011526951b33ac0311ea6a8840a17}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RS1\_\-SET@{DMA\_\-RS1\_\-SET}}
+\index{DMA\_\-RS1\_\-SET@{DMA\_\-RS1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RS1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS1, 1)}}
+\label{a00548_a58d011526951b33ac0311ea6a8840a17}
+
+
+Definition at line 191 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a56cf33a3ff47843e93b59f3c9215c190}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RS2\_\-CLEAR@{DMA\_\-RS2\_\-CLEAR}}
+\index{DMA\_\-RS2\_\-CLEAR@{DMA\_\-RS2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RS2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS2, 0)}}
+\label{a00548_a56cf33a3ff47843e93b59f3c9215c190}
+
+
+Definition at line 182 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a80c2ed408c1d84abcc8cd48b1ea47a76}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RS2\_\-GET@{DMA\_\-RS2\_\-GET}}
+\index{DMA\_\-RS2\_\-GET@{DMA\_\-RS2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS2)}}
+\label{a00548_a80c2ed408c1d84abcc8cd48b1ea47a76}
+
+
+Definition at line 178 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a3c74db6964b09cf9d719e23e0b6f418d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-RS2\_\-SET@{DMA\_\-RS2\_\-SET}}
+\index{DMA\_\-RS2\_\-SET@{DMA\_\-RS2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-RS2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-RS2, 1)}}
+\label{a00548_a3c74db6964b09cf9d719e23e0b6f418d}
+
+
+Definition at line 180 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a6ed9c3f99fc66201bac0fc50d6efe249}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-SR0\_\-CLEAR@{DMA\_\-SR0\_\-CLEAR}}
+\index{DMA\_\-SR0\_\-CLEAR@{DMA\_\-SR0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-SR0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR0, 0)}}
+\label{a00548_a6ed9c3f99fc66201bac0fc50d6efe249}
+
+
+Definition at line 251 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aba854eaaf11af9996e84b5b8b8b071a3}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-SR0\_\-GET@{DMA\_\-SR0\_\-GET}}
+\index{DMA\_\-SR0\_\-GET@{DMA\_\-SR0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-SR0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR0)}}
+\label{a00548_aba854eaaf11af9996e84b5b8b8b071a3}
+
+
+Definition at line 247 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a1e6689ee1e23c15db22d1f9c0498da6c}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-SR0\_\-SET@{DMA\_\-SR0\_\-SET}}
+\index{DMA\_\-SR0\_\-SET@{DMA\_\-SR0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-SR0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR0, 1)}}
+\label{a00548_a1e6689ee1e23c15db22d1f9c0498da6c}
+
+
+Definition at line 249 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_abb047fba877eb77ea1cc366961dde56a}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-SR1\_\-CLEAR@{DMA\_\-SR1\_\-CLEAR}}
+\index{DMA\_\-SR1\_\-CLEAR@{DMA\_\-SR1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-SR1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR1, 0)}}
+\label{a00548_abb047fba877eb77ea1cc366961dde56a}
+
+
+Definition at line 240 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ae3221e389cb363ca48d3499b8bd0c341}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-SR1\_\-GET@{DMA\_\-SR1\_\-GET}}
+\index{DMA\_\-SR1\_\-GET@{DMA\_\-SR1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-SR1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR1)}}
+\label{a00548_ae3221e389cb363ca48d3499b8bd0c341}
+
+
+Definition at line 236 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a41d19b9fc911cc3609371241f106d8e3}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-SR1\_\-SET@{DMA\_\-SR1\_\-SET}}
+\index{DMA\_\-SR1\_\-SET@{DMA\_\-SR1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-SR1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR1, 1)}}
+\label{a00548_a41d19b9fc911cc3609371241f106d8e3}
+
+
+Definition at line 238 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ae84ab428a3f36df085c382892929d627}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-SR2\_\-CLEAR@{DMA\_\-SR2\_\-CLEAR}}
+\index{DMA\_\-SR2\_\-CLEAR@{DMA\_\-SR2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-SR2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR2, 0)}}
+\label{a00548_ae84ab428a3f36df085c382892929d627}
+
+
+Definition at line 229 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a03df77af38fb3a79c6cb5f7f5f6f7be2}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-SR2\_\-GET@{DMA\_\-SR2\_\-GET}}
+\index{DMA\_\-SR2\_\-GET@{DMA\_\-SR2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-SR2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR2)}}
+\label{a00548_a03df77af38fb3a79c6cb5f7f5f6f7be2}
+
+
+Definition at line 225 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a2883d819b72adb613c5ebfa2b41d400d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-SR2\_\-SET@{DMA\_\-SR2\_\-SET}}
+\index{DMA\_\-SR2\_\-SET@{DMA\_\-SR2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-SR2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-SR2, 1)}}
+\label{a00548_a2883d819b72adb613c5ebfa2b41d400d}
+
+
+Definition at line 227 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_add7dbff5a0618ca68dec41b3e0a95753}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ST\_\-GET@{DMA\_\-ST\_\-GET}}
+\index{DMA\_\-ST\_\-GET@{DMA\_\-ST\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ST\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ST\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ST)}}
+\label{a00548_add7dbff5a0618ca68dec41b3e0a95753}
+
+
+Definition at line 74 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a354e7e406e1cc9173fe0abc7926801bb}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-ST\_\-SET@{DMA\_\-ST\_\-SET}}
+\index{DMA\_\-ST\_\-SET@{DMA\_\-ST\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-ST\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ST\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-ST, (value))}}
+\label{a00548_a354e7e406e1cc9173fe0abc7926801bb}
+
+
+Definition at line 76 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a536a0569b69b2338c968d3e3e95713a1}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-STATUS\_\-GET@{DMA\_\-STATUS\_\-GET}}
+\index{DMA\_\-STATUS\_\-GET@{DMA\_\-STATUS\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, DMA\_\-STATUS))}}
+\label{a00548_a536a0569b69b2338c968d3e3e95713a1}
+
+
+Definition at line 49 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_abdc028e92c227552bee727cf38356929}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-TS\_\-GET@{DMA\_\-TS\_\-GET}}
+\index{DMA\_\-TS\_\-GET@{DMA\_\-TS\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-TS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-TS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-TS)}}
+\label{a00548_abdc028e92c227552bee727cf38356929}
+
+
+Definition at line 56 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a1b007103ced38b2b77dd52ba31b76167}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-TS\_\-SET@{DMA\_\-TS\_\-SET}}
+\index{DMA\_\-TS\_\-SET@{DMA\_\-TS\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-TS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-TS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-TS, (value))}}
+\label{a00548_a1b007103ced38b2b77dd52ba31b76167}
+
+
+Definition at line 58 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a6ae3d579ebb21f3a99df20964e414f82}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBC0\_\-CLEAR@{DMA\_\-UBC0\_\-CLEAR}}
+\index{DMA\_\-UBC0\_\-CLEAR@{DMA\_\-UBC0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBC0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC0, 0)}}
+\label{a00548_a6ae3d579ebb21f3a99df20964e414f82}
+
+
+Definition at line 345 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a2a90400bc44a1cad0fee54fff1bc3a2f}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBC0\_\-GET@{DMA\_\-UBC0\_\-GET}}
+\index{DMA\_\-UBC0\_\-GET@{DMA\_\-UBC0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBC0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC0)}}
+\label{a00548_a2a90400bc44a1cad0fee54fff1bc3a2f}
+
+
+Definition at line 341 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a3ecc19116e71cc2320727a303dee2634}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBC0\_\-SET@{DMA\_\-UBC0\_\-SET}}
+\index{DMA\_\-UBC0\_\-SET@{DMA\_\-UBC0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBC0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC0, 1)}}
+\label{a00548_a3ecc19116e71cc2320727a303dee2634}
+
+
+Definition at line 343 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a334e451bd305502bd002d7353d7c8835}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBC1\_\-CLEAR@{DMA\_\-UBC1\_\-CLEAR}}
+\index{DMA\_\-UBC1\_\-CLEAR@{DMA\_\-UBC1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBC1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC1, 0)}}
+\label{a00548_a334e451bd305502bd002d7353d7c8835}
+
+
+Definition at line 334 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ab40c738d0f30bd17e298fb4d7c25cf90}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBC1\_\-GET@{DMA\_\-UBC1\_\-GET}}
+\index{DMA\_\-UBC1\_\-GET@{DMA\_\-UBC1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBC1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC1)}}
+\label{a00548_ab40c738d0f30bd17e298fb4d7c25cf90}
+
+
+Definition at line 330 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a62a22d5adbb6b7667b6554bece8a9869}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBC1\_\-SET@{DMA\_\-UBC1\_\-SET}}
+\index{DMA\_\-UBC1\_\-SET@{DMA\_\-UBC1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBC1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC1, 1)}}
+\label{a00548_a62a22d5adbb6b7667b6554bece8a9869}
+
+
+Definition at line 332 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_af0cd9df92303f02e79bf5f8c768f887e}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBC2\_\-CLEAR@{DMA\_\-UBC2\_\-CLEAR}}
+\index{DMA\_\-UBC2\_\-CLEAR@{DMA\_\-UBC2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBC2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC2, 0)}}
+\label{a00548_af0cd9df92303f02e79bf5f8c768f887e}
+
+
+Definition at line 323 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a7543f13f6e938c8f56c00c4937771bf0}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBC2\_\-GET@{DMA\_\-UBC2\_\-GET}}
+\index{DMA\_\-UBC2\_\-GET@{DMA\_\-UBC2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBC2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC2)}}
+\label{a00548_a7543f13f6e938c8f56c00c4937771bf0}
+
+
+Definition at line 319 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a1e93cafa4ff512c5786b3f06693fe904}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBC2\_\-SET@{DMA\_\-UBC2\_\-SET}}
+\index{DMA\_\-UBC2\_\-SET@{DMA\_\-UBC2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBC2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBC2, 1)}}
+\label{a00548_a1e93cafa4ff512c5786b3f06693fe904}
+
+
+Definition at line 321 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a05872cb711a77e489d1f480df93bbe58}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBS0\_\-CLEAR@{DMA\_\-UBS0\_\-CLEAR}}
+\index{DMA\_\-UBS0\_\-CLEAR@{DMA\_\-UBS0\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBS0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS0, 0)}}
+\label{a00548_a05872cb711a77e489d1f480df93bbe58}
+
+
+Definition at line 298 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_addcdeeb513c806d7788d37dcaada5111}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBS0\_\-GET@{DMA\_\-UBS0\_\-GET}}
+\index{DMA\_\-UBS0\_\-GET@{DMA\_\-UBS0\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS0)}}
+\label{a00548_addcdeeb513c806d7788d37dcaada5111}
+
+
+Definition at line 294 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a72b0dfbac2f270a03fc1c8ab2be235a0}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBS0\_\-SET@{DMA\_\-UBS0\_\-SET}}
+\index{DMA\_\-UBS0\_\-SET@{DMA\_\-UBS0\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBS0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS0, 1)}}
+\label{a00548_a72b0dfbac2f270a03fc1c8ab2be235a0}
+
+
+Definition at line 296 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ab677f8c07aac916c791e5dcd4089d98d}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBS1\_\-CLEAR@{DMA\_\-UBS1\_\-CLEAR}}
+\index{DMA\_\-UBS1\_\-CLEAR@{DMA\_\-UBS1\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBS1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS1, 0)}}
+\label{a00548_ab677f8c07aac916c791e5dcd4089d98d}
+
+
+Definition at line 287 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ad97649b40805962ebf3746e2c6a6e6af}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBS1\_\-GET@{DMA\_\-UBS1\_\-GET}}
+\index{DMA\_\-UBS1\_\-GET@{DMA\_\-UBS1\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS1)}}
+\label{a00548_ad97649b40805962ebf3746e2c6a6e6af}
+
+
+Definition at line 283 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_a7a0a7628f63721dc31523f7eb190a0c5}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBS1\_\-SET@{DMA\_\-UBS1\_\-SET}}
+\index{DMA\_\-UBS1\_\-SET@{DMA\_\-UBS1\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBS1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS1, 1)}}
+\label{a00548_a7a0a7628f63721dc31523f7eb190a0c5}
+
+
+Definition at line 285 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_ad4b0a2f591848dc34930a15a5da579db}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBS2\_\-CLEAR@{DMA\_\-UBS2\_\-CLEAR}}
+\index{DMA\_\-UBS2\_\-CLEAR@{DMA\_\-UBS2\_\-CLEAR}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBS2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS2, 0)}}
+\label{a00548_ad4b0a2f591848dc34930a15a5da579db}
+
+
+Definition at line 276 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_aca560f96ccd5a71c7d17c4c6bd98b426}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBS2\_\-GET@{DMA\_\-UBS2\_\-GET}}
+\index{DMA\_\-UBS2\_\-GET@{DMA\_\-UBS2\_\-GET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS2)}}
+\label{a00548_aca560f96ccd5a71c7d17c4c6bd98b426}
+
+
+Definition at line 272 of file gsn\_\-reg\_\-dma\_\-spec.h.
+
+\hypertarget{a00548_adfd9f0e8ea6fa2bc57ac05a5bd9010d0}{
+\index{gsn\_\-reg\_\-dma\_\-spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}!DMA\_\-UBS2\_\-SET@{DMA\_\-UBS2\_\-SET}}
+\index{DMA\_\-UBS2\_\-SET@{DMA\_\-UBS2\_\-SET}!gsn_reg_dma_spec.h@{gsn\_\-reg\_\-dma\_\-spec.h}}
+\subsubsection[{DMA\_\-UBS2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, DMA\_\-UBS2, 1)}}
+\label{a00548_adfd9f0e8ea6fa2bc57ac05a5bd9010d0}
+
+
+Definition at line 274 of file gsn\_\-reg\_\-dma\_\-spec.h.
+

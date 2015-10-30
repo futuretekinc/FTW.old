@@ -1,0 +1,97 @@
+\hypertarget{a00134}{
+\section{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO Struct Reference}
+\label{a00134}\index{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}}
+}
+
+
+TBTT Error information type.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-mac\_\-def.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00134_a3d1414bdcc8e606c7ce01b0ae1ecd3f5}{tbttError}
+\item 
+\hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00134_a6ee6d5e38a858420f2c05255880cd74b}{tbttErrorInterval}
+\item 
+\hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00134_a9363de710e6e10227bd2cba50db103f1}{beaconTimestamp}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00134_a500e8dd044fc9ab3a3667118412b098a}{beaconInterval}
+\item 
+\hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00134_a179f80a8972ebcf158d1107182fd1ca3}{tbttErrorUpdateTime}
+\item 
+\hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00134_a50a8d50f9a6fb53e3f5aa9d2dd67606a}{tbttSta}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+TBTT Error information type. 
+
+Definition at line 1326 of file gsn\_\-mac\_\-def.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00134_a500e8dd044fc9ab3a3667118412b098a}{
+\index{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}!beaconInterval@{beaconInterval}}
+\index{beaconInterval@{beaconInterval}!GSN_MAC_TBTT_ERROR_INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}}
+\subsubsection[{beaconInterval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf beaconInterval}}}
+\label{a00134_a500e8dd044fc9ab3a3667118412b098a}
+beacon interval in TUs (1TU=1024us) of current WLAN 
+
+Definition at line 1335 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00134_a9363de710e6e10227bd2cba50db103f1}{
+\index{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}!beaconTimestamp@{beaconTimestamp}}
+\index{beaconTimestamp@{beaconTimestamp}!GSN_MAC_TBTT_ERROR_INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}}
+\subsubsection[{beaconTimestamp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ULONG64} {\bf beaconTimestamp}}}
+\label{a00134_a9363de710e6e10227bd2cba50db103f1}
+timestamp in the received beacon (microseconds) 
+
+Definition at line 1334 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00134_a3d1414bdcc8e606c7ce01b0ae1ecd3f5}{
+\index{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}!tbttError@{tbttError}}
+\index{tbttError@{tbttError}!GSN_MAC_TBTT_ERROR_INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}}
+\subsubsection[{tbttError}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf tbttError}}}
+\label{a00134_a3d1414bdcc8e606c7ce01b0ae1ecd3f5}
+TBTT error in microseconds, this is signed 
+
+Definition at line 1328 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00134_a6ee6d5e38a858420f2c05255880cd74b}{
+\index{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}!tbttErrorInterval@{tbttErrorInterval}}
+\index{tbttErrorInterval@{tbttErrorInterval}!GSN_MAC_TBTT_ERROR_INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}}
+\subsubsection[{tbttErrorInterval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ULONG64} {\bf tbttErrorInterval}}}
+\label{a00134_a6ee6d5e38a858420f2c05255880cd74b}
+Interval over which error was calculated. This gives correct interval only when the system is awake (sleep,deep-\/sleep are fine) but not when system goes to standby in between. 
+
+Definition at line 1329 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00134_a179f80a8972ebcf158d1107182fd1ca3}{
+\index{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}!tbttErrorUpdateTime@{tbttErrorUpdateTime}}
+\index{tbttErrorUpdateTime@{tbttErrorUpdateTime}!GSN_MAC_TBTT_ERROR_INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}}
+\subsubsection[{tbttErrorUpdateTime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ULONG64} {\bf tbttErrorUpdateTime}}}
+\label{a00134_a179f80a8972ebcf158d1107182fd1ca3}
+RTC time at which TBTT error was computed 
+
+Definition at line 1336 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00134_a50a8d50f9a6fb53e3f5aa9d2dd67606a}{
+\index{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}!tbttSta@{tbttSta}}
+\index{tbttSta@{tbttSta}!GSN_MAC_TBTT_ERROR_INFO@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}}
+\subsubsection[{tbttSta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ULONG64} {\bf tbttSta}}}
+\label{a00134_a50a8d50f9a6fb53e3f5aa9d2dd67606a}
+tbttSta is the estimated TBTT programmed for radio wakeup for receiving beacon; Upon receiving the beacon, the TBTT error info is updated and AFW signaled. 
+
+Definition at line 1337 of file gsn\_\-mac\_\-def.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00522}{gsn\_\-mac\_\-def.h}\end{DoxyCompactItemize}

@@ -1,0 +1,717 @@
+\hypertarget{a00666}{
+\section{GSN HTTP Server}
+\label{a00666}\index{GSN HTTP Server@{GSN HTTP Server}}
+}
+
+
+GSN HTTP Server Wrapper and URI Handler.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00097}{GSN\_\-HTTPD\_\-URI\_\-HANDLER}
+\begin{DoxyCompactList}\small\item\em Definition of URI handler structure Definition of the URI handler structure that is used by the HTTPD URI handler to dispatch requests to URIs appropriately. \end{DoxyCompactList}\item 
+struct \hyperlink{a00095}{GSN\_\-HTTPD\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em Definition of Config structure governing behavior of HTTPD server Definition of the Config structure that governs the behavior of the HTTPD server. Application can set the various parameters of this structure and the HTTP server will be configured appropriately when GsnHttpd\_\-Start is called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00666_ga2a0e4d865dc418b0c680dfd0e55a91f8}{GSN\_\-HTTPD\_\-MAX\_\-USERNAME\_\-LEN}~32
+\begin{DoxyCompactList}\small\item\em Max HTTPD user name length This macro defines the maximum HTTPD user name length supported. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_ga230f65ce2cb2f51b5a77ac10e8c41911}{GSN\_\-HTTPD\_\-MAX\_\-PASSWORD\_\-LEN}~32
+\begin{DoxyCompactList}\small\item\em Max HTTPD Password length This macro defines the maximum HTTPD password length supported. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_ga57177849568fdcc8676db8fafcc80b74}{GSN\_\-HTTPD\_\-MAX\_\-URI\_\-HANDLERS}~10
+\begin{DoxyCompactList}\small\item\em Max Number of URI Handlers This macro defines the size of the URI handler table. This should be set appropriately to ensure the enough memory is available and that memory is not wasted. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_ga95da763c129195cbff1fce21503d6406}{GSN\_\-HTTPD\_\-MAX\_\-URI\_\-LENGTH}~64
+\begin{DoxyCompactList}\small\item\em Max Length of the URI This macro defines the maximum length of the URI that is supported. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_ga53602fa8c89b89819cae837fc8ba07cb}{GSN\_\-HTTPD\_\-MAX\_\-DESC\_\-LENGTH}~64
+\begin{DoxyCompactList}\small\item\em Max Length of the URI This macro defines the maximum length of the URI description that is supported. The description string should be short and less than this value. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_ga824f47b1441b0279d607862e43d2fc3e}{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-NONE}~0
+\begin{DoxyCompactList}\small\item\em Definition of HTTP Method when none is supported. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_gacd507c9947ef6c72439a7a6b334ba992}{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET}~0x1
+\begin{DoxyCompactList}\small\item\em Definition of HTTP GET Method. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_gafcfe6d0dabbefac822f05864c5b15aa6}{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-POST}~0x2
+\begin{DoxyCompactList}\small\item\em Definition of HTTP POST Method. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_ga770c378292f790cfba51990b41cf58dc}{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-PUT}~0x3
+\begin{DoxyCompactList}\small\item\em Definition of HTTP PUT Method. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_ga2c713aa7f2f3beef019826bca59fae7a}{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-DELETE}~0x4
+\begin{DoxyCompactList}\small\item\em Definition of HTTP PUT Method. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_ga02224e5a5226487aecd6d50f7812ed07}{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET\_\-POST}~(GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET $|$ GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-POST)
+\begin{DoxyCompactList}\small\item\em Definition of HTTP GET + POST Method. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_gad35e4cccb1b941e871e8679071c231ff}{GSN\_\-HTTPD\_\-API\_\-SYS\_\-BASE\_\-URI}~\char`\"{}/gainspan/system\char`\"{}
+\begin{DoxyCompactList}\small\item\em Base URI for System API's Base URI for System API's. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_ga0d52f5c67895eb49f4680ca1b4d97498}{GSN\_\-HTTPD\_\-API\_\-PROFILE\_\-BASE\_\-URI}~\char`\"{}/gainspan/profile\char`\"{}
+\begin{DoxyCompactList}\small\item\em Base URI for Profile API's Base URI for Profile API's. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_ga65ea05b0dabc770285f0a18270af5fc7}{GSN\_\-HTTPD\_\-BUF\_\-SIZE}~(3$\ast$512)
+\begin{DoxyCompactList}\small\item\em Max HTTPD Response buffer size This macro defines the size of the buffer used for sending HTTP responses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{a00666_ga97ddf6ff1568f9984c83a2161cd9f49d}{GSN\_\-HTTPD\_\-STATUS\_\-T}($\ast$ \hyperlink{a00666_ga37351c58635a4a2a10675d5ea28e37be}{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-FN\_\-T} )(ttHttpdUserEvent event, const char $\ast$uri, ttHttpdUserConHandle conn\_\-handler)
+\begin{DoxyCompactList}\small\item\em Definition of the callback function for processing events from HTTPD. Definition of the callback function for processing events from HTTPD. Each URI handler has to specify a callback function to handle events being posted from the HTTP server. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00097}{GSN\_\-HTTPD\_\-URI\_\-HANDLER} \hyperlink{a00666_ga3dd2e2bbc2820f5f49868effb95b371a}{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-T}
+\begin{DoxyCompactList}\small\item\em Definition of URI handler structure Definition of the URI handler structure that is used by the HTTPD URI handler to dispatch requests to URIs appropriately. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00095}{GSN\_\-HTTPD\_\-CONFIG} \hyperlink{a00666_ga5049df4d9f9df24293e341c70976f6c3}{GSN\_\-HTTPD\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em Definition of Config structure governing behavior of HTTPD server Definition of the Config structure that governs the behavior of the HTTPD server. Application can set the various parameters of this structure and the HTTP server will be configured appropriately when GsnHttpd\_\-Start is called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00666_ga97ddf6ff1568f9984c83a2161cd9f49d}{GSN\_\-HTTPD\_\-STATUS\_\-T} \{ \par
+\hyperlink{a00666_gga97ddf6ff1568f9984c83a2161cd9f49dac44d80d13effc5b74cb543f72c08049c}{GSN\_\-HTTPD\_\-SUCCESS} =  0, 
+\par
+\hyperlink{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da8780e55822019c621b341656612915f3}{GSN\_\-HTTPD\_\-FAILURE}, 
+\par
+\hyperlink{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da698a2fe2a47b1082d5e063eef0eeb193}{GSN\_\-HTTPD\_\-ALREADY\_\-STARTED}, 
+\par
+\hyperlink{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da5018ed43ccffdb7c736b44d1e5c7f378}{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-NO\_\-MEM}, 
+\par
+\hyperlink{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da332145bf766def5f742322a03ea27835}{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-INVALID}
+ \}
+\begin{DoxyCompactList}\small\item\em Max HTTPD Wrapper/URI Handler status and error codes This data type defines the various status and error codes that can be returned by the HTTP Wrapper/URI Handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} \hyperlink{a00666_gae82a556385532a5c373c2c9700fa0959}{GsnHttpd\_\-Start} (\hyperlink{a00095}{GSN\_\-HTTPD\_\-CONFIG\_\-T} config, \hyperlink{a00459}{SERVER\_\-CERT\_\-DETAIL\_\-T} $\ast$pCred)
+\begin{DoxyCompactList}\small\item\em Function that takes the configuration parameters and starts HTTPD This function starts HTTPD with the parameters specified. In case stack buffer is not passed, it will attempt to allocate a stack on its own. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} \hyperlink{a00666_gadb4c2b217e18fcf95a912c9680fd29a2}{GsnHttpd\_\-Stop} ()
+\begin{DoxyCompactList}\small\item\em Function that stops the HTTPD server. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00666_gaa6cb01078a42676719b577ab37df15c4}{GsnHttpd\_\-IsRunning} ()
+\begin{DoxyCompactList}\small\item\em Function that checks whether the HTTPD server is running. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00666_ga4bf4a027427d6e572bfa6123b9ecb625}{GsnHttpd\_\-IsAuthEnabled} ()
+\begin{DoxyCompactList}\small\item\em Function that checks whether the Authentication is enabled in HTTPD. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00666_ga95afa0c13f59a7b224e60c11a051a45a}{GsnHttpd\_\-SendBuffer} (ttHttpdUserConHandle conHandle, const char $\ast$bufferPtr, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} bufferLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} flag, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} $\ast$errorCodePtr)
+\begin{DoxyCompactList}\small\item\em Send Buffer. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00666_ga9e05db18fe9e554159a3fe594492687d}{GsnHttpd\_\-SendBufferAndLastChunk} (ttHttpdUserConHandle conHandle, const \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$bufferPtr, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} bufferLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} flag, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} $\ast$errorCodePtr)
+\begin{DoxyCompactList}\small\item\em Send Buffer and indicate terminating chunk. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00666_ga04f2afbebcac5ab376d70b735803d69d}{GsnHttpd\_\-SendLastChunk} (ttHttpdUserConHandle conHandle, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} $\ast$errorCodePtr)
+\begin{DoxyCompactList}\small\item\em Sends terminating chunk. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$ \hyperlink{a00666_ga38a6f342aa4579945c64f4809c5feb20}{GsnHttpd\_\-GetBuffer} ()
+\begin{DoxyCompactList}\small\item\em Get a buffer to use for sending HTTP response. \end{DoxyCompactList}\item 
+void \hyperlink{a00666_ga98b1c525385ddbcbaac8ec8ba4d32ea4}{GsnHttpd\_\-ReleaseBuffer} (\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$bufPtr)
+\begin{DoxyCompactList}\small\item\em Release the buffer that was allocated by HTTPD. \end{DoxyCompactList}\item 
+ttHttpUserMethod \hyperlink{a00666_gaecd42418ea97610f5b55c35c5419cd13}{GsnHttpd\_\-GetHttpMethod} (ttHttpdUserConHandle conHandle)
+\begin{DoxyCompactList}\small\item\em Gets the HTTP method invoked on the connection handle. \end{DoxyCompactList}\item 
+void \hyperlink{a00666_ga1d8828de7be384020ba6bbb1ea26a47c}{GsnHttpd\_\-SetStrFromXmlStr} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$str, \hyperlink{a00436}{GSN\_\-XML\_\-STRING\_\-T} xml\_\-str, int str\_\-len)
+\begin{DoxyCompactList}\small\item\em Extracts the string from xml\_\-str This function extracts the string from a xml\_\-str representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00666_ga3004294919c3368623df769bbbc8e843}{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-XML}~0
+\begin{DoxyCompactList}\small\item\em Definitions of the various HTTP Content types There are definitions for the various content types that can be returned by the URI handlers. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00666_gadb38ca97283506dc6dc4fd43956d3f1b}{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-JSON}~1
+\item 
+\#define \hyperlink{a00666_ga19c52b08a8222ee99b7bbfb85ce76435}{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-HTML}~2
+\item 
+\#define \hyperlink{a00666_gac415fd2b4698131654ed19395cc07941}{GSN\_\-HTTPD\_\-CONTENT\_\-IMG\_\-GIF}~3
+\item 
+\#define \hyperlink{a00666_ga609fa91a2102bbc3f21d0fb9c2f492a9}{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-OCTSTRM}~4
+\item 
+\#define \hyperlink{a00666_ga401387dbe1a0b570c26f495cbd92e53a}{GSN\_\-HTTPD\_\-CONTENT\_\-TYPES\_\-MAX}~5
+\item 
+\#define \hyperlink{a00666_gafd71fee266007e7dd46c2453ed351e18}{GSN\_\-HTTPD\_\-CONTENT\_\-DEFAULT}~GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-XML
+\item 
+\#define \hyperlink{a00666_ga96878e559c11f82897b9a300d88d376c}{GSN\_\-USE\_\-IPV6}~0x01
+\item 
+\#define \hyperlink{a00666_ga1de955d22e5f48865ad9e80c3bdcf945}{GSN\_\-USE\_\-IPV4}~0x02
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN HTTP Server Wrapper and URI Handler. This file contains public definitions and API's for HTTP Server Wrapper and URI Handler. \par
+
+
+\par
+ This file contains public definitions and API's for HTTP Server Wrapper and URI Handler. The HTTP Server wrapper provides an API around the native web server making configuration much easier. The URI handler provides a mechanism for applications to attach handlers to URI's (resources). This allows applications to build a RESTful architecture based on HTTP APIs. 
+
+\subsection{Define Documentation}
+\hypertarget{a00666_ga0d52f5c67895eb49f4680ca1b4d97498}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-API\_\-PROFILE\_\-BASE\_\-URI@{GSN\_\-HTTPD\_\-API\_\-PROFILE\_\-BASE\_\-URI}}
+\index{GSN\_\-HTTPD\_\-API\_\-PROFILE\_\-BASE\_\-URI@{GSN\_\-HTTPD\_\-API\_\-PROFILE\_\-BASE\_\-URI}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-API\_\-PROFILE\_\-BASE\_\-URI}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-API\_\-PROFILE\_\-BASE\_\-URI~\char`\"{}/gainspan/profile\char`\"{}}}
+\label{a00666_ga0d52f5c67895eb49f4680ca1b4d97498}
+
+
+Base URI for Profile API's Base URI for Profile API's. 
+
+
+
+Definition at line 340 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_gad35e4cccb1b941e871e8679071c231ff}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-API\_\-SYS\_\-BASE\_\-URI@{GSN\_\-HTTPD\_\-API\_\-SYS\_\-BASE\_\-URI}}
+\index{GSN\_\-HTTPD\_\-API\_\-SYS\_\-BASE\_\-URI@{GSN\_\-HTTPD\_\-API\_\-SYS\_\-BASE\_\-URI}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-API\_\-SYS\_\-BASE\_\-URI}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-API\_\-SYS\_\-BASE\_\-URI~\char`\"{}/gainspan/system\char`\"{}}}
+\label{a00666_gad35e4cccb1b941e871e8679071c231ff}
+
+
+Base URI for System API's Base URI for System API's. 
+
+
+
+Definition at line 333 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga65ea05b0dabc770285f0a18270af5fc7}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-BUF\_\-SIZE@{GSN\_\-HTTPD\_\-BUF\_\-SIZE}}
+\index{GSN\_\-HTTPD\_\-BUF\_\-SIZE@{GSN\_\-HTTPD\_\-BUF\_\-SIZE}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-BUF\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-BUF\_\-SIZE~(3$\ast$512)}}
+\label{a00666_ga65ea05b0dabc770285f0a18270af5fc7}
+
+
+Max HTTPD Response buffer size This macro defines the size of the buffer used for sending HTTP responses. 
+
+
+
+Definition at line 368 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga19c52b08a8222ee99b7bbfb85ce76435}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-HTML@{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-HTML}}
+\index{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-HTML@{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-HTML}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-HTML}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-HTML~2}}
+\label{a00666_ga19c52b08a8222ee99b7bbfb85ce76435}
+
+
+Definition at line 204 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_gadb38ca97283506dc6dc4fd43956d3f1b}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-JSON@{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-JSON}}
+\index{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-JSON@{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-JSON}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-JSON}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-JSON~1}}
+\label{a00666_gadb38ca97283506dc6dc4fd43956d3f1b}
+
+
+Definition at line 203 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga609fa91a2102bbc3f21d0fb9c2f492a9}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-OCTSTRM@{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-OCTSTRM}}
+\index{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-OCTSTRM@{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-OCTSTRM}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-OCTSTRM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-OCTSTRM~4}}
+\label{a00666_ga609fa91a2102bbc3f21d0fb9c2f492a9}
+
+
+Definition at line 206 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga3004294919c3368623df769bbbc8e843}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-XML@{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-XML}}
+\index{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-XML@{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-XML}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-XML}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-XML~0}}
+\label{a00666_ga3004294919c3368623df769bbbc8e843}
+
+
+Definitions of the various HTTP Content types There are definitions for the various content types that can be returned by the URI handlers. 
+
+
+
+Definition at line 202 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_gafd71fee266007e7dd46c2453ed351e18}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-CONTENT\_\-DEFAULT@{GSN\_\-HTTPD\_\-CONTENT\_\-DEFAULT}}
+\index{GSN\_\-HTTPD\_\-CONTENT\_\-DEFAULT@{GSN\_\-HTTPD\_\-CONTENT\_\-DEFAULT}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-CONTENT\_\-DEFAULT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-CONTENT\_\-DEFAULT~GSN\_\-HTTPD\_\-CONTENT\_\-APP\_\-XML}}
+\label{a00666_gafd71fee266007e7dd46c2453ed351e18}
+
+
+Definition at line 208 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_gac415fd2b4698131654ed19395cc07941}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-CONTENT\_\-IMG\_\-GIF@{GSN\_\-HTTPD\_\-CONTENT\_\-IMG\_\-GIF}}
+\index{GSN\_\-HTTPD\_\-CONTENT\_\-IMG\_\-GIF@{GSN\_\-HTTPD\_\-CONTENT\_\-IMG\_\-GIF}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-CONTENT\_\-IMG\_\-GIF}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-CONTENT\_\-IMG\_\-GIF~3}}
+\label{a00666_gac415fd2b4698131654ed19395cc07941}
+
+
+Definition at line 205 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga401387dbe1a0b570c26f495cbd92e53a}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-CONTENT\_\-TYPES\_\-MAX@{GSN\_\-HTTPD\_\-CONTENT\_\-TYPES\_\-MAX}}
+\index{GSN\_\-HTTPD\_\-CONTENT\_\-TYPES\_\-MAX@{GSN\_\-HTTPD\_\-CONTENT\_\-TYPES\_\-MAX}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-CONTENT\_\-TYPES\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-CONTENT\_\-TYPES\_\-MAX~5}}
+\label{a00666_ga401387dbe1a0b570c26f495cbd92e53a}
+
+
+Definition at line 207 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga53602fa8c89b89819cae837fc8ba07cb}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-MAX\_\-DESC\_\-LENGTH@{GSN\_\-HTTPD\_\-MAX\_\-DESC\_\-LENGTH}}
+\index{GSN\_\-HTTPD\_\-MAX\_\-DESC\_\-LENGTH@{GSN\_\-HTTPD\_\-MAX\_\-DESC\_\-LENGTH}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-MAX\_\-DESC\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-MAX\_\-DESC\_\-LENGTH~64}}
+\label{a00666_ga53602fa8c89b89819cae837fc8ba07cb}
+
+
+Max Length of the URI This macro defines the maximum length of the URI description that is supported. The description string should be short and less than this value. 
+
+
+
+Definition at line 120 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga230f65ce2cb2f51b5a77ac10e8c41911}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-MAX\_\-PASSWORD\_\-LEN@{GSN\_\-HTTPD\_\-MAX\_\-PASSWORD\_\-LEN}}
+\index{GSN\_\-HTTPD\_\-MAX\_\-PASSWORD\_\-LEN@{GSN\_\-HTTPD\_\-MAX\_\-PASSWORD\_\-LEN}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-MAX\_\-PASSWORD\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-MAX\_\-PASSWORD\_\-LEN~32}}
+\label{a00666_ga230f65ce2cb2f51b5a77ac10e8c41911}
+
+
+Max HTTPD Password length This macro defines the maximum HTTPD password length supported. 
+
+
+
+Definition at line 93 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga57177849568fdcc8676db8fafcc80b74}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-MAX\_\-URI\_\-HANDLERS@{GSN\_\-HTTPD\_\-MAX\_\-URI\_\-HANDLERS}}
+\index{GSN\_\-HTTPD\_\-MAX\_\-URI\_\-HANDLERS@{GSN\_\-HTTPD\_\-MAX\_\-URI\_\-HANDLERS}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-MAX\_\-URI\_\-HANDLERS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-MAX\_\-URI\_\-HANDLERS~10}}
+\label{a00666_ga57177849568fdcc8676db8fafcc80b74}
+
+
+Max Number of URI Handlers This macro defines the size of the URI handler table. This should be set appropriately to ensure the enough memory is available and that memory is not wasted. 
+
+
+
+Definition at line 104 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga95da763c129195cbff1fce21503d6406}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-MAX\_\-URI\_\-LENGTH@{GSN\_\-HTTPD\_\-MAX\_\-URI\_\-LENGTH}}
+\index{GSN\_\-HTTPD\_\-MAX\_\-URI\_\-LENGTH@{GSN\_\-HTTPD\_\-MAX\_\-URI\_\-LENGTH}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-MAX\_\-URI\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-MAX\_\-URI\_\-LENGTH~64}}
+\label{a00666_ga95da763c129195cbff1fce21503d6406}
+
+
+Max Length of the URI This macro defines the maximum length of the URI that is supported. 
+
+
+
+Definition at line 111 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga2a0e4d865dc418b0c680dfd0e55a91f8}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-MAX\_\-USERNAME\_\-LEN@{GSN\_\-HTTPD\_\-MAX\_\-USERNAME\_\-LEN}}
+\index{GSN\_\-HTTPD\_\-MAX\_\-USERNAME\_\-LEN@{GSN\_\-HTTPD\_\-MAX\_\-USERNAME\_\-LEN}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-MAX\_\-USERNAME\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-MAX\_\-USERNAME\_\-LEN~32}}
+\label{a00666_ga2a0e4d865dc418b0c680dfd0e55a91f8}
+
+
+Max HTTPD user name length This macro defines the maximum HTTPD user name length supported. 
+
+
+
+Definition at line 86 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga2c713aa7f2f3beef019826bca59fae7a}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-DELETE@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-DELETE}}
+\index{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-DELETE@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-DELETE}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-DELETE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-DELETE~0x4}}
+\label{a00666_ga2c713aa7f2f3beef019826bca59fae7a}
+
+
+Definition of HTTP PUT Method. 
+
+
+
+Definition at line 169 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_gacd507c9947ef6c72439a7a6b334ba992}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET}}
+\index{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET~0x1}}
+\label{a00666_gacd507c9947ef6c72439a7a6b334ba992}
+
+
+Definition of HTTP GET Method. 
+
+
+
+Definition at line 149 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga02224e5a5226487aecd6d50f7812ed07}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET\_\-POST@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET\_\-POST}}
+\index{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET\_\-POST@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET\_\-POST}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET\_\-POST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET\_\-POST~(GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-GET $|$ GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-POST)}}
+\label{a00666_ga02224e5a5226487aecd6d50f7812ed07}
+
+
+Definition of HTTP GET + POST Method. 
+
+
+
+Definition at line 176 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga824f47b1441b0279d607862e43d2fc3e}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-NONE@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-NONE}}
+\index{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-NONE@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-NONE}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-NONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-NONE~0}}
+\label{a00666_ga824f47b1441b0279d607862e43d2fc3e}
+
+
+Definition of HTTP Method when none is supported. 
+
+
+
+Definition at line 143 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_gafcfe6d0dabbefac822f05864c5b15aa6}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-POST@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-POST}}
+\index{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-POST@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-POST}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-POST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-POST~0x2}}
+\label{a00666_gafcfe6d0dabbefac822f05864c5b15aa6}
+
+
+Definition of HTTP POST Method. 
+
+
+
+Definition at line 155 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga770c378292f790cfba51990b41cf58dc}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-PUT@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-PUT}}
+\index{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-PUT@{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-PUT}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-PUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-URI\_\-METHOD\_\-PUT~0x3}}
+\label{a00666_ga770c378292f790cfba51990b41cf58dc}
+
+
+Definition of HTTP PUT Method. 
+
+
+
+Definition at line 162 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga1de955d22e5f48865ad9e80c3bdcf945}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-USE\_\-IPV4@{GSN\_\-USE\_\-IPV4}}
+\index{GSN\_\-USE\_\-IPV4@{GSN\_\-USE\_\-IPV4}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-USE\_\-IPV4}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-USE\_\-IPV4~0x02}}
+\label{a00666_ga1de955d22e5f48865ad9e80c3bdcf945}
+
+
+Definition at line 211 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga96878e559c11f82897b9a300d88d376c}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-USE\_\-IPV6@{GSN\_\-USE\_\-IPV6}}
+\index{GSN\_\-USE\_\-IPV6@{GSN\_\-USE\_\-IPV6}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-USE\_\-IPV6}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-USE\_\-IPV6~0x01}}
+\label{a00666_ga96878e559c11f82897b9a300d88d376c}
+
+
+Definition at line 210 of file gsn\_\-httpd.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00666_ga5049df4d9f9df24293e341c70976f6c3}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-CONFIG\_\-T@{GSN\_\-HTTPD\_\-CONFIG\_\-T}}
+\index{GSN\_\-HTTPD\_\-CONFIG\_\-T@{GSN\_\-HTTPD\_\-CONFIG\_\-T}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-HTTPD\_\-CONFIG}  {\bf GSN\_\-HTTPD\_\-CONFIG\_\-T}}}
+\label{a00666_ga5049df4d9f9df24293e341c70976f6c3}
+
+
+Definition of Config structure governing behavior of HTTPD server Definition of the Config structure that governs the behavior of the HTTPD server. Application can set the various parameters of this structure and the HTTP server will be configured appropriately when GsnHttpd\_\-Start is called. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00666_gae82a556385532a5c373c2c9700fa0959}{GsnHttpd\_\-Start} 
+\end{DoxySeeAlso}
+\hypertarget{a00666_ga37351c58635a4a2a10675d5ea28e37be}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-FN\_\-T@{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-FN\_\-T}}
+\index{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-FN\_\-T@{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-FN\_\-T}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-FN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-HTTPD\_\-STATUS\_\-T}($\ast$ {\bf GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-FN\_\-T})(ttHttpdUserEvent event, const char $\ast$uri, ttHttpdUserConHandle conn\_\-handler)}}
+\label{a00666_ga37351c58635a4a2a10675d5ea28e37be}
+
+
+Definition of the callback function for processing events from HTTPD. Definition of the callback function for processing events from HTTPD. Each URI handler has to specify a callback function to handle events being posted from the HTTP server. 
+
+
+
+Definition at line 188 of file gsn\_\-httpd.h.
+
+\hypertarget{a00666_ga3dd2e2bbc2820f5f49868effb95b371a}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-T@{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-T}}
+\index{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-T@{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-T}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-HTTPD\_\-URI\_\-HANDLER}  {\bf GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-T}}}
+\label{a00666_ga3dd2e2bbc2820f5f49868effb95b371a}
+
+
+Definition of URI handler structure Definition of the URI handler structure that is used by the HTTPD URI handler to dispatch requests to URIs appropriately. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00666_ga97ddf6ff1568f9984c83a2161cd9f49d}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-STATUS\_\-T@{GSN\_\-HTTPD\_\-STATUS\_\-T}}
+\index{GSN\_\-HTTPD\_\-STATUS\_\-T@{GSN\_\-HTTPD\_\-STATUS\_\-T}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GSN\_\-HTTPD\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-HTTPD\_\-STATUS\_\-T}}}
+\label{a00666_ga97ddf6ff1568f9984c83a2161cd9f49d}
+
+
+Max HTTPD Wrapper/URI Handler status and error codes This data type defines the various status and error codes that can be returned by the HTTP Wrapper/URI Handler. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-HTTPD\_\-SUCCESS@{GSN\_\-HTTPD\_\-SUCCESS}!GSN HTTP Server@{GSN HTTP Server}}\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-SUCCESS@{GSN\_\-HTTPD\_\-SUCCESS}}\item[{\em 
+\hypertarget{a00666_gga97ddf6ff1568f9984c83a2161cd9f49dac44d80d13effc5b74cb543f72c08049c}{
+GSN\_\-HTTPD\_\-SUCCESS}
+\label{a00666_gga97ddf6ff1568f9984c83a2161cd9f49dac44d80d13effc5b74cb543f72c08049c}
+}]\index{GSN\_\-HTTPD\_\-FAILURE@{GSN\_\-HTTPD\_\-FAILURE}!GSN HTTP Server@{GSN HTTP Server}}\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-FAILURE@{GSN\_\-HTTPD\_\-FAILURE}}\item[{\em 
+\hypertarget{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da8780e55822019c621b341656612915f3}{
+GSN\_\-HTTPD\_\-FAILURE}
+\label{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da8780e55822019c621b341656612915f3}
+}]\index{GSN\_\-HTTPD\_\-ALREADY\_\-STARTED@{GSN\_\-HTTPD\_\-ALREADY\_\-STARTED}!GSN HTTP Server@{GSN HTTP Server}}\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-ALREADY\_\-STARTED@{GSN\_\-HTTPD\_\-ALREADY\_\-STARTED}}\item[{\em 
+\hypertarget{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da698a2fe2a47b1082d5e063eef0eeb193}{
+GSN\_\-HTTPD\_\-ALREADY\_\-STARTED}
+\label{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da698a2fe2a47b1082d5e063eef0eeb193}
+}]\index{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-NO\_\-MEM@{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-NO\_\-MEM}!GSN HTTP Server@{GSN HTTP Server}}\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-NO\_\-MEM@{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-NO\_\-MEM}}\item[{\em 
+\hypertarget{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da5018ed43ccffdb7c736b44d1e5c7f378}{
+GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-NO\_\-MEM}
+\label{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da5018ed43ccffdb7c736b44d1e5c7f378}
+}]\index{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-INVALID@{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-INVALID}!GSN HTTP Server@{GSN HTTP Server}}\index{GSN HTTP Server@{GSN HTTP Server}!GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-INVALID@{GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-INVALID}}\item[{\em 
+\hypertarget{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da332145bf766def5f742322a03ea27835}{
+GSN\_\-HTTPD\_\-URI\_\-HANDLER\_\-INVALID}
+\label{a00666_gga97ddf6ff1568f9984c83a2161cd9f49da332145bf766def5f742322a03ea27835}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 129 of file gsn\_\-httpd.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00666_ga38a6f342aa4579945c64f4809c5feb20}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GsnHttpd\_\-GetBuffer@{GsnHttpd\_\-GetBuffer}}
+\index{GsnHttpd\_\-GetBuffer@{GsnHttpd\_\-GetBuffer}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GsnHttpd\_\-GetBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT8}$\ast$ GsnHttpd\_\-GetBuffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00666_ga38a6f342aa4579945c64f4809c5feb20}
+
+
+Get a buffer to use for sending HTTP response. 
+
+This function returns a buffer that can be used for sending HTTP response 
+\begin{DoxyRetVals}{Return values}
+{\em buffer} & Pointer to buffer \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00666_gaecd42418ea97610f5b55c35c5419cd13}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GsnHttpd\_\-GetHttpMethod@{GsnHttpd\_\-GetHttpMethod}}
+\index{GsnHttpd\_\-GetHttpMethod@{GsnHttpd\_\-GetHttpMethod}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GsnHttpd\_\-GetHttpMethod}]{\setlength{\rightskip}{0pt plus 5cm}ttHttpUserMethod GsnHttpd\_\-GetHttpMethod (
+\begin{DoxyParamCaption}
+\item[{ttHttpdUserConHandle}]{conHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00666_gaecd42418ea97610f5b55c35c5419cd13}
+
+
+Gets the HTTP method invoked on the connection handle. 
+
+This function returns the HTTP method invoked by the client on the HTTP connection handle. 
+\begin{DoxyRetVals}{Return values}
+{\em ttHttpUserMethod} & HTTP Method invoked \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00666_ga4bf4a027427d6e572bfa6123b9ecb625}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GsnHttpd\_\-IsAuthEnabled@{GsnHttpd\_\-IsAuthEnabled}}
+\index{GsnHttpd\_\-IsAuthEnabled@{GsnHttpd\_\-IsAuthEnabled}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GsnHttpd\_\-IsAuthEnabled}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnHttpd\_\-IsAuthEnabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00666_ga4bf4a027427d6e572bfa6123b9ecb625}
+
+
+Function that checks whether the Authentication is enabled in HTTPD. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & if enabled, FALSE otherwise \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00666_gaa6cb01078a42676719b577ab37df15c4}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GsnHttpd\_\-IsRunning@{GsnHttpd\_\-IsRunning}}
+\index{GsnHttpd\_\-IsRunning@{GsnHttpd\_\-IsRunning}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GsnHttpd\_\-IsRunning}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnHttpd\_\-IsRunning (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00666_gaa6cb01078a42676719b577ab37df15c4}
+
+
+Function that checks whether the HTTPD server is running. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & if running, FALSE otherwise \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00666_ga98b1c525385ddbcbaac8ec8ba4d32ea4}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GsnHttpd\_\-ReleaseBuffer@{GsnHttpd\_\-ReleaseBuffer}}
+\index{GsnHttpd\_\-ReleaseBuffer@{GsnHttpd\_\-ReleaseBuffer}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GsnHttpd\_\-ReleaseBuffer}]{\setlength{\rightskip}{0pt plus 5cm}void GsnHttpd\_\-ReleaseBuffer (
+\begin{DoxyParamCaption}
+\item[{{\bf INT8} $\ast$}]{bufPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00666_ga98b1c525385ddbcbaac8ec8ba4d32ea4}
+
+
+Release the buffer that was allocated by HTTPD. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00666_ga95afa0c13f59a7b224e60c11a051a45a}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GsnHttpd\_\-SendBuffer@{GsnHttpd\_\-SendBuffer}}
+\index{GsnHttpd\_\-SendBuffer@{GsnHttpd\_\-SendBuffer}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GsnHttpd\_\-SendBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} GsnHttpd\_\-SendBuffer (
+\begin{DoxyParamCaption}
+\item[{ttHttpdUserConHandle}]{conHandle, }
+\item[{const char $\ast$}]{bufferPtr, }
+\item[{{\bf INT32}}]{bufferLen, }
+\item[{{\bf INT32}}]{flag, }
+\item[{{\bf INT32} $\ast$}]{errorCodePtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00666_ga95afa0c13f59a7b224e60c11a051a45a}
+
+
+Send Buffer. 
+
+This function sends the buffer on the HTTP connection 
+\begin{DoxyParams}{Parameters}
+{\em conHandle} & -\/ IN Pointer to connection handle \\
+\hline
+{\em bufferPtr} & -\/ IN Pointer to buffer \\
+\hline
+{\em bufferLen} & -\/ IN Length of Buffer \\
+\hline
+{\em flag} & -\/ IN Flags determining send behavior \\
+\hline
+{\em errorCodePtr} & -\/ OUT Indicates error code, if any \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Number} & of bytes sent \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00666_ga9e05db18fe9e554159a3fe594492687d}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GsnHttpd\_\-SendBufferAndLastChunk@{GsnHttpd\_\-SendBufferAndLastChunk}}
+\index{GsnHttpd\_\-SendBufferAndLastChunk@{GsnHttpd\_\-SendBufferAndLastChunk}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GsnHttpd\_\-SendBufferAndLastChunk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} GsnHttpd\_\-SendBufferAndLastChunk (
+\begin{DoxyParamCaption}
+\item[{ttHttpdUserConHandle}]{conHandle, }
+\item[{const {\bf INT8} $\ast$}]{bufferPtr, }
+\item[{{\bf INT32}}]{bufferLen, }
+\item[{{\bf INT32}}]{flag, }
+\item[{{\bf INT32} $\ast$}]{errorCodePtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00666_ga9e05db18fe9e554159a3fe594492687d}
+
+
+Send Buffer and indicate terminating chunk. 
+
+This function sends the buffer and also sends information indicating that it is the terminating chunk 
+\begin{DoxyParams}{Parameters}
+{\em conHandle} & -\/ IN Pointer to connection handle \\
+\hline
+{\em bufferPtr} & -\/ IN Pointer to buffer \\
+\hline
+{\em bufferLen} & -\/ IN Length of Buffer \\
+\hline
+{\em flag} & -\/ IN Flags determining send behavior \\
+\hline
+{\em errorCodePtr} & -\/ OUT Indicates error code, if any \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Number} & of bytes sent \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00666_ga04f2afbebcac5ab376d70b735803d69d}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GsnHttpd\_\-SendLastChunk@{GsnHttpd\_\-SendLastChunk}}
+\index{GsnHttpd\_\-SendLastChunk@{GsnHttpd\_\-SendLastChunk}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GsnHttpd\_\-SendLastChunk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} GsnHttpd\_\-SendLastChunk (
+\begin{DoxyParamCaption}
+\item[{ttHttpdUserConHandle}]{conHandle, }
+\item[{{\bf INT32} $\ast$}]{errorCodePtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00666_ga04f2afbebcac5ab376d70b735803d69d}
+
+
+Sends terminating chunk. 
+
+This function sends the terminating chunk on the HTTP connection 
+\begin{DoxyParams}{Parameters}
+{\em conHandle} & -\/ IN Pointer to connection handle \\
+\hline
+{\em errorCodePtr} & -\/ OUT Indicates error code, if any \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-HTTPD\_\-FAILURE} & Failure to Send \\
+\hline
+{\em GSN\_\-HTTPD\_\-SUCCESS} & Sent successfully \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00666_ga1d8828de7be384020ba6bbb1ea26a47c}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GsnHttpd\_\-SetStrFromXmlStr@{GsnHttpd\_\-SetStrFromXmlStr}}
+\index{GsnHttpd\_\-SetStrFromXmlStr@{GsnHttpd\_\-SetStrFromXmlStr}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GsnHttpd\_\-SetStrFromXmlStr}]{\setlength{\rightskip}{0pt plus 5cm}void GsnHttpd\_\-SetStrFromXmlStr (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{str, }
+\item[{{\bf GSN\_\-XML\_\-STRING\_\-T}}]{xml\_\-str, }
+\item[{int}]{str\_\-len}
+\end{DoxyParamCaption}
+)}}
+\label{a00666_ga1d8828de7be384020ba6bbb1ea26a47c}
+
+
+Extracts the string from xml\_\-str This function extracts the string from a xml\_\-str representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ IN/OUT Pointer to str which will be populated \\
+\hline
+{\em xml\_\-str} & -\/ IN GSN\_\-XML\_\-STRING\_\-T representation \\
+\hline
+{\em str\_\-len} & -\/ IN Length of str \\
+\hline
+\end{DoxyParams}
+\hypertarget{a00666_gae82a556385532a5c373c2c9700fa0959}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GsnHttpd\_\-Start@{GsnHttpd\_\-Start}}
+\index{GsnHttpd\_\-Start@{GsnHttpd\_\-Start}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GsnHttpd\_\-Start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT8} GsnHttpd\_\-Start (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HTTPD\_\-CONFIG\_\-T}}]{config, }
+\item[{{\bf SERVER\_\-CERT\_\-DETAIL\_\-T} $\ast$}]{pCred}
+\end{DoxyParamCaption}
+)}}
+\label{a00666_gae82a556385532a5c373c2c9700fa0959}
+
+
+Function that takes the configuration parameters and starts HTTPD This function starts HTTPD with the parameters specified. In case stack buffer is not passed, it will attempt to allocate a stack on its own. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00666_ga5049df4d9f9df24293e341c70976f6c3}{GSN\_\-HTTPD\_\-CONFIG\_\-T} 
+\end{DoxySeeAlso}
+\hypertarget{a00666_gadb4c2b217e18fcf95a912c9680fd29a2}{
+\index{GSN HTTP Server@{GSN HTTP Server}!GsnHttpd\_\-Stop@{GsnHttpd\_\-Stop}}
+\index{GsnHttpd\_\-Stop@{GsnHttpd\_\-Stop}!GSN HTTP Server@{GSN HTTP Server}}
+\subsubsection[{GsnHttpd\_\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT8} GsnHttpd\_\-Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00666_gadb4c2b217e18fcf95a912c9680fd29a2}
+
+
+Function that stops the HTTPD server. 
+

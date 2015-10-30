@@ -1,0 +1,142 @@
+\hypertarget{a00517}{
+\section{gsn\_\-icmpv6\_\-if.h File Reference}
+\label{a00517}\index{gsn\_\-icmpv6\_\-if.h@{gsn\_\-icmpv6\_\-if.h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00202}{GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO}
+\item 
+struct \hyperlink{a00201}{GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00517_a2642b7d250423c7b7524057d29b54511}{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-RPL}~155
+\item 
+\#define \hyperlink{a00517_a6dc1fad08aee881cc17ed9712e82667e}{NX\_\-PROTOCOL\_\-NH\_\-HOP\_\-BY\_\-HOP\_\-OPT\_\-RPL}~0x63
+\item 
+\#define \hyperlink{a00517_a940c791f30b90f1694c39ef73afed3c6}{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAR}~157
+\item 
+\#define \hyperlink{a00517_a6fe0f507c619484e4329d0ca0874c676}{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAC}~158
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00517_a78118dbc6ab28e82664a90f2ab3fcc38}{ICMP\_\-PKT\_\-FORM\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} flag, \hyperlink{a00207}{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T} $\ast$pInfo)
+\begin{DoxyCompactList}\small\item\em Callback funtion definition for ICMPv6 Frame creation. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00202}{GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO} \hyperlink{a00517_a58a5688ef70025c73273fd000f498f71}{GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00201}{GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO} \hyperlink{a00517_aa9e1485ab17057b7e24a40c17643f5c9}{GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00517_ae1499751f3ce2b87c7cff0660c82f310}{GsnNw\_\-ICMPv6Send} (VOID $\ast$ip\_\-ptr, \hyperlink{a00202}{GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO\_\-T} $\ast$pInfo, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pDstAddr, VOID $\ast$pIf)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00517_a8c4d4e5c8fb9eeadc329b71328f98c8a}{GsnRpl\_\-ICMPv6PktProcess} (VOID $\ast$pCtx, \hyperlink{a00201}{GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO\_\-T} $\ast$pRecvInfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00517_a6fe0f507c619484e4329d0ca0874c676}{
+\index{gsn\_\-icmpv6\_\-if.h@{gsn\_\-icmpv6\_\-if.h}!GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAC@{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAC}}
+\index{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAC@{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAC}!gsn_icmpv6_if.h@{gsn\_\-icmpv6\_\-if.h}}
+\subsubsection[{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAC}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAC~158}}
+\label{a00517_a6fe0f507c619484e4329d0ca0874c676}
+
+
+Definition at line 43 of file gsn\_\-icmpv6\_\-if.h.
+
+\hypertarget{a00517_a940c791f30b90f1694c39ef73afed3c6}{
+\index{gsn\_\-icmpv6\_\-if.h@{gsn\_\-icmpv6\_\-if.h}!GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAR@{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAR}}
+\index{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAR@{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAR}!gsn_icmpv6_if.h@{gsn\_\-icmpv6\_\-if.h}}
+\subsubsection[{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-DAR~157}}
+\label{a00517_a940c791f30b90f1694c39ef73afed3c6}
+
+
+Definition at line 42 of file gsn\_\-icmpv6\_\-if.h.
+
+\hypertarget{a00517_a2642b7d250423c7b7524057d29b54511}{
+\index{gsn\_\-icmpv6\_\-if.h@{gsn\_\-icmpv6\_\-if.h}!GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-RPL@{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-RPL}}
+\index{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-RPL@{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-RPL}!gsn_icmpv6_if.h@{gsn\_\-icmpv6\_\-if.h}}
+\subsubsection[{GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-RPL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NW\_\-ICMPV6\_\-TYPE\_\-RPL~155}}
+\label{a00517_a2642b7d250423c7b7524057d29b54511}
+
+
+Definition at line 40 of file gsn\_\-icmpv6\_\-if.h.
+
+\hypertarget{a00517_a6dc1fad08aee881cc17ed9712e82667e}{
+\index{gsn\_\-icmpv6\_\-if.h@{gsn\_\-icmpv6\_\-if.h}!NX\_\-PROTOCOL\_\-NH\_\-HOP\_\-BY\_\-HOP\_\-OPT\_\-RPL@{NX\_\-PROTOCOL\_\-NH\_\-HOP\_\-BY\_\-HOP\_\-OPT\_\-RPL}}
+\index{NX\_\-PROTOCOL\_\-NH\_\-HOP\_\-BY\_\-HOP\_\-OPT\_\-RPL@{NX\_\-PROTOCOL\_\-NH\_\-HOP\_\-BY\_\-HOP\_\-OPT\_\-RPL}!gsn_icmpv6_if.h@{gsn\_\-icmpv6\_\-if.h}}
+\subsubsection[{NX\_\-PROTOCOL\_\-NH\_\-HOP\_\-BY\_\-HOP\_\-OPT\_\-RPL}]{\setlength{\rightskip}{0pt plus 5cm}\#define NX\_\-PROTOCOL\_\-NH\_\-HOP\_\-BY\_\-HOP\_\-OPT\_\-RPL~0x63}}
+\label{a00517_a6dc1fad08aee881cc17ed9712e82667e}
+
+
+Definition at line 41 of file gsn\_\-icmpv6\_\-if.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00517_aa9e1485ab17057b7e24a40c17643f5c9}{
+\index{gsn\_\-icmpv6\_\-if.h@{gsn\_\-icmpv6\_\-if.h}!GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO\_\-T@{GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO\_\-T}}
+\index{GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO\_\-T@{GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO\_\-T}!gsn_icmpv6_if.h@{gsn\_\-icmpv6\_\-if.h}}
+\subsubsection[{GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO} {\bf GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO\_\-T}}}
+\label{a00517_aa9e1485ab17057b7e24a40c17643f5c9}
+\hypertarget{a00517_a58a5688ef70025c73273fd000f498f71}{
+\index{gsn\_\-icmpv6\_\-if.h@{gsn\_\-icmpv6\_\-if.h}!GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO\_\-T@{GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO\_\-T}}
+\index{GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO\_\-T@{GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO\_\-T}!gsn_icmpv6_if.h@{gsn\_\-icmpv6\_\-if.h}}
+\subsubsection[{GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO} {\bf GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO\_\-T}}}
+\label{a00517_a58a5688ef70025c73273fd000f498f71}
+\hypertarget{a00517_a78118dbc6ab28e82664a90f2ab3fcc38}{
+\index{gsn\_\-icmpv6\_\-if.h@{gsn\_\-icmpv6\_\-if.h}!ICMP\_\-PKT\_\-FORM\_\-CB\_\-T@{ICMP\_\-PKT\_\-FORM\_\-CB\_\-T}}
+\index{ICMP\_\-PKT\_\-FORM\_\-CB\_\-T@{ICMP\_\-PKT\_\-FORM\_\-CB\_\-T}!gsn_icmpv6_if.h@{gsn\_\-icmpv6\_\-if.h}}
+\subsubsection[{ICMP\_\-PKT\_\-FORM\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}($\ast$ {\bf ICMP\_\-PKT\_\-FORM\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT32} flag, {\bf GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T} $\ast$pInfo)}}
+\label{a00517_a78118dbc6ab28e82664a90f2ab3fcc38}
+
+
+Callback funtion definition for ICMPv6 Frame creation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Buffer pointer to context. \\
+\hline
+{\em pBuf} & -\/ IN Buffer pointer to construct the RPL header. \\
+\hline
+{\em pSize} & -\/ IN/OUT: writes teh available size. The callback function should return the size it wrote. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Returns} & the ICMPv6 code to be used. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 55 of file gsn\_\-icmpv6\_\-if.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00517_ae1499751f3ce2b87c7cff0660c82f310}{
+\index{gsn\_\-icmpv6\_\-if.h@{gsn\_\-icmpv6\_\-if.h}!GsnNw\_\-ICMPv6Send@{GsnNw\_\-ICMPv6Send}}
+\index{GsnNw\_\-ICMPv6Send@{GsnNw\_\-ICMPv6Send}!gsn_icmpv6_if.h@{gsn\_\-icmpv6\_\-if.h}}
+\subsubsection[{GsnNw\_\-ICMPv6Send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnNw\_\-ICMPv6Send (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{ip\_\-ptr, }
+\item[{{\bf GSN\_\-RPL\_\-ICMP\_\-SEND\_\-INFO\_\-T} $\ast$}]{pInfo, }
+\item[{{\bf UINT8} $\ast$}]{pDstAddr, }
+\item[{VOID $\ast$}]{pIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00517_ae1499751f3ce2b87c7cff0660c82f310}
+\hypertarget{a00517_a8c4d4e5c8fb9eeadc329b71328f98c8a}{
+\index{gsn\_\-icmpv6\_\-if.h@{gsn\_\-icmpv6\_\-if.h}!GsnRpl\_\-ICMPv6PktProcess@{GsnRpl\_\-ICMPv6PktProcess}}
+\index{GsnRpl\_\-ICMPv6PktProcess@{GsnRpl\_\-ICMPv6PktProcess}!gsn_icmpv6_if.h@{gsn\_\-icmpv6\_\-if.h}}
+\subsubsection[{GsnRpl\_\-ICMPv6PktProcess}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-ICMPv6PktProcess (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pCtx, }
+\item[{{\bf GSN\_\-RPL\_\-ICMP\_\-RECV\_\-INFO\_\-T} $\ast$}]{pRecvInfo}
+\end{DoxyParamCaption}
+)}}
+\label{a00517_a8c4d4e5c8fb9eeadc329b71328f98c8a}

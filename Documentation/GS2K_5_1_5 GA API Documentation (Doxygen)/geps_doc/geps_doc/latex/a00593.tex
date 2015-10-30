@@ -1,0 +1,111 @@
+\hypertarget{a00593}{
+\section{gsn\_\-sys\_\-qual.h File Reference}
+\label{a00593}\index{gsn\_\-sys\_\-qual.h@{gsn\_\-sys\_\-qual.h}}
+}
+
+
+GSN System quality. This file contains system quality module definitions.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+Include dependency graph for gsn\_\-sys\_\-qual.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{a00837}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00838}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00675_gaad089e403699cbffe3ae8ccddc6a2fa2}{GSN\_\-SQ\_\-MAX\_\-TASKS}~32
+\begin{DoxyCompactList}\small\item\em maximum number of tasks \end{DoxyCompactList}\item 
+\#define \hyperlink{a00593_a35b32ccea91b55e06b21da8d33908d47}{GSN\_\-CM3\_\-CLK}~0x5000000
+\item 
+\#define \hyperlink{a00593_a5b2d0d53bec6a4677fc2a92ceabebf3a}{GSN\_\-WDOG\_\-INT\_\-NUMBER}~17
+\item 
+\#define \hyperlink{a00593_a834c876307d18c3a77fde059aaf17061}{GSN\_\-WDOG\_\-TIMEOUT\_\-IN\_\-SEC}~10
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00675_gabf7d0df05da1734b65c7831213712b38}{GSN\_\-SQ\_\-TASK\_\-MONITOR\_\-ID} \hyperlink{a00675_ga953706c798c40007d94a580180412cbc}{GSN\_\-SQ\_\-TASK\_\-MONITOR\_\-ID\_\-T}
+\begin{DoxyCompactList}\small\item\em Task IDs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00675_gabf7d0df05da1734b65c7831213712b38}{GSN\_\-SQ\_\-TASK\_\-MONITOR\_\-ID} \{ \par
+\hyperlink{a00675_ggabf7d0df05da1734b65c7831213712b38a246f41404878a57d9ffd06087a7668de}{GSN\_\-SQ\_\-TASK\_\-MONITOR\_\-ID\_\-FIRST} =  0, 
+\par
+\hyperlink{a00675_ggabf7d0df05da1734b65c7831213712b38a67e6b7edb548bc21bf0a9b23f6bb3ece}{GSN\_\-SQ\_\-TASK\_\-MONITOR\_\-ID\_\-MAX}
+ \}
+\begin{DoxyCompactList}\small\item\em Task IDs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+VOID \hyperlink{a00675_gad10ad5f9dbac0e77f484ca53319e52ad}{GsnSq\_\-Init} (VOID)
+\begin{DoxyCompactList}\small\item\em System Quality Task Monitor initialization. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00675_gaf709cf6cb9df1be311084cdf383854a0}{GsnSq\_\-WdTmrStart} (VOID)
+\begin{DoxyCompactList}\small\item\em System Quality Task Monitor timer start. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00675_gabfd6482b09418af5050000a0b7aff482}{GsnSq\_\-TaskMonitorRegister} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} taskId, \hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$thread, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} monitorTime)
+\begin{DoxyCompactList}\small\item\em Register monitor time for a given task ID. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00675_ga53008154a8350fc85d627cd563e4d1df}{GsnSq\_\-TaskMonitorDeregister} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} taskId)
+\begin{DoxyCompactList}\small\item\em Deregister a task by setting max ticks to 0. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00675_ga96da464fdeb49f53790f74732ef808a9}{GsnSq\_\-TaskMonitorStart} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} taskId, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} data)
+\begin{DoxyCompactList}\small\item\em Start monitoring a given task by setting tick count to max+1. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00675_ga285d40bdd1cfff28b38cc49232859568}{GsnSq\_\-TaskMonitorStop} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} taskId)
+\begin{DoxyCompactList}\small\item\em Stop monitoring a given task by setting tick count to INVALID. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00675_ga8f76a4cc1c863a3ca744e3c377f3a4bd}{GsnSq\_\-AssertHandler} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} level)
+\begin{DoxyCompactList}\small\item\em Handle Assert based on the level. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00675_ga14affd26fb768070a8d90706441b8c8d}{GsnSq\_\-DeInit} (VOID)
+\begin{DoxyCompactList}\small\item\em Sysqual Deinit. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00675_gac34869e67e126c75fd2f750c34fe1789}{GsnSq\_\-TaskMonitorStarted} (VOID)
+\begin{DoxyCompactList}\small\item\em Returns TRUE if monitor started. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN System quality. This file contains system quality module definitions. 
+
+Definition in file \hyperlink{a00593_source}{gsn\_\-sys\_\-qual.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00593_a35b32ccea91b55e06b21da8d33908d47}{
+\index{gsn\_\-sys\_\-qual.h@{gsn\_\-sys\_\-qual.h}!GSN\_\-CM3\_\-CLK@{GSN\_\-CM3\_\-CLK}}
+\index{GSN\_\-CM3\_\-CLK@{GSN\_\-CM3\_\-CLK}!gsn_sys_qual.h@{gsn\_\-sys\_\-qual.h}}
+\subsubsection[{GSN\_\-CM3\_\-CLK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-CM3\_\-CLK~0x5000000}}
+\label{a00593_a35b32ccea91b55e06b21da8d33908d47}
+
+
+Definition at line 142 of file gsn\_\-sys\_\-qual.h.
+
+\hypertarget{a00593_a5b2d0d53bec6a4677fc2a92ceabebf3a}{
+\index{gsn\_\-sys\_\-qual.h@{gsn\_\-sys\_\-qual.h}!GSN\_\-WDOG\_\-INT\_\-NUMBER@{GSN\_\-WDOG\_\-INT\_\-NUMBER}}
+\index{GSN\_\-WDOG\_\-INT\_\-NUMBER@{GSN\_\-WDOG\_\-INT\_\-NUMBER}!gsn_sys_qual.h@{gsn\_\-sys\_\-qual.h}}
+\subsubsection[{GSN\_\-WDOG\_\-INT\_\-NUMBER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDOG\_\-INT\_\-NUMBER~17}}
+\label{a00593_a5b2d0d53bec6a4677fc2a92ceabebf3a}
+
+
+Definition at line 143 of file gsn\_\-sys\_\-qual.h.
+
+\hypertarget{a00593_a834c876307d18c3a77fde059aaf17061}{
+\index{gsn\_\-sys\_\-qual.h@{gsn\_\-sys\_\-qual.h}!GSN\_\-WDOG\_\-TIMEOUT\_\-IN\_\-SEC@{GSN\_\-WDOG\_\-TIMEOUT\_\-IN\_\-SEC}}
+\index{GSN\_\-WDOG\_\-TIMEOUT\_\-IN\_\-SEC@{GSN\_\-WDOG\_\-TIMEOUT\_\-IN\_\-SEC}!gsn_sys_qual.h@{gsn\_\-sys\_\-qual.h}}
+\subsubsection[{GSN\_\-WDOG\_\-TIMEOUT\_\-IN\_\-SEC}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDOG\_\-TIMEOUT\_\-IN\_\-SEC~10}}
+\label{a00593_a834c876307d18c3a77fde059aaf17061}
+
+
+Definition at line 144 of file gsn\_\-sys\_\-qual.h.
+

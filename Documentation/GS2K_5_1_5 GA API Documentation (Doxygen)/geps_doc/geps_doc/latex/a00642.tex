@@ -1,0 +1,2678 @@
+\hypertarget{a00642}{
+\section{GSN MAC Definitions}
+\label{a00642}\index{GSN MAC Definitions@{GSN MAC Definitions}}
+}
+
+
+This group contains 802.11 MAC-\/level definitions.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00118}{GSN\_\-MAC\_\-PHY\_\-CHANNEL\_\-T}
+\begin{DoxyCompactList}\small\item\em physical layer radio channel type, including internal data for VCO control. \end{DoxyCompactList}\item 
+struct \hyperlink{a00122}{GSN\_\-MAC\_\-POWER\_\-CAPABILITY\_\-IE\_\-T}
+\begin{DoxyCompactList}\small\item\em 802.11h (power control) type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00133}{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-IE\_\-T}
+\begin{DoxyCompactList}\small\item\em supported channel tuple type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00131}{GSN\_\-MAC\_\-SEC\_\-KEY\_\-T}
+\begin{DoxyCompactList}\small\item\em Key structured type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00128}{GSN\_\-MAC\_\-RSN\_\-SUITE\_\-SELECTOR\_\-T}
+\begin{DoxyCompactList}\small\item\em RSN Information Element field type for the beacon frame (WPA Extension) \end{DoxyCompactList}\item 
+struct \hyperlink{a00126}{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-T}
+\begin{DoxyCompactList}\small\item\em Raw Information Element field of the beacon frame (WPA Extension) \end{DoxyCompactList}\item 
+struct \hyperlink{a00129}{GSN\_\-MAC\_\-RSNA\_\-STAT\_\-T}
+\begin{DoxyCompactList}\small\item\em RSNA statistics type (WPA Extension) \end{DoxyCompactList}\item 
+struct \hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T}
+\begin{DoxyCompactList}\small\item\em Rate set type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00132}{GSN\_\-MAC\_\-STA\_\-RATESET\_\-T}
+\begin{DoxyCompactList}\small\item\em Preformatted rate set per station length. \end{DoxyCompactList}\item 
+struct \hyperlink{a00119}{GSN\_\-MAC\_\-PHY\_\-DS\_\-T}
+\begin{DoxyCompactList}\small\item\em MAC direct sequence channel type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00120}{GSN\_\-MAC\_\-PHY\_\-FH\_\-T}
+\begin{DoxyCompactList}\small\item\em MAC frequency hopping channel type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00112}{GSN\_\-MAC\_\-CFP\_\-T}
+\begin{DoxyCompactList}\small\item\em MACC CFP type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00114}{GSN\_\-MAC\_\-CHANNELSET\_\-T}
+\begin{DoxyCompactList}\small\item\em MACC Channel set type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00115}{GSN\_\-MAC\_\-COUNTRY\_\-T}
+\begin{DoxyCompactList}\small\item\em Country type (describing the channels available in a jurisdiction) \end{DoxyCompactList}\item 
+struct \hyperlink{a00135}{GSN\_\-MAC\_\-TXPOWERSET\_\-T}
+\begin{DoxyCompactList}\small\item\em Transmit power settings type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00113}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-T}
+\begin{DoxyCompactList}\small\item\em Channel domain type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00127}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-T}
+\begin{DoxyCompactList}\small\item\em Channel raw channel domain type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00130}{GSN\_\-MAC\_\-SCAN\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Scan parameter type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T}
+\begin{DoxyCompactList}\small\item\em MAC frame type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00109}{GSN\_\-MAC\_\-ASSOC\_\-FRAME\_\-T}
+\begin{DoxyCompactList}\small\item\em Association frame type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00136}{GSN\_\-MAC\_\-WMM\_\-FRAME\_\-T}
+\begin{DoxyCompactList}\small\item\em Wireless management frame type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00137}{GSN\_\-MAC\_\-WPA\_\-FRAME\_\-T}
+\begin{DoxyCompactList}\small\item\em WPA frame type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00123}{GSN\_\-MAC\_\-PROPRIETARY\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em Proprietary information frame type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00124}{GSN\_\-MAC\_\-PUBLIC\_\-HDR\_\-T}
+\begin{DoxyCompactList}\small\item\em Public header type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00110}{GSN\_\-MAC\_\-BSS\_\-ELMT\_\-T}
+\begin{DoxyCompactList}\small\item\em MAC BSS element type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00111}{GSN\_\-MAC\_\-BSS\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em MAC BSS information type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00134}{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}
+\begin{DoxyCompactList}\small\item\em TBTT Error information type. \end{DoxyCompactList}\item 
+union \hyperlink{a00117}{GSN\_\-MAC\_\-MIB\_\-ELMT\_\-UNION\_\-T}
+\begin{DoxyCompactList}\small\item\em Available MIB types. \end{DoxyCompactList}\item 
+struct \hyperlink{a00138}{GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR}
+\begin{DoxyCompactList}\small\item\em WPS attributes. This structure contains relevant WPS attributes extracted from WPS IE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_gac05267227cbd1ea16b61aa98de2050cc}{GSN\_\-MAC\_\-POWERMODE\_\-ACTIF}~1
+\begin{DoxyCompactList}\small\item\em 802.11 power management mode (active or PowerSave). \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga884676614ce794771a22a5ea358a25cf}{GSN\_\-MAC\_\-SSID\_\-CMP}(ssid1Ptr, ssid2Ptr)
+\begin{DoxyCompactList}\small\item\em structured type for CMP SSID. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga216e78da30032f04c2c3a222478ed85e}{GSN\_\-MAC\_\-SSID\_\-ISEMPTY}(ssidPtr)~(( ssidPtr)-\/$>$length == 0 )
+\begin{DoxyCompactList}\small\item\em SSID empty pointer. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gaeeeab57b53de2e9a366c2b883e008f5e}{GSN\_\-MAC\_\-ADDR\_\-LEN}~GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-LEN
+\begin{DoxyCompactList}\small\item\em default value of the length of a MAC address. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gad81b63f034b99768727bc1514ba5c175}{GSN\_\-MAC\_\-ADDR\_\-BCAST}(Addr1Ptr)
+\begin{DoxyCompactList}\small\item\em macro returns TRUE if the argument is a broadcast address. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga95d4817391976ee04a12a20613cacc4c}{GSN\_\-MAC\_\-ADDR\_\-GROUP}(MacAddrPtr)~(($\ast$( MacAddrPtr )) \& GSN\_\-MAC\_\-HEAD\_\-ADDR\_\-GROUP\_\-MASK )
+\begin{DoxyCompactList}\small\item\em macro returns TRUE if the argument is a group address, and masks the group bit. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga3b8dd261cd46e061d18d2630039df685}{GSN\_\-MAC\_\-ADDR\_\-BCAST\_\-SET}(MacAddrPtr)~memset(( \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$ )( MacAddrPtr ), 0xFF, GSN\_\-MAC\_\-ADDR\_\-LEN )
+\begin{DoxyCompactList}\small\item\em macro sets an address to the broadcast address 0xFF FF FF FF FF FF. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gac3c796c333ec1130603aadab0258164a}{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-TUPLE\_\-MAX}~4
+\begin{DoxyCompactList}\small\item\em maximum supported channels. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gabedb9ac65e149bcb1082d6926937508f}{GSN\_\-MAC\_\-SEC\_\-KEY\_\-LEN}~32
+\begin{DoxyCompactList}\small\item\em Key length for TKIP. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gade0df88c41a2fec188655329c10a73ed}{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-LEN}~34
+\begin{DoxyCompactList}\small\item\em Raw RSN Information Element length. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga5dd3f6052d990b4ee0d404f05787ce20}{GSN\_\-MAC\_\-BASIC\_\-RATE}~0x80
+\begin{DoxyCompactList}\small\item\em Mask to test for basic rate (\hyperlink{a00481_a3a8ea58898cb58fc96013383d39f482c}{BIT(7)}) \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga3c207cac645e3d78288b23f6291d759e}{GSN\_\-MAC\_\-RATESET\_\-LEN}~12
+\begin{DoxyCompactList}\small\item\em rateset length \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gabec601feeb30bf739dc67873ac12c4ba}{TIME\_\-TUtoUs}(MacTimeTU)~(( MacTimeTU ) $\ast$ 1024 )
+\begin{DoxyCompactList}\small\item\em Convert time to 802.11 time units (1024 microseconds) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00642_ga7fb691c78d3a1046fa998bae1560e1a5}{WLAN\_\-BOOLEAN}
+\begin{DoxyCompactList}\small\item\em Boolean type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00417}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} \hyperlink{a00642_gaa99e8c0b151cd3a4b954dda1b8d45170}{GSN\_\-MAC\_\-SSID\_\-T}
+\begin{DoxyCompactList}\small\item\em structured type for storing an SSID. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00416}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T} \hyperlink{a00642_ga1150dbb5bc1f1413f5de4acf75c48815}{GSN\_\-MAC\_\-ADDR\_\-T}
+\begin{DoxyCompactList}\small\item\em structured type for holding MAC address. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00122}{GSN\_\-MAC\_\-POWER\_\-CAPABILITY\_\-IE\_\-T} \hyperlink{a00642_ga7dca958f849da86237513f7adc55ed53}{GSN\_\-MAC\_\-POWER\_\-CAPABILITY\_\-IE\_\-T}
+\begin{DoxyCompactList}\small\item\em 802.11h (power control) type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00133}{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-IE\_\-T} \hyperlink{a00642_ga0e3372dcd5ddb7b5c77b4d1d132cd8c4}{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-IE\_\-T}
+\begin{DoxyCompactList}\small\item\em supported channel tuple type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00131}{GSN\_\-MAC\_\-SEC\_\-KEY\_\-T} \hyperlink{a00642_ga47d838a4f5db3c6d8039dac8b4726479}{GSN\_\-MAC\_\-SEC\_\-KEY\_\-T}
+\begin{DoxyCompactList}\small\item\em Key structured type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00128}{GSN\_\-MAC\_\-RSN\_\-SUITE\_\-SELECTOR\_\-T} \hyperlink{a00642_ga26429f56abe84cea3365f048adb8870f}{GSN\_\-MAC\_\-RSN\_\-SUITE\_\-SELECTOR\_\-T}
+\begin{DoxyCompactList}\small\item\em RSN Information Element field type for the beacon frame (WPA Extension) \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00126}{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-T} \hyperlink{a00642_ga4a6cc0e7737d1ea40ea41dc94472455f}{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-T}
+\begin{DoxyCompactList}\small\item\em Raw Information Element field of the beacon frame (WPA Extension) \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00129}{GSN\_\-MAC\_\-RSNA\_\-STAT\_\-T} \hyperlink{a00642_ga72bcd48cbb7fbabbe7a09a5271e1723e}{GSN\_\-MAC\_\-RSNA\_\-STAT\_\-T}
+\begin{DoxyCompactList}\small\item\em RSNA statistics type (WPA Extension) \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T} \hyperlink{a00642_ga3030fec57a589cc8daf2616c8cad3e0d}{GSN\_\-MAC\_\-RATESET\_\-T}
+\begin{DoxyCompactList}\small\item\em Rate set type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00132}{GSN\_\-MAC\_\-STA\_\-RATESET\_\-T} \hyperlink{a00642_gaaffd1c48ebeedf03ed41954311a17ec0}{GSN\_\-MAC\_\-STA\_\-RATESET\_\-T}
+\begin{DoxyCompactList}\small\item\em Preformatted rate set per station length. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00642_ga260da9755b2bec5e93c8b16a5a92d41d}{GSN\_\-MAC\_\-RATE\_\-T} \hyperlink{a00642_ga514160bf923e24c122096eecb9350b16}{GSN\_\-MAC\_\-RATE\_\-T}
+\begin{DoxyCompactList}\small\item\em enumerated type describing the various available rates. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00119}{GSN\_\-MAC\_\-PHY\_\-DS\_\-T} \hyperlink{a00642_gaaa415fc5bf3610b9f39d91d220983e10}{GSN\_\-MAC\_\-PHY\_\-DS\_\-T}
+\begin{DoxyCompactList}\small\item\em MAC direct sequence channel type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00120}{GSN\_\-MAC\_\-PHY\_\-FH\_\-T} \hyperlink{a00642_ga929013282703665ac236cdc91ee3c3f7}{GSN\_\-MAC\_\-PHY\_\-FH\_\-T}
+\begin{DoxyCompactList}\small\item\em MAC frequency hopping channel type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00112}{GSN\_\-MAC\_\-CFP\_\-T} \hyperlink{a00642_gad5d3559fa1fc09e64eb23e72d14a503a}{GSN\_\-MAC\_\-CFP\_\-T}
+\begin{DoxyCompactList}\small\item\em MACC CFP type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00114}{GSN\_\-MAC\_\-CHANNELSET\_\-T} \hyperlink{a00642_gacacca7fcdec7f267751d787618578af1}{GSN\_\-MAC\_\-CHANNELSET\_\-T}
+\begin{DoxyCompactList}\small\item\em MACC Channel set type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00115}{GSN\_\-MAC\_\-COUNTRY\_\-T} \hyperlink{a00642_gaa312c43eca44aa7bb2ab45da931da79f}{GSN\_\-MAC\_\-COUNTRY\_\-T}
+\begin{DoxyCompactList}\small\item\em Country type (describing the channels available in a jurisdiction) \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00135}{GSN\_\-MAC\_\-TXPOWERSET\_\-T} \hyperlink{a00642_ga4e1e0373dd92610638567c678eeee81d}{GSN\_\-MAC\_\-TXPOWERSET\_\-T}
+\begin{DoxyCompactList}\small\item\em Transmit power settings type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00113}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-T} \hyperlink{a00642_ga8ff4cc41b9827ad704cb982edb371b48}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-T}
+\begin{DoxyCompactList}\small\item\em Channel domain type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00127}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-T} \hyperlink{a00642_gab8bb3634782377a5a3fd1c09ad5bedca}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-T}
+\begin{DoxyCompactList}\small\item\em Channel raw channel domain type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00642_gacd7033290927ecd0c0b3b6e9829ecb2e}{GSN\_\-MAC\_\-SCAN\_\-TYPE} \hyperlink{a00642_ga25b1673dd1960a988e38a58156a53fd2}{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Scan type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00130}{GSN\_\-MAC\_\-SCAN\_\-PARAM\_\-T} \hyperlink{a00642_ga224c46962ac3e8d21a5dfc0d1a565391}{MAC\_\-SCAN\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Scan parameter type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} \hyperlink{a00642_gabe8a532741138f69c4e27fc2bb44af8c}{GSN\_\-MAC\_\-FRAME\_\-T}
+\begin{DoxyCompactList}\small\item\em MAC frame type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00109}{GSN\_\-MAC\_\-ASSOC\_\-FRAME\_\-T} \hyperlink{a00642_gab32a90b2661aaffd2fb7960c34e4bf76}{GSN\_\-MAC\_\-ASSOC\_\-FRAME\_\-T}
+\begin{DoxyCompactList}\small\item\em Association frame type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00136}{GSN\_\-MAC\_\-WMM\_\-FRAME\_\-T} \hyperlink{a00642_gab14ec7de1faea7e197f97d61281085fc}{GSN\_\-MAC\_\-WMM\_\-FRAME\_\-T}
+\begin{DoxyCompactList}\small\item\em Wireless management frame type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00137}{GSN\_\-MAC\_\-WPA\_\-FRAME\_\-T} \hyperlink{a00642_gadc2ef85538f39a0b8e01d199ccad1630}{GSN\_\-MAC\_\-WPA\_\-FRAME\_\-T}
+\begin{DoxyCompactList}\small\item\em WPA frame type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00123}{GSN\_\-MAC\_\-PROPRIETARY\_\-INFO\_\-T} \hyperlink{a00642_gaf102d7396d0f17159f993324bc63fc03}{GSN\_\-MAC\_\-PROPRIETARY\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em Proprietary information frame type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00124}{GSN\_\-MAC\_\-PUBLIC\_\-HDR\_\-T} \hyperlink{a00642_ga83bfac29d319ebdbbc048906db949e06}{GSN\_\-MAC\_\-PUBLIC\_\-HDR\_\-T}
+\begin{DoxyCompactList}\small\item\em Public header type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00110}{GSN\_\-MAC\_\-BSS\_\-ELMT\_\-T} \hyperlink{a00642_ga741210948f906164f06f08b1b4705da8}{GSN\_\-MAC\_\-BSS\_\-ELMT\_\-T}
+\begin{DoxyCompactList}\small\item\em MAC BSS element type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00111}{GSN\_\-MAC\_\-BSS\_\-INFO\_\-T} \hyperlink{a00642_ga991bb63d940b90bac4f74912786f521d}{GSN\_\-MAC\_\-BSS\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em MAC BSS information type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00134}{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO} \hyperlink{a00642_ga172482aaa298a33c998f4206dd7e558a}{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em TBTT Error information type. \end{DoxyCompactList}\item 
+typedef union \hyperlink{a00117}{GSN\_\-MAC\_\-MIB\_\-ELMT\_\-UNION\_\-T} \hyperlink{a00642_ga64f7d136e7c2a14b7ea884d6ffd901c0}{GSN\_\-MAC\_\-MIB\_\-ELMT\_\-UNION\_\-T}
+\begin{DoxyCompactList}\small\item\em Available MIB types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00642_ga0ae19d69a0b381d883890df8a7812414}{GSN\_\-MAC\_\-WPS\_\-ATTR} \hyperlink{a00642_gaabc433282fb88ae2bc9ea6b726e4f049}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-T}
+\begin{DoxyCompactList}\small\item\em WPS attribute types. This enum defines the WPS attribute type values. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00138}{GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR} \hyperlink{a00642_gab0287dd9aaabe07cf4313a9d8a14dcca}{GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR\_\-T}
+\begin{DoxyCompactList}\small\item\em WPS attributes. This structure contains relevant WPS attributes extracted from WPS IE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00642_ga260da9755b2bec5e93c8b16a5a92d41d}{GSN\_\-MAC\_\-RATE\_\-T} \{ \par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da8eebea2599d06d1e26e773c8878ec37c}{GSN\_\-MAC\_\-RATE\_\-1MBPS} =  2, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41daee17221504eae789861277320adb346a}{GSN\_\-MAC\_\-RATE\_\-2MBPS} =  4, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41daa3c3416953cd6d2d272b9a41d47cec5c}{GSN\_\-MAC\_\-RATE\_\-5\_\-5MBPS} =  11, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da6ffc66c1ba4d053f582de80f67147b53}{GSN\_\-MAC\_\-RATE\_\-6\_\-5MBPS} =  13, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da4ee50fb4c98be33ef617386bea1cd128}{GSN\_\-MAC\_\-RATE\_\-6MBPS} =  12, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da0fd352dc70a6821572a0395e4240d991}{GSN\_\-MAC\_\-RATE\_\-9MBPS} =  18, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41daeb680a41efe94b110c0a19c7134d5892}{GSN\_\-MAC\_\-RATE\_\-11MBPS} =  22, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da97cdd89b6922881aab4d80c151adaf2b}{GSN\_\-MAC\_\-RATE\_\-12MBPS} =  24, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da8982b7bfe30b509211ddb4bfaec9f6b2}{GSN\_\-MAC\_\-RATE\_\-13MBPS} =  26, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da1fa98727e873a12b52fe5654f9e8beb0}{GSN\_\-MAC\_\-RATE\_\-18MBPS} =  36, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41dad5feaa4be91659303c8e8905590004e8}{GSN\_\-MAC\_\-RATE\_\-19\_\-5MBPS} =  39, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41dad28f25101ea2432bdd1a06fe2a97fc14}{GSN\_\-MAC\_\-RATE\_\-24MBPS} =  48, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41dad012ef0af6775a233e4fefa0b163dd2c}{GSN\_\-MAC\_\-RATE\_\-26MBPS} =  52, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da5a4fdc5677b4912f81aa0367a93ac63b}{GSN\_\-MAC\_\-RATE\_\-36MBPS} =  72, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da4ff541ec828e47779ab515bbce812432}{GSN\_\-MAC\_\-RATE\_\-39MBPS} =  78, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da90c278dcfd04b86e79b797239b3b133b}{GSN\_\-MAC\_\-RATE\_\-48MBPS} =  96, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41dae36e5884dc5c75b3d0d06a9199213993}{GSN\_\-MAC\_\-RATE\_\-52MBPS} =  104, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41daa73db96531738bd3cc757599330b490c}{GSN\_\-MAC\_\-RATE\_\-54MBPS} =  108, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da4fc0e557eb2aca6c25f56228efe4a365}{GSN\_\-MAC\_\-RATE\_\-58\_\-5MBPS} =  117, 
+\par
+\hyperlink{a00642_gga260da9755b2bec5e93c8b16a5a92d41da3225e2fa7882610a3a764e0ccf7499a6}{GSN\_\-MAC\_\-RATE\_\-65MBPS} =  130
+ \}
+\begin{DoxyCompactList}\small\item\em enumerated type describing the various available rates. \end{DoxyCompactList}\item 
+enum \hyperlink{a00642_gacd7033290927ecd0c0b3b6e9829ecb2e}{GSN\_\-MAC\_\-SCAN\_\-TYPE} \{ \par
+\hyperlink{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea365bc3b0d49cef29862eaefb8e74c58c}{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE} =  0, 
+\par
+\hyperlink{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea8807821495b972487d959e08e67d1dd0}{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE}, 
+\par
+\hyperlink{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea3b09e6f9740ed6f5510747c59b2e3af3}{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}, 
+\par
+\hyperlink{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea148a646044a62921ae0f6f15a49d427d}{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}, 
+\par
+\hyperlink{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea42dc80aa1ea641af49db305afc3dd664}{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}, 
+\par
+\hyperlink{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea922992fd8398f8d60e90a33674583b24}{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}, 
+\par
+\hyperlink{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2eaff33c56427944572c294ced551b38993}{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}
+ \}
+\begin{DoxyCompactList}\small\item\em Scan type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00642_gaa470d1007e57e516d1df5e4b8063182f}{GSN\_\-MAC\_\-PROTECT\_\-MODE\_\-T} \{ \par
+\hyperlink{a00642_ggaa470d1007e57e516d1df5e4b8063182faebc94a474d588d14f27566401b67ec30}{GSN\_\-MAC\_\-PROTECT\_\-NONE} =  0, 
+\par
+\hyperlink{a00642_ggaa470d1007e57e516d1df5e4b8063182fac1649209fc916370cf2eb11fdedcaa6f}{GSN\_\-MAC\_\-PROTECT\_\-CTS\_\-TO\_\-SELF}, 
+\par
+\hyperlink{a00642_ggaa470d1007e57e516d1df5e4b8063182fa1909b4b4f8de41538af85b18c822c8dc}{GSN\_\-MAC\_\-PROTECT\_\-RTS\_\-CTS}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of protection modes for 802.11g operation. \end{DoxyCompactList}\item 
+enum \hyperlink{a00642_gaabd0b61d3828dd59d93bb8be08f10ac6}{GSN\_\-MAC\_\-DIVERSITY\_\-MODE\_\-T} \{ \par
+\hyperlink{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6af0b41fcfdb282436ce96f215518df7b7}{GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA0\_\-ONLY} =  0, 
+\par
+\hyperlink{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a2108d8a409d1453f2dba556036e7949f}{GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA1\_\-ONLY}, 
+\par
+\hyperlink{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6abf76ce9526e8b9ca1c14fc5bed8215e4}{GSN\_\-MAC\_\-DIVERSITY\_\-ALWAYS\_\-TOGGLING}, 
+\par
+\hyperlink{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a35eadd9c9bd58e7c7dd77f54f9cfa48d}{GSN\_\-MAC\_\-DIVERSITY\_\-FOR\_\-AP} =  3, 
+\par
+\hyperlink{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a55627deea74bcc196d12110f41d7f6a9}{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-START} =  4, 
+\par
+\hyperlink{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a5eb675197b32e9b6eeab713023e910d9}{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-MESURE\_\-OTHER}, 
+\par
+\hyperlink{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a8faf40fc52be3915b495936e34a68c14}{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-LOCK\_\-ON\_\-BEST}
+ \}
+\begin{DoxyCompactList}\small\item\em Antenna diversity operating modes. \end{DoxyCompactList}\item 
+enum \hyperlink{a00642_ga0ae19d69a0b381d883890df8a7812414}{GSN\_\-MAC\_\-WPS\_\-ATTR} \{ \par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ae0e4f98b1e9f93fab112823a40124cf9}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-CHANNEL} =  0x1001, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a14a9ece3989389a193ba8952c6e54a49}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ASSOC\_\-STATE} =  0x1002, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a82abc540504b8e5abd3d3284d1be3691}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE} =  0x1003, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a82a50e93477f656efe36c78bee9853ae}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE\_\-FLAGS} =  0x1004, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a6db708b7b9456aa0954847a56a87c950}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTHENTICATOR} =  0x1005, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a0b8df95e03afe854134675a191b32380}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-METHODS} =  0x1008, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a11665e3ac538b48a4c5cd07c7f85ac34}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-ERROR} =  0x1009, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a58e52e468a71edde980771bdcc5cb57c}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL4} =  0x100a, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a8196c29bf558c99d22a89a2821eeddd7}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL6} =  0x100b, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414acde288264ac04d778a3253db30d27606}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE} =  0x100c, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a860213d76ac7a737ae6526d4ede0972b}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE\_\-FLAGS} =  0x100d, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414af801b5a3d9b7781b514c52ff1d95046e}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CRED} =  0x100e, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a0f7ef631b9b5172cdeaac0f6d57be68b}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE} =  0x100f, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a1bccefdc1fb8e59b0f1b2143760a6644}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE\_\-FLAGS} =  0x1010, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ac600b93117d1fd53e66ed52e54699451}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-NAME} =  0x1011, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a08ccfbe8970a56aae777bf20f46d3b65}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-PASSWORD\_\-ID} =  0x1012, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414affb3ee90dc1870d4a399814ef2e72f7b}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH1} =  0x1014, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a077695e5257e9e646d38ab4d649df7d7}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH2} =  0x1015, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a148038d92c6054711427dd01c4178df3}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE1} =  0x1016, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ad67e234cf3cd78d829db04fd1d76d592}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE2} =  0x1017, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a061dcf9ed592316d74edafcbdd408abc}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-SETTINGS} =  0x1018, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a6e68d887428b6b8305aa9c18cb3d1c5a}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENROLLEE\_\-NONCE} =  0x101a, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a522f5dba15cb3d3aacdcd036e2b59150}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-FEATURE\_\-ID} =  0x101b, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ab35724dadfe61d6ee4b8db2c26f5d592}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY} =  0x101c, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414addddcc8e24644c522a4b64a303dad605}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY\_\-PROOF} =  0x101d, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ac6599d36351e718ee91228713e9ea30b}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-WRAP\_\-AUTH} =  0x101e, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a3830bf83e6e906525b7c4b9fba9a4cf7}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-ID} =  0x101f, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ae08e8ebd8144290f405ddd039d50d4a1}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MAC\_\-ADDR} =  0x1020, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a56e395ae5ad56ebcdf3a3daf60508705}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MANUFACTURER} =  0x1021, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414aad2c6f083e5d168e417eaeaec60e1188}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-TYPE} =  0x1022, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a00711c771bb3f70aca7c5590d8be46a5}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NAME} =  0x1023, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a747ceda35756847af00e4c08aa9ddb6b}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NUMBER} =  0x1024, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a95ce2bb8157589dccf214d78e7bfe089}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-INDEX} =  0x1026, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a6335ff86b286abd89e8357c3a38e4cfa}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY} =  0x1027, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ab3412060b43412458c32ae279dafab42}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY\_\-INDEX} =  0x1028, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a53315d91cf0bccd56a5df8903b4b1e3c}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-DEVICE\_\-NAME} =  0x1029, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a63fe81cf6d0077c4dd62fdf2397f628f}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-PASSWORD} =  0x102a, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a4a27af7c5d1724ce0f641ac86d401f86}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OOB\_\-DEVICE\_\-PASSWORD} =  0x102c, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a248764365b811e501fa52e7175fd15f1}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OS\_\-VERSION} =  0x102d, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a759d95dbbd54effd023e9c7dac8e5ccc}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-POWER\_\-LEVEL} =  0x102f, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ab5034f8c8b189c17df7ad8f014598d6e}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-CURRENT} =  0x1030, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a58db76da0cc1255ce52bf6f152c2adfa}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-MAX} =  0x1031, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a7e34100818d569f2b3ee549b38a2fe30}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBLIC\_\-KEY} =  0x1032, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a7503378812e50f11419c9ef2ebf38cb4}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RADIO\_\-ENABLE} =  0x1033, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a9e2fa8c3462ef0459ac59b542b30d73b}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REBOOT} =  0x1034, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ae57635b08d409f68022e5dd31f2db238}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-CURRENT} =  0x1035, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a5c0f743d2a7e9046503b1a12ef8fdbd1}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-ESTABLISHED} =  0x1036, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a2ef5c33ca0d80654d41a318e2d8bbbb9}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-LIST} =  0x1037, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a12357664da12b1300136c3987b234b9a}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-MAX} =  0x1038, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ac72ed6c2511a4fe61f421fe8b97aa84d}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-NONCE} =  0x1039, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a7976e11cc80f9fedaad827a78937ce43}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REQUEST\_\-TYPE} =  0x103a, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414afc565ba8593a669a97cec3a7ffd12286}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RESPONSE\_\-TYPE} =  0x103b, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a61f9014364e3888a78f4f9e9f03cce18}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RF\_\-BANDS} =  0x103c, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a34d93c9b4edc5be7a47a6797ff169a13}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH1} =  0x103d, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a896f51ad7da9054a9e30ecf48006aa23}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH2} =  0x103e, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414aee2db55e6fede6b24410a216871d016e}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE1} =  0x103f, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a88c81608cdb2a5e022755eb117651766}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE2} =  0x1040, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a2523c1744d85b547d72ab907fc72f370}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR} =  0x1041, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a6d10efeab9c2b6e2ba656f8a23c3448f}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SERIAL\_\-NUMBER} =  0x1042, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a4c38d42c808c6312f62526fd678028b2}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WPS\_\-STATE} =  0x1044, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414aa230c88c2e2ba08e4f955b304e552bf0}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SSID} =  0x1045, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a277667b176aacf858631fd0ea6847ed3}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-TOTAL\_\-NETWORKS} =  0x1046, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ac5f48c116f9cb5dd46fd2a4e9c3e76d6}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-E} =  0x1047, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414aa6b19c984ca4e9f72133042f9102dcf8}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-R} =  0x1048, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ad30e228111674bab9eabffe99ddf1af3}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VENDOR\_\-EXT} =  0x1049, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ace95785bf34b55e3c792f556cd74d4c9}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VERSION} =  0x104a, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414aa3fdf34a8468ff5000c0e9ef3bacca27}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT\_\-REQ} =  0x104b, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a6de100ee39618b50cfeea63451215faa}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT} =  0x104c, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ac26c41281a3d8a08bf5aa9cafd12e1e0}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-IDENTITY} =  0x104d, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a6eca670b85550427017fe20b3769627a}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-COUNTER} =  0x104e, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ab9823407c5f09c370cec3ebc15eaf768}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBKEY\_\-HASH} =  0x104f, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a2f9230427597a54f33ebdb495ce4e875}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REKEY\_\-KEY} =  0x1050, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a7c493d54cbe9bcdbf614d0ef1eb8c698}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-LIFETIME} =  0x1051, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ad5533224919266772b2e66b15e249329}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PERMITTED\_\-CFG\_\-METHODS} =  0x1052, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ab8085b8e758237446f2dea40d1163170}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR\_\-CONFIG\_\-METHODS} =  0x1053, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a8e09e6a61a2a303b81ee1a97ee2bdc56}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PRIMARY\_\-DEV\_\-TYPE} =  0x1054, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414aeef9d9adce9ef3a96e43ef49162e6b7e}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SECONDARY\_\-DEV\_\-TYP\_\-ELIST} =  0x1055, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a026fdeb1d92c07881b4647872a7e4b4b}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PORTABLE\_\-DEV} =  0x1056, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a4a5a1ab8cec5bb899989e7753a806d11}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-SETUP\_\-LOCKED} =  0x1057, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a229f8589f7ca2eea8cad9c8f1a45f53c}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPLICATION\_\-EXT} =  0x1058, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a377bf260f557239e4b247b0a00f844fc}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-TYPE} =  0x1059, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a7124169a361bbebc153ff846efdaba5e}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IV} =  0x1060, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414ac27a96bcbf6bb6daaa59c46c000c8cb5}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-PROVIDED\_\-AUTO} =  0x1061, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a2dcc37ccc4d028268022fb606db04ada}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-802\_\-1X\_\-ENABLED} =  0x1062, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a83c9a15823fc1f9759c87d8f8c88746b}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPSESSIONKEY} =  0x1063, 
+\par
+\hyperlink{a00642_gga0ae19d69a0b381d883890df8a7812414a89a728e5656f62fe81a5263adcbdf6e0}{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WEPTRANSMITKEY} =  0x1064
+ \}
+\begin{DoxyCompactList}\small\item\em WPS attribute types. This enum defines the WPS attribute type values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+INLINE void \hyperlink{a00642_ga41c43127ce1f76a9d59782ea41e71936}{GSN\_\-MAC\_\-SSID\_\-CPY} (\hyperlink{a00417}{GSN\_\-MAC\_\-SSID\_\-T} $\ast$const dstSsidPtr, const \hyperlink{a00417}{GSN\_\-MAC\_\-SSID\_\-T} $\ast$const srcSsidPtr)
+\begin{DoxyCompactList}\small\item\em utility for copying an SSID to a new memory location. \end{DoxyCompactList}\item 
+INLINE void \hyperlink{a00642_ga10d1d894fd6997657ba3ad3feb3f5c25}{GSN\_\-MAC\_\-ADDR\_\-CPY} (void $\ast$const DstAddrPtr, const void $\ast$const SrcAddrPtr)
+\begin{DoxyCompactList}\small\item\em utility function for copying a MAC address to a new memory location. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00642_ga7fb691c78d3a1046fa998bae1560e1a5}{WLAN\_\-BOOLEAN} \hyperlink{a00642_ga40777d8fbdd030789a57dff0bd8ff0f0}{GSN\_\-MAC\_\-ADDR\_\-CMP} (const void $\ast$const Addr1Ptr, const void $\ast$const Addr2Ptr)
+\begin{DoxyCompactList}\small\item\em utility for comparing two MAC addresses; returns TRUE if they are equal. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00642_ga7fb691c78d3a1046fa998bae1560e1a5}{WLAN\_\-BOOLEAN} \hyperlink{a00642_ga41a9a0ac53be9509c53d788c7f441f11}{GSN\_\-MAC\_\-ADDR\_\-FILTER} (const \hyperlink{a00416}{GSN\_\-MAC\_\-ADDR\_\-T} $\ast$const addrPtr, const \hyperlink{a00416}{GSN\_\-MAC\_\-ADDR\_\-T} $\ast$const maskPtr, const \hyperlink{a00416}{GSN\_\-MAC\_\-ADDR\_\-T} $\ast$const filterPtr)
+\begin{DoxyCompactList}\small\item\em utility to mask and filter the given address by the given mask/filter. \end{DoxyCompactList}\item 
+INLINE void \hyperlink{a00642_gad5c339a4bdf8153b8db53bb5b3437cce}{GSN\_\-MAC\_\-KEY\_\-CPY} (\hyperlink{a00131}{GSN\_\-MAC\_\-SEC\_\-KEY\_\-T} $\ast$const macKeyPtr, const \hyperlink{a00131}{GSN\_\-MAC\_\-SEC\_\-KEY\_\-T} $\ast$const srcKeyPtr)
+\begin{DoxyCompactList}\small\item\em utility to copy a security key to a new memory location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_gacd47816d50e57aeb3b85dfdedc358f68}{GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-OPEN}~0
+\begin{DoxyCompactList}\small\item\em authentication definitions. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gaed7a52fc252b37b7c3959abe9f1ae41d}{GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-SHARED}~1
+\item 
+\#define \hyperlink{a00642_gaef1305dd2c4b1cf097722788e2c1ee57}{GSN\_\-MAC\_\-AUTH\_\-FIRST\_\-SEQ}~1
+\item 
+\#define \hyperlink{a00642_ga57052f7661d88b214bdd95c8813cf7ab}{GSN\_\-MAC\_\-AUTH\_\-SECOND\_\-SEQ}~2
+\item 
+\#define \hyperlink{a00642_ga9dacfef47d27c883bff514e485ef2e56}{GSN\_\-MAC\_\-AUTH\_\-THIRD\_\-SEQ}~3
+\item 
+\#define \hyperlink{a00642_ga6c6855fb6717e3e7dbf0015697bb75a2}{GSN\_\-MAC\_\-AUTH\_\-FOURTH\_\-SEQ}~4
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_ga53bbc17ad8f0c2d8481cd07a300a9640}{GSN\_\-MAC\_\-PHYTYPE\_\-FHSS}~1
+\begin{DoxyCompactList}\small\item\em 802.11 physical layer type (classic, a, b, g, etc.). \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gaea4417ed84d382fcaec29ef522d491af}{GSN\_\-MAC\_\-PHYTYPE\_\-DSSS}~2
+\item 
+\#define \hyperlink{a00642_ga0c7253eeef7a0f2a018c4b1436bc584d}{GSN\_\-MAC\_\-PHYTYPE\_\-IR}~3
+\item 
+\#define \hyperlink{a00642_ga23cddc9f0e4001a0b73f391e92df0302}{GSN\_\-MAC\_\-PHYTYPE\_\-OFDM}~4
+\item 
+\#define \hyperlink{a00642_ga86c7ded9f98a88e0d0b6e1f8c3c710a9}{GSN\_\-MAC\_\-PHYTYPE\_\-HRDSSS}~5
+\item 
+\#define \hyperlink{a00642_ga1bef034ba2995a95023a571a00b85b9a}{GSN\_\-MAC\_\-PHYTYPE\_\-ERP}~6
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_ga2372fc9534269f16c2e02d4c02bd9678}{GSN\_\-MAC\_\-BSSTYPE\_\-INFRASTRUCTURE}~1
+\begin{DoxyCompactList}\small\item\em BSS type -\/ infrastructure (AP) or independent service set. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga87bb2904a9980d0ecf8f90a9def53f8b}{GSN\_\-MAC\_\-BSSTYPE\_\-INDEPENDENT}~0
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_ga1153f0727bac49c704c19659c6af8126}{GSN\_\-MAC\_\-AUTH\_\-OPEN}~1
+\begin{DoxyCompactList}\small\item\em Authentication algorithm; used with OID type b. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gaf44feac70f9ce6dc783578b7ccc2f8a3}{GSN\_\-MAC\_\-AUTH\_\-SHARED}~2
+\item 
+\#define \hyperlink{a00642_gab184a6403ca2858aefd8100162c3d123}{GSN\_\-MAC\_\-AUTH\_\-AUTO}~3
+\item 
+\#define \hyperlink{a00642_ga0a443ae2a1e4873621cdbb480dc8a7fc}{GSN\_\-MAC\_\-AUTH\_\-WPA}~4
+\item 
+\#define \hyperlink{a00642_gab69f885fde7c0cc3a634bdb6c59137b4}{GSN\_\-MAC\_\-AUTH\_\-WPAPSK}~5
+\item 
+\#define \hyperlink{a00642_gac24885ac3891945ce4609aa30ef41a04}{GSN\_\-MAC\_\-AUTH\_\-WPANONE}~6
+\item 
+\#define \hyperlink{a00642_gacffb560e436c18bd91375b8f3ecda578}{GSN\_\-MAC\_\-AUTH\_\-WPA2}~7
+\item 
+\#define \hyperlink{a00642_gafdd52a10528e2f3e5277f4ecc458e3b9}{GSN\_\-MAC\_\-AUTH\_\-WPA2PSK}~8
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_ga8562dc7df79490dc400c2a694356c55d}{GSN\_\-MAC\_\-POWERMODE\_\-CAM}~1
+\begin{DoxyCompactList}\small\item\em 802.11 power mode. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga751f71fb490748186b9e7ffc85d77b74}{GSN\_\-MAC\_\-POWERMODE\_\-MAXPSP}~2
+\item 
+\#define \hyperlink{a00642_ga4533fe3149beb1276a66d8d703fb8c4a}{GSN\_\-MAC\_\-POWERMODE\_\-FASTPSP}~3
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_ga97e73490c2ebf96dc976cfa9819ca342}{GSN\_\-MAC\_\-ENC\_\-WEP}~0x01
+\begin{DoxyCompactList}\small\item\em encryption type / status. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga41cad5522df15c08084272449a15f488}{GSN\_\-MAC\_\-ENC\_\-WPA}~0x02
+\item 
+\#define \hyperlink{a00642_gae50c827781cd44789ebc5ace15ce7fac}{GSN\_\-MAC\_\-ENC\_\-TKIP}~0x04
+\item 
+\#define \hyperlink{a00642_gad400c18aedc0468b5338a51ddfd65803}{GSN\_\-MAC\_\-ENC\_\-WPA2}~0x10
+\item 
+\#define \hyperlink{a00642_gaaec086a1c50b8286b787d02bedd41fbf}{GSN\_\-MAC\_\-ENC\_\-CCMP}~0x20
+\item 
+\#define \hyperlink{a00642_gaa8b7bb2627d27e63f25be3787fa8abc1}{GSN\_\-MAC\_\-ENC\_\-NONE}~0x80
+\item 
+\#define \hyperlink{a00642_gae6f462d0bcd3c5811fb25ec43699b8c8}{GSN\_\-MAC\_\-ENC\_\-ALL}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_gaa9374ba371dac462bbc520ad04eb91a1}{GSN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN}~0
+\begin{DoxyCompactList}\small\item\em SSID length options (broadcast or standard). \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gabc6a02f5958aac465500370ca12dd011}{GSN\_\-MAC\_\-SSID\_\-LEN}~32
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_ga9f1db3741ca60ee70690fe908f615b05}{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-MASK}~0x07
+\begin{DoxyCompactList}\small\item\em Cipher suite selectors (table 2 p 20); Descriptor values \mbox{[}bit 0 1 2\mbox{]}. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gabb256ee389628678d07227a262c724cd}{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP40}~0x01
+\item 
+\#define \hyperlink{a00642_ga923f017a53927b85c88857723b490d0f}{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-TKIP}~0x02
+\item 
+\#define \hyperlink{a00642_gae128a6f53a21ed1dd5cc751f5f76b063}{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-CCMP}~0x04
+\item 
+\#define \hyperlink{a00642_ga4a472fd868a0633cf337c1a3c4b0a8ed}{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP104}~0x05
+\item 
+\#define \hyperlink{a00642_ga29ef5d37177a52a22dd6707dd3e943cf}{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-NOSEC}~0xFE
+\item 
+\#define \hyperlink{a00642_ga6498ff5acf21d809adebf490aaeb1158}{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-INVALID}~0xFF
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_ga66753c440ce19038fd3676c28b340ba3}{GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-8021X}~1
+\begin{DoxyCompactList}\small\item\em authentication and key management suite selectors (table 1 p 20) \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga32b9e4b675a4ef0664691d13d70e1b1b}{GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-PSK}~2
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_ga01d15be8069f353fa7376360929eeb2f}{GSN\_\-MAC\_\-STA\_\-CLASS\_\-MASK}~0x30
+\begin{DoxyCompactList}\small\item\em Station class flags. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gaf0688616f5b52712d7fbc5f2a10896c1}{GSN\_\-MAC\_\-STA\_\-CLASS1}~0x00
+\item 
+\#define \hyperlink{a00642_ga0127205e69cce6c11a8b87d6562c5623}{GSN\_\-MAC\_\-STA\_\-CLASS2}~0x10
+\item 
+\#define \hyperlink{a00642_ga0da606a37b3024d9bf42760219f526be}{GSN\_\-MAC\_\-STA\_\-CLASS3}~0x30
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_gaab8abe9d2ed942b0aac9ae3f562e204a}{GSN\_\-MAC\_\-STA\_\-PS\_\-MODE}~1
+\begin{DoxyCompactList}\small\item\em station power save mode \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_gaa20efb0a2c9950b1601e9a681c9372be}{GSN\_\-MAC\_\-STA\_\-ACTIVE}~0
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_gadef528ef0222b55050b526f2acd1e545}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-24GHZ}~/$\ast$ FCC    $\ast$/ \{11, \{ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11\}\}
+\begin{DoxyCompactList}\small\item\em Channel domain definitions. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga3ad89b43471f5e0ec1a3fb38092a322d}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-5GHZ}~/$\ast$ FCC    $\ast$/ \{12, \{36, 40, 44, 48, 52, 56, 60, 64, 149, 153, 157, 161\}\}
+\item 
+\#define \hyperlink{a00642_gad25876d674bda6a842556d3b3194ab50}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X20}~/$\ast$ IC     $\ast$/ \{11, \{ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11\}\}
+\item 
+\#define \hyperlink{a00642_ga9bdd8d819efafbf6ee3f9a9372b8b4ab}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X30}~/$\ast$ ETSI   $\ast$/ \{13, \{ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13\}\}
+\item 
+\#define \hyperlink{a00642_ga2fa52e7994dae2b65aa764cebd4b08a6}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X31}~/$\ast$ Spain  $\ast$/ \{2,  \{10, 11\}\}
+\item 
+\#define \hyperlink{a00642_ga674bc6383fba8ff146b4741af9ed8494}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X32}~/$\ast$ France $\ast$/ \{4,  \{10, 11, 12, 13\}\}
+\item 
+\#define \hyperlink{a00642_ga28a20ad2b2d714e7729976e3778428a0}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X40}~/$\ast$ MKK    $\ast$/ \{1,  \{14\}\}
+\item 
+\#define \hyperlink{a00642_gacb2f3c46d39cb7547bf13a2cf2da53c6}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X41}~/$\ast$ Japan  $\ast$/ \{24, \{ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 240, 244, 248, 252, 8, 12, 16, 34, 38, 42, 46\}\}
+\item 
+\#define \hyperlink{a00642_ga1902c2b82dd9530b1f76e7aa03cad775}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-24\_\-ONLY}~\{14, \{ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14\}\}
+\item 
+\#define \hyperlink{a00642_ga700daf355821d5d26cb0d2f346a1a969}{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-5\_\-ONLY}~\{33, \{ 7,  8, 11, 12, 16, 36, 40, 44, 48, 52, 56, 60, 64, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 149, 153, 157, 161, 183, 184, 188, 192, 196 \}\}
+\item 
+\#define \hyperlink{a00642_gab2030e7c4ab461cd034d5ee1ef004372}{GSN\_\-MAC\_\-MAX\_\-RAWCHANNELDOMAIN}~(1 + 1 + 3 + 3$\ast$3)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00121}{GSN\_\-MAC\_\-PMKIDLIST\_\-T} \hyperlink{a00642_ga93df35fe1df8b6cf9f020c78019dd58c}{GSN\_\-MAC\_\-PMKIDLIST\_\-T}
+\item 
+\#define \hyperlink{a00642_ga56ae91b81107b9438ab55637317cab2c}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-EMPTY}~/$\ast$ EMPTY  $\ast$/ \{3, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 0\}
+\begin{DoxyCompactList}\small\item\em Channel raw channel domain entries. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga500c98f87ed8a4f3682e4b1b660bfe3d}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-24GHZ}~/$\ast$ FCC    $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, 'U', 'S', ' ', 1, 11, 10\}
+\item 
+\#define \hyperlink{a00642_ga942c8bca51fccd885216a358eb762f55}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-5GHZ}~/$\ast$ FCC    $\ast$/  \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, 'U', 'S', ' ',36,  7, 10\}
+\item 
+\#define \hyperlink{a00642_gacbfcc1079a6c770488a643ba72c66f78}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X20}~/$\ast$ IC     $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, ' ', ' ', ' ', 1, 11, 10\}
+\item 
+\#define \hyperlink{a00642_gae86f5fe270e13731354c040379263373}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X30}~/$\ast$ ETSI   $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, ' ', ' ', ' ', 1, 13, 10\}
+\item 
+\#define \hyperlink{a00642_ga8f1d8d62d0476db2e67ae76fbbd8edcb}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X31}~/$\ast$ Spain  $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, 'E', 'S', ' ', 10, 1, 10\}
+\item 
+\#define \hyperlink{a00642_gae1d4ccda0a4874b368916cf6bffd8dd9}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X32}~/$\ast$ France $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, 'F', 'R', ' ', 10, 4, 10\}
+\item 
+\#define \hyperlink{a00642_ga438fdc847fa4e621ec8496edb440b33d}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X40}~/$\ast$ MKK    $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, ' ', ' ', ' ', 14, 1, 10\}
+\item 
+\#define \hyperlink{a00642_gad8ce3e93cc664b42d72189d4cbec214c}{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X41}~/$\ast$ Japan  $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, 'J', 'P', ' ', 1, 13, 10\}
+\item 
+\#define \hyperlink{a00642_ga9f42c86bf65bb1ba654fb772cc494637}{GSN\_\-MAC\_\-MAX\_\-PMKIDLIST}~80
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_ga98d81e9fac7e3e57bb933a0e8774312b}{GSN\_\-MAC\_\-BSS\_\-VALID}~0x01
+\begin{DoxyCompactList}\small\item\em BSS element values. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga11cf8c8f47218aaccfe9b0342ad34b1a}{GSN\_\-MAC\_\-AUTHENTICATED}~0x02
+\item 
+\#define \hyperlink{a00642_gac95d79b5108d9696c78d41bf0bfc5f62}{GSN\_\-MAC\_\-ASSOCIATED}~0x04
+\item 
+\#define \hyperlink{a00642_gaa8c55e757f0ecc6201c7a9db8808da39}{GSN\_\-MAC\_\-SCAN\_\-MARKED}~0x80
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_gaf9a051751a39d7ec6cf8e671deafd3ff}{GSN\_\-MAC\_\-SLOTTIME\_\-LONG}~20
+\begin{DoxyCompactList}\small\item\em Slot duration for different PHY types. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga081f6423e4f0a7752d2a289c9a7eedbc}{GSN\_\-MAC\_\-SLOTTIME\_\-SHORT}~9
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00642_gae099692a4b641e183742ae960e3d2cb9}{GSN\_\-MAC\_\-SET\_\-RSSI\_\-ANTENNA}(my\_\-rssi, my\_\-antenna)~( ( my\_\-antenna $<$$<$ 7 ) $|$ ( my\_\-rssi \& ( $\sim$0x80 )))
+\begin{DoxyCompactList}\small\item\em antenna diversity / RSSI defines. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00642_ga0baa7c82496dc0f07898a5df0d135d5c}{GSN\_\-MAC\_\-GET\_\-RSSI}(rssi)~(rssi $|$ 0x80)
+\item 
+\#define \hyperlink{a00642_gaf90baba19031f5fc0662b2e19649b7cd}{GSN\_\-MAC\_\-GET\_\-ANTENNA}(rssi)~((rssi \& 0x80)?1:0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group contains 802.11 MAC-\/level definitions. This group contains macro definitions for authentication, physical-\/layer properties, encryption, and various MAC address filtering and comparison operations. Note there are a number of macro sequences where only the first element is included in the documentation for simplicity; click on the source code definition link to see all the options for the given macro type. 
+
+\subsection{Define Documentation}
+\hypertarget{a00642_gad81b63f034b99768727bc1514ba5c175}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ADDR\_\-BCAST@{GSN\_\-MAC\_\-ADDR\_\-BCAST}}
+\index{GSN\_\-MAC\_\-ADDR\_\-BCAST@{GSN\_\-MAC\_\-ADDR\_\-BCAST}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ADDR\_\-BCAST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ADDR\_\-BCAST(
+\begin{DoxyParamCaption}
+\item[{}]{Addr1Ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00642_gad81b63f034b99768727bc1514ba5c175}
+{\bfseries Value:}
+\begin{DoxyCode}
+((*(( UINT8* )( Addr1Ptr )  ) == 0xFF )                                \
+    &&(*(( UINT8* )( Addr1Ptr ) + 1 ) == 0xFF )                             \
+    &&(*(( UINT8* )( Addr1Ptr ) + 2 ) == 0xFF )                             \
+    &&(*(( UINT8* )( Addr1Ptr ) + 3 ) == 0xFF )                             \
+    &&(*(( UINT8* )( Addr1Ptr ) + 4 ) == 0xFF )                             \
+    &&(*(( UINT8* )( Addr1Ptr ) + 5 ) == 0xFF ))
+\end{DoxyCode}
+
+
+macro returns TRUE if the argument is a broadcast address. 
+
+
+
+Definition at line 400 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga3b8dd261cd46e061d18d2630039df685}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ADDR\_\-BCAST\_\-SET@{GSN\_\-MAC\_\-ADDR\_\-BCAST\_\-SET}}
+\index{GSN\_\-MAC\_\-ADDR\_\-BCAST\_\-SET@{GSN\_\-MAC\_\-ADDR\_\-BCAST\_\-SET}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ADDR\_\-BCAST\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ADDR\_\-BCAST\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{MacAddrPtr}
+\end{DoxyParamCaption}
+)~memset(( {\bf UINT8}$\ast$ )( MacAddrPtr ), 0xFF, GSN\_\-MAC\_\-ADDR\_\-LEN )}}
+\label{a00642_ga3b8dd261cd46e061d18d2630039df685}
+
+
+macro sets an address to the broadcast address 0xFF FF FF FF FF FF. 
+
+
+
+Definition at line 426 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga95d4817391976ee04a12a20613cacc4c}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ADDR\_\-GROUP@{GSN\_\-MAC\_\-ADDR\_\-GROUP}}
+\index{GSN\_\-MAC\_\-ADDR\_\-GROUP@{GSN\_\-MAC\_\-ADDR\_\-GROUP}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ADDR\_\-GROUP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ADDR\_\-GROUP(
+\begin{DoxyParamCaption}
+\item[{}]{MacAddrPtr}
+\end{DoxyParamCaption}
+)~(($\ast$( MacAddrPtr )) \& GSN\_\-MAC\_\-HEAD\_\-ADDR\_\-GROUP\_\-MASK )}}
+\label{a00642_ga95d4817391976ee04a12a20613cacc4c}
+
+
+macro returns TRUE if the argument is a group address, and masks the group bit. 
+
+
+
+Definition at line 416 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaeeeab57b53de2e9a366c2b883e008f5e}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ADDR\_\-LEN@{GSN\_\-MAC\_\-ADDR\_\-LEN}}
+\index{GSN\_\-MAC\_\-ADDR\_\-LEN@{GSN\_\-MAC\_\-ADDR\_\-LEN}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ADDR\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ADDR\_\-LEN~GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-LEN}}
+\label{a00642_gaeeeab57b53de2e9a366c2b883e008f5e}
+
+
+default value of the length of a MAC address. 
+
+
+
+Definition at line 311 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gac95d79b5108d9696c78d41bf0bfc5f62}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ASSOCIATED@{GSN\_\-MAC\_\-ASSOCIATED}}
+\index{GSN\_\-MAC\_\-ASSOCIATED@{GSN\_\-MAC\_\-ASSOCIATED}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ASSOCIATED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ASSOCIATED~0x04}}
+\label{a00642_gac95d79b5108d9696c78d41bf0bfc5f62}
+
+
+Definition at line 1258 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gacd47816d50e57aeb3b85dfdedc358f68}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-OPEN@{GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-OPEN}}
+\index{GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-OPEN@{GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-OPEN}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-OPEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-OPEN~0}}
+\label{a00642_gacd47816d50e57aeb3b85dfdedc358f68}
+
+
+authentication definitions. 
+
+
+
+Definition at line 90 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaed7a52fc252b37b7c3959abe9f1ae41d}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-SHARED@{GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-SHARED}}
+\index{GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-SHARED@{GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-SHARED}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-SHARED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-ALGO\_\-SHARED~1}}
+\label{a00642_gaed7a52fc252b37b7c3959abe9f1ae41d}
+
+
+Definition at line 91 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gab184a6403ca2858aefd8100162c3d123}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-AUTO@{GSN\_\-MAC\_\-AUTH\_\-AUTO}}
+\index{GSN\_\-MAC\_\-AUTH\_\-AUTO@{GSN\_\-MAC\_\-AUTH\_\-AUTO}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-AUTO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-AUTO~3}}
+\label{a00642_gab184a6403ca2858aefd8100162c3d123}
+
+
+Definition at line 140 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaef1305dd2c4b1cf097722788e2c1ee57}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-FIRST\_\-SEQ@{GSN\_\-MAC\_\-AUTH\_\-FIRST\_\-SEQ}}
+\index{GSN\_\-MAC\_\-AUTH\_\-FIRST\_\-SEQ@{GSN\_\-MAC\_\-AUTH\_\-FIRST\_\-SEQ}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-FIRST\_\-SEQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-FIRST\_\-SEQ~1}}
+\label{a00642_gaef1305dd2c4b1cf097722788e2c1ee57}
+
+
+Definition at line 93 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga6c6855fb6717e3e7dbf0015697bb75a2}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-FOURTH\_\-SEQ@{GSN\_\-MAC\_\-AUTH\_\-FOURTH\_\-SEQ}}
+\index{GSN\_\-MAC\_\-AUTH\_\-FOURTH\_\-SEQ@{GSN\_\-MAC\_\-AUTH\_\-FOURTH\_\-SEQ}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-FOURTH\_\-SEQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-FOURTH\_\-SEQ~4}}
+\label{a00642_ga6c6855fb6717e3e7dbf0015697bb75a2}
+
+
+Definition at line 96 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga1153f0727bac49c704c19659c6af8126}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-OPEN@{GSN\_\-MAC\_\-AUTH\_\-OPEN}}
+\index{GSN\_\-MAC\_\-AUTH\_\-OPEN@{GSN\_\-MAC\_\-AUTH\_\-OPEN}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-OPEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-OPEN~1}}
+\label{a00642_ga1153f0727bac49c704c19659c6af8126}
+
+
+Authentication algorithm; used with OID type b. 
+
+
+
+Definition at line 138 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga57052f7661d88b214bdd95c8813cf7ab}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-SECOND\_\-SEQ@{GSN\_\-MAC\_\-AUTH\_\-SECOND\_\-SEQ}}
+\index{GSN\_\-MAC\_\-AUTH\_\-SECOND\_\-SEQ@{GSN\_\-MAC\_\-AUTH\_\-SECOND\_\-SEQ}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-SECOND\_\-SEQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-SECOND\_\-SEQ~2}}
+\label{a00642_ga57052f7661d88b214bdd95c8813cf7ab}
+
+
+Definition at line 94 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaf44feac70f9ce6dc783578b7ccc2f8a3}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-SHARED@{GSN\_\-MAC\_\-AUTH\_\-SHARED}}
+\index{GSN\_\-MAC\_\-AUTH\_\-SHARED@{GSN\_\-MAC\_\-AUTH\_\-SHARED}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-SHARED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-SHARED~2}}
+\label{a00642_gaf44feac70f9ce6dc783578b7ccc2f8a3}
+
+
+Definition at line 139 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga9dacfef47d27c883bff514e485ef2e56}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-THIRD\_\-SEQ@{GSN\_\-MAC\_\-AUTH\_\-THIRD\_\-SEQ}}
+\index{GSN\_\-MAC\_\-AUTH\_\-THIRD\_\-SEQ@{GSN\_\-MAC\_\-AUTH\_\-THIRD\_\-SEQ}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-THIRD\_\-SEQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-THIRD\_\-SEQ~3}}
+\label{a00642_ga9dacfef47d27c883bff514e485ef2e56}
+
+
+Definition at line 95 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga0a443ae2a1e4873621cdbb480dc8a7fc}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-WPA@{GSN\_\-MAC\_\-AUTH\_\-WPA}}
+\index{GSN\_\-MAC\_\-AUTH\_\-WPA@{GSN\_\-MAC\_\-AUTH\_\-WPA}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-WPA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-WPA~4}}
+\label{a00642_ga0a443ae2a1e4873621cdbb480dc8a7fc}
+
+
+Definition at line 141 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gacffb560e436c18bd91375b8f3ecda578}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-WPA2@{GSN\_\-MAC\_\-AUTH\_\-WPA2}}
+\index{GSN\_\-MAC\_\-AUTH\_\-WPA2@{GSN\_\-MAC\_\-AUTH\_\-WPA2}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-WPA2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-WPA2~7}}
+\label{a00642_gacffb560e436c18bd91375b8f3ecda578}
+
+
+Definition at line 144 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gafdd52a10528e2f3e5277f4ecc458e3b9}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-WPA2PSK@{GSN\_\-MAC\_\-AUTH\_\-WPA2PSK}}
+\index{GSN\_\-MAC\_\-AUTH\_\-WPA2PSK@{GSN\_\-MAC\_\-AUTH\_\-WPA2PSK}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-WPA2PSK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-WPA2PSK~8}}
+\label{a00642_gafdd52a10528e2f3e5277f4ecc458e3b9}
+
+
+Definition at line 145 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gac24885ac3891945ce4609aa30ef41a04}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-WPANONE@{GSN\_\-MAC\_\-AUTH\_\-WPANONE}}
+\index{GSN\_\-MAC\_\-AUTH\_\-WPANONE@{GSN\_\-MAC\_\-AUTH\_\-WPANONE}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-WPANONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-WPANONE~6}}
+\label{a00642_gac24885ac3891945ce4609aa30ef41a04}
+
+
+Definition at line 143 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gab69f885fde7c0cc3a634bdb6c59137b4}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTH\_\-WPAPSK@{GSN\_\-MAC\_\-AUTH\_\-WPAPSK}}
+\index{GSN\_\-MAC\_\-AUTH\_\-WPAPSK@{GSN\_\-MAC\_\-AUTH\_\-WPAPSK}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTH\_\-WPAPSK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTH\_\-WPAPSK~5}}
+\label{a00642_gab69f885fde7c0cc3a634bdb6c59137b4}
+
+
+Definition at line 142 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga11cf8c8f47218aaccfe9b0342ad34b1a}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-AUTHENTICATED@{GSN\_\-MAC\_\-AUTHENTICATED}}
+\index{GSN\_\-MAC\_\-AUTHENTICATED@{GSN\_\-MAC\_\-AUTHENTICATED}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-AUTHENTICATED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-AUTHENTICATED~0x02}}
+\label{a00642_ga11cf8c8f47218aaccfe9b0342ad34b1a}
+
+
+Definition at line 1257 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga5dd3f6052d990b4ee0d404f05787ce20}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-BASIC\_\-RATE@{GSN\_\-MAC\_\-BASIC\_\-RATE}}
+\index{GSN\_\-MAC\_\-BASIC\_\-RATE@{GSN\_\-MAC\_\-BASIC\_\-RATE}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-BASIC\_\-RATE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-BASIC\_\-RATE~0x80}}
+\label{a00642_ga5dd3f6052d990b4ee0d404f05787ce20}
+
+
+Mask to test for basic rate (\hyperlink{a00481_a3a8ea58898cb58fc96013383d39f482c}{BIT(7)}) 
+
+
+
+Definition at line 774 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaa9374ba371dac462bbc520ad04eb91a1}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN@{GSN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN}}
+\index{GSN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN@{GSN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN~0}}
+\label{a00642_gaa9374ba371dac462bbc520ad04eb91a1}
+
+
+SSID length options (broadcast or standard). 
+
+
+
+Definition at line 223 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga98d81e9fac7e3e57bb933a0e8774312b}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-BSS\_\-VALID@{GSN\_\-MAC\_\-BSS\_\-VALID}}
+\index{GSN\_\-MAC\_\-BSS\_\-VALID@{GSN\_\-MAC\_\-BSS\_\-VALID}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-BSS\_\-VALID}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-BSS\_\-VALID~0x01}}
+\label{a00642_ga98d81e9fac7e3e57bb933a0e8774312b}
+
+
+BSS element values. 
+
+
+
+Definition at line 1256 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga87bb2904a9980d0ecf8f90a9def53f8b}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-BSSTYPE\_\-INDEPENDENT@{GSN\_\-MAC\_\-BSSTYPE\_\-INDEPENDENT}}
+\index{GSN\_\-MAC\_\-BSSTYPE\_\-INDEPENDENT@{GSN\_\-MAC\_\-BSSTYPE\_\-INDEPENDENT}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-BSSTYPE\_\-INDEPENDENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-BSSTYPE\_\-INDEPENDENT~0}}
+\label{a00642_ga87bb2904a9980d0ecf8f90a9def53f8b}
+
+
+Definition at line 128 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga2372fc9534269f16c2e02d4c02bd9678}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-BSSTYPE\_\-INFRASTRUCTURE@{GSN\_\-MAC\_\-BSSTYPE\_\-INFRASTRUCTURE}}
+\index{GSN\_\-MAC\_\-BSSTYPE\_\-INFRASTRUCTURE@{GSN\_\-MAC\_\-BSSTYPE\_\-INFRASTRUCTURE}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-BSSTYPE\_\-INFRASTRUCTURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-BSSTYPE\_\-INFRASTRUCTURE~1}}
+\label{a00642_ga2372fc9534269f16c2e02d4c02bd9678}
+
+
+BSS type -\/ infrastructure (AP) or independent service set. 
+
+
+
+Definition at line 127 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga1902c2b82dd9530b1f76e7aa03cad775}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELDOMAIN\_\-24\_\-ONLY@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-24\_\-ONLY}}
+\index{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-24\_\-ONLY@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-24\_\-ONLY}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-24\_\-ONLY}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-CHANNELDOMAIN\_\-24\_\-ONLY~\{14, \{ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14\}\}}}
+\label{a00642_ga1902c2b82dd9530b1f76e7aa03cad775}
+
+
+Definition at line 1034 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga700daf355821d5d26cb0d2f346a1a969}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELDOMAIN\_\-5\_\-ONLY@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-5\_\-ONLY}}
+\index{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-5\_\-ONLY@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-5\_\-ONLY}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-5\_\-ONLY}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-CHANNELDOMAIN\_\-5\_\-ONLY~\{33, \{ 7,  8, 11, 12, 16, 36, 40, 44, 48, 52, 56, 60, 64, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 149, 153, 157, 161, 183, 184, 188, 192, 196 \}\}}}
+\label{a00642_ga700daf355821d5d26cb0d2f346a1a969}
+
+
+Definition at line 1036 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gadef528ef0222b55050b526f2acd1e545}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-24GHZ@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-24GHZ}}
+\index{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-24GHZ@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-24GHZ}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-24GHZ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-24GHZ~/$\ast$ FCC    $\ast$/ \{11, \{ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11\}\}}}
+\label{a00642_gadef528ef0222b55050b526f2acd1e545}
+
+
+Channel domain definitions. 
+
+
+
+Definition at line 1025 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga3ad89b43471f5e0ec1a3fb38092a322d}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-5GHZ@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-5GHZ}}
+\index{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-5GHZ@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-5GHZ}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-5GHZ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X10\_\-5GHZ~/$\ast$ FCC    $\ast$/ \{12, \{36, 40, 44, 48, 52, 56, 60, 64, 149, 153, 157, 161\}\}}}
+\label{a00642_ga3ad89b43471f5e0ec1a3fb38092a322d}
+
+
+Definition at line 1026 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gad25876d674bda6a842556d3b3194ab50}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X20@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X20}}
+\index{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X20@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X20}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X20}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X20~/$\ast$ IC     $\ast$/ \{11, \{ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11\}\}}}
+\label{a00642_gad25876d674bda6a842556d3b3194ab50}
+
+
+Definition at line 1027 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga9bdd8d819efafbf6ee3f9a9372b8b4ab}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X30@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X30}}
+\index{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X30@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X30}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X30}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X30~/$\ast$ ETSI   $\ast$/ \{13, \{ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13\}\}}}
+\label{a00642_ga9bdd8d819efafbf6ee3f9a9372b8b4ab}
+
+
+Definition at line 1028 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga2fa52e7994dae2b65aa764cebd4b08a6}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X31@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X31}}
+\index{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X31@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X31}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X31}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X31~/$\ast$ Spain  $\ast$/ \{2,  \{10, 11\}\}}}
+\label{a00642_ga2fa52e7994dae2b65aa764cebd4b08a6}
+
+
+Definition at line 1029 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga674bc6383fba8ff146b4741af9ed8494}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X32@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X32}}
+\index{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X32@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X32}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X32}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X32~/$\ast$ France $\ast$/ \{4,  \{10, 11, 12, 13\}\}}}
+\label{a00642_ga674bc6383fba8ff146b4741af9ed8494}
+
+
+Definition at line 1030 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga28a20ad2b2d714e7729976e3778428a0}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X40@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X40}}
+\index{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X40@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X40}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X40}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X40~/$\ast$ MKK    $\ast$/ \{1,  \{14\}\}}}
+\label{a00642_ga28a20ad2b2d714e7729976e3778428a0}
+
+
+Definition at line 1031 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gacb2f3c46d39cb7547bf13a2cf2da53c6}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X41@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X41}}
+\index{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X41@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X41}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X41}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-CHANNELDOMAIN\_\-X41~/$\ast$ Japan  $\ast$/ \{24, \{ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 240, 244, 248, 252, 8, 12, 16, 34, 38, 42, 46\}\}}}
+\label{a00642_gacb2f3c46d39cb7547bf13a2cf2da53c6}
+
+
+Definition at line 1032 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gae6f462d0bcd3c5811fb25ec43699b8c8}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ENC\_\-ALL@{GSN\_\-MAC\_\-ENC\_\-ALL}}
+\index{GSN\_\-MAC\_\-ENC\_\-ALL@{GSN\_\-MAC\_\-ENC\_\-ALL}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ENC\_\-ALL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ENC\_\-ALL}}
+\label{a00642_gae6f462d0bcd3c5811fb25ec43699b8c8}
+{\bfseries Value:}
+\begin{DoxyCode}
+(GSN_MAC_ENC_NONE | GSN_MAC_ENC_WEP | GSN_MAC_ENC_TKIP \
+                            | GSN_MAC_ENC_CCMP)
+\end{DoxyCode}
+
+
+Definition at line 201 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaaec086a1c50b8286b787d02bedd41fbf}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ENC\_\-CCMP@{GSN\_\-MAC\_\-ENC\_\-CCMP}}
+\index{GSN\_\-MAC\_\-ENC\_\-CCMP@{GSN\_\-MAC\_\-ENC\_\-CCMP}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ENC\_\-CCMP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ENC\_\-CCMP~0x20}}
+\label{a00642_gaaec086a1c50b8286b787d02bedd41fbf}
+
+
+Definition at line 193 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaa8b7bb2627d27e63f25be3787fa8abc1}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ENC\_\-NONE@{GSN\_\-MAC\_\-ENC\_\-NONE}}
+\index{GSN\_\-MAC\_\-ENC\_\-NONE@{GSN\_\-MAC\_\-ENC\_\-NONE}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ENC\_\-NONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ENC\_\-NONE~0x80}}
+\label{a00642_gaa8b7bb2627d27e63f25be3787fa8abc1}
+
+
+Definition at line 200 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gae50c827781cd44789ebc5ace15ce7fac}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ENC\_\-TKIP@{GSN\_\-MAC\_\-ENC\_\-TKIP}}
+\index{GSN\_\-MAC\_\-ENC\_\-TKIP@{GSN\_\-MAC\_\-ENC\_\-TKIP}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ENC\_\-TKIP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ENC\_\-TKIP~0x04}}
+\label{a00642_gae50c827781cd44789ebc5ace15ce7fac}
+
+
+Definition at line 191 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga97e73490c2ebf96dc976cfa9819ca342}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ENC\_\-WEP@{GSN\_\-MAC\_\-ENC\_\-WEP}}
+\index{GSN\_\-MAC\_\-ENC\_\-WEP@{GSN\_\-MAC\_\-ENC\_\-WEP}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ENC\_\-WEP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ENC\_\-WEP~0x01}}
+\label{a00642_ga97e73490c2ebf96dc976cfa9819ca342}
+
+
+encryption type / status. 
+
+These values are essentially the values of the MIB element GSN\_\-WIF\_\-ME\_\-CONF\_\-ENCRYPTIONSTATUS in the WLAN Firmware (WFW) MIB.
+
+Note: The original value of GSN\_\-MAC\_\-ENC\_\-NONE is 0, as required to set GSN\_\-WIF\_\-ME\_\-CONF\_\-ENCRYPTIONSTATUS to 0 in the WFW MIB. However, it is redefined here to 0x80 to allow the APP CPU to specify NONE as one of the security modes. It is then internally mapped back to 0 when the WFW MIB element value is set. 
+
+Definition at line 189 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga41cad5522df15c08084272449a15f488}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ENC\_\-WPA@{GSN\_\-MAC\_\-ENC\_\-WPA}}
+\index{GSN\_\-MAC\_\-ENC\_\-WPA@{GSN\_\-MAC\_\-ENC\_\-WPA}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ENC\_\-WPA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ENC\_\-WPA~0x02}}
+\label{a00642_ga41cad5522df15c08084272449a15f488}
+
+
+Definition at line 190 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gad400c18aedc0468b5338a51ddfd65803}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ENC\_\-WPA2@{GSN\_\-MAC\_\-ENC\_\-WPA2}}
+\index{GSN\_\-MAC\_\-ENC\_\-WPA2@{GSN\_\-MAC\_\-ENC\_\-WPA2}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ENC\_\-WPA2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-ENC\_\-WPA2~0x10}}
+\label{a00642_gad400c18aedc0468b5338a51ddfd65803}
+
+
+Definition at line 192 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaf90baba19031f5fc0662b2e19649b7cd}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-GET\_\-ANTENNA@{GSN\_\-MAC\_\-GET\_\-ANTENNA}}
+\index{GSN\_\-MAC\_\-GET\_\-ANTENNA@{GSN\_\-MAC\_\-GET\_\-ANTENNA}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-GET\_\-ANTENNA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-GET\_\-ANTENNA(
+\begin{DoxyParamCaption}
+\item[{}]{rssi}
+\end{DoxyParamCaption}
+)~((rssi \& 0x80)?1:0)}}
+\label{a00642_gaf90baba19031f5fc0662b2e19649b7cd}
+
+
+Definition at line 1436 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga0baa7c82496dc0f07898a5df0d135d5c}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-GET\_\-RSSI@{GSN\_\-MAC\_\-GET\_\-RSSI}}
+\index{GSN\_\-MAC\_\-GET\_\-RSSI@{GSN\_\-MAC\_\-GET\_\-RSSI}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-GET\_\-RSSI}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-GET\_\-RSSI(
+\begin{DoxyParamCaption}
+\item[{}]{rssi}
+\end{DoxyParamCaption}
+)~(rssi $|$ 0x80)}}
+\label{a00642_ga0baa7c82496dc0f07898a5df0d135d5c}
+
+
+Definition at line 1435 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga9f42c86bf65bb1ba654fb772cc494637}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-MAX\_\-PMKIDLIST@{GSN\_\-MAC\_\-MAX\_\-PMKIDLIST}}
+\index{GSN\_\-MAC\_\-MAX\_\-PMKIDLIST@{GSN\_\-MAC\_\-MAX\_\-PMKIDLIST}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-MAX\_\-PMKIDLIST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-MAX\_\-PMKIDLIST~80}}
+\label{a00642_ga9f42c86bf65bb1ba654fb772cc494637}
+
+
+Definition at line 1073 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gab2030e7c4ab461cd034d5ee1ef004372}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-MAX\_\-RAWCHANNELDOMAIN@{GSN\_\-MAC\_\-MAX\_\-RAWCHANNELDOMAIN}}
+\index{GSN\_\-MAC\_\-MAX\_\-RAWCHANNELDOMAIN@{GSN\_\-MAC\_\-MAX\_\-RAWCHANNELDOMAIN}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-MAX\_\-RAWCHANNELDOMAIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-MAX\_\-RAWCHANNELDOMAIN~(1 + 1 + 3 + 3$\ast$3)}}
+\label{a00642_gab2030e7c4ab461cd034d5ee1ef004372}
+
+
+Definition at line 1038 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaea4417ed84d382fcaec29ef522d491af}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PHYTYPE\_\-DSSS@{GSN\_\-MAC\_\-PHYTYPE\_\-DSSS}}
+\index{GSN\_\-MAC\_\-PHYTYPE\_\-DSSS@{GSN\_\-MAC\_\-PHYTYPE\_\-DSSS}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PHYTYPE\_\-DSSS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-PHYTYPE\_\-DSSS~2}}
+\label{a00642_gaea4417ed84d382fcaec29ef522d491af}
+
+
+Definition at line 113 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga1bef034ba2995a95023a571a00b85b9a}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PHYTYPE\_\-ERP@{GSN\_\-MAC\_\-PHYTYPE\_\-ERP}}
+\index{GSN\_\-MAC\_\-PHYTYPE\_\-ERP@{GSN\_\-MAC\_\-PHYTYPE\_\-ERP}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PHYTYPE\_\-ERP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-PHYTYPE\_\-ERP~6}}
+\label{a00642_ga1bef034ba2995a95023a571a00b85b9a}
+
+
+Definition at line 117 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga53bbc17ad8f0c2d8481cd07a300a9640}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PHYTYPE\_\-FHSS@{GSN\_\-MAC\_\-PHYTYPE\_\-FHSS}}
+\index{GSN\_\-MAC\_\-PHYTYPE\_\-FHSS@{GSN\_\-MAC\_\-PHYTYPE\_\-FHSS}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PHYTYPE\_\-FHSS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-PHYTYPE\_\-FHSS~1}}
+\label{a00642_ga53bbc17ad8f0c2d8481cd07a300a9640}
+
+
+802.11 physical layer type (classic, a, b, g, etc.). 
+
+
+
+Definition at line 112 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga86c7ded9f98a88e0d0b6e1f8c3c710a9}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PHYTYPE\_\-HRDSSS@{GSN\_\-MAC\_\-PHYTYPE\_\-HRDSSS}}
+\index{GSN\_\-MAC\_\-PHYTYPE\_\-HRDSSS@{GSN\_\-MAC\_\-PHYTYPE\_\-HRDSSS}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PHYTYPE\_\-HRDSSS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-PHYTYPE\_\-HRDSSS~5}}
+\label{a00642_ga86c7ded9f98a88e0d0b6e1f8c3c710a9}
+
+
+Definition at line 116 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga0c7253eeef7a0f2a018c4b1436bc584d}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PHYTYPE\_\-IR@{GSN\_\-MAC\_\-PHYTYPE\_\-IR}}
+\index{GSN\_\-MAC\_\-PHYTYPE\_\-IR@{GSN\_\-MAC\_\-PHYTYPE\_\-IR}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PHYTYPE\_\-IR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-PHYTYPE\_\-IR~3}}
+\label{a00642_ga0c7253eeef7a0f2a018c4b1436bc584d}
+
+
+Definition at line 114 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga23cddc9f0e4001a0b73f391e92df0302}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PHYTYPE\_\-OFDM@{GSN\_\-MAC\_\-PHYTYPE\_\-OFDM}}
+\index{GSN\_\-MAC\_\-PHYTYPE\_\-OFDM@{GSN\_\-MAC\_\-PHYTYPE\_\-OFDM}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PHYTYPE\_\-OFDM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-PHYTYPE\_\-OFDM~4}}
+\label{a00642_ga23cddc9f0e4001a0b73f391e92df0302}
+
+
+Definition at line 115 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gac05267227cbd1ea16b61aa98de2050cc}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-POWERMODE\_\-ACTIF@{GSN\_\-MAC\_\-POWERMODE\_\-ACTIF}}
+\index{GSN\_\-MAC\_\-POWERMODE\_\-ACTIF@{GSN\_\-MAC\_\-POWERMODE\_\-ACTIF}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-POWERMODE\_\-ACTIF}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-POWERMODE\_\-ACTIF~1}}
+\label{a00642_gac05267227cbd1ea16b61aa98de2050cc}
+
+
+802.11 power management mode (active or PowerSave). 
+
+
+
+Definition at line 156 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga8562dc7df79490dc400c2a694356c55d}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-POWERMODE\_\-CAM@{GSN\_\-MAC\_\-POWERMODE\_\-CAM}}
+\index{GSN\_\-MAC\_\-POWERMODE\_\-CAM@{GSN\_\-MAC\_\-POWERMODE\_\-CAM}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-POWERMODE\_\-CAM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-POWERMODE\_\-CAM~1}}
+\label{a00642_ga8562dc7df79490dc400c2a694356c55d}
+
+
+802.11 power mode. 
+
+
+
+Definition at line 166 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga4533fe3149beb1276a66d8d703fb8c4a}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-POWERMODE\_\-FASTPSP@{GSN\_\-MAC\_\-POWERMODE\_\-FASTPSP}}
+\index{GSN\_\-MAC\_\-POWERMODE\_\-FASTPSP@{GSN\_\-MAC\_\-POWERMODE\_\-FASTPSP}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-POWERMODE\_\-FASTPSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-POWERMODE\_\-FASTPSP~3}}
+\label{a00642_ga4533fe3149beb1276a66d8d703fb8c4a}
+
+
+Definition at line 168 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga751f71fb490748186b9e7ffc85d77b74}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-POWERMODE\_\-MAXPSP@{GSN\_\-MAC\_\-POWERMODE\_\-MAXPSP}}
+\index{GSN\_\-MAC\_\-POWERMODE\_\-MAXPSP@{GSN\_\-MAC\_\-POWERMODE\_\-MAXPSP}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-POWERMODE\_\-MAXPSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-POWERMODE\_\-MAXPSP~2}}
+\label{a00642_ga751f71fb490748186b9e7ffc85d77b74}
+
+
+Definition at line 167 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga3c207cac645e3d78288b23f6291d759e}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATESET\_\-LEN@{GSN\_\-MAC\_\-RATESET\_\-LEN}}
+\index{GSN\_\-MAC\_\-RATESET\_\-LEN@{GSN\_\-MAC\_\-RATESET\_\-LEN}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RATESET\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RATESET\_\-LEN~12}}
+\label{a00642_ga3c207cac645e3d78288b23f6291d759e}
+
+
+rateset length 
+
+
+
+Definition at line 783 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gade0df88c41a2fec188655329c10a73ed}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-LEN@{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-LEN}}
+\index{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-LEN@{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-LEN}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-LEN~34}}
+\label{a00642_gade0df88c41a2fec188655329c10a73ed}
+
+
+Raw RSN Information Element length. 
+
+
+
+Definition at line 563 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga56ae91b81107b9438ab55637317cab2c}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-EMPTY@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-EMPTY}}
+\index{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-EMPTY@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-EMPTY}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-EMPTY}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-EMPTY~/$\ast$ EMPTY  $\ast$/ \{3, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 0\}}}
+\label{a00642_ga56ae91b81107b9438ab55637317cab2c}
+
+
+Channel raw channel domain entries. 
+
+
+
+Definition at line 1063 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga500c98f87ed8a4f3682e4b1b660bfe3d}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-24GHZ@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-24GHZ}}
+\index{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-24GHZ@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-24GHZ}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-24GHZ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-24GHZ~/$\ast$ FCC    $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, 'U', 'S', ' ', 1, 11, 10\}}}
+\label{a00642_ga500c98f87ed8a4f3682e4b1b660bfe3d}
+
+
+Definition at line 1064 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga942c8bca51fccd885216a358eb762f55}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-5GHZ@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-5GHZ}}
+\index{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-5GHZ@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-5GHZ}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-5GHZ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X10\_\-5GHZ~/$\ast$ FCC    $\ast$/  \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, 'U', 'S', ' ',36,  7, 10\}}}
+\label{a00642_ga942c8bca51fccd885216a358eb762f55}
+
+
+Definition at line 1065 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gacbfcc1079a6c770488a643ba72c66f78}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X20@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X20}}
+\index{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X20@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X20}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X20}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X20~/$\ast$ IC     $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, ' ', ' ', ' ', 1, 11, 10\}}}
+\label{a00642_gacbfcc1079a6c770488a643ba72c66f78}
+
+
+Definition at line 1066 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gae86f5fe270e13731354c040379263373}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X30@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X30}}
+\index{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X30@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X30}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X30}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X30~/$\ast$ ETSI   $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, ' ', ' ', ' ', 1, 13, 10\}}}
+\label{a00642_gae86f5fe270e13731354c040379263373}
+
+
+Definition at line 1067 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga8f1d8d62d0476db2e67ae76fbbd8edcb}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X31@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X31}}
+\index{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X31@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X31}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X31}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X31~/$\ast$ Spain  $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, 'E', 'S', ' ', 10, 1, 10\}}}
+\label{a00642_ga8f1d8d62d0476db2e67ae76fbbd8edcb}
+
+
+Definition at line 1068 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gae1d4ccda0a4874b368916cf6bffd8dd9}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X32@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X32}}
+\index{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X32@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X32}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X32}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X32~/$\ast$ France $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, 'F', 'R', ' ', 10, 4, 10\}}}
+\label{a00642_gae1d4ccda0a4874b368916cf6bffd8dd9}
+
+
+Definition at line 1069 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga438fdc847fa4e621ec8496edb440b33d}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X40@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X40}}
+\index{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X40@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X40}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X40}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X40~/$\ast$ MKK    $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, ' ', ' ', ' ', 14, 1, 10\}}}
+\label{a00642_ga438fdc847fa4e621ec8496edb440b33d}
+
+
+Definition at line 1070 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gad8ce3e93cc664b42d72189d4cbec214c}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X41@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X41}}
+\index{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X41@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X41}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X41}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-X41~/$\ast$ Japan  $\ast$/ \{8, GSN\_\-MAC\_\-ELTID\_\-COUNTRY, 6, 'J', 'P', ' ', 1, 13, 10\}}}
+\label{a00642_gad8ce3e93cc664b42d72189d4cbec214c}
+
+
+Definition at line 1071 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gae128a6f53a21ed1dd5cc751f5f76b063}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-CCMP@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-CCMP}}
+\index{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-CCMP@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-CCMP}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-CCMP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-CCMP~0x04}}
+\label{a00642_gae128a6f53a21ed1dd5cc751f5f76b063}
+
+
+Definition at line 524 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga6498ff5acf21d809adebf490aaeb1158}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-INVALID@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-INVALID}}
+\index{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-INVALID@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-INVALID}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-INVALID}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-INVALID~0xFF}}
+\label{a00642_ga6498ff5acf21d809adebf490aaeb1158}
+
+
+Definition at line 527 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga9f1db3741ca60ee70690fe908f615b05}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-MASK@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-MASK}}
+\index{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-MASK@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-MASK}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-MASK~0x07}}
+\label{a00642_ga9f1db3741ca60ee70690fe908f615b05}
+
+
+Cipher suite selectors (table 2 p 20); Descriptor values \mbox{[}bit 0 1 2\mbox{]}. 
+
+
+
+Definition at line 521 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga29ef5d37177a52a22dd6707dd3e943cf}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-NOSEC@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-NOSEC}}
+\index{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-NOSEC@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-NOSEC}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-NOSEC}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-NOSEC~0xFE}}
+\label{a00642_ga29ef5d37177a52a22dd6707dd3e943cf}
+
+
+Definition at line 526 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga923f017a53927b85c88857723b490d0f}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-TKIP@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-TKIP}}
+\index{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-TKIP@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-TKIP}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-TKIP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-TKIP~0x02}}
+\label{a00642_ga923f017a53927b85c88857723b490d0f}
+
+
+Definition at line 523 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga4a472fd868a0633cf337c1a3c4b0a8ed}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP104@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP104}}
+\index{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP104@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP104}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP104}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP104~0x05}}
+\label{a00642_ga4a472fd868a0633cf337c1a3c4b0a8ed}
+
+
+Definition at line 525 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gabb256ee389628678d07227a262c724cd}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP40@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP40}}
+\index{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP40@{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP40}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP40}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RSNIE\_\-CIPHER\_\-WEP40~0x01}}
+\label{a00642_gabb256ee389628678d07227a262c724cd}
+
+
+Definition at line 522 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga66753c440ce19038fd3676c28b340ba3}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-8021X@{GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-8021X}}
+\index{GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-8021X@{GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-8021X}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-8021X}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-8021X~1}}
+\label{a00642_ga66753c440ce19038fd3676c28b340ba3}
+
+
+authentication and key management suite selectors (table 1 p 20) 
+
+
+
+Definition at line 744 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga32b9e4b675a4ef0664691d13d70e1b1b}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-PSK@{GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-PSK}}
+\index{GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-PSK@{GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-PSK}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-PSK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-RSNIE\_\-KEYMGT\_\-PSK~2}}
+\label{a00642_ga32b9e4b675a4ef0664691d13d70e1b1b}
+
+
+Definition at line 745 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaa8c55e757f0ecc6201c7a9db8808da39}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SCAN\_\-MARKED@{GSN\_\-MAC\_\-SCAN\_\-MARKED}}
+\index{GSN\_\-MAC\_\-SCAN\_\-MARKED@{GSN\_\-MAC\_\-SCAN\_\-MARKED}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SCAN\_\-MARKED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-SCAN\_\-MARKED~0x80}}
+\label{a00642_gaa8c55e757f0ecc6201c7a9db8808da39}
+
+
+Definition at line 1260 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gabedb9ac65e149bcb1082d6926937508f}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SEC\_\-KEY\_\-LEN@{GSN\_\-MAC\_\-SEC\_\-KEY\_\-LEN}}
+\index{GSN\_\-MAC\_\-SEC\_\-KEY\_\-LEN@{GSN\_\-MAC\_\-SEC\_\-KEY\_\-LEN}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SEC\_\-KEY\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-SEC\_\-KEY\_\-LEN~32}}
+\label{a00642_gabedb9ac65e149bcb1082d6926937508f}
+
+
+Key length for TKIP. 
+
+TKIP keys 256 bits (max length) with MIC keys 
+
+Definition at line 493 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gae099692a4b641e183742ae960e3d2cb9}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SET\_\-RSSI\_\-ANTENNA@{GSN\_\-MAC\_\-SET\_\-RSSI\_\-ANTENNA}}
+\index{GSN\_\-MAC\_\-SET\_\-RSSI\_\-ANTENNA@{GSN\_\-MAC\_\-SET\_\-RSSI\_\-ANTENNA}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SET\_\-RSSI\_\-ANTENNA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-SET\_\-RSSI\_\-ANTENNA(
+\begin{DoxyParamCaption}
+\item[{}]{my\_\-rssi, }
+\item[{}]{my\_\-antenna}
+\end{DoxyParamCaption}
+)~( ( my\_\-antenna $<$$<$ 7 ) $|$ ( my\_\-rssi \& ( $\sim$0x80 )))}}
+\label{a00642_gae099692a4b641e183742ae960e3d2cb9}
+
+
+antenna diversity / RSSI defines. 
+
+RSSI (Received Signal Strength Indication) can be used to choose the antenna with the best signal strength for a given frame or series of frames. 
+
+Definition at line 1432 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaf9a051751a39d7ec6cf8e671deafd3ff}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SLOTTIME\_\-LONG@{GSN\_\-MAC\_\-SLOTTIME\_\-LONG}}
+\index{GSN\_\-MAC\_\-SLOTTIME\_\-LONG@{GSN\_\-MAC\_\-SLOTTIME\_\-LONG}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SLOTTIME\_\-LONG}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-SLOTTIME\_\-LONG~20}}
+\label{a00642_gaf9a051751a39d7ec6cf8e671deafd3ff}
+
+
+Slot duration for different PHY types. 
+
+
+
+Definition at line 1395 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga081f6423e4f0a7752d2a289c9a7eedbc}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SLOTTIME\_\-SHORT@{GSN\_\-MAC\_\-SLOTTIME\_\-SHORT}}
+\index{GSN\_\-MAC\_\-SLOTTIME\_\-SHORT@{GSN\_\-MAC\_\-SLOTTIME\_\-SHORT}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SLOTTIME\_\-SHORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-SLOTTIME\_\-SHORT~9}}
+\label{a00642_ga081f6423e4f0a7752d2a289c9a7eedbc}
+
+
+Definition at line 1396 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga884676614ce794771a22a5ea358a25cf}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SSID\_\-CMP@{GSN\_\-MAC\_\-SSID\_\-CMP}}
+\index{GSN\_\-MAC\_\-SSID\_\-CMP@{GSN\_\-MAC\_\-SSID\_\-CMP}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SSID\_\-CMP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-SSID\_\-CMP(
+\begin{DoxyParamCaption}
+\item[{}]{ssid1Ptr, }
+\item[{}]{ssid2Ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00642_ga884676614ce794771a22a5ea358a25cf}
+{\bfseries Value:}
+\begin{DoxyCode}
+((( ssid1Ptr)->length == (ssid2Ptr)->length ) &&                 \
+    ( memcmp((&( ssid1Ptr)->array[ 0 ]), (&( ssid2Ptr)->array[ 0 ]), \
+    ( ssid1Ptr)->length) == 0 ))
+\end{DoxyCode}
+
+
+structured type for CMP SSID. 
+
+
+
+Definition at line 247 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga216e78da30032f04c2c3a222478ed85e}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SSID\_\-ISEMPTY@{GSN\_\-MAC\_\-SSID\_\-ISEMPTY}}
+\index{GSN\_\-MAC\_\-SSID\_\-ISEMPTY@{GSN\_\-MAC\_\-SSID\_\-ISEMPTY}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SSID\_\-ISEMPTY}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-SSID\_\-ISEMPTY(
+\begin{DoxyParamCaption}
+\item[{}]{ssidPtr}
+\end{DoxyParamCaption}
+)~(( ssidPtr)-\/$>$length == 0 )}}
+\label{a00642_ga216e78da30032f04c2c3a222478ed85e}
+
+
+SSID empty pointer. 
+
+
+
+Definition at line 276 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gabc6a02f5958aac465500370ca12dd011}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SSID\_\-LEN@{GSN\_\-MAC\_\-SSID\_\-LEN}}
+\index{GSN\_\-MAC\_\-SSID\_\-LEN@{GSN\_\-MAC\_\-SSID\_\-LEN}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SSID\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-SSID\_\-LEN~32}}
+\label{a00642_gabc6a02f5958aac465500370ca12dd011}
+
+
+Definition at line 224 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaa20efb0a2c9950b1601e9a681c9372be}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-STA\_\-ACTIVE@{GSN\_\-MAC\_\-STA\_\-ACTIVE}}
+\index{GSN\_\-MAC\_\-STA\_\-ACTIVE@{GSN\_\-MAC\_\-STA\_\-ACTIVE}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-STA\_\-ACTIVE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-STA\_\-ACTIVE~0}}
+\label{a00642_gaa20efb0a2c9950b1601e9a681c9372be}
+
+
+Definition at line 887 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaf0688616f5b52712d7fbc5f2a10896c1}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-STA\_\-CLASS1@{GSN\_\-MAC\_\-STA\_\-CLASS1}}
+\index{GSN\_\-MAC\_\-STA\_\-CLASS1@{GSN\_\-MAC\_\-STA\_\-CLASS1}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-STA\_\-CLASS1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-STA\_\-CLASS1~0x00}}
+\label{a00642_gaf0688616f5b52712d7fbc5f2a10896c1}
+
+
+Definition at line 874 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga0127205e69cce6c11a8b87d6562c5623}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-STA\_\-CLASS2@{GSN\_\-MAC\_\-STA\_\-CLASS2}}
+\index{GSN\_\-MAC\_\-STA\_\-CLASS2@{GSN\_\-MAC\_\-STA\_\-CLASS2}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-STA\_\-CLASS2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-STA\_\-CLASS2~0x10}}
+\label{a00642_ga0127205e69cce6c11a8b87d6562c5623}
+
+
+Definition at line 875 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga0da606a37b3024d9bf42760219f526be}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-STA\_\-CLASS3@{GSN\_\-MAC\_\-STA\_\-CLASS3}}
+\index{GSN\_\-MAC\_\-STA\_\-CLASS3@{GSN\_\-MAC\_\-STA\_\-CLASS3}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-STA\_\-CLASS3}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-STA\_\-CLASS3~0x30}}
+\label{a00642_ga0da606a37b3024d9bf42760219f526be}
+
+
+Definition at line 876 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga01d15be8069f353fa7376360929eeb2f}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-STA\_\-CLASS\_\-MASK@{GSN\_\-MAC\_\-STA\_\-CLASS\_\-MASK}}
+\index{GSN\_\-MAC\_\-STA\_\-CLASS\_\-MASK@{GSN\_\-MAC\_\-STA\_\-CLASS\_\-MASK}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-STA\_\-CLASS\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-STA\_\-CLASS\_\-MASK~0x30}}
+\label{a00642_ga01d15be8069f353fa7376360929eeb2f}
+
+
+Station class flags. 
+
+
+
+Definition at line 873 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaab8abe9d2ed942b0aac9ae3f562e204a}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-STA\_\-PS\_\-MODE@{GSN\_\-MAC\_\-STA\_\-PS\_\-MODE}}
+\index{GSN\_\-MAC\_\-STA\_\-PS\_\-MODE@{GSN\_\-MAC\_\-STA\_\-PS\_\-MODE}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-STA\_\-PS\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-STA\_\-PS\_\-MODE~1}}
+\label{a00642_gaab8abe9d2ed942b0aac9ae3f562e204a}
+
+
+station power save mode 
+
+
+
+Definition at line 886 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gac3c796c333ec1130603aadab0258164a}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-TUPLE\_\-MAX@{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-TUPLE\_\-MAX}}
+\index{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-TUPLE\_\-MAX@{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-TUPLE\_\-MAX}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-TUPLE\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-TUPLE\_\-MAX~4}}
+\label{a00642_gac3c796c333ec1130603aadab0258164a}
+
+
+maximum supported channels. 
+
+
+
+Definition at line 455 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gabec601feeb30bf739dc67873ac12c4ba}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!TIME\_\-TUtoUs@{TIME\_\-TUtoUs}}
+\index{TIME\_\-TUtoUs@{TIME\_\-TUtoUs}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{TIME\_\-TUtoUs}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIME\_\-TUtoUs(
+\begin{DoxyParamCaption}
+\item[{}]{MacTimeTU}
+\end{DoxyParamCaption}
+)~(( MacTimeTU ) $\ast$ 1024 )}}
+\label{a00642_gabec601feeb30bf739dc67873ac12c4ba}
+
+
+Convert time to 802.11 time units (1024 microseconds) 
+
+
+
+Definition at line 861 of file gsn\_\-mac\_\-def.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00642_ga1150dbb5bc1f1413f5de4acf75c48815}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ADDR\_\-T@{GSN\_\-MAC\_\-ADDR\_\-T}}
+\index{GSN\_\-MAC\_\-ADDR\_\-T@{GSN\_\-MAC\_\-ADDR\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ADDR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T} {\bf GSN\_\-MAC\_\-ADDR\_\-T}}}
+\label{a00642_ga1150dbb5bc1f1413f5de4acf75c48815}
+
+
+structured type for holding MAC address. 
+
+
+
+Definition at line 320 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gab32a90b2661aaffd2fb7960c34e4bf76}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ASSOC\_\-FRAME\_\-T@{GSN\_\-MAC\_\-ASSOC\_\-FRAME\_\-T}}
+\index{GSN\_\-MAC\_\-ASSOC\_\-FRAME\_\-T@{GSN\_\-MAC\_\-ASSOC\_\-FRAME\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ASSOC\_\-FRAME\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-ASSOC\_\-FRAME\_\-T}  {\bf GSN\_\-MAC\_\-ASSOC\_\-FRAME\_\-T}}}
+\label{a00642_gab32a90b2661aaffd2fb7960c34e4bf76}
+
+
+Association frame type. 
+
+\hypertarget{a00642_ga741210948f906164f06f08b1b4705da8}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-BSS\_\-ELMT\_\-T@{GSN\_\-MAC\_\-BSS\_\-ELMT\_\-T}}
+\index{GSN\_\-MAC\_\-BSS\_\-ELMT\_\-T@{GSN\_\-MAC\_\-BSS\_\-ELMT\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-BSS\_\-ELMT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-BSS\_\-ELMT\_\-T}  {\bf GSN\_\-MAC\_\-BSS\_\-ELMT\_\-T}}}
+\label{a00642_ga741210948f906164f06f08b1b4705da8}
+
+
+MAC BSS element type. 
+
+\hypertarget{a00642_ga991bb63d940b90bac4f74912786f521d}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-BSS\_\-INFO\_\-T@{GSN\_\-MAC\_\-BSS\_\-INFO\_\-T}}
+\index{GSN\_\-MAC\_\-BSS\_\-INFO\_\-T@{GSN\_\-MAC\_\-BSS\_\-INFO\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-BSS\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-BSS\_\-INFO\_\-T}  {\bf GSN\_\-MAC\_\-BSS\_\-INFO\_\-T}}}
+\label{a00642_ga991bb63d940b90bac4f74912786f521d}
+
+
+MAC BSS information type. 
+
+\hypertarget{a00642_gad5d3559fa1fc09e64eb23e72d14a503a}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CFP\_\-T@{GSN\_\-MAC\_\-CFP\_\-T}}
+\index{GSN\_\-MAC\_\-CFP\_\-T@{GSN\_\-MAC\_\-CFP\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CFP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-CFP\_\-T}  {\bf GSN\_\-MAC\_\-CFP\_\-T}}}
+\label{a00642_gad5d3559fa1fc09e64eb23e72d14a503a}
+
+
+MACC CFP type. 
+
+ME\_\-COUNTRY and ME\_\-CHANNELS should be moved to MeDef since only the ME will use them However, so far, we need to send these structures to the LMAC which formats the beacon, so they are temporary placed in MacDef \hypertarget{a00642_ga8ff4cc41b9827ad704cb982edb371b48}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELDOMAIN\_\-T@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-T}}
+\index{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-T@{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELDOMAIN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-CHANNELDOMAIN\_\-T}  {\bf GSN\_\-MAC\_\-CHANNELDOMAIN\_\-T}}}
+\label{a00642_ga8ff4cc41b9827ad704cb982edb371b48}
+
+
+Channel domain type. 
+
+\hypertarget{a00642_gacacca7fcdec7f267751d787618578af1}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-CHANNELSET\_\-T@{GSN\_\-MAC\_\-CHANNELSET\_\-T}}
+\index{GSN\_\-MAC\_\-CHANNELSET\_\-T@{GSN\_\-MAC\_\-CHANNELSET\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-CHANNELSET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-CHANNELSET\_\-T}  {\bf GSN\_\-MAC\_\-CHANNELSET\_\-T}}}
+\label{a00642_gacacca7fcdec7f267751d787618578af1}
+
+
+MACC Channel set type. 
+
+\hypertarget{a00642_gaa312c43eca44aa7bb2ab45da931da79f}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-COUNTRY\_\-T@{GSN\_\-MAC\_\-COUNTRY\_\-T}}
+\index{GSN\_\-MAC\_\-COUNTRY\_\-T@{GSN\_\-MAC\_\-COUNTRY\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-COUNTRY\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-COUNTRY\_\-T}  {\bf GSN\_\-MAC\_\-COUNTRY\_\-T}}}
+\label{a00642_gaa312c43eca44aa7bb2ab45da931da79f}
+
+
+Country type (describing the channels available in a jurisdiction) 
+
+\hypertarget{a00642_gabe8a532741138f69c4e27fc2bb44af8c}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-FRAME\_\-T@{GSN\_\-MAC\_\-FRAME\_\-T}}
+\index{GSN\_\-MAC\_\-FRAME\_\-T@{GSN\_\-MAC\_\-FRAME\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-FRAME\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-FRAME\_\-T}  {\bf GSN\_\-MAC\_\-FRAME\_\-T}}}
+\label{a00642_gabe8a532741138f69c4e27fc2bb44af8c}
+
+
+MAC frame type. 
+
+\hypertarget{a00642_ga64f7d136e7c2a14b7ea884d6ffd901c0}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-MIB\_\-ELMT\_\-UNION\_\-T@{GSN\_\-MAC\_\-MIB\_\-ELMT\_\-UNION\_\-T}}
+\index{GSN\_\-MAC\_\-MIB\_\-ELMT\_\-UNION\_\-T@{GSN\_\-MAC\_\-MIB\_\-ELMT\_\-UNION\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-MIB\_\-ELMT\_\-UNION\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf GSN\_\-MAC\_\-MIB\_\-ELMT\_\-UNION\_\-T}  {\bf GSN\_\-MAC\_\-MIB\_\-ELMT\_\-UNION\_\-T}}}
+\label{a00642_ga64f7d136e7c2a14b7ea884d6ffd901c0}
+
+
+Available MIB types. 
+
+The structure MAC\_\-MIB\_\-ELMT\_\-UNION contains all the types available from the MIB interface. This allows us to check the size of the maximum element stored within the MIB \mbox{[}sizeof(MAC\_\-MIB\_\-ELMT\_\-UNION)\mbox{]}. Slot duration for different PHY \hypertarget{a00642_gaaa415fc5bf3610b9f39d91d220983e10}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PHY\_\-DS\_\-T@{GSN\_\-MAC\_\-PHY\_\-DS\_\-T}}
+\index{GSN\_\-MAC\_\-PHY\_\-DS\_\-T@{GSN\_\-MAC\_\-PHY\_\-DS\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PHY\_\-DS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-PHY\_\-DS\_\-T}  {\bf GSN\_\-MAC\_\-PHY\_\-DS\_\-T}}}
+\label{a00642_gaaa415fc5bf3610b9f39d91d220983e10}
+
+
+MAC direct sequence channel type. 
+
+\hypertarget{a00642_ga929013282703665ac236cdc91ee3c3f7}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PHY\_\-FH\_\-T@{GSN\_\-MAC\_\-PHY\_\-FH\_\-T}}
+\index{GSN\_\-MAC\_\-PHY\_\-FH\_\-T@{GSN\_\-MAC\_\-PHY\_\-FH\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PHY\_\-FH\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-PHY\_\-FH\_\-T}  {\bf GSN\_\-MAC\_\-PHY\_\-FH\_\-T}}}
+\label{a00642_ga929013282703665ac236cdc91ee3c3f7}
+
+
+MAC frequency hopping channel type. 
+
+\hypertarget{a00642_ga93df35fe1df8b6cf9f020c78019dd58c}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PMKIDLIST\_\-T@{GSN\_\-MAC\_\-PMKIDLIST\_\-T}}
+\index{GSN\_\-MAC\_\-PMKIDLIST\_\-T@{GSN\_\-MAC\_\-PMKIDLIST\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PMKIDLIST\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-PMKIDLIST\_\-T}  {\bf GSN\_\-MAC\_\-PMKIDLIST\_\-T}}}
+\label{a00642_ga93df35fe1df8b6cf9f020c78019dd58c}
+\hypertarget{a00642_ga7dca958f849da86237513f7adc55ed53}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-POWER\_\-CAPABILITY\_\-IE\_\-T@{GSN\_\-MAC\_\-POWER\_\-CAPABILITY\_\-IE\_\-T}}
+\index{GSN\_\-MAC\_\-POWER\_\-CAPABILITY\_\-IE\_\-T@{GSN\_\-MAC\_\-POWER\_\-CAPABILITY\_\-IE\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-POWER\_\-CAPABILITY\_\-IE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-POWER\_\-CAPABILITY\_\-IE\_\-T}  {\bf GSN\_\-MAC\_\-POWER\_\-CAPABILITY\_\-IE\_\-T}}}
+\label{a00642_ga7dca958f849da86237513f7adc55ed53}
+
+
+802.11h (power control) type. 
+
+\hypertarget{a00642_gaf102d7396d0f17159f993324bc63fc03}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PROPRIETARY\_\-INFO\_\-T@{GSN\_\-MAC\_\-PROPRIETARY\_\-INFO\_\-T}}
+\index{GSN\_\-MAC\_\-PROPRIETARY\_\-INFO\_\-T@{GSN\_\-MAC\_\-PROPRIETARY\_\-INFO\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PROPRIETARY\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-PROPRIETARY\_\-INFO\_\-T}  {\bf GSN\_\-MAC\_\-PROPRIETARY\_\-INFO\_\-T}}}
+\label{a00642_gaf102d7396d0f17159f993324bc63fc03}
+
+
+Proprietary information frame type. 
+
+\hypertarget{a00642_ga83bfac29d319ebdbbc048906db949e06}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PUBLIC\_\-HDR\_\-T@{GSN\_\-MAC\_\-PUBLIC\_\-HDR\_\-T}}
+\index{GSN\_\-MAC\_\-PUBLIC\_\-HDR\_\-T@{GSN\_\-MAC\_\-PUBLIC\_\-HDR\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PUBLIC\_\-HDR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-PUBLIC\_\-HDR\_\-T}  {\bf GSN\_\-MAC\_\-PUBLIC\_\-HDR\_\-T}}}
+\label{a00642_ga83bfac29d319ebdbbc048906db949e06}
+
+
+Public header type. 
+
+\hypertarget{a00642_ga514160bf923e24c122096eecb9350b16}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-T@{GSN\_\-MAC\_\-RATE\_\-T}}
+\index{GSN\_\-MAC\_\-RATE\_\-T@{GSN\_\-MAC\_\-RATE\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-MAC\_\-RATE\_\-T}  {\bf GSN\_\-MAC\_\-RATE\_\-T}}}
+\label{a00642_ga514160bf923e24c122096eecb9350b16}
+
+
+enumerated type describing the various available rates. 
+
+TIME \hypertarget{a00642_ga3030fec57a589cc8daf2616c8cad3e0d}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATESET\_\-T@{GSN\_\-MAC\_\-RATESET\_\-T}}
+\index{GSN\_\-MAC\_\-RATESET\_\-T@{GSN\_\-MAC\_\-RATESET\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RATESET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-RATESET\_\-T}  {\bf GSN\_\-MAC\_\-RATESET\_\-T}}}
+\label{a00642_ga3030fec57a589cc8daf2616c8cad3e0d}
+
+
+Rate set type. 
+
+\hypertarget{a00642_ga4a6cc0e7737d1ea40ea41dc94472455f}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-T@{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-T}}
+\index{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-T@{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-T}  {\bf GSN\_\-MAC\_\-RAW\_\-RSN\_\-IE\_\-T}}}
+\label{a00642_ga4a6cc0e7737d1ea40ea41dc94472455f}
+
+
+Raw Information Element field of the beacon frame (WPA Extension) 
+
+\hypertarget{a00642_gab8bb3634782377a5a3fd1c09ad5bedca}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-T@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-T}}
+\index{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-T@{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-T}  {\bf GSN\_\-MAC\_\-RAWCHANNELDOMAIN\_\-T}}}
+\label{a00642_gab8bb3634782377a5a3fd1c09ad5bedca}
+
+
+Channel raw channel domain type. 
+
+\hypertarget{a00642_ga26429f56abe84cea3365f048adb8870f}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RSN\_\-SUITE\_\-SELECTOR\_\-T@{GSN\_\-MAC\_\-RSN\_\-SUITE\_\-SELECTOR\_\-T}}
+\index{GSN\_\-MAC\_\-RSN\_\-SUITE\_\-SELECTOR\_\-T@{GSN\_\-MAC\_\-RSN\_\-SUITE\_\-SELECTOR\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RSN\_\-SUITE\_\-SELECTOR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-RSN\_\-SUITE\_\-SELECTOR\_\-T}  {\bf GSN\_\-MAC\_\-RSN\_\-SUITE\_\-SELECTOR\_\-T}}}
+\label{a00642_ga26429f56abe84cea3365f048adb8870f}
+
+
+RSN Information Element field type for the beacon frame (WPA Extension) 
+
+\hypertarget{a00642_ga72bcd48cbb7fbabbe7a09a5271e1723e}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RSNA\_\-STAT\_\-T@{GSN\_\-MAC\_\-RSNA\_\-STAT\_\-T}}
+\index{GSN\_\-MAC\_\-RSNA\_\-STAT\_\-T@{GSN\_\-MAC\_\-RSNA\_\-STAT\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RSNA\_\-STAT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-RSNA\_\-STAT\_\-T}  {\bf GSN\_\-MAC\_\-RSNA\_\-STAT\_\-T}}}
+\label{a00642_ga72bcd48cbb7fbabbe7a09a5271e1723e}
+
+
+RSNA statistics type (WPA Extension) 
+
+\hypertarget{a00642_ga25b1673dd1960a988e38a58156a53fd2}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-T@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-T}}
+\index{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-T@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-MAC\_\-SCAN\_\-TYPE}  {\bf GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-T}}}
+\label{a00642_ga25b1673dd1960a988e38a58156a53fd2}
+
+
+Scan type. 
+
+\hypertarget{a00642_ga47d838a4f5db3c6d8039dac8b4726479}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SEC\_\-KEY\_\-T@{GSN\_\-MAC\_\-SEC\_\-KEY\_\-T}}
+\index{GSN\_\-MAC\_\-SEC\_\-KEY\_\-T@{GSN\_\-MAC\_\-SEC\_\-KEY\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SEC\_\-KEY\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-SEC\_\-KEY\_\-T}  {\bf GSN\_\-MAC\_\-SEC\_\-KEY\_\-T}}}
+\label{a00642_ga47d838a4f5db3c6d8039dac8b4726479}
+
+
+Key structured type. 
+
+Descriptor values \mbox{[}bit 0 1 2\mbox{]} Cipher suite selectors (table 2 p20) \hypertarget{a00642_gaa99e8c0b151cd3a4b954dda1b8d45170}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SSID\_\-T@{GSN\_\-MAC\_\-SSID\_\-T}}
+\index{GSN\_\-MAC\_\-SSID\_\-T@{GSN\_\-MAC\_\-SSID\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SSID\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} {\bf GSN\_\-MAC\_\-SSID\_\-T}}}
+\label{a00642_gaa99e8c0b151cd3a4b954dda1b8d45170}
+
+
+structured type for storing an SSID. 
+
+
+
+Definition at line 236 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaaffd1c48ebeedf03ed41954311a17ec0}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-STA\_\-RATESET\_\-T@{GSN\_\-MAC\_\-STA\_\-RATESET\_\-T}}
+\index{GSN\_\-MAC\_\-STA\_\-RATESET\_\-T@{GSN\_\-MAC\_\-STA\_\-RATESET\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-STA\_\-RATESET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-STA\_\-RATESET\_\-T}  {\bf GSN\_\-MAC\_\-STA\_\-RATESET\_\-T}}}
+\label{a00642_gaaffd1c48ebeedf03ed41954311a17ec0}
+
+
+Preformatted rate set per station length. 
+
+\hypertarget{a00642_ga0e3372dcd5ddb7b5c77b4d1d132cd8c4}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-IE\_\-T@{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-IE\_\-T}}
+\index{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-IE\_\-T@{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-IE\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-IE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-IE\_\-T}  {\bf GSN\_\-MAC\_\-SUPPORTED\_\-CHANNELS\_\-IE\_\-T}}}
+\label{a00642_ga0e3372dcd5ddb7b5c77b4d1d132cd8c4}
+
+
+supported channel tuple type. 
+
+\hypertarget{a00642_ga172482aaa298a33c998f4206dd7e558a}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO\_\-T@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO\_\-T}}
+\index{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO\_\-T@{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO}  {\bf GSN\_\-MAC\_\-TBTT\_\-ERROR\_\-INFO\_\-T}}}
+\label{a00642_ga172482aaa298a33c998f4206dd7e558a}
+
+
+TBTT Error information type. 
+
+\hypertarget{a00642_ga4e1e0373dd92610638567c678eeee81d}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-TXPOWERSET\_\-T@{GSN\_\-MAC\_\-TXPOWERSET\_\-T}}
+\index{GSN\_\-MAC\_\-TXPOWERSET\_\-T@{GSN\_\-MAC\_\-TXPOWERSET\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-TXPOWERSET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-TXPOWERSET\_\-T}  {\bf GSN\_\-MAC\_\-TXPOWERSET\_\-T}}}
+\label{a00642_ga4e1e0373dd92610638567c678eeee81d}
+
+
+Transmit power settings type. 
+
+\hypertarget{a00642_gab14ec7de1faea7e197f97d61281085fc}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WMM\_\-FRAME\_\-T@{GSN\_\-MAC\_\-WMM\_\-FRAME\_\-T}}
+\index{GSN\_\-MAC\_\-WMM\_\-FRAME\_\-T@{GSN\_\-MAC\_\-WMM\_\-FRAME\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-WMM\_\-FRAME\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-WMM\_\-FRAME\_\-T}  {\bf GSN\_\-MAC\_\-WMM\_\-FRAME\_\-T}}}
+\label{a00642_gab14ec7de1faea7e197f97d61281085fc}
+
+
+Wireless management frame type. 
+
+\hypertarget{a00642_gadc2ef85538f39a0b8e01d199ccad1630}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPA\_\-FRAME\_\-T@{GSN\_\-MAC\_\-WPA\_\-FRAME\_\-T}}
+\index{GSN\_\-MAC\_\-WPA\_\-FRAME\_\-T@{GSN\_\-MAC\_\-WPA\_\-FRAME\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-WPA\_\-FRAME\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-WPA\_\-FRAME\_\-T}  {\bf GSN\_\-MAC\_\-WPA\_\-FRAME\_\-T}}}
+\label{a00642_gadc2ef85538f39a0b8e01d199ccad1630}
+
+
+WPA frame type. 
+
+\hypertarget{a00642_gaabc433282fb88ae2bc9ea6b726e4f049}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-T@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-T}}
+\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-T@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-MAC\_\-WPS\_\-ATTR}  {\bf GSN\_\-MAC\_\-WPS\_\-ATTR\_\-T}}}
+\label{a00642_gaabc433282fb88ae2bc9ea6b726e4f049}
+
+
+WPS attribute types. This enum defines the WPS attribute type values. 
+
+\hypertarget{a00642_gab0287dd9aaabe07cf4313a9d8a14dcca}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR\_\-T@{GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR\_\-T}}
+\index{GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR\_\-T@{GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR}  {\bf GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR\_\-T}}}
+\label{a00642_gab0287dd9aaabe07cf4313a9d8a14dcca}
+
+
+WPS attributes. This structure contains relevant WPS attributes extracted from WPS IE. 
+
+\hypertarget{a00642_ga224c46962ac3e8d21a5dfc0d1a565391}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!MAC\_\-SCAN\_\-PARAM\_\-T@{MAC\_\-SCAN\_\-PARAM\_\-T}}
+\index{MAC\_\-SCAN\_\-PARAM\_\-T@{MAC\_\-SCAN\_\-PARAM\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{MAC\_\-SCAN\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MAC\_\-SCAN\_\-PARAM\_\-T}  {\bf MAC\_\-SCAN\_\-PARAM\_\-T}}}
+\label{a00642_ga224c46962ac3e8d21a5dfc0d1a565391}
+
+
+Scan parameter type. 
+
+FRAME type \hypertarget{a00642_ga7fb691c78d3a1046fa998bae1560e1a5}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!WLAN\_\-BOOLEAN@{WLAN\_\-BOOLEAN}}
+\index{WLAN\_\-BOOLEAN@{WLAN\_\-BOOLEAN}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{WLAN\_\-BOOLEAN}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf UINT8} {\bf WLAN\_\-BOOLEAN}}}
+\label{a00642_ga7fb691c78d3a1046fa998bae1560e1a5}
+
+
+Boolean type. 
+
+MAC SSID type and macros 
+
+Definition at line 214 of file gsn\_\-mac\_\-def.h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00642_gaabd0b61d3828dd59d93bb8be08f10ac6}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-DIVERSITY\_\-MODE\_\-T@{GSN\_\-MAC\_\-DIVERSITY\_\-MODE\_\-T}}
+\index{GSN\_\-MAC\_\-DIVERSITY\_\-MODE\_\-T@{GSN\_\-MAC\_\-DIVERSITY\_\-MODE\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-DIVERSITY\_\-MODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-MAC\_\-DIVERSITY\_\-MODE\_\-T}}}
+\label{a00642_gaabd0b61d3828dd59d93bb8be08f10ac6}
+
+
+Antenna diversity operating modes. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA0\_\-ONLY@{GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA0\_\-ONLY}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA0\_\-ONLY@{GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA0\_\-ONLY}}\item[{\em 
+\hypertarget{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6af0b41fcfdb282436ce96f215518df7b7}{
+GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA0\_\-ONLY}
+\label{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6af0b41fcfdb282436ce96f215518df7b7}
+}]\index{GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA1\_\-ONLY@{GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA1\_\-ONLY}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA1\_\-ONLY@{GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA1\_\-ONLY}}\item[{\em 
+\hypertarget{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a2108d8a409d1453f2dba556036e7949f}{
+GSN\_\-MAC\_\-DIVERSITY\_\-ANTENNA1\_\-ONLY}
+\label{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a2108d8a409d1453f2dba556036e7949f}
+}]\index{GSN\_\-MAC\_\-DIVERSITY\_\-ALWAYS\_\-TOGGLING@{GSN\_\-MAC\_\-DIVERSITY\_\-ALWAYS\_\-TOGGLING}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-DIVERSITY\_\-ALWAYS\_\-TOGGLING@{GSN\_\-MAC\_\-DIVERSITY\_\-ALWAYS\_\-TOGGLING}}\item[{\em 
+\hypertarget{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6abf76ce9526e8b9ca1c14fc5bed8215e4}{
+GSN\_\-MAC\_\-DIVERSITY\_\-ALWAYS\_\-TOGGLING}
+\label{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6abf76ce9526e8b9ca1c14fc5bed8215e4}
+}]\index{GSN\_\-MAC\_\-DIVERSITY\_\-FOR\_\-AP@{GSN\_\-MAC\_\-DIVERSITY\_\-FOR\_\-AP}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-DIVERSITY\_\-FOR\_\-AP@{GSN\_\-MAC\_\-DIVERSITY\_\-FOR\_\-AP}}\item[{\em 
+\hypertarget{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a35eadd9c9bd58e7c7dd77f54f9cfa48d}{
+GSN\_\-MAC\_\-DIVERSITY\_\-FOR\_\-AP}
+\label{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a35eadd9c9bd58e7c7dd77f54f9cfa48d}
+}]\index{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-START@{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-START}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-START@{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-START}}\item[{\em 
+\hypertarget{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a55627deea74bcc196d12110f41d7f6a9}{
+GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-START}
+\label{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a55627deea74bcc196d12110f41d7f6a9}
+}]\index{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-MESURE\_\-OTHER@{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-MESURE\_\-OTHER}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-MESURE\_\-OTHER@{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-MESURE\_\-OTHER}}\item[{\em 
+\hypertarget{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a5eb675197b32e9b6eeab713023e910d9}{
+GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-MESURE\_\-OTHER}
+\label{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a5eb675197b32e9b6eeab713023e910d9}
+}]\index{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-LOCK\_\-ON\_\-BEST@{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-LOCK\_\-ON\_\-BEST}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-LOCK\_\-ON\_\-BEST@{GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-LOCK\_\-ON\_\-BEST}}\item[{\em 
+\hypertarget{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a8faf40fc52be3915b495936e34a68c14}{
+GSN\_\-MAC\_\-DIVERSITY\_\-ALGO\_\-LOCK\_\-ON\_\-BEST}
+\label{a00642_ggaabd0b61d3828dd59d93bb8be08f10ac6a8faf40fc52be3915b495936e34a68c14}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 1448 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gaa470d1007e57e516d1df5e4b8063182f}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PROTECT\_\-MODE\_\-T@{GSN\_\-MAC\_\-PROTECT\_\-MODE\_\-T}}
+\index{GSN\_\-MAC\_\-PROTECT\_\-MODE\_\-T@{GSN\_\-MAC\_\-PROTECT\_\-MODE\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-PROTECT\_\-MODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-MAC\_\-PROTECT\_\-MODE\_\-T}}}
+\label{a00642_gaa470d1007e57e516d1df5e4b8063182f}
+
+
+Enumeration of protection modes for 802.11g operation. 
+
+These modes define how a g station protects its transmissions against interference by b stations that can't hear a native OFDM transmission. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-MAC\_\-PROTECT\_\-NONE@{GSN\_\-MAC\_\-PROTECT\_\-NONE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PROTECT\_\-NONE@{GSN\_\-MAC\_\-PROTECT\_\-NONE}}\item[{\em 
+\hypertarget{a00642_ggaa470d1007e57e516d1df5e4b8063182faebc94a474d588d14f27566401b67ec30}{
+GSN\_\-MAC\_\-PROTECT\_\-NONE}
+\label{a00642_ggaa470d1007e57e516d1df5e4b8063182faebc94a474d588d14f27566401b67ec30}
+}]\index{GSN\_\-MAC\_\-PROTECT\_\-CTS\_\-TO\_\-SELF@{GSN\_\-MAC\_\-PROTECT\_\-CTS\_\-TO\_\-SELF}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PROTECT\_\-CTS\_\-TO\_\-SELF@{GSN\_\-MAC\_\-PROTECT\_\-CTS\_\-TO\_\-SELF}}\item[{\em 
+\hypertarget{a00642_ggaa470d1007e57e516d1df5e4b8063182fac1649209fc916370cf2eb11fdedcaa6f}{
+GSN\_\-MAC\_\-PROTECT\_\-CTS\_\-TO\_\-SELF}
+\label{a00642_ggaa470d1007e57e516d1df5e4b8063182fac1649209fc916370cf2eb11fdedcaa6f}
+}]\index{GSN\_\-MAC\_\-PROTECT\_\-RTS\_\-CTS@{GSN\_\-MAC\_\-PROTECT\_\-RTS\_\-CTS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-PROTECT\_\-RTS\_\-CTS@{GSN\_\-MAC\_\-PROTECT\_\-RTS\_\-CTS}}\item[{\em 
+\hypertarget{a00642_ggaa470d1007e57e516d1df5e4b8063182fa1909b4b4f8de41538af85b18c822c8dc}{
+GSN\_\-MAC\_\-PROTECT\_\-RTS\_\-CTS}
+\label{a00642_ggaa470d1007e57e516d1df5e4b8063182fa1909b4b4f8de41538af85b18c822c8dc}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 1411 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga260da9755b2bec5e93c8b16a5a92d41d}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-T@{GSN\_\-MAC\_\-RATE\_\-T}}
+\index{GSN\_\-MAC\_\-RATE\_\-T@{GSN\_\-MAC\_\-RATE\_\-T}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-RATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-MAC\_\-RATE\_\-T}}}
+\label{a00642_ga260da9755b2bec5e93c8b16a5a92d41d}
+
+
+enumerated type describing the various available rates. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-MAC\_\-RATE\_\-1MBPS@{GSN\_\-MAC\_\-RATE\_\-1MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-1MBPS@{GSN\_\-MAC\_\-RATE\_\-1MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da8eebea2599d06d1e26e773c8878ec37c}{
+GSN\_\-MAC\_\-RATE\_\-1MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da8eebea2599d06d1e26e773c8878ec37c}
+}]\index{GSN\_\-MAC\_\-RATE\_\-2MBPS@{GSN\_\-MAC\_\-RATE\_\-2MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-2MBPS@{GSN\_\-MAC\_\-RATE\_\-2MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41daee17221504eae789861277320adb346a}{
+GSN\_\-MAC\_\-RATE\_\-2MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41daee17221504eae789861277320adb346a}
+}]\index{GSN\_\-MAC\_\-RATE\_\-5\_\-5MBPS@{GSN\_\-MAC\_\-RATE\_\-5\_\-5MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-5\_\-5MBPS@{GSN\_\-MAC\_\-RATE\_\-5\_\-5MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41daa3c3416953cd6d2d272b9a41d47cec5c}{
+GSN\_\-MAC\_\-RATE\_\-5\_\-5MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41daa3c3416953cd6d2d272b9a41d47cec5c}
+}]\index{GSN\_\-MAC\_\-RATE\_\-6\_\-5MBPS@{GSN\_\-MAC\_\-RATE\_\-6\_\-5MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-6\_\-5MBPS@{GSN\_\-MAC\_\-RATE\_\-6\_\-5MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da6ffc66c1ba4d053f582de80f67147b53}{
+GSN\_\-MAC\_\-RATE\_\-6\_\-5MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da6ffc66c1ba4d053f582de80f67147b53}
+}]\index{GSN\_\-MAC\_\-RATE\_\-6MBPS@{GSN\_\-MAC\_\-RATE\_\-6MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-6MBPS@{GSN\_\-MAC\_\-RATE\_\-6MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da4ee50fb4c98be33ef617386bea1cd128}{
+GSN\_\-MAC\_\-RATE\_\-6MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da4ee50fb4c98be33ef617386bea1cd128}
+}]\index{GSN\_\-MAC\_\-RATE\_\-9MBPS@{GSN\_\-MAC\_\-RATE\_\-9MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-9MBPS@{GSN\_\-MAC\_\-RATE\_\-9MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da0fd352dc70a6821572a0395e4240d991}{
+GSN\_\-MAC\_\-RATE\_\-9MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da0fd352dc70a6821572a0395e4240d991}
+}]\index{GSN\_\-MAC\_\-RATE\_\-11MBPS@{GSN\_\-MAC\_\-RATE\_\-11MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-11MBPS@{GSN\_\-MAC\_\-RATE\_\-11MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41daeb680a41efe94b110c0a19c7134d5892}{
+GSN\_\-MAC\_\-RATE\_\-11MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41daeb680a41efe94b110c0a19c7134d5892}
+}]\index{GSN\_\-MAC\_\-RATE\_\-12MBPS@{GSN\_\-MAC\_\-RATE\_\-12MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-12MBPS@{GSN\_\-MAC\_\-RATE\_\-12MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da97cdd89b6922881aab4d80c151adaf2b}{
+GSN\_\-MAC\_\-RATE\_\-12MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da97cdd89b6922881aab4d80c151adaf2b}
+}]\index{GSN\_\-MAC\_\-RATE\_\-13MBPS@{GSN\_\-MAC\_\-RATE\_\-13MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-13MBPS@{GSN\_\-MAC\_\-RATE\_\-13MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da8982b7bfe30b509211ddb4bfaec9f6b2}{
+GSN\_\-MAC\_\-RATE\_\-13MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da8982b7bfe30b509211ddb4bfaec9f6b2}
+}]\index{GSN\_\-MAC\_\-RATE\_\-18MBPS@{GSN\_\-MAC\_\-RATE\_\-18MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-18MBPS@{GSN\_\-MAC\_\-RATE\_\-18MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da1fa98727e873a12b52fe5654f9e8beb0}{
+GSN\_\-MAC\_\-RATE\_\-18MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da1fa98727e873a12b52fe5654f9e8beb0}
+}]\index{GSN\_\-MAC\_\-RATE\_\-19\_\-5MBPS@{GSN\_\-MAC\_\-RATE\_\-19\_\-5MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-19\_\-5MBPS@{GSN\_\-MAC\_\-RATE\_\-19\_\-5MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41dad5feaa4be91659303c8e8905590004e8}{
+GSN\_\-MAC\_\-RATE\_\-19\_\-5MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41dad5feaa4be91659303c8e8905590004e8}
+}]\index{GSN\_\-MAC\_\-RATE\_\-24MBPS@{GSN\_\-MAC\_\-RATE\_\-24MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-24MBPS@{GSN\_\-MAC\_\-RATE\_\-24MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41dad28f25101ea2432bdd1a06fe2a97fc14}{
+GSN\_\-MAC\_\-RATE\_\-24MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41dad28f25101ea2432bdd1a06fe2a97fc14}
+}]\index{GSN\_\-MAC\_\-RATE\_\-26MBPS@{GSN\_\-MAC\_\-RATE\_\-26MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-26MBPS@{GSN\_\-MAC\_\-RATE\_\-26MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41dad012ef0af6775a233e4fefa0b163dd2c}{
+GSN\_\-MAC\_\-RATE\_\-26MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41dad012ef0af6775a233e4fefa0b163dd2c}
+}]\index{GSN\_\-MAC\_\-RATE\_\-36MBPS@{GSN\_\-MAC\_\-RATE\_\-36MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-36MBPS@{GSN\_\-MAC\_\-RATE\_\-36MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da5a4fdc5677b4912f81aa0367a93ac63b}{
+GSN\_\-MAC\_\-RATE\_\-36MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da5a4fdc5677b4912f81aa0367a93ac63b}
+}]\index{GSN\_\-MAC\_\-RATE\_\-39MBPS@{GSN\_\-MAC\_\-RATE\_\-39MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-39MBPS@{GSN\_\-MAC\_\-RATE\_\-39MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da4ff541ec828e47779ab515bbce812432}{
+GSN\_\-MAC\_\-RATE\_\-39MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da4ff541ec828e47779ab515bbce812432}
+}]\index{GSN\_\-MAC\_\-RATE\_\-48MBPS@{GSN\_\-MAC\_\-RATE\_\-48MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-48MBPS@{GSN\_\-MAC\_\-RATE\_\-48MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da90c278dcfd04b86e79b797239b3b133b}{
+GSN\_\-MAC\_\-RATE\_\-48MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da90c278dcfd04b86e79b797239b3b133b}
+}]\index{GSN\_\-MAC\_\-RATE\_\-52MBPS@{GSN\_\-MAC\_\-RATE\_\-52MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-52MBPS@{GSN\_\-MAC\_\-RATE\_\-52MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41dae36e5884dc5c75b3d0d06a9199213993}{
+GSN\_\-MAC\_\-RATE\_\-52MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41dae36e5884dc5c75b3d0d06a9199213993}
+}]\index{GSN\_\-MAC\_\-RATE\_\-54MBPS@{GSN\_\-MAC\_\-RATE\_\-54MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-54MBPS@{GSN\_\-MAC\_\-RATE\_\-54MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41daa73db96531738bd3cc757599330b490c}{
+GSN\_\-MAC\_\-RATE\_\-54MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41daa73db96531738bd3cc757599330b490c}
+}]\index{GSN\_\-MAC\_\-RATE\_\-58\_\-5MBPS@{GSN\_\-MAC\_\-RATE\_\-58\_\-5MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-58\_\-5MBPS@{GSN\_\-MAC\_\-RATE\_\-58\_\-5MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da4fc0e557eb2aca6c25f56228efe4a365}{
+GSN\_\-MAC\_\-RATE\_\-58\_\-5MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da4fc0e557eb2aca6c25f56228efe4a365}
+}]\index{GSN\_\-MAC\_\-RATE\_\-65MBPS@{GSN\_\-MAC\_\-RATE\_\-65MBPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-RATE\_\-65MBPS@{GSN\_\-MAC\_\-RATE\_\-65MBPS}}\item[{\em 
+\hypertarget{a00642_gga260da9755b2bec5e93c8b16a5a92d41da3225e2fa7882610a3a764e0ccf7499a6}{
+GSN\_\-MAC\_\-RATE\_\-65MBPS}
+\label{a00642_gga260da9755b2bec5e93c8b16a5a92d41da3225e2fa7882610a3a764e0ccf7499a6}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 825 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_gacd7033290927ecd0c0b3b6e9829ecb2e}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SCAN\_\-TYPE@{GSN\_\-MAC\_\-SCAN\_\-TYPE}}
+\index{GSN\_\-MAC\_\-SCAN\_\-TYPE@{GSN\_\-MAC\_\-SCAN\_\-TYPE}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SCAN\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-MAC\_\-SCAN\_\-TYPE}}}
+\label{a00642_gacd7033290927ecd0c0b3b6e9829ecb2e}
+
+
+Scan type. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE}}\item[{\em 
+\hypertarget{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea365bc3b0d49cef29862eaefb8e74c58c}{
+GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE}
+\label{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea365bc3b0d49cef29862eaefb8e74c58c}
+}]passive scan \index{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE}}\item[{\em 
+\hypertarget{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea8807821495b972487d959e08e67d1dd0}{
+GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE}
+\label{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea8807821495b972487d959e08e67d1dd0}
+}]active scan \index{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}}\item[{\em 
+\hypertarget{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea3b09e6f9740ed6f5510747c59b2e3af3}{
+GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}
+\label{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea3b09e6f9740ed6f5510747c59b2e3af3}
+}]scan for p2p devices only \index{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}}\item[{\em 
+\hypertarget{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea148a646044a62921ae0f6f15a49d427d}{
+GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}
+\label{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea148a646044a62921ae0f6f15a49d427d}
+}]scan for given p2p device type \index{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}}\item[{\em 
+\hypertarget{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea42dc80aa1ea641af49db305afc3dd664}{
+GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}
+\label{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea42dc80aa1ea641af49db305afc3dd664}
+}]scan for given p2p device Id \index{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}}\item[{\em 
+\hypertarget{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea922992fd8398f8d60e90a33674583b24}{
+GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}
+\label{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2ea922992fd8398f8d60e90a33674583b24}
+}]scan for wlan and p2p groups \index{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS@{GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}}\item[{\em 
+\hypertarget{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2eaff33c56427944572c294ced551b38993}{
+GSN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}
+\label{a00642_ggacd7033290927ecd0c0b3b6e9829ecb2eaff33c56427944572c294ced551b38993}
+}]scan for wlan and p2p devices \end{description}
+\end{Desc}
+
+
+
+Definition at line 1095 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga0ae19d69a0b381d883890df8a7812414}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR@{GSN\_\-MAC\_\-WPS\_\-ATTR}}
+\index{GSN\_\-MAC\_\-WPS\_\-ATTR@{GSN\_\-MAC\_\-WPS\_\-ATTR}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-WPS\_\-ATTR}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-MAC\_\-WPS\_\-ATTR}}}
+\label{a00642_ga0ae19d69a0b381d883890df8a7812414}
+
+
+WPS attribute types. This enum defines the WPS attribute type values. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-CHANNEL@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-CHANNEL}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-CHANNEL@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-CHANNEL}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ae0e4f98b1e9f93fab112823a40124cf9}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-CHANNEL}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ae0e4f98b1e9f93fab112823a40124cf9}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ASSOC\_\-STATE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ASSOC\_\-STATE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ASSOC\_\-STATE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ASSOC\_\-STATE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a14a9ece3989389a193ba8952c6e54a49}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ASSOC\_\-STATE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a14a9ece3989389a193ba8952c6e54a49}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a82abc540504b8e5abd3d3284d1be3691}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a82abc540504b8e5abd3d3284d1be3691}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE\_\-FLAGS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE\_\-FLAGS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE\_\-FLAGS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE\_\-FLAGS}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a82a50e93477f656efe36c78bee9853ae}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTH\_\-TYPE\_\-FLAGS}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a82a50e93477f656efe36c78bee9853ae}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTHENTICATOR@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTHENTICATOR}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTHENTICATOR@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTHENTICATOR}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a6db708b7b9456aa0954847a56a87c950}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AUTHENTICATOR}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a6db708b7b9456aa0954847a56a87c950}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-METHODS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-METHODS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-METHODS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-METHODS}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a0b8df95e03afe854134675a191b32380}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-METHODS}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a0b8df95e03afe854134675a191b32380}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-ERROR@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-ERROR}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-ERROR@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-ERROR}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a11665e3ac538b48a4c5cd07c7f85ac34}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIG\_\-ERROR}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a11665e3ac538b48a4c5cd07c7f85ac34}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL4@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL4}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL4@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL4}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a58e52e468a71edde980771bdcc5cb57c}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL4}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a58e52e468a71edde980771bdcc5cb57c}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL6@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL6}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL6@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL6}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a8196c29bf558c99d22a89a2821eeddd7}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONFIRM\_\-URL6}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a8196c29bf558c99d22a89a2821eeddd7}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414acde288264ac04d778a3253db30d27606}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414acde288264ac04d778a3253db30d27606}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE\_\-FLAGS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE\_\-FLAGS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE\_\-FLAGS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE\_\-FLAGS}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a860213d76ac7a737ae6526d4ede0972b}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CONN\_\-TYPE\_\-FLAGS}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a860213d76ac7a737ae6526d4ede0972b}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CRED@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CRED}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CRED@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CRED}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414af801b5a3d9b7781b514c52ff1d95046e}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-CRED}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414af801b5a3d9b7781b514c52ff1d95046e}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a0f7ef631b9b5172cdeaac0f6d57be68b}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a0f7ef631b9b5172cdeaac0f6d57be68b}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE\_\-FLAGS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE\_\-FLAGS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE\_\-FLAGS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE\_\-FLAGS}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a1bccefdc1fb8e59b0f1b2143760a6644}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-TYPE\_\-FLAGS}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a1bccefdc1fb8e59b0f1b2143760a6644}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-NAME@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-NAME}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-NAME@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-NAME}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ac600b93117d1fd53e66ed52e54699451}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-NAME}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ac600b93117d1fd53e66ed52e54699451}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-PASSWORD\_\-ID@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-PASSWORD\_\-ID}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-PASSWORD\_\-ID@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-PASSWORD\_\-ID}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a08ccfbe8970a56aae777bf20f46d3b65}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-DEV\_\-PASSWORD\_\-ID}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a08ccfbe8970a56aae777bf20f46d3b65}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH1@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH1}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH1@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH1}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414affb3ee90dc1870d4a399814ef2e72f7b}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH1}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414affb3ee90dc1870d4a399814ef2e72f7b}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH2@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH2}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH2@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH2}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a077695e5257e9e646d38ab4d649df7d7}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-HASH2}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a077695e5257e9e646d38ab4d649df7d7}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE1@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE1}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE1@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE1}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a148038d92c6054711427dd01c4178df3}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE1}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a148038d92c6054711427dd01c4178df3}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE2@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE2}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE2@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE2}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ad67e234cf3cd78d829db04fd1d76d592}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-E\_\-SNONCE2}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ad67e234cf3cd78d829db04fd1d76d592}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-SETTINGS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-SETTINGS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-SETTINGS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-SETTINGS}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a061dcf9ed592316d74edafcbdd408abc}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENCR\_\-SETTINGS}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a061dcf9ed592316d74edafcbdd408abc}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENROLLEE\_\-NONCE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENROLLEE\_\-NONCE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENROLLEE\_\-NONCE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENROLLEE\_\-NONCE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a6e68d887428b6b8305aa9c18cb3d1c5a}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-ENROLLEE\_\-NONCE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a6e68d887428b6b8305aa9c18cb3d1c5a}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-FEATURE\_\-ID@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-FEATURE\_\-ID}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-FEATURE\_\-ID@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-FEATURE\_\-ID}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a522f5dba15cb3d3aacdcd036e2b59150}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-FEATURE\_\-ID}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a522f5dba15cb3d3aacdcd036e2b59150}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ab35724dadfe61d6ee4b8db2c26f5d592}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ab35724dadfe61d6ee4b8db2c26f5d592}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY\_\-PROOF@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY\_\-PROOF}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY\_\-PROOF@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY\_\-PROOF}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414addddcc8e24644c522a4b64a303dad605}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IDENTITY\_\-PROOF}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414addddcc8e24644c522a4b64a303dad605}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-WRAP\_\-AUTH@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-WRAP\_\-AUTH}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-WRAP\_\-AUTH@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-WRAP\_\-AUTH}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ac6599d36351e718ee91228713e9ea30b}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-WRAP\_\-AUTH}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ac6599d36351e718ee91228713e9ea30b}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-ID@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-ID}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-ID@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-ID}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a3830bf83e6e906525b7c4b9fba9a4cf7}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-ID}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a3830bf83e6e906525b7c4b9fba9a4cf7}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MAC\_\-ADDR@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MAC\_\-ADDR}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MAC\_\-ADDR@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MAC\_\-ADDR}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ae08e8ebd8144290f405ddd039d50d4a1}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MAC\_\-ADDR}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ae08e8ebd8144290f405ddd039d50d4a1}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MANUFACTURER@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MANUFACTURER}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MANUFACTURER@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MANUFACTURER}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a56e395ae5ad56ebcdf3a3daf60508705}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MANUFACTURER}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a56e395ae5ad56ebcdf3a3daf60508705}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-TYPE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-TYPE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414aad2c6f083e5d168e417eaeaec60e1188}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-TYPE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414aad2c6f083e5d168e417eaeaec60e1188}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NAME@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NAME}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NAME@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NAME}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a00711c771bb3f70aca7c5590d8be46a5}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NAME}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a00711c771bb3f70aca7c5590d8be46a5}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NUMBER@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NUMBER}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NUMBER@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NUMBER}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a747ceda35756847af00e4c08aa9ddb6b}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MODEL\_\-NUMBER}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a747ceda35756847af00e4c08aa9ddb6b}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-INDEX@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-INDEX}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-INDEX@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-INDEX}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a95ce2bb8157589dccf214d78e7bfe089}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-INDEX}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a95ce2bb8157589dccf214d78e7bfe089}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a6335ff86b286abd89e8357c3a38e4cfa}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a6335ff86b286abd89e8357c3a38e4cfa}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY\_\-INDEX@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY\_\-INDEX}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY\_\-INDEX@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY\_\-INDEX}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ab3412060b43412458c32ae279dafab42}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NETWORK\_\-KEY\_\-INDEX}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ab3412060b43412458c32ae279dafab42}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-DEVICE\_\-NAME@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-DEVICE\_\-NAME}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-DEVICE\_\-NAME@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-DEVICE\_\-NAME}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a53315d91cf0bccd56a5df8903b4b1e3c}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-DEVICE\_\-NAME}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a53315d91cf0bccd56a5df8903b4b1e3c}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-PASSWORD@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-PASSWORD}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-PASSWORD@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-PASSWORD}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a63fe81cf6d0077c4dd62fdf2397f628f}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-NEW\_\-PASSWORD}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a63fe81cf6d0077c4dd62fdf2397f628f}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OOB\_\-DEVICE\_\-PASSWORD@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OOB\_\-DEVICE\_\-PASSWORD}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OOB\_\-DEVICE\_\-PASSWORD@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OOB\_\-DEVICE\_\-PASSWORD}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a4a27af7c5d1724ce0f641ac86d401f86}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OOB\_\-DEVICE\_\-PASSWORD}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a4a27af7c5d1724ce0f641ac86d401f86}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OS\_\-VERSION@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OS\_\-VERSION}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OS\_\-VERSION@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OS\_\-VERSION}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a248764365b811e501fa52e7175fd15f1}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-OS\_\-VERSION}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a248764365b811e501fa52e7175fd15f1}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-POWER\_\-LEVEL@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-POWER\_\-LEVEL}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-POWER\_\-LEVEL@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-POWER\_\-LEVEL}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a759d95dbbd54effd023e9c7dac8e5ccc}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-POWER\_\-LEVEL}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a759d95dbbd54effd023e9c7dac8e5ccc}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-CURRENT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-CURRENT}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-CURRENT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-CURRENT}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ab5034f8c8b189c17df7ad8f014598d6e}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-CURRENT}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ab5034f8c8b189c17df7ad8f014598d6e}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-MAX@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-MAX}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-MAX@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-MAX}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a58db76da0cc1255ce52bf6f152c2adfa}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PSK\_\-MAX}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a58db76da0cc1255ce52bf6f152c2adfa}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBLIC\_\-KEY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBLIC\_\-KEY}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBLIC\_\-KEY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBLIC\_\-KEY}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a7e34100818d569f2b3ee549b38a2fe30}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBLIC\_\-KEY}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a7e34100818d569f2b3ee549b38a2fe30}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RADIO\_\-ENABLE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RADIO\_\-ENABLE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RADIO\_\-ENABLE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RADIO\_\-ENABLE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a7503378812e50f11419c9ef2ebf38cb4}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RADIO\_\-ENABLE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a7503378812e50f11419c9ef2ebf38cb4}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REBOOT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REBOOT}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REBOOT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REBOOT}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a9e2fa8c3462ef0459ac59b542b30d73b}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REBOOT}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a9e2fa8c3462ef0459ac59b542b30d73b}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-CURRENT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-CURRENT}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-CURRENT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-CURRENT}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ae57635b08d409f68022e5dd31f2db238}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-CURRENT}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ae57635b08d409f68022e5dd31f2db238}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-ESTABLISHED@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-ESTABLISHED}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-ESTABLISHED@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-ESTABLISHED}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a5c0f743d2a7e9046503b1a12ef8fdbd1}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-ESTABLISHED}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a5c0f743d2a7e9046503b1a12ef8fdbd1}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-LIST@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-LIST}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-LIST@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-LIST}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a2ef5c33ca0d80654d41a318e2d8bbbb9}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-LIST}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a2ef5c33ca0d80654d41a318e2d8bbbb9}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-MAX@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-MAX}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-MAX@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-MAX}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a12357664da12b1300136c3987b234b9a}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-MAX}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a12357664da12b1300136c3987b234b9a}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-NONCE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-NONCE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-NONCE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-NONCE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ac72ed6c2511a4fe61f421fe8b97aa84d}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REGISTRAR\_\-NONCE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ac72ed6c2511a4fe61f421fe8b97aa84d}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REQUEST\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REQUEST\_\-TYPE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REQUEST\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REQUEST\_\-TYPE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a7976e11cc80f9fedaad827a78937ce43}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REQUEST\_\-TYPE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a7976e11cc80f9fedaad827a78937ce43}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RESPONSE\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RESPONSE\_\-TYPE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RESPONSE\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RESPONSE\_\-TYPE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414afc565ba8593a669a97cec3a7ffd12286}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RESPONSE\_\-TYPE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414afc565ba8593a669a97cec3a7ffd12286}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RF\_\-BANDS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RF\_\-BANDS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RF\_\-BANDS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RF\_\-BANDS}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a61f9014364e3888a78f4f9e9f03cce18}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-RF\_\-BANDS}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a61f9014364e3888a78f4f9e9f03cce18}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH1@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH1}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH1@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH1}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a34d93c9b4edc5be7a47a6797ff169a13}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH1}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a34d93c9b4edc5be7a47a6797ff169a13}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH2@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH2}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH2@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH2}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a896f51ad7da9054a9e30ecf48006aa23}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-HASH2}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a896f51ad7da9054a9e30ecf48006aa23}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE1@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE1}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE1@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE1}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414aee2db55e6fede6b24410a216871d016e}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE1}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414aee2db55e6fede6b24410a216871d016e}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE2@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE2}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE2@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE2}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a88c81608cdb2a5e022755eb117651766}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-R\_\-SNONCE2}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a88c81608cdb2a5e022755eb117651766}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a2523c1744d85b547d72ab907fc72f370}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a2523c1744d85b547d72ab907fc72f370}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SERIAL\_\-NUMBER@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SERIAL\_\-NUMBER}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SERIAL\_\-NUMBER@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SERIAL\_\-NUMBER}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a6d10efeab9c2b6e2ba656f8a23c3448f}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SERIAL\_\-NUMBER}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a6d10efeab9c2b6e2ba656f8a23c3448f}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WPS\_\-STATE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WPS\_\-STATE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WPS\_\-STATE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WPS\_\-STATE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a4c38d42c808c6312f62526fd678028b2}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WPS\_\-STATE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a4c38d42c808c6312f62526fd678028b2}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SSID@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SSID}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SSID@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SSID}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414aa230c88c2e2ba08e4f955b304e552bf0}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SSID}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414aa230c88c2e2ba08e4f955b304e552bf0}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-TOTAL\_\-NETWORKS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-TOTAL\_\-NETWORKS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-TOTAL\_\-NETWORKS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-TOTAL\_\-NETWORKS}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a277667b176aacf858631fd0ea6847ed3}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-TOTAL\_\-NETWORKS}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a277667b176aacf858631fd0ea6847ed3}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-E@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-E}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-E@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-E}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ac5f48c116f9cb5dd46fd2a4e9c3e76d6}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-E}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ac5f48c116f9cb5dd46fd2a4e9c3e76d6}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-R@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-R}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-R@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-R}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414aa6b19c984ca4e9f72133042f9102dcf8}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-UUID\_\-R}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414aa6b19c984ca4e9f72133042f9102dcf8}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VENDOR\_\-EXT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VENDOR\_\-EXT}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VENDOR\_\-EXT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VENDOR\_\-EXT}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ad30e228111674bab9eabffe99ddf1af3}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VENDOR\_\-EXT}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ad30e228111674bab9eabffe99ddf1af3}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VERSION@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VERSION}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VERSION@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VERSION}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ace95785bf34b55e3c792f556cd74d4c9}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-VERSION}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ace95785bf34b55e3c792f556cd74d4c9}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT\_\-REQ@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT\_\-REQ}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT\_\-REQ@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT\_\-REQ}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414aa3fdf34a8468ff5000c0e9ef3bacca27}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT\_\-REQ}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414aa3fdf34a8468ff5000c0e9ef3bacca27}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a6de100ee39618b50cfeea63451215faa}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-X509\_\-CERT}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a6de100ee39618b50cfeea63451215faa}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-IDENTITY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-IDENTITY}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-IDENTITY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-IDENTITY}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ac26c41281a3d8a08bf5aa9cafd12e1e0}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-IDENTITY}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ac26c41281a3d8a08bf5aa9cafd12e1e0}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-COUNTER@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-COUNTER}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-COUNTER@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-COUNTER}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a6eca670b85550427017fe20b3769627a}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-MSG\_\-COUNTER}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a6eca670b85550427017fe20b3769627a}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBKEY\_\-HASH@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBKEY\_\-HASH}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBKEY\_\-HASH@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBKEY\_\-HASH}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ab9823407c5f09c370cec3ebc15eaf768}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PUBKEY\_\-HASH}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ab9823407c5f09c370cec3ebc15eaf768}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REKEY\_\-KEY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REKEY\_\-KEY}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REKEY\_\-KEY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REKEY\_\-KEY}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a2f9230427597a54f33ebdb495ce4e875}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-REKEY\_\-KEY}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a2f9230427597a54f33ebdb495ce4e875}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-LIFETIME@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-LIFETIME}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-LIFETIME@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-LIFETIME}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a7c493d54cbe9bcdbf614d0ef1eb8c698}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-LIFETIME}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a7c493d54cbe9bcdbf614d0ef1eb8c698}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PERMITTED\_\-CFG\_\-METHODS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PERMITTED\_\-CFG\_\-METHODS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PERMITTED\_\-CFG\_\-METHODS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PERMITTED\_\-CFG\_\-METHODS}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ad5533224919266772b2e66b15e249329}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PERMITTED\_\-CFG\_\-METHODS}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ad5533224919266772b2e66b15e249329}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR\_\-CONFIG\_\-METHODS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR\_\-CONFIG\_\-METHODS}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR\_\-CONFIG\_\-METHODS@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR\_\-CONFIG\_\-METHODS}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ab8085b8e758237446f2dea40d1163170}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SELECTED\_\-REGISTRAR\_\-CONFIG\_\-METHODS}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ab8085b8e758237446f2dea40d1163170}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PRIMARY\_\-DEV\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PRIMARY\_\-DEV\_\-TYPE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PRIMARY\_\-DEV\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PRIMARY\_\-DEV\_\-TYPE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a8e09e6a61a2a303b81ee1a97ee2bdc56}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PRIMARY\_\-DEV\_\-TYPE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a8e09e6a61a2a303b81ee1a97ee2bdc56}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SECONDARY\_\-DEV\_\-TYP\_\-ELIST@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SECONDARY\_\-DEV\_\-TYP\_\-ELIST}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SECONDARY\_\-DEV\_\-TYP\_\-ELIST@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SECONDARY\_\-DEV\_\-TYP\_\-ELIST}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414aeef9d9adce9ef3a96e43ef49162e6b7e}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-SECONDARY\_\-DEV\_\-TYP\_\-ELIST}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414aeef9d9adce9ef3a96e43ef49162e6b7e}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PORTABLE\_\-DEV@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PORTABLE\_\-DEV}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PORTABLE\_\-DEV@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PORTABLE\_\-DEV}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a026fdeb1d92c07881b4647872a7e4b4b}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-PORTABLE\_\-DEV}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a026fdeb1d92c07881b4647872a7e4b4b}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-SETUP\_\-LOCKED@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-SETUP\_\-LOCKED}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-SETUP\_\-LOCKED@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-SETUP\_\-LOCKED}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a4a5a1ab8cec5bb899989e7753a806d11}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-AP\_\-SETUP\_\-LOCKED}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a4a5a1ab8cec5bb899989e7753a806d11}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPLICATION\_\-EXT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPLICATION\_\-EXT}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPLICATION\_\-EXT@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPLICATION\_\-EXT}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a229f8589f7ca2eea8cad9c8f1a45f53c}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPLICATION\_\-EXT}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a229f8589f7ca2eea8cad9c8f1a45f53c}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-TYPE}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-TYPE@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-TYPE}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a377bf260f557239e4b247b0a00f844fc}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-EAP\_\-TYPE}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a377bf260f557239e4b247b0a00f844fc}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IV@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IV}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IV@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IV}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a7124169a361bbebc153ff846efdaba5e}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-IV}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a7124169a361bbebc153ff846efdaba5e}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-PROVIDED\_\-AUTO@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-PROVIDED\_\-AUTO}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-PROVIDED\_\-AUTO@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-PROVIDED\_\-AUTO}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414ac27a96bcbf6bb6daaa59c46c000c8cb5}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-KEY\_\-PROVIDED\_\-AUTO}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414ac27a96bcbf6bb6daaa59c46c000c8cb5}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-802\_\-1X\_\-ENABLED@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-802\_\-1X\_\-ENABLED}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-802\_\-1X\_\-ENABLED@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-802\_\-1X\_\-ENABLED}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a2dcc37ccc4d028268022fb606db04ada}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-802\_\-1X\_\-ENABLED}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a2dcc37ccc4d028268022fb606db04ada}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPSESSIONKEY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPSESSIONKEY}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPSESSIONKEY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPSESSIONKEY}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a83c9a15823fc1f9759c87d8f8c88746b}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-APPSESSIONKEY}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a83c9a15823fc1f9759c87d8f8c88746b}
+}]\index{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WEPTRANSMITKEY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WEPTRANSMITKEY}!GSN MAC Definitions@{GSN MAC Definitions}}\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WEPTRANSMITKEY@{GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WEPTRANSMITKEY}}\item[{\em 
+\hypertarget{a00642_gga0ae19d69a0b381d883890df8a7812414a89a728e5656f62fe81a5263adcbdf6e0}{
+GSN\_\-MAC\_\-WPS\_\-ATTR\_\-WEPTRANSMITKEY}
+\label{a00642_gga0ae19d69a0b381d883890df8a7812414a89a728e5656f62fe81a5263adcbdf6e0}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 1467 of file gsn\_\-mac\_\-def.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00642_ga40777d8fbdd030789a57dff0bd8ff0f0}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ADDR\_\-CMP@{GSN\_\-MAC\_\-ADDR\_\-CMP}}
+\index{GSN\_\-MAC\_\-ADDR\_\-CMP@{GSN\_\-MAC\_\-ADDR\_\-CMP}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ADDR\_\-CMP}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf WLAN\_\-BOOLEAN} GSN\_\-MAC\_\-ADDR\_\-CMP (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$const}]{Addr1Ptr, }
+\item[{const void $\ast$const}]{Addr2Ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00642_ga40777d8fbdd030789a57dff0bd8ff0f0}
+
+
+utility for comparing two MAC addresses; returns TRUE if they are equal. 
+
+
+
+Definition at line 350 of file gsn\_\-mac\_\-def.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00642_ga40777d8fbdd030789a57dff0bd8ff0f0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00642_ga10d1d894fd6997657ba3ad3feb3f5c25}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ADDR\_\-CPY@{GSN\_\-MAC\_\-ADDR\_\-CPY}}
+\index{GSN\_\-MAC\_\-ADDR\_\-CPY@{GSN\_\-MAC\_\-ADDR\_\-CPY}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ADDR\_\-CPY}]{\setlength{\rightskip}{0pt plus 5cm}INLINE void GSN\_\-MAC\_\-ADDR\_\-CPY (
+\begin{DoxyParamCaption}
+\item[{void $\ast$const}]{DstAddrPtr, }
+\item[{const void $\ast$const}]{SrcAddrPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00642_ga10d1d894fd6997657ba3ad3feb3f5c25}
+
+
+utility function for copying a MAC address to a new memory location. 
+
+
+
+Definition at line 331 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga41a9a0ac53be9509c53d788c7f441f11}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-ADDR\_\-FILTER@{GSN\_\-MAC\_\-ADDR\_\-FILTER}}
+\index{GSN\_\-MAC\_\-ADDR\_\-FILTER@{GSN\_\-MAC\_\-ADDR\_\-FILTER}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-ADDR\_\-FILTER}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf WLAN\_\-BOOLEAN} GSN\_\-MAC\_\-ADDR\_\-FILTER (
+\begin{DoxyParamCaption}
+\item[{const {\bf GSN\_\-MAC\_\-ADDR\_\-T} $\ast$const}]{addrPtr, }
+\item[{const {\bf GSN\_\-MAC\_\-ADDR\_\-T} $\ast$const}]{maskPtr, }
+\item[{const {\bf GSN\_\-MAC\_\-ADDR\_\-T} $\ast$const}]{filterPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00642_ga41a9a0ac53be9509c53d788c7f441f11}
+
+
+utility to mask and filter the given address by the given mask/filter. 
+
+This utility takes an input address, a mask, and a filter. The input address is bitwise-\/masked by the mask, and then compared to the filter. If the masked address is the same as the filter, the function returns TRUE. 
+
+Definition at line 379 of file gsn\_\-mac\_\-def.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00642_ga41a9a0ac53be9509c53d788c7f441f11_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00642_gad5c339a4bdf8153b8db53bb5b3437cce}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-KEY\_\-CPY@{GSN\_\-MAC\_\-KEY\_\-CPY}}
+\index{GSN\_\-MAC\_\-KEY\_\-CPY@{GSN\_\-MAC\_\-KEY\_\-CPY}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-KEY\_\-CPY}]{\setlength{\rightskip}{0pt plus 5cm}INLINE void GSN\_\-MAC\_\-KEY\_\-CPY (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-SEC\_\-KEY\_\-T} $\ast$const}]{macKeyPtr, }
+\item[{const {\bf GSN\_\-MAC\_\-SEC\_\-KEY\_\-T} $\ast$const}]{srcKeyPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00642_gad5c339a4bdf8153b8db53bb5b3437cce}
+
+
+utility to copy a security key to a new memory location. 
+
+
+
+Definition at line 1579 of file gsn\_\-mac\_\-def.h.
+
+\hypertarget{a00642_ga41c43127ce1f76a9d59782ea41e71936}{
+\index{GSN MAC Definitions@{GSN MAC Definitions}!GSN\_\-MAC\_\-SSID\_\-CPY@{GSN\_\-MAC\_\-SSID\_\-CPY}}
+\index{GSN\_\-MAC\_\-SSID\_\-CPY@{GSN\_\-MAC\_\-SSID\_\-CPY}!GSN MAC Definitions@{GSN MAC Definitions}}
+\subsubsection[{GSN\_\-MAC\_\-SSID\_\-CPY}]{\setlength{\rightskip}{0pt plus 5cm}INLINE void GSN\_\-MAC\_\-SSID\_\-CPY (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-SSID\_\-T} $\ast$const}]{dstSsidPtr, }
+\item[{const {\bf GSN\_\-MAC\_\-SSID\_\-T} $\ast$const}]{srcSsidPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00642_ga41c43127ce1f76a9d59782ea41e71936}
+
+
+utility for copying an SSID to a new memory location. 
+
+
+
+Definition at line 260 of file gsn\_\-mac\_\-def.h.
+

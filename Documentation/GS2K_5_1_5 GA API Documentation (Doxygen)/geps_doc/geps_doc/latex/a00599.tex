@@ -1,0 +1,213 @@
+\hypertarget{a00599}{
+\section{gsn\_\-types.h File Reference}
+\label{a00599}\index{gsn\_\-types.h@{gsn\_\-types.h}}
+}
+
+
+GSN Basic types. This file contains the basic types.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00845}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00036}{GSN\_\-CB}
+\item 
+struct \hyperlink{a00037}{GSN\_\-CB32}
+\item 
+struct \hyperlink{a00033}{GSN\_\-BUF8}
+\begin{DoxyCompactList}\small\item\em Byte Buffer. \end{DoxyCompactList}\item 
+struct \hyperlink{a00034}{GSN\_\-BUF8LISTELMT}
+\begin{DoxyCompactList}\small\item\em Definition of a Linked List of Byte Buffers. \end{DoxyCompactList}\item 
+struct \hyperlink{a00029}{GSN\_\-BUF16}
+\begin{DoxyCompactList}\small\item\em Definition of a Half-\/Word Buffer. \end{DoxyCompactList}\item 
+struct \hyperlink{a00030}{GSN\_\-BUF16LISTELMT}
+\begin{DoxyCompactList}\small\item\em Definition of a Linked List of Half-\/Word Buffers. \end{DoxyCompactList}\item 
+struct \hyperlink{a00031}{GSN\_\-BUF32}
+\begin{DoxyCompactList}\small\item\em Definition of a Word Buffer. \end{DoxyCompactList}\item 
+struct \hyperlink{a00032}{GSN\_\-BUF32LISTELMT}
+\begin{DoxyCompactList}\small\item\em Definition of a Linked List of Word Buffers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00599_a634811c51bc3d3d55b574b3eefc99025}{SIZE\_\-OF\_\-UINT8}~sizeof(\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8})
+\item 
+\#define \hyperlink{a00599_a4aafb4570f293835708cc4b104df89cb}{SIZE\_\-OF\_\-INT8}~sizeof(\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8})
+\item 
+\#define \hyperlink{a00599_a455564fd0dd201a9424e5114dad2d635}{SIZE\_\-OF\_\-INT16}~sizeof(\hyperlink{a00660_ga57de7cb8e702b1746127a4d5137fa455}{INT16})
+\item 
+\#define \hyperlink{a00599_ad2024c1c99e56ed26a41c381b40038d0}{SIZE\_\-OF\_\-UINT16}~sizeof(\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16})
+\item 
+\#define \hyperlink{a00599_ae3ed18c0021e8539119a2b31fa5b1112}{SIZE\_\-OF\_\-INT32}~sizeof(\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32})
+\item 
+\#define \hyperlink{a00599_aba6ba1193a4f95d3156ea40aa71186e5}{SIZE\_\-OF\_\-UINT32}~sizeof(\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})
+\item 
+\#define \hyperlink{a00599_a5c7f6bdd54401ce871dbb0b691eb5440}{SIZE\_\-OF\_\-ULONG32}~sizeof(\hyperlink{a00660_gaa4ee7c96d5dff444cca1bf965c9f77fd}{ULONG32})
+\item 
+\#define \hyperlink{a00599_a9e5aa76cc9e0a06fb7f56ecd4de43635}{SIZE\_\-OF\_\-BOOL}~sizeof(\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}
+\item 
+typedef char \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8}
+\item 
+typedef short \hyperlink{a00660_ga57de7cb8e702b1746127a4d5137fa455}{INT16}
+\item 
+typedef unsigned short \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16}
+\item 
+typedef int \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32}
+\item 
+typedef unsigned int \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32}
+\item 
+typedef unsigned long \hyperlink{a00660_gaa4ee7c96d5dff444cca1bf965c9f77fd}{ULONG32}
+\item 
+typedef \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL}
+\item 
+typedef long long \hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64}
+\item 
+typedef unsigned long long \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64}
+\item 
+typedef \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}
+\item 
+typedef void($\ast$ \hyperlink{a00599_ac4c0c28469f0b55f25aa4c54e7eefdc2}{GSN\_\-CB\_\-FCT} )(void $\ast$pThis, const void $\ast$pParam)
+\item 
+typedef void($\ast$ \hyperlink{a00599_ab4bad69dbb3955c389ce748612ed9ba4}{GSN\_\-CB32\_\-FCT} )(void $\ast$pThis, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} value)
+\item 
+typedef struct \hyperlink{a00036}{GSN\_\-CB} \hyperlink{a00599_a7db24ea278c4ee3f84be794922ac3014}{GSN\_\-CB\_\-T}
+\item 
+typedef struct \hyperlink{a00037}{GSN\_\-CB32} \hyperlink{a00599_ad6498a464c109edb4fb99f43db8ae490}{GSN\_\-CB32\_\-T}
+\item 
+typedef struct \hyperlink{a00033}{GSN\_\-BUF8} \hyperlink{a00654_ga5ae3d391ff074ccd3582b1ece95b3424}{GSN\_\-BUF8\_\-T}
+\begin{DoxyCompactList}\small\item\em Byte Buffer. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00034}{GSN\_\-BUF8LISTELMT} \hyperlink{a00654_ga99a362860e397ed25f4481f88b5b792e}{GSN\_\-BUF8LISTELMT\_\-T}
+\begin{DoxyCompactList}\small\item\em Definition of a Linked List of Byte Buffers. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00029}{GSN\_\-BUF16} \hyperlink{a00654_ga4fdddff0bde69bd592327bf3914b4c39}{GSN\_\-BUF16\_\-T}
+\begin{DoxyCompactList}\small\item\em Definition of a Half-\/Word Buffer. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00030}{GSN\_\-BUF16LISTELMT} \hyperlink{a00654_ga6635dc0a6b962b379e55c1fff1ab6298}{GSN\_\-BUF16LISTELMT\_\-T}
+\begin{DoxyCompactList}\small\item\em Definition of a Linked List of Half-\/Word Buffers. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00031}{GSN\_\-BUF32} \hyperlink{a00654_ga8a61cbeed769180229c38ff66d0d820c}{GSN\_\-BUF32\_\-T}
+\begin{DoxyCompactList}\small\item\em Definition of a Word Buffer. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00032}{GSN\_\-BUF32LISTELMT} \hyperlink{a00654_ga885b6249f0604d742fc832fa1c221d5e}{GSN\_\-BUF32LISTELMT\_\-T}
+\begin{DoxyCompactList}\small\item\em Definition of a Linked List of Word Buffers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN Basic types. This file contains the basic types. 
+
+Definition in file \hyperlink{a00599_source}{gsn\_\-types.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00599_a9e5aa76cc9e0a06fb7f56ecd4de43635}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!SIZE\_\-OF\_\-BOOL@{SIZE\_\-OF\_\-BOOL}}
+\index{SIZE\_\-OF\_\-BOOL@{SIZE\_\-OF\_\-BOOL}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{SIZE\_\-OF\_\-BOOL}]{\setlength{\rightskip}{0pt plus 5cm}\#define SIZE\_\-OF\_\-BOOL~sizeof({\bf BOOL})}}
+\label{a00599_a9e5aa76cc9e0a06fb7f56ecd4de43635}
+
+
+Definition at line 151 of file gsn\_\-types.h.
+
+\hypertarget{a00599_a455564fd0dd201a9424e5114dad2d635}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!SIZE\_\-OF\_\-INT16@{SIZE\_\-OF\_\-INT16}}
+\index{SIZE\_\-OF\_\-INT16@{SIZE\_\-OF\_\-INT16}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{SIZE\_\-OF\_\-INT16}]{\setlength{\rightskip}{0pt plus 5cm}\#define SIZE\_\-OF\_\-INT16~sizeof({\bf INT16})}}
+\label{a00599_a455564fd0dd201a9424e5114dad2d635}
+
+
+Definition at line 101 of file gsn\_\-types.h.
+
+\hypertarget{a00599_ae3ed18c0021e8539119a2b31fa5b1112}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!SIZE\_\-OF\_\-INT32@{SIZE\_\-OF\_\-INT32}}
+\index{SIZE\_\-OF\_\-INT32@{SIZE\_\-OF\_\-INT32}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{SIZE\_\-OF\_\-INT32}]{\setlength{\rightskip}{0pt plus 5cm}\#define SIZE\_\-OF\_\-INT32~sizeof({\bf INT32})}}
+\label{a00599_ae3ed18c0021e8539119a2b31fa5b1112}
+
+
+Definition at line 121 of file gsn\_\-types.h.
+
+\hypertarget{a00599_a4aafb4570f293835708cc4b104df89cb}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!SIZE\_\-OF\_\-INT8@{SIZE\_\-OF\_\-INT8}}
+\index{SIZE\_\-OF\_\-INT8@{SIZE\_\-OF\_\-INT8}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{SIZE\_\-OF\_\-INT8}]{\setlength{\rightskip}{0pt plus 5cm}\#define SIZE\_\-OF\_\-INT8~sizeof({\bf INT8})}}
+\label{a00599_a4aafb4570f293835708cc4b104df89cb}
+
+
+Definition at line 91 of file gsn\_\-types.h.
+
+\hypertarget{a00599_ad2024c1c99e56ed26a41c381b40038d0}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!SIZE\_\-OF\_\-UINT16@{SIZE\_\-OF\_\-UINT16}}
+\index{SIZE\_\-OF\_\-UINT16@{SIZE\_\-OF\_\-UINT16}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{SIZE\_\-OF\_\-UINT16}]{\setlength{\rightskip}{0pt plus 5cm}\#define SIZE\_\-OF\_\-UINT16~sizeof({\bf UINT16})}}
+\label{a00599_ad2024c1c99e56ed26a41c381b40038d0}
+
+
+Definition at line 111 of file gsn\_\-types.h.
+
+\hypertarget{a00599_aba6ba1193a4f95d3156ea40aa71186e5}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!SIZE\_\-OF\_\-UINT32@{SIZE\_\-OF\_\-UINT32}}
+\index{SIZE\_\-OF\_\-UINT32@{SIZE\_\-OF\_\-UINT32}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{SIZE\_\-OF\_\-UINT32}]{\setlength{\rightskip}{0pt plus 5cm}\#define SIZE\_\-OF\_\-UINT32~sizeof({\bf UINT32})}}
+\label{a00599_aba6ba1193a4f95d3156ea40aa71186e5}
+
+
+Definition at line 131 of file gsn\_\-types.h.
+
+\hypertarget{a00599_a634811c51bc3d3d55b574b3eefc99025}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!SIZE\_\-OF\_\-UINT8@{SIZE\_\-OF\_\-UINT8}}
+\index{SIZE\_\-OF\_\-UINT8@{SIZE\_\-OF\_\-UINT8}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{SIZE\_\-OF\_\-UINT8}]{\setlength{\rightskip}{0pt plus 5cm}\#define SIZE\_\-OF\_\-UINT8~sizeof({\bf UINT8})}}
+\label{a00599_a634811c51bc3d3d55b574b3eefc99025}
+
+
+Definition at line 81 of file gsn\_\-types.h.
+
+\hypertarget{a00599_a5c7f6bdd54401ce871dbb0b691eb5440}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!SIZE\_\-OF\_\-ULONG32@{SIZE\_\-OF\_\-ULONG32}}
+\index{SIZE\_\-OF\_\-ULONG32@{SIZE\_\-OF\_\-ULONG32}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{SIZE\_\-OF\_\-ULONG32}]{\setlength{\rightskip}{0pt plus 5cm}\#define SIZE\_\-OF\_\-ULONG32~sizeof({\bf ULONG32})}}
+\label{a00599_a5c7f6bdd54401ce871dbb0b691eb5440}
+
+
+Definition at line 141 of file gsn\_\-types.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00599_ab4bad69dbb3955c389ce748612ed9ba4}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!GSN\_\-CB32\_\-FCT@{GSN\_\-CB32\_\-FCT}}
+\index{GSN\_\-CB32\_\-FCT@{GSN\_\-CB32\_\-FCT}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{GSN\_\-CB32\_\-FCT}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf GSN\_\-CB32\_\-FCT})(void $\ast$pThis, {\bf UINT32} value)}}
+\label{a00599_ab4bad69dbb3955c389ce748612ed9ba4}
+
+
+Definition at line 184 of file gsn\_\-types.h.
+
+\hypertarget{a00599_ad6498a464c109edb4fb99f43db8ae490}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!GSN\_\-CB32\_\-T@{GSN\_\-CB32\_\-T}}
+\index{GSN\_\-CB32\_\-T@{GSN\_\-CB32\_\-T}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{GSN\_\-CB32\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-CB32}  {\bf GSN\_\-CB32\_\-T}}}
+\label{a00599_ad6498a464c109edb4fb99f43db8ae490}
+\hypertarget{a00599_ac4c0c28469f0b55f25aa4c54e7eefdc2}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!GSN\_\-CB\_\-FCT@{GSN\_\-CB\_\-FCT}}
+\index{GSN\_\-CB\_\-FCT@{GSN\_\-CB\_\-FCT}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{GSN\_\-CB\_\-FCT}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf GSN\_\-CB\_\-FCT})(void $\ast$pThis, const void $\ast$pParam)}}
+\label{a00599_ac4c0c28469f0b55f25aa4c54e7eefdc2}
+
+
+Definition at line 183 of file gsn\_\-types.h.
+
+\hypertarget{a00599_a7db24ea278c4ee3f84be794922ac3014}{
+\index{gsn\_\-types.h@{gsn\_\-types.h}!GSN\_\-CB\_\-T@{GSN\_\-CB\_\-T}}
+\index{GSN\_\-CB\_\-T@{GSN\_\-CB\_\-T}!gsn_types.h@{gsn\_\-types.h}}
+\subsubsection[{GSN\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-CB}  {\bf GSN\_\-CB\_\-T}}}
+\label{a00599_a7db24ea278c4ee3f84be794922ac3014}

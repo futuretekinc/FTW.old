@@ -1,0 +1,132 @@
+\hypertarget{a00055}{
+\section{GSN\_\-DNS\_\-SERVER Struct Reference}
+\label{a00055}\index{GSN\_\-DNS\_\-SERVER@{GSN\_\-DNS\_\-SERVER}}
+}
+
+
+DNS Server Structure.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-dns\_\-server.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00055_a09261ac30de0001f89753c8f3869ad2f}{serverIpAddr}
+\item 
+ULONG \hyperlink{a00055_a7f1f7891e264201060f498798b450a8b}{serverIpv6Addr} \mbox{[}4\mbox{]}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00055_a7063be62a4ac374e6b6228f590720d7c}{dnsName}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00055_a8edc1f578eda1ef92041687d5d0b5a0c}{sockDescv6}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00055_a4074c310b3e312fa174c6fa7c211cbad}{sockDescv4}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00055_a7d1eb61b5440a79b7efef1031c5a1333}{versionFlag}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00055_a9cd77fc2426c7e03a911fa7461c60716}{GsnDnsSrvr\_\-Status}
+\item 
+\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$ \hyperlink{a00055_a98d510676ecd134a5e9ac61bf222cded}{pNwif}
+\item 
+\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} \hyperlink{a00055_a1bbe64de092f51bf05b4e6259a27e1d0}{dnsLock}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+DNS Server Structure. 
+
+This Structure defines IP address, Domain Name and socket descriptor of DNS server. 
+
+Definition at line 99 of file gsn\_\-dns\_\-server.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00055_a1bbe64de092f51bf05b4e6259a27e1d0}{
+\index{GSN\_\-DNS\_\-SERVER@{GSN\_\-DNS\_\-SERVER}!dnsLock@{dnsLock}}
+\index{dnsLock@{dnsLock}!GSN_DNS_SERVER@{GSN\_\-DNS\_\-SERVER}}
+\subsubsection[{dnsLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} {\bf dnsLock}}}
+\label{a00055_a1bbe64de092f51bf05b4e6259a27e1d0}
+
+
+Definition at line 109 of file gsn\_\-dns\_\-server.h.
+
+\hypertarget{a00055_a7063be62a4ac374e6b6228f590720d7c}{
+\index{GSN\_\-DNS\_\-SERVER@{GSN\_\-DNS\_\-SERVER}!dnsName@{dnsName}}
+\index{dnsName@{dnsName}!GSN_DNS_SERVER@{GSN\_\-DNS\_\-SERVER}}
+\subsubsection[{dnsName}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf dnsName}}}
+\label{a00055_a7063be62a4ac374e6b6228f590720d7c}
+Pointer to Domain Name of Node 
+
+Definition at line 103 of file gsn\_\-dns\_\-server.h.
+
+\hypertarget{a00055_a9cd77fc2426c7e03a911fa7461c60716}{
+\index{GSN\_\-DNS\_\-SERVER@{GSN\_\-DNS\_\-SERVER}!GsnDnsSrvr\_\-Status@{GsnDnsSrvr\_\-Status}}
+\index{GsnDnsSrvr\_\-Status@{GsnDnsSrvr\_\-Status}!GSN_DNS_SERVER@{GSN\_\-DNS\_\-SERVER}}
+\subsubsection[{GsnDnsSrvr\_\-Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf GsnDnsSrvr\_\-Status}}}
+\label{a00055_a9cd77fc2426c7e03a911fa7461c60716}
+
+
+Definition at line 107 of file gsn\_\-dns\_\-server.h.
+
+\hypertarget{a00055_a98d510676ecd134a5e9ac61bf222cded}{
+\index{GSN\_\-DNS\_\-SERVER@{GSN\_\-DNS\_\-SERVER}!pNwif@{pNwif}}
+\index{pNwif@{pNwif}!GSN_DNS_SERVER@{GSN\_\-DNS\_\-SERVER}}
+\subsubsection[{pNwif}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-CTX\_\-T}$\ast$ {\bf pNwif}}}
+\label{a00055_a98d510676ecd134a5e9ac61bf222cded}
+
+
+Definition at line 108 of file gsn\_\-dns\_\-server.h.
+
+\hypertarget{a00055_a09261ac30de0001f89753c8f3869ad2f}{
+\index{GSN\_\-DNS\_\-SERVER@{GSN\_\-DNS\_\-SERVER}!serverIpAddr@{serverIpAddr}}
+\index{serverIpAddr@{serverIpAddr}!GSN_DNS_SERVER@{GSN\_\-DNS\_\-SERVER}}
+\subsubsection[{serverIpAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf serverIpAddr}}}
+\label{a00055_a09261ac30de0001f89753c8f3869ad2f}
+IP address of Server in Host Byte order 
+
+Definition at line 101 of file gsn\_\-dns\_\-server.h.
+
+\hypertarget{a00055_a7f1f7891e264201060f498798b450a8b}{
+\index{GSN\_\-DNS\_\-SERVER@{GSN\_\-DNS\_\-SERVER}!serverIpv6Addr@{serverIpv6Addr}}
+\index{serverIpv6Addr@{serverIpv6Addr}!GSN_DNS_SERVER@{GSN\_\-DNS\_\-SERVER}}
+\subsubsection[{serverIpv6Addr}]{\setlength{\rightskip}{0pt plus 5cm}ULONG {\bf serverIpv6Addr}\mbox{[}4\mbox{]}}}
+\label{a00055_a7f1f7891e264201060f498798b450a8b}
+
+
+Definition at line 102 of file gsn\_\-dns\_\-server.h.
+
+\hypertarget{a00055_a4074c310b3e312fa174c6fa7c211cbad}{
+\index{GSN\_\-DNS\_\-SERVER@{GSN\_\-DNS\_\-SERVER}!sockDescv4@{sockDescv4}}
+\index{sockDescv4@{sockDescv4}!GSN_DNS_SERVER@{GSN\_\-DNS\_\-SERVER}}
+\subsubsection[{sockDescv4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf sockDescv4}}}
+\label{a00055_a4074c310b3e312fa174c6fa7c211cbad}
+
+
+Definition at line 105 of file gsn\_\-dns\_\-server.h.
+
+\hypertarget{a00055_a8edc1f578eda1ef92041687d5d0b5a0c}{
+\index{GSN\_\-DNS\_\-SERVER@{GSN\_\-DNS\_\-SERVER}!sockDescv6@{sockDescv6}}
+\index{sockDescv6@{sockDescv6}!GSN_DNS_SERVER@{GSN\_\-DNS\_\-SERVER}}
+\subsubsection[{sockDescv6}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf sockDescv6}}}
+\label{a00055_a8edc1f578eda1ef92041687d5d0b5a0c}
+Socket descriptor 
+
+Definition at line 104 of file gsn\_\-dns\_\-server.h.
+
+\hypertarget{a00055_a7d1eb61b5440a79b7efef1031c5a1333}{
+\index{GSN\_\-DNS\_\-SERVER@{GSN\_\-DNS\_\-SERVER}!versionFlag@{versionFlag}}
+\index{versionFlag@{versionFlag}!GSN_DNS_SERVER@{GSN\_\-DNS\_\-SERVER}}
+\subsubsection[{versionFlag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf versionFlag}}}
+\label{a00055_a7d1eb61b5440a79b7efef1031c5a1333}
+
+
+Definition at line 106 of file gsn\_\-dns\_\-server.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00485}{gsn\_\-dns\_\-server.h}\end{DoxyCompactItemize}

@@ -1,0 +1,281 @@
+\hypertarget{a00541}{
+\section{gsn\_\-pwr\_\-mgmt.h File Reference}
+\label{a00541}\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+}
+{\ttfamily \#include \char`\"{}gsn\_\-includes.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-rtc\_\-spec.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-rtc\_\-op.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-clkctl\_\-spec.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-clkctl\_\-op.h\char`\"{}}\par
+Include dependency graph for gsn\_\-pwr\_\-mgmt.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00779}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00780}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00184}{GSN\_\-PWR\_\-MGMT\_\-CTX}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00541_a2fc8f0d83dd46818c142e356193d20d1}{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-EN}()~SCB-\/$>$SCR $|$= SCB\_\-SCR\_\-SLEEPDEEP\_\-Msk
+\item 
+\#define \hyperlink{a00541_adeb86c5114f129ed3d14320383eab25d}{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-DISABLE}()~SCB-\/$>$SCR \&= $\sim$(SCB\_\-SCR\_\-SLEEPDEEP\_\-Msk)
+\item 
+\#define \hyperlink{a00541_ae093b81b0690633cee4ace9276433844}{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-DP\_\-SLEEP\_\-STATUS\_\-GET}()~SCB-\/$>$SCR \& SCB\_\-SCR\_\-SLEEPDEEP\_\-Msk
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00541_a5b011c4f2fa22db81cedb1ff114a4bfe}{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T} \hyperlink{a00541_a554e74f30cbd4d5a87771d6c2ea2a06d}{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T}
+\item 
+typedef struct \hyperlink{a00184}{GSN\_\-PWR\_\-MGMT\_\-CTX} \hyperlink{a00541_a10440ea6f2ea146cf321d77c90be38bb}{GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00541_a5b011c4f2fa22db81cedb1ff114a4bfe}{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T} \{ \hyperlink{a00541_a5b011c4f2fa22db81cedb1ff114a4bfea1cab7dd13138a8aef7ed6eb93123101e}{GSN\_\-DP\_\-ACTIVITY\_\-HI\_\-IN\_\-PROCESS} =  1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00541_a948bdd5a7baf779d21f85c5a778a4ee3}{GsnPwrMgmt\_\-Cm3SleepDeepEn} ()
+\begin{DoxyCompactList}\small\item\em Cortex M3 sleep deep enable. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00541_a985e139255635838aef703818afef7c2}{GsnPwrMgmt\_\-EnterStby} (\hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} duration)
+\item 
+INLINE VOID \hyperlink{a00541_a1befe55fa5788f77d489b4b3df4ee6a3}{GsnPwrMgmt\_\-DpSlpDisable} (\hyperlink{a00184}{GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T} $\ast$pPwrCtx)
+\item 
+INLINE VOID \hyperlink{a00541_a6d958088b16e1cfdf234a2dfbd9870df}{GsnPwrMgmt\_\-StdbyEnable} (\hyperlink{a00184}{GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T} $\ast$pPwrCtx)
+\item 
+INLINE VOID \hyperlink{a00541_a853ff2c926ce9571ee3bef604233417f}{GsnPwrMgmt\_\-StdbyDisable} (\hyperlink{a00184}{GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T} $\ast$pPwrCtx)
+\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00541_aa6a7af5b633cde99e749d47ffc0ff6e1}{GsnPwrMgmt\_\-StbyReady} (\hyperlink{a00184}{GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T} $\ast$pPwrCtx)
+\item 
+VOID \hyperlink{a00541_ae540dfb6c63bbb9a13b3554aaad3d262}{GsnPwrMgmt\_\-Init} (\hyperlink{a00184}{GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T} $\ast$pPwrCtx)
+\item 
+VOID \hyperlink{a00541_a67ab944828e059b5efacfe4e0ada9861}{GsnPwrMgmt\_\-DpSlpActivitySet} (\hyperlink{a00541_a5b011c4f2fa22db81cedb1ff114a4bfe}{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T} dpSlpActivity)
+\item 
+VOID \hyperlink{a00541_a6937e1338eeae9eea294ecb2ca7be2b4}{GsnPwrMgmt\_\-DpSlpActivityClr} (\hyperlink{a00541_a5b011c4f2fa22db81cedb1ff114a4bfe}{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T} dpSlpActivity)
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00541_a9529b392baaf7ed9513094f6ffd33220}{GsnPwrMgmt\_\-DpSlpActivityGet} (VOID)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00184}{GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T} $\ast$ \hyperlink{a00541_a5f5837f9341547051dd10d3f34b4ef8f}{gPwrCtx}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00541_ae093b81b0690633cee4ace9276433844}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GSN\_\-PWR\_\-MGMT\_\-CM3\_\-DP\_\-SLEEP\_\-STATUS\_\-GET@{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-DP\_\-SLEEP\_\-STATUS\_\-GET}}
+\index{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-DP\_\-SLEEP\_\-STATUS\_\-GET@{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-DP\_\-SLEEP\_\-STATUS\_\-GET}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-DP\_\-SLEEP\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-PWR\_\-MGMT\_\-CM3\_\-DP\_\-SLEEP\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~SCB-\/$>$SCR \& SCB\_\-SCR\_\-SLEEPDEEP\_\-Msk}}
+\label{a00541_ae093b81b0690633cee4ace9276433844}
+
+
+Definition at line 14 of file gsn\_\-pwr\_\-mgmt.h.
+
+\hypertarget{a00541_adeb86c5114f129ed3d14320383eab25d}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-DISABLE@{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-DISABLE}}
+\index{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-DISABLE@{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-DISABLE}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-DISABLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-DISABLE(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~SCB-\/$>$SCR \&= $\sim$(SCB\_\-SCR\_\-SLEEPDEEP\_\-Msk)}}
+\label{a00541_adeb86c5114f129ed3d14320383eab25d}
+
+
+Definition at line 13 of file gsn\_\-pwr\_\-mgmt.h.
+
+\hypertarget{a00541_a2fc8f0d83dd46818c142e356193d20d1}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-EN@{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-EN}}
+\index{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-EN@{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-EN}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-EN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-PWR\_\-MGMT\_\-CM3\_\-SLEEP\_\-DEEP\_\-EN(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~SCB-\/$>$SCR $|$= SCB\_\-SCR\_\-SLEEPDEEP\_\-Msk}}
+\label{a00541_a2fc8f0d83dd46818c142e356193d20d1}
+
+
+Definition at line 12 of file gsn\_\-pwr\_\-mgmt.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00541_a554e74f30cbd4d5a87771d6c2ea2a06d}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T@{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T}}
+\index{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T@{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T} {\bf GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T}}}
+\label{a00541_a554e74f30cbd4d5a87771d6c2ea2a06d}
+\hypertarget{a00541_a10440ea6f2ea146cf321d77c90be38bb}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T@{GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T}}
+\index{GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T@{GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-PWR\_\-MGMT\_\-CTX} {\bf GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T}}}
+\label{a00541_a10440ea6f2ea146cf321d77c90be38bb}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00541_a5b011c4f2fa22db81cedb1ff114a4bfe}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T@{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T}}
+\index{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T@{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T}}}
+\label{a00541_a5b011c4f2fa22db81cedb1ff114a4bfe}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-DP\_\-ACTIVITY\_\-HI\_\-IN\_\-PROCESS@{GSN\_\-DP\_\-ACTIVITY\_\-HI\_\-IN\_\-PROCESS}!gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GSN\_\-DP\_\-ACTIVITY\_\-HI\_\-IN\_\-PROCESS@{GSN\_\-DP\_\-ACTIVITY\_\-HI\_\-IN\_\-PROCESS}}\item[{\em 
+\hypertarget{a00541_a5b011c4f2fa22db81cedb1ff114a4bfea1cab7dd13138a8aef7ed6eb93123101e}{
+GSN\_\-DP\_\-ACTIVITY\_\-HI\_\-IN\_\-PROCESS}
+\label{a00541_a5b011c4f2fa22db81cedb1ff114a4bfea1cab7dd13138a8aef7ed6eb93123101e}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 16 of file gsn\_\-pwr\_\-mgmt.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00541_a948bdd5a7baf779d21f85c5a778a4ee3}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GsnPwrMgmt\_\-Cm3SleepDeepEn@{GsnPwrMgmt\_\-Cm3SleepDeepEn}}
+\index{GsnPwrMgmt\_\-Cm3SleepDeepEn@{GsnPwrMgmt\_\-Cm3SleepDeepEn}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GsnPwrMgmt\_\-Cm3SleepDeepEn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnPwrMgmt\_\-Cm3SleepDeepEn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00541_a948bdd5a7baf779d21f85c5a778a4ee3}
+
+
+Cortex M3 sleep deep enable. 
+
+\begin{DoxyReturn}{Returns}
+GSN\_\-STATUS\_\-T GSN\_\-SUCCESS -\/-\/ CM3 deep sleep enabled. GSN\_\-FAILURE -\/-\/ CM3 sleep enabled. 
+\end{DoxyReturn}
+\hypertarget{a00541_a6937e1338eeae9eea294ecb2ca7be2b4}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GsnPwrMgmt\_\-DpSlpActivityClr@{GsnPwrMgmt\_\-DpSlpActivityClr}}
+\index{GsnPwrMgmt\_\-DpSlpActivityClr@{GsnPwrMgmt\_\-DpSlpActivityClr}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GsnPwrMgmt\_\-DpSlpActivityClr}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnPwrMgmt\_\-DpSlpActivityClr (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T}}]{dpSlpActivity}
+\end{DoxyParamCaption}
+)}}
+\label{a00541_a6937e1338eeae9eea294ecb2ca7be2b4}
+\hypertarget{a00541_a9529b392baaf7ed9513094f6ffd33220}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GsnPwrMgmt\_\-DpSlpActivityGet@{GsnPwrMgmt\_\-DpSlpActivityGet}}
+\index{GsnPwrMgmt\_\-DpSlpActivityGet@{GsnPwrMgmt\_\-DpSlpActivityGet}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GsnPwrMgmt\_\-DpSlpActivityGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnPwrMgmt\_\-DpSlpActivityGet (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00541_a9529b392baaf7ed9513094f6ffd33220}
+\hypertarget{a00541_a67ab944828e059b5efacfe4e0ada9861}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GsnPwrMgmt\_\-DpSlpActivitySet@{GsnPwrMgmt\_\-DpSlpActivitySet}}
+\index{GsnPwrMgmt\_\-DpSlpActivitySet@{GsnPwrMgmt\_\-DpSlpActivitySet}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GsnPwrMgmt\_\-DpSlpActivitySet}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnPwrMgmt\_\-DpSlpActivitySet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DP\_\-ACTIVITY\_\-BIT\_\-MAP\_\-T}}]{dpSlpActivity}
+\end{DoxyParamCaption}
+)}}
+\label{a00541_a67ab944828e059b5efacfe4e0ada9861}
+\hypertarget{a00541_a1befe55fa5788f77d489b4b3df4ee6a3}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GsnPwrMgmt\_\-DpSlpDisable@{GsnPwrMgmt\_\-DpSlpDisable}}
+\index{GsnPwrMgmt\_\-DpSlpDisable@{GsnPwrMgmt\_\-DpSlpDisable}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GsnPwrMgmt\_\-DpSlpDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnPwrMgmt\_\-DpSlpDisable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T} $\ast$}]{pPwrCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00541_a1befe55fa5788f77d489b4b3df4ee6a3}
+
+
+Definition at line 53 of file gsn\_\-pwr\_\-mgmt.h.
+
+\hypertarget{a00541_a985e139255635838aef703818afef7c2}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GsnPwrMgmt\_\-EnterStby@{GsnPwrMgmt\_\-EnterStby}}
+\index{GsnPwrMgmt\_\-EnterStby@{GsnPwrMgmt\_\-EnterStby}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GsnPwrMgmt\_\-EnterStby}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnPwrMgmt\_\-EnterStby (
+\begin{DoxyParamCaption}
+\item[{{\bf ULONG64}}]{duration}
+\end{DoxyParamCaption}
+)}}
+\label{a00541_a985e139255635838aef703818afef7c2}
+\hypertarget{a00541_ae540dfb6c63bbb9a13b3554aaad3d262}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GsnPwrMgmt\_\-Init@{GsnPwrMgmt\_\-Init}}
+\index{GsnPwrMgmt\_\-Init@{GsnPwrMgmt\_\-Init}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GsnPwrMgmt\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnPwrMgmt\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T} $\ast$}]{pPwrCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00541_ae540dfb6c63bbb9a13b3554aaad3d262}
+\hypertarget{a00541_aa6a7af5b633cde99e749d47ffc0ff6e1}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GsnPwrMgmt\_\-StbyReady@{GsnPwrMgmt\_\-StbyReady}}
+\index{GsnPwrMgmt\_\-StbyReady@{GsnPwrMgmt\_\-StbyReady}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GsnPwrMgmt\_\-StbyReady}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GsnPwrMgmt\_\-StbyReady (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T} $\ast$}]{pPwrCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00541_aa6a7af5b633cde99e749d47ffc0ff6e1}
+
+
+Definition at line 89 of file gsn\_\-pwr\_\-mgmt.h.
+
+\hypertarget{a00541_a853ff2c926ce9571ee3bef604233417f}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GsnPwrMgmt\_\-StdbyDisable@{GsnPwrMgmt\_\-StdbyDisable}}
+\index{GsnPwrMgmt\_\-StdbyDisable@{GsnPwrMgmt\_\-StdbyDisable}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GsnPwrMgmt\_\-StdbyDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnPwrMgmt\_\-StdbyDisable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T} $\ast$}]{pPwrCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00541_a853ff2c926ce9571ee3bef604233417f}
+
+
+Definition at line 78 of file gsn\_\-pwr\_\-mgmt.h.
+
+\hypertarget{a00541_a6d958088b16e1cfdf234a2dfbd9870df}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!GsnPwrMgmt\_\-StdbyEnable@{GsnPwrMgmt\_\-StdbyEnable}}
+\index{GsnPwrMgmt\_\-StdbyEnable@{GsnPwrMgmt\_\-StdbyEnable}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{GsnPwrMgmt\_\-StdbyEnable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnPwrMgmt\_\-StdbyEnable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T} $\ast$}]{pPwrCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00541_a6d958088b16e1cfdf234a2dfbd9870df}
+
+
+Definition at line 59 of file gsn\_\-pwr\_\-mgmt.h.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00541_a5f5837f9341547051dd10d3f34b4ef8f}{
+\index{gsn\_\-pwr\_\-mgmt.h@{gsn\_\-pwr\_\-mgmt.h}!gPwrCtx@{gPwrCtx}}
+\index{gPwrCtx@{gPwrCtx}!gsn_pwr_mgmt.h@{gsn\_\-pwr\_\-mgmt.h}}
+\subsubsection[{gPwrCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-PWR\_\-MGMT\_\-CTX\_\-T}$\ast$ {\bf gPwrCtx}}}
+\label{a00541_a5f5837f9341547051dd10d3f34b4ef8f}

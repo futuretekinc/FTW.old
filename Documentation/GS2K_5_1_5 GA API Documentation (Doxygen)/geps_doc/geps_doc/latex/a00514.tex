@@ -1,0 +1,52 @@
+\hypertarget{a00514}{
+\section{gsn\_\-httpd\_\-util.h File Reference}
+\label{a00514}\index{gsn\_\-httpd\_\-util.h@{gsn\_\-httpd\_\-util.h}}
+}
+
+
+GSN HTTPD Utility Functions Public header This file contains definitions for some HTTPD Utility functions.  
+
+
+{\ttfamily \#include $<$gsn\_\-types.h$>$}\par
+{\ttfamily \#include \char`\"{}http$\backslash$gsn\_\-httpd.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}xml\_\-parser/gsn\_\-xml.h\char`\"{}}\par
+Include dependency graph for gsn\_\-httpd\_\-util.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00745}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{a00746}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00666_ga95afa0c13f59a7b224e60c11a051a45a}{GsnHttpd\_\-SendBuffer} (ttHttpdUserConHandle conHandle, const char $\ast$bufferPtr, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} bufferLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} flag, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} $\ast$errorCodePtr)
+\begin{DoxyCompactList}\small\item\em Send Buffer. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00666_ga9e05db18fe9e554159a3fe594492687d}{GsnHttpd\_\-SendBufferAndLastChunk} (ttHttpdUserConHandle conHandle, const \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$bufferPtr, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} bufferLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} flag, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} $\ast$errorCodePtr)
+\begin{DoxyCompactList}\small\item\em Send Buffer and indicate terminating chunk. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00666_ga04f2afbebcac5ab376d70b735803d69d}{GsnHttpd\_\-SendLastChunk} (ttHttpdUserConHandle conHandle, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} $\ast$errorCodePtr)
+\begin{DoxyCompactList}\small\item\em Sends terminating chunk. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$ \hyperlink{a00666_ga38a6f342aa4579945c64f4809c5feb20}{GsnHttpd\_\-GetBuffer} ()
+\begin{DoxyCompactList}\small\item\em Get a buffer to use for sending HTTP response. \end{DoxyCompactList}\item 
+void \hyperlink{a00666_ga98b1c525385ddbcbaac8ec8ba4d32ea4}{GsnHttpd\_\-ReleaseBuffer} (\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$bufPtr)
+\begin{DoxyCompactList}\small\item\em Release the buffer that was allocated by HTTPD. \end{DoxyCompactList}\item 
+ttHttpUserMethod \hyperlink{a00666_gaecd42418ea97610f5b55c35c5419cd13}{GsnHttpd\_\-GetHttpMethod} (ttHttpdUserConHandle conHandle)
+\begin{DoxyCompactList}\small\item\em Gets the HTTP method invoked on the connection handle. \end{DoxyCompactList}\item 
+void \hyperlink{a00666_ga1d8828de7be384020ba6bbb1ea26a47c}{GsnHttpd\_\-SetStrFromXmlStr} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$str, \hyperlink{a00436}{GSN\_\-XML\_\-STRING\_\-T} xml\_\-str, int str\_\-len)
+\begin{DoxyCompactList}\small\item\em Extracts the string from xml\_\-str This function extracts the string from a xml\_\-str representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN HTTPD Utility Functions Public header This file contains definitions for some HTTPD Utility functions. 
+
+Definition in file \hyperlink{a00514_source}{gsn\_\-httpd\_\-util.h}.
+

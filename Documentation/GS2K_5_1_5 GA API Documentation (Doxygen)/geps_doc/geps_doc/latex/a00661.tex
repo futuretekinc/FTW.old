@@ -1,0 +1,188 @@
+\hypertarget{a00661}{
+\section{GSN Dhcp Server}
+\label{a00661}\index{GSN Dhcp Server@{GSN Dhcp Server}}
+}
+
+
+DHCP Server API's.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00044}{GSN\_\-DHCP\_\-SRVR\_\-CFG}
+\begin{DoxyCompactList}\small\item\em DHCP server configuration structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00045}{GSN\_\-DHCP\_\-SRVR\_\-CLIENT}
+\begin{DoxyCompactList}\small\item\em DHCP server client structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR}
+\begin{DoxyCompactList}\small\item\em DHCP server context structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00044}{GSN\_\-DHCP\_\-SRVR\_\-CFG} \hyperlink{a00661_ga5a69af0df29b0dc56441470a22cf3ab3}{GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em DHCP server configuration structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00045}{GSN\_\-DHCP\_\-SRVR\_\-CLIENT} \hyperlink{a00661_ga54a36c901a1b4f316e5202de8b35def8}{GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T}
+\begin{DoxyCompactList}\small\item\em DHCP server client structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR} \hyperlink{a00661_ga894396f4b78d0bb4bd07286f4004fe8f}{GSN\_\-DHCP\_\-SRVR\_\-T}
+\begin{DoxyCompactList}\small\item\em DHCP server context structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00661_gac04808b6c079b9f20bb2a8d1a3805630}{GsnDhcpSrvr\_\-Start} (\hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$dhcpSrvr, \hyperlink{a00044}{GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T} $\ast$dhcpSrvrCfg)
+\begin{DoxyCompactList}\small\item\em Start DHCP server. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00661_ga1ed16aa486ac47bcaebe60b62132c569}{GsnDhcpSrvr\_\-Stop} (\hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$dhcpSrvr)
+\begin{DoxyCompactList}\small\item\em Stop the DHCP server. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00661_ga8fa3791028d92350c2d4ec346a0b8ffe}{GsnDhcpSrvr\_\-ClientDelete} (\hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$dhcpSrvr, \hyperlink{a00416}{GSN\_\-MAC\_\-ADDR\_\-T} $\ast$macAddr)
+\begin{DoxyCompactList}\small\item\em Delete the dhcp client entry. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00661_ga28fb2f33b4dd3b44f02c5278f081104a}{GsnDhcpSrvr\_\-ClientQuery} (\hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$pDhcpSrvr, \hyperlink{a00045}{GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T} $\ast$clients, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} count)
+\begin{DoxyCompactList}\small\item\em Query the dhcp client entries. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+DHCP Server API's. This file contains public definitions and API's for Dhcp Server. \par
+
+
+\par
+ This file contains public definitions and API's for Dhcp Server. DHCP server is started when node acting as a Limited AP. Users can associate to the node and configure it. The API GsnDhcpSrvr\_\-Start starts the DHCP server and API GsnDhcpSrvr\_\-Stop stops DHCP server. When a user/STA disassociates from limited AP its entry can be removed using API GsnDhcpSrvr\_\-ClientDelete. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00661_ga5a69af0df29b0dc56441470a22cf3ab3}{
+\index{GSN Dhcp Server@{GSN Dhcp Server}!GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T@{GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T}}
+\index{GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T@{GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T}!GSN Dhcp Server@{GSN Dhcp Server}}
+\subsubsection[{GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DHCP\_\-SRVR\_\-CFG}  {\bf GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T}}}
+\label{a00661_ga5a69af0df29b0dc56441470a22cf3ab3}
+
+
+DHCP server configuration structure. 
+
+This structure defines the configuration data of DHCP server. The configuration is provided by the caller. \hypertarget{a00661_ga54a36c901a1b4f316e5202de8b35def8}{
+\index{GSN Dhcp Server@{GSN Dhcp Server}!GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T@{GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T}}
+\index{GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T@{GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T}!GSN Dhcp Server@{GSN Dhcp Server}}
+\subsubsection[{GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DHCP\_\-SRVR\_\-CLIENT}  {\bf GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T}}}
+\label{a00661_ga54a36c901a1b4f316e5202de8b35def8}
+
+
+DHCP server client structure. 
+
+This structure defines the information stored for each client. \hypertarget{a00661_ga894396f4b78d0bb4bd07286f4004fe8f}{
+\index{GSN Dhcp Server@{GSN Dhcp Server}!GSN\_\-DHCP\_\-SRVR\_\-T@{GSN\_\-DHCP\_\-SRVR\_\-T}}
+\index{GSN\_\-DHCP\_\-SRVR\_\-T@{GSN\_\-DHCP\_\-SRVR\_\-T}!GSN Dhcp Server@{GSN Dhcp Server}}
+\subsubsection[{GSN\_\-DHCP\_\-SRVR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DHCP\_\-SRVR}  {\bf GSN\_\-DHCP\_\-SRVR\_\-T}}}
+\label{a00661_ga894396f4b78d0bb4bd07286f4004fe8f}
+
+
+DHCP server context structure. 
+
+This structure contains the parameters that define an instance of the DHCP server. 
+
+\subsection{Function Documentation}
+\hypertarget{a00661_ga8fa3791028d92350c2d4ec346a0b8ffe}{
+\index{GSN Dhcp Server@{GSN Dhcp Server}!GsnDhcpSrvr\_\-ClientDelete@{GsnDhcpSrvr\_\-ClientDelete}}
+\index{GsnDhcpSrvr\_\-ClientDelete@{GsnDhcpSrvr\_\-ClientDelete}!GSN Dhcp Server@{GSN Dhcp Server}}
+\subsubsection[{GsnDhcpSrvr\_\-ClientDelete}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnDhcpSrvr\_\-ClientDelete (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$}]{dhcpSrvr, }
+\item[{{\bf GSN\_\-MAC\_\-ADDR\_\-T} $\ast$}]{macAddr}
+\end{DoxyParamCaption}
+)}}
+\label{a00661_ga8fa3791028d92350c2d4ec346a0b8ffe}
+
+
+Delete the dhcp client entry. 
+
+This function Delete the dhcp client entry on the server. 
+\begin{DoxyParams}{Parameters}
+{\em dhcpSrvr} & -\/ IN Pointer to DHCP context provided by user. \\
+\hline
+{\em macAddr} & -\/ IN Pointer to mac address provided by user. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-FAILURE} & Operation failed. \\
+\hline
+{\em GSN\_\-SUCCESS} & DHCP server stopped successfully. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00661_ga28fb2f33b4dd3b44f02c5278f081104a}{
+\index{GSN Dhcp Server@{GSN Dhcp Server}!GsnDhcpSrvr\_\-ClientQuery@{GsnDhcpSrvr\_\-ClientQuery}}
+\index{GsnDhcpSrvr\_\-ClientQuery@{GsnDhcpSrvr\_\-ClientQuery}!GSN Dhcp Server@{GSN Dhcp Server}}
+\subsubsection[{GsnDhcpSrvr\_\-ClientQuery}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT8} GsnDhcpSrvr\_\-ClientQuery (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$}]{pDhcpSrvr, }
+\item[{{\bf GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T} $\ast$}]{clients, }
+\item[{{\bf UINT8}}]{count}
+\end{DoxyParamCaption}
+)}}
+\label{a00661_ga28fb2f33b4dd3b44f02c5278f081104a}
+
+
+Query the dhcp client entries. 
+
+This function get the dchp client entries and return that info to the caller. 
+\begin{DoxyParams}{Parameters}
+{\em pDhcpSrvr} & -\/ IN Pointer to DHCP context provided by user. \\
+\hline
+{\em clients} & -\/ IN Pointer to client entry address provided by user. \\
+\hline
+{\em count} & -\/ IN The max number of entry needed provided by user. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & number of entries available. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00661_gac04808b6c079b9f20bb2a8d1a3805630}{
+\index{GSN Dhcp Server@{GSN Dhcp Server}!GsnDhcpSrvr\_\-Start@{GsnDhcpSrvr\_\-Start}}
+\index{GsnDhcpSrvr\_\-Start@{GsnDhcpSrvr\_\-Start}!GSN Dhcp Server@{GSN Dhcp Server}}
+\subsubsection[{GsnDhcpSrvr\_\-Start}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnDhcpSrvr\_\-Start (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$}]{dhcpSrvr, }
+\item[{{\bf GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T} $\ast$}]{dhcpSrvrCfg}
+\end{DoxyParamCaption}
+)}}
+\label{a00661_gac04808b6c079b9f20bb2a8d1a3805630}
+
+
+Start DHCP server. 
+
+This function initializes the DHCP server context, creates a socket, binds to it and waits for messages on the socket. 
+\begin{DoxyParams}{Parameters}
+{\em dhcpSrvr} & -\/ IN Pointer to DHCP context provided by user. \\
+\hline
+{\em dhcpSrvrCfg} & -\/ IN DHCP server configuration. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-FAILURE} & Operation failed. \\
+\hline
+{\em GSN\_\-SUCCESS} & DHCP server started successfully. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00661_ga1ed16aa486ac47bcaebe60b62132c569}{
+\index{GSN Dhcp Server@{GSN Dhcp Server}!GsnDhcpSrvr\_\-Stop@{GsnDhcpSrvr\_\-Stop}}
+\index{GsnDhcpSrvr\_\-Stop@{GsnDhcpSrvr\_\-Stop}!GSN Dhcp Server@{GSN Dhcp Server}}
+\subsubsection[{GsnDhcpSrvr\_\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnDhcpSrvr\_\-Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$}]{dhcpSrvr}
+\end{DoxyParamCaption}
+)}}
+\label{a00661_ga1ed16aa486ac47bcaebe60b62132c569}
+
+
+Stop the DHCP server. 
+
+This function stops the DHCP server. 
+\begin{DoxyParams}{Parameters}
+{\em dhcpSrvr} & -\/ IN Pointer to DHCP context provided by user. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-FAILURE} & Operation failed. \\
+\hline
+{\em GSN\_\-SUCCESS} & DHCP server stopped successfully. \\
+\hline
+\end{DoxyRetVals}

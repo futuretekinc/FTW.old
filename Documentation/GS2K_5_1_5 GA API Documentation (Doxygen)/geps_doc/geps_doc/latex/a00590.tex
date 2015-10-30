@@ -1,0 +1,487 @@
+\hypertarget{a00590}{
+\section{gsn\_\-ssl.h File Reference}
+\label{a00590}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}}
+}
+
+
+GSN SSL public header. This file contains the public APIs and structures of SSL module.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+Include dependency graph for gsn\_\-ssl.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{a00832}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00833}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00245}{GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T}
+\begin{DoxyCompactList}\small\item\em SSL Server context structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00459}{SERVER\_\-CERT\_\-DETAIL}
+\begin{DoxyCompactList}\small\item\em SSL Certificate detail structure for SSL Server. \end{DoxyCompactList}\item 
+struct \hyperlink{a00243}{GSN\_\-SSL\_\-CONN\_\-T}
+\begin{DoxyCompactList}\small\item\em SSL context structure for client. \end{DoxyCompactList}\item 
+struct \hyperlink{a00242}{GSN\_\-SSL\_\-CONN\_\-PARAMS}
+\begin{DoxyCompactList}\small\item\em SSL connection parmeters for client. \end{DoxyCompactList}\item 
+struct \hyperlink{a00244}{GSN\_\-SSL\_\-RECV\_\-PARAMS}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00590_a015c2dade92f5f5d0f34f3542137f878}{GSN\_\-TLSV1\_\-CONN\_\-T}~struct tlsv1\_\-client
+\item 
+\#define \hyperlink{a00590_a81d295a4a574f18257bfc281d7628299}{GSN\_\-SSL\_\-SERVER\_\-PORT}~443
+\item 
+\#define \hyperlink{a00590_affb1611026ffad79cc89ecfd0b5ab126}{GSN\_\-SSL\_\-CONN\_\-ESTABLISHED}~11
+\item 
+\#define \hyperlink{a00590_ae88c363dc4ad7b48d3d8ef525ad56ef3}{GSN\_\-SSL\_\-CONN\_\-STATUS\_\-FAIL}~0
+\item 
+\#define \hyperlink{a00590_ad118098904d94f590753956e7ef09686}{GSN\_\-SSL\_\-CONN\_\-STATUS\_\-SUCCESS}~1
+\item 
+\#define \hyperlink{a00590_a52aa5f715ba7a35e30cf2ddfb349b70c}{GSN\_\-SSL\_\-CONN\_\-ALERT\_\-FATAL}~2
+\item 
+\#define \hyperlink{a00590_af42427aba0f8d775720b905a8474745c}{GSN\_\-SSL\_\-DEFAULT\_\-FRAGMENT\_\-SIZE}~1398
+\item 
+\#define \hyperlink{a00590_af010106869d3f50993c95d5194622f13}{GSN\_\-SSL\_\-TLS\_\-HEADER\_\-LENGTH}~5
+\item 
+\#define \hyperlink{a00590_a3bac6333c6a4a404e7c259c37660d421}{GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-APPLICATION\_\-DATA}~23
+\item 
+\#define \hyperlink{a00590_ad535e5cacb88f5dda3ab6b82c8168d03}{GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-ALERT}~21
+\item 
+\#define \hyperlink{a00590_a1e93d1fd8b3696527ad06eed65b27319}{GSN\_\-SSL\_\-MAX\_\-ALERT\_\-SIZE}~64
+\item 
+\#define \hyperlink{a00590_a2ec533316c08037994e84a483607a77d}{GSN\_\-SSL\_\-CLOSE\_\-NOTIFICATION}~0
+\item 
+\#define \hyperlink{a00590_ad9f116584e36b649a32776bb3841d77f}{GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-WARNING}~1
+\item 
+\#define \hyperlink{a00590_a79b7ec36cf70cd7b760879d85fd5f089}{GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-FATAL}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00245}{GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T} \hyperlink{a00590_a332d8f9cc0e8ad1eb424089450db11a8}{GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T}
+\begin{DoxyCompactList}\small\item\em SSL Server context structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00459}{SERVER\_\-CERT\_\-DETAIL} \hyperlink{a00590_a97fb9dc92ed454d9d7e3f3e18bd57264}{SERVER\_\-CERT\_\-DETAIL\_\-T}
+\begin{DoxyCompactList}\small\item\em SSL Certificate detail structure for SSL Server. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00243}{GSN\_\-SSL\_\-CONN\_\-T} \hyperlink{a00590_a6cfb78a2ffc706dcf264400a3f3bcbcc}{GSN\_\-SSL\_\-CONN\_\-T}
+\begin{DoxyCompactList}\small\item\em SSL context structure for client. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00242}{GSN\_\-SSL\_\-CONN\_\-PARAMS} \hyperlink{a00590_ad6dda2b8b9bdde45cf9ddc89943cd611}{GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T}
+\begin{DoxyCompactList}\small\item\em SSL connection parmeters for client. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00244}{GSN\_\-SSL\_\-RECV\_\-PARAMS} \hyperlink{a00590_a1e6a9615d8936cfd33de0c31c8fb05a5}{GSN\_\-SSL\_\-RECV\_\-PARAMS\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00590_a4d55884cc33490a3514a051fccf526c0}{GSN\_\-SSL\_\-CONN\_\-MODE} \{ \par
+\hyperlink{a00590_a4d55884cc33490a3514a051fccf526c0a2a8d782da6ea42ea82fc3b4b7d4d6278}{GSN\_\-SSL\_\-CONN\_\-MODE\_\-CLIENT}, 
+\par
+\hyperlink{a00590_a4d55884cc33490a3514a051fccf526c0a5e4099b5fdead4995a50799880ddad53}{GSN\_\-SSL\_\-CONN\_\-MODE\_\-SERVER}
+ \}
+\begin{DoxyCompactList}\small\item\em SSL Connection mode enum. \end{DoxyCompactList}\item 
+enum \hyperlink{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36b}{GSN\_\-SSL\_\-STATE} \{ \par
+\hyperlink{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36bab79adb6214fe72959da3b272a79a7baf}{GSN\_\-SSL\_\-STATE\_\-INIT}, 
+\par
+\hyperlink{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36ba2f8d693f5b97b1f5f50ed09018feb848}{GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVING}, 
+\par
+\hyperlink{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36ba935a93148b464954ddff860e32666488}{GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVED}, 
+\par
+\hyperlink{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36bad0f09a9e759744e2038fd1c4bcde152f}{GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVING}, 
+\par
+\hyperlink{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36ba69d9f0cf691fb086df6aab2b2aa56233}{GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVED}, 
+\par
+\hyperlink{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36bac9f319fd7820c93e4bc08c0d19251fe6}{GSN\_\-SSL\_\-STATE\_\-RECEIVE\_\-DONE}
+ \}
+\begin{DoxyCompactList}\small\item\em SSL State enum. \end{DoxyCompactList}\item 
+enum \hyperlink{a00590_ae32da31c01290e41ef6e3d59ee2caf2a}{GSN\_\-SSL\_\-CONN\_\-STATE} \{ \par
+\hyperlink{a00590_ae32da31c01290e41ef6e3d59ee2caf2aa14682f9c56550d7bed043cdbe2f267a1}{GSN\_\-SSL\_\-CONN\_\-OPEN}, 
+\par
+\hyperlink{a00590_ae32da31c01290e41ef6e3d59ee2caf2aa60688a63a988fb9e11fe92ab1f510898}{GSN\_\-SSL\_\-CONN\_\-CLOSING}
+ \}
+\begin{DoxyCompactList}\small\item\em SSL State enum. \end{DoxyCompactList}\item 
+enum \hyperlink{a00590_a509253ad5fddd526327d77c721bc27df}{MAX\_\-FRAG\_\-SIZE\_\-T} \{ \par
+\hyperlink{a00590_a509253ad5fddd526327d77c721bc27dfa8c6ca370cf3fbf21efd93e3309f00cc8}{MAX\_\-FRAG\_\-SIZE\_\-512B} =  1, 
+\par
+\hyperlink{a00590_a509253ad5fddd526327d77c721bc27dfa1c5f06e10b9cc38fcc576c0ffee66245}{MAX\_\-FRAG\_\-SIZE\_\-1KB}, 
+\par
+\hyperlink{a00590_a509253ad5fddd526327d77c721bc27dfa02b8591f3b00419dad0f4477e4ab7074}{MAX\_\-FRAG\_\-SIZE\_\-2KB}, 
+\par
+\hyperlink{a00590_a509253ad5fddd526327d77c721bc27dfad3b9a220ae7be1ff2e558c7ff7a65771}{MAX\_\-FRAG\_\-SIZE\_\-4KB}
+ \}
+\begin{DoxyCompactList}\small\item\em SSL maximum Fragment length extension value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID $\ast$ \hyperlink{a00674_ga006730269e57e14d7d8db08d92c6a66f}{GsnSsl\_\-ServerInit} (\hyperlink{a00459}{SERVER\_\-CERT\_\-DETAIL\_\-T} $\ast$pCert)
+\begin{DoxyCompactList}\small\item\em SSL Server Init API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00245}{GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T} $\ast$ \hyperlink{a00674_ga1a963b6c25ebc6d49fc74042b6a04fdc}{GsnSsl\_\-Accept} (VOID $\ast$pServerCtx)
+\begin{DoxyCompactList}\small\item\em SSL Server Accept API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_gae142357dbc08534b840fb7cb3a8ef918}{GsnSsl\_\-Open} (VOID $\ast$pSslConn, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDes, \hyperlink{a00242}{GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T} $\ast$sslConParams)
+\begin{DoxyCompactList}\small\item\em SSL Open connection API. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00674_gadfc449eccdabf03e53cfad9ab4ec84a9}{GsnSsl\_\-Close} (VOID $\ast$sslConn)
+\begin{DoxyCompactList}\small\item\em SSL Close connection API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_ga6b68d0db3b129389d791294c46c0bdc8}{GsnSsl\_\-Alert} (VOID $\ast$pSSLConn, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDesc)
+\begin{DoxyCompactList}\small\item\em SSL Close Alert API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_ga0a0b2a99da357ea291fe513d0d7f9e62}{GsnSsl\_\-Encode} (VOID $\ast$pSSLConn, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pInDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} inDataLen, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$$\ast$pOutDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pOutDataLen)
+\begin{DoxyCompactList}\small\item\em SSL encode API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_ga39281464090e59585ad982be685dbf14}{GsnSsl\_\-Decode} (VOID $\ast$pSSLConn, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pInDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} inDataLen, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$$\ast$pOutDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pOutDataLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDesc)
+\begin{DoxyCompactList}\small\item\em SSL Decode API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00674_ga7f017b2db979edeb90345bd1168434ee}{GsnSsl\_\-DataReceive} (VOID $\ast$pSSLConn, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDes, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$$\ast$pRxDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pRxDataLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} timeOut)
+\begin{DoxyCompactList}\small\item\em SSL Receive API. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00674_ga3ad38224bcf86318bcc28deccbc2b9c9}{GsnSsl\_\-AlertSend} (VOID $\ast$pSSLConn, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} Alert, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} Description, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDesc)
+\begin{DoxyCompactList}\small\item\em SSL Receive API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00674_gaca29d86d80bab0743914793bfab782f9}{GsnSsl\_\-Alloc} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size)
+\begin{DoxyCompactList}\small\item\em SSL Memory allocation API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_ga959a6dcdcd5671e4a0750019faf4537b}{GsnSsl\_\-Free} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em SSL Memory Free API. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_gab5ead9a9cb96275f43b9c7fa858c2e97}{GsnHttps\_\-DataReceive} (\hyperlink{a00243}{GSN\_\-SSL\_\-CONN\_\-T} $\ast$sslConn, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDes, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$$\ast$rxDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$rxDataLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} timeOut)
+\begin{DoxyCompactList}\small\item\em SSL http receive and decode API. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00674_ga7e797cc2e59a5ec5438f9277f2185095}{GsnSsl\_\-ServerDeInit} (VOID $\ast$cred)
+\begin{DoxyCompactList}\small\item\em SSL Server Deinit API. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00674_gab3a9ba7fc2842812b6deefd016521e81}{GsnSsl\_\-Receive} (VOID $\ast$pSslConn, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDes, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$$\ast$rxDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$rxDataLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} timeOut)
+\begin{DoxyCompactList}\small\item\em SSL receive API. \end{DoxyCompactList}\item 
+int \hyperlink{a00590_a432f6ee8f5d4ec2826e9576bbcaa8204}{GsnSsl\_\-DecryptAlert} (struct tlsv1\_\-client $\ast$conn, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$in\_\-data, size\_\-t in\_\-len, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$out\_\-data, size\_\-t out\_\-len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN SSL public header. This file contains the public APIs and structures of SSL module. 
+
+Definition in file \hyperlink{a00590_source}{gsn\_\-ssl.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00590_a79b7ec36cf70cd7b760879d85fd5f089}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-FATAL@{GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-FATAL}}
+\index{GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-FATAL@{GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-FATAL}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-FATAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-FATAL~2}}
+\label{a00590_a79b7ec36cf70cd7b760879d85fd5f089}
+
+
+Definition at line 92 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_ad9f116584e36b649a32776bb3841d77f}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-WARNING@{GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-WARNING}}
+\index{GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-WARNING@{GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-WARNING}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-WARNING}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-ALERT\_\-LEVEL\_\-WARNING~1}}
+\label{a00590_ad9f116584e36b649a32776bb3841d77f}
+
+
+Definition at line 90 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_a2ec533316c08037994e84a483607a77d}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CLOSE\_\-NOTIFICATION@{GSN\_\-SSL\_\-CLOSE\_\-NOTIFICATION}}
+\index{GSN\_\-SSL\_\-CLOSE\_\-NOTIFICATION@{GSN\_\-SSL\_\-CLOSE\_\-NOTIFICATION}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-CLOSE\_\-NOTIFICATION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-CLOSE\_\-NOTIFICATION~0}}
+\label{a00590_a2ec533316c08037994e84a483607a77d}
+
+
+Definition at line 88 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_a52aa5f715ba7a35e30cf2ddfb349b70c}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-ALERT\_\-FATAL@{GSN\_\-SSL\_\-CONN\_\-ALERT\_\-FATAL}}
+\index{GSN\_\-SSL\_\-CONN\_\-ALERT\_\-FATAL@{GSN\_\-SSL\_\-CONN\_\-ALERT\_\-FATAL}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-CONN\_\-ALERT\_\-FATAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-CONN\_\-ALERT\_\-FATAL~2}}
+\label{a00590_a52aa5f715ba7a35e30cf2ddfb349b70c}
+
+
+Definition at line 82 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_affb1611026ffad79cc89ecfd0b5ab126}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-ESTABLISHED@{GSN\_\-SSL\_\-CONN\_\-ESTABLISHED}}
+\index{GSN\_\-SSL\_\-CONN\_\-ESTABLISHED@{GSN\_\-SSL\_\-CONN\_\-ESTABLISHED}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-CONN\_\-ESTABLISHED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-CONN\_\-ESTABLISHED~11}}
+\label{a00590_affb1611026ffad79cc89ecfd0b5ab126}
+
+
+Definition at line 79 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_ae88c363dc4ad7b48d3d8ef525ad56ef3}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-STATUS\_\-FAIL@{GSN\_\-SSL\_\-CONN\_\-STATUS\_\-FAIL}}
+\index{GSN\_\-SSL\_\-CONN\_\-STATUS\_\-FAIL@{GSN\_\-SSL\_\-CONN\_\-STATUS\_\-FAIL}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-CONN\_\-STATUS\_\-FAIL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-CONN\_\-STATUS\_\-FAIL~0}}
+\label{a00590_ae88c363dc4ad7b48d3d8ef525ad56ef3}
+
+
+Definition at line 80 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_ad118098904d94f590753956e7ef09686}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-STATUS\_\-SUCCESS@{GSN\_\-SSL\_\-CONN\_\-STATUS\_\-SUCCESS}}
+\index{GSN\_\-SSL\_\-CONN\_\-STATUS\_\-SUCCESS@{GSN\_\-SSL\_\-CONN\_\-STATUS\_\-SUCCESS}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-CONN\_\-STATUS\_\-SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-CONN\_\-STATUS\_\-SUCCESS~1}}
+\label{a00590_ad118098904d94f590753956e7ef09686}
+
+
+Definition at line 81 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_af42427aba0f8d775720b905a8474745c}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-DEFAULT\_\-FRAGMENT\_\-SIZE@{GSN\_\-SSL\_\-DEFAULT\_\-FRAGMENT\_\-SIZE}}
+\index{GSN\_\-SSL\_\-DEFAULT\_\-FRAGMENT\_\-SIZE@{GSN\_\-SSL\_\-DEFAULT\_\-FRAGMENT\_\-SIZE}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-DEFAULT\_\-FRAGMENT\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-DEFAULT\_\-FRAGMENT\_\-SIZE~1398}}
+\label{a00590_af42427aba0f8d775720b905a8474745c}
+
+
+Definition at line 83 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_a1e93d1fd8b3696527ad06eed65b27319}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-MAX\_\-ALERT\_\-SIZE@{GSN\_\-SSL\_\-MAX\_\-ALERT\_\-SIZE}}
+\index{GSN\_\-SSL\_\-MAX\_\-ALERT\_\-SIZE@{GSN\_\-SSL\_\-MAX\_\-ALERT\_\-SIZE}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-MAX\_\-ALERT\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-MAX\_\-ALERT\_\-SIZE~64}}
+\label{a00590_a1e93d1fd8b3696527ad06eed65b27319}
+
+
+Definition at line 87 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_a81d295a4a574f18257bfc281d7628299}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-SERVER\_\-PORT@{GSN\_\-SSL\_\-SERVER\_\-PORT}}
+\index{GSN\_\-SSL\_\-SERVER\_\-PORT@{GSN\_\-SSL\_\-SERVER\_\-PORT}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-SERVER\_\-PORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-SERVER\_\-PORT~443}}
+\label{a00590_a81d295a4a574f18257bfc281d7628299}
+
+
+Definition at line 78 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_ad535e5cacb88f5dda3ab6b82c8168d03}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-ALERT@{GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-ALERT}}
+\index{GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-ALERT@{GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-ALERT}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-ALERT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-ALERT~21}}
+\label{a00590_ad535e5cacb88f5dda3ab6b82c8168d03}
+
+
+Definition at line 86 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_a3bac6333c6a4a404e7c259c37660d421}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-APPLICATION\_\-DATA@{GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-APPLICATION\_\-DATA}}
+\index{GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-APPLICATION\_\-DATA@{GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-APPLICATION\_\-DATA}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-APPLICATION\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-TLS\_\-CONTENT\_\-TYPE\_\-APPLICATION\_\-DATA~23}}
+\label{a00590_a3bac6333c6a4a404e7c259c37660d421}
+
+
+Definition at line 85 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_af010106869d3f50993c95d5194622f13}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-TLS\_\-HEADER\_\-LENGTH@{GSN\_\-SSL\_\-TLS\_\-HEADER\_\-LENGTH}}
+\index{GSN\_\-SSL\_\-TLS\_\-HEADER\_\-LENGTH@{GSN\_\-SSL\_\-TLS\_\-HEADER\_\-LENGTH}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-TLS\_\-HEADER\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SSL\_\-TLS\_\-HEADER\_\-LENGTH~5}}
+\label{a00590_af010106869d3f50993c95d5194622f13}
+
+
+Definition at line 84 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_a015c2dade92f5f5d0f34f3542137f878}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-TLSV1\_\-CONN\_\-T@{GSN\_\-TLSV1\_\-CONN\_\-T}}
+\index{GSN\_\-TLSV1\_\-CONN\_\-T@{GSN\_\-TLSV1\_\-CONN\_\-T}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-TLSV1\_\-CONN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-TLSV1\_\-CONN\_\-T~struct tlsv1\_\-client}}
+\label{a00590_a015c2dade92f5f5d0f34f3542137f878}
+
+
+Definition at line 77 of file gsn\_\-ssl.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00590_ad6dda2b8b9bdde45cf9ddc89943cd611}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T@{GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T}}
+\index{GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T@{GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SSL\_\-CONN\_\-PARAMS} {\bf GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T}}}
+\label{a00590_ad6dda2b8b9bdde45cf9ddc89943cd611}
+
+
+SSL connection parmeters for client. 
+
+\hypertarget{a00590_a6cfb78a2ffc706dcf264400a3f3bcbcc}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-T@{GSN\_\-SSL\_\-CONN\_\-T}}
+\index{GSN\_\-SSL\_\-CONN\_\-T@{GSN\_\-SSL\_\-CONN\_\-T}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-CONN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SSL\_\-CONN\_\-T} {\bf GSN\_\-SSL\_\-CONN\_\-T}}}
+\label{a00590_a6cfb78a2ffc706dcf264400a3f3bcbcc}
+
+
+SSL context structure for client. 
+
+\hypertarget{a00590_a1e6a9615d8936cfd33de0c31c8fb05a5}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-RECV\_\-PARAMS\_\-T@{GSN\_\-SSL\_\-RECV\_\-PARAMS\_\-T}}
+\index{GSN\_\-SSL\_\-RECV\_\-PARAMS\_\-T@{GSN\_\-SSL\_\-RECV\_\-PARAMS\_\-T}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-RECV\_\-PARAMS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SSL\_\-RECV\_\-PARAMS} {\bf GSN\_\-SSL\_\-RECV\_\-PARAMS\_\-T}}}
+\label{a00590_a1e6a9615d8936cfd33de0c31c8fb05a5}
+\hypertarget{a00590_a332d8f9cc0e8ad1eb424089450db11a8}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T@{GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T}}
+\index{GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T@{GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T} {\bf GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T}}}
+\label{a00590_a332d8f9cc0e8ad1eb424089450db11a8}
+
+
+SSL Server context structure. 
+
+\hypertarget{a00590_a97fb9dc92ed454d9d7e3f3e18bd57264}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!SERVER\_\-CERT\_\-DETAIL\_\-T@{SERVER\_\-CERT\_\-DETAIL\_\-T}}
+\index{SERVER\_\-CERT\_\-DETAIL\_\-T@{SERVER\_\-CERT\_\-DETAIL\_\-T}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{SERVER\_\-CERT\_\-DETAIL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf SERVER\_\-CERT\_\-DETAIL} {\bf SERVER\_\-CERT\_\-DETAIL\_\-T}}}
+\label{a00590_a97fb9dc92ed454d9d7e3f3e18bd57264}
+
+
+SSL Certificate detail structure for SSL Server. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00590_a4d55884cc33490a3514a051fccf526c0}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-MODE@{GSN\_\-SSL\_\-CONN\_\-MODE}}
+\index{GSN\_\-SSL\_\-CONN\_\-MODE@{GSN\_\-SSL\_\-CONN\_\-MODE}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-CONN\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-SSL\_\-CONN\_\-MODE}}}
+\label{a00590_a4d55884cc33490a3514a051fccf526c0}
+
+
+SSL Connection mode enum. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-SSL\_\-CONN\_\-MODE\_\-CLIENT@{GSN\_\-SSL\_\-CONN\_\-MODE\_\-CLIENT}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-MODE\_\-CLIENT@{GSN\_\-SSL\_\-CONN\_\-MODE\_\-CLIENT}}\item[{\em 
+\hypertarget{a00590_a4d55884cc33490a3514a051fccf526c0a2a8d782da6ea42ea82fc3b4b7d4d6278}{
+GSN\_\-SSL\_\-CONN\_\-MODE\_\-CLIENT}
+\label{a00590_a4d55884cc33490a3514a051fccf526c0a2a8d782da6ea42ea82fc3b4b7d4d6278}
+}]\index{GSN\_\-SSL\_\-CONN\_\-MODE\_\-SERVER@{GSN\_\-SSL\_\-CONN\_\-MODE\_\-SERVER}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-MODE\_\-SERVER@{GSN\_\-SSL\_\-CONN\_\-MODE\_\-SERVER}}\item[{\em 
+\hypertarget{a00590_a4d55884cc33490a3514a051fccf526c0a5e4099b5fdead4995a50799880ddad53}{
+GSN\_\-SSL\_\-CONN\_\-MODE\_\-SERVER}
+\label{a00590_a4d55884cc33490a3514a051fccf526c0a5e4099b5fdead4995a50799880ddad53}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 105 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_ae32da31c01290e41ef6e3d59ee2caf2a}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-STATE@{GSN\_\-SSL\_\-CONN\_\-STATE}}
+\index{GSN\_\-SSL\_\-CONN\_\-STATE@{GSN\_\-SSL\_\-CONN\_\-STATE}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-CONN\_\-STATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-SSL\_\-CONN\_\-STATE}}}
+\label{a00590_ae32da31c01290e41ef6e3d59ee2caf2a}
+
+
+SSL State enum. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-SSL\_\-CONN\_\-OPEN@{GSN\_\-SSL\_\-CONN\_\-OPEN}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-OPEN@{GSN\_\-SSL\_\-CONN\_\-OPEN}}\item[{\em 
+\hypertarget{a00590_ae32da31c01290e41ef6e3d59ee2caf2aa14682f9c56550d7bed043cdbe2f267a1}{
+GSN\_\-SSL\_\-CONN\_\-OPEN}
+\label{a00590_ae32da31c01290e41ef6e3d59ee2caf2aa14682f9c56550d7bed043cdbe2f267a1}
+}]\index{GSN\_\-SSL\_\-CONN\_\-CLOSING@{GSN\_\-SSL\_\-CONN\_\-CLOSING}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-CONN\_\-CLOSING@{GSN\_\-SSL\_\-CONN\_\-CLOSING}}\item[{\em 
+\hypertarget{a00590_ae32da31c01290e41ef6e3d59ee2caf2aa60688a63a988fb9e11fe92ab1f510898}{
+GSN\_\-SSL\_\-CONN\_\-CLOSING}
+\label{a00590_ae32da31c01290e41ef6e3d59ee2caf2aa60688a63a988fb9e11fe92ab1f510898}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 141 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36b}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-STATE@{GSN\_\-SSL\_\-STATE}}
+\index{GSN\_\-SSL\_\-STATE@{GSN\_\-SSL\_\-STATE}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GSN\_\-SSL\_\-STATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-SSL\_\-STATE}}}
+\label{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36b}
+
+
+SSL State enum. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-SSL\_\-STATE\_\-INIT@{GSN\_\-SSL\_\-STATE\_\-INIT}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-STATE\_\-INIT@{GSN\_\-SSL\_\-STATE\_\-INIT}}\item[{\em 
+\hypertarget{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36bab79adb6214fe72959da3b272a79a7baf}{
+GSN\_\-SSL\_\-STATE\_\-INIT}
+\label{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36bab79adb6214fe72959da3b272a79a7baf}
+}]\index{GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVING@{GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVING}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVING@{GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVING}}\item[{\em 
+\hypertarget{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36ba2f8d693f5b97b1f5f50ed09018feb848}{
+GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVING}
+\label{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36ba2f8d693f5b97b1f5f50ed09018feb848}
+}]\index{GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVED@{GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVED}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVED@{GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVED}}\item[{\em 
+\hypertarget{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36ba935a93148b464954ddff860e32666488}{
+GSN\_\-SSL\_\-STATE\_\-HEADER\_\-RECEIVED}
+\label{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36ba935a93148b464954ddff860e32666488}
+}]\index{GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVING@{GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVING}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVING@{GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVING}}\item[{\em 
+\hypertarget{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36bad0f09a9e759744e2038fd1c4bcde152f}{
+GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVING}
+\label{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36bad0f09a9e759744e2038fd1c4bcde152f}
+}]\index{GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVED@{GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVED}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVED@{GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVED}}\item[{\em 
+\hypertarget{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36ba69d9f0cf691fb086df6aab2b2aa56233}{
+GSN\_\-SSL\_\-STATE\_\-BODY\_\-RECEIVED}
+\label{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36ba69d9f0cf691fb086df6aab2b2aa56233}
+}]\index{GSN\_\-SSL\_\-STATE\_\-RECEIVE\_\-DONE@{GSN\_\-SSL\_\-STATE\_\-RECEIVE\_\-DONE}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GSN\_\-SSL\_\-STATE\_\-RECEIVE\_\-DONE@{GSN\_\-SSL\_\-STATE\_\-RECEIVE\_\-DONE}}\item[{\em 
+\hypertarget{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36bac9f319fd7820c93e4bc08c0d19251fe6}{
+GSN\_\-SSL\_\-STATE\_\-RECEIVE\_\-DONE}
+\label{a00590_a2e456f8dfdd4ea1d44ac95d6fc55b36bac9f319fd7820c93e4bc08c0d19251fe6}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 119 of file gsn\_\-ssl.h.
+
+\hypertarget{a00590_a509253ad5fddd526327d77c721bc27df}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!MAX\_\-FRAG\_\-SIZE\_\-T@{MAX\_\-FRAG\_\-SIZE\_\-T}}
+\index{MAX\_\-FRAG\_\-SIZE\_\-T@{MAX\_\-FRAG\_\-SIZE\_\-T}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{MAX\_\-FRAG\_\-SIZE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf MAX\_\-FRAG\_\-SIZE\_\-T}}}
+\label{a00590_a509253ad5fddd526327d77c721bc27df}
+
+
+SSL maximum Fragment length extension value. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MAX\_\-FRAG\_\-SIZE\_\-512B@{MAX\_\-FRAG\_\-SIZE\_\-512B}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!MAX\_\-FRAG\_\-SIZE\_\-512B@{MAX\_\-FRAG\_\-SIZE\_\-512B}}\item[{\em 
+\hypertarget{a00590_a509253ad5fddd526327d77c721bc27dfa8c6ca370cf3fbf21efd93e3309f00cc8}{
+MAX\_\-FRAG\_\-SIZE\_\-512B}
+\label{a00590_a509253ad5fddd526327d77c721bc27dfa8c6ca370cf3fbf21efd93e3309f00cc8}
+}]\index{MAX\_\-FRAG\_\-SIZE\_\-1KB@{MAX\_\-FRAG\_\-SIZE\_\-1KB}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!MAX\_\-FRAG\_\-SIZE\_\-1KB@{MAX\_\-FRAG\_\-SIZE\_\-1KB}}\item[{\em 
+\hypertarget{a00590_a509253ad5fddd526327d77c721bc27dfa1c5f06e10b9cc38fcc576c0ffee66245}{
+MAX\_\-FRAG\_\-SIZE\_\-1KB}
+\label{a00590_a509253ad5fddd526327d77c721bc27dfa1c5f06e10b9cc38fcc576c0ffee66245}
+}]\index{MAX\_\-FRAG\_\-SIZE\_\-2KB@{MAX\_\-FRAG\_\-SIZE\_\-2KB}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!MAX\_\-FRAG\_\-SIZE\_\-2KB@{MAX\_\-FRAG\_\-SIZE\_\-2KB}}\item[{\em 
+\hypertarget{a00590_a509253ad5fddd526327d77c721bc27dfa02b8591f3b00419dad0f4477e4ab7074}{
+MAX\_\-FRAG\_\-SIZE\_\-2KB}
+\label{a00590_a509253ad5fddd526327d77c721bc27dfa02b8591f3b00419dad0f4477e4ab7074}
+}]\index{MAX\_\-FRAG\_\-SIZE\_\-4KB@{MAX\_\-FRAG\_\-SIZE\_\-4KB}!gsn\_\-ssl.h@{gsn\_\-ssl.h}}\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!MAX\_\-FRAG\_\-SIZE\_\-4KB@{MAX\_\-FRAG\_\-SIZE\_\-4KB}}\item[{\em 
+\hypertarget{a00590_a509253ad5fddd526327d77c721bc27dfad3b9a220ae7be1ff2e558c7ff7a65771}{
+MAX\_\-FRAG\_\-SIZE\_\-4KB}
+\label{a00590_a509253ad5fddd526327d77c721bc27dfad3b9a220ae7be1ff2e558c7ff7a65771}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 158 of file gsn\_\-ssl.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00590_a432f6ee8f5d4ec2826e9576bbcaa8204}{
+\index{gsn\_\-ssl.h@{gsn\_\-ssl.h}!GsnSsl\_\-DecryptAlert@{GsnSsl\_\-DecryptAlert}}
+\index{GsnSsl\_\-DecryptAlert@{GsnSsl\_\-DecryptAlert}!gsn_ssl.h@{gsn\_\-ssl.h}}
+\subsubsection[{GsnSsl\_\-DecryptAlert}]{\setlength{\rightskip}{0pt plus 5cm}int GsnSsl\_\-DecryptAlert (
+\begin{DoxyParamCaption}
+\item[{struct tlsv1\_\-client $\ast$}]{conn, }
+\item[{{\bf UINT8} $\ast$}]{in\_\-data, }
+\item[{size\_\-t}]{in\_\-len, }
+\item[{{\bf UINT8} $\ast$}]{out\_\-data, }
+\item[{size\_\-t}]{out\_\-len}
+\end{DoxyParamCaption}
+)}}
+\label{a00590_a432f6ee8f5d4ec2826e9576bbcaa8204}

@@ -1,0 +1,210 @@
+\hypertarget{a00521}{
+\section{gsn\_\-isotxif.h File Reference}
+\label{a00521}\index{gsn\_\-isotxif.h@{gsn\_\-isotxif.h}}
+}
+
+
+GSN ISOTXIF public header. This file contains public function prototypes and data structure definitions for wlan interface module.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00755}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00105}{GSN\_\-ISOTXIF\_\-CTX}
+\begin{DoxyCompactList}\small\item\em GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the ISOTXIF interface will have its own context defined here. \end{DoxyCompactList}\item 
+struct \hyperlink{a00106}{GSN\_\-ISOTXIF\_\-INIT\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em ISOTXIF context init function parameter data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00105}{GSN\_\-ISOTXIF\_\-CTX} \hyperlink{a00625_ga35f27a7ee5e85ca8decc1f1636e8ca08}{GSN\_\-ISOTXIF\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the ISOTXIF interface will have its own context defined here. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00106}{GSN\_\-ISOTXIF\_\-INIT\_\-PARAM} \hyperlink{a00625_ga86fe1e652bfee5af4919a3021fa448fc}{GSN\_\-ISOTXIF\_\-INIT\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em ISOTXIF context init function parameter data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00521_abc9d5709f340ca4e17d131e1bb62452a}{GsnIsotxif\_\-Init} (\hyperlink{a00105}{GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$pIsotxifCtx, \hyperlink{a00106}{GSN\_\-ISOTXIF\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+INLINE VOID \hyperlink{a00521_a796010862c1446f3782ec57bdf213787}{GsnIsotxif\_\-CtrlIndCbReg} (\hyperlink{a00105}{GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$pIsotxifCtx, \hyperlink{a00635_gac721992ff2f8c904a29e80d4b2eaead3}{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} ind)
+\item 
+INLINE VOID \hyperlink{a00521_a9e559b9d089e882c9056fd9754b6f17a}{GsnIsotxif\_\-DataIndCbReg} (\hyperlink{a00105}{GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$pIsotxifCtx, \hyperlink{a00635_ga9630fce1058035404e218cc275052c03}{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx)
+\item 
+INLINE VOID $\ast$ \hyperlink{a00521_a8f5ca5a5f5fce715ab6d70a8cd50896c}{GsnIsotxif\_\-ReqBuffGet} (\hyperlink{a00105}{GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$pIsotxifCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} reqSize)
+\item 
+INLINE VOID $\ast$ \hyperlink{a00521_af933ec0dba7fa993e8ebadd9f4f8a175}{GsnIsotxif\_\-DataTxBuffGet} (\hyperlink{a00105}{GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$pIsotxifCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataSize)
+\item 
+INLINE \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00521_a579ac891de19798b8228064b9937d9cd}{GsnIsotxif\_\-CtrlSend} (\hyperlink{a00105}{GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$pIsotxifCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} reqAPI, VOID $\ast$pReq, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} reqSize)
+\item 
+INLINE \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00521_a51c8566083314b7f98223e438ceefbf4}{GsnIsotxif\_\-DataSend} (\hyperlink{a00105}{GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$pIsotxifCtx, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$data, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} sizeOfData, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} pktId)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN ISOTXIF public header. This file contains public function prototypes and data structure definitions for wlan interface module. \begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition in file \hyperlink{a00521_source}{gsn\_\-isotxif.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00521_a796010862c1446f3782ec57bdf213787}{
+\index{gsn\_\-isotxif.h@{gsn\_\-isotxif.h}!GsnIsotxif\_\-CtrlIndCbReg@{GsnIsotxif\_\-CtrlIndCbReg}}
+\index{GsnIsotxif\_\-CtrlIndCbReg@{GsnIsotxif\_\-CtrlIndCbReg}!gsn_isotxif.h@{gsn\_\-isotxif.h}}
+\subsubsection[{GsnIsotxif\_\-CtrlIndCbReg}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnIsotxif\_\-CtrlIndCbReg (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$}]{pIsotxifCtx, }
+\item[{{\bf GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-T}}]{cb, }
+\item[{VOID $\ast$}]{ctx, }
+\item[{{\bf UINT16}}]{ind}
+\end{DoxyParamCaption}
+)}}
+\label{a00521_a796010862c1446f3782ec57bdf213787}
+
+
+Definition at line 128 of file gsn\_\-isotxif.h.
+
+\hypertarget{a00521_a579ac891de19798b8228064b9937d9cd}{
+\index{gsn\_\-isotxif.h@{gsn\_\-isotxif.h}!GsnIsotxif\_\-CtrlSend@{GsnIsotxif\_\-CtrlSend}}
+\index{GsnIsotxif\_\-CtrlSend@{GsnIsotxif\_\-CtrlSend}!gsn_isotxif.h@{gsn\_\-isotxif.h}}
+\subsubsection[{GsnIsotxif\_\-CtrlSend}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-STATUS} GsnIsotxif\_\-CtrlSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$}]{pIsotxifCtx, }
+\item[{{\bf UINT32}}]{reqAPI, }
+\item[{VOID $\ast$}]{pReq, }
+\item[{{\bf UINT16}}]{reqSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00521_a579ac891de19798b8228064b9937d9cd}
+
+
+Definition at line 169 of file gsn\_\-isotxif.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=356pt]{a00521_a579ac891de19798b8228064b9937d9cd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00521_a9e559b9d089e882c9056fd9754b6f17a}{
+\index{gsn\_\-isotxif.h@{gsn\_\-isotxif.h}!GsnIsotxif\_\-DataIndCbReg@{GsnIsotxif\_\-DataIndCbReg}}
+\index{GsnIsotxif\_\-DataIndCbReg@{GsnIsotxif\_\-DataIndCbReg}!gsn_isotxif.h@{gsn\_\-isotxif.h}}
+\subsubsection[{GsnIsotxif\_\-DataIndCbReg}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnIsotxif\_\-DataIndCbReg (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$}]{pIsotxifCtx, }
+\item[{{\bf GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-T}}]{cb, }
+\item[{VOID $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}
+\label{a00521_a9e559b9d089e882c9056fd9754b6f17a}
+
+
+Definition at line 144 of file gsn\_\-isotxif.h.
+
+\hypertarget{a00521_a51c8566083314b7f98223e438ceefbf4}{
+\index{gsn\_\-isotxif.h@{gsn\_\-isotxif.h}!GsnIsotxif\_\-DataSend@{GsnIsotxif\_\-DataSend}}
+\index{GsnIsotxif\_\-DataSend@{GsnIsotxif\_\-DataSend}!gsn_isotxif.h@{gsn\_\-isotxif.h}}
+\subsubsection[{GsnIsotxif\_\-DataSend}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-STATUS} GsnIsotxif\_\-DataSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$}]{pIsotxifCtx, }
+\item[{{\bf INT8} $\ast$}]{data, }
+\item[{{\bf UINT32}}]{sizeOfData, }
+\item[{{\bf UINT8}}]{pktId}
+\end{DoxyParamCaption}
+)}}
+\label{a00521_a51c8566083314b7f98223e438ceefbf4}
+
+
+Definition at line 176 of file gsn\_\-isotxif.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=370pt]{a00521_a51c8566083314b7f98223e438ceefbf4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00521_af933ec0dba7fa993e8ebadd9f4f8a175}{
+\index{gsn\_\-isotxif.h@{gsn\_\-isotxif.h}!GsnIsotxif\_\-DataTxBuffGet@{GsnIsotxif\_\-DataTxBuffGet}}
+\index{GsnIsotxif\_\-DataTxBuffGet@{GsnIsotxif\_\-DataTxBuffGet}!gsn_isotxif.h@{gsn\_\-isotxif.h}}
+\subsubsection[{GsnIsotxif\_\-DataTxBuffGet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID$\ast$ GsnIsotxif\_\-DataTxBuffGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$}]{pIsotxifCtx, }
+\item[{{\bf UINT32}}]{dataSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00521_af933ec0dba7fa993e8ebadd9f4f8a175}
+
+
+Definition at line 163 of file gsn\_\-isotxif.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00521_af933ec0dba7fa993e8ebadd9f4f8a175_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00521_abc9d5709f340ca4e17d131e1bb62452a}{
+\index{gsn\_\-isotxif.h@{gsn\_\-isotxif.h}!GsnIsotxif\_\-Init@{GsnIsotxif\_\-Init}}
+\index{GsnIsotxif\_\-Init@{GsnIsotxif\_\-Init}!gsn_isotxif.h@{gsn\_\-isotxif.h}}
+\subsubsection[{GsnIsotxif\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnIsotxif\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$}]{pIsotxifCtx, }
+\item[{{\bf GSN\_\-ISOTXIF\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00521_abc9d5709f340ca4e17d131e1bb62452a}
+\hypertarget{a00521_a8f5ca5a5f5fce715ab6d70a8cd50896c}{
+\index{gsn\_\-isotxif.h@{gsn\_\-isotxif.h}!GsnIsotxif\_\-ReqBuffGet@{GsnIsotxif\_\-ReqBuffGet}}
+\index{GsnIsotxif\_\-ReqBuffGet@{GsnIsotxif\_\-ReqBuffGet}!gsn_isotxif.h@{gsn\_\-isotxif.h}}
+\subsubsection[{GsnIsotxif\_\-ReqBuffGet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID$\ast$ GsnIsotxif\_\-ReqBuffGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ISOTXIF\_\-CTX\_\-T} $\ast$}]{pIsotxifCtx, }
+\item[{{\bf UINT32}}]{reqSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00521_a8f5ca5a5f5fce715ab6d70a8cd50896c}
+
+
+Definition at line 154 of file gsn\_\-isotxif.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00521_a8f5ca5a5f5fce715ab6d70a8cd50896c_cgraph}
+\end{center}
+\end{figure}
+
+

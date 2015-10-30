@@ -1,0 +1,277 @@
+\hypertarget{a00635}{
+\section{GSN WLAN Firmware Interface (WIF) module}
+\label{a00635}\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+}
+
+
+This group provides the interface with WLAN Firmware running on WLAN CPU.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00323}{GSN\_\-WIF\_\-CTX}
+\begin{DoxyCompactList}\small\item\em GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the wif interface will have its own context defined here. \end{DoxyCompactList}\item 
+struct \hyperlink{a00338}{GSN\_\-WIF\_\-INIT\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em Wif context init function parameter data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00342}{GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em Wif context init function parameter data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00636}{GSN WIF WLAN Control API}
+\item 
+\hyperlink{a00637}{GSN WIF Debug Definition}
+\item 
+\hyperlink{a00638}{GSN WIF Definitions}
+\item 
+\hyperlink{a00639}{GSN SOC Platform Configuration}
+\item 
+\hyperlink{a00640}{GSN WIF WLAN Control Interface}
+\item 
+\hyperlink{a00641}{GSN WLAN Definitions}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00323}{GSN\_\-WIF\_\-CTX} \hyperlink{a00635_ga7a8bd94a4326b0ff61696008eda89228}{GSN\_\-WIF\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the wif interface will have its own context defined here. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00338}{GSN\_\-WIF\_\-INIT\_\-PARAM} \hyperlink{a00635_gaf24820ac43e65f03340551f2b579f6f5}{GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Wif context init function parameter data structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00342}{GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM} \hyperlink{a00635_ga3af1a4583d80b21b8aa4274a01ca7ad7}{GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Wif context init function parameter data structure. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_ga6079bd2ef0b375f3d1b987c9e3de8f6b}{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Sys Control \char`\"{} indication Cb. Callback definition for the Sys Control indication callback. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00635_gad71afa8e03b517ec379abfa3cb39de92}{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Sys Control \char`\"{} indication Cb. Callback definition for the Sys Control indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_ga1a6c66e709c29a827dc0c07e40f4b9aa}{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_ga713dea098107eba190695d6e868ff027}{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_gac721992ff2f8c904a29e80d4b2eaead3}{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_gaf83e1299bf211f7c06ff40e18f1d3ad4}{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_gad46de129691b078bd6ff8df7f46318d2}{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} status, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} dataClass, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF Data indication Cb. Callback definition for the Data indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_ga9630fce1058035404e218cc275052c03}{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} status, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF Data indication Cb. Callback definition for the Data indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_gaeb1ca28d0827d970df3911f1bd46cf98}{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF Data indication Cb. Callback definition for the Data indication callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00635_ga1ffa97473da0d308f2f3d214c775c8da}{GsnWif\_\-Init} (\hyperlink{a00323}{GSN\_\-WIF\_\-CTX\_\-T} $\ast$pWifCtx, \hyperlink{a00338}{GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Initialize WLAN IF. This function initializes the WLAN IF instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group provides the interface with WLAN Firmware running on WLAN CPU. Whole GsnWif module is grouped in two parts, APIs and the Msg\_\-Sys. The APIs provide the handling of various requests and indications. Msg\_\-Sys provides the buffer managemnet and shared memeory management infrastructure to trnasfer messages (control/data) between WLAn and APP firmware. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00635_ga713dea098107eba190695d6e868ff027}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-T}}
+\index{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}( $\ast$ {\bf GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT16} msgId, {\bf UINT16} msgLen, VOID $\ast$pMsg)}}
+\label{a00635_ga713dea098107eba190695d6e868ff027}
+
+
+GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. 
+
+\begin{DoxyNote}{Note}
+see GsnWif\_\-WlanCtrlIndCbReg 
+\end{DoxyNote}
+
+
+Definition at line 137 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00635_ga7a8bd94a4326b0ff61696008eda89228}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-CTX\_\-T@{GSN\_\-WIF\_\-CTX\_\-T}}
+\index{GSN\_\-WIF\_\-CTX\_\-T@{GSN\_\-WIF\_\-CTX\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-CTX} {\bf GSN\_\-WIF\_\-CTX\_\-T}}}
+\label{a00635_ga7a8bd94a4326b0ff61696008eda89228}
+
+
+GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the wif interface will have its own context defined here. 
+
+END of coresvcdoc.
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00635_gad46de129691b078bd6ff8df7f46318d2}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-T}}
+\index{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}( $\ast$ {\bf GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT16} status, {\bf UINT8} dataClass, {\bf UINT16} msgLen, VOID $\ast$pMsg)}}
+\label{a00635_gad46de129691b078bd6ff8df7f46318d2}
+
+
+GSN WLAN IF Data indication Cb. Callback definition for the Data indication callback. 
+
+\begin{DoxyNote}{Note}
+see GsnWif\_\-DataIndCbReg 
+\end{DoxyNote}
+
+
+Definition at line 170 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00635_gaf83e1299bf211f7c06ff40e18f1d3ad4}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-T}}
+\index{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}( $\ast$ {\bf GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT16} msgId, {\bf UINT16} msgLen, VOID $\ast$pMsg)}}
+\label{a00635_gaf83e1299bf211f7c06ff40e18f1d3ad4}
+
+
+GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. 
+
+\begin{DoxyNote}{Note}
+see GsnWif\_\-WlanCtrlIndCbReg 
+\end{DoxyNote}
+
+
+Definition at line 159 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00635_gaeb1ca28d0827d970df3911f1bd46cf98}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-T}}
+\index{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}( $\ast$ {\bf GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT32} msgId, {\bf UINT16} msgLen, VOID $\ast$pMsg)}}
+\label{a00635_gaeb1ca28d0827d970df3911f1bd46cf98}
+
+
+GSN WLAN IF Data indication Cb. Callback definition for the Data indication callback. 
+
+\begin{DoxyNote}{Note}
+see GsnWif\_\-DataIndCbReg 
+\end{DoxyNote}
+
+
+Definition at line 192 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00635_gaf24820ac43e65f03340551f2b579f6f5}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T@{GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T@{GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-INIT\_\-PARAM} {\bf GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00635_gaf24820ac43e65f03340551f2b579f6f5}
+
+
+Wif context init function parameter data structure. 
+
+\hypertarget{a00635_gac721992ff2f8c904a29e80d4b2eaead3}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-T}}
+\index{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}( $\ast$ {\bf GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT16} msgId, {\bf UINT16} msgLen, VOID $\ast$pMsg)}}
+\label{a00635_gac721992ff2f8c904a29e80d4b2eaead3}
+
+
+GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. 
+
+\begin{DoxyNote}{Note}
+see GsnWif\_\-WlanCtrlIndCbReg 
+\end{DoxyNote}
+
+
+Definition at line 148 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00635_ga9630fce1058035404e218cc275052c03}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-T}}
+\index{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}( $\ast$ {\bf GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT16} status, {\bf UINT16} msgLen, VOID $\ast$pMsg)}}
+\label{a00635_ga9630fce1058035404e218cc275052c03}
+
+
+GSN WLAN IF Data indication Cb. Callback definition for the Data indication callback. 
+
+\begin{DoxyNote}{Note}
+see GsnWif\_\-DataIndCbReg 
+\end{DoxyNote}
+
+
+Definition at line 181 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00635_ga3af1a4583d80b21b8aa4274a01ca7ad7}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM\_\-T@{GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM\_\-T@{GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM} {\bf GSN\_\-WIF\_\-RE\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00635_ga3af1a4583d80b21b8aa4274a01ca7ad7}
+
+
+Wif context init function parameter data structure. 
+
+\hypertarget{a00635_gad71afa8e03b517ec379abfa3cb39de92}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-T}}
+\index{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT16} msgLen, VOID $\ast$pMsg)}}
+\label{a00635_gad71afa8e03b517ec379abfa3cb39de92}
+
+
+GSN WLAN IF \char`\"{}Sys Control \char`\"{} indication Cb. Callback definition for the Sys Control indication callback. 
+
+\begin{DoxyNote}{Note}
+see GsnWif\_\-SysCtrlIndCbReg 
+\end{DoxyNote}
+
+
+Definition at line 117 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00635_ga6079bd2ef0b375f3d1b987c9e3de8f6b}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}( $\ast$ {\bf GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT16} msgId, {\bf UINT16} msgLen, VOID $\ast$pMsg)}}
+\label{a00635_ga6079bd2ef0b375f3d1b987c9e3de8f6b}
+
+
+GSN WLAN IF \char`\"{}Sys Control \char`\"{} indication Cb. Callback definition for the Sys Control indication callback. 
+
+\begin{DoxyNote}{Note}
+see GsnWif\_\-SysCtrlIndCbReg 
+\end{DoxyNote}
+
+
+Definition at line 106 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00635_ga1a6c66e709c29a827dc0c07e40f4b9aa}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}( $\ast$ {\bf GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT16} msgId, {\bf UINT16} msgLen, VOID $\ast$pMsg)}}
+\label{a00635_ga1a6c66e709c29a827dc0c07e40f4b9aa}
+
+
+GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. 
+
+\begin{DoxyNote}{Note}
+see GsnWif\_\-WlanCtrlIndCbReg 
+\end{DoxyNote}
+
+
+Definition at line 127 of file gsn\_\-wif\_\-common.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00635_ga1ffa97473da0d308f2f3d214c775c8da}{
+\index{GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}!GsnWif\_\-Init@{GsnWif\_\-Init}}
+\index{GsnWif\_\-Init@{GsnWif\_\-Init}!GSN WLAN Firmware Interface (WIF) module@{GSN WLAN Firmware Interface (WIF) module}}
+\subsubsection[{GsnWif\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWif\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WIF\_\-CTX\_\-T} $\ast$}]{pWifCtx, }
+\item[{{\bf GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00635_ga1ffa97473da0d308f2f3d214c775c8da}
+
+
+Initialize WLAN IF. This function initializes the WLAN IF instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pWifCtx} & -\/IN pointer to data structure of type GSN\_\-WIF\_\-CTX\_\-T. This the context memory of a WLAN IF instance. \\
+\hline
+{\em pParam} & -\/ IN pointer to data structure of type GSN\_\-WIF\_\-INIT\_\-PARAM\_\-T. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS if operation is successful else GSN\_\-FAILURE. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+All the memeres of \char`\"{}pParam\char`\"{} shall be properly initialised before callling this function 
+\end{DoxyNote}

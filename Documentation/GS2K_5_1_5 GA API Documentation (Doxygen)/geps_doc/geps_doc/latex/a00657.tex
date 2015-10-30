@@ -1,0 +1,206 @@
+\hypertarget{a00657}{
+\section{GSN Bitfield Definitions}
+\label{a00657}\index{GSN Bitfield Definitions@{GSN Bitfield Definitions}}
+}
+
+
+This group contains bitfield macro definitions.  
+
+
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00657_ga4af6407b36a81973e93a80026461312d}{CREATE\_\-BITFIELD}(bfName, bfLsb, bfMsb)
+\begin{DoxyCompactList}\small\item\em Create a bitfield. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00657_ga330112fe57abc76abf484fedd191ca29}{BITFIELD\_\-MASK}(fieldLSBBit, fieldMSBBit)~((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})(((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})2 $<$$<$ (fieldMSBBit)) -\/ ((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})1 $<$$<$ (fieldLSBBit))))
+\begin{DoxyCompactList}\small\item\em Prepare a bitfield mask. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00657_ga99ab04466c2041af684f24ec71596969}{TEST\_\-BITFIELD}(var, fieldName)~((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})(var) \& fieldName\#\#\_\-MASK)
+\begin{DoxyCompactList}\small\item\em Test a bitfield. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00657_ga3e5cdd0d8d2d0a80286bfe31fe379530}{GET\_\-BITFIELD}(var, fieldName)~((((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})(var) \& fieldName\#\#\_\-MASK) $>$$>$ (fieldName\#\#\_\-LSB)))
+\begin{DoxyCompactList}\small\item\em Get a bitfield. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00657_ga32ad62c1b9d831dbd3c0cb56d39457fd}{MAKE\_\-BITFIELD}(fieldName, bitFieldValue)~(((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})(bitFieldValue) $<$$<$ (fieldName\#\#\_\-LSB)) \& fieldName\#\#\_\-MASK)
+\begin{DoxyCompactList}\small\item\em Get a bitfield. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00657_gab5ace147a6b9a49268acc7d8ae3f7524}{SET\_\-BITFIELD}(var, fieldName, bitFieldValue)
+\begin{DoxyCompactList}\small\item\em Set a bitfield. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group contains bitfield macro definitions. 
+
+\subsection{Define Documentation}
+\hypertarget{a00657_ga330112fe57abc76abf484fedd191ca29}{
+\index{GSN Bitfield Definitions@{GSN Bitfield Definitions}!BITFIELD\_\-MASK@{BITFIELD\_\-MASK}}
+\index{BITFIELD\_\-MASK@{BITFIELD\_\-MASK}!GSN Bitfield Definitions@{GSN Bitfield Definitions}}
+\subsubsection[{BITFIELD\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define BITFIELD\_\-MASK(
+\begin{DoxyParamCaption}
+\item[{}]{fieldLSBBit, }
+\item[{}]{fieldMSBBit}
+\end{DoxyParamCaption}
+)~(({\bf UINT32})((({\bf UINT32})2 $<$$<$ (fieldMSBBit)) -\/ (({\bf UINT32})1 $<$$<$ (fieldLSBBit))))}}
+\label{a00657_ga330112fe57abc76abf484fedd191ca29}
+
+
+Prepare a bitfield mask. 
+
+This macro prepares a mask for the given bitfield. 
+\begin{DoxyParams}{Parameters}
+{\em fieldLSBBit} & -\/ IN Bitfield least significant bit. \\
+\hline
+{\em fieldMSBBit} & -\/ IN Bitfield most significant bit. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 106 of file gsn\_\-bitfield\_\-macros.h.
+
+\hypertarget{a00657_ga4af6407b36a81973e93a80026461312d}{
+\index{GSN Bitfield Definitions@{GSN Bitfield Definitions}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!GSN Bitfield Definitions@{GSN Bitfield Definitions}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define CREATE\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{bfName, }
+\item[{}]{bfLsb, }
+\item[{}]{bfMsb}
+\end{DoxyParamCaption}
+)}}
+\label{a00657_ga4af6407b36a81973e93a80026461312d}
+{\bfseries Value:}
+\begin{DoxyCode}
+enum {bfName##_LSB = bfLsb, bfName##_MSB = bfMsb, \
+                bfName##_MASK = \
+                ((0xFFFFFFFF>>(31-(bfMsb-bfLsb)))<<bfLsb)}
+\end{DoxyCode}
+
+
+Create a bitfield. 
+
+This macro defines a bitfield. 
+\begin{DoxyParams}{Parameters}
+{\em bfName} & -\/ IN Bitfield name. \\
+\hline
+{\em bfLsb} & -\/ IN Bitfield least significant bit. \\
+\hline
+{\em bfMsb} & -\/ IN Bitfield most significant bit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This macro ends up defining 3 enums: bfName\_\-LSB, bfName\_\-MSB, bfName\_\-MASK. 
+\end{DoxyNote}
+
+
+Definition at line 90 of file gsn\_\-bitfield\_\-macros.h.
+
+\hypertarget{a00657_ga3e5cdd0d8d2d0a80286bfe31fe379530}{
+\index{GSN Bitfield Definitions@{GSN Bitfield Definitions}!GET\_\-BITFIELD@{GET\_\-BITFIELD}}
+\index{GET\_\-BITFIELD@{GET\_\-BITFIELD}!GSN Bitfield Definitions@{GSN Bitfield Definitions}}
+\subsubsection[{GET\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{fieldName}
+\end{DoxyParamCaption}
+)~(((({\bf UINT32})(var) \& fieldName\#\#\_\-MASK) $>$$>$ (fieldName\#\#\_\-LSB)))}}
+\label{a00657_ga3e5cdd0d8d2d0a80286bfe31fe379530}
+
+
+Get a bitfield. 
+
+This macro extracts a bitfield from a given variable. The returned value is normalized ie., it will be available starting from bit position zero. 
+\begin{DoxyParams}{Parameters}
+{\em var} & -\/ IN variable from which bitfield has to be extracted. \\
+\hline
+{\em fieldName} & -\/ IN name of the bitfield defined earlier using CREATE\_\-BITFIELD. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 136 of file gsn\_\-bitfield\_\-macros.h.
+
+\hypertarget{a00657_ga32ad62c1b9d831dbd3c0cb56d39457fd}{
+\index{GSN Bitfield Definitions@{GSN Bitfield Definitions}!MAKE\_\-BITFIELD@{MAKE\_\-BITFIELD}}
+\index{MAKE\_\-BITFIELD@{MAKE\_\-BITFIELD}!GSN Bitfield Definitions@{GSN Bitfield Definitions}}
+\subsubsection[{MAKE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAKE\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{fieldName, }
+\item[{}]{bitFieldValue}
+\end{DoxyParamCaption}
+)~((({\bf UINT32})(bitFieldValue) $<$$<$ (fieldName\#\#\_\-LSB)) \& fieldName\#\#\_\-MASK)}}
+\label{a00657_ga32ad62c1b9d831dbd3c0cb56d39457fd}
+
+
+Get a bitfield. 
+
+This macro creates a temporary variable with the bitfield set to given value. 
+\begin{DoxyParams}{Parameters}
+{\em fieldName} & -\/ IN name of the bitfield defined earlier using CREATE\_\-BITFIELD. \\
+\hline
+{\em bitFieldValue} & -\/ IN value to set for bitfield. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Multiple MAKE\_\-BITFIELDs can be ORed together to form a variable will various bitfields within a 32-\/bit variable set to different values. 
+\end{DoxyNote}
+
+
+Definition at line 153 of file gsn\_\-bitfield\_\-macros.h.
+
+\hypertarget{a00657_gab5ace147a6b9a49268acc7d8ae3f7524}{
+\index{GSN Bitfield Definitions@{GSN Bitfield Definitions}!SET\_\-BITFIELD@{SET\_\-BITFIELD}}
+\index{SET\_\-BITFIELD@{SET\_\-BITFIELD}!GSN Bitfield Definitions@{GSN Bitfield Definitions}}
+\subsubsection[{SET\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{fieldName, }
+\item[{}]{bitFieldValue}
+\end{DoxyParamCaption}
+)}}
+\label{a00657_gab5ace147a6b9a49268acc7d8ae3f7524}
+{\bfseries Value:}
+\begin{DoxyCode}
+((var) = (((UINT32)(var) & ~fieldName##_MASK) | \
+              MAKE_BITFIELD(fieldName, bitFieldValue)))
+\end{DoxyCode}
+
+
+Set a bitfield. 
+
+This macro sets a new value for a bitfield in the given variable. 
+\begin{DoxyParams}{Parameters}
+{\em var} & -\/ IN variable in which bitfield has to be set. \\
+\hline
+{\em fieldName} & -\/ IN name of the bitfield defined earlier using CREATE\_\-BITFIELD. \\
+\hline
+{\em bitFieldValue} & -\/ IN value to set for the bitfield. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 167 of file gsn\_\-bitfield\_\-macros.h.
+
+\hypertarget{a00657_ga99ab04466c2041af684f24ec71596969}{
+\index{GSN Bitfield Definitions@{GSN Bitfield Definitions}!TEST\_\-BITFIELD@{TEST\_\-BITFIELD}}
+\index{TEST\_\-BITFIELD@{TEST\_\-BITFIELD}!GSN Bitfield Definitions@{GSN Bitfield Definitions}}
+\subsubsection[{TEST\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define TEST\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{fieldName}
+\end{DoxyParamCaption}
+)~(({\bf UINT32})(var) \& fieldName\#\#\_\-MASK)}}
+\label{a00657_ga99ab04466c2041af684f24ec71596969}
+
+
+Test a bitfield. 
+
+This macro masks all the fields in the given variable except the one specified. 
+\begin{DoxyParams}{Parameters}
+{\em var} & -\/ IN variable in which masking has to be done. \\
+\hline
+{\em fieldName} & -\/ IN name of the bitfield defined earlier using CREATE\_\-BITFIELD. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This macro can be used to check if any bits are set in the bitfield. 
+\end{DoxyNote}
+
+
+Definition at line 122 of file gsn\_\-bitfield\_\-macros.h.
+

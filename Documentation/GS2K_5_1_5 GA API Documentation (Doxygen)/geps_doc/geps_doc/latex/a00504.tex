@@ -1,0 +1,558 @@
+\hypertarget{a00504}{
+\section{gsn\_\-hi.h File Reference}
+\label{a00504}\index{gsn\_\-hi.h@{gsn\_\-hi.h}}
+}
+
+
+wif message system header file This file contains wif message system APIs and definitions.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00735}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00086}{GSN\_\-HI\_\-IFC\_\-INFO}
+\item 
+struct \hyperlink{a00087}{GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM}
+\item 
+struct \hyperlink{a00085}{GSN\_\-HI\_\-CTX}
+\begin{DoxyCompactList}\small\item\em Shared Memory address Shared RAM (64 K) is used for trnsferring data and control messages between the WLAN and APP firmware. This defines the Address of the shared RAM. \end{DoxyCompactList}\item 
+struct \hyperlink{a00088}{GSN\_\-HI\_\-INIT\_\-PARAM}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00504_a44b95fe3f9838b63d4282a6a413a0420}{DP\_\-RAM\_\-SIZE}~0x10000
+\item 
+\#define \hyperlink{a00504_aec37f3e3a39dc1b34124eb3910354072}{DP\_\-RAM\_\-START\_\-ADDR}~0x20200000
+\item 
+\#define \hyperlink{a00504_ab962077fafe0d5c7cf939b161ee036cd}{RESET\_\-IND\_\-RESRVD\_\-SIZE}~68
+\item 
+\#define \hyperlink{a00504_ac44fe8ec6bb4d56cb75f549c72337159}{DP\_\-RAM\_\-END\_\-ADDR}~((DP\_\-RAM\_\-START\_\-ADDR + DP\_\-RAM\_\-SIZE) -\/ RESET\_\-IND\_\-RESRVD\_\-SIZE)
+\item 
+\#define \hyperlink{a00504_a6f1967f211946fb8b058b6f7f2a2e320}{RESET\_\-IND\_\-LOCATION}()~DP\_\-RAM\_\-END\_\-ADDR
+\item 
+\#define \hyperlink{a00504_a65fc079f82225f881f51d99d69997df7}{GSN\_\-TD\_\-Q\_\-MSG\_\-SIZE}~16
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{a00191}{GSN\_\-WIF\_\-Q\_\-DESC\_\-T} \hyperlink{a00504_a3905dedc9ed3f124095eadfed4f5abe5}{GSN\_\-HI\_\-Q\_\-DESC\_\-T}
+\item 
+typedef \hyperlink{a00191}{GSN\_\-WIF\_\-Q\_\-DESC\_\-HNDL\_\-T} \hyperlink{a00504_a73258a3b56bb06d739abb2feb99414a0}{GSN\_\-HI\_\-Q\_\-DESC\_\-HNDL\_\-T}
+\item 
+typedef \hyperlink{a00325}{GSN\_\-WIF\_\-DATA\_\-TD\_\-T} \hyperlink{a00504_a31706a5b40c3056a0b743a89f6c05133}{GSN\_\-HI\_\-DATA\_\-TD\_\-T}
+\item 
+typedef \hyperlink{a00322}{GSN\_\-WIF\_\-CTL\_\-TD\_\-T} \hyperlink{a00504_a5e4c16c7fbbdd09aba0c540321f7096c}{GSN\_\-HI\_\-CTL\_\-TD\_\-T}
+\item 
+typedef enum \hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0}{GSN\_\-HI\_\-TD\_\-Q\_\-SIZE} \hyperlink{a00504_acb6d991a21f18903617a0d1f76669715}{GSN\_\-HI\_\-TD\_\-Q\_\-SIZE\_\-T}
+\item 
+typedef enum \hyperlink{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9}{GSN\_\-HI\_\-BUFF\_\-SIZE} \hyperlink{a00504_a12fd1388defb0650e3a3e453d080a348}{GSN\_\-HI\_\-BUFF\_\-SIZE\_\-T}
+\item 
+typedef enum \hyperlink{a00504_a8a2a6fba490f79e27c9537b300d8f830}{GSN\_\-HI\_\-DEV\_\-INDX} \hyperlink{a00504_a8d08b031d5e7fe5884fe1e266ee7cc52}{GSN\_\-HI\_\-DEV\_\-INDX\_\-T}
+\item 
+typedef VOID($\ast$ \hyperlink{a00504_a9943ae3de497f108841d00f0b80ff390}{GSN\_\-HI\_\-CTRL\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00322}{GSN\_\-WIF\_\-CTL\_\-TD\_\-T} $\ast$pCtrlTD)
+\item 
+typedef VOID($\ast$ \hyperlink{a00504_a01ca163707bf2c00971f4e2a9b96fb46}{GSN\_\-HI\_\-DATA\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00325}{GSN\_\-WIF\_\-DATA\_\-TD\_\-T} $\ast$pDataTD)
+\item 
+typedef struct \hyperlink{a00086}{GSN\_\-HI\_\-IFC\_\-INFO} \hyperlink{a00504_a15e46ea325aab2acdb718f26b2a03009}{GSN\_\-HI\_\-IFC\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00087}{GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM} \hyperlink{a00504_acdefdd55143ac5ad28ad1a8dcb797d24}{GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM\_\-T}
+\item 
+typedef struct \hyperlink{a00085}{GSN\_\-HI\_\-CTX} \hyperlink{a00623_gab04b88d48bd4d71618f6790808c3484c}{GSN\_\-HI\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em Shared Memory address Shared RAM (64 K) is used for trnsferring data and control messages between the WLAN and APP firmware. This defines the Address of the shared RAM. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00088}{GSN\_\-HI\_\-INIT\_\-PARAM} \hyperlink{a00504_add93d994a6bf408b8e0743f1d249a7ca}{GSN\_\-HI\_\-INIT\_\-PARAM\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0}{GSN\_\-HI\_\-TD\_\-Q\_\-SIZE} \{ \par
+\hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0adb05a0a98aa19d5b26468e4f229578ca}{GSN\_\-HI\_\-DTX\_\-RDY\_\-Q\_\-SIZE} =  8, 
+\par
+\hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0aebe6250ea6b40cfb0d708fab7ea70273}{GSN\_\-HI\_\-DTX\_\-DONE\_\-Q\_\-SIZE} =  8, 
+\par
+\hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0a57988ca60743c9bde377391f8e404561}{GSN\_\-HI\_\-DRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE} =  8, 
+\par
+\hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0a1baf70d44bfdf7ae99453e3131d28e57}{GSN\_\-HI\_\-DRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE} =  8, 
+\par
+\hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0aadd4f8c99bf54bb3241e7d17b7b405b3}{GSN\_\-HI\_\-DRX\_\-DONE\_\-Q\_\-SIZE} =  8, 
+\par
+\hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0ab55b2008d0889fc86c250135941c5bad}{GSN\_\-HI\_\-CTX\_\-RDY\_\-Q\_\-SIZE} =  8, 
+\par
+\hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0a19875a72deff70604132ffeb11f59b11}{GSN\_\-HI\_\-CTX\_\-DONE\_\-Q\_\-SIZE} =  8, 
+\par
+\hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0a1d31ce26675049a23087eb9b632dde4a}{GSN\_\-HI\_\-CRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE} =  8, 
+\par
+\hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0abd3cc8ddc734b511245f331b06663dda}{GSN\_\-HI\_\-CRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE} =  8, 
+\par
+\hyperlink{a00504_a3b998e699fabd8ac8a6463c5645113a0a246b30db176c13630ef9b0b36e9437f2}{GSN\_\-HI\_\-CRX\_\-DONE\_\-Q\_\-SIZE} =  8
+ \}
+\item 
+enum \hyperlink{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9}{GSN\_\-HI\_\-BUFF\_\-SIZE} \{ \par
+\hyperlink{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9ae722ffbaba09e88f2d0e3bd21723e5de}{GSN\_\-HI\_\-DRX\_\-SBUFF\_\-SIZE} =  128, 
+\par
+\hyperlink{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9a849863beb077e95f467314f93fd17761}{GSN\_\-HI\_\-DRX\_\-LBUFF\_\-SIZE} =  1600, 
+\par
+\hyperlink{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9a46de337fa76c358c91c60c752e5dd106}{GSN\_\-HI\_\-CRX\_\-SBUFF\_\-SIZE} =  128, 
+\par
+\hyperlink{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9ac29709a63467628e63d52b5b7f94b68f}{GSN\_\-HI\_\-CRX\_\-LBUFF\_\-SIZE} =  1600
+ \}
+\item 
+enum \hyperlink{a00504_a8a2a6fba490f79e27c9537b300d8f830}{GSN\_\-HI\_\-DEV\_\-INDX} \{ \par
+\hyperlink{a00504_a8a2a6fba490f79e27c9537b300d8f830a02a620b4de54ddafb59811f01854a988}{GSN\_\-HI\_\-DEV\_\-INDX\_\-0}, 
+\par
+\hyperlink{a00504_a8a2a6fba490f79e27c9537b300d8f830a4b7666e86a4e4290b97f1dd2975d2dda}{GSN\_\-Hi\_\-DEV\_\-INDX\_\-1}, 
+\par
+\hyperlink{a00504_a8a2a6fba490f79e27c9537b300d8f830a1d001a61175a0eb3cb31828cff627621}{GSN\_\-Hi\_\-DEV\_\-INDX\_\-2}, 
+\par
+\hyperlink{a00504_a8a2a6fba490f79e27c9537b300d8f830a2514241b6314f36256d680c3c1bcccc3}{GSN\_\-HI\_\-DEV\_\-INDX\_\-MAX}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00623_ga9d165724225b153f84dcf1184ebcf044}{GsnHi\_\-Init} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00088}{GSN\_\-HI\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Initialise Message System. This function initialises the Wif Message system. This wif message system contains the mailbox and the shared memory for message exchange between the WLAN and the APP Fw. All the messages data and Control, are exchanged using the shared RAM. The Hw mail box itself is used for indicating the messages available. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00504_a1a12a1d12a90b2c1a1364f14488c6746}{GsnHi\_\-CtrlSend} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00608_a6fed68726c005805e6c3841b055b1b8b}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-T} hiClass, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} devIndex, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} reqAPI, VOID $\ast$pReq, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} reqSize)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00504_abd4555713b0cfa991359c10ec74bf0b3}{GsnHi\_\-DataSend} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00608_a6fed68726c005805e6c3841b055b1b8b}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-T} hiClass, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} devIndex, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msgId, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$data, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} pktId)
+\item 
+PUBLIC VOID \hyperlink{a00504_afe301e46d683e5d7e8106318e70fe648}{GsnHi\_\-BootReqSend} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00348}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-T} $\ast$pBootReq)
+\item 
+VOID \hyperlink{a00504_a4966461f5997bca9c2640279059cb840}{GsnHi\_\-InterfaceRegister} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00087}{GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+VOID \hyperlink{a00504_a4802c8ad658867c125be8ef68783103f}{GsnHi\_\-InterfaceDeregister} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} macIfNum)
+\item 
+VOID \hyperlink{a00504_a75b8d10adc581a5881e0e406494b1fb2}{GsnHi\_\-ResetIndCbReg} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00635_gad71afa8e03b517ec379abfa3cb39de92}{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx)
+\item 
+VOID $\ast$ \hyperlink{a00504_ae2e81f1cb1e6098cb4fbfa7bb7604f53}{GsnHi\_\-DataTxBufGet} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+wif message system header file This file contains wif message system APIs and definitions. 
+
+Definition in file \hyperlink{a00504_source}{gsn\_\-hi.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00504_ac44fe8ec6bb4d56cb75f549c72337159}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!DP\_\-RAM\_\-END\_\-ADDR@{DP\_\-RAM\_\-END\_\-ADDR}}
+\index{DP\_\-RAM\_\-END\_\-ADDR@{DP\_\-RAM\_\-END\_\-ADDR}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{DP\_\-RAM\_\-END\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DP\_\-RAM\_\-END\_\-ADDR~((DP\_\-RAM\_\-START\_\-ADDR + DP\_\-RAM\_\-SIZE) -\/ RESET\_\-IND\_\-RESRVD\_\-SIZE)}}
+\label{a00504_ac44fe8ec6bb4d56cb75f549c72337159}
+
+
+Definition at line 67 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_a44b95fe3f9838b63d4282a6a413a0420}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!DP\_\-RAM\_\-SIZE@{DP\_\-RAM\_\-SIZE}}
+\index{DP\_\-RAM\_\-SIZE@{DP\_\-RAM\_\-SIZE}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{DP\_\-RAM\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DP\_\-RAM\_\-SIZE~0x10000}}
+\label{a00504_a44b95fe3f9838b63d4282a6a413a0420}
+
+
+Definition at line 64 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_aec37f3e3a39dc1b34124eb3910354072}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!DP\_\-RAM\_\-START\_\-ADDR@{DP\_\-RAM\_\-START\_\-ADDR}}
+\index{DP\_\-RAM\_\-START\_\-ADDR@{DP\_\-RAM\_\-START\_\-ADDR}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{DP\_\-RAM\_\-START\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DP\_\-RAM\_\-START\_\-ADDR~0x20200000}}
+\label{a00504_aec37f3e3a39dc1b34124eb3910354072}
+
+
+Definition at line 65 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_a65fc079f82225f881f51d99d69997df7}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-TD\_\-Q\_\-MSG\_\-SIZE@{GSN\_\-TD\_\-Q\_\-MSG\_\-SIZE}}
+\index{GSN\_\-TD\_\-Q\_\-MSG\_\-SIZE@{GSN\_\-TD\_\-Q\_\-MSG\_\-SIZE}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-TD\_\-Q\_\-MSG\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-TD\_\-Q\_\-MSG\_\-SIZE~16}}
+\label{a00504_a65fc079f82225f881f51d99d69997df7}
+
+
+Definition at line 113 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_a6f1967f211946fb8b058b6f7f2a2e320}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!RESET\_\-IND\_\-LOCATION@{RESET\_\-IND\_\-LOCATION}}
+\index{RESET\_\-IND\_\-LOCATION@{RESET\_\-IND\_\-LOCATION}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{RESET\_\-IND\_\-LOCATION}]{\setlength{\rightskip}{0pt plus 5cm}\#define RESET\_\-IND\_\-LOCATION(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~DP\_\-RAM\_\-END\_\-ADDR}}
+\label{a00504_a6f1967f211946fb8b058b6f7f2a2e320}
+
+
+Definition at line 69 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_ab962077fafe0d5c7cf939b161ee036cd}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!RESET\_\-IND\_\-RESRVD\_\-SIZE@{RESET\_\-IND\_\-RESRVD\_\-SIZE}}
+\index{RESET\_\-IND\_\-RESRVD\_\-SIZE@{RESET\_\-IND\_\-RESRVD\_\-SIZE}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{RESET\_\-IND\_\-RESRVD\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define RESET\_\-IND\_\-RESRVD\_\-SIZE~68}}
+\label{a00504_ab962077fafe0d5c7cf939b161ee036cd}
+
+
+Definition at line 66 of file gsn\_\-hi.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00504_a12fd1388defb0650e3a3e453d080a348}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-BUFF\_\-SIZE\_\-T@{GSN\_\-HI\_\-BUFF\_\-SIZE\_\-T}}
+\index{GSN\_\-HI\_\-BUFF\_\-SIZE\_\-T@{GSN\_\-HI\_\-BUFF\_\-SIZE\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-BUFF\_\-SIZE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-HI\_\-BUFF\_\-SIZE} {\bf GSN\_\-HI\_\-BUFF\_\-SIZE\_\-T}}}
+\label{a00504_a12fd1388defb0650e3a3e453d080a348}
+\hypertarget{a00504_a5e4c16c7fbbdd09aba0c540321f7096c}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-CTL\_\-TD\_\-T@{GSN\_\-HI\_\-CTL\_\-TD\_\-T}}
+\index{GSN\_\-HI\_\-CTL\_\-TD\_\-T@{GSN\_\-HI\_\-CTL\_\-TD\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-CTL\_\-TD\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-CTL\_\-TD\_\-T} {\bf GSN\_\-HI\_\-CTL\_\-TD\_\-T}}}
+\label{a00504_a5e4c16c7fbbdd09aba0c540321f7096c}
+
+
+Definition at line 62 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_a9943ae3de497f108841d00f0b80ff390}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-CTRL\_\-CB\_\-T@{GSN\_\-HI\_\-CTRL\_\-CB\_\-T}}
+\index{GSN\_\-HI\_\-CTRL\_\-CB\_\-T@{GSN\_\-HI\_\-CTRL\_\-CB\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-CTRL\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-HI\_\-CTRL\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf GSN\_\-WIF\_\-CTL\_\-TD\_\-T} $\ast$pCtrlTD)}}
+\label{a00504_a9943ae3de497f108841d00f0b80ff390}
+
+
+Definition at line 129 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_a01ca163707bf2c00971f4e2a9b96fb46}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DATA\_\-CB\_\-T@{GSN\_\-HI\_\-DATA\_\-CB\_\-T}}
+\index{GSN\_\-HI\_\-DATA\_\-CB\_\-T@{GSN\_\-HI\_\-DATA\_\-CB\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-DATA\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-HI\_\-DATA\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf GSN\_\-WIF\_\-DATA\_\-TD\_\-T} $\ast$pDataTD)}}
+\label{a00504_a01ca163707bf2c00971f4e2a9b96fb46}
+
+
+Definition at line 131 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_a31706a5b40c3056a0b743a89f6c05133}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DATA\_\-TD\_\-T@{GSN\_\-HI\_\-DATA\_\-TD\_\-T}}
+\index{GSN\_\-HI\_\-DATA\_\-TD\_\-T@{GSN\_\-HI\_\-DATA\_\-TD\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-DATA\_\-TD\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-DATA\_\-TD\_\-T} {\bf GSN\_\-HI\_\-DATA\_\-TD\_\-T}}}
+\label{a00504_a31706a5b40c3056a0b743a89f6c05133}
+
+
+Definition at line 61 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_a8d08b031d5e7fe5884fe1e266ee7cc52}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DEV\_\-INDX\_\-T@{GSN\_\-HI\_\-DEV\_\-INDX\_\-T}}
+\index{GSN\_\-HI\_\-DEV\_\-INDX\_\-T@{GSN\_\-HI\_\-DEV\_\-INDX\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-DEV\_\-INDX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-HI\_\-DEV\_\-INDX} {\bf GSN\_\-HI\_\-DEV\_\-INDX\_\-T}}}
+\label{a00504_a8d08b031d5e7fe5884fe1e266ee7cc52}
+\hypertarget{a00504_a15e46ea325aab2acdb718f26b2a03009}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-IFC\_\-INFO\_\-T@{GSN\_\-HI\_\-IFC\_\-INFO\_\-T}}
+\index{GSN\_\-HI\_\-IFC\_\-INFO\_\-T@{GSN\_\-HI\_\-IFC\_\-INFO\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-IFC\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-HI\_\-IFC\_\-INFO} {\bf GSN\_\-HI\_\-IFC\_\-INFO\_\-T}}}
+\label{a00504_a15e46ea325aab2acdb718f26b2a03009}
+\hypertarget{a00504_acdefdd55143ac5ad28ad1a8dcb797d24}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM\_\-T@{GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM\_\-T}}
+\index{GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM\_\-T@{GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM} {\bf GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM\_\-T}}}
+\label{a00504_acdefdd55143ac5ad28ad1a8dcb797d24}
+\hypertarget{a00504_add93d994a6bf408b8e0743f1d249a7ca}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-INIT\_\-PARAM\_\-T@{GSN\_\-HI\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-HI\_\-INIT\_\-PARAM\_\-T@{GSN\_\-HI\_\-INIT\_\-PARAM\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-HI\_\-INIT\_\-PARAM} {\bf GSN\_\-HI\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00504_add93d994a6bf408b8e0743f1d249a7ca}
+\hypertarget{a00504_a73258a3b56bb06d739abb2feb99414a0}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-Q\_\-DESC\_\-HNDL\_\-T@{GSN\_\-HI\_\-Q\_\-DESC\_\-HNDL\_\-T}}
+\index{GSN\_\-HI\_\-Q\_\-DESC\_\-HNDL\_\-T@{GSN\_\-HI\_\-Q\_\-DESC\_\-HNDL\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-Q\_\-DESC\_\-HNDL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-Q\_\-DESC\_\-HNDL\_\-T} {\bf GSN\_\-HI\_\-Q\_\-DESC\_\-HNDL\_\-T}}}
+\label{a00504_a73258a3b56bb06d739abb2feb99414a0}
+
+
+Definition at line 59 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_a3905dedc9ed3f124095eadfed4f5abe5}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-Q\_\-DESC\_\-T@{GSN\_\-HI\_\-Q\_\-DESC\_\-T}}
+\index{GSN\_\-HI\_\-Q\_\-DESC\_\-T@{GSN\_\-HI\_\-Q\_\-DESC\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-Q\_\-DESC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-Q\_\-DESC\_\-T} {\bf GSN\_\-HI\_\-Q\_\-DESC\_\-T}}}
+\label{a00504_a3905dedc9ed3f124095eadfed4f5abe5}
+END of coresvcdoc. 
+
+Definition at line 58 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_acb6d991a21f18903617a0d1f76669715}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-TD\_\-Q\_\-SIZE\_\-T@{GSN\_\-HI\_\-TD\_\-Q\_\-SIZE\_\-T}}
+\index{GSN\_\-HI\_\-TD\_\-Q\_\-SIZE\_\-T@{GSN\_\-HI\_\-TD\_\-Q\_\-SIZE\_\-T}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-TD\_\-Q\_\-SIZE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-HI\_\-TD\_\-Q\_\-SIZE} {\bf GSN\_\-HI\_\-TD\_\-Q\_\-SIZE\_\-T}}}
+\label{a00504_acb6d991a21f18903617a0d1f76669715}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-BUFF\_\-SIZE@{GSN\_\-HI\_\-BUFF\_\-SIZE}}
+\index{GSN\_\-HI\_\-BUFF\_\-SIZE@{GSN\_\-HI\_\-BUFF\_\-SIZE}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-BUFF\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-HI\_\-BUFF\_\-SIZE}}}
+\label{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-HI\_\-DRX\_\-SBUFF\_\-SIZE@{GSN\_\-HI\_\-DRX\_\-SBUFF\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DRX\_\-SBUFF\_\-SIZE@{GSN\_\-HI\_\-DRX\_\-SBUFF\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9ae722ffbaba09e88f2d0e3bd21723e5de}{
+GSN\_\-HI\_\-DRX\_\-SBUFF\_\-SIZE}
+\label{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9ae722ffbaba09e88f2d0e3bd21723e5de}
+}]\index{GSN\_\-HI\_\-DRX\_\-LBUFF\_\-SIZE@{GSN\_\-HI\_\-DRX\_\-LBUFF\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DRX\_\-LBUFF\_\-SIZE@{GSN\_\-HI\_\-DRX\_\-LBUFF\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9a849863beb077e95f467314f93fd17761}{
+GSN\_\-HI\_\-DRX\_\-LBUFF\_\-SIZE}
+\label{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9a849863beb077e95f467314f93fd17761}
+}]\index{GSN\_\-HI\_\-CRX\_\-SBUFF\_\-SIZE@{GSN\_\-HI\_\-CRX\_\-SBUFF\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-CRX\_\-SBUFF\_\-SIZE@{GSN\_\-HI\_\-CRX\_\-SBUFF\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9a46de337fa76c358c91c60c752e5dd106}{
+GSN\_\-HI\_\-CRX\_\-SBUFF\_\-SIZE}
+\label{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9a46de337fa76c358c91c60c752e5dd106}
+}]\index{GSN\_\-HI\_\-CRX\_\-LBUFF\_\-SIZE@{GSN\_\-HI\_\-CRX\_\-LBUFF\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-CRX\_\-LBUFF\_\-SIZE@{GSN\_\-HI\_\-CRX\_\-LBUFF\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9ac29709a63467628e63d52b5b7f94b68f}{
+GSN\_\-HI\_\-CRX\_\-LBUFF\_\-SIZE}
+\label{a00504_a08d83a81fbc89f1d44c527a3f5ee68e9ac29709a63467628e63d52b5b7f94b68f}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 99 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_a8a2a6fba490f79e27c9537b300d8f830}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DEV\_\-INDX@{GSN\_\-HI\_\-DEV\_\-INDX}}
+\index{GSN\_\-HI\_\-DEV\_\-INDX@{GSN\_\-HI\_\-DEV\_\-INDX}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-DEV\_\-INDX}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-HI\_\-DEV\_\-INDX}}}
+\label{a00504_a8a2a6fba490f79e27c9537b300d8f830}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-HI\_\-DEV\_\-INDX\_\-0@{GSN\_\-HI\_\-DEV\_\-INDX\_\-0}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DEV\_\-INDX\_\-0@{GSN\_\-HI\_\-DEV\_\-INDX\_\-0}}\item[{\em 
+\hypertarget{a00504_a8a2a6fba490f79e27c9537b300d8f830a02a620b4de54ddafb59811f01854a988}{
+GSN\_\-HI\_\-DEV\_\-INDX\_\-0}
+\label{a00504_a8a2a6fba490f79e27c9537b300d8f830a02a620b4de54ddafb59811f01854a988}
+}]\index{GSN\_\-Hi\_\-DEV\_\-INDX\_\-1@{GSN\_\-Hi\_\-DEV\_\-INDX\_\-1}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-Hi\_\-DEV\_\-INDX\_\-1@{GSN\_\-Hi\_\-DEV\_\-INDX\_\-1}}\item[{\em 
+\hypertarget{a00504_a8a2a6fba490f79e27c9537b300d8f830a4b7666e86a4e4290b97f1dd2975d2dda}{
+GSN\_\-Hi\_\-DEV\_\-INDX\_\-1}
+\label{a00504_a8a2a6fba490f79e27c9537b300d8f830a4b7666e86a4e4290b97f1dd2975d2dda}
+}]\index{GSN\_\-Hi\_\-DEV\_\-INDX\_\-2@{GSN\_\-Hi\_\-DEV\_\-INDX\_\-2}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-Hi\_\-DEV\_\-INDX\_\-2@{GSN\_\-Hi\_\-DEV\_\-INDX\_\-2}}\item[{\em 
+\hypertarget{a00504_a8a2a6fba490f79e27c9537b300d8f830a1d001a61175a0eb3cb31828cff627621}{
+GSN\_\-Hi\_\-DEV\_\-INDX\_\-2}
+\label{a00504_a8a2a6fba490f79e27c9537b300d8f830a1d001a61175a0eb3cb31828cff627621}
+}]\index{GSN\_\-HI\_\-DEV\_\-INDX\_\-MAX@{GSN\_\-HI\_\-DEV\_\-INDX\_\-MAX}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DEV\_\-INDX\_\-MAX@{GSN\_\-HI\_\-DEV\_\-INDX\_\-MAX}}\item[{\em 
+\hypertarget{a00504_a8a2a6fba490f79e27c9537b300d8f830a2514241b6314f36256d680c3c1bcccc3}{
+GSN\_\-HI\_\-DEV\_\-INDX\_\-MAX}
+\label{a00504_a8a2a6fba490f79e27c9537b300d8f830a2514241b6314f36256d680c3c1bcccc3}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 121 of file gsn\_\-hi.h.
+
+\hypertarget{a00504_a3b998e699fabd8ac8a6463c5645113a0}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-TD\_\-Q\_\-SIZE@{GSN\_\-HI\_\-TD\_\-Q\_\-SIZE}}
+\index{GSN\_\-HI\_\-TD\_\-Q\_\-SIZE@{GSN\_\-HI\_\-TD\_\-Q\_\-SIZE}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GSN\_\-HI\_\-TD\_\-Q\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-HI\_\-TD\_\-Q\_\-SIZE}}}
+\label{a00504_a3b998e699fabd8ac8a6463c5645113a0}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-HI\_\-DTX\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-DTX\_\-RDY\_\-Q\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DTX\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-DTX\_\-RDY\_\-Q\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a3b998e699fabd8ac8a6463c5645113a0adb05a0a98aa19d5b26468e4f229578ca}{
+GSN\_\-HI\_\-DTX\_\-RDY\_\-Q\_\-SIZE}
+\label{a00504_a3b998e699fabd8ac8a6463c5645113a0adb05a0a98aa19d5b26468e4f229578ca}
+}]\index{GSN\_\-HI\_\-DTX\_\-DONE\_\-Q\_\-SIZE@{GSN\_\-HI\_\-DTX\_\-DONE\_\-Q\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DTX\_\-DONE\_\-Q\_\-SIZE@{GSN\_\-HI\_\-DTX\_\-DONE\_\-Q\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a3b998e699fabd8ac8a6463c5645113a0aebe6250ea6b40cfb0d708fab7ea70273}{
+GSN\_\-HI\_\-DTX\_\-DONE\_\-Q\_\-SIZE}
+\label{a00504_a3b998e699fabd8ac8a6463c5645113a0aebe6250ea6b40cfb0d708fab7ea70273}
+}]\index{GSN\_\-HI\_\-DRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-DRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-DRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a3b998e699fabd8ac8a6463c5645113a0a57988ca60743c9bde377391f8e404561}{
+GSN\_\-HI\_\-DRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE}
+\label{a00504_a3b998e699fabd8ac8a6463c5645113a0a57988ca60743c9bde377391f8e404561}
+}]\index{GSN\_\-HI\_\-DRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-DRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-DRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a3b998e699fabd8ac8a6463c5645113a0a1baf70d44bfdf7ae99453e3131d28e57}{
+GSN\_\-HI\_\-DRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE}
+\label{a00504_a3b998e699fabd8ac8a6463c5645113a0a1baf70d44bfdf7ae99453e3131d28e57}
+}]\index{GSN\_\-HI\_\-DRX\_\-DONE\_\-Q\_\-SIZE@{GSN\_\-HI\_\-DRX\_\-DONE\_\-Q\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-DRX\_\-DONE\_\-Q\_\-SIZE@{GSN\_\-HI\_\-DRX\_\-DONE\_\-Q\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a3b998e699fabd8ac8a6463c5645113a0aadd4f8c99bf54bb3241e7d17b7b405b3}{
+GSN\_\-HI\_\-DRX\_\-DONE\_\-Q\_\-SIZE}
+\label{a00504_a3b998e699fabd8ac8a6463c5645113a0aadd4f8c99bf54bb3241e7d17b7b405b3}
+}]\index{GSN\_\-HI\_\-CTX\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-CTX\_\-RDY\_\-Q\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-CTX\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-CTX\_\-RDY\_\-Q\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a3b998e699fabd8ac8a6463c5645113a0ab55b2008d0889fc86c250135941c5bad}{
+GSN\_\-HI\_\-CTX\_\-RDY\_\-Q\_\-SIZE}
+\label{a00504_a3b998e699fabd8ac8a6463c5645113a0ab55b2008d0889fc86c250135941c5bad}
+}]\index{GSN\_\-HI\_\-CTX\_\-DONE\_\-Q\_\-SIZE@{GSN\_\-HI\_\-CTX\_\-DONE\_\-Q\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-CTX\_\-DONE\_\-Q\_\-SIZE@{GSN\_\-HI\_\-CTX\_\-DONE\_\-Q\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a3b998e699fabd8ac8a6463c5645113a0a19875a72deff70604132ffeb11f59b11}{
+GSN\_\-HI\_\-CTX\_\-DONE\_\-Q\_\-SIZE}
+\label{a00504_a3b998e699fabd8ac8a6463c5645113a0a19875a72deff70604132ffeb11f59b11}
+}]\index{GSN\_\-HI\_\-CRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-CRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-CRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-CRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a3b998e699fabd8ac8a6463c5645113a0a1d31ce26675049a23087eb9b632dde4a}{
+GSN\_\-HI\_\-CRX\_\-SBUF\_\-RDY\_\-Q\_\-SIZE}
+\label{a00504_a3b998e699fabd8ac8a6463c5645113a0a1d31ce26675049a23087eb9b632dde4a}
+}]\index{GSN\_\-HI\_\-CRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-CRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-CRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE@{GSN\_\-HI\_\-CRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a3b998e699fabd8ac8a6463c5645113a0abd3cc8ddc734b511245f331b06663dda}{
+GSN\_\-HI\_\-CRX\_\-LBUF\_\-RDY\_\-Q\_\-SIZE}
+\label{a00504_a3b998e699fabd8ac8a6463c5645113a0abd3cc8ddc734b511245f331b06663dda}
+}]\index{GSN\_\-HI\_\-CRX\_\-DONE\_\-Q\_\-SIZE@{GSN\_\-HI\_\-CRX\_\-DONE\_\-Q\_\-SIZE}!gsn\_\-hi.h@{gsn\_\-hi.h}}\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GSN\_\-HI\_\-CRX\_\-DONE\_\-Q\_\-SIZE@{GSN\_\-HI\_\-CRX\_\-DONE\_\-Q\_\-SIZE}}\item[{\em 
+\hypertarget{a00504_a3b998e699fabd8ac8a6463c5645113a0a246b30db176c13630ef9b0b36e9437f2}{
+GSN\_\-HI\_\-CRX\_\-DONE\_\-Q\_\-SIZE}
+\label{a00504_a3b998e699fabd8ac8a6463c5645113a0a246b30db176c13630ef9b0b36e9437f2}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 77 of file gsn\_\-hi.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00504_afe301e46d683e5d7e8106318e70fe648}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GsnHi\_\-BootReqSend@{GsnHi\_\-BootReqSend}}
+\index{GsnHi\_\-BootReqSend@{GsnHi\_\-BootReqSend}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GsnHi\_\-BootReqSend}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnHi\_\-BootReqSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-CTX\_\-T} $\ast$}]{pHiCtx, }
+\item[{{\bf GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-T} $\ast$}]{pBootReq}
+\end{DoxyParamCaption}
+)}}
+\label{a00504_afe301e46d683e5d7e8106318e70fe648}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00504_afe301e46d683e5d7e8106318e70fe648_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00504_a1a12a1d12a90b2c1a1364f14488c6746}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GsnHi\_\-CtrlSend@{GsnHi\_\-CtrlSend}}
+\index{GsnHi\_\-CtrlSend@{GsnHi\_\-CtrlSend}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GsnHi\_\-CtrlSend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnHi\_\-CtrlSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-CTX\_\-T} $\ast$}]{pHiCtx, }
+\item[{{\bf GSN\_\-WIF\_\-HI\_\-CLASS\_\-T}}]{hiClass, }
+\item[{{\bf UINT8}}]{devIndex, }
+\item[{{\bf UINT32}}]{reqAPI, }
+\item[{VOID $\ast$}]{pReq, }
+\item[{{\bf UINT16}}]{reqSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00504_a1a12a1d12a90b2c1a1364f14488c6746}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=368pt]{a00504_a1a12a1d12a90b2c1a1364f14488c6746_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00504_abd4555713b0cfa991359c10ec74bf0b3}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GsnHi\_\-DataSend@{GsnHi\_\-DataSend}}
+\index{GsnHi\_\-DataSend@{GsnHi\_\-DataSend}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GsnHi\_\-DataSend}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnHi\_\-DataSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-CTX\_\-T} $\ast$}]{pHiCtx, }
+\item[{{\bf GSN\_\-WIF\_\-HI\_\-CLASS\_\-T}}]{hiClass, }
+\item[{{\bf UINT8}}]{devIndex, }
+\item[{{\bf UINT32}}]{msgId, }
+\item[{{\bf INT8} $\ast$}]{data, }
+\item[{{\bf UINT32}}]{dataLen, }
+\item[{{\bf UINT8}}]{pktId}
+\end{DoxyParamCaption}
+)}}
+\label{a00504_abd4555713b0cfa991359c10ec74bf0b3}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00504_abd4555713b0cfa991359c10ec74bf0b3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00504_ae2e81f1cb1e6098cb4fbfa7bb7604f53}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GsnHi\_\-DataTxBufGet@{GsnHi\_\-DataTxBufGet}}
+\index{GsnHi\_\-DataTxBufGet@{GsnHi\_\-DataTxBufGet}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GsnHi\_\-DataTxBufGet}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ GsnHi\_\-DataTxBufGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-CTX\_\-T} $\ast$}]{pHiCtx, }
+\item[{{\bf UINT32}}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{a00504_ae2e81f1cb1e6098cb4fbfa7bb7604f53}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00504_ae2e81f1cb1e6098cb4fbfa7bb7604f53_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00504_a4802c8ad658867c125be8ef68783103f}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GsnHi\_\-InterfaceDeregister@{GsnHi\_\-InterfaceDeregister}}
+\index{GsnHi\_\-InterfaceDeregister@{GsnHi\_\-InterfaceDeregister}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GsnHi\_\-InterfaceDeregister}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnHi\_\-InterfaceDeregister (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-CTX\_\-T} $\ast$}]{pHiCtx, }
+\item[{{\bf UINT8}}]{macIfNum}
+\end{DoxyParamCaption}
+)}}
+\label{a00504_a4802c8ad658867c125be8ef68783103f}
+\hypertarget{a00504_a4966461f5997bca9c2640279059cb840}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GsnHi\_\-InterfaceRegister@{GsnHi\_\-InterfaceRegister}}
+\index{GsnHi\_\-InterfaceRegister@{GsnHi\_\-InterfaceRegister}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GsnHi\_\-InterfaceRegister}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnHi\_\-InterfaceRegister (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-CTX\_\-T} $\ast$}]{pHiCtx, }
+\item[{{\bf GSN\_\-HI\_\-IFC\_\-REG\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00504_a4966461f5997bca9c2640279059cb840}
+\hypertarget{a00504_a75b8d10adc581a5881e0e406494b1fb2}{
+\index{gsn\_\-hi.h@{gsn\_\-hi.h}!GsnHi\_\-ResetIndCbReg@{GsnHi\_\-ResetIndCbReg}}
+\index{GsnHi\_\-ResetIndCbReg@{GsnHi\_\-ResetIndCbReg}!gsn_hi.h@{gsn\_\-hi.h}}
+\subsubsection[{GsnHi\_\-ResetIndCbReg}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnHi\_\-ResetIndCbReg (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-CTX\_\-T} $\ast$}]{pHiCtx, }
+\item[{{\bf GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-T}}]{cb, }
+\item[{VOID $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}
+\label{a00504_a75b8d10adc581a5881e0e406494b1fb2}
+
+
+Definition at line 286 of file gsn\_\-hi.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00504_a75b8d10adc581a5881e0e406494b1fb2_icgraph}
+\end{center}
+\end{figure}
+
+

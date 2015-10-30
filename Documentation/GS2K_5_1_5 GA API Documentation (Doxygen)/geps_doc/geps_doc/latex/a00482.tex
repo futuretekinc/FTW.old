@@ -1,0 +1,171 @@
+\hypertarget{a00482}{
+\section{gsn\_\-dhcp\_\-srvr.h File Reference}
+\label{a00482}\index{gsn\_\-dhcp\_\-srvr.h@{gsn\_\-dhcp\_\-srvr.h}}
+}
+
+
+GSN DHCP server public header. This file contains the public APIs and structures of Dhcp Server module.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+Include dependency graph for gsn\_\-dhcp\_\-srvr.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{a00710}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00711}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00046}{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}
+\item 
+struct \hyperlink{a00044}{GSN\_\-DHCP\_\-SRVR\_\-CFG}
+\begin{DoxyCompactList}\small\item\em DHCP server configuration structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00045}{GSN\_\-DHCP\_\-SRVR\_\-CLIENT}
+\begin{DoxyCompactList}\small\item\em DHCP server client structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR}
+\begin{DoxyCompactList}\small\item\em DHCP server context structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00482_acbcc05b8f8e281cd1d4a25697a4d7fd8}{GSN\_\-DHCP\_\-SRVR\_\-MAX\_\-CLIENTS}~64
+\item 
+\#define \hyperlink{a00482_af6676f1b75f7325a0d8f728b2ea24602}{optFields}~optFieldsUnion.optUnFields
+\item 
+\#define \hyperlink{a00482_a15c82ef794d07726fd4fa71e7c66ae50}{optDhcpMsg}~optFieldsUnion.optUnDhcpMsg
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00482_a4e4c9cdf544b20379a6322b6f2466dd2}{GSN\_\-DHCPSRVR\_\-CLIENT\_\-CONNECT\_\-NOTIFY\_\-FP} )(\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} IpAddr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$MacAddr)
+\item 
+typedef VOID($\ast$ \hyperlink{a00482_a05462468438cc4b6c8ec15d1a0cdecb6}{GSN\_\-DHCPSRVR\_\-CLIENT\_\-DISCONNECT\_\-NOTIFY\_\-FP} )(\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} IpAddr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$MacAddr)
+\item 
+typedef struct \hyperlink{a00046}{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG} \hyperlink{a00482_aeaa3dc7848019559e3dae3a916ff5608}{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG\_\-T}
+\item 
+typedef struct \hyperlink{a00044}{GSN\_\-DHCP\_\-SRVR\_\-CFG} \hyperlink{a00661_ga5a69af0df29b0dc56441470a22cf3ab3}{GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em DHCP server configuration structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00045}{GSN\_\-DHCP\_\-SRVR\_\-CLIENT} \hyperlink{a00661_ga54a36c901a1b4f316e5202de8b35def8}{GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T}
+\begin{DoxyCompactList}\small\item\em DHCP server client structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR} \hyperlink{a00661_ga894396f4b78d0bb4bd07286f4004fe8f}{GSN\_\-DHCP\_\-SRVR\_\-T}
+\begin{DoxyCompactList}\small\item\em DHCP server context structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00661_gac04808b6c079b9f20bb2a8d1a3805630}{GsnDhcpSrvr\_\-Start} (\hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$dhcpSrvr, \hyperlink{a00044}{GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T} $\ast$dhcpSrvrCfg)
+\begin{DoxyCompactList}\small\item\em Start DHCP server. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00661_ga1ed16aa486ac47bcaebe60b62132c569}{GsnDhcpSrvr\_\-Stop} (\hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$dhcpSrvr)
+\begin{DoxyCompactList}\small\item\em Stop the DHCP server. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00661_ga8fa3791028d92350c2d4ec346a0b8ffe}{GsnDhcpSrvr\_\-ClientDelete} (\hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$dhcpSrvr, \hyperlink{a00416}{GSN\_\-MAC\_\-ADDR\_\-T} $\ast$macAddr)
+\begin{DoxyCompactList}\small\item\em Delete the dhcp client entry. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00661_ga28fb2f33b4dd3b44f02c5278f081104a}{GsnDhcpSrvr\_\-ClientQuery} (\hyperlink{a00043}{GSN\_\-DHCP\_\-SRVR\_\-T} $\ast$pDhcpSrvr, \hyperlink{a00045}{GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T} $\ast$clients, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} count)
+\begin{DoxyCompactList}\small\item\em Query the dhcp client entries. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00482_ad786ccf0423ccf61677e29b66ec6fcd4}{GsnDhcpSrvr\_\-ClientConnectNotify} (\hyperlink{a00044}{GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T} $\ast$dhcpSrvrCfg, \hyperlink{a00482_a4e4c9cdf544b20379a6322b6f2466dd2}{GSN\_\-DHCPSRVR\_\-CLIENT\_\-CONNECT\_\-NOTIFY\_\-FP} ClientConnectNotify)
+\item 
+PUBLIC INLINE VOID \hyperlink{a00482_a970c900fb376b9a4afe7076ee1aa1a5a}{GsnDhcpSrvr\_\-ClientDisconnectNotify} (\hyperlink{a00044}{GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T} $\ast$dhcpSrvrCfg, \hyperlink{a00482_a05462468438cc4b6c8ec15d1a0cdecb6}{GSN\_\-DHCPSRVR\_\-CLIENT\_\-DISCONNECT\_\-NOTIFY\_\-FP} ClientDisconnNotify)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN DHCP server public header. This file contains the public APIs and structures of Dhcp Server module. 
+
+Definition in file \hyperlink{a00482_source}{gsn\_\-dhcp\_\-srvr.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00482_acbcc05b8f8e281cd1d4a25697a4d7fd8}{
+\index{gsn\_\-dhcp\_\-srvr.h@{gsn\_\-dhcp\_\-srvr.h}!GSN\_\-DHCP\_\-SRVR\_\-MAX\_\-CLIENTS@{GSN\_\-DHCP\_\-SRVR\_\-MAX\_\-CLIENTS}}
+\index{GSN\_\-DHCP\_\-SRVR\_\-MAX\_\-CLIENTS@{GSN\_\-DHCP\_\-SRVR\_\-MAX\_\-CLIENTS}!gsn_dhcp_srvr.h@{gsn\_\-dhcp\_\-srvr.h}}
+\subsubsection[{GSN\_\-DHCP\_\-SRVR\_\-MAX\_\-CLIENTS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DHCP\_\-SRVR\_\-MAX\_\-CLIENTS~64}}
+\label{a00482_acbcc05b8f8e281cd1d4a25697a4d7fd8}
+
+
+Definition at line 86 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00482_a15c82ef794d07726fd4fa71e7c66ae50}{
+\index{gsn\_\-dhcp\_\-srvr.h@{gsn\_\-dhcp\_\-srvr.h}!optDhcpMsg@{optDhcpMsg}}
+\index{optDhcpMsg@{optDhcpMsg}!gsn_dhcp_srvr.h@{gsn\_\-dhcp\_\-srvr.h}}
+\subsubsection[{optDhcpMsg}]{\setlength{\rightskip}{0pt plus 5cm}\#define optDhcpMsg~optFieldsUnion.optUnDhcpMsg}}
+\label{a00482_a15c82ef794d07726fd4fa71e7c66ae50}
+
+
+Definition at line 157 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00482_af6676f1b75f7325a0d8f728b2ea24602}{
+\index{gsn\_\-dhcp\_\-srvr.h@{gsn\_\-dhcp\_\-srvr.h}!optFields@{optFields}}
+\index{optFields@{optFields}!gsn_dhcp_srvr.h@{gsn\_\-dhcp\_\-srvr.h}}
+\subsubsection[{optFields}]{\setlength{\rightskip}{0pt plus 5cm}\#define optFields~optFieldsUnion.optUnFields}}
+\label{a00482_af6676f1b75f7325a0d8f728b2ea24602}
+
+
+Definition at line 156 of file gsn\_\-dhcp\_\-srvr.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00482_aeaa3dc7848019559e3dae3a916ff5608}{
+\index{gsn\_\-dhcp\_\-srvr.h@{gsn\_\-dhcp\_\-srvr.h}!GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG\_\-T@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG\_\-T}}
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG\_\-T@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG\_\-T}!gsn_dhcp_srvr.h@{gsn\_\-dhcp\_\-srvr.h}}
+\subsubsection[{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG} {\bf GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG\_\-T}}}
+\label{a00482_aeaa3dc7848019559e3dae3a916ff5608}
+\hypertarget{a00482_a4e4c9cdf544b20379a6322b6f2466dd2}{
+\index{gsn\_\-dhcp\_\-srvr.h@{gsn\_\-dhcp\_\-srvr.h}!GSN\_\-DHCPSRVR\_\-CLIENT\_\-CONNECT\_\-NOTIFY\_\-FP@{GSN\_\-DHCPSRVR\_\-CLIENT\_\-CONNECT\_\-NOTIFY\_\-FP}}
+\index{GSN\_\-DHCPSRVR\_\-CLIENT\_\-CONNECT\_\-NOTIFY\_\-FP@{GSN\_\-DHCPSRVR\_\-CLIENT\_\-CONNECT\_\-NOTIFY\_\-FP}!gsn_dhcp_srvr.h@{gsn\_\-dhcp\_\-srvr.h}}
+\subsubsection[{GSN\_\-DHCPSRVR\_\-CLIENT\_\-CONNECT\_\-NOTIFY\_\-FP}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-DHCPSRVR\_\-CLIENT\_\-CONNECT\_\-NOTIFY\_\-FP})({\bf UINT32} IpAddr, {\bf UINT8} $\ast$MacAddr)}}
+\label{a00482_a4e4c9cdf544b20379a6322b6f2466dd2}
+
+
+Definition at line 88 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00482_a05462468438cc4b6c8ec15d1a0cdecb6}{
+\index{gsn\_\-dhcp\_\-srvr.h@{gsn\_\-dhcp\_\-srvr.h}!GSN\_\-DHCPSRVR\_\-CLIENT\_\-DISCONNECT\_\-NOTIFY\_\-FP@{GSN\_\-DHCPSRVR\_\-CLIENT\_\-DISCONNECT\_\-NOTIFY\_\-FP}}
+\index{GSN\_\-DHCPSRVR\_\-CLIENT\_\-DISCONNECT\_\-NOTIFY\_\-FP@{GSN\_\-DHCPSRVR\_\-CLIENT\_\-DISCONNECT\_\-NOTIFY\_\-FP}!gsn_dhcp_srvr.h@{gsn\_\-dhcp\_\-srvr.h}}
+\subsubsection[{GSN\_\-DHCPSRVR\_\-CLIENT\_\-DISCONNECT\_\-NOTIFY\_\-FP}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-DHCPSRVR\_\-CLIENT\_\-DISCONNECT\_\-NOTIFY\_\-FP})({\bf UINT32} IpAddr, {\bf UINT8} $\ast$MacAddr)}}
+\label{a00482_a05462468438cc4b6c8ec15d1a0cdecb6}
+
+
+Definition at line 89 of file gsn\_\-dhcp\_\-srvr.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00482_ad786ccf0423ccf61677e29b66ec6fcd4}{
+\index{gsn\_\-dhcp\_\-srvr.h@{gsn\_\-dhcp\_\-srvr.h}!GsnDhcpSrvr\_\-ClientConnectNotify@{GsnDhcpSrvr\_\-ClientConnectNotify}}
+\index{GsnDhcpSrvr\_\-ClientConnectNotify@{GsnDhcpSrvr\_\-ClientConnectNotify}!gsn_dhcp_srvr.h@{gsn\_\-dhcp\_\-srvr.h}}
+\subsubsection[{GsnDhcpSrvr\_\-ClientConnectNotify}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnDhcpSrvr\_\-ClientConnectNotify (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T} $\ast$}]{dhcpSrvrCfg, }
+\item[{{\bf GSN\_\-DHCPSRVR\_\-CLIENT\_\-CONNECT\_\-NOTIFY\_\-FP}}]{ClientConnectNotify}
+\end{DoxyParamCaption}
+)}}
+\label{a00482_ad786ccf0423ccf61677e29b66ec6fcd4}
+
+
+Definition at line 309 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00482_a970c900fb376b9a4afe7076ee1aa1a5a}{
+\index{gsn\_\-dhcp\_\-srvr.h@{gsn\_\-dhcp\_\-srvr.h}!GsnDhcpSrvr\_\-ClientDisconnectNotify@{GsnDhcpSrvr\_\-ClientDisconnectNotify}}
+\index{GsnDhcpSrvr\_\-ClientDisconnectNotify@{GsnDhcpSrvr\_\-ClientDisconnectNotify}!gsn_dhcp_srvr.h@{gsn\_\-dhcp\_\-srvr.h}}
+\subsubsection[{GsnDhcpSrvr\_\-ClientDisconnectNotify}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnDhcpSrvr\_\-ClientDisconnectNotify (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T} $\ast$}]{dhcpSrvrCfg, }
+\item[{{\bf GSN\_\-DHCPSRVR\_\-CLIENT\_\-DISCONNECT\_\-NOTIFY\_\-FP}}]{ClientDisconnNotify}
+\end{DoxyParamCaption}
+)}}
+\label{a00482_a970c900fb376b9a4afe7076ee1aa1a5a}
+
+
+Definition at line 315 of file gsn\_\-dhcp\_\-srvr.h.
+

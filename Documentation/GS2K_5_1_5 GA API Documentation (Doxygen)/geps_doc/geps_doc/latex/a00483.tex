@@ -1,0 +1,701 @@
+\hypertarget{a00483}{
+\section{gsn\_\-dhcpv6\_\-server.h File Reference}
+\label{a00483}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}
+}
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}nx\_\-api.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}netx\_\-bsd\_\-layer$\backslash$nxd\_\-bsd.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-includes.h\char`\"{}}\par
+Include dependency graph for gsn\_\-dhcpv6\_\-server.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00712}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00017}{DUID\_\-STRUCT}
+\item 
+struct \hyperlink{a00448}{IA}
+\item 
+struct \hyperlink{a00012}{DHCPv6\_\-IANA}
+\item 
+struct \hyperlink{a00011}{CLIENT\_\-RECORD}
+\item 
+struct \hyperlink{a00047}{GSN\_\-DHCPv6\_\-SERVER}
+\item 
+struct \hyperlink{a00048}{GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00483_a41c5abad52342d95307159d75744be8d}{DHCPV6\_\-HW\_\-TYPE\_\-IEEE\_\-802}~0x06
+\item 
+\#define \hyperlink{a00483_a756a3ed2f077dd25f79697de051bf054}{DHCPV6\_\-SERVER\_\-UDP\_\-PORT}~547
+\item 
+\#define \hyperlink{a00483_a3ff50f033298c268838af66368fb4e69}{DHCPV6\_\-SERVER\_\-DUID\_\-VENDOR\_\-ASSIGNED\_\-LENGTH}~48
+\item 
+\#define \hyperlink{a00483_a9f73551d8a5dc5848f0697423c2decd0}{MAX\_\-CLIENTS\_\-SUPPORTED}~32
+\item 
+\#define \hyperlink{a00483_a4fad1fc7152257309c71c4bb436b2923}{DHCPV6\_\-DEFAULT\_\-PREFERRED\_\-TIME}~600
+\item 
+\#define \hyperlink{a00483_aa922293cdf6f9d7eb2565637343cc792}{DHCPV6\_\-DEFAULT\_\-VALID\_\-TIME}~1200
+\item 
+\#define \hyperlink{a00483_ada7a6a6dd1f42862da0d21c0c8e7ed28}{DHCPv6\_\-RESERVED\_\-ADDR}~1
+\item 
+\#define \hyperlink{a00483_a54d11cb48ed95c18bf82f06bd6a011d4}{GSN\_\-DHCPv6\_\-RUNNING}~1
+\item 
+\#define \hyperlink{a00483_a50c99b3c3347b1c54841c401a73f9b5a}{htonl\_\-t}(a)~NX\_\-CHANGE\_\-ULONG\_\-ENDIAN(a)
+\item 
+\#define \hyperlink{a00483_a0594815223be09a511e2c5a604eef26b}{htons\_\-t}(a)~NX\_\-CHANGE\_\-USHORT\_\-ENDIAN(a)
+\item 
+\#define \hyperlink{a00483_ab05acc32c9a175a532474a854e89595d}{REC\_\-BUF\_\-SIZE}~512
+\item 
+\#define \hyperlink{a00483_a4c6ddff94506616bb52409dfd2af1d0c}{SEND\_\-BUF\_\-SIZE}~256
+\item 
+\#define \hyperlink{a00483_af50ac01a495c2a42d607618c1b326169}{OPTION\_\-CLIENTID}~0x01
+\item 
+\#define \hyperlink{a00483_a05aee2eeda94c9918d3e3baa9ad941b5}{OPTION\_\-SERVERID}~0x02
+\item 
+\#define \hyperlink{a00483_afe5b550dba54955b26ecaba13992ff6b}{OPTION\_\-IA\_\-NA}~0x03
+\item 
+\#define \hyperlink{a00483_a9deb61f575a66b7b36e928f55777cfdd}{OPTION\_\-IA\_\-TA}~0x04
+\item 
+\#define \hyperlink{a00483_a957417efd54627f3c3ef58a75ff78bae}{OPTION\_\-IAADDR}~0x05
+\item 
+\#define \hyperlink{a00483_a628e8c190e5d28f8ac6165ea7611b06b}{OPTION\_\-ORO}~0x06
+\item 
+\#define \hyperlink{a00483_a6655906f14b043b58a5172ea8b152b2c}{OPTION\_\-PREFERENCE}~0x07
+\item 
+\#define \hyperlink{a00483_a008afb102f804ed2ccf48979730f78c1}{OPTION\_\-ELAPSED\_\-TIME}~0x08
+\item 
+\#define \hyperlink{a00483_a8fe8cf1baed9b7ab90125059271a38a6}{OPTION\_\-RELAY\_\-MSG}~0x09
+\item 
+\#define \hyperlink{a00483_a4565af575648cd808c7056e347c4caae}{OPTION\_\-AUTH}~0x0A
+\item 
+\#define \hyperlink{a00483_adf64a1d484ee547882ca38c6b17db3c3}{OPTION\_\-UNICAST}~0x0B
+\item 
+\#define \hyperlink{a00483_a1472aead1468caf555218588d11ec94c}{OPTION\_\-STATUS\_\-CODE}~0x0C
+\item 
+\#define \hyperlink{a00483_a0581c160f85ebbc711f548fe1687ddfb}{OPTION\_\-RAPID\_\-COMMIT}~0x0D
+\item 
+\#define \hyperlink{a00483_acd388b3fad92587c49a1ae26a1fea390}{OPTION\_\-USER\_\-CLASS}~0x0E
+\item 
+\#define \hyperlink{a00483_ab556f01905f90dfb043de286a2e5a67e}{OPTION\_\-VENDOR\_\-CLASS}~0x0F
+\item 
+\#define \hyperlink{a00483_a9c051d005e37e3e849110ec191ccfe86}{OPTION\_\-VENDOR\_\-OPTS}~0x10
+\item 
+\#define \hyperlink{a00483_a2974485f1ecc8f0cd4336e1c9a33fbbc}{OPTION\_\-INTERFACE\_\-ID}~0x11
+\item 
+\#define \hyperlink{a00483_a1c047b46fa235e8f41b3680aa139a4df}{OPTION\_\-RECONF\_\-MSG}~0x12
+\item 
+\#define \hyperlink{a00483_a69f013e566daff7e6b8ec286a94221c8}{OPTION\_\-RECONF\_\-ACCEPT}~0x13
+\item 
+\#define \hyperlink{a00483_af16b7d1106c0511b31c46b6c2e28b806}{GSN\_\-DHCPv6\_\-SUCCESS}~0
+\item 
+\#define \hyperlink{a00483_a0eebeb49f6cb24a60f608ec50ab0ece0}{GSN\_\-DHCPv6\_\-FAILURE}~1
+\item 
+\#define \hyperlink{a00483_a0ec0b99d472f09654e4863600f4bf23e}{GSN\_\-DHCPv6\_\-BIND\_\-ERROR}~2
+\item 
+\#define \hyperlink{a00483_a464da6d56a014f1b62a5a90824a1703a}{GSN\_\-DHCPv6\_\-INIT\_\-ERROR}~3
+\item 
+\#define \hyperlink{a00483_a091a751a7cc6acc2cffebd3a374319e8}{GSN\_\-DHCPv6\_\-BAD\_\-PACKET}~4
+\item 
+\#define \hyperlink{a00483_ad8ed41acfd9ed0e8a154bee5a02ad21e}{GSN\_\-DHCPv6\_\-INVALID\_\-GLOBAL\_\-ADDR}~5
+\item 
+\#define \hyperlink{a00483_a404520803dd797f133b20938b0526f90}{GSN\_\-DHCPv6\_\-MSG\_\-TYPE\_\-NOT\_\-SUPPORTED}~6
+\item 
+\#define \hyperlink{a00483_a5befd9eeb73dd236dc1bd30733150df5}{GSN\_\-DHCPv6\_\-NO\_\-IP}~33
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936}{DHCPv6\_\-MSG\_\-TYPE} \hyperlink{a00483_a1d34617a35a60e4b2a0ee8785a17cb8b}{DHCPv6\_\-MSG\_\-TYPE\_\-T}
+\item 
+typedef enum \hyperlink{a00483_afdbd2a591347668dffb23033d02a22c9}{DHCPv6\_\-DUID\_\-TYPE} \hyperlink{a00483_ad41483530dbb704887473bc9d5073275}{DHCPv6\_\-DUID\_\-TYPE\_\-T}
+\item 
+typedef struct \hyperlink{a00017}{DUID\_\-STRUCT} \hyperlink{a00483_a0e7dca41960d2d738d6e2afd7ac33dd3}{DUID\_\-STRUCT\_\-T}
+\item 
+typedef struct \hyperlink{a00448}{IA} \hyperlink{a00483_a951b7e63d22940987031a8c0cc927cd4}{IA\_\-T}
+\item 
+typedef struct \hyperlink{a00012}{DHCPv6\_\-IANA} \hyperlink{a00483_a3bf2eaff124af92a0ffcaeee86f2850c}{DHCPv6\_\-IANA\_\-T}
+\item 
+typedef struct \hyperlink{a00011}{CLIENT\_\-RECORD} \hyperlink{a00483_ad3e7a26d9bf9eabc18531f08fabd4444}{CLIENT\_\-RECORD\_\-T}
+\item 
+typedef struct \hyperlink{a00047}{GSN\_\-DHCPv6\_\-SERVER} \hyperlink{a00483_af7a0320c7608bfa8adb8049320a2f721}{GSN\_\-DHCPv6\_\-SERVER\_\-T}
+\item 
+typedef struct \hyperlink{a00048}{GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM} \hyperlink{a00483_a564505e22308b59f2e2b53b49b96a9d7}{GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936}{DHCPv6\_\-MSG\_\-TYPE} \{ \par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936a3501dcea2be16e6bdbec01e54e03ee8b}{SOLICIT} =  1, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936a0c0acdd86237dab3036d9df2b9c69ba1}{ADVERTISE}, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936abaf6b8e08edf0e9d2eb38551fed1fb39}{REQUEST}, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936a8547ec939211e497427e395b924a77f1}{CONFIRM}, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936a103f428952ce407b3e0677c52b97a897}{RENEW}, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936a46d3aa99fc1f60d30c4ba8c1763ab7c4}{REBIND}, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936a6bd05ac0fc10609a9dae953dc42a7a76}{REPLY}, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936ad590443978dc58d64aed5001f56efcdf}{RELEASE}, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936adc20371abb33737f66685f51a3802bc8}{DECLINE}, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936abfea36f66f9b1fbc703efc30c8250b6b}{RECONFIGURE}, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936a9986ba77fbf8cb405125a1941162a124}{INFORMATION\_\-REQUEST}, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936a6beb45fd93ff6d9e07c903cc828d0566}{RELAY\_\-FORW}, 
+\par
+\hyperlink{a00483_a89b22bc5b092a112c58f8ddd7dc17936aa15461f75e1693e1dd6bd74b7cd86ad1}{RELAY\_\-REPL}
+ \}
+\item 
+enum \hyperlink{a00483_afdbd2a591347668dffb23033d02a22c9}{DHCPv6\_\-DUID\_\-TYPE} \{ \par
+\hyperlink{a00483_afdbd2a591347668dffb23033d02a22c9a1e5a8e57f87080aa5fa02a5de0a35f2b}{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-TIME} =  1, 
+\par
+\hyperlink{a00483_afdbd2a591347668dffb23033d02a22c9a0fe511c16b1ce9631887f600398cb8d1}{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-VENDOR\_\-ASSIGNED}, 
+\par
+\hyperlink{a00483_afdbd2a591347668dffb23033d02a22c9a1cd91a39325c6c54265f6c68b7e178cf}{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-ONLY}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00483_a83ab55204cbb0c9629405de40c2837bc}{GsnDhcpv6Srvr\_\-start} (\hyperlink{a00047}{GSN\_\-DHCPv6\_\-SERVER\_\-T} $\ast$pDhcpv6Server, \hyperlink{a00048}{GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM\_\-T} $\ast$pDhcpv6InitParams)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00483_afe3c216d47a0972d1ca5e7c7d94c19e5}{GsnDhcpv6Srvr\_\-Stop} (\hyperlink{a00047}{GSN\_\-DHCPv6\_\-SERVER\_\-T} $\ast$pDhcpv6Server)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00483_a4fad1fc7152257309c71c4bb436b2923}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPV6\_\-DEFAULT\_\-PREFERRED\_\-TIME@{DHCPV6\_\-DEFAULT\_\-PREFERRED\_\-TIME}}
+\index{DHCPV6\_\-DEFAULT\_\-PREFERRED\_\-TIME@{DHCPV6\_\-DEFAULT\_\-PREFERRED\_\-TIME}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DHCPV6\_\-DEFAULT\_\-PREFERRED\_\-TIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define DHCPV6\_\-DEFAULT\_\-PREFERRED\_\-TIME~600}}
+\label{a00483_a4fad1fc7152257309c71c4bb436b2923}
+
+
+Definition at line 55 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_aa922293cdf6f9d7eb2565637343cc792}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPV6\_\-DEFAULT\_\-VALID\_\-TIME@{DHCPV6\_\-DEFAULT\_\-VALID\_\-TIME}}
+\index{DHCPV6\_\-DEFAULT\_\-VALID\_\-TIME@{DHCPV6\_\-DEFAULT\_\-VALID\_\-TIME}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DHCPV6\_\-DEFAULT\_\-VALID\_\-TIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define DHCPV6\_\-DEFAULT\_\-VALID\_\-TIME~1200}}
+\label{a00483_aa922293cdf6f9d7eb2565637343cc792}
+
+
+Definition at line 57 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a41c5abad52342d95307159d75744be8d}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPV6\_\-HW\_\-TYPE\_\-IEEE\_\-802@{DHCPV6\_\-HW\_\-TYPE\_\-IEEE\_\-802}}
+\index{DHCPV6\_\-HW\_\-TYPE\_\-IEEE\_\-802@{DHCPV6\_\-HW\_\-TYPE\_\-IEEE\_\-802}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DHCPV6\_\-HW\_\-TYPE\_\-IEEE\_\-802}]{\setlength{\rightskip}{0pt plus 5cm}\#define DHCPV6\_\-HW\_\-TYPE\_\-IEEE\_\-802~0x06}}
+\label{a00483_a41c5abad52342d95307159d75744be8d}
+
+
+Definition at line 47 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_ada7a6a6dd1f42862da0d21c0c8e7ed28}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPv6\_\-RESERVED\_\-ADDR@{DHCPv6\_\-RESERVED\_\-ADDR}}
+\index{DHCPv6\_\-RESERVED\_\-ADDR@{DHCPv6\_\-RESERVED\_\-ADDR}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DHCPv6\_\-RESERVED\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DHCPv6\_\-RESERVED\_\-ADDR~1}}
+\label{a00483_ada7a6a6dd1f42862da0d21c0c8e7ed28}
+
+
+Definition at line 60 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a3ff50f033298c268838af66368fb4e69}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPV6\_\-SERVER\_\-DUID\_\-VENDOR\_\-ASSIGNED\_\-LENGTH@{DHCPV6\_\-SERVER\_\-DUID\_\-VENDOR\_\-ASSIGNED\_\-LENGTH}}
+\index{DHCPV6\_\-SERVER\_\-DUID\_\-VENDOR\_\-ASSIGNED\_\-LENGTH@{DHCPV6\_\-SERVER\_\-DUID\_\-VENDOR\_\-ASSIGNED\_\-LENGTH}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DHCPV6\_\-SERVER\_\-DUID\_\-VENDOR\_\-ASSIGNED\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define DHCPV6\_\-SERVER\_\-DUID\_\-VENDOR\_\-ASSIGNED\_\-LENGTH~48}}
+\label{a00483_a3ff50f033298c268838af66368fb4e69}
+
+
+Definition at line 51 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a756a3ed2f077dd25f79697de051bf054}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPV6\_\-SERVER\_\-UDP\_\-PORT@{DHCPV6\_\-SERVER\_\-UDP\_\-PORT}}
+\index{DHCPV6\_\-SERVER\_\-UDP\_\-PORT@{DHCPV6\_\-SERVER\_\-UDP\_\-PORT}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DHCPV6\_\-SERVER\_\-UDP\_\-PORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DHCPV6\_\-SERVER\_\-UDP\_\-PORT~547}}
+\label{a00483_a756a3ed2f077dd25f79697de051bf054}
+
+
+Definition at line 49 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a091a751a7cc6acc2cffebd3a374319e8}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GSN\_\-DHCPv6\_\-BAD\_\-PACKET@{GSN\_\-DHCPv6\_\-BAD\_\-PACKET}}
+\index{GSN\_\-DHCPv6\_\-BAD\_\-PACKET@{GSN\_\-DHCPv6\_\-BAD\_\-PACKET}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GSN\_\-DHCPv6\_\-BAD\_\-PACKET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DHCPv6\_\-BAD\_\-PACKET~4}}
+\label{a00483_a091a751a7cc6acc2cffebd3a374319e8}
+
+
+Definition at line 120 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a0ec0b99d472f09654e4863600f4bf23e}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GSN\_\-DHCPv6\_\-BIND\_\-ERROR@{GSN\_\-DHCPv6\_\-BIND\_\-ERROR}}
+\index{GSN\_\-DHCPv6\_\-BIND\_\-ERROR@{GSN\_\-DHCPv6\_\-BIND\_\-ERROR}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GSN\_\-DHCPv6\_\-BIND\_\-ERROR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DHCPv6\_\-BIND\_\-ERROR~2}}
+\label{a00483_a0ec0b99d472f09654e4863600f4bf23e}
+
+
+Definition at line 118 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a0eebeb49f6cb24a60f608ec50ab0ece0}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GSN\_\-DHCPv6\_\-FAILURE@{GSN\_\-DHCPv6\_\-FAILURE}}
+\index{GSN\_\-DHCPv6\_\-FAILURE@{GSN\_\-DHCPv6\_\-FAILURE}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GSN\_\-DHCPv6\_\-FAILURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DHCPv6\_\-FAILURE~1}}
+\label{a00483_a0eebeb49f6cb24a60f608ec50ab0ece0}
+
+
+Definition at line 117 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a464da6d56a014f1b62a5a90824a1703a}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GSN\_\-DHCPv6\_\-INIT\_\-ERROR@{GSN\_\-DHCPv6\_\-INIT\_\-ERROR}}
+\index{GSN\_\-DHCPv6\_\-INIT\_\-ERROR@{GSN\_\-DHCPv6\_\-INIT\_\-ERROR}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GSN\_\-DHCPv6\_\-INIT\_\-ERROR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DHCPv6\_\-INIT\_\-ERROR~3}}
+\label{a00483_a464da6d56a014f1b62a5a90824a1703a}
+
+
+Definition at line 119 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_ad8ed41acfd9ed0e8a154bee5a02ad21e}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GSN\_\-DHCPv6\_\-INVALID\_\-GLOBAL\_\-ADDR@{GSN\_\-DHCPv6\_\-INVALID\_\-GLOBAL\_\-ADDR}}
+\index{GSN\_\-DHCPv6\_\-INVALID\_\-GLOBAL\_\-ADDR@{GSN\_\-DHCPv6\_\-INVALID\_\-GLOBAL\_\-ADDR}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GSN\_\-DHCPv6\_\-INVALID\_\-GLOBAL\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DHCPv6\_\-INVALID\_\-GLOBAL\_\-ADDR~5}}
+\label{a00483_ad8ed41acfd9ed0e8a154bee5a02ad21e}
+
+
+Definition at line 121 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a404520803dd797f133b20938b0526f90}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GSN\_\-DHCPv6\_\-MSG\_\-TYPE\_\-NOT\_\-SUPPORTED@{GSN\_\-DHCPv6\_\-MSG\_\-TYPE\_\-NOT\_\-SUPPORTED}}
+\index{GSN\_\-DHCPv6\_\-MSG\_\-TYPE\_\-NOT\_\-SUPPORTED@{GSN\_\-DHCPv6\_\-MSG\_\-TYPE\_\-NOT\_\-SUPPORTED}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GSN\_\-DHCPv6\_\-MSG\_\-TYPE\_\-NOT\_\-SUPPORTED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DHCPv6\_\-MSG\_\-TYPE\_\-NOT\_\-SUPPORTED~6}}
+\label{a00483_a404520803dd797f133b20938b0526f90}
+
+
+Definition at line 122 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a5befd9eeb73dd236dc1bd30733150df5}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GSN\_\-DHCPv6\_\-NO\_\-IP@{GSN\_\-DHCPv6\_\-NO\_\-IP}}
+\index{GSN\_\-DHCPv6\_\-NO\_\-IP@{GSN\_\-DHCPv6\_\-NO\_\-IP}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GSN\_\-DHCPv6\_\-NO\_\-IP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DHCPv6\_\-NO\_\-IP~33}}
+\label{a00483_a5befd9eeb73dd236dc1bd30733150df5}
+
+
+Definition at line 123 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a54d11cb48ed95c18bf82f06bd6a011d4}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GSN\_\-DHCPv6\_\-RUNNING@{GSN\_\-DHCPv6\_\-RUNNING}}
+\index{GSN\_\-DHCPv6\_\-RUNNING@{GSN\_\-DHCPv6\_\-RUNNING}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GSN\_\-DHCPv6\_\-RUNNING}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DHCPv6\_\-RUNNING~1}}
+\label{a00483_a54d11cb48ed95c18bf82f06bd6a011d4}
+
+
+Definition at line 62 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_af16b7d1106c0511b31c46b6c2e28b806}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GSN\_\-DHCPv6\_\-SUCCESS@{GSN\_\-DHCPv6\_\-SUCCESS}}
+\index{GSN\_\-DHCPv6\_\-SUCCESS@{GSN\_\-DHCPv6\_\-SUCCESS}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GSN\_\-DHCPv6\_\-SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DHCPv6\_\-SUCCESS~0}}
+\label{a00483_af16b7d1106c0511b31c46b6c2e28b806}
+
+
+Definition at line 116 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a50c99b3c3347b1c54841c401a73f9b5a}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!htonl\_\-t@{htonl\_\-t}}
+\index{htonl\_\-t@{htonl\_\-t}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{htonl\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}\#define htonl\_\-t(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~NX\_\-CHANGE\_\-ULONG\_\-ENDIAN(a)}}
+\label{a00483_a50c99b3c3347b1c54841c401a73f9b5a}
+
+
+Definition at line 65 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a0594815223be09a511e2c5a604eef26b}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!htons\_\-t@{htons\_\-t}}
+\index{htons\_\-t@{htons\_\-t}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{htons\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}\#define htons\_\-t(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~NX\_\-CHANGE\_\-USHORT\_\-ENDIAN(a)}}
+\label{a00483_a0594815223be09a511e2c5a604eef26b}
+
+
+Definition at line 67 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a9f73551d8a5dc5848f0697423c2decd0}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!MAX\_\-CLIENTS\_\-SUPPORTED@{MAX\_\-CLIENTS\_\-SUPPORTED}}
+\index{MAX\_\-CLIENTS\_\-SUPPORTED@{MAX\_\-CLIENTS\_\-SUPPORTED}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{MAX\_\-CLIENTS\_\-SUPPORTED}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-CLIENTS\_\-SUPPORTED~32}}
+\label{a00483_a9f73551d8a5dc5848f0697423c2decd0}
+
+
+Definition at line 53 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a4565af575648cd808c7056e347c4caae}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-AUTH@{OPTION\_\-AUTH}}
+\index{OPTION\_\-AUTH@{OPTION\_\-AUTH}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-AUTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-AUTH~0x0A}}
+\label{a00483_a4565af575648cd808c7056e347c4caae}
+
+
+Definition at line 103 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_af50ac01a495c2a42d607618c1b326169}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-CLIENTID@{OPTION\_\-CLIENTID}}
+\index{OPTION\_\-CLIENTID@{OPTION\_\-CLIENTID}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-CLIENTID}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-CLIENTID~0x01}}
+\label{a00483_af50ac01a495c2a42d607618c1b326169}
+
+
+Definition at line 94 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a008afb102f804ed2ccf48979730f78c1}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-ELAPSED\_\-TIME@{OPTION\_\-ELAPSED\_\-TIME}}
+\index{OPTION\_\-ELAPSED\_\-TIME@{OPTION\_\-ELAPSED\_\-TIME}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-ELAPSED\_\-TIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-ELAPSED\_\-TIME~0x08}}
+\label{a00483_a008afb102f804ed2ccf48979730f78c1}
+
+
+Definition at line 101 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_afe5b550dba54955b26ecaba13992ff6b}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-IA\_\-NA@{OPTION\_\-IA\_\-NA}}
+\index{OPTION\_\-IA\_\-NA@{OPTION\_\-IA\_\-NA}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-IA\_\-NA}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-IA\_\-NA~0x03}}
+\label{a00483_afe5b550dba54955b26ecaba13992ff6b}
+
+
+Definition at line 96 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a9deb61f575a66b7b36e928f55777cfdd}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-IA\_\-TA@{OPTION\_\-IA\_\-TA}}
+\index{OPTION\_\-IA\_\-TA@{OPTION\_\-IA\_\-TA}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-IA\_\-TA}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-IA\_\-TA~0x04}}
+\label{a00483_a9deb61f575a66b7b36e928f55777cfdd}
+
+
+Definition at line 97 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a957417efd54627f3c3ef58a75ff78bae}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-IAADDR@{OPTION\_\-IAADDR}}
+\index{OPTION\_\-IAADDR@{OPTION\_\-IAADDR}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-IAADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-IAADDR~0x05}}
+\label{a00483_a957417efd54627f3c3ef58a75ff78bae}
+
+
+Definition at line 98 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a2974485f1ecc8f0cd4336e1c9a33fbbc}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-INTERFACE\_\-ID@{OPTION\_\-INTERFACE\_\-ID}}
+\index{OPTION\_\-INTERFACE\_\-ID@{OPTION\_\-INTERFACE\_\-ID}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-INTERFACE\_\-ID}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-INTERFACE\_\-ID~0x11}}
+\label{a00483_a2974485f1ecc8f0cd4336e1c9a33fbbc}
+
+
+Definition at line 110 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a628e8c190e5d28f8ac6165ea7611b06b}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-ORO@{OPTION\_\-ORO}}
+\index{OPTION\_\-ORO@{OPTION\_\-ORO}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-ORO}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-ORO~0x06}}
+\label{a00483_a628e8c190e5d28f8ac6165ea7611b06b}
+
+
+Definition at line 99 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a6655906f14b043b58a5172ea8b152b2c}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-PREFERENCE@{OPTION\_\-PREFERENCE}}
+\index{OPTION\_\-PREFERENCE@{OPTION\_\-PREFERENCE}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-PREFERENCE}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-PREFERENCE~0x07}}
+\label{a00483_a6655906f14b043b58a5172ea8b152b2c}
+
+
+Definition at line 100 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a0581c160f85ebbc711f548fe1687ddfb}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-RAPID\_\-COMMIT@{OPTION\_\-RAPID\_\-COMMIT}}
+\index{OPTION\_\-RAPID\_\-COMMIT@{OPTION\_\-RAPID\_\-COMMIT}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-RAPID\_\-COMMIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-RAPID\_\-COMMIT~0x0D}}
+\label{a00483_a0581c160f85ebbc711f548fe1687ddfb}
+
+
+Definition at line 106 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a69f013e566daff7e6b8ec286a94221c8}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-RECONF\_\-ACCEPT@{OPTION\_\-RECONF\_\-ACCEPT}}
+\index{OPTION\_\-RECONF\_\-ACCEPT@{OPTION\_\-RECONF\_\-ACCEPT}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-RECONF\_\-ACCEPT}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-RECONF\_\-ACCEPT~0x13}}
+\label{a00483_a69f013e566daff7e6b8ec286a94221c8}
+
+
+Definition at line 112 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a1c047b46fa235e8f41b3680aa139a4df}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-RECONF\_\-MSG@{OPTION\_\-RECONF\_\-MSG}}
+\index{OPTION\_\-RECONF\_\-MSG@{OPTION\_\-RECONF\_\-MSG}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-RECONF\_\-MSG}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-RECONF\_\-MSG~0x12}}
+\label{a00483_a1c047b46fa235e8f41b3680aa139a4df}
+
+
+Definition at line 111 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a8fe8cf1baed9b7ab90125059271a38a6}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-RELAY\_\-MSG@{OPTION\_\-RELAY\_\-MSG}}
+\index{OPTION\_\-RELAY\_\-MSG@{OPTION\_\-RELAY\_\-MSG}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-RELAY\_\-MSG}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-RELAY\_\-MSG~0x09}}
+\label{a00483_a8fe8cf1baed9b7ab90125059271a38a6}
+
+
+Definition at line 102 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a05aee2eeda94c9918d3e3baa9ad941b5}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-SERVERID@{OPTION\_\-SERVERID}}
+\index{OPTION\_\-SERVERID@{OPTION\_\-SERVERID}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-SERVERID}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-SERVERID~0x02}}
+\label{a00483_a05aee2eeda94c9918d3e3baa9ad941b5}
+
+
+Definition at line 95 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a1472aead1468caf555218588d11ec94c}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-STATUS\_\-CODE@{OPTION\_\-STATUS\_\-CODE}}
+\index{OPTION\_\-STATUS\_\-CODE@{OPTION\_\-STATUS\_\-CODE}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-STATUS\_\-CODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-STATUS\_\-CODE~0x0C}}
+\label{a00483_a1472aead1468caf555218588d11ec94c}
+
+
+Definition at line 105 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_adf64a1d484ee547882ca38c6b17db3c3}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-UNICAST@{OPTION\_\-UNICAST}}
+\index{OPTION\_\-UNICAST@{OPTION\_\-UNICAST}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-UNICAST}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-UNICAST~0x0B}}
+\label{a00483_adf64a1d484ee547882ca38c6b17db3c3}
+
+
+Definition at line 104 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_acd388b3fad92587c49a1ae26a1fea390}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-USER\_\-CLASS@{OPTION\_\-USER\_\-CLASS}}
+\index{OPTION\_\-USER\_\-CLASS@{OPTION\_\-USER\_\-CLASS}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-USER\_\-CLASS}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-USER\_\-CLASS~0x0E}}
+\label{a00483_acd388b3fad92587c49a1ae26a1fea390}
+
+
+Definition at line 107 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_ab556f01905f90dfb043de286a2e5a67e}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-VENDOR\_\-CLASS@{OPTION\_\-VENDOR\_\-CLASS}}
+\index{OPTION\_\-VENDOR\_\-CLASS@{OPTION\_\-VENDOR\_\-CLASS}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-VENDOR\_\-CLASS}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-VENDOR\_\-CLASS~0x0F}}
+\label{a00483_ab556f01905f90dfb043de286a2e5a67e}
+
+
+Definition at line 108 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a9c051d005e37e3e849110ec191ccfe86}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!OPTION\_\-VENDOR\_\-OPTS@{OPTION\_\-VENDOR\_\-OPTS}}
+\index{OPTION\_\-VENDOR\_\-OPTS@{OPTION\_\-VENDOR\_\-OPTS}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{OPTION\_\-VENDOR\_\-OPTS}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPTION\_\-VENDOR\_\-OPTS~0x10}}
+\label{a00483_a9c051d005e37e3e849110ec191ccfe86}
+
+
+Definition at line 109 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_ab05acc32c9a175a532474a854e89595d}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!REC\_\-BUF\_\-SIZE@{REC\_\-BUF\_\-SIZE}}
+\index{REC\_\-BUF\_\-SIZE@{REC\_\-BUF\_\-SIZE}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{REC\_\-BUF\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define REC\_\-BUF\_\-SIZE~512}}
+\label{a00483_ab05acc32c9a175a532474a854e89595d}
+
+
+Definition at line 69 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a4c6ddff94506616bb52409dfd2af1d0c}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!SEND\_\-BUF\_\-SIZE@{SEND\_\-BUF\_\-SIZE}}
+\index{SEND\_\-BUF\_\-SIZE@{SEND\_\-BUF\_\-SIZE}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{SEND\_\-BUF\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SEND\_\-BUF\_\-SIZE~256}}
+\label{a00483_a4c6ddff94506616bb52409dfd2af1d0c}
+
+
+Definition at line 70 of file gsn\_\-dhcpv6\_\-server.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00483_ad3e7a26d9bf9eabc18531f08fabd4444}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!CLIENT\_\-RECORD\_\-T@{CLIENT\_\-RECORD\_\-T}}
+\index{CLIENT\_\-RECORD\_\-T@{CLIENT\_\-RECORD\_\-T}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{CLIENT\_\-RECORD\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf CLIENT\_\-RECORD} {\bf CLIENT\_\-RECORD\_\-T}}}
+\label{a00483_ad3e7a26d9bf9eabc18531f08fabd4444}
+\hypertarget{a00483_ad41483530dbb704887473bc9d5073275}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPv6\_\-DUID\_\-TYPE\_\-T@{DHCPv6\_\-DUID\_\-TYPE\_\-T}}
+\index{DHCPv6\_\-DUID\_\-TYPE\_\-T@{DHCPv6\_\-DUID\_\-TYPE\_\-T}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DHCPv6\_\-DUID\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf DHCPv6\_\-DUID\_\-TYPE} {\bf DHCPv6\_\-DUID\_\-TYPE\_\-T}}}
+\label{a00483_ad41483530dbb704887473bc9d5073275}
+\hypertarget{a00483_a3bf2eaff124af92a0ffcaeee86f2850c}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPv6\_\-IANA\_\-T@{DHCPv6\_\-IANA\_\-T}}
+\index{DHCPv6\_\-IANA\_\-T@{DHCPv6\_\-IANA\_\-T}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DHCPv6\_\-IANA\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf DHCPv6\_\-IANA} {\bf DHCPv6\_\-IANA\_\-T}}}
+\label{a00483_a3bf2eaff124af92a0ffcaeee86f2850c}
+\hypertarget{a00483_a1d34617a35a60e4b2a0ee8785a17cb8b}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPv6\_\-MSG\_\-TYPE\_\-T@{DHCPv6\_\-MSG\_\-TYPE\_\-T}}
+\index{DHCPv6\_\-MSG\_\-TYPE\_\-T@{DHCPv6\_\-MSG\_\-TYPE\_\-T}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DHCPv6\_\-MSG\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf DHCPv6\_\-MSG\_\-TYPE} {\bf DHCPv6\_\-MSG\_\-TYPE\_\-T}}}
+\label{a00483_a1d34617a35a60e4b2a0ee8785a17cb8b}
+\hypertarget{a00483_a0e7dca41960d2d738d6e2afd7ac33dd3}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DUID\_\-STRUCT\_\-T@{DUID\_\-STRUCT\_\-T}}
+\index{DUID\_\-STRUCT\_\-T@{DUID\_\-STRUCT\_\-T}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DUID\_\-STRUCT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf DUID\_\-STRUCT}  {\bf DUID\_\-STRUCT\_\-T}}}
+\label{a00483_a0e7dca41960d2d738d6e2afd7ac33dd3}
+\hypertarget{a00483_af7a0320c7608bfa8adb8049320a2f721}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GSN\_\-DHCPv6\_\-SERVER\_\-T@{GSN\_\-DHCPv6\_\-SERVER\_\-T}}
+\index{GSN\_\-DHCPv6\_\-SERVER\_\-T@{GSN\_\-DHCPv6\_\-SERVER\_\-T}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GSN\_\-DHCPv6\_\-SERVER\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DHCPv6\_\-SERVER} {\bf GSN\_\-DHCPv6\_\-SERVER\_\-T}}}
+\label{a00483_af7a0320c7608bfa8adb8049320a2f721}
+\hypertarget{a00483_a564505e22308b59f2e2b53b49b96a9d7}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM\_\-T@{GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM\_\-T@{GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM\_\-T}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM} {\bf GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00483_a564505e22308b59f2e2b53b49b96a9d7}
+\hypertarget{a00483_a951b7e63d22940987031a8c0cc927cd4}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!IA\_\-T@{IA\_\-T}}
+\index{IA\_\-T@{IA\_\-T}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{IA\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf IA} {\bf IA\_\-T}}}
+\label{a00483_a951b7e63d22940987031a8c0cc927cd4}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00483_afdbd2a591347668dffb23033d02a22c9}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPv6\_\-DUID\_\-TYPE@{DHCPv6\_\-DUID\_\-TYPE}}
+\index{DHCPv6\_\-DUID\_\-TYPE@{DHCPv6\_\-DUID\_\-TYPE}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DHCPv6\_\-DUID\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DHCPv6\_\-DUID\_\-TYPE}}}
+\label{a00483_afdbd2a591347668dffb23033d02a22c9}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-TIME@{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-TIME}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-TIME@{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-TIME}}\item[{\em 
+\hypertarget{a00483_afdbd2a591347668dffb23033d02a22c9a1e5a8e57f87080aa5fa02a5de0a35f2b}{
+DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-TIME}
+\label{a00483_afdbd2a591347668dffb23033d02a22c9a1e5a8e57f87080aa5fa02a5de0a35f2b}
+}]\index{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-VENDOR\_\-ASSIGNED@{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-VENDOR\_\-ASSIGNED}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-VENDOR\_\-ASSIGNED@{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-VENDOR\_\-ASSIGNED}}\item[{\em 
+\hypertarget{a00483_afdbd2a591347668dffb23033d02a22c9a0fe511c16b1ce9631887f600398cb8d1}{
+DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-VENDOR\_\-ASSIGNED}
+\label{a00483_afdbd2a591347668dffb23033d02a22c9a0fe511c16b1ce9631887f600398cb8d1}
+}]\index{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-ONLY@{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-ONLY}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-ONLY@{DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-ONLY}}\item[{\em 
+\hypertarget{a00483_afdbd2a591347668dffb23033d02a22c9a1cd91a39325c6c54265f6c68b7e178cf}{
+DHCPV6\_\-SERVER\_\-DUID\_\-TYPE\_\-LINK\_\-ONLY}
+\label{a00483_afdbd2a591347668dffb23033d02a22c9a1cd91a39325c6c54265f6c68b7e178cf}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 127 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DHCPv6\_\-MSG\_\-TYPE@{DHCPv6\_\-MSG\_\-TYPE}}
+\index{DHCPv6\_\-MSG\_\-TYPE@{DHCPv6\_\-MSG\_\-TYPE}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{DHCPv6\_\-MSG\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DHCPv6\_\-MSG\_\-TYPE}}}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{SOLICIT@{SOLICIT}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!SOLICIT@{SOLICIT}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936a3501dcea2be16e6bdbec01e54e03ee8b}{
+SOLICIT}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936a3501dcea2be16e6bdbec01e54e03ee8b}
+}]\index{ADVERTISE@{ADVERTISE}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!ADVERTISE@{ADVERTISE}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936a0c0acdd86237dab3036d9df2b9c69ba1}{
+ADVERTISE}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936a0c0acdd86237dab3036d9df2b9c69ba1}
+}]\index{REQUEST@{REQUEST}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!REQUEST@{REQUEST}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936abaf6b8e08edf0e9d2eb38551fed1fb39}{
+REQUEST}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936abaf6b8e08edf0e9d2eb38551fed1fb39}
+}]\index{CONFIRM@{CONFIRM}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!CONFIRM@{CONFIRM}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936a8547ec939211e497427e395b924a77f1}{
+CONFIRM}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936a8547ec939211e497427e395b924a77f1}
+}]\index{RENEW@{RENEW}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!RENEW@{RENEW}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936a103f428952ce407b3e0677c52b97a897}{
+RENEW}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936a103f428952ce407b3e0677c52b97a897}
+}]\index{REBIND@{REBIND}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!REBIND@{REBIND}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936a46d3aa99fc1f60d30c4ba8c1763ab7c4}{
+REBIND}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936a46d3aa99fc1f60d30c4ba8c1763ab7c4}
+}]\index{REPLY@{REPLY}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!REPLY@{REPLY}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936a6bd05ac0fc10609a9dae953dc42a7a76}{
+REPLY}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936a6bd05ac0fc10609a9dae953dc42a7a76}
+}]\index{RELEASE@{RELEASE}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!RELEASE@{RELEASE}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936ad590443978dc58d64aed5001f56efcdf}{
+RELEASE}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936ad590443978dc58d64aed5001f56efcdf}
+}]\index{DECLINE@{DECLINE}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!DECLINE@{DECLINE}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936adc20371abb33737f66685f51a3802bc8}{
+DECLINE}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936adc20371abb33737f66685f51a3802bc8}
+}]\index{RECONFIGURE@{RECONFIGURE}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!RECONFIGURE@{RECONFIGURE}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936abfea36f66f9b1fbc703efc30c8250b6b}{
+RECONFIGURE}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936abfea36f66f9b1fbc703efc30c8250b6b}
+}]\index{INFORMATION\_\-REQUEST@{INFORMATION\_\-REQUEST}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!INFORMATION\_\-REQUEST@{INFORMATION\_\-REQUEST}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936a9986ba77fbf8cb405125a1941162a124}{
+INFORMATION\_\-REQUEST}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936a9986ba77fbf8cb405125a1941162a124}
+}]\index{RELAY\_\-FORW@{RELAY\_\-FORW}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!RELAY\_\-FORW@{RELAY\_\-FORW}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936a6beb45fd93ff6d9e07c903cc828d0566}{
+RELAY\_\-FORW}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936a6beb45fd93ff6d9e07c903cc828d0566}
+}]\index{RELAY\_\-REPL@{RELAY\_\-REPL}!gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}}\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!RELAY\_\-REPL@{RELAY\_\-REPL}}\item[{\em 
+\hypertarget{a00483_a89b22bc5b092a112c58f8ddd7dc17936aa15461f75e1693e1dd6bd74b7cd86ad1}{
+RELAY\_\-REPL}
+\label{a00483_a89b22bc5b092a112c58f8ddd7dc17936aa15461f75e1693e1dd6bd74b7cd86ad1}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 75 of file gsn\_\-dhcpv6\_\-server.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00483_a83ab55204cbb0c9629405de40c2837bc}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GsnDhcpv6Srvr\_\-start@{GsnDhcpv6Srvr\_\-start}}
+\index{GsnDhcpv6Srvr\_\-start@{GsnDhcpv6Srvr\_\-start}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GsnDhcpv6Srvr\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnDhcpv6Srvr\_\-start (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DHCPv6\_\-SERVER\_\-T} $\ast$}]{pDhcpv6Server, }
+\item[{{\bf GSN\_\-DHCPV6\_\-SRVR\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pDhcpv6InitParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00483_a83ab55204cbb0c9629405de40c2837bc}
+\hypertarget{a00483_afe3c216d47a0972d1ca5e7c7d94c19e5}{
+\index{gsn\_\-dhcpv6\_\-server.h@{gsn\_\-dhcpv6\_\-server.h}!GsnDhcpv6Srvr\_\-Stop@{GsnDhcpv6Srvr\_\-Stop}}
+\index{GsnDhcpv6Srvr\_\-Stop@{GsnDhcpv6Srvr\_\-Stop}!gsn_dhcpv6_server.h@{gsn\_\-dhcpv6\_\-server.h}}
+\subsubsection[{GsnDhcpv6Srvr\_\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnDhcpv6Srvr\_\-Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DHCPv6\_\-SERVER\_\-T} $\ast$}]{pDhcpv6Server}
+\end{DoxyParamCaption}
+)}}
+\label{a00483_afe3c216d47a0972d1ca5e7c7d94c19e5}

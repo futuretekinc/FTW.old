@@ -1,0 +1,412 @@
+\hypertarget{a00648}{
+\section{GSN GPIO API}
+\label{a00648}\index{GSN GPIO API@{GSN GPIO API}}
+}
+
+
+This module configures, reads from, and writes to GPIO pins.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00018}{GPIO\_\-CALLBACK}
+\begin{DoxyCompactList}\small\item\em GPIO callback structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00648_gae6698a8151cd85d7dac2358199ed7c6e}{GSN\_\-GPIO\_\-CALLBACK\_\-FUNC\_\-T} )(\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} gpioNum, VOID $\ast$context)
+\begin{DoxyCompactList}\small\item\em The Callback Function Prototype. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00018}{GPIO\_\-CALLBACK} \hyperlink{a00648_ga8646a0bb88c00e7b2463984ae3466ac7}{GPIO\_\-CALLBACK\_\-T}
+\begin{DoxyCompactList}\small\item\em GPIO callback structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00648_gaff716caaf31f66ce12b16f91bb47c06a}{GSN\_\-GPIO\_\-INT\_\-TRIG\_\-T} \{ \par
+\hyperlink{a00648_ggaff716caaf31f66ce12b16f91bb47c06aa52a5bb11ea0fbbaeb8c0328e374c2170}{GSN\_\-GPIO\_\-INT\_\-PE\_\-TRIG}, 
+\par
+\hyperlink{a00648_ggaff716caaf31f66ce12b16f91bb47c06aa82a5e5bf12f8a3a17cd11b729b845b7c}{GSN\_\-GPIO\_\-INT\_\-NE\_\-TRIG}
+ \}
+\begin{DoxyCompactList}\small\item\em GPIO interrupt trigger enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00648_gaa78f67e1c5700e2d46ba586e2f2e2888}{GsnGpio\_\-Init} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap, \hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioDirBitMap)
+\begin{DoxyCompactList}\small\item\em This Function Initializes the GPIO. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga2d626ec26c8ffd4a364baa765eda47bb}{GsnGpio\_\-Read} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} $\ast$gpioBitMapValue, \hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Read Function. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga933dbb1d81c4ad5a793bcde69d62893a}{GsnGpio\_\-DirSet} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap, \hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioDirBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Direction Set. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_gaafee2b2c522249da06678f6f1ee1f965}{GsnGpio\_\-OutSet} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Out Set. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga1a63f62c863b21f969e07aad3b8b6de7}{GsnGpio\_\-OutIndvidualSet} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Out Set. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga39b91b13276fa91305f7fc7374251311}{GsnGpio\_\-OutClear} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Out Clear. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_gaba2b3db43960f2d257bcc9da83e51db4}{GsnGpio\_\-PEIntEnable} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Possitive Edge Interrupt Enable. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga9f8bfa1b71f64bd2dcf06ff51e085d26}{GsnGpio\_\-NEIntEnable} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Interrupt Enable. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga61b46966afa3dafd5fd49035a991aef9}{GsnGpio\_\-PEIntDisable} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Possitive Edge Interrupt Enable. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga170e15d6ae8011c0a008e6309715a23a}{GsnGpio\_\-NEIntDisable} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Interrupt Enable. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga4408d667f2fcbc51c669e8a8b25e2f6c}{GsnGpio\_\-PEIntClear} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Possitive edge Interrupt clear. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga4b1dc7062930fe980b86818e438c1cb0}{GsnGpio\_\-NEIntClear} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Interrupt Disable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module configures, reads from, and writes to GPIO pins. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00648_ga8646a0bb88c00e7b2463984ae3466ac7}{
+\index{GSN GPIO API@{GSN GPIO API}!GPIO\_\-CALLBACK\_\-T@{GPIO\_\-CALLBACK\_\-T}}
+\index{GPIO\_\-CALLBACK\_\-T@{GPIO\_\-CALLBACK\_\-T}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GPIO\_\-CALLBACK\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GPIO\_\-CALLBACK}  {\bf GPIO\_\-CALLBACK\_\-T}}}
+\label{a00648_ga8646a0bb88c00e7b2463984ae3466ac7}
+
+
+GPIO callback structure. 
+
+\hypertarget{a00648_gae6698a8151cd85d7dac2358199ed7c6e}{
+\index{GSN GPIO API@{GSN GPIO API}!GSN\_\-GPIO\_\-CALLBACK\_\-FUNC\_\-T@{GSN\_\-GPIO\_\-CALLBACK\_\-FUNC\_\-T}}
+\index{GSN\_\-GPIO\_\-CALLBACK\_\-FUNC\_\-T@{GSN\_\-GPIO\_\-CALLBACK\_\-FUNC\_\-T}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GSN\_\-GPIO\_\-CALLBACK\_\-FUNC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$  {\bf GSN\_\-GPIO\_\-CALLBACK\_\-FUNC\_\-T})({\bf UINT8} gpioNum, VOID $\ast$context)}}
+\label{a00648_gae6698a8151cd85d7dac2358199ed7c6e}
+
+
+The Callback Function Prototype. 
+
+The callback function takes two arguments:
+\begin{DoxyItemize}
+\item argument 1 is gpio number,
+\item argument 2 is the context pointer which is passed when the callback is registered. \begin{DoxySeeAlso}{See also}
+\hyperlink{a00648_gae6698a8151cd85d7dac2358199ed7c6e}{GSN\_\-GPIO\_\-CALLBACK\_\-FUNC\_\-T}. 
+\end{DoxySeeAlso}
+
+\end{DoxyItemize}
+
+Definition at line 101 of file gsn\_\-gpio.h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00648_gaff716caaf31f66ce12b16f91bb47c06a}{
+\index{GSN GPIO API@{GSN GPIO API}!GSN\_\-GPIO\_\-INT\_\-TRIG\_\-T@{GSN\_\-GPIO\_\-INT\_\-TRIG\_\-T}}
+\index{GSN\_\-GPIO\_\-INT\_\-TRIG\_\-T@{GSN\_\-GPIO\_\-INT\_\-TRIG\_\-T}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GSN\_\-GPIO\_\-INT\_\-TRIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-GPIO\_\-INT\_\-TRIG\_\-T}}}
+\label{a00648_gaff716caaf31f66ce12b16f91bb47c06a}
+
+
+GPIO interrupt trigger enum. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-GPIO\_\-INT\_\-PE\_\-TRIG@{GSN\_\-GPIO\_\-INT\_\-PE\_\-TRIG}!GSN GPIO API@{GSN GPIO API}}\index{GSN GPIO API@{GSN GPIO API}!GSN\_\-GPIO\_\-INT\_\-PE\_\-TRIG@{GSN\_\-GPIO\_\-INT\_\-PE\_\-TRIG}}\item[{\em 
+\hypertarget{a00648_ggaff716caaf31f66ce12b16f91bb47c06aa52a5bb11ea0fbbaeb8c0328e374c2170}{
+GSN\_\-GPIO\_\-INT\_\-PE\_\-TRIG}
+\label{a00648_ggaff716caaf31f66ce12b16f91bb47c06aa52a5bb11ea0fbbaeb8c0328e374c2170}
+}]\index{GSN\_\-GPIO\_\-INT\_\-NE\_\-TRIG@{GSN\_\-GPIO\_\-INT\_\-NE\_\-TRIG}!GSN GPIO API@{GSN GPIO API}}\index{GSN GPIO API@{GSN GPIO API}!GSN\_\-GPIO\_\-INT\_\-NE\_\-TRIG@{GSN\_\-GPIO\_\-INT\_\-NE\_\-TRIG}}\item[{\em 
+\hypertarget{a00648_ggaff716caaf31f66ce12b16f91bb47c06aa82a5e5bf12f8a3a17cd11b729b845b7c}{
+GSN\_\-GPIO\_\-INT\_\-NE\_\-TRIG}
+\label{a00648_ggaff716caaf31f66ce12b16f91bb47c06aa82a5e5bf12f8a3a17cd11b729b845b7c}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 110 of file gsn\_\-gpio.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00648_ga933dbb1d81c4ad5a793bcde69d62893a}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-DirSet@{GsnGpio\_\-DirSet}}
+\index{GsnGpio\_\-DirSet@{GsnGpio\_\-DirSet}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-DirSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-DirSet (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap, }
+\item[{{\bf LONG64}}]{gpioDirBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_ga933dbb1d81c4ad5a793bcde69d62893a}
+
+
+Gpio Direction Set. 
+
+This function sets the direction of GPIO specified by gpioBitMap. gpioBitMap accepts GPIO map, 0 is to set the specific GPIO direction to output; 1 is to set the specific GPIO direction to input. This API gets the current setting from the register and changes the values of bits indicated by gpioBitmap and writes them back into the register.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMap} & -\/ IN gpio bit map. \\
+\hline
+{\em gpioDirBitMap} & -\/ IN gpio bitmap specifying the direction for each gpio. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00648_gaa78f67e1c5700e2d46ba586e2f2e2888}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-Init@{GsnGpio\_\-Init}}
+\index{GsnGpio\_\-Init@{GsnGpio\_\-Init}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap, }
+\item[{{\bf LONG64}}]{gpioDirBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_gaa78f67e1c5700e2d46ba586e2f2e2888}
+
+
+This Function Initializes the GPIO. 
+
+The gpioBitMap provides a list of GPIO pins which are to be initialized as a bit map. The \char`\"{}Bit n\char`\"{} refers to \char`\"{}GPIO n\char`\"{} e.g. Bit 0 refers to GPIO 0.
+
+The gpioDirBitMap provides the list of GPIO pins as a bit map for which direction may be set. The value of a particular bit in this corresponds to the value desired for that particular GPIO. E.g., if Bit 3 is set to 0 then it refers to GPIO 3 being set as output direction, and if Bit 3 is set to 1 then it refers to GPIO 3 being set as input direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMap} & -\/ IN gpio bit number. \\
+\hline
+{\em gpioDirBitMap} & -\/ IN The direction (input or output)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00648_ga4b1dc7062930fe980b86818e438c1cb0}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-NEIntClear@{GsnGpio\_\-NEIntClear}}
+\index{GsnGpio\_\-NEIntClear@{GsnGpio\_\-NEIntClear}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-NEIntClear}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-NEIntClear (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_ga4b1dc7062930fe980b86818e438c1cb0}
+
+
+Gpio Interrupt Disable. 
+
+This function Clears the given Negative edge GPIO interrupts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMap} & -\/ IN gpio bit map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00648_ga170e15d6ae8011c0a008e6309715a23a}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-NEIntDisable@{GsnGpio\_\-NEIntDisable}}
+\index{GsnGpio\_\-NEIntDisable@{GsnGpio\_\-NEIntDisable}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-NEIntDisable}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-NEIntDisable (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_ga170e15d6ae8011c0a008e6309715a23a}
+
+
+Gpio Interrupt Enable. 
+
+This function disables the given Negative Edge GPIO interrupts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMap} & -\/ IN gpio bit map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00648_ga9f8bfa1b71f64bd2dcf06ff51e085d26}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-NEIntEnable@{GsnGpio\_\-NEIntEnable}}
+\index{GsnGpio\_\-NEIntEnable@{GsnGpio\_\-NEIntEnable}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-NEIntEnable}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-NEIntEnable (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_ga9f8bfa1b71f64bd2dcf06ff51e085d26}
+
+
+Gpio Interrupt Enable. 
+
+This function enables the given Negative Edge GPIO interrupts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMap} & -\/ IN gpio bit map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00648_ga39b91b13276fa91305f7fc7374251311}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-OutClear@{GsnGpio\_\-OutClear}}
+\index{GsnGpio\_\-OutClear@{GsnGpio\_\-OutClear}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-OutClear}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-OutClear (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_ga39b91b13276fa91305f7fc7374251311}
+
+
+Gpio Out Clear. 
+
+This function clears the of GPIO specified by gpioBitMap. gpioBitMap accepts GPIO map, 1 is to clear the specific GPIO to make it low . This API gets the current setting from the register and changes the values of bits indicated by gpioBitmap and writes them back into the register.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMap} & -\/ IN gpio bit map. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00648_ga1a63f62c863b21f969e07aad3b8b6de7}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-OutIndvidualSet@{GsnGpio\_\-OutIndvidualSet}}
+\index{GsnGpio\_\-OutIndvidualSet@{GsnGpio\_\-OutIndvidualSet}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-OutIndvidualSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-OutIndvidualSet (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_ga1a63f62c863b21f969e07aad3b8b6de7}
+
+
+Gpio Out Set. 
+
+This function sets only the GPIO specified by gpioBitMap and not touch others. gpioBitMap accepts GPIO map, 1 is to set the specific GPIO to make high ; 0 is to set the specific GPIO to make low . This API gets the current setting from the register and changes the values of bits indicated by gpioBitmap and writes them back into the register.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMap} & -\/ IN gpio bit map. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00648_gaafee2b2c522249da06678f6f1ee1f965}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-OutSet@{GsnGpio\_\-OutSet}}
+\index{GsnGpio\_\-OutSet@{GsnGpio\_\-OutSet}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-OutSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-OutSet (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_gaafee2b2c522249da06678f6f1ee1f965}
+
+
+Gpio Out Set. 
+
+This function sets the of GPIO specified by gpioBitMap abd reset others. gpioBitMap accepts GPIO map, 1 is to set the specific GPIO to make high ; 0 is to set the specific GPIO to make low . This API gets the current setting from the register and changes the values of bits indicated by gpioBitmap and writes them back into the register.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMap} & -\/ IN gpio bit map. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00648_ga4408d667f2fcbc51c669e8a8b25e2f6c}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-PEIntClear@{GsnGpio\_\-PEIntClear}}
+\index{GsnGpio\_\-PEIntClear@{GsnGpio\_\-PEIntClear}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-PEIntClear}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-PEIntClear (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_ga4408d667f2fcbc51c669e8a8b25e2f6c}
+
+
+Gpio Possitive edge Interrupt clear. 
+
+This function Clears the given Possitive Edge GPIO interrupts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMap} & -\/ IN gpio bit map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00648_ga61b46966afa3dafd5fd49035a991aef9}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-PEIntDisable@{GsnGpio\_\-PEIntDisable}}
+\index{GsnGpio\_\-PEIntDisable@{GsnGpio\_\-PEIntDisable}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-PEIntDisable}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-PEIntDisable (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_ga61b46966afa3dafd5fd49035a991aef9}
+
+
+Gpio Possitive Edge Interrupt Enable. 
+
+This function Disables the given Possitive Edge GPIO interrupts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMap} & -\/ IN gpio bit map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00648_gaba2b3db43960f2d257bcc9da83e51db4}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-PEIntEnable@{GsnGpio\_\-PEIntEnable}}
+\index{GsnGpio\_\-PEIntEnable@{GsnGpio\_\-PEIntEnable}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-PEIntEnable}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-PEIntEnable (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_gaba2b3db43960f2d257bcc9da83e51db4}
+
+
+Gpio Possitive Edge Interrupt Enable. 
+
+This function enables the given Possitive Edge GPIO interrupts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMap} & -\/ IN gpio bit map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00648_ga2d626ec26c8ffd4a364baa765eda47bb}{
+\index{GSN GPIO API@{GSN GPIO API}!GsnGpio\_\-Read@{GsnGpio\_\-Read}}
+\index{GsnGpio\_\-Read@{GsnGpio\_\-Read}!GSN GPIO API@{GSN GPIO API}}
+\subsubsection[{GsnGpio\_\-Read}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64} $\ast$}]{gpioBitMapValue, }
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00648_ga2d626ec26c8ffd4a364baa765eda47bb}
+
+
+Gpio Read Function. 
+
+This function allows reading the values from input gpio(s). gpioBitMap accepts a map of gpio values to be read, and gpioBitMapValue contains a map of the values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpioBitMapValue} & -\/ OUT pointer to gpio read value. \\
+\hline
+{\em gpioBitMap} & -\/ IN gpio bit map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}

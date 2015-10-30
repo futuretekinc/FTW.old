@@ -1,0 +1,121 @@
+\hypertarget{a00170}{
+\section{GSN\_\-NWIF\_\-IP4\_\-CONFIG Struct Reference}
+\label{a00170}\index{GSN\_\-NWIF\_\-IP4\_\-CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}}
+}
+
+
+NWIF IP configuration.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-nwif.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00170_a3645e8aceeda8be734506deae9b16aae}{staticIp}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00170_a48e99cad0feadbd616a0cda7d9628826}{ipAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00170_a57e84f1cb54cb270925550e459768abe}{subnetMask}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00170_acce916feccd51bb2f497d83520f0dead}{gatewayIpAddr}
+\item 
+\hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00170_a89875aaf4ec4e96b54d0f7a14423861f}{dhcpLeaseExpireTime}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00170_a2e8867f6d4eeb9ec8e4e1f60b62256a6}{dnsPriSrvrIp}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00170_a671649f6f19fe92fefced076678b08ac}{dnsSecSrvrIp}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00170_a0379c17037072ed631bd2efd42722f2c}{hostName} \mbox{[}GSN\_\-NWIF\_\-HOST\_\-NAME\_\-MAX\_\-LEN+1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+NWIF IP configuration. 
+
+This structure defines the NWIF IP V4configuration used for configuring the network interface. 
+
+Definition at line 166 of file gsn\_\-nwif.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00170_a89875aaf4ec4e96b54d0f7a14423861f}{
+\index{GSN\_\-NWIF\_\-IP4\_\-CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}!dhcpLeaseExpireTime@{dhcpLeaseExpireTime}}
+\index{dhcpLeaseExpireTime@{dhcpLeaseExpireTime}!GSN_NWIF_IP4_CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}}
+\subsubsection[{dhcpLeaseExpireTime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ULONG64} {\bf dhcpLeaseExpireTime}}}
+\label{a00170_a89875aaf4ec4e96b54d0f7a14423861f}
+DHCP lease expiry time if DHCP has already been done. This is used by NW service module to renew DHCP IP if DHCP lease has expired. 
+
+Definition at line 178 of file gsn\_\-nwif.h.
+
+\hypertarget{a00170_a2e8867f6d4eeb9ec8e4e1f60b62256a6}{
+\index{GSN\_\-NWIF\_\-IP4\_\-CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}!dnsPriSrvrIp@{dnsPriSrvrIp}}
+\index{dnsPriSrvrIp@{dnsPriSrvrIp}!GSN_NWIF_IP4_CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}}
+\subsubsection[{dnsPriSrvrIp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf dnsPriSrvrIp}}}
+\label{a00170_a2e8867f6d4eeb9ec8e4e1f60b62256a6}
+DNS Primary Server IP address. 
+
+Definition at line 181 of file gsn\_\-nwif.h.
+
+\hypertarget{a00170_a671649f6f19fe92fefced076678b08ac}{
+\index{GSN\_\-NWIF\_\-IP4\_\-CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}!dnsSecSrvrIp@{dnsSecSrvrIp}}
+\index{dnsSecSrvrIp@{dnsSecSrvrIp}!GSN_NWIF_IP4_CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}}
+\subsubsection[{dnsSecSrvrIp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf dnsSecSrvrIp}}}
+\label{a00170_a671649f6f19fe92fefced076678b08ac}
+DNS Secondary Server IP address. 
+
+Definition at line 182 of file gsn\_\-nwif.h.
+
+\hypertarget{a00170_acce916feccd51bb2f497d83520f0dead}{
+\index{GSN\_\-NWIF\_\-IP4\_\-CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}!gatewayIpAddr@{gatewayIpAddr}}
+\index{gatewayIpAddr@{gatewayIpAddr}!GSN_NWIF_IP4_CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}}
+\subsubsection[{gatewayIpAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf gatewayIpAddr}}}
+\label{a00170_acce916feccd51bb2f497d83520f0dead}
+Gateway IP address if already known. 
+
+Definition at line 176 of file gsn\_\-nwif.h.
+
+\hypertarget{a00170_a0379c17037072ed631bd2efd42722f2c}{
+\index{GSN\_\-NWIF\_\-IP4\_\-CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}!hostName@{hostName}}
+\index{hostName@{hostName}!GSN_NWIF_IP4_CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}}
+\subsubsection[{hostName}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf hostName}\mbox{[}GSN\_\-NWIF\_\-HOST\_\-NAME\_\-MAX\_\-LEN+1\mbox{]}}}
+\label{a00170_a0379c17037072ed631bd2efd42722f2c}
+Node host name 
+
+Definition at line 183 of file gsn\_\-nwif.h.
+
+\hypertarget{a00170_a48e99cad0feadbd616a0cda7d9628826}{
+\index{GSN\_\-NWIF\_\-IP4\_\-CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}!ipAddr@{ipAddr}}
+\index{ipAddr@{ipAddr}!GSN_NWIF_IP4_CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}}
+\subsubsection[{ipAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf ipAddr}}}
+\label{a00170_a48e99cad0feadbd616a0cda7d9628826}
+IP address if already known ie., in case of static IP or in case DHCP has already been done. 
+
+Definition at line 171 of file gsn\_\-nwif.h.
+
+\hypertarget{a00170_a3645e8aceeda8be734506deae9b16aae}{
+\index{GSN\_\-NWIF\_\-IP4\_\-CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}!staticIp@{staticIp}}
+\index{staticIp@{staticIp}!GSN_NWIF_IP4_CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}}
+\subsubsection[{staticIp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf staticIp}}}
+\label{a00170_a3645e8aceeda8be734506deae9b16aae}
+'1' if static IP configuration, '0' if DHCP needs to be performed. 
+
+Definition at line 168 of file gsn\_\-nwif.h.
+
+\hypertarget{a00170_a57e84f1cb54cb270925550e459768abe}{
+\index{GSN\_\-NWIF\_\-IP4\_\-CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}!subnetMask@{subnetMask}}
+\index{subnetMask@{subnetMask}!GSN_NWIF_IP4_CONFIG@{GSN\_\-NWIF\_\-IP4\_\-CONFIG}}
+\subsubsection[{subnetMask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf subnetMask}}}
+\label{a00170_a57e84f1cb54cb270925550e459768abe}
+Subnet mask if already known. 
+
+Definition at line 174 of file gsn\_\-nwif.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00534}{gsn\_\-nwif.h}\end{DoxyCompactItemize}

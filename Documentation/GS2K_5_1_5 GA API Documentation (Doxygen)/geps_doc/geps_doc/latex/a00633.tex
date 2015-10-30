@@ -1,0 +1,171 @@
+\hypertarget{a00633}{
+\section{GSN UINT64 API}
+\label{a00633}\index{GSN UINT64 API@{GSN UINT64 API}}
+}
+
+
+This module provides arithmetic operations on \hyperlink{a00462}{UINT64} 64-\/bit integers.  
+
+
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00633_gac563e9d0ef4149a2e6bf4b69848b8350}{GsnUint64\_\-Add} (const \hyperlink{a00462}{UINT64} $\ast$const valPtr, const \hyperlink{a00462}{UINT64} $\ast$const addValPtr, \hyperlink{a00462}{UINT64} $\ast$const resultPtr)
+\begin{DoxyCompactList}\small\item\em Adds two \hyperlink{a00462}{UINT64} variables. This function adds two \hyperlink{a00462}{UINT64} variables. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00633_gaa28251a236e953a0f7d7c9cc6d2a4f56}{GsnUint64\_\-Sub} (const \hyperlink{a00462}{UINT64} $\ast$const valPtr, const \hyperlink{a00462}{UINT64} $\ast$const subValPtr, \hyperlink{a00462}{UINT64} $\ast$const resultPtr)
+\begin{DoxyCompactList}\small\item\em Subtracts two \hyperlink{a00462}{UINT64} variables. This function subtracts two \hyperlink{a00462}{UINT64} variables. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00633_ga6f146e62b0ba7c60b788e7567b9a43d7}{GsnUint64\_\-Cmp} (const \hyperlink{a00462}{UINT64} $\ast$const valPtr, const \hyperlink{a00462}{UINT64} $\ast$const cmpValPtr)
+\begin{DoxyCompactList}\small\item\em conpares two \hyperlink{a00462}{UINT64} variables. This function comapres two \hyperlink{a00462}{UINT64} variables. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00633_ga91c8c7e7593d471df3663ac581c75140}{GsnUint64\_\-ToUlong64} (const \hyperlink{a00462}{UINT64} $\ast$const valPtr)
+\begin{DoxyCompactList}\small\item\em convert \hyperlink{a00462}{UINT64} to ULONG64. This function converts \hyperlink{a00462}{UINT64} variable to ULONG64. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00462}{UINT64} \hyperlink{a00633_gaae22c3035a2dff23ae786020704f0e24}{GsnUint64\_\-FromUlong64} (const \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} $\ast$const valPtr)
+\begin{DoxyCompactList}\small\item\em convert ULONG64 to \hyperlink{a00462}{UINT64}. This function converts ULONG64 variable to \hyperlink{a00462}{UINT64}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module provides arithmetic operations on \hyperlink{a00462}{UINT64} 64-\/bit integers. 
+
+\subsection{Function Documentation}
+\hypertarget{a00633_gac563e9d0ef4149a2e6bf4b69848b8350}{
+\index{GSN UINT64 API@{GSN UINT64 API}!GsnUint64\_\-Add@{GsnUint64\_\-Add}}
+\index{GsnUint64\_\-Add@{GsnUint64\_\-Add}!GSN UINT64 API@{GSN UINT64 API}}
+\subsubsection[{GsnUint64\_\-Add}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnUint64\_\-Add (
+\begin{DoxyParamCaption}
+\item[{const {\bf UINT64} $\ast$const}]{valPtr, }
+\item[{const {\bf UINT64} $\ast$const}]{addValPtr, }
+\item[{{\bf UINT64} $\ast$const}]{resultPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00633_gac563e9d0ef4149a2e6bf4b69848b8350}
+
+
+Adds two \hyperlink{a00462}{UINT64} variables. This function adds two \hyperlink{a00462}{UINT64} variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valPtr} & -\/ IN ValPtr, pointer to base. \\
+\hline
+{\em addValPtr} & -\/ IN AddValPtr, pointer to the operand to add. \\
+\hline
+{\em resultPtr} & -\/ IN ResultPtr, pointer where the result has to be stored. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+The ValPtr and ResultPtr can be identical. 
+\end{DoxyNote}
+\hypertarget{a00633_ga6f146e62b0ba7c60b788e7567b9a43d7}{
+\index{GSN UINT64 API@{GSN UINT64 API}!GsnUint64\_\-Cmp@{GsnUint64\_\-Cmp}}
+\index{GsnUint64\_\-Cmp@{GsnUint64\_\-Cmp}!GSN UINT64 API@{GSN UINT64 API}}
+\subsubsection[{GsnUint64\_\-Cmp}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnUint64\_\-Cmp (
+\begin{DoxyParamCaption}
+\item[{const {\bf UINT64} $\ast$const}]{valPtr, }
+\item[{const {\bf UINT64} $\ast$const}]{cmpValPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00633_ga6f146e62b0ba7c60b788e7567b9a43d7}
+
+
+conpares two \hyperlink{a00462}{UINT64} variables. This function comapres two \hyperlink{a00462}{UINT64} variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valPtr} & -\/ IN ValPtr, pointer to base. \\
+\hline
+{\em cmpValPtr} & -\/ IN CmpValPtr, value to be compared. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em (like} & strncmp) 1: Val $>$ CmpVal 0: Val = CmpVal -\/1: Val $<$ CmpVal \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00633_gaae22c3035a2dff23ae786020704f0e24}{
+\index{GSN UINT64 API@{GSN UINT64 API}!GsnUint64\_\-FromUlong64@{GsnUint64\_\-FromUlong64}}
+\index{GsnUint64\_\-FromUlong64@{GsnUint64\_\-FromUlong64}!GSN UINT64 API@{GSN UINT64 API}}
+\subsubsection[{GsnUint64\_\-FromUlong64}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf UINT64} GsnUint64\_\-FromUlong64 (
+\begin{DoxyParamCaption}
+\item[{const {\bf ULONG64} $\ast$const}]{valPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00633_gaae22c3035a2dff23ae786020704f0e24}
+
+
+convert ULONG64 to \hyperlink{a00462}{UINT64}. This function converts ULONG64 variable to \hyperlink{a00462}{UINT64}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valPtr} & -\/ IN valPtr, ULONG64 value to be converted to \hyperlink{a00462}{UINT64}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em result} & -\/ OUT result, \hyperlink{a00462}{UINT64} value to be written. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 172 of file gsn\_\-uint64\_\-op.h.
+
+\hypertarget{a00633_gaa28251a236e953a0f7d7c9cc6d2a4f56}{
+\index{GSN UINT64 API@{GSN UINT64 API}!GsnUint64\_\-Sub@{GsnUint64\_\-Sub}}
+\index{GsnUint64\_\-Sub@{GsnUint64\_\-Sub}!GSN UINT64 API@{GSN UINT64 API}}
+\subsubsection[{GsnUint64\_\-Sub}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnUint64\_\-Sub (
+\begin{DoxyParamCaption}
+\item[{const {\bf UINT64} $\ast$const}]{valPtr, }
+\item[{const {\bf UINT64} $\ast$const}]{subValPtr, }
+\item[{{\bf UINT64} $\ast$const}]{resultPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00633_gaa28251a236e953a0f7d7c9cc6d2a4f56}
+
+
+Subtracts two \hyperlink{a00462}{UINT64} variables. This function subtracts two \hyperlink{a00462}{UINT64} variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valPtr} & -\/ IN ValPtr, pointer to base. \\
+\hline
+{\em subValPtr} & -\/ IN AddValPtr, pointer to the operand to subtract. \\
+\hline
+{\em resultPtr} & -\/ IN ResultPtr, pointer where the result has to be stored. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+The ValPtr and ResultPtr can be identical. 
+\end{DoxyNote}
+\hypertarget{a00633_ga91c8c7e7593d471df3663ac581c75140}{
+\index{GSN UINT64 API@{GSN UINT64 API}!GsnUint64\_\-ToUlong64@{GsnUint64\_\-ToUlong64}}
+\index{GsnUint64\_\-ToUlong64@{GsnUint64\_\-ToUlong64}!GSN UINT64 API@{GSN UINT64 API}}
+\subsubsection[{GsnUint64\_\-ToUlong64}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf ULONG64} GsnUint64\_\-ToUlong64 (
+\begin{DoxyParamCaption}
+\item[{const {\bf UINT64} $\ast$const}]{valPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00633_ga91c8c7e7593d471df3663ac581c75140}
+
+
+convert \hyperlink{a00462}{UINT64} to ULONG64. This function converts \hyperlink{a00462}{UINT64} variable to ULONG64. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valPtr} & -\/ IN valPtr, \hyperlink{a00462}{UINT64} value to be converted to ULONG64. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em result} & -\/ OUT result, ULONG64 value to be written. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 154 of file gsn\_\-uint64\_\-op.h.
+

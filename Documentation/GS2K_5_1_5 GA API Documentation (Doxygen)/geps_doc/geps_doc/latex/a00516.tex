@@ -1,0 +1,383 @@
+\hypertarget{a00516}{
+\section{gsn\_\-i2c.h File Reference}
+\label{a00516}\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}}
+}
+
+
+Public Header Containing i2c Driver Functions.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-includes.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}clk\_\-ctl$\backslash$gsn\_\-clk\_\-ctl.h\char`\"{}}\par
+Include dependency graph for gsn\_\-i2c.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00749}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00750}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00098}{GSN\_\-I2C}
+\begin{DoxyCompactList}\small\item\em I2C Data / Status Structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00099}{GSN\_\-I2C\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em I2C Configuration Structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE}
+\begin{DoxyCompactList}\small\item\em I2C Handle (Identifier for an Initialized I2C Interface). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00516_a018ca5b94b592748dc0c5067ba5b53b9}{I2C\_\-NCO\_\-VALUE}~0x01
+\item 
+\#define \hyperlink{a00516_a6cad032e96be8fa3ad31d085c758a573}{I2C\_\-CLK\_\-SEL\_\-VALUE}~0x00
+\item 
+\#define \hyperlink{a00516_a254ad9d333377934566571cb085a6735}{I2C\_\-STEP}~0x40070078
+\item 
+\#define \hyperlink{a00516_ad0d2c364d420c2463f7bc57ee1816acc}{I2C\_\-STEP\_\-VALUE\_\-100K}~0x083126
+\item 
+\#define \hyperlink{a00516_a3d3b7d87fcf2351f9db5d426e344a934}{I2C\_\-STEP\_\-VALUE\_\-400K}~0x20c49c
+\item 
+\#define \hyperlink{a00516_affce4a0cfddd2ddf661fe33b4b60cb67}{I2C\_\-STEP\_\-VALUE\_\-34M}~0x116827b
+\item 
+\#define \hyperlink{a00516_a70781c406c17458a408f41de8605edfd}{MAX\_\-FIFO\_\-SIZE}~128
+\item 
+\#define \hyperlink{a00516_a8d74e4c372da075d89cf1f067a056368}{HOLD\_\-CLOCK\_\-VALUE}~0x05
+\item 
+\#define \hyperlink{a00516_affcc1dcbe50bbf9e262eb3fdd0ece3f4}{MASTER\_\-CODE\_\-VALUE}~0x0B
+\item 
+\#define \hyperlink{a00516_aadd6c6fc61177e3aa132d309515f93fb}{BLOCK\_\-COUNT\_\-VALUE}~12
+\item 
+\#define \hyperlink{a00516_aed890941c63a6b5ffef9e6d6858287f8}{I2C\_\-CLEARIRQ\_\-BITMASK}~(0x00)
+\item 
+\#define \hyperlink{a00516_a58947b4668e625ae55a8e9f3648ad78d}{I2C\_\-CLEARSTATUSIRQ\_\-BITMASK}~(0xff)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00649_gab1800d5ab13710494cd9a9e6eac6e0ab}{GSN\_\-I2C\_\-ADMOD} \hyperlink{a00649_gac3021fdaf2e11a7972d53d5292ad5f26}{GSN\_\-I2C\_\-ADMOD\_\-T}
+\begin{DoxyCompactList}\small\item\em Addressing format Selector in the Control Register. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00649_ga56cbec3c8496c0e235150e2779966e47}{GSN\_\-I2C\_\-MS\_\-MODE} \hyperlink{a00649_ga72605883ea904f4ee6c310a25142a0ab}{GSN\_\-I2C\_\-MS\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Master / Slave Selector in Control Register. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00649_gaa477e3e9e89468cf508ed6ea99357639}{GSN\_\-I2C\_\-ERATE} \hyperlink{a00649_gad834947ae5685696ffea0ecec904b16e}{GSN\_\-I2C\_\-ERATE\_\-T}
+\begin{DoxyCompactList}\small\item\em E-\/rate Enumeration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00649_ga75fb1bfd3b52d6ceab35ff62418c6bf6}{GSN\_\-I2C\_\-HIGH\_\-SPEED\_\-ENABLE} \hyperlink{a00649_ga78dfa46a936df5bba07b4ba66cdfca62}{GSN\_\-I2C\_\-HIGH\_\-SPEED\_\-ENABLE\_\-T}
+\begin{DoxyCompactList}\small\item\em Speed Setting Enumeration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00649_ga67da6f46815f1aaf8cf6e1a35b13a02c}{GSN\_\-I2C\_\-RWOP} \hyperlink{a00649_ga0789ba469961beef75b0187cc554d801}{GSN\_\-I2C\_\-RWOP\_\-T}
+\begin{DoxyCompactList}\small\item\em Read/Write Selector in the Control Register. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00649_ga2ed0e9ed554e26759140e9afffd51eb4}{GSN\_\-I2C\_\-ABORTCUROP} \hyperlink{a00649_gaee6d5c48317a97a0237257dac66b7f8f}{GSN\_\-I2C\_\-ABORTCUROP\_\-T}
+\begin{DoxyCompactList}\small\item\em Abort the current operation selection Enumeration.(Master Mode only) \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00649_ga47ecffee533c3e8638337fb1c33feb17}{GSN\_\-I2C\_\-BYTECNTORIDE} \hyperlink{a00649_ga3201b324d6b787d61766a854c7a8702a}{GSN\_\-I2C\_\-BYTECNTORIDE\_\-T}
+\begin{DoxyCompactList}\small\item\em Byte count override Setting Enumeration.(Master Mode only) \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00649_ga714a31fb514e9a5d07a62aadef7cc5f8}{GSN\_\-I2C\_\-RCAS} \hyperlink{a00649_ga3e0976c06462690937465a53a0c38cc4}{GSN\_\-I2C\_\-RCAS\_\-T}
+\begin{DoxyCompactList}\small\item\em Random/Current address Selector in Control Register (Master Mode only). \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00649_gaad8f0d778e6fcb233fd5644b770b504e}{GSN\_\-I2C\_\-MEMADD\_\-SEL} \hyperlink{a00649_ga3c8e92172b940c58950060ddbccee36d}{GSN\_\-I2C\_\-MEMADD\_\-SEL\_\-T}
+\begin{DoxyCompactList}\small\item\em Memory address selection Enumeration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00649_gac428b668a257595f28f3daf1789b22ae}{GSN\_\-I2C\_\-CLK\_\-SEL} \hyperlink{a00649_gaced0c2ab1bd7baab4cc105c12ccc1ce0}{GSN\_\-I2C\_\-CLK\_\-SEL\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn I2C Clock selection. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00649_ga409f34aceadb7ed6f56c6aac57ab4087}{GSN\_\-I2C\_\-ASYN\_\-EVENT\_\-STATUS} \hyperlink{a00649_ga4a73cb21823d744414fed4d0aef5eb3c}{GSN\_\-I2C\_\-ASYN\_\-EVENT\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em Asynchronous Event Status Enumeration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00649_ga4d7ad53afa3985c8d48b6f0de5d44b77}{GSN\_\-I2C\_\-STATUS} \hyperlink{a00649_ga9787fba32c156c866916dc301e5727c8}{GSN\_\-I2C\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em I2C Status Enumeration. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{a00649_gac8a6faecb999f4f891344abbbfc08914}{GSN\_\-I2C\_\-CALLBACK\_\-FP} )(VOID $\ast$ctx, \hyperlink{a00649_ga9787fba32c156c866916dc301e5727c8}{GSN\_\-I2C\_\-STATUS\_\-T})
+\begin{DoxyCompactList}\small\item\em I2C Callback Type. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{a00649_gab1a00d4a51461218cbbafc33b29ddd89}{GSN\_\-I2C\_\-ASYNEVENT\_\-CALLBACK\_\-FP} )(\hyperlink{a00649_ga4a73cb21823d744414fed4d0aef5eb3c}{GSN\_\-I2C\_\-ASYN\_\-EVENT\_\-STATUS\_\-T})
+\begin{DoxyCompactList}\small\item\em I2C Asynchronous Event Callback Type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00098}{GSN\_\-I2C} \hyperlink{a00649_gae64c71a450a11f2589a7e359f15fca3a}{GSN\_\-I2C\_\-T}
+\begin{DoxyCompactList}\small\item\em I2C Data / Status Structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00099}{GSN\_\-I2C\_\-CONFIG} \hyperlink{a00649_ga851303f2738862fc0d0f1ea157265fec}{GSN\_\-I2C\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em I2C Configuration Structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE} \hyperlink{a00649_ga0a305c61b3066326aa4867e75fdfdbf1}{GSN\_\-I2C\_\-HANDLE\_\-T}
+\begin{DoxyCompactList}\small\item\em I2C Handle (Identifier for an Initialized I2C Interface). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00649_gab1800d5ab13710494cd9a9e6eac6e0ab}{GSN\_\-I2C\_\-ADMOD} \{ \par
+\hyperlink{a00649_ggab1800d5ab13710494cd9a9e6eac6e0abadc7f88f3cdf658094fc2e850fc32fa82}{GSN\_\-I2C\_\-ADMOD\_\-7BITS}, 
+\par
+\hyperlink{a00649_ggab1800d5ab13710494cd9a9e6eac6e0aba20b175316fa837d475e95cf6c4d95eb4}{GSN\_\-I2C\_\-ADMOD\_\-10BITS}
+ \}
+\begin{DoxyCompactList}\small\item\em Addressing format Selector in the Control Register. \end{DoxyCompactList}\item 
+enum \hyperlink{a00649_ga56cbec3c8496c0e235150e2779966e47}{GSN\_\-I2C\_\-MS\_\-MODE} \{ \par
+\hyperlink{a00649_gga56cbec3c8496c0e235150e2779966e47a983f57036fae304e43ce78f0a82488f7}{GSN\_\-I2C\_\-MNS\_\-SLAVE}, 
+\par
+\hyperlink{a00649_gga56cbec3c8496c0e235150e2779966e47a52d760f8c37219014a0387df086b95fe}{GSN\_\-I2C\_\-MNS\_\-MASTER}
+ \}
+\begin{DoxyCompactList}\small\item\em Master / Slave Selector in Control Register. \end{DoxyCompactList}\item 
+enum \hyperlink{a00649_gaa477e3e9e89468cf508ed6ea99357639}{GSN\_\-I2C\_\-ERATE} \{ \par
+\hyperlink{a00649_ggaa477e3e9e89468cf508ed6ea99357639af8b3beab06731f51024cdf139f59967d}{GSN\_\-I2C\_\-ERATE\_\-100KBITS}, 
+\par
+\hyperlink{a00649_ggaa477e3e9e89468cf508ed6ea99357639a64cb07eb5773970cf54700c4e0d46980}{GSN\_\-I2C\_\-ERATE\_\-400KBITS}, 
+\par
+\hyperlink{a00649_ggaa477e3e9e89468cf508ed6ea99357639a9faa845f0bff1187e45e6a87733554d3}{GSN\_\-I2C\_\-ERATE\_\-HSE}
+ \}
+\begin{DoxyCompactList}\small\item\em E-\/rate Enumeration. \end{DoxyCompactList}\item 
+enum \hyperlink{a00649_ga75fb1bfd3b52d6ceab35ff62418c6bf6}{GSN\_\-I2C\_\-HIGH\_\-SPEED\_\-ENABLE} \{ \par
+\hyperlink{a00649_gga75fb1bfd3b52d6ceab35ff62418c6bf6a17def2de96abbf935f2575540969c799}{GSN\_\-I2C\_\-FAST\_\-MODE\_\-ENABLE}, 
+\par
+\hyperlink{a00649_gga75fb1bfd3b52d6ceab35ff62418c6bf6a1e00b42818c99439a7fc786bba97884f}{GSN\_\-I2C\_\-HIGH\_\-SPEED\_\-ENABLE}
+ \}
+\begin{DoxyCompactList}\small\item\em Speed Setting Enumeration. \end{DoxyCompactList}\item 
+enum \hyperlink{a00649_ga67da6f46815f1aaf8cf6e1a35b13a02c}{GSN\_\-I2C\_\-RWOP} \{ \par
+\hyperlink{a00649_gga67da6f46815f1aaf8cf6e1a35b13a02ca05670c9dbe8177c6b8181687371252b8}{GSN\_\-I2C\_\-RWOP\_\-WRITE}, 
+\par
+\hyperlink{a00649_gga67da6f46815f1aaf8cf6e1a35b13a02ca06637fe79ea8edf62c203c11c2cca718}{GSN\_\-I2C\_\-RWOP\_\-READ}
+ \}
+\begin{DoxyCompactList}\small\item\em Read/Write Selector in the Control Register. \end{DoxyCompactList}\item 
+enum \hyperlink{a00649_ga2ed0e9ed554e26759140e9afffd51eb4}{GSN\_\-I2C\_\-ABORTCUROP} \{ \par
+\hyperlink{a00649_gga2ed0e9ed554e26759140e9afffd51eb4ac5cf33d09a8a21ee470a61827adee434}{GSN\_\-I2C\_\-AbortCurOp\_\-reset}, 
+\par
+\hyperlink{a00649_gga2ed0e9ed554e26759140e9afffd51eb4af3c6cf457cfa893024d5cd527fe834ea}{GSN\_\-I2C\_\-AbortCurOp\_\-set}
+ \}
+\begin{DoxyCompactList}\small\item\em Abort the current operation selection Enumeration.(Master Mode only) \end{DoxyCompactList}\item 
+enum \hyperlink{a00649_ga47ecffee533c3e8638337fb1c33feb17}{GSN\_\-I2C\_\-BYTECNTORIDE} \{ \par
+\hyperlink{a00649_gga47ecffee533c3e8638337fb1c33feb17a04fb1c372ab6d5edce35268530fffae3}{GSN\_\-I2C\_\-BYTECNT\_\-SET}, 
+\par
+\hyperlink{a00649_gga47ecffee533c3e8638337fb1c33feb17a5467187f06dde3b3af5d8682eafb17ad}{GSN\_\-I2C\_\-BLOCK\_\-SET}
+ \}
+\begin{DoxyCompactList}\small\item\em Byte count override Setting Enumeration.(Master Mode only) \end{DoxyCompactList}\item 
+enum \hyperlink{a00649_ga714a31fb514e9a5d07a62aadef7cc5f8}{GSN\_\-I2C\_\-RCAS} \{ \par
+\hyperlink{a00649_gga714a31fb514e9a5d07a62aadef7cc5f8a190230ad2a9fc15dfc59234aa3f2b498}{GSN\_\-I2C\_\-RCAS\_\-CURRENTADD}, 
+\par
+\hyperlink{a00649_gga714a31fb514e9a5d07a62aadef7cc5f8a76baa362b7df91bb133cbe4ff24fdb1f}{GSN\_\-I2C\_\-RCAS\_\-RANDOMADD}
+ \}
+\begin{DoxyCompactList}\small\item\em Random/Current address Selector in Control Register (Master Mode only). \end{DoxyCompactList}\item 
+enum \hyperlink{a00649_gaad8f0d778e6fcb233fd5644b770b504e}{GSN\_\-I2C\_\-MEMADD\_\-SEL} \{ \par
+\hyperlink{a00649_ggaad8f0d778e6fcb233fd5644b770b504ea0bf65661bf32f831e8de0f9efe265713}{GSN\_\-I2C\_\-MEMADD\_\-SINGLE}, 
+\par
+\hyperlink{a00649_ggaad8f0d778e6fcb233fd5644b770b504ea576baa1b26cdfcf66c0b01a1497086c8}{GSN\_\-I2C\_\-MEMADD\_\-DOUBLE}
+ \}
+\begin{DoxyCompactList}\small\item\em Memory address selection Enumeration. \end{DoxyCompactList}\item 
+enum \hyperlink{a00649_gac428b668a257595f28f3daf1789b22ae}{GSN\_\-I2C\_\-CLK\_\-SEL} \{ \par
+\hyperlink{a00649_ggac428b668a257595f28f3daf1789b22aea7d53c94ea61f351a141475d3e6baa2a1}{GSN\_\-I2C\_\-CLK\_\-HSRC}, 
+\par
+\hyperlink{a00649_ggac428b668a257595f28f3daf1789b22aeae80d5209c31a33e9c27d85cef9b739a3}{GSN\_\-I2C\_\-CLK\_\-XTAL}, 
+\par
+\hyperlink{a00649_ggac428b668a257595f28f3daf1789b22aea8142d42036e3e241cafb4e697a86da5a}{GSN\_\-I2C\_\-CLK\_\-PLL}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn I2C Clock selection. \end{DoxyCompactList}\item 
+enum \hyperlink{a00649_ga409f34aceadb7ed6f56c6aac57ab4087}{GSN\_\-I2C\_\-ASYN\_\-EVENT\_\-STATUS} \{ \par
+\hyperlink{a00649_gga409f34aceadb7ed6f56c6aac57ab4087a335509d5bc336dc347e70de98d920e47}{GSN\_\-I2C\_\-MASTER\_\-TO\_\-SLAVE\_\-TRANSITION} =  0xF0, 
+\par
+\hyperlink{a00649_gga409f34aceadb7ed6f56c6aac57ab4087a25e43eceed994fb8bdf29e4dd92a7255}{GSN\_\-I2C\_\-SEND\_\-DATA}, 
+\par
+\hyperlink{a00649_gga409f34aceadb7ed6f56c6aac57ab4087aebd3adfb114070455555687da2e29407}{GSN\_\-I2C\_\-RECV\_\-DATA}
+ \}
+\begin{DoxyCompactList}\small\item\em Asynchronous Event Status Enumeration. \end{DoxyCompactList}\item 
+enum \hyperlink{a00649_ga4d7ad53afa3985c8d48b6f0de5d44b77}{GSN\_\-I2C\_\-STATUS} \{ \par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77a394d60be3ef24c0b68cde373c2a0b0f7}{GSN\_\-I2C\_\-STATUS\_\-OK} =  0x00, 
+\par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77a535e7016a121c42477d53500d70ff6a4}{GSN\_\-I2C\_\-STATUS\_\-ERR}, 
+\par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77ae364f76eb03653a00da62b5d26c407ee}{GSN\_\-I2C\_\-STATUS\_\-OK\_\-ENDTRANS}, 
+\par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77aa2d687f22b49218f273edcdf9e7db49d}{GSN\_\-I2C\_\-STATUS\_\-OK\_\-FREE}, 
+\par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77a267496c8b5ec13ee41cd90e0f5ea3157}{GSN\_\-I2C\_\-STATUS\_\-ERR\_\-BADPARAM} =  0x10, 
+\par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77ace72c07e90b446420671e15f1866def3}{GSN\_\-I2C\_\-STATUS\_\-ERR\_\-INVALID}, 
+\par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77a08d58435d2a1675d4da7e0e3d9c3e1dd}{GSN\_\-I2C\_\-STATUS\_\-ERR\_\-OVERSIZE}, 
+\par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77a4b1ace395705214697dc3fd9fa1057da}{GSN\_\-I2C\_\-STATUS\_\-ERR\_\-ARBITRATION}, 
+\par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77a6879fe954ef376ed93ee3b953d6b0eed}{GSN\_\-I2C\_\-STATUS\_\-ERR\_\-BUSBUSY} =  0x20, 
+\par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77acaa8a18ff4c4de5ae19b7bca268ac6cf}{GSN\_\-I2C\_\-STATUS\_\-ERR\_\-NOACK}, 
+\par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77af278bd6be1a735e7fecec68716b123a3}{GSN\_\-I2C\_\-STATUS\_\-ERR\_\-OVERREC}, 
+\par
+\hyperlink{a00649_gga4d7ad53afa3985c8d48b6f0de5d44b77acb306db9784c6a1e65c1fd6cc849b656}{GSN\_\-I2C\_\-STATUS\_\-MAX}
+ \}
+\begin{DoxyCompactList}\small\item\em I2C Status Enumeration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00649_ga51f57a33eaa6ad50b0c2bec9e0aab4db}{GsnI2c\_\-Open} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$ptI2cHandle, \hyperlink{a00099}{GSN\_\-I2C\_\-CONFIG\_\-T} $\ast$ptI2cConfig, \hyperlink{a00649_gab1a00d4a51461218cbbafc33b29ddd89}{GSN\_\-I2C\_\-ASYNEVENT\_\-CALLBACK\_\-FP} asynEventCallBack)
+\begin{DoxyCompactList}\small\item\em I2c Driver Open. This function opens an i2c port. This function initializes the corresponding i2c object. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00649_ga4af69729fab473b2eaf344209f86726d}{GsnI2c\_\-Read} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$i2cHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$userBuffer, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} noOfBytesToRead, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blockMode, \hyperlink{a00649_gac8a6faecb999f4f891344abbbfc08914}{GSN\_\-I2C\_\-CALLBACK\_\-FP} rdCallBackFunc, VOID $\ast$ctext)
+\begin{DoxyCompactList}\small\item\em i2c Read function. 1. prepare for transmission. 2. Start data reception by enabling the Rx interrupt. 3. wait on the semaphore for a synchronous read. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00649_gae4d913972ddaffee2a1f2209af944983}{GsnI2c\_\-Write} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$i2cHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$userBuffer, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} noOfBytesToWrite, \hyperlink{a00649_gac8a6faecb999f4f891344abbbfc08914}{GSN\_\-I2C\_\-CALLBACK\_\-FP} writeCallBackFunc, VOID $\ast$ctext)
+\begin{DoxyCompactList}\small\item\em i2c Write Function. 1. prepare for transmission. 2. Start data transmission by enabling the Tx interrupt. 3. wait on the semaphore for a synchronous write. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00649_gabe1debde978a1d7934b1acfd178469e0}{GsnI2c\_\-Close} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$i2cHandle)
+\begin{DoxyCompactList}\small\item\em i2c Driver Close. This function closes the driver. This function deletes the semaphores and disables the corresponding i2c port. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00649_gaad1c66acad9ae584473a112d4b830c3a}{GsnI2c\_\-addModeSet} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle, \hyperlink{a00649_gac3021fdaf2e11a7972d53d5292ad5f26}{GSN\_\-I2C\_\-ADMOD\_\-T} addrMode)
+\begin{DoxyCompactList}\small\item\em Set i2c driver address mode. This function sets the address mode of the i2c port. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00649_ga0f151cd2545fe37d9dbeccdb49b321cd}{GsnI2c\_\-MSModeSet} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle, \hyperlink{a00649_ga72605883ea904f4ee6c310a25142a0ab}{GSN\_\-I2C\_\-MS\_\-MODE\_\-T} gsnI2cMSMode)
+\begin{DoxyCompactList}\small\item\em Set i2c Master-\/Slave Mode. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00649_gabc8cac41e125a051c0bcb393f7833dff}{GsnI2c\_\-MemAddSet} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle, \hyperlink{a00649_ga3c8e92172b940c58950060ddbccee36d}{GSN\_\-I2C\_\-MEMADD\_\-SEL\_\-T} gsnI2cMemAddSel)
+\begin{DoxyCompactList}\small\item\em Set i2c Single/Double memory address. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00516_abe0abc5ae190ee622e1dd9aa212390f1}{GsnI2c\_\-ByteOverride} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle, \hyperlink{a00649_ga3201b324d6b787d61766a854c7a8702a}{GSN\_\-I2C\_\-BYTECNTORIDE\_\-T} gsnI2cBytecntOride)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00649_ga863505feedae2f7a5958d5f80cbf24cb}{GsnI2c\_\-DestSlaveAddSet} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} gsnI2cSlaveAddr)
+\begin{DoxyCompactList}\small\item\em Set Destination Slave Address. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00649_gad36905265e175988b6f39b9724078929}{GsnI2c\_\-SlaveLocAddrSet} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} gsnI2cSlavelocAddr)
+\begin{DoxyCompactList}\small\item\em Set Local Slave Address. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00649_ga30a24cb98453484c641cc68384a2c20a}{GsnI2c\_\-AddrInSlave} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} gsnI2cAddrLocInSlave)
+\begin{DoxyCompactList}\small\item\em Set Address in Slave location. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00649_gaf3d84383c6018e61b76e8db674bb2fb5}{GsnI2c\_\-High\_\-speed\_\-enableSet} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle, \hyperlink{a00649_ga78dfa46a936df5bba07b4ba66cdfca62}{GSN\_\-I2C\_\-HIGH\_\-SPEED\_\-ENABLE\_\-T} HSenable)
+\begin{DoxyCompactList}\small\item\em Set i2c High speed Mode enable. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00649_ga323ceb5b782ad727f819bf1e110eb2d8}{GsnI2c\_\-RandomCurrentAddrSet} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle, \hyperlink{a00649_ga3e0976c06462690937465a53a0c38cc4}{GSN\_\-I2C\_\-RCAS\_\-T} gsnI2cRepStartEnable)
+\begin{DoxyCompactList}\small\item\em Random/Current address selection. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00649_ga087be6496fcf8dc85fab781f736c0a24}{GsnI2c\_\-RateSet} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle, \hyperlink{a00649_gad834947ae5685696ffea0ecec904b16e}{GSN\_\-I2C\_\-ERATE\_\-T} gsnI2cRate)
+\begin{DoxyCompactList}\small\item\em Set Data Rate. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00649_ga2a1f35ecff4dd0518db43da269962818}{GsnI2c\_\-OwnSlaveAddGet} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} gsnI2cSlavelocAddr)
+\begin{DoxyCompactList}\small\item\em Get Local Slave Address. \end{DoxyCompactList}\item 
+\hyperlink{a00649_ga72605883ea904f4ee6c310a25142a0ab}{GSN\_\-I2C\_\-MS\_\-MODE\_\-T} \hyperlink{a00649_gabcb5149cfa26cd66ce55cfad5c8d9a56}{GsnI2c\_\-MSModeGet} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle)
+\begin{DoxyCompactList}\small\item\em Get Master/Slave mode. \end{DoxyCompactList}\item 
+\hyperlink{a00649_gac3021fdaf2e11a7972d53d5292ad5f26}{GSN\_\-I2C\_\-ADMOD\_\-T} \hyperlink{a00649_gaee7528d38130deb5c253f3b1efc46fba}{GsnI2c\_\-addModeGet} (\hyperlink{a00100}{GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$gsnI2chandle)
+\begin{DoxyCompactList}\small\item\em Get Address Mode (7 or 10 Bits) \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00516_a435a32856858c9f711f5292120e0f4c8}{\_\-\_\-GsnI2c\_\-Isr} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Public Header Containing i2c Driver Functions. 
+
+Definition in file \hyperlink{a00516_source}{gsn\_\-i2c.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00516_aadd6c6fc61177e3aa132d309515f93fb}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!BLOCK\_\-COUNT\_\-VALUE@{BLOCK\_\-COUNT\_\-VALUE}}
+\index{BLOCK\_\-COUNT\_\-VALUE@{BLOCK\_\-COUNT\_\-VALUE}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{BLOCK\_\-COUNT\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BLOCK\_\-COUNT\_\-VALUE~12}}
+\label{a00516_aadd6c6fc61177e3aa132d309515f93fb}
+
+
+Definition at line 99 of file gsn\_\-i2c.h.
+
+\hypertarget{a00516_a8d74e4c372da075d89cf1f067a056368}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!HOLD\_\-CLOCK\_\-VALUE@{HOLD\_\-CLOCK\_\-VALUE}}
+\index{HOLD\_\-CLOCK\_\-VALUE@{HOLD\_\-CLOCK\_\-VALUE}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{HOLD\_\-CLOCK\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define HOLD\_\-CLOCK\_\-VALUE~0x05}}
+\label{a00516_a8d74e4c372da075d89cf1f067a056368}
+
+
+Definition at line 97 of file gsn\_\-i2c.h.
+
+\hypertarget{a00516_aed890941c63a6b5ffef9e6d6858287f8}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!I2C\_\-CLEARIRQ\_\-BITMASK@{I2C\_\-CLEARIRQ\_\-BITMASK}}
+\index{I2C\_\-CLEARIRQ\_\-BITMASK@{I2C\_\-CLEARIRQ\_\-BITMASK}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{I2C\_\-CLEARIRQ\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-CLEARIRQ\_\-BITMASK~(0x00)}}
+\label{a00516_aed890941c63a6b5ffef9e6d6858287f8}
+
+
+Definition at line 101 of file gsn\_\-i2c.h.
+
+\hypertarget{a00516_a58947b4668e625ae55a8e9f3648ad78d}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!I2C\_\-CLEARSTATUSIRQ\_\-BITMASK@{I2C\_\-CLEARSTATUSIRQ\_\-BITMASK}}
+\index{I2C\_\-CLEARSTATUSIRQ\_\-BITMASK@{I2C\_\-CLEARSTATUSIRQ\_\-BITMASK}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{I2C\_\-CLEARSTATUSIRQ\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-CLEARSTATUSIRQ\_\-BITMASK~(0xff)}}
+\label{a00516_a58947b4668e625ae55a8e9f3648ad78d}
+
+
+Definition at line 102 of file gsn\_\-i2c.h.
+
+\hypertarget{a00516_a6cad032e96be8fa3ad31d085c758a573}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!I2C\_\-CLK\_\-SEL\_\-VALUE@{I2C\_\-CLK\_\-SEL\_\-VALUE}}
+\index{I2C\_\-CLK\_\-SEL\_\-VALUE@{I2C\_\-CLK\_\-SEL\_\-VALUE}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{I2C\_\-CLK\_\-SEL\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-CLK\_\-SEL\_\-VALUE~0x00}}
+\label{a00516_a6cad032e96be8fa3ad31d085c758a573}
+
+
+Definition at line 90 of file gsn\_\-i2c.h.
+
+\hypertarget{a00516_a018ca5b94b592748dc0c5067ba5b53b9}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!I2C\_\-NCO\_\-VALUE@{I2C\_\-NCO\_\-VALUE}}
+\index{I2C\_\-NCO\_\-VALUE@{I2C\_\-NCO\_\-VALUE}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{I2C\_\-NCO\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-NCO\_\-VALUE~0x01}}
+\label{a00516_a018ca5b94b592748dc0c5067ba5b53b9}
+
+
+Definition at line 89 of file gsn\_\-i2c.h.
+
+\hypertarget{a00516_a254ad9d333377934566571cb085a6735}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!I2C\_\-STEP@{I2C\_\-STEP}}
+\index{I2C\_\-STEP@{I2C\_\-STEP}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{I2C\_\-STEP}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-STEP~0x40070078}}
+\label{a00516_a254ad9d333377934566571cb085a6735}
+
+
+Definition at line 91 of file gsn\_\-i2c.h.
+
+\hypertarget{a00516_ad0d2c364d420c2463f7bc57ee1816acc}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!I2C\_\-STEP\_\-VALUE\_\-100K@{I2C\_\-STEP\_\-VALUE\_\-100K}}
+\index{I2C\_\-STEP\_\-VALUE\_\-100K@{I2C\_\-STEP\_\-VALUE\_\-100K}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{I2C\_\-STEP\_\-VALUE\_\-100K}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-STEP\_\-VALUE\_\-100K~0x083126}}
+\label{a00516_ad0d2c364d420c2463f7bc57ee1816acc}
+
+
+Definition at line 92 of file gsn\_\-i2c.h.
+
+\hypertarget{a00516_affce4a0cfddd2ddf661fe33b4b60cb67}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!I2C\_\-STEP\_\-VALUE\_\-34M@{I2C\_\-STEP\_\-VALUE\_\-34M}}
+\index{I2C\_\-STEP\_\-VALUE\_\-34M@{I2C\_\-STEP\_\-VALUE\_\-34M}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{I2C\_\-STEP\_\-VALUE\_\-34M}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-STEP\_\-VALUE\_\-34M~0x116827b}}
+\label{a00516_affce4a0cfddd2ddf661fe33b4b60cb67}
+
+
+Definition at line 94 of file gsn\_\-i2c.h.
+
+\hypertarget{a00516_a3d3b7d87fcf2351f9db5d426e344a934}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!I2C\_\-STEP\_\-VALUE\_\-400K@{I2C\_\-STEP\_\-VALUE\_\-400K}}
+\index{I2C\_\-STEP\_\-VALUE\_\-400K@{I2C\_\-STEP\_\-VALUE\_\-400K}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{I2C\_\-STEP\_\-VALUE\_\-400K}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C\_\-STEP\_\-VALUE\_\-400K~0x20c49c}}
+\label{a00516_a3d3b7d87fcf2351f9db5d426e344a934}
+
+
+Definition at line 93 of file gsn\_\-i2c.h.
+
+\hypertarget{a00516_affcc1dcbe50bbf9e262eb3fdd0ece3f4}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!MASTER\_\-CODE\_\-VALUE@{MASTER\_\-CODE\_\-VALUE}}
+\index{MASTER\_\-CODE\_\-VALUE@{MASTER\_\-CODE\_\-VALUE}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{MASTER\_\-CODE\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define MASTER\_\-CODE\_\-VALUE~0x0B}}
+\label{a00516_affcc1dcbe50bbf9e262eb3fdd0ece3f4}
+
+
+Definition at line 98 of file gsn\_\-i2c.h.
+
+\hypertarget{a00516_a70781c406c17458a408f41de8605edfd}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!MAX\_\-FIFO\_\-SIZE@{MAX\_\-FIFO\_\-SIZE}}
+\index{MAX\_\-FIFO\_\-SIZE@{MAX\_\-FIFO\_\-SIZE}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{MAX\_\-FIFO\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-FIFO\_\-SIZE~128}}
+\label{a00516_a70781c406c17458a408f41de8605edfd}
+
+
+Definition at line 96 of file gsn\_\-i2c.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00516_a435a32856858c9f711f5292120e0f4c8}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!\_\-\_\-GsnI2c\_\-Isr@{\_\-\_\-GsnI2c\_\-Isr}}
+\index{\_\-\_\-GsnI2c\_\-Isr@{\_\-\_\-GsnI2c\_\-Isr}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{\_\-\_\-GsnI2c\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnI2c\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00516_a435a32856858c9f711f5292120e0f4c8}
+\hypertarget{a00516_abe0abc5ae190ee622e1dd9aa212390f1}{
+\index{gsn\_\-i2c.h@{gsn\_\-i2c.h}!GsnI2c\_\-ByteOverride@{GsnI2c\_\-ByteOverride}}
+\index{GsnI2c\_\-ByteOverride@{GsnI2c\_\-ByteOverride}!gsn_i2c.h@{gsn\_\-i2c.h}}
+\subsubsection[{GsnI2c\_\-ByteOverride}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnI2c\_\-ByteOverride (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-I2C\_\-HANDLE\_\-T} $\ast$}]{gsnI2chandle, }
+\item[{{\bf GSN\_\-I2C\_\-BYTECNTORIDE\_\-T}}]{gsnI2cBytecntOride}
+\end{DoxyParamCaption}
+)}}
+\label{a00516_abe0abc5ae190ee622e1dd9aa212390f1}

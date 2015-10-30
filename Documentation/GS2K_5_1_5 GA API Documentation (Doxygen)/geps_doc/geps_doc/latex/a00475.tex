@@ -1,0 +1,67 @@
+\hypertarget{a00475}{
+\section{gsn\_\-assert.h File Reference}
+\label{a00475}\index{gsn\_\-assert.h@{gsn\_\-assert.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00699}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00475_a91dbdc304dd61d2fba621535e40d9259}{GSN\_\-ASSERT}(c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00475_a91dbdc304dd61d2fba621535e40d9259}{
+\index{gsn\_\-assert.h@{gsn\_\-assert.h}!GSN\_\-ASSERT@{GSN\_\-ASSERT}}
+\index{GSN\_\-ASSERT@{GSN\_\-ASSERT}!gsn_assert.h@{gsn\_\-assert.h}}
+\subsubsection[{GSN\_\-ASSERT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ASSERT(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)}}
+\label{a00475_a91dbdc304dd61d2fba621535e40d9259}
+{\bfseries Value:}
+\begin{DoxyCode}
+{                                                                               \
+      
+        if(!(c))                                                                                                                                        \
+      
+        {                                                                                                                                                       \
+      
+                GSN_SYS_RESET_INFO_T *pResetInfo= (GSN_SYS_RESET_INFO_T *)
+      GSN_SYS_RESET_INFO_LOCATION_GET();      \
+                UINT32 filenameLen = strlen(__FILE__);                           
+                      \
+        UINT8 *filename = __FILE__;                                                     \
+      
+        if(filenameLen > 32)                                                    \
+      
+                filename = filename + (filenameLen - 32);                        
+              \
+                memcpy(&(pResetInfo->app.resetInfo[0]), filename, 32);           
+             \
+                pResetInfo->app.resetInfo[8] = __LINE__;                         
+             \
+                pResetInfo->app.resetType = GSN_RESET_TYPE_SYSTEM;                              \
+      
+                pResetInfo->app.resetReason = GSN_RESET_REASON_APP_ASSERT;       
+                      \
+                pResetInfo->app.resetInfoSize = 16;                              
+             \
+        GsnSys_Reset(GSN_RESET_REASON_APP_ASSERT);                                      \
+      
+        }                                                                                                                                                       \
+      
+}
+\end{DoxyCode}
+
+
+Definition at line 36 of file gsn\_\-assert.h.
+

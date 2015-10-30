@@ -1,0 +1,393 @@
+\hypertarget{a00600}{
+\section{gsn\_\-uart.h File Reference}
+\label{a00600}\index{gsn\_\-uart.h@{gsn\_\-uart.h}}
+}
+
+
+Public Header Containing UART Driver Functions.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$osal$\backslash$gsn\_\-osal\_\-threadx.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}clk\_\-ctl$\backslash$gsn\_\-clk\_\-ctl.h\char`\"{}}\par
+Include dependency graph for gsn\_\-uart.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00846}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00847}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00264}{GSN\_\-UART\_\-CONTROLFLOW\_\-CTX}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines SW flow parameters and HW flow parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{a00267}{GSN\_\-UART\_\-RX\_\-BUFF}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines UART Rx buffer status parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00265}{GSN\_\-UART\_\-ERROR\_\-STATUS}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines UART Rx buffer status parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00268}{GSN\_\-UARTCONFIG}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines a UART configuration parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00263}{GSN\_\-UART}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines a UART driver handling parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{a00266}{GSN\_\-UART\_\-HANDLE}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines a UART handle, which holds a UART config and data parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00600_a8d4d184d01326210338840c046d1fb04}{GSN\_\-UART\_\-NOS}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00600_a2e597592e12f52e6b9f19cffdcd2378f}{UARTCALLBACK\_\-FP} )(VOID $\ast$, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})
+\item 
+typedef enum \hyperlink{a00656_gaca485e5a863be5b5c698317dc0ca469a}{GSN\_\-UART\_\-IFL} \hyperlink{a00656_ga170d0f1af6abfe39aa2dc0586412a85c}{GSN\_\-UART\_\-IFL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART Interrupt FIFO levels. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_ga99b0d3d670ac3d61d3a8764fafc3b992}{GSN\_\-UART\_\-BAUDRATE} \hyperlink{a00656_ga867d009d402b5b0186abe5307715b9fc}{GSN\_\-UART\_\-BAUDRATE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART baud rate values. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_ga9082153fb94765f4ce91b584f1d8a0a3}{GSN\_\-UART\_\-WORDLEN} \hyperlink{a00656_gac850885034c791e458a2edf4a0530f67}{GSN\_\-UART\_\-WORDLEN\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART data length. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_gad03ef3aa80077ad749fb3afd6e9a23af}{GSN\_\-UART\_\-CLKSEL} \hyperlink{a00656_ga615bd92bf0cbe48e5b0502e97a57b0a5}{GSN\_\-UART\_\-CLKSEL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines clocks available for UART. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_ga89a87c4e15500db4330f0d501e2068d1}{GSN\_\-UART\_\-CLK\_\-VALUE\_\-TEST} \hyperlink{a00656_ga52bf28199735274775228339e8d05012}{GSN\_\-UART\_\-CLK\_\-VALUE\_\-TEST\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines max clock values available for UART. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_ga7b923f8de1d1d52f2879a94bce534a31}{GSN\_\-UART\_\-CLK\_\-VALUE} \hyperlink{a00656_ga20d80c69e5cf0a5f5460e7fe0cfb2787}{GSN\_\-UART\_\-CLK\_\-VALUE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This is for tetsing. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_ga67767f968b0ccabbdd2c41c40f826e4e}{GSN\_\-UART\_\-CHARFORMAT} \hyperlink{a00656_gaf208b91b10fde1d137e4ec8a7dde641b}{GSN\_\-UART\_\-CHARFORMAT\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART char format values. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_ga4871fc0b0bc6480a9cbee4d0694d23e8}{GSN\_\-UART\_\-STOPBITS} \hyperlink{a00656_gad24814e9f0d44d09137d1984c23155c1}{GSN\_\-UART\_\-STOPBITS\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART stop bits values . \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_gac5a3ad4d3d1621c5ed941f57ad0b6679}{GSN\_\-UART\_\-PARITYBIT} \hyperlink{a00656_ga62f12eb4660a18fb77ba09b0625d0c8e}{GSN\_\-UART\_\-PARITYBIT\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART parity bits values. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_gad707454e495f43928eae3af5419aebba}{GSN\_\-UART\_\-NO} \hyperlink{a00656_ga2e91880e4d139a83add2ffc3a75ad653}{GSN\_\-UART\_\-NO\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART port numbers. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_ga533c64d91240c65815984fe1f73817b2}{GSN\_\-UART\_\-HWSUPPORT} \hyperlink{a00656_gaf4df97392dfefed655a81fe500a74162}{GSN\_\-UART\_\-HWSUPPORT\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART HW flow supports This enum defines UART HW flow supports. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_ga7905ed9a5914128d4dd4e1f0ff7a8a56}{GSN\_\-UART\_\-SWFLOW} \hyperlink{a00656_gae4fa00cd25fb7d023d1016b79b520542}{GSN\_\-UART\_\-SWFLOW\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART SW flow supports This enum defines UART SW flow supports. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_ga48e5ede8ddc3ed1b7967288df611c09d}{GSN\_\-UART\_\-DMA} \hyperlink{a00656_gafc3ee1b15b6b7039d697e48cabeba7de}{GSN\_\-UART\_\-DMA\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN UART DMA supports This enum defines UART DMA supports. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_ga09347558a3ca84081b700f762369ff09}{GSN\_\-UART\_\-DMA\_\-TX\_\-MODE} \hyperlink{a00656_gaca97ddd99d6a776d3991457a1113f687}{GSN\_\-UART\_\-DMA\_\-TX\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn UART DMA TX mode types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00656_gaef21b1191deb90943f343ad04ef5339b}{GSN\_\-UART\_\-DMA\_\-RX\_\-MODE} \hyperlink{a00656_ga14b3640ffe5cd4028623beae5472da4a}{GSN\_\-UART\_\-DMA\_\-RX\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn UART DMA RX mode types. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00264}{GSN\_\-UART\_\-CONTROLFLOW\_\-CTX} \hyperlink{a00656_ga3db249a0ebcad29608945db9a3628070}{GSN\_\-UART\_\-CONTROLFLOW\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines SW flow parameters and HW flow parameters. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00267}{GSN\_\-UART\_\-RX\_\-BUFF} \hyperlink{a00656_ga9a87f35f38fefe3c4b6a3057aec9b10a}{GSN\_\-UART\_\-RX\_\-BUFF\_\-T}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines UART Rx buffer status parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00265}{GSN\_\-UART\_\-ERROR\_\-STATUS} \hyperlink{a00656_ga5129250d6cc2cf041ba60eeb792ea834}{GSN\_\-UART\_\-ERROR\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines UART Rx buffer status parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00268}{GSN\_\-UARTCONFIG} \hyperlink{a00656_gab793201a4cc37e8cf27b0b640b1f37bc}{GSN\_\-UART\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines a UART configuration parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00263}{GSN\_\-UART} \hyperlink{a00656_gacd6ebb3a4883ec781b873a90dbed102a}{GSN\_\-UART\_\-T}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines a UART driver handling parameters. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00266}{GSN\_\-UART\_\-HANDLE} \hyperlink{a00656_ga1e481438503e3525aaef5eb97517e75a}{GSN\_\-UART\_\-HANDLE\_\-T}
+\begin{DoxyCompactList}\small\item\em UART GSN Structure. This structure defines a UART handle, which holds a UART config and data parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00656_gaca485e5a863be5b5c698317dc0ca469a}{GSN\_\-UART\_\-IFL} \{ \par
+\hyperlink{a00656_ggaca485e5a863be5b5c698317dc0ca469aa93c61afd5e02a12497bda5028b4d41a7}{GSN\_\-UART\_\-IFL\_\-1\_\-BY\_\-8}, 
+\par
+\hyperlink{a00656_ggaca485e5a863be5b5c698317dc0ca469aaa635a1678c47b8dd453c5abd852bcba2}{GSN\_\-UART\_\-IFL\_\-1\_\-BY\_\-4}, 
+\par
+\hyperlink{a00656_ggaca485e5a863be5b5c698317dc0ca469aa7e8b61f4b331baf6a23f2fc55cb3901c}{GSN\_\-UART\_\-IFL\_\-1\_\-BY\_\-2}, 
+\par
+\hyperlink{a00656_ggaca485e5a863be5b5c698317dc0ca469aa1868476dfd4ebc2b4b5f1398ac4a4229}{GSN\_\-UART\_\-IFL\_\-3\_\-BY\_\-4}, 
+\par
+\hyperlink{a00656_ggaca485e5a863be5b5c698317dc0ca469aaa93754e8a359383590e2921b03352c9c}{GSN\_\-UART\_\-IFL\_\-7\_\-BY\_\-8}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART Interrupt FIFO levels. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_ga99b0d3d670ac3d61d3a8764fafc3b992}{GSN\_\-UART\_\-BAUDRATE} \{ \par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992aed22e0e63c37a7729a6f5614093110f1}{GSN\_\-UART\_\-BAUDRATE\_\-1K2} =  1200, 
+\par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992aed8ca1e14912131fdb44b308117f95af}{GSN\_\-UART\_\-BAUDRATE\_\-2K4} =  2400, 
+\par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992adbb772f8e147d5259cc57829b8b7eb3b}{GSN\_\-UART\_\-BAUDRATE\_\-4K8} =  4800, 
+\par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992a75b9a7f05ac77527ee7764f25b7960ec}{GSN\_\-UART\_\-BAUDRATE\_\-9K6} =  9600, 
+\par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992ab5d1d0d38627c8c3bcef0eca6b258006}{GSN\_\-UART\_\-BAUDRATE\_\-19K2} =  19200, 
+\par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992ae0ca8c2c8d5eb96813089fe2b290556d}{GSN\_\-UART\_\-BAUDRATE\_\-38K4} =  38400, 
+\par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992abcabb70f14f4d91c07818f934eeb474c}{GSN\_\-UART\_\-BAUDRATE\_\-57K6} =  57600, 
+\par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992a6ec9479380380d806553c9d1d806aa72}{GSN\_\-UART\_\-BAUDRATE\_\-115K2} =  115200, 
+\par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992a6ca81661ffd8464d9291b5f77e4c9321}{GSN\_\-UART\_\-BAUDRATE\_\-230K4} =  230400, 
+\par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992a6b3663c967032ba0b467a1433e940bee}{GSN\_\-UART\_\-BAUDRATE\_\-460K8} =  460800, 
+\par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992a24763d1145ed75345cd3a62f8d1b453f}{GSN\_\-UART\_\-BAUDRATE\_\-921K6} =  921600, 
+\par
+\hyperlink{a00656_gga99b0d3d670ac3d61d3a8764fafc3b992a3848e75f1204235b9c747ab67438bd13}{GSN\_\-UART\_\-BAUDRATE\_\-UNDEFINED}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART baud rate values. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_ga9082153fb94765f4ce91b584f1d8a0a3}{GSN\_\-UART\_\-WORDLEN} \{ \par
+\hyperlink{a00656_gga9082153fb94765f4ce91b584f1d8a0a3a522feaf3af3136ecae56f34efc1f3c98}{GSN\_\-UART\_\-WORDLEN\_\-5}, 
+\par
+\hyperlink{a00656_gga9082153fb94765f4ce91b584f1d8a0a3a7c7427fcbff646d1e4b19e5b33e49cf6}{GSN\_\-UART\_\-WORDLEN\_\-6}, 
+\par
+\hyperlink{a00656_gga9082153fb94765f4ce91b584f1d8a0a3a0589fde9876f57d818bdc126836237ba}{GSN\_\-UART\_\-WORDLEN\_\-7}, 
+\par
+\hyperlink{a00656_gga9082153fb94765f4ce91b584f1d8a0a3a5a4566a59533384391a29c0024001695}{GSN\_\-UART\_\-WORDLEN\_\-8}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART data length. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_gad03ef3aa80077ad749fb3afd6e9a23af}{GSN\_\-UART\_\-CLKSEL} \{ \par
+\hyperlink{a00656_ggad03ef3aa80077ad749fb3afd6e9a23afa65224eb1061d57170c9027f40a5e9282}{GSN\_\-UART\_\-CLK\_\-RC}, 
+\par
+\hyperlink{a00656_ggad03ef3aa80077ad749fb3afd6e9a23afa1d81da573d0e3e03fc80556f37259ade}{GSN\_\-UART\_\-CLK\_\-XTAL}, 
+\par
+\hyperlink{a00656_ggad03ef3aa80077ad749fb3afd6e9a23afaef9b1aa51132e522ebac09fde4365171}{GSN\_\-UART\_\-CLK\_\-PLL}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines clocks available for UART. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_ga89a87c4e15500db4330f0d501e2068d1}{GSN\_\-UART\_\-CLK\_\-VALUE\_\-TEST} \{ \par
+\hyperlink{a00656_gga89a87c4e15500db4330f0d501e2068d1a885613e521e568e810c02a17fc85a57e}{GSN\_\-UART\_\-CLK\_\-HSRC\_\-MAX} = 80000000, 
+\par
+\hyperlink{a00656_gga89a87c4e15500db4330f0d501e2068d1accc7ddada8dc3f8831f900813cd3f938}{GSN\_\-UART\_\-CLK\_\-XTAL\_\-MAX} = 40000000, 
+\par
+\hyperlink{a00656_gga89a87c4e15500db4330f0d501e2068d1a3473e1426adc27467ad37d0d25c187d6}{GSN\_\-UART\_\-CLK\_\-PLL\_\-MAX} = 120000000
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines max clock values available for UART. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_ga7b923f8de1d1d52f2879a94bce534a31}{GSN\_\-UART\_\-CLK\_\-VALUE} \{ \par
+\hyperlink{a00656_gga7b923f8de1d1d52f2879a94bce534a31a097ddadbe38e0dc576b793f0f2ed362e}{GSN\_\-UART\_\-CLK\_\-HSRC\_\-MAX\_\-TEST} = 50000000, 
+\par
+\hyperlink{a00656_gga7b923f8de1d1d52f2879a94bce534a31a3e1900763b065d501c46046e348883dc}{GSN\_\-UART\_\-CLK\_\-XTAL\_\-MAX\_\-TEST} = 50000000, 
+\par
+\hyperlink{a00656_gga7b923f8de1d1d52f2879a94bce534a31a8604aadfcb18657a8f04b8c5fe1302d1}{GSN\_\-UART\_\-CLK\_\-PLL\_\-MAX\_\-TEST} = 50000000
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This is for tetsing. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_ga67767f968b0ccabbdd2c41c40f826e4e}{GSN\_\-UART\_\-CHARFORMAT} \{ \par
+\hyperlink{a00656_gga67767f968b0ccabbdd2c41c40f826e4eacbb0bb47d7c8e068379e8a4e4a1feee0}{GSN\_\-UART\_\-CHARFORMAT\_\-5} =  0, 
+\par
+\hyperlink{a00656_gga67767f968b0ccabbdd2c41c40f826e4ea4b2d1e2fe97abce3f3d2eb82afab7191}{GSN\_\-UART\_\-CHARFORMAT\_\-6} =  1, 
+\par
+\hyperlink{a00656_gga67767f968b0ccabbdd2c41c40f826e4ea6efc2f9b9010e5fdada35ab8d053cb61}{GSN\_\-UART\_\-CHARFORMAT\_\-7} =  2, 
+\par
+\hyperlink{a00656_gga67767f968b0ccabbdd2c41c40f826e4ea79ef21d73d53e47c1b8cdeb08bb6f012}{GSN\_\-UART\_\-CHARFORMAT\_\-8} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART char format values. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_ga4871fc0b0bc6480a9cbee4d0694d23e8}{GSN\_\-UART\_\-STOPBITS} \{ \par
+\hyperlink{a00656_gga4871fc0b0bc6480a9cbee4d0694d23e8adf08125e45b8fd6597ae5c9e3fdce74f}{GSN\_\-UART\_\-STOPBITS\_\-1} =  0, 
+\par
+\hyperlink{a00656_gga4871fc0b0bc6480a9cbee4d0694d23e8a0e9a8f9dce89753ee946917155d2f8f7}{GSN\_\-UART\_\-STOPBITS\_\-2} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART stop bits values . \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_gac5a3ad4d3d1621c5ed941f57ad0b6679}{GSN\_\-UART\_\-PARITYBIT} \{ \par
+\hyperlink{a00656_ggac5a3ad4d3d1621c5ed941f57ad0b6679a8d4382c5f6da818c4586d1d9975d1469}{GSN\_\-UART\_\-PARITYBIT\_\-ODD} =  0, 
+\par
+\hyperlink{a00656_ggac5a3ad4d3d1621c5ed941f57ad0b6679a4f7a6be9936712e4dba380527164264b}{GSN\_\-UART\_\-PARITYBIT\_\-EVEN} =  1, 
+\par
+\hyperlink{a00656_ggac5a3ad4d3d1621c5ed941f57ad0b6679a8639420c9852fffc90bb61aeed1bdf37}{GSN\_\-UART\_\-PARITYBIT\_\-MARK} =  2, 
+\par
+\hyperlink{a00656_ggac5a3ad4d3d1621c5ed941f57ad0b6679a799adae9224500cb496c92701fc16365}{GSN\_\-UART\_\-PARITYBIT\_\-SPACE} =  3, 
+\par
+\hyperlink{a00656_ggac5a3ad4d3d1621c5ed941f57ad0b6679a5fd254bda102b3716865e3a9a5947a9a}{GSN\_\-UART\_\-PARITYBIT\_\-NONE}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART parity bits values. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_gad707454e495f43928eae3af5419aebba}{GSN\_\-UART\_\-NO} \{ \par
+\hyperlink{a00656_ggad707454e495f43928eae3af5419aebbaa92016241e6e4ec1743da2d8607515588}{GSN\_\-UART\_\-0} =  0, 
+\par
+\hyperlink{a00656_ggad707454e495f43928eae3af5419aebbaa7b06af4453a01dbf3d543dae032c8b08}{GSN\_\-UART\_\-1} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART port numbers. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_ga533c64d91240c65815984fe1f73817b2}{GSN\_\-UART\_\-HWSUPPORT} \{ \par
+\hyperlink{a00656_gga533c64d91240c65815984fe1f73817b2a8c7dc93e66c23c714a1a4252266a33ba}{GSN\_\-UART\_\-HW\_\-NO\_\-SUPPORT}, 
+\par
+\hyperlink{a00656_gga533c64d91240c65815984fe1f73817b2a82cf56f78194edff113af7386e83b642}{GSN\_\-UART\_\-HW\_\-SUPPORT}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART HW flow supports This enum defines UART HW flow supports. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_ga7905ed9a5914128d4dd4e1f0ff7a8a56}{GSN\_\-UART\_\-SWFLOW} \{ \par
+\hyperlink{a00656_gga7905ed9a5914128d4dd4e1f0ff7a8a56ae730ad90159b4ce3273e733202e78a65}{GSN\_\-UART\_\-SWFLOW\_\-NO\_\-SUPPORT}, 
+\par
+\hyperlink{a00656_gga7905ed9a5914128d4dd4e1f0ff7a8a56a48ad312611c254a0e7236e5f3584a26a}{GSN\_\-UART\_\-SWFLOW\_\-SUPPORT}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART SW flow supports This enum defines UART SW flow supports. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_ga48e5ede8ddc3ed1b7967288df611c09d}{GSN\_\-UART\_\-DMA} \{ \par
+\hyperlink{a00656_gga48e5ede8ddc3ed1b7967288df611c09da61e84f0813edd6dddf49f60631c4e98f}{GSN\_\-UART\_\-DMA\_\-NO\_\-SUPPORT}, 
+\par
+\hyperlink{a00656_gga48e5ede8ddc3ed1b7967288df611c09da04012c54ff5d366f0f59b2807e15275c}{GSN\_\-UART\_\-DMA\_\-SUPPORT}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART DMA supports This enum defines UART DMA supports. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_ga09347558a3ca84081b700f762369ff09}{GSN\_\-UART\_\-DMA\_\-TX\_\-MODE} \{ \par
+\hyperlink{a00656_gga09347558a3ca84081b700f762369ff09ab713fb7412083d9608b9c7dcb47705f9}{GSN\_\-UART\_\-DMA\_\-TX\_\-CLEAR}, 
+\par
+\hyperlink{a00656_gga09347558a3ca84081b700f762369ff09a678a20a0d6e4f1a555e07f1291188153}{GSN\_\-UART\_\-DMA\_\-TX\_\-SET}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn UART DMA TX mode types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_gaef21b1191deb90943f343ad04ef5339b}{GSN\_\-UART\_\-DMA\_\-RX\_\-MODE} \{ \par
+\hyperlink{a00656_ggaef21b1191deb90943f343ad04ef5339ba5440e9f8ca11a0d1fcd66fcbdac4a01d}{GSN\_\-UART\_\-DMA\_\-RX\_\-CLEAR}, 
+\par
+\hyperlink{a00656_ggaef21b1191deb90943f343ad04ef5339bad7cfcc300aded98ca2db71d3276cb442}{GSN\_\-UART\_\-DMA\_\-RX\_\-SET}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn UART DMA RX mode types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00656_ga42c5ecdf0c08902681813944c3b6afdc}{GSN\_\-UART\_\-DEVICE\_\-STATE} \{ \par
+\hyperlink{a00656_gga42c5ecdf0c08902681813944c3b6afdca86763e1e0e68eff7d0d7daa2371bd4d8}{GSN\_\-UART\_\-NOT\_\-INITIALIZED}, 
+\par
+\hyperlink{a00656_gga42c5ecdf0c08902681813944c3b6afdca9e3fa475abd418f2edffe86d5528f4f1}{GSN\_\-UART\_\-INITIALIZED}, 
+\par
+\hyperlink{a00656_gga42c5ecdf0c08902681813944c3b6afdca090949a6a7da5bbd9bbb3b112715a3fa}{GSN\_\-UART\_\-READ\_\-PROGRESS}, 
+\par
+\hyperlink{a00656_gga42c5ecdf0c08902681813944c3b6afdca474ad9ad38710696ebc404a470bd992e}{GSN\_\-UART\_\-READ\_\-FINISHED}, 
+\par
+\hyperlink{a00656_gga42c5ecdf0c08902681813944c3b6afdcaf1b2680e1c8ae1a54ef960ec85995d94}{GSN\_\-UART\_\-WRITE\_\-PROGRESS}, 
+\par
+\hyperlink{a00656_gga42c5ecdf0c08902681813944c3b6afdcae05949f1fb3ada6a51123d06e9d693ed}{GSN\_\-UART\_\-WRITE\_\-FINISHED}, 
+\par
+\hyperlink{a00656_gga42c5ecdf0c08902681813944c3b6afdca7e2bf37128b2e3daba78e16f2da65c4b}{GSN\_\-UART\_\-BLOCK\_\-READ\_\-PROGRESS}, 
+\par
+\hyperlink{a00656_gga42c5ecdf0c08902681813944c3b6afdcae021460fb491bbba1b32996482fc12a2}{GSN\_\-UART\_\-RECEIVE\_\-ERROR}, 
+\par
+\hyperlink{a00656_gga42c5ecdf0c08902681813944c3b6afdca7a5fba23afa342bad30092e490b16635}{GSN\_\-UART\_\-CLOSED}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN UART Types. This enum defines UART return values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00656_ga65b923fe4ca7d5f30850d9112c2b3c8d}{GsnUart\_\-Open} (\hyperlink{a00656_ga2e91880e4d139a83add2ffc3a75ad653}{GSN\_\-UART\_\-NO\_\-T} eGsnUartNo, \hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle, \hyperlink{a00268}{GSN\_\-UART\_\-CONFIG\_\-T} $\ast$ptUartConfig)
+\begin{DoxyCompactList}\small\item\em UART Driver open API. This function open a UART port. This function initializes the corresponding UART. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00656_ga6b0eacf5eb9ff518c5cf462f417504ea}{GsnUart\_\-Read} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$puBuffer, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} noOfBytesToRead, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blockRead, \hyperlink{a00600_a2e597592e12f52e6b9f19cffdcd2378f}{UARTCALLBACK\_\-FP} ptCallBackFunc, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em UART GSN Read throgh specified port 1. prepare for transmission. 2. Start data reception by enabling the Rx interrupt. 3. wait on the semaphore for a synchronous read. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00656_gae5731c2af6519762d209aa7b5764356d}{GsnUart\_\-Write} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$puBuffer, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} noOfBytesToWrite, \hyperlink{a00600_a2e597592e12f52e6b9f19cffdcd2378f}{UARTCALLBACK\_\-FP} ptCallBackFunc, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em UART Write Through Specified Port 1. Prepare for transmission 2. Start transmission by putting data into UART FIFO. 3. Enable the TX interrupt. 4. Wait on the write semaphore for a synchronous write. \end{DoxyCompactList}\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00656_ga791dc8834d7d8198f38b487da9af0536}{GsnUart\_\-Close} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Closes API. This function closes the driver. This function deletes the semaphores and disables the corresponding UART port. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_ga31a275eaf10b35ae705b9f8a7bd69949}{GsnUart\_\-DmaTxSet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Dma Transmit Set API. This function set DMA transmit mode in UART. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_gad84018c54ca6499f277fbe9997103157}{GsnUart\_\-DmaTxClear} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Dma Transmit Clear API. This function clear the DMA transmit mode in UART. \end{DoxyCompactList}\item 
+\hyperlink{a00656_gaca97ddd99d6a776d3991457a1113f687}{GSN\_\-UART\_\-DMA\_\-TX\_\-MODE\_\-T} \hyperlink{a00656_ga338ba361667098d2a1d11aff8a3924fb}{GsnUart\_\-DmaTxGet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Gets DMA transmit mode API. This function gets the UART\_\-DMA\_\-TX\_\-MODE status.. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_ga6a3d0cebdb3eebb40cd6d7e48375fdde}{GsnUart\_\-DmaRxClear} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Dma Receive Clear API. This function clear the DMA receive mode in UART. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_ga120bd7e79427738b0700cfa28a473106}{GsnUart\_\-DmaRxSet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Dma Receive Set API. This function set DMA Receive mode in UART. \end{DoxyCompactList}\item 
+\hyperlink{a00656_ga14b3640ffe5cd4028623beae5472da4a}{GSN\_\-UART\_\-DMA\_\-RX\_\-MODE\_\-T} \hyperlink{a00656_ga18dd0cc9f8cf76bbce0889ed412691a3}{GsnUart\_\-DmaRxGet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Gets DMA Receive mode API. This function gets the UART\_\-DMA\_\-RX\_\-MODE status. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_ga1c8bfb967aee8f7d60b6ba5917fef54f}{GsnUart\_\-BaudRateSet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} eBaudRate)
+\begin{DoxyCompactList}\small\item\em UART Driver Set Baud rate API. This function set the baud rate settings of UART. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00656_ga7f5c8a333e4eb2de06f97625cef471ef}{GsnUart\_\-BaudRateGet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Gets Baud Rate API. This function gets the UART baud rate settings. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_ga9568fde8552d93218dfa1968ea060ca4}{GsnUart\_\-CharFormatSet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle, \hyperlink{a00656_gaf208b91b10fde1d137e4ec8a7dde641b}{GSN\_\-UART\_\-CHARFORMAT\_\-T} eCharFormat)
+\begin{DoxyCompactList}\small\item\em UART Driver Set Char Format Bit API. This function set the stop bit settings of UART. \end{DoxyCompactList}\item 
+\hyperlink{a00656_gaf208b91b10fde1d137e4ec8a7dde641b}{GSN\_\-UART\_\-CHARFORMAT\_\-T} \hyperlink{a00656_ga75d819e60ca33c8862d24eda5af9c9c1}{GsnUart\_\-CharFormatGet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Gets Char Format API. This function gets the char format settings of UART. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_gad9d35777aa29c641223dabe083698273}{GsnUart\_\-StopBitsSet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle, \hyperlink{a00656_gad24814e9f0d44d09137d1984c23155c1}{GSN\_\-UART\_\-STOPBITS\_\-T} eStopBits)
+\begin{DoxyCompactList}\small\item\em UART Driver Sets Stop Bit API. This function sets the UART stop bit settings. \end{DoxyCompactList}\item 
+\hyperlink{a00656_gad24814e9f0d44d09137d1984c23155c1}{GSN\_\-UART\_\-STOPBITS\_\-T} \hyperlink{a00656_gac23203e67a9128c9c651521afa29f530}{GsnUart\_\-StopBitsGet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Gets Stop Bit API. This function gets the UART stop bit settings. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_gadb746c13dcdb711e624ce1e857bbb11e}{GsnUart\_\-ParityBitsSet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle, \hyperlink{a00656_ga62f12eb4660a18fb77ba09b0625d0c8e}{GSN\_\-UART\_\-PARITYBIT\_\-T} eParityBits)
+\begin{DoxyCompactList}\small\item\em UART Driver Set Parity Bit API. This function sets the UART parity bit. \end{DoxyCompactList}\item 
+\hyperlink{a00656_ga62f12eb4660a18fb77ba09b0625d0c8e}{GSN\_\-UART\_\-PARITYBIT\_\-T} \hyperlink{a00656_ga5215fd6a39e76e43f50c313952214b9b}{GsnUart\_\-ParityBitsGet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Gets Parity Bit API. This function gets the UART parity bit settings. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_gae40916095a0f516326a0aa80efe47eac}{GsnUart\_\-HwFlowSupportSet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle, \hyperlink{a00656_gaf4df97392dfefed655a81fe500a74162}{GSN\_\-UART\_\-HWSUPPORT\_\-T} hwFlowSupport)
+\begin{DoxyCompactList}\small\item\em UART Driver Set HW Flow Support. This function sets and enables the UART HW flow support. \end{DoxyCompactList}\item 
+\hyperlink{a00656_gaf4df97392dfefed655a81fe500a74162}{GSN\_\-UART\_\-HWSUPPORT\_\-T} \hyperlink{a00656_ga257ed612df03564408836a8debee880a}{GsnUart\_\-HwFlowSupportGet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Get Hw flow support API. This function gets Hw flow support settings of UART. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00656_gaa01ab358548634ea6ecb2d188bb05ea7}{GsnUart\_\-TxStatusGet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Get Tx Status This function gets Tx Status for the UART. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_ga956677b6d98e04883e319782e1978b22}{GsnUart\_\-SwFlowSupportSet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle, \hyperlink{a00656_gae4fa00cd25fb7d023d1016b79b520542}{GSN\_\-UART\_\-SWFLOW\_\-T} value)
+\begin{DoxyCompactList}\small\item\em UART Driver Set SW Flow Support. This function sets and enables the UART SW flow support. \end{DoxyCompactList}\item 
+\hyperlink{a00656_gae4fa00cd25fb7d023d1016b79b520542}{GSN\_\-UART\_\-SWFLOW\_\-T} \hyperlink{a00656_ga95f5a07299d754d9bee8165152d9dd27}{GsnUart\_\-SwFlowSupportGet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Get SW Flow Support. This function gets the UART SW flow support status. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_ga4f4f8c34cc82ac1a0a5f4751190f2301}{GsnUart\_\-LoopBackEn} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\begin{DoxyCompactList}\small\item\em UART Driver Loop Back Enable. This function enable loop back in UART.TX line is connected to RX line. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_gaca9431f3944d584accd4697be926dde9}{GsnUart\_\-ClockEnable} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} gsnUartNo, \hyperlink{a00268}{GSN\_\-UART\_\-CONFIG\_\-T} $\ast$ptUartConfig)
+\begin{DoxyCompactList}\small\item\em UART Driver Enable UART clock This function will Enable UART clock. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_ga636fb7edc1ca9341330e1ff442e4c917}{GsnUart\_\-TxCallBack} (VOID $\ast$ptUartHandle, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelId)
+\begin{DoxyCompactList}\small\item\em UART Driver -\/ GsnUart\_\-TxCallBack This function will call asynchronously by dma driver. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00656_ga15a22d726c4fae9872826a00f83928eb}{GsnUart\_\-RxCallBack} (VOID $\ast$ptUartHandle, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelId)
+\begin{DoxyCompactList}\small\item\em UART Driver-\/GsnUart\_\-RxCallBack This function will call asynchronously by dma driver. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00600_a1b201c82db5f293b0926e528051fa07c}{GsnUart\_\-IntrFifoRxLevelSet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle, \hyperlink{a00656_ga170d0f1af6abfe39aa2dc0586412a85c}{GSN\_\-UART\_\-IFL\_\-T} level)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00600_a917e0f7cd57ee8857fbee1cd19a1c8da}{GsnUart\_\-IntrFifoTxLevelGet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00600_a69e50b6d32f88ccdd5f1ab1a673b032e}{GsnUart\_\-IntrFifoRxLevelGet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00600_adf9a2f1a6ab26f70e5df7f7b25c13919}{GsnUart\_\-IntrFifoTxLevelSet} (\hyperlink{a00266}{GSN\_\-UART\_\-HANDLE\_\-T} $\ast$ptUartHandle, \hyperlink{a00656_ga170d0f1af6abfe39aa2dc0586412a85c}{GSN\_\-UART\_\-IFL\_\-T} level)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Public Header Containing UART Driver Functions. 
+
+Definition in file \hyperlink{a00600_source}{gsn\_\-uart.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00600_a8d4d184d01326210338840c046d1fb04}{
+\index{gsn\_\-uart.h@{gsn\_\-uart.h}!GSN\_\-UART\_\-NOS@{GSN\_\-UART\_\-NOS}}
+\index{GSN\_\-UART\_\-NOS@{GSN\_\-UART\_\-NOS}!gsn_uart.h@{gsn\_\-uart.h}}
+\subsubsection[{GSN\_\-UART\_\-NOS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART\_\-NOS~2}}
+\label{a00600_a8d4d184d01326210338840c046d1fb04}
+
+
+Definition at line 92 of file gsn\_\-uart.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00600_a2e597592e12f52e6b9f19cffdcd2378f}{
+\index{gsn\_\-uart.h@{gsn\_\-uart.h}!UARTCALLBACK\_\-FP@{UARTCALLBACK\_\-FP}}
+\index{UARTCALLBACK\_\-FP@{UARTCALLBACK\_\-FP}!gsn_uart.h@{gsn\_\-uart.h}}
+\subsubsection[{UARTCALLBACK\_\-FP}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf UARTCALLBACK\_\-FP})(VOID $\ast$, {\bf UINT32})}}
+\label{a00600_a2e597592e12f52e6b9f19cffdcd2378f}
+
+
+Definition at line 106 of file gsn\_\-uart.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00600_a69e50b6d32f88ccdd5f1ab1a673b032e}{
+\index{gsn\_\-uart.h@{gsn\_\-uart.h}!GsnUart\_\-IntrFifoRxLevelGet@{GsnUart\_\-IntrFifoRxLevelGet}}
+\index{GsnUart\_\-IntrFifoRxLevelGet@{GsnUart\_\-IntrFifoRxLevelGet}!gsn_uart.h@{gsn\_\-uart.h}}
+\subsubsection[{GsnUart\_\-IntrFifoRxLevelGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnUart\_\-IntrFifoRxLevelGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-UART\_\-HANDLE\_\-T} $\ast$}]{ptUartHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00600_a69e50b6d32f88ccdd5f1ab1a673b032e}
+\hypertarget{a00600_a1b201c82db5f293b0926e528051fa07c}{
+\index{gsn\_\-uart.h@{gsn\_\-uart.h}!GsnUart\_\-IntrFifoRxLevelSet@{GsnUart\_\-IntrFifoRxLevelSet}}
+\index{GsnUart\_\-IntrFifoRxLevelSet@{GsnUart\_\-IntrFifoRxLevelSet}!gsn_uart.h@{gsn\_\-uart.h}}
+\subsubsection[{GsnUart\_\-IntrFifoRxLevelSet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnUart\_\-IntrFifoRxLevelSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-UART\_\-HANDLE\_\-T} $\ast$}]{ptUartHandle, }
+\item[{{\bf GSN\_\-UART\_\-IFL\_\-T}}]{level}
+\end{DoxyParamCaption}
+)}}
+\label{a00600_a1b201c82db5f293b0926e528051fa07c}
+\hypertarget{a00600_a917e0f7cd57ee8857fbee1cd19a1c8da}{
+\index{gsn\_\-uart.h@{gsn\_\-uart.h}!GsnUart\_\-IntrFifoTxLevelGet@{GsnUart\_\-IntrFifoTxLevelGet}}
+\index{GsnUart\_\-IntrFifoTxLevelGet@{GsnUart\_\-IntrFifoTxLevelGet}!gsn_uart.h@{gsn\_\-uart.h}}
+\subsubsection[{GsnUart\_\-IntrFifoTxLevelGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnUart\_\-IntrFifoTxLevelGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-UART\_\-HANDLE\_\-T} $\ast$}]{ptUartHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00600_a917e0f7cd57ee8857fbee1cd19a1c8da}
+\hypertarget{a00600_adf9a2f1a6ab26f70e5df7f7b25c13919}{
+\index{gsn\_\-uart.h@{gsn\_\-uart.h}!GsnUart\_\-IntrFifoTxLevelSet@{GsnUart\_\-IntrFifoTxLevelSet}}
+\index{GsnUart\_\-IntrFifoTxLevelSet@{GsnUart\_\-IntrFifoTxLevelSet}!gsn_uart.h@{gsn\_\-uart.h}}
+\subsubsection[{GsnUart\_\-IntrFifoTxLevelSet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnUart\_\-IntrFifoTxLevelSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-UART\_\-HANDLE\_\-T} $\ast$}]{ptUartHandle, }
+\item[{{\bf GSN\_\-UART\_\-IFL\_\-T}}]{level}
+\end{DoxyParamCaption}
+)}}
+\label{a00600_adf9a2f1a6ab26f70e5df7f7b25c13919}

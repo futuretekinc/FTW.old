@@ -1,0 +1,495 @@
+\hypertarget{a00486}{
+\section{gsn\_\-drivers\_\-pl722x.h File Reference}
+\label{a00486}\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{a00716}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00449}{PL722X\_\-CONFIG}
+\item 
+struct \hyperlink{a00453}{PL722X\_\-PARAMS}
+\item 
+struct \hyperlink{a00450}{PL722X\_\-ELECTRIC\_\-UNITS}
+\item 
+struct \hyperlink{a00451}{PL722X\_\-FW\_\-VER}
+\item 
+struct \hyperlink{a00452}{PL722X\_\-OCP\_\-PARAM}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00486_a8ed206bcae8ff07f3be218a4283ed5d5}{Pl722x\_\-Printf}(...)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00449}{PL722X\_\-CONFIG} \hyperlink{a00486_aabd9b2f1a89e02b31d332b04e11d68f4}{PL722X\_\-CONFIG\_\-T}
+\item 
+typedef struct \hyperlink{a00453}{PL722X\_\-PARAMS} \hyperlink{a00486_a821a0c1a5a145063f260d31fad400bd4}{PL722X\_\-PARAMS\_\-T}
+\item 
+typedef struct \hyperlink{a00450}{PL722X\_\-ELECTRIC\_\-UNITS} \hyperlink{a00486_a3641c98c6f3726ae5c6e148503dc2993}{PL722X\_\-ELECTRIC\_\-UNITS\_\-T}
+\item 
+typedef struct \hyperlink{a00451}{PL722X\_\-FW\_\-VER} \hyperlink{a00486_ac4e944f981c07b278a56ef938f76735d}{PL722X\_\-FW\_\-VER\_\-T}
+\item 
+typedef struct \hyperlink{a00452}{PL722X\_\-OCP\_\-PARAM} \hyperlink{a00486_a2d33321bbdef2f4ed4a14fa4c375a1ad}{PL722X\_\-OCP\_\-PARAM\_\-T}
+\item 
+typedef enum \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_ac4ecf097ed33a9b5d098d1ea1235d6ad}{PL722X\_\-STATUS}
+\begin{DoxyCompactList}\small\item\em This structure defines the status of operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \{ \par
+\hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8ca7690dbe3630b18aed1cdb482e3a53d03}{PL722X\_\-SUCCESS} =  0, 
+\par
+\hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8ca2259fb3fc39982ea86e9749c3f363c6a}{PL722X\_\-FAILURE} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em This structure defines the status of operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_af09b33c19ebcc67ad3c405684f320339}{PL722X\_\-Init} (\hyperlink{a00449}{PL722X\_\-CONFIG\_\-T} $\ast$cofig)
+\begin{DoxyCompactList}\small\item\em Initialize the prolific chip. 1.Configure SPI mode in pl722x 2.verify the SPI mode in pl722x. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_ae1cf0085a492216194d8cf05b6f11cd1}{PL722X\_\-ReadParam} (\hyperlink{a00453}{PL722X\_\-PARAMS\_\-T} $\ast$param)
+\begin{DoxyCompactList}\small\item\em Read the prolific parameters. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_adf46efb1131cf2da7c821ae906280b79}{PL722X\_\-GetElectricUnits} (\hyperlink{a00450}{PL722X\_\-ELECTRIC\_\-UNITS\_\-T} $\ast$elecUnits)
+\begin{DoxyCompactList}\small\item\em Read the prolific and convert it in to engineering units. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_ac2327d5a0de088c8874af54611f05cc7}{PL722X\_\-Read\_\-FwVer} (\hyperlink{a00451}{PL722X\_\-FW\_\-VER\_\-T} $\ast$param)
+\begin{DoxyCompactList}\small\item\em Read the prolific parameters. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_acb416193cf2da8aad8dccbb9c4903595}{PL722X\_\-Read} (\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} addr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} bytesToRead, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Read the prolific registers. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_a42f46804b5e8cdadec695451a4889484}{PL722X\_\-Write} (\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} addr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} bytesToWrite, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em write the prolific registers \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_a83913c15618c7a31798780209239b49e}{PL722X\_\-Close} (VOID)
+\begin{DoxyCompactList}\small\item\em Close the interface. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_abec87e3fe5270ae493abd4cfd6085f9c}{PL722X\_\-ControlLoad} (\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} status)
+\begin{DoxyCompactList}\small\item\em Configure relay (enable/disable) \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_a5985ef082206431fb4395bf320166f49}{PL722X\_\-ResetKWH} (VOID)
+\begin{DoxyCompactList}\small\item\em Reset KWH calculation (cumilative value) \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00486_a5a2855fdd84c82c174ec61549247332a}{PL722X\_\-DisableOCP} (VOID)
+\begin{DoxyCompactList}\small\item\em Disable OCP (over curent protection) \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00486_a0bc6667f5504eba89f2bf507f1f256ea}{PL722X\_\-EnableOCP} (VOID)
+\begin{DoxyCompactList}\small\item\em Enable OCP (over curent protection) \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00486_aa2ae71e6647e53de71f7c3bd8142b38b}{PL722X\_\-GetOCPStatus} (VOID)
+\begin{DoxyCompactList}\small\item\em Get OCP status will return whether OCP has happened or not. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_a800401a69bad9c154a78ca38c7437420}{PL722X\_\-GetOCPParams} (\hyperlink{a00452}{PL722X\_\-OCP\_\-PARAM\_\-T} $\ast$param)
+\begin{DoxyCompactList}\small\item\em Get OCP parameters required for setting loading current and loading time. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_a061f83f7bc6c813b53aa8ff3747211ee}{PL722X\_\-SetLoadingCurrent} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Set loading current. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{PL722X\_\-STATUS} \hyperlink{a00486_aa276ef4f8ff4fa3763223a7a47e6671d}{PL722X\_\-SetLoadingTime} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Set loading time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00486_a8ed206bcae8ff07f3be218a4283ed5d5}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!Pl722x\_\-Printf@{Pl722x\_\-Printf}}
+\index{Pl722x\_\-Printf@{Pl722x\_\-Printf}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{Pl722x\_\-Printf}]{\setlength{\rightskip}{0pt plus 5cm}\#define Pl722x\_\-Printf(
+\begin{DoxyParamCaption}
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_a8ed206bcae8ff07f3be218a4283ed5d5}
+Macros 
+
+Definition at line 54 of file gsn\_\-drivers\_\-pl722x.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00486_aabd9b2f1a89e02b31d332b04e11d68f4}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-CONFIG\_\-T@{PL722X\_\-CONFIG\_\-T}}
+\index{PL722X\_\-CONFIG\_\-T@{PL722X\_\-CONFIG\_\-T}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf PL722X\_\-CONFIG} {\bf PL722X\_\-CONFIG\_\-T}}}
+\label{a00486_aabd9b2f1a89e02b31d332b04e11d68f4}
+Public data types \hypertarget{a00486_a3641c98c6f3726ae5c6e148503dc2993}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-ELECTRIC\_\-UNITS\_\-T@{PL722X\_\-ELECTRIC\_\-UNITS\_\-T}}
+\index{PL722X\_\-ELECTRIC\_\-UNITS\_\-T@{PL722X\_\-ELECTRIC\_\-UNITS\_\-T}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-ELECTRIC\_\-UNITS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf PL722X\_\-ELECTRIC\_\-UNITS} {\bf PL722X\_\-ELECTRIC\_\-UNITS\_\-T}}}
+\label{a00486_a3641c98c6f3726ae5c6e148503dc2993}
+\hypertarget{a00486_ac4e944f981c07b278a56ef938f76735d}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-FW\_\-VER\_\-T@{PL722X\_\-FW\_\-VER\_\-T}}
+\index{PL722X\_\-FW\_\-VER\_\-T@{PL722X\_\-FW\_\-VER\_\-T}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-FW\_\-VER\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf PL722X\_\-FW\_\-VER} {\bf PL722X\_\-FW\_\-VER\_\-T}}}
+\label{a00486_ac4e944f981c07b278a56ef938f76735d}
+\hypertarget{a00486_a2d33321bbdef2f4ed4a14fa4c375a1ad}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-OCP\_\-PARAM\_\-T@{PL722X\_\-OCP\_\-PARAM\_\-T}}
+\index{PL722X\_\-OCP\_\-PARAM\_\-T@{PL722X\_\-OCP\_\-PARAM\_\-T}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-OCP\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf PL722X\_\-OCP\_\-PARAM} {\bf PL722X\_\-OCP\_\-PARAM\_\-T}}}
+\label{a00486_a2d33321bbdef2f4ed4a14fa4c375a1ad}
+\hypertarget{a00486_a821a0c1a5a145063f260d31fad400bd4}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-PARAMS\_\-T@{PL722X\_\-PARAMS\_\-T}}
+\index{PL722X\_\-PARAMS\_\-T@{PL722X\_\-PARAMS\_\-T}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-PARAMS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf PL722X\_\-PARAMS} {\bf PL722X\_\-PARAMS\_\-T}}}
+\label{a00486_a821a0c1a5a145063f260d31fad400bd4}
+\hypertarget{a00486_ac4ecf097ed33a9b5d098d1ea1235d6ad}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-STATUS@{PL722X\_\-STATUS}}
+\index{PL722X\_\-STATUS@{PL722X\_\-STATUS}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf PL722X\_\-STATUS} {\bf PL722X\_\-STATUS}}}
+\label{a00486_ac4ecf097ed33a9b5d098d1ea1235d6ad}
+
+
+This structure defines the status of operation. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-STATUS@{PL722X\_\-STATUS}}
+\index{PL722X\_\-STATUS@{PL722X\_\-STATUS}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PL722X\_\-STATUS}}}
+\label{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8c}
+
+
+This structure defines the status of operation. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{PL722X\_\-SUCCESS@{PL722X\_\-SUCCESS}!gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-SUCCESS@{PL722X\_\-SUCCESS}}\item[{\em 
+\hypertarget{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8ca7690dbe3630b18aed1cdb482e3a53d03}{
+PL722X\_\-SUCCESS}
+\label{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8ca7690dbe3630b18aed1cdb482e3a53d03}
+}]\index{PL722X\_\-FAILURE@{PL722X\_\-FAILURE}!gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-FAILURE@{PL722X\_\-FAILURE}}\item[{\em 
+\hypertarget{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8ca2259fb3fc39982ea86e9749c3f363c6a}{
+PL722X\_\-FAILURE}
+\label{a00486_a2bb5dcead34a0fa5b7fca8986b66fa8ca2259fb3fc39982ea86e9749c3f363c6a}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 118 of file gsn\_\-drivers\_\-pl722x.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00486_a83913c15618c7a31798780209239b49e}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-Close@{PL722X\_\-Close}}
+\index{PL722X\_\-Close@{PL722X\_\-Close}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-Close}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-Close (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_a83913c15618c7a31798780209239b49e}
+
+
+Close the interface. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00486_abec87e3fe5270ae493abd4cfd6085f9c}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-ControlLoad@{PL722X\_\-ControlLoad}}
+\index{PL722X\_\-ControlLoad@{PL722X\_\-ControlLoad}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-ControlLoad}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-ControlLoad (
+\begin{DoxyParamCaption}
+\item[{{\bf BOOL}}]{status}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_abec87e3fe5270ae493abd4cfd6085f9c}
+
+
+Configure relay (enable/disable) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & -\/ enable/disbale the relay connected to pl722x \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Enable/disable CFG5 (bit 5) of OffsetCFG (0x380F) If OCP happened, MCU will not be able to control the load through pl7223 until status flag is cleared 
+\end{DoxyNote}
+\hypertarget{a00486_a5a2855fdd84c82c174ec61549247332a}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-DisableOCP@{PL722X\_\-DisableOCP}}
+\index{PL722X\_\-DisableOCP@{PL722X\_\-DisableOCP}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-DisableOCP}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID PL722X\_\-DisableOCP (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_a5a2855fdd84c82c174ec61549247332a}
+
+
+Disable OCP (over curent protection) 
+
+OCP information
+
+\begin{DoxyNote}{Note}
+Disable(0) CFG4 (bit 4) of OffsetCFG (0x380F) 
+\end{DoxyNote}
+\hypertarget{a00486_a0bc6667f5504eba89f2bf507f1f256ea}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-EnableOCP@{PL722X\_\-EnableOCP}}
+\index{PL722X\_\-EnableOCP@{PL722X\_\-EnableOCP}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-EnableOCP}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID PL722X\_\-EnableOCP (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_a0bc6667f5504eba89f2bf507f1f256ea}
+
+
+Enable OCP (over curent protection) 
+
+\begin{DoxyNote}{Note}
+Enable CFG4 (bit 4) of OffsetCFG (0x380F) 
+\end{DoxyNote}
+\hypertarget{a00486_adf46efb1131cf2da7c821ae906280b79}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-GetElectricUnits@{PL722X\_\-GetElectricUnits}}
+\index{PL722X\_\-GetElectricUnits@{PL722X\_\-GetElectricUnits}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-GetElectricUnits}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-GetElectricUnits (
+\begin{DoxyParamCaption}
+\item[{{\bf PL722X\_\-ELECTRIC\_\-UNITS\_\-T} $\ast$}]{elecUnits}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_adf46efb1131cf2da7c821ae906280b79}
+
+
+Read the prolific and convert it in to engineering units. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elecUnits} & -\/ IN Parameter to be read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+PL722X\_\-STATUS 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00486_a800401a69bad9c154a78ca38c7437420}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-GetOCPParams@{PL722X\_\-GetOCPParams}}
+\index{PL722X\_\-GetOCPParams@{PL722X\_\-GetOCPParams}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-GetOCPParams}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-GetOCPParams (
+\begin{DoxyParamCaption}
+\item[{{\bf PL722X\_\-OCP\_\-PARAM\_\-T} $\ast$}]{param}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_a800401a69bad9c154a78ca38c7437420}
+
+
+Get OCP parameters required for setting loading current and loading time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & -\/IN pointer where OCP params read needs to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+please find the formula for computing loading current and time loading curent: STPUTH rule = \{\{(IA\_\-rms -\/ IA\_\-offset ) / (IA\_\-gain / 2$^\wedge$20 ) \} $^\wedge$2 \} $\ast$ (SampleCnt\_\-1) loading time: STTH rule = \{\{(IA\_\-rms -\/ IA\_\-offset ) / (IA\_\-gain / 2$^\wedge$20 ) \} $^\wedge$2 \} $\ast$( SampleCnt\_\-ADC\_\-Clock) $\ast$( T\_\-sc)
+\end{DoxyNote}
+so parameters needed are -\/IA\_\-OFFSET (0x3841 -\/ 0x3845) -\/ 5 Bytes -\/IA\_\-GAIN (0x3822 -\/ 0x3823) -\/ 2 Bytes -\/SAMPLE\_\-CNT\_\-1 (0x381A -\/ 0x381B) -\/ 2 Bytes -\/SampleCnt\_\-ADC\_\-Clock = 4000000/1024 = 3906 (d) \hypertarget{a00486_aa2ae71e6647e53de71f7c3bd8142b38b}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-GetOCPStatus@{PL722X\_\-GetOCPStatus}}
+\index{PL722X\_\-GetOCPStatus@{PL722X\_\-GetOCPStatus}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-GetOCPStatus}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf BOOL} PL722X\_\-GetOCPStatus (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_aa2ae71e6647e53de71f7c3bd8142b38b}
+
+
+Get OCP status will return whether OCP has happened or not. 
+
+\begin{DoxyReturn}{Returns}
+status 0 -\/ Not occured 1 -\/ occured 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Read register \char`\"{}OC\_\-Flag (0x3024)\char`\"{}. OC\_\-Flag = 0, Normal Condition OC\_\-Flag = 1, Over-\/Current Occurred 
+\end{DoxyNote}
+\hypertarget{a00486_af09b33c19ebcc67ad3c405684f320339}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-Init@{PL722X\_\-Init}}
+\index{PL722X\_\-Init@{PL722X\_\-Init}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf PL722X\_\-CONFIG\_\-T} $\ast$}]{cofig}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_af09b33c19ebcc67ad3c405684f320339}
+
+
+Initialize the prolific chip. 1.Configure SPI mode in pl722x 2.verify the SPI mode in pl722x. 
+
+Public Functions
+
+\begin{DoxyReturn}{Returns}
+PL721X\_\-STATUS 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00486_acb416193cf2da8aad8dccbb9c4903595}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-Read@{PL722X\_\-Read}}
+\index{PL722X\_\-Read@{PL722X\_\-Read}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-Read}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT16}}]{addr, }
+\item[{{\bf UINT8}}]{bytesToRead, }
+\item[{{\bf UINT8} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_acb416193cf2da8aad8dccbb9c4903595}
+
+
+Read the prolific registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & -\/ IN Address to Read \\
+\hline
+{\em bytesToRead} & -\/ IN Number of bytes to Read \\
+\hline
+{\em ptr} & -\/ IN/OUT buffer pointer in which to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+PL722X\_\-STATUS 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00486_ac2327d5a0de088c8874af54611f05cc7}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-Read\_\-FwVer@{PL722X\_\-Read\_\-FwVer}}
+\index{PL722X\_\-Read\_\-FwVer@{PL722X\_\-Read\_\-FwVer}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-Read\_\-FwVer}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-Read\_\-FwVer (
+\begin{DoxyParamCaption}
+\item[{{\bf PL722X\_\-FW\_\-VER\_\-T} $\ast$}]{param}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_ac2327d5a0de088c8874af54611f05cc7}
+
+
+Read the prolific parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & -\/ IN Pointer where read parameter should be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+PL722X\_\-STATUS 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00486_ae1cf0085a492216194d8cf05b6f11cd1}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-ReadParam@{PL722X\_\-ReadParam}}
+\index{PL722X\_\-ReadParam@{PL722X\_\-ReadParam}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-ReadParam}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-ReadParam (
+\begin{DoxyParamCaption}
+\item[{{\bf PL722X\_\-PARAMS\_\-T} $\ast$}]{param}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_ae1cf0085a492216194d8cf05b6f11cd1}
+
+
+Read the prolific parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & -\/ IN Parameter to be read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+PL722X\_\-STATUS 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00486_a5985ef082206431fb4395bf320166f49}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-ResetKWH@{PL722X\_\-ResetKWH}}
+\index{PL722X\_\-ResetKWH@{PL722X\_\-ResetKWH}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-ResetKWH}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-ResetKWH (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_a5985ef082206431fb4395bf320166f49}
+
+
+Reset KWH calculation (cumilative value) 
+
+\begin{DoxyNote}{Note}
+clear (1) CFG6 (bit 6) of OffsetCFG (0x380F) Set(0) CFG6 (bit 6) of OffsetCFG (0x380F) 
+\end{DoxyNote}
+\hypertarget{a00486_a061f83f7bc6c813b53aa8ff3747211ee}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-SetLoadingCurrent@{PL722X\_\-SetLoadingCurrent}}
+\index{PL722X\_\-SetLoadingCurrent@{PL722X\_\-SetLoadingCurrent}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-SetLoadingCurrent}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-SetLoadingCurrent (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_a061f83f7bc6c813b53aa8ff3747211ee}
+
+
+Set loading current. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & -\/IN value which should be passed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Function copies 5 bytes to address 0x3828. Make sure ptr\mbox{[}0\mbox{]} is the lower order byte 
+\end{DoxyNote}
+\hypertarget{a00486_aa276ef4f8ff4fa3763223a7a47e6671d}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-SetLoadingTime@{PL722X\_\-SetLoadingTime}}
+\index{PL722X\_\-SetLoadingTime@{PL722X\_\-SetLoadingTime}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-SetLoadingTime}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-SetLoadingTime (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_aa276ef4f8ff4fa3763223a7a47e6671d}
+
+
+Set loading time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & -\/IN value which should be passed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Function copies 6 bytes to address 0x3858. Make sure ptr\mbox{[}0\mbox{]} is the lower order byte 
+\end{DoxyNote}
+\hypertarget{a00486_a42f46804b5e8cdadec695451a4889484}{
+\index{gsn\_\-drivers\_\-pl722x.h@{gsn\_\-drivers\_\-pl722x.h}!PL722X\_\-Write@{PL722X\_\-Write}}
+\index{PL722X\_\-Write@{PL722X\_\-Write}!gsn_drivers_pl722x.h@{gsn\_\-drivers\_\-pl722x.h}}
+\subsubsection[{PL722X\_\-Write}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf PL722X\_\-STATUS} PL722X\_\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT16}}]{addr, }
+\item[{{\bf UINT8}}]{bytesToWrite, }
+\item[{{\bf UINT8} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00486_a42f46804b5e8cdadec695451a4889484}
+
+
+write the prolific registers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & -\/ IN Address to Write \\
+\hline
+{\em bytesToWrite} & -\/ IN Number of bytes to Write \\
+\hline
+{\em ptr} & -\/ IN buffer pointer for data to Write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+PL722X\_\-STATUS 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}

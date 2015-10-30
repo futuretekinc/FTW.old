@@ -1,0 +1,115 @@
+\hypertarget{a00323}{
+\section{GSN\_\-WIF\_\-CTX Struct Reference}
+\label{a00323}\index{GSN\_\-WIF\_\-CTX@{GSN\_\-WIF\_\-CTX}}
+}
+
+
+GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the wif interface will have its own context defined here.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wif.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00677_gabc852e0cb262314c5f307a3e9802921e}{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-T} \hyperlink{a00323_a3ee37b79013f1da93271b12024198eed}{macIfType}
+\item 
+\hyperlink{a00639_ga7ff7134a0bdba9e91d4edf9cea797de7}{GSN\_\-WIF\_\-IF\_\-STATE\_\-T} \hyperlink{a00323_a3f6086ca990f81e2275fbe02baf56620}{state}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00323_ae57ae92e651751e7978e237c55133b4c}{macIfNum}
+\item 
+\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$ \hyperlink{a00323_ab671e23204d79f8fda7dba9992c3d6e9}{pHiCtx}
+\item 
+\hyperlink{a00378}{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T} \hyperlink{a00323_acda926f459f060896e5bc461acf633fb}{wlanCtrlIndCbTbl} \mbox{[}GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-MAX\_\-IND\mbox{]}
+\item 
+\hyperlink{a00318}{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T} \hyperlink{a00323_a4964ff7aaa3b18e3676bf5d6781b710a}{calCtrlIndCbTbl} \mbox{[}GSN\_\-WIF\_\-CAL\_\-CTRL\_\-MAX\_\-IND\mbox{]}
+\item 
+\hyperlink{a00324}{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T} \hyperlink{a00323_a0a90ad3e7a8afda41c61fef59c158b79}{dataIndCb}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the wif interface will have its own context defined here. 
+
+END of coresvcdoc.
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 78 of file gsn\_\-wif.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00323_a4964ff7aaa3b18e3676bf5d6781b710a}{
+\index{GSN\_\-WIF\_\-CTX@{GSN\_\-WIF\_\-CTX}!calCtrlIndCbTbl@{calCtrlIndCbTbl}}
+\index{calCtrlIndCbTbl@{calCtrlIndCbTbl}!GSN_WIF_CTX@{GSN\_\-WIF\_\-CTX}}
+\subsubsection[{calCtrlIndCbTbl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T} {\bf calCtrlIndCbTbl}\mbox{[}GSN\_\-WIF\_\-CAL\_\-CTRL\_\-MAX\_\-IND\mbox{]}}}
+\label{a00323_a4964ff7aaa3b18e3676bf5d6781b710a}
+Data indication call back 
+
+Definition at line 90 of file gsn\_\-wif.h.
+
+\hypertarget{a00323_a0a90ad3e7a8afda41c61fef59c158b79}{
+\index{GSN\_\-WIF\_\-CTX@{GSN\_\-WIF\_\-CTX}!dataIndCb@{dataIndCb}}
+\index{dataIndCb@{dataIndCb}!GSN_WIF_CTX@{GSN\_\-WIF\_\-CTX}}
+\subsubsection[{dataIndCb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T} {\bf dataIndCb}}}
+\label{a00323_a0a90ad3e7a8afda41c61fef59c158b79}
+
+
+Definition at line 91 of file gsn\_\-wif.h.
+
+\hypertarget{a00323_ae57ae92e651751e7978e237c55133b4c}{
+\index{GSN\_\-WIF\_\-CTX@{GSN\_\-WIF\_\-CTX}!macIfNum@{macIfNum}}
+\index{macIfNum@{macIfNum}!GSN_WIF_CTX@{GSN\_\-WIF\_\-CTX}}
+\subsubsection[{macIfNum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf macIfNum}}}
+\label{a00323_ae57ae92e651751e7978e237c55133b4c}
+device index mapped to this wif context Pointer to context of other modules used by Wif 
+
+Definition at line 82 of file gsn\_\-wif.h.
+
+\hypertarget{a00323_a3ee37b79013f1da93271b12024198eed}{
+\index{GSN\_\-WIF\_\-CTX@{GSN\_\-WIF\_\-CTX}!macIfType@{macIfType}}
+\index{macIfType@{macIfType}!GSN_WIF_CTX@{GSN\_\-WIF\_\-CTX}}
+\subsubsection[{macIfType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-T} {\bf macIfType}}}
+\label{a00323_a3ee37b79013f1da93271b12024198eed}
+Type of wlan Nw -\/ STA/AP/IBSS 
+
+Definition at line 80 of file gsn\_\-wif.h.
+
+\hypertarget{a00323_ab671e23204d79f8fda7dba9992c3d6e9}{
+\index{GSN\_\-WIF\_\-CTX@{GSN\_\-WIF\_\-CTX}!pHiCtx@{pHiCtx}}
+\index{pHiCtx@{pHiCtx}!GSN_WIF_CTX@{GSN\_\-WIF\_\-CTX}}
+\subsubsection[{pHiCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-CTX\_\-T}$\ast$ {\bf pHiCtx}}}
+\label{a00323_ab671e23204d79f8fda7dba9992c3d6e9}
+
+
+Definition at line 85 of file gsn\_\-wif.h.
+
+\hypertarget{a00323_a3f6086ca990f81e2275fbe02baf56620}{
+\index{GSN\_\-WIF\_\-CTX@{GSN\_\-WIF\_\-CTX}!state@{state}}
+\index{state@{state}!GSN_WIF_CTX@{GSN\_\-WIF\_\-CTX}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WIF\_\-IF\_\-STATE\_\-T} {\bf state}}}
+\label{a00323_a3f6086ca990f81e2275fbe02baf56620}
+Wlan interface state 
+
+Definition at line 81 of file gsn\_\-wif.h.
+
+\hypertarget{a00323_acda926f459f060896e5bc461acf633fb}{
+\index{GSN\_\-WIF\_\-CTX@{GSN\_\-WIF\_\-CTX}!wlanCtrlIndCbTbl@{wlanCtrlIndCbTbl}}
+\index{wlanCtrlIndCbTbl@{wlanCtrlIndCbTbl}!GSN_WIF_CTX@{GSN\_\-WIF\_\-CTX}}
+\subsubsection[{wlanCtrlIndCbTbl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T} {\bf wlanCtrlIndCbTbl}\mbox{[}GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-MAX\_\-IND\mbox{]}}}
+\label{a00323_acda926f459f060896e5bc461acf633fb}
+$<$Wlan control indication call back table Calibration Control Indication call back table 
+
+Definition at line 88 of file gsn\_\-wif.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00605}{gsn\_\-wif.h}\end{DoxyCompactItemize}

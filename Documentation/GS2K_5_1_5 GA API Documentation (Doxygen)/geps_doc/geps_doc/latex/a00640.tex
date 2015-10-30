@@ -1,0 +1,1355 @@
+\hypertarget{a00640}{
+\section{GSN WIF WLAN Control Interface}
+\label{a00640}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00418}{GSN\_\-WLAN\_\-PROCESS\_\-MSG}
+\begin{DoxyCompactList}\small\item\em Host messages structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00188}{GSN\_\-RF\_\-TEST\_\-GENERAL\_\-OPTIONS\_\-S}
+\begin{DoxyCompactList}\small\item\em Test General options. \end{DoxyCompactList}\item 
+struct \hyperlink{a00187}{GSN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-S}
+\begin{DoxyCompactList}\small\item\em Frame TX Test. \end{DoxyCompactList}\item 
+struct \hyperlink{a00190}{GSN\_\-RF\_\-TEST\_\-TX99\_\-S}
+\begin{DoxyCompactList}\small\item\em TX99/TX100 Tests. \end{DoxyCompactList}\item 
+struct \hyperlink{a00189}{GSN\_\-RF\_\-TEST\_\-TX100\_\-S}
+\begin{DoxyCompactList}\small\item\em TX100 Test. \end{DoxyCompactList}\item 
+struct \hyperlink{a00185}{GSN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-TEST\_\-S}
+\begin{DoxyCompactList}\small\item\em Carrier Wave Transmit Test. \end{DoxyCompactList}\item 
+struct \hyperlink{a00186}{GSN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-S}
+\begin{DoxyCompactList}\small\item\em Frame RX Test. \end{DoxyCompactList}\item 
+struct \hyperlink{a00419}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-S}
+\begin{DoxyCompactList}\small\item\em RX Stop Indication. \end{DoxyCompactList}\item 
+struct \hyperlink{a00374}{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Connect request. \end{DoxyCompactList}\item 
+struct \hyperlink{a00373}{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-IND\_\-S}
+\begin{DoxyCompactList}\small\item\em Connect indication. \end{DoxyCompactList}\item 
+struct \hyperlink{a00391}{GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-S}
+\begin{DoxyCompactList}\small\item\em MIC failure indication. \end{DoxyCompactList}\item 
+struct \hyperlink{a00395}{GSN\_\-WIF\_\-WLAN\_\-RSSI\_\-S}
+\begin{DoxyCompactList}\small\item\em rssi get response format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00392}{GSN\_\-WIF\_\-WLAN\_\-NUM\_\-RETRY\_\-S}
+\begin{DoxyCompactList}\small\item\em num retries get cmd response format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00409}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-S}
+\begin{DoxyCompactList}\small\item\em wlan tx rate set command structure \end{DoxyCompactList}\item 
+struct \hyperlink{a00390}{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-S}
+\begin{DoxyCompactList}\small\item\em tx power set/get format power indexes. \end{DoxyCompactList}\item 
+struct \hyperlink{a00408}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-S}
+\begin{DoxyCompactList}\small\item\em tx power set/get format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00341}{GSN\_\-WIF\_\-MAC\_\-STATE\_\-GET\_\-RSP\_\-S}
+\begin{DoxyCompactList}\small\item\em wlan state get cmd response format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00375}{GSN\_\-WIF\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-RSP\_\-S}
+\begin{DoxyCompactList}\small\item\em list of connected STA's info \end{DoxyCompactList}\item 
+struct \hyperlink{a00410}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}
+\begin{DoxyCompactList}\small\item\em wlan tx statistics get cmd \end{DoxyCompactList}\item 
+struct \hyperlink{a00398}{GSN\_\-WIF\_\-WLAN\_\-RX\_\-STATS\_\-S}
+\begin{DoxyCompactList}\small\item\em wlan rx statistics get cmd \end{DoxyCompactList}\item 
+struct \hyperlink{a00321}{GSN\_\-WIF\_\-CONCTD\_\-STA\_\-LIST\_\-IND\_\-S}
+\begin{DoxyCompactList}\small\item\em connected STA list get indication \end{DoxyCompactList}\item 
+struct \hyperlink{a00407}{GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-S}
+\begin{DoxyCompactList}\small\item\em TKIP TSC/PN num. \end{DoxyCompactList}\item 
+struct \hyperlink{a00380}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Disconnect request. \end{DoxyCompactList}\item 
+struct \hyperlink{a00379}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-S}
+\begin{DoxyCompactList}\small\item\em Disconnect indication. \end{DoxyCompactList}\item 
+struct \hyperlink{a00388}{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em set MAC address. \end{DoxyCompactList}\item 
+struct \hyperlink{a00372}{GSN\_\-WIF\_\-WLAN\_\-BCN\_\-MISS\_\-THRESHOLD\_\-SET\_\-S}
+\begin{DoxyCompactList}\small\item\em beacon miss command params \end{DoxyCompactList}\item 
+struct \hyperlink{a00396}{GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-S}
+\begin{DoxyCompactList}\small\item\em RTS enable command parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{a00406}{GSN\_\-WIF\_\-WLAN\_\-STATISTICS\_\-READ\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em read statistics command structure format \end{DoxyCompactList}\item 
+struct \hyperlink{a00397}{GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-S}
+\begin{DoxyCompactList}\small\item\em set promiscous mode command params \end{DoxyCompactList}\item 
+struct \hyperlink{a00401}{GSN\_\-WIF\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-S}
+\begin{DoxyCompactList}\small\item\em scan params set cmd parameters \end{DoxyCompactList}\item 
+struct \hyperlink{a00386}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em key install msg format \end{DoxyCompactList}\item 
+struct \hyperlink{a00387}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-REMOVE\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em key remove msg format \end{DoxyCompactList}\item 
+struct \hyperlink{a00370}{GSN\_\-WIF\_\-WLAN\_\-BA\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Addba Set. \end{DoxyCompactList}\item 
+struct \hyperlink{a00367}{GSN\_\-WIF\_\-WLAN\_\-AMSDU\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em AMSDU Setup/Removal. \end{DoxyCompactList}\item 
+struct \hyperlink{a00366}{GSN\_\-WIF\_\-WLAN\_\-AMPDU\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em AMPDU Setup/Removal. \end{DoxyCompactList}\item 
+struct \hyperlink{a00381}{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Frame Tx Fail Count Threshold Setup. \end{DoxyCompactList}\item 
+struct \hyperlink{a00382}{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-S}
+\begin{DoxyCompactList}\small\item\em Frame Tx Fail Count Threshold Setup. \end{DoxyCompactList}\item 
+struct \hyperlink{a00411}{GSN\_\-WIF\_\-WLAN\_\-TXPOWER\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Frame Tx Fail Count Threshold Setup. \end{DoxyCompactList}\item 
+struct \hyperlink{a00368}{GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-S}
+\begin{DoxyCompactList}\small\item\em deep sleep ap configuration \end{DoxyCompactList}\item 
+struct \hyperlink{a00385}{GSN\_\-WIF\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-S}
+\begin{DoxyCompactList}\small\item\em KeepAlive set/get format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00389}{GSN\_\-WIF\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-S}
+\begin{DoxyCompactList}\small\item\em Mcst Rx set/get format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00365}{GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-S}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00677_ga4d89b2a0c901a8c766f195897f16623f}{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-E} \{ \par
+\hyperlink{a00640_gga4d89b2a0c901a8c766f195897f16623faa311500f825dc8fd0001c0d8a6917605}{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-STA} =  0x01, 
+\par
+\hyperlink{a00640_gga4d89b2a0c901a8c766f195897f16623fa6005fc49b47b857a5d371c912c1bf3fd}{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-AP} =  0x02, 
+\par
+\hyperlink{a00640_gga4d89b2a0c901a8c766f195897f16623faf57bc7deeac6ae399614faf0b9d20fba}{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-IBSS} =  0x03, 
+\par
+\hyperlink{a00640_gga4d89b2a0c901a8c766f195897f16623faa63e066458c172dea3b093f1bed382c6}{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-15\_\-4} =  0x4, 
+\par
+\hyperlink{a00640_gga4d89b2a0c901a8c766f195897f16623fa4d99b481ead0aaa86d901a99899befef}{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-ISOTX} =  0x5
+ \}
+\begin{DoxyCompactList}\small\item\em NW type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga5415d31a2d60b731af07dc04240e540c}{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-E} \{ \par
+\hyperlink{a00640_gga5415d31a2d60b731af07dc04240e540cad9009c323b9b80ec4a57c22a6a42bf20}{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-OPEN} =  0x01, 
+\par
+\hyperlink{a00640_gga5415d31a2d60b731af07dc04240e540cafc5f6649938bc4669e367f043b84fdac}{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-SHARED} =  0x02
+ \}
+\begin{DoxyCompactList}\small\item\em Dot11 Auth type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga2b3917a91d576d0d037c406e6397cab9}{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-E} \{ \par
+\hyperlink{a00640_gga2b3917a91d576d0d037c406e6397cab9abe5ad72eaf443c01179b9fdd3e44ad94}{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-NONE} =  0x01, 
+\par
+\hyperlink{a00640_gga2b3917a91d576d0d037c406e6397cab9a9b0bab6a04025a0c9a9094fcd005b288}{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA} =  0x02, 
+\par
+\hyperlink{a00640_gga2b3917a91d576d0d037c406e6397cab9aa801aac72ada7e073ef56477001cd2fe}{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2} =  0x04, 
+\par
+\hyperlink{a00640_gga2b3917a91d576d0d037c406e6397cab9a2df301dcc2ba2da66f8e1bc2a70002c0}{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-PSK} =  0x08, 
+\par
+\hyperlink{a00640_gga2b3917a91d576d0d037c406e6397cab9aadfb9e64b7645e372f4d109180b44fca}{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-PSK} =  0x10, 
+\par
+\hyperlink{a00640_gga2b3917a91d576d0d037c406e6397cab9aa0fa868074f7ff9aebd665edf070eb52}{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-CCKM} =  0x20, 
+\par
+\hyperlink{a00640_gga2b3917a91d576d0d037c406e6397cab9a8bc51b5a7ed8ca4967f5ef955ab9f1a2}{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-CCKM} =  0x40
+ \}
+\begin{DoxyCompactList}\small\item\em Auth type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga49c8ff4188538f53965f3e0916f59746}{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-E} \{ \par
+\hyperlink{a00640_gga49c8ff4188538f53965f3e0916f59746a5de19dc37abf26499707c12567818897}{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-NONE} =  0x01, 
+\par
+\hyperlink{a00640_gga49c8ff4188538f53965f3e0916f59746a74eebc9282a5ce051a677573ba6928eb}{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-WEP} =  0x02, 
+\par
+\hyperlink{a00640_gga49c8ff4188538f53965f3e0916f59746ae7316c7d6905e798ff24db647fe514b3}{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-TKIP} =  0x04, 
+\par
+\hyperlink{a00640_gga49c8ff4188538f53965f3e0916f59746afeb252a087410849b295f8b9e7c1a384}{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-AES} =  0x08
+ \}
+\begin{DoxyCompactList}\small\item\em crypto type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga738f68b803d29587618534b884d8b600}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-E} \{ \par
+\hyperlink{a00640_gga738f68b803d29587618534b884d8b600af8dba2674fcae6ee49ea53e87e6b327c}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-WEP}, 
+\par
+\hyperlink{a00640_gga738f68b803d29587618534b884d8b600a384424192335ee263f6b9150bf61b80b}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-PTK}, 
+\par
+\hyperlink{a00640_gga738f68b803d29587618534b884d8b600aeb6b6a4473c3d874d150972fb22d0975}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-GTK}
+ \}
+\begin{DoxyCompactList}\small\item\em Key type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga651010efc8cff4e360fd72c7d32a70a9}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-S} \{ \par
+\hyperlink{a00640_gga651010efc8cff4e360fd72c7d32a70a9a7b0f6c4fc037430360bb1a515fbd2261}{TX99\_\-PATTERN\_\-ALL\_\-ZEROS} =  0, 
+\par
+\hyperlink{a00640_gga651010efc8cff4e360fd72c7d32a70a9ac5997221faab077928ba36901f9ac13d}{TX99\_\-PATTERN\_\-ALL\_\-ONES} =  1, 
+\par
+\hyperlink{a00640_gga651010efc8cff4e360fd72c7d32a70a9ab3b8555f274736bb950108d0bd3c598b}{TX99\_\-PATTERN\_\-REPEATING\_\-10} =  2, 
+\par
+\hyperlink{a00640_gga651010efc8cff4e360fd72c7d32a70a9ae96c1a78fb24fcbe775fefda62757452}{TX99\_\-PATTERN\_\-PN7} =  3, 
+\par
+\hyperlink{a00640_gga651010efc8cff4e360fd72c7d32a70a9a55c749918a1b75ad9ab5091c250e8c0e}{TX99\_\-PATTERN\_\-PN9} =  4, 
+\par
+\hyperlink{a00640_gga651010efc8cff4e360fd72c7d32a70a9a46eb7d7ab33b8cc68e2a3cf127375470}{TX99\_\-PATTERN\_\-PN15} =  5
+ \}
+\begin{DoxyCompactList}\small\item\em Types of patterns available. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga3c5fd791827dffd656e69ad09ce2304e}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-S} \{ \par
+\hyperlink{a00640_gga3c5fd791827dffd656e69ad09ce2304eaca614bc30bd8954133ec65e0d1476b2d}{GSN\_\-TEST\_\-TYPE\_\-RX} =  0, 
+\par
+\hyperlink{a00640_gga3c5fd791827dffd656e69ad09ce2304eac474ecc66322eaff905fd8428af8f25f}{GSN\_\-TEST\_\-TYPE\_\-TX} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em Types of Tests. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga8d2c2dc6c9f7927c5cf4634d7b403b95}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-S} \{ \par
+\hyperlink{a00640_gga8d2c2dc6c9f7927c5cf4634d7b403b95a7b846af0882a2e9fdd177f290b02a6a1}{GSN\_\-MODE\_\-BSS\_\-STA} =  0, 
+\par
+\hyperlink{a00640_gga8d2c2dc6c9f7927c5cf4634d7b403b95ada8c3c5dcc25a633515f39d0622ed38a}{GSN\_\-MODE\_\-IBSS\_\-STA} =  1, 
+\par
+\hyperlink{a00640_gga8d2c2dc6c9f7927c5cf4634d7b403b95a67277979d811dae8f619f13ae651e957}{GSN\_\-MODE\_\-AP} =  2, 
+\par
+\hyperlink{a00640_gga8d2c2dc6c9f7927c5cf4634d7b403b95a2b9ddf1d3ec73ebec39439826d471cce}{GSN\_\-MODE\_\-UNASSOC\_\-MODE} =  3, 
+\par
+\hyperlink{a00640_gga8d2c2dc6c9f7927c5cf4634d7b403b95a2dfea59dcf8f2cc5cf5563dd98062949}{GSN\_\-MODE\_\-HUT\_\-MODE\_\-BSS\_\-STA} =  0x80, 
+\par
+\hyperlink{a00640_gga8d2c2dc6c9f7927c5cf4634d7b403b95a5c1af84ee44deddd78424d6649351d5c}{GSN\_\-MODE\_\-HUT\_\-MODE\_\-IBSS\_\-STA} =  0x81, 
+\par
+\hyperlink{a00640_gga8d2c2dc6c9f7927c5cf4634d7b403b95ad385a9345a8b96725314fefa76e307ad}{GSN\_\-MODE\_\-HUT\_\-MODE\_\-AP} =  0x82
+ \}
+\begin{DoxyCompactList}\small\item\em Types of WLAN modes. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga7f657dfcb65c6810c23ae68bbca0b101}{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-E} \{ \par
+\hyperlink{a00640_gga7f657dfcb65c6810c23ae68bbca0b101aba4ce9371ded92ab818bd48b24d1b74f}{GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-REG} =  0, 
+\par
+\hyperlink{a00640_gga7f657dfcb65c6810c23ae68bbca0b101afd4788d7537c66f77185272b27a0479e}{GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-PHY} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em tx power set/get format power indexes. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga75fc31972dc5127c4ee4b3e585ab0206}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-E} \{ \par
+\hyperlink{a00640_gga75fc31972dc5127c4ee4b3e585ab0206aa8ef942d0ca232cab8243a718383af18}{GSN\_\-TX\_\-POW\_\-802\_\-11B\_\-IDX} =  0, 
+\par
+\hyperlink{a00640_gga75fc31972dc5127c4ee4b3e585ab0206ae3826b232cc1ee4a30d46890b0718bb0}{GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-LO\_\-IDX} =  1, 
+\par
+\hyperlink{a00640_gga75fc31972dc5127c4ee4b3e585ab0206aa05a5fdd8b3cbb522655e6c2e400bd23}{GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-HI\_\-IDX} =  2, 
+\par
+\hyperlink{a00640_gga75fc31972dc5127c4ee4b3e585ab0206a2b481aadf4f8c66408beb3dfa4d84fc7}{GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-LO\_\-IDX} =  3, 
+\par
+\hyperlink{a00640_gga75fc31972dc5127c4ee4b3e585ab0206a0d66ebcda580eb26e8347354d3087d70}{GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-HI\_\-IDX} =  4, 
+\par
+\hyperlink{a00640_gga75fc31972dc5127c4ee4b3e585ab0206a647770c3d643ef01c522760760b94172}{GSN\_\-TX\_\-POW\_\-MAX\_\-IDX} =  5
+ \}
+\begin{DoxyCompactList}\small\item\em tx power set/get format power indexes. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_gaf26e714e09b57b3b2a5f21341613761d}{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-E} \{ \par
+\hyperlink{a00640_ggaf26e714e09b57b3b2a5f21341613761da29bec55c1820017c55b7eebc1cbb2698}{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-NOT\_\-CONNECTED} =  0x0, 
+\par
+\hyperlink{a00640_ggaf26e714e09b57b3b2a5f21341613761daf9bfe447cd6ae519e8f1f06ce72a39a9}{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-CONNECTED} =  0x1
+ \}
+\begin{DoxyCompactList}\small\item\em stat type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga9dd854d0108dc49ff077a04e897e3518}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-E} \{ \par
+\hyperlink{a00640_gga9dd854d0108dc49ff077a04e897e3518af4c7545e3a50f0a4b80e819642f6fa11}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-AUTH\_\-FAILED}, 
+\par
+\hyperlink{a00640_gga9dd854d0108dc49ff077a04e897e3518ab326383254792bc87a5b3dd116a846fa}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-ASSOC\_\-FAILED}, 
+\par
+\hyperlink{a00640_gga9dd854d0108dc49ff077a04e897e3518aee4dc21ac6db977675d9681fa1f87131}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RESOURCE\_\-UNAVAIL}, 
+\par
+\hyperlink{a00640_gga9dd854d0108dc49ff077a04e897e3518a571260d569e804028dc21870862dbf8d}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-SYNC\_\-LOSS}, 
+\par
+\hyperlink{a00640_gga9dd854d0108dc49ff077a04e897e3518acd39138402c119334dd5f6b3a18ee9c5}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RETRY\_\-EXCEEDED}, 
+\par
+\hyperlink{a00640_gga9dd854d0108dc49ff077a04e897e3518a969801072b56d9aa2eb6298b7d79d6fd}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-NW\_\-UNAVAIL}, 
+\par
+\hyperlink{a00640_gga9dd854d0108dc49ff077a04e897e3518a6e04b4bfeb58c31b2b515f7919275cba}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-WFW\_\-FAILURE}, 
+\par
+\hyperlink{a00640_gga9dd854d0108dc49ff077a04e897e3518ae0b2465fb829477650a95f708deff7fe}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-PROTOCOL\_\-FAILURE}, 
+\par
+\hyperlink{a00640_gga9dd854d0108dc49ff077a04e897e3518aedf74ad09bfdcfc5b39c5a36afe860df}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-DEAUTH} = 0xFF
+ \}
+\begin{DoxyCompactList}\small\item\em Disconnect reason code. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga1ea7ef2124a3ae886d909d6b8188ef79}{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-E} \{ \par
+\hyperlink{a00640_gga1ea7ef2124a3ae886d909d6b8188ef79a04b02ff9d7f0704e049d050172be3433}{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-TX} =  0x0, 
+\par
+\hyperlink{a00640_gga1ea7ef2124a3ae886d909d6b8188ef79a9b06475a178a05d5fea8e190e34e8e08}{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-RX} =  0x1
+ \}
+\begin{DoxyCompactList}\small\item\em stat type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga4d89b2a0c901a8c766f195897f16623f}{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-E} \hyperlink{a00677_gabc852e0cb262314c5f307a3e9802921e}{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em NW type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga5415d31a2d60b731af07dc04240e540c}{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-E} \hyperlink{a00677_gaa550b3e9decb3a2585cb801dde9e5609}{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-T}
+\begin{DoxyCompactList}\small\item\em Dot11 Auth type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga2b3917a91d576d0d037c406e6397cab9}{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-E} \hyperlink{a00677_ga07b4b8b059f529183cc5da3aadfa2966}{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-T}
+\begin{DoxyCompactList}\small\item\em Auth type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga49c8ff4188538f53965f3e0916f59746}{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-E} \hyperlink{a00677_gac2cbed9ce43ac5da06c3a3396bbaaf31}{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-T}
+\begin{DoxyCompactList}\small\item\em crypto type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga738f68b803d29587618534b884d8b600}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-E} \hyperlink{a00677_gab0871ec1fe022833d9573d32749bd7c4}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Key type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga651010efc8cff4e360fd72c7d32a70a9}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-S} \hyperlink{a00677_gaf2d0e783b6db5c93a78ee3d99153ebcb}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-T}
+\begin{DoxyCompactList}\small\item\em Types of patterns available. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga3c5fd791827dffd656e69ad09ce2304e}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-S} \hyperlink{a00677_ga58d933da4429968a4151ae6b2106281b}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Types of Tests. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga8d2c2dc6c9f7927c5cf4634d7b403b95}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-S} \hyperlink{a00677_ga05896005da162a0b0f4b304f7c551947}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Types of WLAN modes. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00418}{GSN\_\-WLAN\_\-PROCESS\_\-MSG} \hyperlink{a00677_gaabf8bae549f7aca1d1a07fbc8f2d4459}{GSN\_\-WLAN\_\-PROCESS\_\-MSG\_\-T}
+\begin{DoxyCompactList}\small\item\em Host messages structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00188}{GSN\_\-RF\_\-TEST\_\-GENERAL\_\-OPTIONS\_\-S} \hyperlink{a00677_gadc69ae2ca627931231f38c5a07778b9a}{GSN\_\-RF\_\-TEST\_\-GENERAL\_\-OPTIONS\_\-T}
+\begin{DoxyCompactList}\small\item\em Test General options. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00187}{GSN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-S} \hyperlink{a00677_ga054447e13e32b5fdf1ba941142c3b8b8}{GSN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-T}
+\begin{DoxyCompactList}\small\item\em Frame TX Test. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00190}{GSN\_\-RF\_\-TEST\_\-TX99\_\-S} \hyperlink{a00677_gad6f744cc56ee1d2eefa8b1b733cacbe5}{GSN\_\-RF\_\-TEST\_\-TX99\_\-T}
+\begin{DoxyCompactList}\small\item\em TX99/TX100 Tests. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00189}{GSN\_\-RF\_\-TEST\_\-TX100\_\-S} \hyperlink{a00677_ga69f7ed019cbe7d83cfe2cc5446cdab1a}{GSN\_\-RF\_\-TEST\_\-TX100\_\-T}
+\begin{DoxyCompactList}\small\item\em TX100 Test. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00185}{GSN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-TEST\_\-S} \hyperlink{a00677_gae9bb588f7933f628f82d3351844e18f8}{GSN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-TEST\_\-T}
+\begin{DoxyCompactList}\small\item\em Carrier Wave Transmit Test. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00186}{GSN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-S} \hyperlink{a00677_gad57c6b5251e62dd07e194a52c90216ac}{GSN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-T}
+\begin{DoxyCompactList}\small\item\em Frame RX Test. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00419}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-S} \hyperlink{a00677_ga150fdf6ec3c7c370b27651412b36653a}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-T}
+\begin{DoxyCompactList}\small\item\em RX Stop Indication. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00374}{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S} \hyperlink{a00677_ga017431808d3e402931e4b6bfd133240b}{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Connect request. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00373}{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-IND\_\-S} \hyperlink{a00677_gafb178a89c3d7936c482fd6c6cb2e17af}{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-IND\_\-T}
+\begin{DoxyCompactList}\small\item\em Connect indication. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00391}{GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-S} \hyperlink{a00677_ga7692f300e14cded7c79c50838226ed2b}{GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-T}
+\begin{DoxyCompactList}\small\item\em MIC failure indication. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00395}{GSN\_\-WIF\_\-WLAN\_\-RSSI\_\-S} \hyperlink{a00677_ga6bf98e2985565ecb3084ad0fb0d0e8c8}{GSN\_\-WIF\_\-WLAN\_\-RSSI\_\-T}
+\begin{DoxyCompactList}\small\item\em rssi get response format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00392}{GSN\_\-WIF\_\-WLAN\_\-NUM\_\-RETRY\_\-S} \hyperlink{a00677_ga941d2bc71947bd100c963211cf48a341}{GSN\_\-WIF\_\-WLAN\_\-NUM\_\-RETRY\_\-T}
+\begin{DoxyCompactList}\small\item\em num retries get cmd response format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00409}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-S} \hyperlink{a00677_ga3248623873f75304b338528b6c711975}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-T}
+\begin{DoxyCompactList}\small\item\em wlan tx rate set command structure \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00390}{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-S} \hyperlink{a00677_ga9d8aade166418018f4e609e679f7c603}{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-T}
+\begin{DoxyCompactList}\small\item\em tx power set/get format power indexes. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga7f657dfcb65c6810c23ae68bbca0b101}{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-E} \hyperlink{a00677_gad221ad803b8f2c5c4e24ef1f0c0aa83c}{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em tx power set/get format power indexes. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga75fc31972dc5127c4ee4b3e585ab0206}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-E} \hyperlink{a00677_gaa864eedc8e384ed0ea49b62f267aff72}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-T}
+\begin{DoxyCompactList}\small\item\em tx power set/get format power indexes. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00408}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-S} \hyperlink{a00677_ga04f719a66b056bce000089417b9775bf}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-T}
+\begin{DoxyCompactList}\small\item\em tx power set/get format. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_gaf26e714e09b57b3b2a5f21341613761d}{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-E} \hyperlink{a00677_gabb160daeefaad3c313cfd17480013311}{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-T}
+\begin{DoxyCompactList}\small\item\em stat type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00341}{GSN\_\-WIF\_\-MAC\_\-STATE\_\-GET\_\-RSP\_\-S} \hyperlink{a00677_ga6dbab71e19ca02665a3be40e8850b059}{GSN\_\-WIF\_\-MAC\_\-STATE\_\-GET\_\-RSP\_\-T}
+\begin{DoxyCompactList}\small\item\em wlan state get cmd response format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00375}{GSN\_\-WIF\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-RSP\_\-S} \hyperlink{a00677_ga0cb3a8c19998e8db9e9251598e564b23}{GSN\_\-WIF\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-RSP\_\-T}
+\begin{DoxyCompactList}\small\item\em list of connected STA's info \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00410}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S} \hyperlink{a00677_gadedc886d92dbab6910156f707795905d}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-T}
+\begin{DoxyCompactList}\small\item\em wlan tx statistics get cmd \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00398}{GSN\_\-WIF\_\-WLAN\_\-RX\_\-STATS\_\-S} \hyperlink{a00677_ga1bb08fff4c3ba2c6027ad054755e4df2}{GSN\_\-WIF\_\-WLAN\_\-RX\_\-STATS\_\-T}
+\begin{DoxyCompactList}\small\item\em wlan rx statistics get cmd \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00321}{GSN\_\-WIF\_\-CONCTD\_\-STA\_\-LIST\_\-IND\_\-S} \hyperlink{a00677_ga7709929fb1c332b2853a998d3b305561}{GSN\_\-WIF\_\-CONCTD\_\-STA\_\-LIST\_\-IND\_\-T}
+\begin{DoxyCompactList}\small\item\em connected STA list get indication \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00407}{GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-S} \hyperlink{a00677_ga4c920262f319d5fe619f45ee687d827b}{GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-T}
+\begin{DoxyCompactList}\small\item\em TKIP TSC/PN num. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00380}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REQ\_\-S} \hyperlink{a00677_gaf8a8c7854be001d295e7a84a9512a1d7}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Disconnect request. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga9dd854d0108dc49ff077a04e897e3518}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-E} \hyperlink{a00677_ga59f311fc4d769ed3a162e48be5ea59aa}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-T}
+\begin{DoxyCompactList}\small\item\em Disconnect reason code. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00379}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-S} \hyperlink{a00677_ga12e53679e526d82e7e99a05a000dbdf8}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-T}
+\begin{DoxyCompactList}\small\item\em Disconnect indication. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00388}{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ\_\-S} \hyperlink{a00677_ga013826a17b7a57eb4c9e4de16a91b6a7}{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em set MAC address. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00372}{GSN\_\-WIF\_\-WLAN\_\-BCN\_\-MISS\_\-THRESHOLD\_\-SET\_\-S} \hyperlink{a00677_ga3804a62776c49cf6cd5522262eb81695}{GSN\_\-WIF\_\-WLAN\_\-BCN\_\-MISS\_\-THRESHOLD\_\-SET\_\-T}
+\begin{DoxyCompactList}\small\item\em beacon miss command params \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00396}{GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-S} \hyperlink{a00677_ga7629340b77de2ac1d56c6aa8c8013d47}{GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-T}
+\begin{DoxyCompactList}\small\item\em RTS enable command parameters. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga1ea7ef2124a3ae886d909d6b8188ef79}{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-E} \hyperlink{a00677_ga64d9749befbab903d13eae1c816e40cf}{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em stat type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00406}{GSN\_\-WIF\_\-WLAN\_\-STATISTICS\_\-READ\_\-REQ\_\-S} \hyperlink{a00677_ga0532c6cda31388631d8d6346390ac764}{GSN\_\-WIF\_\-WLAN\_\-STATISTICS\_\-READ\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em read statistics command structure format \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00397}{GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-S} \hyperlink{a00677_gad632a83292610148499e14031b507f4b}{GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-T}
+\begin{DoxyCompactList}\small\item\em set promiscous mode command params \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00401}{GSN\_\-WIF\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-S} \hyperlink{a00677_ga38fb363f219070729c31798116e9702c}{GSN\_\-WIF\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-T}
+\begin{DoxyCompactList}\small\item\em scan params set cmd parameters \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00386}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S} \hyperlink{a00677_gaf02b17f4ae1181f48eafc5cafc75a98b}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em key install msg format \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00387}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-REMOVE\_\-REQ\_\-S} \hyperlink{a00677_gab7781e4db5d81b8372ab59ea540b6f04}{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-REMOVE\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em key remove msg format \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00370}{GSN\_\-WIF\_\-WLAN\_\-BA\_\-REQ\_\-S} \hyperlink{a00677_ga9c1f7a4f3662503ec5a924804653ae43}{GSN\_\-WIF\_\-WLAN\_\-BA\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Addba Set. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00367}{GSN\_\-WIF\_\-WLAN\_\-AMSDU\_\-REQ\_\-S} \hyperlink{a00677_ga3da66319027a0addea57f579e40c55a6}{GSN\_\-WIF\_\-WLAN\_\-AMSDU\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em AMSDU Setup/Removal. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00366}{GSN\_\-WIF\_\-WLAN\_\-AMPDU\_\-REQ\_\-S} \hyperlink{a00677_gade98eca1b34b9be5633f39a09c50f1d1}{GSN\_\-WIF\_\-WLAN\_\-AMPDU\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em AMPDU Setup/Removal. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00381}{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-S} \hyperlink{a00677_ga004bcfaf3fdb9825409e0ae35e69a636}{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Frame Tx Fail Count Threshold Setup. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00382}{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-S} \hyperlink{a00677_ga72cc751c5634b432dbd748e5760ba9c3}{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-T}
+\begin{DoxyCompactList}\small\item\em Frame Tx Fail Count Threshold Setup. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00411}{GSN\_\-WIF\_\-WLAN\_\-TXPOWER\_\-REQ\_\-S} \hyperlink{a00677_ga23625516479d19d7b54f0771fdacec4a}{GSN\_\-WIF\_\-WLAN\_\-TXPOWER\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Frame Tx Fail Count Threshold Setup. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00368}{GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-S} \hyperlink{a00677_ga5b778f6fbad2d264cc6e8d03a61b7a42}{GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em deep sleep ap configuration \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00385}{GSN\_\-WIF\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-S} \hyperlink{a00677_ga05b94921534c912004364babe9d0c9e9}{GSN\_\-WIF\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-T}
+\begin{DoxyCompactList}\small\item\em KeepAlive set/get format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00389}{GSN\_\-WIF\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-S} \hyperlink{a00677_ga1c35c53aa2b78b1856a8fe1233b8368e}{GSN\_\-WIF\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-T}
+\begin{DoxyCompactList}\small\item\em Mcst Rx set/get format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00365}{GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-S} \hyperlink{a00677_gafb05388636305e014ec95505951eca42}{GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-T}
+\item 
+\#define \hyperlink{a00677_ga061dde080c4358e4caf65cfb37d5c3cd}{MAC\_\-PROPRIETARY\_\-INFO\_\-LEN}~250
+\begin{DoxyCompactList}\small\item\em wps ie set request. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00677_gad043f51474c04cc30a14d7d36d0d38f4}{GSN\_\-WIF\_\-WLAN\_\-RSN\_\-WPA\_\-IE\_\-LEN\_\-MAX}~64
+\begin{DoxyCompactList}\small\item\em ie max length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+END of coresvcdoc.
+
+This group of APIs provides WLAN control definitions like scan, association, etc. 
+
+\subsection{Define Documentation}
+\hypertarget{a00677_gad043f51474c04cc30a14d7d36d0d38f4}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-RSN\_\-WPA\_\-IE\_\-LEN\_\-MAX@{GSN\_\-WIF\_\-WLAN\_\-RSN\_\-WPA\_\-IE\_\-LEN\_\-MAX}}
+\index{GSN\_\-WIF\_\-WLAN\_\-RSN\_\-WPA\_\-IE\_\-LEN\_\-MAX@{GSN\_\-WIF\_\-WLAN\_\-RSN\_\-WPA\_\-IE\_\-LEN\_\-MAX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-RSN\_\-WPA\_\-IE\_\-LEN\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-WLAN\_\-RSN\_\-WPA\_\-IE\_\-LEN\_\-MAX~64}}
+\label{a00677_gad043f51474c04cc30a14d7d36d0d38f4}
+
+
+ie max length. 
+
+
+
+Definition at line 194 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga061dde080c4358e4caf65cfb37d5c3cd}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!MAC\_\-PROPRIETARY\_\-INFO\_\-LEN@{MAC\_\-PROPRIETARY\_\-INFO\_\-LEN}}
+\index{MAC\_\-PROPRIETARY\_\-INFO\_\-LEN@{MAC\_\-PROPRIETARY\_\-INFO\_\-LEN}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{MAC\_\-PROPRIETARY\_\-INFO\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAC\_\-PROPRIETARY\_\-INFO\_\-LEN~250}}
+\label{a00677_ga061dde080c4358e4caf65cfb37d5c3cd}
+
+
+wps ie set request. 
+
+This structure defines the wps ie set request structure. 
+
+Definition at line 179 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00677_gae9bb588f7933f628f82d3351844e18f8}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-TEST\_\-T@{GSN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-TEST\_\-T}}
+\index{GSN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-TEST\_\-T@{GSN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-TEST\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-TEST\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-TEST\_\-S} {\bf GSN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-TEST\_\-T}}}
+\label{a00677_gae9bb588f7933f628f82d3351844e18f8}
+
+
+Carrier Wave Transmit Test. 
+
+This structure defines the parameters required for Carrier Wave Transmit Test. \hypertarget{a00677_gad57c6b5251e62dd07e194a52c90216ac}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-T@{GSN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-T}}
+\index{GSN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-T@{GSN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-S} {\bf GSN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-T}}}
+\label{a00677_gad57c6b5251e62dd07e194a52c90216ac}
+
+
+Frame RX Test. 
+
+This structure defines the parameters required for RX Test. \hypertarget{a00677_ga054447e13e32b5fdf1ba941142c3b8b8}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-T@{GSN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-T}}
+\index{GSN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-T@{GSN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-S} {\bf GSN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-T}}}
+\label{a00677_ga054447e13e32b5fdf1ba941142c3b8b8}
+
+
+Frame TX Test. 
+
+This structure defines the parameters required for TX Test. \hypertarget{a00677_gadc69ae2ca627931231f38c5a07778b9a}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-RF\_\-TEST\_\-GENERAL\_\-OPTIONS\_\-T@{GSN\_\-RF\_\-TEST\_\-GENERAL\_\-OPTIONS\_\-T}}
+\index{GSN\_\-RF\_\-TEST\_\-GENERAL\_\-OPTIONS\_\-T@{GSN\_\-RF\_\-TEST\_\-GENERAL\_\-OPTIONS\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-RF\_\-TEST\_\-GENERAL\_\-OPTIONS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RF\_\-TEST\_\-GENERAL\_\-OPTIONS\_\-S} {\bf GSN\_\-RF\_\-TEST\_\-GENERAL\_\-OPTIONS\_\-T}}}
+\label{a00677_gadc69ae2ca627931231f38c5a07778b9a}
+
+
+Test General options. 
+
+This structure defines the general parameters required for all the tests. \hypertarget{a00677_ga69f7ed019cbe7d83cfe2cc5446cdab1a}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-RF\_\-TEST\_\-TX100\_\-T@{GSN\_\-RF\_\-TEST\_\-TX100\_\-T}}
+\index{GSN\_\-RF\_\-TEST\_\-TX100\_\-T@{GSN\_\-RF\_\-TEST\_\-TX100\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-RF\_\-TEST\_\-TX100\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RF\_\-TEST\_\-TX100\_\-S} {\bf GSN\_\-RF\_\-TEST\_\-TX100\_\-T}}}
+\label{a00677_ga69f7ed019cbe7d83cfe2cc5446cdab1a}
+
+
+TX100 Test. 
+
+This structure defines the parameters required for TX100 Test. \hypertarget{a00677_gad6f744cc56ee1d2eefa8b1b733cacbe5}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-RF\_\-TEST\_\-TX99\_\-T@{GSN\_\-RF\_\-TEST\_\-TX99\_\-T}}
+\index{GSN\_\-RF\_\-TEST\_\-TX99\_\-T@{GSN\_\-RF\_\-TEST\_\-TX99\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-RF\_\-TEST\_\-TX99\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RF\_\-TEST\_\-TX99\_\-S} {\bf GSN\_\-RF\_\-TEST\_\-TX99\_\-T}}}
+\label{a00677_gad6f744cc56ee1d2eefa8b1b733cacbe5}
+
+
+TX99/TX100 Tests. 
+
+This structure defines the parameters required for TX99/TX100 Tests. \hypertarget{a00677_ga7709929fb1c332b2853a998d3b305561}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-CONCTD\_\-STA\_\-LIST\_\-IND\_\-T@{GSN\_\-WIF\_\-CONCTD\_\-STA\_\-LIST\_\-IND\_\-T}}
+\index{GSN\_\-WIF\_\-CONCTD\_\-STA\_\-LIST\_\-IND\_\-T@{GSN\_\-WIF\_\-CONCTD\_\-STA\_\-LIST\_\-IND\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-CONCTD\_\-STA\_\-LIST\_\-IND\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-CONCTD\_\-STA\_\-LIST\_\-IND\_\-S} {\bf GSN\_\-WIF\_\-CONCTD\_\-STA\_\-LIST\_\-IND\_\-T}}}
+\label{a00677_ga7709929fb1c332b2853a998d3b305561}
+
+
+connected STA list get indication 
+
+This structure defines the connected sta list get command response structure \hypertarget{a00677_ga6dbab71e19ca02665a3be40e8850b059}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-MAC\_\-STATE\_\-GET\_\-RSP\_\-T@{GSN\_\-WIF\_\-MAC\_\-STATE\_\-GET\_\-RSP\_\-T}}
+\index{GSN\_\-WIF\_\-MAC\_\-STATE\_\-GET\_\-RSP\_\-T@{GSN\_\-WIF\_\-MAC\_\-STATE\_\-GET\_\-RSP\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-MAC\_\-STATE\_\-GET\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-MAC\_\-STATE\_\-GET\_\-RSP\_\-S} {\bf GSN\_\-WIF\_\-MAC\_\-STATE\_\-GET\_\-RSP\_\-T}}}
+\label{a00677_ga6dbab71e19ca02665a3be40e8850b059}
+
+
+wlan state get cmd response format. 
+
+This structure defines the wlan state get cmd response format. \hypertarget{a00677_gafb05388636305e014ec95505951eca42}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-T@{GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-T@{GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-S} {\bf GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-T}}}
+\label{a00677_gafb05388636305e014ec95505951eca42}
+and ba\_\-rx\_\-tid.
+
+This structure defines the Ba\_\-Tx and Ba\_\-Rx bitmap. \hypertarget{a00677_gade98eca1b34b9be5633f39a09c50f1d1}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AMPDU\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-AMPDU\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-AMPDU\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-AMPDU\_\-REQ\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-AMPDU\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-AMPDU\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-AMPDU\_\-REQ\_\-T}}}
+\label{a00677_gade98eca1b34b9be5633f39a09c50f1d1}
+
+
+AMPDU Setup/Removal. 
+
+This structure defines the AMPDU Session preparation structure. \hypertarget{a00677_ga3da66319027a0addea57f579e40c55a6}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AMSDU\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-AMSDU\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-AMSDU\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-AMSDU\_\-REQ\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-AMSDU\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-AMSDU\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-AMSDU\_\-REQ\_\-T}}}
+\label{a00677_ga3da66319027a0addea57f579e40c55a6}
+
+
+AMSDU Setup/Removal. 
+
+This structure defines the AMSDU Session preparation structure. \hypertarget{a00677_ga5b778f6fbad2d264cc6e8d03a61b7a42}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-T@{GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-T@{GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-S} {\bf GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-T}}}
+\label{a00677_ga5b778f6fbad2d264cc6e8d03a61b7a42}
+
+
+deep sleep ap configuration 
+
+This structure defines the deep sleep ap configuration structure. \hypertarget{a00677_ga07b4b8b059f529183cc5da3aadfa2966}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-T@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-T@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-E}  {\bf GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-T}}}
+\label{a00677_ga07b4b8b059f529183cc5da3aadfa2966}
+
+
+Auth type. 
+
+This enum defines the authentication type of the connection. \hypertarget{a00677_ga9c1f7a4f3662503ec5a924804653ae43}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-BA\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-BA\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-BA\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-BA\_\-REQ\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-BA\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-BA\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-BA\_\-REQ\_\-T}}}
+\label{a00677_ga9c1f7a4f3662503ec5a924804653ae43}
+
+
+Addba Set. 
+
+This structure defines the ADDBA Set structure. \hypertarget{a00677_ga3804a62776c49cf6cd5522262eb81695}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-BCN\_\-MISS\_\-THRESHOLD\_\-SET\_\-T@{GSN\_\-WIF\_\-WLAN\_\-BCN\_\-MISS\_\-THRESHOLD\_\-SET\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-BCN\_\-MISS\_\-THRESHOLD\_\-SET\_\-T@{GSN\_\-WIF\_\-WLAN\_\-BCN\_\-MISS\_\-THRESHOLD\_\-SET\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-BCN\_\-MISS\_\-THRESHOLD\_\-SET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-BCN\_\-MISS\_\-THRESHOLD\_\-SET\_\-S} {\bf GSN\_\-WIF\_\-WLAN\_\-BCN\_\-MISS\_\-THRESHOLD\_\-SET\_\-T}}}
+\label{a00677_ga3804a62776c49cf6cd5522262eb81695}
+
+
+beacon miss command params 
+
+This structure defines the beacon miss command params \hypertarget{a00677_gafb178a89c3d7936c482fd6c6cb2e17af}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-IND\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-IND\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-IND\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-IND\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-IND\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-IND\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-IND\_\-T}}}
+\label{a00677_gafb178a89c3d7936c482fd6c6cb2e17af}
+
+
+Connect indication. 
+
+This structure defines the connect indication structure. \hypertarget{a00677_ga017431808d3e402931e4b6bfd133240b}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-CONNECT\_\-REQ\_\-T}}}
+\label{a00677_ga017431808d3e402931e4b6bfd133240b}
+
+
+Connect request. 
+
+This structure defines the connect request structure. \hypertarget{a00677_ga0cb3a8c19998e8db9e9251598e564b23}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-RSP\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-RSP\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-RSP\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-RSP\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-RSP\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-RSP\_\-T}}}
+\label{a00677_ga0cb3a8c19998e8db9e9251598e564b23}
+
+
+list of connected STA's info 
+
+This structure defines the connected STA list indication structure. \hypertarget{a00677_gac2cbed9ce43ac5da06c3a3396bbaaf31}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-E}  {\bf GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-T}}}
+\label{a00677_gac2cbed9ce43ac5da06c3a3396bbaaf31}
+
+
+crypto type. 
+
+This enum defines the crypto type of the connection. \hypertarget{a00677_ga12e53679e526d82e7e99a05a000dbdf8}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-T@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-T@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-T}}}
+\label{a00677_ga12e53679e526d82e7e99a05a000dbdf8}
+
+
+Disconnect indication. 
+
+This structure defines the disconnect indication structure. \hypertarget{a00677_ga59f311fc4d769ed3a162e48be5ea59aa}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-T@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-T@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-E}  {\bf GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-T}}}
+\label{a00677_ga59f311fc4d769ed3a162e48be5ea59aa}
+
+
+Disconnect reason code. 
+
+This enum defines the disconnect reasons indicating the reason for connect request failure or termination of existing connection if the failure originated in WFW and not due to receipt of disassoc/deauth frame. \hypertarget{a00677_gaf8a8c7854be001d295e7a84a9512a1d7}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REQ\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REQ\_\-T}}}
+\label{a00677_gaf8a8c7854be001d295e7a84a9512a1d7}
+
+
+Disconnect request. 
+
+This structure defines the disconnect request structure. \hypertarget{a00677_gaa550b3e9decb3a2585cb801dde9e5609}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-T@{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-T@{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-E}  {\bf GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-T}}}
+\label{a00677_gaa550b3e9decb3a2585cb801dde9e5609}
+
+
+Dot11 Auth type. 
+
+This enum defines the 802.11 authentication to use during association. \hypertarget{a00677_ga004bcfaf3fdb9825409e0ae35e69a636}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-T}}}
+\label{a00677_ga004bcfaf3fdb9825409e0ae35e69a636}
+
+
+Frame Tx Fail Count Threshold Setup. 
+
+This structure defines the AMPDU Session preparation structure. \hypertarget{a00677_ga72cc751c5634b432dbd748e5760ba9c3}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-T@{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-T@{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-T}}}
+\label{a00677_ga72cc751c5634b432dbd748e5760ba9c3}
+
+
+Frame Tx Fail Count Threshold Setup. 
+
+This structure defines the AMPDU Session preparation structure. \hypertarget{a00677_ga05b94921534c912004364babe9d0c9e9}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-T@{GSN\_\-WIF\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-T@{GSN\_\-WIF\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-T}}}
+\label{a00677_ga05b94921534c912004364babe9d0c9e9}
+
+
+KeepAlive set/get format. 
+
+This structure defines the KeepAlive get/set cmd format. \hypertarget{a00677_gaf02b17f4ae1181f48eafc5cafc75a98b}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S} {\bf GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-T}}}
+\label{a00677_gaf02b17f4ae1181f48eafc5cafc75a98b}
+
+
+key install msg format 
+
+This structure defines the format of key install command \hypertarget{a00677_gab7781e4db5d81b8372ab59ea540b6f04}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-KEY\_\-REMOVE\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-REMOVE\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-REMOVE\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-REMOVE\_\-REQ\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-REMOVE\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-KEY\_\-REMOVE\_\-REQ\_\-S} {\bf GSN\_\-WIF\_\-WLAN\_\-KEY\_\-REMOVE\_\-REQ\_\-T}}}
+\label{a00677_gab7781e4db5d81b8372ab59ea540b6f04}
+
+
+key remove msg format 
+
+This structure defines the format of key remove command \hypertarget{a00677_gab0871ec1fe022833d9573d32749bd7c4}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-E} {\bf GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-T}}}
+\label{a00677_gab0871ec1fe022833d9573d32749bd7c4}
+
+
+Key type. 
+
+This enum defines the key type used for installing the keys in to WLAN. \hypertarget{a00677_ga013826a17b7a57eb4c9e4de16a91b6a7}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ\_\-T}}}
+\label{a00677_ga013826a17b7a57eb4c9e4de16a91b6a7}
+
+
+set MAC address. 
+
+This structure defines the set MAC address structure. \hypertarget{a00677_gabb160daeefaad3c313cfd17480013311}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-E}  {\bf GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-T}}}
+\label{a00677_gabb160daeefaad3c313cfd17480013311}
+
+
+stat type. 
+
+This enum defines the statistics type for read stats command \hypertarget{a00677_ga1c35c53aa2b78b1856a8fe1233b8368e}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-T}}}
+\label{a00677_ga1c35c53aa2b78b1856a8fe1233b8368e}
+
+
+Mcst Rx set/get format. 
+
+This structure defines the Mcst Rx get/set cmd format. \hypertarget{a00677_ga9d8aade166418018f4e609e679f7c603}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-T}}}
+\label{a00677_ga9d8aade166418018f4e609e679f7c603}
+
+
+tx power set/get format power indexes. 
+
+This structure defines the Memory or Register structure to Peek/Poke from WLAN. \hypertarget{a00677_gad221ad803b8f2c5c4e24ef1f0c0aa83c}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-E} {\bf GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-T}}}
+\label{a00677_gad221ad803b8f2c5c4e24ef1f0c0aa83c}
+
+
+tx power set/get format power indexes. 
+
+This enum defines the types of Memory or Register to Peek/Poke from WLAN. \hypertarget{a00677_ga7692f300e14cded7c79c50838226ed2b}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-T@{GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-T}}}
+\label{a00677_ga7692f300e14cded7c79c50838226ed2b}
+
+
+MIC failure indication. 
+
+This structure defines the mic failure indication structure. \hypertarget{a00677_ga941d2bc71947bd100c963211cf48a341}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-NUM\_\-RETRY\_\-T@{GSN\_\-WIF\_\-WLAN\_\-NUM\_\-RETRY\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-NUM\_\-RETRY\_\-T@{GSN\_\-WIF\_\-WLAN\_\-NUM\_\-RETRY\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-NUM\_\-RETRY\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-NUM\_\-RETRY\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-NUM\_\-RETRY\_\-T}}}
+\label{a00677_ga941d2bc71947bd100c963211cf48a341}
+
+
+num retries get cmd response format. 
+
+This structure defines the num retries get cmd response format. \hypertarget{a00677_gabc852e0cb262314c5f307a3e9802921e}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-E}  {\bf GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-T}}}
+\label{a00677_gabc852e0cb262314c5f307a3e9802921e}
+
+
+NW type. 
+
+This enum defines the NW type for connection. \hypertarget{a00677_ga6bf98e2985565ecb3084ad0fb0d0e8c8}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-RSSI\_\-T@{GSN\_\-WIF\_\-WLAN\_\-RSSI\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-RSSI\_\-T@{GSN\_\-WIF\_\-WLAN\_\-RSSI\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-RSSI\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-RSSI\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-RSSI\_\-T}}}
+\label{a00677_ga6bf98e2985565ecb3084ad0fb0d0e8c8}
+
+
+rssi get response format. 
+
+This structure defines the rssi get cmd response format. \hypertarget{a00677_ga7629340b77de2ac1d56c6aa8c8013d47}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-S} {\bf GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-T}}}
+\label{a00677_ga7629340b77de2ac1d56c6aa8c8013d47}
+
+
+RTS enable command parameters. 
+
+This structure defines the RTS enable command parameters \hypertarget{a00677_gad632a83292610148499e14031b507f4b}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-T@{GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-T@{GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-S} {\bf GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-T}}}
+\label{a00677_gad632a83292610148499e14031b507f4b}
+
+
+set promiscous mode command params 
+
+This structure defines the set promiscous mode command params \hypertarget{a00677_ga1bb08fff4c3ba2c6027ad054755e4df2}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-RX\_\-STATS\_\-T@{GSN\_\-WIF\_\-WLAN\_\-RX\_\-STATS\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-RX\_\-STATS\_\-T@{GSN\_\-WIF\_\-WLAN\_\-RX\_\-STATS\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-RX\_\-STATS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-RX\_\-STATS\_\-S} {\bf GSN\_\-WIF\_\-WLAN\_\-RX\_\-STATS\_\-T}}}
+\label{a00677_ga1bb08fff4c3ba2c6027ad054755e4df2}
+
+
+wlan rx statistics get cmd 
+
+This structure defines the wlan rx statistics get command structure \hypertarget{a00677_ga38fb363f219070729c31798116e9702c}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-T@{GSN\_\-WIF\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-T@{GSN\_\-WIF\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-S} {\bf GSN\_\-WIF\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-T}}}
+\label{a00677_ga38fb363f219070729c31798116e9702c}
+
+
+scan params set cmd parameters 
+
+This structure defines the format of scan params set command \hypertarget{a00677_ga64d9749befbab903d13eae1c816e40cf}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-E}  {\bf GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-T}}}
+\label{a00677_ga64d9749befbab903d13eae1c816e40cf}
+
+
+stat type. 
+
+This enum defines the statistics type for read stats command \hypertarget{a00677_ga0532c6cda31388631d8d6346390ac764}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-STATISTICS\_\-READ\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-STATISTICS\_\-READ\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-STATISTICS\_\-READ\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-STATISTICS\_\-READ\_\-REQ\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-STATISTICS\_\-READ\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-STATISTICS\_\-READ\_\-REQ\_\-S} {\bf GSN\_\-WIF\_\-WLAN\_\-STATISTICS\_\-READ\_\-REQ\_\-T}}}
+\label{a00677_ga0532c6cda31388631d8d6346390ac764}
+
+
+read statistics command structure format 
+
+This structure defines the read statistics command structure format \hypertarget{a00677_ga4c920262f319d5fe619f45ee687d827b}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-T}}}
+\label{a00677_ga4c920262f319d5fe619f45ee687d827b}
+
+
+TKIP TSC/PN num. 
+
+This structure defines the TKIP TSC/PN number get command structure \hypertarget{a00677_gaa864eedc8e384ed0ea49b62f267aff72}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-E} {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-T}}}
+\label{a00677_gaa864eedc8e384ed0ea49b62f267aff72}
+
+
+tx power set/get format power indexes. 
+
+This structure defines the tx power get/set cmd format indexes. \hypertarget{a00677_ga04f719a66b056bce000089417b9775bf}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-T}}}
+\label{a00677_ga04f719a66b056bce000089417b9775bf}
+
+
+tx power set/get format. 
+
+This structure defines the tx power get/set cmd format. \hypertarget{a00677_ga3248623873f75304b338528b6c711975}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-T}}}
+\label{a00677_ga3248623873f75304b338528b6c711975}
+
+
+wlan tx rate set command structure 
+
+This structure defines the wlan rate struct command/command response format. \hypertarget{a00677_gadedc886d92dbab6910156f707795905d}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-T}}}
+\label{a00677_gadedc886d92dbab6910156f707795905d}
+
+
+wlan tx statistics get cmd 
+
+This structure defines the wlan tx statistics get command structure \hypertarget{a00677_ga23625516479d19d7b54f0771fdacec4a}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-TXPOWER\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TXPOWER\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-TXPOWER\_\-REQ\_\-T@{GSN\_\-WIF\_\-WLAN\_\-TXPOWER\_\-REQ\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-TXPOWER\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-TXPOWER\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-WLAN\_\-TXPOWER\_\-REQ\_\-T}}}
+\label{a00677_ga23625516479d19d7b54f0771fdacec4a}
+
+
+Frame Tx Fail Count Threshold Setup. 
+
+This structure defines the structure. \hypertarget{a00677_gaabf8bae549f7aca1d1a07fbc8f2d4459}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WLAN\_\-PROCESS\_\-MSG\_\-T@{GSN\_\-WLAN\_\-PROCESS\_\-MSG\_\-T}}
+\index{GSN\_\-WLAN\_\-PROCESS\_\-MSG\_\-T@{GSN\_\-WLAN\_\-PROCESS\_\-MSG\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WLAN\_\-PROCESS\_\-MSG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WLAN\_\-PROCESS\_\-MSG} {\bf GSN\_\-WLAN\_\-PROCESS\_\-MSG\_\-T}}}
+\label{a00677_gaabf8bae549f7aca1d1a07fbc8f2d4459}
+
+
+Host messages structure. 
+
+This structure defines the format of the host messages \hypertarget{a00677_ga05896005da162a0b0f4b304f7c551947}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-T@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-T}}
+\index{GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-T@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-S} {\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-T}}}
+\label{a00677_ga05896005da162a0b0f4b304f7c551947}
+
+
+Types of WLAN modes. 
+
+This enum defines the available modes in bringing WLAN. \hypertarget{a00677_ga150fdf6ec3c7c370b27651412b36653a}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-T@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-T}}
+\index{GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-T@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-S} {\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-T}}}
+\label{a00677_ga150fdf6ec3c7c370b27651412b36653a}
+
+
+RX Stop Indication. 
+
+This structure defines the stats collected in RX tests which will be indicated after the test. \hypertarget{a00677_gaf2d0e783b6db5c93a78ee3d99153ebcb}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-T@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-T}}
+\index{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-T@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-S} {\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-T}}}
+\label{a00677_gaf2d0e783b6db5c93a78ee3d99153ebcb}
+
+
+Types of patterns available. 
+
+This enum defines types of patterns available for tranmission in TX99/TX100 tests. \hypertarget{a00677_ga58d933da4429968a4151ae6b2106281b}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-T@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-T}}
+\index{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-T@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-T}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-S} {\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-T}}}
+\label{a00677_ga58d933da4429968a4151ae6b2106281b}
+
+
+Types of Tests. 
+
+This enum defines type of test as Transmission or Reception. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00677_ga2b3917a91d576d0d037c406e6397cab9}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-E@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-E}}
+\index{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-E@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-E}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-E}}}
+\label{a00677_ga2b3917a91d576d0d037c406e6397cab9}
+
+
+Auth type. 
+
+This enum defines the authentication type of the connection. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-NONE@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-NONE}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-NONE@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-NONE}}\item[{\em 
+\hypertarget{a00677_gga2b3917a91d576d0d037c406e6397cab9abe5ad72eaf443c01179b9fdd3e44ad94}{
+GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-NONE}
+\label{a00677_gga2b3917a91d576d0d037c406e6397cab9abe5ad72eaf443c01179b9fdd3e44ad94}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA}}\item[{\em 
+\hypertarget{a00677_gga2b3917a91d576d0d037c406e6397cab9a9b0bab6a04025a0c9a9094fcd005b288}{
+GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA}
+\label{a00677_gga2b3917a91d576d0d037c406e6397cab9a9b0bab6a04025a0c9a9094fcd005b288}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2}}\item[{\em 
+\hypertarget{a00677_gga2b3917a91d576d0d037c406e6397cab9aa801aac72ada7e073ef56477001cd2fe}{
+GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2}
+\label{a00677_gga2b3917a91d576d0d037c406e6397cab9aa801aac72ada7e073ef56477001cd2fe}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-PSK@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-PSK}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-PSK@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-PSK}}\item[{\em 
+\hypertarget{a00677_gga2b3917a91d576d0d037c406e6397cab9a2df301dcc2ba2da66f8e1bc2a70002c0}{
+GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-PSK}
+\label{a00677_gga2b3917a91d576d0d037c406e6397cab9a2df301dcc2ba2da66f8e1bc2a70002c0}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-PSK@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-PSK}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-PSK@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-PSK}}\item[{\em 
+\hypertarget{a00677_gga2b3917a91d576d0d037c406e6397cab9aadfb9e64b7645e372f4d109180b44fca}{
+GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-PSK}
+\label{a00677_gga2b3917a91d576d0d037c406e6397cab9aadfb9e64b7645e372f4d109180b44fca}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-CCKM@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-CCKM}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-CCKM@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-CCKM}}\item[{\em 
+\hypertarget{a00677_gga2b3917a91d576d0d037c406e6397cab9aa0fa868074f7ff9aebd665edf070eb52}{
+GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA\_\-CCKM}
+\label{a00677_gga2b3917a91d576d0d037c406e6397cab9aa0fa868074f7ff9aebd665edf070eb52}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-CCKM@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-CCKM}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-CCKM@{GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-CCKM}}\item[{\em 
+\hypertarget{a00677_gga2b3917a91d576d0d037c406e6397cab9a8bc51b5a7ed8ca4967f5ef955ab9f1a2}{
+GSN\_\-WIF\_\-WLAN\_\-AUTH\_\-WPA2\_\-CCKM}
+\label{a00677_gga2b3917a91d576d0d037c406e6397cab9a8bc51b5a7ed8ca4967f5ef955ab9f1a2}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 144 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga49c8ff4188538f53965f3e0916f59746}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-E@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-E}}
+\index{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-E@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-E}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-E}}}
+\label{a00677_ga49c8ff4188538f53965f3e0916f59746}
+
+
+crypto type. 
+
+This enum defines the crypto type of the connection. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-NONE@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-NONE}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-NONE@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-NONE}}\item[{\em 
+\hypertarget{a00677_gga49c8ff4188538f53965f3e0916f59746a5de19dc37abf26499707c12567818897}{
+GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-NONE}
+\label{a00677_gga49c8ff4188538f53965f3e0916f59746a5de19dc37abf26499707c12567818897}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-WEP@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-WEP}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-WEP@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-WEP}}\item[{\em 
+\hypertarget{a00677_gga49c8ff4188538f53965f3e0916f59746a74eebc9282a5ce051a677573ba6928eb}{
+GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-WEP}
+\label{a00677_gga49c8ff4188538f53965f3e0916f59746a74eebc9282a5ce051a677573ba6928eb}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-TKIP@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-TKIP}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-TKIP@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-TKIP}}\item[{\em 
+\hypertarget{a00677_gga49c8ff4188538f53965f3e0916f59746ae7316c7d6905e798ff24db647fe514b3}{
+GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-TKIP}
+\label{a00677_gga49c8ff4188538f53965f3e0916f59746ae7316c7d6905e798ff24db647fe514b3}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-AES@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-AES}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-AES@{GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-AES}}\item[{\em 
+\hypertarget{a00677_gga49c8ff4188538f53965f3e0916f59746afeb252a087410849b295f8b9e7c1a384}{
+GSN\_\-WIF\_\-WLAN\_\-CRYPTO\_\-AES}
+\label{a00677_gga49c8ff4188538f53965f3e0916f59746afeb252a087410849b295f8b9e7c1a384}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 162 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga9dd854d0108dc49ff077a04e897e3518}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-E@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-E}}
+\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-E@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-E}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-E}}}
+\label{a00677_ga9dd854d0108dc49ff077a04e897e3518}
+
+
+Disconnect reason code. 
+
+This enum defines the disconnect reasons indicating the reason for connect request failure or termination of existing connection if the failure originated in WFW and not due to receipt of disassoc/deauth frame. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-AUTH\_\-FAILED@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-AUTH\_\-FAILED}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-AUTH\_\-FAILED@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-AUTH\_\-FAILED}}\item[{\em 
+\hypertarget{a00677_gga9dd854d0108dc49ff077a04e897e3518af4c7545e3a50f0a4b80e819642f6fa11}{
+GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-AUTH\_\-FAILED}
+\label{a00677_gga9dd854d0108dc49ff077a04e897e3518af4c7545e3a50f0a4b80e819642f6fa11}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-ASSOC\_\-FAILED@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-ASSOC\_\-FAILED}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-ASSOC\_\-FAILED@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-ASSOC\_\-FAILED}}\item[{\em 
+\hypertarget{a00677_gga9dd854d0108dc49ff077a04e897e3518ab326383254792bc87a5b3dd116a846fa}{
+GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-ASSOC\_\-FAILED}
+\label{a00677_gga9dd854d0108dc49ff077a04e897e3518ab326383254792bc87a5b3dd116a846fa}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RESOURCE\_\-UNAVAIL@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RESOURCE\_\-UNAVAIL}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RESOURCE\_\-UNAVAIL@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RESOURCE\_\-UNAVAIL}}\item[{\em 
+\hypertarget{a00677_gga9dd854d0108dc49ff077a04e897e3518aee4dc21ac6db977675d9681fa1f87131}{
+GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RESOURCE\_\-UNAVAIL}
+\label{a00677_gga9dd854d0108dc49ff077a04e897e3518aee4dc21ac6db977675d9681fa1f87131}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-SYNC\_\-LOSS@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-SYNC\_\-LOSS}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-SYNC\_\-LOSS@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-SYNC\_\-LOSS}}\item[{\em 
+\hypertarget{a00677_gga9dd854d0108dc49ff077a04e897e3518a571260d569e804028dc21870862dbf8d}{
+GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-SYNC\_\-LOSS}
+\label{a00677_gga9dd854d0108dc49ff077a04e897e3518a571260d569e804028dc21870862dbf8d}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RETRY\_\-EXCEEDED@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RETRY\_\-EXCEEDED}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RETRY\_\-EXCEEDED@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RETRY\_\-EXCEEDED}}\item[{\em 
+\hypertarget{a00677_gga9dd854d0108dc49ff077a04e897e3518acd39138402c119334dd5f6b3a18ee9c5}{
+GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-RETRY\_\-EXCEEDED}
+\label{a00677_gga9dd854d0108dc49ff077a04e897e3518acd39138402c119334dd5f6b3a18ee9c5}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-NW\_\-UNAVAIL@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-NW\_\-UNAVAIL}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-NW\_\-UNAVAIL@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-NW\_\-UNAVAIL}}\item[{\em 
+\hypertarget{a00677_gga9dd854d0108dc49ff077a04e897e3518a969801072b56d9aa2eb6298b7d79d6fd}{
+GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-NW\_\-UNAVAIL}
+\label{a00677_gga9dd854d0108dc49ff077a04e897e3518a969801072b56d9aa2eb6298b7d79d6fd}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-WFW\_\-FAILURE@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-WFW\_\-FAILURE}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-WFW\_\-FAILURE@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-WFW\_\-FAILURE}}\item[{\em 
+\hypertarget{a00677_gga9dd854d0108dc49ff077a04e897e3518a6e04b4bfeb58c31b2b515f7919275cba}{
+GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-WFW\_\-FAILURE}
+\label{a00677_gga9dd854d0108dc49ff077a04e897e3518a6e04b4bfeb58c31b2b515f7919275cba}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-PROTOCOL\_\-FAILURE@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-PROTOCOL\_\-FAILURE}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-PROTOCOL\_\-FAILURE@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-PROTOCOL\_\-FAILURE}}\item[{\em 
+\hypertarget{a00677_gga9dd854d0108dc49ff077a04e897e3518ae0b2465fb829477650a95f708deff7fe}{
+GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-PROTOCOL\_\-FAILURE}
+\label{a00677_gga9dd854d0108dc49ff077a04e897e3518ae0b2465fb829477650a95f708deff7fe}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-DEAUTH@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-DEAUTH}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-DEAUTH@{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-DEAUTH}}\item[{\em 
+\hypertarget{a00677_gga9dd854d0108dc49ff077a04e897e3518aedf74ad09bfdcfc5b39c5a36afe860df}{
+GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-REASON\_\-DEAUTH}
+\label{a00677_gga9dd854d0108dc49ff077a04e897e3518aedf74ad09bfdcfc5b39c5a36afe860df}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 1080 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga5415d31a2d60b731af07dc04240e540c}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-E@{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-E}}
+\index{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-E@{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-E}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-E}}}
+\label{a00677_ga5415d31a2d60b731af07dc04240e540c}
+
+
+Dot11 Auth type. 
+
+This enum defines the 802.11 authentication to use during association. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-OPEN@{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-OPEN}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-OPEN@{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-OPEN}}\item[{\em 
+\hypertarget{a00677_gga5415d31a2d60b731af07dc04240e540cad9009c323b9b80ec4a57c22a6a42bf20}{
+GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-OPEN}
+\label{a00677_gga5415d31a2d60b731af07dc04240e540cad9009c323b9b80ec4a57c22a6a42bf20}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-SHARED@{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-SHARED}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-SHARED@{GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-SHARED}}\item[{\em 
+\hypertarget{a00677_gga5415d31a2d60b731af07dc04240e540cafc5f6649938bc4669e367f043b84fdac}{
+GSN\_\-WIF\_\-WLAN\_\-DOT11\_\-AUTH\_\-SHARED}
+\label{a00677_gga5415d31a2d60b731af07dc04240e540cafc5f6649938bc4669e367f043b84fdac}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 131 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga738f68b803d29587618534b884d8b600}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-E}}
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-E}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-E}}}
+\label{a00677_ga738f68b803d29587618534b884d8b600}
+
+
+Key type. 
+
+This enum defines the key type used for installing the keys in to WLAN. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-WEP@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-WEP}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-WEP@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-WEP}}\item[{\em 
+\hypertarget{a00677_gga738f68b803d29587618534b884d8b600af8dba2674fcae6ee49ea53e87e6b327c}{
+GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-WEP}
+\label{a00677_gga738f68b803d29587618534b884d8b600af8dba2674fcae6ee49ea53e87e6b327c}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-PTK@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-PTK}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-PTK@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-PTK}}\item[{\em 
+\hypertarget{a00677_gga738f68b803d29587618534b884d8b600a384424192335ee263f6b9150bf61b80b}{
+GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-PTK}
+\label{a00677_gga738f68b803d29587618534b884d8b600a384424192335ee263f6b9150bf61b80b}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-GTK@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-GTK}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-GTK@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-GTK}}\item[{\em 
+\hypertarget{a00677_gga738f68b803d29587618534b884d8b600aeb6b6a4473c3d874d150972fb22d0975}{
+GSN\_\-WIF\_\-WLAN\_\-KEY\_\-TYPE\_\-GTK}
+\label{a00677_gga738f68b803d29587618534b884d8b600aeb6b6a4473c3d874d150972fb22d0975}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 203 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_gaf26e714e09b57b3b2a5f21341613761d}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-E}}
+\index{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-E}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-E}}}
+\label{a00677_gaf26e714e09b57b3b2a5f21341613761d}
+
+
+stat type. 
+
+This enum defines the statistics type for read stats command \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-NOT\_\-CONNECTED@{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-NOT\_\-CONNECTED}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-NOT\_\-CONNECTED@{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-NOT\_\-CONNECTED}}\item[{\em 
+\hypertarget{a00677_ggaf26e714e09b57b3b2a5f21341613761da29bec55c1820017c55b7eebc1cbb2698}{
+GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-NOT\_\-CONNECTED}
+\label{a00677_ggaf26e714e09b57b3b2a5f21341613761da29bec55c1820017c55b7eebc1cbb2698}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-CONNECTED@{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-CONNECTED}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-CONNECTED@{GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-CONNECTED}}\item[{\em 
+\hypertarget{a00677_ggaf26e714e09b57b3b2a5f21341613761daf9bfe447cd6ae519e8f1f06ce72a39a9}{
+GSN\_\-WIF\_\-WLAN\_\-MAC\_\-STATE\_\-CONNECTED}
+\label{a00677_ggaf26e714e09b57b3b2a5f21341613761daf9bfe447cd6ae519e8f1f06ce72a39a9}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 833 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga7f657dfcb65c6810c23ae68bbca0b101}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-E}}
+\index{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-E}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-E}}}
+\label{a00677_ga7f657dfcb65c6810c23ae68bbca0b101}
+
+
+tx power set/get format power indexes. 
+
+This enum defines the types of Memory or Register to Peek/Poke from WLAN. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-REG@{GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-REG}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-REG@{GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-REG}}\item[{\em 
+\hypertarget{a00677_gga7f657dfcb65c6810c23ae68bbca0b101aba4ce9371ded92ab818bd48b24d1b74f}{
+GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-REG}
+\label{a00677_gga7f657dfcb65c6810c23ae68bbca0b101aba4ce9371ded92ab818bd48b24d1b74f}
+}]\index{GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-PHY@{GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-PHY}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-PHY@{GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-PHY}}\item[{\em 
+\hypertarget{a00677_gga7f657dfcb65c6810c23ae68bbca0b101afd4788d7537c66f77185272b27a0479e}{
+GSN\_\-WLAN\_\-MEM\_\-REG\_\-TYPE\_\-PHY}
+\label{a00677_gga7f657dfcb65c6810c23ae68bbca0b101afd4788d7537c66f77185272b27a0479e}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 794 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga4d89b2a0c901a8c766f195897f16623f}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-E}}
+\index{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-E}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-E}}}
+\label{a00677_ga4d89b2a0c901a8c766f195897f16623f}
+
+
+NW type. 
+
+This enum defines the NW type for connection. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-STA@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-STA}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-STA@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-STA}}\item[{\em 
+\hypertarget{a00677_gga4d89b2a0c901a8c766f195897f16623faa311500f825dc8fd0001c0d8a6917605}{
+GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-STA}
+\label{a00677_gga4d89b2a0c901a8c766f195897f16623faa311500f825dc8fd0001c0d8a6917605}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-AP@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-AP}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-AP@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-AP}}\item[{\em 
+\hypertarget{a00677_gga4d89b2a0c901a8c766f195897f16623fa6005fc49b47b857a5d371c912c1bf3fd}{
+GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-AP}
+\label{a00677_gga4d89b2a0c901a8c766f195897f16623fa6005fc49b47b857a5d371c912c1bf3fd}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-IBSS@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-IBSS}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-IBSS@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-IBSS}}\item[{\em 
+\hypertarget{a00677_gga4d89b2a0c901a8c766f195897f16623faf57bc7deeac6ae399614faf0b9d20fba}{
+GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-IBSS}
+\label{a00677_gga4d89b2a0c901a8c766f195897f16623faf57bc7deeac6ae399614faf0b9d20fba}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-15\_\-4@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-15\_\-4}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-15\_\-4@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-15\_\-4}}\item[{\em 
+\hypertarget{a00677_gga4d89b2a0c901a8c766f195897f16623faa63e066458c172dea3b093f1bed382c6}{
+GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-15\_\-4}
+\label{a00677_gga4d89b2a0c901a8c766f195897f16623faa63e066458c172dea3b093f1bed382c6}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-ISOTX@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-ISOTX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-ISOTX@{GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-ISOTX}}\item[{\em 
+\hypertarget{a00677_gga4d89b2a0c901a8c766f195897f16623fa4d99b481ead0aaa86d901a99899befef}{
+GSN\_\-WIF\_\-WLAN\_\-NW\_\-TYPE\_\-ISOTX}
+\label{a00677_gga4d89b2a0c901a8c766f195897f16623fa4d99b481ead0aaa86d901a99899befef}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 115 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga1ea7ef2124a3ae886d909d6b8188ef79}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-E}}
+\index{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-E}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-E}}}
+\label{a00677_ga1ea7ef2124a3ae886d909d6b8188ef79}
+
+
+stat type. 
+
+This enum defines the statistics type for read stats command \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-TX@{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-TX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-TX@{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-TX}}\item[{\em 
+\hypertarget{a00677_gga1ea7ef2124a3ae886d909d6b8188ef79a04b02ff9d7f0704e049d050172be3433}{
+GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-TX}
+\label{a00677_gga1ea7ef2124a3ae886d909d6b8188ef79a04b02ff9d7f0704e049d050172be3433}
+}]\index{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-RX@{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-RX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-RX@{GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-RX}}\item[{\em 
+\hypertarget{a00677_gga1ea7ef2124a3ae886d909d6b8188ef79a9b06475a178a05d5fea8e190e34e8e08}{
+GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-RX}
+\label{a00677_gga1ea7ef2124a3ae886d909d6b8188ef79a9b06475a178a05d5fea8e190e34e8e08}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 1234 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga75fc31972dc5127c4ee4b3e585ab0206}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-E@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-E}}
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-E@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-E}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-POW\_\-RATE\_\-IDX\_\-E}}}
+\label{a00677_ga75fc31972dc5127c4ee4b3e585ab0206}
+
+
+tx power set/get format power indexes. 
+
+This structure defines the tx power get/set cmd format indexes. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-TX\_\-POW\_\-802\_\-11B\_\-IDX@{GSN\_\-TX\_\-POW\_\-802\_\-11B\_\-IDX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-TX\_\-POW\_\-802\_\-11B\_\-IDX@{GSN\_\-TX\_\-POW\_\-802\_\-11B\_\-IDX}}\item[{\em 
+\hypertarget{a00677_gga75fc31972dc5127c4ee4b3e585ab0206aa8ef942d0ca232cab8243a718383af18}{
+GSN\_\-TX\_\-POW\_\-802\_\-11B\_\-IDX}
+\label{a00677_gga75fc31972dc5127c4ee4b3e585ab0206aa8ef942d0ca232cab8243a718383af18}
+}]\index{GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-LO\_\-IDX@{GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-LO\_\-IDX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-LO\_\-IDX@{GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-LO\_\-IDX}}\item[{\em 
+\hypertarget{a00677_gga75fc31972dc5127c4ee4b3e585ab0206ae3826b232cc1ee4a30d46890b0718bb0}{
+GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-LO\_\-IDX}
+\label{a00677_gga75fc31972dc5127c4ee4b3e585ab0206ae3826b232cc1ee4a30d46890b0718bb0}
+}]\index{GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-HI\_\-IDX@{GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-HI\_\-IDX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-HI\_\-IDX@{GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-HI\_\-IDX}}\item[{\em 
+\hypertarget{a00677_gga75fc31972dc5127c4ee4b3e585ab0206aa05a5fdd8b3cbb522655e6c2e400bd23}{
+GSN\_\-TX\_\-POW\_\-802\_\-11G\_\-HI\_\-IDX}
+\label{a00677_gga75fc31972dc5127c4ee4b3e585ab0206aa05a5fdd8b3cbb522655e6c2e400bd23}
+}]\index{GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-LO\_\-IDX@{GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-LO\_\-IDX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-LO\_\-IDX@{GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-LO\_\-IDX}}\item[{\em 
+\hypertarget{a00677_gga75fc31972dc5127c4ee4b3e585ab0206a2b481aadf4f8c66408beb3dfa4d84fc7}{
+GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-LO\_\-IDX}
+\label{a00677_gga75fc31972dc5127c4ee4b3e585ab0206a2b481aadf4f8c66408beb3dfa4d84fc7}
+}]\index{GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-HI\_\-IDX@{GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-HI\_\-IDX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-HI\_\-IDX@{GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-HI\_\-IDX}}\item[{\em 
+\hypertarget{a00677_gga75fc31972dc5127c4ee4b3e585ab0206a0d66ebcda580eb26e8347354d3087d70}{
+GSN\_\-TX\_\-POW\_\-802\_\-11N\_\-HI\_\-IDX}
+\label{a00677_gga75fc31972dc5127c4ee4b3e585ab0206a0d66ebcda580eb26e8347354d3087d70}
+}]\index{GSN\_\-TX\_\-POW\_\-MAX\_\-IDX@{GSN\_\-TX\_\-POW\_\-MAX\_\-IDX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-TX\_\-POW\_\-MAX\_\-IDX@{GSN\_\-TX\_\-POW\_\-MAX\_\-IDX}}\item[{\em 
+\hypertarget{a00677_gga75fc31972dc5127c4ee4b3e585ab0206a647770c3d643ef01c522760760b94172}{
+GSN\_\-TX\_\-POW\_\-MAX\_\-IDX}
+\label{a00677_gga75fc31972dc5127c4ee4b3e585ab0206a647770c3d643ef01c522760760b94172}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 806 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga8d2c2dc6c9f7927c5cf4634d7b403b95}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-S@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-S}}
+\index{GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-S@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-S}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-MODE\_\-S}}}
+\label{a00677_ga8d2c2dc6c9f7927c5cf4634d7b403b95}
+
+
+Types of WLAN modes. 
+
+This enum defines the available modes in bringing WLAN. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-MODE\_\-BSS\_\-STA@{GSN\_\-MODE\_\-BSS\_\-STA}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-MODE\_\-BSS\_\-STA@{GSN\_\-MODE\_\-BSS\_\-STA}}\item[{\em 
+\hypertarget{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95a7b846af0882a2e9fdd177f290b02a6a1}{
+GSN\_\-MODE\_\-BSS\_\-STA}
+\label{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95a7b846af0882a2e9fdd177f290b02a6a1}
+}]\index{GSN\_\-MODE\_\-IBSS\_\-STA@{GSN\_\-MODE\_\-IBSS\_\-STA}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-MODE\_\-IBSS\_\-STA@{GSN\_\-MODE\_\-IBSS\_\-STA}}\item[{\em 
+\hypertarget{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95ada8c3c5dcc25a633515f39d0622ed38a}{
+GSN\_\-MODE\_\-IBSS\_\-STA}
+\label{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95ada8c3c5dcc25a633515f39d0622ed38a}
+}]\index{GSN\_\-MODE\_\-AP@{GSN\_\-MODE\_\-AP}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-MODE\_\-AP@{GSN\_\-MODE\_\-AP}}\item[{\em 
+\hypertarget{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95a67277979d811dae8f619f13ae651e957}{
+GSN\_\-MODE\_\-AP}
+\label{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95a67277979d811dae8f619f13ae651e957}
+}]\index{GSN\_\-MODE\_\-UNASSOC\_\-MODE@{GSN\_\-MODE\_\-UNASSOC\_\-MODE}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-MODE\_\-UNASSOC\_\-MODE@{GSN\_\-MODE\_\-UNASSOC\_\-MODE}}\item[{\em 
+\hypertarget{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95a2b9ddf1d3ec73ebec39439826d471cce}{
+GSN\_\-MODE\_\-UNASSOC\_\-MODE}
+\label{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95a2b9ddf1d3ec73ebec39439826d471cce}
+}]\index{GSN\_\-MODE\_\-HUT\_\-MODE\_\-BSS\_\-STA@{GSN\_\-MODE\_\-HUT\_\-MODE\_\-BSS\_\-STA}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-MODE\_\-HUT\_\-MODE\_\-BSS\_\-STA@{GSN\_\-MODE\_\-HUT\_\-MODE\_\-BSS\_\-STA}}\item[{\em 
+\hypertarget{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95a2dfea59dcf8f2cc5cf5563dd98062949}{
+GSN\_\-MODE\_\-HUT\_\-MODE\_\-BSS\_\-STA}
+\label{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95a2dfea59dcf8f2cc5cf5563dd98062949}
+}]\index{GSN\_\-MODE\_\-HUT\_\-MODE\_\-IBSS\_\-STA@{GSN\_\-MODE\_\-HUT\_\-MODE\_\-IBSS\_\-STA}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-MODE\_\-HUT\_\-MODE\_\-IBSS\_\-STA@{GSN\_\-MODE\_\-HUT\_\-MODE\_\-IBSS\_\-STA}}\item[{\em 
+\hypertarget{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95a5c1af84ee44deddd78424d6649351d5c}{
+GSN\_\-MODE\_\-HUT\_\-MODE\_\-IBSS\_\-STA}
+\label{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95a5c1af84ee44deddd78424d6649351d5c}
+}]\index{GSN\_\-MODE\_\-HUT\_\-MODE\_\-AP@{GSN\_\-MODE\_\-HUT\_\-MODE\_\-AP}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-MODE\_\-HUT\_\-MODE\_\-AP@{GSN\_\-MODE\_\-HUT\_\-MODE\_\-AP}}\item[{\em 
+\hypertarget{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95ad385a9345a8b96725314fefa76e307ad}{
+GSN\_\-MODE\_\-HUT\_\-MODE\_\-AP}
+\label{a00677_gga8d2c2dc6c9f7927c5cf4634d7b403b95ad385a9345a8b96725314fefa76e307ad}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 255 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga651010efc8cff4e360fd72c7d32a70a9}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-S@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-S}}
+\index{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-S@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-S}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-99\_\-PATTERN\_\-S}}}
+\label{a00677_ga651010efc8cff4e360fd72c7d32a70a9}
+
+
+Types of patterns available. 
+
+This enum defines types of patterns available for tranmission in TX99/TX100 tests. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{TX99\_\-PATTERN\_\-ALL\_\-ZEROS@{TX99\_\-PATTERN\_\-ALL\_\-ZEROS}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!TX99\_\-PATTERN\_\-ALL\_\-ZEROS@{TX99\_\-PATTERN\_\-ALL\_\-ZEROS}}\item[{\em 
+\hypertarget{a00677_gga651010efc8cff4e360fd72c7d32a70a9a7b0f6c4fc037430360bb1a515fbd2261}{
+TX99\_\-PATTERN\_\-ALL\_\-ZEROS}
+\label{a00677_gga651010efc8cff4e360fd72c7d32a70a9a7b0f6c4fc037430360bb1a515fbd2261}
+}]\index{TX99\_\-PATTERN\_\-ALL\_\-ONES@{TX99\_\-PATTERN\_\-ALL\_\-ONES}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!TX99\_\-PATTERN\_\-ALL\_\-ONES@{TX99\_\-PATTERN\_\-ALL\_\-ONES}}\item[{\em 
+\hypertarget{a00677_gga651010efc8cff4e360fd72c7d32a70a9ac5997221faab077928ba36901f9ac13d}{
+TX99\_\-PATTERN\_\-ALL\_\-ONES}
+\label{a00677_gga651010efc8cff4e360fd72c7d32a70a9ac5997221faab077928ba36901f9ac13d}
+}]\index{TX99\_\-PATTERN\_\-REPEATING\_\-10@{TX99\_\-PATTERN\_\-REPEATING\_\-10}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!TX99\_\-PATTERN\_\-REPEATING\_\-10@{TX99\_\-PATTERN\_\-REPEATING\_\-10}}\item[{\em 
+\hypertarget{a00677_gga651010efc8cff4e360fd72c7d32a70a9ab3b8555f274736bb950108d0bd3c598b}{
+TX99\_\-PATTERN\_\-REPEATING\_\-10}
+\label{a00677_gga651010efc8cff4e360fd72c7d32a70a9ab3b8555f274736bb950108d0bd3c598b}
+}]\index{TX99\_\-PATTERN\_\-PN7@{TX99\_\-PATTERN\_\-PN7}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!TX99\_\-PATTERN\_\-PN7@{TX99\_\-PATTERN\_\-PN7}}\item[{\em 
+\hypertarget{a00677_gga651010efc8cff4e360fd72c7d32a70a9ae96c1a78fb24fcbe775fefda62757452}{
+TX99\_\-PATTERN\_\-PN7}
+\label{a00677_gga651010efc8cff4e360fd72c7d32a70a9ae96c1a78fb24fcbe775fefda62757452}
+}]\index{TX99\_\-PATTERN\_\-PN9@{TX99\_\-PATTERN\_\-PN9}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!TX99\_\-PATTERN\_\-PN9@{TX99\_\-PATTERN\_\-PN9}}\item[{\em 
+\hypertarget{a00677_gga651010efc8cff4e360fd72c7d32a70a9a55c749918a1b75ad9ab5091c250e8c0e}{
+TX99\_\-PATTERN\_\-PN9}
+\label{a00677_gga651010efc8cff4e360fd72c7d32a70a9a55c749918a1b75ad9ab5091c250e8c0e}
+}]\index{TX99\_\-PATTERN\_\-PN15@{TX99\_\-PATTERN\_\-PN15}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!TX99\_\-PATTERN\_\-PN15@{TX99\_\-PATTERN\_\-PN15}}\item[{\em 
+\hypertarget{a00677_gga651010efc8cff4e360fd72c7d32a70a9a46eb7d7ab33b8cc68e2a3cf127375470}{
+TX99\_\-PATTERN\_\-PN15}
+\label{a00677_gga651010efc8cff4e360fd72c7d32a70a9a46eb7d7ab33b8cc68e2a3cf127375470}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 222 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00677_ga3c5fd791827dffd656e69ad09ce2304e}{
+\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-S@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-S}}
+\index{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-S@{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-S}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}
+\subsubsection[{GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-TYPE\_\-S}}}
+\label{a00677_ga3c5fd791827dffd656e69ad09ce2304e}
+
+
+Types of Tests. 
+
+This enum defines type of test as Transmission or Reception. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-TEST\_\-TYPE\_\-RX@{GSN\_\-TEST\_\-TYPE\_\-RX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-TEST\_\-TYPE\_\-RX@{GSN\_\-TEST\_\-TYPE\_\-RX}}\item[{\em 
+\hypertarget{a00677_gga3c5fd791827dffd656e69ad09ce2304eaca614bc30bd8954133ec65e0d1476b2d}{
+GSN\_\-TEST\_\-TYPE\_\-RX}
+\label{a00677_gga3c5fd791827dffd656e69ad09ce2304eaca614bc30bd8954133ec65e0d1476b2d}
+}]\index{GSN\_\-TEST\_\-TYPE\_\-TX@{GSN\_\-TEST\_\-TYPE\_\-TX}!GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}}\index{GSN WIF WLAN Control Interface@{GSN WIF WLAN Control Interface}!GSN\_\-TEST\_\-TYPE\_\-TX@{GSN\_\-TEST\_\-TYPE\_\-TX}}\item[{\em 
+\hypertarget{a00677_gga3c5fd791827dffd656e69ad09ce2304eac474ecc66322eaff905fd8428af8f25f}{
+GSN\_\-TEST\_\-TYPE\_\-TX}
+\label{a00677_gga3c5fd791827dffd656e69ad09ce2304eac474ecc66322eaff905fd8428af8f25f}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 241 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+

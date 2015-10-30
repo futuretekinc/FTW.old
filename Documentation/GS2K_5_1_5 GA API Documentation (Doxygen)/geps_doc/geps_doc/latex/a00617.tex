@@ -1,0 +1,375 @@
+\hypertarget{a00617}{
+\section{gsn\_\-xml\_\-string\_\-parser.h File Reference}
+\label{a00617}\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+}
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+Include dependency graph for gsn\_\-xml\_\-string\_\-parser.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{a00867}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00443}{GSNXMLSTR\_\-CB\_\-PARAM}
+\item 
+struct \hyperlink{a00445}{GSNXMLSTR\_\-TAG\_\-TBL}
+\item 
+struct \hyperlink{a00444}{GSNXMLSTR\_\-PARSER\_\-CTX}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00617_a09493df9ef1c8c1efcd140f312c1339a}{XML\_\-TAG\_\-DELIM}~':'
+\item 
+\#define \hyperlink{a00617_ae022c7443fa057eab9332be3bcf30ee1}{XML\_\-PRAM\_\-NOTFOUND}~-\/1
+\item 
+\#define \hyperlink{a00617_a0bf4ba66f68d29a25220741fef120715}{XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-START}~9998
+\item 
+\#define \hyperlink{a00617_a0db347e2f3ff29be9ed8f7c0a31dfdfe}{XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-END}~9997
+\item 
+\#define \hyperlink{a00617_ac9cfa337a705cb1ebeaa1128f5444e04}{XML\_\-SPLLEN\_\-ATTRIBUTE}~9996
+\item 
+\#define \hyperlink{a00617_ad6b2d5ba3c774ca9a68e2c1a80c1a6f1}{XML\_\-SPLLEN\_\-ELEMENT\_\-END}~0
+\item 
+\#define \hyperlink{a00617_a43044dd9d746fc224bae3fb539cfb277}{GSNXMLSTR\_\-MAX\_\-NESTED\_\-ELMENTS}~10
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00617_a3c1986da00f01da491bb75cd8b92638f}{GSN\_\-XML\_\-STRING\_\-DECODE\_\-CB} )()
+\item 
+typedef enum \hyperlink{a00617_a933b08dd0c11d03cdb7673574f376355}{GSN\_\-XML\_\-SPARSER\_\-STATE} \hyperlink{a00617_a045b855de28d8d53ac3eea33744c4373}{GSN\_\-XML\_\-SPARSER\_\-STATE\_\-T}
+\item 
+typedef enum \hyperlink{a00617_aef610642a09e23ef6afbf0a6cbb981a1}{GSN\_\-XML\_\-SPARSER\_\-SUBSTATE} \hyperlink{a00617_ac9440bea1b7765eea3dee99fd963f32b}{GSN\_\-XML\_\-SPARSER\_\-SUBSTATE\_\-T}
+\item 
+typedef struct \hyperlink{a00443}{GSNXMLSTR\_\-CB\_\-PARAM} \hyperlink{a00617_ada7e23a9d8fd32114ec83e0e38bbb3b0}{GSNXMLSTR\_\-CB\_\-PARAM\_\-T}
+\item 
+typedef struct \hyperlink{a00445}{GSNXMLSTR\_\-TAG\_\-TBL} \hyperlink{a00617_a18cff694b8d047609a93d6c8a649252f}{GSNXMLSTR\_\-TAG\_\-TBL\_\-T}
+\item 
+typedef struct \hyperlink{a00444}{GSNXMLSTR\_\-PARSER\_\-CTX} \hyperlink{a00617_a64ce49bd32531a998af089593a5bd708}{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T}
+\item 
+typedef VOID($\ast$ \hyperlink{a00617_ac0dc2fec904f158bdcee4a2af8dd1a69}{XML\_\-PARSER\_\-CB} )(void $\ast$, \hyperlink{a00443}{GSNXMLSTR\_\-CB\_\-PARAM\_\-T} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00617_a933b08dd0c11d03cdb7673574f376355}{GSN\_\-XML\_\-SPARSER\_\-STATE} \{ \par
+\hyperlink{a00617_a933b08dd0c11d03cdb7673574f376355a305cc95fb8eee17e2dd4ca3134ef2231}{XML\_\-DECODE\_\-ROOT\_\-ELEMENT} = 0, 
+\par
+\hyperlink{a00617_a933b08dd0c11d03cdb7673574f376355ac096650e0f481e1a6075edcc46c34e25}{XML\_\-DECODE\_\-SIMPLE\_\-ELEMENT}
+ \}
+\item 
+enum \hyperlink{a00617_aef610642a09e23ef6afbf0a6cbb981a1}{GSN\_\-XML\_\-SPARSER\_\-SUBSTATE} \{ \par
+\hyperlink{a00617_aef610642a09e23ef6afbf0a6cbb981a1a92cefb0b6441dd89da20e557c560e274}{XML\_\-DECODE\_\-TAG} = 0, 
+\par
+\hyperlink{a00617_aef610642a09e23ef6afbf0a6cbb981a1a6862d48353a5c0cc37ebc127fddbab27}{XML\_\-DECODE\_\-ATTRIBUTE}, 
+\par
+\hyperlink{a00617_aef610642a09e23ef6afbf0a6cbb981a1abd2c700ad78b01d6b96da215aed657b2}{XML\_\-DECODE\_\-VALUE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00617_a2d31e461655d523bdd8a4399b7f207e5}{GsnXMLStr\_\-NextParamGet} (\hyperlink{a00444}{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$xmlParserCtx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$temp, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} delim, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len)
+\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00617_a7f6558008e57dea5c4418cdee7e84503}{GsnXMLStr\_\-GetEncodedValueLen} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$bufferIn, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len)
+\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00617_acd552e3e011cf08bae991192c7221f67}{GsnXMLStr\_\-EncodePreDefEntity} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$bufferIn, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$outBuffer)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00617_ae804f6424bca99195646dbaecb7c811f}{GsnXMLStr\_\-Encode} (\hyperlink{a00444}{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$xmlParserCtx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$inBuffer, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} elementType, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$$\ast$outBuffer, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} bufferStartIndex, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$outLen)
+\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00617_a7663137be07a9ffcf34a5c58f04b2520}{GsnXMLStr\_\-DecodePreDefEntity} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$bufferIn, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len)
+\item 
+PUBLIC VOID \hyperlink{a00617_a49a7c731a3a7cd54fe50ff6de7b1a127}{GsnXMLStr\_\-ParserCtxInit} (\hyperlink{a00444}{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$xmlParserCtx)
+\item 
+PUBLIC VOID \hyperlink{a00617_a33438e41b27fdd8b226087407930ba1f}{GsnXMLStr\_\-SetTagCount} (\hyperlink{a00444}{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$xmlParserCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} totalTagCount)
+\item 
+PUBLIC VOID \hyperlink{a00617_a4f5b6d9e3d197a602117902d284a3793}{GsnXMLStr\_\-SetRootTag} (\hyperlink{a00444}{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$xmlParserCtx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$rootTag)
+\item 
+PUBLIC VOID \hyperlink{a00617_a093242abb86e16da9f80d29e27cdf376}{GsnXMLStr\_\-ParserCtxDeInit} (\hyperlink{a00444}{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$xmlParserCtx)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00617_a62d305dcfc0df3a9ed4eca61ca3e2800}{GsnXMLStr\_\-Decode} (\hyperlink{a00444}{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$xmlParserCtx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$bufferIn, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00617_ac0dc2fec904f158bdcee4a2af8dd1a69}{XML\_\-PARSER\_\-CB} XmlParserCb, VOID $\ast$cbContext)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00617_a43044dd9d746fc224bae3fb539cfb277}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GSNXMLSTR\_\-MAX\_\-NESTED\_\-ELMENTS@{GSNXMLSTR\_\-MAX\_\-NESTED\_\-ELMENTS}}
+\index{GSNXMLSTR\_\-MAX\_\-NESTED\_\-ELMENTS@{GSNXMLSTR\_\-MAX\_\-NESTED\_\-ELMENTS}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GSNXMLSTR\_\-MAX\_\-NESTED\_\-ELMENTS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNXMLSTR\_\-MAX\_\-NESTED\_\-ELMENTS~10}}
+\label{a00617_a43044dd9d746fc224bae3fb539cfb277}
+
+
+Definition at line 55 of file gsn\_\-xml\_\-string\_\-parser.h.
+
+\hypertarget{a00617_ae022c7443fa057eab9332be3bcf30ee1}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-PRAM\_\-NOTFOUND@{XML\_\-PRAM\_\-NOTFOUND}}
+\index{XML\_\-PRAM\_\-NOTFOUND@{XML\_\-PRAM\_\-NOTFOUND}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{XML\_\-PRAM\_\-NOTFOUND}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-PRAM\_\-NOTFOUND~-\/1}}
+\label{a00617_ae022c7443fa057eab9332be3bcf30ee1}
+
+
+Definition at line 50 of file gsn\_\-xml\_\-string\_\-parser.h.
+
+\hypertarget{a00617_ac9cfa337a705cb1ebeaa1128f5444e04}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-SPLLEN\_\-ATTRIBUTE@{XML\_\-SPLLEN\_\-ATTRIBUTE}}
+\index{XML\_\-SPLLEN\_\-ATTRIBUTE@{XML\_\-SPLLEN\_\-ATTRIBUTE}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{XML\_\-SPLLEN\_\-ATTRIBUTE}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-SPLLEN\_\-ATTRIBUTE~9996}}
+\label{a00617_ac9cfa337a705cb1ebeaa1128f5444e04}
+
+
+Definition at line 53 of file gsn\_\-xml\_\-string\_\-parser.h.
+
+\hypertarget{a00617_a0db347e2f3ff29be9ed8f7c0a31dfdfe}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-END@{XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-END}}
+\index{XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-END@{XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-END}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-END~9997}}
+\label{a00617_a0db347e2f3ff29be9ed8f7c0a31dfdfe}
+
+
+Definition at line 52 of file gsn\_\-xml\_\-string\_\-parser.h.
+
+\hypertarget{a00617_a0bf4ba66f68d29a25220741fef120715}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-START@{XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-START}}
+\index{XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-START@{XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-START}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-SPLLEN\_\-COMPLEX\_\-TAG\_\-START~9998}}
+\label{a00617_a0bf4ba66f68d29a25220741fef120715}
+
+
+Definition at line 51 of file gsn\_\-xml\_\-string\_\-parser.h.
+
+\hypertarget{a00617_ad6b2d5ba3c774ca9a68e2c1a80c1a6f1}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-SPLLEN\_\-ELEMENT\_\-END@{XML\_\-SPLLEN\_\-ELEMENT\_\-END}}
+\index{XML\_\-SPLLEN\_\-ELEMENT\_\-END@{XML\_\-SPLLEN\_\-ELEMENT\_\-END}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{XML\_\-SPLLEN\_\-ELEMENT\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-SPLLEN\_\-ELEMENT\_\-END~0}}
+\label{a00617_ad6b2d5ba3c774ca9a68e2c1a80c1a6f1}
+
+
+Definition at line 54 of file gsn\_\-xml\_\-string\_\-parser.h.
+
+\hypertarget{a00617_a09493df9ef1c8c1efcd140f312c1339a}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-TAG\_\-DELIM@{XML\_\-TAG\_\-DELIM}}
+\index{XML\_\-TAG\_\-DELIM@{XML\_\-TAG\_\-DELIM}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{XML\_\-TAG\_\-DELIM}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-TAG\_\-DELIM~':'}}
+\label{a00617_a09493df9ef1c8c1efcd140f312c1339a}
+Escape character. 
+
+Definition at line 49 of file gsn\_\-xml\_\-string\_\-parser.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00617_a045b855de28d8d53ac3eea33744c4373}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GSN\_\-XML\_\-SPARSER\_\-STATE\_\-T@{GSN\_\-XML\_\-SPARSER\_\-STATE\_\-T}}
+\index{GSN\_\-XML\_\-SPARSER\_\-STATE\_\-T@{GSN\_\-XML\_\-SPARSER\_\-STATE\_\-T}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GSN\_\-XML\_\-SPARSER\_\-STATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-XML\_\-SPARSER\_\-STATE} {\bf GSN\_\-XML\_\-SPARSER\_\-STATE\_\-T}}}
+\label{a00617_a045b855de28d8d53ac3eea33744c4373}
+\hypertarget{a00617_ac9440bea1b7765eea3dee99fd963f32b}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GSN\_\-XML\_\-SPARSER\_\-SUBSTATE\_\-T@{GSN\_\-XML\_\-SPARSER\_\-SUBSTATE\_\-T}}
+\index{GSN\_\-XML\_\-SPARSER\_\-SUBSTATE\_\-T@{GSN\_\-XML\_\-SPARSER\_\-SUBSTATE\_\-T}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GSN\_\-XML\_\-SPARSER\_\-SUBSTATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-XML\_\-SPARSER\_\-SUBSTATE} {\bf GSN\_\-XML\_\-SPARSER\_\-SUBSTATE\_\-T}}}
+\label{a00617_ac9440bea1b7765eea3dee99fd963f32b}
+\hypertarget{a00617_a3c1986da00f01da491bb75cd8b92638f}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GSN\_\-XML\_\-STRING\_\-DECODE\_\-CB@{GSN\_\-XML\_\-STRING\_\-DECODE\_\-CB}}
+\index{GSN\_\-XML\_\-STRING\_\-DECODE\_\-CB@{GSN\_\-XML\_\-STRING\_\-DECODE\_\-CB}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GSN\_\-XML\_\-STRING\_\-DECODE\_\-CB}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf GSN\_\-XML\_\-STRING\_\-DECODE\_\-CB})()}}
+\label{a00617_a3c1986da00f01da491bb75cd8b92638f}
+
+
+Definition at line 57 of file gsn\_\-xml\_\-string\_\-parser.h.
+
+\hypertarget{a00617_ada7e23a9d8fd32114ec83e0e38bbb3b0}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GSNXMLSTR\_\-CB\_\-PARAM\_\-T@{GSNXMLSTR\_\-CB\_\-PARAM\_\-T}}
+\index{GSNXMLSTR\_\-CB\_\-PARAM\_\-T@{GSNXMLSTR\_\-CB\_\-PARAM\_\-T}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GSNXMLSTR\_\-CB\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSNXMLSTR\_\-CB\_\-PARAM}   {\bf GSNXMLSTR\_\-CB\_\-PARAM\_\-T}}}
+\label{a00617_ada7e23a9d8fd32114ec83e0e38bbb3b0}
+\hypertarget{a00617_a64ce49bd32531a998af089593a5bd708}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GSNXMLSTR\_\-PARSER\_\-CTX\_\-T@{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T}}
+\index{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T@{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GSNXMLSTR\_\-PARSER\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSNXMLSTR\_\-PARSER\_\-CTX}   {\bf GSNXMLSTR\_\-PARSER\_\-CTX\_\-T}}}
+\label{a00617_a64ce49bd32531a998af089593a5bd708}
+\hypertarget{a00617_a18cff694b8d047609a93d6c8a649252f}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GSNXMLSTR\_\-TAG\_\-TBL\_\-T@{GSNXMLSTR\_\-TAG\_\-TBL\_\-T}}
+\index{GSNXMLSTR\_\-TAG\_\-TBL\_\-T@{GSNXMLSTR\_\-TAG\_\-TBL\_\-T}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GSNXMLSTR\_\-TAG\_\-TBL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSNXMLSTR\_\-TAG\_\-TBL} {\bf GSNXMLSTR\_\-TAG\_\-TBL\_\-T}}}
+\label{a00617_a18cff694b8d047609a93d6c8a649252f}
+\hypertarget{a00617_ac0dc2fec904f158bdcee4a2af8dd1a69}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-PARSER\_\-CB@{XML\_\-PARSER\_\-CB}}
+\index{XML\_\-PARSER\_\-CB@{XML\_\-PARSER\_\-CB}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{XML\_\-PARSER\_\-CB}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf XML\_\-PARSER\_\-CB})(void $\ast$,{\bf GSNXMLSTR\_\-CB\_\-PARAM\_\-T} $\ast$)}}
+\label{a00617_ac0dc2fec904f158bdcee4a2af8dd1a69}
+
+
+Definition at line 107 of file gsn\_\-xml\_\-string\_\-parser.h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00617_a933b08dd0c11d03cdb7673574f376355}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GSN\_\-XML\_\-SPARSER\_\-STATE@{GSN\_\-XML\_\-SPARSER\_\-STATE}}
+\index{GSN\_\-XML\_\-SPARSER\_\-STATE@{GSN\_\-XML\_\-SPARSER\_\-STATE}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GSN\_\-XML\_\-SPARSER\_\-STATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-XML\_\-SPARSER\_\-STATE}}}
+\label{a00617_a933b08dd0c11d03cdb7673574f376355}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{XML\_\-DECODE\_\-ROOT\_\-ELEMENT@{XML\_\-DECODE\_\-ROOT\_\-ELEMENT}!gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-DECODE\_\-ROOT\_\-ELEMENT@{XML\_\-DECODE\_\-ROOT\_\-ELEMENT}}\item[{\em 
+\hypertarget{a00617_a933b08dd0c11d03cdb7673574f376355a305cc95fb8eee17e2dd4ca3134ef2231}{
+XML\_\-DECODE\_\-ROOT\_\-ELEMENT}
+\label{a00617_a933b08dd0c11d03cdb7673574f376355a305cc95fb8eee17e2dd4ca3134ef2231}
+}]\index{XML\_\-DECODE\_\-SIMPLE\_\-ELEMENT@{XML\_\-DECODE\_\-SIMPLE\_\-ELEMENT}!gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-DECODE\_\-SIMPLE\_\-ELEMENT@{XML\_\-DECODE\_\-SIMPLE\_\-ELEMENT}}\item[{\em 
+\hypertarget{a00617_a933b08dd0c11d03cdb7673574f376355ac096650e0f481e1a6075edcc46c34e25}{
+XML\_\-DECODE\_\-SIMPLE\_\-ELEMENT}
+\label{a00617_a933b08dd0c11d03cdb7673574f376355ac096650e0f481e1a6075edcc46c34e25}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 58 of file gsn\_\-xml\_\-string\_\-parser.h.
+
+\hypertarget{a00617_aef610642a09e23ef6afbf0a6cbb981a1}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GSN\_\-XML\_\-SPARSER\_\-SUBSTATE@{GSN\_\-XML\_\-SPARSER\_\-SUBSTATE}}
+\index{GSN\_\-XML\_\-SPARSER\_\-SUBSTATE@{GSN\_\-XML\_\-SPARSER\_\-SUBSTATE}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GSN\_\-XML\_\-SPARSER\_\-SUBSTATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-XML\_\-SPARSER\_\-SUBSTATE}}}
+\label{a00617_aef610642a09e23ef6afbf0a6cbb981a1}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{XML\_\-DECODE\_\-TAG@{XML\_\-DECODE\_\-TAG}!gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-DECODE\_\-TAG@{XML\_\-DECODE\_\-TAG}}\item[{\em 
+\hypertarget{a00617_aef610642a09e23ef6afbf0a6cbb981a1a92cefb0b6441dd89da20e557c560e274}{
+XML\_\-DECODE\_\-TAG}
+\label{a00617_aef610642a09e23ef6afbf0a6cbb981a1a92cefb0b6441dd89da20e557c560e274}
+}]\index{XML\_\-DECODE\_\-ATTRIBUTE@{XML\_\-DECODE\_\-ATTRIBUTE}!gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-DECODE\_\-ATTRIBUTE@{XML\_\-DECODE\_\-ATTRIBUTE}}\item[{\em 
+\hypertarget{a00617_aef610642a09e23ef6afbf0a6cbb981a1a6862d48353a5c0cc37ebc127fddbab27}{
+XML\_\-DECODE\_\-ATTRIBUTE}
+\label{a00617_aef610642a09e23ef6afbf0a6cbb981a1a6862d48353a5c0cc37ebc127fddbab27}
+}]\index{XML\_\-DECODE\_\-VALUE@{XML\_\-DECODE\_\-VALUE}!gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!XML\_\-DECODE\_\-VALUE@{XML\_\-DECODE\_\-VALUE}}\item[{\em 
+\hypertarget{a00617_aef610642a09e23ef6afbf0a6cbb981a1abd2c700ad78b01d6b96da215aed657b2}{
+XML\_\-DECODE\_\-VALUE}
+\label{a00617_aef610642a09e23ef6afbf0a6cbb981a1abd2c700ad78b01d6b96da215aed657b2}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 63 of file gsn\_\-xml\_\-string\_\-parser.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00617_a62d305dcfc0df3a9ed4eca61ca3e2800}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GsnXMLStr\_\-Decode@{GsnXMLStr\_\-Decode}}
+\index{GsnXMLStr\_\-Decode@{GsnXMLStr\_\-Decode}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GsnXMLStr\_\-Decode}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnXMLStr\_\-Decode (
+\begin{DoxyParamCaption}
+\item[{{\bf GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$}]{xmlParserCtx, }
+\item[{{\bf UINT8} $\ast$}]{bufferIn, }
+\item[{{\bf UINT32}}]{len, }
+\item[{{\bf XML\_\-PARSER\_\-CB}}]{XmlParserCb, }
+\item[{VOID $\ast$}]{cbContext}
+\end{DoxyParamCaption}
+)}}
+\label{a00617_a62d305dcfc0df3a9ed4eca61ca3e2800}
+\hypertarget{a00617_a7663137be07a9ffcf34a5c58f04b2520}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GsnXMLStr\_\-DecodePreDefEntity@{GsnXMLStr\_\-DecodePreDefEntity}}
+\index{GsnXMLStr\_\-DecodePreDefEntity@{GsnXMLStr\_\-DecodePreDefEntity}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GsnXMLStr\_\-DecodePreDefEntity}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT32} GsnXMLStr\_\-DecodePreDefEntity (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{bufferIn, }
+\item[{{\bf UINT32}}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{a00617_a7663137be07a9ffcf34a5c58f04b2520}
+\hypertarget{a00617_ae804f6424bca99195646dbaecb7c811f}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GsnXMLStr\_\-Encode@{GsnXMLStr\_\-Encode}}
+\index{GsnXMLStr\_\-Encode@{GsnXMLStr\_\-Encode}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GsnXMLStr\_\-Encode}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnXMLStr\_\-Encode (
+\begin{DoxyParamCaption}
+\item[{{\bf GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$}]{xmlParserCtx, }
+\item[{{\bf UINT8} $\ast$}]{inBuffer, }
+\item[{{\bf UINT32}}]{len, }
+\item[{{\bf UINT32}}]{elementType, }
+\item[{{\bf INT8} $\ast$$\ast$}]{outBuffer, }
+\item[{{\bf UINT32}}]{bufferStartIndex, }
+\item[{{\bf UINT32} $\ast$}]{outLen}
+\end{DoxyParamCaption}
+)}}
+\label{a00617_ae804f6424bca99195646dbaecb7c811f}
+\hypertarget{a00617_acd552e3e011cf08bae991192c7221f67}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GsnXMLStr\_\-EncodePreDefEntity@{GsnXMLStr\_\-EncodePreDefEntity}}
+\index{GsnXMLStr\_\-EncodePreDefEntity@{GsnXMLStr\_\-EncodePreDefEntity}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GsnXMLStr\_\-EncodePreDefEntity}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT32} GsnXMLStr\_\-EncodePreDefEntity (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{bufferIn, }
+\item[{{\bf UINT32}}]{len, }
+\item[{{\bf INT8} $\ast$}]{outBuffer}
+\end{DoxyParamCaption}
+)}}
+\label{a00617_acd552e3e011cf08bae991192c7221f67}
+\hypertarget{a00617_a7f6558008e57dea5c4418cdee7e84503}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GsnXMLStr\_\-GetEncodedValueLen@{GsnXMLStr\_\-GetEncodedValueLen}}
+\index{GsnXMLStr\_\-GetEncodedValueLen@{GsnXMLStr\_\-GetEncodedValueLen}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GsnXMLStr\_\-GetEncodedValueLen}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT32} GsnXMLStr\_\-GetEncodedValueLen (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{bufferIn, }
+\item[{{\bf UINT32}}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{a00617_a7f6558008e57dea5c4418cdee7e84503}
+\hypertarget{a00617_a2d31e461655d523bdd8a4399b7f207e5}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GsnXMLStr\_\-NextParamGet@{GsnXMLStr\_\-NextParamGet}}
+\index{GsnXMLStr\_\-NextParamGet@{GsnXMLStr\_\-NextParamGet}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GsnXMLStr\_\-NextParamGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnXMLStr\_\-NextParamGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$}]{xmlParserCtx, }
+\item[{{\bf UINT8} $\ast$}]{temp, }
+\item[{{\bf UINT8}}]{delim, }
+\item[{{\bf UINT32}}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{a00617_a2d31e461655d523bdd8a4399b7f207e5}
+\hypertarget{a00617_a093242abb86e16da9f80d29e27cdf376}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GsnXMLStr\_\-ParserCtxDeInit@{GsnXMLStr\_\-ParserCtxDeInit}}
+\index{GsnXMLStr\_\-ParserCtxDeInit@{GsnXMLStr\_\-ParserCtxDeInit}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GsnXMLStr\_\-ParserCtxDeInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnXMLStr\_\-ParserCtxDeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$}]{xmlParserCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00617_a093242abb86e16da9f80d29e27cdf376}
+\hypertarget{a00617_a49a7c731a3a7cd54fe50ff6de7b1a127}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GsnXMLStr\_\-ParserCtxInit@{GsnXMLStr\_\-ParserCtxInit}}
+\index{GsnXMLStr\_\-ParserCtxInit@{GsnXMLStr\_\-ParserCtxInit}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GsnXMLStr\_\-ParserCtxInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnXMLStr\_\-ParserCtxInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$}]{xmlParserCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00617_a49a7c731a3a7cd54fe50ff6de7b1a127}
+\hypertarget{a00617_a4f5b6d9e3d197a602117902d284a3793}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GsnXMLStr\_\-SetRootTag@{GsnXMLStr\_\-SetRootTag}}
+\index{GsnXMLStr\_\-SetRootTag@{GsnXMLStr\_\-SetRootTag}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GsnXMLStr\_\-SetRootTag}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnXMLStr\_\-SetRootTag (
+\begin{DoxyParamCaption}
+\item[{{\bf GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$}]{xmlParserCtx, }
+\item[{{\bf UINT8} $\ast$}]{rootTag}
+\end{DoxyParamCaption}
+)}}
+\label{a00617_a4f5b6d9e3d197a602117902d284a3793}
+\hypertarget{a00617_a33438e41b27fdd8b226087407930ba1f}{
+\index{gsn\_\-xml\_\-string\_\-parser.h@{gsn\_\-xml\_\-string\_\-parser.h}!GsnXMLStr\_\-SetTagCount@{GsnXMLStr\_\-SetTagCount}}
+\index{GsnXMLStr\_\-SetTagCount@{GsnXMLStr\_\-SetTagCount}!gsn_xml_string_parser.h@{gsn\_\-xml\_\-string\_\-parser.h}}
+\subsubsection[{GsnXMLStr\_\-SetTagCount}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnXMLStr\_\-SetTagCount (
+\begin{DoxyParamCaption}
+\item[{{\bf GSNXMLSTR\_\-PARSER\_\-CTX\_\-T} $\ast$}]{xmlParserCtx, }
+\item[{{\bf UINT32}}]{totalTagCount}
+\end{DoxyParamCaption}
+)}}
+\label{a00617_a33438e41b27fdd8b226087407930ba1f}

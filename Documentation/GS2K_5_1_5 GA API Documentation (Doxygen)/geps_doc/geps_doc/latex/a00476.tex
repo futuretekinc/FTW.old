@@ -1,0 +1,39 @@
+\hypertarget{a00476}{
+\section{gsn\_\-bitfield\_\-macros.h File Reference}
+\label{a00476}\index{gsn\_\-bitfield\_\-macros.h@{gsn\_\-bitfield\_\-macros.h}}
+}
+
+
+GSN Macros public header.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00700}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00657_ga4af6407b36a81973e93a80026461312d}{CREATE\_\-BITFIELD}(bfName, bfLsb, bfMsb)
+\begin{DoxyCompactList}\small\item\em Create a bitfield. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00657_ga330112fe57abc76abf484fedd191ca29}{BITFIELD\_\-MASK}(fieldLSBBit, fieldMSBBit)~((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})(((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})2 $<$$<$ (fieldMSBBit)) -\/ ((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})1 $<$$<$ (fieldLSBBit))))
+\begin{DoxyCompactList}\small\item\em Prepare a bitfield mask. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00657_ga99ab04466c2041af684f24ec71596969}{TEST\_\-BITFIELD}(var, fieldName)~((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})(var) \& fieldName\#\#\_\-MASK)
+\begin{DoxyCompactList}\small\item\em Test a bitfield. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00657_ga3e5cdd0d8d2d0a80286bfe31fe379530}{GET\_\-BITFIELD}(var, fieldName)~((((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})(var) \& fieldName\#\#\_\-MASK) $>$$>$ (fieldName\#\#\_\-LSB)))
+\begin{DoxyCompactList}\small\item\em Get a bitfield. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00657_ga32ad62c1b9d831dbd3c0cb56d39457fd}{MAKE\_\-BITFIELD}(fieldName, bitFieldValue)~(((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})(bitFieldValue) $<$$<$ (fieldName\#\#\_\-LSB)) \& fieldName\#\#\_\-MASK)
+\begin{DoxyCompactList}\small\item\em Get a bitfield. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00657_gab5ace147a6b9a49268acc7d8ae3f7524}{SET\_\-BITFIELD}(var, fieldName, bitFieldValue)
+\begin{DoxyCompactList}\small\item\em Set a bitfield. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN Macros public header. This file contains the public definitions for general macros. 
+
+Definition in file \hyperlink{a00476_source}{gsn\_\-bitfield\_\-macros.h}.
+

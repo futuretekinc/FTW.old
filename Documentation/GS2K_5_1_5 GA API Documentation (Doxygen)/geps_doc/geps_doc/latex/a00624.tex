@@ -1,0 +1,208 @@
+\hypertarget{a00624}{
+\section{GSN MB API.}
+\label{a00624}\index{GSN MB API.@{GSN MB API.}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00139}{GSN\_\-MB\_\-S}
+\begin{DoxyCompactList}\small\item\em GSN MBOX Context. Structure to store the MBOX context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00139}{GSN\_\-MB\_\-S} \hyperlink{a00624_gafb7207d32d68a7fa15928ef5fd8bf5f1}{GSN\_\-MB\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN MBOX Context. Structure to store the MBOX context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00624_ga5c877a50bab8634f61b36946a257d364}{GsnMb\_\-Open} (VOID)
+\begin{DoxyCompactList}\small\item\em mailbox open. opens mail box. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00624_ga3b236d5592b80003e2454e09fdb684f6}{GsnMb\_\-SbMsgPut} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} sb, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msg)
+\begin{DoxyCompactList}\small\item\em Send mailbox message. Send a message through send box. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00624_gae4ec736485020de1b55a348e12692d87}{GsnMb\_\-RbMsgGet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rb)
+\begin{DoxyCompactList}\small\item\em Read mailbox message. Read a message from read box. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00624_gae52a4cb7b044f2fadba7da7ca233e5de}{GsnMb\_\-RbIntRegister} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rb, \hyperlink{a00036}{GSN\_\-CB\_\-T} $\ast$pCb)
+\begin{DoxyCompactList}\small\item\em Read mailbox interrupt register. Registers the Read Mailbox Interrupt. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00624_gad7650d45bacf6a9836945238c052ba80}{GsnMb\_\-RbIntUnregister} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rb)
+\begin{DoxyCompactList}\small\item\em Read mailbox interrupt unregister. Unregisters the Read Mailbox Interrupt. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00624_ga1bec0f48d9589185fd0e4dc08350fba4}{GsnMb\_\-RbIsr} ()
+\begin{DoxyCompactList}\small\item\em Read mailbox ISR. Read Mailbox ISR. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00624_ga853cbc16429dc144020969ee32fc4d53}{GsnMB\_\-Isr} (VOID)
+\begin{DoxyCompactList}\small\item\em mailbox ISR. Mailbox ISR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group of APIs implements the mailbox driver features. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00624_gafb7207d32d68a7fa15928ef5fd8bf5f1}{
+\index{GSN MB API.@{GSN MB API.}!GSN\_\-MB\_\-T@{GSN\_\-MB\_\-T}}
+\index{GSN\_\-MB\_\-T@{GSN\_\-MB\_\-T}!GSN MB API.@{GSN MB API.}}
+\subsubsection[{GSN\_\-MB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MB\_\-S}  {\bf GSN\_\-MB\_\-T}}}
+\label{a00624_gafb7207d32d68a7fa15928ef5fd8bf5f1}
+
+
+GSN MBOX Context. Structure to store the MBOX context. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00624_ga853cbc16429dc144020969ee32fc4d53}{
+\index{GSN MB API.@{GSN MB API.}!GsnMB\_\-Isr@{GsnMB\_\-Isr}}
+\index{GsnMB\_\-Isr@{GsnMB\_\-Isr}!GSN MB API.@{GSN MB API.}}
+\subsubsection[{GsnMB\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnMB\_\-Isr (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00624_ga853cbc16429dc144020969ee32fc4d53}
+
+
+mailbox ISR. Mailbox ISR. 
+
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00624_ga5c877a50bab8634f61b36946a257d364}{
+\index{GSN MB API.@{GSN MB API.}!GsnMb\_\-Open@{GsnMb\_\-Open}}
+\index{GsnMb\_\-Open@{GsnMb\_\-Open}!GSN MB API.@{GSN MB API.}}
+\subsubsection[{GsnMb\_\-Open}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnMb\_\-Open (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00624_ga5c877a50bab8634f61b36946a257d364}
+
+
+mailbox open. opens mail box. 
+
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00624_gae52a4cb7b044f2fadba7da7ca233e5de}{
+\index{GSN MB API.@{GSN MB API.}!GsnMb\_\-RbIntRegister@{GsnMb\_\-RbIntRegister}}
+\index{GsnMb\_\-RbIntRegister@{GsnMb\_\-RbIntRegister}!GSN MB API.@{GSN MB API.}}
+\subsubsection[{GsnMb\_\-RbIntRegister}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnMb\_\-RbIntRegister (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{rb, }
+\item[{{\bf GSN\_\-CB\_\-T} $\ast$}]{pCb}
+\end{DoxyParamCaption}
+)}}
+\label{a00624_gae52a4cb7b044f2fadba7da7ca233e5de}
+
+
+Read mailbox interrupt register. Registers the Read Mailbox Interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb} & -\/ IN read box number \\
+\hline
+{\em pCb} & -\/ IN callback \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00624_gad7650d45bacf6a9836945238c052ba80}{
+\index{GSN MB API.@{GSN MB API.}!GsnMb\_\-RbIntUnregister@{GsnMb\_\-RbIntUnregister}}
+\index{GsnMb\_\-RbIntUnregister@{GsnMb\_\-RbIntUnregister}!GSN MB API.@{GSN MB API.}}
+\subsubsection[{GsnMb\_\-RbIntUnregister}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnMb\_\-RbIntUnregister (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{rb}
+\end{DoxyParamCaption}
+)}}
+\label{a00624_gad7650d45bacf6a9836945238c052ba80}
+
+
+Read mailbox interrupt unregister. Unregisters the Read Mailbox Interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb} & -\/ IN read box number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00624_ga1bec0f48d9589185fd0e4dc08350fba4}{
+\index{GSN MB API.@{GSN MB API.}!GsnMb\_\-RbIsr@{GsnMb\_\-RbIsr}}
+\index{GsnMb\_\-RbIsr@{GsnMb\_\-RbIsr}!GSN MB API.@{GSN MB API.}}
+\subsubsection[{GsnMb\_\-RbIsr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnMb\_\-RbIsr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00624_ga1bec0f48d9589185fd0e4dc08350fba4}
+
+
+Read mailbox ISR. Read Mailbox ISR. 
+
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00624_gae4ec736485020de1b55a348e12692d87}{
+\index{GSN MB API.@{GSN MB API.}!GsnMb\_\-RbMsgGet@{GsnMb\_\-RbMsgGet}}
+\index{GsnMb\_\-RbMsgGet@{GsnMb\_\-RbMsgGet}!GSN MB API.@{GSN MB API.}}
+\subsubsection[{GsnMb\_\-RbMsgGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT32} GsnMb\_\-RbMsgGet (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{rb}
+\end{DoxyParamCaption}
+)}}
+\label{a00624_gae4ec736485020de1b55a348e12692d87}
+
+
+Read mailbox message. Read a message from read box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb} & -\/ IN read box number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+UINT32 -\/ return the data read 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00624_ga3b236d5592b80003e2454e09fdb684f6}{
+\index{GSN MB API.@{GSN MB API.}!GsnMb\_\-SbMsgPut@{GsnMb\_\-SbMsgPut}}
+\index{GsnMb\_\-SbMsgPut@{GsnMb\_\-SbMsgPut}!GSN MB API.@{GSN MB API.}}
+\subsubsection[{GsnMb\_\-SbMsgPut}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnMb\_\-SbMsgPut (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{sb, }
+\item[{{\bf UINT32}}]{msg}
+\end{DoxyParamCaption}
+)}}
+\label{a00624_ga3b236d5592b80003e2454e09fdb684f6}
+
+
+Send mailbox message. Send a message through send box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sb} & -\/ IN send box number \\
+\hline
+{\em msg} & -\/ IN message to be put into send box \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}

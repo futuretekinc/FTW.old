@@ -1,0 +1,228 @@
+\hypertarget{a00046}{
+\section{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG Struct Reference}
+\label{a00046}\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+}
+
+
+{\ttfamily \#include $<$gsn\_\-dhcp\_\-srvr.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00046_a199e9ac2d94217d9267d3e09a3389144}{bootOp}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00046_ad53ae5a864f26d2fbe06ad714b206ce0}{bootHtype}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00046_a366bc11312e460bb188070016094cf47}{bootHlen}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00046_a10c0d3467e6ca1d91a79eb52b8849b6b}{bootHops}
+\item 
+unsigned long \hyperlink{a00046_a7c30634c6eaa55ec623c235e8019e2c4}{bootXid}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00046_a64a68d29c3d9d4110f8e1bfb1ad1ce11}{bootSecs}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00046_a0612cc761a70188aafc3e33f50caee69}{bootFlags}
+\item 
+unsigned long \hyperlink{a00046_aab4e6c0f4dcf01263f1adf6f33e2ab6d}{bootCiaddr}
+\item 
+unsigned long \hyperlink{a00046_aa41ec004ca53a19130117115df4490c1}{bootYiaddr}
+\item 
+unsigned long \hyperlink{a00046_a2a5ac8561740fade922c8910a1673fc3}{bootSiaddr}
+\item 
+unsigned long \hyperlink{a00046_a3a95eb696914a23297c224d06d4e31e7}{bootGiaddr}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00046_a087f494fda2caad84904be6ab979c237}{bootChaddr} \mbox{[}16\mbox{]}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00046_a2c25a626f887cce100878940ec833b9b}{bootSname} \mbox{[}64\mbox{]}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00046_ab799fcd688f0b9f083d02928b070469c}{bootFile} \mbox{[}128\mbox{]}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>unsigned long \hyperlink{a00046_abae004f76576c98d26dc7265cb169cb7}{optMagic}\\
+\>union \{\\
+\>\>\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00046_a84256f38f4097ee6713ebf0937ebee9e}{optUnFields} \mbox{[}312-\/sizeof(unsigned long)\mbox{]}\\
+\>\>unsigned long \hyperlink{a00046_a05cd9a158761d6a0f39b0368c71123da}{optUnDhcpMsg}\\
+\>\} \hyperlink{a00046_ade6ea719c201c8a3928fffa4f47f52c4}{optFieldsUnion}\\
+\} \hyperlink{a00046_ad645ac868c4d8259e1ee85cd240c8654}{bootOptions}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 91 of file gsn\_\-dhcp\_\-srvr.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00046_a087f494fda2caad84904be6ab979c237}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootChaddr@{bootChaddr}}
+\index{bootChaddr@{bootChaddr}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootChaddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf bootChaddr}\mbox{[}16\mbox{]}}}
+\label{a00046_a087f494fda2caad84904be6ab979c237}
+
+
+Definition at line 137 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_aab4e6c0f4dcf01263f1adf6f33e2ab6d}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootCiaddr@{bootCiaddr}}
+\index{bootCiaddr@{bootCiaddr}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootCiaddr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf bootCiaddr}}}
+\label{a00046_aab4e6c0f4dcf01263f1adf6f33e2ab6d}
+
+
+Definition at line 117 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_ab799fcd688f0b9f083d02928b070469c}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootFile@{bootFile}}
+\index{bootFile@{bootFile}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootFile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf bootFile}\mbox{[}128\mbox{]}}}
+\label{a00046_ab799fcd688f0b9f083d02928b070469c}
+
+
+Definition at line 145 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_a0612cc761a70188aafc3e33f50caee69}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootFlags@{bootFlags}}
+\index{bootFlags@{bootFlags}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootFlags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf bootFlags}}}
+\label{a00046_a0612cc761a70188aafc3e33f50caee69}
+
+
+Definition at line 115 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_a3a95eb696914a23297c224d06d4e31e7}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootGiaddr@{bootGiaddr}}
+\index{bootGiaddr@{bootGiaddr}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootGiaddr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf bootGiaddr}}}
+\label{a00046_a3a95eb696914a23297c224d06d4e31e7}
+
+
+Definition at line 135 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_a366bc11312e460bb188070016094cf47}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootHlen@{bootHlen}}
+\index{bootHlen@{bootHlen}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootHlen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf bootHlen}}}
+\label{a00046_a366bc11312e460bb188070016094cf47}
+
+
+Definition at line 101 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_a10c0d3467e6ca1d91a79eb52b8849b6b}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootHops@{bootHops}}
+\index{bootHops@{bootHops}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootHops}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf bootHops}}}
+\label{a00046_a10c0d3467e6ca1d91a79eb52b8849b6b}
+
+
+Definition at line 106 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_ad53ae5a864f26d2fbe06ad714b206ce0}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootHtype@{bootHtype}}
+\index{bootHtype@{bootHtype}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootHtype}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf bootHtype}}}
+\label{a00046_ad53ae5a864f26d2fbe06ad714b206ce0}
+
+
+Definition at line 99 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_a199e9ac2d94217d9267d3e09a3389144}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootOp@{bootOp}}
+\index{bootOp@{bootOp}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootOp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf bootOp}}}
+\label{a00046_a199e9ac2d94217d9267d3e09a3389144}
+
+
+Definition at line 94 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_ad645ac868c4d8259e1ee85cd240c8654}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootOptions@{bootOptions}}
+\index{bootOptions@{bootOptions}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootOptions}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   {\bf bootOptions}}}
+\label{a00046_ad645ac868c4d8259e1ee85cd240c8654}
+\hypertarget{a00046_a64a68d29c3d9d4110f8e1bfb1ad1ce11}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootSecs@{bootSecs}}
+\index{bootSecs@{bootSecs}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootSecs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf bootSecs}}}
+\label{a00046_a64a68d29c3d9d4110f8e1bfb1ad1ce11}
+
+
+Definition at line 113 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_a2a5ac8561740fade922c8910a1673fc3}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootSiaddr@{bootSiaddr}}
+\index{bootSiaddr@{bootSiaddr}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootSiaddr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf bootSiaddr}}}
+\label{a00046_a2a5ac8561740fade922c8910a1673fc3}
+
+
+Definition at line 133 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_a2c25a626f887cce100878940ec833b9b}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootSname@{bootSname}}
+\index{bootSname@{bootSname}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootSname}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf bootSname}\mbox{[}64\mbox{]}}}
+\label{a00046_a2c25a626f887cce100878940ec833b9b}
+
+
+Definition at line 139 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_a7c30634c6eaa55ec623c235e8019e2c4}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootXid@{bootXid}}
+\index{bootXid@{bootXid}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootXid}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf bootXid}}}
+\label{a00046_a7c30634c6eaa55ec623c235e8019e2c4}
+
+
+Definition at line 111 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_aa41ec004ca53a19130117115df4490c1}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!bootYiaddr@{bootYiaddr}}
+\index{bootYiaddr@{bootYiaddr}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{bootYiaddr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf bootYiaddr}}}
+\label{a00046_aa41ec004ca53a19130117115df4490c1}
+
+
+Definition at line 122 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_ade6ea719c201c8a3928fffa4f47f52c4}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!optFieldsUnion@{optFieldsUnion}}
+\index{optFieldsUnion@{optFieldsUnion}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{optFieldsUnion}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   {\bf optFieldsUnion}}}
+\label{a00046_ade6ea719c201c8a3928fffa4f47f52c4}
+\hypertarget{a00046_abae004f76576c98d26dc7265cb169cb7}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!optMagic@{optMagic}}
+\index{optMagic@{optMagic}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{optMagic}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf optMagic}}}
+\label{a00046_abae004f76576c98d26dc7265cb169cb7}
+
+
+Definition at line 155 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_a05cd9a158761d6a0f39b0368c71123da}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!optUnDhcpMsg@{optUnDhcpMsg}}
+\index{optUnDhcpMsg@{optUnDhcpMsg}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{optUnDhcpMsg}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf optUnDhcpMsg}}}
+\label{a00046_a05cd9a158761d6a0f39b0368c71123da}
+
+
+Definition at line 163 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00046_a84256f38f4097ee6713ebf0937ebee9e}{
+\index{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}!optUnFields@{optUnFields}}
+\index{optUnFields@{optUnFields}!GSN_DHCP_SRVR_DHCP_MSG@{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG}}
+\subsubsection[{optUnFields}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf optUnFields}\mbox{[}312-\/sizeof(unsigned long)\mbox{]}}}
+\label{a00046_a84256f38f4097ee6713ebf0937ebee9e}
+
+
+Definition at line 161 of file gsn\_\-dhcp\_\-srvr.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00482}{gsn\_\-dhcp\_\-srvr.h}\end{DoxyCompactItemize}

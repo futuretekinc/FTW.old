@@ -1,0 +1,401 @@
+\hypertarget{a00644}{
+\section{GSN CLK CTL API}
+\label{a00644}\index{GSN CLK CTL API@{GSN CLK CTL API}}
+}
+
+
+API Functions for the Use of the Clock Control Interface.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX}
+\begin{DoxyCompactList}\small\item\em GSN CLK CTL Structure. This structure defines a CLK CTL driver handling parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{a00038}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG}
+\begin{DoxyCompactList}\small\item\em GSN CLK CTL CNFG Structure. This structure defines a CLK CTL driver Config parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00644_ga1b0f0bc3777cd50abe5f39797df023b5}{GSN\_\-CLK\_\-SEL} \hyperlink{a00644_gaf4925c33b2dac850008f7d4463760580}{GSN\_\-CLK\_\-SEL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN CLk CTL Types. This enum defines CLK SEL values. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00644_ga53f0e57a2fa30eef772141f9ac772202}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC} \hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN CLk CTL SRC Types. This enum defines CLK SEL SRC values. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX} \hyperlink{a00644_ga9e7d0d37ecaac3d985e5618e1c8c57d5}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN CLK CTL Structure. This structure defines a CLK CTL driver handling parameters. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00038}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG} \hyperlink{a00644_ga8a7770f0cdba320f9d6418cc8419b450}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN CLK CTL CNFG Structure. This structure defines a CLK CTL driver Config parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00644_ga1b0f0bc3777cd50abe5f39797df023b5}{GSN\_\-CLK\_\-SEL} \{ \par
+\hyperlink{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a6d77f67c5fe2d58a1800d47a3405bdbb}{GSN\_\-CLK\_\-SEL\_\-HS\_\-RC}, 
+\par
+\hyperlink{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a84a3dddc792558a0c75441bf1d6cb991}{GSN\_\-CLK\_\-SEL\_\-HS\_\-XTAL}, 
+\par
+\hyperlink{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a67004660ec5d9c601cb897e7feb94047}{GSN\_\-CLK\_\-SEL\_\-PLL}, 
+\par
+\hyperlink{a00644_gga1b0f0bc3777cd50abe5f39797df023b5acdcf68cddce2291868ff3ad7223e7b05}{GSN\_\-CLK\_\-SEL\_\-LP}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN CLk CTL Types. This enum defines CLK SEL values. \end{DoxyCompactList}\item 
+enum \hyperlink{a00644_ga53f0e57a2fa30eef772141f9ac772202}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC} \{ \par
+\hyperlink{a00644_gga53f0e57a2fa30eef772141f9ac772202a778d05cc32c381d03f443ac3a8cfe4c9}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-NONE} =  0, 
+\par
+\hyperlink{a00644_gga53f0e57a2fa30eef772141f9ac772202a02bb61fbda65f8b12d2a10e7cea70246}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-RC} =  1, 
+\par
+\hyperlink{a00644_gga53f0e57a2fa30eef772141f9ac772202abad63f96e1fa920dacacee0a840414fc}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-XTAL} =  2, 
+\par
+\hyperlink{a00644_gga53f0e57a2fa30eef772141f9ac772202ae43332cf79f679999752978cc45713f3}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-PLL} =  4, 
+\par
+\hyperlink{a00644_gga53f0e57a2fa30eef772141f9ac772202ae05644f7e6452d1a1d374c212763ec06}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-LP} =  8
+ \}
+\begin{DoxyCompactList}\small\item\em GSN CLk CTL SRC Types. This enum defines CLK SEL SRC values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$ \hyperlink{a00644_gaef13c343baa0a6f395810efe229e7e31}{GsnClkCtl\_\-CtxGet} ()
+\begin{DoxyCompactList}\small\item\em Clk ctl ctx Get. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00644_ga74a76a16a91b861c57de64bf57b48791}{GsnClkCtl\_\-Init} (\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$clkCtlCtx)
+\begin{DoxyCompactList}\small\item\em ClkCtl Driver init API. This function initializes ref counts, base register ptr and semophore. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00644_ga38236e68d421597db2a20b7de39d16cf}{GsnClkCtl\_\-ClkSrcEnable} (\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$clkCtlCtx, \hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T} src)
+\begin{DoxyCompactList}\small\item\em Clock Source Enable API. This function enables the clock source. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00644_gaa111736e7f1f7c8c3715827b8fa1ee28}{GsnClkCtl\_\-ClkSrcDisable} (\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$clkCtlCtx, \hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T} src)
+\begin{DoxyCompactList}\small\item\em Clock Source Disable API. This function Disable the clock source. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00644_gacacf5da645112b8bc401a79b031eda53}{GsnClkCtl\_\-ClkSrcSwitch} (\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$clkCtlCtx, \hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T} oldSrc, \hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T} newSrc)
+\begin{DoxyCompactList}\small\item\em Clock Source Switching API. This function switch between old to new clock source. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00644_gab47a206ddcbe7020c38010d7b073d7db}{GsnClkCtl\_\-Cm3ClkCfg} (\hyperlink{a00038}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T} $\ast$cm3ClkCfg)
+\begin{DoxyCompactList}\small\item\em Clock Config API. This function Configures the clock. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00644_ga6198c49f77d396e7cbfe138fa1315674}{GsnClkCtl\_\-Cm3ClkSwitch} (\hyperlink{a00038}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T} $\ast$pCm3ClkCfg, \hyperlink{a00644_gaf4925c33b2dac850008f7d4463760580}{GSN\_\-CLK\_\-SEL\_\-T} newClk)
+\begin{DoxyCompactList}\small\item\em Cm3 Clock Source Switch API. This function switch cm3 clock source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+API Functions for the Use of the Clock Control Interface. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00644_ga95d23078ba56d33653b82794ca56f5d6}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T}}
+\index{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC} {\bf GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T}}}
+\label{a00644_ga95d23078ba56d33653b82794ca56f5d6}
+
+
+GSN CLk CTL SRC Types. This enum defines CLK SEL SRC values. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T} 
+\end{DoxySeeAlso}
+\hypertarget{a00644_ga8a7770f0cdba320f9d6418cc8419b450}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T@{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T}}
+\index{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T@{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG} {\bf GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T}}}
+\label{a00644_ga8a7770f0cdba320f9d6418cc8419b450}
+
+
+GSN CLK CTL CNFG Structure. This structure defines a CLK CTL driver Config parameters. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00644_ga8a7770f0cdba320f9d6418cc8419b450}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T} 
+\end{DoxySeeAlso}
+\hypertarget{a00644_ga9e7d0d37ecaac3d985e5618e1c8c57d5}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-CTL\_\-CTX\_\-T@{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T}}
+\index{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T@{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-CLK\_\-CTL\_\-CTX} {\bf GSN\_\-CLK\_\-CTL\_\-CTX\_\-T}}}
+\label{a00644_ga9e7d0d37ecaac3d985e5618e1c8c57d5}
+
+
+GSN CLK CTL Structure. This structure defines a CLK CTL driver handling parameters. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00644_ga9e7d0d37ecaac3d985e5618e1c8c57d5}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} 
+\end{DoxySeeAlso}
+\hypertarget{a00644_gaf4925c33b2dac850008f7d4463760580}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-SEL\_\-T@{GSN\_\-CLK\_\-SEL\_\-T}}
+\index{GSN\_\-CLK\_\-SEL\_\-T@{GSN\_\-CLK\_\-SEL\_\-T}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GSN\_\-CLK\_\-SEL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-CLK\_\-SEL} {\bf GSN\_\-CLK\_\-SEL\_\-T}}}
+\label{a00644_gaf4925c33b2dac850008f7d4463760580}
+
+
+GSN CLk CTL Types. This enum defines CLK SEL values. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00644_gaf4925c33b2dac850008f7d4463760580}{GSN\_\-CLK\_\-SEL\_\-T} 
+\end{DoxySeeAlso}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00644_ga53f0e57a2fa30eef772141f9ac772202}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC}}
+\index{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC}}}
+\label{a00644_ga53f0e57a2fa30eef772141f9ac772202}
+
+
+GSN CLk CTL SRC Types. This enum defines CLK SEL SRC values. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-CLK\_\-CTL\_\-CLK\_\-NONE@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-NONE}!GSN CLK CTL API@{GSN CLK CTL API}}\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-CTL\_\-CLK\_\-NONE@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-NONE}}\item[{\em 
+\hypertarget{a00644_gga53f0e57a2fa30eef772141f9ac772202a778d05cc32c381d03f443ac3a8cfe4c9}{
+GSN\_\-CLK\_\-CTL\_\-CLK\_\-NONE}
+\label{a00644_gga53f0e57a2fa30eef772141f9ac772202a778d05cc32c381d03f443ac3a8cfe4c9}
+}]\index{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-RC@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-RC}!GSN CLK CTL API@{GSN CLK CTL API}}\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-RC@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-RC}}\item[{\em 
+\hypertarget{a00644_gga53f0e57a2fa30eef772141f9ac772202a02bb61fbda65f8b12d2a10e7cea70246}{
+GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-RC}
+\label{a00644_gga53f0e57a2fa30eef772141f9ac772202a02bb61fbda65f8b12d2a10e7cea70246}
+}]\index{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-XTAL@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-XTAL}!GSN CLK CTL API@{GSN CLK CTL API}}\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-XTAL@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-XTAL}}\item[{\em 
+\hypertarget{a00644_gga53f0e57a2fa30eef772141f9ac772202abad63f96e1fa920dacacee0a840414fc}{
+GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-XTAL}
+\label{a00644_gga53f0e57a2fa30eef772141f9ac772202abad63f96e1fa920dacacee0a840414fc}
+}]\index{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-PLL@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-PLL}!GSN CLK CTL API@{GSN CLK CTL API}}\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-PLL@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-PLL}}\item[{\em 
+\hypertarget{a00644_gga53f0e57a2fa30eef772141f9ac772202ae43332cf79f679999752978cc45713f3}{
+GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-PLL}
+\label{a00644_gga53f0e57a2fa30eef772141f9ac772202ae43332cf79f679999752978cc45713f3}
+}]\index{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-LP@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-LP}!GSN CLK CTL API@{GSN CLK CTL API}}\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-LP@{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-LP}}\item[{\em 
+\hypertarget{a00644_gga53f0e57a2fa30eef772141f9ac772202ae05644f7e6452d1a1d374c212763ec06}{
+GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-LP}
+\label{a00644_gga53f0e57a2fa30eef772141f9ac772202ae05644f7e6452d1a1d374c212763ec06}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 106 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00644_ga1b0f0bc3777cd50abe5f39797df023b5}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-SEL@{GSN\_\-CLK\_\-SEL}}
+\index{GSN\_\-CLK\_\-SEL@{GSN\_\-CLK\_\-SEL}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GSN\_\-CLK\_\-SEL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-CLK\_\-SEL}}}
+\label{a00644_ga1b0f0bc3777cd50abe5f39797df023b5}
+
+
+GSN CLk CTL Types. This enum defines CLK SEL values. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00644_gaf4925c33b2dac850008f7d4463760580}{GSN\_\-CLK\_\-SEL\_\-T} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-CLK\_\-SEL\_\-HS\_\-RC@{GSN\_\-CLK\_\-SEL\_\-HS\_\-RC}!GSN CLK CTL API@{GSN CLK CTL API}}\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-SEL\_\-HS\_\-RC@{GSN\_\-CLK\_\-SEL\_\-HS\_\-RC}}\item[{\em 
+\hypertarget{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a6d77f67c5fe2d58a1800d47a3405bdbb}{
+GSN\_\-CLK\_\-SEL\_\-HS\_\-RC}
+\label{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a6d77f67c5fe2d58a1800d47a3405bdbb}
+}]\index{GSN\_\-CLK\_\-SEL\_\-HS\_\-XTAL@{GSN\_\-CLK\_\-SEL\_\-HS\_\-XTAL}!GSN CLK CTL API@{GSN CLK CTL API}}\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-SEL\_\-HS\_\-XTAL@{GSN\_\-CLK\_\-SEL\_\-HS\_\-XTAL}}\item[{\em 
+\hypertarget{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a84a3dddc792558a0c75441bf1d6cb991}{
+GSN\_\-CLK\_\-SEL\_\-HS\_\-XTAL}
+\label{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a84a3dddc792558a0c75441bf1d6cb991}
+}]\index{GSN\_\-CLK\_\-SEL\_\-PLL@{GSN\_\-CLK\_\-SEL\_\-PLL}!GSN CLK CTL API@{GSN CLK CTL API}}\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-SEL\_\-PLL@{GSN\_\-CLK\_\-SEL\_\-PLL}}\item[{\em 
+\hypertarget{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a67004660ec5d9c601cb897e7feb94047}{
+GSN\_\-CLK\_\-SEL\_\-PLL}
+\label{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a67004660ec5d9c601cb897e7feb94047}
+}]\index{GSN\_\-CLK\_\-SEL\_\-LP@{GSN\_\-CLK\_\-SEL\_\-LP}!GSN CLK CTL API@{GSN CLK CTL API}}\index{GSN CLK CTL API@{GSN CLK CTL API}!GSN\_\-CLK\_\-SEL\_\-LP@{GSN\_\-CLK\_\-SEL\_\-LP}}\item[{\em 
+\hypertarget{a00644_gga1b0f0bc3777cd50abe5f39797df023b5acdcf68cddce2291868ff3ad7223e7b05}{
+GSN\_\-CLK\_\-SEL\_\-LP}
+\label{a00644_gga1b0f0bc3777cd50abe5f39797df023b5acdcf68cddce2291868ff3ad7223e7b05}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 90 of file gsn\_\-clk\_\-ctl.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00644_gaa111736e7f1f7c8c3715827b8fa1ee28}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GsnClkCtl\_\-ClkSrcDisable@{GsnClkCtl\_\-ClkSrcDisable}}
+\index{GsnClkCtl\_\-ClkSrcDisable@{GsnClkCtl\_\-ClkSrcDisable}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GsnClkCtl\_\-ClkSrcDisable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnClkCtl\_\-ClkSrcDisable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$}]{clkCtlCtx, }
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T}}]{src}
+\end{DoxyParamCaption}
+)}}
+\label{a00644_gaa111736e7f1f7c8c3715827b8fa1ee28}
+
+
+Clock Source Disable API. This function Disable the clock source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clkCtlCtx} & -\/ IN clock Control Handle. \\
+\hline
+{\em src} & -\/ IN clock source. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS -\/ Disable successful. 
+
+GSN\_\-FAILURE -\/ Disable failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00644_ga38236e68d421597db2a20b7de39d16cf}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GsnClkCtl\_\-ClkSrcEnable@{GsnClkCtl\_\-ClkSrcEnable}}
+\index{GsnClkCtl\_\-ClkSrcEnable@{GsnClkCtl\_\-ClkSrcEnable}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GsnClkCtl\_\-ClkSrcEnable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnClkCtl\_\-ClkSrcEnable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$}]{clkCtlCtx, }
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T}}]{src}
+\end{DoxyParamCaption}
+)}}
+\label{a00644_ga38236e68d421597db2a20b7de39d16cf}
+
+
+Clock Source Enable API. This function enables the clock source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clkCtlCtx} & -\/ IN clock Control Handle. \\
+\hline
+{\em src} & -\/ IN clock source. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS -\/ Enable successful. 
+
+GSN\_\-FAILURE -\/ Enable failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00644_gacacf5da645112b8bc401a79b031eda53}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GsnClkCtl\_\-ClkSrcSwitch@{GsnClkCtl\_\-ClkSrcSwitch}}
+\index{GsnClkCtl\_\-ClkSrcSwitch@{GsnClkCtl\_\-ClkSrcSwitch}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GsnClkCtl\_\-ClkSrcSwitch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnClkCtl\_\-ClkSrcSwitch (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$}]{clkCtlCtx, }
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T}}]{oldSrc, }
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T}}]{newSrc}
+\end{DoxyParamCaption}
+)}}
+\label{a00644_gacacf5da645112b8bc401a79b031eda53}
+
+
+Clock Source Switching API. This function switch between old to new clock source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clkCtlCtx} & -\/ IN clock Control Handle. \\
+\hline
+{\em oldSrc} & -\/ IN old clock source. \\
+\hline
+{\em newSrc} & -\/ IN new clock source. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS -\/ switching successful. 
+
+GSN\_\-FAILURE -\/ switching failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00644_gab47a206ddcbe7020c38010d7b073d7db}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GsnClkCtl\_\-Cm3ClkCfg@{GsnClkCtl\_\-Cm3ClkCfg}}
+\index{GsnClkCtl\_\-Cm3ClkCfg@{GsnClkCtl\_\-Cm3ClkCfg}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GsnClkCtl\_\-Cm3ClkCfg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnClkCtl\_\-Cm3ClkCfg (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T} $\ast$}]{cm3ClkCfg}
+\end{DoxyParamCaption}
+)}}
+\label{a00644_gab47a206ddcbe7020c38010d7b073d7db}
+
+
+Clock Config API. This function Configures the clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cm3ClkCfg} & -\/ IN clock configuration struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS -\/ Disable successful. 
+
+GSN\_\-FAILURE -\/ Disable failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00644_ga6198c49f77d396e7cbfe138fa1315674}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GsnClkCtl\_\-Cm3ClkSwitch@{GsnClkCtl\_\-Cm3ClkSwitch}}
+\index{GsnClkCtl\_\-Cm3ClkSwitch@{GsnClkCtl\_\-Cm3ClkSwitch}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GsnClkCtl\_\-Cm3ClkSwitch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnClkCtl\_\-Cm3ClkSwitch (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T} $\ast$}]{pCm3ClkCfg, }
+\item[{{\bf GSN\_\-CLK\_\-SEL\_\-T}}]{newClk}
+\end{DoxyParamCaption}
+)}}
+\label{a00644_ga6198c49f77d396e7cbfe138fa1315674}
+
+
+Cm3 Clock Source Switch API. This function switch cm3 clock source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCm3ClkCfg} & -\/ IN cm3 clock configuration. \\
+\hline
+{\em newClk} & -\/ IN new clock source. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS -\/ switching successful. 
+
+GSN\_\-FAILURE -\/ switching failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00644_gaef13c343baa0a6f395810efe229e7e31}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GsnClkCtl\_\-CtxGet@{GsnClkCtl\_\-CtxGet}}
+\index{GsnClkCtl\_\-CtxGet@{GsnClkCtl\_\-CtxGet}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GsnClkCtl\_\-CtxGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-CLK\_\-CTL\_\-CTX\_\-T}$\ast$ GsnClkCtl\_\-CtxGet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00644_gaef13c343baa0a6f395810efe229e7e31}
+
+
+Clk ctl ctx Get. 
+
+Initilizes ref counts, base register ptr and semophore 
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} & context handle. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00644_ga74a76a16a91b861c57de64bf57b48791}{
+\index{GSN CLK CTL API@{GSN CLK CTL API}!GsnClkCtl\_\-Init@{GsnClkCtl\_\-Init}}
+\index{GsnClkCtl\_\-Init@{GsnClkCtl\_\-Init}!GSN CLK CTL API@{GSN CLK CTL API}}
+\subsubsection[{GsnClkCtl\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnClkCtl\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$}]{clkCtlCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00644_ga74a76a16a91b861c57de64bf57b48791}
+
+
+ClkCtl Driver init API. This function initializes ref counts, base register ptr and semophore. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clkCtlCtx} & -\/ IN clock Control Handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}

@@ -1,0 +1,74 @@
+\hypertarget{a00578}{
+\section{gsn\_\-ring\_\-buf.h File Reference}
+\label{a00578}\index{gsn\_\-ring\_\-buf.h@{gsn\_\-ring\_\-buf.h}}
+}
+
+
+GSN Ring buffer implementation. This file contains the ring buffer functionality.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+Include dependency graph for gsn\_\-ring\_\-buf.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{a00813}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00814}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00191}{GSN\_\-RING\_\-BUF}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00191}{GSN\_\-RING\_\-BUF} \hyperlink{a00632_gaca5ec9760102d4664831e7f6614766bc}{GSN\_\-RING\_\-BUF\_\-T}
+\item 
+typedef \hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-T} $\ast$ \hyperlink{a00578_a33e5a462afbc26ddf2d6e33a4d0a80eb}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} \hyperlink{a00632_ga5a3a10cb80523bff48cbf73776e47864}{GsnRingBuf\_\-Init} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-T} $\ast$ringBuf, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} entrySize, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ringSize, VOID $\ast$buf)
+\begin{DoxyCompactList}\small\item\em Initialize ring buffer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00632_ga4a6b45d6cdeafb52618c83f7e4493248}{GsnRingBuf\_\-Put} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} ringBuf, VOID $\ast$pData)
+\begin{DoxyCompactList}\small\item\em Put data in the buffer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00632_gab599ebf3ae090c745e3e027fedf8ed3e}{GsnRingBuf\_\-Get} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} ringBuf, VOID $\ast$pData)
+\begin{DoxyCompactList}\small\item\em Get data from the buffer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00632_ga39019b55b74ef1ef4d385a40d347e96e}{GsnRingBuf\_\-IsMsgQueued} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} ringBuf, VOID $\ast$pData)
+\begin{DoxyCompactList}\small\item\em Check message queue. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00632_ga28df066aa6f2af6fc0d50fb4402de208}{GsnRingBuf\_\-Reset} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} ringBuf)
+\begin{DoxyCompactList}\small\item\em Reset ring buffer. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00632_ga03d18f6d7018fa9b86172970abab664b}{GsnRingBuf\_\-MsgCount} (\hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T} ringBuf)
+\begin{DoxyCompactList}\small\item\em Get message count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN Ring buffer implementation. This file contains the ring buffer functionality. 
+
+Definition in file \hyperlink{a00578_source}{gsn\_\-ring\_\-buf.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00578_a33e5a462afbc26ddf2d6e33a4d0a80eb}{
+\index{gsn\_\-ring\_\-buf.h@{gsn\_\-ring\_\-buf.h}!GSN\_\-RING\_\-BUF\_\-HNDL\_\-T@{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T}}
+\index{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T@{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T}!gsn_ring_buf.h@{gsn\_\-ring\_\-buf.h}}
+\subsubsection[{GSN\_\-RING\_\-BUF\_\-HNDL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-RING\_\-BUF\_\-T}$\ast$ {\bf GSN\_\-RING\_\-BUF\_\-HNDL\_\-T}}}
+\label{a00578_a33e5a462afbc26ddf2d6e33a4d0a80eb}
+
+
+Definition at line 91 of file gsn\_\-ring\_\-buf.h.
+

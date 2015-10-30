@@ -1,0 +1,200 @@
+\hypertarget{a00480}{
+\section{gsn\_\-dbg.h File Reference}
+\label{a00480}\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}}
+}
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$osal$\backslash$gsn\_\-osal.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}drivers$\backslash$uart$\backslash$gsn\_\-uart.h\char`\"{}}\par
+Include dependency graph for gsn\_\-dbg.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00706}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00707}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00042}{GSN\_\-DBG}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00480_af26118ea176201539c2c83076cd58a96}{GSN\_\-DBG\_\-PRINTF\_\-BUFFER\_\-SIZE}~220
+\begin{DoxyCompactList}\small\item\em Printf Buffer Size. This macro defines the size of the printf buffer. The amount of data that can be printed in one call to printf is limited by this. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00480_aba8405c0cf90d3089bbf3f9c245f4c3c}{DBG\_\-UART\_\-RX\_\-BUF\_\-SIZE}~16
+\item 
+\#define \hyperlink{a00480_ac700db0df52b804c6db3a98ee458770e}{DBG\_\-UART\_\-TX\_\-BUF\_\-SIZE}~256
+\item 
+\#define \hyperlink{a00480_ad2eb277496af160238e7306fff780ad2}{printf}(...)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00480_a8ff8c69b7acf278f10a03c109b02e54b}{GSN\_\-DBG\_\-PORT\_\-TYPE} \hyperlink{a00480_a42632950cffc518e7b58d4661584b8a9}{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-T}
+\item 
+typedef struct \hyperlink{a00042}{GSN\_\-DBG} \hyperlink{a00480_a4920ef5c327fa0df103c11fe6abd0ca4}{GSN\_\-DBG\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00480_a8ff8c69b7acf278f10a03c109b02e54b}{GSN\_\-DBG\_\-PORT\_\-TYPE} \{ \par
+\hyperlink{a00480_a8ff8c69b7acf278f10a03c109b02e54baf36171e8e97f9916e2744e1d7cca2c74}{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-UART}, 
+\par
+\hyperlink{a00480_a8ff8c69b7acf278f10a03c109b02e54baaa35ced24cdd70b9cc95efa3f4228c80}{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-ITM}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00480_a696e3a7199b8dfda455a657e358cf7bc}{GsnDbg\_\-Init} (\hyperlink{a00042}{GSN\_\-DBG\_\-T} $\ast$pDbgCtx, \hyperlink{a00480_a42632950cffc518e7b58d4661584b8a9}{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-T} portType)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00480_a280e286daee7dbf3388c1f1b0be386cb}{GsnDbg\_\-Start} (\hyperlink{a00042}{GSN\_\-DBG\_\-T} $\ast$pDbgCtx, \hyperlink{a00268}{GSN\_\-UART\_\-CONFIG\_\-T} $\ast$pConf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} port)
+\item 
+void \hyperlink{a00480_ae085902bd370094b777020dc28bea748}{GsnDbg\_\-Printf} (\hyperlink{a00042}{GSN\_\-DBG\_\-T} $\ast$pDbgCtx, char $\ast$fmt,...)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00042}{GSN\_\-DBG\_\-T} $\ast$ \hyperlink{a00480_a0ea54aaf70383854541f75f1c3345976}{gsnDbgCtx}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00480_aba8405c0cf90d3089bbf3f9c245f4c3c}{
+\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!DBG\_\-UART\_\-RX\_\-BUF\_\-SIZE@{DBG\_\-UART\_\-RX\_\-BUF\_\-SIZE}}
+\index{DBG\_\-UART\_\-RX\_\-BUF\_\-SIZE@{DBG\_\-UART\_\-RX\_\-BUF\_\-SIZE}!gsn_dbg.h@{gsn\_\-dbg.h}}
+\subsubsection[{DBG\_\-UART\_\-RX\_\-BUF\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DBG\_\-UART\_\-RX\_\-BUF\_\-SIZE~16}}
+\label{a00480_aba8405c0cf90d3089bbf3f9c245f4c3c}
+
+
+Definition at line 70 of file gsn\_\-dbg.h.
+
+\hypertarget{a00480_ac700db0df52b804c6db3a98ee458770e}{
+\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!DBG\_\-UART\_\-TX\_\-BUF\_\-SIZE@{DBG\_\-UART\_\-TX\_\-BUF\_\-SIZE}}
+\index{DBG\_\-UART\_\-TX\_\-BUF\_\-SIZE@{DBG\_\-UART\_\-TX\_\-BUF\_\-SIZE}!gsn_dbg.h@{gsn\_\-dbg.h}}
+\subsubsection[{DBG\_\-UART\_\-TX\_\-BUF\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DBG\_\-UART\_\-TX\_\-BUF\_\-SIZE~256}}
+\label{a00480_ac700db0df52b804c6db3a98ee458770e}
+
+
+Definition at line 73 of file gsn\_\-dbg.h.
+
+\hypertarget{a00480_af26118ea176201539c2c83076cd58a96}{
+\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!GSN\_\-DBG\_\-PRINTF\_\-BUFFER\_\-SIZE@{GSN\_\-DBG\_\-PRINTF\_\-BUFFER\_\-SIZE}}
+\index{GSN\_\-DBG\_\-PRINTF\_\-BUFFER\_\-SIZE@{GSN\_\-DBG\_\-PRINTF\_\-BUFFER\_\-SIZE}!gsn_dbg.h@{gsn\_\-dbg.h}}
+\subsubsection[{GSN\_\-DBG\_\-PRINTF\_\-BUFFER\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-DBG\_\-PRINTF\_\-BUFFER\_\-SIZE~220}}
+\label{a00480_af26118ea176201539c2c83076cd58a96}
+
+
+Printf Buffer Size. This macro defines the size of the printf buffer. The amount of data that can be printed in one call to printf is limited by this. 
+
+
+
+Definition at line 57 of file gsn\_\-dbg.h.
+
+\hypertarget{a00480_ad2eb277496af160238e7306fff780ad2}{
+\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!printf@{printf}}
+\index{printf@{printf}!gsn_dbg.h@{gsn\_\-dbg.h}}
+\subsubsection[{printf}]{\setlength{\rightskip}{0pt plus 5cm}\#define printf(
+\begin{DoxyParamCaption}
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}
+\label{a00480_ad2eb277496af160238e7306fff780ad2}
+
+
+Definition at line 102 of file gsn\_\-dbg.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00480_a42632950cffc518e7b58d4661584b8a9}{
+\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!GSN\_\-DBG\_\-PORT\_\-TYPE\_\-T@{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-T}}
+\index{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-T@{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-T}!gsn_dbg.h@{gsn\_\-dbg.h}}
+\subsubsection[{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-DBG\_\-PORT\_\-TYPE}  {\bf GSN\_\-DBG\_\-PORT\_\-TYPE\_\-T}}}
+\label{a00480_a42632950cffc518e7b58d4661584b8a9}
+\hypertarget{a00480_a4920ef5c327fa0df103c11fe6abd0ca4}{
+\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!GSN\_\-DBG\_\-T@{GSN\_\-DBG\_\-T}}
+\index{GSN\_\-DBG\_\-T@{GSN\_\-DBG\_\-T}!gsn_dbg.h@{gsn\_\-dbg.h}}
+\subsubsection[{GSN\_\-DBG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DBG}  {\bf GSN\_\-DBG\_\-T}}}
+\label{a00480_a4920ef5c327fa0df103c11fe6abd0ca4}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00480_a8ff8c69b7acf278f10a03c109b02e54b}{
+\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!GSN\_\-DBG\_\-PORT\_\-TYPE@{GSN\_\-DBG\_\-PORT\_\-TYPE}}
+\index{GSN\_\-DBG\_\-PORT\_\-TYPE@{GSN\_\-DBG\_\-PORT\_\-TYPE}!gsn_dbg.h@{gsn\_\-dbg.h}}
+\subsubsection[{GSN\_\-DBG\_\-PORT\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-DBG\_\-PORT\_\-TYPE}}}
+\label{a00480_a8ff8c69b7acf278f10a03c109b02e54b}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-UART@{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-UART}!gsn\_\-dbg.h@{gsn\_\-dbg.h}}\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!GSN\_\-DBG\_\-PORT\_\-TYPE\_\-UART@{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-UART}}\item[{\em 
+\hypertarget{a00480_a8ff8c69b7acf278f10a03c109b02e54baf36171e8e97f9916e2744e1d7cca2c74}{
+GSN\_\-DBG\_\-PORT\_\-TYPE\_\-UART}
+\label{a00480_a8ff8c69b7acf278f10a03c109b02e54baf36171e8e97f9916e2744e1d7cca2c74}
+}]\index{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-ITM@{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-ITM}!gsn\_\-dbg.h@{gsn\_\-dbg.h}}\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!GSN\_\-DBG\_\-PORT\_\-TYPE\_\-ITM@{GSN\_\-DBG\_\-PORT\_\-TYPE\_\-ITM}}\item[{\em 
+\hypertarget{a00480_a8ff8c69b7acf278f10a03c109b02e54baaa35ced24cdd70b9cc95efa3f4228c80}{
+GSN\_\-DBG\_\-PORT\_\-TYPE\_\-ITM}
+\label{a00480_a8ff8c69b7acf278f10a03c109b02e54baaa35ced24cdd70b9cc95efa3f4228c80}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 41 of file gsn\_\-dbg.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00480_a696e3a7199b8dfda455a657e358cf7bc}{
+\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!GsnDbg\_\-Init@{GsnDbg\_\-Init}}
+\index{GsnDbg\_\-Init@{GsnDbg\_\-Init}!gsn_dbg.h@{gsn\_\-dbg.h}}
+\subsubsection[{GsnDbg\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnDbg\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DBG\_\-T} $\ast$}]{pDbgCtx, }
+\item[{{\bf GSN\_\-DBG\_\-PORT\_\-TYPE\_\-T}}]{portType}
+\end{DoxyParamCaption}
+)}}
+\label{a00480_a696e3a7199b8dfda455a657e358cf7bc}
+\hypertarget{a00480_ae085902bd370094b777020dc28bea748}{
+\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!GsnDbg\_\-Printf@{GsnDbg\_\-Printf}}
+\index{GsnDbg\_\-Printf@{GsnDbg\_\-Printf}!gsn_dbg.h@{gsn\_\-dbg.h}}
+\subsubsection[{GsnDbg\_\-Printf}]{\setlength{\rightskip}{0pt plus 5cm}void GsnDbg\_\-Printf (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DBG\_\-T} $\ast$}]{pDbgCtx, }
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}
+\label{a00480_ae085902bd370094b777020dc28bea748}
+\hypertarget{a00480_a280e286daee7dbf3388c1f1b0be386cb}{
+\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!GsnDbg\_\-Start@{GsnDbg\_\-Start}}
+\index{GsnDbg\_\-Start@{GsnDbg\_\-Start}!gsn_dbg.h@{gsn\_\-dbg.h}}
+\subsubsection[{GsnDbg\_\-Start}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnDbg\_\-Start (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DBG\_\-T} $\ast$}]{pDbgCtx, }
+\item[{{\bf GSN\_\-UART\_\-CONFIG\_\-T} $\ast$}]{pConf, }
+\item[{{\bf UINT32}}]{port}
+\end{DoxyParamCaption}
+)}}
+\label{a00480_a280e286daee7dbf3388c1f1b0be386cb}
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00480_a0ea54aaf70383854541f75f1c3345976}{
+\index{gsn\_\-dbg.h@{gsn\_\-dbg.h}!gsnDbgCtx@{gsnDbgCtx}}
+\index{gsnDbgCtx@{gsnDbgCtx}!gsn_dbg.h@{gsn\_\-dbg.h}}
+\subsubsection[{gsnDbgCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-DBG\_\-T}$\ast$ {\bf gsnDbgCtx}}}
+\label{a00480_a0ea54aaf70383854541f75f1c3345976}

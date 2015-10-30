@@ -1,0 +1,516 @@
+\hypertarget{a00538}{
+\section{gsn\_\-pdu\_\-impl.h File Reference}
+\label{a00538}\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}}
+}
+{\ttfamily \#include \char`\"{}..$\backslash$..$\backslash$..$\backslash$src$\backslash$modules$\backslash$coap$\backslash$libcoap-\/4.0.1$\backslash$pdu.h\char`\"{}}\par
+{\ttfamily \#include $<$gsn\_\-includes.h$>$}\par
+Include dependency graph for gsn\_\-pdu\_\-impl.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00775}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{a00776}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00456}{request\_\-info}
+\item 
+struct \hyperlink{a00041}{GSN\_\-COAP\_\-OPTION}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00538_acc4ca49ca61a25e4f6b3de9c18778f04}{GSN\_\-COAP\_\-MAX\_\-PDU\_\-SIZE}~COAP\_\-MAX\_\-PDU\_\-SIZE
+\item 
+\#define \hyperlink{a00538_adf035ba37a37f2a207f53e88d7676b8b}{GSN\_\-COAP\_\-OPTION\_\-IF\_\-MATCH}~COAP\_\-OPTION\_\-IF\_\-MATCH
+\item 
+\#define \hyperlink{a00538_aa1cf57f0a34deaa2bfef8a093d08691d}{GSN\_\-COAP\_\-OPTION\_\-URI\_\-HOST}~COAP\_\-OPTION\_\-URI\_\-HOST
+\item 
+\#define \hyperlink{a00538_a8030e10c58d5b7729a877e21680dee56}{GSN\_\-COAP\_\-OPTION\_\-ETAG}~COAP\_\-OPTION\_\-ETAG
+\item 
+\#define \hyperlink{a00538_abf47e54e8c0f72612737e3d7813613bd}{GSN\_\-COAP\_\-OPTION\_\-IF\_\-NONE\_\-MATCH}~COAP\_\-OPTION\_\-IF\_\-NONE\_\-MATCH
+\item 
+\#define \hyperlink{a00538_adbd1e23ca1ccd52a765b85ec4aa4e102}{GSN\_\-COAP\_\-OPTION\_\-URI\_\-PORT}~COAP\_\-OPTION\_\-URI\_\-PORT
+\item 
+\#define \hyperlink{a00538_a1a9d0eb2a0cd7f7e6c9af4439de1ba44}{GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-PATH}~COAP\_\-OPTION\_\-LOCATION\_\-PATH
+\item 
+\#define \hyperlink{a00538_aa500b59b9d4fcbe031289432e4ca4dde}{GSN\_\-COAP\_\-OPTION\_\-URI\_\-PATH}~COAP\_\-OPTION\_\-URI\_\-PATH
+\item 
+\#define \hyperlink{a00538_aa19d2afe3a44f4b52b219f5dc38ae596}{GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-FORMAT}~COAP\_\-OPTION\_\-CONTENT\_\-FORMAT
+\item 
+\#define \hyperlink{a00538_ac31fe808c646a28285bbfb171de94833}{GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-TYPE}~GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-FORMAT
+\item 
+\#define \hyperlink{a00538_ac65b49ede9c94084cb44f0ae772672ac}{GSN\_\-COAP\_\-OPTION\_\-MAXAGE}~COAP\_\-OPTION\_\-MAXAGE
+\item 
+\#define \hyperlink{a00538_a36e6d48e2ecaa5b40e85f923196abadc}{GSN\_\-COAP\_\-OPTION\_\-URI\_\-QUERY}~COAP\_\-OPTION\_\-URI\_\-QUERY
+\item 
+\#define \hyperlink{a00538_a9f67829749b7a93afd48b320975d5c3f}{GSN\_\-COAP\_\-OPTION\_\-ACCEPT}~COAP\_\-OPTION\_\-ACCEPT
+\item 
+\#define \hyperlink{a00538_acc7e9240a1bd5c13834932086226047b}{GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-QUERY}~COAP\_\-OPTION\_\-LOCATION\_\-QUERY
+\item 
+\#define \hyperlink{a00538_a6f3680e3a5fe2fb576732cfe97ce94bf}{GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-URI}~COAP\_\-OPTION\_\-PROXY\_\-URI
+\item 
+\#define \hyperlink{a00538_a7962b386b8a2d20e7f2078b13990a9c1}{GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-SCHEME}~COAP\_\-OPTION\_\-PROXY\_\-SCHEME
+\item 
+\#define \hyperlink{a00538_a32a86f9ec40bf427952ce5907c4b15c0}{GSN\_\-COAP\_\-OPTION\_\-OBSERVE}~COAP\_\-OPTION\_\-OBSERVE
+\item 
+\#define \hyperlink{a00538_a1806fdf67281ec7ce5653f42a6d74e4f}{GSN\_\-COAP\_\-OPTION\_\-SUBSCRIPTION}~COAP\_\-OPTION\_\-OBSERVE
+\item 
+\#define \hyperlink{a00538_af2202534af3538e184f5bf062ec59b5e}{GSN\_\-COAP\_\-OPTION\_\-BLOCK2}~COAP\_\-OPTION\_\-BLOCK2
+\item 
+\#define \hyperlink{a00538_a811ef0ca4fd74ece7dfa87b2b9bb6ca1}{GSN\_\-COAP\_\-OPTION\_\-BLOCK1}~COAP\_\-OPTION\_\-BLOCK1
+\item 
+\#define \hyperlink{a00538_ae122b98ec30473a73d0c6350bbffb76f}{GSN\_\-COAP\_\-MAX\_\-OPT}~COAP\_\-MAX\_\-OPT
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef coap\_\-pdu\_\-t \hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T}
+\item 
+typedef struct \hyperlink{a00456}{request\_\-info} \hyperlink{a00538_a8a243064c0dae8cfa5791f2ca3223eb9}{GSN\_\-COAP\_\-REQUEST\_\-PARAMS\_\-T}
+\item 
+typedef struct \hyperlink{a00041}{GSN\_\-COAP\_\-OPTION} \hyperlink{a00538_ad50259914e24245b799f66caf5819d83}{GSN\_\-COAP\_\-OPTION\_\-LIST\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94}{coap\_\-conn\_\-type} \{ \par
+\hyperlink{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94ab9cca17d1919b71523373917d0acb146}{GSN\_\-COAP\_\-MESSAGE\_\-CON}, 
+\par
+\hyperlink{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94a4cc17b37ccdcbbd6f8c10a3470940938}{GSN\_\-COAP\_\-MESSAGE\_\-NON}, 
+\par
+\hyperlink{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94a7ef08197861cfb461e562bd6afc2c243}{GSN\_\-COAP\_\-MESSAGE\_\-ACK}, 
+\par
+\hyperlink{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94a5d0277d791861a00ed38181ac231918d}{GSN\_\-COAP\_\-MESSAGE\_\-RST}
+ \}
+\item 
+enum \hyperlink{a00538_a60b3db981099ef05a78fd3a008890d4a}{coap\_\-conn\_\-method} \{ \par
+\hyperlink{a00538_a60b3db981099ef05a78fd3a008890d4aa846d070ff3076a1981e2f25f465a5a4f}{GSN\_\-COAP\_\-REQUEST\_\-GET} =  1, 
+\par
+\hyperlink{a00538_a60b3db981099ef05a78fd3a008890d4aa215a75187585dba92162ab15832a9719}{GSN\_\-COAP\_\-REQUEST\_\-POST}, 
+\par
+\hyperlink{a00538_a60b3db981099ef05a78fd3a008890d4aa58d8c19487f6cda3a4ede569f401b631}{GSN\_\-COAP\_\-REQUEST\_\-PUT}, 
+\par
+\hyperlink{a00538_a60b3db981099ef05a78fd3a008890d4aa5f9b0565648501d85f6fd47bc47b8b86}{GSN\_\-COAP\_\-REQUEST\_\-DELETE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$ \hyperlink{a00538_a63855ed522f323e4bce8db59ac7295d5}{GsnCoap\_\-Create\_\-Pdu} (\hyperlink{a00456}{GSN\_\-COAP\_\-REQUEST\_\-PARAMS\_\-T} info, size\_\-t size)
+\item 
+void \hyperlink{a00538_a40995304881bff62c7031e17b0ba1b97}{GsnCoap\_\-Clear\_\-Pdu} (\hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$pdu, size\_\-t size)
+\item 
+void \hyperlink{a00538_a15db3b315a66fc112aca707c26d98127}{GsnCoap\_\-Delete\_\-Pdu} (\hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$)
+\item 
+int \hyperlink{a00538_aa895a7edf6c84238d9503826d70c1e54}{GsnCoap\_\-Add\_\-Token} (\hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$pdu, unsigned int len, const unsigned char $\ast$data)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00538_aa7b6484f070191314e7b76952770d8f7}{GsnCoap\_\-Append\_\-OptionList} (\hyperlink{a00041}{GSN\_\-COAP\_\-OPTION\_\-LIST\_\-T} $\ast$$\ast$listHead, unsigned short key, unsigned int dataLength, unsigned char $\ast$data)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00538_a803cb5b81bfef54ed7b23823fcbac95e}{GsnCoap\_\-Add\_\-Options} (\hyperlink{a00041}{GSN\_\-COAP\_\-OPTION\_\-LIST\_\-T} $\ast$$\ast$listHead, \hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$pdu)
+\item 
+int \hyperlink{a00538_a7cdc194a8829b99a0efec0ba4abe7385}{GsnCoap\_\-Add\_\-Data} (\hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$pdu, unsigned int len, const unsigned char $\ast$data)
+\item 
+int \hyperlink{a00538_a522f0039c73bba09720d6deb09d77b90}{GsnCoap\_\-Get\_\-Data} (\hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$pdu, size\_\-t $\ast$len, unsigned char $\ast$$\ast$data)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00538_a20323cf1abc087219e07d9424a41c801}{GsnCoap\_\-Add\_\-Option} (unsigned short key, unsigned int dataLength, unsigned char $\ast$data)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00538_a1419c409659c063ccef4c9c83b9a6ee5}{GsnCoap\_\-AddAll\_\-OptionsTo\_\-Pdu} (\hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$pdu)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00538_ae122b98ec30473a73d0c6350bbffb76f}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-MAX\_\-OPT@{GSN\_\-COAP\_\-MAX\_\-OPT}}
+\index{GSN\_\-COAP\_\-MAX\_\-OPT@{GSN\_\-COAP\_\-MAX\_\-OPT}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-MAX\_\-OPT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-MAX\_\-OPT~COAP\_\-MAX\_\-OPT}}
+\label{a00538_ae122b98ec30473a73d0c6350bbffb76f}
+
+
+Definition at line 46 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_acc4ca49ca61a25e4f6b3de9c18778f04}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-MAX\_\-PDU\_\-SIZE@{GSN\_\-COAP\_\-MAX\_\-PDU\_\-SIZE}}
+\index{GSN\_\-COAP\_\-MAX\_\-PDU\_\-SIZE@{GSN\_\-COAP\_\-MAX\_\-PDU\_\-SIZE}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-MAX\_\-PDU\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-MAX\_\-PDU\_\-SIZE~COAP\_\-MAX\_\-PDU\_\-SIZE}}
+\label{a00538_acc4ca49ca61a25e4f6b3de9c18778f04}
+
+
+Definition at line 16 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_a9f67829749b7a93afd48b320975d5c3f}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-ACCEPT@{GSN\_\-COAP\_\-OPTION\_\-ACCEPT}}
+\index{GSN\_\-COAP\_\-OPTION\_\-ACCEPT@{GSN\_\-COAP\_\-OPTION\_\-ACCEPT}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-ACCEPT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-ACCEPT~COAP\_\-OPTION\_\-ACCEPT}}
+\label{a00538_a9f67829749b7a93afd48b320975d5c3f}
+
+
+Definition at line 31 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_a811ef0ca4fd74ece7dfa87b2b9bb6ca1}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-BLOCK1@{GSN\_\-COAP\_\-OPTION\_\-BLOCK1}}
+\index{GSN\_\-COAP\_\-OPTION\_\-BLOCK1@{GSN\_\-COAP\_\-OPTION\_\-BLOCK1}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-BLOCK1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-BLOCK1~COAP\_\-OPTION\_\-BLOCK1}}
+\label{a00538_a811ef0ca4fd74ece7dfa87b2b9bb6ca1}
+
+
+Definition at line 44 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_af2202534af3538e184f5bf062ec59b5e}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-BLOCK2@{GSN\_\-COAP\_\-OPTION\_\-BLOCK2}}
+\index{GSN\_\-COAP\_\-OPTION\_\-BLOCK2@{GSN\_\-COAP\_\-OPTION\_\-BLOCK2}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-BLOCK2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-BLOCK2~COAP\_\-OPTION\_\-BLOCK2}}
+\label{a00538_af2202534af3538e184f5bf062ec59b5e}
+
+
+Definition at line 43 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_aa19d2afe3a44f4b52b219f5dc38ae596}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-FORMAT@{GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-FORMAT}}
+\index{GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-FORMAT@{GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-FORMAT}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-FORMAT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-FORMAT~COAP\_\-OPTION\_\-CONTENT\_\-FORMAT}}
+\label{a00538_aa19d2afe3a44f4b52b219f5dc38ae596}
+
+
+Definition at line 27 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_ac31fe808c646a28285bbfb171de94833}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-TYPE@{GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-TYPE}}
+\index{GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-TYPE@{GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-TYPE}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-TYPE~GSN\_\-COAP\_\-OPTION\_\-CONTENT\_\-FORMAT}}
+\label{a00538_ac31fe808c646a28285bbfb171de94833}
+
+
+Definition at line 28 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_a8030e10c58d5b7729a877e21680dee56}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-ETAG@{GSN\_\-COAP\_\-OPTION\_\-ETAG}}
+\index{GSN\_\-COAP\_\-OPTION\_\-ETAG@{GSN\_\-COAP\_\-OPTION\_\-ETAG}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-ETAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-ETAG~COAP\_\-OPTION\_\-ETAG}}
+\label{a00538_a8030e10c58d5b7729a877e21680dee56}
+
+
+Definition at line 22 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_adf035ba37a37f2a207f53e88d7676b8b}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-IF\_\-MATCH@{GSN\_\-COAP\_\-OPTION\_\-IF\_\-MATCH}}
+\index{GSN\_\-COAP\_\-OPTION\_\-IF\_\-MATCH@{GSN\_\-COAP\_\-OPTION\_\-IF\_\-MATCH}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-IF\_\-MATCH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-IF\_\-MATCH~COAP\_\-OPTION\_\-IF\_\-MATCH}}
+\label{a00538_adf035ba37a37f2a207f53e88d7676b8b}
+
+
+Definition at line 20 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_abf47e54e8c0f72612737e3d7813613bd}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-IF\_\-NONE\_\-MATCH@{GSN\_\-COAP\_\-OPTION\_\-IF\_\-NONE\_\-MATCH}}
+\index{GSN\_\-COAP\_\-OPTION\_\-IF\_\-NONE\_\-MATCH@{GSN\_\-COAP\_\-OPTION\_\-IF\_\-NONE\_\-MATCH}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-IF\_\-NONE\_\-MATCH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-IF\_\-NONE\_\-MATCH~COAP\_\-OPTION\_\-IF\_\-NONE\_\-MATCH}}
+\label{a00538_abf47e54e8c0f72612737e3d7813613bd}
+
+
+Definition at line 23 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_a1a9d0eb2a0cd7f7e6c9af4439de1ba44}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-PATH@{GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-PATH}}
+\index{GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-PATH@{GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-PATH}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-PATH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-PATH~COAP\_\-OPTION\_\-LOCATION\_\-PATH}}
+\label{a00538_a1a9d0eb2a0cd7f7e6c9af4439de1ba44}
+
+
+Definition at line 25 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_acc7e9240a1bd5c13834932086226047b}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-QUERY@{GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-QUERY}}
+\index{GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-QUERY@{GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-QUERY}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-QUERY}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-LOCATION\_\-QUERY~COAP\_\-OPTION\_\-LOCATION\_\-QUERY}}
+\label{a00538_acc7e9240a1bd5c13834932086226047b}
+
+
+Definition at line 32 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_ac65b49ede9c94084cb44f0ae772672ac}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-MAXAGE@{GSN\_\-COAP\_\-OPTION\_\-MAXAGE}}
+\index{GSN\_\-COAP\_\-OPTION\_\-MAXAGE@{GSN\_\-COAP\_\-OPTION\_\-MAXAGE}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-MAXAGE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-MAXAGE~COAP\_\-OPTION\_\-MAXAGE}}
+\label{a00538_ac65b49ede9c94084cb44f0ae772672ac}
+
+
+Definition at line 29 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_a32a86f9ec40bf427952ce5907c4b15c0}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-OBSERVE@{GSN\_\-COAP\_\-OPTION\_\-OBSERVE}}
+\index{GSN\_\-COAP\_\-OPTION\_\-OBSERVE@{GSN\_\-COAP\_\-OPTION\_\-OBSERVE}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-OBSERVE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-OBSERVE~COAP\_\-OPTION\_\-OBSERVE}}
+\label{a00538_a32a86f9ec40bf427952ce5907c4b15c0}
+
+
+Definition at line 38 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_a7962b386b8a2d20e7f2078b13990a9c1}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-SCHEME@{GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-SCHEME}}
+\index{GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-SCHEME@{GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-SCHEME}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-SCHEME}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-SCHEME~COAP\_\-OPTION\_\-PROXY\_\-SCHEME}}
+\label{a00538_a7962b386b8a2d20e7f2078b13990a9c1}
+
+
+Definition at line 34 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_a6f3680e3a5fe2fb576732cfe97ce94bf}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-URI@{GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-URI}}
+\index{GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-URI@{GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-URI}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-URI}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-PROXY\_\-URI~COAP\_\-OPTION\_\-PROXY\_\-URI}}
+\label{a00538_a6f3680e3a5fe2fb576732cfe97ce94bf}
+
+
+Definition at line 33 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_a1806fdf67281ec7ce5653f42a6d74e4f}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-SUBSCRIPTION@{GSN\_\-COAP\_\-OPTION\_\-SUBSCRIPTION}}
+\index{GSN\_\-COAP\_\-OPTION\_\-SUBSCRIPTION@{GSN\_\-COAP\_\-OPTION\_\-SUBSCRIPTION}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-SUBSCRIPTION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-SUBSCRIPTION~COAP\_\-OPTION\_\-OBSERVE}}
+\label{a00538_a1806fdf67281ec7ce5653f42a6d74e4f}
+
+
+Definition at line 39 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_aa1cf57f0a34deaa2bfef8a093d08691d}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-URI\_\-HOST@{GSN\_\-COAP\_\-OPTION\_\-URI\_\-HOST}}
+\index{GSN\_\-COAP\_\-OPTION\_\-URI\_\-HOST@{GSN\_\-COAP\_\-OPTION\_\-URI\_\-HOST}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-URI\_\-HOST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-URI\_\-HOST~COAP\_\-OPTION\_\-URI\_\-HOST}}
+\label{a00538_aa1cf57f0a34deaa2bfef8a093d08691d}
+
+
+Definition at line 21 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_aa500b59b9d4fcbe031289432e4ca4dde}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-URI\_\-PATH@{GSN\_\-COAP\_\-OPTION\_\-URI\_\-PATH}}
+\index{GSN\_\-COAP\_\-OPTION\_\-URI\_\-PATH@{GSN\_\-COAP\_\-OPTION\_\-URI\_\-PATH}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-URI\_\-PATH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-URI\_\-PATH~COAP\_\-OPTION\_\-URI\_\-PATH}}
+\label{a00538_aa500b59b9d4fcbe031289432e4ca4dde}
+
+
+Definition at line 26 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_adbd1e23ca1ccd52a765b85ec4aa4e102}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-URI\_\-PORT@{GSN\_\-COAP\_\-OPTION\_\-URI\_\-PORT}}
+\index{GSN\_\-COAP\_\-OPTION\_\-URI\_\-PORT@{GSN\_\-COAP\_\-OPTION\_\-URI\_\-PORT}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-URI\_\-PORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-URI\_\-PORT~COAP\_\-OPTION\_\-URI\_\-PORT}}
+\label{a00538_adbd1e23ca1ccd52a765b85ec4aa4e102}
+
+
+Definition at line 24 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_a36e6d48e2ecaa5b40e85f923196abadc}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-URI\_\-QUERY@{GSN\_\-COAP\_\-OPTION\_\-URI\_\-QUERY}}
+\index{GSN\_\-COAP\_\-OPTION\_\-URI\_\-QUERY@{GSN\_\-COAP\_\-OPTION\_\-URI\_\-QUERY}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-URI\_\-QUERY}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-COAP\_\-OPTION\_\-URI\_\-QUERY~COAP\_\-OPTION\_\-URI\_\-QUERY}}
+\label{a00538_a36e6d48e2ecaa5b40e85f923196abadc}
+
+
+Definition at line 30 of file gsn\_\-pdu\_\-impl.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00538_ad50259914e24245b799f66caf5819d83}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-OPTION\_\-LIST\_\-T@{GSN\_\-COAP\_\-OPTION\_\-LIST\_\-T}}
+\index{GSN\_\-COAP\_\-OPTION\_\-LIST\_\-T@{GSN\_\-COAP\_\-OPTION\_\-LIST\_\-T}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-OPTION\_\-LIST\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-COAP\_\-OPTION}  {\bf GSN\_\-COAP\_\-OPTION\_\-LIST\_\-T}}}
+\label{a00538_ad50259914e24245b799f66caf5819d83}
+\hypertarget{a00538_afde87a99bfaad4a8beac3df27a309976}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-PDU\_\-T@{GSN\_\-COAP\_\-PDU\_\-T}}
+\index{GSN\_\-COAP\_\-PDU\_\-T@{GSN\_\-COAP\_\-PDU\_\-T}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-PDU\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef coap\_\-pdu\_\-t {\bf GSN\_\-COAP\_\-PDU\_\-T}}}
+\label{a00538_afde87a99bfaad4a8beac3df27a309976}
+
+
+Definition at line 14 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_a8a243064c0dae8cfa5791f2ca3223eb9}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-REQUEST\_\-PARAMS\_\-T@{GSN\_\-COAP\_\-REQUEST\_\-PARAMS\_\-T}}
+\index{GSN\_\-COAP\_\-REQUEST\_\-PARAMS\_\-T@{GSN\_\-COAP\_\-REQUEST\_\-PARAMS\_\-T}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-REQUEST\_\-PARAMS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf request\_\-info}  {\bf GSN\_\-COAP\_\-REQUEST\_\-PARAMS\_\-T}}}
+\label{a00538_a8a243064c0dae8cfa5791f2ca3223eb9}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00538_a60b3db981099ef05a78fd3a008890d4a}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!coap\_\-conn\_\-method@{coap\_\-conn\_\-method}}
+\index{coap\_\-conn\_\-method@{coap\_\-conn\_\-method}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{coap\_\-conn\_\-method}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf coap\_\-conn\_\-method}}}
+\label{a00538_a60b3db981099ef05a78fd3a008890d4a}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-COAP\_\-REQUEST\_\-GET@{GSN\_\-COAP\_\-REQUEST\_\-GET}!gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}}\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-REQUEST\_\-GET@{GSN\_\-COAP\_\-REQUEST\_\-GET}}\item[{\em 
+\hypertarget{a00538_a60b3db981099ef05a78fd3a008890d4aa846d070ff3076a1981e2f25f465a5a4f}{
+GSN\_\-COAP\_\-REQUEST\_\-GET}
+\label{a00538_a60b3db981099ef05a78fd3a008890d4aa846d070ff3076a1981e2f25f465a5a4f}
+}]\index{GSN\_\-COAP\_\-REQUEST\_\-POST@{GSN\_\-COAP\_\-REQUEST\_\-POST}!gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}}\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-REQUEST\_\-POST@{GSN\_\-COAP\_\-REQUEST\_\-POST}}\item[{\em 
+\hypertarget{a00538_a60b3db981099ef05a78fd3a008890d4aa215a75187585dba92162ab15832a9719}{
+GSN\_\-COAP\_\-REQUEST\_\-POST}
+\label{a00538_a60b3db981099ef05a78fd3a008890d4aa215a75187585dba92162ab15832a9719}
+}]\index{GSN\_\-COAP\_\-REQUEST\_\-PUT@{GSN\_\-COAP\_\-REQUEST\_\-PUT}!gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}}\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-REQUEST\_\-PUT@{GSN\_\-COAP\_\-REQUEST\_\-PUT}}\item[{\em 
+\hypertarget{a00538_a60b3db981099ef05a78fd3a008890d4aa58d8c19487f6cda3a4ede569f401b631}{
+GSN\_\-COAP\_\-REQUEST\_\-PUT}
+\label{a00538_a60b3db981099ef05a78fd3a008890d4aa58d8c19487f6cda3a4ede569f401b631}
+}]\index{GSN\_\-COAP\_\-REQUEST\_\-DELETE@{GSN\_\-COAP\_\-REQUEST\_\-DELETE}!gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}}\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-REQUEST\_\-DELETE@{GSN\_\-COAP\_\-REQUEST\_\-DELETE}}\item[{\em 
+\hypertarget{a00538_a60b3db981099ef05a78fd3a008890d4aa5f9b0565648501d85f6fd47bc47b8b86}{
+GSN\_\-COAP\_\-REQUEST\_\-DELETE}
+\label{a00538_a60b3db981099ef05a78fd3a008890d4aa5f9b0565648501d85f6fd47bc47b8b86}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 61 of file gsn\_\-pdu\_\-impl.h.
+
+\hypertarget{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!coap\_\-conn\_\-type@{coap\_\-conn\_\-type}}
+\index{coap\_\-conn\_\-type@{coap\_\-conn\_\-type}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{coap\_\-conn\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf coap\_\-conn\_\-type}}}
+\label{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-COAP\_\-MESSAGE\_\-CON@{GSN\_\-COAP\_\-MESSAGE\_\-CON}!gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}}\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-MESSAGE\_\-CON@{GSN\_\-COAP\_\-MESSAGE\_\-CON}}\item[{\em 
+\hypertarget{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94ab9cca17d1919b71523373917d0acb146}{
+GSN\_\-COAP\_\-MESSAGE\_\-CON}
+\label{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94ab9cca17d1919b71523373917d0acb146}
+}]\index{GSN\_\-COAP\_\-MESSAGE\_\-NON@{GSN\_\-COAP\_\-MESSAGE\_\-NON}!gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}}\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-MESSAGE\_\-NON@{GSN\_\-COAP\_\-MESSAGE\_\-NON}}\item[{\em 
+\hypertarget{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94a4cc17b37ccdcbbd6f8c10a3470940938}{
+GSN\_\-COAP\_\-MESSAGE\_\-NON}
+\label{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94a4cc17b37ccdcbbd6f8c10a3470940938}
+}]\index{GSN\_\-COAP\_\-MESSAGE\_\-ACK@{GSN\_\-COAP\_\-MESSAGE\_\-ACK}!gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}}\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-MESSAGE\_\-ACK@{GSN\_\-COAP\_\-MESSAGE\_\-ACK}}\item[{\em 
+\hypertarget{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94a7ef08197861cfb461e562bd6afc2c243}{
+GSN\_\-COAP\_\-MESSAGE\_\-ACK}
+\label{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94a7ef08197861cfb461e562bd6afc2c243}
+}]\index{GSN\_\-COAP\_\-MESSAGE\_\-RST@{GSN\_\-COAP\_\-MESSAGE\_\-RST}!gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}}\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GSN\_\-COAP\_\-MESSAGE\_\-RST@{GSN\_\-COAP\_\-MESSAGE\_\-RST}}\item[{\em 
+\hypertarget{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94a5d0277d791861a00ed38181ac231918d}{
+GSN\_\-COAP\_\-MESSAGE\_\-RST}
+\label{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94a5d0277d791861a00ed38181ac231918d}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 48 of file gsn\_\-pdu\_\-impl.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00538_a7cdc194a8829b99a0efec0ba4abe7385}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GsnCoap\_\-Add\_\-Data@{GsnCoap\_\-Add\_\-Data}}
+\index{GsnCoap\_\-Add\_\-Data@{GsnCoap\_\-Add\_\-Data}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Add\_\-Data}]{\setlength{\rightskip}{0pt plus 5cm}int GsnCoap\_\-Add\_\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$}]{pdu, }
+\item[{unsigned int}]{len, }
+\item[{const unsigned char $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}
+\label{a00538_a7cdc194a8829b99a0efec0ba4abe7385}
+Adds given data to the pdu that is passed as first parameter. Note that the PDU's data is destroyed by \hyperlink{a00538_a20323cf1abc087219e07d9424a41c801}{GsnCoap\_\-Add\_\-Option()}. \hypertarget{a00538_a20323cf1abc087219e07d9424a41c801}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GsnCoap\_\-Add\_\-Option@{GsnCoap\_\-Add\_\-Option}}
+\index{GsnCoap\_\-Add\_\-Option@{GsnCoap\_\-Add\_\-Option}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Add\_\-Option}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnCoap\_\-Add\_\-Option (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{key, }
+\item[{unsigned int}]{dataLength, }
+\item[{unsigned char $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}
+\label{a00538_a20323cf1abc087219e07d9424a41c801}
+\hypertarget{a00538_a803cb5b81bfef54ed7b23823fcbac95e}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GsnCoap\_\-Add\_\-Options@{GsnCoap\_\-Add\_\-Options}}
+\index{GsnCoap\_\-Add\_\-Options@{GsnCoap\_\-Add\_\-Options}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Add\_\-Options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnCoap\_\-Add\_\-Options (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-OPTION\_\-LIST\_\-T} $\ast$$\ast$}]{listHead, }
+\item[{{\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$}]{pdu}
+\end{DoxyParamCaption}
+)}}
+\label{a00538_a803cb5b81bfef54ed7b23823fcbac95e}
+\hypertarget{a00538_aa895a7edf6c84238d9503826d70c1e54}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GsnCoap\_\-Add\_\-Token@{GsnCoap\_\-Add\_\-Token}}
+\index{GsnCoap\_\-Add\_\-Token@{GsnCoap\_\-Add\_\-Token}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Add\_\-Token}]{\setlength{\rightskip}{0pt plus 5cm}int GsnCoap\_\-Add\_\-Token (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$}]{pdu, }
+\item[{unsigned int}]{len, }
+\item[{const unsigned char $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}
+\label{a00538_aa895a7edf6c84238d9503826d70c1e54}
+\hypertarget{a00538_a1419c409659c063ccef4c9c83b9a6ee5}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GsnCoap\_\-AddAll\_\-OptionsTo\_\-Pdu@{GsnCoap\_\-AddAll\_\-OptionsTo\_\-Pdu}}
+\index{GsnCoap\_\-AddAll\_\-OptionsTo\_\-Pdu@{GsnCoap\_\-AddAll\_\-OptionsTo\_\-Pdu}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-AddAll\_\-OptionsTo\_\-Pdu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnCoap\_\-AddAll\_\-OptionsTo\_\-Pdu (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$}]{pdu}
+\end{DoxyParamCaption}
+)}}
+\label{a00538_a1419c409659c063ccef4c9c83b9a6ee5}
+\hypertarget{a00538_aa7b6484f070191314e7b76952770d8f7}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GsnCoap\_\-Append\_\-OptionList@{GsnCoap\_\-Append\_\-OptionList}}
+\index{GsnCoap\_\-Append\_\-OptionList@{GsnCoap\_\-Append\_\-OptionList}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Append\_\-OptionList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnCoap\_\-Append\_\-OptionList (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-OPTION\_\-LIST\_\-T} $\ast$$\ast$}]{listHead, }
+\item[{unsigned short}]{key, }
+\item[{unsigned int}]{dataLength, }
+\item[{unsigned char $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}
+\label{a00538_aa7b6484f070191314e7b76952770d8f7}
+\hypertarget{a00538_a40995304881bff62c7031e17b0ba1b97}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GsnCoap\_\-Clear\_\-Pdu@{GsnCoap\_\-Clear\_\-Pdu}}
+\index{GsnCoap\_\-Clear\_\-Pdu@{GsnCoap\_\-Clear\_\-Pdu}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Clear\_\-Pdu}]{\setlength{\rightskip}{0pt plus 5cm}void GsnCoap\_\-Clear\_\-Pdu (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$}]{pdu, }
+\item[{size\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{a00538_a40995304881bff62c7031e17b0ba1b97}
+\hypertarget{a00538_a63855ed522f323e4bce8db59ac7295d5}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GsnCoap\_\-Create\_\-Pdu@{GsnCoap\_\-Create\_\-Pdu}}
+\index{GsnCoap\_\-Create\_\-Pdu@{GsnCoap\_\-Create\_\-Pdu}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Create\_\-Pdu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-COAP\_\-PDU\_\-T}$\ast$ GsnCoap\_\-Create\_\-Pdu (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-REQUEST\_\-PARAMS\_\-T}}]{info, }
+\item[{size\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{a00538_a63855ed522f323e4bce8db59ac7295d5}
+\hypertarget{a00538_a15db3b315a66fc112aca707c26d98127}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GsnCoap\_\-Delete\_\-Pdu@{GsnCoap\_\-Delete\_\-Pdu}}
+\index{GsnCoap\_\-Delete\_\-Pdu@{GsnCoap\_\-Delete\_\-Pdu}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Delete\_\-Pdu}]{\setlength{\rightskip}{0pt plus 5cm}void GsnCoap\_\-Delete\_\-Pdu (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00538_a15db3b315a66fc112aca707c26d98127}
+\hypertarget{a00538_a522f0039c73bba09720d6deb09d77b90}{
+\index{gsn\_\-pdu\_\-impl.h@{gsn\_\-pdu\_\-impl.h}!GsnCoap\_\-Get\_\-Data@{GsnCoap\_\-Get\_\-Data}}
+\index{GsnCoap\_\-Get\_\-Data@{GsnCoap\_\-Get\_\-Data}!gsn_pdu_impl.h@{gsn\_\-pdu\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Get\_\-Data}]{\setlength{\rightskip}{0pt plus 5cm}int GsnCoap\_\-Get\_\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$}]{pdu, }
+\item[{size\_\-t $\ast$}]{len, }
+\item[{unsigned char $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)}}
+\label{a00538_a522f0039c73bba09720d6deb09d77b90}
+Retrieves the length and data pointer of specified PDU. Returns 0 on error or 1 if $\ast$len and $\ast$data have correct values. Note that these values are destroyed with the pdu. 

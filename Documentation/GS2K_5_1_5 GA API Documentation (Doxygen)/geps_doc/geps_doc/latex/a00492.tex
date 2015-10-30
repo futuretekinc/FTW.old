@@ -1,0 +1,121 @@
+\hypertarget{a00492}{
+\section{gsn\_\-emu\_\-sdadc.h File Reference}
+\label{a00492}\index{gsn\_\-emu\_\-sdadc.h@{gsn\_\-emu\_\-sdadc.h}}
+}
+{\ttfamily \#include \char`\"{}gsn\_\-emu\_\-common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-emu\_\-private.h\char`\"{}}\par
+Include dependency graph for gsn\_\-emu\_\-sdadc.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00723}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00492_ae7e56ad6c9fcbc26066cb8a0f430b997}{GsnEmu\_\-SdAdcStart} (VOID $\ast$arg1, VOID $\ast$arg2)
+\item 
+PUBLIC VOID \hyperlink{a00492_af245a5d5ab0ef8f194a7ad8ee987b969}{GsnEmu\_\-SdAdcCb} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$conbuf\_\-0, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$conbuf\_\-1, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$conbuf\_\-2, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} $\ast$size, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} status, VOID $\ast$ctx)
+\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00492_a179dbbfd2be61b47b68f64bec2c7b8d4}{GsnEmu\_\-SdAdcStop} (VOID $\ast$arg1, VOID $\ast$arg2)
+\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00492_a251e562bcf429a596f9c08e1082213fe}{GsnEmu\_\-SdAdcLoadControl} (\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} onOff, VOID $\ast$arg1, VOID $\ast$arg2)
+\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00492_a387c3bf6b3480eac8633a2ea45a059d5}{GsnEmu\_\-SdAdcResetEnergy} (VOID $\ast$arg1, VOID $\ast$arg2)
+\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00492_acc9bb7d53df04b918f54f6db7c3ffbd5}{GsnEmu\_\-SdAdcComputeElecParams} (VOID $\ast$arg1, VOID $\ast$arg2, VOID $\ast$arg3)
+\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00492_a98638ba0f755bad96bda4e1dfbf153a4}{GsnEmu\_\-SdAdcGetInstantValues} (VOID $\ast$arg1, VOID $\ast$arg2, VOID $\ast$arg3)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00492_af245a5d5ab0ef8f194a7ad8ee987b969}{
+\index{gsn\_\-emu\_\-sdadc.h@{gsn\_\-emu\_\-sdadc.h}!GsnEmu\_\-SdAdcCb@{GsnEmu\_\-SdAdcCb}}
+\index{GsnEmu\_\-SdAdcCb@{GsnEmu\_\-SdAdcCb}!gsn_emu_sdadc.h@{gsn\_\-emu\_\-sdadc.h}}
+\subsubsection[{GsnEmu\_\-SdAdcCb}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnEmu\_\-SdAdcCb (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32} $\ast$}]{conbuf\_\-0, }
+\item[{{\bf UINT32} $\ast$}]{conbuf\_\-1, }
+\item[{{\bf UINT32} $\ast$}]{conbuf\_\-2, }
+\item[{{\bf UINT16} $\ast$}]{size, }
+\item[{{\bf UINT32}}]{status, }
+\item[{VOID $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}
+\label{a00492_af245a5d5ab0ef8f194a7ad8ee987b969}
+\hypertarget{a00492_acc9bb7d53df04b918f54f6db7c3ffbd5}{
+\index{gsn\_\-emu\_\-sdadc.h@{gsn\_\-emu\_\-sdadc.h}!GsnEmu\_\-SdAdcComputeElecParams@{GsnEmu\_\-SdAdcComputeElecParams}}
+\index{GsnEmu\_\-SdAdcComputeElecParams@{GsnEmu\_\-SdAdcComputeElecParams}!gsn_emu_sdadc.h@{gsn\_\-emu\_\-sdadc.h}}
+\subsubsection[{GsnEmu\_\-SdAdcComputeElecParams}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-EMU\_\-STATUS\_\-T} GsnEmu\_\-SdAdcComputeElecParams (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{arg1, }
+\item[{VOID $\ast$}]{arg2, }
+\item[{VOID $\ast$}]{arg3}
+\end{DoxyParamCaption}
+)}}
+\label{a00492_acc9bb7d53df04b918f54f6db7c3ffbd5}
+\hypertarget{a00492_a98638ba0f755bad96bda4e1dfbf153a4}{
+\index{gsn\_\-emu\_\-sdadc.h@{gsn\_\-emu\_\-sdadc.h}!GsnEmu\_\-SdAdcGetInstantValues@{GsnEmu\_\-SdAdcGetInstantValues}}
+\index{GsnEmu\_\-SdAdcGetInstantValues@{GsnEmu\_\-SdAdcGetInstantValues}!gsn_emu_sdadc.h@{gsn\_\-emu\_\-sdadc.h}}
+\subsubsection[{GsnEmu\_\-SdAdcGetInstantValues}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-EMU\_\-STATUS\_\-T} GsnEmu\_\-SdAdcGetInstantValues (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{arg1, }
+\item[{VOID $\ast$}]{arg2, }
+\item[{VOID $\ast$}]{arg3}
+\end{DoxyParamCaption}
+)}}
+\label{a00492_a98638ba0f755bad96bda4e1dfbf153a4}
+\hypertarget{a00492_a251e562bcf429a596f9c08e1082213fe}{
+\index{gsn\_\-emu\_\-sdadc.h@{gsn\_\-emu\_\-sdadc.h}!GsnEmu\_\-SdAdcLoadControl@{GsnEmu\_\-SdAdcLoadControl}}
+\index{GsnEmu\_\-SdAdcLoadControl@{GsnEmu\_\-SdAdcLoadControl}!gsn_emu_sdadc.h@{gsn\_\-emu\_\-sdadc.h}}
+\subsubsection[{GsnEmu\_\-SdAdcLoadControl}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-EMU\_\-STATUS\_\-T} GsnEmu\_\-SdAdcLoadControl (
+\begin{DoxyParamCaption}
+\item[{{\bf BOOL}}]{onOff, }
+\item[{VOID $\ast$}]{arg1, }
+\item[{VOID $\ast$}]{arg2}
+\end{DoxyParamCaption}
+)}}
+\label{a00492_a251e562bcf429a596f9c08e1082213fe}
+\hypertarget{a00492_a387c3bf6b3480eac8633a2ea45a059d5}{
+\index{gsn\_\-emu\_\-sdadc.h@{gsn\_\-emu\_\-sdadc.h}!GsnEmu\_\-SdAdcResetEnergy@{GsnEmu\_\-SdAdcResetEnergy}}
+\index{GsnEmu\_\-SdAdcResetEnergy@{GsnEmu\_\-SdAdcResetEnergy}!gsn_emu_sdadc.h@{gsn\_\-emu\_\-sdadc.h}}
+\subsubsection[{GsnEmu\_\-SdAdcResetEnergy}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-EMU\_\-STATUS\_\-T} GsnEmu\_\-SdAdcResetEnergy (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{arg1, }
+\item[{VOID $\ast$}]{arg2}
+\end{DoxyParamCaption}
+)}}
+\label{a00492_a387c3bf6b3480eac8633a2ea45a059d5}
+\hypertarget{a00492_ae7e56ad6c9fcbc26066cb8a0f430b997}{
+\index{gsn\_\-emu\_\-sdadc.h@{gsn\_\-emu\_\-sdadc.h}!GsnEmu\_\-SdAdcStart@{GsnEmu\_\-SdAdcStart}}
+\index{GsnEmu\_\-SdAdcStart@{GsnEmu\_\-SdAdcStart}!gsn_emu_sdadc.h@{gsn\_\-emu\_\-sdadc.h}}
+\subsubsection[{GsnEmu\_\-SdAdcStart}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-EMU\_\-STATUS\_\-T} GsnEmu\_\-SdAdcStart (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{arg1, }
+\item[{VOID $\ast$}]{arg2}
+\end{DoxyParamCaption}
+)}}
+\label{a00492_ae7e56ad6c9fcbc26066cb8a0f430b997}
+File inclusion
+
+Macros
+
+Public data types
+
+Public variable
+
+Private variable
+
+Public Functions \hypertarget{a00492_a179dbbfd2be61b47b68f64bec2c7b8d4}{
+\index{gsn\_\-emu\_\-sdadc.h@{gsn\_\-emu\_\-sdadc.h}!GsnEmu\_\-SdAdcStop@{GsnEmu\_\-SdAdcStop}}
+\index{GsnEmu\_\-SdAdcStop@{GsnEmu\_\-SdAdcStop}!gsn_emu_sdadc.h@{gsn\_\-emu\_\-sdadc.h}}
+\subsubsection[{GsnEmu\_\-SdAdcStop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-EMU\_\-STATUS\_\-T} GsnEmu\_\-SdAdcStop (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{arg1, }
+\item[{VOID $\ast$}]{arg2}
+\end{DoxyParamCaption}
+)}}
+\label{a00492_a179dbbfd2be61b47b68f64bec2c7b8d4}

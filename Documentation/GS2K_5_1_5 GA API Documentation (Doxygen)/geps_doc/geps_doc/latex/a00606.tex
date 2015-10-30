@@ -1,0 +1,1903 @@
+\hypertarget{a00606}{
+\section{gsn\_\-wif\_\-api.h File Reference}
+\label{a00606}\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}}
+}
+
+
+GSN WIF API public header.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00853}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00636_ga3c3fb4bb2d829ffe7098bdd4ee283a42}{GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT}~10
+\begin{DoxyCompactList}\small\item\em API type identifier definition. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00606_ad352ae019596522d3c81180b30376724}{GSN\_\-WIF\_\-API\_\-TYPE\_\-SIZE}~6
+\item 
+\#define \hyperlink{a00636_ga1bd275f0a8f47dba99b6e22adcb67ca4}{GSN\_\-WIF\_\-API\_\-TYPE\_\-SYS\_\-CTL}~0x0
+\begin{DoxyCompactList}\small\item\em API types. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00606_a98e877f872668c98c0704efa914d7d17}{GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-CTL}~0x1
+\item 
+\#define \hyperlink{a00606_a2df8a6bf01c3126db06c5aeddf23e5be}{GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-CTL}~0x2
+\item 
+\#define \hyperlink{a00606_ac0be4ec4d6df42203ffe9726642c57c3}{GSN\_\-WIF\_\-API\_\-TYPE\_\-ISOTX\_\-CTL}~0x3
+\item 
+\#define \hyperlink{a00606_ac93423f7f5f2de5551ddd87f5bbe304f}{GSN\_\-WIF\_\-API\_\-TYPE\_\-CAL\_\-CTL}~0x4
+\item 
+\#define \hyperlink{a00606_a7feac063dca4c720cff1a1d4c90386c5}{GSN\_\-WIF\_\-API\_\-TYPE\_\-UNUSED}~0x10
+\item 
+\#define \hyperlink{a00606_a727f31d47220e310a75e7c1689ec6c43}{GSN\_\-WIF\_\-API\_\-TYPE\_\-DATA}~0x20
+\item 
+\#define \hyperlink{a00606_a6a88e175f21c3151d20d1e6d8d521243}{GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-DATA}~0x21
+\item 
+\#define \hyperlink{a00606_a128a138e12d8546c58af101ae73dafc9}{GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-UNASSOC\_\-DATA}~0x22
+\item 
+\#define \hyperlink{a00606_ac32fa2de29fe87b7f1a6087a3243b8d4}{GSN\_\-WIF\_\-API\_\-TYPE\_\-DBG}~0x30
+\item 
+\#define \hyperlink{a00606_a681c57c3ba88deec4991fdd5717fa2cc}{GSN\_\-WIF\_\-API\_\-SYS\_\-CTL}~(GSN\_\-WIF\_\-API\_\-TYPE\_\-SYS\_\-CTL $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)
+\item 
+\#define \hyperlink{a00606_a9011cb33556c61d17ed1aa2b70183db8}{GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL}~(GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-CTL $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)
+\item 
+\#define \hyperlink{a00606_a4fd6f523cdc97966a77e03a064afec4d}{GSN\_\-WIF\_\-API\_\-154\_\-CTL}~(GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-CTL $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)
+\item 
+\#define \hyperlink{a00606_a007ca824d2c96585429e34764c16ab18}{GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL}~(GSN\_\-WIF\_\-API\_\-TYPE\_\-ISOTX\_\-CTL $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)
+\item 
+\#define \hyperlink{a00606_acc0ff02b6d9aeb7c90ff1db2ef235489}{GSN\_\-WIF\_\-API\_\-CAL\_\-CTL}~(GSN\_\-WIF\_\-API\_\-TYPE\_\-CAL\_\-CTL $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)
+\item 
+\#define \hyperlink{a00606_afbcdd61ea6cafbc156859b2daeda0bc4}{GSN\_\-WIF\_\-API\_\-DBG}~(GSN\_\-WIF\_\-API\_\-TYPE\_\-DBG $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)
+\item 
+\#define \hyperlink{a00606_a6a95cc2947a0ffdd6e579227f44eccb6}{GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE}~0x200
+\item 
+\#define \hyperlink{a00606_aa998987ec74a3be76345057ed66ca72c}{GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END}~(GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE -\/ 1)
+\item 
+\#define \hyperlink{a00636_ga35490aa95424208d771f9ce5466c4dc2}{GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 0)
+\begin{DoxyCompactList}\small\item\em System Control API. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00606_aac4311cb72fcfd70889bfd3a902e62c9}{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 1)
+\item 
+\#define \hyperlink{a00606_a1f4b00a872d92b53f729018f11351fdd}{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 2)
+\item 
+\#define \hyperlink{a00606_ae748e4ad237f8544adc73fd54e198742}{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 3)
+\item 
+\#define \hyperlink{a00606_a7a90408cd351147200b5824ceaf21510}{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-PAUSE\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 4)
+\item 
+\#define \hyperlink{a00606_a3dbcf8abb5c0ba6ed779472b6af453c0}{GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 5)
+\item 
+\#define \hyperlink{a00606_a15ace3ae6990865d2940c7681642cac6}{GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-RSP}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 6)
+\item 
+\#define \hyperlink{a00606_ac2fcf63e15733f2b941ed0042282fa07}{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-CANCEL\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 7)
+\item 
+\#define \hyperlink{a00606_a2f161fe998e2f4e9293bb9c555d0d6d4}{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 8)
+\item 
+\#define \hyperlink{a00606_a9e43ea4cb7108ce9d5ff1eb0e3623f58}{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 9)
+\item 
+\#define \hyperlink{a00606_a3f3fe0223e46a1f2d66ad838b535fb67}{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 10)
+\item 
+\#define \hyperlink{a00606_a60e546c898b2b9fa3f373311b2edd6a0}{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 11)
+\item 
+\#define \hyperlink{a00606_a7a2b143bb66de836a2b96e5fb0e35d88}{GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 12)
+\item 
+\#define \hyperlink{a00606_a4535e602c9ce56975b1048ff27f961e2}{GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 14)
+\item 
+\#define \hyperlink{a00606_a0b7c07d125cb7a93691b3df400da4260}{GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-START}~(GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-REQ)
+\item 
+\#define \hyperlink{a00606_ad4f159041961543262f326993fa41304}{GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-END}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)
+\item 
+\#define \hyperlink{a00606_afc607e4455b6d89c4b50f43cb98dc7df}{GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-IND}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 0)
+\item 
+\#define \hyperlink{a00606_a345e36cd22f979d5658b2810ea85bdae}{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-RDY\_\-IND}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 1)
+\item 
+\#define \hyperlink{a00606_a211bdbcd29b041f76e896a89fe48cd33}{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-RSP}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 2)
+\item 
+\#define \hyperlink{a00606_a1846f96406c429a8ecf8cb1b11c81f71}{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-RSP}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 3)
+\item 
+\#define \hyperlink{a00606_aba7166569706b2885be26e10411fbdf5}{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-RESUME\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 4)
+\item 
+\#define \hyperlink{a00606_ae890eabe1132a01ac9aa6ef5d5ee105e}{GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-RSP}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 5)
+\item 
+\#define \hyperlink{a00606_a23247938aa161b346fd923ce298740fa}{GSN\_\-WIF\_\-API\_\-SYS\_\-RESET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 6)
+\item 
+\#define \hyperlink{a00606_a75f465637f58de98ccf4e13109751193}{GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 7)
+\item 
+\#define \hyperlink{a00606_a915a87e97514aa78bc1fc481fa52fb13}{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-RSP}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 8)
+\item 
+\#define \hyperlink{a00606_a68daa74a2f5d9dd92261db9b44ea3b04}{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-RSP}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 9)
+\item 
+\#define \hyperlink{a00606_a697f00db1242d9669dad03f339dee38a}{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-RSP}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 10)
+\item 
+\#define \hyperlink{a00606_a19bf52f5120153a8453dd90dab2e78b4}{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-RSP}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 11)
+\item 
+\#define \hyperlink{a00606_ab78c1ca62426417801be036f56d808fc}{GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-IND}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 12)
+\item 
+\#define \hyperlink{a00606_a29c102b36af712416a8dcb56e95ddc8f}{GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-RSP}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 14)
+\item 
+\#define \hyperlink{a00606_a4dfac5bd144fa9e23e0389182df89716}{GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-START}~(GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-IND)
+\item 
+\#define \hyperlink{a00606_a4b084ace5b4394d9dfbd5f15515942ba}{GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-END}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)
+\item 
+\#define \hyperlink{a00636_ga807417e493752092e13b44e6f31b896e}{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 0)
+\begin{DoxyCompactList}\small\item\em WLAN Control API. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00606_a000d192d1af36858dbc749f275d21d9a}{GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 1)
+\item 
+\#define \hyperlink{a00606_aaec020519f654d34567226449b0a872b}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 2)
+\item 
+\#define \hyperlink{a00606_ab5ae3873d5429c2f2aba1d7db6fe1b34}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-TEST\_\-STOP\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 3)
+\item 
+\#define \hyperlink{a00606_acd5783286a3f99614a8e2cf2524484ac}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 4)
+\item 
+\#define \hyperlink{a00606_afc6cc44ba2e03d4d2ccf0da923c61bd3}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 5)
+\item 
+\#define \hyperlink{a00606_add9a75e673355731d98ddb52d8e969a4}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 6)
+\item 
+\#define \hyperlink{a00606_a15863aea319457dd89e563953224c2a8}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 7)
+\item 
+\#define \hyperlink{a00606_a1957a22b168fa365aa4352fa2719cac7}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 8)
+\item 
+\#define \hyperlink{a00606_af97f692c14b16848867464de9e30345b}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 9)
+\item 
+\#define \hyperlink{a00606_a9a723d579a54011634bea28aba7c79ab}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-STOP\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 10)
+\item 
+\#define \hyperlink{a00606_a36d04dda650efd1945604cf4e91fc93a}{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 11)
+\item 
+\#define \hyperlink{a00606_a7391bce85b67103d09002373a1cd4dd4}{GSN\_\-WIF\_\-API\_\-WLAN\_\-INSTALL\_\-KEY\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 12)
+\item 
+\#define \hyperlink{a00606_ac3cc58bcd4d9098e0ac262ea82b411dd}{GSN\_\-WIF\_\-API\_\-WLAN\_\-REMOVE\_\-KEY\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 13)
+\item 
+\#define \hyperlink{a00606_a0ea898da7168e443e768b28a6fd0bbd7}{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 14)
+\item 
+\#define \hyperlink{a00606_af67ddc2f5d26e57baaadfc05d1928cb0}{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 15)
+\item 
+\#define \hyperlink{a00606_a5029cbbdeeb8c7da8893c2447e44a19f}{GSN\_\-WIF\_\-API\_\-WLAN\_\-PROBE\_\-REQ\_\-IE\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 16)
+\item 
+\#define \hyperlink{a00606_a31be24f62b1eee84f63d1d0fa328dd23}{GSN\_\-WIF\_\-API\_\-WLAN\_\-ASS0C\_\-REQ\_\-IE\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 17)
+\item 
+\#define \hyperlink{a00606_ae77e40031b89eb3bb5fdea3318597f19}{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 18)
+\item 
+\#define \hyperlink{a00606_ae32370bb6df5ef1f64f00e2c104a8913}{GSN\_\-WIF\_\-API\_\-BEACON\_\-MISS\_\-THRESHOLD\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 19)
+\item 
+\#define \hyperlink{a00606_a79cd91d26d1dfdd3b3e00f8568587797}{GSN\_\-WIF\_\-API\_\-SET\_\-COUNTER\_\-MSR\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 20)
+\item 
+\#define \hyperlink{a00606_ad0d1457143b1e60fce103be6d8e28c23}{GSN\_\-WIF\_\-API\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 21)
+\item 
+\#define \hyperlink{a00606_ac0af89f8f1a179902cd2e7a5b7a637ef}{GSN\_\-WIF\_\-API\_\-TKIP\_\-SEQ\_\-NUM\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 22)
+\item 
+\#define \hyperlink{a00606_a35bb3dead77b7a506dd5809fd4ceb4e6}{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATISTICS\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 23)
+\item 
+\#define \hyperlink{a00606_a513b3629b58f0539a9fb6c7b82bee561}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RECV\_\-FILTER\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 24)
+\item 
+\#define \hyperlink{a00606_a99d545c6a379d1d68302b795ea877018}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RTS\_\-ENABLE\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 25)
+\item 
+\#define \hyperlink{a00606_a9109b912102b7d0b17a14b970ed407e1}{GSN\_\-WIF\_\-API\_\-WLAN\_\-ADDBA\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 26)
+\item 
+\#define \hyperlink{a00606_a34c747ff7eeac716d0ab50e7aa73b73a}{GSN\_\-WIF\_\-API\_\-WLAN\_\-DELBA\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 27)
+\item 
+\#define \hyperlink{a00606_aac0a14ca8e9e988f133dfcdb7b497a2f}{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 28)
+\item 
+\#define \hyperlink{a00606_abbcee4d9c543b34111c56ea552d425fb}{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-END\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 29)
+\item 
+\#define \hyperlink{a00606_ad35b5a23c18aba099bcb58f8d97b11df}{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 30)
+\item 
+\#define \hyperlink{a00606_a9397a2ec965fa51d30dacf50c0f1cd1d}{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-END\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 31)
+\item 
+\#define \hyperlink{a00606_a2c95af70d6e37fddd526c78e69a75027}{GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 32)
+\item 
+\#define \hyperlink{a00606_a1b9369f2e6e36e28f622f648eea3386f}{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 33)
+\item 
+\#define \hyperlink{a00606_aba4abf8270641c5b5a406a2648ec1f35}{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 34)
+\item 
+\#define \hyperlink{a00606_adc79bfe57e012e6c591f9f4faa5dc5c7}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 35)
+\item 
+\#define \hyperlink{a00606_ac18b706325a23dd410bf82b1ccddf003}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 36)
+\item 
+\#define \hyperlink{a00606_a7e180abfccc9e86d92337c61fea91008}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 37)
+\item 
+\#define \hyperlink{a00606_a123c74a5314e0994fe78bd39d6ce8e62}{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-CFG\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 38)
+\item 
+\#define \hyperlink{a00606_a5b4151a75aa80c25bfe4e7e8a7c0b30b}{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 39)
+\item 
+\#define \hyperlink{a00606_ada95ef64874e794dadfcf53048e1676e}{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-DAB\_\-DONE\_\-IND\_\-EN\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 40)
+\item 
+\#define \hyperlink{a00606_a2b11495e7a42ebe57c2dbb52caa174be}{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 41)
+\item 
+\#define \hyperlink{a00606_aaa22a6abee1aef348294034350fb93c2}{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 42)
+\item 
+\#define \hyperlink{a00606_aeb820162c0c23597e33fe405490eec14}{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATE\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 43)
+\item 
+\#define \hyperlink{a00606_a966d1c5a360a22f0bc4666e1999f1627}{GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 44)
+\item 
+\#define \hyperlink{a00606_a0f5d7572b7b55ea1ef95405de1a96c6f}{GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 45)
+\item 
+\#define \hyperlink{a00606_a083be1997e604c2fd50a5f603933d9c1}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 46)
+\item 
+\#define \hyperlink{a00606_af138445c1bd5c29a416711575f28f054}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 47)
+\item 
+\#define \hyperlink{a00606_ab9c67f0a15ac24f03be0d69cfdc76f2d}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 48)
+\item 
+\#define \hyperlink{a00606_af768a3727f101af4d6dbee040a9df622}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 49)
+\item 
+\#define \hyperlink{a00606_ae32f5c6804303b9f5281f38db9605ab0}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 50)
+\item 
+\#define \hyperlink{a00606_ac6965464db6080ed747aa8ddcea38fa4}{GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 51)
+\item 
+\#define \hyperlink{a00606_aa834a28f1568a4ca8b78849f2c231bee}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 52)
+\item 
+\#define \hyperlink{a00606_a1bf24556a4e5c2d50882bde783ce8d11}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 53)
+\item 
+\#define \hyperlink{a00606_a1a64e2f0126971b7cb99d8449d403264}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 54)
+\item 
+\#define \hyperlink{a00606_a8a7ad08db4f5e8b8ed8d954a4ab164b1}{GSN\_\-WIF\_\-API\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 55)
+\item 
+\#define \hyperlink{a00606_a4397129f559035aab5a5677031c160fa}{GSN\_\-WIF\_\-API\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 56)
+\item 
+\#define \hyperlink{a00606_a68f6cdb031dae6063c330460e4f89acd}{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-POKE\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 57)
+\item 
+\#define \hyperlink{a00606_af4bb9564cfec03082d7dc43e668df779}{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 58)
+\item 
+\#define \hyperlink{a00606_af3dcd23f15d05b842c5d9b2c26edc0cc}{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 59)
+\item 
+\#define \hyperlink{a00606_a37da2db2071463c312f9e5013115c8c6}{GSN\_\-WIF\_\-API\_\-WLAN\_\-ALLOW\_\-BA}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 60)
+\item 
+\#define \hyperlink{a00606_a6834e5d5979c600347ca1fb9bd01edcf}{GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-START}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-REQ)
+\item 
+\#define \hyperlink{a00606_a3725193a651ad127aa95e6cd4776142a}{GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-END}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)
+\item 
+\#define \hyperlink{a00606_a4235ab97a11c5af4b6fd612919a35aa5}{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 0)
+\item 
+\#define \hyperlink{a00606_af905b59fa8d65ece02d1c3ad08f8e8e0}{GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 1)
+\item 
+\#define \hyperlink{a00606_aecb8f3f1b29bed47468e3462e98d7134}{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 2)
+\item 
+\#define \hyperlink{a00606_a3257f30439daa60e3cbfcebd93b4fcc9}{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-COMPLETE\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 3)
+\item 
+\#define \hyperlink{a00606_ab6d7629ede4a3c3793e60e919097f563}{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-RESP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 4)
+\item 
+\#define \hyperlink{a00606_ad12cca32c3658ab57938340a749d5b44}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-RESP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 5)
+\item 
+\#define \hyperlink{a00606_aa350d110b6d980a01a1556b23af7be4d}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-DONE\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 6)
+\item 
+\#define \hyperlink{a00606_ac5717c171a79a8a3989e00909337a097}{GSN\_\-WIF\_\-API\_\-WLAN\_\-BCN\_\-MISS\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 7)
+\item 
+\#define \hyperlink{a00606_a80cd149f4f96b359f53dbdfd943431c9}{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-CONNECTED\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 8)
+\item 
+\#define \hyperlink{a00606_aa2a74f308fee600db82ab1ae2079975b}{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-DISCONNECTED\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 9)
+\item 
+\#define \hyperlink{a00606_aa9c3f26b1df9c3628d11fd1c9be77617}{GSN\_\-WIF\_\-API\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 10)
+\item 
+\#define \hyperlink{a00606_af666ac0238396dacb1d840f30722e0e0}{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 11)
+\item 
+\#define \hyperlink{a00606_a2badca9f3116f476a7c0a4e70540ddda}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 12)
+\item 
+\#define \hyperlink{a00606_a5d9598cf8c8aacd7bd4887f177b6ab47}{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATS\_\-GET\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 13)
+\item 
+\#define \hyperlink{a00606_a9853dd8e3717d38a6e418711af6ca64b}{GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 14)
+\item 
+\#define \hyperlink{a00606_a9c7f8ddfa90f9193ba9e4687e49849f8}{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 15)
+\item 
+\#define \hyperlink{a00606_a96cdab55830b9edbe1cc69eaa85dc825}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 16)
+\item 
+\#define \hyperlink{a00606_a269e0a872acf675df2554005aed594c3}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 17)
+\item 
+\#define \hyperlink{a00606_ae8ecda1d37b7e28222baad4442fcbdcb}{GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-TIMESTAMP\_\-RST\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 18)
+\item 
+\#define \hyperlink{a00606_a050382039d7970aecd125e5650867a63}{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONT\_\-DECRYPT\_\-FAIL\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 19)
+\item 
+\#define \hyperlink{a00606_ac42ca4847b033a0dd716ba0ea426ac2c}{GSN\_\-WIF\_\-API\_\-WLAN\_\-DAB\_\-DONE\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 20)
+\item 
+\#define \hyperlink{a00606_aa74bbfcfbed9f979db8cb8107c890572}{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 21)
+\item 
+\#define \hyperlink{a00606_a1b36f022c11587b107a5c881b7f4a1bc}{GSN\_\-WIF\_\-API\_\-MAC\_\-STATE\_\-GET\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 22)
+\item 
+\#define \hyperlink{a00606_ade1455cde90120f07f6ce732f8f4edef}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 23)
+\item 
+\#define \hyperlink{a00606_ad2fe3d876eeb0f842b25d997a0ea34ea}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 24)
+\item 
+\#define \hyperlink{a00606_aaae2b9eaaef814ac098dbe0e78b79dcb}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 25)
+\item 
+\#define \hyperlink{a00606_ac189a3913a0937bae3c8d51279d222d8}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 26)
+\item 
+\#define \hyperlink{a00606_ad2dd03a292cee38878b70dff36b5226e}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 27)
+\item 
+\#define \hyperlink{a00606_a76c950c06223a6ea6b05ae45124c7846}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-TX\_\-CFM\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 28)
+\item 
+\#define \hyperlink{a00606_a8766e85ca051694ef429be0992bcb5a5}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 29)
+\item 
+\#define \hyperlink{a00606_ae4403ddde31a8f4999ec840615320aa5}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 30)
+\item 
+\#define \hyperlink{a00606_a0261724e99f5302926d5f1f03cf3cd90}{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 31)
+\item 
+\#define \hyperlink{a00606_a8fcbe024770baf2a76e7b3f9a85c2616}{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 32)
+\item 
+\#define \hyperlink{a00606_adc557f62fc089d3a452741703075a3a9}{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-RSP}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 33)
+\item 
+\#define \hyperlink{a00606_aa1066ce81555519d97215091bf494941}{GSN\_\-WIF\_\-API\_\-WLAN\_\-ASYNC\_\-DISCONNECT\_\-IND}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 34)
+\item 
+\#define \hyperlink{a00606_a50f545f68929ef78001e5172fa1b9feb}{GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-START}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-IND)
+\item 
+\#define \hyperlink{a00606_a0b65635ab7d19cab097030c6a63afac6}{GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-END}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)
+\item 
+\#define \hyperlink{a00636_gaaf48f3ebb3fabb793cc8b5663aff7251}{GSN\_\-WIF\_\-API\_\-ISOTX\_\-BLINK\_\-REQ}~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ 0)
+\begin{DoxyCompactList}\small\item\em ISOTX Control API. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00606_a4fc41bc8b4a53ac4f838a63d82a440cb}{GSN\_\-WIF\_\-API\_\-ISOTX\_\-STOP\_\-REQ}~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ 1)
+\item 
+\#define \hyperlink{a00606_a76d48fe893107985b120f8001db43c86}{GSN\_\-WIF\_\-API\_\-ISOTX\_\-REGWRITE\_\-REQ}~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ 2)
+\item 
+\#define \hyperlink{a00606_a2466920f393b1d4118b179abbbd22304}{GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-START}~GSN\_\-WIF\_\-API\_\-ISOTX\_\-BLINK\_\-REQ
+\item 
+\#define \hyperlink{a00606_a2b181291892e88fc4edb7a8cfca27942}{GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-END}~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)
+\item 
+\#define \hyperlink{a00606_a4d597f3f49ec5c3e0d0cef4ae6c1d206}{GSN\_\-WIF\_\-API\_\-ISOTX\_\-BDAT\_\-IND}~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 0)
+\item 
+\#define \hyperlink{a00606_ac00a78bc5243ffae41de840e417dbbe8}{GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-START}~GSN\_\-WIF\_\-API\_\-ISOTX\_\-BDAT\_\-IND
+\item 
+\#define \hyperlink{a00606_aa96d7be65446e0dadc82d200a3c45c21}{GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-END}~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)
+\item 
+\#define \hyperlink{a00636_ga65249c647288361df35fafec69154f96}{GSN\_\-WIF\_\-API\_\-CAL\_\-RUN}~(GSN\_\-WIF\_\-API\_\-CAL\_\-CTL $|$ 0)
+\begin{DoxyCompactList}\small\item\em CAL Control API. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00606_ae8235399bcb09b9515e753a961d47f1c}{GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-START}~GSN\_\-WIF\_\-API\_\-CAL\_\-RUN
+\item 
+\#define \hyperlink{a00606_a3ecbea43eead2908ddcc145a26ce4b91}{GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-END}~(GSN\_\-WIF\_\-API\_\-CAL\_\-CTL $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)
+\item 
+\#define \hyperlink{a00606_a337d4e3933a595d66bc47526972379af}{GSN\_\-WIF\_\-API\_\-CAL\_\-RUN\_\-RSP}~(GSN\_\-WIF\_\-API\_\-CAL\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 0)
+\item 
+\#define \hyperlink{a00606_a59025d140d6b62b1af0e733dea2bbdd6}{GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-START}~GSN\_\-WIF\_\-API\_\-CAL\_\-RUN\_\-RSP
+\item 
+\#define \hyperlink{a00606_a197b7d6afa8a6ab40f07ac83b9368bda}{GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-END}~(GSN\_\-WIF\_\-API\_\-CAL\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)
+\item 
+\#define \hyperlink{a00636_ga141fe1f244ec03a374f1efba9524991c}{GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-PEEK\_\-REQ}~(GSN\_\-WIF\_\-API\_\-DBG $|$ 0)
+\begin{DoxyCompactList}\small\item\em Debug API. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00606_aab1f1b84f54eb7e095cccb3230190801}{GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-POKE\_\-REQ}~(GSN\_\-WIF\_\-API\_\-DBG $|$ 1)
+\item 
+\#define \hyperlink{a00606_a6bcd7953e56bfbba85dd70749c2bdf53}{GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-READ\_\-REQ}~(GSN\_\-WIF\_\-API\_\-DBG $|$ 2)
+\item 
+\#define \hyperlink{a00606_ac5cf169380b5ecfbecccd7485cc52417}{GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-WRITE\_\-REQ}~(GSN\_\-WIF\_\-API\_\-DBG $|$ 3)
+\item 
+\#define \hyperlink{a00606_a01c1d35b5f839c25f87a9e93b948cd11}{GSN\_\-WIF\_\-API\_\-DBG\_\-EXEC\_\-REQ}~(GSN\_\-WIF\_\-API\_\-DBG $|$ 4)
+\item 
+\#define \hyperlink{a00606_a0aaa70b34aba81a71b8bde80f389cbd0}{GSN\_\-WIF\_\-API\_\-DBG\_\-FLASH\_\-READ\_\-REQ}~(GSN\_\-WIF\_\-API\_\-DBG $|$ 5)
+\item 
+\#define \hyperlink{a00606_a11de83e81df9fc11e0ec10df5b8ac7d2}{GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-WRITE\_\-REQ}~(GSN\_\-WIF\_\-API\_\-DBG $|$ 6)
+\item 
+\#define \hyperlink{a00606_ab417c596bf5f77e5ebc3e01b5be56201}{GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-READ\_\-REQ}~(GSN\_\-WIF\_\-API\_\-DBG $|$ 7)
+\item 
+\#define \hyperlink{a00606_ab5ab029cd4620155e8f98abad7c49f98}{GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-START}~GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-PEEK\_\-REQ
+\item 
+\#define \hyperlink{a00606_af92c532000365e8a7291db06368cc886}{GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-END}~(GSN\_\-WIF\_\-API\_\-DBG $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN WIF API public header. This file contains the public APIs of WLAN control interface. 
+
+Definition in file \hyperlink{a00606_source}{gsn\_\-wif\_\-api.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00606_a4fd6f523cdc97966a77e03a064afec4d}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-154\_\-CTL@{GSN\_\-WIF\_\-API\_\-154\_\-CTL}}
+\index{GSN\_\-WIF\_\-API\_\-154\_\-CTL@{GSN\_\-WIF\_\-API\_\-154\_\-CTL}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-154\_\-CTL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-154\_\-CTL~(GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-CTL $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)}}
+\label{a00606_a4fd6f523cdc97966a77e03a064afec4d}
+
+
+Definition at line 128 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ae32370bb6df5ef1f64f00e2c104a8913}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-BEACON\_\-MISS\_\-THRESHOLD\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-BEACON\_\-MISS\_\-THRESHOLD\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-BEACON\_\-MISS\_\-THRESHOLD\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-BEACON\_\-MISS\_\-THRESHOLD\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-BEACON\_\-MISS\_\-THRESHOLD\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-BEACON\_\-MISS\_\-THRESHOLD\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 19)}}
+\label{a00606_ae32370bb6df5ef1f64f00e2c104a8913}
+
+
+Definition at line 208 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_acc0ff02b6d9aeb7c90ff1db2ef235489}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-CAL\_\-CTL@{GSN\_\-WIF\_\-API\_\-CAL\_\-CTL}}
+\index{GSN\_\-WIF\_\-API\_\-CAL\_\-CTL@{GSN\_\-WIF\_\-API\_\-CAL\_\-CTL}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-CAL\_\-CTL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-CAL\_\-CTL~(GSN\_\-WIF\_\-API\_\-TYPE\_\-CAL\_\-CTL $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)}}
+\label{a00606_acc0ff02b6d9aeb7c90ff1db2ef235489}
+
+
+Definition at line 130 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a337d4e3933a595d66bc47526972379af}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-CAL\_\-RUN\_\-RSP@{GSN\_\-WIF\_\-API\_\-CAL\_\-RUN\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-CAL\_\-RUN\_\-RSP@{GSN\_\-WIF\_\-API\_\-CAL\_\-RUN\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-CAL\_\-RUN\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-CAL\_\-RUN\_\-RSP~(GSN\_\-WIF\_\-API\_\-CAL\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 0)}}
+\label{a00606_a337d4e3933a595d66bc47526972379af}
+
+
+Definition at line 337 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ad0d1457143b1e60fce103be6d8e28c23}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 21)}}
+\label{a00606_ad0d1457143b1e60fce103be6d8e28c23}
+
+
+Definition at line 210 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_afbcdd61ea6cafbc156859b2daeda0bc4}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-DBG@{GSN\_\-WIF\_\-API\_\-DBG}}
+\index{GSN\_\-WIF\_\-API\_\-DBG@{GSN\_\-WIF\_\-API\_\-DBG}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-DBG}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-DBG~(GSN\_\-WIF\_\-API\_\-TYPE\_\-DBG $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)}}
+\label{a00606_afbcdd61ea6cafbc156859b2daeda0bc4}
+
+
+Definition at line 132 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a01c1d35b5f839c25f87a9e93b948cd11}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-DBG\_\-EXEC\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-EXEC\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-DBG\_\-EXEC\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-EXEC\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-DBG\_\-EXEC\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-DBG\_\-EXEC\_\-REQ~(GSN\_\-WIF\_\-API\_\-DBG $|$ 4)}}
+\label{a00606_a01c1d35b5f839c25f87a9e93b948cd11}
+
+
+Definition at line 356 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a0aaa70b34aba81a71b8bde80f389cbd0}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-DBG\_\-FLASH\_\-READ\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-FLASH\_\-READ\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-DBG\_\-FLASH\_\-READ\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-FLASH\_\-READ\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-DBG\_\-FLASH\_\-READ\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-DBG\_\-FLASH\_\-READ\_\-REQ~(GSN\_\-WIF\_\-API\_\-DBG $|$ 5)}}
+\label{a00606_a0aaa70b34aba81a71b8bde80f389cbd0}
+
+
+Definition at line 357 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a6bcd7953e56bfbba85dd70749c2bdf53}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-READ\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-READ\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-READ\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-READ\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-READ\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-READ\_\-REQ~(GSN\_\-WIF\_\-API\_\-DBG $|$ 2)}}
+\label{a00606_a6bcd7953e56bfbba85dd70749c2bdf53}
+
+
+Definition at line 354 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac5cf169380b5ecfbecccd7485cc52417}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-WRITE\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-WRITE\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-WRITE\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-WRITE\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-WRITE\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-DBG\_\-MEM\_\-WRITE\_\-REQ~(GSN\_\-WIF\_\-API\_\-DBG $|$ 3)}}
+\label{a00606_ac5cf169380b5ecfbecccd7485cc52417}
+
+
+Definition at line 355 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ab417c596bf5f77e5ebc3e01b5be56201}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-READ\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-READ\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-READ\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-READ\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-READ\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-READ\_\-REQ~(GSN\_\-WIF\_\-API\_\-DBG $|$ 7)}}
+\label{a00606_ab417c596bf5f77e5ebc3e01b5be56201}
+
+
+Definition at line 359 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a11de83e81df9fc11e0ec10df5b8ac7d2}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-WRITE\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-WRITE\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-WRITE\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-WRITE\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-WRITE\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-DBG\_\-OTP\_\-WRITE\_\-REQ~(GSN\_\-WIF\_\-API\_\-DBG $|$ 6)}}
+\label{a00606_a11de83e81df9fc11e0ec10df5b8ac7d2}
+
+
+Definition at line 358 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aab1f1b84f54eb7e095cccb3230190801}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-POKE\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-POKE\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-POKE\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-POKE\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-POKE\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-POKE\_\-REQ~(GSN\_\-WIF\_\-API\_\-DBG $|$ 1)}}
+\label{a00606_aab1f1b84f54eb7e095cccb3230190801}
+
+
+Definition at line 353 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a4d597f3f49ec5c3e0d0cef4ae6c1d206}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-ISOTX\_\-BDAT\_\-IND@{GSN\_\-WIF\_\-API\_\-ISOTX\_\-BDAT\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-ISOTX\_\-BDAT\_\-IND@{GSN\_\-WIF\_\-API\_\-ISOTX\_\-BDAT\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-ISOTX\_\-BDAT\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-ISOTX\_\-BDAT\_\-IND~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 0)}}
+\label{a00606_a4d597f3f49ec5c3e0d0cef4ae6c1d206}
+
+
+Definition at line 317 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a007ca824d2c96585429e34764c16ab18}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL@{GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL}}
+\index{GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL@{GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL~(GSN\_\-WIF\_\-API\_\-TYPE\_\-ISOTX\_\-CTL $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)}}
+\label{a00606_a007ca824d2c96585429e34764c16ab18}
+
+
+Definition at line 129 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a76d48fe893107985b120f8001db43c86}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-ISOTX\_\-REGWRITE\_\-REQ@{GSN\_\-WIF\_\-API\_\-ISOTX\_\-REGWRITE\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-ISOTX\_\-REGWRITE\_\-REQ@{GSN\_\-WIF\_\-API\_\-ISOTX\_\-REGWRITE\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-ISOTX\_\-REGWRITE\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-ISOTX\_\-REGWRITE\_\-REQ~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ 2)}}
+\label{a00606_a76d48fe893107985b120f8001db43c86}
+
+
+Definition at line 309 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a4fc41bc8b4a53ac4f838a63d82a440cb}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-ISOTX\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-ISOTX\_\-STOP\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-ISOTX\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-ISOTX\_\-STOP\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-ISOTX\_\-STOP\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-ISOTX\_\-STOP\_\-REQ~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ 1)}}
+\label{a00606_a4fc41bc8b4a53ac4f838a63d82a440cb}
+
+
+Definition at line 308 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a1b36f022c11587b107a5c881b7f4a1bc}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-MAC\_\-STATE\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-MAC\_\-STATE\_\-GET\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-MAC\_\-STATE\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-MAC\_\-STATE\_\-GET\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-MAC\_\-STATE\_\-GET\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-MAC\_\-STATE\_\-GET\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 22)}}
+\label{a00606_a1b36f022c11587b107a5c881b7f4a1bc}
+
+
+Definition at line 278 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a79cd91d26d1dfdd3b3e00f8568587797}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SET\_\-COUNTER\_\-MSR\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-SET\_\-COUNTER\_\-MSR\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SET\_\-COUNTER\_\-MSR\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-SET\_\-COUNTER\_\-MSR\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SET\_\-COUNTER\_\-MSR\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SET\_\-COUNTER\_\-MSR\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 20)}}
+\label{a00606_a79cd91d26d1dfdd3b3e00f8568587797}
+
+
+Definition at line 209 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ab78c1ca62426417801be036f56d808fc}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-IND@{GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-IND@{GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-IND~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 12)}}
+\label{a00606_ab78c1ca62426417801be036f56d808fc}
+
+
+Definition at line 175 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a7a2b143bb66de836a2b96e5fb0e35d88}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-BATT\_\-CHK\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 12)}}
+\label{a00606_a7a2b143bb66de836a2b96e5fb0e35d88}
+
+
+Definition at line 156 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_afc607e4455b6d89c4b50f43cb98dc7df}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-IND@{GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-IND@{GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-IND~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 0)}}
+\label{a00606_afc607e4455b6d89c4b50f43cb98dc7df}
+
+
+Definition at line 163 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a681c57c3ba88deec4991fdd5717fa2cc}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-CTL@{GSN\_\-WIF\_\-API\_\-SYS\_\-CTL}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-CTL@{GSN\_\-WIF\_\-API\_\-SYS\_\-CTL}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-CTL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-CTL~(GSN\_\-WIF\_\-API\_\-TYPE\_\-SYS\_\-CTL $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)}}
+\label{a00606_a681c57c3ba88deec4991fdd5717fa2cc}
+
+
+Definition at line 126 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a4535e602c9ce56975b1048ff27f961e2}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 14)}}
+\label{a00606_a4535e602c9ce56975b1048ff27f961e2}
+
+
+Definition at line 157 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a29c102b36af712416a8dcb56e95ddc8f}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-FEATURE\_\-BMAP\_\-RSP~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 14)}}
+\label{a00606_a29c102b36af712416a8dcb56e95ddc8f}
+
+
+Definition at line 176 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a75f465637f58de98ccf4e13109751193}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 7)}}
+\label{a00606_a75f465637f58de98ccf4e13109751193}
+
+
+Definition at line 170 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a15ace3ae6990865d2940c7681642cac6}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-FILE\_\-OP\_\-RSP~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 6)}}
+\label{a00606_a15ace3ae6990865d2940c7681642cac6}
+
+
+Definition at line 150 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a3dbcf8abb5c0ba6ed779472b6af453c0}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 5)}}
+\label{a00606_a3dbcf8abb5c0ba6ed779472b6af453c0}
+
+
+Definition at line 149 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ae890eabe1132a01ac9aa6ef5d5ee105e}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-FW\_\-VERSION\_\-RSP~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 5)}}
+\label{a00606_ae890eabe1132a01ac9aa6ef5d5ee105e}
+
+
+Definition at line 168 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a7a90408cd351147200b5824ceaf21510}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-PAUSE\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-PAUSE\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-PAUSE\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-PAUSE\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-PAUSE\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-PAUSE\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 4)}}
+\label{a00606_a7a90408cd351147200b5824ceaf21510}
+
+
+Definition at line 148 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aba7166569706b2885be26e10411fbdf5}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-RESUME\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-RESUME\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-RESUME\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-RESUME\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-RESUME\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-RESUME\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 4)}}
+\label{a00606_aba7166569706b2885be26e10411fbdf5}
+
+
+Definition at line 167 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a1f4b00a872d92b53f729018f11351fdd}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 2)}}
+\label{a00606_a1f4b00a872d92b53f729018f11351fdd}
+
+
+Definition at line 146 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a211bdbcd29b041f76e896a89fe48cd33}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-START\_\-RSP~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 2)}}
+\label{a00606_a211bdbcd29b041f76e896a89fe48cd33}
+
+
+Definition at line 165 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ae748e4ad237f8544adc73fd54e198742}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 3)}}
+\label{a00606_ae748e4ad237f8544adc73fd54e198742}
+
+
+Definition at line 147 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a1846f96406c429a8ecf8cb1b11c81f71}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-IF\_\-STOP\_\-RSP~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 3)}}
+\label{a00606_a1846f96406c429a8ecf8cb1b11c81f71}
+
+
+Definition at line 166 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a3f3fe0223e46a1f2d66ad838b535fb67}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 10)}}
+\label{a00606_a3f3fe0223e46a1f2d66ad838b535fb67}
+
+
+Definition at line 154 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a19bf52f5120153a8453dd90dab2e78b4}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-READ\_\-RSP~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 11)}}
+\label{a00606_a19bf52f5120153a8453dd90dab2e78b4}
+
+
+Definition at line 174 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a60e546c898b2b9fa3f373311b2edd6a0}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 11)}}
+\label{a00606_a60e546c898b2b9fa3f373311b2edd6a0}
+
+
+Definition at line 155 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a697f00db1242d9669dad03f339dee38a}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-MEM\_\-WRITE\_\-RSP~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 10)}}
+\label{a00606_a697f00db1242d9669dad03f339dee38a}
+
+
+Definition at line 173 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a9e43ea4cb7108ce9d5ff1eb0e3623f58}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 9)}}
+\label{a00606_a9e43ea4cb7108ce9d5ff1eb0e3623f58}
+
+
+Definition at line 153 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a68daa74a2f5d9dd92261db9b44ea3b04}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-READ\_\-RSP~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 9)}}
+\label{a00606_a68daa74a2f5d9dd92261db9b44ea3b04}
+
+
+Definition at line 172 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a2f161fe998e2f4e9293bb9c555d0d6d4}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 8)}}
+\label{a00606_a2f161fe998e2f4e9293bb9c555d0d6d4}
+
+
+Definition at line 152 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a915a87e97514aa78bc1fc481fa52fb13}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-RSP@{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-OTP\_\-WRITE\_\-RSP~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 8)}}
+\label{a00606_a915a87e97514aa78bc1fc481fa52fb13}
+
+
+Definition at line 171 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a23247938aa161b346fd923ce298740fa}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-RESET\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-RESET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-RESET\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-RESET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-RESET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-RESET\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 6)}}
+\label{a00606_a23247938aa161b346fd923ce298740fa}
+
+
+Definition at line 169 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac2fcf63e15733f2b941ed0042282fa07}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-CANCEL\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-CANCEL\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-CANCEL\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-CANCEL\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-CANCEL\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-CANCEL\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 7)}}
+\label{a00606_ac2fcf63e15733f2b941ed0042282fa07}
+
+
+Definition at line 151 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a345e36cd22f979d5658b2810ea85bdae}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-RDY\_\-IND@{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-RDY\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-RDY\_\-IND@{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-RDY\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-RDY\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-RDY\_\-IND~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 1)}}
+\label{a00606_a345e36cd22f979d5658b2810ea85bdae}
+
+
+Definition at line 164 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aac4311cb72fcfd70889bfd3a902e62c9}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-STDBY\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 1)}}
+\label{a00606_aac4311cb72fcfd70889bfd3a902e62c9}
+
+
+Definition at line 145 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac0af89f8f1a179902cd2e7a5b7a637ef}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-TKIP\_\-SEQ\_\-NUM\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-TKIP\_\-SEQ\_\-NUM\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-TKIP\_\-SEQ\_\-NUM\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-TKIP\_\-SEQ\_\-NUM\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TKIP\_\-SEQ\_\-NUM\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TKIP\_\-SEQ\_\-NUM\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 22)}}
+\label{a00606_ac0af89f8f1a179902cd2e7a5b7a637ef}
+
+
+Definition at line 211 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a2df8a6bf01c3126db06c5aeddf23e5be}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-CTL@{GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-CTL}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-CTL@{GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-CTL}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-CTL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-CTL~0x2}}
+\label{a00606_a2df8a6bf01c3126db06c5aeddf23e5be}
+
+
+Definition at line 116 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a6a88e175f21c3151d20d1e6d8d521243}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-DATA@{GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-DATA}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-DATA@{GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-DATA}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-DATA~0x21}}
+\label{a00606_a6a88e175f21c3151d20d1e6d8d521243}
+
+
+Definition at line 121 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac93423f7f5f2de5551ddd87f5bbe304f}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-TYPE\_\-CAL\_\-CTL@{GSN\_\-WIF\_\-API\_\-TYPE\_\-CAL\_\-CTL}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-CAL\_\-CTL@{GSN\_\-WIF\_\-API\_\-TYPE\_\-CAL\_\-CTL}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-CAL\_\-CTL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-CAL\_\-CTL~0x4}}
+\label{a00606_ac93423f7f5f2de5551ddd87f5bbe304f}
+
+
+Definition at line 118 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a727f31d47220e310a75e7c1689ec6c43}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-TYPE\_\-DATA@{GSN\_\-WIF\_\-API\_\-TYPE\_\-DATA}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-DATA@{GSN\_\-WIF\_\-API\_\-TYPE\_\-DATA}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-DATA~0x20}}
+\label{a00606_a727f31d47220e310a75e7c1689ec6c43}
+
+
+Definition at line 120 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac32fa2de29fe87b7f1a6087a3243b8d4}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-TYPE\_\-DBG@{GSN\_\-WIF\_\-API\_\-TYPE\_\-DBG}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-DBG@{GSN\_\-WIF\_\-API\_\-TYPE\_\-DBG}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-DBG}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-DBG~0x30}}
+\label{a00606_ac32fa2de29fe87b7f1a6087a3243b8d4}
+
+
+Definition at line 123 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac0be4ec4d6df42203ffe9726642c57c3}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-TYPE\_\-ISOTX\_\-CTL@{GSN\_\-WIF\_\-API\_\-TYPE\_\-ISOTX\_\-CTL}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-ISOTX\_\-CTL@{GSN\_\-WIF\_\-API\_\-TYPE\_\-ISOTX\_\-CTL}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-ISOTX\_\-CTL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-ISOTX\_\-CTL~0x3}}
+\label{a00606_ac0be4ec4d6df42203ffe9726642c57c3}
+
+
+Definition at line 117 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ad352ae019596522d3c81180b30376724}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-TYPE\_\-SIZE@{GSN\_\-WIF\_\-API\_\-TYPE\_\-SIZE}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-SIZE@{GSN\_\-WIF\_\-API\_\-TYPE\_\-SIZE}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-SIZE~6}}
+\label{a00606_ad352ae019596522d3c81180b30376724}
+
+
+Definition at line 103 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a7feac063dca4c720cff1a1d4c90386c5}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-TYPE\_\-UNUSED@{GSN\_\-WIF\_\-API\_\-TYPE\_\-UNUSED}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-UNUSED@{GSN\_\-WIF\_\-API\_\-TYPE\_\-UNUSED}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-UNUSED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-UNUSED~0x10}}
+\label{a00606_a7feac063dca4c720cff1a1d4c90386c5}
+
+
+Definition at line 119 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a98e877f872668c98c0704efa914d7d17}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-CTL@{GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-CTL}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-CTL@{GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-CTL}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-CTL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-CTL~0x1}}
+\label{a00606_a98e877f872668c98c0704efa914d7d17}
+
+
+Definition at line 115 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a128a138e12d8546c58af101ae73dafc9}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-UNASSOC\_\-DATA@{GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-UNASSOC\_\-DATA}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-UNASSOC\_\-DATA@{GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-UNASSOC\_\-DATA}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-UNASSOC\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-UNASSOC\_\-DATA~0x22}}
+\label{a00606_a128a138e12d8546c58af101ae73dafc9}
+
+
+Definition at line 122 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a9109b912102b7d0b17a14b970ed407e1}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-ADDBA\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-ADDBA\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-ADDBA\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-ADDBA\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-ADDBA\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-ADDBA\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 26)}}
+\label{a00606_a9109b912102b7d0b17a14b970ed407e1}
+
+
+Definition at line 215 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a37da2db2071463c312f9e5013115c8c6}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-ALLOW\_\-BA@{GSN\_\-WIF\_\-API\_\-WLAN\_\-ALLOW\_\-BA}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-ALLOW\_\-BA@{GSN\_\-WIF\_\-API\_\-WLAN\_\-ALLOW\_\-BA}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-ALLOW\_\-BA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-ALLOW\_\-BA~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 60)}}
+\label{a00606_a37da2db2071463c312f9e5013115c8c6}
+
+
+Definition at line 250 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a9397a2ec965fa51d30dacf50c0f1cd1d}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-END\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-END\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-END\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-END\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-END\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-END\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 31)}}
+\label{a00606_a9397a2ec965fa51d30dacf50c0f1cd1d}
+
+
+Definition at line 220 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ad35b5a23c18aba099bcb58f8d97b11df}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-AMPDU\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 30)}}
+\label{a00606_ad35b5a23c18aba099bcb58f8d97b11df}
+
+
+Definition at line 219 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_abbcee4d9c543b34111c56ea552d425fb}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-END\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-END\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-END\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-END\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-END\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-END\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 29)}}
+\label{a00606_abbcee4d9c543b34111c56ea552d425fb}
+
+
+Definition at line 218 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aac0a14ca8e9e988f133dfcdb7b497a2f}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-AMSDU\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 28)}}
+\label{a00606_aac0a14ca8e9e988f133dfcdb7b497a2f}
+
+
+Definition at line 217 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac6965464db6080ed747aa8ddcea38fa4}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 51)}}
+\label{a00606_ac6965464db6080ed747aa8ddcea38fa4}
+
+
+Definition at line 241 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ae8ecda1d37b7e28222baad4442fcbdcb}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-TIMESTAMP\_\-RST\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-TIMESTAMP\_\-RST\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-TIMESTAMP\_\-RST\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-TIMESTAMP\_\-RST\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-TIMESTAMP\_\-RST\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-AP\_\-TIMESTAMP\_\-RST\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 18)}}
+\label{a00606_ae8ecda1d37b7e28222baad4442fcbdcb}
+
+
+Definition at line 274 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a31be24f62b1eee84f63d1d0fa328dd23}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-ASS0C\_\-REQ\_\-IE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-ASS0C\_\-REQ\_\-IE\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-ASS0C\_\-REQ\_\-IE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-ASS0C\_\-REQ\_\-IE\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-ASS0C\_\-REQ\_\-IE\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-ASS0C\_\-REQ\_\-IE\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 17)}}
+\label{a00606_a31be24f62b1eee84f63d1d0fa328dd23}
+
+
+Definition at line 206 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aa1066ce81555519d97215091bf494941}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-ASYNC\_\-DISCONNECT\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-ASYNC\_\-DISCONNECT\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-ASYNC\_\-DISCONNECT\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-ASYNC\_\-DISCONNECT\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-ASYNC\_\-DISCONNECT\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-ASYNC\_\-DISCONNECT\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 34)}}
+\label{a00606_aa1066ce81555519d97215091bf494941}
+
+
+Definition at line 290 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac5717c171a79a8a3989e00909337a097}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-BCN\_\-MISS\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-BCN\_\-MISS\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-BCN\_\-MISS\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-BCN\_\-MISS\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-BCN\_\-MISS\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-BCN\_\-MISS\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 7)}}
+\label{a00606_ac5717c171a79a8a3989e00909337a097}
+
+
+Definition at line 263 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a4235ab97a11c5af4b6fd612919a35aa5}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 0)}}
+\label{a00606_a4235ab97a11c5af4b6fd612919a35aa5}
+
+
+Definition at line 256 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_af666ac0238396dacb1d840f30722e0e0}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECTED\_\-STA\_\-LIST\_\-GET\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 11)}}
+\label{a00606_af666ac0238396dacb1d840f30722e0e0}
+
+
+Definition at line 267 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a050382039d7970aecd125e5650867a63}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-CONT\_\-DECRYPT\_\-FAIL\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONT\_\-DECRYPT\_\-FAIL\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONT\_\-DECRYPT\_\-FAIL\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONT\_\-DECRYPT\_\-FAIL\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONT\_\-DECRYPT\_\-FAIL\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-CONT\_\-DECRYPT\_\-FAIL\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 19)}}
+\label{a00606_a050382039d7970aecd125e5650867a63}
+
+
+Definition at line 275 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a9011cb33556c61d17ed1aa2b70183db8}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL@{GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL@{GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL~(GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-CTL $<$$<$ GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT)}}
+\label{a00606_a9011cb33556c61d17ed1aa2b70183db8}
+
+
+Definition at line 127 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac42ca4847b033a0dd716ba0ea426ac2c}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-DAB\_\-DONE\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-DAB\_\-DONE\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-DAB\_\-DONE\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-DAB\_\-DONE\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-DAB\_\-DONE\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-DAB\_\-DONE\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 20)}}
+\label{a00606_ac42ca4847b033a0dd716ba0ea426ac2c}
+
+
+Definition at line 276 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a34c747ff7eeac716d0ab50e7aa73b73a}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-DELBA\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-DELBA\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-DELBA\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-DELBA\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-DELBA\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-DELBA\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 27)}}
+\label{a00606_a34c747ff7eeac716d0ab50e7aa73b73a}
+
+
+Definition at line 216 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_af905b59fa8d65ece02d1c3ad08f8e8e0}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 1)}}
+\label{a00606_af905b59fa8d65ece02d1c3ad08f8e8e0}
+
+
+Definition at line 257 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a000d192d1af36858dbc749f275d21d9a}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-DISCONNECT\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 1)}}
+\label{a00606_a000d192d1af36858dbc749f275d21d9a}
+
+
+Definition at line 189 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a2c95af70d6e37fddd526c78e69a75027}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 32)}}
+\label{a00606_a2c95af70d6e37fddd526c78e69a75027}
+
+
+Definition at line 221 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a9853dd8e3717d38a6e418711af6ca64b}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 14)}}
+\label{a00606_a9853dd8e3717d38a6e418711af6ca64b}
+
+
+Definition at line 270 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a7391bce85b67103d09002373a1cd4dd4}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-INSTALL\_\-KEY\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-INSTALL\_\-KEY\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-INSTALL\_\-KEY\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-INSTALL\_\-KEY\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-INSTALL\_\-KEY\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-INSTALL\_\-KEY\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 12)}}
+\label{a00606_a7391bce85b67103d09002373a1cd4dd4}
+
+
+Definition at line 201 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a8a7ad08db4f5e8b8ed8d954a4ab164b1}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-KEEP\_\-ALIVE\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 55)}}
+\label{a00606_a8a7ad08db4f5e8b8ed8d954a4ab164b1}
+
+
+Definition at line 245 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_af67ddc2f5d26e57baaadfc05d1928cb0}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 15)}}
+\label{a00606_af67ddc2f5d26e57baaadfc05d1928cb0}
+
+
+Definition at line 204 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ab6d7629ede4a3c3793e60e919097f563}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-RESP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-RESP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-RESP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-RESP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-RESP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-GET\_\-RESP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 4)}}
+\label{a00606_ab6d7629ede4a3c3793e60e919097f563}
+
+
+Definition at line 260 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a0ea898da7168e443e768b28a6fd0bbd7}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-MAC\_\-ADDR\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 14)}}
+\label{a00606_a0ea898da7168e443e768b28a6fd0bbd7}
+
+
+Definition at line 203 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a4397129f559035aab5a5677031c160fa}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-MCST\_\-RX\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 56)}}
+\label{a00606_a4397129f559035aab5a5677031c160fa}
+
+
+Definition at line 246 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_af4bb9564cfec03082d7dc43e668df779}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 58)}}
+\label{a00606_af4bb9564cfec03082d7dc43e668df779}
+
+
+Definition at line 248 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a8fcbe024770baf2a76e7b3f9a85c2616}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-PEEK\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 32)}}
+\label{a00606_a8fcbe024770baf2a76e7b3f9a85c2616}
+
+
+Definition at line 288 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a68f6cdb031dae6063c330460e4f89acd}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-POKE\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-POKE\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-POKE\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-POKE\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-POKE\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-MEM\_\-REG\_\-POKE\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 57)}}
+\label{a00606_a68f6cdb031dae6063c330460e4f89acd}
+
+
+Definition at line 247 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aa9c3f26b1df9c3628d11fd1c9be77617}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 10)}}
+\label{a00606_aa9c3f26b1df9c3628d11fd1c9be77617}
+
+
+Definition at line 266 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aaa22a6abee1aef348294034350fb93c2}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 42)}}
+\label{a00606_aaa22a6abee1aef348294034350fb93c2}
+
+
+Definition at line 232 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aa74bbfcfbed9f979db8cb8107c890572}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-GET\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 21)}}
+\label{a00606_aa74bbfcfbed9f979db8cb8107c890572}
+
+
+Definition at line 277 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a2b11495e7a42ebe57c2dbb52caa174be}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-NUM\_\-RETRY\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 41)}}
+\label{a00606_a2b11495e7a42ebe57c2dbb52caa174be}
+
+
+Definition at line 231 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aba4abf8270641c5b5a406a2648ec1f35}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 34)}}
+\label{a00606_aba4abf8270641c5b5a406a2648ec1f35}
+
+
+Definition at line 223 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a9c7f8ddfa90f9193ba9e4687e49849f8}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-GET\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 15)}}
+\label{a00606_a9c7f8ddfa90f9193ba9e4687e49849f8}
+
+
+Definition at line 271 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a1b9369f2e6e36e28f622f648eea3386f}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-PHY\_\-MODE\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 33)}}
+\label{a00606_a1b9369f2e6e36e28f622f648eea3386f}
+
+
+Definition at line 222 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a5029cbbdeeb8c7da8893c2447e44a19f}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-PROBE\_\-REQ\_\-IE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-PROBE\_\-REQ\_\-IE\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-PROBE\_\-REQ\_\-IE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-PROBE\_\-REQ\_\-IE\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-PROBE\_\-REQ\_\-IE\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-PROBE\_\-REQ\_\-IE\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 16)}}
+\label{a00606_a5029cbbdeeb8c7da8893c2447e44a19f}
+
+
+Definition at line 205 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a513b3629b58f0539a9fb6c7b82bee561}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RECV\_\-FILTER\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RECV\_\-FILTER\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RECV\_\-FILTER\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RECV\_\-FILTER\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RECV\_\-FILTER\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RECV\_\-FILTER\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 24)}}
+\label{a00606_a513b3629b58f0539a9fb6c7b82bee561}
+
+
+Definition at line 213 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac3cc58bcd4d9098e0ac262ea82b411dd}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-REMOVE\_\-KEY\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-REMOVE\_\-KEY\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-REMOVE\_\-KEY\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-REMOVE\_\-KEY\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-REMOVE\_\-KEY\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-REMOVE\_\-KEY\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 13)}}
+\label{a00606_ac3cc58bcd4d9098e0ac262ea82b411dd}
+
+
+Definition at line 202 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a1957a22b168fa365aa4352fa2719cac7}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 8)}}
+\label{a00606_a1957a22b168fa365aa4352fa2719cac7}
+
+
+Definition at line 197 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_acd5783286a3f99614a8e2cf2524484ac}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 4)}}
+\label{a00606_acd5783286a3f99614a8e2cf2524484ac}
+
+
+Definition at line 193 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_afc6cc44ba2e03d4d2ccf0da923c61bd3}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 5)}}
+\label{a00606_afc6cc44ba2e03d4d2ccf0da923c61bd3}
+
+
+Definition at line 194 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ad12cca32c3658ab57938340a749d5b44}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-RESP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-RESP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-RESP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-RESP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-RESP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-RX\_\-STOP\_\-RESP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 5)}}
+\label{a00606_ad12cca32c3658ab57938340a749d5b44}
+
+
+Definition at line 261 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aa350d110b6d980a01a1556b23af7be4d}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-DONE\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-DONE\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-DONE\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-DONE\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-DONE\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-DONE\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 6)}}
+\label{a00606_aa350d110b6d980a01a1556b23af7be4d}
+
+
+Definition at line 262 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aaec020519f654d34567226449b0a872b}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-FRAME\_\-TX\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 2)}}
+\label{a00606_aaec020519f654d34567226449b0a872b}
+
+
+Definition at line 191 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a15863aea319457dd89e563953224c2a8}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 7)}}
+\label{a00606_a15863aea319457dd89e563953224c2a8}
+
+
+Definition at line 196 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_add9a75e673355731d98ddb52d8e969a4}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 6)}}
+\label{a00606_add9a75e673355731d98ddb52d8e969a4}
+
+
+Definition at line 195 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ab5ae3873d5429c2f2aba1d7db6fe1b34}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-TEST\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-TEST\_\-STOP\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-TEST\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-TEST\_\-STOP\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-TEST\_\-STOP\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-TEST\_\-STOP\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 3)}}
+\label{a00606_ab5ae3873d5429c2f2aba1d7db6fe1b34}
+
+
+Definition at line 192 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a7e180abfccc9e86d92337c61fea91008}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 37)}}
+\label{a00606_a7e180abfccc9e86d92337c61fea91008}
+
+
+Definition at line 226 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a269e0a872acf675df2554005aed594c3}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RSSI\_\-GET\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 17)}}
+\label{a00606_a269e0a872acf675df2554005aed594c3}
+
+
+Definition at line 273 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a99d545c6a379d1d68302b795ea877018}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RTS\_\-ENABLE\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RTS\_\-ENABLE\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RTS\_\-ENABLE\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RTS\_\-ENABLE\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RTS\_\-ENABLE\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-RTS\_\-ENABLE\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 25)}}
+\label{a00606_a99d545c6a379d1d68302b795ea877018}
+
+
+Definition at line 214 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a3257f30439daa60e3cbfcebd93b4fcc9}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-COMPLETE\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-COMPLETE\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-COMPLETE\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-COMPLETE\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-COMPLETE\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-COMPLETE\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 3)}}
+\label{a00606_a3257f30439daa60e3cbfcebd93b4fcc9}
+
+
+Definition at line 259 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aecb8f3f1b29bed47468e3462e98d7134}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 2)}}
+\label{a00606_aecb8f3f1b29bed47468e3462e98d7134}
+
+
+Definition at line 258 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ae77e40031b89eb3bb5fdea3318597f19}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-PARAMS\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 18)}}
+\label{a00606_ae77e40031b89eb3bb5fdea3318597f19}
+
+
+Definition at line 207 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a36d04dda650efd1945604cf4e91fc93a}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-SCAN\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 11)}}
+\label{a00606_a36d04dda650efd1945604cf4e91fc93a}
+
+
+Definition at line 200 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a80cd149f4f96b359f53dbdfd943431c9}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-CONNECTED\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-CONNECTED\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-CONNECTED\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-CONNECTED\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-CONNECTED\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-CONNECTED\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 8)}}
+\label{a00606_a80cd149f4f96b359f53dbdfd943431c9}
+
+
+Definition at line 264 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aa2a74f308fee600db82ab1ae2079975b}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-DISCONNECTED\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-DISCONNECTED\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-DISCONNECTED\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-DISCONNECTED\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-DISCONNECTED\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-DISCONNECTED\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 9)}}
+\label{a00606_aa2a74f308fee600db82ab1ae2079975b}
+
+
+Definition at line 265 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a123c74a5314e0994fe78bd39d6ce8e62}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-CFG\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-CFG\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-CFG\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-CFG\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-CFG\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-CFG\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 38)}}
+\label{a00606_a123c74a5314e0994fe78bd39d6ce8e62}
+
+
+Definition at line 227 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ada95ef64874e794dadfcf53048e1676e}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-DAB\_\-DONE\_\-IND\_\-EN\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-DAB\_\-DONE\_\-IND\_\-EN\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-DAB\_\-DONE\_\-IND\_\-EN\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-DAB\_\-DONE\_\-IND\_\-EN\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-DAB\_\-DONE\_\-IND\_\-EN\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-DAB\_\-DONE\_\-IND\_\-EN\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 40)}}
+\label{a00606_ada95ef64874e794dadfcf53048e1676e}
+
+
+Definition at line 229 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_af3dcd23f15d05b842c5d9b2c26edc0cc}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 59)}}
+\label{a00606_af3dcd23f15d05b842c5d9b2c26edc0cc}
+
+
+Definition at line 249 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_adc557f62fc089d3a452741703075a3a9}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-GET\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 33)}}
+\label{a00606_adc557f62fc089d3a452741703075a3a9}
+
+
+Definition at line 289 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a5b4151a75aa80c25bfe4e7e8a7c0b30b}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-STA\_\-PS\_\-STATE\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 39)}}
+\label{a00606_a5b4151a75aa80c25bfe4e7e8a7c0b30b}
+
+
+Definition at line 228 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aeb820162c0c23597e33fe405490eec14}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-STATE\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATE\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATE\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATE\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATE\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-STATE\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 43)}}
+\label{a00606_aeb820162c0c23597e33fe405490eec14}
+
+
+Definition at line 233 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a35bb3dead77b7a506dd5809fd4ceb4e6}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-STATISTICS\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATISTICS\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATISTICS\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATISTICS\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATISTICS\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-STATISTICS\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 23)}}
+\label{a00606_a35bb3dead77b7a506dd5809fd4ceb4e6}
+
+
+Definition at line 212 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a5d9598cf8c8aacd7bd4887f177b6ab47}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-STATS\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATS\_\-GET\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATS\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATS\_\-GET\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-STATS\_\-GET\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-STATS\_\-GET\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 13)}}
+\label{a00606_a5d9598cf8c8aacd7bd4887f177b6ab47}
+
+
+Definition at line 269 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_af97f692c14b16848867464de9e30345b}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 9)}}
+\label{a00606_af97f692c14b16848867464de9e30345b}
+
+
+Definition at line 198 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a9a723d579a54011634bea28aba7c79ab}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-STOP\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-STOP\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-STOP\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TEST\_\-MODE\_\-STOP\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 10)}}
+\label{a00606_a9a723d579a54011634bea28aba7c79ab}
+
+
+Definition at line 199 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a2badca9f3116f476a7c0a4e70540ddda}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 12)}}
+\label{a00606_a2badca9f3116f476a7c0a4e70540ddda}
+
+
+Definition at line 268 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ade1455cde90120f07f6ce732f8f4edef}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 23)}}
+\label{a00606_ade1455cde90120f07f6ce732f8f4edef}
+
+
+Definition at line 279 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a1a64e2f0126971b7cb99d8449d403264}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 54)}}
+\label{a00606_a1a64e2f0126971b7cb99d8449d403264}
+
+
+Definition at line 244 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a0261724e99f5302926d5f1f03cf3cd90}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-GET\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 31)}}
+\label{a00606_a0261724e99f5302926d5f1f03cf3cd90}
+
+
+Definition at line 287 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a1bf24556a4e5c2d50882bde783ce8d11}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-RATE\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 53)}}
+\label{a00606_a1bf24556a4e5c2d50882bde783ce8d11}
+
+
+Definition at line 243 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aa834a28f1568a4ca8b78849f2c231bee}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 52)}}
+\label{a00606_aa834a28f1568a4ca8b78849f2c231bee}
+
+
+Definition at line 242 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ae4403ddde31a8f4999ec840615320aa5}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TX\_\-WAIT\_\-ALL\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 30)}}
+\label{a00606_ae4403ddde31a8f4999ec840615320aa5}
+
+
+Definition at line 286 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac18b706325a23dd410bf82b1ccddf003}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 36)}}
+\label{a00606_ac18b706325a23dd410bf82b1ccddf003}
+
+
+Definition at line 225 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a96cdab55830b9edbe1cc69eaa85dc825}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-GET\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 16)}}
+\label{a00606_a96cdab55830b9edbe1cc69eaa85dc825}
+
+
+Definition at line 272 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_adc79bfe57e012e6c591f9f4faa5dc5c7}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-TXPOWER\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 35)}}
+\label{a00606_adc79bfe57e012e6c591f9f4faa5dc5c7}
+
+
+Definition at line 224 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a083be1997e604c2fd50a5f603933d9c1}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 46)}}
+\label{a00606_a083be1997e604c2fd50a5f603933d9c1}
+
+
+Definition at line 236 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ad2fe3d876eeb0f842b25d997a0ea34ea}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 24)}}
+\label{a00606_ad2fe3d876eeb0f842b25d997a0ea34ea}
+
+
+Definition at line 280 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_af138445c1bd5c29a416711575f28f054}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 47)}}
+\label{a00606_af138445c1bd5c29a416711575f28f054}
+
+
+Definition at line 237 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aaae2b9eaaef814ac098dbe0e78b79dcb}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 25)}}
+\label{a00606_aaae2b9eaaef814ac098dbe0e78b79dcb}
+
+
+Definition at line 281 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ab9c67f0a15ac24f03be0d69cfdc76f2d}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 48)}}
+\label{a00606_ab9c67f0a15ac24f03be0d69cfdc76f2d}
+
+
+Definition at line 238 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a8766e85ca051694ef429be0992bcb5a5}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-CONFIG\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 29)}}
+\label{a00606_a8766e85ca051694ef429be0992bcb5a5}
+
+
+Definition at line 285 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_af768a3727f101af4d6dbee040a9df622}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 49)}}
+\label{a00606_af768a3727f101af4d6dbee040a9df622}
+
+
+Definition at line 239 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac189a3913a0937bae3c8d51279d222d8}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-START\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 26)}}
+\label{a00606_ac189a3913a0937bae3c8d51279d222d8}
+
+
+Definition at line 282 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ae32f5c6804303b9f5281f38db9605ab0}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 50)}}
+\label{a00606_ae32f5c6804303b9f5281f38db9605ab0}
+
+
+Definition at line 240 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ad2dd03a292cee38878b70dff36b5226e}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-RSP}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-RSP@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-RSP}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-RSP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-RX\_\-STOP\_\-RSP~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 27)}}
+\label{a00606_ad2dd03a292cee38878b70dff36b5226e}
+
+
+Definition at line 283 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a76c950c06223a6ea6b05ae45124c7846}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-TX\_\-CFM\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-TX\_\-CFM\_\-IND}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-TX\_\-CFM\_\-IND@{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-TX\_\-CFM\_\-IND}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-TX\_\-CFM\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-TX\_\-CFM\_\-IND~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ 28)}}
+\label{a00606_a76c950c06223a6ea6b05ae45124c7846}
+
+
+Definition at line 284 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a0f5d7572b7b55ea1ef95405de1a96c6f}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-GET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 45)}}
+\label{a00606_a0f5d7572b7b55ea1ef95405de1a96c6f}
+
+
+Definition at line 235 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a966d1c5a360a22f0bc4666e1999f1627}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-SET\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-SET\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-SET\_\-REQ}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-SET\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-WLAN\_\-TX\_\-POW\_\-SET\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 44)}}
+\label{a00606_a966d1c5a360a22f0bc4666e1999f1627}
+
+
+Definition at line 234 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a197b7d6afa8a6ab40f07ac83b9368bda}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-END@{GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-END}}
+\index{GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-END@{GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-END}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-END~(GSN\_\-WIF\_\-API\_\-CAL\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)}}
+\label{a00606_a197b7d6afa8a6ab40f07ac83b9368bda}
+
+
+Definition at line 341 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a59025d140d6b62b1af0e733dea2bbdd6}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-START@{GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-START}}
+\index{GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-START@{GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-START}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-CAL\_\-API\_\-IND\_\-START~GSN\_\-WIF\_\-API\_\-CAL\_\-RUN\_\-RSP}}
+\label{a00606_a59025d140d6b62b1af0e733dea2bbdd6}
+
+
+Definition at line 340 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a3ecbea43eead2908ddcc145a26ce4b91}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-END@{GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-END}}
+\index{GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-END@{GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-END}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-END~(GSN\_\-WIF\_\-API\_\-CAL\_\-CTL $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)}}
+\label{a00606_a3ecbea43eead2908ddcc145a26ce4b91}
+
+
+Definition at line 334 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ae8235399bcb09b9515e753a961d47f1c}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-START@{GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-START}}
+\index{GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-START@{GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-START}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-CAL\_\-API\_\-REQ\_\-START~GSN\_\-WIF\_\-API\_\-CAL\_\-RUN}}
+\label{a00606_ae8235399bcb09b9515e753a961d47f1c}
+
+
+Definition at line 333 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_af92c532000365e8a7291db06368cc886}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-END@{GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-END}}
+\index{GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-END@{GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-END}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-END~(GSN\_\-WIF\_\-API\_\-DBG $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)}}
+\label{a00606_af92c532000365e8a7291db06368cc886}
+
+
+Definition at line 362 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ab5ab029cd4620155e8f98abad7c49f98}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-START@{GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-START}}
+\index{GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-START@{GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-START}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-DBG\_\-API\_\-REQ\_\-START~GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-PEEK\_\-REQ}}
+\label{a00606_ab5ab029cd4620155e8f98abad7c49f98}
+
+
+Definition at line 361 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a6a95cc2947a0ffdd6e579227f44eccb6}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE@{GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE}}
+\index{GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE@{GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE~0x200}}
+\label{a00606_a6a95cc2947a0ffdd6e579227f44eccb6}
+
+
+Definition at line 135 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aa96d7be65446e0dadc82d200a3c45c21}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-END@{GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-END}}
+\index{GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-END@{GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-END}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-END~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)}}
+\label{a00606_aa96d7be65446e0dadc82d200a3c45c21}
+
+
+Definition at line 320 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ac00a78bc5243ffae41de840e417dbbe8}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-START@{GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-START}}
+\index{GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-START@{GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-START}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-ISOTX\_\-API\_\-IND\_\-START~GSN\_\-WIF\_\-API\_\-ISOTX\_\-BDAT\_\-IND}}
+\label{a00606_ac00a78bc5243ffae41de840e417dbbe8}
+
+
+Definition at line 319 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a2b181291892e88fc4edb7a8cfca27942}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-END@{GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-END}}
+\index{GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-END@{GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-END}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-END~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)}}
+\label{a00606_a2b181291892e88fc4edb7a8cfca27942}
+
+
+Definition at line 312 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a2466920f393b1d4118b179abbbd22304}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-START@{GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-START}}
+\index{GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-START@{GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-START}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-ISOTX\_\-API\_\-REQ\_\-START~GSN\_\-WIF\_\-API\_\-ISOTX\_\-BLINK\_\-REQ}}
+\label{a00606_a2466920f393b1d4118b179abbbd22304}
+
+
+Definition at line 311 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_aa998987ec74a3be76345057ed66ca72c}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END@{GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END}}
+\index{GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END@{GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END~(GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE -\/ 1)}}
+\label{a00606_aa998987ec74a3be76345057ed66ca72c}
+
+
+Definition at line 136 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a4b084ace5b4394d9dfbd5f15515942ba}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-END@{GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-END}}
+\index{GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-END@{GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-END}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-END~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)}}
+\label{a00606_a4b084ace5b4394d9dfbd5f15515942ba}
+
+
+Definition at line 179 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a4dfac5bd144fa9e23e0389182df89716}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-START@{GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-START}}
+\index{GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-START@{GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-START}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-SYS\_\-API\_\-IND\_\-START~(GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-IND)}}
+\label{a00606_a4dfac5bd144fa9e23e0389182df89716}
+
+
+Definition at line 178 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_ad4f159041961543262f326993fa41304}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-END@{GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-END}}
+\index{GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-END@{GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-END}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-END~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)}}
+\label{a00606_ad4f159041961543262f326993fa41304}
+
+
+Definition at line 160 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a0b7c07d125cb7a93691b3df400da4260}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-START@{GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-START}}
+\index{GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-START@{GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-START}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-SYS\_\-API\_\-REQ\_\-START~(GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-REQ)}}
+\label{a00606_a0b7c07d125cb7a93691b3df400da4260}
+
+
+Definition at line 159 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a0b65635ab7d19cab097030c6a63afac6}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-END@{GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-END}}
+\index{GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-END@{GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-END}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-END~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-IND\_\-RSP\_\-MSG\_\-TYPE $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)}}
+\label{a00606_a0b65635ab7d19cab097030c6a63afac6}
+
+
+Definition at line 294 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a50f545f68929ef78001e5172fa1b9feb}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-START@{GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-START}}
+\index{GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-START@{GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-START}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-WLAN\_\-API\_\-IND\_\-START~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-IND)}}
+\label{a00606_a50f545f68929ef78001e5172fa1b9feb}
+
+
+Definition at line 293 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a3725193a651ad127aa95e6cd4776142a}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-END@{GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-END}}
+\index{GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-END@{GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-END}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-END~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ GSN\_\-WIF\_\-MSG\_\-TYPE\_\-END)}}
+\label{a00606_a3725193a651ad127aa95e6cd4776142a}
+
+
+Definition at line 253 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00606_a6834e5d5979c600347ca1fb9bd01edcf}{
+\index{gsn\_\-wif\_\-api.h@{gsn\_\-wif\_\-api.h}!GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-START@{GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-START}}
+\index{GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-START@{GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-START}!gsn_wif_api.h@{gsn\_\-wif\_\-api.h}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-WLAN\_\-API\_\-REQ\_\-START~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-REQ)}}
+\label{a00606_a6834e5d5979c600347ca1fb9bd01edcf}
+
+
+Definition at line 252 of file gsn\_\-wif\_\-api.h.
+

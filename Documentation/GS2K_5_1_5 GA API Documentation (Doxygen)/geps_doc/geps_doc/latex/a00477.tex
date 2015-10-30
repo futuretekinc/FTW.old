@@ -1,0 +1,477 @@
+\hypertarget{a00477}{
+\section{gsn\_\-clk\_\-ctl.h File Reference}
+\label{a00477}\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}}
+}
+
+
+GSN CLK CTL API Definitions. This file contains the public APIs definitions and structures of Clock Control driver.  
+
+
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-rtc\_\-spec.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-rtc\_\-op.h\char`\"{}}\par
+Include dependency graph for gsn\_\-clk\_\-ctl.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00701}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00702}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX}
+\begin{DoxyCompactList}\small\item\em GSN CLK CTL Structure. This structure defines a CLK CTL driver handling parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{a00038}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG}
+\begin{DoxyCompactList}\small\item\em GSN CLK CTL CNFG Structure. This structure defines a CLK CTL driver Config parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00477_aa4db632255f1ef5cbe18f32c947d868f}{GSN\_\-CLK\_\-CLT\_\-BASE\_\-ADDR}~0x40070000
+\item 
+\#define \hyperlink{a00477_acb6ca13b15c69b10ce12002e75a8991f}{GSN\_\-CLOCK\_\-STABLE\_\-INT}~38
+\item 
+\#define \hyperlink{a00477_a2040e61f2f25e41f8c4fd747638fecda}{GSN\_\-RTC\_\-BASE\_\-ADDR}~0x41000000
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00644_ga1b0f0bc3777cd50abe5f39797df023b5}{GSN\_\-CLK\_\-SEL} \hyperlink{a00644_gaf4925c33b2dac850008f7d4463760580}{GSN\_\-CLK\_\-SEL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN CLk CTL Types. This enum defines CLK SEL values. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00644_ga53f0e57a2fa30eef772141f9ac772202}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC} \hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN CLk CTL SRC Types. This enum defines CLK SEL SRC values. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX} \hyperlink{a00644_ga9e7d0d37ecaac3d985e5618e1c8c57d5}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN CLK CTL Structure. This structure defines a CLK CTL driver handling parameters. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00038}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG} \hyperlink{a00644_ga8a7770f0cdba320f9d6418cc8419b450}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN CLK CTL CNFG Structure. This structure defines a CLK CTL driver Config parameters. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457d}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL} \hyperlink{a00477_ac0f1ee78197c9b51f46253d4b8eefc02}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00644_ga1b0f0bc3777cd50abe5f39797df023b5}{GSN\_\-CLK\_\-SEL} \{ \par
+\hyperlink{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a6d77f67c5fe2d58a1800d47a3405bdbb}{GSN\_\-CLK\_\-SEL\_\-HS\_\-RC}, 
+\par
+\hyperlink{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a84a3dddc792558a0c75441bf1d6cb991}{GSN\_\-CLK\_\-SEL\_\-HS\_\-XTAL}, 
+\par
+\hyperlink{a00644_gga1b0f0bc3777cd50abe5f39797df023b5a67004660ec5d9c601cb897e7feb94047}{GSN\_\-CLK\_\-SEL\_\-PLL}, 
+\par
+\hyperlink{a00644_gga1b0f0bc3777cd50abe5f39797df023b5acdcf68cddce2291868ff3ad7223e7b05}{GSN\_\-CLK\_\-SEL\_\-LP}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN CLk CTL Types. This enum defines CLK SEL values. \end{DoxyCompactList}\item 
+enum \hyperlink{a00644_ga53f0e57a2fa30eef772141f9ac772202}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC} \{ \par
+\hyperlink{a00644_gga53f0e57a2fa30eef772141f9ac772202a778d05cc32c381d03f443ac3a8cfe4c9}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-NONE} =  0, 
+\par
+\hyperlink{a00644_gga53f0e57a2fa30eef772141f9ac772202a02bb61fbda65f8b12d2a10e7cea70246}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-RC} =  1, 
+\par
+\hyperlink{a00644_gga53f0e57a2fa30eef772141f9ac772202abad63f96e1fa920dacacee0a840414fc}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-HS\_\-XTAL} =  2, 
+\par
+\hyperlink{a00644_gga53f0e57a2fa30eef772141f9ac772202ae43332cf79f679999752978cc45713f3}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-PLL} =  4, 
+\par
+\hyperlink{a00644_gga53f0e57a2fa30eef772141f9ac772202ae05644f7e6452d1a1d374c212763ec06}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-LP} =  8
+ \}
+\begin{DoxyCompactList}\small\item\em GSN CLk CTL SRC Types. This enum defines CLK SEL SRC values. \end{DoxyCompactList}\item 
+enum \hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457d}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL} \{ \par
+\hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457da0132e12ba1bc91c5b657071760c723f4}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-20MHZ}, 
+\par
+\hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457da8db8a779b105aea0193a082f2507ba58}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-40MHZ}, 
+\par
+\hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457da889b43c632745b076cf0f145409e0b67}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-80MHZ}, 
+\par
+\hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457da7fad9ce283fb96ee1265f0ee4c5c54fc}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-96MHZ}, 
+\par
+\hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457da29ef02350be4e713e80dec2077c0d7fb}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-120MHZ}, 
+\par
+\hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457dad5112a6509bb20c9746a0a02bea11ac8}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-137MHZ}, 
+\par
+\hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457da52d9d3e44199c404200eb24d6f6346ab}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-160MHZ}, 
+\par
+\hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457da9c9508a68ac2ec9bfa4412b0198f409f}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-240MHZ}, 
+\par
+\hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457daa7c7f2e2c12dbaf482142c4b451c91b6}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-480MHZ}, 
+\par
+\hyperlink{a00477_a7e6656786e3a4b1ea2697ba42a89457da36e9be2ff782ebf1da92dbd8e1c265d9}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-960MHZ}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$ \hyperlink{a00644_gaef13c343baa0a6f395810efe229e7e31}{GsnClkCtl\_\-CtxGet} ()
+\begin{DoxyCompactList}\small\item\em Clk ctl ctx Get. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00644_ga74a76a16a91b861c57de64bf57b48791}{GsnClkCtl\_\-Init} (\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$clkCtlCtx)
+\begin{DoxyCompactList}\small\item\em ClkCtl Driver init API. This function initializes ref counts, base register ptr and semophore. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00644_ga38236e68d421597db2a20b7de39d16cf}{GsnClkCtl\_\-ClkSrcEnable} (\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$clkCtlCtx, \hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T} src)
+\begin{DoxyCompactList}\small\item\em Clock Source Enable API. This function enables the clock source. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00644_gaa111736e7f1f7c8c3715827b8fa1ee28}{GsnClkCtl\_\-ClkSrcDisable} (\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$clkCtlCtx, \hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T} src)
+\begin{DoxyCompactList}\small\item\em Clock Source Disable API. This function Disable the clock source. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00644_gacacf5da645112b8bc401a79b031eda53}{GsnClkCtl\_\-ClkSrcSwitch} (\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$clkCtlCtx, \hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T} oldSrc, \hyperlink{a00644_ga95d23078ba56d33653b82794ca56f5d6}{GSN\_\-CLK\_\-CTL\_\-CLK\_\-SRC\_\-T} newSrc)
+\begin{DoxyCompactList}\small\item\em Clock Source Switching API. This function switch between old to new clock source. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00644_gab47a206ddcbe7020c38010d7b073d7db}{GsnClkCtl\_\-Cm3ClkCfg} (\hyperlink{a00038}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T} $\ast$cm3ClkCfg)
+\begin{DoxyCompactList}\small\item\em Clock Config API. This function Configures the clock. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00644_ga6198c49f77d396e7cbfe138fa1315674}{GsnClkCtl\_\-Cm3ClkSwitch} (\hyperlink{a00038}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T} $\ast$pCm3ClkCfg, \hyperlink{a00644_gaf4925c33b2dac850008f7d4463760580}{GSN\_\-CLK\_\-SEL\_\-T} newClk)
+\begin{DoxyCompactList}\small\item\em Cm3 Clock Source Switch API. This function switch cm3 clock source. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00477_adf71e276b5ea31c6b657541fc4ee0bc9}{GsnClkCtl\_\-HsRcCal} (\hyperlink{a00038}{GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T} $\ast$pCm3ClkCfg)
+\item 
+INLINE VOID \hyperlink{a00477_a618d2ff082f9713b5c25330978521fd5}{GsnClkCtl\_\-SysPllEn} (\hyperlink{a00477_ac0f1ee78197c9b51f46253d4b8eefc02}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T} freq)
+\item 
+INLINE VOID \hyperlink{a00477_ade29f0d2a451a9c995ad10b07d85f3c4}{GsnClkCtl\_\-SysPllDisable} ()
+\item 
+INLINE VOID \hyperlink{a00477_a5f4a6fbbe3d68f2780d33c5e1d78a655}{GsnClkCtl\_\-AdcPllEn} (\hyperlink{a00477_ac0f1ee78197c9b51f46253d4b8eefc02}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T} freq)
+\item 
+INLINE VOID \hyperlink{a00477_ac739c0f99fb0524282db3d1676c8e0fd}{GsnClkCtl\_\-AdcPllDisable} ()
+\item 
+INLINE VOID \hyperlink{a00477_a7d5f8f21cda19589bb7dc0e3c7df2785}{GsnClkCtl\_\-DacPllEn} (\hyperlink{a00477_ac0f1ee78197c9b51f46253d4b8eefc02}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T} freq)
+\item 
+INLINE VOID \hyperlink{a00477_ac66e8d7d9a4d99c9136c2fed774b064c}{GsnClkCtl\_\-DacPllDisable} ()
+\item 
+INLINE VOID \hyperlink{a00477_af997c6d5edcf89848e43442c744f182b}{GsnClkCtl\_\-Dig5PllEn} (\hyperlink{a00477_ac0f1ee78197c9b51f46253d4b8eefc02}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T} freq)
+\item 
+INLINE VOID \hyperlink{a00477_a6f827ca677bbf56fd7bfffc8791a0fff}{GsnClkCtl\_\-Dig5PllDisable} ()
+\item 
+INLINE VOID \hyperlink{a00477_ad1af5cdcb37f6b830805a2d46388c82e}{GsnClkCtl\_\-Dig4PllEn} (\hyperlink{a00477_ac0f1ee78197c9b51f46253d4b8eefc02}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T} freq)
+\item 
+INLINE VOID \hyperlink{a00477_af249ea88f93e1338674dddef55c1f2dc}{GsnClkCtl\_\-Dig4PllDisable} ()
+\item 
+INLINE VOID \hyperlink{a00477_ac1f7cbd24605ef0ad08562bdc3dabd33}{GsnClkCtl\_\-Dig3PllEn} (\hyperlink{a00477_ac0f1ee78197c9b51f46253d4b8eefc02}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T} freq)
+\item 
+INLINE VOID \hyperlink{a00477_a88ac3f6a8bdaccc213912df6d5bb2183}{GsnClkCtl\_\-Dig3PllDisable} ()
+\item 
+INLINE VOID \hyperlink{a00477_aee9c6554a7c2b12f78f710cde51e6c6d}{GsnClkCtl\_\-Dig2PllEn} (\hyperlink{a00477_ac0f1ee78197c9b51f46253d4b8eefc02}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T} freq)
+\item 
+INLINE VOID \hyperlink{a00477_add84b736b9666d8f634e7e55a15d2d69}{GsnClkCtl\_\-Dig2PllDisable} ()
+\item 
+INLINE VOID \hyperlink{a00477_aff4860c914d33ebb9ddc1524e185bb47}{GsnClkCtl\_\-Dig1PllEn} (\hyperlink{a00477_ac0f1ee78197c9b51f46253d4b8eefc02}{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T} freq)
+\item 
+INLINE VOID \hyperlink{a00477_a8d71fca59c0fa8540b7cb8fb30cadb24}{GsnClkCtl\_\-Dig1PllDisable} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN CLK CTL API Definitions. This file contains the public APIs definitions and structures of Clock Control driver. 
+
+Definition in file \hyperlink{a00477_source}{gsn\_\-clk\_\-ctl.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00477_aa4db632255f1ef5cbe18f32c947d868f}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CLT\_\-BASE\_\-ADDR@{GSN\_\-CLK\_\-CLT\_\-BASE\_\-ADDR}}
+\index{GSN\_\-CLK\_\-CLT\_\-BASE\_\-ADDR@{GSN\_\-CLK\_\-CLT\_\-BASE\_\-ADDR}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GSN\_\-CLK\_\-CLT\_\-BASE\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-CLK\_\-CLT\_\-BASE\_\-ADDR~0x40070000}}
+\label{a00477_aa4db632255f1ef5cbe18f32c947d868f}
+
+
+Definition at line 78 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_acb6ca13b15c69b10ce12002e75a8991f}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLOCK\_\-STABLE\_\-INT@{GSN\_\-CLOCK\_\-STABLE\_\-INT}}
+\index{GSN\_\-CLOCK\_\-STABLE\_\-INT@{GSN\_\-CLOCK\_\-STABLE\_\-INT}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GSN\_\-CLOCK\_\-STABLE\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-CLOCK\_\-STABLE\_\-INT~38}}
+\label{a00477_acb6ca13b15c69b10ce12002e75a8991f}
+
+
+Definition at line 79 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_a2040e61f2f25e41f8c4fd747638fecda}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-RTC\_\-BASE\_\-ADDR@{GSN\_\-RTC\_\-BASE\_\-ADDR}}
+\index{GSN\_\-RTC\_\-BASE\_\-ADDR@{GSN\_\-RTC\_\-BASE\_\-ADDR}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GSN\_\-RTC\_\-BASE\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RTC\_\-BASE\_\-ADDR~0x41000000}}
+\label{a00477_a2040e61f2f25e41f8c4fd747638fecda}
+
+
+Definition at line 80 of file gsn\_\-clk\_\-ctl.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00477_ac0f1ee78197c9b51f46253d4b8eefc02}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}}
+\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL} {\bf GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}}}
+\label{a00477_ac0f1ee78197c9b51f46253d4b8eefc02}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00477_a7e6656786e3a4b1ea2697ba42a89457d}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL}}
+\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL}}}
+\label{a00477_a7e6656786e3a4b1ea2697ba42a89457d}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-20MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-20MHZ}!gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}}\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-20MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-20MHZ}}\item[{\em 
+\hypertarget{a00477_a7e6656786e3a4b1ea2697ba42a89457da0132e12ba1bc91c5b657071760c723f4}{
+GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-20MHZ}
+\label{a00477_a7e6656786e3a4b1ea2697ba42a89457da0132e12ba1bc91c5b657071760c723f4}
+}]\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-40MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-40MHZ}!gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}}\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-40MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-40MHZ}}\item[{\em 
+\hypertarget{a00477_a7e6656786e3a4b1ea2697ba42a89457da8db8a779b105aea0193a082f2507ba58}{
+GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-40MHZ}
+\label{a00477_a7e6656786e3a4b1ea2697ba42a89457da8db8a779b105aea0193a082f2507ba58}
+}]\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-80MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-80MHZ}!gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}}\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-80MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-80MHZ}}\item[{\em 
+\hypertarget{a00477_a7e6656786e3a4b1ea2697ba42a89457da889b43c632745b076cf0f145409e0b67}{
+GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-80MHZ}
+\label{a00477_a7e6656786e3a4b1ea2697ba42a89457da889b43c632745b076cf0f145409e0b67}
+}]\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-96MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-96MHZ}!gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}}\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-96MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-96MHZ}}\item[{\em 
+\hypertarget{a00477_a7e6656786e3a4b1ea2697ba42a89457da7fad9ce283fb96ee1265f0ee4c5c54fc}{
+GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-96MHZ}
+\label{a00477_a7e6656786e3a4b1ea2697ba42a89457da7fad9ce283fb96ee1265f0ee4c5c54fc}
+}]\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-120MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-120MHZ}!gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}}\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-120MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-120MHZ}}\item[{\em 
+\hypertarget{a00477_a7e6656786e3a4b1ea2697ba42a89457da29ef02350be4e713e80dec2077c0d7fb}{
+GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-120MHZ}
+\label{a00477_a7e6656786e3a4b1ea2697ba42a89457da29ef02350be4e713e80dec2077c0d7fb}
+}]\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-137MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-137MHZ}!gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}}\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-137MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-137MHZ}}\item[{\em 
+\hypertarget{a00477_a7e6656786e3a4b1ea2697ba42a89457dad5112a6509bb20c9746a0a02bea11ac8}{
+GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-137MHZ}
+\label{a00477_a7e6656786e3a4b1ea2697ba42a89457dad5112a6509bb20c9746a0a02bea11ac8}
+}]\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-160MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-160MHZ}!gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}}\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-160MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-160MHZ}}\item[{\em 
+\hypertarget{a00477_a7e6656786e3a4b1ea2697ba42a89457da52d9d3e44199c404200eb24d6f6346ab}{
+GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-160MHZ}
+\label{a00477_a7e6656786e3a4b1ea2697ba42a89457da52d9d3e44199c404200eb24d6f6346ab}
+}]\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-240MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-240MHZ}!gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}}\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-240MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-240MHZ}}\item[{\em 
+\hypertarget{a00477_a7e6656786e3a4b1ea2697ba42a89457da9c9508a68ac2ec9bfa4412b0198f409f}{
+GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-240MHZ}
+\label{a00477_a7e6656786e3a4b1ea2697ba42a89457da9c9508a68ac2ec9bfa4412b0198f409f}
+}]\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-480MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-480MHZ}!gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}}\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-480MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-480MHZ}}\item[{\em 
+\hypertarget{a00477_a7e6656786e3a4b1ea2697ba42a89457daa7c7f2e2c12dbaf482142c4b451c91b6}{
+GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-480MHZ}
+\label{a00477_a7e6656786e3a4b1ea2697ba42a89457daa7c7f2e2c12dbaf482142c4b451c91b6}
+}]\index{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-960MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-960MHZ}!gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}}\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-960MHZ@{GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-960MHZ}}\item[{\em 
+\hypertarget{a00477_a7e6656786e3a4b1ea2697ba42a89457da36e9be2ff782ebf1da92dbd8e1c265d9}{
+GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-960MHZ}
+\label{a00477_a7e6656786e3a4b1ea2697ba42a89457da36e9be2ff782ebf1da92dbd8e1c265d9}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 252 of file gsn\_\-clk\_\-ctl.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00477_ac739c0f99fb0524282db3d1676c8e0fd}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-AdcPllDisable@{GsnClkCtl\_\-AdcPllDisable}}
+\index{GsnClkCtl\_\-AdcPllDisable@{GsnClkCtl\_\-AdcPllDisable}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-AdcPllDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-AdcPllDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_ac739c0f99fb0524282db3d1676c8e0fd}
+
+
+Definition at line 283 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_a5f4a6fbbe3d68f2780d33c5e1d78a655}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-AdcPllEn@{GsnClkCtl\_\-AdcPllEn}}
+\index{GsnClkCtl\_\-AdcPllEn@{GsnClkCtl\_\-AdcPllEn}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-AdcPllEn}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-AdcPllEn (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}}]{freq}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_a5f4a6fbbe3d68f2780d33c5e1d78a655}
+
+
+Definition at line 277 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_ac66e8d7d9a4d99c9136c2fed774b064c}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-DacPllDisable@{GsnClkCtl\_\-DacPllDisable}}
+\index{GsnClkCtl\_\-DacPllDisable@{GsnClkCtl\_\-DacPllDisable}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-DacPllDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-DacPllDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_ac66e8d7d9a4d99c9136c2fed774b064c}
+
+
+Definition at line 294 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_a7d5f8f21cda19589bb7dc0e3c7df2785}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-DacPllEn@{GsnClkCtl\_\-DacPllEn}}
+\index{GsnClkCtl\_\-DacPllEn@{GsnClkCtl\_\-DacPllEn}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-DacPllEn}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-DacPllEn (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}}]{freq}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_a7d5f8f21cda19589bb7dc0e3c7df2785}
+
+
+Definition at line 288 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_a8d71fca59c0fa8540b7cb8fb30cadb24}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-Dig1PllDisable@{GsnClkCtl\_\-Dig1PllDisable}}
+\index{GsnClkCtl\_\-Dig1PllDisable@{GsnClkCtl\_\-Dig1PllDisable}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-Dig1PllDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-Dig1PllDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_a8d71fca59c0fa8540b7cb8fb30cadb24}
+
+
+Definition at line 349 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_aff4860c914d33ebb9ddc1524e185bb47}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-Dig1PllEn@{GsnClkCtl\_\-Dig1PllEn}}
+\index{GsnClkCtl\_\-Dig1PllEn@{GsnClkCtl\_\-Dig1PllEn}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-Dig1PllEn}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-Dig1PllEn (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}}]{freq}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_aff4860c914d33ebb9ddc1524e185bb47}
+
+
+Definition at line 343 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_add84b736b9666d8f634e7e55a15d2d69}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-Dig2PllDisable@{GsnClkCtl\_\-Dig2PllDisable}}
+\index{GsnClkCtl\_\-Dig2PllDisable@{GsnClkCtl\_\-Dig2PllDisable}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-Dig2PllDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-Dig2PllDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_add84b736b9666d8f634e7e55a15d2d69}
+
+
+Definition at line 338 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_aee9c6554a7c2b12f78f710cde51e6c6d}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-Dig2PllEn@{GsnClkCtl\_\-Dig2PllEn}}
+\index{GsnClkCtl\_\-Dig2PllEn@{GsnClkCtl\_\-Dig2PllEn}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-Dig2PllEn}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-Dig2PllEn (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}}]{freq}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_aee9c6554a7c2b12f78f710cde51e6c6d}
+
+
+Definition at line 332 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_a88ac3f6a8bdaccc213912df6d5bb2183}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-Dig3PllDisable@{GsnClkCtl\_\-Dig3PllDisable}}
+\index{GsnClkCtl\_\-Dig3PllDisable@{GsnClkCtl\_\-Dig3PllDisable}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-Dig3PllDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-Dig3PllDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_a88ac3f6a8bdaccc213912df6d5bb2183}
+
+
+Definition at line 327 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_ac1f7cbd24605ef0ad08562bdc3dabd33}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-Dig3PllEn@{GsnClkCtl\_\-Dig3PllEn}}
+\index{GsnClkCtl\_\-Dig3PllEn@{GsnClkCtl\_\-Dig3PllEn}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-Dig3PllEn}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-Dig3PllEn (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}}]{freq}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_ac1f7cbd24605ef0ad08562bdc3dabd33}
+
+
+Definition at line 321 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_af249ea88f93e1338674dddef55c1f2dc}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-Dig4PllDisable@{GsnClkCtl\_\-Dig4PllDisable}}
+\index{GsnClkCtl\_\-Dig4PllDisable@{GsnClkCtl\_\-Dig4PllDisable}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-Dig4PllDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-Dig4PllDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_af249ea88f93e1338674dddef55c1f2dc}
+
+
+Definition at line 316 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_ad1af5cdcb37f6b830805a2d46388c82e}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-Dig4PllEn@{GsnClkCtl\_\-Dig4PllEn}}
+\index{GsnClkCtl\_\-Dig4PllEn@{GsnClkCtl\_\-Dig4PllEn}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-Dig4PllEn}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-Dig4PllEn (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}}]{freq}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_ad1af5cdcb37f6b830805a2d46388c82e}
+
+
+Definition at line 310 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_a6f827ca677bbf56fd7bfffc8791a0fff}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-Dig5PllDisable@{GsnClkCtl\_\-Dig5PllDisable}}
+\index{GsnClkCtl\_\-Dig5PllDisable@{GsnClkCtl\_\-Dig5PllDisable}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-Dig5PllDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-Dig5PllDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_a6f827ca677bbf56fd7bfffc8791a0fff}
+
+
+Definition at line 305 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_af997c6d5edcf89848e43442c744f182b}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-Dig5PllEn@{GsnClkCtl\_\-Dig5PllEn}}
+\index{GsnClkCtl\_\-Dig5PllEn@{GsnClkCtl\_\-Dig5PllEn}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-Dig5PllEn}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-Dig5PllEn (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}}]{freq}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_af997c6d5edcf89848e43442c744f182b}
+
+
+Definition at line 299 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_adf71e276b5ea31c6b657541fc4ee0bc9}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-HsRcCal@{GsnClkCtl\_\-HsRcCal}}
+\index{GsnClkCtl\_\-HsRcCal@{GsnClkCtl\_\-HsRcCal}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-HsRcCal}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnClkCtl\_\-HsRcCal (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-CM3\_\-CLK\_\-CFG\_\-T} $\ast$}]{pCm3ClkCfg}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_adf71e276b5ea31c6b657541fc4ee0bc9}
+\hypertarget{a00477_ade29f0d2a451a9c995ad10b07d85f3c4}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-SysPllDisable@{GsnClkCtl\_\-SysPllDisable}}
+\index{GsnClkCtl\_\-SysPllDisable@{GsnClkCtl\_\-SysPllDisable}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-SysPllDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-SysPllDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_ade29f0d2a451a9c995ad10b07d85f3c4}
+
+
+Definition at line 272 of file gsn\_\-clk\_\-ctl.h.
+
+\hypertarget{a00477_a618d2ff082f9713b5c25330978521fd5}{
+\index{gsn\_\-clk\_\-ctl.h@{gsn\_\-clk\_\-ctl.h}!GsnClkCtl\_\-SysPllEn@{GsnClkCtl\_\-SysPllEn}}
+\index{GsnClkCtl\_\-SysPllEn@{GsnClkCtl\_\-SysPllEn}!gsn_clk_ctl.h@{gsn\_\-clk\_\-ctl.h}}
+\subsubsection[{GsnClkCtl\_\-SysPllEn}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnClkCtl\_\-SysPllEn (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-CLK\_\-CTL\_\-PLL\_\-FREQ\_\-SEL\_\-T}}]{freq}
+\end{DoxyParamCaption}
+)}}
+\label{a00477_a618d2ff082f9713b5c25330978521fd5}
+
+
+Definition at line 266 of file gsn\_\-clk\_\-ctl.h.
+

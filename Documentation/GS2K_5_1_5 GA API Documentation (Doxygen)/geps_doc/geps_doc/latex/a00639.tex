@@ -1,0 +1,907 @@
+\hypertarget{a00639}{
+\section{GSN SOC Platform Configuration}
+\label{a00639}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00348}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Boot Indication Message. \end{DoxyCompactList}\item 
+struct \hyperlink{a00347}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-S}
+\begin{DoxyCompactList}\small\item\em boot indication msg format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00353}{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Start Interface Message. \end{DoxyCompactList}\item 
+struct \hyperlink{a00355}{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Stop Interface Message. \end{DoxyCompactList}\item 
+struct \hyperlink{a00360}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em opt write command format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00361}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-S}
+\begin{DoxyCompactList}\small\item\em opt write command acknowledge format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00358}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em opt read command format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00359}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-S}
+\begin{DoxyCompactList}\small\item\em opt read command acknowledge format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00357}{GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Memory/Reg read/Write command format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00350}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em File Operation Request. \end{DoxyCompactList}\item 
+struct \hyperlink{a00351}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}
+\begin{DoxyCompactList}\small\item\em File Operation Response. \end{DoxyCompactList}\item 
+struct \hyperlink{a00364}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Standby request msg format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00363}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-S}
+\item 
+struct \hyperlink{a00346}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Battery Measurement Deatials. \end{DoxyCompactList}\item 
+struct \hyperlink{a00345}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-S}
+\begin{DoxyCompactList}\small\item\em Battery Measurement Deatials. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00639_ga89d2e01544259ce81d97d4161d5f3c51}{GSN\_\-WIF\_\-SYS\_\-CTL\_\-DEV\_\-INDEX}~0xff
+\begin{DoxyCompactList}\small\item\em sysctl device number \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00639_ga36af0a76d3b3d7cad5c5dd1f60c39091}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON} \hyperlink{a00639_ga213ad232655e90fd6ca561d772ef7b96}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON\_\-T}
+\begin{DoxyCompactList}\small\item\em Boot reason. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_gaf19dc62e1c923b6383337e8e8296c242}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT} \hyperlink{a00639_ga0c8b91590ceaee6ceb3d5267d191318d}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-T}
+\begin{DoxyCompactList}\small\item\em Normal boot reason. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga9d8caf6999c8508aaf8d3b414693a0a2}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET} \hyperlink{a00639_ga932935c40cc08491352069856307cf6e}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-T}
+\begin{DoxyCompactList}\small\item\em SW Reset boot reason. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga93cc8ed01d7724e043b553774ec3df16}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET} \hyperlink{a00639_ga1e2be305dad8c272f3e260243e3af8fe}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-T}
+\begin{DoxyCompactList}\small\item\em Watchdog boot reason. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga9447df4a60ba9be14d372720213b2c23}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP} \hyperlink{a00639_ga908aa6facf38cbcd28fae2a91d83d4e7}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-T}
+\begin{DoxyCompactList}\small\item\em Exception boot reason. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga39cb2f02fc6abae8ae5a431aa24944c0}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS} \hyperlink{a00639_ga0a757a76eb611c307f5c94e57d0a462a}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em FWUP download status. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga8df4566faa9edce0748124e2d08c1efe}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS} \hyperlink{a00639_ga48fd5cab26a503fd58913132ff62487b}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em FWUP other status. Enumeration of other Firmware Update status options. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_gaa1aae8d2007a2f4b746672dbc9c8efbb}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE} \hyperlink{a00639_gaa8a4795d26e385102aa6e91b2a088c6d}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em host interface type Enumeration of host interface types \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00348}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S} \hyperlink{a00639_ga1d3de3e01c42d56351a808bbea56786d}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Boot Indication Message. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00347}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-S} \hyperlink{a00639_gad38929b3e09d60d08210d2b83a89b43f}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-T}
+\begin{DoxyCompactList}\small\item\em boot indication msg format. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga5b5ea6b444509449484db8bf22612b98}{GSN\_\-WIF\_\-IF\_\-STATE\_\-S} \hyperlink{a00639_ga7ff7134a0bdba9e91d4edf9cea797de7}{GSN\_\-WIF\_\-IF\_\-STATE\_\-T}
+\begin{DoxyCompactList}\small\item\em L2 Interface state. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00353}{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S} \hyperlink{a00639_gae60d074a50101f9b50a01707e3d4f437}{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Start Interface Message. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00355}{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-S} \hyperlink{a00639_ga1e2d9e30a2dac9894c1d8c54d6b2b68e}{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Stop Interface Message. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga24ebbde6925db9b03e4648c99be320b4}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-E} \hyperlink{a00639_ga87b927b7d702c16024b46557013dbb64}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-T}
+\begin{DoxyCompactList}\small\item\em File Operation codes. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00360}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-S} \hyperlink{a00639_gaa1cf18e499f7fd325969144c10fdd54a}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em opt write command format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00361}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-S} \hyperlink{a00639_gac6f93d0889c0fdbf82aa2e0af7c0d988}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-T}
+\begin{DoxyCompactList}\small\item\em opt write command acknowledge format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00358}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-S} \hyperlink{a00639_gab7804e5393f417c861691706760684ef}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em opt read command format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00359}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-S} \hyperlink{a00639_gae38db03f3f15f58fb7e7d6bcdc07474a}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-T}
+\begin{DoxyCompactList}\small\item\em opt read command acknowledge format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00357}{GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-S} \hyperlink{a00639_ga9e7044ea584df3b45c6e9811e5de6731}{GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Memory/Reg read/Write command format. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga4ab9f7b6980d4b5c3f3a0199250b8923}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-E} \hyperlink{a00639_gafae04713b42d9bf1e40e2f94397416e3}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em File Operation result codes. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_gac5b276b2a9ea66f27afb0f35e0e75257}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-E} \hyperlink{a00639_ga7719428a1c7dead37acbe115df44fad9}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-T}
+\begin{DoxyCompactList}\small\item\em File Operation flags. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00350}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-S} \hyperlink{a00639_ga1808a8f4a69150d0761c6d965d5527d0}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em File Operation Request. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00351}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S} \hyperlink{a00639_gace03eed872f0520e74fbcb1eb8faa065}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-T}
+\begin{DoxyCompactList}\small\item\em File Operation Response. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00364}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S} \hyperlink{a00639_gac5574c4a3e73dabf551d5bdbe8a1c59e}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Standby request msg format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00363}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-S} \hyperlink{a00639_ga682020519e40d5d988f8edece8ec693c}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-T}
+\item 
+typedef struct \hyperlink{a00346}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-S} \hyperlink{a00639_ga5da12fbc2ff8e811daefb22efe2ea035}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Battery Measurement Deatials. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00345}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-S} \hyperlink{a00639_gad097596826952565d80cccae8d9f10c0}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-T}
+\begin{DoxyCompactList}\small\item\em Battery Measurement Deatials. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00639_ga36af0a76d3b3d7cad5c5dd1f60c39091}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON} \{ \par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091ac285fff9dba8dc2ba60fdacd33619829}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FIRST\_\-BOOT} =  0, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091aeb9feea283c362b0c0e9d78bb5762bb2}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-NORMAL\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a398f4e2af9200a6c92a0e5efdbfa72bd}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FW\_\-UPDATE\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a00a2ab01a491601e24d1609e84d51f50}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WATCHDOG\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a4a77c0d04ab7ee1c0aeb06b46bf3127c}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SW\_\-RESET\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a57c1bc088be599019fbc84f6a8691480}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXCEPTION\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a091d2c23baba77524f56e8160707ea37}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXT\_\-RESET\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a1bf68122c5be8c2214712adf99074a86}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-DBG\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a56db5479c0f77a1912d28b8515263fa4}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WLAN\_\-TEST\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a6ae80cef6eb41a7eaa9581ff6dab4d2d}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FACTORY\_\-FW\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a69530a2da30366e453bf136a6ef32df0}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CORE\_\-BROWNOUT\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091af069096b1d74063e2a81f51cb9de8d63}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CRYPTO\_\-SW\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a3105a241e957797a7f6042c7c77b197c}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SRC\_\-MAX}
+ \}
+\begin{DoxyCompactList}\small\item\em Boot reason. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_gaf19dc62e1c923b6383337e8e8296c242}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT} \{ \par
+\hyperlink{a00639_ggaf19dc62e1c923b6383337e8e8296c242aaa34679749818c0b6b49589c05b1d2d8}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-RTC} =  0, 
+\par
+\hyperlink{a00639_ggaf19dc62e1c923b6383337e8e8296c242ab0c3999cf0b0db563677fc197d848d5f}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-ALARM} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em Normal boot reason. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga9d8caf6999c8508aaf8d3b414693a0a2}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET} \{ \par
+\hyperlink{a00639_gga9d8caf6999c8508aaf8d3b414693a0a2a5fa5611bcc8a6b4df4bd0210e6f861d0}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-WLAN} =  0x1, 
+\par
+\hyperlink{a00639_gga9d8caf6999c8508aaf8d3b414693a0a2ae91706337a69766a937c6ce4d5934cdd}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-APP} =  0x2
+ \}
+\begin{DoxyCompactList}\small\item\em SW Reset boot reason. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga93cc8ed01d7724e043b553774ec3df16}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET} \{ \par
+\hyperlink{a00639_gga93cc8ed01d7724e043b553774ec3df16a5b3dea32336a204e17485b63635d0fba}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-WLAN} =  0x1, 
+\par
+\hyperlink{a00639_gga93cc8ed01d7724e043b553774ec3df16ab015077ed326c799fa21c7fc48115940}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-APP} =  0x2
+ \}
+\begin{DoxyCompactList}\small\item\em Watchdog boot reason. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga9447df4a60ba9be14d372720213b2c23}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP} \{ \par
+\hyperlink{a00639_gga9447df4a60ba9be14d372720213b2c23abc4bb520cfdd57e022e7e5e2b2a5f555}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ABORT} =  0, 
+\par
+\hyperlink{a00639_gga9447df4a60ba9be14d372720213b2c23a488c8769b3249bdb8329bb1bbdaaea86}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ASSERT} =  1, 
+\par
+\hyperlink{a00639_gga9447df4a60ba9be14d372720213b2c23acb5b82fa9415893bb5fd62f0c514d290}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ABORT} =  2, 
+\par
+\hyperlink{a00639_gga9447df4a60ba9be14d372720213b2c23a51c2d92fe86618628ee3208796512b03}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ASSERT} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em Exception boot reason. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga39cb2f02fc6abae8ae5a431aa24944c0}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS} \{ \par
+\hyperlink{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a20c7f10721b308522548859ef16917e7}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SUCCESS} =  0, 
+\par
+\hyperlink{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a9dd90ed3f631644b1d936a9844d7eaab}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-CHKSUM\_\-ERROR}, 
+\par
+\hyperlink{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a6fcf93a4efae3973b0142a839ebb654b}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-FLASH\_\-FAIL}, 
+\par
+\hyperlink{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a6b82080d96a8397aceb85f9ecc03bf78}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SWAP\_\-ERROR}
+ \}
+\begin{DoxyCompactList}\small\item\em FWUP download status. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga8df4566faa9edce0748124e2d08c1efe}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS} \{ \par
+\hyperlink{a00639_gga8df4566faa9edce0748124e2d08c1efea7bd77a34da3f7cf36884f4ed738101c5}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-NO\_\-ERROR} =  0, 
+\par
+\hyperlink{a00639_gga8df4566faa9edce0748124e2d08c1efeabf7f11d1ce41bb8d8cba0dff0b3df92a}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-TIMEOUT}, 
+\par
+\hyperlink{a00639_gga8df4566faa9edce0748124e2d08c1efeaa6cd7e26354e8e53f8a1cb9c94a7ad54}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-SEQNUM}, 
+\par
+\hyperlink{a00639_gga8df4566faa9edce0748124e2d08c1efead2bdb2dd956827ac45f9dab635622eae}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-PARAMS}
+ \}
+\begin{DoxyCompactList}\small\item\em FWUP other status. Enumeration of other Firmware Update status options. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_gaa1aae8d2007a2f4b746672dbc9c8efbb}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE} \{ \par
+\hyperlink{a00639_ggaa1aae8d2007a2f4b746672dbc9c8efbbaef814f4355ae06b21e9b99429e4e32e1}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-MB} =  0, 
+\par
+\hyperlink{a00639_ggaa1aae8d2007a2f4b746672dbc9c8efbba9d391bc48ffc1354dc5af474787f9f09}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-UART} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em host interface type Enumeration of host interface types \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga5b5ea6b444509449484db8bf22612b98}{GSN\_\-WIF\_\-IF\_\-STATE\_\-S} \{ \par
+\hyperlink{a00639_gga5b5ea6b444509449484db8bf22612b98aa658b0b0b1fc66453cc3aabbf296110e}{GSN\_\-WIF\_\-IF\_\-STATE\_\-NOT\_\-INITED} =  0, 
+\par
+\hyperlink{a00639_gga5b5ea6b444509449484db8bf22612b98aef6747e4a65b293ee9bee94928ec1e1a}{GSN\_\-WIF\_\-IF\_\-STATE\_\-SUSPENDED}, 
+\par
+\hyperlink{a00639_gga5b5ea6b444509449484db8bf22612b98a53425b647ada0e1a9e599d699b20cebf}{GSN\_\-WIF\_\-IF\_\-STATE\_\-RUNNING}, 
+\par
+\hyperlink{a00639_gga5b5ea6b444509449484db8bf22612b98a772f04af861bc5f56c255305c5354365}{GSN\_\-WIF\_\-IF\_\-STATE\_\-STOP\_\-REQUESTED\_\-WAITING\_\-FOR\_\-TX\_\-COMPLETION}, 
+\par
+\hyperlink{a00639_gga5b5ea6b444509449484db8bf22612b98a993c121d2959bd02efde4f10104b0ad3}{GSN\_\-WIF\_\-IF\_\-STATE\_\-STOPPED}
+ \}
+\begin{DoxyCompactList}\small\item\em L2 Interface state. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga24ebbde6925db9b03e4648c99be320b4}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-E} \{ \par
+\hyperlink{a00639_gga24ebbde6925db9b03e4648c99be320b4a9297e545d68f2bbfb23886d76258954d}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-OPEN} =  0, 
+\par
+\hyperlink{a00639_gga24ebbde6925db9b03e4648c99be320b4a8fda2104e936080f682793861eed2af2}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-CLOSE} =  1, 
+\par
+\hyperlink{a00639_gga24ebbde6925db9b03e4648c99be320b4a80cebc45da04e421658eb57baa0b75df}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-READ} =  2, 
+\par
+\hyperlink{a00639_gga24ebbde6925db9b03e4648c99be320b4a000e53ca67ec09e29f77da0415fe675e}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-WRITE} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em File Operation codes. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga4ab9f7b6980d4b5c3f3a0199250b8923}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-E} \{ \hyperlink{a00639_gga4ab9f7b6980d4b5c3f3a0199250b8923a8f28cfe76fca5043418aaa6eaeec9e0a}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-SUCCESS} =  0
+ \}
+\begin{DoxyCompactList}\small\item\em File Operation result codes. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_gac5b276b2a9ea66f27afb0f35e0e75257}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-E} \{ \par
+\hyperlink{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a70c4828a84c7b58dbd61131c8bebfb1a}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-CREAT} =  1, 
+\par
+\hyperlink{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a3e3b02fa7233e93586c27fd95a8395aa}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RD}, 
+\par
+\hyperlink{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a0afd71ef921c94f1b97cf8722f9235a4}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-WR}, 
+\par
+\hyperlink{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257aea0bd02aef90199065c6bbe0d4c84c21}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RDWR}, 
+\par
+\hyperlink{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257acaacf27fc6f8dbce410f3651a6d9952c}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-DEL}
+ \}
+\begin{DoxyCompactList}\small\item\em File Operation flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+END of coresvcdoc.
+
+This group of APIs provides system control definitions like access to chip bootup info, Standby and reset, alarm indications, RTC memory, system time, and battery status. 
+
+\subsection{Define Documentation}
+\hypertarget{a00639_ga89d2e01544259ce81d97d4161d5f3c51}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-CTL\_\-DEV\_\-INDEX@{GSN\_\-WIF\_\-SYS\_\-CTL\_\-DEV\_\-INDEX}}
+\index{GSN\_\-WIF\_\-SYS\_\-CTL\_\-DEV\_\-INDEX@{GSN\_\-WIF\_\-SYS\_\-CTL\_\-DEV\_\-INDEX}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-CTL\_\-DEV\_\-INDEX}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-SYS\_\-CTL\_\-DEV\_\-INDEX~0xff}}
+\label{a00639_ga89d2e01544259ce81d97d4161d5f3c51}
+
+
+sysctl device number 
+
+all sys control response messages will have this number in dev index field 
+
+Definition at line 107 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00639_ga7ff7134a0bdba9e91d4edf9cea797de7}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-IF\_\-STATE\_\-T@{GSN\_\-WIF\_\-IF\_\-STATE\_\-T}}
+\index{GSN\_\-WIF\_\-IF\_\-STATE\_\-T@{GSN\_\-WIF\_\-IF\_\-STATE\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-IF\_\-STATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-IF\_\-STATE\_\-S}  {\bf GSN\_\-WIF\_\-IF\_\-STATE\_\-T}}}
+\label{a00639_ga7ff7134a0bdba9e91d4edf9cea797de7}
+
+
+L2 Interface state. 
+
+Layer-\/2 interface state \hypertarget{a00639_gad097596826952565d80cccae8d9f10c0}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-T@{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-T@{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-S} {\bf GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-T}}}
+\label{a00639_gad097596826952565d80cccae8d9f10c0}
+
+
+Battery Measurement Deatials. 
+
+This structure defines the Battery measurement Indication format. \hypertarget{a00639_ga5da12fbc2ff8e811daefb22efe2ea035}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-T}}}
+\label{a00639_ga5da12fbc2ff8e811daefb22efe2ea035}
+
+
+Battery Measurement Deatials. 
+
+This structure defines the Battery measurement Start cmd format. \hypertarget{a00639_gad38929b3e09d60d08210d2b83a89b43f}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-T}}}
+\label{a00639_gad38929b3e09d60d08210d2b83a89b43f}
+
+
+boot indication msg format. 
+
+boot indication msg format \hypertarget{a00639_ga213ad232655e90fd6ca561d772ef7b96}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON}  {\bf GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON\_\-T}}}
+\label{a00639_ga213ad232655e90fd6ca561d772ef7b96}
+
+
+Boot reason. 
+
+enumeration containing the reason for the latest SOC boot. \hypertarget{a00639_ga1d3de3e01c42d56351a808bbea56786d}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-T}}}
+\label{a00639_ga1d3de3e01c42d56351a808bbea56786d}
+
+
+Boot Indication Message. 
+
+APP puts this boot indication into ctl-\/rdy queue and release WLAN CPU reset. The WLAN CPU boots up and reads this message and performs some internal configuration. \hypertarget{a00639_ga908aa6facf38cbcd28fae2a91d83d4e7}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP}  {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-T}}}
+\label{a00639_ga908aa6facf38cbcd28fae2a91d83d4e7}
+
+
+Exception boot reason. 
+
+Enumeration of possible reasons for bootup after a CPU exception. \hypertarget{a00639_ga0a757a76eb611c307f5c94e57d0a462a}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS}  {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS\_\-T}}}
+\label{a00639_ga0a757a76eb611c307f5c94e57d0a462a}
+
+
+FWUP download status. 
+
+Enumeration of possible status after a Firmware Update. \hypertarget{a00639_ga48fd5cab26a503fd58913132ff62487b}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS}  {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS\_\-T}}}
+\label{a00639_ga48fd5cab26a503fd58913132ff62487b}
+
+
+FWUP other status. Enumeration of other Firmware Update status options. 
+
+\hypertarget{a00639_gaa8a4795d26e385102aa6e91b2a088c6d}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE}  {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-T}}}
+\label{a00639_gaa8a4795d26e385102aa6e91b2a088c6d}
+
+
+host interface type Enumeration of host interface types 
+
+\hypertarget{a00639_ga0c8b91590ceaee6ceb3d5267d191318d}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT}  {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-T}}}
+\label{a00639_ga0c8b91590ceaee6ceb3d5267d191318d}
+
+
+Normal boot reason. 
+
+Enumeration of possible reasons for normal bootup (timeout or alarm). \hypertarget{a00639_ga932935c40cc08491352069856307cf6e}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET}  {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-T}}}
+\label{a00639_ga932935c40cc08491352069856307cf6e}
+
+
+SW Reset boot reason. 
+
+Enumeration of possible reasons for bootup after a software reset. \hypertarget{a00639_ga1e2be305dad8c272f3e260243e3af8fe}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-T@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET}  {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-T}}}
+\label{a00639_ga1e2be305dad8c272f3e260243e3af8fe}
+
+
+Watchdog boot reason. 
+
+Enumeration of possible reasons for bootup after a Watchdog timer reset. \hypertarget{a00639_ga7719428a1c7dead37acbe115df44fad9}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-E}  {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-T}}}
+\label{a00639_ga7719428a1c7dead37acbe115df44fad9}
+
+
+File Operation flags. 
+
+Special flags for file operation. This is a bitmap, so multiple operations could be requested. \hypertarget{a00639_ga1808a8f4a69150d0761c6d965d5527d0}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-T}}}
+\label{a00639_ga1808a8f4a69150d0761c6d965d5527d0}
+
+
+File Operation Request. 
+
+WLAN sends this message to APP to request a file operation. \hypertarget{a00639_gace03eed872f0520e74fbcb1eb8faa065}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-T}}}
+\label{a00639_gace03eed872f0520e74fbcb1eb8faa065}
+
+
+File Operation Response. 
+
+APP sends this message to WLAN as a response of file operation. \hypertarget{a00639_gafae04713b42d9bf1e40e2f94397416e3}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-E}  {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-T}}}
+\label{a00639_gafae04713b42d9bf1e40e2f94397416e3}
+
+
+File Operation result codes. 
+
+Types for file operation result. \hypertarget{a00639_ga87b927b7d702c16024b46557013dbb64}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-E}  {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-T}}}
+\label{a00639_ga87b927b7d702c16024b46557013dbb64}
+
+
+File Operation codes. 
+
+Types for file operation. \hypertarget{a00639_gae60d074a50101f9b50a01707e3d4f437}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-T}}}
+\label{a00639_gae60d074a50101f9b50a01707e3d4f437}
+
+
+Start Interface Message. 
+
+APP sends this message to WFW to start an interface. \hypertarget{a00639_ga1e2d9e30a2dac9894c1d8c54d6b2b68e}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-T}}}
+\label{a00639_ga1e2d9e30a2dac9894c1d8c54d6b2b68e}
+
+
+Stop Interface Message. 
+
+APP sends this message to WFW to stop an interface. \hypertarget{a00639_ga9e7044ea584df3b45c6e9811e5de6731}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-S} {\bf GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-T}}}
+\label{a00639_ga9e7044ea584df3b45c6e9811e5de6731}
+
+
+Memory/Reg read/Write command format. 
+
+Types for Memory read/Write command . \hypertarget{a00639_gab7804e5393f417c861691706760684ef}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-T}}}
+\label{a00639_gab7804e5393f417c861691706760684ef}
+
+
+opt read command format. 
+
+Types for opt read command format. \hypertarget{a00639_gae38db03f3f15f58fb7e7d6bcdc07474a}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-T}}}
+\label{a00639_gae38db03f3f15f58fb7e7d6bcdc07474a}
+
+
+opt read command acknowledge format. 
+
+Types for opt read command acknowledge format. \hypertarget{a00639_gaa1cf18e499f7fd325969144c10fdd54a}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-T}}}
+\label{a00639_gaa1cf18e499f7fd325969144c10fdd54a}
+
+
+opt write command format. 
+
+Types for opt write command format. \hypertarget{a00639_gac6f93d0889c0fdbf82aa2e0af7c0d988}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-T}}}
+\label{a00639_gac6f93d0889c0fdbf82aa2e0af7c0d988}
+
+
+opt write command acknowledge format. 
+
+Types for opt write command acknowledge format. \hypertarget{a00639_ga682020519e40d5d988f8edece8ec693c}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-T@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-T@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-T}}}
+\label{a00639_ga682020519e40d5d988f8edece8ec693c}
+Standby ready indication msg format. \hypertarget{a00639_gac5574c4a3e73dabf551d5bdbe8a1c59e}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-T}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-T}}}
+\label{a00639_gac5574c4a3e73dabf551d5bdbe8a1c59e}
+
+
+Standby request msg format. 
+
+Standby request msg format 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00639_ga5b5ea6b444509449484db8bf22612b98}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-IF\_\-STATE\_\-S@{GSN\_\-WIF\_\-IF\_\-STATE\_\-S}}
+\index{GSN\_\-WIF\_\-IF\_\-STATE\_\-S@{GSN\_\-WIF\_\-IF\_\-STATE\_\-S}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-IF\_\-STATE\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-IF\_\-STATE\_\-S}}}
+\label{a00639_ga5b5ea6b444509449484db8bf22612b98}
+
+
+L2 Interface state. 
+
+Layer-\/2 interface state \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-IF\_\-STATE\_\-NOT\_\-INITED@{GSN\_\-WIF\_\-IF\_\-STATE\_\-NOT\_\-INITED}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-IF\_\-STATE\_\-NOT\_\-INITED@{GSN\_\-WIF\_\-IF\_\-STATE\_\-NOT\_\-INITED}}\item[{\em 
+\hypertarget{a00639_gga5b5ea6b444509449484db8bf22612b98aa658b0b0b1fc66453cc3aabbf296110e}{
+GSN\_\-WIF\_\-IF\_\-STATE\_\-NOT\_\-INITED}
+\label{a00639_gga5b5ea6b444509449484db8bf22612b98aa658b0b0b1fc66453cc3aabbf296110e}
+}]The interface is not initialized \index{GSN\_\-WIF\_\-IF\_\-STATE\_\-SUSPENDED@{GSN\_\-WIF\_\-IF\_\-STATE\_\-SUSPENDED}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-IF\_\-STATE\_\-SUSPENDED@{GSN\_\-WIF\_\-IF\_\-STATE\_\-SUSPENDED}}\item[{\em 
+\hypertarget{a00639_gga5b5ea6b444509449484db8bf22612b98aef6747e4a65b293ee9bee94928ec1e1a}{
+GSN\_\-WIF\_\-IF\_\-STATE\_\-SUSPENDED}
+\label{a00639_gga5b5ea6b444509449484db8bf22612b98aef6747e4a65b293ee9bee94928ec1e1a}
+}]The interface is configured but suspended right now, may be another interface is active \index{GSN\_\-WIF\_\-IF\_\-STATE\_\-RUNNING@{GSN\_\-WIF\_\-IF\_\-STATE\_\-RUNNING}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-IF\_\-STATE\_\-RUNNING@{GSN\_\-WIF\_\-IF\_\-STATE\_\-RUNNING}}\item[{\em 
+\hypertarget{a00639_gga5b5ea6b444509449484db8bf22612b98a53425b647ada0e1a9e599d699b20cebf}{
+GSN\_\-WIF\_\-IF\_\-STATE\_\-RUNNING}
+\label{a00639_gga5b5ea6b444509449484db8bf22612b98a53425b647ada0e1a9e599d699b20cebf}
+}]The interface is currently running ie., it owns the RF now \index{GSN\_\-WIF\_\-IF\_\-STATE\_\-STOP\_\-REQUESTED\_\-WAITING\_\-FOR\_\-TX\_\-COMPLETION@{GSN\_\-WIF\_\-IF\_\-STATE\_\-STOP\_\-REQUESTED\_\-WAITING\_\-FOR\_\-TX\_\-COMPLETION}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-IF\_\-STATE\_\-STOP\_\-REQUESTED\_\-WAITING\_\-FOR\_\-TX\_\-COMPLETION@{GSN\_\-WIF\_\-IF\_\-STATE\_\-STOP\_\-REQUESTED\_\-WAITING\_\-FOR\_\-TX\_\-COMPLETION}}\item[{\em 
+\hypertarget{a00639_gga5b5ea6b444509449484db8bf22612b98a772f04af861bc5f56c255305c5354365}{
+GSN\_\-WIF\_\-IF\_\-STATE\_\-STOP\_\-REQUESTED\_\-WAITING\_\-FOR\_\-TX\_\-COMPLETION}
+\label{a00639_gga5b5ea6b444509449484db8bf22612b98a772f04af861bc5f56c255305c5354365}
+}]if stop is requested, waiting for completion of pending TX s \index{GSN\_\-WIF\_\-IF\_\-STATE\_\-STOPPED@{GSN\_\-WIF\_\-IF\_\-STATE\_\-STOPPED}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-IF\_\-STATE\_\-STOPPED@{GSN\_\-WIF\_\-IF\_\-STATE\_\-STOPPED}}\item[{\em 
+\hypertarget{a00639_gga5b5ea6b444509449484db8bf22612b98a993c121d2959bd02efde4f10104b0ad3}{
+GSN\_\-WIF\_\-IF\_\-STATE\_\-STOPPED}
+\label{a00639_gga5b5ea6b444509449484db8bf22612b98a993c121d2959bd02efde4f10104b0ad3}
+}]THe interface is stopped due to some reason \end{description}
+\end{Desc}
+
+
+
+Definition at line 301 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00639_ga36af0a76d3b3d7cad5c5dd1f60c39091}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON}}}
+\label{a00639_ga36af0a76d3b3d7cad5c5dd1f60c39091}
+
+
+Boot reason. 
+
+enumeration containing the reason for the latest SOC boot. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FIRST\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FIRST\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FIRST\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FIRST\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091ac285fff9dba8dc2ba60fdacd33619829}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FIRST\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091ac285fff9dba8dc2ba60fdacd33619829}
+}]Power ON \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-NORMAL\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-NORMAL\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-NORMAL\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-NORMAL\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091aeb9feea283c362b0c0e9d78bb5762bb2}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-NORMAL\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091aeb9feea283c362b0c0e9d78bb5762bb2}
+}]RTC or External Alarm \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FW\_\-UPDATE\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FW\_\-UPDATE\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FW\_\-UPDATE\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FW\_\-UPDATE\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a398f4e2af9200a6c92a0e5efdbfa72bd}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FW\_\-UPDATE\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a398f4e2af9200a6c92a0e5efdbfa72bd}
+}]FW Update \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WATCHDOG\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WATCHDOG\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WATCHDOG\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WATCHDOG\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a00a2ab01a491601e24d1609e84d51f50}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WATCHDOG\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a00a2ab01a491601e24d1609e84d51f50}
+}]WD \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SW\_\-RESET\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SW\_\-RESET\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SW\_\-RESET\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SW\_\-RESET\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a4a77c0d04ab7ee1c0aeb06b46bf3127c}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SW\_\-RESET\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a4a77c0d04ab7ee1c0aeb06b46bf3127c}
+}]WLAN S/W Reset \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXCEPTION\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXCEPTION\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXCEPTION\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXCEPTION\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a57c1bc088be599019fbc84f6a8691480}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXCEPTION\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a57c1bc088be599019fbc84f6a8691480}
+}]Exception in S/W \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXT\_\-RESET\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXT\_\-RESET\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXT\_\-RESET\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXT\_\-RESET\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a091d2c23baba77524f56e8160707ea37}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXT\_\-RESET\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a091d2c23baba77524f56e8160707ea37}
+}]External reset \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-DBG\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-DBG\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-DBG\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-DBG\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a1bf68122c5be8c2214712adf99074a86}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-DBG\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a1bf68122c5be8c2214712adf99074a86}
+}]Debug boot \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WLAN\_\-TEST\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WLAN\_\-TEST\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WLAN\_\-TEST\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WLAN\_\-TEST\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a56db5479c0f77a1912d28b8515263fa4}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WLAN\_\-TEST\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a56db5479c0f77a1912d28b8515263fa4}
+}]WLAN test over serial \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FACTORY\_\-FW\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FACTORY\_\-FW\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FACTORY\_\-FW\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FACTORY\_\-FW\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a6ae80cef6eb41a7eaa9581ff6dab4d2d}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FACTORY\_\-FW\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a6ae80cef6eb41a7eaa9581ff6dab4d2d}
+}]Factory firmware restore \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CORE\_\-BROWNOUT\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CORE\_\-BROWNOUT\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CORE\_\-BROWNOUT\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CORE\_\-BROWNOUT\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a69530a2da30366e453bf136a6ef32df0}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CORE\_\-BROWNOUT\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a69530a2da30366e453bf136a6ef32df0}
+}]Core Brownout \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CRYPTO\_\-SW\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CRYPTO\_\-SW\_\-BOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CRYPTO\_\-SW\_\-BOOT@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CRYPTO\_\-SW\_\-BOOT}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091af069096b1d74063e2a81f51cb9de8d63}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CRYPTO\_\-SW\_\-BOOT}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091af069096b1d74063e2a81f51cb9de8d63}
+}]Crypto S/W Reset \index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SRC\_\-MAX@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SRC\_\-MAX}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SRC\_\-MAX@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SRC\_\-MAX}}\item[{\em 
+\hypertarget{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a3105a241e957797a7f6042c7c77b197c}{
+GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SRC\_\-MAX}
+\label{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a3105a241e957797a7f6042c7c77b197c}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 118 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00639_ga9447df4a60ba9be14d372720213b2c23}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP}}}
+\label{a00639_ga9447df4a60ba9be14d372720213b2c23}
+
+
+Exception boot reason. 
+
+Enumeration of possible reasons for bootup after a CPU exception. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ABORT@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ABORT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ABORT@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ABORT}}\item[{\em 
+\hypertarget{a00639_gga9447df4a60ba9be14d372720213b2c23abc4bb520cfdd57e022e7e5e2b2a5f555}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ABORT}
+\label{a00639_gga9447df4a60ba9be14d372720213b2c23abc4bb520cfdd57e022e7e5e2b2a5f555}
+}]\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ASSERT@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ASSERT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ASSERT@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ASSERT}}\item[{\em 
+\hypertarget{a00639_gga9447df4a60ba9be14d372720213b2c23a488c8769b3249bdb8329bb1bbdaaea86}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ASSERT}
+\label{a00639_gga9447df4a60ba9be14d372720213b2c23a488c8769b3249bdb8329bb1bbdaaea86}
+}]\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ABORT@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ABORT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ABORT@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ABORT}}\item[{\em 
+\hypertarget{a00639_gga9447df4a60ba9be14d372720213b2c23acb5b82fa9415893bb5fd62f0c514d290}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ABORT}
+\label{a00639_gga9447df4a60ba9be14d372720213b2c23acb5b82fa9415893bb5fd62f0c514d290}
+}]\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ASSERT@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ASSERT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ASSERT@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ASSERT}}\item[{\em 
+\hypertarget{a00639_gga9447df4a60ba9be14d372720213b2c23a51c2d92fe86618628ee3208796512b03}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ASSERT}
+\label{a00639_gga9447df4a60ba9be14d372720213b2c23a51c2d92fe86618628ee3208796512b03}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 183 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00639_ga39cb2f02fc6abae8ae5a431aa24944c0}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS}}}
+\label{a00639_ga39cb2f02fc6abae8ae5a431aa24944c0}
+
+
+FWUP download status. 
+
+Enumeration of possible status after a Firmware Update. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SUCCESS@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SUCCESS}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SUCCESS@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SUCCESS}}\item[{\em 
+\hypertarget{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a20c7f10721b308522548859ef16917e7}{
+GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SUCCESS}
+\label{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a20c7f10721b308522548859ef16917e7}
+}]\index{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-CHKSUM\_\-ERROR@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-CHKSUM\_\-ERROR}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-CHKSUM\_\-ERROR@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-CHKSUM\_\-ERROR}}\item[{\em 
+\hypertarget{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a9dd90ed3f631644b1d936a9844d7eaab}{
+GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-CHKSUM\_\-ERROR}
+\label{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a9dd90ed3f631644b1d936a9844d7eaab}
+}]\index{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-FLASH\_\-FAIL@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-FLASH\_\-FAIL}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-FLASH\_\-FAIL@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-FLASH\_\-FAIL}}\item[{\em 
+\hypertarget{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a6fcf93a4efae3973b0142a839ebb654b}{
+GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-FLASH\_\-FAIL}
+\label{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a6fcf93a4efae3973b0142a839ebb654b}
+}]\index{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SWAP\_\-ERROR@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SWAP\_\-ERROR}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SWAP\_\-ERROR@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SWAP\_\-ERROR}}\item[{\em 
+\hypertarget{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a6b82080d96a8397aceb85f9ecc03bf78}{
+GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SWAP\_\-ERROR}
+\label{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a6b82080d96a8397aceb85f9ecc03bf78}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 198 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00639_ga8df4566faa9edce0748124e2d08c1efe}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS}}}
+\label{a00639_ga8df4566faa9edce0748124e2d08c1efe}
+
+
+FWUP other status. Enumeration of other Firmware Update status options. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-NO\_\-ERROR@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-NO\_\-ERROR}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-NO\_\-ERROR@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-NO\_\-ERROR}}\item[{\em 
+\hypertarget{a00639_gga8df4566faa9edce0748124e2d08c1efea7bd77a34da3f7cf36884f4ed738101c5}{
+GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-NO\_\-ERROR}
+\label{a00639_gga8df4566faa9edce0748124e2d08c1efea7bd77a34da3f7cf36884f4ed738101c5}
+}]\index{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-TIMEOUT@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-TIMEOUT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-TIMEOUT@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-TIMEOUT}}\item[{\em 
+\hypertarget{a00639_gga8df4566faa9edce0748124e2d08c1efeabf7f11d1ce41bb8d8cba0dff0b3df92a}{
+GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-TIMEOUT}
+\label{a00639_gga8df4566faa9edce0748124e2d08c1efeabf7f11d1ce41bb8d8cba0dff0b3df92a}
+}]\index{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-SEQNUM@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-SEQNUM}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-SEQNUM@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-SEQNUM}}\item[{\em 
+\hypertarget{a00639_gga8df4566faa9edce0748124e2d08c1efeaa6cd7e26354e8e53f8a1cb9c94a7ad54}{
+GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-SEQNUM}
+\label{a00639_gga8df4566faa9edce0748124e2d08c1efeaa6cd7e26354e8e53f8a1cb9c94a7ad54}
+}]\index{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-PARAMS@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-PARAMS}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-PARAMS@{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-PARAMS}}\item[{\em 
+\hypertarget{a00639_gga8df4566faa9edce0748124e2d08c1efead2bdb2dd956827ac45f9dab635622eae}{
+GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-PARAMS}
+\label{a00639_gga8df4566faa9edce0748124e2d08c1efead2bdb2dd956827ac45f9dab635622eae}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 212 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00639_gaa1aae8d2007a2f4b746672dbc9c8efbb}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE}}}
+\label{a00639_gaa1aae8d2007a2f4b746672dbc9c8efbb}
+
+
+host interface type Enumeration of host interface types 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-MB@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-MB}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-MB@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-MB}}\item[{\em 
+\hypertarget{a00639_ggaa1aae8d2007a2f4b746672dbc9c8efbbaef814f4355ae06b21e9b99429e4e32e1}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-MB}
+\label{a00639_ggaa1aae8d2007a2f4b746672dbc9c8efbbaef814f4355ae06b21e9b99429e4e32e1}
+}]\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-UART@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-UART}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-UART@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-UART}}\item[{\em 
+\hypertarget{a00639_ggaa1aae8d2007a2f4b746672dbc9c8efbba9d391bc48ffc1354dc5af474787f9f09}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-UART}
+\label{a00639_ggaa1aae8d2007a2f4b746672dbc9c8efbba9d391bc48ffc1354dc5af474787f9f09}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 228 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00639_gaf19dc62e1c923b6383337e8e8296c242}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT}}}
+\label{a00639_gaf19dc62e1c923b6383337e8e8296c242}
+
+
+Normal boot reason. 
+
+Enumeration of possible reasons for normal bootup (timeout or alarm). \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-RTC@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-RTC}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-RTC@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-RTC}}\item[{\em 
+\hypertarget{a00639_ggaf19dc62e1c923b6383337e8e8296c242aaa34679749818c0b6b49589c05b1d2d8}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-RTC}
+\label{a00639_ggaf19dc62e1c923b6383337e8e8296c242aaa34679749818c0b6b49589c05b1d2d8}
+}]\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-ALARM@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-ALARM}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-ALARM@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-ALARM}}\item[{\em 
+\hypertarget{a00639_ggaf19dc62e1c923b6383337e8e8296c242ab0c3999cf0b0db563677fc197d848d5f}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-ALARM}
+\label{a00639_ggaf19dc62e1c923b6383337e8e8296c242ab0c3999cf0b0db563677fc197d848d5f}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 144 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00639_ga9d8caf6999c8508aaf8d3b414693a0a2}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET}}}
+\label{a00639_ga9d8caf6999c8508aaf8d3b414693a0a2}
+
+
+SW Reset boot reason. 
+
+Enumeration of possible reasons for bootup after a software reset. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-WLAN@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-WLAN}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-WLAN@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-WLAN}}\item[{\em 
+\hypertarget{a00639_gga9d8caf6999c8508aaf8d3b414693a0a2a5fa5611bcc8a6b4df4bd0210e6f861d0}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-WLAN}
+\label{a00639_gga9d8caf6999c8508aaf8d3b414693a0a2a5fa5611bcc8a6b4df4bd0210e6f861d0}
+}]\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-APP@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-APP}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-APP@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-APP}}\item[{\em 
+\hypertarget{a00639_gga9d8caf6999c8508aaf8d3b414693a0a2ae91706337a69766a937c6ce4d5934cdd}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-APP}
+\label{a00639_gga9d8caf6999c8508aaf8d3b414693a0a2ae91706337a69766a937c6ce4d5934cdd}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 157 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00639_ga93cc8ed01d7724e043b553774ec3df16}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET}}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET}}}
+\label{a00639_ga93cc8ed01d7724e043b553774ec3df16}
+
+
+Watchdog boot reason. 
+
+Enumeration of possible reasons for bootup after a Watchdog timer reset. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-WLAN@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-WLAN}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-WLAN@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-WLAN}}\item[{\em 
+\hypertarget{a00639_gga93cc8ed01d7724e043b553774ec3df16a5b3dea32336a204e17485b63635d0fba}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-WLAN}
+\label{a00639_gga93cc8ed01d7724e043b553774ec3df16a5b3dea32336a204e17485b63635d0fba}
+}]\index{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-APP@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-APP}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-APP@{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-APP}}\item[{\em 
+\hypertarget{a00639_gga93cc8ed01d7724e043b553774ec3df16ab015077ed326c799fa21c7fc48115940}{
+GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-APP}
+\label{a00639_gga93cc8ed01d7724e043b553774ec3df16ab015077ed326c799fa21c7fc48115940}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 170 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00639_gac5b276b2a9ea66f27afb0f35e0e75257}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-E@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-E}}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-E@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-E}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-E}}}
+\label{a00639_gac5b276b2a9ea66f27afb0f35e0e75257}
+
+
+File Operation flags. 
+
+Special flags for file operation. This is a bitmap, so multiple operations could be requested. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-CREAT@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-CREAT}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-CREAT@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-CREAT}}\item[{\em 
+\hypertarget{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a70c4828a84c7b58dbd61131c8bebfb1a}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-CREAT}
+\label{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a70c4828a84c7b58dbd61131c8bebfb1a}
+}]use with open to create file, if not set, then existing file is opened \index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RD@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RD}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RD@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RD}}\item[{\em 
+\hypertarget{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a3e3b02fa7233e93586c27fd95a8395aa}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RD}
+\label{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a3e3b02fa7233e93586c27fd95a8395aa}
+}]use with open to open in rd mode \index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-WR@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-WR}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-WR@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-WR}}\item[{\em 
+\hypertarget{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a0afd71ef921c94f1b97cf8722f9235a4}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-WR}
+\label{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a0afd71ef921c94f1b97cf8722f9235a4}
+}]use with open to open in wr mode \index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RDWR@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RDWR}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RDWR@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RDWR}}\item[{\em 
+\hypertarget{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257aea0bd02aef90199065c6bbe0d4c84c21}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RDWR}
+\label{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257aea0bd02aef90199065c6bbe0d4c84c21}
+}]use with open to open in rd,wr mode \index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-DEL@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-DEL}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-DEL@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-DEL}}\item[{\em 
+\hypertarget{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257acaacf27fc6f8dbce410f3651a6d9952c}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-DEL}
+\label{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257acaacf27fc6f8dbce410f3651a6d9952c}
+}]use with close to delete file \end{description}
+\end{Desc}
+
+
+
+Definition at line 518 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00639_ga4ab9f7b6980d4b5c3f3a0199250b8923}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-E@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-E}}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-E@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-E}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-E}}}
+\label{a00639_ga4ab9f7b6980d4b5c3f3a0199250b8923}
+
+
+File Operation result codes. 
+
+Types for file operation result. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-SUCCESS@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-SUCCESS}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-SUCCESS@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-SUCCESS}}\item[{\em 
+\hypertarget{a00639_gga4ab9f7b6980d4b5c3f3a0199250b8923a8f28cfe76fca5043418aaa6eaeec9e0a}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-SUCCESS}
+\label{a00639_gga4ab9f7b6980d4b5c3f3a0199250b8923a8f28cfe76fca5043418aaa6eaeec9e0a}
+}]anything else is failure \end{description}
+\end{Desc}
+
+
+
+Definition at line 503 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00639_ga24ebbde6925db9b03e4648c99be320b4}{
+\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-E@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-E}}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-E@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-E}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-E}}}
+\label{a00639_ga24ebbde6925db9b03e4648c99be320b4}
+
+
+File Operation codes. 
+
+Types for file operation. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-OPEN@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-OPEN}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-OPEN@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-OPEN}}\item[{\em 
+\hypertarget{a00639_gga24ebbde6925db9b03e4648c99be320b4a9297e545d68f2bbfb23886d76258954d}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-OPEN}
+\label{a00639_gga24ebbde6925db9b03e4648c99be320b4a9297e545d68f2bbfb23886d76258954d}
+}]\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-CLOSE@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-CLOSE}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-CLOSE@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-CLOSE}}\item[{\em 
+\hypertarget{a00639_gga24ebbde6925db9b03e4648c99be320b4a8fda2104e936080f682793861eed2af2}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-CLOSE}
+\label{a00639_gga24ebbde6925db9b03e4648c99be320b4a8fda2104e936080f682793861eed2af2}
+}]\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-READ@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-READ}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-READ@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-READ}}\item[{\em 
+\hypertarget{a00639_gga24ebbde6925db9b03e4648c99be320b4a80cebc45da04e421658eb57baa0b75df}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-READ}
+\label{a00639_gga24ebbde6925db9b03e4648c99be320b4a80cebc45da04e421658eb57baa0b75df}
+}]\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-WRITE@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-WRITE}!GSN SOC Platform Configuration@{GSN SOC Platform Configuration}}\index{GSN SOC Platform Configuration@{GSN SOC Platform Configuration}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-WRITE@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-WRITE}}\item[{\em 
+\hypertarget{a00639_gga24ebbde6925db9b03e4648c99be320b4a000e53ca67ec09e29f77da0415fe675e}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-WRITE}
+\label{a00639_gga24ebbde6925db9b03e4648c99be320b4a000e53ca67ec09e29f77da0415fe675e}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 418 of file gsn\_\-wif\_\-sys\_\-defs.h.
+

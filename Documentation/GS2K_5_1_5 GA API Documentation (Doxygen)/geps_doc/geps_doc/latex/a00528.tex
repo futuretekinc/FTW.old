@@ -1,0 +1,51 @@
+\hypertarget{a00528}{
+\section{gsn\_\-msg\_\-handler.h File Reference}
+\label{a00528}\index{gsn\_\-msg\_\-handler.h@{gsn\_\-msg\_\-handler.h}}
+}
+
+
+GSN Message Handler public declaration. This file contains the public API declaration.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00763}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Message Handler context. type definition of the message handler context. \end{DoxyCompactList}\item 
+struct \hyperlink{a00154}{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Message Handler configuration. type definition of the message handler configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL}($\ast$ \hyperlink{a00627_ga638c4ec452bde3b70fae3b7239e05cca}{GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T} )(VOID $\ast$pCtx, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN Message Handler callback type. type definition of the handler used in message handler. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} \hyperlink{a00627_gaf399ebe34f6e083a27eab240f852ac4d}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Message Handler context. type definition of the message handler context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00154}{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T} \hyperlink{a00627_gafb3b653c75d46a7789b82f2f3aff8321}{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Message Handler configuration. type definition of the message handler configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00627_gacc70d680d0d460b942143107dca09514}{GsnMsgHandler\_\-Create} (\hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$pCtx, \hyperlink{a00154}{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T} $\ast$pCfg, VOID $\ast$pMsg, \hyperlink{a00627_ga638c4ec452bde3b70fae3b7239e05cca}{GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T} handlerCb, VOID $\ast$pHandlerCtx)
+\begin{DoxyCompactList}\small\item\em Create Message Handler. This function is used to create a message handler. \end{DoxyCompactList}\item 
+INLINE PUBLIC VOID \hyperlink{a00627_gaf9aa1fcf54621e2f9cc80cd0c8697d70}{GsnMsgHandler\_\-Delete} (\hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$pCtx)
+\begin{DoxyCompactList}\small\item\em Delete Message Handler. This function is used to create a message handler. \end{DoxyCompactList}\item 
+INLINE PUBLIC VOID \hyperlink{a00627_ga1658d3ee7bb4baeaccbfb3350b834674}{GsnMsgHandler\_\-Install} (\hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$pCtx, VOID $\ast$pHandlerCtx, \hyperlink{a00627_ga638c4ec452bde3b70fae3b7239e05cca}{GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T} handlerCb)
+\begin{DoxyCompactList}\small\item\em Install handler in Message Handler. This function is used to install handler and its context in message handler. \end{DoxyCompactList}\item 
+INLINE PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00627_gae27cb95242e79adb4d3ed617f0126c4b}{GsnMsgHandler\_\-Post} (\hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$pCtx, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em Post message to Message Handler. This function is used to post a message to a message handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN Message Handler public declaration. This file contains the public API declaration. 
+
+Definition in file \hyperlink{a00528_source}{gsn\_\-msg\_\-handler.h}.
+

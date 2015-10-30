@@ -1,0 +1,3219 @@
+\hypertarget{a00565}{
+\section{gsn\_\-reg\_\-pwm\_\-spec.h File Reference}
+\label{a00565}\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00802}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00565_a8a4ca7fd926356de47ba79c81559f1fc}{COMMON\_\-PWM}~0x40100000
+\item 
+\#define \hyperlink{a00565_a1ed6898b1ee03d9483ce781f1f851ffb}{PWM\_\-PWMCR\_\-OFFSETADDRESS}~0x00000000
+\item 
+\#define \hyperlink{a00565_aaff2da63915376887aab580f6fd14619}{PWM\_\-PWMCR\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a1a7d20fb5029cfe68d3972c012f825ad}{PWM\_\-PWMCR\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_a940279f6cfb5c63c1d33ed7aef1af025}{PWM\_\-PWMCR\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_a1b649e10a0e7c96070404a2f7e8e06fa}{PWM\_\-PWMCR\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_a9cfc58aa51479fffb2ad13b9d1f2140a}{PWM\_\-CLKFREQ\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a5ab3f3c7f2fde6281cf23a776170bde8}{PWM\_\-CLKFREQ\_\-BITOFFSET}~16
+\item 
+\#define \hyperlink{a00565_a3e40fa7bb96ef0ab41dd6c55a677fd4e}{PWM\_\-CLKFREQ\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_aafb0f88c898bc809c1dedcb764035cdf}{PWM\_\-CLKFREQ\_\-BITMASK}~0x00010000
+\item 
+\#define \hyperlink{a00565_a8d7b05b8c1963d8dd7500929da1ae824}{PWM\_\-CLKFREQ\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a2aa37a1f58aae29ca5c21a3ed714d64c}{PWM\_\-SCLS\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a808cf75beac1131f7c35f3a560fdef11}{PWM\_\-SCLS\_\-BITOFFSET}~13
+\item 
+\#define \hyperlink{a00565_ab2835b9033ec1ff977ed6a335f7d1135}{PWM\_\-SCLS\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_ab7e8fe07d218f5a5de027c01dfae6ee3}{PWM\_\-SCLS\_\-BITMASK}~0x00002000
+\item 
+\#define \hyperlink{a00565_a06b314cd436f167fc3081a845546b2cc}{PWM\_\-SCLS\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a1b7f936a7649c7f0768376f5b1708791}{PWM\_\-SEN\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a04ad96c43a0a475b6b58512e3a2751f1}{PWM\_\-SEN\_\-BITOFFSET}~12
+\item 
+\#define \hyperlink{a00565_af0d8ffbf5f63bfcce2096cb6647e6008}{PWM\_\-SEN\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a1c3b561c85f49b7baf11499691b807f7}{PWM\_\-SEN\_\-BITMASK}~0x00001000
+\item 
+\#define \hyperlink{a00565_a6320df8f16adebd9db7d8814d6eec919}{PWM\_\-SEN\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a2e02d894047e60f171b47ce5c119b22e}{PWM\_\-POL2\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_abdd5c3d9c594895666d8876f4fa69d64}{PWM\_\-POL2\_\-BITOFFSET}~10
+\item 
+\#define \hyperlink{a00565_a747574ed13e6904f21e60943be324cdc}{PWM\_\-POL2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_aa306f679ffafcc67897c133927dc4910}{PWM\_\-POL2\_\-BITMASK}~0x00000400
+\item 
+\#define \hyperlink{a00565_aa558c9f963219dc5822698b93ef4f6d6}{PWM\_\-POL2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ad706dc65d2a9dfe96eea06384d13351f}{PWM\_\-CLS2\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_ae94efecdd4ec42d1aadc52684c9f2bf2}{PWM\_\-CLS2\_\-BITOFFSET}~9
+\item 
+\#define \hyperlink{a00565_aca1f4663b80ef5947b379df09e3b3433}{PWM\_\-CLS2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_ae3cf31d7a0097a1a0b0847a862df0376}{PWM\_\-CLS2\_\-BITMASK}~0x00000200
+\item 
+\#define \hyperlink{a00565_a87ea2c3888708644f116c7d264353d85}{PWM\_\-CLS2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a82c2a6a73b8bea0771bf6add0d32f143}{PWM\_\-EN2\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_af559c0fb6de2e23f4d380dda6d592c55}{PWM\_\-EN2\_\-BITOFFSET}~8
+\item 
+\#define \hyperlink{a00565_ad291377138c0354336fceeb9ed5d4cb5}{PWM\_\-EN2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a3d1cd2162acc720efb1a767901b921a0}{PWM\_\-EN2\_\-BITMASK}~0x00000100
+\item 
+\#define \hyperlink{a00565_a2e1c438f84f028e37fcddb3aa9a28c73}{PWM\_\-EN2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_aac74b5b5be71ba9c30ec30017740bc41}{PWM\_\-POL1\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a549bceaced16a3cbb3e435ec9e3bafab}{PWM\_\-POL1\_\-BITOFFSET}~6
+\item 
+\#define \hyperlink{a00565_aa2a8b0096107ef70cec17fde6fd14087}{PWM\_\-POL1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_aa52c1424968758179b9f047aa946058d}{PWM\_\-POL1\_\-BITMASK}~0x00000040
+\item 
+\#define \hyperlink{a00565_a49ab249dcd99072a3eefbcc15f3c8f43}{PWM\_\-POL1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a746ef691be8e0fcde7ccc848780ca9e0}{PWM\_\-CLS1\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_af9f76b27b56b26bb53b426e0fbf48c85}{PWM\_\-CLS1\_\-BITOFFSET}~5
+\item 
+\#define \hyperlink{a00565_a914ddc7576bf9a85724a228403093c49}{PWM\_\-CLS1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a25ab219a74af0d96b957e5a8247e9f6f}{PWM\_\-CLS1\_\-BITMASK}~0x00000020
+\item 
+\#define \hyperlink{a00565_ab86d21e8e4c60a9168861b5d7b9544bb}{PWM\_\-CLS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a7cdc9c922184aaf5dcc31f1894078157}{PWM\_\-EN1\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a831752a6986c6120f977ff03f2c88b4d}{PWM\_\-EN1\_\-BITOFFSET}~4
+\item 
+\#define \hyperlink{a00565_af5bb489f6d7da9acc7f734c170cc4fcc}{PWM\_\-EN1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a0e81085a1468c3225dc12d30d0b2d1c0}{PWM\_\-EN1\_\-BITMASK}~0x00000010
+\item 
+\#define \hyperlink{a00565_a34b74e0e84541202a25b69cba41e8066}{PWM\_\-EN1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a294ebda7eef2c91c8f52559b8789b736}{PWM\_\-POL0\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a9d39b8850cc9ac2c4fa32e9cc1bce5f9}{PWM\_\-POL0\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00565_a0976f8f4717ee2f374fd23ee64cb60d5}{PWM\_\-POL0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a169e4ad3a000055444ecf5f5a0a3d99c}{PWM\_\-POL0\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00565_ac58d25159b2b429b71bb96545f3b3673}{PWM\_\-POL0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a0c550f5d2d70f5e6d68ab9a0ea7cc3c2}{PWM\_\-CLS0\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a794c36116a3f31f40f7cdae0b58b6a3c}{PWM\_\-CLS0\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00565_ac6a9bd678846a70c3f515ca6ccbc15d3}{PWM\_\-CLS0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a2a9e82a21817093eb5177a6f4a306962}{PWM\_\-CLS0\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00565_a5976b8924a69c971d37e8b23bdca325f}{PWM\_\-CLS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ade5fe532100cb8c66b4abc1f7895aff8}{PWM\_\-EN0\_\-OFFSETADDRESS}~PWM\_\-PWMCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a1a35a931958ece14629a7abd0c028a56}{PWM\_\-EN0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a63df657a3c34278532572df2feed73b0}{PWM\_\-EN0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a1c78dc20905ee75158c8502e81d5bfb8}{PWM\_\-EN0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00565_a710b5a6b2483dfbf8251fbf642be4b2e}{PWM\_\-EN0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ae6722fb70732f8b8a2b53ce99e78a8b9}{PWM\_\-PWMCPS\_\-OFFSETADDRESS}~0x00000004
+\item 
+\#define \hyperlink{a00565_a6bede042f00b760aa67e03e55dab81c6}{PWM\_\-PWMCPS\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_aa4d129d4f2a6e8b93d85571952232483}{PWM\_\-PWMCPS\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_a46fc28857838e93b502ee449c130598c}{PWM\_\-PWMCPS\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_a8f654e6b58b75107e15f80a12ec97476}{PWM\_\-PWMCPS\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_a73d74355f535b5295698ee741a1fc8b3}{PWM\_\-CPS\_\-OFFSETADDRESS}~PWM\_\-PWMCPS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a1bbad1be0bd416872c86c6bbd7aecabc}{PWM\_\-CPS\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_aff1828ea2804b30439108c4581c69afe}{PWM\_\-CPS\_\-BITFIELDSIZE}~6
+\item 
+\#define \hyperlink{a00565_a2bff5ec88be76abb7d9b1a79c7a4b1f2}{PWM\_\-CPS\_\-BITMASK}~0x0000003f
+\item 
+\#define \hyperlink{a00565_a656dfbd9b57eba7c922b69a1a96e50a3}{PWM\_\-CPS\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_aa1693c2827f9d8708ca5db029964edde}{PWM\_\-PWMDCR\_\-OFFSETADDRESS}~0x00000008
+\item 
+\#define \hyperlink{a00565_aac0b51e2bb02790b399b2c96855f6e5d}{PWM\_\-PWMDCR\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_adeda64484cdf91ad6227b3e202923a56}{PWM\_\-PWMDCR\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_a0826361be1f002b278f3ac4cae30f3f4}{PWM\_\-PWMDCR\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_a535f439651c1fb9edae479c50cf4e2b9}{PWM\_\-PWMDCR\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_aedcb01b681b85e2b4b769edc20acc37f}{PWM\_\-PDS1\_\-OFFSETADDRESS}~PWM\_\-PWMDCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a003f5d5b2ba862041386fc85e91b535d}{PWM\_\-PDS1\_\-BITOFFSET}~16
+\item 
+\#define \hyperlink{a00565_a7264db9b33ba8cc42ff8de1a909850a4}{PWM\_\-PDS1\_\-BITFIELDSIZE}~16
+\item 
+\#define \hyperlink{a00565_ab1f290fb10c11f76a50cae8de640ff6d}{PWM\_\-PDS1\_\-BITMASK}~0xffff0000
+\item 
+\#define \hyperlink{a00565_ad27640307879d938cddb8c4b120cbcaa}{PWM\_\-PDS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a53f03ec64fe15d3148e7ad970868031b}{PWM\_\-PDS0\_\-OFFSETADDRESS}~PWM\_\-PWMDCR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_af3c6c14f418969466a1158fda8273532}{PWM\_\-PDS0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a36fe636cc40d9d2be64b0b2e23ee08d3}{PWM\_\-PDS0\_\-BITFIELDSIZE}~16
+\item 
+\#define \hyperlink{a00565_a60c76844001c700b5dfa3162b04d7b9d}{PWM\_\-PDS0\_\-BITMASK}~0x0000ffff
+\item 
+\#define \hyperlink{a00565_ac9074da35e87234a5ea38426c9018ec4}{PWM\_\-PDS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ac7cf84caf366abf45c8bea875af9d9cd}{PWM\_\-PWMID\_\-OFFSETADDRESS}~0x0000000c
+\item 
+\#define \hyperlink{a00565_ab16f58c2ba3dd62d1cb62c7bc545ef17}{PWM\_\-PWMID\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a890c82cbcf55f493d7b1e7ea19bfe54a}{PWM\_\-PWMID\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_ab10df0efef0c94288e260ab197d40a5b}{PWM\_\-PWMID\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_a80e2697233e8ec4bc934b91d8f19e31f}{PWM\_\-PWMID\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_a633098a5cae368212040cfe0f285a2e0}{PWM\_\-ID\_\-OFFSETADDRESS}~PWM\_\-PWMID\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a980cbc74448c168119540aa7e63b2314}{PWM\_\-ID\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a2eb8bd2ff17c539025823cbe71616f89}{PWM\_\-ID\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_a69479612854fb302d76c4ee1c308095c}{PWM\_\-ID\_\-BITMASK}~0xffffffff
+\item 
+\#define \hyperlink{a00565_a0b1a1bbe9036e85057cf408ef7327bb8}{PWM\_\-ID\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a96c4b7a9710e59bc16e7a9080c65d993}{PWM\_\-PWMCCR0\_\-OFFSETADDRESS}~0x00000010
+\item 
+\#define \hyperlink{a00565_a3938e138ff2db3e10edfeaa93942082d}{PWM\_\-PWMCCR0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_aee0a6aa8798a5a77567630bc95da6238}{PWM\_\-PWMCCR0\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_a84d2c5ab073744cc88a2cd5ec7ad9da8}{PWM\_\-PWMCCR0\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_a65a30122017f33352742e6c4bd27a61c}{PWM\_\-PWMCCR0\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_a81d3568a6a82e43d3ce81c82d7bf9722}{PWM\_\-ONCNT\_\-OFFSETADDRESS}~PWM\_\-PWMCCR0\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a1e31aee8b02e1ec10576c7baf924a301}{PWM\_\-ONCNT\_\-BITOFFSET}~16
+\item 
+\#define \hyperlink{a00565_ac2e2ae1a3f8bed8129a1f3b1c84650b0}{PWM\_\-ONCNT\_\-BITFIELDSIZE}~16
+\item 
+\#define \hyperlink{a00565_abf8c208ee2db737284329994da3cb497}{PWM\_\-ONCNT\_\-BITMASK}~0xffff0000
+\item 
+\#define \hyperlink{a00565_a93caaeaab33b499e005ec9df26cafd86}{PWM\_\-ONCNT\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a2cf73b7444de137029b012f9e299083b}{PWM\_\-OFFCNT\_\-OFFSETADDRESS}~PWM\_\-PWMCCR0\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a8f9fdf1c7df6872936cc569b9bcaa5c6}{PWM\_\-OFFCNT\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a74e5ecaa49850efdabf02db2adf9fba8}{PWM\_\-OFFCNT\_\-BITFIELDSIZE}~16
+\item 
+\#define \hyperlink{a00565_a3431544ba0e652cbec2e5ab87ce6ffb6}{PWM\_\-OFFCNT\_\-BITMASK}~0x0000ffff
+\item 
+\#define \hyperlink{a00565_ae3b6c31203f7d1effb77cf64328f3419}{PWM\_\-OFFCNT\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a86f5110d45040c237a33483a0362c951}{PWM\_\-PWMCCR1\_\-OFFSETADDRESS}~0x00000014
+\item 
+\#define \hyperlink{a00565_abfe1fa91401442ffba6dad205931bf9c}{PWM\_\-PWMCCR1\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_af940af59835c3aaade205c23e1f0305c}{PWM\_\-PWMCCR1\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_a007d09bc215a10dc77951153d07070df}{PWM\_\-PWMCCR1\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_acf04b09e34761a2e587b0e4f777f87bd}{PWM\_\-PWMCCR1\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_ad5621eac4c6082f349e0870570ced3b8}{PWM\_\-PWMCCR2\_\-OFFSETADDRESS}~0x00000018
+\item 
+\#define \hyperlink{a00565_a04dc50da34fd6cd18f8e4f5ad9be1eaf}{PWM\_\-PWMCCR2\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a9452ecb41ecd79d01af0caffd9119bca}{PWM\_\-PWMCCR2\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_a9c092dac6dff536fa655daa89f6a1143}{PWM\_\-PWMCCR2\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_a59f99ef8ebff5154854c39b9337ff48b}{PWM\_\-PWMCCR2\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_a5d19a1896da50e99e3f4ffbfa6e78b9a}{PWM\_\-PWMCST0\_\-OFFSETADDRESS}~0x00000020
+\item 
+\#define \hyperlink{a00565_ad1c39509570f96dc4f7e1c529729ba68}{PWM\_\-PWMCST0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_ac70a5c6184a303acb66c6d44fb1c2e29}{PWM\_\-PWMCST0\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_ae56f42c138da4a129af7e601a4081b66}{PWM\_\-PWMCST0\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_a13e2ee4a3d5e3b5343e2888eafd63c35}{PWM\_\-PWMCST0\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_ad80d9a60b1af1c534b6ab06c75d249ec}{PWM\_\-CNTST\_\-OFFSETADDRESS}~PWM\_\-PWMCST0\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_ac937f242c18bb3a56b38d9a764db2d78}{PWM\_\-CNTST\_\-BITOFFSET}~16
+\item 
+\#define \hyperlink{a00565_a3b6674b72140ed31c824c747122cb5cb}{PWM\_\-CNTST\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a60cef3d409c8d64931e03cf348cbe8be}{PWM\_\-CNTST\_\-BITMASK}~0x00010000
+\item 
+\#define \hyperlink{a00565_a02fbeff375a01d36f329a146d4690ad4}{PWM\_\-CNTST\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a113821db24adeb5e54b06e9f6dc8bdf7}{PWM\_\-CNTVAL\_\-OFFSETADDRESS}~PWM\_\-PWMCST0\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_af0a974ea0c7d36049043f7b761ad99a5}{PWM\_\-CNTVAL\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a847c142d9f4ac4ec3fcd415aa67a3483}{PWM\_\-CNTVAL\_\-BITFIELDSIZE}~16
+\item 
+\#define \hyperlink{a00565_af1714292b4b38e420ed93f69439e1a2c}{PWM\_\-CNTVAL\_\-BITMASK}~0x0000ffff
+\item 
+\#define \hyperlink{a00565_a47135f22788ad7987b7a45e9905f4495}{PWM\_\-CNTVAL\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a34f4aa6de9713fc2060a47ae9bbbf0fd}{PWM\_\-PWMCST1\_\-OFFSETADDRESS}~0x00000024
+\item 
+\#define \hyperlink{a00565_adeb11942c3e819f9b566e0184e421124}{PWM\_\-PWMCST1\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_aece3415a67ea87bc39a36d41a98777ca}{PWM\_\-PWMCST1\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_a520f5915f13969709b5dd5b809ae0189}{PWM\_\-PWMCST1\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_a507fa471c1eb1994c73ac92fed9f2f78}{PWM\_\-PWMCST1\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_a81bdbb774320c60d5ed169b4f5cb833d}{PWM\_\-PWMCST2\_\-OFFSETADDRESS}~0x00000028
+\item 
+\#define \hyperlink{a00565_a89186f7b73a1c8ae73069751717eaa4c}{PWM\_\-PWMCST2\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_ace5f322318efae3c8fdbc8140f82cdd3}{PWM\_\-PWMCST2\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_aadf5c28e1c542f508c1997683c5f0179}{PWM\_\-PWMCST2\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_ac7897dc0dc26dfd99dd2e6d8a07cdbd9}{PWM\_\-PWMCST2\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_ae8efb404ac600ed96a7e07f5827853a3}{PWM\_\-PWMIS\_\-OFFSETADDRESS}~0x00000030
+\item 
+\#define \hyperlink{a00565_aecc69ca8656aab951d4a6e4657b199f2}{PWM\_\-PWMIS\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a9666d5eb40575f281c9569cf3dab969b}{PWM\_\-PWMIS\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_ac3bcdcc018853a301f78c32671b9c81d}{PWM\_\-PWMIS\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_abd79dfa7ccc23e9f10c6962a4da55800}{PWM\_\-PWMIS\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_a2e47de59f6ab527f42e6960c00488d3b}{PWM\_\-OFFIS2\_\-OFFSETADDRESS}~PWM\_\-PWMIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_aae57b43d574c920a6c5058652be7ccc2}{PWM\_\-OFFIS2\_\-BITOFFSET}~9
+\item 
+\#define \hyperlink{a00565_a602ec25550a607b94e516304074a697c}{PWM\_\-OFFIS2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_ab7c352d8d1e26c09c7c7f3fbf68c6e97}{PWM\_\-OFFIS2\_\-BITMASK}~0x00000200
+\item 
+\#define \hyperlink{a00565_a73ae00395d1cf4ed2ca2babab730d6ec}{PWM\_\-OFFIS2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ad85b1ea970d53706a654bf2e50752b67}{PWM\_\-ONIS2\_\-OFFSETADDRESS}~PWM\_\-PWMIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a09ba755539781bfcafe8199bf842bbe3}{PWM\_\-ONIS2\_\-BITOFFSET}~8
+\item 
+\#define \hyperlink{a00565_aec621161c9287a2c020ec844e3e73692}{PWM\_\-ONIS2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a1dcc9a8438a604cb0897b0ed9ad04917}{PWM\_\-ONIS2\_\-BITMASK}~0x00000100
+\item 
+\#define \hyperlink{a00565_aba7cb03e39fb0141b6a79a0f298a8e6d}{PWM\_\-ONIS2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_abc1a93ef7b96e1697a76326f1847b0e4}{PWM\_\-OFFIS1\_\-OFFSETADDRESS}~PWM\_\-PWMIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a29414f5c81a8ce89458d80e10677417b}{PWM\_\-OFFIS1\_\-BITOFFSET}~5
+\item 
+\#define \hyperlink{a00565_a8a83913942e9238413edbb1c9c4f6700}{PWM\_\-OFFIS1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a2a75bc51e5dceab8d52b0273d5140b67}{PWM\_\-OFFIS1\_\-BITMASK}~0x00000020
+\item 
+\#define \hyperlink{a00565_ac51bb97b6d31f24dcb93d48016952447}{PWM\_\-OFFIS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a64dafa81ad149352d3b96cdaf4df87ac}{PWM\_\-ONIS1\_\-OFFSETADDRESS}~PWM\_\-PWMIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a30c2aa672bf574153e6aca0d0202dee7}{PWM\_\-ONIS1\_\-BITOFFSET}~4
+\item 
+\#define \hyperlink{a00565_a385174e318896f04ac28315523b32ef1}{PWM\_\-ONIS1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a3a8368d37598a3e06ac0adbcbb45dce1}{PWM\_\-ONIS1\_\-BITMASK}~0x00000010
+\item 
+\#define \hyperlink{a00565_ab5bdc403d17f3c123eabba9ce9803144}{PWM\_\-ONIS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ad776527b5c972a73cdb17fcfa7facf79}{PWM\_\-OFFIS0\_\-OFFSETADDRESS}~PWM\_\-PWMIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a15a384ea0630b9925a7d363eeac6dde5}{PWM\_\-OFFIS0\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00565_a522485998071a566658c5e5053fd7a16}{PWM\_\-OFFIS0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a174cd7955e1bb617fb16f705d9e18a2f}{PWM\_\-OFFIS0\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00565_a34d2488e01033e09e389b8e725084bb8}{PWM\_\-OFFIS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a44a0b021d6963a4246ea3081a5dd50ad}{PWM\_\-ONIS0\_\-OFFSETADDRESS}~PWM\_\-PWMIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a848aae31bbabab473111b05aa885af1e}{PWM\_\-ONIS0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_af2887ed7f985bc0d495de8817e5902ec}{PWM\_\-ONIS0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_aaf610b0cb59d94f8b80e62bb8fe11bfc}{PWM\_\-ONIS0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00565_a8f6965d1e884e33dc231898c6d833cd3}{PWM\_\-ONIS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ad85bbc1622b6502490eec15b1ab0819b}{PWM\_\-PWMRIS\_\-OFFSETADDRESS}~0x00000034
+\item 
+\#define \hyperlink{a00565_acaff455b91b6368bbe26d2843c5269da}{PWM\_\-PWMRIS\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a58f5287ba2f123a06d724a22fb9b85f5}{PWM\_\-PWMRIS\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_a4dec8740cf398f2550ef3685cfbf13e9}{PWM\_\-PWMRIS\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_a839e8d008fe8c5db26fb49cb48f4595f}{PWM\_\-PWMRIS\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_ab3ad5b76de2aa9acfbc01708c2f516f4}{PWM\_\-OFFRIS2\_\-OFFSETADDRESS}~PWM\_\-PWMRIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a8e66e84d67e008997e47171daaeaa747}{PWM\_\-OFFRIS2\_\-BITOFFSET}~9
+\item 
+\#define \hyperlink{a00565_aaf2b16c29029a880d26f35958de998e2}{PWM\_\-OFFRIS2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a88f29da4b8d1eaa79468e653981c0aa6}{PWM\_\-OFFRIS2\_\-BITMASK}~0x00000200
+\item 
+\#define \hyperlink{a00565_ae51673cd2a9d20e9f46ac3ac54361084}{PWM\_\-OFFRIS2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a9c251436a956778616254b424b9d9476}{PWM\_\-ONRIS2\_\-OFFSETADDRESS}~PWM\_\-PWMRIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_ac4dcfd05963a3ee28d5dcf09579bc69b}{PWM\_\-ONRIS2\_\-BITOFFSET}~8
+\item 
+\#define \hyperlink{a00565_a17c7a2f0258dfa8c750292cb2ae87c6f}{PWM\_\-ONRIS2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a98fe5375714720a916cc9441270e3f65}{PWM\_\-ONRIS2\_\-BITMASK}~0x00000100
+\item 
+\#define \hyperlink{a00565_ac51a141dd577d19955defa945ba8c71c}{PWM\_\-ONRIS2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_aa0011d709ada1c8cb3b221053cdcd3ad}{PWM\_\-OFFRIS1\_\-OFFSETADDRESS}~PWM\_\-PWMRIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_af934a7197671bee73fc9acba848e4d94}{PWM\_\-OFFRIS1\_\-BITOFFSET}~5
+\item 
+\#define \hyperlink{a00565_a5fc0ddbfdc56442808b5de93ccd40fa0}{PWM\_\-OFFRIS1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a557cb447f85354a11c7e11dacb5969f9}{PWM\_\-OFFRIS1\_\-BITMASK}~0x00000020
+\item 
+\#define \hyperlink{a00565_a5d41f39e164eb3d27dbbd432e35c3233}{PWM\_\-OFFRIS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a48d8b9e83760dfe43c39030946285035}{PWM\_\-ONRIS1\_\-OFFSETADDRESS}~PWM\_\-PWMRIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_abee1b1081aee0ae78f8116b1b1076d7e}{PWM\_\-ONRIS1\_\-BITOFFSET}~4
+\item 
+\#define \hyperlink{a00565_a5ed91b07d94e8ef561da94f2914a1d7b}{PWM\_\-ONRIS1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a4fff32a1d2f87b94371ebc9d2d41dc32}{PWM\_\-ONRIS1\_\-BITMASK}~0x00000010
+\item 
+\#define \hyperlink{a00565_a1993e53c914dc39f3f8ad4e54012819c}{PWM\_\-ONRIS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ab4f4c6a7031c6cc75825ce5331678457}{PWM\_\-OFFRIS0\_\-OFFSETADDRESS}~PWM\_\-PWMRIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a581825b5d80790f432ee8d6d5ed5c332}{PWM\_\-OFFRIS0\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00565_ae4c07c49aa63a2897740abfdb2994484}{PWM\_\-OFFRIS0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a75da53217a98c663bc356f68f588a7bf}{PWM\_\-OFFRIS0\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00565_a4cbdf9fba3e2a20e873357d3ccc9c1a0}{PWM\_\-OFFRIS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ac4aa2fe5ef4a803d111d50d3c33cc09d}{PWM\_\-ONRIS0\_\-OFFSETADDRESS}~PWM\_\-PWMRIS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_aa14bb3a0925508c8e3ae6935998725e8}{PWM\_\-ONRIS0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a8c664a35e7e0c30111a95b5fe1ad1311}{PWM\_\-ONRIS0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_aa1b799cb72a3ad42549f2294d6f3bf48}{PWM\_\-ONRIS0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00565_af1203aa729f79270e6cdfef4bc9e9e90}{PWM\_\-ONRIS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a469ac74ee92662446dff6988c5b5f369}{PWM\_\-PWMIM\_\-OFFSETADDRESS}~0x00000038
+\item 
+\#define \hyperlink{a00565_a8beac3873234629219bd895535763394}{PWM\_\-PWMIM\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a42dc9b8cc0b60ec94bdd0cb9cc70218c}{PWM\_\-PWMIM\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_ab6518f2d44583d2a58e41caafade7fc8}{PWM\_\-PWMIM\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_abfc8e4406af6d5bfb673eec20fbc3175}{PWM\_\-PWMIM\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_a64c5144c2e49b2ba331da85235747794}{PWM\_\-OFFIM2\_\-OFFSETADDRESS}~PWM\_\-PWMIM\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_aae30b9dc7ec99f0e396dfb033776a1ce}{PWM\_\-OFFIM2\_\-BITOFFSET}~9
+\item 
+\#define \hyperlink{a00565_a21b3382fe6658a31067c9a968390c542}{PWM\_\-OFFIM2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a995f38fa29e87f54611816509d4618d9}{PWM\_\-OFFIM2\_\-BITMASK}~0x00000200
+\item 
+\#define \hyperlink{a00565_a61b870db47a70b6912fbe4a99ce2f353}{PWM\_\-OFFIM2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a798ecf352fa4c346ce9b536964ec0ce2}{PWM\_\-ONIM2\_\-OFFSETADDRESS}~PWM\_\-PWMIM\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_ac852c55151e65e0336a9303acd2be579}{PWM\_\-ONIM2\_\-BITOFFSET}~8
+\item 
+\#define \hyperlink{a00565_a4627793b4810f33e028618e974dab71d}{PWM\_\-ONIM2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a45b02b49077c722e98c59b5fe89dd2a2}{PWM\_\-ONIM2\_\-BITMASK}~0x00000100
+\item 
+\#define \hyperlink{a00565_a30aff2b2296aa6b8ef04e418f92085e8}{PWM\_\-ONIM2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ad71f32a8d545c6033402b2b62abe6120}{PWM\_\-OFFIM1\_\-OFFSETADDRESS}~PWM\_\-PWMIM\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a8b81fe77f2c57a36af74f6e345a2e21b}{PWM\_\-OFFIM1\_\-BITOFFSET}~5
+\item 
+\#define \hyperlink{a00565_a9495e1fb3f916dba97607f5a96d80613}{PWM\_\-OFFIM1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_ad66e14a243cfe054609b4768cb1095e5}{PWM\_\-OFFIM1\_\-BITMASK}~0x00000020
+\item 
+\#define \hyperlink{a00565_a6b3ea49e054b5b22f00931a21f8215f7}{PWM\_\-OFFIM1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ab7cd5ba873031bd3d4bb8a7b173a8f6b}{PWM\_\-ONIM1\_\-OFFSETADDRESS}~PWM\_\-PWMIM\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a7f08790e34410dfd96c9874b33f18602}{PWM\_\-ONIM1\_\-BITOFFSET}~4
+\item 
+\#define \hyperlink{a00565_ab5c9df7bd6f64d10ddd1653e921dc6c6}{PWM\_\-ONIM1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_ad3f1f166f59fc9435af3dd3ccb336033}{PWM\_\-ONIM1\_\-BITMASK}~0x00000010
+\item 
+\#define \hyperlink{a00565_ab8730bf4f51dc9a83599cf86d88ed63f}{PWM\_\-ONIM1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_af94ba5e00da014775b64ab73712c90d0}{PWM\_\-OFFIM0\_\-OFFSETADDRESS}~PWM\_\-PWMIM\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_ab1bbe80c83ff0aa3014c4aa9e442a13f}{PWM\_\-OFFIM0\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00565_a1553c8ebc3a22a8b7a9443c95c3a9a28}{PWM\_\-OFFIM0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a01e614a0416e13e6f17f18e0bef689ed}{PWM\_\-OFFIM0\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00565_a9f78151961be85de838922f5fbd3d5e1}{PWM\_\-OFFIM0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ababcd59a5db5295a3854b983e91e1032}{PWM\_\-ONIM0\_\-OFFSETADDRESS}~PWM\_\-PWMIM\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a119f48c42261b5ebca8415edb1c122b0}{PWM\_\-ONIM0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_ae7eca55b2c1528595f07d571376f2044}{PWM\_\-ONIM0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a03867e034567918d31ffaf38512c7556}{PWM\_\-ONIM0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00565_aaf81938645250f5383f7dd5d429d4981}{PWM\_\-ONIM0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a4ed506b6b0291be53741bd7a9ced73a5}{PWM\_\-PWMIC\_\-OFFSETADDRESS}~0x0000003c
+\item 
+\#define \hyperlink{a00565_a8bb11f7bed8dc0591fdf4026a9380dbd}{PWM\_\-PWMIC\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a7d313f8bac74b3afd862d383ce57df50}{PWM\_\-PWMIC\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00565_ac6be16b81228d8e168d46269385fab6d}{PWM\_\-PWMIC\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00565_a0464f8f18a320328dd7a2e100de3c367}{PWM\_\-PWMIC\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00565_a4442dd1a7a9bb9bbb94778f3dd6463bd}{PWM\_\-OFFIC2\_\-OFFSETADDRESS}~PWM\_\-PWMIC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a257b9ca27dfc054f60faf59d9edac1a7}{PWM\_\-OFFIC2\_\-BITOFFSET}~9
+\item 
+\#define \hyperlink{a00565_ac5e73d679bc421137b94da4c343ce3c8}{PWM\_\-OFFIC2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_abe54248326e414e6b9152ae2b196f4e4}{PWM\_\-OFFIC2\_\-BITMASK}~0x00000200
+\item 
+\#define \hyperlink{a00565_a93b0dc851986b12ea90b737fd896147a}{PWM\_\-OFFIC2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_ad974ce25581be8812e9e9ed8f30976d0}{PWM\_\-ONIC2\_\-OFFSETADDRESS}~PWM\_\-PWMIC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a47cf9ee8db1a0d2c45deaba2a05e36af}{PWM\_\-ONIC2\_\-BITOFFSET}~8
+\item 
+\#define \hyperlink{a00565_a9bfa96509dda21eff340370ccedd684b}{PWM\_\-ONIC2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_acc0b23fde7b18f435bdb338004f94edf}{PWM\_\-ONIC2\_\-BITMASK}~0x00000100
+\item 
+\#define \hyperlink{a00565_aaea40cf71b9841eaca0de14a491e1f60}{PWM\_\-ONIC2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a688d14f7269cbf615626d282e6723295}{PWM\_\-OFFIC1\_\-OFFSETADDRESS}~PWM\_\-PWMIC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a25bb383aa09d4f5b7c9a2bf36749de18}{PWM\_\-OFFIC1\_\-BITOFFSET}~5
+\item 
+\#define \hyperlink{a00565_a389bbb6e06ce4364b917a97c7cf8c7e1}{PWM\_\-OFFIC1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a51c063c90cab4885e923fbfe8ca2df66}{PWM\_\-OFFIC1\_\-BITMASK}~0x00000020
+\item 
+\#define \hyperlink{a00565_a741fd8a2002de1bbedde6b605b932db3}{PWM\_\-OFFIC1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a8720f560d7ebf143f6f0838a708c2745}{PWM\_\-ONIC1\_\-OFFSETADDRESS}~PWM\_\-PWMIC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a70925ca11d17d6032e0d2a5cb3c64343}{PWM\_\-ONIC1\_\-BITOFFSET}~4
+\item 
+\#define \hyperlink{a00565_a6406cc11fa48cff5633713551ecad887}{PWM\_\-ONIC1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_aee5abeb79015964b2c60680245350820}{PWM\_\-ONIC1\_\-BITMASK}~0x00000010
+\item 
+\#define \hyperlink{a00565_a72905a56a3e9112c596eb93288adc8ec}{PWM\_\-ONIC1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_a86d4d70c23c0eda27e2b2f3fdafd9fe5}{PWM\_\-OFFIC0\_\-OFFSETADDRESS}~PWM\_\-PWMIC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a558b49b89b6c5d1601fe3906a07a62c4}{PWM\_\-OFFIC0\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00565_aed02228d5918701750e7268012c37063}{PWM\_\-OFFIC0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_a80e891db0c3f2402d67feb80cc462e44}{PWM\_\-OFFIC0\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00565_ab445c0b98ac492ac0e23ed74252c3b62}{PWM\_\-OFFIC0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00565_afc5297678ec187528a5d97caf97284c1}{PWM\_\-ONIC0\_\-OFFSETADDRESS}~PWM\_\-PWMIC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00565_a928d555584e421cb9e6e88567673806d}{PWM\_\-ONIC0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00565_a465874ab844956b4c3fb9a19d9e1acdd}{PWM\_\-ONIC0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00565_aac0c63571edc91f2d9934facb0b2c0ee}{PWM\_\-ONIC0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00565_a6cd4e0b036ef62f52d2d5f102572c526}{PWM\_\-ONIC0\_\-INIT}~0x0
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00565_a8a4ca7fd926356de47ba79c81559f1fc}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!COMMON\_\-PWM@{COMMON\_\-PWM}}
+\index{COMMON\_\-PWM@{COMMON\_\-PWM}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{COMMON\_\-PWM}]{\setlength{\rightskip}{0pt plus 5cm}\#define COMMON\_\-PWM~0x40100000}}
+\label{a00565_a8a4ca7fd926356de47ba79c81559f1fc}
+
+
+Definition at line 56 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a3e40fa7bb96ef0ab41dd6c55a677fd4e}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLKFREQ\_\-BITFIELDSIZE@{PWM\_\-CLKFREQ\_\-BITFIELDSIZE}}
+\index{PWM\_\-CLKFREQ\_\-BITFIELDSIZE@{PWM\_\-CLKFREQ\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLKFREQ\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLKFREQ\_\-BITFIELDSIZE~1}}
+\label{a00565_a3e40fa7bb96ef0ab41dd6c55a677fd4e}
+
+
+Definition at line 74 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aafb0f88c898bc809c1dedcb764035cdf}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLKFREQ\_\-BITMASK@{PWM\_\-CLKFREQ\_\-BITMASK}}
+\index{PWM\_\-CLKFREQ\_\-BITMASK@{PWM\_\-CLKFREQ\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLKFREQ\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLKFREQ\_\-BITMASK~0x00010000}}
+\label{a00565_aafb0f88c898bc809c1dedcb764035cdf}
+
+
+Definition at line 75 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a5ab3f3c7f2fde6281cf23a776170bde8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLKFREQ\_\-BITOFFSET@{PWM\_\-CLKFREQ\_\-BITOFFSET}}
+\index{PWM\_\-CLKFREQ\_\-BITOFFSET@{PWM\_\-CLKFREQ\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLKFREQ\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLKFREQ\_\-BITOFFSET~16}}
+\label{a00565_a5ab3f3c7f2fde6281cf23a776170bde8}
+
+
+Definition at line 73 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a8d7b05b8c1963d8dd7500929da1ae824}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLKFREQ\_\-INIT@{PWM\_\-CLKFREQ\_\-INIT}}
+\index{PWM\_\-CLKFREQ\_\-INIT@{PWM\_\-CLKFREQ\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLKFREQ\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLKFREQ\_\-INIT~0x0}}
+\label{a00565_a8d7b05b8c1963d8dd7500929da1ae824}
+
+
+Definition at line 76 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a9cfc58aa51479fffb2ad13b9d1f2140a}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLKFREQ\_\-OFFSETADDRESS@{PWM\_\-CLKFREQ\_\-OFFSETADDRESS}}
+\index{PWM\_\-CLKFREQ\_\-OFFSETADDRESS@{PWM\_\-CLKFREQ\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLKFREQ\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLKFREQ\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_a9cfc58aa51479fffb2ad13b9d1f2140a}
+
+
+Definition at line 72 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac6a9bd678846a70c3f515ca6ccbc15d3}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS0\_\-BITFIELDSIZE@{PWM\_\-CLS0\_\-BITFIELDSIZE}}
+\index{PWM\_\-CLS0\_\-BITFIELDSIZE@{PWM\_\-CLS0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS0\_\-BITFIELDSIZE~1}}
+\label{a00565_ac6a9bd678846a70c3f515ca6ccbc15d3}
+
+
+Definition at line 164 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a2a9e82a21817093eb5177a6f4a306962}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS0\_\-BITMASK@{PWM\_\-CLS0\_\-BITMASK}}
+\index{PWM\_\-CLS0\_\-BITMASK@{PWM\_\-CLS0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS0\_\-BITMASK~0x00000002}}
+\label{a00565_a2a9e82a21817093eb5177a6f4a306962}
+
+
+Definition at line 165 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a794c36116a3f31f40f7cdae0b58b6a3c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS0\_\-BITOFFSET@{PWM\_\-CLS0\_\-BITOFFSET}}
+\index{PWM\_\-CLS0\_\-BITOFFSET@{PWM\_\-CLS0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS0\_\-BITOFFSET~1}}
+\label{a00565_a794c36116a3f31f40f7cdae0b58b6a3c}
+
+
+Definition at line 163 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a5976b8924a69c971d37e8b23bdca325f}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS0\_\-INIT@{PWM\_\-CLS0\_\-INIT}}
+\index{PWM\_\-CLS0\_\-INIT@{PWM\_\-CLS0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS0\_\-INIT~0x0}}
+\label{a00565_a5976b8924a69c971d37e8b23bdca325f}
+
+
+Definition at line 166 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a0c550f5d2d70f5e6d68ab9a0ea7cc3c2}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS0\_\-OFFSETADDRESS@{PWM\_\-CLS0\_\-OFFSETADDRESS}}
+\index{PWM\_\-CLS0\_\-OFFSETADDRESS@{PWM\_\-CLS0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS0\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_a0c550f5d2d70f5e6d68ab9a0ea7cc3c2}
+
+
+Definition at line 162 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a914ddc7576bf9a85724a228403093c49}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS1\_\-BITFIELDSIZE@{PWM\_\-CLS1\_\-BITFIELDSIZE}}
+\index{PWM\_\-CLS1\_\-BITFIELDSIZE@{PWM\_\-CLS1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS1\_\-BITFIELDSIZE~1}}
+\label{a00565_a914ddc7576bf9a85724a228403093c49}
+
+
+Definition at line 137 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a25ab219a74af0d96b957e5a8247e9f6f}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS1\_\-BITMASK@{PWM\_\-CLS1\_\-BITMASK}}
+\index{PWM\_\-CLS1\_\-BITMASK@{PWM\_\-CLS1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS1\_\-BITMASK~0x00000020}}
+\label{a00565_a25ab219a74af0d96b957e5a8247e9f6f}
+
+
+Definition at line 138 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af9f76b27b56b26bb53b426e0fbf48c85}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS1\_\-BITOFFSET@{PWM\_\-CLS1\_\-BITOFFSET}}
+\index{PWM\_\-CLS1\_\-BITOFFSET@{PWM\_\-CLS1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS1\_\-BITOFFSET~5}}
+\label{a00565_af9f76b27b56b26bb53b426e0fbf48c85}
+
+
+Definition at line 136 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab86d21e8e4c60a9168861b5d7b9544bb}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS1\_\-INIT@{PWM\_\-CLS1\_\-INIT}}
+\index{PWM\_\-CLS1\_\-INIT@{PWM\_\-CLS1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS1\_\-INIT~0x0}}
+\label{a00565_ab86d21e8e4c60a9168861b5d7b9544bb}
+
+
+Definition at line 139 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a746ef691be8e0fcde7ccc848780ca9e0}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS1\_\-OFFSETADDRESS@{PWM\_\-CLS1\_\-OFFSETADDRESS}}
+\index{PWM\_\-CLS1\_\-OFFSETADDRESS@{PWM\_\-CLS1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS1\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_a746ef691be8e0fcde7ccc848780ca9e0}
+
+
+Definition at line 135 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aca1f4663b80ef5947b379df09e3b3433}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS2\_\-BITFIELDSIZE@{PWM\_\-CLS2\_\-BITFIELDSIZE}}
+\index{PWM\_\-CLS2\_\-BITFIELDSIZE@{PWM\_\-CLS2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS2\_\-BITFIELDSIZE~1}}
+\label{a00565_aca1f4663b80ef5947b379df09e3b3433}
+
+
+Definition at line 110 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ae3cf31d7a0097a1a0b0847a862df0376}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS2\_\-BITMASK@{PWM\_\-CLS2\_\-BITMASK}}
+\index{PWM\_\-CLS2\_\-BITMASK@{PWM\_\-CLS2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS2\_\-BITMASK~0x00000200}}
+\label{a00565_ae3cf31d7a0097a1a0b0847a862df0376}
+
+
+Definition at line 111 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ae94efecdd4ec42d1aadc52684c9f2bf2}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS2\_\-BITOFFSET@{PWM\_\-CLS2\_\-BITOFFSET}}
+\index{PWM\_\-CLS2\_\-BITOFFSET@{PWM\_\-CLS2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS2\_\-BITOFFSET~9}}
+\label{a00565_ae94efecdd4ec42d1aadc52684c9f2bf2}
+
+
+Definition at line 109 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a87ea2c3888708644f116c7d264353d85}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS2\_\-INIT@{PWM\_\-CLS2\_\-INIT}}
+\index{PWM\_\-CLS2\_\-INIT@{PWM\_\-CLS2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS2\_\-INIT~0x0}}
+\label{a00565_a87ea2c3888708644f116c7d264353d85}
+
+
+Definition at line 112 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad706dc65d2a9dfe96eea06384d13351f}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CLS2\_\-OFFSETADDRESS@{PWM\_\-CLS2\_\-OFFSETADDRESS}}
+\index{PWM\_\-CLS2\_\-OFFSETADDRESS@{PWM\_\-CLS2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CLS2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS2\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_ad706dc65d2a9dfe96eea06384d13351f}
+
+
+Definition at line 108 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a3b6674b72140ed31c824c747122cb5cb}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CNTST\_\-BITFIELDSIZE@{PWM\_\-CNTST\_\-BITFIELDSIZE}}
+\index{PWM\_\-CNTST\_\-BITFIELDSIZE@{PWM\_\-CNTST\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CNTST\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTST\_\-BITFIELDSIZE~1}}
+\label{a00565_a3b6674b72140ed31c824c747122cb5cb}
+
+
+Definition at line 306 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a60cef3d409c8d64931e03cf348cbe8be}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CNTST\_\-BITMASK@{PWM\_\-CNTST\_\-BITMASK}}
+\index{PWM\_\-CNTST\_\-BITMASK@{PWM\_\-CNTST\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CNTST\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTST\_\-BITMASK~0x00010000}}
+\label{a00565_a60cef3d409c8d64931e03cf348cbe8be}
+
+
+Definition at line 307 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac937f242c18bb3a56b38d9a764db2d78}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CNTST\_\-BITOFFSET@{PWM\_\-CNTST\_\-BITOFFSET}}
+\index{PWM\_\-CNTST\_\-BITOFFSET@{PWM\_\-CNTST\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CNTST\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTST\_\-BITOFFSET~16}}
+\label{a00565_ac937f242c18bb3a56b38d9a764db2d78}
+
+
+Definition at line 305 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a02fbeff375a01d36f329a146d4690ad4}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CNTST\_\-INIT@{PWM\_\-CNTST\_\-INIT}}
+\index{PWM\_\-CNTST\_\-INIT@{PWM\_\-CNTST\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CNTST\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTST\_\-INIT~0x0}}
+\label{a00565_a02fbeff375a01d36f329a146d4690ad4}
+
+
+Definition at line 308 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad80d9a60b1af1c534b6ab06c75d249ec}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CNTST\_\-OFFSETADDRESS@{PWM\_\-CNTST\_\-OFFSETADDRESS}}
+\index{PWM\_\-CNTST\_\-OFFSETADDRESS@{PWM\_\-CNTST\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CNTST\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTST\_\-OFFSETADDRESS~PWM\_\-PWMCST0\_\-OFFSETADDRESS}}
+\label{a00565_ad80d9a60b1af1c534b6ab06c75d249ec}
+
+
+Definition at line 304 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a847c142d9f4ac4ec3fcd415aa67a3483}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CNTVAL\_\-BITFIELDSIZE@{PWM\_\-CNTVAL\_\-BITFIELDSIZE}}
+\index{PWM\_\-CNTVAL\_\-BITFIELDSIZE@{PWM\_\-CNTVAL\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CNTVAL\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTVAL\_\-BITFIELDSIZE~16}}
+\label{a00565_a847c142d9f4ac4ec3fcd415aa67a3483}
+
+
+Definition at line 315 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af1714292b4b38e420ed93f69439e1a2c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CNTVAL\_\-BITMASK@{PWM\_\-CNTVAL\_\-BITMASK}}
+\index{PWM\_\-CNTVAL\_\-BITMASK@{PWM\_\-CNTVAL\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CNTVAL\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTVAL\_\-BITMASK~0x0000ffff}}
+\label{a00565_af1714292b4b38e420ed93f69439e1a2c}
+
+
+Definition at line 316 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af0a974ea0c7d36049043f7b761ad99a5}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CNTVAL\_\-BITOFFSET@{PWM\_\-CNTVAL\_\-BITOFFSET}}
+\index{PWM\_\-CNTVAL\_\-BITOFFSET@{PWM\_\-CNTVAL\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CNTVAL\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTVAL\_\-BITOFFSET~0}}
+\label{a00565_af0a974ea0c7d36049043f7b761ad99a5}
+
+
+Definition at line 314 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a47135f22788ad7987b7a45e9905f4495}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CNTVAL\_\-INIT@{PWM\_\-CNTVAL\_\-INIT}}
+\index{PWM\_\-CNTVAL\_\-INIT@{PWM\_\-CNTVAL\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CNTVAL\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTVAL\_\-INIT~0x0}}
+\label{a00565_a47135f22788ad7987b7a45e9905f4495}
+
+
+Definition at line 317 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a113821db24adeb5e54b06e9f6dc8bdf7}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CNTVAL\_\-OFFSETADDRESS@{PWM\_\-CNTVAL\_\-OFFSETADDRESS}}
+\index{PWM\_\-CNTVAL\_\-OFFSETADDRESS@{PWM\_\-CNTVAL\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CNTVAL\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTVAL\_\-OFFSETADDRESS~PWM\_\-PWMCST0\_\-OFFSETADDRESS}}
+\label{a00565_a113821db24adeb5e54b06e9f6dc8bdf7}
+
+
+Definition at line 313 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aff1828ea2804b30439108c4581c69afe}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CPS\_\-BITFIELDSIZE@{PWM\_\-CPS\_\-BITFIELDSIZE}}
+\index{PWM\_\-CPS\_\-BITFIELDSIZE@{PWM\_\-CPS\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CPS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CPS\_\-BITFIELDSIZE~6}}
+\label{a00565_aff1828ea2804b30439108c4581c69afe}
+
+
+Definition at line 192 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a2bff5ec88be76abb7d9b1a79c7a4b1f2}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CPS\_\-BITMASK@{PWM\_\-CPS\_\-BITMASK}}
+\index{PWM\_\-CPS\_\-BITMASK@{PWM\_\-CPS\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CPS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CPS\_\-BITMASK~0x0000003f}}
+\label{a00565_a2bff5ec88be76abb7d9b1a79c7a4b1f2}
+
+
+Definition at line 193 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1bbad1be0bd416872c86c6bbd7aecabc}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CPS\_\-BITOFFSET@{PWM\_\-CPS\_\-BITOFFSET}}
+\index{PWM\_\-CPS\_\-BITOFFSET@{PWM\_\-CPS\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CPS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CPS\_\-BITOFFSET~0}}
+\label{a00565_a1bbad1be0bd416872c86c6bbd7aecabc}
+
+
+Definition at line 191 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a656dfbd9b57eba7c922b69a1a96e50a3}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CPS\_\-INIT@{PWM\_\-CPS\_\-INIT}}
+\index{PWM\_\-CPS\_\-INIT@{PWM\_\-CPS\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CPS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CPS\_\-INIT~0x0}}
+\label{a00565_a656dfbd9b57eba7c922b69a1a96e50a3}
+
+
+Definition at line 194 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a73d74355f535b5295698ee741a1fc8b3}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-CPS\_\-OFFSETADDRESS@{PWM\_\-CPS\_\-OFFSETADDRESS}}
+\index{PWM\_\-CPS\_\-OFFSETADDRESS@{PWM\_\-CPS\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-CPS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CPS\_\-OFFSETADDRESS~PWM\_\-PWMCPS\_\-OFFSETADDRESS}}
+\label{a00565_a73d74355f535b5295698ee741a1fc8b3}
+
+
+Definition at line 190 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a63df657a3c34278532572df2feed73b0}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN0\_\-BITFIELDSIZE@{PWM\_\-EN0\_\-BITFIELDSIZE}}
+\index{PWM\_\-EN0\_\-BITFIELDSIZE@{PWM\_\-EN0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN0\_\-BITFIELDSIZE~1}}
+\label{a00565_a63df657a3c34278532572df2feed73b0}
+
+
+Definition at line 173 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1c78dc20905ee75158c8502e81d5bfb8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN0\_\-BITMASK@{PWM\_\-EN0\_\-BITMASK}}
+\index{PWM\_\-EN0\_\-BITMASK@{PWM\_\-EN0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN0\_\-BITMASK~0x00000001}}
+\label{a00565_a1c78dc20905ee75158c8502e81d5bfb8}
+
+
+Definition at line 174 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1a35a931958ece14629a7abd0c028a56}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN0\_\-BITOFFSET@{PWM\_\-EN0\_\-BITOFFSET}}
+\index{PWM\_\-EN0\_\-BITOFFSET@{PWM\_\-EN0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN0\_\-BITOFFSET~0}}
+\label{a00565_a1a35a931958ece14629a7abd0c028a56}
+
+
+Definition at line 172 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a710b5a6b2483dfbf8251fbf642be4b2e}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN0\_\-INIT@{PWM\_\-EN0\_\-INIT}}
+\index{PWM\_\-EN0\_\-INIT@{PWM\_\-EN0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN0\_\-INIT~0x0}}
+\label{a00565_a710b5a6b2483dfbf8251fbf642be4b2e}
+
+
+Definition at line 175 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ade5fe532100cb8c66b4abc1f7895aff8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN0\_\-OFFSETADDRESS@{PWM\_\-EN0\_\-OFFSETADDRESS}}
+\index{PWM\_\-EN0\_\-OFFSETADDRESS@{PWM\_\-EN0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN0\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_ade5fe532100cb8c66b4abc1f7895aff8}
+
+
+Definition at line 171 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af5bb489f6d7da9acc7f734c170cc4fcc}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN1\_\-BITFIELDSIZE@{PWM\_\-EN1\_\-BITFIELDSIZE}}
+\index{PWM\_\-EN1\_\-BITFIELDSIZE@{PWM\_\-EN1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN1\_\-BITFIELDSIZE~1}}
+\label{a00565_af5bb489f6d7da9acc7f734c170cc4fcc}
+
+
+Definition at line 146 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a0e81085a1468c3225dc12d30d0b2d1c0}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN1\_\-BITMASK@{PWM\_\-EN1\_\-BITMASK}}
+\index{PWM\_\-EN1\_\-BITMASK@{PWM\_\-EN1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN1\_\-BITMASK~0x00000010}}
+\label{a00565_a0e81085a1468c3225dc12d30d0b2d1c0}
+
+
+Definition at line 147 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a831752a6986c6120f977ff03f2c88b4d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN1\_\-BITOFFSET@{PWM\_\-EN1\_\-BITOFFSET}}
+\index{PWM\_\-EN1\_\-BITOFFSET@{PWM\_\-EN1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN1\_\-BITOFFSET~4}}
+\label{a00565_a831752a6986c6120f977ff03f2c88b4d}
+
+
+Definition at line 145 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a34b74e0e84541202a25b69cba41e8066}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN1\_\-INIT@{PWM\_\-EN1\_\-INIT}}
+\index{PWM\_\-EN1\_\-INIT@{PWM\_\-EN1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN1\_\-INIT~0x0}}
+\label{a00565_a34b74e0e84541202a25b69cba41e8066}
+
+
+Definition at line 148 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a7cdc9c922184aaf5dcc31f1894078157}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN1\_\-OFFSETADDRESS@{PWM\_\-EN1\_\-OFFSETADDRESS}}
+\index{PWM\_\-EN1\_\-OFFSETADDRESS@{PWM\_\-EN1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN1\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_a7cdc9c922184aaf5dcc31f1894078157}
+
+
+Definition at line 144 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad291377138c0354336fceeb9ed5d4cb5}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN2\_\-BITFIELDSIZE@{PWM\_\-EN2\_\-BITFIELDSIZE}}
+\index{PWM\_\-EN2\_\-BITFIELDSIZE@{PWM\_\-EN2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN2\_\-BITFIELDSIZE~1}}
+\label{a00565_ad291377138c0354336fceeb9ed5d4cb5}
+
+
+Definition at line 119 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a3d1cd2162acc720efb1a767901b921a0}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN2\_\-BITMASK@{PWM\_\-EN2\_\-BITMASK}}
+\index{PWM\_\-EN2\_\-BITMASK@{PWM\_\-EN2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN2\_\-BITMASK~0x00000100}}
+\label{a00565_a3d1cd2162acc720efb1a767901b921a0}
+
+
+Definition at line 120 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af559c0fb6de2e23f4d380dda6d592c55}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN2\_\-BITOFFSET@{PWM\_\-EN2\_\-BITOFFSET}}
+\index{PWM\_\-EN2\_\-BITOFFSET@{PWM\_\-EN2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN2\_\-BITOFFSET~8}}
+\label{a00565_af559c0fb6de2e23f4d380dda6d592c55}
+
+
+Definition at line 118 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a2e1c438f84f028e37fcddb3aa9a28c73}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN2\_\-INIT@{PWM\_\-EN2\_\-INIT}}
+\index{PWM\_\-EN2\_\-INIT@{PWM\_\-EN2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN2\_\-INIT~0x0}}
+\label{a00565_a2e1c438f84f028e37fcddb3aa9a28c73}
+
+
+Definition at line 121 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a82c2a6a73b8bea0771bf6add0d32f143}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-EN2\_\-OFFSETADDRESS@{PWM\_\-EN2\_\-OFFSETADDRESS}}
+\index{PWM\_\-EN2\_\-OFFSETADDRESS@{PWM\_\-EN2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-EN2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN2\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_a82c2a6a73b8bea0771bf6add0d32f143}
+
+
+Definition at line 117 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a2eb8bd2ff17c539025823cbe71616f89}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ID\_\-BITFIELDSIZE@{PWM\_\-ID\_\-BITFIELDSIZE}}
+\index{PWM\_\-ID\_\-BITFIELDSIZE@{PWM\_\-ID\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ID\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ID\_\-BITFIELDSIZE~32}}
+\label{a00565_a2eb8bd2ff17c539025823cbe71616f89}
+
+
+Definition at line 239 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a69479612854fb302d76c4ee1c308095c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ID\_\-BITMASK@{PWM\_\-ID\_\-BITMASK}}
+\index{PWM\_\-ID\_\-BITMASK@{PWM\_\-ID\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ID\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ID\_\-BITMASK~0xffffffff}}
+\label{a00565_a69479612854fb302d76c4ee1c308095c}
+
+
+Definition at line 240 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a980cbc74448c168119540aa7e63b2314}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ID\_\-BITOFFSET@{PWM\_\-ID\_\-BITOFFSET}}
+\index{PWM\_\-ID\_\-BITOFFSET@{PWM\_\-ID\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ID\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ID\_\-BITOFFSET~0}}
+\label{a00565_a980cbc74448c168119540aa7e63b2314}
+
+
+Definition at line 238 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a0b1a1bbe9036e85057cf408ef7327bb8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ID\_\-INIT@{PWM\_\-ID\_\-INIT}}
+\index{PWM\_\-ID\_\-INIT@{PWM\_\-ID\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ID\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ID\_\-INIT~0x0}}
+\label{a00565_a0b1a1bbe9036e85057cf408ef7327bb8}
+
+
+Definition at line 241 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a633098a5cae368212040cfe0f285a2e0}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ID\_\-OFFSETADDRESS@{PWM\_\-ID\_\-OFFSETADDRESS}}
+\index{PWM\_\-ID\_\-OFFSETADDRESS@{PWM\_\-ID\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ID\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ID\_\-OFFSETADDRESS~PWM\_\-PWMID\_\-OFFSETADDRESS}}
+\label{a00565_a633098a5cae368212040cfe0f285a2e0}
+
+
+Definition at line 237 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a74e5ecaa49850efdabf02db2adf9fba8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFCNT\_\-BITFIELDSIZE@{PWM\_\-OFFCNT\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFCNT\_\-BITFIELDSIZE@{PWM\_\-OFFCNT\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFCNT\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFCNT\_\-BITFIELDSIZE~16}}
+\label{a00565_a74e5ecaa49850efdabf02db2adf9fba8}
+
+
+Definition at line 267 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a3431544ba0e652cbec2e5ab87ce6ffb6}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFCNT\_\-BITMASK@{PWM\_\-OFFCNT\_\-BITMASK}}
+\index{PWM\_\-OFFCNT\_\-BITMASK@{PWM\_\-OFFCNT\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFCNT\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFCNT\_\-BITMASK~0x0000ffff}}
+\label{a00565_a3431544ba0e652cbec2e5ab87ce6ffb6}
+
+
+Definition at line 268 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a8f9fdf1c7df6872936cc569b9bcaa5c6}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFCNT\_\-BITOFFSET@{PWM\_\-OFFCNT\_\-BITOFFSET}}
+\index{PWM\_\-OFFCNT\_\-BITOFFSET@{PWM\_\-OFFCNT\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFCNT\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFCNT\_\-BITOFFSET~0}}
+\label{a00565_a8f9fdf1c7df6872936cc569b9bcaa5c6}
+
+
+Definition at line 266 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ae3b6c31203f7d1effb77cf64328f3419}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFCNT\_\-INIT@{PWM\_\-OFFCNT\_\-INIT}}
+\index{PWM\_\-OFFCNT\_\-INIT@{PWM\_\-OFFCNT\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFCNT\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFCNT\_\-INIT~0x0}}
+\label{a00565_ae3b6c31203f7d1effb77cf64328f3419}
+
+
+Definition at line 269 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a2cf73b7444de137029b012f9e299083b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFCNT\_\-OFFSETADDRESS@{PWM\_\-OFFCNT\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFCNT\_\-OFFSETADDRESS@{PWM\_\-OFFCNT\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFCNT\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFCNT\_\-OFFSETADDRESS~PWM\_\-PWMCCR0\_\-OFFSETADDRESS}}
+\label{a00565_a2cf73b7444de137029b012f9e299083b}
+
+
+Definition at line 265 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aed02228d5918701750e7268012c37063}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC0\_\-BITFIELDSIZE@{PWM\_\-OFFIC0\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFIC0\_\-BITFIELDSIZE@{PWM\_\-OFFIC0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC0\_\-BITFIELDSIZE~1}}
+\label{a00565_aed02228d5918701750e7268012c37063}
+
+
+Definition at line 582 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a80e891db0c3f2402d67feb80cc462e44}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC0\_\-BITMASK@{PWM\_\-OFFIC0\_\-BITMASK}}
+\index{PWM\_\-OFFIC0\_\-BITMASK@{PWM\_\-OFFIC0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC0\_\-BITMASK~0x00000002}}
+\label{a00565_a80e891db0c3f2402d67feb80cc462e44}
+
+
+Definition at line 583 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a558b49b89b6c5d1601fe3906a07a62c4}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC0\_\-BITOFFSET@{PWM\_\-OFFIC0\_\-BITOFFSET}}
+\index{PWM\_\-OFFIC0\_\-BITOFFSET@{PWM\_\-OFFIC0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC0\_\-BITOFFSET~1}}
+\label{a00565_a558b49b89b6c5d1601fe3906a07a62c4}
+
+
+Definition at line 581 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab445c0b98ac492ac0e23ed74252c3b62}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC0\_\-INIT@{PWM\_\-OFFIC0\_\-INIT}}
+\index{PWM\_\-OFFIC0\_\-INIT@{PWM\_\-OFFIC0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC0\_\-INIT~0x0}}
+\label{a00565_ab445c0b98ac492ac0e23ed74252c3b62}
+
+
+Definition at line 584 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a86d4d70c23c0eda27e2b2f3fdafd9fe5}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC0\_\-OFFSETADDRESS@{PWM\_\-OFFIC0\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFIC0\_\-OFFSETADDRESS@{PWM\_\-OFFIC0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC0\_\-OFFSETADDRESS~PWM\_\-PWMIC\_\-OFFSETADDRESS}}
+\label{a00565_a86d4d70c23c0eda27e2b2f3fdafd9fe5}
+
+
+Definition at line 580 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a389bbb6e06ce4364b917a97c7cf8c7e1}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC1\_\-BITFIELDSIZE@{PWM\_\-OFFIC1\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFIC1\_\-BITFIELDSIZE@{PWM\_\-OFFIC1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC1\_\-BITFIELDSIZE~1}}
+\label{a00565_a389bbb6e06ce4364b917a97c7cf8c7e1}
+
+
+Definition at line 564 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a51c063c90cab4885e923fbfe8ca2df66}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC1\_\-BITMASK@{PWM\_\-OFFIC1\_\-BITMASK}}
+\index{PWM\_\-OFFIC1\_\-BITMASK@{PWM\_\-OFFIC1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC1\_\-BITMASK~0x00000020}}
+\label{a00565_a51c063c90cab4885e923fbfe8ca2df66}
+
+
+Definition at line 565 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a25bb383aa09d4f5b7c9a2bf36749de18}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC1\_\-BITOFFSET@{PWM\_\-OFFIC1\_\-BITOFFSET}}
+\index{PWM\_\-OFFIC1\_\-BITOFFSET@{PWM\_\-OFFIC1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC1\_\-BITOFFSET~5}}
+\label{a00565_a25bb383aa09d4f5b7c9a2bf36749de18}
+
+
+Definition at line 563 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a741fd8a2002de1bbedde6b605b932db3}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC1\_\-INIT@{PWM\_\-OFFIC1\_\-INIT}}
+\index{PWM\_\-OFFIC1\_\-INIT@{PWM\_\-OFFIC1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC1\_\-INIT~0x0}}
+\label{a00565_a741fd8a2002de1bbedde6b605b932db3}
+
+
+Definition at line 566 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a688d14f7269cbf615626d282e6723295}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC1\_\-OFFSETADDRESS@{PWM\_\-OFFIC1\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFIC1\_\-OFFSETADDRESS@{PWM\_\-OFFIC1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC1\_\-OFFSETADDRESS~PWM\_\-PWMIC\_\-OFFSETADDRESS}}
+\label{a00565_a688d14f7269cbf615626d282e6723295}
+
+
+Definition at line 562 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac5e73d679bc421137b94da4c343ce3c8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC2\_\-BITFIELDSIZE@{PWM\_\-OFFIC2\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFIC2\_\-BITFIELDSIZE@{PWM\_\-OFFIC2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC2\_\-BITFIELDSIZE~1}}
+\label{a00565_ac5e73d679bc421137b94da4c343ce3c8}
+
+
+Definition at line 546 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_abe54248326e414e6b9152ae2b196f4e4}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC2\_\-BITMASK@{PWM\_\-OFFIC2\_\-BITMASK}}
+\index{PWM\_\-OFFIC2\_\-BITMASK@{PWM\_\-OFFIC2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC2\_\-BITMASK~0x00000200}}
+\label{a00565_abe54248326e414e6b9152ae2b196f4e4}
+
+
+Definition at line 547 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a257b9ca27dfc054f60faf59d9edac1a7}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC2\_\-BITOFFSET@{PWM\_\-OFFIC2\_\-BITOFFSET}}
+\index{PWM\_\-OFFIC2\_\-BITOFFSET@{PWM\_\-OFFIC2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC2\_\-BITOFFSET~9}}
+\label{a00565_a257b9ca27dfc054f60faf59d9edac1a7}
+
+
+Definition at line 545 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a93b0dc851986b12ea90b737fd896147a}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC2\_\-INIT@{PWM\_\-OFFIC2\_\-INIT}}
+\index{PWM\_\-OFFIC2\_\-INIT@{PWM\_\-OFFIC2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC2\_\-INIT~0x0}}
+\label{a00565_a93b0dc851986b12ea90b737fd896147a}
+
+
+Definition at line 548 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a4442dd1a7a9bb9bbb94778f3dd6463bd}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIC2\_\-OFFSETADDRESS@{PWM\_\-OFFIC2\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFIC2\_\-OFFSETADDRESS@{PWM\_\-OFFIC2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIC2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC2\_\-OFFSETADDRESS~PWM\_\-PWMIC\_\-OFFSETADDRESS}}
+\label{a00565_a4442dd1a7a9bb9bbb94778f3dd6463bd}
+
+
+Definition at line 544 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1553c8ebc3a22a8b7a9443c95c3a9a28}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM0\_\-BITFIELDSIZE@{PWM\_\-OFFIM0\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFIM0\_\-BITFIELDSIZE@{PWM\_\-OFFIM0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM0\_\-BITFIELDSIZE~1}}
+\label{a00565_a1553c8ebc3a22a8b7a9443c95c3a9a28}
+
+
+Definition at line 518 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a01e614a0416e13e6f17f18e0bef689ed}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM0\_\-BITMASK@{PWM\_\-OFFIM0\_\-BITMASK}}
+\index{PWM\_\-OFFIM0\_\-BITMASK@{PWM\_\-OFFIM0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM0\_\-BITMASK~0x00000002}}
+\label{a00565_a01e614a0416e13e6f17f18e0bef689ed}
+
+
+Definition at line 519 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab1bbe80c83ff0aa3014c4aa9e442a13f}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM0\_\-BITOFFSET@{PWM\_\-OFFIM0\_\-BITOFFSET}}
+\index{PWM\_\-OFFIM0\_\-BITOFFSET@{PWM\_\-OFFIM0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM0\_\-BITOFFSET~1}}
+\label{a00565_ab1bbe80c83ff0aa3014c4aa9e442a13f}
+
+
+Definition at line 517 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a9f78151961be85de838922f5fbd3d5e1}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM0\_\-INIT@{PWM\_\-OFFIM0\_\-INIT}}
+\index{PWM\_\-OFFIM0\_\-INIT@{PWM\_\-OFFIM0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM0\_\-INIT~0x0}}
+\label{a00565_a9f78151961be85de838922f5fbd3d5e1}
+
+
+Definition at line 520 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af94ba5e00da014775b64ab73712c90d0}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM0\_\-OFFSETADDRESS@{PWM\_\-OFFIM0\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFIM0\_\-OFFSETADDRESS@{PWM\_\-OFFIM0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM0\_\-OFFSETADDRESS~PWM\_\-PWMIM\_\-OFFSETADDRESS}}
+\label{a00565_af94ba5e00da014775b64ab73712c90d0}
+
+
+Definition at line 516 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a9495e1fb3f916dba97607f5a96d80613}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM1\_\-BITFIELDSIZE@{PWM\_\-OFFIM1\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFIM1\_\-BITFIELDSIZE@{PWM\_\-OFFIM1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM1\_\-BITFIELDSIZE~1}}
+\label{a00565_a9495e1fb3f916dba97607f5a96d80613}
+
+
+Definition at line 500 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad66e14a243cfe054609b4768cb1095e5}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM1\_\-BITMASK@{PWM\_\-OFFIM1\_\-BITMASK}}
+\index{PWM\_\-OFFIM1\_\-BITMASK@{PWM\_\-OFFIM1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM1\_\-BITMASK~0x00000020}}
+\label{a00565_ad66e14a243cfe054609b4768cb1095e5}
+
+
+Definition at line 501 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a8b81fe77f2c57a36af74f6e345a2e21b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM1\_\-BITOFFSET@{PWM\_\-OFFIM1\_\-BITOFFSET}}
+\index{PWM\_\-OFFIM1\_\-BITOFFSET@{PWM\_\-OFFIM1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM1\_\-BITOFFSET~5}}
+\label{a00565_a8b81fe77f2c57a36af74f6e345a2e21b}
+
+
+Definition at line 499 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a6b3ea49e054b5b22f00931a21f8215f7}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM1\_\-INIT@{PWM\_\-OFFIM1\_\-INIT}}
+\index{PWM\_\-OFFIM1\_\-INIT@{PWM\_\-OFFIM1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM1\_\-INIT~0x0}}
+\label{a00565_a6b3ea49e054b5b22f00931a21f8215f7}
+
+
+Definition at line 502 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad71f32a8d545c6033402b2b62abe6120}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM1\_\-OFFSETADDRESS@{PWM\_\-OFFIM1\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFIM1\_\-OFFSETADDRESS@{PWM\_\-OFFIM1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM1\_\-OFFSETADDRESS~PWM\_\-PWMIM\_\-OFFSETADDRESS}}
+\label{a00565_ad71f32a8d545c6033402b2b62abe6120}
+
+
+Definition at line 498 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a21b3382fe6658a31067c9a968390c542}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM2\_\-BITFIELDSIZE@{PWM\_\-OFFIM2\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFIM2\_\-BITFIELDSIZE@{PWM\_\-OFFIM2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM2\_\-BITFIELDSIZE~1}}
+\label{a00565_a21b3382fe6658a31067c9a968390c542}
+
+
+Definition at line 482 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a995f38fa29e87f54611816509d4618d9}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM2\_\-BITMASK@{PWM\_\-OFFIM2\_\-BITMASK}}
+\index{PWM\_\-OFFIM2\_\-BITMASK@{PWM\_\-OFFIM2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM2\_\-BITMASK~0x00000200}}
+\label{a00565_a995f38fa29e87f54611816509d4618d9}
+
+
+Definition at line 483 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aae30b9dc7ec99f0e396dfb033776a1ce}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM2\_\-BITOFFSET@{PWM\_\-OFFIM2\_\-BITOFFSET}}
+\index{PWM\_\-OFFIM2\_\-BITOFFSET@{PWM\_\-OFFIM2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM2\_\-BITOFFSET~9}}
+\label{a00565_aae30b9dc7ec99f0e396dfb033776a1ce}
+
+
+Definition at line 481 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a61b870db47a70b6912fbe4a99ce2f353}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM2\_\-INIT@{PWM\_\-OFFIM2\_\-INIT}}
+\index{PWM\_\-OFFIM2\_\-INIT@{PWM\_\-OFFIM2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM2\_\-INIT~0x0}}
+\label{a00565_a61b870db47a70b6912fbe4a99ce2f353}
+
+
+Definition at line 484 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a64c5144c2e49b2ba331da85235747794}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIM2\_\-OFFSETADDRESS@{PWM\_\-OFFIM2\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFIM2\_\-OFFSETADDRESS@{PWM\_\-OFFIM2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIM2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM2\_\-OFFSETADDRESS~PWM\_\-PWMIM\_\-OFFSETADDRESS}}
+\label{a00565_a64c5144c2e49b2ba331da85235747794}
+
+
+Definition at line 480 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a522485998071a566658c5e5053fd7a16}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS0\_\-BITFIELDSIZE@{PWM\_\-OFFIS0\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFIS0\_\-BITFIELDSIZE@{PWM\_\-OFFIS0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS0\_\-BITFIELDSIZE~1}}
+\label{a00565_a522485998071a566658c5e5053fd7a16}
+
+
+Definition at line 390 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a174cd7955e1bb617fb16f705d9e18a2f}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS0\_\-BITMASK@{PWM\_\-OFFIS0\_\-BITMASK}}
+\index{PWM\_\-OFFIS0\_\-BITMASK@{PWM\_\-OFFIS0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS0\_\-BITMASK~0x00000002}}
+\label{a00565_a174cd7955e1bb617fb16f705d9e18a2f}
+
+
+Definition at line 391 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a15a384ea0630b9925a7d363eeac6dde5}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS0\_\-BITOFFSET@{PWM\_\-OFFIS0\_\-BITOFFSET}}
+\index{PWM\_\-OFFIS0\_\-BITOFFSET@{PWM\_\-OFFIS0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS0\_\-BITOFFSET~1}}
+\label{a00565_a15a384ea0630b9925a7d363eeac6dde5}
+
+
+Definition at line 389 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a34d2488e01033e09e389b8e725084bb8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS0\_\-INIT@{PWM\_\-OFFIS0\_\-INIT}}
+\index{PWM\_\-OFFIS0\_\-INIT@{PWM\_\-OFFIS0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS0\_\-INIT~0x0}}
+\label{a00565_a34d2488e01033e09e389b8e725084bb8}
+
+
+Definition at line 392 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad776527b5c972a73cdb17fcfa7facf79}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS0\_\-OFFSETADDRESS@{PWM\_\-OFFIS0\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFIS0\_\-OFFSETADDRESS@{PWM\_\-OFFIS0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS0\_\-OFFSETADDRESS~PWM\_\-PWMIS\_\-OFFSETADDRESS}}
+\label{a00565_ad776527b5c972a73cdb17fcfa7facf79}
+
+
+Definition at line 388 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a8a83913942e9238413edbb1c9c4f6700}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS1\_\-BITFIELDSIZE@{PWM\_\-OFFIS1\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFIS1\_\-BITFIELDSIZE@{PWM\_\-OFFIS1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS1\_\-BITFIELDSIZE~1}}
+\label{a00565_a8a83913942e9238413edbb1c9c4f6700}
+
+
+Definition at line 372 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a2a75bc51e5dceab8d52b0273d5140b67}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS1\_\-BITMASK@{PWM\_\-OFFIS1\_\-BITMASK}}
+\index{PWM\_\-OFFIS1\_\-BITMASK@{PWM\_\-OFFIS1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS1\_\-BITMASK~0x00000020}}
+\label{a00565_a2a75bc51e5dceab8d52b0273d5140b67}
+
+
+Definition at line 373 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a29414f5c81a8ce89458d80e10677417b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS1\_\-BITOFFSET@{PWM\_\-OFFIS1\_\-BITOFFSET}}
+\index{PWM\_\-OFFIS1\_\-BITOFFSET@{PWM\_\-OFFIS1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS1\_\-BITOFFSET~5}}
+\label{a00565_a29414f5c81a8ce89458d80e10677417b}
+
+
+Definition at line 371 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac51bb97b6d31f24dcb93d48016952447}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS1\_\-INIT@{PWM\_\-OFFIS1\_\-INIT}}
+\index{PWM\_\-OFFIS1\_\-INIT@{PWM\_\-OFFIS1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS1\_\-INIT~0x0}}
+\label{a00565_ac51bb97b6d31f24dcb93d48016952447}
+
+
+Definition at line 374 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_abc1a93ef7b96e1697a76326f1847b0e4}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS1\_\-OFFSETADDRESS@{PWM\_\-OFFIS1\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFIS1\_\-OFFSETADDRESS@{PWM\_\-OFFIS1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS1\_\-OFFSETADDRESS~PWM\_\-PWMIS\_\-OFFSETADDRESS}}
+\label{a00565_abc1a93ef7b96e1697a76326f1847b0e4}
+
+
+Definition at line 370 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a602ec25550a607b94e516304074a697c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS2\_\-BITFIELDSIZE@{PWM\_\-OFFIS2\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFIS2\_\-BITFIELDSIZE@{PWM\_\-OFFIS2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS2\_\-BITFIELDSIZE~1}}
+\label{a00565_a602ec25550a607b94e516304074a697c}
+
+
+Definition at line 354 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab7c352d8d1e26c09c7c7f3fbf68c6e97}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS2\_\-BITMASK@{PWM\_\-OFFIS2\_\-BITMASK}}
+\index{PWM\_\-OFFIS2\_\-BITMASK@{PWM\_\-OFFIS2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS2\_\-BITMASK~0x00000200}}
+\label{a00565_ab7c352d8d1e26c09c7c7f3fbf68c6e97}
+
+
+Definition at line 355 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aae57b43d574c920a6c5058652be7ccc2}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS2\_\-BITOFFSET@{PWM\_\-OFFIS2\_\-BITOFFSET}}
+\index{PWM\_\-OFFIS2\_\-BITOFFSET@{PWM\_\-OFFIS2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS2\_\-BITOFFSET~9}}
+\label{a00565_aae57b43d574c920a6c5058652be7ccc2}
+
+
+Definition at line 353 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a73ae00395d1cf4ed2ca2babab730d6ec}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS2\_\-INIT@{PWM\_\-OFFIS2\_\-INIT}}
+\index{PWM\_\-OFFIS2\_\-INIT@{PWM\_\-OFFIS2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS2\_\-INIT~0x0}}
+\label{a00565_a73ae00395d1cf4ed2ca2babab730d6ec}
+
+
+Definition at line 356 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a2e47de59f6ab527f42e6960c00488d3b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFIS2\_\-OFFSETADDRESS@{PWM\_\-OFFIS2\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFIS2\_\-OFFSETADDRESS@{PWM\_\-OFFIS2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFIS2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS2\_\-OFFSETADDRESS~PWM\_\-PWMIS\_\-OFFSETADDRESS}}
+\label{a00565_a2e47de59f6ab527f42e6960c00488d3b}
+
+
+Definition at line 352 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ae4c07c49aa63a2897740abfdb2994484}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS0\_\-BITFIELDSIZE@{PWM\_\-OFFRIS0\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFRIS0\_\-BITFIELDSIZE@{PWM\_\-OFFRIS0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS0\_\-BITFIELDSIZE~1}}
+\label{a00565_ae4c07c49aa63a2897740abfdb2994484}
+
+
+Definition at line 454 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a75da53217a98c663bc356f68f588a7bf}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS0\_\-BITMASK@{PWM\_\-OFFRIS0\_\-BITMASK}}
+\index{PWM\_\-OFFRIS0\_\-BITMASK@{PWM\_\-OFFRIS0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS0\_\-BITMASK~0x00000002}}
+\label{a00565_a75da53217a98c663bc356f68f588a7bf}
+
+
+Definition at line 455 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a581825b5d80790f432ee8d6d5ed5c332}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS0\_\-BITOFFSET@{PWM\_\-OFFRIS0\_\-BITOFFSET}}
+\index{PWM\_\-OFFRIS0\_\-BITOFFSET@{PWM\_\-OFFRIS0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS0\_\-BITOFFSET~1}}
+\label{a00565_a581825b5d80790f432ee8d6d5ed5c332}
+
+
+Definition at line 453 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a4cbdf9fba3e2a20e873357d3ccc9c1a0}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS0\_\-INIT@{PWM\_\-OFFRIS0\_\-INIT}}
+\index{PWM\_\-OFFRIS0\_\-INIT@{PWM\_\-OFFRIS0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS0\_\-INIT~0x0}}
+\label{a00565_a4cbdf9fba3e2a20e873357d3ccc9c1a0}
+
+
+Definition at line 456 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab4f4c6a7031c6cc75825ce5331678457}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS0\_\-OFFSETADDRESS@{PWM\_\-OFFRIS0\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFRIS0\_\-OFFSETADDRESS@{PWM\_\-OFFRIS0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS0\_\-OFFSETADDRESS~PWM\_\-PWMRIS\_\-OFFSETADDRESS}}
+\label{a00565_ab4f4c6a7031c6cc75825ce5331678457}
+
+
+Definition at line 452 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a5fc0ddbfdc56442808b5de93ccd40fa0}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS1\_\-BITFIELDSIZE@{PWM\_\-OFFRIS1\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFRIS1\_\-BITFIELDSIZE@{PWM\_\-OFFRIS1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS1\_\-BITFIELDSIZE~1}}
+\label{a00565_a5fc0ddbfdc56442808b5de93ccd40fa0}
+
+
+Definition at line 436 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a557cb447f85354a11c7e11dacb5969f9}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS1\_\-BITMASK@{PWM\_\-OFFRIS1\_\-BITMASK}}
+\index{PWM\_\-OFFRIS1\_\-BITMASK@{PWM\_\-OFFRIS1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS1\_\-BITMASK~0x00000020}}
+\label{a00565_a557cb447f85354a11c7e11dacb5969f9}
+
+
+Definition at line 437 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af934a7197671bee73fc9acba848e4d94}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS1\_\-BITOFFSET@{PWM\_\-OFFRIS1\_\-BITOFFSET}}
+\index{PWM\_\-OFFRIS1\_\-BITOFFSET@{PWM\_\-OFFRIS1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS1\_\-BITOFFSET~5}}
+\label{a00565_af934a7197671bee73fc9acba848e4d94}
+
+
+Definition at line 435 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a5d41f39e164eb3d27dbbd432e35c3233}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS1\_\-INIT@{PWM\_\-OFFRIS1\_\-INIT}}
+\index{PWM\_\-OFFRIS1\_\-INIT@{PWM\_\-OFFRIS1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS1\_\-INIT~0x0}}
+\label{a00565_a5d41f39e164eb3d27dbbd432e35c3233}
+
+
+Definition at line 438 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aa0011d709ada1c8cb3b221053cdcd3ad}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS1\_\-OFFSETADDRESS@{PWM\_\-OFFRIS1\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFRIS1\_\-OFFSETADDRESS@{PWM\_\-OFFRIS1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS1\_\-OFFSETADDRESS~PWM\_\-PWMRIS\_\-OFFSETADDRESS}}
+\label{a00565_aa0011d709ada1c8cb3b221053cdcd3ad}
+
+
+Definition at line 434 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aaf2b16c29029a880d26f35958de998e2}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS2\_\-BITFIELDSIZE@{PWM\_\-OFFRIS2\_\-BITFIELDSIZE}}
+\index{PWM\_\-OFFRIS2\_\-BITFIELDSIZE@{PWM\_\-OFFRIS2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS2\_\-BITFIELDSIZE~1}}
+\label{a00565_aaf2b16c29029a880d26f35958de998e2}
+
+
+Definition at line 418 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a88f29da4b8d1eaa79468e653981c0aa6}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS2\_\-BITMASK@{PWM\_\-OFFRIS2\_\-BITMASK}}
+\index{PWM\_\-OFFRIS2\_\-BITMASK@{PWM\_\-OFFRIS2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS2\_\-BITMASK~0x00000200}}
+\label{a00565_a88f29da4b8d1eaa79468e653981c0aa6}
+
+
+Definition at line 419 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a8e66e84d67e008997e47171daaeaa747}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS2\_\-BITOFFSET@{PWM\_\-OFFRIS2\_\-BITOFFSET}}
+\index{PWM\_\-OFFRIS2\_\-BITOFFSET@{PWM\_\-OFFRIS2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS2\_\-BITOFFSET~9}}
+\label{a00565_a8e66e84d67e008997e47171daaeaa747}
+
+
+Definition at line 417 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ae51673cd2a9d20e9f46ac3ac54361084}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS2\_\-INIT@{PWM\_\-OFFRIS2\_\-INIT}}
+\index{PWM\_\-OFFRIS2\_\-INIT@{PWM\_\-OFFRIS2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS2\_\-INIT~0x0}}
+\label{a00565_ae51673cd2a9d20e9f46ac3ac54361084}
+
+
+Definition at line 420 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab3ad5b76de2aa9acfbc01708c2f516f4}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-OFFRIS2\_\-OFFSETADDRESS@{PWM\_\-OFFRIS2\_\-OFFSETADDRESS}}
+\index{PWM\_\-OFFRIS2\_\-OFFSETADDRESS@{PWM\_\-OFFRIS2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-OFFRIS2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS2\_\-OFFSETADDRESS~PWM\_\-PWMRIS\_\-OFFSETADDRESS}}
+\label{a00565_ab3ad5b76de2aa9acfbc01708c2f516f4}
+
+
+Definition at line 416 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac2e2ae1a3f8bed8129a1f3b1c84650b0}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONCNT\_\-BITFIELDSIZE@{PWM\_\-ONCNT\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONCNT\_\-BITFIELDSIZE@{PWM\_\-ONCNT\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONCNT\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONCNT\_\-BITFIELDSIZE~16}}
+\label{a00565_ac2e2ae1a3f8bed8129a1f3b1c84650b0}
+
+
+Definition at line 258 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_abf8c208ee2db737284329994da3cb497}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONCNT\_\-BITMASK@{PWM\_\-ONCNT\_\-BITMASK}}
+\index{PWM\_\-ONCNT\_\-BITMASK@{PWM\_\-ONCNT\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONCNT\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONCNT\_\-BITMASK~0xffff0000}}
+\label{a00565_abf8c208ee2db737284329994da3cb497}
+
+
+Definition at line 259 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1e31aee8b02e1ec10576c7baf924a301}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONCNT\_\-BITOFFSET@{PWM\_\-ONCNT\_\-BITOFFSET}}
+\index{PWM\_\-ONCNT\_\-BITOFFSET@{PWM\_\-ONCNT\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONCNT\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONCNT\_\-BITOFFSET~16}}
+\label{a00565_a1e31aee8b02e1ec10576c7baf924a301}
+
+
+Definition at line 257 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a93caaeaab33b499e005ec9df26cafd86}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONCNT\_\-INIT@{PWM\_\-ONCNT\_\-INIT}}
+\index{PWM\_\-ONCNT\_\-INIT@{PWM\_\-ONCNT\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONCNT\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONCNT\_\-INIT~0x0}}
+\label{a00565_a93caaeaab33b499e005ec9df26cafd86}
+
+
+Definition at line 260 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a81d3568a6a82e43d3ce81c82d7bf9722}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONCNT\_\-OFFSETADDRESS@{PWM\_\-ONCNT\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONCNT\_\-OFFSETADDRESS@{PWM\_\-ONCNT\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONCNT\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONCNT\_\-OFFSETADDRESS~PWM\_\-PWMCCR0\_\-OFFSETADDRESS}}
+\label{a00565_a81d3568a6a82e43d3ce81c82d7bf9722}
+
+
+Definition at line 256 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a465874ab844956b4c3fb9a19d9e1acdd}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC0\_\-BITFIELDSIZE@{PWM\_\-ONIC0\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONIC0\_\-BITFIELDSIZE@{PWM\_\-ONIC0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC0\_\-BITFIELDSIZE~1}}
+\label{a00565_a465874ab844956b4c3fb9a19d9e1acdd}
+
+
+Definition at line 591 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aac0c63571edc91f2d9934facb0b2c0ee}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC0\_\-BITMASK@{PWM\_\-ONIC0\_\-BITMASK}}
+\index{PWM\_\-ONIC0\_\-BITMASK@{PWM\_\-ONIC0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC0\_\-BITMASK~0x00000001}}
+\label{a00565_aac0c63571edc91f2d9934facb0b2c0ee}
+
+
+Definition at line 592 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a928d555584e421cb9e6e88567673806d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC0\_\-BITOFFSET@{PWM\_\-ONIC0\_\-BITOFFSET}}
+\index{PWM\_\-ONIC0\_\-BITOFFSET@{PWM\_\-ONIC0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC0\_\-BITOFFSET~0}}
+\label{a00565_a928d555584e421cb9e6e88567673806d}
+
+
+Definition at line 590 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a6cd4e0b036ef62f52d2d5f102572c526}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC0\_\-INIT@{PWM\_\-ONIC0\_\-INIT}}
+\index{PWM\_\-ONIC0\_\-INIT@{PWM\_\-ONIC0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC0\_\-INIT~0x0}}
+\label{a00565_a6cd4e0b036ef62f52d2d5f102572c526}
+
+
+Definition at line 593 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_afc5297678ec187528a5d97caf97284c1}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC0\_\-OFFSETADDRESS@{PWM\_\-ONIC0\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONIC0\_\-OFFSETADDRESS@{PWM\_\-ONIC0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC0\_\-OFFSETADDRESS~PWM\_\-PWMIC\_\-OFFSETADDRESS}}
+\label{a00565_afc5297678ec187528a5d97caf97284c1}
+
+
+Definition at line 589 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a6406cc11fa48cff5633713551ecad887}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC1\_\-BITFIELDSIZE@{PWM\_\-ONIC1\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONIC1\_\-BITFIELDSIZE@{PWM\_\-ONIC1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC1\_\-BITFIELDSIZE~1}}
+\label{a00565_a6406cc11fa48cff5633713551ecad887}
+
+
+Definition at line 573 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aee5abeb79015964b2c60680245350820}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC1\_\-BITMASK@{PWM\_\-ONIC1\_\-BITMASK}}
+\index{PWM\_\-ONIC1\_\-BITMASK@{PWM\_\-ONIC1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC1\_\-BITMASK~0x00000010}}
+\label{a00565_aee5abeb79015964b2c60680245350820}
+
+
+Definition at line 574 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a70925ca11d17d6032e0d2a5cb3c64343}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC1\_\-BITOFFSET@{PWM\_\-ONIC1\_\-BITOFFSET}}
+\index{PWM\_\-ONIC1\_\-BITOFFSET@{PWM\_\-ONIC1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC1\_\-BITOFFSET~4}}
+\label{a00565_a70925ca11d17d6032e0d2a5cb3c64343}
+
+
+Definition at line 572 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a72905a56a3e9112c596eb93288adc8ec}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC1\_\-INIT@{PWM\_\-ONIC1\_\-INIT}}
+\index{PWM\_\-ONIC1\_\-INIT@{PWM\_\-ONIC1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC1\_\-INIT~0x0}}
+\label{a00565_a72905a56a3e9112c596eb93288adc8ec}
+
+
+Definition at line 575 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a8720f560d7ebf143f6f0838a708c2745}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC1\_\-OFFSETADDRESS@{PWM\_\-ONIC1\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONIC1\_\-OFFSETADDRESS@{PWM\_\-ONIC1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC1\_\-OFFSETADDRESS~PWM\_\-PWMIC\_\-OFFSETADDRESS}}
+\label{a00565_a8720f560d7ebf143f6f0838a708c2745}
+
+
+Definition at line 571 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a9bfa96509dda21eff340370ccedd684b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC2\_\-BITFIELDSIZE@{PWM\_\-ONIC2\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONIC2\_\-BITFIELDSIZE@{PWM\_\-ONIC2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC2\_\-BITFIELDSIZE~1}}
+\label{a00565_a9bfa96509dda21eff340370ccedd684b}
+
+
+Definition at line 555 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_acc0b23fde7b18f435bdb338004f94edf}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC2\_\-BITMASK@{PWM\_\-ONIC2\_\-BITMASK}}
+\index{PWM\_\-ONIC2\_\-BITMASK@{PWM\_\-ONIC2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC2\_\-BITMASK~0x00000100}}
+\label{a00565_acc0b23fde7b18f435bdb338004f94edf}
+
+
+Definition at line 556 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a47cf9ee8db1a0d2c45deaba2a05e36af}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC2\_\-BITOFFSET@{PWM\_\-ONIC2\_\-BITOFFSET}}
+\index{PWM\_\-ONIC2\_\-BITOFFSET@{PWM\_\-ONIC2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC2\_\-BITOFFSET~8}}
+\label{a00565_a47cf9ee8db1a0d2c45deaba2a05e36af}
+
+
+Definition at line 554 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aaea40cf71b9841eaca0de14a491e1f60}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC2\_\-INIT@{PWM\_\-ONIC2\_\-INIT}}
+\index{PWM\_\-ONIC2\_\-INIT@{PWM\_\-ONIC2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC2\_\-INIT~0x0}}
+\label{a00565_aaea40cf71b9841eaca0de14a491e1f60}
+
+
+Definition at line 557 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad974ce25581be8812e9e9ed8f30976d0}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIC2\_\-OFFSETADDRESS@{PWM\_\-ONIC2\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONIC2\_\-OFFSETADDRESS@{PWM\_\-ONIC2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIC2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC2\_\-OFFSETADDRESS~PWM\_\-PWMIC\_\-OFFSETADDRESS}}
+\label{a00565_ad974ce25581be8812e9e9ed8f30976d0}
+
+
+Definition at line 553 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ae7eca55b2c1528595f07d571376f2044}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM0\_\-BITFIELDSIZE@{PWM\_\-ONIM0\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONIM0\_\-BITFIELDSIZE@{PWM\_\-ONIM0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM0\_\-BITFIELDSIZE~1}}
+\label{a00565_ae7eca55b2c1528595f07d571376f2044}
+
+
+Definition at line 527 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a03867e034567918d31ffaf38512c7556}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM0\_\-BITMASK@{PWM\_\-ONIM0\_\-BITMASK}}
+\index{PWM\_\-ONIM0\_\-BITMASK@{PWM\_\-ONIM0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM0\_\-BITMASK~0x00000001}}
+\label{a00565_a03867e034567918d31ffaf38512c7556}
+
+
+Definition at line 528 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a119f48c42261b5ebca8415edb1c122b0}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM0\_\-BITOFFSET@{PWM\_\-ONIM0\_\-BITOFFSET}}
+\index{PWM\_\-ONIM0\_\-BITOFFSET@{PWM\_\-ONIM0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM0\_\-BITOFFSET~0}}
+\label{a00565_a119f48c42261b5ebca8415edb1c122b0}
+
+
+Definition at line 526 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aaf81938645250f5383f7dd5d429d4981}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM0\_\-INIT@{PWM\_\-ONIM0\_\-INIT}}
+\index{PWM\_\-ONIM0\_\-INIT@{PWM\_\-ONIM0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM0\_\-INIT~0x0}}
+\label{a00565_aaf81938645250f5383f7dd5d429d4981}
+
+
+Definition at line 529 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ababcd59a5db5295a3854b983e91e1032}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM0\_\-OFFSETADDRESS@{PWM\_\-ONIM0\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONIM0\_\-OFFSETADDRESS@{PWM\_\-ONIM0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM0\_\-OFFSETADDRESS~PWM\_\-PWMIM\_\-OFFSETADDRESS}}
+\label{a00565_ababcd59a5db5295a3854b983e91e1032}
+
+
+Definition at line 525 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab5c9df7bd6f64d10ddd1653e921dc6c6}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM1\_\-BITFIELDSIZE@{PWM\_\-ONIM1\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONIM1\_\-BITFIELDSIZE@{PWM\_\-ONIM1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM1\_\-BITFIELDSIZE~1}}
+\label{a00565_ab5c9df7bd6f64d10ddd1653e921dc6c6}
+
+
+Definition at line 509 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad3f1f166f59fc9435af3dd3ccb336033}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM1\_\-BITMASK@{PWM\_\-ONIM1\_\-BITMASK}}
+\index{PWM\_\-ONIM1\_\-BITMASK@{PWM\_\-ONIM1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM1\_\-BITMASK~0x00000010}}
+\label{a00565_ad3f1f166f59fc9435af3dd3ccb336033}
+
+
+Definition at line 510 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a7f08790e34410dfd96c9874b33f18602}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM1\_\-BITOFFSET@{PWM\_\-ONIM1\_\-BITOFFSET}}
+\index{PWM\_\-ONIM1\_\-BITOFFSET@{PWM\_\-ONIM1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM1\_\-BITOFFSET~4}}
+\label{a00565_a7f08790e34410dfd96c9874b33f18602}
+
+
+Definition at line 508 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab8730bf4f51dc9a83599cf86d88ed63f}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM1\_\-INIT@{PWM\_\-ONIM1\_\-INIT}}
+\index{PWM\_\-ONIM1\_\-INIT@{PWM\_\-ONIM1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM1\_\-INIT~0x0}}
+\label{a00565_ab8730bf4f51dc9a83599cf86d88ed63f}
+
+
+Definition at line 511 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab7cd5ba873031bd3d4bb8a7b173a8f6b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM1\_\-OFFSETADDRESS@{PWM\_\-ONIM1\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONIM1\_\-OFFSETADDRESS@{PWM\_\-ONIM1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM1\_\-OFFSETADDRESS~PWM\_\-PWMIM\_\-OFFSETADDRESS}}
+\label{a00565_ab7cd5ba873031bd3d4bb8a7b173a8f6b}
+
+
+Definition at line 507 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a4627793b4810f33e028618e974dab71d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM2\_\-BITFIELDSIZE@{PWM\_\-ONIM2\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONIM2\_\-BITFIELDSIZE@{PWM\_\-ONIM2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM2\_\-BITFIELDSIZE~1}}
+\label{a00565_a4627793b4810f33e028618e974dab71d}
+
+
+Definition at line 491 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a45b02b49077c722e98c59b5fe89dd2a2}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM2\_\-BITMASK@{PWM\_\-ONIM2\_\-BITMASK}}
+\index{PWM\_\-ONIM2\_\-BITMASK@{PWM\_\-ONIM2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM2\_\-BITMASK~0x00000100}}
+\label{a00565_a45b02b49077c722e98c59b5fe89dd2a2}
+
+
+Definition at line 492 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac852c55151e65e0336a9303acd2be579}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM2\_\-BITOFFSET@{PWM\_\-ONIM2\_\-BITOFFSET}}
+\index{PWM\_\-ONIM2\_\-BITOFFSET@{PWM\_\-ONIM2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM2\_\-BITOFFSET~8}}
+\label{a00565_ac852c55151e65e0336a9303acd2be579}
+
+
+Definition at line 490 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a30aff2b2296aa6b8ef04e418f92085e8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM2\_\-INIT@{PWM\_\-ONIM2\_\-INIT}}
+\index{PWM\_\-ONIM2\_\-INIT@{PWM\_\-ONIM2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM2\_\-INIT~0x0}}
+\label{a00565_a30aff2b2296aa6b8ef04e418f92085e8}
+
+
+Definition at line 493 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a798ecf352fa4c346ce9b536964ec0ce2}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIM2\_\-OFFSETADDRESS@{PWM\_\-ONIM2\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONIM2\_\-OFFSETADDRESS@{PWM\_\-ONIM2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIM2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM2\_\-OFFSETADDRESS~PWM\_\-PWMIM\_\-OFFSETADDRESS}}
+\label{a00565_a798ecf352fa4c346ce9b536964ec0ce2}
+
+
+Definition at line 489 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af2887ed7f985bc0d495de8817e5902ec}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS0\_\-BITFIELDSIZE@{PWM\_\-ONIS0\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONIS0\_\-BITFIELDSIZE@{PWM\_\-ONIS0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS0\_\-BITFIELDSIZE~1}}
+\label{a00565_af2887ed7f985bc0d495de8817e5902ec}
+
+
+Definition at line 399 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aaf610b0cb59d94f8b80e62bb8fe11bfc}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS0\_\-BITMASK@{PWM\_\-ONIS0\_\-BITMASK}}
+\index{PWM\_\-ONIS0\_\-BITMASK@{PWM\_\-ONIS0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS0\_\-BITMASK~0x00000001}}
+\label{a00565_aaf610b0cb59d94f8b80e62bb8fe11bfc}
+
+
+Definition at line 400 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a848aae31bbabab473111b05aa885af1e}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS0\_\-BITOFFSET@{PWM\_\-ONIS0\_\-BITOFFSET}}
+\index{PWM\_\-ONIS0\_\-BITOFFSET@{PWM\_\-ONIS0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS0\_\-BITOFFSET~0}}
+\label{a00565_a848aae31bbabab473111b05aa885af1e}
+
+
+Definition at line 398 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a8f6965d1e884e33dc231898c6d833cd3}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS0\_\-INIT@{PWM\_\-ONIS0\_\-INIT}}
+\index{PWM\_\-ONIS0\_\-INIT@{PWM\_\-ONIS0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS0\_\-INIT~0x0}}
+\label{a00565_a8f6965d1e884e33dc231898c6d833cd3}
+
+
+Definition at line 401 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a44a0b021d6963a4246ea3081a5dd50ad}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS0\_\-OFFSETADDRESS@{PWM\_\-ONIS0\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONIS0\_\-OFFSETADDRESS@{PWM\_\-ONIS0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS0\_\-OFFSETADDRESS~PWM\_\-PWMIS\_\-OFFSETADDRESS}}
+\label{a00565_a44a0b021d6963a4246ea3081a5dd50ad}
+
+
+Definition at line 397 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a385174e318896f04ac28315523b32ef1}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS1\_\-BITFIELDSIZE@{PWM\_\-ONIS1\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONIS1\_\-BITFIELDSIZE@{PWM\_\-ONIS1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS1\_\-BITFIELDSIZE~1}}
+\label{a00565_a385174e318896f04ac28315523b32ef1}
+
+
+Definition at line 381 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a3a8368d37598a3e06ac0adbcbb45dce1}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS1\_\-BITMASK@{PWM\_\-ONIS1\_\-BITMASK}}
+\index{PWM\_\-ONIS1\_\-BITMASK@{PWM\_\-ONIS1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS1\_\-BITMASK~0x00000010}}
+\label{a00565_a3a8368d37598a3e06ac0adbcbb45dce1}
+
+
+Definition at line 382 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a30c2aa672bf574153e6aca0d0202dee7}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS1\_\-BITOFFSET@{PWM\_\-ONIS1\_\-BITOFFSET}}
+\index{PWM\_\-ONIS1\_\-BITOFFSET@{PWM\_\-ONIS1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS1\_\-BITOFFSET~4}}
+\label{a00565_a30c2aa672bf574153e6aca0d0202dee7}
+
+
+Definition at line 380 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab5bdc403d17f3c123eabba9ce9803144}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS1\_\-INIT@{PWM\_\-ONIS1\_\-INIT}}
+\index{PWM\_\-ONIS1\_\-INIT@{PWM\_\-ONIS1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS1\_\-INIT~0x0}}
+\label{a00565_ab5bdc403d17f3c123eabba9ce9803144}
+
+
+Definition at line 383 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a64dafa81ad149352d3b96cdaf4df87ac}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS1\_\-OFFSETADDRESS@{PWM\_\-ONIS1\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONIS1\_\-OFFSETADDRESS@{PWM\_\-ONIS1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS1\_\-OFFSETADDRESS~PWM\_\-PWMIS\_\-OFFSETADDRESS}}
+\label{a00565_a64dafa81ad149352d3b96cdaf4df87ac}
+
+
+Definition at line 379 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aec621161c9287a2c020ec844e3e73692}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS2\_\-BITFIELDSIZE@{PWM\_\-ONIS2\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONIS2\_\-BITFIELDSIZE@{PWM\_\-ONIS2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS2\_\-BITFIELDSIZE~1}}
+\label{a00565_aec621161c9287a2c020ec844e3e73692}
+
+
+Definition at line 363 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1dcc9a8438a604cb0897b0ed9ad04917}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS2\_\-BITMASK@{PWM\_\-ONIS2\_\-BITMASK}}
+\index{PWM\_\-ONIS2\_\-BITMASK@{PWM\_\-ONIS2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS2\_\-BITMASK~0x00000100}}
+\label{a00565_a1dcc9a8438a604cb0897b0ed9ad04917}
+
+
+Definition at line 364 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a09ba755539781bfcafe8199bf842bbe3}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS2\_\-BITOFFSET@{PWM\_\-ONIS2\_\-BITOFFSET}}
+\index{PWM\_\-ONIS2\_\-BITOFFSET@{PWM\_\-ONIS2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS2\_\-BITOFFSET~8}}
+\label{a00565_a09ba755539781bfcafe8199bf842bbe3}
+
+
+Definition at line 362 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aba7cb03e39fb0141b6a79a0f298a8e6d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS2\_\-INIT@{PWM\_\-ONIS2\_\-INIT}}
+\index{PWM\_\-ONIS2\_\-INIT@{PWM\_\-ONIS2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS2\_\-INIT~0x0}}
+\label{a00565_aba7cb03e39fb0141b6a79a0f298a8e6d}
+
+
+Definition at line 365 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad85b1ea970d53706a654bf2e50752b67}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONIS2\_\-OFFSETADDRESS@{PWM\_\-ONIS2\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONIS2\_\-OFFSETADDRESS@{PWM\_\-ONIS2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONIS2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS2\_\-OFFSETADDRESS~PWM\_\-PWMIS\_\-OFFSETADDRESS}}
+\label{a00565_ad85b1ea970d53706a654bf2e50752b67}
+
+
+Definition at line 361 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a8c664a35e7e0c30111a95b5fe1ad1311}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS0\_\-BITFIELDSIZE@{PWM\_\-ONRIS0\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONRIS0\_\-BITFIELDSIZE@{PWM\_\-ONRIS0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS0\_\-BITFIELDSIZE~1}}
+\label{a00565_a8c664a35e7e0c30111a95b5fe1ad1311}
+
+
+Definition at line 463 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aa1b799cb72a3ad42549f2294d6f3bf48}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS0\_\-BITMASK@{PWM\_\-ONRIS0\_\-BITMASK}}
+\index{PWM\_\-ONRIS0\_\-BITMASK@{PWM\_\-ONRIS0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS0\_\-BITMASK~0x00000001}}
+\label{a00565_aa1b799cb72a3ad42549f2294d6f3bf48}
+
+
+Definition at line 464 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aa14bb3a0925508c8e3ae6935998725e8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS0\_\-BITOFFSET@{PWM\_\-ONRIS0\_\-BITOFFSET}}
+\index{PWM\_\-ONRIS0\_\-BITOFFSET@{PWM\_\-ONRIS0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS0\_\-BITOFFSET~0}}
+\label{a00565_aa14bb3a0925508c8e3ae6935998725e8}
+
+
+Definition at line 462 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af1203aa729f79270e6cdfef4bc9e9e90}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS0\_\-INIT@{PWM\_\-ONRIS0\_\-INIT}}
+\index{PWM\_\-ONRIS0\_\-INIT@{PWM\_\-ONRIS0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS0\_\-INIT~0x0}}
+\label{a00565_af1203aa729f79270e6cdfef4bc9e9e90}
+
+
+Definition at line 465 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac4aa2fe5ef4a803d111d50d3c33cc09d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS0\_\-OFFSETADDRESS@{PWM\_\-ONRIS0\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONRIS0\_\-OFFSETADDRESS@{PWM\_\-ONRIS0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS0\_\-OFFSETADDRESS~PWM\_\-PWMRIS\_\-OFFSETADDRESS}}
+\label{a00565_ac4aa2fe5ef4a803d111d50d3c33cc09d}
+
+
+Definition at line 461 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a5ed91b07d94e8ef561da94f2914a1d7b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS1\_\-BITFIELDSIZE@{PWM\_\-ONRIS1\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONRIS1\_\-BITFIELDSIZE@{PWM\_\-ONRIS1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS1\_\-BITFIELDSIZE~1}}
+\label{a00565_a5ed91b07d94e8ef561da94f2914a1d7b}
+
+
+Definition at line 445 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a4fff32a1d2f87b94371ebc9d2d41dc32}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS1\_\-BITMASK@{PWM\_\-ONRIS1\_\-BITMASK}}
+\index{PWM\_\-ONRIS1\_\-BITMASK@{PWM\_\-ONRIS1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS1\_\-BITMASK~0x00000010}}
+\label{a00565_a4fff32a1d2f87b94371ebc9d2d41dc32}
+
+
+Definition at line 446 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_abee1b1081aee0ae78f8116b1b1076d7e}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS1\_\-BITOFFSET@{PWM\_\-ONRIS1\_\-BITOFFSET}}
+\index{PWM\_\-ONRIS1\_\-BITOFFSET@{PWM\_\-ONRIS1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS1\_\-BITOFFSET~4}}
+\label{a00565_abee1b1081aee0ae78f8116b1b1076d7e}
+
+
+Definition at line 444 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1993e53c914dc39f3f8ad4e54012819c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS1\_\-INIT@{PWM\_\-ONRIS1\_\-INIT}}
+\index{PWM\_\-ONRIS1\_\-INIT@{PWM\_\-ONRIS1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS1\_\-INIT~0x0}}
+\label{a00565_a1993e53c914dc39f3f8ad4e54012819c}
+
+
+Definition at line 447 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a48d8b9e83760dfe43c39030946285035}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS1\_\-OFFSETADDRESS@{PWM\_\-ONRIS1\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONRIS1\_\-OFFSETADDRESS@{PWM\_\-ONRIS1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS1\_\-OFFSETADDRESS~PWM\_\-PWMRIS\_\-OFFSETADDRESS}}
+\label{a00565_a48d8b9e83760dfe43c39030946285035}
+
+
+Definition at line 443 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a17c7a2f0258dfa8c750292cb2ae87c6f}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS2\_\-BITFIELDSIZE@{PWM\_\-ONRIS2\_\-BITFIELDSIZE}}
+\index{PWM\_\-ONRIS2\_\-BITFIELDSIZE@{PWM\_\-ONRIS2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS2\_\-BITFIELDSIZE~1}}
+\label{a00565_a17c7a2f0258dfa8c750292cb2ae87c6f}
+
+
+Definition at line 427 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a98fe5375714720a916cc9441270e3f65}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS2\_\-BITMASK@{PWM\_\-ONRIS2\_\-BITMASK}}
+\index{PWM\_\-ONRIS2\_\-BITMASK@{PWM\_\-ONRIS2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS2\_\-BITMASK~0x00000100}}
+\label{a00565_a98fe5375714720a916cc9441270e3f65}
+
+
+Definition at line 428 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac4dcfd05963a3ee28d5dcf09579bc69b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS2\_\-BITOFFSET@{PWM\_\-ONRIS2\_\-BITOFFSET}}
+\index{PWM\_\-ONRIS2\_\-BITOFFSET@{PWM\_\-ONRIS2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS2\_\-BITOFFSET~8}}
+\label{a00565_ac4dcfd05963a3ee28d5dcf09579bc69b}
+
+
+Definition at line 426 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac51a141dd577d19955defa945ba8c71c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS2\_\-INIT@{PWM\_\-ONRIS2\_\-INIT}}
+\index{PWM\_\-ONRIS2\_\-INIT@{PWM\_\-ONRIS2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS2\_\-INIT~0x0}}
+\label{a00565_ac51a141dd577d19955defa945ba8c71c}
+
+
+Definition at line 429 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a9c251436a956778616254b424b9d9476}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-ONRIS2\_\-OFFSETADDRESS@{PWM\_\-ONRIS2\_\-OFFSETADDRESS}}
+\index{PWM\_\-ONRIS2\_\-OFFSETADDRESS@{PWM\_\-ONRIS2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-ONRIS2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS2\_\-OFFSETADDRESS~PWM\_\-PWMRIS\_\-OFFSETADDRESS}}
+\label{a00565_a9c251436a956778616254b424b9d9476}
+
+
+Definition at line 425 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a36fe636cc40d9d2be64b0b2e23ee08d3}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PDS0\_\-BITFIELDSIZE@{PWM\_\-PDS0\_\-BITFIELDSIZE}}
+\index{PWM\_\-PDS0\_\-BITFIELDSIZE@{PWM\_\-PDS0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PDS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS0\_\-BITFIELDSIZE~16}}
+\label{a00565_a36fe636cc40d9d2be64b0b2e23ee08d3}
+
+
+Definition at line 220 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a60c76844001c700b5dfa3162b04d7b9d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PDS0\_\-BITMASK@{PWM\_\-PDS0\_\-BITMASK}}
+\index{PWM\_\-PDS0\_\-BITMASK@{PWM\_\-PDS0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PDS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS0\_\-BITMASK~0x0000ffff}}
+\label{a00565_a60c76844001c700b5dfa3162b04d7b9d}
+
+
+Definition at line 221 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af3c6c14f418969466a1158fda8273532}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PDS0\_\-BITOFFSET@{PWM\_\-PDS0\_\-BITOFFSET}}
+\index{PWM\_\-PDS0\_\-BITOFFSET@{PWM\_\-PDS0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PDS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS0\_\-BITOFFSET~0}}
+\label{a00565_af3c6c14f418969466a1158fda8273532}
+
+
+Definition at line 219 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac9074da35e87234a5ea38426c9018ec4}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PDS0\_\-INIT@{PWM\_\-PDS0\_\-INIT}}
+\index{PWM\_\-PDS0\_\-INIT@{PWM\_\-PDS0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PDS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS0\_\-INIT~0x0}}
+\label{a00565_ac9074da35e87234a5ea38426c9018ec4}
+
+
+Definition at line 222 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a53f03ec64fe15d3148e7ad970868031b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PDS0\_\-OFFSETADDRESS@{PWM\_\-PDS0\_\-OFFSETADDRESS}}
+\index{PWM\_\-PDS0\_\-OFFSETADDRESS@{PWM\_\-PDS0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PDS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS0\_\-OFFSETADDRESS~PWM\_\-PWMDCR\_\-OFFSETADDRESS}}
+\label{a00565_a53f03ec64fe15d3148e7ad970868031b}
+
+
+Definition at line 218 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a7264db9b33ba8cc42ff8de1a909850a4}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PDS1\_\-BITFIELDSIZE@{PWM\_\-PDS1\_\-BITFIELDSIZE}}
+\index{PWM\_\-PDS1\_\-BITFIELDSIZE@{PWM\_\-PDS1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PDS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS1\_\-BITFIELDSIZE~16}}
+\label{a00565_a7264db9b33ba8cc42ff8de1a909850a4}
+
+
+Definition at line 211 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab1f290fb10c11f76a50cae8de640ff6d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PDS1\_\-BITMASK@{PWM\_\-PDS1\_\-BITMASK}}
+\index{PWM\_\-PDS1\_\-BITMASK@{PWM\_\-PDS1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PDS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS1\_\-BITMASK~0xffff0000}}
+\label{a00565_ab1f290fb10c11f76a50cae8de640ff6d}
+
+
+Definition at line 212 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a003f5d5b2ba862041386fc85e91b535d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PDS1\_\-BITOFFSET@{PWM\_\-PDS1\_\-BITOFFSET}}
+\index{PWM\_\-PDS1\_\-BITOFFSET@{PWM\_\-PDS1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PDS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS1\_\-BITOFFSET~16}}
+\label{a00565_a003f5d5b2ba862041386fc85e91b535d}
+
+
+Definition at line 210 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad27640307879d938cddb8c4b120cbcaa}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PDS1\_\-INIT@{PWM\_\-PDS1\_\-INIT}}
+\index{PWM\_\-PDS1\_\-INIT@{PWM\_\-PDS1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PDS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS1\_\-INIT~0x0}}
+\label{a00565_ad27640307879d938cddb8c4b120cbcaa}
+
+
+Definition at line 213 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aedcb01b681b85e2b4b769edc20acc37f}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PDS1\_\-OFFSETADDRESS@{PWM\_\-PDS1\_\-OFFSETADDRESS}}
+\index{PWM\_\-PDS1\_\-OFFSETADDRESS@{PWM\_\-PDS1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PDS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS1\_\-OFFSETADDRESS~PWM\_\-PWMDCR\_\-OFFSETADDRESS}}
+\label{a00565_aedcb01b681b85e2b4b769edc20acc37f}
+
+
+Definition at line 209 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a0976f8f4717ee2f374fd23ee64cb60d5}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL0\_\-BITFIELDSIZE@{PWM\_\-POL0\_\-BITFIELDSIZE}}
+\index{PWM\_\-POL0\_\-BITFIELDSIZE@{PWM\_\-POL0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL0\_\-BITFIELDSIZE~1}}
+\label{a00565_a0976f8f4717ee2f374fd23ee64cb60d5}
+
+
+Definition at line 155 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a169e4ad3a000055444ecf5f5a0a3d99c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL0\_\-BITMASK@{PWM\_\-POL0\_\-BITMASK}}
+\index{PWM\_\-POL0\_\-BITMASK@{PWM\_\-POL0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL0\_\-BITMASK~0x00000004}}
+\label{a00565_a169e4ad3a000055444ecf5f5a0a3d99c}
+
+
+Definition at line 156 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a9d39b8850cc9ac2c4fa32e9cc1bce5f9}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL0\_\-BITOFFSET@{PWM\_\-POL0\_\-BITOFFSET}}
+\index{PWM\_\-POL0\_\-BITOFFSET@{PWM\_\-POL0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL0\_\-BITOFFSET~2}}
+\label{a00565_a9d39b8850cc9ac2c4fa32e9cc1bce5f9}
+
+
+Definition at line 154 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac58d25159b2b429b71bb96545f3b3673}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL0\_\-INIT@{PWM\_\-POL0\_\-INIT}}
+\index{PWM\_\-POL0\_\-INIT@{PWM\_\-POL0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL0\_\-INIT~0x0}}
+\label{a00565_ac58d25159b2b429b71bb96545f3b3673}
+
+
+Definition at line 157 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a294ebda7eef2c91c8f52559b8789b736}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL0\_\-OFFSETADDRESS@{PWM\_\-POL0\_\-OFFSETADDRESS}}
+\index{PWM\_\-POL0\_\-OFFSETADDRESS@{PWM\_\-POL0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL0\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_a294ebda7eef2c91c8f52559b8789b736}
+
+
+Definition at line 153 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aa2a8b0096107ef70cec17fde6fd14087}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL1\_\-BITFIELDSIZE@{PWM\_\-POL1\_\-BITFIELDSIZE}}
+\index{PWM\_\-POL1\_\-BITFIELDSIZE@{PWM\_\-POL1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL1\_\-BITFIELDSIZE~1}}
+\label{a00565_aa2a8b0096107ef70cec17fde6fd14087}
+
+
+Definition at line 128 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aa52c1424968758179b9f047aa946058d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL1\_\-BITMASK@{PWM\_\-POL1\_\-BITMASK}}
+\index{PWM\_\-POL1\_\-BITMASK@{PWM\_\-POL1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL1\_\-BITMASK~0x00000040}}
+\label{a00565_aa52c1424968758179b9f047aa946058d}
+
+
+Definition at line 129 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a549bceaced16a3cbb3e435ec9e3bafab}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL1\_\-BITOFFSET@{PWM\_\-POL1\_\-BITOFFSET}}
+\index{PWM\_\-POL1\_\-BITOFFSET@{PWM\_\-POL1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL1\_\-BITOFFSET~6}}
+\label{a00565_a549bceaced16a3cbb3e435ec9e3bafab}
+
+
+Definition at line 127 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a49ab249dcd99072a3eefbcc15f3c8f43}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL1\_\-INIT@{PWM\_\-POL1\_\-INIT}}
+\index{PWM\_\-POL1\_\-INIT@{PWM\_\-POL1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL1\_\-INIT~0x0}}
+\label{a00565_a49ab249dcd99072a3eefbcc15f3c8f43}
+
+
+Definition at line 130 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aac74b5b5be71ba9c30ec30017740bc41}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL1\_\-OFFSETADDRESS@{PWM\_\-POL1\_\-OFFSETADDRESS}}
+\index{PWM\_\-POL1\_\-OFFSETADDRESS@{PWM\_\-POL1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL1\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_aac74b5b5be71ba9c30ec30017740bc41}
+
+
+Definition at line 126 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a747574ed13e6904f21e60943be324cdc}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL2\_\-BITFIELDSIZE@{PWM\_\-POL2\_\-BITFIELDSIZE}}
+\index{PWM\_\-POL2\_\-BITFIELDSIZE@{PWM\_\-POL2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL2\_\-BITFIELDSIZE~1}}
+\label{a00565_a747574ed13e6904f21e60943be324cdc}
+
+
+Definition at line 101 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aa306f679ffafcc67897c133927dc4910}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL2\_\-BITMASK@{PWM\_\-POL2\_\-BITMASK}}
+\index{PWM\_\-POL2\_\-BITMASK@{PWM\_\-POL2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL2\_\-BITMASK~0x00000400}}
+\label{a00565_aa306f679ffafcc67897c133927dc4910}
+
+
+Definition at line 102 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_abdd5c3d9c594895666d8876f4fa69d64}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL2\_\-BITOFFSET@{PWM\_\-POL2\_\-BITOFFSET}}
+\index{PWM\_\-POL2\_\-BITOFFSET@{PWM\_\-POL2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL2\_\-BITOFFSET~10}}
+\label{a00565_abdd5c3d9c594895666d8876f4fa69d64}
+
+
+Definition at line 100 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aa558c9f963219dc5822698b93ef4f6d6}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL2\_\-INIT@{PWM\_\-POL2\_\-INIT}}
+\index{PWM\_\-POL2\_\-INIT@{PWM\_\-POL2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL2\_\-INIT~0x0}}
+\label{a00565_aa558c9f963219dc5822698b93ef4f6d6}
+
+
+Definition at line 103 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a2e02d894047e60f171b47ce5c119b22e}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-POL2\_\-OFFSETADDRESS@{PWM\_\-POL2\_\-OFFSETADDRESS}}
+\index{PWM\_\-POL2\_\-OFFSETADDRESS@{PWM\_\-POL2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-POL2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL2\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_a2e02d894047e60f171b47ce5c119b22e}
+
+
+Definition at line 99 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aee0a6aa8798a5a77567630bc95da6238}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR0\_\-BITFIELDSIZE@{PWM\_\-PWMCCR0\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMCCR0\_\-BITFIELDSIZE@{PWM\_\-PWMCCR0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR0\_\-BITFIELDSIZE~32}}
+\label{a00565_aee0a6aa8798a5a77567630bc95da6238}
+
+
+Definition at line 249 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a84d2c5ab073744cc88a2cd5ec7ad9da8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR0\_\-BITMASK@{PWM\_\-PWMCCR0\_\-BITMASK}}
+\index{PWM\_\-PWMCCR0\_\-BITMASK@{PWM\_\-PWMCCR0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR0\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_a84d2c5ab073744cc88a2cd5ec7ad9da8}
+
+
+Definition at line 250 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a3938e138ff2db3e10edfeaa93942082d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR0\_\-BITOFFSET@{PWM\_\-PWMCCR0\_\-BITOFFSET}}
+\index{PWM\_\-PWMCCR0\_\-BITOFFSET@{PWM\_\-PWMCCR0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR0\_\-BITOFFSET~0}}
+\label{a00565_a3938e138ff2db3e10edfeaa93942082d}
+
+
+Definition at line 248 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a65a30122017f33352742e6c4bd27a61c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR0\_\-INIT@{PWM\_\-PWMCCR0\_\-INIT}}
+\index{PWM\_\-PWMCCR0\_\-INIT@{PWM\_\-PWMCCR0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR0\_\-INIT~0x00000000}}
+\label{a00565_a65a30122017f33352742e6c4bd27a61c}
+
+
+Definition at line 251 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a96c4b7a9710e59bc16e7a9080c65d993}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR0\_\-OFFSETADDRESS@{PWM\_\-PWMCCR0\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMCCR0\_\-OFFSETADDRESS@{PWM\_\-PWMCCR0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR0\_\-OFFSETADDRESS~0x00000010}}
+\label{a00565_a96c4b7a9710e59bc16e7a9080c65d993}
+
+
+Definition at line 247 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af940af59835c3aaade205c23e1f0305c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR1\_\-BITFIELDSIZE@{PWM\_\-PWMCCR1\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMCCR1\_\-BITFIELDSIZE@{PWM\_\-PWMCCR1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR1\_\-BITFIELDSIZE~32}}
+\label{a00565_af940af59835c3aaade205c23e1f0305c}
+
+
+Definition at line 277 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a007d09bc215a10dc77951153d07070df}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR1\_\-BITMASK@{PWM\_\-PWMCCR1\_\-BITMASK}}
+\index{PWM\_\-PWMCCR1\_\-BITMASK@{PWM\_\-PWMCCR1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR1\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_a007d09bc215a10dc77951153d07070df}
+
+
+Definition at line 278 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_abfe1fa91401442ffba6dad205931bf9c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR1\_\-BITOFFSET@{PWM\_\-PWMCCR1\_\-BITOFFSET}}
+\index{PWM\_\-PWMCCR1\_\-BITOFFSET@{PWM\_\-PWMCCR1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR1\_\-BITOFFSET~0}}
+\label{a00565_abfe1fa91401442ffba6dad205931bf9c}
+
+
+Definition at line 276 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_acf04b09e34761a2e587b0e4f777f87bd}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR1\_\-INIT@{PWM\_\-PWMCCR1\_\-INIT}}
+\index{PWM\_\-PWMCCR1\_\-INIT@{PWM\_\-PWMCCR1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR1\_\-INIT~0x00000000}}
+\label{a00565_acf04b09e34761a2e587b0e4f777f87bd}
+
+
+Definition at line 279 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a86f5110d45040c237a33483a0362c951}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR1\_\-OFFSETADDRESS@{PWM\_\-PWMCCR1\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMCCR1\_\-OFFSETADDRESS@{PWM\_\-PWMCCR1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR1\_\-OFFSETADDRESS~0x00000014}}
+\label{a00565_a86f5110d45040c237a33483a0362c951}
+
+
+Definition at line 275 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a9452ecb41ecd79d01af0caffd9119bca}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR2\_\-BITFIELDSIZE@{PWM\_\-PWMCCR2\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMCCR2\_\-BITFIELDSIZE@{PWM\_\-PWMCCR2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR2\_\-BITFIELDSIZE~32}}
+\label{a00565_a9452ecb41ecd79d01af0caffd9119bca}
+
+
+Definition at line 287 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a9c092dac6dff536fa655daa89f6a1143}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR2\_\-BITMASK@{PWM\_\-PWMCCR2\_\-BITMASK}}
+\index{PWM\_\-PWMCCR2\_\-BITMASK@{PWM\_\-PWMCCR2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR2\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_a9c092dac6dff536fa655daa89f6a1143}
+
+
+Definition at line 288 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a04dc50da34fd6cd18f8e4f5ad9be1eaf}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR2\_\-BITOFFSET@{PWM\_\-PWMCCR2\_\-BITOFFSET}}
+\index{PWM\_\-PWMCCR2\_\-BITOFFSET@{PWM\_\-PWMCCR2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR2\_\-BITOFFSET~0}}
+\label{a00565_a04dc50da34fd6cd18f8e4f5ad9be1eaf}
+
+
+Definition at line 286 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a59f99ef8ebff5154854c39b9337ff48b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR2\_\-INIT@{PWM\_\-PWMCCR2\_\-INIT}}
+\index{PWM\_\-PWMCCR2\_\-INIT@{PWM\_\-PWMCCR2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR2\_\-INIT~0x00000000}}
+\label{a00565_a59f99ef8ebff5154854c39b9337ff48b}
+
+
+Definition at line 289 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad5621eac4c6082f349e0870570ced3b8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCCR2\_\-OFFSETADDRESS@{PWM\_\-PWMCCR2\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMCCR2\_\-OFFSETADDRESS@{PWM\_\-PWMCCR2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCCR2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR2\_\-OFFSETADDRESS~0x00000018}}
+\label{a00565_ad5621eac4c6082f349e0870570ced3b8}
+
+
+Definition at line 285 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aa4d129d4f2a6e8b93d85571952232483}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCPS\_\-BITFIELDSIZE@{PWM\_\-PWMCPS\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMCPS\_\-BITFIELDSIZE@{PWM\_\-PWMCPS\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCPS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCPS\_\-BITFIELDSIZE~32}}
+\label{a00565_aa4d129d4f2a6e8b93d85571952232483}
+
+
+Definition at line 183 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a46fc28857838e93b502ee449c130598c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCPS\_\-BITMASK@{PWM\_\-PWMCPS\_\-BITMASK}}
+\index{PWM\_\-PWMCPS\_\-BITMASK@{PWM\_\-PWMCPS\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCPS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCPS\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_a46fc28857838e93b502ee449c130598c}
+
+
+Definition at line 184 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a6bede042f00b760aa67e03e55dab81c6}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCPS\_\-BITOFFSET@{PWM\_\-PWMCPS\_\-BITOFFSET}}
+\index{PWM\_\-PWMCPS\_\-BITOFFSET@{PWM\_\-PWMCPS\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCPS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCPS\_\-BITOFFSET~0}}
+\label{a00565_a6bede042f00b760aa67e03e55dab81c6}
+
+
+Definition at line 182 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a8f654e6b58b75107e15f80a12ec97476}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCPS\_\-INIT@{PWM\_\-PWMCPS\_\-INIT}}
+\index{PWM\_\-PWMCPS\_\-INIT@{PWM\_\-PWMCPS\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCPS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCPS\_\-INIT~0x00000000}}
+\label{a00565_a8f654e6b58b75107e15f80a12ec97476}
+
+
+Definition at line 185 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ae6722fb70732f8b8a2b53ce99e78a8b9}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCPS\_\-OFFSETADDRESS@{PWM\_\-PWMCPS\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMCPS\_\-OFFSETADDRESS@{PWM\_\-PWMCPS\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCPS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCPS\_\-OFFSETADDRESS~0x00000004}}
+\label{a00565_ae6722fb70732f8b8a2b53ce99e78a8b9}
+
+
+Definition at line 181 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1a7d20fb5029cfe68d3972c012f825ad}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCR\_\-BITFIELDSIZE@{PWM\_\-PWMCR\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMCR\_\-BITFIELDSIZE@{PWM\_\-PWMCR\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCR\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCR\_\-BITFIELDSIZE~32}}
+\label{a00565_a1a7d20fb5029cfe68d3972c012f825ad}
+
+
+Definition at line 65 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a940279f6cfb5c63c1d33ed7aef1af025}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCR\_\-BITMASK@{PWM\_\-PWMCR\_\-BITMASK}}
+\index{PWM\_\-PWMCR\_\-BITMASK@{PWM\_\-PWMCR\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCR\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCR\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_a940279f6cfb5c63c1d33ed7aef1af025}
+
+
+Definition at line 66 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aaff2da63915376887aab580f6fd14619}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCR\_\-BITOFFSET@{PWM\_\-PWMCR\_\-BITOFFSET}}
+\index{PWM\_\-PWMCR\_\-BITOFFSET@{PWM\_\-PWMCR\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCR\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCR\_\-BITOFFSET~0}}
+\label{a00565_aaff2da63915376887aab580f6fd14619}
+
+
+Definition at line 64 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1b649e10a0e7c96070404a2f7e8e06fa}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCR\_\-INIT@{PWM\_\-PWMCR\_\-INIT}}
+\index{PWM\_\-PWMCR\_\-INIT@{PWM\_\-PWMCR\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCR\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCR\_\-INIT~0x00000000}}
+\label{a00565_a1b649e10a0e7c96070404a2f7e8e06fa}
+
+
+Definition at line 67 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1ed6898b1ee03d9483ce781f1f851ffb}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCR\_\-OFFSETADDRESS@{PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMCR\_\-OFFSETADDRESS@{PWM\_\-PWMCR\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCR\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCR\_\-OFFSETADDRESS~0x00000000}}
+\label{a00565_a1ed6898b1ee03d9483ce781f1f851ffb}
+
+
+Definition at line 63 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac70a5c6184a303acb66c6d44fb1c2e29}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST0\_\-BITFIELDSIZE@{PWM\_\-PWMCST0\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMCST0\_\-BITFIELDSIZE@{PWM\_\-PWMCST0\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST0\_\-BITFIELDSIZE~32}}
+\label{a00565_ac70a5c6184a303acb66c6d44fb1c2e29}
+
+
+Definition at line 297 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ae56f42c138da4a129af7e601a4081b66}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST0\_\-BITMASK@{PWM\_\-PWMCST0\_\-BITMASK}}
+\index{PWM\_\-PWMCST0\_\-BITMASK@{PWM\_\-PWMCST0\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST0\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_ae56f42c138da4a129af7e601a4081b66}
+
+
+Definition at line 298 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad1c39509570f96dc4f7e1c529729ba68}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST0\_\-BITOFFSET@{PWM\_\-PWMCST0\_\-BITOFFSET}}
+\index{PWM\_\-PWMCST0\_\-BITOFFSET@{PWM\_\-PWMCST0\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST0\_\-BITOFFSET~0}}
+\label{a00565_ad1c39509570f96dc4f7e1c529729ba68}
+
+
+Definition at line 296 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a13e2ee4a3d5e3b5343e2888eafd63c35}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST0\_\-INIT@{PWM\_\-PWMCST0\_\-INIT}}
+\index{PWM\_\-PWMCST0\_\-INIT@{PWM\_\-PWMCST0\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST0\_\-INIT~0x00000000}}
+\label{a00565_a13e2ee4a3d5e3b5343e2888eafd63c35}
+
+
+Definition at line 299 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a5d19a1896da50e99e3f4ffbfa6e78b9a}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST0\_\-OFFSETADDRESS@{PWM\_\-PWMCST0\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMCST0\_\-OFFSETADDRESS@{PWM\_\-PWMCST0\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST0\_\-OFFSETADDRESS~0x00000020}}
+\label{a00565_a5d19a1896da50e99e3f4ffbfa6e78b9a}
+
+
+Definition at line 295 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aece3415a67ea87bc39a36d41a98777ca}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST1\_\-BITFIELDSIZE@{PWM\_\-PWMCST1\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMCST1\_\-BITFIELDSIZE@{PWM\_\-PWMCST1\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST1\_\-BITFIELDSIZE~32}}
+\label{a00565_aece3415a67ea87bc39a36d41a98777ca}
+
+
+Definition at line 325 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a520f5915f13969709b5dd5b809ae0189}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST1\_\-BITMASK@{PWM\_\-PWMCST1\_\-BITMASK}}
+\index{PWM\_\-PWMCST1\_\-BITMASK@{PWM\_\-PWMCST1\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST1\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_a520f5915f13969709b5dd5b809ae0189}
+
+
+Definition at line 326 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_adeb11942c3e819f9b566e0184e421124}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST1\_\-BITOFFSET@{PWM\_\-PWMCST1\_\-BITOFFSET}}
+\index{PWM\_\-PWMCST1\_\-BITOFFSET@{PWM\_\-PWMCST1\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST1\_\-BITOFFSET~0}}
+\label{a00565_adeb11942c3e819f9b566e0184e421124}
+
+
+Definition at line 324 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a507fa471c1eb1994c73ac92fed9f2f78}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST1\_\-INIT@{PWM\_\-PWMCST1\_\-INIT}}
+\index{PWM\_\-PWMCST1\_\-INIT@{PWM\_\-PWMCST1\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST1\_\-INIT~0x00000000}}
+\label{a00565_a507fa471c1eb1994c73ac92fed9f2f78}
+
+
+Definition at line 327 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a34f4aa6de9713fc2060a47ae9bbbf0fd}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST1\_\-OFFSETADDRESS@{PWM\_\-PWMCST1\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMCST1\_\-OFFSETADDRESS@{PWM\_\-PWMCST1\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST1\_\-OFFSETADDRESS~0x00000024}}
+\label{a00565_a34f4aa6de9713fc2060a47ae9bbbf0fd}
+
+
+Definition at line 323 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ace5f322318efae3c8fdbc8140f82cdd3}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST2\_\-BITFIELDSIZE@{PWM\_\-PWMCST2\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMCST2\_\-BITFIELDSIZE@{PWM\_\-PWMCST2\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST2\_\-BITFIELDSIZE~32}}
+\label{a00565_ace5f322318efae3c8fdbc8140f82cdd3}
+
+
+Definition at line 335 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aadf5c28e1c542f508c1997683c5f0179}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST2\_\-BITMASK@{PWM\_\-PWMCST2\_\-BITMASK}}
+\index{PWM\_\-PWMCST2\_\-BITMASK@{PWM\_\-PWMCST2\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST2\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_aadf5c28e1c542f508c1997683c5f0179}
+
+
+Definition at line 336 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a89186f7b73a1c8ae73069751717eaa4c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST2\_\-BITOFFSET@{PWM\_\-PWMCST2\_\-BITOFFSET}}
+\index{PWM\_\-PWMCST2\_\-BITOFFSET@{PWM\_\-PWMCST2\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST2\_\-BITOFFSET~0}}
+\label{a00565_a89186f7b73a1c8ae73069751717eaa4c}
+
+
+Definition at line 334 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac7897dc0dc26dfd99dd2e6d8a07cdbd9}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST2\_\-INIT@{PWM\_\-PWMCST2\_\-INIT}}
+\index{PWM\_\-PWMCST2\_\-INIT@{PWM\_\-PWMCST2\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST2\_\-INIT~0x00000000}}
+\label{a00565_ac7897dc0dc26dfd99dd2e6d8a07cdbd9}
+
+
+Definition at line 337 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a81bdbb774320c60d5ed169b4f5cb833d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMCST2\_\-OFFSETADDRESS@{PWM\_\-PWMCST2\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMCST2\_\-OFFSETADDRESS@{PWM\_\-PWMCST2\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMCST2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST2\_\-OFFSETADDRESS~0x00000028}}
+\label{a00565_a81bdbb774320c60d5ed169b4f5cb833d}
+
+
+Definition at line 333 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_adeda64484cdf91ad6227b3e202923a56}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMDCR\_\-BITFIELDSIZE@{PWM\_\-PWMDCR\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMDCR\_\-BITFIELDSIZE@{PWM\_\-PWMDCR\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMDCR\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMDCR\_\-BITFIELDSIZE~32}}
+\label{a00565_adeda64484cdf91ad6227b3e202923a56}
+
+
+Definition at line 202 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a0826361be1f002b278f3ac4cae30f3f4}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMDCR\_\-BITMASK@{PWM\_\-PWMDCR\_\-BITMASK}}
+\index{PWM\_\-PWMDCR\_\-BITMASK@{PWM\_\-PWMDCR\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMDCR\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMDCR\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_a0826361be1f002b278f3ac4cae30f3f4}
+
+
+Definition at line 203 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aac0b51e2bb02790b399b2c96855f6e5d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMDCR\_\-BITOFFSET@{PWM\_\-PWMDCR\_\-BITOFFSET}}
+\index{PWM\_\-PWMDCR\_\-BITOFFSET@{PWM\_\-PWMDCR\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMDCR\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMDCR\_\-BITOFFSET~0}}
+\label{a00565_aac0b51e2bb02790b399b2c96855f6e5d}
+
+
+Definition at line 201 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a535f439651c1fb9edae479c50cf4e2b9}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMDCR\_\-INIT@{PWM\_\-PWMDCR\_\-INIT}}
+\index{PWM\_\-PWMDCR\_\-INIT@{PWM\_\-PWMDCR\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMDCR\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMDCR\_\-INIT~0x00000000}}
+\label{a00565_a535f439651c1fb9edae479c50cf4e2b9}
+
+
+Definition at line 204 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aa1693c2827f9d8708ca5db029964edde}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMDCR\_\-OFFSETADDRESS@{PWM\_\-PWMDCR\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMDCR\_\-OFFSETADDRESS@{PWM\_\-PWMDCR\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMDCR\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMDCR\_\-OFFSETADDRESS~0x00000008}}
+\label{a00565_aa1693c2827f9d8708ca5db029964edde}
+
+
+Definition at line 200 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a7d313f8bac74b3afd862d383ce57df50}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIC\_\-BITFIELDSIZE@{PWM\_\-PWMIC\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMIC\_\-BITFIELDSIZE@{PWM\_\-PWMIC\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIC\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIC\_\-BITFIELDSIZE~32}}
+\label{a00565_a7d313f8bac74b3afd862d383ce57df50}
+
+
+Definition at line 537 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac6be16b81228d8e168d46269385fab6d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIC\_\-BITMASK@{PWM\_\-PWMIC\_\-BITMASK}}
+\index{PWM\_\-PWMIC\_\-BITMASK@{PWM\_\-PWMIC\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIC\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIC\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_ac6be16b81228d8e168d46269385fab6d}
+
+
+Definition at line 538 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a8bb11f7bed8dc0591fdf4026a9380dbd}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIC\_\-BITOFFSET@{PWM\_\-PWMIC\_\-BITOFFSET}}
+\index{PWM\_\-PWMIC\_\-BITOFFSET@{PWM\_\-PWMIC\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIC\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIC\_\-BITOFFSET~0}}
+\label{a00565_a8bb11f7bed8dc0591fdf4026a9380dbd}
+
+
+Definition at line 536 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a0464f8f18a320328dd7a2e100de3c367}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIC\_\-INIT@{PWM\_\-PWMIC\_\-INIT}}
+\index{PWM\_\-PWMIC\_\-INIT@{PWM\_\-PWMIC\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIC\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIC\_\-INIT~0x00000000}}
+\label{a00565_a0464f8f18a320328dd7a2e100de3c367}
+
+
+Definition at line 539 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a4ed506b6b0291be53741bd7a9ced73a5}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIC\_\-OFFSETADDRESS@{PWM\_\-PWMIC\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMIC\_\-OFFSETADDRESS@{PWM\_\-PWMIC\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIC\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIC\_\-OFFSETADDRESS~0x0000003c}}
+\label{a00565_a4ed506b6b0291be53741bd7a9ced73a5}
+
+
+Definition at line 535 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a890c82cbcf55f493d7b1e7ea19bfe54a}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMID\_\-BITFIELDSIZE@{PWM\_\-PWMID\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMID\_\-BITFIELDSIZE@{PWM\_\-PWMID\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMID\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMID\_\-BITFIELDSIZE~32}}
+\label{a00565_a890c82cbcf55f493d7b1e7ea19bfe54a}
+
+
+Definition at line 230 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab10df0efef0c94288e260ab197d40a5b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMID\_\-BITMASK@{PWM\_\-PWMID\_\-BITMASK}}
+\index{PWM\_\-PWMID\_\-BITMASK@{PWM\_\-PWMID\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMID\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMID\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_ab10df0efef0c94288e260ab197d40a5b}
+
+
+Definition at line 231 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab16f58c2ba3dd62d1cb62c7bc545ef17}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMID\_\-BITOFFSET@{PWM\_\-PWMID\_\-BITOFFSET}}
+\index{PWM\_\-PWMID\_\-BITOFFSET@{PWM\_\-PWMID\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMID\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMID\_\-BITOFFSET~0}}
+\label{a00565_ab16f58c2ba3dd62d1cb62c7bc545ef17}
+
+
+Definition at line 229 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a80e2697233e8ec4bc934b91d8f19e31f}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMID\_\-INIT@{PWM\_\-PWMID\_\-INIT}}
+\index{PWM\_\-PWMID\_\-INIT@{PWM\_\-PWMID\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMID\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMID\_\-INIT~0x00000000}}
+\label{a00565_a80e2697233e8ec4bc934b91d8f19e31f}
+
+
+Definition at line 232 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac7cf84caf366abf45c8bea875af9d9cd}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMID\_\-OFFSETADDRESS@{PWM\_\-PWMID\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMID\_\-OFFSETADDRESS@{PWM\_\-PWMID\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMID\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMID\_\-OFFSETADDRESS~0x0000000c}}
+\label{a00565_ac7cf84caf366abf45c8bea875af9d9cd}
+
+
+Definition at line 228 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a42dc9b8cc0b60ec94bdd0cb9cc70218c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIM\_\-BITFIELDSIZE@{PWM\_\-PWMIM\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMIM\_\-BITFIELDSIZE@{PWM\_\-PWMIM\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIM\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIM\_\-BITFIELDSIZE~32}}
+\label{a00565_a42dc9b8cc0b60ec94bdd0cb9cc70218c}
+
+
+Definition at line 473 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab6518f2d44583d2a58e41caafade7fc8}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIM\_\-BITMASK@{PWM\_\-PWMIM\_\-BITMASK}}
+\index{PWM\_\-PWMIM\_\-BITMASK@{PWM\_\-PWMIM\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIM\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIM\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_ab6518f2d44583d2a58e41caafade7fc8}
+
+
+Definition at line 474 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a8beac3873234629219bd895535763394}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIM\_\-BITOFFSET@{PWM\_\-PWMIM\_\-BITOFFSET}}
+\index{PWM\_\-PWMIM\_\-BITOFFSET@{PWM\_\-PWMIM\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIM\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIM\_\-BITOFFSET~0}}
+\label{a00565_a8beac3873234629219bd895535763394}
+
+
+Definition at line 472 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_abfc8e4406af6d5bfb673eec20fbc3175}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIM\_\-INIT@{PWM\_\-PWMIM\_\-INIT}}
+\index{PWM\_\-PWMIM\_\-INIT@{PWM\_\-PWMIM\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIM\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIM\_\-INIT~0x00000000}}
+\label{a00565_abfc8e4406af6d5bfb673eec20fbc3175}
+
+
+Definition at line 475 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a469ac74ee92662446dff6988c5b5f369}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIM\_\-OFFSETADDRESS@{PWM\_\-PWMIM\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMIM\_\-OFFSETADDRESS@{PWM\_\-PWMIM\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIM\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIM\_\-OFFSETADDRESS~0x00000038}}
+\label{a00565_a469ac74ee92662446dff6988c5b5f369}
+
+
+Definition at line 471 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a9666d5eb40575f281c9569cf3dab969b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIS\_\-BITFIELDSIZE@{PWM\_\-PWMIS\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMIS\_\-BITFIELDSIZE@{PWM\_\-PWMIS\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIS\_\-BITFIELDSIZE~32}}
+\label{a00565_a9666d5eb40575f281c9569cf3dab969b}
+
+
+Definition at line 345 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ac3bcdcc018853a301f78c32671b9c81d}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIS\_\-BITMASK@{PWM\_\-PWMIS\_\-BITMASK}}
+\index{PWM\_\-PWMIS\_\-BITMASK@{PWM\_\-PWMIS\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIS\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_ac3bcdcc018853a301f78c32671b9c81d}
+
+
+Definition at line 346 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_aecc69ca8656aab951d4a6e4657b199f2}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIS\_\-BITOFFSET@{PWM\_\-PWMIS\_\-BITOFFSET}}
+\index{PWM\_\-PWMIS\_\-BITOFFSET@{PWM\_\-PWMIS\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIS\_\-BITOFFSET~0}}
+\label{a00565_aecc69ca8656aab951d4a6e4657b199f2}
+
+
+Definition at line 344 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_abd79dfa7ccc23e9f10c6962a4da55800}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIS\_\-INIT@{PWM\_\-PWMIS\_\-INIT}}
+\index{PWM\_\-PWMIS\_\-INIT@{PWM\_\-PWMIS\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIS\_\-INIT~0x00000000}}
+\label{a00565_abd79dfa7ccc23e9f10c6962a4da55800}
+
+
+Definition at line 347 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ae8efb404ac600ed96a7e07f5827853a3}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMIS\_\-OFFSETADDRESS@{PWM\_\-PWMIS\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMIS\_\-OFFSETADDRESS@{PWM\_\-PWMIS\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMIS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIS\_\-OFFSETADDRESS~0x00000030}}
+\label{a00565_ae8efb404ac600ed96a7e07f5827853a3}
+
+
+Definition at line 343 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a58f5287ba2f123a06d724a22fb9b85f5}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMRIS\_\-BITFIELDSIZE@{PWM\_\-PWMRIS\_\-BITFIELDSIZE}}
+\index{PWM\_\-PWMRIS\_\-BITFIELDSIZE@{PWM\_\-PWMRIS\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMRIS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMRIS\_\-BITFIELDSIZE~32}}
+\label{a00565_a58f5287ba2f123a06d724a22fb9b85f5}
+
+
+Definition at line 409 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a4dec8740cf398f2550ef3685cfbf13e9}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMRIS\_\-BITMASK@{PWM\_\-PWMRIS\_\-BITMASK}}
+\index{PWM\_\-PWMRIS\_\-BITMASK@{PWM\_\-PWMRIS\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMRIS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMRIS\_\-BITMASK~0xFFFFFFFF}}
+\label{a00565_a4dec8740cf398f2550ef3685cfbf13e9}
+
+
+Definition at line 410 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_acaff455b91b6368bbe26d2843c5269da}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMRIS\_\-BITOFFSET@{PWM\_\-PWMRIS\_\-BITOFFSET}}
+\index{PWM\_\-PWMRIS\_\-BITOFFSET@{PWM\_\-PWMRIS\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMRIS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMRIS\_\-BITOFFSET~0}}
+\label{a00565_acaff455b91b6368bbe26d2843c5269da}
+
+
+Definition at line 408 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a839e8d008fe8c5db26fb49cb48f4595f}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMRIS\_\-INIT@{PWM\_\-PWMRIS\_\-INIT}}
+\index{PWM\_\-PWMRIS\_\-INIT@{PWM\_\-PWMRIS\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMRIS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMRIS\_\-INIT~0x00000000}}
+\label{a00565_a839e8d008fe8c5db26fb49cb48f4595f}
+
+
+Definition at line 411 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ad85bbc1622b6502490eec15b1ab0819b}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-PWMRIS\_\-OFFSETADDRESS@{PWM\_\-PWMRIS\_\-OFFSETADDRESS}}
+\index{PWM\_\-PWMRIS\_\-OFFSETADDRESS@{PWM\_\-PWMRIS\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-PWMRIS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMRIS\_\-OFFSETADDRESS~0x00000034}}
+\label{a00565_ad85bbc1622b6502490eec15b1ab0819b}
+
+
+Definition at line 407 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab2835b9033ec1ff977ed6a335f7d1135}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-SCLS\_\-BITFIELDSIZE@{PWM\_\-SCLS\_\-BITFIELDSIZE}}
+\index{PWM\_\-SCLS\_\-BITFIELDSIZE@{PWM\_\-SCLS\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-SCLS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SCLS\_\-BITFIELDSIZE~1}}
+\label{a00565_ab2835b9033ec1ff977ed6a335f7d1135}
+
+
+Definition at line 83 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_ab7e8fe07d218f5a5de027c01dfae6ee3}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-SCLS\_\-BITMASK@{PWM\_\-SCLS\_\-BITMASK}}
+\index{PWM\_\-SCLS\_\-BITMASK@{PWM\_\-SCLS\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-SCLS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SCLS\_\-BITMASK~0x00002000}}
+\label{a00565_ab7e8fe07d218f5a5de027c01dfae6ee3}
+
+
+Definition at line 84 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a808cf75beac1131f7c35f3a560fdef11}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-SCLS\_\-BITOFFSET@{PWM\_\-SCLS\_\-BITOFFSET}}
+\index{PWM\_\-SCLS\_\-BITOFFSET@{PWM\_\-SCLS\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-SCLS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SCLS\_\-BITOFFSET~13}}
+\label{a00565_a808cf75beac1131f7c35f3a560fdef11}
+
+
+Definition at line 82 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a06b314cd436f167fc3081a845546b2cc}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-SCLS\_\-INIT@{PWM\_\-SCLS\_\-INIT}}
+\index{PWM\_\-SCLS\_\-INIT@{PWM\_\-SCLS\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-SCLS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SCLS\_\-INIT~0x0}}
+\label{a00565_a06b314cd436f167fc3081a845546b2cc}
+
+
+Definition at line 85 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a2aa37a1f58aae29ca5c21a3ed714d64c}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-SCLS\_\-OFFSETADDRESS@{PWM\_\-SCLS\_\-OFFSETADDRESS}}
+\index{PWM\_\-SCLS\_\-OFFSETADDRESS@{PWM\_\-SCLS\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-SCLS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SCLS\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_a2aa37a1f58aae29ca5c21a3ed714d64c}
+
+
+Definition at line 81 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_af0d8ffbf5f63bfcce2096cb6647e6008}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-SEN\_\-BITFIELDSIZE@{PWM\_\-SEN\_\-BITFIELDSIZE}}
+\index{PWM\_\-SEN\_\-BITFIELDSIZE@{PWM\_\-SEN\_\-BITFIELDSIZE}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-SEN\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SEN\_\-BITFIELDSIZE~1}}
+\label{a00565_af0d8ffbf5f63bfcce2096cb6647e6008}
+
+
+Definition at line 92 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1c3b561c85f49b7baf11499691b807f7}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-SEN\_\-BITMASK@{PWM\_\-SEN\_\-BITMASK}}
+\index{PWM\_\-SEN\_\-BITMASK@{PWM\_\-SEN\_\-BITMASK}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-SEN\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SEN\_\-BITMASK~0x00001000}}
+\label{a00565_a1c3b561c85f49b7baf11499691b807f7}
+
+
+Definition at line 93 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a04ad96c43a0a475b6b58512e3a2751f1}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-SEN\_\-BITOFFSET@{PWM\_\-SEN\_\-BITOFFSET}}
+\index{PWM\_\-SEN\_\-BITOFFSET@{PWM\_\-SEN\_\-BITOFFSET}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-SEN\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SEN\_\-BITOFFSET~12}}
+\label{a00565_a04ad96c43a0a475b6b58512e3a2751f1}
+
+
+Definition at line 91 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a6320df8f16adebd9db7d8814d6eec919}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-SEN\_\-INIT@{PWM\_\-SEN\_\-INIT}}
+\index{PWM\_\-SEN\_\-INIT@{PWM\_\-SEN\_\-INIT}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-SEN\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SEN\_\-INIT~0x0}}
+\label{a00565_a6320df8f16adebd9db7d8814d6eec919}
+
+
+Definition at line 94 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+
+\hypertarget{a00565_a1b7f936a7649c7f0768376f5b1708791}{
+\index{gsn\_\-reg\_\-pwm\_\-spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}!PWM\_\-SEN\_\-OFFSETADDRESS@{PWM\_\-SEN\_\-OFFSETADDRESS}}
+\index{PWM\_\-SEN\_\-OFFSETADDRESS@{PWM\_\-SEN\_\-OFFSETADDRESS}!gsn_reg_pwm_spec.h@{gsn\_\-reg\_\-pwm\_\-spec.h}}
+\subsubsection[{PWM\_\-SEN\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SEN\_\-OFFSETADDRESS~PWM\_\-PWMCR\_\-OFFSETADDRESS}}
+\label{a00565_a1b7f936a7649c7f0768376f5b1708791}
+
+
+Definition at line 90 of file gsn\_\-reg\_\-pwm\_\-spec.h.
+

@@ -1,0 +1,411 @@
+\hypertarget{a00410}{
+\section{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S Struct Reference}
+\label{a00410}\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+}
+
+
+wlan tx statistics get cmd  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wif\_\-wlan\_\-defs.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00410_a1368e1d98f8be9ce5103d4d75a56588a}{statType}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_af37d80975c1e392ee6e0d7716dd25d1f}{itxs}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_ab6f981da732b49662790618f0a6441f4}{itxto}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a2d2ab651bfccb98b887ad2229160e7fa}{itxf}\\
+\} \hyperlink{a00410_a8f3bdd08f5f6770671203303462c8200}{st}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_af30857fde9d06828d91cff11936bee59}{wep40}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_ab95f62b583a03134163d1f1fd4573a02}{wep104}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a098ddf70ebfebfbb42a1fcc820eb66a8}{tkip}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a1e6e626db840c729cdd71afad98acf4a}{ccmp}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a5cf4008170a4dba8a5299071161cef46}{unencryp}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_af0e3049236e039064d544397e376c31b}{ukencryp}\\
+\} \hyperlink{a00410_affb15a9835201e48b581f56a7912721c}{cip\_type}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_aaf690b30c7bb3b5f1b5675f84c7c92e5}{leg} \mbox{[}16\mbox{]}\mbox{[}2\mbox{]}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a5512e7cbb968332fffc963132021c2a9}{ht20l} \mbox{[}GSN\_WLAN\_MAX\_MCS\_SUPPORTED+1\mbox{]}\mbox{[}2\mbox{]}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_ac3156ecb8d65f7e4aac2caf45fff0d1a}{ht20s} \mbox{[}GSN\_WLAN\_MAX\_MCS\_SUPPORTED+1\mbox{]}\mbox{[}2\mbox{]}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_ab42c2405c4fac47ff38d981b9ebcb346}{ht40l} \mbox{[}GSN\_WLAN\_MAX\_MCS\_SUPPORTED+1\mbox{]}\mbox{[}2\mbox{]}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_abb9b5107f666672351985f8fc94b7f54}{ht40s} \mbox{[}GSN\_WLAN\_MAX\_MCS\_SUPPORTED+1\mbox{]}\mbox{[}2\mbox{]}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_af6ac2ed83df90516d588a62afe6df20f}{mcs32s} \mbox{[}2\mbox{]}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a6d5ba148df5237ec93937479cad72cd9}{mcs32l} \mbox{[}2\mbox{]}\\
+\} \hyperlink{a00410_a01138127fe90db703f2c45ded1bed4aa}{dr}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a124c765f00c7f9cf0dead85dcddac788}{probersp}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a58fb830752b321b4831fbb356e95bb9e}{probereq}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a5b5f1db253e2c61ab11fedd518d5480b}{mc\_data}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a428905296900c9473c713e6132ea6e45}{uc\_data}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a404694cb739b81ab849e54b48d4f1b18}{qos\_uc\_data}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a981f9b86badc745ce706ad7e14d64a8e}{qos\_mc\_data}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a2d2a88872a0d8626bcf602549fb14cfd}{amsdu\_uc\_data}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_af88c580daca00ba48fbe3424d29c6578}{amsdu\_mc\_data}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a46a7bf629d811ace12ce90ce5654c3f5}{ampdu\_uc\_data}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_aaba836124f2c72180510420bb1026205}{ampdu\_mc\_data}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_af35bbce45ee30e4b704726ff63da07ca}{oth\_mgmt}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_aba1f71ef75513044ac20c228b28cb956}{oth}\\
+\>\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_aa1d3a3942f8b928e399ec7a28d4e2c96}{ctrl}\\
+\} \hyperlink{a00410_af8299b546a9d4e1fbe79387e19365c70}{type}\\
+
+\end{tabbing}\item 
+\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a2c017a9458b7c7101d15c4e05b8d3a11}{retries}
+\item 
+\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_abb6b3759b3cebdf3620dfb03b50de2e0}{multiple\_\-retries}
+\item 
+\hyperlink{a00677_gad0599cef3ddc489e9b2fe8afc3159f12}{UWORD32} \hyperlink{a00410_a73de443bdd62ccc7fa8fc68faf358974}{fragments}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+wlan tx statistics get cmd 
+
+This structure defines the wlan tx statistics get command structure 
+
+Definition at line 889 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00410_aaba836124f2c72180510420bb1026205}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!ampdu\_\-mc\_\-data@{ampdu\_\-mc\_\-data}}
+\index{ampdu\_\-mc\_\-data@{ampdu\_\-mc\_\-data}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{ampdu\_\-mc\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf ampdu\_\-mc\_\-data}}}
+\label{a00410_aaba836124f2c72180510420bb1026205}
+
+
+Definition at line 932 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a46a7bf629d811ace12ce90ce5654c3f5}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!ampdu\_\-uc\_\-data@{ampdu\_\-uc\_\-data}}
+\index{ampdu\_\-uc\_\-data@{ampdu\_\-uc\_\-data}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{ampdu\_\-uc\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf ampdu\_\-uc\_\-data}}}
+\label{a00410_a46a7bf629d811ace12ce90ce5654c3f5}
+
+
+Definition at line 931 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_af88c580daca00ba48fbe3424d29c6578}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!amsdu\_\-mc\_\-data@{amsdu\_\-mc\_\-data}}
+\index{amsdu\_\-mc\_\-data@{amsdu\_\-mc\_\-data}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{amsdu\_\-mc\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf amsdu\_\-mc\_\-data}}}
+\label{a00410_af88c580daca00ba48fbe3424d29c6578}
+
+
+Definition at line 930 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a2d2a88872a0d8626bcf602549fb14cfd}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!amsdu\_\-uc\_\-data@{amsdu\_\-uc\_\-data}}
+\index{amsdu\_\-uc\_\-data@{amsdu\_\-uc\_\-data}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{amsdu\_\-uc\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf amsdu\_\-uc\_\-data}}}
+\label{a00410_a2d2a88872a0d8626bcf602549fb14cfd}
+
+
+Definition at line 929 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a1e6e626db840c729cdd71afad98acf4a}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!ccmp@{ccmp}}
+\index{ccmp@{ccmp}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{ccmp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf ccmp}}}
+\label{a00410_a1e6e626db840c729cdd71afad98acf4a}
+
+
+Definition at line 905 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_affb15a9835201e48b581f56a7912721c}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!cip\_\-type@{cip\_\-type}}
+\index{cip\_\-type@{cip\_\-type}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{cip\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   {\bf cip\_\-type}}}
+\label{a00410_affb15a9835201e48b581f56a7912721c}
+\hypertarget{a00410_aa1d3a3942f8b928e399ec7a28d4e2c96}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!ctrl@{ctrl}}
+\index{ctrl@{ctrl}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{ctrl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf ctrl}}}
+\label{a00410_aa1d3a3942f8b928e399ec7a28d4e2c96}
+
+
+Definition at line 935 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a01138127fe90db703f2c45ded1bed4aa}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!dr@{dr}}
+\index{dr@{dr}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{dr}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   {\bf dr}}}
+\label{a00410_a01138127fe90db703f2c45ded1bed4aa}
+\hypertarget{a00410_a73de443bdd62ccc7fa8fc68faf358974}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!fragments@{fragments}}
+\index{fragments@{fragments}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{fragments}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf fragments}}}
+\label{a00410_a73de443bdd62ccc7fa8fc68faf358974}
+
+
+Definition at line 940 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a5512e7cbb968332fffc963132021c2a9}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!ht20l@{ht20l}}
+\index{ht20l@{ht20l}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{ht20l}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf ht20l}\mbox{[}GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED+1\mbox{]}\mbox{[}2\mbox{]}}}
+\label{a00410_a5512e7cbb968332fffc963132021c2a9}
+
+
+Definition at line 913 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_ac3156ecb8d65f7e4aac2caf45fff0d1a}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!ht20s@{ht20s}}
+\index{ht20s@{ht20s}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{ht20s}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf ht20s}\mbox{[}GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED+1\mbox{]}\mbox{[}2\mbox{]}}}
+\label{a00410_ac3156ecb8d65f7e4aac2caf45fff0d1a}
+
+
+Definition at line 914 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_ab42c2405c4fac47ff38d981b9ebcb346}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!ht40l@{ht40l}}
+\index{ht40l@{ht40l}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{ht40l}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf ht40l}\mbox{[}GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED+1\mbox{]}\mbox{[}2\mbox{]}}}
+\label{a00410_ab42c2405c4fac47ff38d981b9ebcb346}
+
+
+Definition at line 915 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_abb9b5107f666672351985f8fc94b7f54}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!ht40s@{ht40s}}
+\index{ht40s@{ht40s}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{ht40s}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf ht40s}\mbox{[}GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED+1\mbox{]}\mbox{[}2\mbox{]}}}
+\label{a00410_abb9b5107f666672351985f8fc94b7f54}
+
+
+Definition at line 916 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a2d2ab651bfccb98b887ad2229160e7fa}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!itxf@{itxf}}
+\index{itxf@{itxf}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{itxf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf itxf}}}
+\label{a00410_a2d2ab651bfccb98b887ad2229160e7fa}
+
+
+Definition at line 896 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_af37d80975c1e392ee6e0d7716dd25d1f}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!itxs@{itxs}}
+\index{itxs@{itxs}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{itxs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf itxs}}}
+\label{a00410_af37d80975c1e392ee6e0d7716dd25d1f}
+
+
+Definition at line 894 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_ab6f981da732b49662790618f0a6441f4}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!itxto@{itxto}}
+\index{itxto@{itxto}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{itxto}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf itxto}}}
+\label{a00410_ab6f981da732b49662790618f0a6441f4}
+
+
+Definition at line 895 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_aaf690b30c7bb3b5f1b5675f84c7c92e5}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!leg@{leg}}
+\index{leg@{leg}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{leg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf leg}\mbox{[}16\mbox{]}\mbox{[}2\mbox{]}}}
+\label{a00410_aaf690b30c7bb3b5f1b5675f84c7c92e5}
+
+
+Definition at line 912 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a5b5f1db253e2c61ab11fedd518d5480b}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!mc\_\-data@{mc\_\-data}}
+\index{mc\_\-data@{mc\_\-data}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{mc\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf mc\_\-data}}}
+\label{a00410_a5b5f1db253e2c61ab11fedd518d5480b}
+
+
+Definition at line 925 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a6d5ba148df5237ec93937479cad72cd9}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!mcs32l@{mcs32l}}
+\index{mcs32l@{mcs32l}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{mcs32l}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf mcs32l}\mbox{[}2\mbox{]}}}
+\label{a00410_a6d5ba148df5237ec93937479cad72cd9}
+
+
+Definition at line 918 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_af6ac2ed83df90516d588a62afe6df20f}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!mcs32s@{mcs32s}}
+\index{mcs32s@{mcs32s}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{mcs32s}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf mcs32s}\mbox{[}2\mbox{]}}}
+\label{a00410_af6ac2ed83df90516d588a62afe6df20f}
+
+
+Definition at line 917 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_abb6b3759b3cebdf3620dfb03b50de2e0}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!multiple\_\-retries@{multiple\_\-retries}}
+\index{multiple\_\-retries@{multiple\_\-retries}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{multiple\_\-retries}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf multiple\_\-retries}}}
+\label{a00410_abb6b3759b3cebdf3620dfb03b50de2e0}
+
+
+Definition at line 939 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_aba1f71ef75513044ac20c228b28cb956}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!oth@{oth}}
+\index{oth@{oth}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{oth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf oth}}}
+\label{a00410_aba1f71ef75513044ac20c228b28cb956}
+
+
+Definition at line 934 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_af35bbce45ee30e4b704726ff63da07ca}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!oth\_\-mgmt@{oth\_\-mgmt}}
+\index{oth\_\-mgmt@{oth\_\-mgmt}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{oth\_\-mgmt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf oth\_\-mgmt}}}
+\label{a00410_af35bbce45ee30e4b704726ff63da07ca}
+
+
+Definition at line 933 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a58fb830752b321b4831fbb356e95bb9e}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!probereq@{probereq}}
+\index{probereq@{probereq}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{probereq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf probereq}}}
+\label{a00410_a58fb830752b321b4831fbb356e95bb9e}
+
+
+Definition at line 924 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a124c765f00c7f9cf0dead85dcddac788}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!probersp@{probersp}}
+\index{probersp@{probersp}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{probersp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf probersp}}}
+\label{a00410_a124c765f00c7f9cf0dead85dcddac788}
+
+
+Definition at line 923 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a981f9b86badc745ce706ad7e14d64a8e}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!qos\_\-mc\_\-data@{qos\_\-mc\_\-data}}
+\index{qos\_\-mc\_\-data@{qos\_\-mc\_\-data}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{qos\_\-mc\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf qos\_\-mc\_\-data}}}
+\label{a00410_a981f9b86badc745ce706ad7e14d64a8e}
+
+
+Definition at line 928 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a404694cb739b81ab849e54b48d4f1b18}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!qos\_\-uc\_\-data@{qos\_\-uc\_\-data}}
+\index{qos\_\-uc\_\-data@{qos\_\-uc\_\-data}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{qos\_\-uc\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf qos\_\-uc\_\-data}}}
+\label{a00410_a404694cb739b81ab849e54b48d4f1b18}
+
+
+Definition at line 927 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a2c017a9458b7c7101d15c4e05b8d3a11}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!retries@{retries}}
+\index{retries@{retries}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{retries}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf retries}}}
+\label{a00410_a2c017a9458b7c7101d15c4e05b8d3a11}
+
+
+Definition at line 938 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a8f3bdd08f5f6770671203303462c8200}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!st@{st}}
+\index{st@{st}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{st}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   {\bf st}}}
+\label{a00410_a8f3bdd08f5f6770671203303462c8200}
+\hypertarget{a00410_a1368e1d98f8be9ce5103d4d75a56588a}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!statType@{statType}}
+\index{statType@{statType}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{statType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf statType}}}
+\label{a00410_a1368e1d98f8be9ce5103d4d75a56588a}
+
+
+Definition at line 891 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a098ddf70ebfebfbb42a1fcc820eb66a8}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!tkip@{tkip}}
+\index{tkip@{tkip}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{tkip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf tkip}}}
+\label{a00410_a098ddf70ebfebfbb42a1fcc820eb66a8}
+
+
+Definition at line 904 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_af8299b546a9d4e1fbe79387e19365c70}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!type@{type}}
+\index{type@{type}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   {\bf type}}}
+\label{a00410_af8299b546a9d4e1fbe79387e19365c70}
+\hypertarget{a00410_a428905296900c9473c713e6132ea6e45}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!uc\_\-data@{uc\_\-data}}
+\index{uc\_\-data@{uc\_\-data}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{uc\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf uc\_\-data}}}
+\label{a00410_a428905296900c9473c713e6132ea6e45}
+
+
+Definition at line 926 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_af0e3049236e039064d544397e376c31b}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!ukencryp@{ukencryp}}
+\index{ukencryp@{ukencryp}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{ukencryp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf ukencryp}}}
+\label{a00410_af0e3049236e039064d544397e376c31b}
+
+
+Definition at line 907 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_a5cf4008170a4dba8a5299071161cef46}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!unencryp@{unencryp}}
+\index{unencryp@{unencryp}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{unencryp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf unencryp}}}
+\label{a00410_a5cf4008170a4dba8a5299071161cef46}
+
+
+Definition at line 906 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_ab95f62b583a03134163d1f1fd4573a02}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!wep104@{wep104}}
+\index{wep104@{wep104}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{wep104}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf wep104}}}
+\label{a00410_ab95f62b583a03134163d1f1fd4573a02}
+
+
+Definition at line 903 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00410_af30857fde9d06828d91cff11936bee59}{
+\index{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}!wep40@{wep40}}
+\index{wep40@{wep40}!GSN_WIF_WLAN_TX_STATS_S@{GSN\_\-WIF\_\-WLAN\_\-TX\_\-STATS\_\-S}}
+\subsubsection[{wep40}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UWORD32} {\bf wep40}}}
+\label{a00410_af30857fde9d06828d91cff11936bee59}
+
+
+Definition at line 902 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00613}{gsn\_\-wif\_\-wlan\_\-defs.h}\end{DoxyCompactItemize}

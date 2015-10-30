@@ -1,0 +1,109 @@
+\hypertarget{a00512}{
+\section{gsn\_\-httpd\_\-file\_\-upload.h File Reference}
+\label{a00512}\index{gsn\_\-httpd\_\-file\_\-upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}}
+}
+
+
+GSN HTTP\_\-FILE\_\-UPLOAD implementation of HTTP based file upload. This API supports file upload to any partition in file system.  
+
+
+{\ttfamily \#include $<$stddef.h$>$}\par
+{\ttfamily \#include \char`\"{}gsn\_\-includes.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}modules/xml\_\-parser/gsn\_\-xml.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}modules/http/gsn\_\-httpd.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}modules/http/gsn\_\-httpd\_\-util.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}modules/http/gsn\_\-httpd\_\-debug.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}modules/http/gsn\_\-httpd\_\-file\_\-api.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}fs/hcc/src/api/api\_\-safe.h\char`\"{}}\par
+Include dependency graph for gsn\_\-httpd\_\-file\_\-upload.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00744}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00512_a6edc031eda94ce06237695299f1d3070}{GSN\_\-HTTP\_\-FILE\_\-UPLOAD\_\-API\_\-PATH}~\char`\"{}/gainspan/system/fsupload\char`\"{}
+\item 
+\#define \hyperlink{a00512_af6d82e0d4b1e8efaaf8cfd99e23f0e96}{GSN\_\-HTTPD\_\-PATHDELIMITER}~\char`\"{}/\char`\"{}
+\item 
+\#define \hyperlink{a00512_ad849668fc7f8947cff98961b8e841d1c}{GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-0}~0
+\item 
+\#define \hyperlink{a00512_a369bf64284f606db1280e9ba1ac1480a}{GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-1}~1
+\item 
+\#define \hyperlink{a00512_ab5c1bca572ab41227e20e3e9ce33aaf8}{GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-2}~2
+\item 
+\#define \hyperlink{a00512_a02c5f458fa66efa8b7d9d6e85a3c4e2e}{GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-3}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00667_ga3ab1de7bf3714fa743ccfadc3a00f835}{GsnFsUpload\_\-Init} ()
+\begin{DoxyCompactList}\small\item\em Initialize ADK FILE UPLOAD module This function initializes the FS\_\-UPLOAD module by registering the system default URI for file upload and sets up callback functions to handle events from http server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN HTTP\_\-FILE\_\-UPLOAD implementation of HTTP based file upload. This API supports file upload to any partition in file system. 
+
+Definition in file \hyperlink{a00512_source}{gsn\_\-httpd\_\-file\_\-upload.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00512_ab5c1bca572ab41227e20e3e9ce33aaf8}{
+\index{gsn\_\-httpd\_\-file\_\-upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}!GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-2@{GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-2}}
+\index{GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-2@{GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-2}!gsn_httpd_file_upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}}
+\subsubsection[{GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-2~2}}
+\label{a00512_ab5c1bca572ab41227e20e3e9ce33aaf8}
+
+
+Definition at line 78 of file gsn\_\-httpd\_\-file\_\-upload.h.
+
+\hypertarget{a00512_a02c5f458fa66efa8b7d9d6e85a3c4e2e}{
+\index{gsn\_\-httpd\_\-file\_\-upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}!GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-3@{GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-3}}
+\index{GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-3@{GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-3}!gsn_httpd_file_upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}}
+\subsubsection[{GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-EXT\_\-FLASH\_\-DRIVE\_\-NUM\_\-3~3}}
+\label{a00512_a02c5f458fa66efa8b7d9d6e85a3c4e2e}
+
+
+Definition at line 79 of file gsn\_\-httpd\_\-file\_\-upload.h.
+
+\hypertarget{a00512_a6edc031eda94ce06237695299f1d3070}{
+\index{gsn\_\-httpd\_\-file\_\-upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}!GSN\_\-HTTP\_\-FILE\_\-UPLOAD\_\-API\_\-PATH@{GSN\_\-HTTP\_\-FILE\_\-UPLOAD\_\-API\_\-PATH}}
+\index{GSN\_\-HTTP\_\-FILE\_\-UPLOAD\_\-API\_\-PATH@{GSN\_\-HTTP\_\-FILE\_\-UPLOAD\_\-API\_\-PATH}!gsn_httpd_file_upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}}
+\subsubsection[{GSN\_\-HTTP\_\-FILE\_\-UPLOAD\_\-API\_\-PATH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTP\_\-FILE\_\-UPLOAD\_\-API\_\-PATH~\char`\"{}/gainspan/system/fsupload\char`\"{}}}
+\label{a00512_a6edc031eda94ce06237695299f1d3070}
+
+
+Definition at line 73 of file gsn\_\-httpd\_\-file\_\-upload.h.
+
+\hypertarget{a00512_af6d82e0d4b1e8efaaf8cfd99e23f0e96}{
+\index{gsn\_\-httpd\_\-file\_\-upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}!GSN\_\-HTTPD\_\-PATHDELIMITER@{GSN\_\-HTTPD\_\-PATHDELIMITER}}
+\index{GSN\_\-HTTPD\_\-PATHDELIMITER@{GSN\_\-HTTPD\_\-PATHDELIMITER}!gsn_httpd_file_upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}}
+\subsubsection[{GSN\_\-HTTPD\_\-PATHDELIMITER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HTTPD\_\-PATHDELIMITER~\char`\"{}/\char`\"{}}}
+\label{a00512_af6d82e0d4b1e8efaaf8cfd99e23f0e96}
+
+
+Definition at line 74 of file gsn\_\-httpd\_\-file\_\-upload.h.
+
+\hypertarget{a00512_ad849668fc7f8947cff98961b8e841d1c}{
+\index{gsn\_\-httpd\_\-file\_\-upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}!GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-0@{GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-0}}
+\index{GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-0@{GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-0}!gsn_httpd_file_upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}}
+\subsubsection[{GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-0~0}}
+\label{a00512_ad849668fc7f8947cff98961b8e841d1c}
+
+
+Definition at line 76 of file gsn\_\-httpd\_\-file\_\-upload.h.
+
+\hypertarget{a00512_a369bf64284f606db1280e9ba1ac1480a}{
+\index{gsn\_\-httpd\_\-file\_\-upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}!GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-1@{GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-1}}
+\index{GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-1@{GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-1}!gsn_httpd_file_upload.h@{gsn\_\-httpd\_\-file\_\-upload.h}}
+\subsubsection[{GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MOD\_\-FLASH\_\-DRIVE\_\-NUM\_\-1~1}}
+\label{a00512_a369bf64284f606db1280e9ba1ac1480a}
+
+
+Definition at line 77 of file gsn\_\-httpd\_\-file\_\-upload.h.
+

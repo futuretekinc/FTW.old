@@ -1,0 +1,642 @@
+\hypertarget{a00561}{
+\section{gsn\_\-reg\_\-mb\_\-op.h File Reference}
+\label{a00561}\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00797}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00561_abf54c2ff768d284b1c748e97e1ca6ade}{MB\_\-MB\_\-RB\_\-STATUS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-STATUS))
+\item 
+\#define \hyperlink{a00561_a3efb0b573c2ca933bf9194949d8bb53d}{MB\_\-RB\_\-INT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-INT)
+\item 
+\#define \hyperlink{a00561_a4e1f89aa5fda47daf3ef56a83b605c74}{MB\_\-MB\_\-RB\_\-MASK\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK))
+\item 
+\#define \hyperlink{a00561_a8837c2e83b27bdbb6576b1b49929a6a4}{MB\_\-MB\_\-RB\_\-MASK\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK, (value))
+\item 
+\#define \hyperlink{a00561_a82823da92e8b89a041e10b0c92f7b05a}{MB\_\-MB\_\-RB\_\-MASK\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK) $|$ (value))
+\item 
+\#define \hyperlink{a00561_afe4a5eedbde041cb5dcde82d05044bfc}{MB\_\-MB\_\-RB\_\-MASK\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00561_a00c8e571d6b1b4331d0f43873b6dea5f}{MB\_\-RB\_\-MASK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-MASK)
+\item 
+\#define \hyperlink{a00561_ab1f1749786514fdb89ebc9e918a58f7c}{MB\_\-RB\_\-MASK\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-MASK, (value))
+\item 
+\#define \hyperlink{a00561_ad5886f8e3f9cb36360685f5b3d0d6a66}{MB\_\-MB\_\-RB\_\-CLEAR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR))
+\item 
+\#define \hyperlink{a00561_a622074e4d5abec53ebf2379a552da691}{MB\_\-MB\_\-RB\_\-CLEAR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR, (value))
+\item 
+\#define \hyperlink{a00561_ad386cb09c10a933ea1c84691ca9fe5e0}{MB\_\-MB\_\-RB\_\-CLEAR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR) $|$ (value))
+\item 
+\#define \hyperlink{a00561_a2c963c5e3f6dc05b1b114580cfe11562}{MB\_\-MB\_\-RB\_\-CLEAR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00561_a3ebc80f7df209d3a5ef24ddd309ea3a9}{MB\_\-RB\_\-CLEAR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-CLEAR)
+\item 
+\#define \hyperlink{a00561_a5b5dad6cf64ba2637dae6ea84ff6f326}{MB\_\-RB\_\-CLEAR\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-CLEAR, (value))
+\item 
+\#define \hyperlink{a00561_a053c83aefc9aab3f339f4ba4123a6a11}{MB\_\-MB\_\-RB\_\-SET\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET))
+\item 
+\#define \hyperlink{a00561_a6349a1232f6fb43f85f4edd760a5cb21}{MB\_\-MB\_\-RB\_\-SET\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET, (value))
+\item 
+\#define \hyperlink{a00561_a237eb1f9f1b0b719fb8a449604df0866}{MB\_\-MB\_\-RB\_\-SET\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET) $|$ (value))
+\item 
+\#define \hyperlink{a00561_a71359350d8134a0883aedd7d29747a1e}{MB\_\-MB\_\-RB\_\-SET\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00561_adc6d08f73151fe3bd006900aa15e3269}{MB\_\-RB\_\-SET\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-SET)
+\item 
+\#define \hyperlink{a00561_a972149d41f137ec23560c01129987145}{MB\_\-RB\_\-SET\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-SET, (value))
+\item 
+\#define \hyperlink{a00561_ab358ac79f8c7e67b8bda6e46c1953e7a}{MB\_\-MB\_\-SB\_\-CONF\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF))
+\item 
+\#define \hyperlink{a00561_a7ba25a30425453daf1591650659e2542}{MB\_\-MB\_\-SB\_\-CONF\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF, (value))
+\item 
+\#define \hyperlink{a00561_a30761659b9323e14e6a7f8d7cb853080}{MB\_\-MB\_\-SB\_\-CONF\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF) $|$ (value))
+\item 
+\#define \hyperlink{a00561_a1a572c15af1d82a5566098efe20fe26d}{MB\_\-MB\_\-SB\_\-CONF\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00561_adfbb669c8aa2cd997ee6ce5e7ece4f76}{MB\_\-SB\_\-CONF\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-CONF)
+\item 
+\#define \hyperlink{a00561_a5a793bf5338b5a377408cd3ee601c0fb}{MB\_\-SB\_\-CONF\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-CONF, (value))
+\item 
+\#define \hyperlink{a00561_aa39509d43793cb575d7ff31867c5cef1}{MB\_\-MB\_\-SB\_\-INT\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT))
+\item 
+\#define \hyperlink{a00561_a3d0df2b1368c2a4418aca6ab7b6bbad1}{MB\_\-MB\_\-SB\_\-INT\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT, (value))
+\item 
+\#define \hyperlink{a00561_afe7e2b0cc7403ee566c3f4c13898c066}{MB\_\-MB\_\-SB\_\-INT\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT) $|$ (value))
+\item 
+\#define \hyperlink{a00561_a30df586baebde7fcfcea1f68801b56fc}{MB\_\-MB\_\-SB\_\-INT\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00561_ad966d6962a8b2529cccb54b16f0b00a9}{MB\_\-SB\_\-INT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-INT)
+\item 
+\#define \hyperlink{a00561_a0672361cdba82e71acda4117f10aa011}{MB\_\-SB\_\-INT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-INT, (value))
+\item 
+\#define \hyperlink{a00561_a964dc36d2ce456645ccff912279bcb94}{MB\_\-MB\_\-SB\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-0, (value))
+\item 
+\#define \hyperlink{a00561_a3b369e7d5a764aaf94b27ee22e246420}{MB\_\-SB\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-0, (value))
+\item 
+\#define \hyperlink{a00561_aacfb8138c50c5154894a5b00f490bef9}{MB\_\-MB\_\-SB\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-1, (value))
+\item 
+\#define \hyperlink{a00561_a18384e72966638a8a46727331396553a}{MB\_\-SB\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-1, (value))
+\item 
+\#define \hyperlink{a00561_a40991c31bedab043240d725c6bd9e39a}{MB\_\-MB\_\-RB\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-0))
+\item 
+\#define \hyperlink{a00561_ac90fcd45cacd0e8535d0aceefdf61334}{MB\_\-RB\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-0)
+\item 
+\#define \hyperlink{a00561_aa022fb0512134d9ca62e2110b64674eb}{MB\_\-MB\_\-RB\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-1))
+\item 
+\#define \hyperlink{a00561_aec68fb08af5d08040ff607a9b8204ee6}{MB\_\-RB\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00561_a40991c31bedab043240d725c6bd9e39a}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-0\_\-GET@{MB\_\-MB\_\-RB\_\-0\_\-GET}}
+\index{MB\_\-MB\_\-RB\_\-0\_\-GET@{MB\_\-MB\_\-RB\_\-0\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-0))}}
+\label{a00561_a40991c31bedab043240d725c6bd9e39a}
+
+
+Definition at line 206 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_aa022fb0512134d9ca62e2110b64674eb}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-1\_\-GET@{MB\_\-MB\_\-RB\_\-1\_\-GET}}
+\index{MB\_\-MB\_\-RB\_\-1\_\-GET@{MB\_\-MB\_\-RB\_\-1\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-1))}}
+\label{a00561_aa022fb0512134d9ca62e2110b64674eb}
+
+
+Definition at line 221 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a2c963c5e3f6dc05b1b114580cfe11562}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-CLEAR\_\-CLEARBIT@{MB\_\-MB\_\-RB\_\-CLEAR\_\-CLEARBIT}}
+\index{MB\_\-MB\_\-RB\_\-CLEAR\_\-CLEARBIT@{MB\_\-MB\_\-RB\_\-CLEAR\_\-CLEARBIT}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-CLEAR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-CLEAR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR) \& ($\sim$(value)))}}
+\label{a00561_a2c963c5e3f6dc05b1b114580cfe11562}
+
+
+Definition at line 90 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_ad5886f8e3f9cb36360685f5b3d0d6a66}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-CLEAR\_\-GET@{MB\_\-MB\_\-RB\_\-CLEAR\_\-GET}}
+\index{MB\_\-MB\_\-RB\_\-CLEAR\_\-GET@{MB\_\-MB\_\-RB\_\-CLEAR\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-CLEAR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-CLEAR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR))}}
+\label{a00561_ad5886f8e3f9cb36360685f5b3d0d6a66}
+
+
+Definition at line 84 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a622074e4d5abec53ebf2379a552da691}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-CLEAR\_\-SET@{MB\_\-MB\_\-RB\_\-CLEAR\_\-SET}}
+\index{MB\_\-MB\_\-RB\_\-CLEAR\_\-SET@{MB\_\-MB\_\-RB\_\-CLEAR\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-CLEAR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-CLEAR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR, (value))}}
+\label{a00561_a622074e4d5abec53ebf2379a552da691}
+
+
+Definition at line 86 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_ad386cb09c10a933ea1c84691ca9fe5e0}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-CLEAR\_\-SETBIT@{MB\_\-MB\_\-RB\_\-CLEAR\_\-SETBIT}}
+\index{MB\_\-MB\_\-RB\_\-CLEAR\_\-SETBIT@{MB\_\-MB\_\-RB\_\-CLEAR\_\-SETBIT}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-CLEAR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-CLEAR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-CLEAR) $|$ (value))}}
+\label{a00561_ad386cb09c10a933ea1c84691ca9fe5e0}
+
+
+Definition at line 88 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_afe4a5eedbde041cb5dcde82d05044bfc}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-MASK\_\-CLEARBIT@{MB\_\-MB\_\-RB\_\-MASK\_\-CLEARBIT}}
+\index{MB\_\-MB\_\-RB\_\-MASK\_\-CLEARBIT@{MB\_\-MB\_\-RB\_\-MASK\_\-CLEARBIT}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-MASK\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-MASK\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK) \& ($\sim$(value)))}}
+\label{a00561_afe4a5eedbde041cb5dcde82d05044bfc}
+
+
+Definition at line 67 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a4e1f89aa5fda47daf3ef56a83b605c74}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-MASK\_\-GET@{MB\_\-MB\_\-RB\_\-MASK\_\-GET}}
+\index{MB\_\-MB\_\-RB\_\-MASK\_\-GET@{MB\_\-MB\_\-RB\_\-MASK\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-MASK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-MASK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK))}}
+\label{a00561_a4e1f89aa5fda47daf3ef56a83b605c74}
+
+
+Definition at line 61 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a8837c2e83b27bdbb6576b1b49929a6a4}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-MASK\_\-SET@{MB\_\-MB\_\-RB\_\-MASK\_\-SET}}
+\index{MB\_\-MB\_\-RB\_\-MASK\_\-SET@{MB\_\-MB\_\-RB\_\-MASK\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-MASK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-MASK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK, (value))}}
+\label{a00561_a8837c2e83b27bdbb6576b1b49929a6a4}
+
+
+Definition at line 63 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a82823da92e8b89a041e10b0c92f7b05a}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-MASK\_\-SETBIT@{MB\_\-MB\_\-RB\_\-MASK\_\-SETBIT}}
+\index{MB\_\-MB\_\-RB\_\-MASK\_\-SETBIT@{MB\_\-MB\_\-RB\_\-MASK\_\-SETBIT}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-MASK\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-MASK\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-MASK) $|$ (value))}}
+\label{a00561_a82823da92e8b89a041e10b0c92f7b05a}
+
+
+Definition at line 65 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a71359350d8134a0883aedd7d29747a1e}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-SET\_\-CLEARBIT@{MB\_\-MB\_\-RB\_\-SET\_\-CLEARBIT}}
+\index{MB\_\-MB\_\-RB\_\-SET\_\-CLEARBIT@{MB\_\-MB\_\-RB\_\-SET\_\-CLEARBIT}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-SET\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-SET\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET) \& ($\sim$(value)))}}
+\label{a00561_a71359350d8134a0883aedd7d29747a1e}
+
+
+Definition at line 113 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a053c83aefc9aab3f339f4ba4123a6a11}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-SET\_\-GET@{MB\_\-MB\_\-RB\_\-SET\_\-GET}}
+\index{MB\_\-MB\_\-RB\_\-SET\_\-GET@{MB\_\-MB\_\-RB\_\-SET\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-SET\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-SET\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET))}}
+\label{a00561_a053c83aefc9aab3f339f4ba4123a6a11}
+
+
+Definition at line 107 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a6349a1232f6fb43f85f4edd760a5cb21}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-SET\_\-SET@{MB\_\-MB\_\-RB\_\-SET\_\-SET}}
+\index{MB\_\-MB\_\-RB\_\-SET\_\-SET@{MB\_\-MB\_\-RB\_\-SET\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-SET\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-SET\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET, (value))}}
+\label{a00561_a6349a1232f6fb43f85f4edd760a5cb21}
+
+
+Definition at line 109 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a237eb1f9f1b0b719fb8a449604df0866}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-SET\_\-SETBIT@{MB\_\-MB\_\-RB\_\-SET\_\-SETBIT}}
+\index{MB\_\-MB\_\-RB\_\-SET\_\-SETBIT@{MB\_\-MB\_\-RB\_\-SET\_\-SETBIT}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-SET\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-SET\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-SET) $|$ (value))}}
+\label{a00561_a237eb1f9f1b0b719fb8a449604df0866}
+
+
+Definition at line 111 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_abf54c2ff768d284b1c748e97e1ca6ade}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-RB\_\-STATUS\_\-GET@{MB\_\-MB\_\-RB\_\-STATUS\_\-GET}}
+\index{MB\_\-MB\_\-RB\_\-STATUS\_\-GET@{MB\_\-MB\_\-RB\_\-STATUS\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-RB\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-RB\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-RB\_\-STATUS))}}
+\label{a00561_abf54c2ff768d284b1c748e97e1ca6ade}
+
+
+Definition at line 46 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a964dc36d2ce456645ccff912279bcb94}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-SB\_\-0\_\-SET@{MB\_\-MB\_\-SB\_\-0\_\-SET}}
+\index{MB\_\-MB\_\-SB\_\-0\_\-SET@{MB\_\-MB\_\-SB\_\-0\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-SB\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-SB\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-0, (value))}}
+\label{a00561_a964dc36d2ce456645ccff912279bcb94}
+
+
+Definition at line 176 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_aacfb8138c50c5154894a5b00f490bef9}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-SB\_\-1\_\-SET@{MB\_\-MB\_\-SB\_\-1\_\-SET}}
+\index{MB\_\-MB\_\-SB\_\-1\_\-SET@{MB\_\-MB\_\-SB\_\-1\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-SB\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-SB\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-1, (value))}}
+\label{a00561_aacfb8138c50c5154894a5b00f490bef9}
+
+
+Definition at line 191 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a1a572c15af1d82a5566098efe20fe26d}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-SB\_\-CONF\_\-CLEARBIT@{MB\_\-MB\_\-SB\_\-CONF\_\-CLEARBIT}}
+\index{MB\_\-MB\_\-SB\_\-CONF\_\-CLEARBIT@{MB\_\-MB\_\-SB\_\-CONF\_\-CLEARBIT}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-SB\_\-CONF\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-SB\_\-CONF\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF) \& ($\sim$(value)))}}
+\label{a00561_a1a572c15af1d82a5566098efe20fe26d}
+
+
+Definition at line 136 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_ab358ac79f8c7e67b8bda6e46c1953e7a}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-SB\_\-CONF\_\-GET@{MB\_\-MB\_\-SB\_\-CONF\_\-GET}}
+\index{MB\_\-MB\_\-SB\_\-CONF\_\-GET@{MB\_\-MB\_\-SB\_\-CONF\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-SB\_\-CONF\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-SB\_\-CONF\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF))}}
+\label{a00561_ab358ac79f8c7e67b8bda6e46c1953e7a}
+
+
+Definition at line 130 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a7ba25a30425453daf1591650659e2542}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-SB\_\-CONF\_\-SET@{MB\_\-MB\_\-SB\_\-CONF\_\-SET}}
+\index{MB\_\-MB\_\-SB\_\-CONF\_\-SET@{MB\_\-MB\_\-SB\_\-CONF\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-SB\_\-CONF\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-SB\_\-CONF\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF, (value))}}
+\label{a00561_a7ba25a30425453daf1591650659e2542}
+
+
+Definition at line 132 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a30761659b9323e14e6a7f8d7cb853080}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-SB\_\-CONF\_\-SETBIT@{MB\_\-MB\_\-SB\_\-CONF\_\-SETBIT}}
+\index{MB\_\-MB\_\-SB\_\-CONF\_\-SETBIT@{MB\_\-MB\_\-SB\_\-CONF\_\-SETBIT}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-SB\_\-CONF\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-SB\_\-CONF\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-CONF) $|$ (value))}}
+\label{a00561_a30761659b9323e14e6a7f8d7cb853080}
+
+
+Definition at line 134 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a30df586baebde7fcfcea1f68801b56fc}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-SB\_\-INT\_\-CLEARBIT@{MB\_\-MB\_\-SB\_\-INT\_\-CLEARBIT}}
+\index{MB\_\-MB\_\-SB\_\-INT\_\-CLEARBIT@{MB\_\-MB\_\-SB\_\-INT\_\-CLEARBIT}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-SB\_\-INT\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-SB\_\-INT\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT) \& ($\sim$(value)))}}
+\label{a00561_a30df586baebde7fcfcea1f68801b56fc}
+
+
+Definition at line 159 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_aa39509d43793cb575d7ff31867c5cef1}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-SB\_\-INT\_\-GET@{MB\_\-MB\_\-SB\_\-INT\_\-GET}}
+\index{MB\_\-MB\_\-SB\_\-INT\_\-GET@{MB\_\-MB\_\-SB\_\-INT\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-SB\_\-INT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-SB\_\-INT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT))}}
+\label{a00561_aa39509d43793cb575d7ff31867c5cef1}
+
+
+Definition at line 153 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a3d0df2b1368c2a4418aca6ab7b6bbad1}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-SB\_\-INT\_\-SET@{MB\_\-MB\_\-SB\_\-INT\_\-SET}}
+\index{MB\_\-MB\_\-SB\_\-INT\_\-SET@{MB\_\-MB\_\-SB\_\-INT\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-SB\_\-INT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-SB\_\-INT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT, (value))}}
+\label{a00561_a3d0df2b1368c2a4418aca6ab7b6bbad1}
+
+
+Definition at line 155 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_afe7e2b0cc7403ee566c3f4c13898c066}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-MB\_\-SB\_\-INT\_\-SETBIT@{MB\_\-MB\_\-SB\_\-INT\_\-SETBIT}}
+\index{MB\_\-MB\_\-SB\_\-INT\_\-SETBIT@{MB\_\-MB\_\-SB\_\-INT\_\-SETBIT}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-MB\_\-SB\_\-INT\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-MB\_\-SB\_\-INT\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, MB\_\-MB\_\-SB\_\-INT) $|$ (value))}}
+\label{a00561_afe7e2b0cc7403ee566c3f4c13898c066}
+
+
+Definition at line 157 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_ac90fcd45cacd0e8535d0aceefdf61334}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-RB\_\-0\_\-GET@{MB\_\-RB\_\-0\_\-GET}}
+\index{MB\_\-RB\_\-0\_\-GET@{MB\_\-RB\_\-0\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-RB\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-RB\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-0)}}
+\label{a00561_ac90fcd45cacd0e8535d0aceefdf61334}
+
+
+Definition at line 213 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_aec68fb08af5d08040ff607a9b8204ee6}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-RB\_\-1\_\-GET@{MB\_\-RB\_\-1\_\-GET}}
+\index{MB\_\-RB\_\-1\_\-GET@{MB\_\-RB\_\-1\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-RB\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-RB\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-1)}}
+\label{a00561_aec68fb08af5d08040ff607a9b8204ee6}
+
+
+Definition at line 228 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a3ebc80f7df209d3a5ef24ddd309ea3a9}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-RB\_\-CLEAR\_\-GET@{MB\_\-RB\_\-CLEAR\_\-GET}}
+\index{MB\_\-RB\_\-CLEAR\_\-GET@{MB\_\-RB\_\-CLEAR\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-RB\_\-CLEAR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-RB\_\-CLEAR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-CLEAR)}}
+\label{a00561_a3ebc80f7df209d3a5ef24ddd309ea3a9}
+
+
+Definition at line 97 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a5b5dad6cf64ba2637dae6ea84ff6f326}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-RB\_\-CLEAR\_\-SET@{MB\_\-RB\_\-CLEAR\_\-SET}}
+\index{MB\_\-RB\_\-CLEAR\_\-SET@{MB\_\-RB\_\-CLEAR\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-RB\_\-CLEAR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-RB\_\-CLEAR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-CLEAR, (value))}}
+\label{a00561_a5b5dad6cf64ba2637dae6ea84ff6f326}
+
+
+Definition at line 99 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a3efb0b573c2ca933bf9194949d8bb53d}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-RB\_\-INT\_\-GET@{MB\_\-RB\_\-INT\_\-GET}}
+\index{MB\_\-RB\_\-INT\_\-GET@{MB\_\-RB\_\-INT\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-RB\_\-INT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-RB\_\-INT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-INT)}}
+\label{a00561_a3efb0b573c2ca933bf9194949d8bb53d}
+
+
+Definition at line 53 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a00c8e571d6b1b4331d0f43873b6dea5f}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-RB\_\-MASK\_\-GET@{MB\_\-RB\_\-MASK\_\-GET}}
+\index{MB\_\-RB\_\-MASK\_\-GET@{MB\_\-RB\_\-MASK\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-RB\_\-MASK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-RB\_\-MASK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-MASK)}}
+\label{a00561_a00c8e571d6b1b4331d0f43873b6dea5f}
+
+
+Definition at line 74 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_ab1f1749786514fdb89ebc9e918a58f7c}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-RB\_\-MASK\_\-SET@{MB\_\-RB\_\-MASK\_\-SET}}
+\index{MB\_\-RB\_\-MASK\_\-SET@{MB\_\-RB\_\-MASK\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-RB\_\-MASK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-RB\_\-MASK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-MASK, (value))}}
+\label{a00561_ab1f1749786514fdb89ebc9e918a58f7c}
+
+
+Definition at line 76 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_adc6d08f73151fe3bd006900aa15e3269}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-RB\_\-SET\_\-GET@{MB\_\-RB\_\-SET\_\-GET}}
+\index{MB\_\-RB\_\-SET\_\-GET@{MB\_\-RB\_\-SET\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-RB\_\-SET\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-RB\_\-SET\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-SET)}}
+\label{a00561_adc6d08f73151fe3bd006900aa15e3269}
+
+
+Definition at line 120 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a972149d41f137ec23560c01129987145}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-RB\_\-SET\_\-SET@{MB\_\-RB\_\-SET\_\-SET}}
+\index{MB\_\-RB\_\-SET\_\-SET@{MB\_\-RB\_\-SET\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-RB\_\-SET\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-RB\_\-SET\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-RB\_\-SET, (value))}}
+\label{a00561_a972149d41f137ec23560c01129987145}
+
+
+Definition at line 122 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a3b369e7d5a764aaf94b27ee22e246420}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-SB\_\-0\_\-SET@{MB\_\-SB\_\-0\_\-SET}}
+\index{MB\_\-SB\_\-0\_\-SET@{MB\_\-SB\_\-0\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-SB\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-SB\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-0, (value))}}
+\label{a00561_a3b369e7d5a764aaf94b27ee22e246420}
+
+
+Definition at line 183 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a18384e72966638a8a46727331396553a}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-SB\_\-1\_\-SET@{MB\_\-SB\_\-1\_\-SET}}
+\index{MB\_\-SB\_\-1\_\-SET@{MB\_\-SB\_\-1\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-SB\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-SB\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-1, (value))}}
+\label{a00561_a18384e72966638a8a46727331396553a}
+
+
+Definition at line 198 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_adfbb669c8aa2cd997ee6ce5e7ece4f76}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-SB\_\-CONF\_\-GET@{MB\_\-SB\_\-CONF\_\-GET}}
+\index{MB\_\-SB\_\-CONF\_\-GET@{MB\_\-SB\_\-CONF\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-SB\_\-CONF\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-SB\_\-CONF\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-CONF)}}
+\label{a00561_adfbb669c8aa2cd997ee6ce5e7ece4f76}
+
+
+Definition at line 143 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a5a793bf5338b5a377408cd3ee601c0fb}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-SB\_\-CONF\_\-SET@{MB\_\-SB\_\-CONF\_\-SET}}
+\index{MB\_\-SB\_\-CONF\_\-SET@{MB\_\-SB\_\-CONF\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-SB\_\-CONF\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-SB\_\-CONF\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-CONF, (value))}}
+\label{a00561_a5a793bf5338b5a377408cd3ee601c0fb}
+
+
+Definition at line 145 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_ad966d6962a8b2529cccb54b16f0b00a9}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-SB\_\-INT\_\-GET@{MB\_\-SB\_\-INT\_\-GET}}
+\index{MB\_\-SB\_\-INT\_\-GET@{MB\_\-SB\_\-INT\_\-GET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-SB\_\-INT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-SB\_\-INT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-INT)}}
+\label{a00561_ad966d6962a8b2529cccb54b16f0b00a9}
+
+
+Definition at line 166 of file gsn\_\-reg\_\-mb\_\-op.h.
+
+\hypertarget{a00561_a0672361cdba82e71acda4117f10aa011}{
+\index{gsn\_\-reg\_\-mb\_\-op.h@{gsn\_\-reg\_\-mb\_\-op.h}!MB\_\-SB\_\-INT\_\-SET@{MB\_\-SB\_\-INT\_\-SET}}
+\index{MB\_\-SB\_\-INT\_\-SET@{MB\_\-SB\_\-INT\_\-SET}!gsn_reg_mb_op.h@{gsn\_\-reg\_\-mb\_\-op.h}}
+\subsubsection[{MB\_\-SB\_\-INT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define MB\_\-SB\_\-INT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, MB\_\-SB\_\-INT, (value))}}
+\label{a00561_a0672361cdba82e71acda4117f10aa011}
+
+
+Definition at line 168 of file gsn\_\-reg\_\-mb\_\-op.h.
+

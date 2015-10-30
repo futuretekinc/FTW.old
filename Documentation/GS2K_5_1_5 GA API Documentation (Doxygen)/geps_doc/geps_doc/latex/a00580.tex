@@ -1,0 +1,217 @@
+\hypertarget{a00580}{
+\section{gsn\_\-rpl\_\-netx\_\-if.h File Reference}
+\label{a00580}\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+}
+{\ttfamily \#include \char`\"{}nx\_\-api.h\char`\"{}}\par
+Include dependency graph for gsn\_\-rpl\_\-netx\_\-if.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{a00816}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00207}{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO}
+\item 
+struct \hyperlink{a00211}{GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO}
+\item 
+struct \hyperlink{a00208}{GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00207}{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO} \hyperlink{a00580_a489578eb1ef10ebcd7f4353f4d1af7b1}{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00211}{GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO} \hyperlink{a00580_ae5a3a277cf1fd6ef3ce9dbf918e7c2d8}{GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00208}{GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO} \hyperlink{a00580_a61f57186267c3617b1816c75d639b467}{GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00580_a0950ef4f66e15e7fed5c62b497f66d8d}{GsnRpl\_\-AllocNetBuf} (\hyperlink{a00207}{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T} $\ast$pNetBufInfo)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00580_ad8318cab256aa5a44eb4a92ee6df0082}{GsnRpl\_\-AddDataHeader} (VOID $\ast$pCtx, \hyperlink{a00211}{GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO\_\-T} $\ast$pSFI, VOID $\ast$pPkt, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} Need\_\-RPL\_\-Extn)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00580_ad53acaa20f932c19b337b24c6dffb272}{GsnRpl\_\-ProcessDataExtn} (VOID $\ast$pCtx, \hyperlink{a00208}{GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO\_\-T} $\ast$pRecvInfo, VOID $\ast$pPkt)
+\item 
+\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00580_a44fd20de7205d1eb6e722f4589a87a36}{GsnRpl\_\-SrcRtNeeded} (VOID $\ast$pDODAG)
+\item 
+VOID \hyperlink{a00580_a2cfda5e7c9065626caf419f6490e6308}{GsnRpl\_\-NetXInit} (\hyperlink{a00192}{GSN\_\-RPL\_\-T} $\ast$pCtx, VOID $\ast$pIpIf)
+\item 
+VOID $\ast$ \hyperlink{a00580_af4876dac783f0b66e3604bf3da6c874b}{GsnRpl\_\-GetNetxIpIfAddr} (VOID $\ast$pIpIf, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ifId, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr\mbox{[}$\,$\mbox{]})
+\item 
+VOID $\ast$ \hyperlink{a00580_a9e3d0dc5186bad68603a96de85f0895a}{GsnRpl\_\-GetNetxIfAddr} (VOID $\ast$pIpIf, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ifId)
+\item 
+VOID \hyperlink{a00580_a215a8d9afe200c2ef1bf16a69150c7d6}{GsnRpl\_\-GetNetxAddrFromIf} (VOID $\ast$pIfAddr, ULONG addr\mbox{[}4\mbox{]})
+\item 
+VOID \hyperlink{a00580_a869a02303383d41940c43fbc3a806882}{GsnRpl\_\-ConstructIPAddr} (VOID $\ast$pIP, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ifId, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pPrefix, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pAddr)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00580_af14343ebb4ece78c218bd6e29819b387}{Is\_\-DAO\_\-ACK} (NX\_\-PACKET $\ast$pPkt)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00580_a67b5b82bc97607060b80726afeba2ce9}{Change\_\-Ip\_\-Next\_\-Header} (NX\_\-PACKET $\ast$pPkt, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} protocol)
+\item 
+VOID \hyperlink{a00580_a2e47be9b08f38443968a26763f067891}{GsnRpl\_\-NetXDeInit} (\hyperlink{a00192}{GSN\_\-RPL\_\-T} $\ast$pCtx, VOID $\ast$pIpIf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00580_a489578eb1ef10ebcd7f4353f4d1af7b1}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T}}
+\index{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T@{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO} {\bf GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T}}}
+\label{a00580_a489578eb1ef10ebcd7f4353f4d1af7b1}
+$<$ To add IPv6 optional herader the following things has to be taken care.
+\begin{DoxyItemize}
+\item A instance of type GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T has to be defined.
+\item The pBufEnd has to be initialized to the pkt pointer of the IPv6 frame.
+\item A new net packet has to be allocated and the address of this has to be put in pBufStart.
+\item The IPv6 header alone has to be copied to the prepend location in the new net packet and the prepend point has to be updated.
+\item The prepend pointer of the original IPv6 pakcet has to be advanced by IPv6 header size.
+\item The new optional header has to be written at the append location of the new net packet.
+\item If the buffer space is not enough for the written the new optional header, then, more net packet call be allocated using GsnRpl\_\-AllocNetBuf, which will allocate a new net packet and chain the packet to the orignal IPv6 packet.
+\end{DoxyItemize}
+
+To generate a new packet the following steps has to be folloews.
+\begin{DoxyItemize}
+\item A instance of type GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T has to be defined and all elements has to be initialized to zero.
+\item Call GsnRpl\_\-AllocNetBuf to allocate packet. If the buffer space is not enough call again GsnRpl\_\-AllocNetBuf to get a new buffer space. GsnRpl\_\-AllocNetBuf takes care of chaining all the packets. 
+\end{DoxyItemize}\hypertarget{a00580_a61f57186267c3617b1816c75d639b467}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO\_\-T@{GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO\_\-T}}
+\index{GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO\_\-T@{GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO\_\-T}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO} {\bf GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO\_\-T}}}
+\label{a00580_a61f57186267c3617b1816c75d639b467}
+\hypertarget{a00580_ae5a3a277cf1fd6ef3ce9dbf918e7c2d8}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO\_\-T@{GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO\_\-T}}
+\index{GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO\_\-T@{GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO\_\-T}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO} {\bf GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO\_\-T}}}
+\label{a00580_ae5a3a277cf1fd6ef3ce9dbf918e7c2d8}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00580_a67b5b82bc97607060b80726afeba2ce9}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!Change\_\-Ip\_\-Next\_\-Header@{Change\_\-Ip\_\-Next\_\-Header}}
+\index{Change\_\-Ip\_\-Next\_\-Header@{Change\_\-Ip\_\-Next\_\-Header}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{Change\_\-Ip\_\-Next\_\-Header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} Change\_\-Ip\_\-Next\_\-Header (
+\begin{DoxyParamCaption}
+\item[{NX\_\-PACKET $\ast$}]{pPkt, }
+\item[{{\bf UINT8}}]{protocol}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_a67b5b82bc97607060b80726afeba2ce9}
+\hypertarget{a00580_ad8318cab256aa5a44eb4a92ee6df0082}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GsnRpl\_\-AddDataHeader@{GsnRpl\_\-AddDataHeader}}
+\index{GsnRpl\_\-AddDataHeader@{GsnRpl\_\-AddDataHeader}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GsnRpl\_\-AddDataHeader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-AddDataHeader (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pCtx, }
+\item[{{\bf GSN\_\-RPL\_\-SEND\_\-FRM\_\-INFO\_\-T} $\ast$}]{pSFI, }
+\item[{VOID $\ast$}]{pPkt, }
+\item[{{\bf UINT8}}]{Need\_\-RPL\_\-Extn}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_ad8318cab256aa5a44eb4a92ee6df0082}
+\hypertarget{a00580_a0950ef4f66e15e7fed5c62b497f66d8d}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GsnRpl\_\-AllocNetBuf@{GsnRpl\_\-AllocNetBuf}}
+\index{GsnRpl\_\-AllocNetBuf@{GsnRpl\_\-AllocNetBuf}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GsnRpl\_\-AllocNetBuf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnRpl\_\-AllocNetBuf (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-NET\_\-BUF\_\-INFO\_\-T} $\ast$}]{pNetBufInfo}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_a0950ef4f66e15e7fed5c62b497f66d8d}
+\hypertarget{a00580_a869a02303383d41940c43fbc3a806882}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GsnRpl\_\-ConstructIPAddr@{GsnRpl\_\-ConstructIPAddr}}
+\index{GsnRpl\_\-ConstructIPAddr@{GsnRpl\_\-ConstructIPAddr}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GsnRpl\_\-ConstructIPAddr}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnRpl\_\-ConstructIPAddr (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pIP, }
+\item[{{\bf UINT8}}]{ifId, }
+\item[{{\bf UINT8} $\ast$}]{pPrefix, }
+\item[{{\bf UINT32} $\ast$}]{pAddr}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_a869a02303383d41940c43fbc3a806882}
+\hypertarget{a00580_a215a8d9afe200c2ef1bf16a69150c7d6}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GsnRpl\_\-GetNetxAddrFromIf@{GsnRpl\_\-GetNetxAddrFromIf}}
+\index{GsnRpl\_\-GetNetxAddrFromIf@{GsnRpl\_\-GetNetxAddrFromIf}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GsnRpl\_\-GetNetxAddrFromIf}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnRpl\_\-GetNetxAddrFromIf (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pIfAddr, }
+\item[{ULONG}]{addr\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_a215a8d9afe200c2ef1bf16a69150c7d6}
+\hypertarget{a00580_a9e3d0dc5186bad68603a96de85f0895a}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GsnRpl\_\-GetNetxIfAddr@{GsnRpl\_\-GetNetxIfAddr}}
+\index{GsnRpl\_\-GetNetxIfAddr@{GsnRpl\_\-GetNetxIfAddr}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GsnRpl\_\-GetNetxIfAddr}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ GsnRpl\_\-GetNetxIfAddr (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pIpIf, }
+\item[{{\bf UINT8}}]{ifId}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_a9e3d0dc5186bad68603a96de85f0895a}
+\hypertarget{a00580_af4876dac783f0b66e3604bf3da6c874b}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GsnRpl\_\-GetNetxIpIfAddr@{GsnRpl\_\-GetNetxIpIfAddr}}
+\index{GsnRpl\_\-GetNetxIpIfAddr@{GsnRpl\_\-GetNetxIpIfAddr}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GsnRpl\_\-GetNetxIpIfAddr}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ GsnRpl\_\-GetNetxIpIfAddr (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pIpIf, }
+\item[{{\bf UINT8}}]{ifId, }
+\item[{{\bf UINT32}}]{addr\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_af4876dac783f0b66e3604bf3da6c874b}
+\hypertarget{a00580_a2e47be9b08f38443968a26763f067891}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GsnRpl\_\-NetXDeInit@{GsnRpl\_\-NetXDeInit}}
+\index{GsnRpl\_\-NetXDeInit@{GsnRpl\_\-NetXDeInit}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GsnRpl\_\-NetXDeInit}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnRpl\_\-NetXDeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-T} $\ast$}]{pCtx, }
+\item[{VOID $\ast$}]{pIpIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_a2e47be9b08f38443968a26763f067891}
+\hypertarget{a00580_a2cfda5e7c9065626caf419f6490e6308}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GsnRpl\_\-NetXInit@{GsnRpl\_\-NetXInit}}
+\index{GsnRpl\_\-NetXInit@{GsnRpl\_\-NetXInit}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GsnRpl\_\-NetXInit}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnRpl\_\-NetXInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-T} $\ast$}]{pCtx, }
+\item[{VOID $\ast$}]{pIpIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_a2cfda5e7c9065626caf419f6490e6308}
+\hypertarget{a00580_ad53acaa20f932c19b337b24c6dffb272}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GsnRpl\_\-ProcessDataExtn@{GsnRpl\_\-ProcessDataExtn}}
+\index{GsnRpl\_\-ProcessDataExtn@{GsnRpl\_\-ProcessDataExtn}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GsnRpl\_\-ProcessDataExtn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-ProcessDataExtn (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pCtx, }
+\item[{{\bf GSN\_\-RPL\_\-RECV\_\-FRM\_\-INFO\_\-T} $\ast$}]{pRecvInfo, }
+\item[{VOID $\ast$}]{pPkt}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_ad53acaa20f932c19b337b24c6dffb272}
+\hypertarget{a00580_a44fd20de7205d1eb6e722f4589a87a36}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!GsnRpl\_\-SrcRtNeeded@{GsnRpl\_\-SrcRtNeeded}}
+\index{GsnRpl\_\-SrcRtNeeded@{GsnRpl\_\-SrcRtNeeded}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{GsnRpl\_\-SrcRtNeeded}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BOOL} GsnRpl\_\-SrcRtNeeded (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pDODAG}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_a44fd20de7205d1eb6e722f4589a87a36}
+\hypertarget{a00580_af14343ebb4ece78c218bd6e29819b387}{
+\index{gsn\_\-rpl\_\-netx\_\-if.h@{gsn\_\-rpl\_\-netx\_\-if.h}!Is\_\-DAO\_\-ACK@{Is\_\-DAO\_\-ACK}}
+\index{Is\_\-DAO\_\-ACK@{Is\_\-DAO\_\-ACK}!gsn_rpl_netx_if.h@{gsn\_\-rpl\_\-netx\_\-if.h}}
+\subsubsection[{Is\_\-DAO\_\-ACK}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} Is\_\-DAO\_\-ACK (
+\begin{DoxyParamCaption}
+\item[{NX\_\-PACKET $\ast$}]{pPkt}
+\end{DoxyParamCaption}
+)}}
+\label{a00580_af14343ebb4ece78c218bd6e29819b387}

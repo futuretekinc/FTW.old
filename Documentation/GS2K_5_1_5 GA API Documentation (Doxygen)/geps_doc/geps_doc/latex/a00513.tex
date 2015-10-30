@@ -1,0 +1,94 @@
+\hypertarget{a00513}{
+\section{gsn\_\-httpd\_\-logo.h File Reference}
+\label{a00513}\index{gsn\_\-httpd\_\-logo.h@{gsn\_\-httpd\_\-logo.h}}
+}
+
+
+GSN HTTPD API for fetching Logo.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00096}{GSN\_\-HTTPD\_\-LOGO\_\-INFO}
+\begin{DoxyCompactList}\small\item\em Definition of structure containing logo information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00096}{GSN\_\-HTTPD\_\-LOGO\_\-INFO} \hyperlink{a00513_a0e3e0804a968ae2e6454dd1dbbeedbc8}{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em Definition of structure containing logo information. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{a00513_aad62b44c06f9c4abc0073c0388cbe332}{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-CB\_\-T} )(\hyperlink{a00096}{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-T} $\ast$pInfo)
+\begin{DoxyCompactList}\small\item\em Definition of callback Logo callback API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00513_a17c748e09c81027d125a8bcec300f662}{GsnHttpdApi\_\-LogoInit} (\hyperlink{a00513_aad62b44c06f9c4abc0073c0388cbe332}{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-CB\_\-T} cbFn)
+\begin{DoxyCompactList}\small\item\em Initialize HTTP Logo API module This function initializes the Log API module taking a callback function as paramter. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00513_a06be6bb9fc1446280b667f8a9cf075b2}{GsnHttpdApi\_\-LogoDeInit} ()
+\begin{DoxyCompactList}\small\item\em UnInitialize HTTP Logo API module This function uninitializes the Logo API module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN HTTPD API for fetching Logo. 
+
+Definition in file \hyperlink{a00513_source}{gsn\_\-httpd\_\-logo.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00513_aad62b44c06f9c4abc0073c0388cbe332}{
+\index{gsn\_\-httpd\_\-logo.h@{gsn\_\-httpd\_\-logo.h}!GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-CB\_\-T@{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-CB\_\-T}}
+\index{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-CB\_\-T@{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-CB\_\-T}!gsn_httpd_logo.h@{gsn\_\-httpd\_\-logo.h}}
+\subsubsection[{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-CB\_\-T})({\bf GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-T} $\ast$pInfo)}}
+\label{a00513_aad62b44c06f9c4abc0073c0388cbe332}
+
+
+Definition of callback Logo callback API. 
+
+
+
+Definition at line 54 of file gsn\_\-httpd\_\-logo.h.
+
+\hypertarget{a00513_a0e3e0804a968ae2e6454dd1dbbeedbc8}{
+\index{gsn\_\-httpd\_\-logo.h@{gsn\_\-httpd\_\-logo.h}!GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-T@{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-T}}
+\index{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-T@{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-T}!gsn_httpd_logo.h@{gsn\_\-httpd\_\-logo.h}}
+\subsubsection[{GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-HTTPD\_\-LOGO\_\-INFO}  {\bf GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-T}}}
+\label{a00513_a0e3e0804a968ae2e6454dd1dbbeedbc8}
+
+
+Definition of structure containing logo information. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00513_a06be6bb9fc1446280b667f8a9cf075b2}{
+\index{gsn\_\-httpd\_\-logo.h@{gsn\_\-httpd\_\-logo.h}!GsnHttpdApi\_\-LogoDeInit@{GsnHttpdApi\_\-LogoDeInit}}
+\index{GsnHttpdApi\_\-LogoDeInit@{GsnHttpdApi\_\-LogoDeInit}!gsn_httpd_logo.h@{gsn\_\-httpd\_\-logo.h}}
+\subsubsection[{GsnHttpdApi\_\-LogoDeInit}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnHttpdApi\_\-LogoDeInit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00513_a06be6bb9fc1446280b667f8a9cf075b2}
+
+
+UnInitialize HTTP Logo API module This function uninitializes the Logo API module. 
+
+\hypertarget{a00513_a17c748e09c81027d125a8bcec300f662}{
+\index{gsn\_\-httpd\_\-logo.h@{gsn\_\-httpd\_\-logo.h}!GsnHttpdApi\_\-LogoInit@{GsnHttpdApi\_\-LogoInit}}
+\index{GsnHttpdApi\_\-LogoInit@{GsnHttpdApi\_\-LogoInit}!gsn_httpd_logo.h@{gsn\_\-httpd\_\-logo.h}}
+\subsubsection[{GsnHttpdApi\_\-LogoInit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnHttpdApi\_\-LogoInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HTTPD\_\-LOGO\_\-INFO\_\-CB\_\-T}}]{cbFn}
+\end{DoxyParamCaption}
+)}}
+\label{a00513_a17c748e09c81027d125a8bcec300f662}
+
+
+Initialize HTTP Logo API module This function initializes the Log API module taking a callback function as paramter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cbFn} & -\/ IN Pointer to callback function \\
+\hline
+\end{DoxyParams}

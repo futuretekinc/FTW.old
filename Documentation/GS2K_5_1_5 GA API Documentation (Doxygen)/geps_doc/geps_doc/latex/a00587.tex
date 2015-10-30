@@ -1,0 +1,927 @@
+\hypertarget{a00587}{
+\section{gsn\_\-spi.h File Reference}
+\label{a00587}\index{gsn\_\-spi.h@{gsn\_\-spi.h}}
+}
+
+
+GSN SPI API Definitions. This file contains the public APIs definitions and structures of SPI driver.  
+
+
+{\ttfamily \#include \char`\"{}spi$\backslash$buffer.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}drivers$\backslash$clk\_\-ctl$\backslash$gsn\_\-clk\_\-ctl.h\char`\"{}}\par
+Include dependency graph for gsn\_\-spi.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00826}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00827}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00241}{GSN\_\-SPI\_\-TXRXCHANNEL}
+\begin{DoxyCompactList}\small\item\em Gsn SPI data transfer structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00239}{GSN\_\-SPI\_\-RW\_\-ARGS}
+\begin{DoxyCompactList}\small\item\em Gsn SPI read write transfer structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00240}{GSN\_\-SPI\_\-RX\_\-RING\_\-BUFF}
+\item 
+struct \hyperlink{a00230}{GSN\_\-SPI}
+\begin{DoxyCompactList}\small\item\em Gsn SPI structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00231}{GSN\_\-SPI\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em Gsn SPI configuration structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE}
+\begin{DoxyCompactList}\small\item\em Gsn SPI Structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00587_a0710240ccdbef200879fbec6fde50342}{SET\_\-INTERRUPTS}~0x000F
+\item 
+\#define \hyperlink{a00587_a731d30ee0b5f9f0471fa8e742ef1784c}{RX\_\-STATUS}~0x0004
+\item 
+\#define \hyperlink{a00587_a7575bf922b1b02fa694d964bb94e1a29}{TX\_\-STATUS}~0x0008
+\item 
+\#define \hyperlink{a00587_a202d8710d0c6930b5c266948f5712d7a}{RT\_\-STATUS}~0x0002
+\item 
+\#define \hyperlink{a00587_a2b4dc619ceaead61fe74bbcf490dc15b}{ROR\_\-STATUS}~0x0001
+\item 
+\#define \hyperlink{a00587_a24c449323e2955bc782cdf3b34de1e33}{ROR\_\-CLEAR}~0x2
+\item 
+\#define \hyperlink{a00587_aa4b1a0a251c6fac18230a25d8d89388c}{RT\_\-CLEAR}~0x1
+\item 
+\#define \hyperlink{a00587_ab6ee6c121b3e29bdf8de48aa17a6d296}{SPI\_\-DMA\_\-RX\_\-TRANSFER\_\-MIN}~32
+\item 
+\#define \hyperlink{a00587_af333ca2812c6cbcfd6637a20fa69088b}{SPI\_\-DMA\_\-TX\_\-TRANSFER\_\-MIN}~32
+\item 
+\#define \hyperlink{a00587_a7bb4731e0835beb3f63c02ce467e43a8}{GSN\_\-SPI\_\-PING\_\-SUCCESS}~0x70000001
+\item 
+\#define \hyperlink{a00587_afb6d18ccbf76c5a9ab4a6a4c50a397bc}{GSN\_\-SPI\_\-PONG\_\-SUCCESS}~0x70000002
+\item 
+\#define \hyperlink{a00587_acc862b4e66ca1cd03299556793dc5be3}{SPI\_\-DMA\_\-CHANNELS}~0x0000000c
+\item 
+\#define \hyperlink{a00587_a8d0e49a864453c0acecdd4078256442b}{SPI\_\-CPSDIV\_\-0}~0
+\item 
+\#define \hyperlink{a00587_a4ac75189ac4f7b124d9b86a73a1cdcd5}{SPI\_\-CPSDIV\_\-1}~1
+\item 
+\#define \hyperlink{a00587_ac09f298bf1f117b25b0683eb26d92757}{SPI\_\-CPSDIV\_\-2}~2
+\item 
+\#define \hyperlink{a00587_a188625c01c63c22c4da5761f1bc2aa9d}{SPI\_\-CPSDIV\_\-4}~4
+\item 
+\#define \hyperlink{a00587_aed030fb6acbafc2b27a6f43d1af24924}{SPI\_\-CPSDIV\_\-8}~8
+\item 
+\#define \hyperlink{a00587_a3874bbb3a35586cbda40389de9451dfe}{SPI\_\-CPSDIV\_\-16}~16
+\item 
+\#define \hyperlink{a00587_a23ad18291368cbe0b4df864168f7a05c}{SPI\_\-CPSDIV\_\-32}~32
+\item 
+\#define \hyperlink{a00587_ad50de377e5c2b1f24f383658becb263f}{SPI\_\-CPSDIV\_\-64}~64
+\item 
+\#define \hyperlink{a00587_aeaf92c7c4fbd8a6ccda7d2100f26893f}{SPI\_\-CLK\_\-EN}~1
+\item 
+\#define \hyperlink{a00587_a79b2c337c31c23b301ac9382b3f42f80}{GSN\_\-SPI\_\-ESC\_\-CHAR}~(0xFB)
+\item 
+\#define \hyperlink{a00587_a51128f266b2ad7b1dcc922aad7bab865}{GSN\_\-SPI\_\-IDLE\_\-CHAR}~(0xF5)
+\item 
+\#define \hyperlink{a00587_ab11cbc78caad6500f4dafc6cce96b333}{GSN\_\-SPI\_\-XOFF\_\-CHAR}~(0xFA)
+\item 
+\#define \hyperlink{a00587_a528c822cb1ddcd15b249cb9e6aaa4816}{GSN\_\-SPI\_\-XON\_\-CHAR}~(0xFD)
+\item 
+\#define \hyperlink{a00587_a5da46db11267d953ab7f05b41c7531b7}{GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ONE}~(0xFF)
+\item 
+\#define \hyperlink{a00587_aa59091c91594ff6b82a646aa28581b4f}{GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ZERO}~(0x00)
+\item 
+\#define \hyperlink{a00587_a7e9dabab86b384dbf1dcfe1d8a757b47}{GSN\_\-SPI\_\-READY\_\-ACK}~(0xF3)
+\item 
+\#define \hyperlink{a00587_a361e1e9747279106b4a35abc82b77de3}{GSN\_\-SPI\_\-CTRL\_\-BYTE\_\-MASK}~(0x80)
+\item 
+\#define \hyperlink{a00587_a82dc6617ad4a3ec4336c9739f8657e1c}{SPI\_\-DMA\_\-ENABLE}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00655_gad27c6db61273e0b521637db94b638cdb}{GSN\_\-SPI\_\-CALLBACK\_\-FUNC\_\-T} )(VOID $\ast$context, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} numberOfBytes)
+\begin{DoxyCompactList}\small\item\em Gsn SPI Call Back function. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00655_ga40c92f454b32d5fffa9780896cecdd02}{GSN\_\-SPI\_\-BLOCKREAD\_\-CALLBACK\_\-FUNC\_\-T} )(VOID $\ast$, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})
+\begin{DoxyCompactList}\small\item\em Gsn SPI Call Back function for block read. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00655_ga4319e7be0e14776c7cd2c7ff7ca8f2c2}{GSN\_\-SPI\_\-INTR\_\-CALLBACK\_\-FUNC\_\-T} )(VOID $\ast$context, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} numberOfBytes, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} status)
+\begin{DoxyCompactList}\small\item\em Gsn SPI Enum port types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00655_gaaabdab9df4e565fb0f07162bb2f22dc4}{GSN\_\-SPI\_\-PROTOCOL} \hyperlink{a00655_gafc404344d5f8c6a8358fa3be07a87444}{GSN\_\-SPI\_\-PROTOCOL\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI protocol types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00587_ad34f711f03e3ba0055566119931ebfa6}{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE} \hyperlink{a00587_a833a62a5682b1e7d499bd6334b2701f5}{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE\_\-T}
+\item 
+typedef enum \hyperlink{a00655_ga6d27ddbf02c08f4f80f88328bb907f94}{GSN\_\-SPI\_\-CLOCKPOLARITY} \hyperlink{a00655_ga40c914db809ec79fd3a564dda8364aea}{GSN\_\-SPI\_\-CLOCKPOLARITY\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI clock polarity types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00655_gad25e484c9005210b7db2528764be5034}{GSN\_\-SPI\_\-CLOCKPHASE} \hyperlink{a00655_ga1399b803d30956e8ed6f4929033329ad}{GSN\_\-SPI\_\-CLOCKPHASE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI serial Clock Phase types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00655_ga52e3e63232981dd9e13226ef140541bf}{GSN\_\-SPI\_\-DATAWORDSIZE} \hyperlink{a00655_ga63cbe81427185213bde26b93dde72747}{GSN\_\-SPI\_\-DATAWORDSIZE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI data word size types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00655_ga4b04f6b757fd4a767ea05de3de79ad15}{GSN\_\-SPI\_\-OPERATINGMODE} \hyperlink{a00655_ga6621383791d81630bc4c294a7a3d292d}{GSN\_\-SPI\_\-OPERATINGMODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI operating mode types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00655_gaf480fa60c7e6a9f132d47f0630a61b1a}{GSN\_\-SPI\_\-DMA\_\-TX\_\-MODE} \hyperlink{a00655_ga39efef290b5dfeaaa7892823d6bfd724}{GSN\_\-SPI\_\-DMA\_\-TX\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI DMA TX mode types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00655_ga21afd388959dd6b6c022109aa9a42586}{GSN\_\-SPI\_\-DMA\_\-RX\_\-MODE} \hyperlink{a00655_ga884b22be3cf70e4b96a0cda9b704390a}{GSN\_\-SPI\_\-DMA\_\-RX\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI DMA RX mode types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00655_ga03895c293b4a0520478212a5a031020d}{GSN\_\-SPI\_\-SSE\_\-MODE} \hyperlink{a00655_ga723e51f459ebae16b20d05a39ffd311a}{GSN\_\-SPI\_\-SSE\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI SSP enable or disable mode types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00655_ga64d5d284cb01ecc3c94f83cd0b22fea0}{GSN\_\-SPI\_\-LoopBack\_\-MODE} \hyperlink{a00655_ga6f83091cbd86860cdb531eb6c520660e}{GSN\_\-SPI\_\-LoopBack\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI LoopBack mode set. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00655_gad8f5cb14958ae6607aad0159bf3dc5b4}{GSN\_\-SPI\_\-SOD\_\-MODE} \hyperlink{a00655_ga5662413f1ff6b81e835e7c5412916d4b}{GSN\_\-SPI\_\-SOD\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI Slave Mode Output Disable mode set. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00655_ga5877a1a4dee99757a5560a974edd42ca}{GSN\_\-SPI\_\-DMA\_\-MODE} \hyperlink{a00655_gafff743b26bbfafb380a9797457935a0e}{GSN\_\-SPI\_\-DMA\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI DMA mode set. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6}{GSN\_\-SPI\_\-DEVICE\_\-STATE} \hyperlink{a00587_a6a9138b2111d919287d97122c32fbc02}{GSN\_\-SPI\_\-DEVICE\_\-STATE\_\-T}
+\item 
+typedef enum \hyperlink{a00655_ga26d561511c040815639b118310656f40}{GSN\_\-SPI\_\-CLK\_\-SEL} \hyperlink{a00655_gac4a300710a224a1971e5a78eae8eb89e}{GSN\_\-SPI\_\-CLK\_\-SEL\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI Clock selection. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00241}{GSN\_\-SPI\_\-TXRXCHANNEL} \hyperlink{a00655_ga0cdbeb0b657e6192938aebc1aaf793de}{GSN\_\-SPI\_\-TXRXCHANNEL\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI data transfer structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00239}{GSN\_\-SPI\_\-RW\_\-ARGS} \hyperlink{a00655_ga9da696c71bee0cdc5b3365d5d055e389}{GSN\_\-SPI\_\-RW\_\-ARGS\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI read write transfer structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00240}{GSN\_\-SPI\_\-RX\_\-RING\_\-BUFF} \hyperlink{a00587_a5884b8b45a9dd074d8fb6610ed9cd935}{GSN\_\-SPI\_\-RX\_\-RING\_\-BUFF\_\-T}
+\item 
+typedef struct \hyperlink{a00230}{GSN\_\-SPI} \hyperlink{a00655_ga18a5a1252fa65289699c9caa71d05fca}{GSN\_\-SPI\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00231}{GSN\_\-SPI\_\-CONFIG} \hyperlink{a00655_ga582e2b85ccb404b546fbe5a27f2113cb}{GSN\_\-SPI\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI configuration structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE} \hyperlink{a00655_ga046c33438e29676344675866f7935308}{GSN\_\-SPI\_\-HANDLE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn SPI Structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00587_a8158d263babcdfe1b3b113e23acd1bf7}{GSN\_\-SPI\_\-NUM\_\-T} \{ \par
+\hyperlink{a00587_a8158d263babcdfe1b3b113e23acd1bf7a355d6fc59709893547ab5ad52b675afd}{SPI\_\-NUM\_\-0} =  0, 
+\par
+\hyperlink{a00587_a8158d263babcdfe1b3b113e23acd1bf7ac1ce77771a9fcfa5a154ce1b5147c171}{SPI\_\-NUM\_\-1} =  1, 
+\par
+\hyperlink{a00587_a8158d263babcdfe1b3b113e23acd1bf7ad0a947040f7568169fa89f259818e24c}{GSN\_\-SPI\_\-NUM\_\-MSPI} =  SPI\_\-NUM\_\-0, 
+\par
+\hyperlink{a00587_a8158d263babcdfe1b3b113e23acd1bf7a30f602b432a624056e8b621d60c07f59}{GSN\_\-SPI\_\-NUM\_\-SSPI} =  SPI\_\-NUM\_\-1, 
+\par
+\hyperlink{a00587_a8158d263babcdfe1b3b113e23acd1bf7ae7e7298752aff8ce0ca30badc092a296}{GSN\_\-TOTAL\_\-SPIS} =  SPI\_\-NUM\_\-1
+ \}
+\item 
+enum \hyperlink{a00655_gaaabdab9df4e565fb0f07162bb2f22dc4}{GSN\_\-SPI\_\-PROTOCOL} \{ \par
+\hyperlink{a00655_ggaaabdab9df4e565fb0f07162bb2f22dc4a49e9fa78d3280c54236b7b4160f22ec2}{GSN\_\-SPI\_\-PROTOCOL\_\-MOTOROLA}, 
+\par
+\hyperlink{a00655_ggaaabdab9df4e565fb0f07162bb2f22dc4a9728b79e3085a9f2a92a49d7d3e88cea}{GSN\_\-SPI\_\-PROTOCOL\_\-TI}, 
+\par
+\hyperlink{a00655_ggaaabdab9df4e565fb0f07162bb2f22dc4adc033576463c374bb615509e89dd84e5}{GSN\_\-SPI\_\-PROTOCOL\_\-NATIONAL}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI protocol types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00587_ad34f711f03e3ba0055566119931ebfa6}{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE} \{ \par
+\hyperlink{a00587_ad34f711f03e3ba0055566119931ebfa6ab092c6de33f79701c1b685352b298edb}{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY} =  0x01, 
+\par
+\hyperlink{a00587_ad34f711f03e3ba0055566119931ebfa6aeea49d95c57b3b8fe30560ad0c6c6b00}{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP\_\-PENDING} =  0x02, 
+\par
+\hyperlink{a00587_ad34f711f03e3ba0055566119931ebfa6ad1575897e2aa42d6d7685e88d935aa97}{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP} =  0x04, 
+\par
+\hyperlink{a00587_ad34f711f03e3ba0055566119931ebfa6a1ee1ef11291783a59b3dd7ef78ac3a57}{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY\_\-PENDING} =  0x08
+ \}
+\item 
+enum \hyperlink{a00655_ga6d27ddbf02c08f4f80f88328bb907f94}{GSN\_\-SPI\_\-CLOCKPOLARITY} \{ \par
+\hyperlink{a00655_gga6d27ddbf02c08f4f80f88328bb907f94ab175071e88453ab1b63abe5db3500175}{GSN\_\-SPI\_\-CLK\_\-POL\_\-INACTIVELOW}, 
+\par
+\hyperlink{a00655_gga6d27ddbf02c08f4f80f88328bb907f94af27b1c22561eb85366ce7e10e0d9e7f5}{GSN\_\-SPI\_\-CLK\_\-POL\_\-INACTIVEHIGH}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI clock polarity types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00655_gad25e484c9005210b7db2528764be5034}{GSN\_\-SPI\_\-CLOCKPHASE} \{ \par
+\hyperlink{a00655_ggad25e484c9005210b7db2528764be5034aab08aff0047af6002867e4d4395f9e86}{GSN\_\-SPI\_\-CLK\_\-PHASE\_\-0}, 
+\par
+\hyperlink{a00655_ggad25e484c9005210b7db2528764be5034ae00df0dc7e8ab0bb7af357af893ed703}{GSN\_\-SPI\_\-CLK\_\-PHASE\_\-180}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI serial Clock Phase types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00655_ga52e3e63232981dd9e13226ef140541bf}{GSN\_\-SPI\_\-DATAWORDSIZE} \{ \par
+\hyperlink{a00655_gga52e3e63232981dd9e13226ef140541bfa1e0f6a3003be36a5ace865cee8d34085}{GSN\_\-SPI\_\-DATAWORDSIZE\_\-8} =  7, 
+\par
+\hyperlink{a00655_gga52e3e63232981dd9e13226ef140541bfa22e72ad895b04d78a53fa2ffba6baa57}{GSN\_\-SPI\_\-DATAWORDSIZE\_\-16} =  15
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI data word size types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00655_ga4b04f6b757fd4a767ea05de3de79ad15}{GSN\_\-SPI\_\-OPERATINGMODE} \{ \par
+\hyperlink{a00655_gga4b04f6b757fd4a767ea05de3de79ad15a41b20334a403fa4cba3f0516de08f358}{GSN\_\-SPI\_\-OPERATION\_\-MODE\_\-MASTER}, 
+\par
+\hyperlink{a00655_gga4b04f6b757fd4a767ea05de3de79ad15a3d789e465d2d8f6bfbe8664060babd5c}{GSN\_\-SPI\_\-OPERATION\_\-MODE\_\-SLAVE}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI operating mode types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00655_gaf480fa60c7e6a9f132d47f0630a61b1a}{GSN\_\-SPI\_\-DMA\_\-TX\_\-MODE} \{ \par
+\hyperlink{a00655_ggaf480fa60c7e6a9f132d47f0630a61b1aa1919ee7b81554032a841319c68fc9f22}{GSN\_\-SPI\_\-DMA\_\-TX\_\-CLEAR}, 
+\par
+\hyperlink{a00655_ggaf480fa60c7e6a9f132d47f0630a61b1aa7fad9b3d0348202826cd2d4b441ccc61}{GSN\_\-SPI\_\-DMA\_\-TX\_\-SET}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI DMA TX mode types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00655_ga21afd388959dd6b6c022109aa9a42586}{GSN\_\-SPI\_\-DMA\_\-RX\_\-MODE} \{ \par
+\hyperlink{a00655_gga21afd388959dd6b6c022109aa9a42586ad73b5edf1fdca2408d5e01fd1653919e}{GSN\_\-SPI\_\-DMA\_\-RX\_\-CLEAR}, 
+\par
+\hyperlink{a00655_gga21afd388959dd6b6c022109aa9a42586a805ddceba5549edcca5ea80a4ad36319}{GSN\_\-SPI\_\-DMA\_\-RX\_\-SET}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI DMA RX mode types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00655_ga03895c293b4a0520478212a5a031020d}{GSN\_\-SPI\_\-SSE\_\-MODE} \{ \par
+\hyperlink{a00655_gga03895c293b4a0520478212a5a031020da7589e64256fe936761aa1d21a631f5cb}{GSN\_\-SPI\_\-SSE\_\-CLEAR}, 
+\par
+\hyperlink{a00655_gga03895c293b4a0520478212a5a031020da5985d59b31c7810deee4cb66a196ca20}{GSN\_\-SPI\_\-SSE\_\-SET}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI SSP enable or disable mode types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00655_ga64d5d284cb01ecc3c94f83cd0b22fea0}{GSN\_\-SPI\_\-LoopBack\_\-MODE} \{ \par
+\hyperlink{a00655_gga64d5d284cb01ecc3c94f83cd0b22fea0ab2884bcbedf7d7d0637f3298d9a33eb2}{GSN\_\-SPI\_\-LoopBack\_\-CLEAR}, 
+\par
+\hyperlink{a00655_gga64d5d284cb01ecc3c94f83cd0b22fea0a53a6810aebddcfe97652d9a46a40cfb5}{GSN\_\-SPI\_\-LoopBack\_\-SET}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI LoopBack mode set. \end{DoxyCompactList}\item 
+enum \hyperlink{a00655_gad8f5cb14958ae6607aad0159bf3dc5b4}{GSN\_\-SPI\_\-SOD\_\-MODE} \{ \par
+\hyperlink{a00655_ggad8f5cb14958ae6607aad0159bf3dc5b4a673eb4658e63e9f7e81ac858cb1ca076}{GSN\_\-SPI\_\-SOD\_\-CLEAR}, 
+\par
+\hyperlink{a00655_ggad8f5cb14958ae6607aad0159bf3dc5b4a08dc6552a27eca2fd23133ced3938f1a}{GSN\_\-SPI\_\-SOD\_\-SET}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI Slave Mode Output Disable mode set. \end{DoxyCompactList}\item 
+enum \hyperlink{a00655_ga5877a1a4dee99757a5560a974edd42ca}{GSN\_\-SPI\_\-DMA\_\-MODE} \{ \par
+\hyperlink{a00655_gga5877a1a4dee99757a5560a974edd42caa57592c04bb258333fb01f83deb98b703}{GSN\_\-SPI\_\-DMA\_\-CLEAR}, 
+\par
+\hyperlink{a00655_gga5877a1a4dee99757a5560a974edd42caa92f7215f44c8faf04067cc9d500d1d53}{GSN\_\-SPI\_\-DMA\_\-SET}, 
+\par
+\hyperlink{a00655_gga5877a1a4dee99757a5560a974edd42caa83c30d5653f56066a6b49c07dc5f4222}{GSN\_\-SPI\_\-DMA\_\-PINGPONG\_\-SET}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI DMA mode set. \end{DoxyCompactList}\item 
+enum \hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6}{GSN\_\-SPI\_\-DEVICE\_\-STATE} \{ \par
+\hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6a023a942bf5aeb94d6cd788b1d4f8ce6f}{GSN\_\-SPI\_\-UNINITIALIZED}, 
+\par
+\hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6a7ad688ca0363ab4e282a92ef540b68d5}{GSN\_\-SPI\_\-INITIALIZED}, 
+\par
+\hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6af100c5f000f497c982ab367b280f2b96}{GSN\_\-SPI\_\-TX\_\-PROCESSING}, 
+\par
+\hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6ad5d5b165a37bc78ee0dc5fafeaabafd7}{GSN\_\-SPI\_\-RX\_\-PROCESSING}, 
+\par
+\hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6a42232c7523efa71c39f9253c26380560}{GSN\_\-SPI\_\-TX\_\-DONE}, 
+\par
+\hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6a06b886e5cb4de1abfa2cf8e14e496c77}{GSN\_\-SPI\_\-RX\_\-DONE}, 
+\par
+\hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6a1fe8bd56614e4776ae59f33b5bf10bdc}{GSN\_\-SPI\_\-READ\_\-PROGRESS}, 
+\par
+\hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6a844ce873b70e1441f77360fbe8824f0c}{GSN\_\-SPI\_\-READ\_\-FINISHED}, 
+\par
+\hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6aa51f0942d34d13422840d54613e93bfe}{GSN\_\-SPI\_\-RX\_\-ERROR}, 
+\par
+\hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6a159c78cc937dc640681c25167195c72c}{GSN\_\-SPI\_\-COMPLETED}, 
+\par
+\hyperlink{a00587_acadb33517f6f254dce30d69f644a88c6ab0ed55469a52e6fe7079f4b3fa227bdc}{GSN\_\-SPI\_\-CLOSED}
+ \}
+\item 
+enum \hyperlink{a00655_ga26d561511c040815639b118310656f40}{GSN\_\-SPI\_\-CLK\_\-SEL} \{ \par
+\hyperlink{a00655_gga26d561511c040815639b118310656f40af41fa8bd6972b83d132eed405b5fdfd5}{GSN\_\-SPI\_\-CLK\_\-HSRC}, 
+\par
+\hyperlink{a00655_gga26d561511c040815639b118310656f40ae499c0694c1b79936ff89f81486431f1}{GSN\_\-SPI\_\-CLK\_\-XTAL}, 
+\par
+\hyperlink{a00655_gga26d561511c040815639b118310656f40a55316df6045aeefd9e9491d23c481d21}{GSN\_\-SPI\_\-CLK\_\-PLL}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn SPI Clock selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00655_ga9ed2952f398bcf1b2f3a44dec07ebf9e}{GsnSpi\_\-Open} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00587_a8158d263babcdfe1b3b113e23acd1bf7}{GSN\_\-SPI\_\-NUM\_\-T} spiPortNumber, \hyperlink{a00231}{GSN\_\-SPI\_\-CONFIG\_\-T} $\ast$gsnSpiConfig)
+\begin{DoxyCompactList}\small\item\em SPI Driver open. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga36cba59711e5606473d08c3b2cb119f9}{GsnSpi\_\-SodSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00655_ga5662413f1ff6b81e835e7c5412916d4b}{GSN\_\-SPI\_\-SOD\_\-MODE\_\-T} sodMode)
+\begin{DoxyCompactList}\small\item\em SPI Driver SOD set or clear register. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00655_ga5662413f1ff6b81e835e7c5412916d4b}{GSN\_\-SPI\_\-SOD\_\-MODE\_\-T} \hyperlink{a00655_ga2c5d3196d92b29538c2ea7e1c04e8da8}{GsnSpi\_\-SodGet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em SPI Driver SOD Get register. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga21713867f6f066789a632fcd2180f691}{GsnSpi\_\-NvicEnable} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em SPI NVIC interrupts enable. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga979f498b435e07948e147f852955d792}{GsnSpi\_\-NvicDisable} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em SPI NVIC interrupts Disable. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00655_gad8d545c582e8ac1fbaa9f57286fd62f8}{GsnSpi\_\-Close} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em SPI Driver close. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00655_ga2970481689a2602c56926842d790c1a9}{GsnSpi\_\-SerialClockRateGet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em SPI Driver Get serial clock rate register. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga3543dc0b4d7a29a37ab1cc4ea82945cb}{GsnSpi\_\-SerialClockRateSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} clockFrequency)
+\begin{DoxyCompactList}\small\item\em SPI Driver set serial clock rate register. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00655_ga6f83091cbd86860cdb531eb6c520660e}{GSN\_\-SPI\_\-LoopBack\_\-MODE\_\-T} \hyperlink{a00655_ga628f6d407adb229afca1dc8b1ff7ed75}{GsnSpi\_\-LoopBackGet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em SPI Driver LopBack mode GET. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_gad0fe77483576e7fb04fc15907618813a}{GsnSpi\_\-LoopBackConfig} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00655_ga6f83091cbd86860cdb531eb6c520660e}{GSN\_\-SPI\_\-LoopBack\_\-MODE\_\-T} LoopBack)
+\begin{DoxyCompactList}\small\item\em SPI Driver LopBack mode SET. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga3114ebc38924cb941ab5160f673e613e}{GsnSpi\_\-LoopBackClear} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00655_ga6f83091cbd86860cdb531eb6c520660e}{GSN\_\-SPI\_\-LoopBack\_\-MODE\_\-T} LoopBack)
+\begin{DoxyCompactList}\small\item\em SPI Driver LopBack mode Clear. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00655_ga6621383791d81630bc4c294a7a3d292d}{GSN\_\-SPI\_\-OPERATINGMODE\_\-T} \hyperlink{a00655_gac78c8ee2b4d5b86c326b8e2f86be0d40}{GsnSpi\_\-OperationModeGet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em SPI Driver gets operation mode. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga4666c9a37c13c62920c60a4f31bad269}{GsnSpi\_\-OperationModeSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00655_ga6621383791d81630bc4c294a7a3d292d}{GSN\_\-SPI\_\-OPERATINGMODE\_\-T} spiSlaveMasterModeSel)
+\begin{DoxyCompactList}\small\item\em SPI Driver set operation mode. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00655_gaab2811f77e6b6fe2e6d503dcc929c2a7}{GsnSpi\_\-ClockDividerGet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em Get SPI clock Divider. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_gafc15df71ec9f7424598101b21a4edf02}{GsnSpi\_\-ClockDividerSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} clkDivider)
+\begin{DoxyCompactList}\small\item\em Set SPI clock Divider. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00655_gafc404344d5f8c6a8358fa3be07a87444}{GSN\_\-SPI\_\-PROTOCOL\_\-T} \hyperlink{a00655_gad415af0ada6d0c1923a5f75f6dc728de}{GsnSpi\_\-ProtocolGet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em Get SPI protocol type. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_gadb92fa4a2bfa6792e6c62f27a2cce12f}{GsnSpi\_\-ProtocolSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00655_gafc404344d5f8c6a8358fa3be07a87444}{GSN\_\-SPI\_\-PROTOCOL\_\-T} spiProtocol)
+\begin{DoxyCompactList}\small\item\em Set SPI protocol. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00655_ga40c914db809ec79fd3a564dda8364aea}{GSN\_\-SPI\_\-CLOCKPOLARITY\_\-T} \hyperlink{a00655_gac08639e1b7daa7f98933d254dd4267c2}{GsnSpi\_\-ClockPolarityGet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em Get SPI clock polarity. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga46e10b008bc602521ad5c852318250fc}{GsnSpi\_\-ClockPolaritySet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00655_ga40c914db809ec79fd3a564dda8364aea}{GSN\_\-SPI\_\-CLOCKPOLARITY\_\-T} spiClkPolarity)
+\begin{DoxyCompactList}\small\item\em Set SPI clock polarity. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00655_ga1399b803d30956e8ed6f4929033329ad}{GSN\_\-SPI\_\-CLOCKPHASE\_\-T} \hyperlink{a00655_ga4a1a93304e2ef3f80bc42a34521930a3}{GsnSpi\_\-ClockPhaseGet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em Get SPI clock phase. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga63969f626783af407abf22424c3aa6b5}{GsnSpi\_\-ClockPhaseSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00655_ga1399b803d30956e8ed6f4929033329ad}{GSN\_\-SPI\_\-CLOCKPHASE\_\-T} spiClkPhase)
+\begin{DoxyCompactList}\small\item\em Set SPI clock phase. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00655_ga63cbe81427185213bde26b93dde72747}{GSN\_\-SPI\_\-DATAWORDSIZE\_\-T} \hyperlink{a00655_ga409590e9bfed9d125930409befb782c5}{GsnSpi\_\-DataWordSizeGet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em Get SPI Dataword size. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga71fc3b8ddb2373618758cec70b2ccdca}{GsnSpi\_\-DataWordSizeSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00655_ga63cbe81427185213bde26b93dde72747}{GSN\_\-SPI\_\-DATAWORDSIZE\_\-T} spiDataSize)
+\begin{DoxyCompactList}\small\item\em Set SPI Dataword size. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00655_ga29d51974bb0e80ae4191a339731c3319}{GsnSpi\_\-MasterReadWrite} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00239}{GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} $\ast$spiRW)
+\begin{DoxyCompactList}\small\item\em SPI Read and write through specified port in master mode. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00655_ga687e89dafd17ddd4cc90c4b744e3696d}{GsnSpi\_\-SlaveWrite} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00241}{GSN\_\-SPI\_\-TXRXCHANNEL\_\-T} $\ast$tx)
+\begin{DoxyCompactList}\small\item\em SPI Slave Write. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00655_gacdf999cddafe165dbbc991808f6db208}{GsnSpi\_\-SlaveRead} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00241}{GSN\_\-SPI\_\-TXRXCHANNEL\_\-T} $\ast$rx)
+\begin{DoxyCompactList}\small\item\em SPI Slave Read. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00587_a25126d53818e98c6503821c4533dc8e9}{GsnSpi\_\-DmaPingBufSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00239}{GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} $\ast$spiRW)
+\item 
+PUBLIC VOID \hyperlink{a00587_a53b71435edc8c235f4090408d1f10e37}{GsnSpi\_\-DmaPongBufSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00239}{GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} $\ast$spiRW)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00655_ga5733034f9b6e7a4307c9a42ae94ff331}{GsnSpi\_\-SlaveReadWrite} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00239}{GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} $\ast$spiRW)
+\begin{DoxyCompactList}\small\item\em SPI Read and write through specified port in slave mode. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga91cf5c4e81e474090b72a663d3d437bd}{GsnSpi\_\-Isr} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em SPI ISR. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga585c3c7cf57beb1410b51729bbdf825c}{\_\-\_\-GsnSpi0\_\-Isr} ()
+\begin{DoxyCompactList}\small\item\em SPI ISR. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga352836cc21d953411e38fb2e90d01ac9}{\_\-\_\-GsnSpi1\_\-Isr} ()
+\begin{DoxyCompactList}\small\item\em SPI ISR. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga43402383d3c4b3bb50c9c34b88002a3c}{\_\-\_\-GsnSpi0\_\-DmaTx\_\-Isr} ()
+\begin{DoxyCompactList}\small\item\em SPI-\/0 Dma Tx done ISR. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_gaba6d8c77f5e7adba7afcf924c990f566}{\_\-\_\-GsnSpi0\_\-DmaRx\_\-Isr} ()
+\begin{DoxyCompactList}\small\item\em SPI-\/0 Dma Rx done ISR. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_gae57fcc9dca6abd4efbe45a144676b268}{\_\-\_\-GsnSpi1\_\-DmaTx\_\-Isr} ()
+\begin{DoxyCompactList}\small\item\em SPI-\/1 Dma Tx done ISR. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga3c3d0c3affa07b1b86fe208055666de6}{\_\-\_\-GsnSpi1\_\-DmaRx\_\-Isr} ()
+\begin{DoxyCompactList}\small\item\em SPI-\/1 Dma Rx done ISR. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_ga0546bc1bf8f01326d3252b07af8551d1}{GsnSpi0\_\-TxCallBack} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\begin{DoxyCompactList}\small\item\em SPI-\/0 Dma Tx done ISR. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_ga4b5207e6c3b7b0ba513a8efe4e0c58f9}{GsnSpi0\_\-TxCallBack\_\-PingPong} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\begin{DoxyCompactList}\small\item\em SPI-\/0 Dma Tx done ISR for PingPong configuration. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_gab0a94dc945496de3fae944b7a20b1748}{GsnSpi0\_\-RxCallBack} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\begin{DoxyCompactList}\small\item\em SPI-\/0 Dma Rx done ISR. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_gab4482aa8532a1a9b1f886148f19d5ecf}{GsnSpi0\_\-RxCallBack\_\-PingPong} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\begin{DoxyCompactList}\small\item\em SPI-\/1 Dma Rx done ISR for PingPong configuration. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_gaa25e67e9580c5965c4d2861e3a515b76}{GsnSpi1\_\-TxCallBack} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\begin{DoxyCompactList}\small\item\em SPI-\/1 Dma Tx done ISR. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_ga591fe7e46faaf3a5875c60705bd58fba}{GsnSpi1\_\-RxCallBack} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\begin{DoxyCompactList}\small\item\em SPI-\/1 Dma Rx done ISR. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_gaff8470ba74c4dcca916bbeff57e4bd7d}{GsnSpi\_\-PauseRingBuff} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em SPI Pause RingBuff. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_ga0d08ec80f335e1b0ed90f7c59367f9b2}{GsnSpi\_\-ResumeRingBuff} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em SPI Resume RingBuff. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00655_ga1c2eb2ee1ac85757bc73cee12de1f83a}{GsnSpi\_\-FlushRingBuff} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em SPI Flush RingBuff. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_ga3b883bf551a2d5a45324f2c9fb192dde}{GsnSpi\_\-DmaPingTxBufSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00241}{GSN\_\-SPI\_\-TXRXCHANNEL\_\-T} $\ast$tx)
+\begin{DoxyCompactList}\small\item\em GsnSpi\_\-DmaPingTxBufSet. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_ga1240aab47d221d687c55d959f9338f38}{GsnSpi\_\-DmaPingRxBufSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00241}{GSN\_\-SPI\_\-TXRXCHANNEL\_\-T} $\ast$rx)
+\begin{DoxyCompactList}\small\item\em GsnSpi\_\-DmaPingRxBufSet. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_ga12f4ac188844f68f5b615c317544d789}{GsnSpi\_\-DmaPongTxBufSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00241}{GSN\_\-SPI\_\-TXRXCHANNEL\_\-T} $\ast$tx)
+\begin{DoxyCompactList}\small\item\em GsnSpi\_\-DmaPongTxBufSet. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_ga67638cf09d337fe02b6987dde904af5e}{GsnSpi\_\-DmaPongRxBufSet} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00241}{GSN\_\-SPI\_\-TXRXCHANNEL\_\-T} $\ast$rx)
+\begin{DoxyCompactList}\small\item\em GsnSpi\_\-DmaPongRxBufSet. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_ga78b8fecdc2cd5a6696de7b0969572670}{GsnSpi\_\-DmaTxRxEnable} (\hyperlink{a00230}{GSN\_\-SPI\_\-T} $\ast$spiThis)
+\begin{DoxyCompactList}\small\item\em 1.)Enabling Dma. 2.)Enabling Rx and Tx request from spi to dma. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_ga5aad26534270bea0b8fa13834ef568e2}{GsnSpi1\_\-TxCallBack\_\-PingPong} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\begin{DoxyCompactList}\small\item\em SPI-\/0 Dma Tx done ISR for PingPong configuration. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_gad380e1dfec5929d457d5e64153229d14}{GsnSpi1\_\-RxCallBack\_\-PingPong} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\begin{DoxyCompactList}\small\item\em SPI-\/1 Dma Rx done ISR for PingPong configuration. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00655_ga66aa235e1a4eef449cdcf4e4e0d51730}{GsnSpi\_\-DmaTxRxDisable} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\begin{DoxyCompactList}\small\item\em Disabling all Dma related stuffs. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00655_ga96438fab641da9e6b7d5ac42efb0a06a}{GsnSpi\_\-Open\_\-Patch} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00587_a8158d263babcdfe1b3b113e23acd1bf7}{GSN\_\-SPI\_\-NUM\_\-T} spiPortNumber, \hyperlink{a00231}{GSN\_\-SPI\_\-CONFIG\_\-T} $\ast$gsnSpiConfig)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00587_a9ee88fbbb0adb04ad37cc545aa863bfc}{GsnSpi\_\-Close\_\-Patch} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00587_a4e53ad22ba5ae147b718beea75c4d098}{GsnSpi\_\-SlaveReadWrite\_\-Patch} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00239}{GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} $\ast$spiRW)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00587_a6b43097fa987f686cdbbaa39882a5e70}{GsnSpi\_\-MasterReadWrite\_\-Patch} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00239}{GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} $\ast$spiRW)
+\item 
+VOID \hyperlink{a00587_a13d0dbc631b15bf6785f92f9a04bd264}{GsnSpi0\_\-TxCallBack\_\-Patch} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\item 
+VOID \hyperlink{a00587_a9c96753aa477c53506e173d5ef6cf7e6}{GsnSpi0\_\-RxCallBack\_\-Patch} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\item 
+VOID \hyperlink{a00587_a6dea914c8be26f943338ddfbf83e3aa5}{GsnSpi1\_\-TxCallBack\_\-Patch} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\item 
+VOID \hyperlink{a00587_a994713a1125a0a17d390664881115924}{GsnSpi1\_\-RxCallBack\_\-Patch} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN SPI API Definitions. This file contains the public APIs definitions and structures of SPI driver. 
+
+Definition in file \hyperlink{a00587_source}{gsn\_\-spi.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00587_a361e1e9747279106b4a35abc82b77de3}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-CTRL\_\-BYTE\_\-MASK@{GSN\_\-SPI\_\-CTRL\_\-BYTE\_\-MASK}}
+\index{GSN\_\-SPI\_\-CTRL\_\-BYTE\_\-MASK@{GSN\_\-SPI\_\-CTRL\_\-BYTE\_\-MASK}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-CTRL\_\-BYTE\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI\_\-CTRL\_\-BYTE\_\-MASK~(0x80)}}
+\label{a00587_a361e1e9747279106b4a35abc82b77de3}
+
+
+Definition at line 115 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a79b2c337c31c23b301ac9382b3f42f80}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-ESC\_\-CHAR@{GSN\_\-SPI\_\-ESC\_\-CHAR}}
+\index{GSN\_\-SPI\_\-ESC\_\-CHAR@{GSN\_\-SPI\_\-ESC\_\-CHAR}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-ESC\_\-CHAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI\_\-ESC\_\-CHAR~(0xFB)}}
+\label{a00587_a79b2c337c31c23b301ac9382b3f42f80}
+
+
+Definition at line 108 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a51128f266b2ad7b1dcc922aad7bab865}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-IDLE\_\-CHAR@{GSN\_\-SPI\_\-IDLE\_\-CHAR}}
+\index{GSN\_\-SPI\_\-IDLE\_\-CHAR@{GSN\_\-SPI\_\-IDLE\_\-CHAR}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-IDLE\_\-CHAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI\_\-IDLE\_\-CHAR~(0xF5)}}
+\label{a00587_a51128f266b2ad7b1dcc922aad7bab865}
+
+
+Definition at line 109 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a5da46db11267d953ab7f05b41c7531b7}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ONE@{GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ONE}}
+\index{GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ONE@{GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ONE}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ONE~(0xFF)}}
+\label{a00587_a5da46db11267d953ab7f05b41c7531b7}
+
+
+Definition at line 112 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_aa59091c91594ff6b82a646aa28581b4f}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ZERO@{GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ZERO}}
+\index{GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ZERO@{GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ZERO}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ZERO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI\_\-INVALID\_\-CHAR\_\-ALL\_\-ZERO~(0x00)}}
+\label{a00587_aa59091c91594ff6b82a646aa28581b4f}
+
+
+Definition at line 113 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a7bb4731e0835beb3f63c02ce467e43a8}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-PING\_\-SUCCESS@{GSN\_\-SPI\_\-PING\_\-SUCCESS}}
+\index{GSN\_\-SPI\_\-PING\_\-SUCCESS@{GSN\_\-SPI\_\-PING\_\-SUCCESS}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-PING\_\-SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI\_\-PING\_\-SUCCESS~0x70000001}}
+\label{a00587_a7bb4731e0835beb3f63c02ce467e43a8}
+
+
+Definition at line 89 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_afb6d18ccbf76c5a9ab4a6a4c50a397bc}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-PONG\_\-SUCCESS@{GSN\_\-SPI\_\-PONG\_\-SUCCESS}}
+\index{GSN\_\-SPI\_\-PONG\_\-SUCCESS@{GSN\_\-SPI\_\-PONG\_\-SUCCESS}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-PONG\_\-SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI\_\-PONG\_\-SUCCESS~0x70000002}}
+\label{a00587_afb6d18ccbf76c5a9ab4a6a4c50a397bc}
+
+
+Definition at line 90 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a7e9dabab86b384dbf1dcfe1d8a757b47}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-READY\_\-ACK@{GSN\_\-SPI\_\-READY\_\-ACK}}
+\index{GSN\_\-SPI\_\-READY\_\-ACK@{GSN\_\-SPI\_\-READY\_\-ACK}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-READY\_\-ACK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI\_\-READY\_\-ACK~(0xF3)}}
+\label{a00587_a7e9dabab86b384dbf1dcfe1d8a757b47}
+
+
+Definition at line 114 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_ab11cbc78caad6500f4dafc6cce96b333}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-XOFF\_\-CHAR@{GSN\_\-SPI\_\-XOFF\_\-CHAR}}
+\index{GSN\_\-SPI\_\-XOFF\_\-CHAR@{GSN\_\-SPI\_\-XOFF\_\-CHAR}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-XOFF\_\-CHAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI\_\-XOFF\_\-CHAR~(0xFA)}}
+\label{a00587_ab11cbc78caad6500f4dafc6cce96b333}
+
+
+Definition at line 110 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a528c822cb1ddcd15b249cb9e6aaa4816}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-XON\_\-CHAR@{GSN\_\-SPI\_\-XON\_\-CHAR}}
+\index{GSN\_\-SPI\_\-XON\_\-CHAR@{GSN\_\-SPI\_\-XON\_\-CHAR}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-XON\_\-CHAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI\_\-XON\_\-CHAR~(0xFD)}}
+\label{a00587_a528c822cb1ddcd15b249cb9e6aaa4816}
+
+
+Definition at line 111 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a24c449323e2955bc782cdf3b34de1e33}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!ROR\_\-CLEAR@{ROR\_\-CLEAR}}
+\index{ROR\_\-CLEAR@{ROR\_\-CLEAR}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{ROR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define ROR\_\-CLEAR~0x2}}
+\label{a00587_a24c449323e2955bc782cdf3b34de1e33}
+
+
+Definition at line 85 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a2b4dc619ceaead61fe74bbcf490dc15b}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!ROR\_\-STATUS@{ROR\_\-STATUS}}
+\index{ROR\_\-STATUS@{ROR\_\-STATUS}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{ROR\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define ROR\_\-STATUS~0x0001}}
+\label{a00587_a2b4dc619ceaead61fe74bbcf490dc15b}
+
+
+Definition at line 84 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_aa4b1a0a251c6fac18230a25d8d89388c}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!RT\_\-CLEAR@{RT\_\-CLEAR}}
+\index{RT\_\-CLEAR@{RT\_\-CLEAR}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{RT\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define RT\_\-CLEAR~0x1}}
+\label{a00587_aa4b1a0a251c6fac18230a25d8d89388c}
+
+
+Definition at line 86 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a202d8710d0c6930b5c266948f5712d7a}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!RT\_\-STATUS@{RT\_\-STATUS}}
+\index{RT\_\-STATUS@{RT\_\-STATUS}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{RT\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define RT\_\-STATUS~0x0002}}
+\label{a00587_a202d8710d0c6930b5c266948f5712d7a}
+
+
+Definition at line 83 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a731d30ee0b5f9f0471fa8e742ef1784c}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!RX\_\-STATUS@{RX\_\-STATUS}}
+\index{RX\_\-STATUS@{RX\_\-STATUS}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{RX\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define RX\_\-STATUS~0x0004}}
+\label{a00587_a731d30ee0b5f9f0471fa8e742ef1784c}
+
+
+Definition at line 81 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a0710240ccdbef200879fbec6fde50342}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SET\_\-INTERRUPTS@{SET\_\-INTERRUPTS}}
+\index{SET\_\-INTERRUPTS@{SET\_\-INTERRUPTS}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SET\_\-INTERRUPTS}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-INTERRUPTS~0x000F}}
+\label{a00587_a0710240ccdbef200879fbec6fde50342}
+
+
+Definition at line 80 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_aeaf92c7c4fbd8a6ccda7d2100f26893f}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-CLK\_\-EN@{SPI\_\-CLK\_\-EN}}
+\index{SPI\_\-CLK\_\-EN@{SPI\_\-CLK\_\-EN}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-CLK\_\-EN}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-CLK\_\-EN~1}}
+\label{a00587_aeaf92c7c4fbd8a6ccda7d2100f26893f}
+
+
+Definition at line 105 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a8d0e49a864453c0acecdd4078256442b}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-CPSDIV\_\-0@{SPI\_\-CPSDIV\_\-0}}
+\index{SPI\_\-CPSDIV\_\-0@{SPI\_\-CPSDIV\_\-0}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-CPSDIV\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-CPSDIV\_\-0~0}}
+\label{a00587_a8d0e49a864453c0acecdd4078256442b}
+
+
+Definition at line 97 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a4ac75189ac4f7b124d9b86a73a1cdcd5}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-CPSDIV\_\-1@{SPI\_\-CPSDIV\_\-1}}
+\index{SPI\_\-CPSDIV\_\-1@{SPI\_\-CPSDIV\_\-1}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-CPSDIV\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-CPSDIV\_\-1~1}}
+\label{a00587_a4ac75189ac4f7b124d9b86a73a1cdcd5}
+
+
+Definition at line 98 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a3874bbb3a35586cbda40389de9451dfe}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-CPSDIV\_\-16@{SPI\_\-CPSDIV\_\-16}}
+\index{SPI\_\-CPSDIV\_\-16@{SPI\_\-CPSDIV\_\-16}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-CPSDIV\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-CPSDIV\_\-16~16}}
+\label{a00587_a3874bbb3a35586cbda40389de9451dfe}
+
+
+Definition at line 102 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_ac09f298bf1f117b25b0683eb26d92757}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-CPSDIV\_\-2@{SPI\_\-CPSDIV\_\-2}}
+\index{SPI\_\-CPSDIV\_\-2@{SPI\_\-CPSDIV\_\-2}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-CPSDIV\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-CPSDIV\_\-2~2}}
+\label{a00587_ac09f298bf1f117b25b0683eb26d92757}
+
+
+Definition at line 99 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a23ad18291368cbe0b4df864168f7a05c}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-CPSDIV\_\-32@{SPI\_\-CPSDIV\_\-32}}
+\index{SPI\_\-CPSDIV\_\-32@{SPI\_\-CPSDIV\_\-32}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-CPSDIV\_\-32}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-CPSDIV\_\-32~32}}
+\label{a00587_a23ad18291368cbe0b4df864168f7a05c}
+
+
+Definition at line 103 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a188625c01c63c22c4da5761f1bc2aa9d}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-CPSDIV\_\-4@{SPI\_\-CPSDIV\_\-4}}
+\index{SPI\_\-CPSDIV\_\-4@{SPI\_\-CPSDIV\_\-4}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-CPSDIV\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-CPSDIV\_\-4~4}}
+\label{a00587_a188625c01c63c22c4da5761f1bc2aa9d}
+
+
+Definition at line 100 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_ad50de377e5c2b1f24f383658becb263f}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-CPSDIV\_\-64@{SPI\_\-CPSDIV\_\-64}}
+\index{SPI\_\-CPSDIV\_\-64@{SPI\_\-CPSDIV\_\-64}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-CPSDIV\_\-64}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-CPSDIV\_\-64~64}}
+\label{a00587_ad50de377e5c2b1f24f383658becb263f}
+
+
+Definition at line 104 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_aed030fb6acbafc2b27a6f43d1af24924}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-CPSDIV\_\-8@{SPI\_\-CPSDIV\_\-8}}
+\index{SPI\_\-CPSDIV\_\-8@{SPI\_\-CPSDIV\_\-8}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-CPSDIV\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-CPSDIV\_\-8~8}}
+\label{a00587_aed030fb6acbafc2b27a6f43d1af24924}
+
+
+Definition at line 101 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_acc862b4e66ca1cd03299556793dc5be3}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-DMA\_\-CHANNELS@{SPI\_\-DMA\_\-CHANNELS}}
+\index{SPI\_\-DMA\_\-CHANNELS@{SPI\_\-DMA\_\-CHANNELS}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-DMA\_\-CHANNELS}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-DMA\_\-CHANNELS~0x0000000c}}
+\label{a00587_acc862b4e66ca1cd03299556793dc5be3}
+
+
+Definition at line 94 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a82dc6617ad4a3ec4336c9739f8657e1c}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-DMA\_\-ENABLE@{SPI\_\-DMA\_\-ENABLE}}
+\index{SPI\_\-DMA\_\-ENABLE@{SPI\_\-DMA\_\-ENABLE}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-DMA\_\-ENABLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-DMA\_\-ENABLE~1}}
+\label{a00587_a82dc6617ad4a3ec4336c9739f8657e1c}
+
+
+Definition at line 1428 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_ab6ee6c121b3e29bdf8de48aa17a6d296}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-DMA\_\-RX\_\-TRANSFER\_\-MIN@{SPI\_\-DMA\_\-RX\_\-TRANSFER\_\-MIN}}
+\index{SPI\_\-DMA\_\-RX\_\-TRANSFER\_\-MIN@{SPI\_\-DMA\_\-RX\_\-TRANSFER\_\-MIN}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-DMA\_\-RX\_\-TRANSFER\_\-MIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-DMA\_\-RX\_\-TRANSFER\_\-MIN~32}}
+\label{a00587_ab6ee6c121b3e29bdf8de48aa17a6d296}
+
+
+Definition at line 87 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_af333ca2812c6cbcfd6637a20fa69088b}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-DMA\_\-TX\_\-TRANSFER\_\-MIN@{SPI\_\-DMA\_\-TX\_\-TRANSFER\_\-MIN}}
+\index{SPI\_\-DMA\_\-TX\_\-TRANSFER\_\-MIN@{SPI\_\-DMA\_\-TX\_\-TRANSFER\_\-MIN}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{SPI\_\-DMA\_\-TX\_\-TRANSFER\_\-MIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-DMA\_\-TX\_\-TRANSFER\_\-MIN~32}}
+\label{a00587_af333ca2812c6cbcfd6637a20fa69088b}
+
+
+Definition at line 88 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a7575bf922b1b02fa694d964bb94e1a29}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!TX\_\-STATUS@{TX\_\-STATUS}}
+\index{TX\_\-STATUS@{TX\_\-STATUS}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{TX\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TX\_\-STATUS~0x0008}}
+\label{a00587_a7575bf922b1b02fa694d964bb94e1a29}
+
+
+Definition at line 82 of file gsn\_\-spi.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00587_a6a9138b2111d919287d97122c32fbc02}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-DEVICE\_\-STATE\_\-T@{GSN\_\-SPI\_\-DEVICE\_\-STATE\_\-T}}
+\index{GSN\_\-SPI\_\-DEVICE\_\-STATE\_\-T@{GSN\_\-SPI\_\-DEVICE\_\-STATE\_\-T}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-DEVICE\_\-STATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-SPI\_\-DEVICE\_\-STATE}  {\bf GSN\_\-SPI\_\-DEVICE\_\-STATE\_\-T}}}
+\label{a00587_a6a9138b2111d919287d97122c32fbc02}
+\hypertarget{a00587_a833a62a5682b1e7d499bd6334b2701f5}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE\_\-T@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE\_\-T}}
+\index{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE\_\-T@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE\_\-T}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE} {\bf GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE\_\-T}}}
+\label{a00587_a833a62a5682b1e7d499bd6334b2701f5}
+\hypertarget{a00587_a5884b8b45a9dd074d8fb6610ed9cd935}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-RX\_\-RING\_\-BUFF\_\-T@{GSN\_\-SPI\_\-RX\_\-RING\_\-BUFF\_\-T}}
+\index{GSN\_\-SPI\_\-RX\_\-RING\_\-BUFF\_\-T@{GSN\_\-SPI\_\-RX\_\-RING\_\-BUFF\_\-T}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-RX\_\-RING\_\-BUFF\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SPI\_\-RX\_\-RING\_\-BUFF}  {\bf GSN\_\-SPI\_\-RX\_\-RING\_\-BUFF\_\-T}}}
+\label{a00587_a5884b8b45a9dd074d8fb6610ed9cd935}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-DEVICE\_\-STATE@{GSN\_\-SPI\_\-DEVICE\_\-STATE}}
+\index{GSN\_\-SPI\_\-DEVICE\_\-STATE@{GSN\_\-SPI\_\-DEVICE\_\-STATE}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-DEVICE\_\-STATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-SPI\_\-DEVICE\_\-STATE}}}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-SPI\_\-UNINITIALIZED@{GSN\_\-SPI\_\-UNINITIALIZED}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-UNINITIALIZED@{GSN\_\-SPI\_\-UNINITIALIZED}}\item[{\em 
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6a023a942bf5aeb94d6cd788b1d4f8ce6f}{
+GSN\_\-SPI\_\-UNINITIALIZED}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6a023a942bf5aeb94d6cd788b1d4f8ce6f}
+}]\index{GSN\_\-SPI\_\-INITIALIZED@{GSN\_\-SPI\_\-INITIALIZED}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-INITIALIZED@{GSN\_\-SPI\_\-INITIALIZED}}\item[{\em 
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6a7ad688ca0363ab4e282a92ef540b68d5}{
+GSN\_\-SPI\_\-INITIALIZED}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6a7ad688ca0363ab4e282a92ef540b68d5}
+}]\index{GSN\_\-SPI\_\-TX\_\-PROCESSING@{GSN\_\-SPI\_\-TX\_\-PROCESSING}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-TX\_\-PROCESSING@{GSN\_\-SPI\_\-TX\_\-PROCESSING}}\item[{\em 
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6af100c5f000f497c982ab367b280f2b96}{
+GSN\_\-SPI\_\-TX\_\-PROCESSING}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6af100c5f000f497c982ab367b280f2b96}
+}]\index{GSN\_\-SPI\_\-RX\_\-PROCESSING@{GSN\_\-SPI\_\-RX\_\-PROCESSING}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-RX\_\-PROCESSING@{GSN\_\-SPI\_\-RX\_\-PROCESSING}}\item[{\em 
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6ad5d5b165a37bc78ee0dc5fafeaabafd7}{
+GSN\_\-SPI\_\-RX\_\-PROCESSING}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6ad5d5b165a37bc78ee0dc5fafeaabafd7}
+}]\index{GSN\_\-SPI\_\-TX\_\-DONE@{GSN\_\-SPI\_\-TX\_\-DONE}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-TX\_\-DONE@{GSN\_\-SPI\_\-TX\_\-DONE}}\item[{\em 
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6a42232c7523efa71c39f9253c26380560}{
+GSN\_\-SPI\_\-TX\_\-DONE}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6a42232c7523efa71c39f9253c26380560}
+}]\index{GSN\_\-SPI\_\-RX\_\-DONE@{GSN\_\-SPI\_\-RX\_\-DONE}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-RX\_\-DONE@{GSN\_\-SPI\_\-RX\_\-DONE}}\item[{\em 
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6a06b886e5cb4de1abfa2cf8e14e496c77}{
+GSN\_\-SPI\_\-RX\_\-DONE}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6a06b886e5cb4de1abfa2cf8e14e496c77}
+}]\index{GSN\_\-SPI\_\-READ\_\-PROGRESS@{GSN\_\-SPI\_\-READ\_\-PROGRESS}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-READ\_\-PROGRESS@{GSN\_\-SPI\_\-READ\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6a1fe8bd56614e4776ae59f33b5bf10bdc}{
+GSN\_\-SPI\_\-READ\_\-PROGRESS}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6a1fe8bd56614e4776ae59f33b5bf10bdc}
+}]\index{GSN\_\-SPI\_\-READ\_\-FINISHED@{GSN\_\-SPI\_\-READ\_\-FINISHED}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-READ\_\-FINISHED@{GSN\_\-SPI\_\-READ\_\-FINISHED}}\item[{\em 
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6a844ce873b70e1441f77360fbe8824f0c}{
+GSN\_\-SPI\_\-READ\_\-FINISHED}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6a844ce873b70e1441f77360fbe8824f0c}
+}]\index{GSN\_\-SPI\_\-RX\_\-ERROR@{GSN\_\-SPI\_\-RX\_\-ERROR}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-RX\_\-ERROR@{GSN\_\-SPI\_\-RX\_\-ERROR}}\item[{\em 
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6aa51f0942d34d13422840d54613e93bfe}{
+GSN\_\-SPI\_\-RX\_\-ERROR}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6aa51f0942d34d13422840d54613e93bfe}
+}]\index{GSN\_\-SPI\_\-COMPLETED@{GSN\_\-SPI\_\-COMPLETED}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-COMPLETED@{GSN\_\-SPI\_\-COMPLETED}}\item[{\em 
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6a159c78cc937dc640681c25167195c72c}{
+GSN\_\-SPI\_\-COMPLETED}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6a159c78cc937dc640681c25167195c72c}
+}]\index{GSN\_\-SPI\_\-CLOSED@{GSN\_\-SPI\_\-CLOSED}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-CLOSED@{GSN\_\-SPI\_\-CLOSED}}\item[{\em 
+\hypertarget{a00587_acadb33517f6f254dce30d69f644a88c6ab0ed55469a52e6fe7079f4b3fa227bdc}{
+GSN\_\-SPI\_\-CLOSED}
+\label{a00587_acadb33517f6f254dce30d69f644a88c6ab0ed55469a52e6fe7079f4b3fa227bdc}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 370 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_a8158d263babcdfe1b3b113e23acd1bf7}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-NUM\_\-T@{GSN\_\-SPI\_\-NUM\_\-T}}
+\index{GSN\_\-SPI\_\-NUM\_\-T@{GSN\_\-SPI\_\-NUM\_\-T}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-NUM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-SPI\_\-NUM\_\-T}}}
+\label{a00587_a8158d263babcdfe1b3b113e23acd1bf7}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{SPI\_\-NUM\_\-0@{SPI\_\-NUM\_\-0}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-NUM\_\-0@{SPI\_\-NUM\_\-0}}\item[{\em 
+\hypertarget{a00587_a8158d263babcdfe1b3b113e23acd1bf7a355d6fc59709893547ab5ad52b675afd}{
+SPI\_\-NUM\_\-0}
+\label{a00587_a8158d263babcdfe1b3b113e23acd1bf7a355d6fc59709893547ab5ad52b675afd}
+}]\index{SPI\_\-NUM\_\-1@{SPI\_\-NUM\_\-1}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!SPI\_\-NUM\_\-1@{SPI\_\-NUM\_\-1}}\item[{\em 
+\hypertarget{a00587_a8158d263babcdfe1b3b113e23acd1bf7ac1ce77771a9fcfa5a154ce1b5147c171}{
+SPI\_\-NUM\_\-1}
+\label{a00587_a8158d263babcdfe1b3b113e23acd1bf7ac1ce77771a9fcfa5a154ce1b5147c171}
+}]\index{GSN\_\-SPI\_\-NUM\_\-MSPI@{GSN\_\-SPI\_\-NUM\_\-MSPI}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-NUM\_\-MSPI@{GSN\_\-SPI\_\-NUM\_\-MSPI}}\item[{\em 
+\hypertarget{a00587_a8158d263babcdfe1b3b113e23acd1bf7ad0a947040f7568169fa89f259818e24c}{
+GSN\_\-SPI\_\-NUM\_\-MSPI}
+\label{a00587_a8158d263babcdfe1b3b113e23acd1bf7ad0a947040f7568169fa89f259818e24c}
+}]Alternate Name is MSPI \index{GSN\_\-SPI\_\-NUM\_\-SSPI@{GSN\_\-SPI\_\-NUM\_\-SSPI}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-NUM\_\-SSPI@{GSN\_\-SPI\_\-NUM\_\-SSPI}}\item[{\em 
+\hypertarget{a00587_a8158d263babcdfe1b3b113e23acd1bf7a30f602b432a624056e8b621d60c07f59}{
+GSN\_\-SPI\_\-NUM\_\-SSPI}
+\label{a00587_a8158d263babcdfe1b3b113e23acd1bf7a30f602b432a624056e8b621d60c07f59}
+}]Alternate Name is SSPI \index{GSN\_\-TOTAL\_\-SPIS@{GSN\_\-TOTAL\_\-SPIS}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-TOTAL\_\-SPIS@{GSN\_\-TOTAL\_\-SPIS}}\item[{\em 
+\hypertarget{a00587_a8158d263babcdfe1b3b113e23acd1bf7ae7e7298752aff8ce0ca30badc092a296}{
+GSN\_\-TOTAL\_\-SPIS}
+\label{a00587_a8158d263babcdfe1b3b113e23acd1bf7ae7e7298752aff8ce0ca30badc092a296}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 166 of file gsn\_\-spi.h.
+
+\hypertarget{a00587_ad34f711f03e3ba0055566119931ebfa6}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE}}
+\index{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STATE}}}
+\label{a00587_ad34f711f03e3ba0055566119931ebfa6}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY}}\item[{\em 
+\hypertarget{a00587_ad34f711f03e3ba0055566119931ebfa6ab092c6de33f79701c1b685352b298edb}{
+GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY}
+\label{a00587_ad34f711f03e3ba0055566119931ebfa6ab092c6de33f79701c1b685352b298edb}
+}]system is ready to recieve data (its default state) \index{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP\_\-PENDING@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP\_\-PENDING}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP\_\-PENDING@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP\_\-PENDING}}\item[{\em 
+\hypertarget{a00587_ad34f711f03e3ba0055566119931ebfa6aeea49d95c57b3b8fe30560ad0c6c6b00}{
+GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP\_\-PENDING}
+\label{a00587_ad34f711f03e3ba0055566119931ebfa6aeea49d95c57b3b8fe30560ad0c6c6b00}
+}]threshold cross over detected but GS\_\-SPI\_\-XOFF yet to be transmitted \index{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP}}\item[{\em 
+\hypertarget{a00587_ad34f711f03e3ba0055566119931ebfa6ad1575897e2aa42d6d7685e88d935aa97}{
+GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-STOP}
+\label{a00587_ad34f711f03e3ba0055566119931ebfa6ad1575897e2aa42d6d7685e88d935aa97}
+}]threshold cross over detected and GS\_\-SPI\_\-XOFF transmitted to peer system \index{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY\_\-PENDING@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY\_\-PENDING}!gsn\_\-spi.h@{gsn\_\-spi.h}}\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY\_\-PENDING@{GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY\_\-PENDING}}\item[{\em 
+\hypertarget{a00587_ad34f711f03e3ba0055566119931ebfa6a1ee1ef11291783a59b3dd7ef78ac3a57}{
+GSN\_\-SPI\_\-RX\_\-FLW\_\-CTRL\_\-READY\_\-PENDING}
+\label{a00587_ad34f711f03e3ba0055566119931ebfa6a1ee1ef11291783a59b3dd7ef78ac3a57}
+}]system is ready to recieve data but GS\_\-SPI\_\-XON yet to be transmitted \end{description}
+\end{Desc}
+
+
+
+Definition at line 196 of file gsn\_\-spi.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00587_a9c96753aa477c53506e173d5ef6cf7e6}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GsnSpi0\_\-RxCallBack\_\-Patch@{GsnSpi0\_\-RxCallBack\_\-Patch}}
+\index{GsnSpi0\_\-RxCallBack\_\-Patch@{GsnSpi0\_\-RxCallBack\_\-Patch}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GsnSpi0\_\-RxCallBack\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnSpi0\_\-RxCallBack\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{ctx, }
+\item[{{\bf UINT32}}]{channelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00587_a9c96753aa477c53506e173d5ef6cf7e6}
+\hypertarget{a00587_a13d0dbc631b15bf6785f92f9a04bd264}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GsnSpi0\_\-TxCallBack\_\-Patch@{GsnSpi0\_\-TxCallBack\_\-Patch}}
+\index{GsnSpi0\_\-TxCallBack\_\-Patch@{GsnSpi0\_\-TxCallBack\_\-Patch}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GsnSpi0\_\-TxCallBack\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnSpi0\_\-TxCallBack\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{ctx, }
+\item[{{\bf UINT32}}]{channelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00587_a13d0dbc631b15bf6785f92f9a04bd264}
+\hypertarget{a00587_a994713a1125a0a17d390664881115924}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GsnSpi1\_\-RxCallBack\_\-Patch@{GsnSpi1\_\-RxCallBack\_\-Patch}}
+\index{GsnSpi1\_\-RxCallBack\_\-Patch@{GsnSpi1\_\-RxCallBack\_\-Patch}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GsnSpi1\_\-RxCallBack\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnSpi1\_\-RxCallBack\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{ctx, }
+\item[{{\bf UINT32}}]{channelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00587_a994713a1125a0a17d390664881115924}
+\hypertarget{a00587_a6dea914c8be26f943338ddfbf83e3aa5}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GsnSpi1\_\-TxCallBack\_\-Patch@{GsnSpi1\_\-TxCallBack\_\-Patch}}
+\index{GsnSpi1\_\-TxCallBack\_\-Patch@{GsnSpi1\_\-TxCallBack\_\-Patch}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GsnSpi1\_\-TxCallBack\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnSpi1\_\-TxCallBack\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{ctx, }
+\item[{{\bf UINT32}}]{channelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00587_a6dea914c8be26f943338ddfbf83e3aa5}
+\hypertarget{a00587_a9ee88fbbb0adb04ad37cc545aa863bfc}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GsnSpi\_\-Close\_\-Patch@{GsnSpi\_\-Close\_\-Patch}}
+\index{GsnSpi\_\-Close\_\-Patch@{GsnSpi\_\-Close\_\-Patch}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GsnSpi\_\-Close\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnSpi\_\-Close\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$}]{spiHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00587_a9ee88fbbb0adb04ad37cc545aa863bfc}
+\hypertarget{a00587_a25126d53818e98c6503821c4533dc8e9}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GsnSpi\_\-DmaPingBufSet@{GsnSpi\_\-DmaPingBufSet}}
+\index{GsnSpi\_\-DmaPingBufSet@{GsnSpi\_\-DmaPingBufSet}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GsnSpi\_\-DmaPingBufSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnSpi\_\-DmaPingBufSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$}]{spiHandle, }
+\item[{{\bf GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} $\ast$}]{spiRW}
+\end{DoxyParamCaption}
+)}}
+\label{a00587_a25126d53818e98c6503821c4533dc8e9}
+\hypertarget{a00587_a53b71435edc8c235f4090408d1f10e37}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GsnSpi\_\-DmaPongBufSet@{GsnSpi\_\-DmaPongBufSet}}
+\index{GsnSpi\_\-DmaPongBufSet@{GsnSpi\_\-DmaPongBufSet}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GsnSpi\_\-DmaPongBufSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnSpi\_\-DmaPongBufSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$}]{spiHandle, }
+\item[{{\bf GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} $\ast$}]{spiRW}
+\end{DoxyParamCaption}
+)}}
+\label{a00587_a53b71435edc8c235f4090408d1f10e37}
+\hypertarget{a00587_a6b43097fa987f686cdbbaa39882a5e70}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GsnSpi\_\-MasterReadWrite\_\-Patch@{GsnSpi\_\-MasterReadWrite\_\-Patch}}
+\index{GsnSpi\_\-MasterReadWrite\_\-Patch@{GsnSpi\_\-MasterReadWrite\_\-Patch}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GsnSpi\_\-MasterReadWrite\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnSpi\_\-MasterReadWrite\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$}]{spiHandle, }
+\item[{{\bf GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} $\ast$}]{spiRW}
+\end{DoxyParamCaption}
+)}}
+\label{a00587_a6b43097fa987f686cdbbaa39882a5e70}
+\hypertarget{a00587_a4e53ad22ba5ae147b718beea75c4d098}{
+\index{gsn\_\-spi.h@{gsn\_\-spi.h}!GsnSpi\_\-SlaveReadWrite\_\-Patch@{GsnSpi\_\-SlaveReadWrite\_\-Patch}}
+\index{GsnSpi\_\-SlaveReadWrite\_\-Patch@{GsnSpi\_\-SlaveReadWrite\_\-Patch}!gsn_spi.h@{gsn\_\-spi.h}}
+\subsubsection[{GsnSpi\_\-SlaveReadWrite\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnSpi\_\-SlaveReadWrite\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$}]{spiHandle, }
+\item[{{\bf GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} $\ast$}]{spiRW}
+\end{DoxyParamCaption}
+)}}
+\label{a00587_a4e53ad22ba5ae147b718beea75c4d098}

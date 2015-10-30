@@ -1,0 +1,933 @@
+\hypertarget{a00650}{
+\section{GSN PWM Device Driver}
+\label{a00650}\index{GSN PWM Device Driver@{GSN PWM Device Driver}}
+}
+
+
+This group contains public definitions for the PWM Device Driver.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00183}{GSN\_\-PWM\_\-PATTERN}
+\begin{DoxyCompactList}\small\item\em pwm pattern structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00454}{PWM\_\-INFO}
+\begin{DoxyCompactList}\small\item\em pwm config structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00181}{GSN\_\-PWM\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em pwm config structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00180}{GSN\_\-PWM}
+\begin{DoxyCompactList}\small\item\em pwm structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE}
+\begin{DoxyCompactList}\small\item\em handle to pwm module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} \hyperlink{a00650_ga6c0d8b08ff5dfcf29b094374033312e9}{GSN\_\-PWM\_\-CLOCKSEL}
+\begin{DoxyCompactList}\small\item\em pwm clock source select. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00650_ga110e33b4ac34f5c1b7e1f1e3b27d2281}{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL} \hyperlink{a00650_ga5b3a1c776cee49d77ba7c367502eeb53}{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL}
+\begin{DoxyCompactList}\small\item\em system clock source select. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00650_ga52371d0feb719879e34584cfa2ef6733}{GSN\_\-PWM\_\-CLOCKFREQ} \hyperlink{a00650_ga66c6af105ee29581b24b10edad6bb0b9}{GSN\_\-PWM\_\-CLOCKFREQ}
+\begin{DoxyCompactList}\small\item\em pwm clock frequency. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00650_gaea0350ae8992c56b4a1bad6bc7ad5de1}{GSN\_\-PWM\_\-POLARITY} \hyperlink{a00650_ga852441593095a912d86bc01bbe8678f0}{GSN\_\-PWM\_\-POLARITY}
+\begin{DoxyCompactList}\small\item\em pwm polarity. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00650_ga2ce321cf068e815e8a30642d73f1bdd4}{GSN\_\-PMW\_\-MODE} \hyperlink{a00650_gae68dbc7fb3fb9bb56a6d4abcbbba43b2}{GSN\_\-PMW\_\-MODE}
+\begin{DoxyCompactList}\small\item\em pwm mode. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00183}{GSN\_\-PWM\_\-PATTERN} \hyperlink{a00650_ga3a1ee0c27116f4c45c7d0369eb2723a3}{GSN\_\-PWM\_\-PATTERN\_\-T}
+\begin{DoxyCompactList}\small\item\em pwm pattern structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00454}{PWM\_\-INFO} \hyperlink{a00650_gaf27034c3354002d4d9ab5141852aea8a}{GSN\_\-PWM\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em pwm config structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00181}{GSN\_\-PWM\_\-CONFIG} \hyperlink{a00650_ga635ed55bc6092da2e511379b0b6f6c64}{GSN\_\-PWM\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em pwm config structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00180}{GSN\_\-PWM} \hyperlink{a00650_gad6886352df79f09ac5070d71f1117f7f}{GSN\_\-PWM\_\-T}
+\begin{DoxyCompactList}\small\item\em pwm structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE} \hyperlink{a00650_ga8be9b48972007ba1d54815d6743d13e6}{GSN\_\-PWM\_\-HANDLE\_\-T}
+\begin{DoxyCompactList}\small\item\em handle to pwm module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} \{ \par
+\hyperlink{a00650_gga9afe1c7d571460ff2f6780bef6b433dfaa98b11eb3f872045951a4d429320d108}{GSN\_\-PWM\_\-1} =  0, 
+\par
+\hyperlink{a00650_gga9afe1c7d571460ff2f6780bef6b433dfae2615df5505d8686938fa54bbbff433c}{GSN\_\-PWM\_\-2} =  1, 
+\par
+\hyperlink{a00650_gga9afe1c7d571460ff2f6780bef6b433dfa4929db9be22abdd0bd3698a0364a0fe0}{GSN\_\-PWM\_\-3} =  2, 
+\par
+\hyperlink{a00650_gga9afe1c7d571460ff2f6780bef6b433dfaad51216337aa6e9b1ebac9acfe3305d4}{GSN\_\-PWM\_\-SYNC} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em pwm number select. \end{DoxyCompactList}\item 
+enum \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} \{ \par
+\hyperlink{a00650_ggafda5110eb592af71b799ed22c7ebf902ac40082bae4532a6c63a739bbc5163aec}{GSN\_\-PWM\_\-CLOCKSEL\_\-BUSCLOCK}, 
+\par
+\hyperlink{a00650_ggafda5110eb592af71b799ed22c7ebf902a449ae8fe8e0cdf0a007d1789cebdae8d}{GSN\_\-PWM\_\-CLOCKSEL\_\-PRESCALECLOCK}
+ \}
+\begin{DoxyCompactList}\small\item\em pwm clock source select. \end{DoxyCompactList}\item 
+enum \hyperlink{a00650_ga110e33b4ac34f5c1b7e1f1e3b27d2281}{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL} \{ \par
+\hyperlink{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281afd82432453c917ab0e752a1e4aeef74c}{GSN\_\-PWM\_\-CLK\_\-RC}, 
+\par
+\hyperlink{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a5fe2bd939dbc6480858e898fa3d2b5f3}{GSN\_\-PWM\_\-CLK\_\-XTAL}, 
+\par
+\hyperlink{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a21baaf60b294988a2796310d4bdc56c6}{GSN\_\-PWM\_\-CLK\_\-PLL}, 
+\par
+\hyperlink{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a8f24e9a7e26bc8cf4774484739bb0d3d}{GSN\_\-PWM\_\-CLK\_\-LP}
+ \}
+\begin{DoxyCompactList}\small\item\em system clock source select. \end{DoxyCompactList}\item 
+enum \hyperlink{a00650_ga52371d0feb719879e34584cfa2ef6733}{GSN\_\-PWM\_\-CLOCKFREQ} \{ \par
+\hyperlink{a00650_gga52371d0feb719879e34584cfa2ef6733af5206b3c38acc666f31b9e983a15a976}{GSN\_\-PWM\_\-CLOCKFREQ\_\-11MHZ}, 
+\par
+\hyperlink{a00650_gga52371d0feb719879e34584cfa2ef6733abfabf3386290830ba5535eaeec958549}{GSN\_\-PWM\_\-CLOCKFREQ\_\-44MHZ}
+ \}
+\begin{DoxyCompactList}\small\item\em pwm clock frequency. \end{DoxyCompactList}\item 
+enum \hyperlink{a00650_gaea0350ae8992c56b4a1bad6bc7ad5de1}{GSN\_\-PWM\_\-POLARITY} \{ \par
+\hyperlink{a00650_ggaea0350ae8992c56b4a1bad6bc7ad5de1a52b06fef71cae3aec176796d4c9b1ac5}{GSN\_\-PWM\_\-POLARITY\_\-NORMAL}, 
+\par
+\hyperlink{a00650_ggaea0350ae8992c56b4a1bad6bc7ad5de1a585764d58b3de6209961d2b9787d26dd}{GSN\_\-PWM\_\-POLARITY\_\-INVERTED}
+ \}
+\begin{DoxyCompactList}\small\item\em pwm polarity. \end{DoxyCompactList}\item 
+enum \hyperlink{a00650_ga2ce321cf068e815e8a30642d73f1bdd4}{GSN\_\-PMW\_\-MODE} \{ \par
+\hyperlink{a00650_gga2ce321cf068e815e8a30642d73f1bdd4a53c59d2f203c604754f20a6b7ec71555}{GSN\_\-PWM\_\-MODE\_\-INDIVIDUAl}, 
+\par
+\hyperlink{a00650_gga2ce321cf068e815e8a30642d73f1bdd4a7a23dfc92d04b1e2f8fc60ea8579453b}{GSN\_\-PWM\_\-MODE\_\-SYNCHRONIZED}
+ \}
+\begin{DoxyCompactList}\small\item\em pwm mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00650_gaf4c38119e4c204818801ffb1b4e2c6b6}{GsnPwm\_\-Open} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00181}{GSN\_\-PWM\_\-CONFIG\_\-T} $\ast$pPwmConfig)
+\begin{DoxyCompactList}\small\item\em Open Pwm module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00650_gaa394019a88d51b5f716cabf35bc5e6c8}{GsnPwm\_\-Start} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber, \hyperlink{a00181}{GSN\_\-PWM\_\-CONFIG\_\-T} $\ast$pPwmConfig, \hyperlink{a00183}{GSN\_\-PWM\_\-PATTERN\_\-T} $\ast$pPwmPattern, \hyperlink{a00454}{GSN\_\-PWM\_\-INFO\_\-T} $\ast$pPwmInfo)
+\begin{DoxyCompactList}\small\item\em start Pwm module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00650_gae88f3b2ecf7fc90d29edb3176435af5a}{GsnPwm\_\-Stop} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber)
+\begin{DoxyCompactList}\small\item\em Stops Pwm module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00650_gad8fcb2f6f84a57099c5ca178dafa7286}{GsnPwm\_\-Close} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle)
+\begin{DoxyCompactList}\small\item\em Closes Pwm module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00650_gafebd1cc305dbd45194b7474691752be4}{GsnPwm\_\-PatternUpdate} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber, \hyperlink{a00183}{GSN\_\-PWM\_\-PATTERN\_\-T} $\ast$pPwmPattern)
+\begin{DoxyCompactList}\small\item\em updates Pwm output pattern. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00650_ga52371d0feb719879e34584cfa2ef6733}{GSN\_\-PWM\_\-CLOCKFREQ} \hyperlink{a00650_ga5a50ab57dd9fb26747a69f3e347a2680}{GsnPwm\_\-ClockFreqGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle)
+\begin{DoxyCompactList}\small\item\em clock frequency get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_ga86973f0fd8f4d941598f19d65b5b2da9}{GsnPwm\_\-ClockFreqSet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga52371d0feb719879e34584cfa2ef6733}{GSN\_\-PWM\_\-CLOCKFREQ} eClockFreq)
+\begin{DoxyCompactList}\small\item\em clock frequency set. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00650_gaa6f74f03d046c5f1e95ad36065c9e538}{GsnPwm\_\-PrescaleValueGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle)
+\begin{DoxyCompactList}\small\item\em clock prescale value get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_gac52e516f0ba211226a2cdff62f54bdc8}{GsnPwm\_\-PrescaleValueSet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} prescaleValue)
+\begin{DoxyCompactList}\small\item\em clock prescale value set. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} \hyperlink{a00650_ga31992b0d90dbf78c04dd3aa695d41004}{GsnPwm\_\-IndividualClockSelectGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber)
+\begin{DoxyCompactList}\small\item\em individual clock get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_gac6c42db84fde1e336b73ddc0e7099f34}{GsnPwm\_\-IndividualClockSelectSet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber, \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} eClockSelect)
+\begin{DoxyCompactList}\small\item\em individual clock select. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00650_gaea0350ae8992c56b4a1bad6bc7ad5de1}{GSN\_\-PWM\_\-POLARITY} \hyperlink{a00650_ga6be7ff3ec663dc5896cd59c400e1c00b}{GsnPwm\_\-IndividualPolarityGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber)
+\begin{DoxyCompactList}\small\item\em individual polarity get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_ga37d8d36f2d0d597eb82ebebd1c4b9953}{GsnPwm\_\-IndividualPolaritySet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber, \hyperlink{a00650_gaea0350ae8992c56b4a1bad6bc7ad5de1}{GSN\_\-PWM\_\-POLARITY} ePolarity)
+\begin{DoxyCompactList}\small\item\em individual polarity set. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_ga8b61d6d4ed2a03b4130ece4db9f2949a}{GsnPwm\_\-SynchronizedPhaseDelayGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} $\ast$pPhase01, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} $\ast$pPhase12)
+\begin{DoxyCompactList}\small\item\em synchronized phase delay get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_ga18d17db7a2e95c82aa8e84d1e1897e3e}{GsnPwm\_\-SynchronizedPhaseDelaySet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} phase01, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} phase12)
+\begin{DoxyCompactList}\small\item\em synchronized phase delay set. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} \hyperlink{a00650_gaabf0051a6ce2882eb1a734c029c7d4b9}{GsnPwm\_\-SynchronizedClockSelectGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle)
+\begin{DoxyCompactList}\small\item\em synchronized clock get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_ga177c51254727205e45ddd643abd59b14}{GsnPwm\_\-SynchronizedClockSelectSet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} eClockSelect)
+\begin{DoxyCompactList}\small\item\em synchronized clock select. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group contains public definitions for the PWM Device Driver. The Pulse Width Modulation (PWM) outputs a signal structured as a series of repeated frames of duration FramePeriod. During each frame, the PWM output signal is ON (high in normal polarity) for pTimeON and OFF (low in normal polarity) for the remainder of the frame. \par
+
+
+The PWM function blocks can be used in two modes of operations, independent PWM mode and Synchronized PWM mode. In the Independent PWM mode, each PWM output module selects a clock frequency (11 or 44 MHz), and optionally divides that frequency by a prescale value. The clock signal resulting from these choices becomes the time unit for FramePeriod and pTimeON. In the Synchronized PWM mode, a single timer drives all outputs, with a selectable phase delay between outputs 0 and 1, and between outputs 1 and 2. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00650_gae68dbc7fb3fb9bb56a6d4abcbbba43b2}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PMW\_\-MODE@{GSN\_\-PMW\_\-MODE}}
+\index{GSN\_\-PMW\_\-MODE@{GSN\_\-PMW\_\-MODE}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PMW\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-PMW\_\-MODE} {\bf GSN\_\-PMW\_\-MODE}}}
+\label{a00650_gae68dbc7fb3fb9bb56a6d4abcbbba43b2}
+
+
+pwm mode. 
+
+\hypertarget{a00650_ga66c6af105ee29581b24b10edad6bb0b9}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLOCKFREQ@{GSN\_\-PWM\_\-CLOCKFREQ}}
+\index{GSN\_\-PWM\_\-CLOCKFREQ@{GSN\_\-PWM\_\-CLOCKFREQ}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-CLOCKFREQ}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-PWM\_\-CLOCKFREQ}  {\bf GSN\_\-PWM\_\-CLOCKFREQ}}}
+\label{a00650_ga66c6af105ee29581b24b10edad6bb0b9}
+
+
+pwm clock frequency. 
+
+\hypertarget{a00650_ga6c0d8b08ff5dfcf29b094374033312e9}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLOCKSEL@{GSN\_\-PWM\_\-CLOCKSEL}}
+\index{GSN\_\-PWM\_\-CLOCKSEL@{GSN\_\-PWM\_\-CLOCKSEL}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-CLOCKSEL}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-PWM\_\-CLOCKSEL}  {\bf GSN\_\-PWM\_\-CLOCKSEL}}}
+\label{a00650_ga6c0d8b08ff5dfcf29b094374033312e9}
+
+
+pwm clock source select. 
+
+\hypertarget{a00650_ga635ed55bc6092da2e511379b0b6f6c64}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CONFIG\_\-T@{GSN\_\-PWM\_\-CONFIG\_\-T}}
+\index{GSN\_\-PWM\_\-CONFIG\_\-T@{GSN\_\-PWM\_\-CONFIG\_\-T}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-PWM\_\-CONFIG} {\bf GSN\_\-PWM\_\-CONFIG\_\-T}}}
+\label{a00650_ga635ed55bc6092da2e511379b0b6f6c64}
+
+
+pwm config structure. 
+
+\hypertarget{a00650_ga8be9b48972007ba1d54815d6743d13e6}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-HANDLE\_\-T@{GSN\_\-PWM\_\-HANDLE\_\-T}}
+\index{GSN\_\-PWM\_\-HANDLE\_\-T@{GSN\_\-PWM\_\-HANDLE\_\-T}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-HANDLE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-PWM\_\-HANDLE} {\bf GSN\_\-PWM\_\-HANDLE\_\-T}}}
+\label{a00650_ga8be9b48972007ba1d54815d6743d13e6}
+
+
+handle to pwm module. 
+
+\hypertarget{a00650_gaf27034c3354002d4d9ab5141852aea8a}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-INFO\_\-T@{GSN\_\-PWM\_\-INFO\_\-T}}
+\index{GSN\_\-PWM\_\-INFO\_\-T@{GSN\_\-PWM\_\-INFO\_\-T}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf PWM\_\-INFO}  {\bf GSN\_\-PWM\_\-INFO\_\-T}}}
+\label{a00650_gaf27034c3354002d4d9ab5141852aea8a}
+
+
+pwm config structure. 
+
+\hypertarget{a00650_ga3a1ee0c27116f4c45c7d0369eb2723a3}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-PATTERN\_\-T@{GSN\_\-PWM\_\-PATTERN\_\-T}}
+\index{GSN\_\-PWM\_\-PATTERN\_\-T@{GSN\_\-PWM\_\-PATTERN\_\-T}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-PATTERN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-PWM\_\-PATTERN}  {\bf GSN\_\-PWM\_\-PATTERN\_\-T}}}
+\label{a00650_ga3a1ee0c27116f4c45c7d0369eb2723a3}
+
+
+pwm pattern structure. 
+
+\hypertarget{a00650_ga852441593095a912d86bc01bbe8678f0}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-POLARITY@{GSN\_\-PWM\_\-POLARITY}}
+\index{GSN\_\-PWM\_\-POLARITY@{GSN\_\-PWM\_\-POLARITY}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-POLARITY}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-PWM\_\-POLARITY}  {\bf GSN\_\-PWM\_\-POLARITY}}}
+\label{a00650_ga852441593095a912d86bc01bbe8678f0}
+
+
+pwm polarity. 
+
+\hypertarget{a00650_ga5b3a1c776cee49d77ba7c367502eeb53}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL@{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL}}
+\index{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL@{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL}    {\bf GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL}}}
+\label{a00650_ga5b3a1c776cee49d77ba7c367502eeb53}
+
+
+system clock source select. 
+
+\hypertarget{a00650_gad6886352df79f09ac5070d71f1117f7f}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-T@{GSN\_\-PWM\_\-T}}
+\index{GSN\_\-PWM\_\-T@{GSN\_\-PWM\_\-T}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-PWM}  {\bf GSN\_\-PWM\_\-T}}}
+\label{a00650_gad6886352df79f09ac5070d71f1117f7f}
+
+
+pwm structure. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00650_ga2ce321cf068e815e8a30642d73f1bdd4}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PMW\_\-MODE@{GSN\_\-PMW\_\-MODE}}
+\index{GSN\_\-PMW\_\-MODE@{GSN\_\-PMW\_\-MODE}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PMW\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-PMW\_\-MODE}}}
+\label{a00650_ga2ce321cf068e815e8a30642d73f1bdd4}
+
+
+pwm mode. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-PWM\_\-MODE\_\-INDIVIDUAl@{GSN\_\-PWM\_\-MODE\_\-INDIVIDUAl}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-MODE\_\-INDIVIDUAl@{GSN\_\-PWM\_\-MODE\_\-INDIVIDUAl}}\item[{\em 
+\hypertarget{a00650_gga2ce321cf068e815e8a30642d73f1bdd4a53c59d2f203c604754f20a6b7ec71555}{
+GSN\_\-PWM\_\-MODE\_\-INDIVIDUAl}
+\label{a00650_gga2ce321cf068e815e8a30642d73f1bdd4a53c59d2f203c604754f20a6b7ec71555}
+}]\index{GSN\_\-PWM\_\-MODE\_\-SYNCHRONIZED@{GSN\_\-PWM\_\-MODE\_\-SYNCHRONIZED}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-MODE\_\-SYNCHRONIZED@{GSN\_\-PWM\_\-MODE\_\-SYNCHRONIZED}}\item[{\em 
+\hypertarget{a00650_gga2ce321cf068e815e8a30642d73f1bdd4a7a23dfc92d04b1e2f8fc60ea8579453b}{
+GSN\_\-PWM\_\-MODE\_\-SYNCHRONIZED}
+\label{a00650_gga2ce321cf068e815e8a30642d73f1bdd4a7a23dfc92d04b1e2f8fc60ea8579453b}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 188 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_ga52371d0feb719879e34584cfa2ef6733}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLOCKFREQ@{GSN\_\-PWM\_\-CLOCKFREQ}}
+\index{GSN\_\-PWM\_\-CLOCKFREQ@{GSN\_\-PWM\_\-CLOCKFREQ}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-CLOCKFREQ}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-PWM\_\-CLOCKFREQ}}}
+\label{a00650_ga52371d0feb719879e34584cfa2ef6733}
+
+
+pwm clock frequency. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-PWM\_\-CLOCKFREQ\_\-11MHZ@{GSN\_\-PWM\_\-CLOCKFREQ\_\-11MHZ}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLOCKFREQ\_\-11MHZ@{GSN\_\-PWM\_\-CLOCKFREQ\_\-11MHZ}}\item[{\em 
+\hypertarget{a00650_gga52371d0feb719879e34584cfa2ef6733af5206b3c38acc666f31b9e983a15a976}{
+GSN\_\-PWM\_\-CLOCKFREQ\_\-11MHZ}
+\label{a00650_gga52371d0feb719879e34584cfa2ef6733af5206b3c38acc666f31b9e983a15a976}
+}]\index{GSN\_\-PWM\_\-CLOCKFREQ\_\-44MHZ@{GSN\_\-PWM\_\-CLOCKFREQ\_\-44MHZ}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLOCKFREQ\_\-44MHZ@{GSN\_\-PWM\_\-CLOCKFREQ\_\-44MHZ}}\item[{\em 
+\hypertarget{a00650_gga52371d0feb719879e34584cfa2ef6733abfabf3386290830ba5535eaeec958549}{
+GSN\_\-PWM\_\-CLOCKFREQ\_\-44MHZ}
+\label{a00650_gga52371d0feb719879e34584cfa2ef6733abfabf3386290830ba5535eaeec958549}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 162 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_gafda5110eb592af71b799ed22c7ebf902}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLOCKSEL@{GSN\_\-PWM\_\-CLOCKSEL}}
+\index{GSN\_\-PWM\_\-CLOCKSEL@{GSN\_\-PWM\_\-CLOCKSEL}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-CLOCKSEL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-PWM\_\-CLOCKSEL}}}
+\label{a00650_gafda5110eb592af71b799ed22c7ebf902}
+
+
+pwm clock source select. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-PWM\_\-CLOCKSEL\_\-BUSCLOCK@{GSN\_\-PWM\_\-CLOCKSEL\_\-BUSCLOCK}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLOCKSEL\_\-BUSCLOCK@{GSN\_\-PWM\_\-CLOCKSEL\_\-BUSCLOCK}}\item[{\em 
+\hypertarget{a00650_ggafda5110eb592af71b799ed22c7ebf902ac40082bae4532a6c63a739bbc5163aec}{
+GSN\_\-PWM\_\-CLOCKSEL\_\-BUSCLOCK}
+\label{a00650_ggafda5110eb592af71b799ed22c7ebf902ac40082bae4532a6c63a739bbc5163aec}
+}]\index{GSN\_\-PWM\_\-CLOCKSEL\_\-PRESCALECLOCK@{GSN\_\-PWM\_\-CLOCKSEL\_\-PRESCALECLOCK}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLOCKSEL\_\-PRESCALECLOCK@{GSN\_\-PWM\_\-CLOCKSEL\_\-PRESCALECLOCK}}\item[{\em 
+\hypertarget{a00650_ggafda5110eb592af71b799ed22c7ebf902a449ae8fe8e0cdf0a007d1789cebdae8d}{
+GSN\_\-PWM\_\-CLOCKSEL\_\-PRESCALECLOCK}
+\label{a00650_ggafda5110eb592af71b799ed22c7ebf902a449ae8fe8e0cdf0a007d1789cebdae8d}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 135 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-NO@{GSN\_\-PWM\_\-NO}}
+\index{GSN\_\-PWM\_\-NO@{GSN\_\-PWM\_\-NO}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-NO}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-PWM\_\-NO}}}
+\label{a00650_ga9afe1c7d571460ff2f6780bef6b433df}
+
+
+pwm number select. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-PWM\_\-1@{GSN\_\-PWM\_\-1}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-1@{GSN\_\-PWM\_\-1}}\item[{\em 
+\hypertarget{a00650_gga9afe1c7d571460ff2f6780bef6b433dfaa98b11eb3f872045951a4d429320d108}{
+GSN\_\-PWM\_\-1}
+\label{a00650_gga9afe1c7d571460ff2f6780bef6b433dfaa98b11eb3f872045951a4d429320d108}
+}]\index{GSN\_\-PWM\_\-2@{GSN\_\-PWM\_\-2}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-2@{GSN\_\-PWM\_\-2}}\item[{\em 
+\hypertarget{a00650_gga9afe1c7d571460ff2f6780bef6b433dfae2615df5505d8686938fa54bbbff433c}{
+GSN\_\-PWM\_\-2}
+\label{a00650_gga9afe1c7d571460ff2f6780bef6b433dfae2615df5505d8686938fa54bbbff433c}
+}]\index{GSN\_\-PWM\_\-3@{GSN\_\-PWM\_\-3}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-3@{GSN\_\-PWM\_\-3}}\item[{\em 
+\hypertarget{a00650_gga9afe1c7d571460ff2f6780bef6b433dfa4929db9be22abdd0bd3698a0364a0fe0}{
+GSN\_\-PWM\_\-3}
+\label{a00650_gga9afe1c7d571460ff2f6780bef6b433dfa4929db9be22abdd0bd3698a0364a0fe0}
+}]\index{GSN\_\-PWM\_\-SYNC@{GSN\_\-PWM\_\-SYNC}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-SYNC@{GSN\_\-PWM\_\-SYNC}}\item[{\em 
+\hypertarget{a00650_gga9afe1c7d571460ff2f6780bef6b433dfaad51216337aa6e9b1ebac9acfe3305d4}{
+GSN\_\-PWM\_\-SYNC}
+\label{a00650_gga9afe1c7d571460ff2f6780bef6b433dfaad51216337aa6e9b1ebac9acfe3305d4}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 120 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_gaea0350ae8992c56b4a1bad6bc7ad5de1}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-POLARITY@{GSN\_\-PWM\_\-POLARITY}}
+\index{GSN\_\-PWM\_\-POLARITY@{GSN\_\-PWM\_\-POLARITY}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-POLARITY}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-PWM\_\-POLARITY}}}
+\label{a00650_gaea0350ae8992c56b4a1bad6bc7ad5de1}
+
+
+pwm polarity. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-PWM\_\-POLARITY\_\-NORMAL@{GSN\_\-PWM\_\-POLARITY\_\-NORMAL}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-POLARITY\_\-NORMAL@{GSN\_\-PWM\_\-POLARITY\_\-NORMAL}}\item[{\em 
+\hypertarget{a00650_ggaea0350ae8992c56b4a1bad6bc7ad5de1a52b06fef71cae3aec176796d4c9b1ac5}{
+GSN\_\-PWM\_\-POLARITY\_\-NORMAL}
+\label{a00650_ggaea0350ae8992c56b4a1bad6bc7ad5de1a52b06fef71cae3aec176796d4c9b1ac5}
+}]\index{GSN\_\-PWM\_\-POLARITY\_\-INVERTED@{GSN\_\-PWM\_\-POLARITY\_\-INVERTED}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-POLARITY\_\-INVERTED@{GSN\_\-PWM\_\-POLARITY\_\-INVERTED}}\item[{\em 
+\hypertarget{a00650_ggaea0350ae8992c56b4a1bad6bc7ad5de1a585764d58b3de6209961d2b9787d26dd}{
+GSN\_\-PWM\_\-POLARITY\_\-INVERTED}
+\label{a00650_ggaea0350ae8992c56b4a1bad6bc7ad5de1a585764d58b3de6209961d2b9787d26dd}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 175 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_ga110e33b4ac34f5c1b7e1f1e3b27d2281}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL@{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL}}
+\index{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL@{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL}}}
+\label{a00650_ga110e33b4ac34f5c1b7e1f1e3b27d2281}
+
+
+system clock source select. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-PWM\_\-CLK\_\-RC@{GSN\_\-PWM\_\-CLK\_\-RC}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLK\_\-RC@{GSN\_\-PWM\_\-CLK\_\-RC}}\item[{\em 
+\hypertarget{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281afd82432453c917ab0e752a1e4aeef74c}{
+GSN\_\-PWM\_\-CLK\_\-RC}
+\label{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281afd82432453c917ab0e752a1e4aeef74c}
+}]\index{GSN\_\-PWM\_\-CLK\_\-XTAL@{GSN\_\-PWM\_\-CLK\_\-XTAL}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLK\_\-XTAL@{GSN\_\-PWM\_\-CLK\_\-XTAL}}\item[{\em 
+\hypertarget{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a5fe2bd939dbc6480858e898fa3d2b5f3}{
+GSN\_\-PWM\_\-CLK\_\-XTAL}
+\label{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a5fe2bd939dbc6480858e898fa3d2b5f3}
+}]\index{GSN\_\-PWM\_\-CLK\_\-PLL@{GSN\_\-PWM\_\-CLK\_\-PLL}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLK\_\-PLL@{GSN\_\-PWM\_\-CLK\_\-PLL}}\item[{\em 
+\hypertarget{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a21baaf60b294988a2796310d4bdc56c6}{
+GSN\_\-PWM\_\-CLK\_\-PLL}
+\label{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a21baaf60b294988a2796310d4bdc56c6}
+}]\index{GSN\_\-PWM\_\-CLK\_\-LP@{GSN\_\-PWM\_\-CLK\_\-LP}!GSN PWM Device Driver@{GSN PWM Device Driver}}\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GSN\_\-PWM\_\-CLK\_\-LP@{GSN\_\-PWM\_\-CLK\_\-LP}}\item[{\em 
+\hypertarget{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a8f24e9a7e26bc8cf4774484739bb0d3d}{
+GSN\_\-PWM\_\-CLK\_\-LP}
+\label{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a8f24e9a7e26bc8cf4774484739bb0d3d}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 147 of file gsn\_\-pwm.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00650_ga5a50ab57dd9fb26747a69f3e347a2680}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-ClockFreqGet@{GsnPwm\_\-ClockFreqGet}}
+\index{GsnPwm\_\-ClockFreqGet@{GsnPwm\_\-ClockFreqGet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-ClockFreqGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf GSN\_\-PWM\_\-CLOCKFREQ} GsnPwm\_\-ClockFreqGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_ga5a50ab57dd9fb26747a69f3e347a2680}
+
+
+clock frequency get. 
+
+This function gets the clock frequency being used. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em PWM\_\-CLOCKFREQ} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 379 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_ga86973f0fd8f4d941598f19d65b5b2da9}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-ClockFreqSet@{GsnPwm\_\-ClockFreqSet}}
+\index{GsnPwm\_\-ClockFreqSet@{GsnPwm\_\-ClockFreqSet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-ClockFreqSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE void GsnPwm\_\-ClockFreqSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf GSN\_\-PWM\_\-CLOCKFREQ}}]{eClockFreq}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_ga86973f0fd8f4d941598f19d65b5b2da9}
+
+
+clock frequency set. 
+
+This function sets the clock frequency. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em eClockFreq} & -\/ IN clock frequency to be set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 399 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_gad8fcb2f6f84a57099c5ca178dafa7286}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-Close@{GsnPwm\_\-Close}}
+\index{GsnPwm\_\-Close@{GsnPwm\_\-Close}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-Close}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnPwm\_\-Close (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_gad8fcb2f6f84a57099c5ca178dafa7286}
+
+
+Closes Pwm module. 
+
+This function Closes the pwm module. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This functions closes the pwm module and uninstalls the irq handler. 
+\end{DoxyNote}
+\hypertarget{a00650_ga31992b0d90dbf78c04dd3aa695d41004}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-IndividualClockSelectGet@{GsnPwm\_\-IndividualClockSelectGet}}
+\index{GsnPwm\_\-IndividualClockSelectGet@{GsnPwm\_\-IndividualClockSelectGet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-IndividualClockSelectGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf GSN\_\-PWM\_\-CLOCKSEL} GsnPwm\_\-IndividualClockSelectGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf GSN\_\-PWM\_\-NO}}]{pwmNumber}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_ga31992b0d90dbf78c04dd3aa695d41004}
+
+
+individual clock get. 
+
+This function gets the clock source of a particular pwm output. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em pwmNumber} & -\/ IN channel number. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-PWM\_\-CLOCKSEL.} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 463 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_gac6c42db84fde1e336b73ddc0e7099f34}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-IndividualClockSelectSet@{GsnPwm\_\-IndividualClockSelectSet}}
+\index{GsnPwm\_\-IndividualClockSelectSet@{GsnPwm\_\-IndividualClockSelectSet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-IndividualClockSelectSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE void GsnPwm\_\-IndividualClockSelectSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf GSN\_\-PWM\_\-NO}}]{pwmNumber, }
+\item[{{\bf GSN\_\-PWM\_\-CLOCKSEL}}]{eClockSelect}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_gac6c42db84fde1e336b73ddc0e7099f34}
+
+
+individual clock select. 
+
+This function sets the clock source of a particular pwm output. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em pwmNumber} & -\/ IN channel number. \\
+\hline
+{\em eClockSelect} & -\/ IN bus clock or prescaled clock. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 487 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_ga6be7ff3ec663dc5896cd59c400e1c00b}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-IndividualPolarityGet@{GsnPwm\_\-IndividualPolarityGet}}
+\index{GsnPwm\_\-IndividualPolarityGet@{GsnPwm\_\-IndividualPolarityGet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-IndividualPolarityGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf GSN\_\-PWM\_\-POLARITY} GsnPwm\_\-IndividualPolarityGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf GSN\_\-PWM\_\-NO}}]{pwmNumber}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_ga6be7ff3ec663dc5896cd59c400e1c00b}
+
+
+individual polarity get. 
+
+This function gets the polarity of a particular pwm output. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em pwmNumber} & -\/ IN channel number. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-PWM\_\-POLARITY.} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 517 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_ga37d8d36f2d0d597eb82ebebd1c4b9953}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-IndividualPolaritySet@{GsnPwm\_\-IndividualPolaritySet}}
+\index{GsnPwm\_\-IndividualPolaritySet@{GsnPwm\_\-IndividualPolaritySet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-IndividualPolaritySet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE void GsnPwm\_\-IndividualPolaritySet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf GSN\_\-PWM\_\-NO}}]{pwmNumber, }
+\item[{{\bf GSN\_\-PWM\_\-POLARITY}}]{ePolarity}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_ga37d8d36f2d0d597eb82ebebd1c4b9953}
+
+
+individual polarity set. 
+
+This function sets the polarity of a particular pwm output. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em pwmNumber} & -\/ IN channel number. \\
+\hline
+{\em ePolarity} & -\/ IN polarity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 542 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_gaf4c38119e4c204818801ffb1b4e2c6b6}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-Open@{GsnPwm\_\-Open}}
+\index{GsnPwm\_\-Open@{GsnPwm\_\-Open}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-Open}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnPwm\_\-Open (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf GSN\_\-PWM\_\-CONFIG\_\-T} $\ast$}]{pPwmConfig}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_gaf4c38119e4c204818801ffb1b4e2c6b6}
+
+
+Open Pwm module. 
+
+This function opens pwm module. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em pPwmConfig} & -\/ IN pointer to pwm configuration. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em PWM\_\-STATUS\_\-STARTED} & pwm already started. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function opens the pwm module and installs the irq (interrupt request) handler. 
+\end{DoxyNote}
+\hypertarget{a00650_gafebd1cc305dbd45194b7474691752be4}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-PatternUpdate@{GsnPwm\_\-PatternUpdate}}
+\index{GsnPwm\_\-PatternUpdate@{GsnPwm\_\-PatternUpdate}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-PatternUpdate}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnPwm\_\-PatternUpdate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf GSN\_\-PWM\_\-NO}}]{pwmNumber, }
+\item[{{\bf GSN\_\-PWM\_\-PATTERN\_\-T} $\ast$}]{pPwmPattern}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_gafebd1cc305dbd45194b7474691752be4}
+
+
+updates Pwm output pattern. 
+
+This function updates the pwm output pattern. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em pwmNumber} & -\/ IN channel number to be updated. \\
+\hline
+{\em pPwmPattern} & -\/ IN pointer to pattern structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em GSN\_\-FAILURE} & Operation failed. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00650_gaa6f74f03d046c5f1e95ad36065c9e538}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-PrescaleValueGet@{GsnPwm\_\-PrescaleValueGet}}
+\index{GsnPwm\_\-PrescaleValueGet@{GsnPwm\_\-PrescaleValueGet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-PrescaleValueGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf UINT8} GsnPwm\_\-PrescaleValueGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_gaa6f74f03d046c5f1e95ad36065c9e538}
+
+
+clock prescale value get. 
+
+This function gets the prescale value being used. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em returns} & first 6 bits of PWMCPS register \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 423 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_gac52e516f0ba211226a2cdff62f54bdc8}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-PrescaleValueSet@{GsnPwm\_\-PrescaleValueSet}}
+\index{GsnPwm\_\-PrescaleValueSet@{GsnPwm\_\-PrescaleValueSet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-PrescaleValueSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE void GsnPwm\_\-PrescaleValueSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf UINT8}}]{prescaleValue}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_gac52e516f0ba211226a2cdff62f54bdc8}
+
+
+clock prescale value set. 
+
+This function sets the prescale value. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em prescaleValue} & -\/ IN 6 bit prescale value (2 to 63) . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 442 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_gaa394019a88d51b5f716cabf35bc5e6c8}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-Start@{GsnPwm\_\-Start}}
+\index{GsnPwm\_\-Start@{GsnPwm\_\-Start}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-Start}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnPwm\_\-Start (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf GSN\_\-PWM\_\-NO}}]{pwmNumber, }
+\item[{{\bf GSN\_\-PWM\_\-CONFIG\_\-T} $\ast$}]{pPwmConfig, }
+\item[{{\bf GSN\_\-PWM\_\-PATTERN\_\-T} $\ast$}]{pPwmPattern, }
+\item[{{\bf GSN\_\-PWM\_\-INFO\_\-T} $\ast$}]{pPwmInfo}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_gaa394019a88d51b5f716cabf35bc5e6c8}
+
+
+start Pwm module. 
+
+This function starts the pwm module. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em pwmNumber} & -\/ IN channel number to be started. \\
+\hline
+{\em pPwmConfig} & -\/ IN pointer to configuration structure. \\
+\hline
+{\em pPwmPattern} & -\/ IN pointer to pattern structure. \\
+\hline
+{\em pPwmInfo} & -\/ IN pointer to pwm information structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function starts the pwm module in Individual or syncronous mode. 
+\end{DoxyNote}
+\hypertarget{a00650_gae88f3b2ecf7fc90d29edb3176435af5a}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-Stop@{GsnPwm\_\-Stop}}
+\index{GsnPwm\_\-Stop@{GsnPwm\_\-Stop}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnPwm\_\-Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf GSN\_\-PWM\_\-NO}}]{pwmNumber}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_gae88f3b2ecf7fc90d29edb3176435af5a}
+
+
+Stops Pwm module. 
+
+This function Stops pwm output. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em pwmNumber} & -\/ IN channel number to be stopped. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00650_gaabf0051a6ce2882eb1a734c029c7d4b9}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-SynchronizedClockSelectGet@{GsnPwm\_\-SynchronizedClockSelectGet}}
+\index{GsnPwm\_\-SynchronizedClockSelectGet@{GsnPwm\_\-SynchronizedClockSelectGet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-SynchronizedClockSelectGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf GSN\_\-PWM\_\-CLOCKSEL} GsnPwm\_\-SynchronizedClockSelectGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_gaabf0051a6ce2882eb1a734c029c7d4b9}
+
+
+synchronized clock get. 
+
+This function gets the clock source. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-PWM\_\-CLOCKSEL\_\-BUSCLOCK} & \\
+\hline
+{\em GSN\_\-PWM\_\-CLOCKSEL\_\-PRESCALECLOCK} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 617 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_ga177c51254727205e45ddd643abd59b14}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-SynchronizedClockSelectSet@{GsnPwm\_\-SynchronizedClockSelectSet}}
+\index{GsnPwm\_\-SynchronizedClockSelectSet@{GsnPwm\_\-SynchronizedClockSelectSet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-SynchronizedClockSelectSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE void GsnPwm\_\-SynchronizedClockSelectSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf GSN\_\-PWM\_\-CLOCKSEL}}]{eClockSelect}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_ga177c51254727205e45ddd643abd59b14}
+
+
+synchronized clock select. 
+
+This function selects the clock source for sync mode. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em eClockSelect} & -\/ IN bus clock or prescaled clock. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 641 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_ga8b61d6d4ed2a03b4130ece4db9f2949a}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-SynchronizedPhaseDelayGet@{GsnPwm\_\-SynchronizedPhaseDelayGet}}
+\index{GsnPwm\_\-SynchronizedPhaseDelayGet@{GsnPwm\_\-SynchronizedPhaseDelayGet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-SynchronizedPhaseDelayGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE void GsnPwm\_\-SynchronizedPhaseDelayGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf UINT16} $\ast$}]{pPhase01, }
+\item[{{\bf UINT16} $\ast$}]{pPhase12}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_ga8b61d6d4ed2a03b4130ece4db9f2949a}
+
+
+synchronized phase delay get. 
+
+This function gets the phase delay between pwm0-\/pwm1 and pwm1-\/pwm2. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em pPhase01} & -\/ OUT phase delay between pwm0 and pwm1 \\
+\hline
+{\em pPhase12} & -\/ OUT phase delay between pwm1 and pwm2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 568 of file gsn\_\-pwm.h.
+
+\hypertarget{a00650_ga18d17db7a2e95c82aa8e84d1e1897e3e}{
+\index{GSN PWM Device Driver@{GSN PWM Device Driver}!GsnPwm\_\-SynchronizedPhaseDelaySet@{GsnPwm\_\-SynchronizedPhaseDelaySet}}
+\index{GsnPwm\_\-SynchronizedPhaseDelaySet@{GsnPwm\_\-SynchronizedPhaseDelaySet}!GSN PWM Device Driver@{GSN PWM Device Driver}}
+\subsubsection[{GsnPwm\_\-SynchronizedPhaseDelaySet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE void GsnPwm\_\-SynchronizedPhaseDelaySet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$}]{pPwmHandle, }
+\item[{{\bf UINT16}}]{phase01, }
+\item[{{\bf UINT16}}]{phase12}
+\end{DoxyParamCaption}
+)}}
+\label{a00650_ga18d17db7a2e95c82aa8e84d1e1897e3e}
+
+
+synchronized phase delay set. 
+
+This function sets the phase delay between pwm0-\/pwm1 and pwm1-\/pwm2. 
+\begin{DoxyParams}{Parameters}
+{\em pPwmHandle} & -\/ IN pointer to pwm handle. \\
+\hline
+{\em phase01} & -\/ IN phase delay between pwm0 and pwm1 \\
+\hline
+{\em phase12} & -\/ IN phase delay between pwm1 and pwm2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 594 of file gsn\_\-pwm.h.
+

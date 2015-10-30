@@ -1,0 +1,796 @@
+\hypertarget{a00563}{
+\section{gsn\_\-reg\_\-op.h File Reference}
+\label{a00563}\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}}
+}
+{\ttfamily \#include $<$stdint.h$>$}\par
+Include dependency graph for gsn\_\-reg\_\-op.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{a00799}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00800}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00563_a470d59f171e690217d37be2e74cbb1d2}{BIT\_\-OFFSET}(bitfieldName)~(bitfieldName \#\# \_\-BITOFFSET \% 8)
+\item 
+\#define \hyperlink{a00563_a87bfeeedb8609ff164f128b6d43aceab}{BYTE\_\-OFFSET}(bitfieldName)~(bitfieldName \#\# \_\-BITOFFSET / 8)
+\item 
+\#define \hyperlink{a00563_ac31161774764493eb1b62b3dba8b614b}{BYTE\_\-OFFSET\_\-ADDRESS}(bitfieldName)~(bitfieldName \#\# \_\-OFFSETADDRESS + BYTE\_\-OFFSET(bitfieldName))
+\item 
+\#define \hyperlink{a00563_a7dcb8dd9e4ff8b9e07d58c7f22e1e933}{HALFWORD\_\-OFFSET\_\-ADDRESS}(bitfieldName)~(BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName) \& $\sim$0x01)
+\item 
+\#define \hyperlink{a00563_a007ab3785afcd0c16db5c8b597bb589d}{WORD\_\-OFFSET\_\-ADDRESS}(bitfieldName)~(BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName) \& $\sim$0x03)
+\item 
+\#define \hyperlink{a00563_ac4a95fe9c1e548d1446cf09964a14e3c}{BYTE\_\-BIT\_\-OFFSET}(bitfieldName)~(BIT\_\-OFFSET(bitfieldName) + (8 $\ast$ (BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName) \& 0x00)))
+\item 
+\#define \hyperlink{a00563_aef156b6069ed516f9835c7fd43f0e6d5}{HALFWORD\_\-BIT\_\-OFFSET}(bitfieldName)~(BIT\_\-OFFSET(bitfieldName) + (8 $\ast$ (BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName) \& 0x01)))
+\item 
+\#define \hyperlink{a00563_ada8d586c5b6da410679e7b9ade8546a4}{WORD\_\-BIT\_\-OFFSET}(bitfieldName)~(BIT\_\-OFFSET(bitfieldName) + (8 $\ast$ (BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName) \& 0x03)))
+\item 
+\#define \hyperlink{a00563_acde41834b2e18f87b20cfd90b9cf869c}{BYTE\_\-VALUE\_\-DN}(bitfieldName, value)~(((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8})  value) $<$$<$ BYTE\_\-BIT\_\-OFFSET(bitfieldName))
+\item 
+\#define \hyperlink{a00563_a1b111c1dde3fa69074e9e62e35c4003b}{HALFWORD\_\-VALUE\_\-DN}(bitfieldName, value)~(((\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16}) value) $<$$<$ HALFWORD\_\-BIT\_\-OFFSET(bitfieldName))
+\item 
+\#define \hyperlink{a00563_a63e20b4366703cf6e879174f34b15ad9}{WORD\_\-VALUE\_\-DN}(bitfieldName, value)~(((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})  value) $<$$<$ WORD\_\-BIT\_\-OFFSET(bitfieldName))
+\item 
+\#define \hyperlink{a00563_a5a632b3fd62bdfdd479a6f7d16e1a3ba}{MASK}(bitfieldName)~(bitfieldName \#\# \_\-BITFIELDSIZE == 32 ? $\sim$0 : (((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32}) 1) $<$$<$ bitfieldName \#\# \_\-BITFIELDSIZE) -\/ 1)
+\item 
+\#define \hyperlink{a00563_abf81604cd5cff88fddd1988252996615}{BYTE\_\-MASK}(bitfieldName)~BYTE\_\-VALUE\_\-DN(bitfieldName, MASK(bitfieldName))
+\item 
+\#define \hyperlink{a00563_ab2c79a60a4c3f02e398901b3d9544667}{HALFWORD\_\-MASK}(bitfieldName)~HALFWORD\_\-VALUE\_\-DN(bitfieldName, MASK(bitfieldName))
+\item 
+\#define \hyperlink{a00563_aff621a361c9e6dc6e8505adf6b5e2377}{WORD\_\-MASK}(bitfieldName)~WORD\_\-VALUE\_\-DN(bitfieldName, MASK(bitfieldName))
+\item 
+\#define \hyperlink{a00563_acb2ef06f238d0fbde936f3eb6bf67835}{BYTE\_\-VALUE}(bitfieldName, value)~(((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8})  value) \& BYTE\_\-MASK(bitfieldName))
+\item 
+\#define \hyperlink{a00563_a299474fbed06a30a84c2444fe6c0e3a7}{HALFWORD\_\-VALUE}(bitfieldName, value)~(((\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16}) value) \& HALFWORD\_\-MASK(bitfieldName))
+\item 
+\#define \hyperlink{a00563_a481ad30c6b18d9b8eaeb2e92af9661d4}{WORD\_\-VALUE}(bitfieldName, value)~(((\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})  value) \& WORD\_\-MASK(bitfieldName))
+\item 
+\#define \hyperlink{a00563_acb95cb4ed9dc3ceaa028000c659039d0}{BYTE\_\-VALUE\_\-N}(bitfieldName, value)~(BYTE\_\-VALUE(bitfieldName, value) $>$$>$ BYTE\_\-BIT\_\-OFFSET(bitfieldName))
+\item 
+\#define \hyperlink{a00563_a01138515a1919e2a86ff46f1ae8a3868}{HALFWORD\_\-VALUE\_\-N}(bitfieldName, value)~(HALFWORD\_\-VALUE(bitfieldName, value) $>$$>$ HALFWORD\_\-BIT\_\-OFFSET(bitfieldName))
+\item 
+\#define \hyperlink{a00563_ae695529d0f24257955d94ba320318fec}{WORD\_\-VALUE\_\-N}(bitfieldName, value)~(WORD\_\-VALUE(bitfieldName, value) $>$$>$ WORD\_\-BIT\_\-OFFSET(bitfieldName))
+\item 
+\#define \hyperlink{a00563_a5d36777897ddb22d8d19933b608dbf27}{SET\_\-BYTE\_\-BITFIELD}(moduleBaseAddress, bitfieldName, value)
+\item 
+\#define \hyperlink{a00563_aa8429c1709f493f6e802f70c3e1b7642}{SET\_\-BYTE\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName, value)
+\item 
+\#define \hyperlink{a00563_ad18faee62af5dfb73874cdcf85fa57e6}{GET\_\-BYTE\_\-BITFIELD}(moduleBaseAddress, bitfieldName)~(($\ast$((volatile \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) (((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress) + BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName)))) \& BYTE\_\-MASK(bitfieldName))
+\item 
+\#define \hyperlink{a00563_a2e932b85f7f4d0602a2108294eaeceac}{GET\_\-BYTE\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName)~(BYTE\_\-VALUE\_\-N(bitfieldName, GET\_\-BYTE\_\-BITFIELD(moduleBaseAddress, bitfieldName)))
+\item 
+\#define \hyperlink{a00563_a22defefbdccfdf7fed7555930bd0c83d}{SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD}(moduleBaseAddress, bitfieldName, value)~$\ast$((volatile \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) ((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress + BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName))) = value
+\item 
+\#define \hyperlink{a00563_ae9903dde02186342de14462b798ca130}{SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName, value)~$\ast$((volatile \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) ((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress + BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName))) = BYTE\_\-VALUE\_\-DN(bitfieldName, value)
+\item 
+\#define \hyperlink{a00563_a66d271d6caf5a5d54751d6fd34364109}{GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD}(moduleBaseAddress, bitfieldName)~($\ast$((volatile \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) ((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress + BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName))))
+\item 
+\#define \hyperlink{a00563_ad267117657cc584877d98e89e7a14033}{GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName)~(BYTE\_\-VALUE\_\-N(bitfieldName, GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD(moduleBaseAddress, bitfieldName)))
+\item 
+\#define \hyperlink{a00563_ab4045ae727107a42970ad838ac5354e3}{SET\_\-HALFWORD\_\-BITFIELD}(moduleBaseAddress, bitfieldName, value)
+\item 
+\#define \hyperlink{a00563_a423f4f48cec0c1f006b7e0b641e7634e}{SET\_\-HALFWORD\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName, value)
+\item 
+\#define \hyperlink{a00563_a42cc6ddac4da598ae10edad91e1b8d5c}{GET\_\-HALFWORD\_\-BITFIELD}(moduleBaseAddress, bitfieldName)~(($\ast$((volatile \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16}$\ast$) (((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress) + HALFWORD\_\-OFFSET\_\-ADDRESS(bitfieldName)))) \& HALFWORD\_\-MASK(bitfieldName))
+\item 
+\#define \hyperlink{a00563_a44345c6896f24e87e696a72e2472d802}{GET\_\-HALFWORD\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName)~(HALFWORD\_\-VALUE\_\-N(bitfieldName, GET\_\-HALFWORD\_\-BITFIELD(moduleBaseAddress, bitfieldName)))
+\item 
+\#define \hyperlink{a00563_a9f01a71c35168aad9d62b0ba1f3aec3e}{SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD}(moduleBaseAddress, bitfieldName, value)~$\ast$((volatile \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16}$\ast$) ((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress + HALFWORD\_\-OFFSET\_\-ADDRESS(bitfieldName))) = value
+\item 
+\#define \hyperlink{a00563_a9743b582277e01086cfef4fc3171e0fa}{SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName, value)~$\ast$((volatile \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16}$\ast$) ((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress + HALFWORD\_\-OFFSET\_\-ADDRESS(bitfieldName))) = HALFWORD\_\-VALUE\_\-DN(bitfieldName, value)
+\item 
+\#define \hyperlink{a00563_afb8325a412cfa6ddcba4d163c64bb9ea}{GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD}(moduleBaseAddress, bitfieldName)~($\ast$((volatile \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16}$\ast$) ((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress + HALFWORD\_\-OFFSET\_\-ADDRESS(bitfieldName))))
+\item 
+\#define \hyperlink{a00563_ad84d424823f2a96e6e22588efcba6eae}{GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName)~(HALFWORD\_\-VALUE\_\-N(bitfieldName, GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD(moduleBaseAddress, bitfieldName)))
+\item 
+\#define \hyperlink{a00563_a91cad4f4207fc2b110b956701aad407c}{SET\_\-WORD\_\-BITFIELD}(moduleBaseAddress, bitfieldName, value)
+\item 
+\#define \hyperlink{a00563_aaaa146daf1b46103c12be3157500cda3}{SET\_\-WORD\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName, value)
+\item 
+\#define \hyperlink{a00563_afa5ed314e7b88ffeb3c465d29116420f}{GET\_\-WORD\_\-BITFIELD}(moduleBaseAddress, bitfieldName)~(($\ast$((volatile \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32}$\ast$) (((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress) + WORD\_\-OFFSET\_\-ADDRESS(bitfieldName)))) \& WORD\_\-MASK(bitfieldName))
+\item 
+\#define \hyperlink{a00563_a506f48da7dac58f9a94e9ace32159acb}{GET\_\-WORD\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName)~(WORD\_\-VALUE\_\-N(bitfieldName, GET\_\-WORD\_\-BITFIELD(moduleBaseAddress, bitfieldName)))
+\item 
+\#define \hyperlink{a00563_a7585c58efa0dfeb43fb4b331907caeb2}{SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD}(moduleBaseAddress, bitfieldName, value)~$\ast$((volatile \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32}$\ast$) ((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress + WORD\_\-OFFSET\_\-ADDRESS(bitfieldName))) = value
+\item 
+\#define \hyperlink{a00563_adc2b2cfb88f85537869d175a6becf06b}{SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName, value)~$\ast$((volatile \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32}$\ast$) ((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress + WORD\_\-OFFSET\_\-ADDRESS(bitfieldName))) = WORD\_\-VALUE\_\-DN(bitfieldName, value)
+\item 
+\#define \hyperlink{a00563_a6c143bfe25d9e5ee2442f62d5703230d}{GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD}(moduleBaseAddress, bitfieldName)~($\ast$((volatile \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32}$\ast$) ((\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8}$\ast$) moduleBaseAddress + WORD\_\-OFFSET\_\-ADDRESS(bitfieldName))))
+\item 
+\#define \hyperlink{a00563_a44f43e55049d7a9631dcfb2c78222076}{GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}(moduleBaseAddress, bitfieldName)~(WORD\_\-VALUE\_\-N(bitfieldName, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(moduleBaseAddress, bitfieldName)))
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00563_a470d59f171e690217d37be2e74cbb1d2}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!BIT\_\-OFFSET@{BIT\_\-OFFSET}}
+\index{BIT\_\-OFFSET@{BIT\_\-OFFSET}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{BIT\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define BIT\_\-OFFSET(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(bitfieldName \#\# \_\-BITOFFSET \% 8)}}
+\label{a00563_a470d59f171e690217d37be2e74cbb1d2}
+
+
+Definition at line 73 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_ac4a95fe9c1e548d1446cf09964a14e3c}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!BYTE\_\-BIT\_\-OFFSET@{BYTE\_\-BIT\_\-OFFSET}}
+\index{BYTE\_\-BIT\_\-OFFSET@{BYTE\_\-BIT\_\-OFFSET}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{BYTE\_\-BIT\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define BYTE\_\-BIT\_\-OFFSET(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(BIT\_\-OFFSET(bitfieldName) + (8 $\ast$ (BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName) \& 0x00)))}}
+\label{a00563_ac4a95fe9c1e548d1446cf09964a14e3c}
+
+
+Definition at line 86 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_abf81604cd5cff88fddd1988252996615}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!BYTE\_\-MASK@{BYTE\_\-MASK}}
+\index{BYTE\_\-MASK@{BYTE\_\-MASK}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{BYTE\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define BYTE\_\-MASK(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~BYTE\_\-VALUE\_\-DN(bitfieldName, MASK(bitfieldName))}}
+\label{a00563_abf81604cd5cff88fddd1988252996615}
+
+
+Definition at line 105 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a87bfeeedb8609ff164f128b6d43aceab}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!BYTE\_\-OFFSET@{BYTE\_\-OFFSET}}
+\index{BYTE\_\-OFFSET@{BYTE\_\-OFFSET}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{BYTE\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define BYTE\_\-OFFSET(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(bitfieldName \#\# \_\-BITOFFSET / 8)}}
+\label{a00563_a87bfeeedb8609ff164f128b6d43aceab}
+
+
+Definition at line 76 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_ac31161774764493eb1b62b3dba8b614b}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!BYTE\_\-OFFSET\_\-ADDRESS@{BYTE\_\-OFFSET\_\-ADDRESS}}
+\index{BYTE\_\-OFFSET\_\-ADDRESS@{BYTE\_\-OFFSET\_\-ADDRESS}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{BYTE\_\-OFFSET\_\-ADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define BYTE\_\-OFFSET\_\-ADDRESS(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(bitfieldName \#\# \_\-OFFSETADDRESS + BYTE\_\-OFFSET(bitfieldName))}}
+\label{a00563_ac31161774764493eb1b62b3dba8b614b}
+
+
+Definition at line 79 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_acb2ef06f238d0fbde936f3eb6bf67835}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!BYTE\_\-VALUE@{BYTE\_\-VALUE}}
+\index{BYTE\_\-VALUE@{BYTE\_\-VALUE}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{BYTE\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BYTE\_\-VALUE(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~((({\bf UINT8})  value) \& BYTE\_\-MASK(bitfieldName))}}
+\label{a00563_acb2ef06f238d0fbde936f3eb6bf67835}
+
+
+Definition at line 112 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_acde41834b2e18f87b20cfd90b9cf869c}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!BYTE\_\-VALUE\_\-DN@{BYTE\_\-VALUE\_\-DN}}
+\index{BYTE\_\-VALUE\_\-DN@{BYTE\_\-VALUE\_\-DN}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{BYTE\_\-VALUE\_\-DN}]{\setlength{\rightskip}{0pt plus 5cm}\#define BYTE\_\-VALUE\_\-DN(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~((({\bf UINT8})  value) $<$$<$ BYTE\_\-BIT\_\-OFFSET(bitfieldName))}}
+\label{a00563_acde41834b2e18f87b20cfd90b9cf869c}
+
+
+Definition at line 96 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_acb95cb4ed9dc3ceaa028000c659039d0}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!BYTE\_\-VALUE\_\-N@{BYTE\_\-VALUE\_\-N}}
+\index{BYTE\_\-VALUE\_\-N@{BYTE\_\-VALUE\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{BYTE\_\-VALUE\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define BYTE\_\-VALUE\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~(BYTE\_\-VALUE(bitfieldName, value) $>$$>$ BYTE\_\-BIT\_\-OFFSET(bitfieldName))}}
+\label{a00563_acb95cb4ed9dc3ceaa028000c659039d0}
+
+
+Definition at line 119 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_ad18faee62af5dfb73874cdcf85fa57e6}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-BYTE\_\-BITFIELD@{GET\_\-BYTE\_\-BITFIELD}}
+\index{GET\_\-BYTE\_\-BITFIELD@{GET\_\-BYTE\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-BYTE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-BYTE\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(($\ast$((volatile {\bf UINT8}$\ast$) ((({\bf UINT8}$\ast$) moduleBaseAddress) + BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName)))) \& BYTE\_\-MASK(bitfieldName))}}
+\label{a00563_ad18faee62af5dfb73874cdcf85fa57e6}
+
+
+Definition at line 163 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a2e932b85f7f4d0602a2108294eaeceac}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-BYTE\_\-BITFIELD\_\-N@{GET\_\-BYTE\_\-BITFIELD\_\-N}}
+\index{GET\_\-BYTE\_\-BITFIELD\_\-N@{GET\_\-BYTE\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-BYTE\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-BYTE\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(BYTE\_\-VALUE\_\-N(bitfieldName, GET\_\-BYTE\_\-BITFIELD(moduleBaseAddress, bitfieldName)))}}
+\label{a00563_a2e932b85f7f4d0602a2108294eaeceac}
+
+
+Definition at line 166 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a66d271d6caf5a5d54751d6fd34364109}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD@{GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD}}
+\index{GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD@{GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~($\ast$((volatile {\bf UINT8}$\ast$) (({\bf UINT8}$\ast$) moduleBaseAddress + BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName))))}}
+\label{a00563_a66d271d6caf5a5d54751d6fd34364109}
+
+
+Definition at line 176 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_ad267117657cc584877d98e89e7a14033}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N}}
+\index{GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(BYTE\_\-VALUE\_\-N(bitfieldName, GET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD(moduleBaseAddress, bitfieldName)))}}
+\label{a00563_ad267117657cc584877d98e89e7a14033}
+
+
+Definition at line 179 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a42cc6ddac4da598ae10edad91e1b8d5c}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-HALFWORD\_\-BITFIELD@{GET\_\-HALFWORD\_\-BITFIELD}}
+\index{GET\_\-HALFWORD\_\-BITFIELD@{GET\_\-HALFWORD\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-HALFWORD\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-HALFWORD\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(($\ast$((volatile {\bf UINT16}$\ast$) ((({\bf UINT8}$\ast$) moduleBaseAddress) + HALFWORD\_\-OFFSET\_\-ADDRESS(bitfieldName)))) \& HALFWORD\_\-MASK(bitfieldName))}}
+\label{a00563_a42cc6ddac4da598ae10edad91e1b8d5c}
+
+
+Definition at line 193 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a44345c6896f24e87e696a72e2472d802}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-HALFWORD\_\-BITFIELD\_\-N@{GET\_\-HALFWORD\_\-BITFIELD\_\-N}}
+\index{GET\_\-HALFWORD\_\-BITFIELD\_\-N@{GET\_\-HALFWORD\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-HALFWORD\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-HALFWORD\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(HALFWORD\_\-VALUE\_\-N(bitfieldName, GET\_\-HALFWORD\_\-BITFIELD(moduleBaseAddress, bitfieldName)))}}
+\label{a00563_a44345c6896f24e87e696a72e2472d802}
+
+
+Definition at line 196 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_afb8325a412cfa6ddcba4d163c64bb9ea}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD@{GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD}}
+\index{GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD@{GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~($\ast$((volatile {\bf UINT16}$\ast$) (({\bf UINT8}$\ast$) moduleBaseAddress + HALFWORD\_\-OFFSET\_\-ADDRESS(bitfieldName))))}}
+\label{a00563_afb8325a412cfa6ddcba4d163c64bb9ea}
+
+
+Definition at line 206 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_ad84d424823f2a96e6e22588efcba6eae}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}}
+\index{GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(HALFWORD\_\-VALUE\_\-N(bitfieldName, GET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD(moduleBaseAddress, bitfieldName)))}}
+\label{a00563_ad84d424823f2a96e6e22588efcba6eae}
+
+
+Definition at line 209 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_afa5ed314e7b88ffeb3c465d29116420f}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-WORD\_\-BITFIELD@{GET\_\-WORD\_\-BITFIELD}}
+\index{GET\_\-WORD\_\-BITFIELD@{GET\_\-WORD\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-WORD\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-WORD\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(($\ast$((volatile {\bf UINT32}$\ast$) ((({\bf UINT8}$\ast$) moduleBaseAddress) + WORD\_\-OFFSET\_\-ADDRESS(bitfieldName)))) \& WORD\_\-MASK(bitfieldName))}}
+\label{a00563_afa5ed314e7b88ffeb3c465d29116420f}
+
+
+Definition at line 223 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a506f48da7dac58f9a94e9ace32159acb}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-WORD\_\-BITFIELD\_\-N@{GET\_\-WORD\_\-BITFIELD\_\-N}}
+\index{GET\_\-WORD\_\-BITFIELD\_\-N@{GET\_\-WORD\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-WORD\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-WORD\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(WORD\_\-VALUE\_\-N(bitfieldName, GET\_\-WORD\_\-BITFIELD(moduleBaseAddress, bitfieldName)))}}
+\label{a00563_a506f48da7dac58f9a94e9ace32159acb}
+
+
+Definition at line 226 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a6c143bfe25d9e5ee2442f62d5703230d}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD@{GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD}}
+\index{GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD@{GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~($\ast$((volatile {\bf UINT32}$\ast$) (({\bf UINT8}$\ast$) moduleBaseAddress + WORD\_\-OFFSET\_\-ADDRESS(bitfieldName))))}}
+\label{a00563_a6c143bfe25d9e5ee2442f62d5703230d}
+
+
+Definition at line 236 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a44f43e55049d7a9631dcfb2c78222076}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}}
+\index{GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(WORD\_\-VALUE\_\-N(bitfieldName, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(moduleBaseAddress, bitfieldName)))}}
+\label{a00563_a44f43e55049d7a9631dcfb2c78222076}
+
+
+Definition at line 239 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_aef156b6069ed516f9835c7fd43f0e6d5}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!HALFWORD\_\-BIT\_\-OFFSET@{HALFWORD\_\-BIT\_\-OFFSET}}
+\index{HALFWORD\_\-BIT\_\-OFFSET@{HALFWORD\_\-BIT\_\-OFFSET}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{HALFWORD\_\-BIT\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define HALFWORD\_\-BIT\_\-OFFSET(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(BIT\_\-OFFSET(bitfieldName) + (8 $\ast$ (BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName) \& 0x01)))}}
+\label{a00563_aef156b6069ed516f9835c7fd43f0e6d5}
+
+
+Definition at line 89 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_ab2c79a60a4c3f02e398901b3d9544667}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!HALFWORD\_\-MASK@{HALFWORD\_\-MASK}}
+\index{HALFWORD\_\-MASK@{HALFWORD\_\-MASK}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{HALFWORD\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define HALFWORD\_\-MASK(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~HALFWORD\_\-VALUE\_\-DN(bitfieldName, MASK(bitfieldName))}}
+\label{a00563_ab2c79a60a4c3f02e398901b3d9544667}
+
+
+Definition at line 107 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a7dcb8dd9e4ff8b9e07d58c7f22e1e933}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!HALFWORD\_\-OFFSET\_\-ADDRESS@{HALFWORD\_\-OFFSET\_\-ADDRESS}}
+\index{HALFWORD\_\-OFFSET\_\-ADDRESS@{HALFWORD\_\-OFFSET\_\-ADDRESS}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{HALFWORD\_\-OFFSET\_\-ADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define HALFWORD\_\-OFFSET\_\-ADDRESS(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName) \& $\sim$0x01)}}
+\label{a00563_a7dcb8dd9e4ff8b9e07d58c7f22e1e933}
+
+
+Definition at line 81 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a299474fbed06a30a84c2444fe6c0e3a7}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!HALFWORD\_\-VALUE@{HALFWORD\_\-VALUE}}
+\index{HALFWORD\_\-VALUE@{HALFWORD\_\-VALUE}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{HALFWORD\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define HALFWORD\_\-VALUE(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~((({\bf UINT16}) value) \& HALFWORD\_\-MASK(bitfieldName))}}
+\label{a00563_a299474fbed06a30a84c2444fe6c0e3a7}
+
+
+Definition at line 114 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a1b111c1dde3fa69074e9e62e35c4003b}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!HALFWORD\_\-VALUE\_\-DN@{HALFWORD\_\-VALUE\_\-DN}}
+\index{HALFWORD\_\-VALUE\_\-DN@{HALFWORD\_\-VALUE\_\-DN}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{HALFWORD\_\-VALUE\_\-DN}]{\setlength{\rightskip}{0pt plus 5cm}\#define HALFWORD\_\-VALUE\_\-DN(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~((({\bf UINT16}) value) $<$$<$ HALFWORD\_\-BIT\_\-OFFSET(bitfieldName))}}
+\label{a00563_a1b111c1dde3fa69074e9e62e35c4003b}
+
+
+Definition at line 98 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a01138515a1919e2a86ff46f1ae8a3868}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!HALFWORD\_\-VALUE\_\-N@{HALFWORD\_\-VALUE\_\-N}}
+\index{HALFWORD\_\-VALUE\_\-N@{HALFWORD\_\-VALUE\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{HALFWORD\_\-VALUE\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define HALFWORD\_\-VALUE\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~(HALFWORD\_\-VALUE(bitfieldName, value) $>$$>$ HALFWORD\_\-BIT\_\-OFFSET(bitfieldName))}}
+\label{a00563_a01138515a1919e2a86ff46f1ae8a3868}
+
+
+Definition at line 121 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a5a632b3fd62bdfdd479a6f7d16e1a3ba}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!MASK@{MASK}}
+\index{MASK@{MASK}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define MASK(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(bitfieldName \#\# \_\-BITFIELDSIZE == 32 ? $\sim$0 : ((({\bf UINT32}) 1) $<$$<$ bitfieldName \#\# \_\-BITFIELDSIZE) -\/ 1)}}
+\label{a00563_a5a632b3fd62bdfdd479a6f7d16e1a3ba}
+
+
+Definition at line 103 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a5d36777897ddb22d8d19933b608dbf27}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-BYTE\_\-BITFIELD@{SET\_\-BYTE\_\-BITFIELD}}
+\index{SET\_\-BYTE\_\-BITFIELD@{SET\_\-BYTE\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-BYTE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-BYTE\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{a00563_a5d36777897ddb22d8d19933b608dbf27}
+{\bfseries Value:}
+\begin{DoxyCode}
+*((volatile UINT8*) (((UINT8*) moduleBaseAddress) + BYTE_OFFSET_ADDRESS(bitfieldN
+      ame))) = \
+                (*((volatile UINT8*) (((UINT8*) moduleBaseAddress) + 
+      BYTE_OFFSET_ADDRESS(bitfieldName))) & ~BYTE_MASK(bitfieldName)) | \
+                ((value) & BYTE_MASK(bitfieldName))
+\end{DoxyCode}
+
+
+Definition at line 153 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_aa8429c1709f493f6e802f70c3e1b7642}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-BYTE\_\-BITFIELD\_\-N@{SET\_\-BYTE\_\-BITFIELD\_\-N}}
+\index{SET\_\-BYTE\_\-BITFIELD\_\-N@{SET\_\-BYTE\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-BYTE\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-BYTE\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{a00563_aa8429c1709f493f6e802f70c3e1b7642}
+{\bfseries Value:}
+\begin{DoxyCode}
+*((volatile UINT8*) (((UINT8*) moduleBaseAddress) + BYTE_OFFSET_ADDRESS(bitfieldN
+      ame))) = \
+                (*((volatile UINT8*) (((UINT8*) moduleBaseAddress) + 
+      BYTE_OFFSET_ADDRESS(bitfieldName))) & ~BYTE_MASK(bitfieldName)) | \
+                (BYTE_VALUE_DN(bitfieldName, value) & BYTE_MASK(bitfieldName))
+\end{DoxyCode}
+
+
+Definition at line 158 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a22defefbdccfdf7fed7555930bd0c83d}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD@{SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD}}
+\index{SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD@{SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~$\ast$((volatile {\bf UINT8}$\ast$) (({\bf UINT8}$\ast$) moduleBaseAddress + BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName))) = value}}
+\label{a00563_a22defefbdccfdf7fed7555930bd0c83d}
+
+
+Definition at line 170 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_ae9903dde02186342de14462b798ca130}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N}}
+\index{SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-BYTE\_\-EXCLUSIVE\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~$\ast$((volatile {\bf UINT8}$\ast$) (({\bf UINT8}$\ast$) moduleBaseAddress + BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName))) = BYTE\_\-VALUE\_\-DN(bitfieldName, value)}}
+\label{a00563_ae9903dde02186342de14462b798ca130}
+
+
+Definition at line 173 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_ab4045ae727107a42970ad838ac5354e3}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-HALFWORD\_\-BITFIELD@{SET\_\-HALFWORD\_\-BITFIELD}}
+\index{SET\_\-HALFWORD\_\-BITFIELD@{SET\_\-HALFWORD\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-HALFWORD\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-HALFWORD\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{a00563_ab4045ae727107a42970ad838ac5354e3}
+{\bfseries Value:}
+\begin{DoxyCode}
+*((volatile UINT16*) (((UINT8*) moduleBaseAddress) + HALFWORD_OFFSET_ADDRESS(bitf
+      ieldName))) = \
+                (*((volatile UINT16*) (((UINT8*) moduleBaseAddress) + 
+      HALFWORD_OFFSET_ADDRESS(bitfieldName))) & ~HALFWORD_MASK(bitfieldName)) | \
+                ((value) & HALFWORD_MASK(bitfieldName))
+\end{DoxyCode}
+
+
+Definition at line 183 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a423f4f48cec0c1f006b7e0b641e7634e}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-HALFWORD\_\-BITFIELD\_\-N@{SET\_\-HALFWORD\_\-BITFIELD\_\-N}}
+\index{SET\_\-HALFWORD\_\-BITFIELD\_\-N@{SET\_\-HALFWORD\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-HALFWORD\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-HALFWORD\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{a00563_a423f4f48cec0c1f006b7e0b641e7634e}
+{\bfseries Value:}
+\begin{DoxyCode}
+*((volatile UINT16*) (((UINT8*) moduleBaseAddress) + HALFWORD_OFFSET_ADDRESS(bitf
+      ieldName))) = \
+                (*((volatile UINT16*) (((UINT8*) moduleBaseAddress) + 
+      HALFWORD_OFFSET_ADDRESS(bitfieldName))) & ~HALFWORD_MASK(bitfieldName)) | \
+                (HALFWORD_VALUE_DN(bitfieldName, value) & HALFWORD_MASK(bitfieldN
+      ame))
+\end{DoxyCode}
+
+
+Definition at line 188 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a9f01a71c35168aad9d62b0ba1f3aec3e}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD@{SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD}}
+\index{SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD@{SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~$\ast$((volatile {\bf UINT16}$\ast$) (({\bf UINT8}$\ast$) moduleBaseAddress + HALFWORD\_\-OFFSET\_\-ADDRESS(bitfieldName))) = value}}
+\label{a00563_a9f01a71c35168aad9d62b0ba1f3aec3e}
+
+
+Definition at line 200 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a9743b582277e01086cfef4fc3171e0fa}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}}
+\index{SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-HALFWORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~$\ast$((volatile {\bf UINT16}$\ast$) (({\bf UINT8}$\ast$) moduleBaseAddress + HALFWORD\_\-OFFSET\_\-ADDRESS(bitfieldName))) = HALFWORD\_\-VALUE\_\-DN(bitfieldName, value)}}
+\label{a00563_a9743b582277e01086cfef4fc3171e0fa}
+
+
+Definition at line 203 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a91cad4f4207fc2b110b956701aad407c}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-WORD\_\-BITFIELD@{SET\_\-WORD\_\-BITFIELD}}
+\index{SET\_\-WORD\_\-BITFIELD@{SET\_\-WORD\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-WORD\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-WORD\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{a00563_a91cad4f4207fc2b110b956701aad407c}
+{\bfseries Value:}
+\begin{DoxyCode}
+*((volatile UINT32*) (((UINT8*) moduleBaseAddress) + WORD_OFFSET_ADDRESS(bitfield
+      Name))) = \
+                (*((volatile UINT32*) (((UINT8*) moduleBaseAddress) + 
+      WORD_OFFSET_ADDRESS(bitfieldName))) & ~WORD_MASK(bitfieldName)) | \
+                ((value) & WORD_MASK(bitfieldName))
+\end{DoxyCode}
+
+
+Definition at line 213 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_aaaa146daf1b46103c12be3157500cda3}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-WORD\_\-BITFIELD\_\-N@{SET\_\-WORD\_\-BITFIELD\_\-N}}
+\index{SET\_\-WORD\_\-BITFIELD\_\-N@{SET\_\-WORD\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-WORD\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-WORD\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{a00563_aaaa146daf1b46103c12be3157500cda3}
+{\bfseries Value:}
+\begin{DoxyCode}
+*((volatile UINT32*) (((UINT8*) moduleBaseAddress) + WORD_OFFSET_ADDRESS(bitfield
+      Name))) = \
+                (*((volatile UINT32*) (((UINT8*) moduleBaseAddress) + 
+      WORD_OFFSET_ADDRESS(bitfieldName))) & ~WORD_MASK(bitfieldName)) | \
+                (WORD_VALUE_DN(bitfieldName, value) & WORD_MASK(bitfieldName))
+\end{DoxyCode}
+
+
+Definition at line 218 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a7585c58efa0dfeb43fb4b331907caeb2}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD@{SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD}}
+\index{SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD@{SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~$\ast$((volatile {\bf UINT32}$\ast$) (({\bf UINT8}$\ast$) moduleBaseAddress + WORD\_\-OFFSET\_\-ADDRESS(bitfieldName))) = value}}
+\label{a00563_a7585c58efa0dfeb43fb4b331907caeb2}
+
+
+Definition at line 230 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_adc2b2cfb88f85537869d175a6becf06b}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}}
+\index{SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N@{SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{moduleBaseAddress, }
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~$\ast$((volatile {\bf UINT32}$\ast$) (({\bf UINT8}$\ast$) moduleBaseAddress + WORD\_\-OFFSET\_\-ADDRESS(bitfieldName))) = WORD\_\-VALUE\_\-DN(bitfieldName, value)}}
+\label{a00563_adc2b2cfb88f85537869d175a6becf06b}
+
+
+Definition at line 233 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_ada8d586c5b6da410679e7b9ade8546a4}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!WORD\_\-BIT\_\-OFFSET@{WORD\_\-BIT\_\-OFFSET}}
+\index{WORD\_\-BIT\_\-OFFSET@{WORD\_\-BIT\_\-OFFSET}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{WORD\_\-BIT\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define WORD\_\-BIT\_\-OFFSET(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(BIT\_\-OFFSET(bitfieldName) + (8 $\ast$ (BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName) \& 0x03)))}}
+\label{a00563_ada8d586c5b6da410679e7b9ade8546a4}
+
+
+Definition at line 92 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_aff621a361c9e6dc6e8505adf6b5e2377}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!WORD\_\-MASK@{WORD\_\-MASK}}
+\index{WORD\_\-MASK@{WORD\_\-MASK}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{WORD\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define WORD\_\-MASK(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~WORD\_\-VALUE\_\-DN(bitfieldName, MASK(bitfieldName))}}
+\label{a00563_aff621a361c9e6dc6e8505adf6b5e2377}
+
+
+Definition at line 109 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a007ab3785afcd0c16db5c8b597bb589d}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!WORD\_\-OFFSET\_\-ADDRESS@{WORD\_\-OFFSET\_\-ADDRESS}}
+\index{WORD\_\-OFFSET\_\-ADDRESS@{WORD\_\-OFFSET\_\-ADDRESS}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{WORD\_\-OFFSET\_\-ADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define WORD\_\-OFFSET\_\-ADDRESS(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName}
+\end{DoxyParamCaption}
+)~(BYTE\_\-OFFSET\_\-ADDRESS(bitfieldName) \& $\sim$0x03)}}
+\label{a00563_a007ab3785afcd0c16db5c8b597bb589d}
+
+
+Definition at line 83 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a481ad30c6b18d9b8eaeb2e92af9661d4}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!WORD\_\-VALUE@{WORD\_\-VALUE}}
+\index{WORD\_\-VALUE@{WORD\_\-VALUE}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{WORD\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define WORD\_\-VALUE(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~((({\bf UINT32})  value) \& WORD\_\-MASK(bitfieldName))}}
+\label{a00563_a481ad30c6b18d9b8eaeb2e92af9661d4}
+
+
+Definition at line 116 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_a63e20b4366703cf6e879174f34b15ad9}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!WORD\_\-VALUE\_\-DN@{WORD\_\-VALUE\_\-DN}}
+\index{WORD\_\-VALUE\_\-DN@{WORD\_\-VALUE\_\-DN}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{WORD\_\-VALUE\_\-DN}]{\setlength{\rightskip}{0pt plus 5cm}\#define WORD\_\-VALUE\_\-DN(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~((({\bf UINT32})  value) $<$$<$ WORD\_\-BIT\_\-OFFSET(bitfieldName))}}
+\label{a00563_a63e20b4366703cf6e879174f34b15ad9}
+
+
+Definition at line 100 of file gsn\_\-reg\_\-op.h.
+
+\hypertarget{a00563_ae695529d0f24257955d94ba320318fec}{
+\index{gsn\_\-reg\_\-op.h@{gsn\_\-reg\_\-op.h}!WORD\_\-VALUE\_\-N@{WORD\_\-VALUE\_\-N}}
+\index{WORD\_\-VALUE\_\-N@{WORD\_\-VALUE\_\-N}!gsn_reg_op.h@{gsn\_\-reg\_\-op.h}}
+\subsubsection[{WORD\_\-VALUE\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define WORD\_\-VALUE\_\-N(
+\begin{DoxyParamCaption}
+\item[{}]{bitfieldName, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~(WORD\_\-VALUE(bitfieldName, value) $>$$>$ WORD\_\-BIT\_\-OFFSET(bitfieldName))}}
+\label{a00563_ae695529d0f24257955d94ba320318fec}
+
+
+Definition at line 123 of file gsn\_\-reg\_\-op.h.
+

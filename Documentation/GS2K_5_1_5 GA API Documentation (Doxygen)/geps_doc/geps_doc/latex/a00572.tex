@@ -1,0 +1,1332 @@
+\hypertarget{a00572}{
+\section{gsn\_\-reg\_\-spi\_\-op.h File Reference}
+\label{a00572}\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00809}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00572_af82dadc598fe835c42078c20da1765c0}{SPI\_\-SPICR0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0))
+\item 
+\#define \hyperlink{a00572_abbe0ab363523ec21587a04452ea08f0a}{SPI\_\-SPICR0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0, (value))
+\item 
+\#define \hyperlink{a00572_aa59607a5125db58566c6627701584be5}{SPI\_\-SPICR0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0) $|$ (value))
+\item 
+\#define \hyperlink{a00572_abfe594eb6e8b3796bd9fda08a016cc45}{SPI\_\-SPICR0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00572_a66f175ac5717a67b2941def2c2633f88}{SPI\_\-SCR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SCR)
+\item 
+\#define \hyperlink{a00572_ad2088a37398a52dda82b4e33b00d3fc8}{SPI\_\-SCR\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SCR, (value))
+\item 
+\#define \hyperlink{a00572_ab614b006d25a4f97b00c084d14fb19ff}{SPI\_\-SPH\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPH)
+\item 
+\#define \hyperlink{a00572_a43979c87129bff0158901bff9c2e7319}{SPI\_\-SPH\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPH, 1)
+\item 
+\#define \hyperlink{a00572_a96ea96dcec5b17db91f47bb2d8cec46c}{SPI\_\-SPH\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPH, 0)
+\item 
+\#define \hyperlink{a00572_a6da368799af6b88905ff6e3b2b4eea52}{SPI\_\-SPO\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPO)
+\item 
+\#define \hyperlink{a00572_a54e9c3bb3f5fb7f749a80a34b28fb96a}{SPI\_\-SPO\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPO, 1)
+\item 
+\#define \hyperlink{a00572_ace627a283484da239b2a8e1cc25bf4c8}{SPI\_\-SPO\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPO, 0)
+\item 
+\#define \hyperlink{a00572_a47ff474ff56bd6785caa7dc71f753ef6}{SPI\_\-FRF\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-FRF)
+\item 
+\#define \hyperlink{a00572_a230cedb6a867587316775f4c1b4d6e32}{SPI\_\-FRF\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-FRF, (value))
+\item 
+\#define \hyperlink{a00572_a08d50aff637634882be2f36c08e63d3c}{SPI\_\-DSS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-DSS)
+\item 
+\#define \hyperlink{a00572_a791c6dd63f23e98d205a25e09779902a}{SPI\_\-DSS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-DSS, (value))
+\item 
+\#define \hyperlink{a00572_a98bed73a2c3590ec21e9f1ca8b889810}{SPI\_\-SPICR1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1))
+\item 
+\#define \hyperlink{a00572_a28add3d00a65b710d51bfd7942c38472}{SPI\_\-SPICR1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1, (value))
+\item 
+\#define \hyperlink{a00572_a8972721f86be5c5a12063afe56d5a276}{SPI\_\-SPICR1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1) $|$ (value))
+\item 
+\#define \hyperlink{a00572_a9905dc52bb4da5e86a2ec304f10b83a7}{SPI\_\-SPICR1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00572_a98f10c5124ad073b899411022c8cb0dd}{SPI\_\-SOD\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SOD)
+\item 
+\#define \hyperlink{a00572_ae01b57d57c228a9b5ba09a9191c6eb0d}{SPI\_\-SOD\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SOD, 1)
+\item 
+\#define \hyperlink{a00572_a6a90d61963877934794ca07120760df4}{SPI\_\-SOD\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SOD, 0)
+\item 
+\#define \hyperlink{a00572_a303a00c5809be25449430a0149479ea8}{SPI\_\-MS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-MS)
+\item 
+\#define \hyperlink{a00572_a2d0f3afa651dd43236af3e871f68250a}{SPI\_\-MS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-MS, 1)
+\item 
+\#define \hyperlink{a00572_a3f3cd4a27a9177c8d89336d88ec9e487}{SPI\_\-MS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-MS, 0)
+\item 
+\#define \hyperlink{a00572_a7f6f9507f5aba07562fad63496bac10b}{SPI\_\-SSE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SSE)
+\item 
+\#define \hyperlink{a00572_a718462dcab8a91c013ca8898d3e16288}{SPI\_\-SSE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SSE, 1)
+\item 
+\#define \hyperlink{a00572_a1a0bc792b67636697ad88cdce4097664}{SPI\_\-SSE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SSE, 0)
+\item 
+\#define \hyperlink{a00572_aeb6b5309e04d25d6130aab101f61961b}{SPI\_\-LBM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-LBM)
+\item 
+\#define \hyperlink{a00572_a7ce25f661ad5c72747ec6fcbec7681c0}{SPI\_\-LBM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-LBM, 1)
+\item 
+\#define \hyperlink{a00572_ab20f56c669d1df442565ebd911eae8ff}{SPI\_\-LBM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-LBM, 0)
+\item 
+\#define \hyperlink{a00572_a4096ab42cbe53b7da061ee49a47a5b75}{SPI\_\-SPIDR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR))
+\item 
+\#define \hyperlink{a00572_abdf8fa70af7624d4a81048a99d631f87}{SPI\_\-SPIDR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR, (value))
+\item 
+\#define \hyperlink{a00572_af6781c705e682db5dad9497df9ce9bfc}{SPI\_\-SPIDR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR) $|$ (value))
+\item 
+\#define \hyperlink{a00572_a4467693908c9deb8cef2df5792cdfdf9}{SPI\_\-SPIDR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00572_a4fc645a0345a6900e6f546e0b3f4d4ec}{SPI\_\-DATA\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-DATA)
+\item 
+\#define \hyperlink{a00572_a03f3d8680e1aeb464fddbb56d81d01c1}{SPI\_\-DATA\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-DATA, (value))
+\item 
+\#define \hyperlink{a00572_a54330444b209a026c869c8fb011e99fc}{SPI\_\-SPISR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPISR))
+\item 
+\#define \hyperlink{a00572_aca0ec790834f4939d0d9d2be2b8d123e}{SPI\_\-BSY\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-BSY)
+\item 
+\#define \hyperlink{a00572_ae4f78396316c2c97e39e4876fdea64cb}{SPI\_\-RFF\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RFF)
+\item 
+\#define \hyperlink{a00572_aff62d00e65a45dfb2aab3e82bc37e594}{SPI\_\-RNE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RNE)
+\item 
+\#define \hyperlink{a00572_a867349e960851360302e44d8bbc57dcf}{SPI\_\-TNF\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TNF)
+\item 
+\#define \hyperlink{a00572_a1ce5b2755d77fbbc68c0ae9d495c92b3}{SPI\_\-TFE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TFE)
+\item 
+\#define \hyperlink{a00572_aa8c8c115e9a2405ae023c3367bec729f}{SPI\_\-SPICPSR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR))
+\item 
+\#define \hyperlink{a00572_ad6feb059b7666d5a2bca66ad1f13a00f}{SPI\_\-SPICPSR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR, (value))
+\item 
+\#define \hyperlink{a00572_aeb115a518d474c3682221de9ae992f00}{SPI\_\-SPICPSR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR) $|$ (value))
+\item 
+\#define \hyperlink{a00572_adc895c7c49f9c66d0e0c87c96e5178e2}{SPI\_\-SPICPSR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00572_a9bf1d12e75139e86410bf16eee145f24}{SPI\_\-CPSDVSR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-CPSDVSR)
+\item 
+\#define \hyperlink{a00572_a6507e9f6ee56d2ae91af1865479b0748}{SPI\_\-CPSDVSR\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-CPSDVSR, (value))
+\item 
+\#define \hyperlink{a00572_a94c104f3e915e2500ac5cf9eea17874e}{SPI\_\-SPIMSC\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC))
+\item 
+\#define \hyperlink{a00572_af88d943a70858f889b6311553f1f5310}{SPI\_\-SPIMSC\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC, (value))
+\item 
+\#define \hyperlink{a00572_aab7932ae7f700f56bb0cf2484d5c9bf3}{SPI\_\-SPIMSC\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC) $|$ (value))
+\item 
+\#define \hyperlink{a00572_a2eadbf5b0338c76d7d140a37e3a27557}{SPI\_\-SPIMSC\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00572_ae8b34889acfb072f01ccf7ce0e48339b}{SPI\_\-TXIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXIM)
+\item 
+\#define \hyperlink{a00572_aba5e2139688416c762ab4ea54176edc3}{SPI\_\-TXIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXIM, 1)
+\item 
+\#define \hyperlink{a00572_a90607b3a709edfa839fd8df7f1eeadaa}{SPI\_\-TXIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXIM, 0)
+\item 
+\#define \hyperlink{a00572_aca98f2c22169ebc5998295c417c89ec2}{SPI\_\-RXIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXIM)
+\item 
+\#define \hyperlink{a00572_aebf3d00f6a2744770605efd3e85e89c4}{SPI\_\-RXIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXIM, 1)
+\item 
+\#define \hyperlink{a00572_a771bbb2ab447248dfd8212210baa291b}{SPI\_\-RXIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXIM, 0)
+\item 
+\#define \hyperlink{a00572_a716422e5f76f90f38559d04a11cd0140}{SPI\_\-RTIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTIM)
+\item 
+\#define \hyperlink{a00572_a9083af74dd1a2e6a332467578e9ac0ce}{SPI\_\-RTIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTIM, 1)
+\item 
+\#define \hyperlink{a00572_ab656a15f58bd41872534e28efa723e5d}{SPI\_\-RTIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTIM, 0)
+\item 
+\#define \hyperlink{a00572_a07af8d9314a06b115ca11ba4c1b20fa2}{SPI\_\-RORIM\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORIM)
+\item 
+\#define \hyperlink{a00572_afd7ffbcce51b6de99d74a39627f8a20a}{SPI\_\-RORIM\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORIM, 1)
+\item 
+\#define \hyperlink{a00572_a070788574532a6945678aefe98d62317}{SPI\_\-RORIM\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORIM, 0)
+\item 
+\#define \hyperlink{a00572_a63a3a1551d2265d1c248d10fa459daa5}{SPI\_\-SPIMIS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMIS))
+\item 
+\#define \hyperlink{a00572_a5604bb7475f5d4d9beadc96044c710fd}{SPI\_\-TXMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXMIS)
+\item 
+\#define \hyperlink{a00572_af68158a292ab4d08ce29a4f19fc13c8c}{SPI\_\-RXMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXMIS)
+\item 
+\#define \hyperlink{a00572_a490a1a2b1541d94cc89c6c5e3f933803}{SPI\_\-RTMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTMIS)
+\item 
+\#define \hyperlink{a00572_a68825adfaa2466e9176d78499a45ad4b}{SPI\_\-RORMIS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORMIS)
+\item 
+\#define \hyperlink{a00572_a89ca3ed354ce8d6dad7a5b4effdb2db4}{SPI\_\-SPIICR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIICR, (value))
+\item 
+\#define \hyperlink{a00572_a69b8516777646f18c9e9d91a8dfa73f2}{SPI\_\-RTIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTIC, 1)
+\item 
+\#define \hyperlink{a00572_a81320baaebb8ba7261cd8c81b7fa716f}{SPI\_\-RTIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTIC, 0)
+\item 
+\#define \hyperlink{a00572_ab748face9c1fca49bdbd1fc7f923fb50}{SPI\_\-RORIC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORIC, 1)
+\item 
+\#define \hyperlink{a00572_a488a98012835ce03eb8d2e59e04ae4b0}{SPI\_\-RORIC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORIC, 0)
+\item 
+\#define \hyperlink{a00572_a565208794e40a6a110acfba8723549b8}{SPI\_\-SPIDMACR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR))
+\item 
+\#define \hyperlink{a00572_aa59a5106f1f366b2cbf5d1b9f2c19b1b}{SPI\_\-SPIDMACR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR, (value))
+\item 
+\#define \hyperlink{a00572_a8f193f7afebac84f3751d1cd85469e0c}{SPI\_\-SPIDMACR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR) $|$ (value))
+\item 
+\#define \hyperlink{a00572_a232c3f82fa5d142b7bad36ac18f314b1}{SPI\_\-SPIDMACR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00572_a1c34bede82c533e14a8d5f8a00b504d7}{SPI\_\-TXDMAE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXDMAE)
+\item 
+\#define \hyperlink{a00572_ab476338deadf8515b121a0c92490b117}{SPI\_\-TXDMAE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXDMAE, 1)
+\item 
+\#define \hyperlink{a00572_ab422a02f05c06cf32f15923ec757dba0}{SPI\_\-TXDMAE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXDMAE, 0)
+\item 
+\#define \hyperlink{a00572_a7d068aa70925157b3b2583943d11fb49}{SPI\_\-RXDMAE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXDMAE)
+\item 
+\#define \hyperlink{a00572_a895efd594b3e601020c191e28730c547}{SPI\_\-RXDMAE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXDMAE, 1)
+\item 
+\#define \hyperlink{a00572_ab2378ab7a5d2cb33c1ae61e0917c498c}{SPI\_\-RXDMAE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXDMAE, 0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00572_aca0ec790834f4939d0d9d2be2b8d123e}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-BSY\_\-GET@{SPI\_\-BSY\_\-GET}}
+\index{SPI\_\-BSY\_\-GET@{SPI\_\-BSY\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-BSY\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-BSY\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-BSY)}}
+\label{a00572_aca0ec790834f4939d0d9d2be2b8d123e}
+
+
+Definition at line 200 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a9bf1d12e75139e86410bf16eee145f24}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-CPSDVSR\_\-GET@{SPI\_\-CPSDVSR\_\-GET}}
+\index{SPI\_\-CPSDVSR\_\-GET@{SPI\_\-CPSDVSR\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-CPSDVSR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-CPSDVSR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-CPSDVSR)}}
+\label{a00572_a9bf1d12e75139e86410bf16eee145f24}
+
+
+Definition at line 249 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a6507e9f6ee56d2ae91af1865479b0748}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-CPSDVSR\_\-SET@{SPI\_\-CPSDVSR\_\-SET}}
+\index{SPI\_\-CPSDVSR\_\-SET@{SPI\_\-CPSDVSR\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-CPSDVSR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-CPSDVSR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-CPSDVSR, (value))}}
+\label{a00572_a6507e9f6ee56d2ae91af1865479b0748}
+
+
+Definition at line 251 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a4fc645a0345a6900e6f546e0b3f4d4ec}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-DATA\_\-GET@{SPI\_\-DATA\_\-GET}}
+\index{SPI\_\-DATA\_\-GET@{SPI\_\-DATA\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-DATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-DATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-DATA)}}
+\label{a00572_a4fc645a0345a6900e6f546e0b3f4d4ec}
+
+
+Definition at line 183 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a03f3d8680e1aeb464fddbb56d81d01c1}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-DATA\_\-SET@{SPI\_\-DATA\_\-SET}}
+\index{SPI\_\-DATA\_\-SET@{SPI\_\-DATA\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-DATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-DATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-DATA, (value))}}
+\label{a00572_a03f3d8680e1aeb464fddbb56d81d01c1}
+
+
+Definition at line 185 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a08d50aff637634882be2f36c08e63d3c}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-DSS\_\-GET@{SPI\_\-DSS\_\-GET}}
+\index{SPI\_\-DSS\_\-GET@{SPI\_\-DSS\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-DSS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-DSS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-DSS)}}
+\label{a00572_a08d50aff637634882be2f36c08e63d3c}
+
+
+Definition at line 102 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a791c6dd63f23e98d205a25e09779902a}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-DSS\_\-SET@{SPI\_\-DSS\_\-SET}}
+\index{SPI\_\-DSS\_\-SET@{SPI\_\-DSS\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-DSS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-DSS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-DSS, (value))}}
+\label{a00572_a791c6dd63f23e98d205a25e09779902a}
+
+
+Definition at line 104 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a47ff474ff56bd6785caa7dc71f753ef6}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-FRF\_\-GET@{SPI\_\-FRF\_\-GET}}
+\index{SPI\_\-FRF\_\-GET@{SPI\_\-FRF\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-FRF\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-FRF\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-FRF)}}
+\label{a00572_a47ff474ff56bd6785caa7dc71f753ef6}
+
+
+Definition at line 93 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a230cedb6a867587316775f4c1b4d6e32}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-FRF\_\-SET@{SPI\_\-FRF\_\-SET}}
+\index{SPI\_\-FRF\_\-SET@{SPI\_\-FRF\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-FRF\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-FRF\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-FRF, (value))}}
+\label{a00572_a230cedb6a867587316775f4c1b4d6e32}
+
+
+Definition at line 95 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ab20f56c669d1df442565ebd911eae8ff}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-LBM\_\-CLEAR@{SPI\_\-LBM\_\-CLEAR}}
+\index{SPI\_\-LBM\_\-CLEAR@{SPI\_\-LBM\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-LBM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-LBM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-LBM, 0)}}
+\label{a00572_ab20f56c669d1df442565ebd911eae8ff}
+
+
+Definition at line 162 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_aeb6b5309e04d25d6130aab101f61961b}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-LBM\_\-GET@{SPI\_\-LBM\_\-GET}}
+\index{SPI\_\-LBM\_\-GET@{SPI\_\-LBM\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-LBM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-LBM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-LBM)}}
+\label{a00572_aeb6b5309e04d25d6130aab101f61961b}
+
+
+Definition at line 158 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a7ce25f661ad5c72747ec6fcbec7681c0}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-LBM\_\-SET@{SPI\_\-LBM\_\-SET}}
+\index{SPI\_\-LBM\_\-SET@{SPI\_\-LBM\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-LBM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-LBM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-LBM, 1)}}
+\label{a00572_a7ce25f661ad5c72747ec6fcbec7681c0}
+
+
+Definition at line 160 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a3f3cd4a27a9177c8d89336d88ec9e487}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-MS\_\-CLEAR@{SPI\_\-MS\_\-CLEAR}}
+\index{SPI\_\-MS\_\-CLEAR@{SPI\_\-MS\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-MS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-MS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-MS, 0)}}
+\label{a00572_a3f3cd4a27a9177c8d89336d88ec9e487}
+
+
+Definition at line 140 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a303a00c5809be25449430a0149479ea8}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-MS\_\-GET@{SPI\_\-MS\_\-GET}}
+\index{SPI\_\-MS\_\-GET@{SPI\_\-MS\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-MS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-MS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-MS)}}
+\label{a00572_a303a00c5809be25449430a0149479ea8}
+
+
+Definition at line 136 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a2d0f3afa651dd43236af3e871f68250a}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-MS\_\-SET@{SPI\_\-MS\_\-SET}}
+\index{SPI\_\-MS\_\-SET@{SPI\_\-MS\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-MS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-MS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-MS, 1)}}
+\label{a00572_a2d0f3afa651dd43236af3e871f68250a}
+
+
+Definition at line 138 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ae4f78396316c2c97e39e4876fdea64cb}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RFF\_\-GET@{SPI\_\-RFF\_\-GET}}
+\index{SPI\_\-RFF\_\-GET@{SPI\_\-RFF\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RFF\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RFF\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RFF)}}
+\label{a00572_ae4f78396316c2c97e39e4876fdea64cb}
+
+
+Definition at line 207 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_aff62d00e65a45dfb2aab3e82bc37e594}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RNE\_\-GET@{SPI\_\-RNE\_\-GET}}
+\index{SPI\_\-RNE\_\-GET@{SPI\_\-RNE\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RNE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RNE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RNE)}}
+\label{a00572_aff62d00e65a45dfb2aab3e82bc37e594}
+
+
+Definition at line 214 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a488a98012835ce03eb8d2e59e04ae4b0}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RORIC\_\-CLEAR@{SPI\_\-RORIC\_\-CLEAR}}
+\index{SPI\_\-RORIC\_\-CLEAR@{SPI\_\-RORIC\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RORIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RORIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORIC, 0)}}
+\label{a00572_a488a98012835ce03eb8d2e59e04ae4b0}
+
+
+Definition at line 371 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ab748face9c1fca49bdbd1fc7f923fb50}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RORIC\_\-SET@{SPI\_\-RORIC\_\-SET}}
+\index{SPI\_\-RORIC\_\-SET@{SPI\_\-RORIC\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RORIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RORIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORIC, 1)}}
+\label{a00572_ab748face9c1fca49bdbd1fc7f923fb50}
+
+
+Definition at line 369 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a070788574532a6945678aefe98d62317}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RORIM\_\-CLEAR@{SPI\_\-RORIM\_\-CLEAR}}
+\index{SPI\_\-RORIM\_\-CLEAR@{SPI\_\-RORIM\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RORIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RORIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORIM, 0)}}
+\label{a00572_a070788574532a6945678aefe98d62317}
+
+
+Definition at line 309 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a07af8d9314a06b115ca11ba4c1b20fa2}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RORIM\_\-GET@{SPI\_\-RORIM\_\-GET}}
+\index{SPI\_\-RORIM\_\-GET@{SPI\_\-RORIM\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RORIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RORIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORIM)}}
+\label{a00572_a07af8d9314a06b115ca11ba4c1b20fa2}
+
+
+Definition at line 305 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_afd7ffbcce51b6de99d74a39627f8a20a}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RORIM\_\-SET@{SPI\_\-RORIM\_\-SET}}
+\index{SPI\_\-RORIM\_\-SET@{SPI\_\-RORIM\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RORIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RORIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORIM, 1)}}
+\label{a00572_afd7ffbcce51b6de99d74a39627f8a20a}
+
+
+Definition at line 307 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a68825adfaa2466e9176d78499a45ad4b}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RORMIS\_\-GET@{SPI\_\-RORMIS\_\-GET}}
+\index{SPI\_\-RORMIS\_\-GET@{SPI\_\-RORMIS\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RORMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RORMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RORMIS)}}
+\label{a00572_a68825adfaa2466e9176d78499a45ad4b}
+
+
+Definition at line 345 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a81320baaebb8ba7261cd8c81b7fa716f}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RTIC\_\-CLEAR@{SPI\_\-RTIC\_\-CLEAR}}
+\index{SPI\_\-RTIC\_\-CLEAR@{SPI\_\-RTIC\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RTIC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RTIC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTIC, 0)}}
+\label{a00572_a81320baaebb8ba7261cd8c81b7fa716f}
+
+
+Definition at line 362 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a69b8516777646f18c9e9d91a8dfa73f2}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RTIC\_\-SET@{SPI\_\-RTIC\_\-SET}}
+\index{SPI\_\-RTIC\_\-SET@{SPI\_\-RTIC\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RTIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RTIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTIC, 1)}}
+\label{a00572_a69b8516777646f18c9e9d91a8dfa73f2}
+
+
+Definition at line 360 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ab656a15f58bd41872534e28efa723e5d}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RTIM\_\-CLEAR@{SPI\_\-RTIM\_\-CLEAR}}
+\index{SPI\_\-RTIM\_\-CLEAR@{SPI\_\-RTIM\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RTIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RTIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTIM, 0)}}
+\label{a00572_ab656a15f58bd41872534e28efa723e5d}
+
+
+Definition at line 298 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a716422e5f76f90f38559d04a11cd0140}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RTIM\_\-GET@{SPI\_\-RTIM\_\-GET}}
+\index{SPI\_\-RTIM\_\-GET@{SPI\_\-RTIM\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RTIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RTIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTIM)}}
+\label{a00572_a716422e5f76f90f38559d04a11cd0140}
+
+
+Definition at line 294 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a9083af74dd1a2e6a332467578e9ac0ce}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RTIM\_\-SET@{SPI\_\-RTIM\_\-SET}}
+\index{SPI\_\-RTIM\_\-SET@{SPI\_\-RTIM\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RTIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RTIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTIM, 1)}}
+\label{a00572_a9083af74dd1a2e6a332467578e9ac0ce}
+
+
+Definition at line 296 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a490a1a2b1541d94cc89c6c5e3f933803}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RTMIS\_\-GET@{SPI\_\-RTMIS\_\-GET}}
+\index{SPI\_\-RTMIS\_\-GET@{SPI\_\-RTMIS\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RTMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RTMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RTMIS)}}
+\label{a00572_a490a1a2b1541d94cc89c6c5e3f933803}
+
+
+Definition at line 338 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ab2378ab7a5d2cb33c1ae61e0917c498c}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RXDMAE\_\-CLEAR@{SPI\_\-RXDMAE\_\-CLEAR}}
+\index{SPI\_\-RXDMAE\_\-CLEAR@{SPI\_\-RXDMAE\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RXDMAE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RXDMAE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXDMAE, 0)}}
+\label{a00572_ab2378ab7a5d2cb33c1ae61e0917c498c}
+
+
+Definition at line 407 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a7d068aa70925157b3b2583943d11fb49}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RXDMAE\_\-GET@{SPI\_\-RXDMAE\_\-GET}}
+\index{SPI\_\-RXDMAE\_\-GET@{SPI\_\-RXDMAE\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RXDMAE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RXDMAE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXDMAE)}}
+\label{a00572_a7d068aa70925157b3b2583943d11fb49}
+
+
+Definition at line 403 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a895efd594b3e601020c191e28730c547}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RXDMAE\_\-SET@{SPI\_\-RXDMAE\_\-SET}}
+\index{SPI\_\-RXDMAE\_\-SET@{SPI\_\-RXDMAE\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RXDMAE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RXDMAE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXDMAE, 1)}}
+\label{a00572_a895efd594b3e601020c191e28730c547}
+
+
+Definition at line 405 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a771bbb2ab447248dfd8212210baa291b}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RXIM\_\-CLEAR@{SPI\_\-RXIM\_\-CLEAR}}
+\index{SPI\_\-RXIM\_\-CLEAR@{SPI\_\-RXIM\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RXIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RXIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXIM, 0)}}
+\label{a00572_a771bbb2ab447248dfd8212210baa291b}
+
+
+Definition at line 287 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_aca98f2c22169ebc5998295c417c89ec2}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RXIM\_\-GET@{SPI\_\-RXIM\_\-GET}}
+\index{SPI\_\-RXIM\_\-GET@{SPI\_\-RXIM\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RXIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RXIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXIM)}}
+\label{a00572_aca98f2c22169ebc5998295c417c89ec2}
+
+
+Definition at line 283 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_aebf3d00f6a2744770605efd3e85e89c4}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RXIM\_\-SET@{SPI\_\-RXIM\_\-SET}}
+\index{SPI\_\-RXIM\_\-SET@{SPI\_\-RXIM\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RXIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RXIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXIM, 1)}}
+\label{a00572_aebf3d00f6a2744770605efd3e85e89c4}
+
+
+Definition at line 285 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_af68158a292ab4d08ce29a4f19fc13c8c}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-RXMIS\_\-GET@{SPI\_\-RXMIS\_\-GET}}
+\index{SPI\_\-RXMIS\_\-GET@{SPI\_\-RXMIS\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-RXMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-RXMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-RXMIS)}}
+\label{a00572_af68158a292ab4d08ce29a4f19fc13c8c}
+
+
+Definition at line 331 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a66f175ac5717a67b2941def2c2633f88}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SCR\_\-GET@{SPI\_\-SCR\_\-GET}}
+\index{SPI\_\-SCR\_\-GET@{SPI\_\-SCR\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SCR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SCR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SCR)}}
+\label{a00572_a66f175ac5717a67b2941def2c2633f88}
+
+
+Definition at line 62 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ad2088a37398a52dda82b4e33b00d3fc8}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SCR\_\-SET@{SPI\_\-SCR\_\-SET}}
+\index{SPI\_\-SCR\_\-SET@{SPI\_\-SCR\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SCR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SCR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SCR, (value))}}
+\label{a00572_ad2088a37398a52dda82b4e33b00d3fc8}
+
+
+Definition at line 64 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a6a90d61963877934794ca07120760df4}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SOD\_\-CLEAR@{SPI\_\-SOD\_\-CLEAR}}
+\index{SPI\_\-SOD\_\-CLEAR@{SPI\_\-SOD\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SOD\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SOD\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SOD, 0)}}
+\label{a00572_a6a90d61963877934794ca07120760df4}
+
+
+Definition at line 129 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a98f10c5124ad073b899411022c8cb0dd}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SOD\_\-GET@{SPI\_\-SOD\_\-GET}}
+\index{SPI\_\-SOD\_\-GET@{SPI\_\-SOD\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SOD\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SOD\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SOD)}}
+\label{a00572_a98f10c5124ad073b899411022c8cb0dd}
+
+
+Definition at line 125 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ae01b57d57c228a9b5ba09a9191c6eb0d}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SOD\_\-SET@{SPI\_\-SOD\_\-SET}}
+\index{SPI\_\-SOD\_\-SET@{SPI\_\-SOD\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SOD\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SOD\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SOD, 1)}}
+\label{a00572_ae01b57d57c228a9b5ba09a9191c6eb0d}
+
+
+Definition at line 127 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a96ea96dcec5b17db91f47bb2d8cec46c}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPH\_\-CLEAR@{SPI\_\-SPH\_\-CLEAR}}
+\index{SPI\_\-SPH\_\-CLEAR@{SPI\_\-SPH\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPH\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPH\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPH, 0)}}
+\label{a00572_a96ea96dcec5b17db91f47bb2d8cec46c}
+
+
+Definition at line 75 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ab614b006d25a4f97b00c084d14fb19ff}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPH\_\-GET@{SPI\_\-SPH\_\-GET}}
+\index{SPI\_\-SPH\_\-GET@{SPI\_\-SPH\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPH\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPH\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPH)}}
+\label{a00572_ab614b006d25a4f97b00c084d14fb19ff}
+
+
+Definition at line 71 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a43979c87129bff0158901bff9c2e7319}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPH\_\-SET@{SPI\_\-SPH\_\-SET}}
+\index{SPI\_\-SPH\_\-SET@{SPI\_\-SPH\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPH\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPH\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPH, 1)}}
+\label{a00572_a43979c87129bff0158901bff9c2e7319}
+
+
+Definition at line 73 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_adc895c7c49f9c66d0e0c87c96e5178e2}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICPSR\_\-CLEARBIT@{SPI\_\-SPICPSR\_\-CLEARBIT}}
+\index{SPI\_\-SPICPSR\_\-CLEARBIT@{SPI\_\-SPICPSR\_\-CLEARBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICPSR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICPSR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR) \& ($\sim$(value)))}}
+\label{a00572_adc895c7c49f9c66d0e0c87c96e5178e2}
+
+
+Definition at line 242 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_aa8c8c115e9a2405ae023c3367bec729f}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICPSR\_\-GET@{SPI\_\-SPICPSR\_\-GET}}
+\index{SPI\_\-SPICPSR\_\-GET@{SPI\_\-SPICPSR\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICPSR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICPSR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR))}}
+\label{a00572_aa8c8c115e9a2405ae023c3367bec729f}
+
+
+Definition at line 236 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ad6feb059b7666d5a2bca66ad1f13a00f}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICPSR\_\-SET@{SPI\_\-SPICPSR\_\-SET}}
+\index{SPI\_\-SPICPSR\_\-SET@{SPI\_\-SPICPSR\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICPSR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICPSR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR, (value))}}
+\label{a00572_ad6feb059b7666d5a2bca66ad1f13a00f}
+
+
+Definition at line 238 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_aeb115a518d474c3682221de9ae992f00}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICPSR\_\-SETBIT@{SPI\_\-SPICPSR\_\-SETBIT}}
+\index{SPI\_\-SPICPSR\_\-SETBIT@{SPI\_\-SPICPSR\_\-SETBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICPSR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICPSR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICPSR) $|$ (value))}}
+\label{a00572_aeb115a518d474c3682221de9ae992f00}
+
+
+Definition at line 240 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_abfe594eb6e8b3796bd9fda08a016cc45}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICR0\_\-CLEARBIT@{SPI\_\-SPICR0\_\-CLEARBIT}}
+\index{SPI\_\-SPICR0\_\-CLEARBIT@{SPI\_\-SPICR0\_\-CLEARBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICR0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICR0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0) \& ($\sim$(value)))}}
+\label{a00572_abfe594eb6e8b3796bd9fda08a016cc45}
+
+
+Definition at line 55 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_af82dadc598fe835c42078c20da1765c0}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICR0\_\-GET@{SPI\_\-SPICR0\_\-GET}}
+\index{SPI\_\-SPICR0\_\-GET@{SPI\_\-SPICR0\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICR0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICR0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0))}}
+\label{a00572_af82dadc598fe835c42078c20da1765c0}
+
+
+Definition at line 49 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_abbe0ab363523ec21587a04452ea08f0a}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICR0\_\-SET@{SPI\_\-SPICR0\_\-SET}}
+\index{SPI\_\-SPICR0\_\-SET@{SPI\_\-SPICR0\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICR0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICR0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0, (value))}}
+\label{a00572_abbe0ab363523ec21587a04452ea08f0a}
+
+
+Definition at line 51 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_aa59607a5125db58566c6627701584be5}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICR0\_\-SETBIT@{SPI\_\-SPICR0\_\-SETBIT}}
+\index{SPI\_\-SPICR0\_\-SETBIT@{SPI\_\-SPICR0\_\-SETBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICR0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICR0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR0) $|$ (value))}}
+\label{a00572_aa59607a5125db58566c6627701584be5}
+
+
+Definition at line 53 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a9905dc52bb4da5e86a2ec304f10b83a7}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICR1\_\-CLEARBIT@{SPI\_\-SPICR1\_\-CLEARBIT}}
+\index{SPI\_\-SPICR1\_\-CLEARBIT@{SPI\_\-SPICR1\_\-CLEARBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICR1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICR1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1) \& ($\sim$(value)))}}
+\label{a00572_a9905dc52bb4da5e86a2ec304f10b83a7}
+
+
+Definition at line 118 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a98bed73a2c3590ec21e9f1ca8b889810}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICR1\_\-GET@{SPI\_\-SPICR1\_\-GET}}
+\index{SPI\_\-SPICR1\_\-GET@{SPI\_\-SPICR1\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICR1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICR1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1))}}
+\label{a00572_a98bed73a2c3590ec21e9f1ca8b889810}
+
+
+Definition at line 112 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a28add3d00a65b710d51bfd7942c38472}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICR1\_\-SET@{SPI\_\-SPICR1\_\-SET}}
+\index{SPI\_\-SPICR1\_\-SET@{SPI\_\-SPICR1\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICR1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICR1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1, (value))}}
+\label{a00572_a28add3d00a65b710d51bfd7942c38472}
+
+
+Definition at line 114 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a8972721f86be5c5a12063afe56d5a276}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPICR1\_\-SETBIT@{SPI\_\-SPICR1\_\-SETBIT}}
+\index{SPI\_\-SPICR1\_\-SETBIT@{SPI\_\-SPICR1\_\-SETBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPICR1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPICR1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPICR1) $|$ (value))}}
+\label{a00572_a8972721f86be5c5a12063afe56d5a276}
+
+
+Definition at line 116 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a232c3f82fa5d142b7bad36ac18f314b1}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIDMACR\_\-CLEARBIT@{SPI\_\-SPIDMACR\_\-CLEARBIT}}
+\index{SPI\_\-SPIDMACR\_\-CLEARBIT@{SPI\_\-SPIDMACR\_\-CLEARBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIDMACR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIDMACR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR) \& ($\sim$(value)))}}
+\label{a00572_a232c3f82fa5d142b7bad36ac18f314b1}
+
+
+Definition at line 385 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a565208794e40a6a110acfba8723549b8}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIDMACR\_\-GET@{SPI\_\-SPIDMACR\_\-GET}}
+\index{SPI\_\-SPIDMACR\_\-GET@{SPI\_\-SPIDMACR\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIDMACR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIDMACR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR))}}
+\label{a00572_a565208794e40a6a110acfba8723549b8}
+
+
+Definition at line 379 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_aa59a5106f1f366b2cbf5d1b9f2c19b1b}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIDMACR\_\-SET@{SPI\_\-SPIDMACR\_\-SET}}
+\index{SPI\_\-SPIDMACR\_\-SET@{SPI\_\-SPIDMACR\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIDMACR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIDMACR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR, (value))}}
+\label{a00572_aa59a5106f1f366b2cbf5d1b9f2c19b1b}
+
+
+Definition at line 381 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a8f193f7afebac84f3751d1cd85469e0c}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIDMACR\_\-SETBIT@{SPI\_\-SPIDMACR\_\-SETBIT}}
+\index{SPI\_\-SPIDMACR\_\-SETBIT@{SPI\_\-SPIDMACR\_\-SETBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIDMACR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIDMACR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDMACR) $|$ (value))}}
+\label{a00572_a8f193f7afebac84f3751d1cd85469e0c}
+
+
+Definition at line 383 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a4467693908c9deb8cef2df5792cdfdf9}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIDR\_\-CLEARBIT@{SPI\_\-SPIDR\_\-CLEARBIT}}
+\index{SPI\_\-SPIDR\_\-CLEARBIT@{SPI\_\-SPIDR\_\-CLEARBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIDR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIDR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR) \& ($\sim$(value)))}}
+\label{a00572_a4467693908c9deb8cef2df5792cdfdf9}
+
+
+Definition at line 176 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a4096ab42cbe53b7da061ee49a47a5b75}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIDR\_\-GET@{SPI\_\-SPIDR\_\-GET}}
+\index{SPI\_\-SPIDR\_\-GET@{SPI\_\-SPIDR\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIDR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIDR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR))}}
+\label{a00572_a4096ab42cbe53b7da061ee49a47a5b75}
+
+
+Definition at line 170 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_abdf8fa70af7624d4a81048a99d631f87}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIDR\_\-SET@{SPI\_\-SPIDR\_\-SET}}
+\index{SPI\_\-SPIDR\_\-SET@{SPI\_\-SPIDR\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIDR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIDR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR, (value))}}
+\label{a00572_abdf8fa70af7624d4a81048a99d631f87}
+
+
+Definition at line 172 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_af6781c705e682db5dad9497df9ce9bfc}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIDR\_\-SETBIT@{SPI\_\-SPIDR\_\-SETBIT}}
+\index{SPI\_\-SPIDR\_\-SETBIT@{SPI\_\-SPIDR\_\-SETBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIDR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIDR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIDR) $|$ (value))}}
+\label{a00572_af6781c705e682db5dad9497df9ce9bfc}
+
+
+Definition at line 174 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a89ca3ed354ce8d6dad7a5b4effdb2db4}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIICR\_\-SET@{SPI\_\-SPIICR\_\-SET}}
+\index{SPI\_\-SPIICR\_\-SET@{SPI\_\-SPIICR\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIICR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIICR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIICR, (value))}}
+\label{a00572_a89ca3ed354ce8d6dad7a5b4effdb2db4}
+
+
+Definition at line 353 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a63a3a1551d2265d1c248d10fa459daa5}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIMIS\_\-GET@{SPI\_\-SPIMIS\_\-GET}}
+\index{SPI\_\-SPIMIS\_\-GET@{SPI\_\-SPIMIS\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMIS))}}
+\label{a00572_a63a3a1551d2265d1c248d10fa459daa5}
+
+
+Definition at line 317 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a2eadbf5b0338c76d7d140a37e3a27557}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIMSC\_\-CLEARBIT@{SPI\_\-SPIMSC\_\-CLEARBIT}}
+\index{SPI\_\-SPIMSC\_\-CLEARBIT@{SPI\_\-SPIMSC\_\-CLEARBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIMSC\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIMSC\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC) \& ($\sim$(value)))}}
+\label{a00572_a2eadbf5b0338c76d7d140a37e3a27557}
+
+
+Definition at line 265 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a94c104f3e915e2500ac5cf9eea17874e}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIMSC\_\-GET@{SPI\_\-SPIMSC\_\-GET}}
+\index{SPI\_\-SPIMSC\_\-GET@{SPI\_\-SPIMSC\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIMSC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIMSC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC))}}
+\label{a00572_a94c104f3e915e2500ac5cf9eea17874e}
+
+
+Definition at line 259 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_af88d943a70858f889b6311553f1f5310}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIMSC\_\-SET@{SPI\_\-SPIMSC\_\-SET}}
+\index{SPI\_\-SPIMSC\_\-SET@{SPI\_\-SPIMSC\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIMSC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIMSC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC, (value))}}
+\label{a00572_af88d943a70858f889b6311553f1f5310}
+
+
+Definition at line 261 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_aab7932ae7f700f56bb0cf2484d5c9bf3}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPIMSC\_\-SETBIT@{SPI\_\-SPIMSC\_\-SETBIT}}
+\index{SPI\_\-SPIMSC\_\-SETBIT@{SPI\_\-SPIMSC\_\-SETBIT}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPIMSC\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPIMSC\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPIMSC) $|$ (value))}}
+\label{a00572_aab7932ae7f700f56bb0cf2484d5c9bf3}
+
+
+Definition at line 263 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a54330444b209a026c869c8fb011e99fc}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPISR\_\-GET@{SPI\_\-SPISR\_\-GET}}
+\index{SPI\_\-SPISR\_\-GET@{SPI\_\-SPISR\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPISR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPISR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SPI\_\-SPISR))}}
+\label{a00572_a54330444b209a026c869c8fb011e99fc}
+
+
+Definition at line 193 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ace627a283484da239b2a8e1cc25bf4c8}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPO\_\-CLEAR@{SPI\_\-SPO\_\-CLEAR}}
+\index{SPI\_\-SPO\_\-CLEAR@{SPI\_\-SPO\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPO\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPO\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPO, 0)}}
+\label{a00572_ace627a283484da239b2a8e1cc25bf4c8}
+
+
+Definition at line 86 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a6da368799af6b88905ff6e3b2b4eea52}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPO\_\-GET@{SPI\_\-SPO\_\-GET}}
+\index{SPI\_\-SPO\_\-GET@{SPI\_\-SPO\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPO)}}
+\label{a00572_a6da368799af6b88905ff6e3b2b4eea52}
+
+
+Definition at line 82 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a54e9c3bb3f5fb7f749a80a34b28fb96a}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SPO\_\-SET@{SPI\_\-SPO\_\-SET}}
+\index{SPI\_\-SPO\_\-SET@{SPI\_\-SPO\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SPO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SPO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SPO, 1)}}
+\label{a00572_a54e9c3bb3f5fb7f749a80a34b28fb96a}
+
+
+Definition at line 84 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a1a0bc792b67636697ad88cdce4097664}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SSE\_\-CLEAR@{SPI\_\-SSE\_\-CLEAR}}
+\index{SPI\_\-SSE\_\-CLEAR@{SPI\_\-SSE\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SSE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SSE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SSE, 0)}}
+\label{a00572_a1a0bc792b67636697ad88cdce4097664}
+
+
+Definition at line 151 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a7f6f9507f5aba07562fad63496bac10b}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SSE\_\-GET@{SPI\_\-SSE\_\-GET}}
+\index{SPI\_\-SSE\_\-GET@{SPI\_\-SSE\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SSE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SSE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SSE)}}
+\label{a00572_a7f6f9507f5aba07562fad63496bac10b}
+
+
+Definition at line 147 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a718462dcab8a91c013ca8898d3e16288}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-SSE\_\-SET@{SPI\_\-SSE\_\-SET}}
+\index{SPI\_\-SSE\_\-SET@{SPI\_\-SSE\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-SSE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-SSE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-SSE, 1)}}
+\label{a00572_a718462dcab8a91c013ca8898d3e16288}
+
+
+Definition at line 149 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a1ce5b2755d77fbbc68c0ae9d495c92b3}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-TFE\_\-GET@{SPI\_\-TFE\_\-GET}}
+\index{SPI\_\-TFE\_\-GET@{SPI\_\-TFE\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-TFE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-TFE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TFE)}}
+\label{a00572_a1ce5b2755d77fbbc68c0ae9d495c92b3}
+
+
+Definition at line 228 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a867349e960851360302e44d8bbc57dcf}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-TNF\_\-GET@{SPI\_\-TNF\_\-GET}}
+\index{SPI\_\-TNF\_\-GET@{SPI\_\-TNF\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-TNF\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-TNF\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TNF)}}
+\label{a00572_a867349e960851360302e44d8bbc57dcf}
+
+
+Definition at line 221 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ab422a02f05c06cf32f15923ec757dba0}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-TXDMAE\_\-CLEAR@{SPI\_\-TXDMAE\_\-CLEAR}}
+\index{SPI\_\-TXDMAE\_\-CLEAR@{SPI\_\-TXDMAE\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-TXDMAE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-TXDMAE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXDMAE, 0)}}
+\label{a00572_ab422a02f05c06cf32f15923ec757dba0}
+
+
+Definition at line 396 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a1c34bede82c533e14a8d5f8a00b504d7}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-TXDMAE\_\-GET@{SPI\_\-TXDMAE\_\-GET}}
+\index{SPI\_\-TXDMAE\_\-GET@{SPI\_\-TXDMAE\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-TXDMAE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-TXDMAE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXDMAE)}}
+\label{a00572_a1c34bede82c533e14a8d5f8a00b504d7}
+
+
+Definition at line 392 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ab476338deadf8515b121a0c92490b117}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-TXDMAE\_\-SET@{SPI\_\-TXDMAE\_\-SET}}
+\index{SPI\_\-TXDMAE\_\-SET@{SPI\_\-TXDMAE\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-TXDMAE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-TXDMAE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXDMAE, 1)}}
+\label{a00572_ab476338deadf8515b121a0c92490b117}
+
+
+Definition at line 394 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a90607b3a709edfa839fd8df7f1eeadaa}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-TXIM\_\-CLEAR@{SPI\_\-TXIM\_\-CLEAR}}
+\index{SPI\_\-TXIM\_\-CLEAR@{SPI\_\-TXIM\_\-CLEAR}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-TXIM\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-TXIM\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXIM, 0)}}
+\label{a00572_a90607b3a709edfa839fd8df7f1eeadaa}
+
+
+Definition at line 276 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_ae8b34889acfb072f01ccf7ce0e48339b}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-TXIM\_\-GET@{SPI\_\-TXIM\_\-GET}}
+\index{SPI\_\-TXIM\_\-GET@{SPI\_\-TXIM\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-TXIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-TXIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXIM)}}
+\label{a00572_ae8b34889acfb072f01ccf7ce0e48339b}
+
+
+Definition at line 272 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_aba5e2139688416c762ab4ea54176edc3}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-TXIM\_\-SET@{SPI\_\-TXIM\_\-SET}}
+\index{SPI\_\-TXIM\_\-SET@{SPI\_\-TXIM\_\-SET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-TXIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-TXIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXIM, 1)}}
+\label{a00572_aba5e2139688416c762ab4ea54176edc3}
+
+
+Definition at line 274 of file gsn\_\-reg\_\-spi\_\-op.h.
+
+\hypertarget{a00572_a5604bb7475f5d4d9beadc96044c710fd}{
+\index{gsn\_\-reg\_\-spi\_\-op.h@{gsn\_\-reg\_\-spi\_\-op.h}!SPI\_\-TXMIS\_\-GET@{SPI\_\-TXMIS\_\-GET}}
+\index{SPI\_\-TXMIS\_\-GET@{SPI\_\-TXMIS\_\-GET}!gsn_reg_spi_op.h@{gsn\_\-reg\_\-spi\_\-op.h}}
+\subsubsection[{SPI\_\-TXMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-TXMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SPI\_\-TXMIS)}}
+\label{a00572_a5604bb7475f5d4d9beadc96044c710fd}
+
+
+Definition at line 324 of file gsn\_\-reg\_\-spi\_\-op.h.
+

@@ -1,0 +1,2201 @@
+\hypertarget{a00603}{
+\section{gsn\_\-wdd.h File Reference}
+\label{a00603}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}}
+}
+
+
+GSN WDD public header. This file contains public definitions for WDD. WDD( Wireless Device Driver ) provides APIs for the wireless drivers. These APIs are scan request, connect request, disconnect request, data request. WDD generates events related to these request. If application has registered its callback function, WDD calls it whenever these events happens.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00849}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00299}{GSN\_\-WDD\_\-STA\_\-INFO}
+\item 
+struct \hyperlink{a00275}{GSN\_\-WDD\_\-IND\_\-CB\_\-INFO}
+\begin{DoxyCompactList}\small\item\em GSN WDD indication CB structure. Datastructure having various indication call back function pointers and respective context. \end{DoxyCompactList}\item 
+struct \hyperlink{a00277}{GSN\_\-WDD\_\-MESSAGE}
+\begin{DoxyCompactList}\small\item\em Wdd Message handler message definition. \end{DoxyCompactList}\item 
+struct \hyperlink{a00281}{GSN\_\-WDD\_\-NOTIF\_\-CB}
+\begin{DoxyCompactList}\small\item\em GSN WDD Notification CB structure. Datastructure having various indication call back and respective context. \end{DoxyCompactList}\item 
+struct \hyperlink{a00292}{GSN\_\-WDD\_\-SEC\_\-IE\_\-INFO}
+\begin{DoxyCompactList}\small\item\em Security IE (Information Element) information This defines the Security IE information. This information is extracted from the MAC frame during scan and connect process and stored for the usage of WLAN/WPA suppicant. \end{DoxyCompactList}\item 
+struct \hyperlink{a00278}{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO}
+\begin{DoxyCompactList}\small\item\em MIC Fail Countermeasure Info. \end{DoxyCompactList}\item 
+struct \hyperlink{a00282}{GSN\_\-WDD\_\-PERSIST\_\-INFO}
+\begin{DoxyCompactList}\small\item\em Persistent info required by WDD. This structure defines persistent info needed by WDD and need to be passed in Init function. Ideally this info should be stored by app in persistent storage like NVRAM or flash, but if the system does not go to standby and if app not have persistent storage, it could store this in RAM as well but with loss of some functionality if a reset happens and this info is lost. \end{DoxyCompactList}\item 
+struct \hyperlink{a00283}{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO}
+\item 
+struct \hyperlink{a00279}{GSN\_\-WDD\_\-MSG\_\-HANDLER}
+\item 
+struct \hyperlink{a00276}{GSN\_\-WDD\_\-INIT\_\-PARAM}
+\item 
+struct \hyperlink{a00284}{GSN\_\-WDD\_\-REINIT\_\-PARAM}
+\item 
+struct \hyperlink{a00280}{GSN\_\-WDD\_\-MSG\_\-HDLR\_\-INIT\_\-PARAM}
+\item 
+struct \hyperlink{a00304}{GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM}
+\item 
+struct \hyperlink{a00300}{GSN\_\-WDD\_\-STA\_\-SPCIFIC\_\-CFG}
+\item 
+struct \hyperlink{a00271}{GSN\_\-WDD\_\-AP\_\-SPCIFIC\_\-CFG}
+\item 
+struct \hyperlink{a00302}{GSN\_\-WDD\_\-WLAN\_\-CFG}
+\item 
+struct \hyperlink{a00286}{GSN\_\-WDD\_\-SCAN\_\-PARAMS}
+\begin{DoxyCompactList}\small\item\em Scan parameters. This structure defines the scan configuration used for scanning the WLAN. The scan configuration is filled up and passed to scan API for scanning one or more channels. \end{DoxyCompactList}\item 
+struct \hyperlink{a00285}{GSN\_\-WDD\_\-SCAN\_\-INFO}
+\item 
+struct \hyperlink{a00273}{GSN\_\-WDD\_\-CONNECT\_\-INFO}
+\item 
+struct \hyperlink{a00274}{GSN\_\-WDD\_\-ERROR}
+\item 
+struct \hyperlink{a00303}{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-EXTN}
+\item 
+struct \hyperlink{a00108}{GSN\_\-L2\_\-DEV\_\-WLAN}
+\item 
+struct \hyperlink{a00272}{GSN\_\-WDD\_\-BLOCKACK\_\-REQ}
+\item 
+struct \hyperlink{a00270}{GSN\_\-WDD\_\-AMSDU\_\-REQ}
+\item 
+struct \hyperlink{a00269}{GSN\_\-WDD\_\-AMPDU\_\-REQ}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00677_ga3d65e35c6d96f765b7e4c83373d90c57}{GSN\_\-WDD\_\-WLAN\_\-MAX\_\-CHNLS}~GSN\_\-WLAN\_\-MAC\_\-MAX\_\-CHNLS
+\begin{DoxyCompactList}\small\item\em Maximum WLAN channels. This macro defines the maximum number of WLAN channels in 2.4GHz band. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00677_ga1cd4e2c2ef057685d974d4a865e5f934}{GSN\_\-WDD\_\-WLAN\_\-DEFAULT\_\-LISTEN\_\-INTERVAL}~600
+\begin{DoxyCompactList}\small\item\em Default WLAN Listen interval. This macro defines the default listen interval. Listen interval is defined in terms of beacon intervals. Assuming 100ms beacon interval, listen interval of 60 seconds = 60 $\ast$ 10 beacon intervals. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00677_gab70cb03c6369e528aaa34311acfc1726}{GSN\_\-WDD\_\-WLAN\_\-DEFAULT\_\-BEACON\_\-INTERVAL}~100
+\begin{DoxyCompactList}\small\item\em Default WLAN Beacon interval. This macro defines the default beacon interval. Beacon interval is defined in terms of time units. 1TU is 1024us (1 mSec). Therefore Beacon interval of 100ms = 100TU. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00677_ga406fd2f9962a7ec83167cd6bcafdd221}{GSN\_\-WDD\_\-WLAN\_\-DEFAULT\_\-DTIM\_\-PERIOD}~1
+\begin{DoxyCompactList}\small\item\em Default WLAN DTIM period. This macro defines the default DTIM period. DTIM period is defined in terms of beacon intervals. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00677_ga5f07a309e776550d66ddc892d44295ae}{GSN\_\-WDD\_\-ASSOC\_\-STATE\_\-NOT\_\-CONCTED}~0
+\begin{DoxyCompactList}\small\item\em flags set used with scan process \end{DoxyCompactList}\item 
+\#define \hyperlink{a00603_af6d374ed7ee7ba0272cf307e24b1042d}{GSN\_\-WDD\_\-ASSOC\_\-STATE\_\-CONCTED}~1
+\item 
+\#define \hyperlink{a00603_a8487e8e5eda472ed8392357a081358f2}{GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-TX}~GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-TX
+\item 
+\#define \hyperlink{a00603_a3a8f4b4eca7723415ea145f12e4e2dbd}{GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-RX}~GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-RX
+\item 
+\#define \hyperlink{a00603_aaa7df45acb072b8008bb24b3e5a8e8b9}{GSN\_\-WDD\_\-ADD\_\-BA}~1
+\item 
+\#define \hyperlink{a00603_a8e1bde26ba2df3e5ae166d325eab08fd}{GSN\_\-WDD\_\-DEL\_\-BA}~2
+\item 
+\#define \hyperlink{a00603_a12348d97f30d004b6b377f53be35af6b}{GSN\_\-WDD\_\-AMSDU\_\-START}~1
+\item 
+\#define \hyperlink{a00603_a22a45b0beca366e846d2a88a1dba6777}{GSN\_\-WDD\_\-AMSDU\_\-END}~2
+\item 
+\#define \hyperlink{a00603_a78add8013309f477df4ce6fb69e28e5c}{GSN\_\-WDD\_\-AMPDU\_\-START}~1
+\item 
+\#define \hyperlink{a00603_a1ea4e46accb95280634fb24898502942}{GSN\_\-WDD\_\-AMPDU\_\-END}~2
+\item 
+\#define \hyperlink{a00603_a630663c7d7bce1461f01614edbcef81e}{GSN\_\-WDD\_\-BZERO}(a, b)~memset((\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$)(a), 0, (b))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{a00379}{GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-T} \hyperlink{a00603_a862addfd6eccb0fedeaaa04732f94d5b}{GSN\_\-WDD\_\-DISASSOCIATION\_\-CB\_\-INFO}
+\item 
+typedef \hyperlink{a00187}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-START\_\-REQ\_\-T} \hyperlink{a00603_a842373dad0ceeafe062cf1827dbd8e54}{GSN\_\-WDD\_\-RFTEST\_\-TX\_\-START\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00190}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-REQ\_\-T} \hyperlink{a00603_ac1e5dbed32ee024fa928fd5f19962055}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00189}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-REQ\_\-T} \hyperlink{a00603_aa8de226d51c4838cb6556845208d7ba3}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00185}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-REQ\_\-T} \hyperlink{a00603_ae2e511d31a8a68f74e6cd794618e0383}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00186}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-START\_\-REQ\_\-T} \hyperlink{a00603_ab667d44d0bbe167c0449134207cd6d9a}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-START\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00391}{GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-T} \hyperlink{a00603_a807e44a4a859b36de8babbf87eef011b}{GSN\_\-WDD\_\-MIC\_\-FAILURE\_\-INFO\_\-T}
+\item 
+typedef \hyperlink{a00396}{GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-T} \hyperlink{a00603_acb20c85ccb97eb810fe9a5dbb403f1ae}{GSN\_\-WDD\_\-RTS\_\-ENBL\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00397}{GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-T} \hyperlink{a00603_ad07f561fb358b50268072fff65afce3d}{GSN\_\-WDD\_\-WLAN\_\-RECV\_\-FILTR\_\-SET\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00381}{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-T} \hyperlink{a00603_a209fb3e1d53b9efa2241d6fd09de5de3}{GSN\_\-WDD\_\-FRAME\_\-TX\_\-FAIL\_\-CNT\_\-LIMIT\_\-SET\_\-T}
+\item 
+typedef \hyperlink{a00382}{GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-T} \hyperlink{a00603_abf86a06ce9b3aa862dc938b896b11ca6}{GSN\_\-WDD\_\-FRAME\_\-TXFAIL\_\-INFO\_\-T}
+\item 
+typedef \hyperlink{a00320}{GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-T} \hyperlink{a00603_ae439d00fb6368eda8ceae5f7bbae3b95}{GSN\_\-WDD\_\-CAL\_\-RUN\_\-RSP\_\-T}
+\item 
+typedef \hyperlink{a00319}{GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-T} \hyperlink{a00603_a02ee63c44fe251b49941f6fc917aa922}{GSN\_\-WDD\_\-CAL\_\-RUN\_\-REQ\_\-T}
+\item 
+typedef \hyperlink{a00316}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-RESP\_\-T} \hyperlink{a00603_a42d71a0411d0f941e080667bdb171e95}{GSN\_\-WDD\_\-UAM\_\-START\_\-RESP\_\-T}
+\item 
+typedef \hyperlink{a00306}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATA\_\-RX\_\-CONFIG\_\-REQ\_\-T} \hyperlink{a00603_a556da70b3c2eaafd2f4893880bd4466a}{GSN\_\-WDD\_\-UAM\_\-DRX\_\-CONFIG\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00317}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-RESP\_\-T} \hyperlink{a00603_a80285c8663f782eba22ba3a5f4d39b38}{GSN\_\-WDD\_\-UAM\_\-STOP\_\-RESP\_\-T}
+\item 
+typedef \hyperlink{a00310}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATA\_\-RX\_\-START\_\-REQ\_\-T} \hyperlink{a00603_a898a4dd61cb26c0d7b242632369c8585}{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-PARAM}
+\item 
+typedef \hyperlink{a00312}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATA\_\-RX\_\-STOP\_\-REQ\_\-T} \hyperlink{a00603_a82650badd5df3ae66988f45fd22b5434}{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-PARAM}
+\item 
+typedef \hyperlink{a00311}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATA\_\-RX\_\-START\_\-RESP\_\-T} \hyperlink{a00603_a033e778f5ece6db55afcb7f609e15815}{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-RESP\_\-T}
+\item 
+typedef \hyperlink{a00313}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATA\_\-RX\_\-STOP\_\-RESP\_\-T} \hyperlink{a00603_a0114b1685f0227b6028a08964c5b0cbd}{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-RESP\_\-T}
+\item 
+typedef \hyperlink{a00314}{GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATAREQ\_\-HDR\_\-T} \hyperlink{a00603_a546688b4be1df3aa4ddbf6a63db0d3d5}{GSN\_\-WDD\_\-UAM\_\-DATA\_\-HDR\_\-T}
+\item 
+typedef \hyperlink{a00408}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-T} \hyperlink{a00603_adbd195fb1038147499991fd7286b8c4c}{GSN\_\-WDD\_\-TX\_\-POW\_\-SET\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00408}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-T} \hyperlink{a00603_a18054aae33f811d29ce76060bf51e0f4}{GSN\_\-WDD\_\-TX\_\-POW\_\-GET\_\-RESP\_\-T}
+\item 
+typedef \hyperlink{a00409}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-T} \hyperlink{a00603_afcf91e1f003aac3078c1642f50f665c1}{GSN\_\-WDD\_\-TX\_\-RATE\_\-SET\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00409}{GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-T} \hyperlink{a00603_a0d7e87cd1ff0f897f58bb1c556ee7e4c}{GSN\_\-WDD\_\-TX\_\-RATE\_\-GET\_\-RESP}
+\item 
+typedef \hyperlink{a00368}{GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-T} \hyperlink{a00603_a7dc57c477301af9fb7424aa7cd500899}{GSN\_\-WDD\_\-AP\_\-PS\_\-CFG\_\-SET\_\-PARAM}
+\item 
+typedef \hyperlink{a00403}{GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-CFG\_\-T} \hyperlink{a00603_aaebb85d67e7b45db59b7608cc1ac8ad0}{GSN\_\-WDD\_\-STA\_\-PS\_\-CFG\_\-SET\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00390}{GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-T} \hyperlink{a00603_a398cf6ae18e42fbe90a94ba03ef55230}{GSN\_\-WDD\_\-WLAN\_\-REG\_\-T}
+\item 
+typedef \hyperlink{a00365}{GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-T} \hyperlink{a00603_afa9ab8eb88c695b390fd27c68bfdfefa}{GSN\_\-WDD\_\-ALLOW\_\-BA\_\-BITMAP\_\-SET\_\-PARAM}
+\item 
+typedef enum \hyperlink{a00677_ga1ff070ddd12f2dfd9bc0e26f84b4888c}{GSN\_\-WDD\_\-EVENT} \hyperlink{a00677_ga82734573aab1decd3ffd115af490f892}{GSN\_\-WDD\_\-EVENT\_\-T}
+\begin{DoxyCompactList}\small\item\em Events notified to the wdd module This defines the events notified to the wdd module using the \hyperlink{a00677_ga3b57a234af35c0dc77fa3760a2f3f07f}{GsnWdd\_\-Notify()} API. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga2846a7c5251eb6332e71299cef92d003}{GSN\_\-WDD\_\-CONNECT\_\-FLAG} \hyperlink{a00677_ga3a599f8d47bbbf9108f9156cddf9bd4b}{GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-T}
+\begin{DoxyCompactList}\small\item\em Flags for GSN WDD Connect operation This defines the wdd connect flags. One or more fo these can be ORed to form a connect flag. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00603_a4ba2b4079f3dd37aa77afda4013afc79}{GSN\_\-WDD\_\-INIT\_\-FLAG} \hyperlink{a00603_ae0e55b26e7cfed5cc849b360e24289e3}{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-T}
+\item 
+typedef enum \hyperlink{a00677_gaa5a68f88cc724016ff0334f21c0dd120}{GSN\_\-WDD\_\-SCAN\_\-FLAG} \hyperlink{a00677_gad988da580b33f4a18de188de56a05736}{GSN\_\-WDD\_\-SCAN\_\-FLAG\_\-T}
+\begin{DoxyCompactList}\small\item\em flags set used with scan process \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00670_gaf67ac3e77c7a5742b9b0bc7672529533}{GSN\_\-WDD\_\-IOCTL\_\-CMD} \hyperlink{a00670_ga0c5055a50e14741ff0accb7d8d5bf039}{GSN\_\-WDD\_\-IOCTL\_\-CMD\_\-T}
+\begin{DoxyCompactList}\small\item\em Layer 2 device I/O control (assumes a wireless L2 device). \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00677_ga235b17af49bd1a1dc55715a7809b24ff}{GSN\_\-WDD\_\-STATE} \hyperlink{a00677_ga3a801c5847114c1bb6dc9cc1a0c5837e}{GSN\_\-WDD\_\-STATE\_\-T}
+\begin{DoxyCompactList}\small\item\em WDD wireless interface management states. This enum defines the different states the WDD wireless interface is in. The WDD APIs transition through some or all of these states. After the API operation is complete, the API is back in idle state. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00603_a7504de238040fb5947d3c3ef6fca9ae9}{GSN\_\-WDD\_\-SCAN\_\-STATE} \hyperlink{a00603_a940af0328a2568d0750d618f5c8f141e}{GSN\_\-WDD\_\-SCAN\_\-STATE\_\-T}
+\item 
+typedef enum \hyperlink{a00603_a141edfb4eec2f7e9831a65c822756f64}{GSN\_\-WDD\_\-RADIO\_\-MODE} \hyperlink{a00603_a66d764097f36dbea8341b9591e8dc9cf}{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-T}
+\item 
+typedef enum \hyperlink{a00603_a8d2389f013d584eba4f8f16644b2e20e}{GSN\_\-WDD\_\-SCAN\_\-TYPE} \hyperlink{a00603_a466b998274f9dcd29e5e82e2f28904b9}{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-T}
+\item 
+typedef struct \hyperlink{a00299}{GSN\_\-WDD\_\-STA\_\-INFO} \hyperlink{a00603_affc6d455eb246fbebdf2993828a937ed}{GSN\_\-WDD\_\-STA\_\-INFO\_\-T}
+\item 
+typedef VOID($\ast$ \hyperlink{a00677_gadb536a5e296beff888ffe8f4cdc68507}{GSN\_\-WDD\_\-DISASSOC\_\-IND\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00379}{GSN\_\-WDD\_\-DISASSOCIATION\_\-CB\_\-INFO} $\ast$pDisAssocInfo)
+\begin{DoxyCompactList}\small\item\em GSN WDD indication CB definitions. An indication is asychronous in nature. A call back register mechnism is provided for each of the indication supported. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00677_ga6b4e6d07b52788c8ddf01ddaa89429ad}{GSN\_\-WDD\_\-BEACON\_\-MISS\_\-IND\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} beaconMissCnt)
+\begin{DoxyCompactList}\small\item\em GSN WDD \char`\"{}Sync loss\char`\"{} indication CB definition. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00677_ga607917e8bad21deeb1564d9455d46f28}{GSN\_\-WDD\_\-STA\_\-JOINED\_\-IND\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00299}{GSN\_\-WDD\_\-STA\_\-INFO\_\-T} $\ast$pStaInfo)
+\begin{DoxyCompactList}\small\item\em GSN WDD STA Connect indication CB definition. This call back will be called when an sta joins the nodes acting as AP/ Group owner. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00677_ga3a4ef614815eaa2e3085c2d168a1ced5}{GSN\_\-WDD\_\-STA\_\-DISCONCTED\_\-IND\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$staMacAddr)
+\begin{DoxyCompactList}\small\item\em GSN WDD STA Dis connect indication CB definition. This call back will be called when an sta joins the nodes acting as AP/ Group owner. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00677_gae1fd7b71fd69db9cad751f084daf2199}{GSN\_\-WDD\_\-BATT\_\-LEVL\_\-IND\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} battLevl)
+\begin{DoxyCompactList}\small\item\em GSN WDD \char`\"{}Battery Level\char`\"{} indication CB definition. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00677_ga7ccb461a81661940f165a9e3d1812421}{GSN\_\-WDD\_\-MIC\_\-FAILURE\_\-IND\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00391}{GSN\_\-WDD\_\-MIC\_\-FAILURE\_\-INFO\_\-T} $\ast$pMicFailureInfo)
+\begin{DoxyCompactList}\small\item\em GSN WDD \char`\"{}Battery Level\char`\"{} indication CB definition. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00677_ga7e71a759def3d63d0aff2122a2b21bef}{GSN\_\-WDD\_\-FRAME\_\-TXFAIL\_\-\_\-IND\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00382}{GSN\_\-WDD\_\-FRAME\_\-TXFAIL\_\-INFO\_\-T} $\ast$pMicFailureInfo)
+\begin{DoxyCompactList}\small\item\em GSN WDD \char`\"{}Battery Level\char`\"{} indication CB definition. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00677_ga609ae39dc432b9821b764bea4957369a}{GSN\_\-WDD\_\-DAB\_\-DONE\_\-IND\_\-CB\_\-T} )(VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em GSN WDD \char`\"{}Battery Level\char`\"{} indication CB definition. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00603_a6ba5be1c4251a77b2a642319af4b696b}{GSN\_\-WDD\_\-DATA\_\-IND\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$data, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} dataLen)
+\item 
+typedef struct \hyperlink{a00275}{GSN\_\-WDD\_\-IND\_\-CB\_\-INFO} \hyperlink{a00677_gaeb9f80300f95181d19a845e3f786daae}{GSN\_\-WDD\_\-IND\_\-CB\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WDD indication CB structure. Datastructure having various indication call back function pointers and respective context. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00603_afa291ab10917d97cae6b9207522e623b}{GSN\_\-WDD\_\-CONNECT\_\-NOTIF\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} status)
+\item 
+typedef VOID($\ast$ \hyperlink{a00603_ac5fbb773daa449d33e065683260e253d}{GSN\_\-WDD\_\-DISCONNECT\_\-NOTIF\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} status)
+\item 
+typedef VOID($\ast$ \hyperlink{a00603_a4929f46818bd2e51f1d25fecc36d30d6}{GSN\_\-WDD\_\-SCAN\_\-NOTIF\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} status, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$resultBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} numResults)
+\item 
+typedef VOID($\ast$ \hyperlink{a00603_a1dbcda6416e95d84f0c8f8f8dcad8a18}{GSN\_\-WDD\_\-CAL\_\-NOTIF\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00320}{GSN\_\-WDD\_\-CAL\_\-RUN\_\-RSP\_\-T} $\ast$resp)
+\item 
+typedef struct \hyperlink{a00277}{GSN\_\-WDD\_\-MESSAGE} \hyperlink{a00677_ga6dc6666c98a822d61766d4b3a8b6d2d5}{GSN\_\-WDD\_\-MESSAGE\_\-T}
+\begin{DoxyCompactList}\small\item\em Wdd Message handler message definition. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00281}{GSN\_\-WDD\_\-NOTIF\_\-CB} \hyperlink{a00677_gab57828609030c2fd2947208559792aec}{GSN\_\-WDD\_\-NOTIF\_\-CB\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WDD Notification CB structure. Datastructure having various indication call back and respective context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00292}{GSN\_\-WDD\_\-SEC\_\-IE\_\-INFO} \hyperlink{a00677_ga70a9458f62036ad38be0efc8a1b65560}{GSN\_\-WDD\_\-SEC\_\-IE\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em Security IE (Information Element) information This defines the Security IE information. This information is extracted from the MAC frame during scan and connect process and stored for the usage of WLAN/WPA suppicant. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00278}{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO} \hyperlink{a00677_gae12a0e2aa7d3d161be1342b19d044cfb}{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em MIC Fail Countermeasure Info. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00603_a12a943db28b7331351c75b7c2105966d}{GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG} \hyperlink{a00603_ab1b47d2a6c940fb05451eebc74ea3852}{GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG\_\-T}
+\item 
+typedef struct \hyperlink{a00282}{GSN\_\-WDD\_\-PERSIST\_\-INFO} \hyperlink{a00677_gaf6471274c5e1eeaf77be72eab076204e}{GSN\_\-WDD\_\-PERSIST\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em Persistent info required by WDD. This structure defines persistent info needed by WDD and need to be passed in Init function. Ideally this info should be stored by app in persistent storage like NVRAM or flash, but if the system does not go to standby and if app not have persistent storage, it could store this in RAM as well but with loss of some functionality if a reset happens and this info is lost. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00283}{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO} \hyperlink{a00603_a33ed28c15746622883e32280cde99faa}{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00279}{GSN\_\-WDD\_\-MSG\_\-HANDLER} \hyperlink{a00603_a3a9ea76a32ca09c14f5b82effc28f0fa}{GSN\_\-WDD\_\-MSG\_\-HANDLER\_\-T}
+\item 
+typedef struct \hyperlink{a00276}{GSN\_\-WDD\_\-INIT\_\-PARAM} \hyperlink{a00603_a3906d6f291df3ccb5d770f1fe7eec5e4}{GSN\_\-WDD\_\-INIT\_\-PARAM\_\-T}
+\item 
+typedef struct \hyperlink{a00284}{GSN\_\-WDD\_\-REINIT\_\-PARAM} \hyperlink{a00603_a8aef612ff6b195fa978a7e8e88c66baa}{GSN\_\-WDD\_\-REINIT\_\-PARAM\_\-T}
+\item 
+typedef struct \hyperlink{a00280}{GSN\_\-WDD\_\-MSG\_\-HDLR\_\-INIT\_\-PARAM} \hyperlink{a00603_a526ef12a3d0b565b524257aa27e62652}{GSN\_\-WDD\_\-MSG\_\-HDLR\_\-INIT\_\-PARAM\_\-T}
+\item 
+typedef struct \hyperlink{a00304}{GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM} \hyperlink{a00603_af389db63bae9a429126b4447bbe046c3}{GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM\_\-T}
+\item 
+typedef struct \hyperlink{a00300}{GSN\_\-WDD\_\-STA\_\-SPCIFIC\_\-CFG} \hyperlink{a00603_a8191aefa707f0e98b4e0ea3b6030ce5e}{GSN\_\-WDD\_\-STA\_\-SPCIFIC\_\-CFG\_\-T}
+\item 
+typedef struct \hyperlink{a00271}{GSN\_\-WDD\_\-AP\_\-SPCIFIC\_\-CFG} \hyperlink{a00603_a1b8ae0d5ebc50c0a8704758bf4a472cd}{GSN\_\-WDD\_\-AP\_\-SPCIFIC\_\-CFG\_\-T}
+\item 
+typedef struct \hyperlink{a00302}{GSN\_\-WDD\_\-WLAN\_\-CFG} \hyperlink{a00603_a622f424d99b2a980a82684099bb1092c}{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T}
+\item 
+typedef struct \hyperlink{a00286}{GSN\_\-WDD\_\-SCAN\_\-PARAMS} \hyperlink{a00677_ga5df05c7cc3d6a8db66ec41eb7c9548e9}{GSN\_\-WDD\_\-SCAN\_\-PARAMS\_\-T}
+\begin{DoxyCompactList}\small\item\em Scan parameters. This structure defines the scan configuration used for scanning the WLAN. The scan configuration is filled up and passed to scan API for scanning one or more channels. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00400}{GSN\_\-WIF\_\-WLAN\_\-SCAN\_\-IND\_\-T} \hyperlink{a00677_gaca7e9b8176b0ff06a2cb24c84be888ed}{GSN\_\-WDD\_\-SCAN\_\-ENTRY\_\-T}
+\begin{DoxyCompactList}\small\item\em Scan Entry definition. This defines the Scan entry data structure. One scan entry per wlan naw found is given to the APP by WLAN during scan process. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00285}{GSN\_\-WDD\_\-SCAN\_\-INFO} \hyperlink{a00603_abe2c6b1527f6a2e6bc61ebacfd6f1391}{GSN\_\-WDD\_\-SCAN\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00273}{GSN\_\-WDD\_\-CONNECT\_\-INFO} \hyperlink{a00603_a99522d8b9d2419985efa523af3c9c00d}{GSN\_\-WDD\_\-CONNECT\_\-INFO\_\-T}
+\item 
+typedef enum \hyperlink{a00603_ab5fdb01131bac4294899f4261109f072}{GSN\_\-WDD\_\-ERROR\_\-CODE} \hyperlink{a00603_a319a2113768d730bfaa5ab1c954f49c1}{GSN\_\-WDD\_\-ERROR\_\-CODE\_\-T}
+\item 
+typedef enum \hyperlink{a00603_a25ca4f0a075752eaf99103b405458b83}{GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO} \hyperlink{a00603_af9a6675c005f80382367ca85c5280ad1}{GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00274}{GSN\_\-WDD\_\-ERROR} \hyperlink{a00603_aa95a91b24c682d5580c32e1588d9405e}{GSN\_\-WDD\_\-ERROR\_\-T}
+\item 
+typedef struct \hyperlink{a00303}{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-EXTN} \hyperlink{a00603_ab591a0b1dc86f93d62c54f486296eed4}{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-EXTN\_\-T}
+\item 
+typedef struct \hyperlink{a00108}{GSN\_\-L2\_\-DEV\_\-WLAN} \hyperlink{a00603_aa56847c4ab1a6ceb37bdb04c5bcb1d0c}{GSN\_\-L2\_\-DEV\_\-WLAN\_\-T}
+\item 
+typedef \hyperlink{a00108}{GSN\_\-L2\_\-DEV\_\-WLAN\_\-T} \hyperlink{a00603_ab461c9df9fc979702c542cabffbb2dba}{GSN\_\-WDD\_\-CTX\_\-T}
+\item 
+typedef enum \hyperlink{a00603_a6267ebdc154297cf5ca79d52aaa5e7ee}{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP} \hyperlink{a00603_ad4d84331dadc231fd291b26199b36691}{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-T}
+\item 
+typedef enum \hyperlink{a00603_a3b2419b27de31e09c69e0b3c17dde07d}{GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE} \hyperlink{a00603_a03ed769ea979937a8ce78d802646c729}{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-T}
+\item 
+typedef struct \hyperlink{a00272}{GSN\_\-WDD\_\-BLOCKACK\_\-REQ} \hyperlink{a00603_ab7d53da5c96f5f0ec1b31894fdc02777}{GSN\_\-WDD\_\-BLOCKACK\_\-REQ\_\-T}
+\item 
+typedef struct \hyperlink{a00270}{GSN\_\-WDD\_\-AMSDU\_\-REQ} \hyperlink{a00603_a140aa60fdc6ee0c2ef0ad0e615453b01}{GSN\_\-WDD\_\-AMSDU\_\-REQ\_\-T}
+\item 
+typedef struct \hyperlink{a00269}{GSN\_\-WDD\_\-AMPDU\_\-REQ} \hyperlink{a00603_af3b1b212e8f1221473592d765ef07711}{GSN\_\-WDD\_\-AMPDU\_\-REQ\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00677_ga1ff070ddd12f2dfd9bc0e26f84b4888c}{GSN\_\-WDD\_\-EVENT} \{ \par
+\hyperlink{a00677_gga1ff070ddd12f2dfd9bc0e26f84b4888ca6b7e7c037214433fddbf87661ca4dbc3}{GSN\_\-WDD\_\-EVENT\_\-WPA\_\-TMR\_\-TIMEOUT}, 
+\par
+\hyperlink{a00677_gga1ff070ddd12f2dfd9bc0e26f84b4888cae1fbc62d6325825bd6ed267da380993a}{GSN\_\-WDD\_\-EVENT\_\-WPA\_\-AUTH\_\-SUCCESS}, 
+\par
+\hyperlink{a00677_gga1ff070ddd12f2dfd9bc0e26f84b4888ca06cef12a6710a11996300ff642b2549e}{GSN\_\-WDD\_\-EVENT\_\-WPA\_\-AUTH\_\-FAILURE}, 
+\par
+\hyperlink{a00677_gga1ff070ddd12f2dfd9bc0e26f84b4888cae071f6b63ae7b67fffe82fbd0129a0b1}{GSN\_\-WDD\_\-EVENT\_\-WPA\_\-WPS\_\-DONE\_\-AUTH\_\-FAILURE}
+ \}
+\begin{DoxyCompactList}\small\item\em Events notified to the wdd module This defines the events notified to the wdd module using the \hyperlink{a00677_ga3b57a234af35c0dc77fa3760a2f3f07f}{GsnWdd\_\-Notify()} API. \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga2846a7c5251eb6332e71299cef92d003}{GSN\_\-WDD\_\-CONNECT\_\-FLAG} \{ \par
+\hyperlink{a00677_gga2846a7c5251eb6332e71299cef92d003a3d40d1cda052d834eee33e420a447d6c}{GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-NONE}, 
+\par
+\hyperlink{a00677_gga2846a7c5251eb6332e71299cef92d003a60e8304e346703de8449ce4cb231deae}{GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-ACTIVE\_\-SCAN} =  BIT(0), 
+\par
+\hyperlink{a00677_gga2846a7c5251eb6332e71299cef92d003a4090f08cff9462cb869860c9201868f8}{GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-SCAN\_\-BEFORE\_\-CONNECT} =  BIT(1), 
+\par
+\hyperlink{a00677_gga2846a7c5251eb6332e71299cef92d003a732819d8713c91ae637a858fc9192373}{GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-HIGHEST\_\-RSSI\_\-NW} =  BIT(2), 
+\par
+\hyperlink{a00677_gga2846a7c5251eb6332e71299cef92d003aed7be53eaf3c29ba59635c83e133911e}{GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-WPS\_\-MATHOD} =  BIT(3), 
+\par
+\hyperlink{a00677_gga2846a7c5251eb6332e71299cef92d003a98743e2fc7097d6818d140bfc051a921}{GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-USE\_\-BSSID} =  BIT(4), 
+\par
+\hyperlink{a00677_gga2846a7c5251eb6332e71299cef92d003abc8bea2329e8acac4ddcd3ea910c7203}{GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-WPS\_\-WITH\_\-DFLT\_\-PIN\_\-METHOD} =  BIT(5)
+ \}
+\begin{DoxyCompactList}\small\item\em Flags for GSN WDD Connect operation This defines the wdd connect flags. One or more fo these can be ORed to form a connect flag. \end{DoxyCompactList}\item 
+enum \hyperlink{a00603_a4ba2b4079f3dd37aa77afda4013afc79}{GSN\_\-WDD\_\-INIT\_\-FLAG} \{ \par
+\hyperlink{a00603_a4ba2b4079f3dd37aa77afda4013afc79abae04da0cfae40f0242a7191fefa98c3}{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-NONE} =  0, 
+\par
+\hyperlink{a00603_a4ba2b4079f3dd37aa77afda4013afc79ac303b837f61d3ad234d4b358ae5c3ae8}{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-FIRST\_\-BOOT} =  BIT(0), 
+\par
+\hyperlink{a00603_a4ba2b4079f3dd37aa77afda4013afc79a5d2687a764f011972e1fa19adb2deffa}{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-CONF\_\-LOST} =  BIT(1)
+ \}
+\item 
+enum \hyperlink{a00677_gaa5a68f88cc724016ff0334f21c0dd120}{GSN\_\-WDD\_\-SCAN\_\-FLAG} \{ \hyperlink{a00677_ggaa5a68f88cc724016ff0334f21c0dd120af8eb784f34297ba01c491b4b8e8ac4a4}{GSN\_\-WDD\_\-SCAN\_\-FLAG\_\-HIGHEST\_\-RSSI\_\-NW\_\-FIND} =  BIT(0)
+ \}
+\begin{DoxyCompactList}\small\item\em flags set used with scan process \end{DoxyCompactList}\item 
+enum \hyperlink{a00670_gaf67ac3e77c7a5742b9b0bc7672529533}{GSN\_\-WDD\_\-IOCTL\_\-CMD} \{ \par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a90643fa9ea5beb1e71ac9dc1fc53cec9}{GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-ON} =  0, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a05ac24f3b915cf763e622bcbb05b3f4f}{GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a60c5f074f918453013d7c738761add62}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533aff1d4dffa5b49df8c650ace2823be8b1}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a4eadb52c59da5af23a4976dca90f2d73}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533ac24a8e559457d883784645d80c09d27d}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a8a81d1c493fdcdc77180b01c800a206a}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-MODE\_\-COUNTER\_\-CLEAR}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a36fc54ac07dd47f6d6b86b07a41ace72}{GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a13b9b199720d5323049dc71fa3abbb0f}{GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a37563cd4302ca3be0f252a5b431f807a}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533ad7bdc6ddeb1968420616edcb71644a66}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-OFF}
+ \}
+\begin{DoxyCompactList}\small\item\em Layer 2 device I/O control (assumes a wireless L2 device). \end{DoxyCompactList}\item 
+enum \hyperlink{a00677_ga235b17af49bd1a1dc55715a7809b24ff}{GSN\_\-WDD\_\-STATE} \{ \par
+\hyperlink{a00677_gga235b17af49bd1a1dc55715a7809b24ffa85f6148682bde7eb370b55ad17044c93}{GSN\_\-WDD\_\-STATE\_\-IDLE}, 
+\par
+\hyperlink{a00677_gga235b17af49bd1a1dc55715a7809b24ffab9dfd40ad92dc407336914a170a14a5d}{GSN\_\-WDD\_\-STATE\_\-CONNECTING}, 
+\par
+\hyperlink{a00677_gga235b17af49bd1a1dc55715a7809b24ffa6c3a9720a310ff028b93050b034c3f6e}{GSN\_\-WDD\_\-STATE\_\-SECURED\_\-CONNECTING}, 
+\par
+\hyperlink{a00677_gga235b17af49bd1a1dc55715a7809b24ffa45ab3a36a018ce282732ef888382a6ed}{GSN\_\-WDD\_\-STATE\_\-WPS\_\-CONNECTING}, 
+\par
+\hyperlink{a00677_gga235b17af49bd1a1dc55715a7809b24ffa809d7f6973224af7492c48f3c4b7ca4c}{GSN\_\-WDD\_\-STATE\_\-SCANNING}, 
+\par
+\hyperlink{a00677_gga235b17af49bd1a1dc55715a7809b24ffa41f6dfce18e1ef088d7d7bd24c250f97}{GSN\_\-WDD\_\-STATE\_\-DISCONNECTING}
+ \}
+\begin{DoxyCompactList}\small\item\em WDD wireless interface management states. This enum defines the different states the WDD wireless interface is in. The WDD APIs transition through some or all of these states. After the API operation is complete, the API is back in idle state. \end{DoxyCompactList}\item 
+enum \hyperlink{a00603_a7504de238040fb5947d3c3ef6fca9ae9}{GSN\_\-WDD\_\-SCAN\_\-STATE} \{ \par
+\hyperlink{a00603_a7504de238040fb5947d3c3ef6fca9ae9a31d25fe118eebeef83abbd1ee1119454}{GSN\_\-WDD\_\-SCN\_\-STATE\_\-IDLE}, 
+\par
+\hyperlink{a00603_a7504de238040fb5947d3c3ef6fca9ae9ad85a0904d1258338cb21fc74ce280e51}{GSN\_\-WDD\_\-SCN\_\-STATE\_\-SCANONLY\_\-IN\_\-PROGRESS}, 
+\par
+\hyperlink{a00603_a7504de238040fb5947d3c3ef6fca9ae9aa7ef954c543a9495cabedcff0a5f2480}{GSN\_\-WDD\_\-SCN\_\-STATE\_\-CONCT\_\-SCAN\_\-IN\_\-PROGRESS}
+ \}
+\item 
+enum \hyperlink{a00603_a141edfb4eec2f7e9831a65c822756f64}{GSN\_\-WDD\_\-RADIO\_\-MODE} \{ \par
+\hyperlink{a00603_a141edfb4eec2f7e9831a65c822756f64aae25e1907cc4f50dde0cf188d5b0c5e6}{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-ACTIVE} =  1, 
+\par
+\hyperlink{a00603_a141edfb4eec2f7e9831a65c822756f64ab3858105d04a95098a45840079fd3a7e}{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-POWER\_\-SAVE}, 
+\par
+\hyperlink{a00603_a141edfb4eec2f7e9831a65c822756f64ac511ce26344d172dd1cd10a3952cc3f4}{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-IEEE\_\-POWER\_\-SAVE}
+ \}
+\item 
+enum \hyperlink{a00603_a8d2389f013d584eba4f8f16644b2e20e}{GSN\_\-WDD\_\-SCAN\_\-TYPE} \{ \par
+\hyperlink{a00603_a8d2389f013d584eba4f8f16644b2e20ea77b844153db82d3e5448c20fa3b8aff2}{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-PASSIVE} =  GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE, 
+\par
+\hyperlink{a00603_a8d2389f013d584eba4f8f16644b2e20ea5e0b88dcc63868c24c041aac726d1cf1}{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-ACTIVE} =  GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE, 
+\par
+\hyperlink{a00603_a8d2389f013d584eba4f8f16644b2e20ea116d2def36fe2ec219e2eb8cc2a55b8d}{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY} =  GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY, 
+\par
+\hyperlink{a00603_a8d2389f013d584eba4f8f16644b2e20ea196eb42f48f9fc74486f5f14b45b3f1b}{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE} =  GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE, 
+\par
+\hyperlink{a00603_a8d2389f013d584eba4f8f16644b2e20eaa496ea0cb908b4ea08fb52eb55df53b5}{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID} =  GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID, 
+\par
+\hyperlink{a00603_a8d2389f013d584eba4f8f16644b2e20ea4ce55e81e91942fe5fb366fc4df7642d}{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS} =  GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS, 
+\par
+\hyperlink{a00603_a8d2389f013d584eba4f8f16644b2e20ea1b7aa5aaa334bb1b4b4480e880ff4920}{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS} =  GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS
+ \}
+\item 
+enum \hyperlink{a00603_a12a943db28b7331351c75b7c2105966d}{GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG} \{ \hyperlink{a00603_a12a943db28b7331351c75b7c2105966da37cf6cc897d0f9dbd3eb7a07fd080e96}{GSN\_\-WDD\_\-PRST\_\-INFO\_\-VALDTY\_\-FLAG\_\-WPAIF\_\-IFO} =  BIT(0)
+ \}
+\item 
+enum \hyperlink{a00603_ab5fdb01131bac4294899f4261109f072}{GSN\_\-WDD\_\-ERROR\_\-CODE} \{ \par
+\hyperlink{a00603_ab5fdb01131bac4294899f4261109f072a7a061cad77c96f63ddc154fff979a42b}{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-AP\_\-NOT\_\-FOUND} =  BIT(0), 
+\par
+\hyperlink{a00603_ab5fdb01131bac4294899f4261109f072aca2cbf14ed14f62891aba17f4e4d9540}{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WLAN\_\-FAIL\_\-TO\_\-CONCT} =  BIT(1), 
+\par
+\hyperlink{a00603_ab5fdb01131bac4294899f4261109f072af1e25f53b0d7a8f18eb969521abc484f}{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WPA\_\-AUTH\_\-FAILURE} =  BIT(2)
+ \}
+\item 
+enum \hyperlink{a00603_a25ca4f0a075752eaf99103b405458b83}{GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO} \{ \par
+\hyperlink{a00603_a25ca4f0a075752eaf99103b405458b83a5b993b9a23adbfc2ceb2e82ff2b35908}{GSN\_\-WDD\_\-ERROR\_\-INFO\_\-STA\_\-DISCONNECTED} =  BIT(16), 
+\par
+\hyperlink{a00603_a25ca4f0a075752eaf99103b405458b83af6b76f54dcae7b9e57e68275d89b2de9}{GSN\_\-WDD\_\-ERROR\_\-INFO\_\-AP\_\-DEAUTH} =  BIT(17)
+ \}
+\item 
+enum \hyperlink{a00603_a6267ebdc154297cf5ca79d52aaa5e7ee}{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP} \{ \par
+\hyperlink{a00603_a6267ebdc154297cf5ca79d52aaa5e7eea023f317a847bea48735e2f76e70a688d}{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-DTIM} = 1, 
+\par
+\hyperlink{a00603_a6267ebdc154297cf5ca79d52aaa5e7eea272f27c0e627a2c1ec808c7182f18a54}{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-LISTEN\_\-INTERVAL}, 
+\par
+\hyperlink{a00603_a6267ebdc154297cf5ca79d52aaa5e7eea4755b6dd01d2aad9b836dc931c004459}{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-CUSTOM}
+ \}
+\item 
+enum \hyperlink{a00603_a3b2419b27de31e09c69e0b3c17dde07d}{GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE} \{ \par
+\hyperlink{a00603_a3b2419b27de31e09c69e0b3c17dde07dabc73090ec594d1e1f957e0e536cb97eb}{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-PS\_\-POLL} = 1, 
+\par
+\hyperlink{a00603_a3b2419b27de31e09c69e0b3c17dde07dac3d2d18c9d2d55c01862536e461f2cf3}{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-SWITCH\_\-TO\_\-ACTIVE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC INLINE \hyperlink{a00302}{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T} $\ast$ \hyperlink{a00677_ga7bd1ca2108e05b90c0a173b88a1b08aa}{GsnWdd\_\-WlanConfigPtrGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd)
+\begin{DoxyCompactList}\small\item\em Get Pionter to WLAN configuration. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00677_ga0afb07551d3ec00f6b889499fefb1a96}{GsnWdd\_\-WlanConfigSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00302}{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T} $\ast$pWlanConfig)
+\begin{DoxyCompactList}\small\item\em Set WLAN configuration. This function set the wlan configuration. This needs to be called before calling connect API. This shall be done if the wlan configuration structure in user application space is different than the one in wdd context. If the wlan configuration structure in wdd context is accessed directly using \hyperlink{a00677_ga7bd1ca2108e05b90c0a173b88a1b08aa}{GsnWdd\_\-WlanConfigPtrGet()} and configured, this API shall not be called. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00677_gaca5deb0666cd04eb14805317d1101bf1}{GsnWdd\_\-StaJoinedIndCbReg} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00677_ga607917e8bad21deeb1564d9455d46f28}{GSN\_\-WDD\_\-STA\_\-JOINED\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em GSN WDD Connect indication CB register. Register Connect Indication call back. This call back will be called when a station connect to the node in AP mode. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00677_ga9f2e2b404dd8b31a46467746abd87d5f}{GsnWdd\_\-StaDisconctedCbReg} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00677_ga3a4ef614815eaa2e3085c2d168a1ced5}{GSN\_\-WDD\_\-STA\_\-DISCONCTED\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em GSN WDD Connect indication CB register. Register Connect Indication call back. This call back will be called when a station connect to the node in AP mode. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00677_gaccdbcdb8561ee5f5d3eff58a67ce1d6a}{GsnWdd\_\-DisassocIndCbReg} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00677_gadb536a5e296beff888ffe8f4cdc68507}{GSN\_\-WDD\_\-DISASSOC\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em GSN WDD Disassociation indication CB register. Register Disassociation Indication call back. This call back will be called when dissociation happen asychronously( with out issueing the disconnect request) \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00677_ga63aadb61c1e3a61401548e4b41c2da8e}{GsnWdd\_\-BeaconMissCbReg} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00677_ga6b4e6d07b52788c8ddf01ddaa89429ad}{GSN\_\-WDD\_\-BEACON\_\-MISS\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em GSN WDD sync loss indication CB register. Register Sync Loss Indication call back. This call back will be called when Syncloss is detected. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00677_ga927648393bfb957c1a972aecd92c49da}{GsnWdd\_\-BattLevlIndCbReg} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00677_gae1fd7b71fd69db9cad751f084daf2199}{GSN\_\-WDD\_\-BATT\_\-LEVL\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em GSN WDD battery indication CB register. Register Battery level Indication call back. This call back will be called when battery level is reported by the wlan. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00677_gac7ac7e627b07da56eb1325cb9124461f}{GsnWdd\_\-FrameTxFailIndCbReg} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00677_ga7e71a759def3d63d0aff2122a2b21bef}{GSN\_\-WDD\_\-FRAME\_\-TXFAIL\_\-\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em GSN WDD battery indication CB register. Register Battery level Indication call back. This call back will be called when battery level is reported by the wlan. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00677_ga689c811b864189de9e85558136b7587d}{GsnWdd\_\-DabDoneIndCbReg} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00677_ga609ae39dc432b9821b764bea4957369a}{GSN\_\-WDD\_\-DAB\_\-DONE\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em GSN WDD battery indication CB register. Register Battery level Indication call back. This call back will be called when battery level is reported by the wlan. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00677_gafb4865d7da2c56855e31130d2d3b5f31}{GsnWdd\_\-DataIndCbReg} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00603_a6ba5be1c4251a77b2a642319af4b696b}{GSN\_\-WDD\_\-DATA\_\-IND\_\-CB\_\-T} cb, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em GSN WDD Disassociation indication CB register. Register Disassociation Indication call back. This call back will be called when dissociation happen asychronously( with out issueing the disconnect request) \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00677_ga531570f995c4706e4dfc0a3b19ddc634}{GsnWdd\_\-Init} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00276}{GSN\_\-WDD\_\-INIT\_\-PARAM\_\-T} $\ast$pInitParam, \hyperlink{a00603_ae0e55b26e7cfed5cc849b360e24289e3}{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-T} flags)
+\begin{DoxyCompactList}\small\item\em Initialisation of given WDD instance. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a4ca55fe62f39d3212f56cd4ccd1b1c70}{GsnWdd\_\-Reinit} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00284}{GSN\_\-WDD\_\-REINIT\_\-PARAM\_\-T} $\ast$pInitParam)
+\item 
+PUBLIC VOID \hyperlink{a00677_gad16cf4ccb5b16d0a9bd6a9b18384c8d9}{GsnWdd\_\-MsgHdlrInit} (\hyperlink{a00279}{GSN\_\-WDD\_\-MSG\_\-HANDLER\_\-T} $\ast$pWddMsgHdlr, \hyperlink{a00280}{GSN\_\-WDD\_\-MSG\_\-HDLR\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Initialisation of WDD message handler. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00677_gab31391ef7af2845ebae8b20e56912e90}{GsnWdd\_\-WlanConfigDefaultInit} (\hyperlink{a00302}{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T} $\ast$pWlanConfig)
+\begin{DoxyCompactList}\small\item\em Function for initializing WLAN config with default values. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00677_ga2c932ee5c2900c450040a2af92048cd0}{GsnWdd\_\-Send} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, VOID $\ast$data, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen)
+\begin{DoxyCompactList}\small\item\em Send a frame This will send the given frmae over the wlan Nw. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00677_ga3b57a234af35c0dc77fa3760a2f3f07f}{GsnWdd\_\-Notify} (VOID $\ast$pCtx, \hyperlink{a00677_ga82734573aab1decd3ffd115af490f892}{GSN\_\-WDD\_\-EVENT\_\-T} event)
+\begin{DoxyCompactList}\small\item\em Notify WDD module This function is used to ntify anm event to the WDD task. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00603_a03380e1642f9c5608bc3cf0b966991aa}{GsnWdd\_\-Connect} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00677_ga3a599f8d47bbbf9108f9156cddf9bd4b}{GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-T} flags, \hyperlink{a00302}{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T} $\ast$pWlanCfg, \hyperlink{a00400}{GSN\_\-WDD\_\-SCAN\_\-ENTRY\_\-T} $\ast$pScanEntry, \hyperlink{a00603_afa291ab10917d97cae6b9207522e623b}{GSN\_\-WDD\_\-CONNECT\_\-NOTIF\_\-CB\_\-T} notifyCb, VOID $\ast$notifyCtx)
+\begin{DoxyCompactList}\small\item\em WLAN Connect. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00677_ga357552985ff387064e0c3feaa21b5808}{GsnWdd\_\-Disconnect} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} disconResonCode, \hyperlink{a00603_ac5fbb773daa449d33e065683260e253d}{GSN\_\-WDD\_\-DISCONNECT\_\-NOTIF\_\-CB\_\-T} notifyCb, VOID $\ast$notifyCtx)
+\begin{DoxyCompactList}\small\item\em WLAN disconnect. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00677_ga2de8f5753f24ef1ae1aa69d8afcbf763}{GsnWdd\_\-PhyAddrGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$macAddr)
+\begin{DoxyCompactList}\small\item\em Get physical address of the L2 interface. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00677_gaab46be560feac69bcc716ba326b80074}{GsnWdd\_\-PhyAddrSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$macAddr, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} updateWfw)
+\begin{DoxyCompactList}\small\item\em Set physical address of the L2 interface This API is called to set the physical address of the given L2 interface. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00603_aade2f710f71d7bfc48ff150b6b85411d}{GsnWdd\_\-AssocStatusGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd)
+\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00603_ad29f2b50720c9a351138039c58ffe1de}{GsnWdd\_\-AssocStatusSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd)
+\item 
+PUBLIC VOID \hyperlink{a00603_a7528c5d281c4ee7e34b720371efdc85f}{GsnWdd\_\-WpaSupplicantInit} (\hyperlink{a00304}{GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00677_gabc21d01bd143e531d2a989e46d60ab78}{GsnWdd\_\-SetGroupKey} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} keyIndex, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} algo, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} authRole, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} keyLen, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$pKey, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} rsc)
+\begin{DoxyCompactList}\small\item\em Set Group key. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00677_gaf4ae3797779c34f09ecedbb97e1119ec}{GsnWdd\_\-SetPairKey} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} keyIndex, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} algo, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} authRole, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} keyLen, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pKey, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} rsc, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pStaAddr)
+\begin{DoxyCompactList}\small\item\em Set Pairwise key. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a4f2a67f095d578728b554cf374fa5e20}{GsnWdd\_\-WpsScan} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00286}{GSN\_\-WDD\_\-SCAN\_\-PARAMS\_\-T} $\ast$scanParams, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$rsltBuff, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rsltBuffLen, \hyperlink{a00603_a4929f46818bd2e51f1d25fecc36d30d6}{GSN\_\-WDD\_\-SCAN\_\-NOTIF\_\-CB\_\-T} notifyCb, VOID $\ast$notifyCtxt)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a943626b18fe20d43cb25a52c09d92707}{GsnWdd\_\-WpsConnect} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00677_ga3a599f8d47bbbf9108f9156cddf9bd4b}{GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-T} flags, \hyperlink{a00400}{GSN\_\-WDD\_\-SCAN\_\-ENTRY\_\-T} $\ast$pScanEntry, \hyperlink{a00603_afa291ab10917d97cae6b9207522e623b}{GSN\_\-WDD\_\-CONNECT\_\-NOTIF\_\-CB\_\-T} notifyCb, VOID $\ast$notifyCtx)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_aa41cf4f9ed094cdaf34743aab0f18d66}{GsnWdd\_\-ProbeReqPropIeSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pIe, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ieLength)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_ae6ad3555ec44c34eeed404750e7942b4}{GsnWdd\_\-AssocReqPropIeSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pIe, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ieLength)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_ab42f3a4a349c23b656836cc286cef669}{GsnWdd\_\-ProbeRspPropIeSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pIe, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ieLength)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a69b2499f175b750a525e64f76836ad25}{GsnWdd\_\-BeaconPropIeSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pIe, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ieLength)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a9ee9b45c0ef30ed06c686dcb774b4b6f}{GsnWdd\_\-RfTestModeStart} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a08170266b4cc58f85de91e014d9037fa}{GsnWdd\_\-RfTestModeStop} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a61acb98a54929d589e2b51099ee59bd6}{GsnWdd\_\-RfTestTxStart} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00187}{GSN\_\-WDD\_\-RFTEST\_\-TX\_\-START\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a3ee4d6fc6b1bdf8bf44efdc357a8c3bf}{GsnWdd\_\-RfTestTx99Start} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00190}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a4f2d0bbf3e44dd436c9d7837159bfba6}{GsnWdd\_\-RfTestTx100Start} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00189}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a0de70987c36f03735533433b4d7a4c4d}{GsnWdd\_\-RfTestTxStop} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_af9b8aa48bc08efbd172f329277b24d1f}{GsnWdd\_\-RfTestCarrierWaveStart} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00185}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a9bc8e520e5bb2951c77f80993445f255}{GsnWdd\_\-RfTestRxStart} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00186}{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-START\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_ab79e7fa651d79f95f4075b33636c44cb}{GsnWdd\_\-RfTestRxStop} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00419}{GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-T} $\ast$rxStats)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_af801d7d7722dbc9c6fe1f4028fe6a300}{GsnWdd\_\-ScanParamSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} minActivScnTime, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} maxActivScnTime, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} passiveScnTime)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a8c7957f946a9bbde3ebe5d53aad0722b}{GsnWdd\_\-BeaconMissThresholdSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} thresholdTime, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} thresholdNo)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_aead66fd4862fa889f8ff19856a815300}{GsnWdd\_\-UAMStart} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ifNum, \hyperlink{a00316}{GSN\_\-WDD\_\-UAM\_\-START\_\-RESP\_\-T} $\ast$pResp)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a4109018738ac40b121930b8c72f3779b}{GsnWdd\_\-UAMStop} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ifNum, \hyperlink{a00317}{GSN\_\-WDD\_\-UAM\_\-STOP\_\-RESP\_\-T} $\ast$pResp)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a121dfe825456ee1a48df189918ac24f1}{GsnWdd\_\-UAMDataRxConfig} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00306}{GSN\_\-WDD\_\-UAM\_\-DRX\_\-CONFIG\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a5d1c80f5cbdeaeed8981b98651a3a44f}{GsnWdd\_\-UamDataRxStart} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00310}{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-PARAM} $\ast$pParam, \hyperlink{a00311}{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-RESP\_\-T} $\ast$pResp)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a39a171245db4d0d1fc2ea999bc983eb2}{GsnWdd\_\-UAMDataRxStop} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00312}{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-PARAM} $\ast$pParam, \hyperlink{a00313}{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-RESP\_\-T} $\ast$pResp)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a070bd6272bf919d8c70c31887890774e}{GsnWdd\_\-UamDataSend} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00314}{GSN\_\-WDD\_\-UAM\_\-DATA\_\-HDR\_\-T} $\ast$dataHdr, VOID $\ast$data, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a022e8be8dffdb8e04bcafbfc49b70c5d}{GsnWdd\_\-TxPowerSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00408}{GSN\_\-WDD\_\-TX\_\-POW\_\-SET\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_aa8ca906f4af22c0b80ff7215e1a108c3}{GsnWdd\_\-TxNumRetrySet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} numRetries)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a85216b4b30c90f4cff6c9d54f2a81724}{GsnWdd\_\-ConctedStaListGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$outBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} outBufSize)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_afe0f0c0deb0c4dabae6b5bd8f10d7d5d}{GsnWdd\_\-ApPowerSaveCfgSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00368}{GSN\_\-WDD\_\-AP\_\-PS\_\-CFG\_\-SET\_\-PARAM} $\ast$pParam)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_ac2f00d6c26c21ba93cbfccf3268ce24f}{GsnWdd\_\-TxRateSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00409}{GSN\_\-WDD\_\-TX\_\-RATE\_\-SET\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a8abf7e27edb280ffd4d2359b0801adc8}{GsnWdd\_\-TxRateGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00409}{GSN\_\-WDD\_\-TX\_\-RATE\_\-GET\_\-RESP} $\ast$outBuf)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a5268fb233d28c9b4b7bd7e758ac8d5b0}{GsnWdd\_\-CalibrnRun} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00319}{GSN\_\-WDD\_\-CAL\_\-RUN\_\-REQ\_\-T} $\ast$pCalRunReq, \hyperlink{a00603_a1dbcda6416e95d84f0c8f8f8dcad8a18}{GSN\_\-WDD\_\-CAL\_\-NOTIF\_\-CB\_\-T} notifyCb, VOID $\ast$notifyCtx)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a3f7de0ec3e1e6c4f5d70e214299aee5e}{GsnWdd\_\-TkipContrMsrStart} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_aaa503be4534404b18f4d674a2829c922}{GsnWdd\_\-TkipSeqNumGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00407}{GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-T} $\ast$pResp)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_ae883bfd249a84f10d8f1f8fe7adbf1ce}{GsnWdd\_\-WlanStatsGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} reset, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} statType, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$outBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} outBufSize)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a1d9fc0409c65a27b5d601792251f03cc}{GsnWdd\_\-WlanRecvFiltrSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00397}{GSN\_\-WDD\_\-WLAN\_\-RECV\_\-FILTR\_\-SET\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_aed9ecd246f0e2b2cdda9f6e71d9fa7b5}{GsnWdd\_\-RtsEnable} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00396}{GSN\_\-WDD\_\-RTS\_\-ENBL\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_aec8c1766cfca1a67dc7bc9a77c9c442a}{GsnWdd\_\-BlockAckReq} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00272}{GSN\_\-WDD\_\-BLOCKACK\_\-REQ\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a0793078f808af92c73408d6b97183f5f}{GsnWdd\_\-AmsduReq} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00270}{GSN\_\-WDD\_\-AMSDU\_\-REQ\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a5a435905813e823c497bea2fa34c6e37}{GsnWdd\_\-AmpduReq} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00269}{GSN\_\-WDD\_\-AMPDU\_\-REQ\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a79cc6d3eea377a30b71bc549ffe1d595}{GsnWdd\_\-FrameTxFailCntLmitSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00381}{GSN\_\-WDD\_\-FRAME\_\-TX\_\-FAIL\_\-CNT\_\-LIMIT\_\-SET\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a0b805962b194131b997c0cd4102880c0}{GsnWdd\_\-Scan} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00286}{GSN\_\-WDD\_\-SCAN\_\-PARAMS\_\-T} $\ast$scanParams, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$rsltBuff, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rsltBuffLen, \hyperlink{a00603_a4929f46818bd2e51f1d25fecc36d30d6}{GSN\_\-WDD\_\-SCAN\_\-NOTIF\_\-CB\_\-T} notifyCb, VOID $\ast$notifyCtxt)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_ac13b223cd0f637a13bd2b34027d76c3d}{GsnWdd\_\-ScanStop} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a5d3978505772ece92b7dcfc4e51aa4d0}{GsnWdd\_\-RSSIGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$outBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} outBufSize)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a7d1f545c22995f6cbc6d37e9ab126aa1}{GsnWdd\_\-Ioctl} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00670_ga0c5055a50e14741ff0accb7d8d5bf039}{GSN\_\-WDD\_\-IOCTL\_\-CMD\_\-T} command, void $\ast$pData)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a7c2b370d2b3fa77d9a12992cd9aafc17}{GsnWdd\_\-RadioPowerSaveCfgSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00403}{GSN\_\-WDD\_\-STA\_\-PS\_\-CFG\_\-SET\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_adc82e00ab52191428f5db1683a068574}{GsnWdd\_\-DABindEnable} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} enable)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_ae7058a871bec3a0765a01d4754053453}{GsnWdd\_\-KeepAliveTimeOutSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} timeOut)
+\item 
+PUBLIC \hyperlink{a00274}{GSN\_\-WDD\_\-ERROR\_\-T} $\ast$ \hyperlink{a00603_a4b1230e5716f48262fda980639dc3006}{GsnWdd\_\-ErrorGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_ad5dc85a2029754dd8c2cf76f1496c7cc}{GsnWdd\_\-BlockAckEnable} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00365}{GSN\_\-WDD\_\-ALLOW\_\-BA\_\-BITMAP\_\-SET\_\-PARAM} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a3dc16a6b58b56b3a825e6b2ac29ce95b}{GsnWdd\_\-UamDataSend\_\-Patch} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00314}{GSN\_\-WDD\_\-UAM\_\-DATA\_\-HDR\_\-T} $\ast$dataHdr, VOID $\ast$data, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen, \hyperlink{a00414}{GSN\_\-WIF\_\-WLAN\_\-UNASSOCIATED\_\-DATACFM\_\-T} $\ast$pDataTxCfm)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_aabc4c7bb7e67428baf82fe3ca3491d09}{GsnWdd\_\-RadioStateGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$radioState)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_ac1f78bd778b4df7b2e64497fc897fc30}{GsnWdd\_\-RadioModeInfoGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00283}{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO\_\-T} $\ast$pRadioModeInfo)
+\item 
+INLINE VOID \hyperlink{a00603_a701a912d9abc9913d06c3537136f818f}{GsnWdd\_\-BssidGet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pCtx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pBssid)
+\item 
+PUBLIC INLINE \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_ad5ea06cf67940cf920306ee76a3d1a40}{GsnWdd\_\-ActiveScanTimeSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} minScanTime, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} maxScanTime)
+\item 
+PUBLIC INLINE \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a9c591d80ae7c6a5771307f06cd0f0906}{GsnWdd\_\-MinActiveScanTimeSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} minScanTime)
+\item 
+PUBLIC INLINE \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_a503f45e0e6d84258988e08111ac4d94c}{GsnWdd\_\-MaxActiveScanTimeSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} maxScanTime)
+\item 
+PUBLIC INLINE \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00603_abe43d60be0ba48f473195c921e3c22f0}{GsnWdd\_\-PassiveScanTimeSet} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} passiveScanTime)
+\item 
+void \hyperlink{a00603_a1c6e50232c9b695109cef9e49f65ea21}{GSN\_\-WDD\_\-SSID\_\-CPY} (\hyperlink{a00417}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} $\ast$const dstSsidPtr, const \hyperlink{a00417}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} $\ast$const srcSsidPtr)
+\item 
+void \hyperlink{a00603_a51907a8dd846daa407ffb8f6048cfbc3}{GSN\_\-WDD\_\-PHY\_\-ADDR\_\-CPY} (void $\ast$const DstAddrPtr, const void $\ast$const SrcAddrPtr)
+\item 
+INLINE VOID $\ast$ \hyperlink{a00603_a7cba4df1ed7d4eceab1218554e7d0fd5}{GsnWdd\_\-GetFrmPtrForConnect} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd)
+\item 
+INLINE \hyperlink{a00297}{GSN\_\-WDD\_\-SECURITY\_\-CONFIG\_\-T} $\ast$ \hyperlink{a00603_a4ffa3e14728ba8f72cdf6c7f12cf0076}{GsnWdd\_\-GetSecCfgPtr} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN WDD public header. This file contains public definitions for WDD. WDD( Wireless Device Driver ) provides APIs for the wireless drivers. These APIs are scan request, connect request, disconnect request, data request. WDD generates events related to these request. If application has registered its callback function, WDD calls it whenever these events happens. 
+
+Definition in file \hyperlink{a00603_source}{gsn\_\-wdd.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00603_aaa7df45acb072b8008bb24b3e5a8e8b9}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-ADD\_\-BA@{GSN\_\-WDD\_\-ADD\_\-BA}}
+\index{GSN\_\-WDD\_\-ADD\_\-BA@{GSN\_\-WDD\_\-ADD\_\-BA}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-ADD\_\-BA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-ADD\_\-BA~1}}
+\label{a00603_aaa7df45acb072b8008bb24b3e5a8e8b9}
+
+
+Definition at line 924 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a1ea4e46accb95280634fb24898502942}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-AMPDU\_\-END@{GSN\_\-WDD\_\-AMPDU\_\-END}}
+\index{GSN\_\-WDD\_\-AMPDU\_\-END@{GSN\_\-WDD\_\-AMPDU\_\-END}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-AMPDU\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-AMPDU\_\-END~2}}
+\label{a00603_a1ea4e46accb95280634fb24898502942}
+
+
+Definition at line 931 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a78add8013309f477df4ce6fb69e28e5c}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-AMPDU\_\-START@{GSN\_\-WDD\_\-AMPDU\_\-START}}
+\index{GSN\_\-WDD\_\-AMPDU\_\-START@{GSN\_\-WDD\_\-AMPDU\_\-START}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-AMPDU\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-AMPDU\_\-START~1}}
+\label{a00603_a78add8013309f477df4ce6fb69e28e5c}
+
+
+Definition at line 930 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a22a45b0beca366e846d2a88a1dba6777}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-AMSDU\_\-END@{GSN\_\-WDD\_\-AMSDU\_\-END}}
+\index{GSN\_\-WDD\_\-AMSDU\_\-END@{GSN\_\-WDD\_\-AMSDU\_\-END}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-AMSDU\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-AMSDU\_\-END~2}}
+\label{a00603_a22a45b0beca366e846d2a88a1dba6777}
+
+
+Definition at line 928 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a12348d97f30d004b6b377f53be35af6b}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-AMSDU\_\-START@{GSN\_\-WDD\_\-AMSDU\_\-START}}
+\index{GSN\_\-WDD\_\-AMSDU\_\-START@{GSN\_\-WDD\_\-AMSDU\_\-START}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-AMSDU\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-AMSDU\_\-START~1}}
+\label{a00603_a12348d97f30d004b6b377f53be35af6b}
+
+
+Definition at line 927 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_af6d374ed7ee7ba0272cf307e24b1042d}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-ASSOC\_\-STATE\_\-CONCTED@{GSN\_\-WDD\_\-ASSOC\_\-STATE\_\-CONCTED}}
+\index{GSN\_\-WDD\_\-ASSOC\_\-STATE\_\-CONCTED@{GSN\_\-WDD\_\-ASSOC\_\-STATE\_\-CONCTED}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-ASSOC\_\-STATE\_\-CONCTED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-ASSOC\_\-STATE\_\-CONCTED~1}}
+\label{a00603_af6d374ed7ee7ba0272cf307e24b1042d}
+
+
+Definition at line 250 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a630663c7d7bce1461f01614edbcef81e}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-BZERO@{GSN\_\-WDD\_\-BZERO}}
+\index{GSN\_\-WDD\_\-BZERO@{GSN\_\-WDD\_\-BZERO}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-BZERO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-BZERO(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~memset(({\bf INT8} $\ast$)(a), 0, (b))}}
+\label{a00603_a630663c7d7bce1461f01614edbcef81e}
+Some utility MACROS 
+
+Definition at line 1499 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a8e1bde26ba2df3e5ae166d325eab08fd}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-DEL\_\-BA@{GSN\_\-WDD\_\-DEL\_\-BA}}
+\index{GSN\_\-WDD\_\-DEL\_\-BA@{GSN\_\-WDD\_\-DEL\_\-BA}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-DEL\_\-BA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-DEL\_\-BA~2}}
+\label{a00603_a8e1bde26ba2df3e5ae166d325eab08fd}
+
+
+Definition at line 925 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a3a8f4b4eca7723415ea145f12e4e2dbd}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-RX@{GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-RX}}
+\index{GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-RX@{GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-RX}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-RX}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-RX~GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-RX}}
+\label{a00603_a3a8f4b4eca7723415ea145f12e4e2dbd}
+
+
+Definition at line 919 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a8487e8e5eda472ed8392357a081358f2}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-TX@{GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-TX}}
+\index{GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-TX@{GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-TX}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-TX}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WDD\_\-WLAN\_\-STAT\_\-TYPE\_\-TX~GSN\_\-WIF\_\-WLAN\_\-STAT\_\-TYPE\_\-TX}}
+\label{a00603_a8487e8e5eda472ed8392357a081358f2}
+Wlan statistics types 
+
+Definition at line 918 of file gsn\_\-wdd.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00603_aa56847c4ab1a6ceb37bdb04c5bcb1d0c}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-L2\_\-DEV\_\-WLAN\_\-T@{GSN\_\-L2\_\-DEV\_\-WLAN\_\-T}}
+\index{GSN\_\-L2\_\-DEV\_\-WLAN\_\-T@{GSN\_\-L2\_\-DEV\_\-WLAN\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-L2\_\-DEV\_\-WLAN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-L2\_\-DEV\_\-WLAN}  {\bf GSN\_\-L2\_\-DEV\_\-WLAN\_\-T}}}
+\label{a00603_aa56847c4ab1a6ceb37bdb04c5bcb1d0c}
+\hypertarget{a00603_afa9ab8eb88c695b390fd27c68bfdfefa}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-ALLOW\_\-BA\_\-BITMAP\_\-SET\_\-PARAM@{GSN\_\-WDD\_\-ALLOW\_\-BA\_\-BITMAP\_\-SET\_\-PARAM}}
+\index{GSN\_\-WDD\_\-ALLOW\_\-BA\_\-BITMAP\_\-SET\_\-PARAM@{GSN\_\-WDD\_\-ALLOW\_\-BA\_\-BITMAP\_\-SET\_\-PARAM}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-ALLOW\_\-BA\_\-BITMAP\_\-SET\_\-PARAM}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-ALLOW\_\-BA\_\-TID\_\-BITMAP\_\-T} {\bf GSN\_\-WDD\_\-ALLOW\_\-BA\_\-BITMAP\_\-SET\_\-PARAM}}}
+\label{a00603_afa9ab8eb88c695b390fd27c68bfdfefa}
+
+
+Definition at line 124 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_af3b1b212e8f1221473592d765ef07711}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-AMPDU\_\-REQ\_\-T@{GSN\_\-WDD\_\-AMPDU\_\-REQ\_\-T}}
+\index{GSN\_\-WDD\_\-AMPDU\_\-REQ\_\-T@{GSN\_\-WDD\_\-AMPDU\_\-REQ\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-AMPDU\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-AMPDU\_\-REQ}  {\bf GSN\_\-WDD\_\-AMPDU\_\-REQ\_\-T}}}
+\label{a00603_af3b1b212e8f1221473592d765ef07711}
+\hypertarget{a00603_a140aa60fdc6ee0c2ef0ad0e615453b01}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-AMSDU\_\-REQ\_\-T@{GSN\_\-WDD\_\-AMSDU\_\-REQ\_\-T}}
+\index{GSN\_\-WDD\_\-AMSDU\_\-REQ\_\-T@{GSN\_\-WDD\_\-AMSDU\_\-REQ\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-AMSDU\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-AMSDU\_\-REQ}  {\bf GSN\_\-WDD\_\-AMSDU\_\-REQ\_\-T}}}
+\label{a00603_a140aa60fdc6ee0c2ef0ad0e615453b01}
+\hypertarget{a00603_a7dc57c477301af9fb7424aa7cd500899}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-AP\_\-PS\_\-CFG\_\-SET\_\-PARAM@{GSN\_\-WDD\_\-AP\_\-PS\_\-CFG\_\-SET\_\-PARAM}}
+\index{GSN\_\-WDD\_\-AP\_\-PS\_\-CFG\_\-SET\_\-PARAM@{GSN\_\-WDD\_\-AP\_\-PS\_\-CFG\_\-SET\_\-PARAM}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-AP\_\-PS\_\-CFG\_\-SET\_\-PARAM}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-AP\_\-PS\_\-CFG\_\-T} {\bf GSN\_\-WDD\_\-AP\_\-PS\_\-CFG\_\-SET\_\-PARAM}}}
+\label{a00603_a7dc57c477301af9fb7424aa7cd500899}
+
+
+Definition at line 118 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a1b8ae0d5ebc50c0a8704758bf4a472cd}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-AP\_\-SPCIFIC\_\-CFG\_\-T@{GSN\_\-WDD\_\-AP\_\-SPCIFIC\_\-CFG\_\-T}}
+\index{GSN\_\-WDD\_\-AP\_\-SPCIFIC\_\-CFG\_\-T@{GSN\_\-WDD\_\-AP\_\-SPCIFIC\_\-CFG\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-AP\_\-SPCIFIC\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-AP\_\-SPCIFIC\_\-CFG} {\bf GSN\_\-WDD\_\-AP\_\-SPCIFIC\_\-CFG\_\-T}}}
+\label{a00603_a1b8ae0d5ebc50c0a8704758bf4a472cd}
+\hypertarget{a00603_ab7d53da5c96f5f0ec1b31894fdc02777}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-BLOCKACK\_\-REQ\_\-T@{GSN\_\-WDD\_\-BLOCKACK\_\-REQ\_\-T}}
+\index{GSN\_\-WDD\_\-BLOCKACK\_\-REQ\_\-T@{GSN\_\-WDD\_\-BLOCKACK\_\-REQ\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-BLOCKACK\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-BLOCKACK\_\-REQ}  {\bf GSN\_\-WDD\_\-BLOCKACK\_\-REQ\_\-T}}}
+\label{a00603_ab7d53da5c96f5f0ec1b31894fdc02777}
+\hypertarget{a00603_a1dbcda6416e95d84f0c8f8f8dcad8a18}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-CAL\_\-NOTIF\_\-CB\_\-T@{GSN\_\-WDD\_\-CAL\_\-NOTIF\_\-CB\_\-T}}
+\index{GSN\_\-WDD\_\-CAL\_\-NOTIF\_\-CB\_\-T@{GSN\_\-WDD\_\-CAL\_\-NOTIF\_\-CB\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-CAL\_\-NOTIF\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-WDD\_\-CAL\_\-NOTIF\_\-CB\_\-T})(VOID $\ast$ctx, {\bf GSN\_\-WDD\_\-CAL\_\-RUN\_\-RSP\_\-T} $\ast$resp)}}
+\label{a00603_a1dbcda6416e95d84f0c8f8f8dcad8a18}
+
+
+Definition at line 468 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a02ee63c44fe251b49941f6fc917aa922}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-CAL\_\-RUN\_\-REQ\_\-T@{GSN\_\-WDD\_\-CAL\_\-RUN\_\-REQ\_\-T}}
+\index{GSN\_\-WDD\_\-CAL\_\-RUN\_\-REQ\_\-T@{GSN\_\-WDD\_\-CAL\_\-RUN\_\-REQ\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-CAL\_\-RUN\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-T} {\bf GSN\_\-WDD\_\-CAL\_\-RUN\_\-REQ\_\-T}}}
+\label{a00603_a02ee63c44fe251b49941f6fc917aa922}
+
+
+Definition at line 92 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_ae439d00fb6368eda8ceae5f7bbae3b95}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-CAL\_\-RUN\_\-RSP\_\-T@{GSN\_\-WDD\_\-CAL\_\-RUN\_\-RSP\_\-T}}
+\index{GSN\_\-WDD\_\-CAL\_\-RUN\_\-RSP\_\-T@{GSN\_\-WDD\_\-CAL\_\-RUN\_\-RSP\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-CAL\_\-RUN\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-T} {\bf GSN\_\-WDD\_\-CAL\_\-RUN\_\-RSP\_\-T}}}
+\label{a00603_ae439d00fb6368eda8ceae5f7bbae3b95}
+
+
+Definition at line 90 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a99522d8b9d2419985efa523af3c9c00d}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-CONNECT\_\-INFO\_\-T@{GSN\_\-WDD\_\-CONNECT\_\-INFO\_\-T}}
+\index{GSN\_\-WDD\_\-CONNECT\_\-INFO\_\-T@{GSN\_\-WDD\_\-CONNECT\_\-INFO\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-CONNECT\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-CONNECT\_\-INFO} {\bf GSN\_\-WDD\_\-CONNECT\_\-INFO\_\-T}}}
+\label{a00603_a99522d8b9d2419985efa523af3c9c00d}
+\hypertarget{a00603_afa291ab10917d97cae6b9207522e623b}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-CONNECT\_\-NOTIF\_\-CB\_\-T@{GSN\_\-WDD\_\-CONNECT\_\-NOTIF\_\-CB\_\-T}}
+\index{GSN\_\-WDD\_\-CONNECT\_\-NOTIF\_\-CB\_\-T@{GSN\_\-WDD\_\-CONNECT\_\-NOTIF\_\-CB\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-CONNECT\_\-NOTIF\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-WDD\_\-CONNECT\_\-NOTIF\_\-CB\_\-T})(VOID $\ast$ctx, {\bf GSN\_\-STATUS} status)}}
+\label{a00603_afa291ab10917d97cae6b9207522e623b}
+
+
+Definition at line 446 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_ab461c9df9fc979702c542cabffbb2dba}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-CTX\_\-T@{GSN\_\-WDD\_\-CTX\_\-T}}
+\index{GSN\_\-WDD\_\-CTX\_\-T@{GSN\_\-WDD\_\-CTX\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-L2\_\-DEV\_\-WLAN\_\-T} {\bf GSN\_\-WDD\_\-CTX\_\-T}}}
+\label{a00603_ab461c9df9fc979702c542cabffbb2dba}
+
+
+Definition at line 899 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a6ba5be1c4251a77b2a642319af4b696b}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-DATA\_\-IND\_\-CB\_\-T@{GSN\_\-WDD\_\-DATA\_\-IND\_\-CB\_\-T}}
+\index{GSN\_\-WDD\_\-DATA\_\-IND\_\-CB\_\-T@{GSN\_\-WDD\_\-DATA\_\-IND\_\-CB\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-DATA\_\-IND\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-WDD\_\-DATA\_\-IND\_\-CB\_\-T})(VOID $\ast$ctx, {\bf INT8} $\ast$data, {\bf UINT16} dataLen)}}
+\label{a00603_a6ba5be1c4251a77b2a642319af4b696b}
+
+
+Definition at line 396 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a862addfd6eccb0fedeaaa04732f94d5b}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-DISASSOCIATION\_\-CB\_\-INFO@{GSN\_\-WDD\_\-DISASSOCIATION\_\-CB\_\-INFO}}
+\index{GSN\_\-WDD\_\-DISASSOCIATION\_\-CB\_\-INFO@{GSN\_\-WDD\_\-DISASSOCIATION\_\-CB\_\-INFO}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-DISASSOCIATION\_\-CB\_\-INFO}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-DISCONNECT\_\-IND\_\-T} {\bf GSN\_\-WDD\_\-DISASSOCIATION\_\-CB\_\-INFO}}}
+\label{a00603_a862addfd6eccb0fedeaaa04732f94d5b}
+
+
+Definition at line 68 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_ac5fbb773daa449d33e065683260e253d}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-DISCONNECT\_\-NOTIF\_\-CB\_\-T@{GSN\_\-WDD\_\-DISCONNECT\_\-NOTIF\_\-CB\_\-T}}
+\index{GSN\_\-WDD\_\-DISCONNECT\_\-NOTIF\_\-CB\_\-T@{GSN\_\-WDD\_\-DISCONNECT\_\-NOTIF\_\-CB\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-DISCONNECT\_\-NOTIF\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-WDD\_\-DISCONNECT\_\-NOTIF\_\-CB\_\-T})(VOID $\ast$ctx, {\bf GSN\_\-STATUS} status)}}
+\label{a00603_ac5fbb773daa449d33e065683260e253d}
+
+
+Definition at line 453 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a319a2113768d730bfaa5ab1c954f49c1}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-ERROR\_\-CODE\_\-T@{GSN\_\-WDD\_\-ERROR\_\-CODE\_\-T}}
+\index{GSN\_\-WDD\_\-ERROR\_\-CODE\_\-T@{GSN\_\-WDD\_\-ERROR\_\-CODE\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-ERROR\_\-CODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-ERROR\_\-CODE} {\bf GSN\_\-WDD\_\-ERROR\_\-CODE\_\-T}}}
+\label{a00603_a319a2113768d730bfaa5ab1c954f49c1}
+\hypertarget{a00603_af9a6675c005f80382367ca85c5280ad1}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO\_\-T@{GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO\_\-T}}
+\index{GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO\_\-T@{GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO} {\bf GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO\_\-T}}}
+\label{a00603_af9a6675c005f80382367ca85c5280ad1}
+\hypertarget{a00603_aa95a91b24c682d5580c32e1588d9405e}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-ERROR\_\-T@{GSN\_\-WDD\_\-ERROR\_\-T}}
+\index{GSN\_\-WDD\_\-ERROR\_\-T@{GSN\_\-WDD\_\-ERROR\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-ERROR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-ERROR} {\bf GSN\_\-WDD\_\-ERROR\_\-T}}}
+\label{a00603_aa95a91b24c682d5580c32e1588d9405e}
+\hypertarget{a00603_a209fb3e1d53b9efa2241d6fd09de5de3}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-FRAME\_\-TX\_\-FAIL\_\-CNT\_\-LIMIT\_\-SET\_\-T@{GSN\_\-WDD\_\-FRAME\_\-TX\_\-FAIL\_\-CNT\_\-LIMIT\_\-SET\_\-T}}
+\index{GSN\_\-WDD\_\-FRAME\_\-TX\_\-FAIL\_\-CNT\_\-LIMIT\_\-SET\_\-T@{GSN\_\-WDD\_\-FRAME\_\-TX\_\-FAIL\_\-CNT\_\-LIMIT\_\-SET\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-FRAME\_\-TX\_\-FAIL\_\-CNT\_\-LIMIT\_\-SET\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-COUNT\_\-THRESHOLD\_\-REQ\_\-T} {\bf GSN\_\-WDD\_\-FRAME\_\-TX\_\-FAIL\_\-CNT\_\-LIMIT\_\-SET\_\-T}}}
+\label{a00603_a209fb3e1d53b9efa2241d6fd09de5de3}
+
+
+Definition at line 86 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_abf86a06ce9b3aa862dc938b896b11ca6}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-FRAME\_\-TXFAIL\_\-INFO\_\-T@{GSN\_\-WDD\_\-FRAME\_\-TXFAIL\_\-INFO\_\-T}}
+\index{GSN\_\-WDD\_\-FRAME\_\-TXFAIL\_\-INFO\_\-T@{GSN\_\-WDD\_\-FRAME\_\-TXFAIL\_\-INFO\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-FRAME\_\-TXFAIL\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-FRAME\_\-TX\_\-FAIL\_\-IND\_\-T} {\bf GSN\_\-WDD\_\-FRAME\_\-TXFAIL\_\-INFO\_\-T}}}
+\label{a00603_abf86a06ce9b3aa862dc938b896b11ca6}
+
+
+Definition at line 88 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_ae0e55b26e7cfed5cc849b360e24289e3}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-INIT\_\-FLAG\_\-T@{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-T}}
+\index{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-T@{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-INIT\_\-FLAG} {\bf GSN\_\-WDD\_\-INIT\_\-FLAG\_\-T}}}
+\label{a00603_ae0e55b26e7cfed5cc849b360e24289e3}
+\hypertarget{a00603_a3906d6f291df3ccb5d770f1fe7eec5e4}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-INIT\_\-PARAM\_\-T@{GSN\_\-WDD\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-WDD\_\-INIT\_\-PARAM\_\-T@{GSN\_\-WDD\_\-INIT\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-INIT\_\-PARAM} {\bf GSN\_\-WDD\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00603_a3906d6f291df3ccb5d770f1fe7eec5e4}
+\hypertarget{a00603_a807e44a4a859b36de8babbf87eef011b}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-MIC\_\-FAILURE\_\-INFO\_\-T@{GSN\_\-WDD\_\-MIC\_\-FAILURE\_\-INFO\_\-T}}
+\index{GSN\_\-WDD\_\-MIC\_\-FAILURE\_\-INFO\_\-T@{GSN\_\-WDD\_\-MIC\_\-FAILURE\_\-INFO\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-MIC\_\-FAILURE\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-MIC\_\-FAILURE\_\-IND\_\-T} {\bf GSN\_\-WDD\_\-MIC\_\-FAILURE\_\-INFO\_\-T}}}
+\label{a00603_a807e44a4a859b36de8babbf87eef011b}
+
+
+Definition at line 80 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a3a9ea76a32ca09c14f5b82effc28f0fa}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-MSG\_\-HANDLER\_\-T@{GSN\_\-WDD\_\-MSG\_\-HANDLER\_\-T}}
+\index{GSN\_\-WDD\_\-MSG\_\-HANDLER\_\-T@{GSN\_\-WDD\_\-MSG\_\-HANDLER\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-MSG\_\-HANDLER\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-MSG\_\-HANDLER} {\bf GSN\_\-WDD\_\-MSG\_\-HANDLER\_\-T}}}
+\label{a00603_a3a9ea76a32ca09c14f5b82effc28f0fa}
+\hypertarget{a00603_a526ef12a3d0b565b524257aa27e62652}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-MSG\_\-HDLR\_\-INIT\_\-PARAM\_\-T@{GSN\_\-WDD\_\-MSG\_\-HDLR\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-WDD\_\-MSG\_\-HDLR\_\-INIT\_\-PARAM\_\-T@{GSN\_\-WDD\_\-MSG\_\-HDLR\_\-INIT\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-MSG\_\-HDLR\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-MSG\_\-HDLR\_\-INIT\_\-PARAM} {\bf GSN\_\-WDD\_\-MSG\_\-HDLR\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00603_a526ef12a3d0b565b524257aa27e62652}
+\hypertarget{a00603_ab1b47d2a6c940fb05451eebc74ea3852}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG\_\-T@{GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG\_\-T}}
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG\_\-T@{GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG} {\bf GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG\_\-T}}}
+\label{a00603_ab1b47d2a6c940fb05451eebc74ea3852}
+\hypertarget{a00603_a33ed28c15746622883e32280cde99faa}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO\_\-T@{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO\_\-T}}
+\index{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO\_\-T@{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO} {\bf GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO\_\-T}}}
+\label{a00603_a33ed28c15746622883e32280cde99faa}
+\hypertarget{a00603_a66d764097f36dbea8341b9591e8dc9cf}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-RADIO\_\-MODE\_\-T@{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-T}}
+\index{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-T@{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-RADIO\_\-MODE} {\bf GSN\_\-WDD\_\-RADIO\_\-MODE\_\-T}}}
+\label{a00603_a66d764097f36dbea8341b9591e8dc9cf}
+\hypertarget{a00603_a8aef612ff6b195fa978a7e8e88c66baa}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-REINIT\_\-PARAM\_\-T@{GSN\_\-WDD\_\-REINIT\_\-PARAM\_\-T}}
+\index{GSN\_\-WDD\_\-REINIT\_\-PARAM\_\-T@{GSN\_\-WDD\_\-REINIT\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-REINIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-REINIT\_\-PARAM} {\bf GSN\_\-WDD\_\-REINIT\_\-PARAM\_\-T}}}
+\label{a00603_a8aef612ff6b195fa978a7e8e88c66baa}
+\hypertarget{a00603_a842373dad0ceeafe062cf1827dbd8e54}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-RFTEST\_\-TX\_\-START\_\-PARAM\_\-T@{GSN\_\-WDD\_\-RFTEST\_\-TX\_\-START\_\-PARAM\_\-T}}
+\index{GSN\_\-WDD\_\-RFTEST\_\-TX\_\-START\_\-PARAM\_\-T@{GSN\_\-WDD\_\-RFTEST\_\-TX\_\-START\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-RFTEST\_\-TX\_\-START\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX\_\-START\_\-REQ\_\-T} {\bf GSN\_\-WDD\_\-RFTEST\_\-TX\_\-START\_\-PARAM\_\-T}}}
+\label{a00603_a842373dad0ceeafe062cf1827dbd8e54}
+
+
+Definition at line 70 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_acb20c85ccb97eb810fe9a5dbb403f1ae}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-RTS\_\-ENBL\_\-PARAM\_\-T@{GSN\_\-WDD\_\-RTS\_\-ENBL\_\-PARAM\_\-T}}
+\index{GSN\_\-WDD\_\-RTS\_\-ENBL\_\-PARAM\_\-T@{GSN\_\-WDD\_\-RTS\_\-ENBL\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-RTS\_\-ENBL\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-RTS\_\-ENABLE\_\-T} {\bf GSN\_\-WDD\_\-RTS\_\-ENBL\_\-PARAM\_\-T}}}
+\label{a00603_acb20c85ccb97eb810fe9a5dbb403f1ae}
+
+
+Definition at line 82 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_abe2c6b1527f6a2e6bc61ebacfd6f1391}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-INFO\_\-T@{GSN\_\-WDD\_\-SCAN\_\-INFO\_\-T}}
+\index{GSN\_\-WDD\_\-SCAN\_\-INFO\_\-T@{GSN\_\-WDD\_\-SCAN\_\-INFO\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-SCAN\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-SCAN\_\-INFO} {\bf GSN\_\-WDD\_\-SCAN\_\-INFO\_\-T}}}
+\label{a00603_abe2c6b1527f6a2e6bc61ebacfd6f1391}
+\hypertarget{a00603_a4929f46818bd2e51f1d25fecc36d30d6}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-NOTIF\_\-CB\_\-T@{GSN\_\-WDD\_\-SCAN\_\-NOTIF\_\-CB\_\-T}}
+\index{GSN\_\-WDD\_\-SCAN\_\-NOTIF\_\-CB\_\-T@{GSN\_\-WDD\_\-SCAN\_\-NOTIF\_\-CB\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-SCAN\_\-NOTIF\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-WDD\_\-SCAN\_\-NOTIF\_\-CB\_\-T})(VOID $\ast$ctx, {\bf GSN\_\-STATUS} status, {\bf UINT8} $\ast$resultBuf, {\bf UINT32} numResults)}}
+\label{a00603_a4929f46818bd2e51f1d25fecc36d30d6}
+
+
+Definition at line 460 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a940af0328a2568d0750d618f5c8f141e}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-STATE\_\-T@{GSN\_\-WDD\_\-SCAN\_\-STATE\_\-T}}
+\index{GSN\_\-WDD\_\-SCAN\_\-STATE\_\-T@{GSN\_\-WDD\_\-SCAN\_\-STATE\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-SCAN\_\-STATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-SCAN\_\-STATE} {\bf GSN\_\-WDD\_\-SCAN\_\-STATE\_\-T}}}
+\label{a00603_a940af0328a2568d0750d618f5c8f141e}
+\hypertarget{a00603_a466b998274f9dcd29e5e82e2f28904b9}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-T@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-T}}
+\index{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-T@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-SCAN\_\-TYPE} {\bf GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-T}}}
+\label{a00603_a466b998274f9dcd29e5e82e2f28904b9}
+\hypertarget{a00603_affc6d455eb246fbebdf2993828a937ed}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-STA\_\-INFO\_\-T@{GSN\_\-WDD\_\-STA\_\-INFO\_\-T}}
+\index{GSN\_\-WDD\_\-STA\_\-INFO\_\-T@{GSN\_\-WDD\_\-STA\_\-INFO\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-STA\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-STA\_\-INFO} {\bf GSN\_\-WDD\_\-STA\_\-INFO\_\-T}}}
+\label{a00603_affc6d455eb246fbebdf2993828a937ed}
+\hypertarget{a00603_aaebb85d67e7b45db59b7608cc1ac8ad0}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-STA\_\-PS\_\-CFG\_\-SET\_\-PARAM\_\-T@{GSN\_\-WDD\_\-STA\_\-PS\_\-CFG\_\-SET\_\-PARAM\_\-T}}
+\index{GSN\_\-WDD\_\-STA\_\-PS\_\-CFG\_\-SET\_\-PARAM\_\-T@{GSN\_\-WDD\_\-STA\_\-PS\_\-CFG\_\-SET\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-STA\_\-PS\_\-CFG\_\-SET\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-CFG\_\-T} {\bf GSN\_\-WDD\_\-STA\_\-PS\_\-CFG\_\-SET\_\-PARAM\_\-T}}}
+\label{a00603_aaebb85d67e7b45db59b7608cc1ac8ad0}
+
+
+Definition at line 120 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a03ed769ea979937a8ce78d802646c729}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-T@{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-T}}
+\index{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-T@{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE} {\bf GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-T}}}
+\label{a00603_a03ed769ea979937a8ce78d802646c729}
+\hypertarget{a00603_ad4d84331dadc231fd291b26199b36691}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-T@{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-T}}
+\index{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-T@{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP} {\bf GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-T}}}
+\label{a00603_ad4d84331dadc231fd291b26199b36691}
+\hypertarget{a00603_a8191aefa707f0e98b4e0ea3b6030ce5e}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-STA\_\-SPCIFIC\_\-CFG\_\-T@{GSN\_\-WDD\_\-STA\_\-SPCIFIC\_\-CFG\_\-T}}
+\index{GSN\_\-WDD\_\-STA\_\-SPCIFIC\_\-CFG\_\-T@{GSN\_\-WDD\_\-STA\_\-SPCIFIC\_\-CFG\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-STA\_\-SPCIFIC\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-STA\_\-SPCIFIC\_\-CFG} {\bf GSN\_\-WDD\_\-STA\_\-SPCIFIC\_\-CFG\_\-T}}}
+\label{a00603_a8191aefa707f0e98b4e0ea3b6030ce5e}
+\hypertarget{a00603_a18054aae33f811d29ce76060bf51e0f4}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-TX\_\-POW\_\-GET\_\-RESP\_\-T@{GSN\_\-WDD\_\-TX\_\-POW\_\-GET\_\-RESP\_\-T}}
+\index{GSN\_\-WDD\_\-TX\_\-POW\_\-GET\_\-RESP\_\-T@{GSN\_\-WDD\_\-TX\_\-POW\_\-GET\_\-RESP\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-TX\_\-POW\_\-GET\_\-RESP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-T} {\bf GSN\_\-WDD\_\-TX\_\-POW\_\-GET\_\-RESP\_\-T}}}
+\label{a00603_a18054aae33f811d29ce76060bf51e0f4}
+
+
+Definition at line 112 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_adbd195fb1038147499991fd7286b8c4c}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-TX\_\-POW\_\-SET\_\-PARAM\_\-T@{GSN\_\-WDD\_\-TX\_\-POW\_\-SET\_\-PARAM\_\-T}}
+\index{GSN\_\-WDD\_\-TX\_\-POW\_\-SET\_\-PARAM\_\-T@{GSN\_\-WDD\_\-TX\_\-POW\_\-SET\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-TX\_\-POW\_\-SET\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-POWER\_\-T} {\bf GSN\_\-WDD\_\-TX\_\-POW\_\-SET\_\-PARAM\_\-T}}}
+\label{a00603_adbd195fb1038147499991fd7286b8c4c}
+
+
+Definition at line 110 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a0d7e87cd1ff0f897f58bb1c556ee7e4c}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-TX\_\-RATE\_\-GET\_\-RESP@{GSN\_\-WDD\_\-TX\_\-RATE\_\-GET\_\-RESP}}
+\index{GSN\_\-WDD\_\-TX\_\-RATE\_\-GET\_\-RESP@{GSN\_\-WDD\_\-TX\_\-RATE\_\-GET\_\-RESP}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-TX\_\-RATE\_\-GET\_\-RESP}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-T} {\bf GSN\_\-WDD\_\-TX\_\-RATE\_\-GET\_\-RESP}}}
+\label{a00603_a0d7e87cd1ff0f897f58bb1c556ee7e4c}
+
+
+Definition at line 116 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_afcf91e1f003aac3078c1642f50f665c1}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-TX\_\-RATE\_\-SET\_\-PARAM\_\-T@{GSN\_\-WDD\_\-TX\_\-RATE\_\-SET\_\-PARAM\_\-T}}
+\index{GSN\_\-WDD\_\-TX\_\-RATE\_\-SET\_\-PARAM\_\-T@{GSN\_\-WDD\_\-TX\_\-RATE\_\-SET\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-TX\_\-RATE\_\-SET\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-TX\_\-RATE\_\-T} {\bf GSN\_\-WDD\_\-TX\_\-RATE\_\-SET\_\-PARAM\_\-T}}}
+\label{a00603_afcf91e1f003aac3078c1642f50f665c1}
+
+
+Definition at line 114 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a546688b4be1df3aa4ddbf6a63db0d3d5}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-UAM\_\-DATA\_\-HDR\_\-T@{GSN\_\-WDD\_\-UAM\_\-DATA\_\-HDR\_\-T}}
+\index{GSN\_\-WDD\_\-UAM\_\-DATA\_\-HDR\_\-T@{GSN\_\-WDD\_\-UAM\_\-DATA\_\-HDR\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-UAM\_\-DATA\_\-HDR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATAREQ\_\-HDR\_\-T} {\bf GSN\_\-WDD\_\-UAM\_\-DATA\_\-HDR\_\-T}}}
+\label{a00603_a546688b4be1df3aa4ddbf6a63db0d3d5}
+
+
+Definition at line 108 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a556da70b3c2eaafd2f4893880bd4466a}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-UAM\_\-DRX\_\-CONFIG\_\-PARAM\_\-T@{GSN\_\-WDD\_\-UAM\_\-DRX\_\-CONFIG\_\-PARAM\_\-T}}
+\index{GSN\_\-WDD\_\-UAM\_\-DRX\_\-CONFIG\_\-PARAM\_\-T@{GSN\_\-WDD\_\-UAM\_\-DRX\_\-CONFIG\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-UAM\_\-DRX\_\-CONFIG\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATA\_\-RX\_\-CONFIG\_\-REQ\_\-T} {\bf GSN\_\-WDD\_\-UAM\_\-DRX\_\-CONFIG\_\-PARAM\_\-T}}}
+\label{a00603_a556da70b3c2eaafd2f4893880bd4466a}
+
+
+Definition at line 96 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a898a4dd61cb26c0d7b242632369c8585}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-PARAM@{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-PARAM}}
+\index{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-PARAM@{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-PARAM}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-PARAM}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATA\_\-RX\_\-START\_\-REQ\_\-T} {\bf GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-PARAM}}}
+\label{a00603_a898a4dd61cb26c0d7b242632369c8585}
+
+
+Definition at line 100 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a033e778f5ece6db55afcb7f609e15815}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-RESP\_\-T@{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-RESP\_\-T}}
+\index{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-RESP\_\-T@{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-RESP\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-RESP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATA\_\-RX\_\-START\_\-RESP\_\-T} {\bf GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-RESP\_\-T}}}
+\label{a00603_a033e778f5ece6db55afcb7f609e15815}
+
+
+Definition at line 104 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a82650badd5df3ae66988f45fd22b5434}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-PARAM@{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-PARAM}}
+\index{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-PARAM@{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-PARAM}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-PARAM}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATA\_\-RX\_\-STOP\_\-REQ\_\-T} {\bf GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-PARAM}}}
+\label{a00603_a82650badd5df3ae66988f45fd22b5434}
+
+
+Definition at line 102 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a0114b1685f0227b6028a08964c5b0cbd}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-RESP\_\-T@{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-RESP\_\-T}}
+\index{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-RESP\_\-T@{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-RESP\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-RESP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-DATA\_\-RX\_\-STOP\_\-RESP\_\-T} {\bf GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-RESP\_\-T}}}
+\label{a00603_a0114b1685f0227b6028a08964c5b0cbd}
+
+
+Definition at line 106 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a42d71a0411d0f941e080667bdb171e95}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-UAM\_\-START\_\-RESP\_\-T@{GSN\_\-WDD\_\-UAM\_\-START\_\-RESP\_\-T}}
+\index{GSN\_\-WDD\_\-UAM\_\-START\_\-RESP\_\-T@{GSN\_\-WDD\_\-UAM\_\-START\_\-RESP\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-UAM\_\-START\_\-RESP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-START\_\-RESP\_\-T} {\bf GSN\_\-WDD\_\-UAM\_\-START\_\-RESP\_\-T}}}
+\label{a00603_a42d71a0411d0f941e080667bdb171e95}
+
+
+Definition at line 94 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a80285c8663f782eba22ba3a5f4d39b38}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-UAM\_\-STOP\_\-RESP\_\-T@{GSN\_\-WDD\_\-UAM\_\-STOP\_\-RESP\_\-T}}
+\index{GSN\_\-WDD\_\-UAM\_\-STOP\_\-RESP\_\-T@{GSN\_\-WDD\_\-UAM\_\-STOP\_\-RESP\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-UAM\_\-STOP\_\-RESP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-UNASSOC\_\-MODE\_\-STOP\_\-RESP\_\-T} {\bf GSN\_\-WDD\_\-UAM\_\-STOP\_\-RESP\_\-T}}}
+\label{a00603_a80285c8663f782eba22ba3a5f4d39b38}
+
+
+Definition at line 98 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_ab591a0b1dc86f93d62c54f486296eed4}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-WLAN\_\-CFG\_\-EXTN\_\-T@{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-EXTN\_\-T}}
+\index{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-EXTN\_\-T@{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-EXTN\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-EXTN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-WLAN\_\-CFG\_\-EXTN} {\bf GSN\_\-WDD\_\-WLAN\_\-CFG\_\-EXTN\_\-T}}}
+\label{a00603_ab591a0b1dc86f93d62c54f486296eed4}
+\hypertarget{a00603_a622f424d99b2a980a82684099bb1092c}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T@{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T}}
+\index{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T@{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-WLAN\_\-CFG}  {\bf GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T}}}
+\label{a00603_a622f424d99b2a980a82684099bb1092c}
+\hypertarget{a00603_ad07f561fb358b50268072fff65afce3d}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-WLAN\_\-RECV\_\-FILTR\_\-SET\_\-PARAM\_\-T@{GSN\_\-WDD\_\-WLAN\_\-RECV\_\-FILTR\_\-SET\_\-PARAM\_\-T}}
+\index{GSN\_\-WDD\_\-WLAN\_\-RECV\_\-FILTR\_\-SET\_\-PARAM\_\-T@{GSN\_\-WDD\_\-WLAN\_\-RECV\_\-FILTR\_\-SET\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-WLAN\_\-RECV\_\-FILTR\_\-SET\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-RX\_\-FILTER\_\-SET\_\-T} {\bf GSN\_\-WDD\_\-WLAN\_\-RECV\_\-FILTR\_\-SET\_\-PARAM\_\-T}}}
+\label{a00603_ad07f561fb358b50268072fff65afce3d}
+
+
+Definition at line 84 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a398cf6ae18e42fbe90a94ba03ef55230}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-WLAN\_\-REG\_\-T@{GSN\_\-WDD\_\-WLAN\_\-REG\_\-T}}
+\index{GSN\_\-WDD\_\-WLAN\_\-REG\_\-T@{GSN\_\-WDD\_\-WLAN\_\-REG\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-WLAN\_\-REG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-MEM\_\-REG\_\-T} {\bf GSN\_\-WDD\_\-WLAN\_\-REG\_\-T}}}
+\label{a00603_a398cf6ae18e42fbe90a94ba03ef55230}
+
+
+Definition at line 122 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_af389db63bae9a429126b4447bbe046c3}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM\_\-T@{GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM\_\-T@{GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM} {\bf GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00603_af389db63bae9a429126b4447bbe046c3}
+\hypertarget{a00603_ae2e511d31a8a68f74e6cd794618e0383}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-PARAM\_\-T@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-PARAM\_\-T}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-PARAM\_\-T@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-REQ\_\-T} {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-PARAM\_\-T}}}
+\label{a00603_ae2e511d31a8a68f74e6cd794618e0383}
+
+
+Definition at line 76 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_ab667d44d0bbe167c0449134207cd6d9a}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-START\_\-PARAM\_\-T@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-START\_\-PARAM\_\-T}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-START\_\-PARAM\_\-T@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-START\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-START\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-START\_\-REQ\_\-T} {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-START\_\-PARAM\_\-T}}}
+\label{a00603_ab667d44d0bbe167c0449134207cd6d9a}
+
+
+Definition at line 78 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_aa8de226d51c4838cb6556845208d7ba3}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-PARAM\_\-T@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-PARAM\_\-T}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-PARAM\_\-T@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-REQ\_\-T} {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-PARAM\_\-T}}}
+\label{a00603_aa8de226d51c4838cb6556845208d7ba3}
+
+
+Definition at line 74 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_ac1e5dbed32ee024fa928fd5f19962055}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-PARAM\_\-T@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-PARAM\_\-T}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-PARAM\_\-T@{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-PARAM\_\-T}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-REQ\_\-T} {\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-PARAM\_\-T}}}
+\label{a00603_ac1e5dbed32ee024fa928fd5f19962055}
+
+
+Definition at line 72 of file gsn\_\-wdd.h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00603_ab5fdb01131bac4294899f4261109f072}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-ERROR\_\-CODE@{GSN\_\-WDD\_\-ERROR\_\-CODE}}
+\index{GSN\_\-WDD\_\-ERROR\_\-CODE@{GSN\_\-WDD\_\-ERROR\_\-CODE}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-ERROR\_\-CODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-ERROR\_\-CODE}}}
+\label{a00603_ab5fdb01131bac4294899f4261109f072}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-AP\_\-NOT\_\-FOUND@{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-AP\_\-NOT\_\-FOUND}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-AP\_\-NOT\_\-FOUND@{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-AP\_\-NOT\_\-FOUND}}\item[{\em 
+\hypertarget{a00603_ab5fdb01131bac4294899f4261109f072a7a061cad77c96f63ddc154fff979a42b}{
+GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-AP\_\-NOT\_\-FOUND}
+\label{a00603_ab5fdb01131bac4294899f4261109f072a7a061cad77c96f63ddc154fff979a42b}
+}]\index{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WLAN\_\-FAIL\_\-TO\_\-CONCT@{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WLAN\_\-FAIL\_\-TO\_\-CONCT}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WLAN\_\-FAIL\_\-TO\_\-CONCT@{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WLAN\_\-FAIL\_\-TO\_\-CONCT}}\item[{\em 
+\hypertarget{a00603_ab5fdb01131bac4294899f4261109f072aca2cbf14ed14f62891aba17f4e4d9540}{
+GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WLAN\_\-FAIL\_\-TO\_\-CONCT}
+\label{a00603_ab5fdb01131bac4294899f4261109f072aca2cbf14ed14f62891aba17f4e4d9540}
+}]\index{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WPA\_\-AUTH\_\-FAILURE@{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WPA\_\-AUTH\_\-FAILURE}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WPA\_\-AUTH\_\-FAILURE@{GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WPA\_\-AUTH\_\-FAILURE}}\item[{\em 
+\hypertarget{a00603_ab5fdb01131bac4294899f4261109f072af1e25f53b0d7a8f18eb969521abc484f}{
+GSN\_\-WDD\_\-CONNECT\_\-ERROR\_\-WPA\_\-AUTH\_\-FAILURE}
+\label{a00603_ab5fdb01131bac4294899f4261109f072af1e25f53b0d7a8f18eb969521abc484f}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 802 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a25ca4f0a075752eaf99103b405458b83}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO@{GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO}}
+\index{GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO@{GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-ERROR\_\-EXTRA\_\-INFO}}}
+\label{a00603_a25ca4f0a075752eaf99103b405458b83}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-ERROR\_\-INFO\_\-STA\_\-DISCONNECTED@{GSN\_\-WDD\_\-ERROR\_\-INFO\_\-STA\_\-DISCONNECTED}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-ERROR\_\-INFO\_\-STA\_\-DISCONNECTED@{GSN\_\-WDD\_\-ERROR\_\-INFO\_\-STA\_\-DISCONNECTED}}\item[{\em 
+\hypertarget{a00603_a25ca4f0a075752eaf99103b405458b83a5b993b9a23adbfc2ceb2e82ff2b35908}{
+GSN\_\-WDD\_\-ERROR\_\-INFO\_\-STA\_\-DISCONNECTED}
+\label{a00603_a25ca4f0a075752eaf99103b405458b83a5b993b9a23adbfc2ceb2e82ff2b35908}
+}]STA sent deauth \index{GSN\_\-WDD\_\-ERROR\_\-INFO\_\-AP\_\-DEAUTH@{GSN\_\-WDD\_\-ERROR\_\-INFO\_\-AP\_\-DEAUTH}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-ERROR\_\-INFO\_\-AP\_\-DEAUTH@{GSN\_\-WDD\_\-ERROR\_\-INFO\_\-AP\_\-DEAUTH}}\item[{\em 
+\hypertarget{a00603_a25ca4f0a075752eaf99103b405458b83af6b76f54dcae7b9e57e68275d89b2de9}{
+GSN\_\-WDD\_\-ERROR\_\-INFO\_\-AP\_\-DEAUTH}
+\label{a00603_a25ca4f0a075752eaf99103b405458b83af6b76f54dcae7b9e57e68275d89b2de9}
+}]AP deauth/disassosiation \end{description}
+\end{Desc}
+
+
+
+Definition at line 809 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a4ba2b4079f3dd37aa77afda4013afc79}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-INIT\_\-FLAG@{GSN\_\-WDD\_\-INIT\_\-FLAG}}
+\index{GSN\_\-WDD\_\-INIT\_\-FLAG@{GSN\_\-WDD\_\-INIT\_\-FLAG}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-INIT\_\-FLAG}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-INIT\_\-FLAG}}}
+\label{a00603_a4ba2b4079f3dd37aa77afda4013afc79}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-NONE@{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-NONE}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-INIT\_\-FLAG\_\-NONE@{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-NONE}}\item[{\em 
+\hypertarget{a00603_a4ba2b4079f3dd37aa77afda4013afc79abae04da0cfae40f0242a7191fefa98c3}{
+GSN\_\-WDD\_\-INIT\_\-FLAG\_\-NONE}
+\label{a00603_a4ba2b4079f3dd37aa77afda4013afc79abae04da0cfae40f0242a7191fefa98c3}
+}]\index{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-FIRST\_\-BOOT@{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-FIRST\_\-BOOT}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-INIT\_\-FLAG\_\-FIRST\_\-BOOT@{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-FIRST\_\-BOOT}}\item[{\em 
+\hypertarget{a00603_a4ba2b4079f3dd37aa77afda4013afc79ac303b837f61d3ad234d4b358ae5c3ae8}{
+GSN\_\-WDD\_\-INIT\_\-FLAG\_\-FIRST\_\-BOOT}
+\label{a00603_a4ba2b4079f3dd37aa77afda4013afc79ac303b837f61d3ad234d4b358ae5c3ae8}
+}]First Boot \index{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-CONF\_\-LOST@{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-CONF\_\-LOST}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-INIT\_\-FLAG\_\-CONF\_\-LOST@{GSN\_\-WDD\_\-INIT\_\-FLAG\_\-CONF\_\-LOST}}\item[{\em 
+\hypertarget{a00603_a4ba2b4079f3dd37aa77afda4013afc79a5d2687a764f011972e1fa19adb2deffa}{
+GSN\_\-WDD\_\-INIT\_\-FLAG\_\-CONF\_\-LOST}
+\label{a00603_a4ba2b4079f3dd37aa77afda4013afc79a5d2687a764f011972e1fa19adb2deffa}
+}]Wlan Configuration is lost \end{description}
+\end{Desc}
+
+
+
+Definition at line 204 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a12a943db28b7331351c75b7c2105966d}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG@{GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG}}
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG@{GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-PERSIST\_\-INFP\_\-VALIDITY\_\-FLAG}}}
+\label{a00603_a12a943db28b7331351c75b7c2105966d}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-PRST\_\-INFO\_\-VALDTY\_\-FLAG\_\-WPAIF\_\-IFO@{GSN\_\-WDD\_\-PRST\_\-INFO\_\-VALDTY\_\-FLAG\_\-WPAIF\_\-IFO}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-PRST\_\-INFO\_\-VALDTY\_\-FLAG\_\-WPAIF\_\-IFO@{GSN\_\-WDD\_\-PRST\_\-INFO\_\-VALDTY\_\-FLAG\_\-WPAIF\_\-IFO}}\item[{\em 
+\hypertarget{a00603_a12a943db28b7331351c75b7c2105966da37cf6cc897d0f9dbd3eb7a07fd080e96}{
+GSN\_\-WDD\_\-PRST\_\-INFO\_\-VALDTY\_\-FLAG\_\-WPAIF\_\-IFO}
+\label{a00603_a12a943db28b7331351c75b7c2105966da37cf6cc897d0f9dbd3eb7a07fd080e96}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 551 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a141edfb4eec2f7e9831a65c822756f64}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-RADIO\_\-MODE@{GSN\_\-WDD\_\-RADIO\_\-MODE}}
+\index{GSN\_\-WDD\_\-RADIO\_\-MODE@{GSN\_\-WDD\_\-RADIO\_\-MODE}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-RADIO\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-RADIO\_\-MODE}}}
+\label{a00603_a141edfb4eec2f7e9831a65c822756f64}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-ACTIVE@{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-ACTIVE}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-RADIO\_\-MODE\_\-ACTIVE@{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-ACTIVE}}\item[{\em 
+\hypertarget{a00603_a141edfb4eec2f7e9831a65c822756f64aae25e1907cc4f50dde0cf188d5b0c5e6}{
+GSN\_\-WDD\_\-RADIO\_\-MODE\_\-ACTIVE}
+\label{a00603_a141edfb4eec2f7e9831a65c822756f64aae25e1907cc4f50dde0cf188d5b0c5e6}
+}]\index{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-POWER\_\-SAVE@{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-POWER\_\-SAVE}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-RADIO\_\-MODE\_\-POWER\_\-SAVE@{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-POWER\_\-SAVE}}\item[{\em 
+\hypertarget{a00603_a141edfb4eec2f7e9831a65c822756f64ab3858105d04a95098a45840079fd3a7e}{
+GSN\_\-WDD\_\-RADIO\_\-MODE\_\-POWER\_\-SAVE}
+\label{a00603_a141edfb4eec2f7e9831a65c822756f64ab3858105d04a95098a45840079fd3a7e}
+}]\index{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-IEEE\_\-POWER\_\-SAVE@{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-IEEE\_\-POWER\_\-SAVE}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-RADIO\_\-MODE\_\-IEEE\_\-POWER\_\-SAVE@{GSN\_\-WDD\_\-RADIO\_\-MODE\_\-IEEE\_\-POWER\_\-SAVE}}\item[{\em 
+\hypertarget{a00603_a141edfb4eec2f7e9831a65c822756f64ac511ce26344d172dd1cd10a3952cc3f4}{
+GSN\_\-WDD\_\-RADIO\_\-MODE\_\-IEEE\_\-POWER\_\-SAVE}
+\label{a00603_a141edfb4eec2f7e9831a65c822756f64ac511ce26344d172dd1cd10a3952cc3f4}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 293 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a7504de238040fb5947d3c3ef6fca9ae9}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-STATE@{GSN\_\-WDD\_\-SCAN\_\-STATE}}
+\index{GSN\_\-WDD\_\-SCAN\_\-STATE@{GSN\_\-WDD\_\-SCAN\_\-STATE}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-SCAN\_\-STATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-SCAN\_\-STATE}}}
+\label{a00603_a7504de238040fb5947d3c3ef6fca9ae9}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-SCN\_\-STATE\_\-IDLE@{GSN\_\-WDD\_\-SCN\_\-STATE\_\-IDLE}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCN\_\-STATE\_\-IDLE@{GSN\_\-WDD\_\-SCN\_\-STATE\_\-IDLE}}\item[{\em 
+\hypertarget{a00603_a7504de238040fb5947d3c3ef6fca9ae9a31d25fe118eebeef83abbd1ee1119454}{
+GSN\_\-WDD\_\-SCN\_\-STATE\_\-IDLE}
+\label{a00603_a7504de238040fb5947d3c3ef6fca9ae9a31d25fe118eebeef83abbd1ee1119454}
+}]No scan being done \index{GSN\_\-WDD\_\-SCN\_\-STATE\_\-SCANONLY\_\-IN\_\-PROGRESS@{GSN\_\-WDD\_\-SCN\_\-STATE\_\-SCANONLY\_\-IN\_\-PROGRESS}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCN\_\-STATE\_\-SCANONLY\_\-IN\_\-PROGRESS@{GSN\_\-WDD\_\-SCN\_\-STATE\_\-SCANONLY\_\-IN\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00603_a7504de238040fb5947d3c3ef6fca9ae9ad85a0904d1258338cb21fc74ce280e51}{
+GSN\_\-WDD\_\-SCN\_\-STATE\_\-SCANONLY\_\-IN\_\-PROGRESS}
+\label{a00603_a7504de238040fb5947d3c3ef6fca9ae9ad85a0904d1258338cb21fc74ce280e51}
+}]scan only (scanning by user app) is in progress \index{GSN\_\-WDD\_\-SCN\_\-STATE\_\-CONCT\_\-SCAN\_\-IN\_\-PROGRESS@{GSN\_\-WDD\_\-SCN\_\-STATE\_\-CONCT\_\-SCAN\_\-IN\_\-PROGRESS}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCN\_\-STATE\_\-CONCT\_\-SCAN\_\-IN\_\-PROGRESS@{GSN\_\-WDD\_\-SCN\_\-STATE\_\-CONCT\_\-SCAN\_\-IN\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00603_a7504de238040fb5947d3c3ef6fca9ae9aa7ef954c543a9495cabedcff0a5f2480}{
+GSN\_\-WDD\_\-SCN\_\-STATE\_\-CONCT\_\-SCAN\_\-IN\_\-PROGRESS}
+\label{a00603_a7504de238040fb5947d3c3ef6fca9ae9aa7ef954c543a9495cabedcff0a5f2480}
+}]wdd is doing scan to find given wlan nw to connect \end{description}
+\end{Desc}
+
+
+
+Definition at line 280 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a8d2389f013d584eba4f8f16644b2e20e}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-TYPE@{GSN\_\-WDD\_\-SCAN\_\-TYPE}}
+\index{GSN\_\-WDD\_\-SCAN\_\-TYPE@{GSN\_\-WDD\_\-SCAN\_\-TYPE}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-SCAN\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-SCAN\_\-TYPE}}}
+\label{a00603_a8d2389f013d584eba4f8f16644b2e20e}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-PASSIVE@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-PASSIVE}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-PASSIVE@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-PASSIVE}}\item[{\em 
+\hypertarget{a00603_a8d2389f013d584eba4f8f16644b2e20ea77b844153db82d3e5448c20fa3b8aff2}{
+GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-PASSIVE}
+\label{a00603_a8d2389f013d584eba4f8f16644b2e20ea77b844153db82d3e5448c20fa3b8aff2}
+}]passive scan \index{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-ACTIVE@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-ACTIVE}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-ACTIVE@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-ACTIVE}}\item[{\em 
+\hypertarget{a00603_a8d2389f013d584eba4f8f16644b2e20ea5e0b88dcc63868c24c041aac726d1cf1}{
+GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-ACTIVE}
+\label{a00603_a8d2389f013d584eba4f8f16644b2e20ea5e0b88dcc63868c24c041aac726d1cf1}
+}]active scan \index{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}}\item[{\em 
+\hypertarget{a00603_a8d2389f013d584eba4f8f16644b2e20ea116d2def36fe2ec219e2eb8cc2a55b8d}{
+GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}
+\label{a00603_a8d2389f013d584eba4f8f16644b2e20ea116d2def36fe2ec219e2eb8cc2a55b8d}
+}]scan for p2p devices only \index{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}}\item[{\em 
+\hypertarget{a00603_a8d2389f013d584eba4f8f16644b2e20ea196eb42f48f9fc74486f5f14b45b3f1b}{
+GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}
+\label{a00603_a8d2389f013d584eba4f8f16644b2e20ea196eb42f48f9fc74486f5f14b45b3f1b}
+}]scan for given p2p device type \index{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}}\item[{\em 
+\hypertarget{a00603_a8d2389f013d584eba4f8f16644b2e20eaa496ea0cb908b4ea08fb52eb55df53b5}{
+GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}
+\label{a00603_a8d2389f013d584eba4f8f16644b2e20eaa496ea0cb908b4ea08fb52eb55df53b5}
+}]scan for given p2p device Id \index{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}}\item[{\em 
+\hypertarget{a00603_a8d2389f013d584eba4f8f16644b2e20ea4ce55e81e91942fe5fb366fc4df7642d}{
+GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}
+\label{a00603_a8d2389f013d584eba4f8f16644b2e20ea4ce55e81e91942fe5fb366fc4df7642d}
+}]scan for wlan and p2p groups \index{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS@{GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}}\item[{\em 
+\hypertarget{a00603_a8d2389f013d584eba4f8f16644b2e20ea1b7aa5aaa334bb1b4b4480e880ff4920}{
+GSN\_\-WDD\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}
+\label{a00603_a8d2389f013d584eba4f8f16644b2e20ea1b7aa5aaa334bb1b4b4480e880ff4920}
+}]scan for wlan and p2p devices \end{description}
+\end{Desc}
+
+
+
+Definition at line 305 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a6267ebdc154297cf5ca79d52aaa5e7ee}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP@{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP}}
+\index{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP@{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP}}}
+\label{a00603_a6267ebdc154297cf5ca79d52aaa5e7ee}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-DTIM@{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-DTIM}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-DTIM@{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-DTIM}}\item[{\em 
+\hypertarget{a00603_a6267ebdc154297cf5ca79d52aaa5e7eea023f317a847bea48735e2f76e70a688d}{
+GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-DTIM}
+\label{a00603_a6267ebdc154297cf5ca79d52aaa5e7eea023f317a847bea48735e2f76e70a688d}
+}]\index{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-LISTEN\_\-INTERVAL@{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-LISTEN\_\-INTERVAL}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-LISTEN\_\-INTERVAL@{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-LISTEN\_\-INTERVAL}}\item[{\em 
+\hypertarget{a00603_a6267ebdc154297cf5ca79d52aaa5e7eea272f27c0e627a2c1ec808c7182f18a54}{
+GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-LISTEN\_\-INTERVAL}
+\label{a00603_a6267ebdc154297cf5ca79d52aaa5e7eea272f27c0e627a2c1ec808c7182f18a54}
+}]\index{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-CUSTOM@{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-CUSTOM}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-CUSTOM@{GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-CUSTOM}}\item[{\em 
+\hypertarget{a00603_a6267ebdc154297cf5ca79d52aaa5e7eea4755b6dd01d2aad9b836dc931c004459}{
+GSN\_\-WDD\_\-STA\_\-PS\_\-WAKEUP\_\-CUSTOM}
+\label{a00603_a6267ebdc154297cf5ca79d52aaa5e7eea4755b6dd01d2aad9b836dc931c004459}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 901 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a3b2419b27de31e09c69e0b3c17dde07d}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE@{GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE}}
+\index{GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE@{GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE}}}
+\label{a00603_a3b2419b27de31e09c69e0b3c17dde07d}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-PS\_\-POLL@{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-PS\_\-POLL}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-PS\_\-POLL@{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-PS\_\-POLL}}\item[{\em 
+\hypertarget{a00603_a3b2419b27de31e09c69e0b3c17dde07dabc73090ec594d1e1f957e0e536cb97eb}{
+GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-PS\_\-POLL}
+\label{a00603_a3b2419b27de31e09c69e0b3c17dde07dabc73090ec594d1e1f957e0e536cb97eb}
+}]\index{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-SWITCH\_\-TO\_\-ACTIVE@{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-SWITCH\_\-TO\_\-ACTIVE}!gsn\_\-wdd.h@{gsn\_\-wdd.h}}\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-SWITCH\_\-TO\_\-ACTIVE@{GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-SWITCH\_\-TO\_\-ACTIVE}}\item[{\em 
+\hypertarget{a00603_a3b2419b27de31e09c69e0b3c17dde07dac3d2d18c9d2d55c01862536e461f2cf3}{
+GSN\_\-WDD\_\-STA\_\-PS\_\-DATA\_\-RX\_\-TYPE\_\-SWITCH\_\-TO\_\-ACTIVE}
+\label{a00603_a3b2419b27de31e09c69e0b3c17dde07dac3d2d18c9d2d55c01862536e461f2cf3}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 908 of file gsn\_\-wdd.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00603_a51907a8dd846daa407ffb8f6048cfbc3}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-PHY\_\-ADDR\_\-CPY@{GSN\_\-WDD\_\-PHY\_\-ADDR\_\-CPY}}
+\index{GSN\_\-WDD\_\-PHY\_\-ADDR\_\-CPY@{GSN\_\-WDD\_\-PHY\_\-ADDR\_\-CPY}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-PHY\_\-ADDR\_\-CPY}]{\setlength{\rightskip}{0pt plus 5cm}void GSN\_\-WDD\_\-PHY\_\-ADDR\_\-CPY (
+\begin{DoxyParamCaption}
+\item[{void $\ast$const}]{DstAddrPtr, }
+\item[{const void $\ast$const}]{SrcAddrPtr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00603_a51907a8dd846daa407ffb8f6048cfbc3}
+
+
+Definition at line 1509 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a1c6e50232c9b695109cef9e49f65ea21}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GSN\_\-WDD\_\-SSID\_\-CPY@{GSN\_\-WDD\_\-SSID\_\-CPY}}
+\index{GSN\_\-WDD\_\-SSID\_\-CPY@{GSN\_\-WDD\_\-SSID\_\-CPY}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GSN\_\-WDD\_\-SSID\_\-CPY}]{\setlength{\rightskip}{0pt plus 5cm}void GSN\_\-WDD\_\-SSID\_\-CPY (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} $\ast$const}]{dstSsidPtr, }
+\item[{const {\bf GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} $\ast$const}]{srcSsidPtr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00603_a1c6e50232c9b695109cef9e49f65ea21}
+
+
+Definition at line 1501 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_ad5ea06cf67940cf920306ee76a3d1a40}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-ActiveScanTimeSet@{GsnWdd\_\-ActiveScanTimeSet}}
+\index{GsnWdd\_\-ActiveScanTimeSet@{GsnWdd\_\-ActiveScanTimeSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-ActiveScanTimeSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf GSN\_\-STATUS} GsnWdd\_\-ActiveScanTimeSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT16}}]{minScanTime, }
+\item[{{\bf UINT16}}]{maxScanTime}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_ad5ea06cf67940cf920306ee76a3d1a40}
+
+
+Definition at line 1471 of file gsn\_\-wdd.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00603_ad5ea06cf67940cf920306ee76a3d1a40_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00603_a5a435905813e823c497bea2fa34c6e37}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-AmpduReq@{GsnWdd\_\-AmpduReq}}
+\index{GsnWdd\_\-AmpduReq@{GsnWdd\_\-AmpduReq}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-AmpduReq}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-AmpduReq (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-AMPDU\_\-REQ\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a5a435905813e823c497bea2fa34c6e37}
+\hypertarget{a00603_a0793078f808af92c73408d6b97183f5f}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-AmsduReq@{GsnWdd\_\-AmsduReq}}
+\index{GsnWdd\_\-AmsduReq@{GsnWdd\_\-AmsduReq}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-AmsduReq}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-AmsduReq (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-AMSDU\_\-REQ\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a0793078f808af92c73408d6b97183f5f}
+\hypertarget{a00603_afe0f0c0deb0c4dabae6b5bd8f10d7d5d}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-ApPowerSaveCfgSet@{GsnWdd\_\-ApPowerSaveCfgSet}}
+\index{GsnWdd\_\-ApPowerSaveCfgSet@{GsnWdd\_\-ApPowerSaveCfgSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-ApPowerSaveCfgSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-ApPowerSaveCfgSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-AP\_\-PS\_\-CFG\_\-SET\_\-PARAM} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_afe0f0c0deb0c4dabae6b5bd8f10d7d5d}
+\hypertarget{a00603_ae6ad3555ec44c34eeed404750e7942b4}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-AssocReqPropIeSet@{GsnWdd\_\-AssocReqPropIeSet}}
+\index{GsnWdd\_\-AssocReqPropIeSet@{GsnWdd\_\-AssocReqPropIeSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-AssocReqPropIeSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-AssocReqPropIeSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT8} $\ast$}]{pIe, }
+\item[{{\bf UINT32}}]{ieLength}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_ae6ad3555ec44c34eeed404750e7942b4}
+\hypertarget{a00603_aade2f710f71d7bfc48ff150b6b85411d}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-AssocStatusGet@{GsnWdd\_\-AssocStatusGet}}
+\index{GsnWdd\_\-AssocStatusGet@{GsnWdd\_\-AssocStatusGet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-AssocStatusGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf BOOL} GsnWdd\_\-AssocStatusGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_aade2f710f71d7bfc48ff150b6b85411d}
+\hypertarget{a00603_ad29f2b50720c9a351138039c58ffe1de}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-AssocStatusSet@{GsnWdd\_\-AssocStatusSet}}
+\index{GsnWdd\_\-AssocStatusSet@{GsnWdd\_\-AssocStatusSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-AssocStatusSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf BOOL} GsnWdd\_\-AssocStatusSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_ad29f2b50720c9a351138039c58ffe1de}
+\hypertarget{a00603_a8c7957f946a9bbde3ebe5d53aad0722b}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-BeaconMissThresholdSet@{GsnWdd\_\-BeaconMissThresholdSet}}
+\index{GsnWdd\_\-BeaconMissThresholdSet@{GsnWdd\_\-BeaconMissThresholdSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-BeaconMissThresholdSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-BeaconMissThresholdSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT32}}]{thresholdTime, }
+\item[{{\bf UINT32}}]{thresholdNo}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a8c7957f946a9bbde3ebe5d53aad0722b}
+\hypertarget{a00603_a69b2499f175b750a525e64f76836ad25}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-BeaconPropIeSet@{GsnWdd\_\-BeaconPropIeSet}}
+\index{GsnWdd\_\-BeaconPropIeSet@{GsnWdd\_\-BeaconPropIeSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-BeaconPropIeSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-BeaconPropIeSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT8} $\ast$}]{pIe, }
+\item[{{\bf UINT32}}]{ieLength}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a69b2499f175b750a525e64f76836ad25}
+\hypertarget{a00603_ad5dc85a2029754dd8c2cf76f1496c7cc}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-BlockAckEnable@{GsnWdd\_\-BlockAckEnable}}
+\index{GsnWdd\_\-BlockAckEnable@{GsnWdd\_\-BlockAckEnable}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-BlockAckEnable}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-BlockAckEnable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-ALLOW\_\-BA\_\-BITMAP\_\-SET\_\-PARAM} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_ad5dc85a2029754dd8c2cf76f1496c7cc}
+\hypertarget{a00603_aec8c1766cfca1a67dc7bc9a77c9c442a}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-BlockAckReq@{GsnWdd\_\-BlockAckReq}}
+\index{GsnWdd\_\-BlockAckReq@{GsnWdd\_\-BlockAckReq}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-BlockAckReq}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-BlockAckReq (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-BLOCKACK\_\-REQ\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_aec8c1766cfca1a67dc7bc9a77c9c442a}
+\hypertarget{a00603_a701a912d9abc9913d06c3537136f818f}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-BssidGet@{GsnWdd\_\-BssidGet}}
+\index{GsnWdd\_\-BssidGet@{GsnWdd\_\-BssidGet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-BssidGet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnWdd\_\-BssidGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pCtx, }
+\item[{{\bf UINT8} $\ast$}]{pBssid}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a701a912d9abc9913d06c3537136f818f}
+INLINE functions and MACROS 
+
+Definition at line 1465 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a5268fb233d28c9b4b7bd7e758ac8d5b0}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-CalibrnRun@{GsnWdd\_\-CalibrnRun}}
+\index{GsnWdd\_\-CalibrnRun@{GsnWdd\_\-CalibrnRun}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-CalibrnRun}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-CalibrnRun (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-CAL\_\-RUN\_\-REQ\_\-T} $\ast$}]{pCalRunReq, }
+\item[{{\bf GSN\_\-WDD\_\-CAL\_\-NOTIF\_\-CB\_\-T}}]{notifyCb, }
+\item[{VOID $\ast$}]{notifyCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a5268fb233d28c9b4b7bd7e758ac8d5b0}
+\hypertarget{a00603_a85216b4b30c90f4cff6c9d54f2a81724}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-ConctedStaListGet@{GsnWdd\_\-ConctedStaListGet}}
+\index{GsnWdd\_\-ConctedStaListGet@{GsnWdd\_\-ConctedStaListGet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-ConctedStaListGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-ConctedStaListGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf INT8} $\ast$}]{outBuf, }
+\item[{{\bf UINT32}}]{outBufSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a85216b4b30c90f4cff6c9d54f2a81724}
+\hypertarget{a00603_a03380e1642f9c5608bc3cf0b966991aa}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-Connect@{GsnWdd\_\-Connect}}
+\index{GsnWdd\_\-Connect@{GsnWdd\_\-Connect}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-Connect}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS\_\-T} GsnWdd\_\-Connect (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-T}}]{flags, }
+\item[{{\bf GSN\_\-WDD\_\-WLAN\_\-CFG\_\-T} $\ast$}]{pWlanCfg, }
+\item[{{\bf GSN\_\-WDD\_\-SCAN\_\-ENTRY\_\-T} $\ast$}]{pScanEntry, }
+\item[{{\bf GSN\_\-WDD\_\-CONNECT\_\-NOTIF\_\-CB\_\-T}}]{notifyCb, }
+\item[{VOID $\ast$}]{notifyCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a03380e1642f9c5608bc3cf0b966991aa}
+
+
+WLAN Connect. 
+
+This function connects to WLAN with the given configuration. Once done, it calls the user provided callback. The flags can be used to control the behavior and operation of this API. 
+\begin{DoxyParams}{Parameters}
+{\em pWdd} & -\/ IN pointer to WDD object. \\
+\hline
+{\em flags} & -\/ IN One or more connect flags (GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-T) ORed. \\
+\hline
+{\em pWlanCfg} & -\/ IN WLAN configuration \\
+\hline
+{\em pScanEntry} & -\/ IN Pointer to scan result if WLAN scan was performed earlier and that will be used for WLAN connection. Connection using a scan entry is possible only if the scan entry was obtained by performing a scan and that was the last scan and no other scan operation was performed after that. This restriction exists because the WLAN MAC stores the scan entries and can connect only to a WLAN for which it has a scan entry in its database. \\
+\hline
+{\em notifyCb} & -\/ IN Function that will be called to indicate the result. \\
+\hline
+{\em notifyCtx} & -\/ IN User context that will be passed back in callback.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS Connection successful. 
+
+GSN\_\-WDD\_\-BUSY Another request is already being handled. 
+
+GSN\_\-FAILURE Operation failed. 
+
+GSN\_\-OPERATION\_\-IN\_\-PROGRESS Operation in progress. Callback function will be called to indicate the result. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If this function returns anything other than GSN\_\-OPERATION\_\-IN\_\-PROGRESS, then the API execution is complete and callback will not be called. If GSN\_\-OPERATION\_\-IN\_\-PROGRESS is returned, then the callback will be called after the operation is complete to indicate the final result. 
+
+If the WLAN connection already exists and WLAN connection is again requested then the connect will fail because the WLAN MAC disassociates if a association request is given when the association already exists. The association state must be maintained by the user and used to manage this. 
+\end{DoxyNote}
+\hypertarget{a00603_adc82e00ab52191428f5db1683a068574}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-DABindEnable@{GsnWdd\_\-DABindEnable}}
+\index{GsnWdd\_\-DABindEnable@{GsnWdd\_\-DABindEnable}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-DABindEnable}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-DABindEnable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT8}}]{enable}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_adc82e00ab52191428f5db1683a068574}
+\hypertarget{a00603_a4b1230e5716f48262fda980639dc3006}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-ErrorGet@{GsnWdd\_\-ErrorGet}}
+\index{GsnWdd\_\-ErrorGet@{GsnWdd\_\-ErrorGet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-ErrorGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-WDD\_\-ERROR\_\-T}$\ast$ GsnWdd\_\-ErrorGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a4b1230e5716f48262fda980639dc3006}
+\hypertarget{a00603_a79cc6d3eea377a30b71bc549ffe1d595}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-FrameTxFailCntLmitSet@{GsnWdd\_\-FrameTxFailCntLmitSet}}
+\index{GsnWdd\_\-FrameTxFailCntLmitSet@{GsnWdd\_\-FrameTxFailCntLmitSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-FrameTxFailCntLmitSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-FrameTxFailCntLmitSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-FRAME\_\-TX\_\-FAIL\_\-CNT\_\-LIMIT\_\-SET\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a79cc6d3eea377a30b71bc549ffe1d595}
+\hypertarget{a00603_a7cba4df1ed7d4eceab1218554e7d0fd5}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-GetFrmPtrForConnect@{GsnWdd\_\-GetFrmPtrForConnect}}
+\index{GsnWdd\_\-GetFrmPtrForConnect@{GsnWdd\_\-GetFrmPtrForConnect}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-GetFrmPtrForConnect}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID$\ast$ GsnWdd\_\-GetFrmPtrForConnect (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a7cba4df1ed7d4eceab1218554e7d0fd5}
+
+
+Definition at line 1515 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a4ffa3e14728ba8f72cdf6c7f12cf0076}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-GetSecCfgPtr@{GsnWdd\_\-GetSecCfgPtr}}
+\index{GsnWdd\_\-GetSecCfgPtr@{GsnWdd\_\-GetSecCfgPtr}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-GetSecCfgPtr}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-WDD\_\-SECURITY\_\-CONFIG\_\-T}$\ast$ GsnWdd\_\-GetSecCfgPtr (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a4ffa3e14728ba8f72cdf6c7f12cf0076}
+
+
+Definition at line 1520 of file gsn\_\-wdd.h.
+
+\hypertarget{a00603_a7d1f545c22995f6cbc6d37e9ab126aa1}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-Ioctl@{GsnWdd\_\-Ioctl}}
+\index{GsnWdd\_\-Ioctl@{GsnWdd\_\-Ioctl}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-Ioctl}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-Ioctl (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-IOCTL\_\-CMD\_\-T}}]{command, }
+\item[{void $\ast$}]{pData}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a7d1f545c22995f6cbc6d37e9ab126aa1}
+\hypertarget{a00603_ae7058a871bec3a0765a01d4754053453}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-KeepAliveTimeOutSet@{GsnWdd\_\-KeepAliveTimeOutSet}}
+\index{GsnWdd\_\-KeepAliveTimeOutSet@{GsnWdd\_\-KeepAliveTimeOutSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-KeepAliveTimeOutSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-KeepAliveTimeOutSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT8}}]{timeOut}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_ae7058a871bec3a0765a01d4754053453}
+\hypertarget{a00603_a503f45e0e6d84258988e08111ac4d94c}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-MaxActiveScanTimeSet@{GsnWdd\_\-MaxActiveScanTimeSet}}
+\index{GsnWdd\_\-MaxActiveScanTimeSet@{GsnWdd\_\-MaxActiveScanTimeSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-MaxActiveScanTimeSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf GSN\_\-STATUS} GsnWdd\_\-MaxActiveScanTimeSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT16}}]{maxScanTime}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a503f45e0e6d84258988e08111ac4d94c}
+
+
+Definition at line 1483 of file gsn\_\-wdd.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00603_a503f45e0e6d84258988e08111ac4d94c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00603_a9c591d80ae7c6a5771307f06cd0f0906}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-MinActiveScanTimeSet@{GsnWdd\_\-MinActiveScanTimeSet}}
+\index{GsnWdd\_\-MinActiveScanTimeSet@{GsnWdd\_\-MinActiveScanTimeSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-MinActiveScanTimeSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf GSN\_\-STATUS} GsnWdd\_\-MinActiveScanTimeSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT16}}]{minScanTime}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a9c591d80ae7c6a5771307f06cd0f0906}
+
+
+Definition at line 1477 of file gsn\_\-wdd.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00603_a9c591d80ae7c6a5771307f06cd0f0906_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00603_abe43d60be0ba48f473195c921e3c22f0}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-PassiveScanTimeSet@{GsnWdd\_\-PassiveScanTimeSet}}
+\index{GsnWdd\_\-PassiveScanTimeSet@{GsnWdd\_\-PassiveScanTimeSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-PassiveScanTimeSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf GSN\_\-STATUS} GsnWdd\_\-PassiveScanTimeSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT16}}]{passiveScanTime}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_abe43d60be0ba48f473195c921e3c22f0}
+
+
+Definition at line 1489 of file gsn\_\-wdd.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00603_abe43d60be0ba48f473195c921e3c22f0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00603_aa41cf4f9ed094cdaf34743aab0f18d66}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-ProbeReqPropIeSet@{GsnWdd\_\-ProbeReqPropIeSet}}
+\index{GsnWdd\_\-ProbeReqPropIeSet@{GsnWdd\_\-ProbeReqPropIeSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-ProbeReqPropIeSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-ProbeReqPropIeSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT8} $\ast$}]{pIe, }
+\item[{{\bf UINT32}}]{ieLength}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_aa41cf4f9ed094cdaf34743aab0f18d66}
+\hypertarget{a00603_ab42f3a4a349c23b656836cc286cef669}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-ProbeRspPropIeSet@{GsnWdd\_\-ProbeRspPropIeSet}}
+\index{GsnWdd\_\-ProbeRspPropIeSet@{GsnWdd\_\-ProbeRspPropIeSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-ProbeRspPropIeSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-ProbeRspPropIeSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT8} $\ast$}]{pIe, }
+\item[{{\bf UINT32}}]{ieLength}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_ab42f3a4a349c23b656836cc286cef669}
+\hypertarget{a00603_ac1f78bd778b4df7b2e64497fc897fc30}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RadioModeInfoGet@{GsnWdd\_\-RadioModeInfoGet}}
+\index{GsnWdd\_\-RadioModeInfoGet@{GsnWdd\_\-RadioModeInfoGet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RadioModeInfoGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RadioModeInfoGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-RADIO\_\-MODE\_\-INFO\_\-T} $\ast$}]{pRadioModeInfo}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_ac1f78bd778b4df7b2e64497fc897fc30}
+\hypertarget{a00603_a7c2b370d2b3fa77d9a12992cd9aafc17}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RadioPowerSaveCfgSet@{GsnWdd\_\-RadioPowerSaveCfgSet}}
+\index{GsnWdd\_\-RadioPowerSaveCfgSet@{GsnWdd\_\-RadioPowerSaveCfgSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RadioPowerSaveCfgSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RadioPowerSaveCfgSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-STA\_\-PS\_\-CFG\_\-SET\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a7c2b370d2b3fa77d9a12992cd9aafc17}
+\hypertarget{a00603_aabc4c7bb7e67428baf82fe3ca3491d09}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RadioStateGet@{GsnWdd\_\-RadioStateGet}}
+\index{GsnWdd\_\-RadioStateGet@{GsnWdd\_\-RadioStateGet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RadioStateGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RadioStateGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT32} $\ast$}]{radioState}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_aabc4c7bb7e67428baf82fe3ca3491d09}
+\hypertarget{a00603_a4ca55fe62f39d3212f56cd4ccd1b1c70}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-Reinit@{GsnWdd\_\-Reinit}}
+\index{GsnWdd\_\-Reinit@{GsnWdd\_\-Reinit}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-Reinit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-Reinit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-REINIT\_\-PARAM\_\-T} $\ast$}]{pInitParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a4ca55fe62f39d3212f56cd4ccd1b1c70}
+\hypertarget{a00603_af9b8aa48bc08efbd172f329277b24d1f}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RfTestCarrierWaveStart@{GsnWdd\_\-RfTestCarrierWaveStart}}
+\index{GsnWdd\_\-RfTestCarrierWaveStart@{GsnWdd\_\-RfTestCarrierWaveStart}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RfTestCarrierWaveStart}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RfTestCarrierWaveStart (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-CARRIER\_\-WAVE\_\-START\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_af9b8aa48bc08efbd172f329277b24d1f}
+\hypertarget{a00603_a9ee9b45c0ef30ed06c686dcb774b4b6f}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RfTestModeStart@{GsnWdd\_\-RfTestModeStart}}
+\index{GsnWdd\_\-RfTestModeStart@{GsnWdd\_\-RfTestModeStart}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RfTestModeStart}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RfTestModeStart (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a9ee9b45c0ef30ed06c686dcb774b4b6f}
+\hypertarget{a00603_a08170266b4cc58f85de91e014d9037fa}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RfTestModeStop@{GsnWdd\_\-RfTestModeStop}}
+\index{GsnWdd\_\-RfTestModeStop@{GsnWdd\_\-RfTestModeStop}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RfTestModeStop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RfTestModeStop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a08170266b4cc58f85de91e014d9037fa}
+\hypertarget{a00603_a9bc8e520e5bb2951c77f80993445f255}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RfTestRxStart@{GsnWdd\_\-RfTestRxStart}}
+\index{GsnWdd\_\-RfTestRxStart@{GsnWdd\_\-RfTestRxStart}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RfTestRxStart}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RfTestRxStart (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-START\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a9bc8e520e5bb2951c77f80993445f255}
+\hypertarget{a00603_ab79e7fa651d79f95f4075b33636c44cb}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RfTestRxStop@{GsnWdd\_\-RfTestRxStop}}
+\index{GsnWdd\_\-RfTestRxStop@{GsnWdd\_\-RfTestRxStop}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RfTestRxStop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RfTestRxStop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WLAN\_\-RF\_\-TEST\_\-RX\_\-STATS\_\-T} $\ast$}]{rxStats}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_ab79e7fa651d79f95f4075b33636c44cb}
+\hypertarget{a00603_a4f2d0bbf3e44dd436c9d7837159bfba6}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RfTestTx100Start@{GsnWdd\_\-RfTestTx100Start}}
+\index{GsnWdd\_\-RfTestTx100Start@{GsnWdd\_\-RfTestTx100Start}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RfTestTx100Start}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RfTestTx100Start (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX100\_\-START\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a4f2d0bbf3e44dd436c9d7837159bfba6}
+\hypertarget{a00603_a3ee4d6fc6b1bdf8bf44efdc357a8c3bf}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RfTestTx99Start@{GsnWdd\_\-RfTestTx99Start}}
+\index{GsnWdd\_\-RfTestTx99Start@{GsnWdd\_\-RfTestTx99Start}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RfTestTx99Start}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RfTestTx99Start (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WIF\_\-API\_\-WLAN\_\-RF\_\-TEST\_\-TX99\_\-START\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a3ee4d6fc6b1bdf8bf44efdc357a8c3bf}
+\hypertarget{a00603_a61acb98a54929d589e2b51099ee59bd6}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RfTestTxStart@{GsnWdd\_\-RfTestTxStart}}
+\index{GsnWdd\_\-RfTestTxStart@{GsnWdd\_\-RfTestTxStart}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RfTestTxStart}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RfTestTxStart (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-RFTEST\_\-TX\_\-START\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a61acb98a54929d589e2b51099ee59bd6}
+\hypertarget{a00603_a0de70987c36f03735533433b4d7a4c4d}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RfTestTxStop@{GsnWdd\_\-RfTestTxStop}}
+\index{GsnWdd\_\-RfTestTxStop@{GsnWdd\_\-RfTestTxStop}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RfTestTxStop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RfTestTxStop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a0de70987c36f03735533433b4d7a4c4d}
+\hypertarget{a00603_a5d3978505772ece92b7dcfc4e51aa4d0}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RSSIGet@{GsnWdd\_\-RSSIGet}}
+\index{GsnWdd\_\-RSSIGet@{GsnWdd\_\-RSSIGet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RSSIGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RSSIGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf INT8} $\ast$}]{outBuf, }
+\item[{{\bf UINT32}}]{outBufSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a5d3978505772ece92b7dcfc4e51aa4d0}
+\hypertarget{a00603_aed9ecd246f0e2b2cdda9f6e71d9fa7b5}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-RtsEnable@{GsnWdd\_\-RtsEnable}}
+\index{GsnWdd\_\-RtsEnable@{GsnWdd\_\-RtsEnable}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-RtsEnable}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-RtsEnable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-RTS\_\-ENBL\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_aed9ecd246f0e2b2cdda9f6e71d9fa7b5}
+\hypertarget{a00603_a0b805962b194131b997c0cd4102880c0}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-Scan@{GsnWdd\_\-Scan}}
+\index{GsnWdd\_\-Scan@{GsnWdd\_\-Scan}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-Scan}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-Scan (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-SCAN\_\-PARAMS\_\-T} $\ast$}]{scanParams, }
+\item[{{\bf INT8} $\ast$}]{rsltBuff, }
+\item[{{\bf UINT32}}]{rsltBuffLen, }
+\item[{{\bf GSN\_\-WDD\_\-SCAN\_\-NOTIF\_\-CB\_\-T}}]{notifyCb, }
+\item[{VOID $\ast$}]{notifyCtxt}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a0b805962b194131b997c0cd4102880c0}
+\hypertarget{a00603_af801d7d7722dbc9c6fe1f4028fe6a300}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-ScanParamSet@{GsnWdd\_\-ScanParamSet}}
+\index{GsnWdd\_\-ScanParamSet@{GsnWdd\_\-ScanParamSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-ScanParamSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-ScanParamSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT16}}]{minActivScnTime, }
+\item[{{\bf UINT16}}]{maxActivScnTime, }
+\item[{{\bf UINT16}}]{passiveScnTime}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_af801d7d7722dbc9c6fe1f4028fe6a300}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00603_af801d7d7722dbc9c6fe1f4028fe6a300_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00603_ac13b223cd0f637a13bd2b34027d76c3d}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-ScanStop@{GsnWdd\_\-ScanStop}}
+\index{GsnWdd\_\-ScanStop@{GsnWdd\_\-ScanStop}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-ScanStop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-ScanStop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_ac13b223cd0f637a13bd2b34027d76c3d}
+\hypertarget{a00603_a3f7de0ec3e1e6c4f5d70e214299aee5e}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-TkipContrMsrStart@{GsnWdd\_\-TkipContrMsrStart}}
+\index{GsnWdd\_\-TkipContrMsrStart@{GsnWdd\_\-TkipContrMsrStart}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-TkipContrMsrStart}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-TkipContrMsrStart (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a3f7de0ec3e1e6c4f5d70e214299aee5e}
+\hypertarget{a00603_aaa503be4534404b18f4d674a2829c922}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-TkipSeqNumGet@{GsnWdd\_\-TkipSeqNumGet}}
+\index{GsnWdd\_\-TkipSeqNumGet@{GsnWdd\_\-TkipSeqNumGet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-TkipSeqNumGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-TkipSeqNumGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WIF\_\-WLAN\_\-TKIP\_\-COUNTER\_\-GET\_\-RSP\_\-T} $\ast$}]{pResp}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_aaa503be4534404b18f4d674a2829c922}
+\hypertarget{a00603_aa8ca906f4af22c0b80ff7215e1a108c3}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-TxNumRetrySet@{GsnWdd\_\-TxNumRetrySet}}
+\index{GsnWdd\_\-TxNumRetrySet@{GsnWdd\_\-TxNumRetrySet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-TxNumRetrySet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnWdd\_\-TxNumRetrySet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT16}}]{numRetries}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_aa8ca906f4af22c0b80ff7215e1a108c3}
+\hypertarget{a00603_a022e8be8dffdb8e04bcafbfc49b70c5d}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-TxPowerSet@{GsnWdd\_\-TxPowerSet}}
+\index{GsnWdd\_\-TxPowerSet@{GsnWdd\_\-TxPowerSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-TxPowerSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-TxPowerSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-TX\_\-POW\_\-SET\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a022e8be8dffdb8e04bcafbfc49b70c5d}
+\hypertarget{a00603_a8abf7e27edb280ffd4d2359b0801adc8}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-TxRateGet@{GsnWdd\_\-TxRateGet}}
+\index{GsnWdd\_\-TxRateGet@{GsnWdd\_\-TxRateGet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-TxRateGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-TxRateGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-TX\_\-RATE\_\-GET\_\-RESP} $\ast$}]{outBuf}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a8abf7e27edb280ffd4d2359b0801adc8}
+\hypertarget{a00603_ac2f00d6c26c21ba93cbfccf3268ce24f}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-TxRateSet@{GsnWdd\_\-TxRateSet}}
+\index{GsnWdd\_\-TxRateSet@{GsnWdd\_\-TxRateSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-TxRateSet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnWdd\_\-TxRateSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-TX\_\-RATE\_\-SET\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_ac2f00d6c26c21ba93cbfccf3268ce24f}
+\hypertarget{a00603_a121dfe825456ee1a48df189918ac24f1}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-UAMDataRxConfig@{GsnWdd\_\-UAMDataRxConfig}}
+\index{GsnWdd\_\-UAMDataRxConfig@{GsnWdd\_\-UAMDataRxConfig}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-UAMDataRxConfig}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-UAMDataRxConfig (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-UAM\_\-DRX\_\-CONFIG\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a121dfe825456ee1a48df189918ac24f1}
+\hypertarget{a00603_a5d1c80f5cbdeaeed8981b98651a3a44f}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-UamDataRxStart@{GsnWdd\_\-UamDataRxStart}}
+\index{GsnWdd\_\-UamDataRxStart@{GsnWdd\_\-UamDataRxStart}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-UamDataRxStart}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-UamDataRxStart (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-PARAM} $\ast$}]{pParam, }
+\item[{{\bf GSN\_\-WDD\_\-UAM\_\-DRX\_\-START\_\-RESP\_\-T} $\ast$}]{pResp}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a5d1c80f5cbdeaeed8981b98651a3a44f}
+\hypertarget{a00603_a39a171245db4d0d1fc2ea999bc983eb2}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-UAMDataRxStop@{GsnWdd\_\-UAMDataRxStop}}
+\index{GsnWdd\_\-UAMDataRxStop@{GsnWdd\_\-UAMDataRxStop}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-UAMDataRxStop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-UAMDataRxStop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-PARAM} $\ast$}]{pParam, }
+\item[{{\bf GSN\_\-WDD\_\-UAM\_\-DRX\_\-STOP\_\-RESP\_\-T} $\ast$}]{pResp}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a39a171245db4d0d1fc2ea999bc983eb2}
+\hypertarget{a00603_a070bd6272bf919d8c70c31887890774e}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-UamDataSend@{GsnWdd\_\-UamDataSend}}
+\index{GsnWdd\_\-UamDataSend@{GsnWdd\_\-UamDataSend}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-UamDataSend}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-UamDataSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-UAM\_\-DATA\_\-HDR\_\-T} $\ast$}]{dataHdr, }
+\item[{VOID $\ast$}]{data, }
+\item[{{\bf UINT32}}]{dataLen}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a070bd6272bf919d8c70c31887890774e}
+\hypertarget{a00603_a3dc16a6b58b56b3a825e6b2ac29ce95b}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-UamDataSend\_\-Patch@{GsnWdd\_\-UamDataSend\_\-Patch}}
+\index{GsnWdd\_\-UamDataSend\_\-Patch@{GsnWdd\_\-UamDataSend\_\-Patch}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-UamDataSend\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-UamDataSend\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-UAM\_\-DATA\_\-HDR\_\-T} $\ast$}]{dataHdr, }
+\item[{VOID $\ast$}]{data, }
+\item[{{\bf UINT32}}]{dataLen, }
+\item[{{\bf GSN\_\-WIF\_\-WLAN\_\-UNASSOCIATED\_\-DATACFM\_\-T} $\ast$}]{pDataTxCfm}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a3dc16a6b58b56b3a825e6b2ac29ce95b}
+\hypertarget{a00603_aead66fd4862fa889f8ff19856a815300}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-UAMStart@{GsnWdd\_\-UAMStart}}
+\index{GsnWdd\_\-UAMStart@{GsnWdd\_\-UAMStart}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-UAMStart}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-UAMStart (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT32}}]{ifNum, }
+\item[{{\bf GSN\_\-WDD\_\-UAM\_\-START\_\-RESP\_\-T} $\ast$}]{pResp}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_aead66fd4862fa889f8ff19856a815300}
+\hypertarget{a00603_a4109018738ac40b121930b8c72f3779b}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-UAMStop@{GsnWdd\_\-UAMStop}}
+\index{GsnWdd\_\-UAMStop@{GsnWdd\_\-UAMStop}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-UAMStop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-UAMStop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT32}}]{ifNum, }
+\item[{{\bf GSN\_\-WDD\_\-UAM\_\-STOP\_\-RESP\_\-T} $\ast$}]{pResp}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a4109018738ac40b121930b8c72f3779b}
+\hypertarget{a00603_a1d9fc0409c65a27b5d601792251f03cc}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-WlanRecvFiltrSet@{GsnWdd\_\-WlanRecvFiltrSet}}
+\index{GsnWdd\_\-WlanRecvFiltrSet@{GsnWdd\_\-WlanRecvFiltrSet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-WlanRecvFiltrSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-WlanRecvFiltrSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-WLAN\_\-RECV\_\-FILTR\_\-SET\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a1d9fc0409c65a27b5d601792251f03cc}
+\hypertarget{a00603_ae883bfd249a84f10d8f1f8fe7adbf1ce}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-WlanStatsGet@{GsnWdd\_\-WlanStatsGet}}
+\index{GsnWdd\_\-WlanStatsGet@{GsnWdd\_\-WlanStatsGet}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-WlanStatsGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-WlanStatsGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT8}}]{reset, }
+\item[{{\bf UINT8}}]{statType, }
+\item[{{\bf INT8} $\ast$}]{outBuf, }
+\item[{{\bf UINT32}}]{outBufSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_ae883bfd249a84f10d8f1f8fe7adbf1ce}
+\hypertarget{a00603_a7528c5d281c4ee7e34b720371efdc85f}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-WpaSupplicantInit@{GsnWdd\_\-WpaSupplicantInit}}
+\index{GsnWdd\_\-WpaSupplicantInit@{GsnWdd\_\-WpaSupplicantInit}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-WpaSupplicantInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnWdd\_\-WpaSupplicantInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-WPA\_\-SUP\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a7528c5d281c4ee7e34b720371efdc85f}
+\hypertarget{a00603_a943626b18fe20d43cb25a52c09d92707}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-WpsConnect@{GsnWdd\_\-WpsConnect}}
+\index{GsnWdd\_\-WpsConnect@{GsnWdd\_\-WpsConnect}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-WpsConnect}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-WpsConnect (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-CONNECT\_\-FLAG\_\-T}}]{flags, }
+\item[{{\bf GSN\_\-WDD\_\-SCAN\_\-ENTRY\_\-T} $\ast$}]{pScanEntry, }
+\item[{{\bf GSN\_\-WDD\_\-CONNECT\_\-NOTIF\_\-CB\_\-T}}]{notifyCb, }
+\item[{VOID $\ast$}]{notifyCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a943626b18fe20d43cb25a52c09d92707}
+\hypertarget{a00603_a4f2a67f095d578728b554cf374fa5e20}{
+\index{gsn\_\-wdd.h@{gsn\_\-wdd.h}!GsnWdd\_\-WpsScan@{GsnWdd\_\-WpsScan}}
+\index{GsnWdd\_\-WpsScan@{GsnWdd\_\-WpsScan}!gsn_wdd.h@{gsn\_\-wdd.h}}
+\subsubsection[{GsnWdd\_\-WpsScan}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWdd\_\-WpsScan (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf GSN\_\-WDD\_\-SCAN\_\-PARAMS\_\-T} $\ast$}]{scanParams, }
+\item[{{\bf INT8} $\ast$}]{rsltBuff, }
+\item[{{\bf UINT32}}]{rsltBuffLen, }
+\item[{{\bf GSN\_\-WDD\_\-SCAN\_\-NOTIF\_\-CB\_\-T}}]{notifyCb, }
+\item[{VOID $\ast$}]{notifyCtxt}
+\end{DoxyParamCaption}
+)}}
+\label{a00603_a4f2a67f095d578728b554cf374fa5e20}

@@ -1,0 +1,156 @@
+\hypertarget{a00506}{
+\section{gsn\_\-hi\_\-mb.h File Reference}
+\label{a00506}\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00737}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00089}{GSN\_\-HI\_\-MB\_\-CTX}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00506_a24c17224665b2175de44eef6666d844a}{GSN\_\-HI\_\-MB\_\-MSG\_\-SB}~0
+\item 
+\#define \hyperlink{a00506_a8d3b3866f9d09968c947cef8e2e7c61b}{GSN\_\-HI\_\-MB\_\-ACK\_\-SB}~1
+\item 
+\#define \hyperlink{a00506_ac9fe421d7ea35b912a309a151189e8f4}{GSN\_\-HI\_\-MB\_\-MSG\_\-RB}~1
+\item 
+\#define \hyperlink{a00506_a309981ae0389b7dfeac5a7cf8fdb4575}{GSN\_\-HI\_\-MB\_\-ACK\_\-RB}~0
+\item 
+\#define \hyperlink{a00506_a82316e9aa8750e0f14322eac4e824279}{GSN\_\-HI\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00089}{GSN\_\-HI\_\-MB\_\-CTX} \hyperlink{a00506_a99ba5f3828c434894ed3e105eaff5a11}{GSN\_\-HI\_\-MB\_\-CTX\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00506_a9a4eb6309fe4be38beab37b5cf0aa821}{GsnHiMb\_\-Init} (\hyperlink{a00089}{GSN\_\-HI\_\-MB\_\-CTX\_\-T} $\ast$pHiMbCtx)
+\item 
+PUBLIC VOID \hyperlink{a00506_a03f9024295120c5126240c6805072110}{GsnHiMb\_\-RecvCbRegister} (\hyperlink{a00089}{GSN\_\-HI\_\-MB\_\-CTX\_\-T} $\ast$pHiMbCtx, \hyperlink{a00036}{GSN\_\-CB\_\-T} $\ast$recvCbInfo)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00506_a0e909527fe01746ee75a4e722aead6fc}{GsnHiMb\_\-MsgSend} (\hyperlink{a00089}{GSN\_\-HI\_\-MB\_\-CTX\_\-T} $\ast$pHiMbCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$msg)
+\item 
+PUBLIC VOID \hyperlink{a00506_a1c7f86819310903ac1cc8053060bfdc3}{GsnHiMb\_\-AckSend} (\hyperlink{a00089}{GSN\_\-HI\_\-MB\_\-CTX\_\-T} $\ast$pHiMbCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$ack)
+\item 
+PUBLIC VOID \hyperlink{a00506_a2726de7ef5da8d51f58253cde523d997}{GsnHiMb\_\-ResetIndRecvCbRegister} (\hyperlink{a00089}{GSN\_\-HI\_\-MB\_\-CTX\_\-T} $\ast$pHiMbCtx, \hyperlink{a00036}{GSN\_\-CB\_\-T} $\ast$recvCbInfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00506_a309981ae0389b7dfeac5a7cf8fdb4575}{
+\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}!GSN\_\-HI\_\-MB\_\-ACK\_\-RB@{GSN\_\-HI\_\-MB\_\-ACK\_\-RB}}
+\index{GSN\_\-HI\_\-MB\_\-ACK\_\-RB@{GSN\_\-HI\_\-MB\_\-ACK\_\-RB}!gsn_hi_mb.h@{gsn\_\-hi\_\-mb.h}}
+\subsubsection[{GSN\_\-HI\_\-MB\_\-ACK\_\-RB}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HI\_\-MB\_\-ACK\_\-RB~0}}
+\label{a00506_a309981ae0389b7dfeac5a7cf8fdb4575}
+
+
+Definition at line 66 of file gsn\_\-hi\_\-mb.h.
+
+\hypertarget{a00506_a8d3b3866f9d09968c947cef8e2e7c61b}{
+\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}!GSN\_\-HI\_\-MB\_\-ACK\_\-SB@{GSN\_\-HI\_\-MB\_\-ACK\_\-SB}}
+\index{GSN\_\-HI\_\-MB\_\-ACK\_\-SB@{GSN\_\-HI\_\-MB\_\-ACK\_\-SB}!gsn_hi_mb.h@{gsn\_\-hi\_\-mb.h}}
+\subsubsection[{GSN\_\-HI\_\-MB\_\-ACK\_\-SB}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HI\_\-MB\_\-ACK\_\-SB~1}}
+\label{a00506_a8d3b3866f9d09968c947cef8e2e7c61b}
+
+
+Definition at line 63 of file gsn\_\-hi\_\-mb.h.
+
+\hypertarget{a00506_ac9fe421d7ea35b912a309a151189e8f4}{
+\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}!GSN\_\-HI\_\-MB\_\-MSG\_\-RB@{GSN\_\-HI\_\-MB\_\-MSG\_\-RB}}
+\index{GSN\_\-HI\_\-MB\_\-MSG\_\-RB@{GSN\_\-HI\_\-MB\_\-MSG\_\-RB}!gsn_hi_mb.h@{gsn\_\-hi\_\-mb.h}}
+\subsubsection[{GSN\_\-HI\_\-MB\_\-MSG\_\-RB}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HI\_\-MB\_\-MSG\_\-RB~1}}
+\label{a00506_ac9fe421d7ea35b912a309a151189e8f4}
+
+
+Definition at line 65 of file gsn\_\-hi\_\-mb.h.
+
+\hypertarget{a00506_a24c17224665b2175de44eef6666d844a}{
+\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}!GSN\_\-HI\_\-MB\_\-MSG\_\-SB@{GSN\_\-HI\_\-MB\_\-MSG\_\-SB}}
+\index{GSN\_\-HI\_\-MB\_\-MSG\_\-SB@{GSN\_\-HI\_\-MB\_\-MSG\_\-SB}!gsn_hi_mb.h@{gsn\_\-hi\_\-mb.h}}
+\subsubsection[{GSN\_\-HI\_\-MB\_\-MSG\_\-SB}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HI\_\-MB\_\-MSG\_\-SB~0}}
+\label{a00506_a24c17224665b2175de44eef6666d844a}
+END of coresvcdoc. 
+
+Definition at line 62 of file gsn\_\-hi\_\-mb.h.
+
+\hypertarget{a00506_a82316e9aa8750e0f14322eac4e824279}{
+\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}!GSN\_\-HI\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB@{GSN\_\-HI\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB}}
+\index{GSN\_\-HI\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB@{GSN\_\-HI\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB}!gsn_hi_mb.h@{gsn\_\-hi\_\-mb.h}}
+\subsubsection[{GSN\_\-HI\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-HI\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB~2}}
+\label{a00506_a82316e9aa8750e0f14322eac4e824279}
+
+
+Definition at line 67 of file gsn\_\-hi\_\-mb.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00506_a99ba5f3828c434894ed3e105eaff5a11}{
+\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}!GSN\_\-HI\_\-MB\_\-CTX\_\-T@{GSN\_\-HI\_\-MB\_\-CTX\_\-T}}
+\index{GSN\_\-HI\_\-MB\_\-CTX\_\-T@{GSN\_\-HI\_\-MB\_\-CTX\_\-T}!gsn_hi_mb.h@{gsn\_\-hi\_\-mb.h}}
+\subsubsection[{GSN\_\-HI\_\-MB\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-HI\_\-MB\_\-CTX}  {\bf GSN\_\-HI\_\-MB\_\-CTX\_\-T}}}
+\label{a00506_a99ba5f3828c434894ed3e105eaff5a11}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00506_a1c7f86819310903ac1cc8053060bfdc3}{
+\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}!GsnHiMb\_\-AckSend@{GsnHiMb\_\-AckSend}}
+\index{GsnHiMb\_\-AckSend@{GsnHiMb\_\-AckSend}!gsn_hi_mb.h@{gsn\_\-hi\_\-mb.h}}
+\subsubsection[{GsnHiMb\_\-AckSend}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnHiMb\_\-AckSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-MB\_\-CTX\_\-T} $\ast$}]{pHiMbCtx, }
+\item[{{\bf UINT32} $\ast$}]{ack}
+\end{DoxyParamCaption}
+)}}
+\label{a00506_a1c7f86819310903ac1cc8053060bfdc3}
+\hypertarget{a00506_a9a4eb6309fe4be38beab37b5cf0aa821}{
+\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}!GsnHiMb\_\-Init@{GsnHiMb\_\-Init}}
+\index{GsnHiMb\_\-Init@{GsnHiMb\_\-Init}!gsn_hi_mb.h@{gsn\_\-hi\_\-mb.h}}
+\subsubsection[{GsnHiMb\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnHiMb\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-MB\_\-CTX\_\-T} $\ast$}]{pHiMbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00506_a9a4eb6309fe4be38beab37b5cf0aa821}
+\hypertarget{a00506_a0e909527fe01746ee75a4e722aead6fc}{
+\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}!GsnHiMb\_\-MsgSend@{GsnHiMb\_\-MsgSend}}
+\index{GsnHiMb\_\-MsgSend@{GsnHiMb\_\-MsgSend}!gsn_hi_mb.h@{gsn\_\-hi\_\-mb.h}}
+\subsubsection[{GsnHiMb\_\-MsgSend}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnHiMb\_\-MsgSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-MB\_\-CTX\_\-T} $\ast$}]{pHiMbCtx, }
+\item[{{\bf UINT32} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}
+\label{a00506_a0e909527fe01746ee75a4e722aead6fc}
+\hypertarget{a00506_a03f9024295120c5126240c6805072110}{
+\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}!GsnHiMb\_\-RecvCbRegister@{GsnHiMb\_\-RecvCbRegister}}
+\index{GsnHiMb\_\-RecvCbRegister@{GsnHiMb\_\-RecvCbRegister}!gsn_hi_mb.h@{gsn\_\-hi\_\-mb.h}}
+\subsubsection[{GsnHiMb\_\-RecvCbRegister}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnHiMb\_\-RecvCbRegister (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-MB\_\-CTX\_\-T} $\ast$}]{pHiMbCtx, }
+\item[{{\bf GSN\_\-CB\_\-T} $\ast$}]{recvCbInfo}
+\end{DoxyParamCaption}
+)}}
+\label{a00506_a03f9024295120c5126240c6805072110}
+\hypertarget{a00506_a2726de7ef5da8d51f58253cde523d997}{
+\index{gsn\_\-hi\_\-mb.h@{gsn\_\-hi\_\-mb.h}!GsnHiMb\_\-ResetIndRecvCbRegister@{GsnHiMb\_\-ResetIndRecvCbRegister}}
+\index{GsnHiMb\_\-ResetIndRecvCbRegister@{GsnHiMb\_\-ResetIndRecvCbRegister}!gsn_hi_mb.h@{gsn\_\-hi\_\-mb.h}}
+\subsubsection[{GsnHiMb\_\-ResetIndRecvCbRegister}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnHiMb\_\-ResetIndRecvCbRegister (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-MB\_\-CTX\_\-T} $\ast$}]{pHiMbCtx, }
+\item[{{\bf GSN\_\-CB\_\-T} $\ast$}]{recvCbInfo}
+\end{DoxyParamCaption}
+)}}
+\label{a00506_a2726de7ef5da8d51f58253cde523d997}

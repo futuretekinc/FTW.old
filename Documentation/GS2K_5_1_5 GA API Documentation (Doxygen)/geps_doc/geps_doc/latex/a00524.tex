@@ -1,0 +1,232 @@
+\hypertarget{a00524}{
+\section{gsn\_\-mac\_\-utils.h File Reference}
+\label{a00524}\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00759}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00524_a22c05c594e837ee99ece9e6a2441bf62}{GsnMacUtil\_\-ExtractBeaconPeriod} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$FramePtr)
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00524_a92e57c56cd6967b9931876260ec4e46c}{GsnMacUtil\_\-ExtractCapaInfo} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$FramePtr)
+\item 
+void \hyperlink{a00524_a9e256983e6d0380f27a546a3173ae7f0}{GsnMacUtil\_\-ExtractSsid} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$FramePtr, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} MaxFrameSize, \hyperlink{a00417}{GSN\_\-MAC\_\-SSID\_\-T} $\ast$MacSsidPtr)
+\item 
+void \hyperlink{a00524_a1de4da06175dcc9cea75079099d7b162}{GsnMacUtil\_\-ExtractTimeStamp} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$FramePtr, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} $\ast$TimeStampPtr)
+\item 
+void \hyperlink{a00524_a35505675bdaa3c4d00983fc1716b6f1c}{GsnMacUtil\_\-ExtractRateSet} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$framePtr, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} maxFrameSize, \hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T} $\ast$macRateSetPtr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} offset)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00524_a975e53784bf40a1620f898769330632d}{GsnMacUtil\_\-ExtractChannel} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$FramePtr, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} MaxFrameSize)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00524_abf2bf3e0ade2b534b278fd3d37caf59e}{GsnMacUtil\_\-ExtractFromBeacon} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$FramePtr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ElmtId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} MaxFrameSize, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} $\ast$FrameSizePtr)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00524_a44255cdf1ce2d41c92461ce654f338bb}{GsnMacUtil\_\-Extract} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$FramePtr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ElmtId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} MaxFrameSize, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} $\ast$FrameSizePtr, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} offset)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00524_a290db09cebd8438817d9c722ccf4819a}{GsnMacUtil\_\-ExtractOUI} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$FramePtr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} OUI1, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} OUI2, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} OUI3, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} OUIType, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} OUISubType, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} MaxFrameSize, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} $\ast$FrameSizePtr, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} Offset)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00524_ac5cb1611a7a723049c313e8abbeba4d6}{GsnMacUtil\_\-ExtractOUIWifi} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$FramePtr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} OUIType, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} OUISubType, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} MaxFrameSize, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} $\ast$FrameSizePtr, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} Offset)
+\item 
+void \hyperlink{a00524_a4ce2d9a9ad86040826c2f88c4ce82882}{GsnMacUtil\_\-RateOrdering} (\hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T} $\ast$RatePtr)
+\item 
+\hyperlink{a00642_ga7fb691c78d3a1046fa998bae1560e1a5}{WLAN\_\-BOOLEAN} \hyperlink{a00524_af71c6b481d7a6271466b8bd675670e4c}{GsnMacUtil\_\-AreBasicRatesMatching} (\hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T} $\ast$BssRatePtr, \hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T} $\ast$StationRatePtr)
+\item 
+void \hyperlink{a00524_a5887858097eff90d7d92315fc3f68dc7}{GsnMacUtil\_\-MergeBasicRates} (\hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T} $\ast$BssRatePtr, \hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T} $\ast$DesiredRatePtr, \hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T} $\ast$ResultRatePtr)
+\item 
+void \hyperlink{a00524_a194f8b650af149b24556b2b35257f146}{GsnMacUtil\_\-MergeRates} (\hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T} $\ast$BssRatePtr, \hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T} $\ast$DesiredRatePtr, \hyperlink{a00125}{GSN\_\-MAC\_\-RATESET\_\-T} $\ast$ResultRatePtr)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00524_a65f38b0667390350fe7f75763194ebf8}{GsnMacUtil\_\-ExtractEncryptionStatus} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$FramePtr, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} MaxFrameSize, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} Offset, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$AuthModePtr)
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00524_aba2f962dfb1814a04298d211a05f411e}{GsnMacUtil\_\-ExtractWpsAttributes} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$framePtr, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} maxFrameSize, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} offset, \hyperlink{a00138}{GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR\_\-T} $\ast$wpsAttr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00524_af71c6b481d7a6271466b8bd675670e4c}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-AreBasicRatesMatching@{GsnMacUtil\_\-AreBasicRatesMatching}}
+\index{GsnMacUtil\_\-AreBasicRatesMatching@{GsnMacUtil\_\-AreBasicRatesMatching}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-AreBasicRatesMatching}]{\setlength{\rightskip}{0pt plus 5cm}{\bf WLAN\_\-BOOLEAN} GsnMacUtil\_\-AreBasicRatesMatching (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-RATESET\_\-T} $\ast$}]{BssRatePtr, }
+\item[{{\bf GSN\_\-MAC\_\-RATESET\_\-T} $\ast$}]{StationRatePtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_af71c6b481d7a6271466b8bd675670e4c}
+\hypertarget{a00524_a44255cdf1ce2d41c92461ce654f338bb}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-Extract@{GsnMacUtil\_\-Extract}}
+\index{GsnMacUtil\_\-Extract@{GsnMacUtil\_\-Extract}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-Extract}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ GsnMacUtil\_\-Extract (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{FramePtr, }
+\item[{{\bf UINT8}}]{ElmtId, }
+\item[{{\bf UINT16}}]{MaxFrameSize, }
+\item[{{\bf UINT16} $\ast$}]{FrameSizePtr, }
+\item[{{\bf UINT16}}]{offset}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a44255cdf1ce2d41c92461ce654f338bb}
+\hypertarget{a00524_a22c05c594e837ee99ece9e6a2441bf62}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-ExtractBeaconPeriod@{GsnMacUtil\_\-ExtractBeaconPeriod}}
+\index{GsnMacUtil\_\-ExtractBeaconPeriod@{GsnMacUtil\_\-ExtractBeaconPeriod}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-ExtractBeaconPeriod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} GsnMacUtil\_\-ExtractBeaconPeriod (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{FramePtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a22c05c594e837ee99ece9e6a2441bf62}
+\hypertarget{a00524_a92e57c56cd6967b9931876260ec4e46c}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-ExtractCapaInfo@{GsnMacUtil\_\-ExtractCapaInfo}}
+\index{GsnMacUtil\_\-ExtractCapaInfo@{GsnMacUtil\_\-ExtractCapaInfo}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-ExtractCapaInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} GsnMacUtil\_\-ExtractCapaInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{FramePtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a92e57c56cd6967b9931876260ec4e46c}
+\hypertarget{a00524_a975e53784bf40a1620f898769330632d}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-ExtractChannel@{GsnMacUtil\_\-ExtractChannel}}
+\index{GsnMacUtil\_\-ExtractChannel@{GsnMacUtil\_\-ExtractChannel}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-ExtractChannel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnMacUtil\_\-ExtractChannel (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{FramePtr, }
+\item[{{\bf UINT16}}]{MaxFrameSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a975e53784bf40a1620f898769330632d}
+\hypertarget{a00524_a65f38b0667390350fe7f75763194ebf8}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-ExtractEncryptionStatus@{GsnMacUtil\_\-ExtractEncryptionStatus}}
+\index{GsnMacUtil\_\-ExtractEncryptionStatus@{GsnMacUtil\_\-ExtractEncryptionStatus}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-ExtractEncryptionStatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnMacUtil\_\-ExtractEncryptionStatus (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{FramePtr, }
+\item[{{\bf UINT16}}]{MaxFrameSize, }
+\item[{{\bf UINT16}}]{Offset, }
+\item[{{\bf UINT8} $\ast$}]{AuthModePtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a65f38b0667390350fe7f75763194ebf8}
+\hypertarget{a00524_abf2bf3e0ade2b534b278fd3d37caf59e}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-ExtractFromBeacon@{GsnMacUtil\_\-ExtractFromBeacon}}
+\index{GsnMacUtil\_\-ExtractFromBeacon@{GsnMacUtil\_\-ExtractFromBeacon}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-ExtractFromBeacon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ GsnMacUtil\_\-ExtractFromBeacon (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{FramePtr, }
+\item[{{\bf UINT8}}]{ElmtId, }
+\item[{{\bf UINT16}}]{MaxFrameSize, }
+\item[{{\bf UINT16} $\ast$}]{FrameSizePtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_abf2bf3e0ade2b534b278fd3d37caf59e}
+\hypertarget{a00524_a290db09cebd8438817d9c722ccf4819a}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-ExtractOUI@{GsnMacUtil\_\-ExtractOUI}}
+\index{GsnMacUtil\_\-ExtractOUI@{GsnMacUtil\_\-ExtractOUI}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-ExtractOUI}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ GsnMacUtil\_\-ExtractOUI (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{FramePtr, }
+\item[{{\bf UINT8}}]{OUI1, }
+\item[{{\bf UINT8}}]{OUI2, }
+\item[{{\bf UINT8}}]{OUI3, }
+\item[{{\bf UINT8}}]{OUIType, }
+\item[{{\bf UINT8}}]{OUISubType, }
+\item[{{\bf UINT16}}]{MaxFrameSize, }
+\item[{{\bf UINT16} $\ast$}]{FrameSizePtr, }
+\item[{{\bf UINT16}}]{Offset}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a290db09cebd8438817d9c722ccf4819a}
+\hypertarget{a00524_ac5cb1611a7a723049c313e8abbeba4d6}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-ExtractOUIWifi@{GsnMacUtil\_\-ExtractOUIWifi}}
+\index{GsnMacUtil\_\-ExtractOUIWifi@{GsnMacUtil\_\-ExtractOUIWifi}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-ExtractOUIWifi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ GsnMacUtil\_\-ExtractOUIWifi (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{FramePtr, }
+\item[{{\bf UINT8}}]{OUIType, }
+\item[{{\bf UINT8}}]{OUISubType, }
+\item[{{\bf UINT16}}]{MaxFrameSize, }
+\item[{{\bf UINT16} $\ast$}]{FrameSizePtr, }
+\item[{{\bf UINT16}}]{Offset}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_ac5cb1611a7a723049c313e8abbeba4d6}
+\hypertarget{a00524_a35505675bdaa3c4d00983fc1716b6f1c}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-ExtractRateSet@{GsnMacUtil\_\-ExtractRateSet}}
+\index{GsnMacUtil\_\-ExtractRateSet@{GsnMacUtil\_\-ExtractRateSet}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-ExtractRateSet}]{\setlength{\rightskip}{0pt plus 5cm}void GsnMacUtil\_\-ExtractRateSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{framePtr, }
+\item[{{\bf UINT16}}]{maxFrameSize, }
+\item[{{\bf GSN\_\-MAC\_\-RATESET\_\-T} $\ast$}]{macRateSetPtr, }
+\item[{{\bf UINT8}}]{offset}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a35505675bdaa3c4d00983fc1716b6f1c}
+\hypertarget{a00524_a9e256983e6d0380f27a546a3173ae7f0}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-ExtractSsid@{GsnMacUtil\_\-ExtractSsid}}
+\index{GsnMacUtil\_\-ExtractSsid@{GsnMacUtil\_\-ExtractSsid}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-ExtractSsid}]{\setlength{\rightskip}{0pt plus 5cm}void GsnMacUtil\_\-ExtractSsid (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{FramePtr, }
+\item[{{\bf UINT16}}]{MaxFrameSize, }
+\item[{{\bf GSN\_\-MAC\_\-SSID\_\-T} $\ast$}]{MacSsidPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a9e256983e6d0380f27a546a3173ae7f0}
+\hypertarget{a00524_a1de4da06175dcc9cea75079099d7b162}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-ExtractTimeStamp@{GsnMacUtil\_\-ExtractTimeStamp}}
+\index{GsnMacUtil\_\-ExtractTimeStamp@{GsnMacUtil\_\-ExtractTimeStamp}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-ExtractTimeStamp}]{\setlength{\rightskip}{0pt plus 5cm}void GsnMacUtil\_\-ExtractTimeStamp (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{FramePtr, }
+\item[{{\bf ULONG64} $\ast$}]{TimeStampPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a1de4da06175dcc9cea75079099d7b162}
+\hypertarget{a00524_aba2f962dfb1814a04298d211a05f411e}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-ExtractWpsAttributes@{GsnMacUtil\_\-ExtractWpsAttributes}}
+\index{GsnMacUtil\_\-ExtractWpsAttributes@{GsnMacUtil\_\-ExtractWpsAttributes}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-ExtractWpsAttributes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ GsnMacUtil\_\-ExtractWpsAttributes (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{framePtr, }
+\item[{{\bf UINT16}}]{maxFrameSize, }
+\item[{{\bf UINT16}}]{offset, }
+\item[{{\bf GSN\_\-MAC\_\-WPS\_\-IE\_\-ATTR\_\-T} $\ast$}]{wpsAttr}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_aba2f962dfb1814a04298d211a05f411e}
+\hypertarget{a00524_a5887858097eff90d7d92315fc3f68dc7}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-MergeBasicRates@{GsnMacUtil\_\-MergeBasicRates}}
+\index{GsnMacUtil\_\-MergeBasicRates@{GsnMacUtil\_\-MergeBasicRates}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-MergeBasicRates}]{\setlength{\rightskip}{0pt plus 5cm}void GsnMacUtil\_\-MergeBasicRates (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-RATESET\_\-T} $\ast$}]{BssRatePtr, }
+\item[{{\bf GSN\_\-MAC\_\-RATESET\_\-T} $\ast$}]{DesiredRatePtr, }
+\item[{{\bf GSN\_\-MAC\_\-RATESET\_\-T} $\ast$}]{ResultRatePtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a5887858097eff90d7d92315fc3f68dc7}
+\hypertarget{a00524_a194f8b650af149b24556b2b35257f146}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-MergeRates@{GsnMacUtil\_\-MergeRates}}
+\index{GsnMacUtil\_\-MergeRates@{GsnMacUtil\_\-MergeRates}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-MergeRates}]{\setlength{\rightskip}{0pt plus 5cm}void GsnMacUtil\_\-MergeRates (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-RATESET\_\-T} $\ast$}]{BssRatePtr, }
+\item[{{\bf GSN\_\-MAC\_\-RATESET\_\-T} $\ast$}]{DesiredRatePtr, }
+\item[{{\bf GSN\_\-MAC\_\-RATESET\_\-T} $\ast$}]{ResultRatePtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a194f8b650af149b24556b2b35257f146}
+\hypertarget{a00524_a4ce2d9a9ad86040826c2f88c4ce82882}{
+\index{gsn\_\-mac\_\-utils.h@{gsn\_\-mac\_\-utils.h}!GsnMacUtil\_\-RateOrdering@{GsnMacUtil\_\-RateOrdering}}
+\index{GsnMacUtil\_\-RateOrdering@{GsnMacUtil\_\-RateOrdering}!gsn_mac_utils.h@{gsn\_\-mac\_\-utils.h}}
+\subsubsection[{GsnMacUtil\_\-RateOrdering}]{\setlength{\rightskip}{0pt plus 5cm}void GsnMacUtil\_\-RateOrdering (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-RATESET\_\-T} $\ast$}]{RatePtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00524_a4ce2d9a9ad86040826c2f88c4ce82882}

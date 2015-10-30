@@ -1,0 +1,715 @@
+\hypertarget{a00527}{
+\section{gsn\_\-mle.h File Reference}
+\label{a00527}\index{gsn\_\-mle.h@{gsn\_\-mle.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00762}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00150}{GSN\_\-MLE\_\-CFG}
+\item 
+struct \hyperlink{a00153}{GSN\_\-MLE\_\-SEC\_\-MAT}
+\item 
+struct \hyperlink{a00152}{GSN\_\-MLE\_\-LINK\_\-REQ\_\-DATA}
+\item 
+struct \hyperlink{a00151}{GSN\_\-MLE\_\-CTX}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00527_ad68e324de02af9d3b7b52ed890fb06b7}{GSN\_\-MLE\_\-UDP\_\-PORT}~19788
+\item 
+\#define \hyperlink{a00527_a5244d0b132f1b7ff1249cc8d4230047a}{GSN\_\-MLE\_\-ADV\_\-INTERVAL}
+\item 
+\#define \hyperlink{a00527_a7665e58f1aaf7053d4d670b220d1ce72}{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REQ}~0
+\item 
+\#define \hyperlink{a00527_abb17d914caf5e73c27e832ccde5117f9}{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT}~1
+\item 
+\#define \hyperlink{a00527_a7cfcbafeb3d1403454fb38d75befe421}{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT\_\-N\_\-REQ}~2
+\item 
+\#define \hyperlink{a00527_a8694fcff6175af65bb59227344bd9a76}{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REJECT}~3
+\item 
+\#define \hyperlink{a00527_a4cfc5b0b258639000f20965f29c391a8}{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ADVERTISEMENT}~4
+\item 
+\#define \hyperlink{a00527_a20f420343d8b5161b4fcc1450247b912}{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE}~5
+\item 
+\#define \hyperlink{a00527_a756d9b90bdbd777f4ed78e783dc52514}{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE\_\-REQ}~6
+\item 
+\#define \hyperlink{a00527_a390c041d3ab533aa2a2c74903273eaaf}{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-SRC\_\-ADDR}~0
+\item 
+\#define \hyperlink{a00527_af299f11b556f92e136368ca99f6c54e2}{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MODE}~1
+\item 
+\#define \hyperlink{a00527_afdfe6e60800cfba332463eae2c77145c}{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-TIMEOUT}~2
+\item 
+\#define \hyperlink{a00527_a533303f595f2cb62527b50ce8f970094}{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-CHALLENGE}~3
+\item 
+\#define \hyperlink{a00527_a1b3a4f1f292cae9ace464952b5551d93}{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-RESPONSE}~4
+\item 
+\#define \hyperlink{a00527_a62e030466464f857e8ee94510302b390}{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-REPLY\_\-COUNTER}~5
+\item 
+\#define \hyperlink{a00527_a8d22cd1a82a36008eea5d5b2e69f845e}{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-LQI}~6
+\item 
+\#define \hyperlink{a00527_a1b7864a8c86208b30b3ec29d660e9cff}{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-NW\_\-PARAM}~7
+\item 
+\#define \hyperlink{a00527_a8bc0ba2f61bfaad972d62ee551f839a0}{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MLE\_\-FRM\_\-CNT}~8
+\item 
+\#define \hyperlink{a00527_ae65b696d76d0b202bce2451e38f183ed}{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-CHANNEL}~0
+\item 
+\#define \hyperlink{a00527_aecfc12d703e039ff9fefc611122030a2}{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-PAN\_\-ID}~1
+\item 
+\#define \hyperlink{a00527_afd6e248344b7cbbd90817a553acadbb0}{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-P\_\-JOIN}~2
+\item 
+\#define \hyperlink{a00527_ae0dbbcbb5be346aebf25a8c8193ce685}{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-BCN\_\-PLD}~3
+\item 
+\#define \hyperlink{a00527_a999b237c7d75f70680b436c7598b4874}{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-SRC\_\-ADDR}(pBuf, shortAddr, macAddr)
+\item 
+\#define \hyperlink{a00527_a860bf67835ad1dbc704225c3c3ff454f}{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-MODE}(pBuf, cfg)
+\item 
+\#define \hyperlink{a00527_ab9ebe409bc701cab2f6626a35ad1a6f8}{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-TIMEOUT}(pBuf, timeOut)
+\item 
+\#define \hyperlink{a00527_a091ef7329226017ce21765e8c6eea021}{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-CHALLENGE}(pBuf, challenge)
+\item 
+\#define \hyperlink{a00527_a1729783155d47f0e47c4024cabd14e56}{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-RESPONSE}(pBuf, response)
+\item 
+\#define \hyperlink{a00527_a84a5f4a8c09e8a12ec7b21d03d8fea03}{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-COUNTER}(pBuf, counter)
+\item 
+\#define \hyperlink{a00527_a92a27696a98909cc234a479caf893b25}{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-MODE}~3
+\item 
+\#define \hyperlink{a00527_ab8e74552a1d4b8387b4b4e0d3e50cb72}{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-SRC\_\-ADDR}~12
+\item 
+\#define \hyperlink{a00527_a68a7e6a566d31e3dcb23ad77aded3426}{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-TIMEOUT}~6
+\item 
+\#define \hyperlink{a00527_a6f5411146a7b138bc901675418aba601}{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-CHALLENGE}~10
+\item 
+\#define \hyperlink{a00527_a5aaa62eed46095f65360512e198ce6b6}{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-RESPONSE}~10
+\item 
+\#define \hyperlink{a00527_aee3b5193bb4624951bb8bde1d0ab10f2}{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-COUNTER}~6
+\item 
+\#define \hyperlink{a00527_a9d781976c514d4c27e18eba2bc5040c2}{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REQ}~0
+\item 
+\#define \hyperlink{a00527_a011ae7add0b9495af647fd4d8f2037c2}{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT}~1
+\item 
+\#define \hyperlink{a00527_ad5e93bb6883ed682c1cc71c4153b308d}{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT\_\-N\_\-REQ}~2
+\item 
+\#define \hyperlink{a00527_ab2c87c6f321a9873218ecbacc65b0dce}{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REJECT}~3
+\item 
+\#define \hyperlink{a00527_a0d81797b692d547670462ce3cff36aea}{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ADVERTISEMENT}~4
+\item 
+\#define \hyperlink{a00527_a6be437a6195684fe311501b5222d2de5}{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE}~5
+\item 
+\#define \hyperlink{a00527_aa738d58de196cd03657a3193efc846b7}{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE\_\-REQ}~6
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00150}{GSN\_\-MLE\_\-CFG} \hyperlink{a00527_a7d33a4e5e3f74734f27df81430a43535}{GSN\_\-MLE\_\-CFG\_\-T}
+\item 
+typedef struct \hyperlink{a00153}{GSN\_\-MLE\_\-SEC\_\-MAT} \hyperlink{a00527_a02cb6a04a0b957eb00dee76c2762b407}{GSN\_\-MLE\_\-SEC\_\-MAT\_\-T}
+\item 
+typedef struct \hyperlink{a00152}{GSN\_\-MLE\_\-LINK\_\-REQ\_\-DATA} \hyperlink{a00527_a26296abd5a01a53cb32594e305e1fd5f}{GSN\_\-MLE\_\-LINK\_\-REQ\_\-DATA\_\-T}
+\item 
+typedef VOID($\ast$ \hyperlink{a00527_ab913f34ba94e3fffc3ebcc67f2df5c3e}{GSN\_\-MLE\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} event, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pEData, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pSrc, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} srcAddrLen)
+\item 
+typedef struct \hyperlink{a00151}{GSN\_\-MLE\_\-CTX} \hyperlink{a00527_a592894f5841d4b4e6fe61fa65893b951}{GSN\_\-MLE\_\-CTX\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00527_aae9dd0488767a7fe618cc5d97d916c1c}{GsnMle\_\-Init} (\hyperlink{a00151}{GSN\_\-MLE\_\-CTX\_\-T} $\ast$pMle, \hyperlink{a00150}{GSN\_\-MLE\_\-CFG\_\-T} $\ast$pCfg, \hyperlink{a00527_ab913f34ba94e3fffc3ebcc67f2df5c3e}{GSN\_\-MLE\_\-CB\_\-T} cb, VOID $\ast$pCbCtx)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00527_a27abe7002f7fd7540f7d00cd5821f3bb}{GsnMle\_\-LinkReqSend} (\hyperlink{a00151}{GSN\_\-MLE\_\-CTX\_\-T} $\ast$pMle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pDst)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00527_a451622f5b56db013ebccf1893198f39b}{GsnMle\_\-LinkAcceptSend} (\hyperlink{a00151}{GSN\_\-MLE\_\-CTX\_\-T} $\ast$pMle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pDst)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00527_a4caa5b86d20f80195bab5d8a3f116213}{GsnMle\_\-LinkAcceptNReqSend} (\hyperlink{a00151}{GSN\_\-MLE\_\-CTX\_\-T} $\ast$pMle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pRsp, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pDst)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00527_a0e78fdff88a1018384efe9beb9784feb}{GsnMle\_\-LinkRejectSend} (\hyperlink{a00151}{GSN\_\-MLE\_\-CTX\_\-T} $\ast$pMle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pDst)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00527_a7f04695ae7dfb556e9a0685379405611}{GsnMle\_\-AdvertisementSend} (\hyperlink{a00151}{GSN\_\-MLE\_\-CTX\_\-T} $\ast$pMle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pDst)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00527_a19e624f9c7a659ed3a3c4aecee3caab2}{GsnMle\_\-AdvertisementProc} (\hyperlink{a00151}{GSN\_\-MLE\_\-CTX\_\-T} $\ast$pMle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pDst)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00527_a0077faacbf86e11bab8fc11d57c165dd}{GsnMle\_\-UpdateSend} (\hyperlink{a00151}{GSN\_\-MLE\_\-CTX\_\-T} $\ast$pMle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pDst)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00527_a78283388ada8354f15e85c70595a29d5}{GsnMle\_\-UpdateProc} (\hyperlink{a00151}{GSN\_\-MLE\_\-CTX\_\-T} $\ast$pMle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pDst)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00527_a5d163a75ad34d795bb4c61796c8d0a65}{GsnMle\_\-DeInit} (\hyperlink{a00151}{GSN\_\-MLE\_\-CTX\_\-T} $\ast$pMle)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00527_a5244d0b132f1b7ff1249cc8d4230047a}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-ADV\_\-INTERVAL@{GSN\_\-MLE\_\-ADV\_\-INTERVAL}}
+\index{GSN\_\-MLE\_\-ADV\_\-INTERVAL@{GSN\_\-MLE\_\-ADV\_\-INTERVAL}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-ADV\_\-INTERVAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-ADV\_\-INTERVAL}}
+\label{a00527_a5244d0b132f1b7ff1249cc8d4230047a}
+
+
+Definition at line 45 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_abb17d914caf5e73c27e832ccde5117f9}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT}}
+\index{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT~1}}
+\label{a00527_abb17d914caf5e73c27e832ccde5117f9}
+
+
+Definition at line 48 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a7cfcbafeb3d1403454fb38d75befe421}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT\_\-N\_\-REQ@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT\_\-N\_\-REQ}}
+\index{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT\_\-N\_\-REQ@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT\_\-N\_\-REQ}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT\_\-N\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ACCEPT\_\-N\_\-REQ~2}}
+\label{a00527_a7cfcbafeb3d1403454fb38d75befe421}
+
+
+Definition at line 49 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a4cfc5b0b258639000f20965f29c391a8}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ADVERTISEMENT@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ADVERTISEMENT}}
+\index{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ADVERTISEMENT@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ADVERTISEMENT}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ADVERTISEMENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-ADVERTISEMENT~4}}
+\label{a00527_a4cfc5b0b258639000f20965f29c391a8}
+
+
+Definition at line 51 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a8694fcff6175af65bb59227344bd9a76}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REJECT@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REJECT}}
+\index{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REJECT@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REJECT}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REJECT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REJECT~3}}
+\label{a00527_a8694fcff6175af65bb59227344bd9a76}
+
+
+Definition at line 50 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a7665e58f1aaf7053d4d670b220d1ce72}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REQ@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REQ}}
+\index{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REQ@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REQ}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-REQ~0}}
+\label{a00527_a7665e58f1aaf7053d4d670b220d1ce72}
+
+
+Definition at line 47 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a20f420343d8b5161b4fcc1450247b912}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE}}
+\index{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE~5}}
+\label{a00527_a20f420343d8b5161b4fcc1450247b912}
+
+
+Definition at line 52 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a756d9b90bdbd777f4ed78e783dc52514}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE\_\-REQ@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE\_\-REQ}}
+\index{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE\_\-REQ@{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE\_\-REQ}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-CMD\_\-TYPE\_\-LINK\_\-UPDATE\_\-REQ~6}}
+\label{a00527_a756d9b90bdbd777f4ed78e783dc52514}
+
+
+Definition at line 53 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a011ae7add0b9495af647fd4d8f2037c2}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT}}
+\index{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT~1}}
+\label{a00527_a011ae7add0b9495af647fd4d8f2037c2}
+
+
+Definition at line 106 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_ad5e93bb6883ed682c1cc71c4153b308d}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT\_\-N\_\-REQ@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT\_\-N\_\-REQ}}
+\index{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT\_\-N\_\-REQ@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT\_\-N\_\-REQ}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT\_\-N\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ACCEPT\_\-N\_\-REQ~2}}
+\label{a00527_ad5e93bb6883ed682c1cc71c4153b308d}
+
+
+Definition at line 107 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a0d81797b692d547670462ce3cff36aea}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ADVERTISEMENT@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ADVERTISEMENT}}
+\index{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ADVERTISEMENT@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ADVERTISEMENT}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ADVERTISEMENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-EVENT\_\-LINK\_\-ADVERTISEMENT~4}}
+\label{a00527_a0d81797b692d547670462ce3cff36aea}
+
+
+Definition at line 109 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_ab2c87c6f321a9873218ecbacc65b0dce}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REJECT@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REJECT}}
+\index{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REJECT@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REJECT}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REJECT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REJECT~3}}
+\label{a00527_ab2c87c6f321a9873218ecbacc65b0dce}
+
+
+Definition at line 108 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a9d781976c514d4c27e18eba2bc5040c2}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REQ@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REQ}}
+\index{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REQ@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REQ}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-EVENT\_\-LINK\_\-REQ~0}}
+\label{a00527_a9d781976c514d4c27e18eba2bc5040c2}
+
+
+Definition at line 105 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a6be437a6195684fe311501b5222d2de5}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE}}
+\index{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE~5}}
+\label{a00527_a6be437a6195684fe311501b5222d2de5}
+
+
+Definition at line 110 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_aa738d58de196cd03657a3193efc846b7}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE\_\-REQ@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE\_\-REQ}}
+\index{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE\_\-REQ@{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE\_\-REQ}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-EVENT\_\-LINK\_\-UPDATE\_\-REQ~6}}
+\label{a00527_aa738d58de196cd03657a3193efc846b7}
+
+
+Definition at line 111 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a6f5411146a7b138bc901675418aba601}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-SIZE\_\-CHALLENGE@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-CHALLENGE}}
+\index{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-CHALLENGE@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-CHALLENGE}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-CHALLENGE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-SIZE\_\-CHALLENGE~10}}
+\label{a00527_a6f5411146a7b138bc901675418aba601}
+
+
+Definition at line 101 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_aee3b5193bb4624951bb8bde1d0ab10f2}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-SIZE\_\-COUNTER@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-COUNTER}}
+\index{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-COUNTER@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-COUNTER}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-COUNTER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-SIZE\_\-COUNTER~6}}
+\label{a00527_aee3b5193bb4624951bb8bde1d0ab10f2}
+
+
+Definition at line 103 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a92a27696a98909cc234a479caf893b25}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-SIZE\_\-MODE@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-MODE}}
+\index{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-MODE@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-MODE}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-SIZE\_\-MODE~3}}
+\label{a00527_a92a27696a98909cc234a479caf893b25}
+
+
+Definition at line 98 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a5aaa62eed46095f65360512e198ce6b6}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-SIZE\_\-RESPONSE@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-RESPONSE}}
+\index{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-RESPONSE@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-RESPONSE}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-RESPONSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-SIZE\_\-RESPONSE~10}}
+\label{a00527_a5aaa62eed46095f65360512e198ce6b6}
+
+
+Definition at line 102 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_ab8e74552a1d4b8387b4b4e0d3e50cb72}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-SIZE\_\-SRC\_\-ADDR@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-SRC\_\-ADDR}}
+\index{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-SRC\_\-ADDR@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-SRC\_\-ADDR}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-SRC\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-SIZE\_\-SRC\_\-ADDR~12}}
+\label{a00527_ab8e74552a1d4b8387b4b4e0d3e50cb72}
+
+
+Definition at line 99 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a68a7e6a566d31e3dcb23ad77aded3426}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-SIZE\_\-TIMEOUT@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-TIMEOUT}}
+\index{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-TIMEOUT@{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-TIMEOUT}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-SIZE\_\-TIMEOUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-SIZE\_\-TIMEOUT~6}}
+\label{a00527_a68a7e6a566d31e3dcb23ad77aded3426}
+
+
+Definition at line 100 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a533303f595f2cb62527b50ce8f970094}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-TYPE\_\-CHALLENGE@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-CHALLENGE}}
+\index{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-CHALLENGE@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-CHALLENGE}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-CHALLENGE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-TYPE\_\-CHALLENGE~3}}
+\label{a00527_a533303f595f2cb62527b50ce8f970094}
+
+
+Definition at line 58 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a8d22cd1a82a36008eea5d5b2e69f845e}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-TYPE\_\-LQI@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-LQI}}
+\index{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-LQI@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-LQI}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-LQI}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-TYPE\_\-LQI~6}}
+\label{a00527_a8d22cd1a82a36008eea5d5b2e69f845e}
+
+
+Definition at line 61 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a8bc0ba2f61bfaad972d62ee551f839a0}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MLE\_\-FRM\_\-CNT@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MLE\_\-FRM\_\-CNT}}
+\index{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MLE\_\-FRM\_\-CNT@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MLE\_\-FRM\_\-CNT}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MLE\_\-FRM\_\-CNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MLE\_\-FRM\_\-CNT~8}}
+\label{a00527_a8bc0ba2f61bfaad972d62ee551f839a0}
+
+
+Definition at line 63 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_af299f11b556f92e136368ca99f6c54e2}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MODE@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MODE}}
+\index{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MODE@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MODE}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-TYPE\_\-MODE~1}}
+\label{a00527_af299f11b556f92e136368ca99f6c54e2}
+
+
+Definition at line 56 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a1b7864a8c86208b30b3ec29d660e9cff}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-TYPE\_\-NW\_\-PARAM@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-NW\_\-PARAM}}
+\index{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-NW\_\-PARAM@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-NW\_\-PARAM}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-NW\_\-PARAM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-TYPE\_\-NW\_\-PARAM~7}}
+\label{a00527_a1b7864a8c86208b30b3ec29d660e9cff}
+
+
+Definition at line 62 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a62e030466464f857e8ee94510302b390}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-TYPE\_\-REPLY\_\-COUNTER@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-REPLY\_\-COUNTER}}
+\index{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-REPLY\_\-COUNTER@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-REPLY\_\-COUNTER}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-REPLY\_\-COUNTER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-TYPE\_\-REPLY\_\-COUNTER~5}}
+\label{a00527_a62e030466464f857e8ee94510302b390}
+
+
+Definition at line 60 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a1b3a4f1f292cae9ace464952b5551d93}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-TYPE\_\-RESPONSE@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-RESPONSE}}
+\index{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-RESPONSE@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-RESPONSE}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-RESPONSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-TYPE\_\-RESPONSE~4}}
+\label{a00527_a1b3a4f1f292cae9ace464952b5551d93}
+
+
+Definition at line 59 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a390c041d3ab533aa2a2c74903273eaaf}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-TYPE\_\-SRC\_\-ADDR@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-SRC\_\-ADDR}}
+\index{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-SRC\_\-ADDR@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-SRC\_\-ADDR}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-SRC\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-TYPE\_\-SRC\_\-ADDR~0}}
+\label{a00527_a390c041d3ab533aa2a2c74903273eaaf}
+
+
+Definition at line 55 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_afdfe6e60800cfba332463eae2c77145c}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-TLV\_\-TYPE\_\-TIMEOUT@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-TIMEOUT}}
+\index{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-TIMEOUT@{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-TIMEOUT}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-TLV\_\-TYPE\_\-TIMEOUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-TLV\_\-TYPE\_\-TIMEOUT~2}}
+\label{a00527_afdfe6e60800cfba332463eae2c77145c}
+
+
+Definition at line 57 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_ad68e324de02af9d3b7b52ed890fb06b7}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-UDP\_\-PORT@{GSN\_\-MLE\_\-UDP\_\-PORT}}
+\index{GSN\_\-MLE\_\-UDP\_\-PORT@{GSN\_\-MLE\_\-UDP\_\-PORT}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-UDP\_\-PORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-UDP\_\-PORT~19788}}
+\label{a00527_ad68e324de02af9d3b7b52ed890fb06b7}
+
+
+Definition at line 43 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a091ef7329226017ce21765e8c6eea021}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-WRITE\_\-TLV\_\-CHALLENGE@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-CHALLENGE}}
+\index{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-CHALLENGE@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-CHALLENGE}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-CHALLENGE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-WRITE\_\-TLV\_\-CHALLENGE(
+\begin{DoxyParamCaption}
+\item[{}]{pBuf, }
+\item[{}]{challenge}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a091ef7329226017ce21765e8c6eea021}
+{\bfseries Value:}
+\begin{DoxyCode}
+*pBuf++ = GSN_MLE_TLV_TYPE_CHALLENGE; *pBuf++ = 8;        \
+    memcpy( pBuf, challenge, 8 ); pBuf += 8;
+\end{DoxyCode}
+
+
+Definition at line 85 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a84a5f4a8c09e8a12ec7b21d03d8fea03}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-WRITE\_\-TLV\_\-COUNTER@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-COUNTER}}
+\index{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-COUNTER@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-COUNTER}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-COUNTER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-WRITE\_\-TLV\_\-COUNTER(
+\begin{DoxyParamCaption}
+\item[{}]{pBuf, }
+\item[{}]{counter}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a84a5f4a8c09e8a12ec7b21d03d8fea03}
+{\bfseries Value:}
+\begin{DoxyCode}
+*pBuf++ = GSN_MLE_TLV_TYPE_REPLY_COUNTER; *pBuf++ = 4;    \
+    WRITE_32( pBuf, counter );
+\end{DoxyCode}
+
+
+Definition at line 93 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a860bf67835ad1dbc704225c3c3ff454f}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-WRITE\_\-TLV\_\-MODE@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-MODE}}
+\index{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-MODE@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-MODE}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-WRITE\_\-TLV\_\-MODE(
+\begin{DoxyParamCaption}
+\item[{}]{pBuf, }
+\item[{}]{cfg}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a860bf67835ad1dbc704225c3c3ff454f}
+{\bfseries Value:}
+\begin{DoxyCode}
+*pBuf++ = GSN_MLE_TLV_TYPE_MODE; *pBuf++ = 1;             \
+    *pBuf++ = (( cfg.isFFD << 1 )|( cfg.isRxOnWhenIdle << 3 ));
+\end{DoxyCode}
+
+
+Definition at line 77 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a1729783155d47f0e47c4024cabd14e56}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-WRITE\_\-TLV\_\-RESPONSE@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-RESPONSE}}
+\index{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-RESPONSE@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-RESPONSE}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-RESPONSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-WRITE\_\-TLV\_\-RESPONSE(
+\begin{DoxyParamCaption}
+\item[{}]{pBuf, }
+\item[{}]{response}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a1729783155d47f0e47c4024cabd14e56}
+{\bfseries Value:}
+\begin{DoxyCode}
+*pBuf++ = GSN_MLE_TLV_TYPE_RESPONSE; *pBuf++ = 8;         \
+    memcpy( pBuf, response, 8 ); pBuf += 8;
+\end{DoxyCode}
+
+
+Definition at line 89 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a999b237c7d75f70680b436c7598b4874}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-WRITE\_\-TLV\_\-SRC\_\-ADDR@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-SRC\_\-ADDR}}
+\index{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-SRC\_\-ADDR@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-SRC\_\-ADDR}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-SRC\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-WRITE\_\-TLV\_\-SRC\_\-ADDR(
+\begin{DoxyParamCaption}
+\item[{}]{pBuf, }
+\item[{}]{shortAddr, }
+\item[{}]{macAddr}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a999b237c7d75f70680b436c7598b4874}
+{\bfseries Value:}
+\begin{DoxyCode}
+*pBuf++ = GSN_MLE_TLV_TYPE_SRC_ADDR; *pBuf++ = 10;        \
+    WRITE_16( pBuf, shortAddr );                              \
+    memcpy( pBuf, macAddr, 8 ); pBuf += 8;
+\end{DoxyCode}
+
+
+Definition at line 72 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_ab9ebe409bc701cab2f6626a35ad1a6f8}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-WRITE\_\-TLV\_\-TIMEOUT@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-TIMEOUT}}
+\index{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-TIMEOUT@{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-TIMEOUT}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-WRITE\_\-TLV\_\-TIMEOUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLE\_\-WRITE\_\-TLV\_\-TIMEOUT(
+\begin{DoxyParamCaption}
+\item[{}]{pBuf, }
+\item[{}]{timeOut}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_ab9ebe409bc701cab2f6626a35ad1a6f8}
+{\bfseries Value:}
+\begin{DoxyCode}
+*pBuf++ = GSN_MLE_TLV_TYPE_TIMEOUT; *pBuf++ = 4;          \
+    WRITE_32( pBuf, timeOut );
+\end{DoxyCode}
+
+
+Definition at line 81 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_ae0dbbcbb5be346aebf25a8c8193ce685}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-BCN\_\-PLD@{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-BCN\_\-PLD}}
+\index{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-BCN\_\-PLD@{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-BCN\_\-PLD}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-BCN\_\-PLD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-BCN\_\-PLD~3}}
+\label{a00527_ae0dbbcbb5be346aebf25a8c8193ce685}
+
+
+Definition at line 68 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_ae65b696d76d0b202bce2451e38f183ed}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-CHANNEL@{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-CHANNEL}}
+\index{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-CHANNEL@{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-CHANNEL}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-CHANNEL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-CHANNEL~0}}
+\label{a00527_ae65b696d76d0b202bce2451e38f183ed}
+
+
+Definition at line 65 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_afd6e248344b7cbbd90817a553acadbb0}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-P\_\-JOIN@{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-P\_\-JOIN}}
+\index{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-P\_\-JOIN@{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-P\_\-JOIN}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-P\_\-JOIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-P\_\-JOIN~2}}
+\label{a00527_afd6e248344b7cbbd90817a553acadbb0}
+
+
+Definition at line 67 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_aecfc12d703e039ff9fefc611122030a2}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-PAN\_\-ID@{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-PAN\_\-ID}}
+\index{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-PAN\_\-ID@{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-PAN\_\-ID}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-PAN\_\-ID}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MLW\_\-NW\_\-PARAM\_\-ID\_\-PAN\_\-ID~1}}
+\label{a00527_aecfc12d703e039ff9fefc611122030a2}
+
+
+Definition at line 66 of file gsn\_\-mle.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00527_ab913f34ba94e3fffc3ebcc67f2df5c3e}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-CB\_\-T@{GSN\_\-MLE\_\-CB\_\-T}}
+\index{GSN\_\-MLE\_\-CB\_\-T@{GSN\_\-MLE\_\-CB\_\-T}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf GSN\_\-MLE\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT8} event, {\bf UINT8} $\ast$pEData, {\bf UINT8} $\ast$pSrc, {\bf UINT32} srcAddrLen)}}
+\label{a00527_ab913f34ba94e3fffc3ebcc67f2df5c3e}
+
+
+Definition at line 134 of file gsn\_\-mle.h.
+
+\hypertarget{a00527_a7d33a4e5e3f74734f27df81430a43535}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-CFG\_\-T@{GSN\_\-MLE\_\-CFG\_\-T}}
+\index{GSN\_\-MLE\_\-CFG\_\-T@{GSN\_\-MLE\_\-CFG\_\-T}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MLE\_\-CFG} {\bf GSN\_\-MLE\_\-CFG\_\-T}}}
+\label{a00527_a7d33a4e5e3f74734f27df81430a43535}
+\hypertarget{a00527_a592894f5841d4b4e6fe61fa65893b951}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-CTX\_\-T@{GSN\_\-MLE\_\-CTX\_\-T}}
+\index{GSN\_\-MLE\_\-CTX\_\-T@{GSN\_\-MLE\_\-CTX\_\-T}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MLE\_\-CTX} {\bf GSN\_\-MLE\_\-CTX\_\-T}}}
+\label{a00527_a592894f5841d4b4e6fe61fa65893b951}
+\hypertarget{a00527_a26296abd5a01a53cb32594e305e1fd5f}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-LINK\_\-REQ\_\-DATA\_\-T@{GSN\_\-MLE\_\-LINK\_\-REQ\_\-DATA\_\-T}}
+\index{GSN\_\-MLE\_\-LINK\_\-REQ\_\-DATA\_\-T@{GSN\_\-MLE\_\-LINK\_\-REQ\_\-DATA\_\-T}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-LINK\_\-REQ\_\-DATA\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MLE\_\-LINK\_\-REQ\_\-DATA} {\bf GSN\_\-MLE\_\-LINK\_\-REQ\_\-DATA\_\-T}}}
+\label{a00527_a26296abd5a01a53cb32594e305e1fd5f}
+\hypertarget{a00527_a02cb6a04a0b957eb00dee76c2762b407}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GSN\_\-MLE\_\-SEC\_\-MAT\_\-T@{GSN\_\-MLE\_\-SEC\_\-MAT\_\-T}}
+\index{GSN\_\-MLE\_\-SEC\_\-MAT\_\-T@{GSN\_\-MLE\_\-SEC\_\-MAT\_\-T}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GSN\_\-MLE\_\-SEC\_\-MAT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MLE\_\-SEC\_\-MAT} {\bf GSN\_\-MLE\_\-SEC\_\-MAT\_\-T}}}
+\label{a00527_a02cb6a04a0b957eb00dee76c2762b407}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00527_a19e624f9c7a659ed3a3c4aecee3caab2}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GsnMle\_\-AdvertisementProc@{GsnMle\_\-AdvertisementProc}}
+\index{GsnMle\_\-AdvertisementProc@{GsnMle\_\-AdvertisementProc}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GsnMle\_\-AdvertisementProc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnMle\_\-AdvertisementProc (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MLE\_\-CTX\_\-T} $\ast$}]{pMle, }
+\item[{{\bf UINT8} $\ast$}]{pDst}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a19e624f9c7a659ed3a3c4aecee3caab2}
+\hypertarget{a00527_a7f04695ae7dfb556e9a0685379405611}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GsnMle\_\-AdvertisementSend@{GsnMle\_\-AdvertisementSend}}
+\index{GsnMle\_\-AdvertisementSend@{GsnMle\_\-AdvertisementSend}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GsnMle\_\-AdvertisementSend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnMle\_\-AdvertisementSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MLE\_\-CTX\_\-T} $\ast$}]{pMle, }
+\item[{{\bf UINT8} $\ast$}]{pDst}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a7f04695ae7dfb556e9a0685379405611}
+\hypertarget{a00527_a5d163a75ad34d795bb4c61796c8d0a65}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GsnMle\_\-DeInit@{GsnMle\_\-DeInit}}
+\index{GsnMle\_\-DeInit@{GsnMle\_\-DeInit}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GsnMle\_\-DeInit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnMle\_\-DeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MLE\_\-CTX\_\-T} $\ast$}]{pMle}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a5d163a75ad34d795bb4c61796c8d0a65}
+\hypertarget{a00527_aae9dd0488767a7fe618cc5d97d916c1c}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GsnMle\_\-Init@{GsnMle\_\-Init}}
+\index{GsnMle\_\-Init@{GsnMle\_\-Init}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GsnMle\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnMle\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MLE\_\-CTX\_\-T} $\ast$}]{pMle, }
+\item[{{\bf GSN\_\-MLE\_\-CFG\_\-T} $\ast$}]{pCfg, }
+\item[{{\bf GSN\_\-MLE\_\-CB\_\-T}}]{cb, }
+\item[{VOID $\ast$}]{pCbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_aae9dd0488767a7fe618cc5d97d916c1c}
+\hypertarget{a00527_a4caa5b86d20f80195bab5d8a3f116213}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GsnMle\_\-LinkAcceptNReqSend@{GsnMle\_\-LinkAcceptNReqSend}}
+\index{GsnMle\_\-LinkAcceptNReqSend@{GsnMle\_\-LinkAcceptNReqSend}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GsnMle\_\-LinkAcceptNReqSend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnMle\_\-LinkAcceptNReqSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MLE\_\-CTX\_\-T} $\ast$}]{pMle, }
+\item[{{\bf UINT8} $\ast$}]{pRsp, }
+\item[{{\bf UINT8} $\ast$}]{pDst}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a4caa5b86d20f80195bab5d8a3f116213}
+\hypertarget{a00527_a451622f5b56db013ebccf1893198f39b}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GsnMle\_\-LinkAcceptSend@{GsnMle\_\-LinkAcceptSend}}
+\index{GsnMle\_\-LinkAcceptSend@{GsnMle\_\-LinkAcceptSend}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GsnMle\_\-LinkAcceptSend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnMle\_\-LinkAcceptSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MLE\_\-CTX\_\-T} $\ast$}]{pMle, }
+\item[{{\bf UINT8} $\ast$}]{pDst}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a451622f5b56db013ebccf1893198f39b}
+\hypertarget{a00527_a0e78fdff88a1018384efe9beb9784feb}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GsnMle\_\-LinkRejectSend@{GsnMle\_\-LinkRejectSend}}
+\index{GsnMle\_\-LinkRejectSend@{GsnMle\_\-LinkRejectSend}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GsnMle\_\-LinkRejectSend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnMle\_\-LinkRejectSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MLE\_\-CTX\_\-T} $\ast$}]{pMle, }
+\item[{{\bf UINT8} $\ast$}]{pDst}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a0e78fdff88a1018384efe9beb9784feb}
+\hypertarget{a00527_a27abe7002f7fd7540f7d00cd5821f3bb}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GsnMle\_\-LinkReqSend@{GsnMle\_\-LinkReqSend}}
+\index{GsnMle\_\-LinkReqSend@{GsnMle\_\-LinkReqSend}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GsnMle\_\-LinkReqSend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnMle\_\-LinkReqSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MLE\_\-CTX\_\-T} $\ast$}]{pMle, }
+\item[{{\bf UINT8} $\ast$}]{pDst}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a27abe7002f7fd7540f7d00cd5821f3bb}
+\hypertarget{a00527_a78283388ada8354f15e85c70595a29d5}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GsnMle\_\-UpdateProc@{GsnMle\_\-UpdateProc}}
+\index{GsnMle\_\-UpdateProc@{GsnMle\_\-UpdateProc}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GsnMle\_\-UpdateProc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnMle\_\-UpdateProc (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MLE\_\-CTX\_\-T} $\ast$}]{pMle, }
+\item[{{\bf UINT8} $\ast$}]{pDst}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a78283388ada8354f15e85c70595a29d5}
+\hypertarget{a00527_a0077faacbf86e11bab8fc11d57c165dd}{
+\index{gsn\_\-mle.h@{gsn\_\-mle.h}!GsnMle\_\-UpdateSend@{GsnMle\_\-UpdateSend}}
+\index{GsnMle\_\-UpdateSend@{GsnMle\_\-UpdateSend}!gsn_mle.h@{gsn\_\-mle.h}}
+\subsubsection[{GsnMle\_\-UpdateSend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnMle\_\-UpdateSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MLE\_\-CTX\_\-T} $\ast$}]{pMle, }
+\item[{{\bf UINT8} $\ast$}]{pDst}
+\end{DoxyParamCaption}
+)}}
+\label{a00527_a0077faacbf86e11bab8fc11d57c165dd}

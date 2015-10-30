@@ -1,0 +1,295 @@
+\hypertarget{a00085}{
+\section{GSN\_\-HI\_\-CTX Struct Reference}
+\label{a00085}\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}}
+}
+
+
+Shared Memory address Shared RAM (64 K) is used for trnsferring data and control messages between the WLAN and APP firmware. This defines the Address of the shared RAM.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-hi.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00191}{GSN\_\-HI\_\-Q\_\-DESC\_\-T} $\ast$ \hyperlink{a00085_a5bae9ee90ebf87d01e751b7870ce7969}{pDTxRdyQ}
+\item 
+\hyperlink{a00191}{GSN\_\-HI\_\-Q\_\-DESC\_\-T} $\ast$ \hyperlink{a00085_a398f238a7e8b465687b31b5662b509e4}{pDTxDoneQ}
+\item 
+\hyperlink{a00191}{GSN\_\-HI\_\-Q\_\-DESC\_\-T} $\ast$ \hyperlink{a00085_a6b28fb8ac26b8ab3fbe508edcfb6187b}{pDRxSbuffRdyQ}
+\item 
+\hyperlink{a00191}{GSN\_\-HI\_\-Q\_\-DESC\_\-T} $\ast$ \hyperlink{a00085_a8bdeea2ec46e25ca2dde6fcde3d17ef0}{pDRxLbuffRdyQ}
+\item 
+\hyperlink{a00191}{GSN\_\-HI\_\-Q\_\-DESC\_\-T} $\ast$ \hyperlink{a00085_a530d01c3ee745926054e01e8cc690ccf}{pDRxDoneQ}
+\item 
+\hyperlink{a00191}{GSN\_\-HI\_\-Q\_\-DESC\_\-T} $\ast$ \hyperlink{a00085_a3013d653b790349c653bceeca0ab840d}{pCTxRdyQ}
+\item 
+\hyperlink{a00191}{GSN\_\-HI\_\-Q\_\-DESC\_\-T} $\ast$ \hyperlink{a00085_a8320fe53c3c7badf5055f94062578356}{pCTxDoneQ}
+\item 
+\hyperlink{a00191}{GSN\_\-HI\_\-Q\_\-DESC\_\-T} $\ast$ \hyperlink{a00085_ab20687f47d0ed918374f7bf6370bb279}{pCRxSbuffRdyQ}
+\item 
+\hyperlink{a00191}{GSN\_\-HI\_\-Q\_\-DESC\_\-T} $\ast$ \hyperlink{a00085_a79ab5491976d42cddf2dfeb015b8de89}{pCRxLbuffRdyQ}
+\item 
+\hyperlink{a00191}{GSN\_\-HI\_\-Q\_\-DESC\_\-T} $\ast$ \hyperlink{a00085_a7581bb1eb817dfb5fe24f45d1b80ea7f}{pCRxDoneQ}
+\item 
+\hyperlink{a00089}{GSN\_\-HI\_\-MB\_\-CTX\_\-T} \hyperlink{a00085_a8244053ac39cc74079281d9e974c512a}{hiMbCtx}
+\item 
+\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} \hyperlink{a00085_a2ca067fff9b5c9e1fa76fefc0bce7ad5}{txBytePool}
+\item 
+\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} \hyperlink{a00085_a6743b8417044eb0c3d5f3d78f6081e43}{dTxTdQLock}
+\item 
+\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} \hyperlink{a00085_ae2d5d0c9675b0d674342c852d924a7d4}{cTxTdQLock}
+\item 
+\hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} \hyperlink{a00085_afdaed19184edc021e1cc45d4dae26980}{recvThreadHndl}
+\item 
+\hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} \hyperlink{a00085_a9ad497e1b82185921e1803dca85cb36f}{evntFlags}
+\item 
+\hyperlink{a00086}{GSN\_\-HI\_\-IFC\_\-INFO\_\-T} \hyperlink{a00085_a5d3162115299965cb2068a915dbf22e5}{interfaceTbl} \mbox{[}GSN\_\-HI\_\-DEV\_\-INDX\_\-MAX+1\mbox{]}
+\item 
+\hyperlink{a00344}{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO} \hyperlink{a00085_a1bdc9efcf75bebaf89a89e8dc336226f}{resetIndCb}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00085_a3d8d24efe6d7728a0e60320295f3f6c2}{sysQualTaskId}
+\item 
+\hyperlink{a00092}{GSN\_\-HIF\_\-STATS\_\-T} $\ast$ \hyperlink{a00085_ad4d017d4879246dcdc740c6738efede0}{pStats}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00085_a998e0b88b8a524cea841b3da7bed4eca}{dTxRdyQSize}
+\item 
+\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} \hyperlink{a00085_a1519e565caee45b4b21956c8b900c256}{dTxRdyQSem}
+\item 
+\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} \hyperlink{a00085_a5adb31ebca57dd3fa3941ae22fdef806}{dataTxBytePool}
+\item 
+\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} \hyperlink{a00085_a5fe078b045135031b58eb5a50a3730ee}{cTxRdyQSem}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Shared Memory address Shared RAM (64 K) is used for trnsferring data and control messages between the WLAN and APP firmware. This defines the Address of the shared RAM. 
+
+Definition at line 158 of file gsn\_\-hi.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00085_a5fe078b045135031b58eb5a50a3730ee}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!cTxRdyQSem@{cTxRdyQSem}}
+\index{cTxRdyQSem@{cTxRdyQSem}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{cTxRdyQSem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-SEM\_\-T} {\bf cTxRdyQSem}}}
+\label{a00085_a5fe078b045135031b58eb5a50a3730ee}
+
+
+Definition at line 197 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_ae2d5d0c9675b0d674342c852d924a7d4}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!cTxTdQLock@{cTxTdQLock}}
+\index{cTxTdQLock@{cTxTdQLock}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{cTxTdQLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} {\bf cTxTdQLock}}}
+\label{a00085_ae2d5d0c9675b0d674342c852d924a7d4}
+
+
+Definition at line 178 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a5adb31ebca57dd3fa3941ae22fdef806}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!dataTxBytePool@{dataTxBytePool}}
+\index{dataTxBytePool@{dataTxBytePool}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{dataTxBytePool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} {\bf dataTxBytePool}}}
+\label{a00085_a5adb31ebca57dd3fa3941ae22fdef806}
+Byte Handle used manage Tx path Memory in DP RAM NOTE !!!! only for C1 !!!! 
+
+Definition at line 194 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a1519e565caee45b4b21956c8b900c256}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!dTxRdyQSem@{dTxRdyQSem}}
+\index{dTxRdyQSem@{dTxRdyQSem}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{dTxRdyQSem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-SEM\_\-T} {\bf dTxRdyQSem}}}
+\label{a00085_a1519e565caee45b4b21956c8b900c256}
+
+
+Definition at line 193 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a998e0b88b8a524cea841b3da7bed4eca}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!dTxRdyQSize@{dTxRdyQSize}}
+\index{dTxRdyQSize@{dTxRdyQSize}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{dTxRdyQSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf dTxRdyQSize}}}
+\label{a00085_a998e0b88b8a524cea841b3da7bed4eca}
+
+
+Definition at line 192 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a6743b8417044eb0c3d5f3d78f6081e43}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!dTxTdQLock@{dTxTdQLock}}
+\index{dTxTdQLock@{dTxTdQLock}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{dTxTdQLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} {\bf dTxTdQLock}}}
+\label{a00085_a6743b8417044eb0c3d5f3d78f6081e43}
+Rx and Tx buffer management queues 
+
+Definition at line 177 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a9ad497e1b82185921e1803dca85cb36f}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!evntFlags@{evntFlags}}
+\index{evntFlags@{evntFlags}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{evntFlags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} {\bf evntFlags}}}
+\label{a00085_a9ad497e1b82185921e1803dca85cb36f}
+Used to notify the message handler task about messages in TD queues 
+
+Definition at line 182 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a8244053ac39cc74079281d9e974c512a}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!hiMbCtx@{hiMbCtx}}
+\index{hiMbCtx@{hiMbCtx}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{hiMbCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-MB\_\-CTX\_\-T} {\bf hiMbCtx}}}
+\label{a00085_a8244053ac39cc74079281d9e974c512a}
+
+
+Definition at line 175 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a5d3162115299965cb2068a915dbf22e5}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!interfaceTbl@{interfaceTbl}}
+\index{interfaceTbl@{interfaceTbl}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{interfaceTbl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-IFC\_\-INFO\_\-T} {\bf interfaceTbl}\mbox{[}GSN\_\-HI\_\-DEV\_\-INDX\_\-MAX+1\mbox{]}}}
+\label{a00085_a5d3162115299965cb2068a915dbf22e5}
+One elemnt for each device index. Note each device (logical) can be of any of the type GSN\_\-WIF\_\-IF\_\-TYPE\_\-T 
+
+Definition at line 184 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a7581bb1eb817dfb5fe24f45d1b80ea7f}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!pCRxDoneQ@{pCRxDoneQ}}
+\index{pCRxDoneQ@{pCRxDoneQ}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{pCRxDoneQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-Q\_\-DESC\_\-T}$\ast$ {\bf pCRxDoneQ}}}
+\label{a00085_a7581bb1eb817dfb5fe24f45d1b80ea7f}
+Pointer to HI mail box context 
+
+Definition at line 174 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a79ab5491976d42cddf2dfeb015b8de89}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!pCRxLbuffRdyQ@{pCRxLbuffRdyQ}}
+\index{pCRxLbuffRdyQ@{pCRxLbuffRdyQ}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{pCRxLbuffRdyQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-Q\_\-DESC\_\-T}$\ast$ {\bf pCRxLbuffRdyQ}}}
+\label{a00085_a79ab5491976d42cddf2dfeb015b8de89}
+
+
+Definition at line 171 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_ab20687f47d0ed918374f7bf6370bb279}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!pCRxSbuffRdyQ@{pCRxSbuffRdyQ}}
+\index{pCRxSbuffRdyQ@{pCRxSbuffRdyQ}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{pCRxSbuffRdyQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-Q\_\-DESC\_\-T}$\ast$ {\bf pCRxSbuffRdyQ}}}
+\label{a00085_ab20687f47d0ed918374f7bf6370bb279}
+
+
+Definition at line 170 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a8320fe53c3c7badf5055f94062578356}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!pCTxDoneQ@{pCTxDoneQ}}
+\index{pCTxDoneQ@{pCTxDoneQ}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{pCTxDoneQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-Q\_\-DESC\_\-T}$\ast$ {\bf pCTxDoneQ}}}
+\label{a00085_a8320fe53c3c7badf5055f94062578356}
+
+
+Definition at line 169 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a3013d653b790349c653bceeca0ab840d}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!pCTxRdyQ@{pCTxRdyQ}}
+\index{pCTxRdyQ@{pCTxRdyQ}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{pCTxRdyQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-Q\_\-DESC\_\-T}$\ast$ {\bf pCTxRdyQ}}}
+\label{a00085_a3013d653b790349c653bceeca0ab840d}
+
+
+Definition at line 168 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a530d01c3ee745926054e01e8cc690ccf}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!pDRxDoneQ@{pDRxDoneQ}}
+\index{pDRxDoneQ@{pDRxDoneQ}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{pDRxDoneQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-Q\_\-DESC\_\-T}$\ast$ {\bf pDRxDoneQ}}}
+\label{a00085_a530d01c3ee745926054e01e8cc690ccf}
+Control Tx and Rx path Queues 
+
+Definition at line 167 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a8bdeea2ec46e25ca2dde6fcde3d17ef0}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!pDRxLbuffRdyQ@{pDRxLbuffRdyQ}}
+\index{pDRxLbuffRdyQ@{pDRxLbuffRdyQ}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{pDRxLbuffRdyQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-Q\_\-DESC\_\-T}$\ast$ {\bf pDRxLbuffRdyQ}}}
+\label{a00085_a8bdeea2ec46e25ca2dde6fcde3d17ef0}
+
+
+Definition at line 164 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a6b28fb8ac26b8ab3fbe508edcfb6187b}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!pDRxSbuffRdyQ@{pDRxSbuffRdyQ}}
+\index{pDRxSbuffRdyQ@{pDRxSbuffRdyQ}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{pDRxSbuffRdyQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-Q\_\-DESC\_\-T}$\ast$ {\bf pDRxSbuffRdyQ}}}
+\label{a00085_a6b28fb8ac26b8ab3fbe508edcfb6187b}
+
+
+Definition at line 163 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a398f238a7e8b465687b31b5662b509e4}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!pDTxDoneQ@{pDTxDoneQ}}
+\index{pDTxDoneQ@{pDTxDoneQ}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{pDTxDoneQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-Q\_\-DESC\_\-T}$\ast$ {\bf pDTxDoneQ}}}
+\label{a00085_a398f238a7e8b465687b31b5662b509e4}
+
+
+Definition at line 162 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a5bae9ee90ebf87d01e751b7870ce7969}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!pDTxRdyQ@{pDTxRdyQ}}
+\index{pDTxRdyQ@{pDTxRdyQ}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{pDTxRdyQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HI\_\-Q\_\-DESC\_\-T}$\ast$ {\bf pDTxRdyQ}}}
+\label{a00085_a5bae9ee90ebf87d01e751b7870ce7969}
+$<$ Data Tx and Rx path Queues 
+
+Definition at line 161 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_ad4d017d4879246dcdc740c6738efede0}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!pStats@{pStats}}
+\index{pStats@{pStats}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{pStats}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HIF\_\-STATS\_\-T}$\ast$ {\bf pStats}}}
+\label{a00085_ad4d017d4879246dcdc740c6738efede0}
+
+
+Definition at line 191 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_afdaed19184edc021e1cc45d4dae26980}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!recvThreadHndl@{recvThreadHndl}}
+\index{recvThreadHndl@{recvThreadHndl}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{recvThreadHndl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} {\bf recvThreadHndl}}}
+\label{a00085_afdaed19184edc021e1cc45d4dae26980}
+wif message receive thread control block 
+
+Definition at line 181 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a1bdc9efcf75bebaf89a89e8dc336226f}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!resetIndCb@{resetIndCb}}
+\index{resetIndCb@{resetIndCb}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{resetIndCb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO} {\bf resetIndCb}}}
+\label{a00085_a1bdc9efcf75bebaf89a89e8dc336226f}
+
+
+Definition at line 189 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a3d8d24efe6d7728a0e60320295f3f6c2}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!sysQualTaskId@{sysQualTaskId}}
+\index{sysQualTaskId@{sysQualTaskId}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{sysQualTaskId}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf sysQualTaskId}}}
+\label{a00085_a3d8d24efe6d7728a0e60320295f3f6c2}
+SysQual Task ID 
+
+Definition at line 190 of file gsn\_\-hi.h.
+
+\hypertarget{a00085_a2ca067fff9b5c9e1fa76fefc0bce7ad5}{
+\index{GSN\_\-HI\_\-CTX@{GSN\_\-HI\_\-CTX}!txBytePool@{txBytePool}}
+\index{txBytePool@{txBytePool}!GSN_HI_CTX@{GSN\_\-HI\_\-CTX}}
+\subsubsection[{txBytePool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} {\bf txBytePool}}}
+\label{a00085_a2ca067fff9b5c9e1fa76fefc0bce7ad5}
+Byte Handle used manage Tx path Memory in DP RAM 
+
+Definition at line 176 of file gsn\_\-hi.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00504}{gsn\_\-hi.h}\end{DoxyCompactItemize}

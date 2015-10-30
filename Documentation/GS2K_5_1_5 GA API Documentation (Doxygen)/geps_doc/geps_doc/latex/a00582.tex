@@ -1,0 +1,556 @@
+\hypertarget{a00582}{
+\section{gsn\_\-rtc.h File Reference}
+\label{a00582}\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}}
+}
+
+
+GSN RTC Public Header.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-includes.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-rtc\_\-spec.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-rtc\_\-op.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-gs2000tmr\_\-spec.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-gs2000tmr\_\-op.h\char`\"{}}\par
+Include dependency graph for gsn\_\-rtc.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00817}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00818}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00582_ac30a46cb77d2c913ade1d5585bac19f5}{GSN\_\-RTC\_\-SRAM\_\-BLOCK\_\-SIZE}~(1024 $\ast$4)
+\item 
+\#define \hyperlink{a00582_a7372cd2c556667ff0089643241db715c}{GSN\_\-RTC\_\-LATCH\_\-MEM\_\-BLOCK\_\-SIZE}~1024
+\item 
+\#define \hyperlink{a00582_aa084e6874d928e77815dbe7381d6b97b}{GSN\_\-RTC\_\-LATCH\_\-MEM\_\-ADDR}~0x41010000
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00582_a624c15b10850050c5064e7949e4bd15f}{GSN\_\-RTC\_\-ALARM\_\-CB\_\-T} )(VOID $\ast$pCtx)
+\item 
+typedef enum \hyperlink{a00582_a7ac2ec492b22971df1e2f294bdb35a06}{GSN\_\-RTC\_\-ALARM} \hyperlink{a00582_a55a97ef6cc63c0ef0c4032ed2324bd2f}{GSN\_\-RTC\_\-ALARM\_\-T}
+\item 
+typedef enum \hyperlink{a00651_gaace509e7754aacb14b76f77e68fa9b2a}{GSN\_\-RTC\_\-CLK\_\-SRC} \hyperlink{a00651_gadb97e494297aadf7b5dda5f239d96c80}{GSN\_\-RTC\_\-CLK\_\-SRC\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn RTC Enum for clock source. This enum defines RTC clk source type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00651_ga3481de456997229518bb1895981bfd74}{GSN\_\-RTC\_\-GPIO\_\-CTL} \hyperlink{a00651_gaac2b2cc7a6f64a96caddc19f3b3df78b}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn RTC gpio control type ENUM. This enum defines RTC gpio control type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00651_ga9b99af1b9b8d009d88640121a1de2e9d}{GSN\_\-RTC\_\-DCDC\_\-CTL} \hyperlink{a00651_gadac67c4bef428c38b07db46ce0a24d23}{GSN\_\-RTC\_\-DCDC\_\-CTL\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn RTC DCDC control type ENUM. This enum defines RTC DCDC control type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00651_ga77c3be59f640309dc97a21e937aa9b3c}{GSN\_\-RTC\_\-SRAM\_\-BANK} \hyperlink{a00651_ga70bc76d00099ffb3dabb49354ff57870}{GSN\_\-RTC\_\-SRAM\_\-BANK\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn RTC SRAM block type ENUM. This enum defines RTC SRAM block number. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00651_gaec3839be6e64287f1c0981aafc08548b}{GSN\_\-RTC\_\-SRAM\_\-BLOCK\_\-ADDR} \hyperlink{a00651_ga490147beeb60589ba19b9446b63b0ea0}{GSN\_\-RTC\_\-SRAM\_\-BLOCK\_\-ADDR\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn RTC SRAM block address ENUM. This enum defines RTC SRAM block address. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00651_gae287d9e78906e2c47d820fbde51a862e}{GSN\_\-RTC\_\-WAKEUP\_\-SOURCE} \hyperlink{a00651_gaf7c5ef16a16838e7cbfc58bda46355bc}{GSN\_\-RTC\_\-WAKEUP\_\-SOURCE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn RTC WAKEUP SOURCE ENUM. This enum defines RTC wakeup source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00582_a7ac2ec492b22971df1e2f294bdb35a06}{GSN\_\-RTC\_\-ALARM} \{ \par
+\hyperlink{a00582_a7ac2ec492b22971df1e2f294bdb35a06abecb97663dcbc46a57076ce23a4f92bd}{GSN\_\-RTC\_\-ALARM\_\-0}, 
+\par
+\hyperlink{a00582_a7ac2ec492b22971df1e2f294bdb35a06adc9593222c178deec345196e2273ee4e}{GSN\_\-RTC\_\-ALARM\_\-1}, 
+\par
+\hyperlink{a00582_a7ac2ec492b22971df1e2f294bdb35a06af6460e5c96bcf15c981d6ef7db825187}{GSN\_\-RTC\_\-ALARM\_\-2}, 
+\par
+\hyperlink{a00582_a7ac2ec492b22971df1e2f294bdb35a06a3b72350180c03ce5d7299d0c3d6ab692}{GSN\_\-RTC\_\-ALARM\_\-3}, 
+\par
+\hyperlink{a00582_a7ac2ec492b22971df1e2f294bdb35a06a58be24ae33a15219d663648ca4372dc9}{GSN\_\-RTC\_\-ALARM\_\-4}
+ \}
+\item 
+enum \hyperlink{a00651_gaace509e7754aacb14b76f77e68fa9b2a}{GSN\_\-RTC\_\-CLK\_\-SRC} \{ \par
+\hyperlink{a00651_ggaace509e7754aacb14b76f77e68fa9b2aa103f27c2edcc660a4bd726cfa53df43b}{GSN\_\-RTC\_\-CLK\_\-SRC\_\-LP\_\-RC}, 
+\par
+\hyperlink{a00651_ggaace509e7754aacb14b76f77e68fa9b2aac0cf76a0773079a58adbc64828e8aa6f}{GSN\_\-RTC\_\-CLK\_\-SRC\_\-LP\_\-XTAL}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn RTC Enum for clock source. This enum defines RTC clk source type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00651_ga3481de456997229518bb1895981bfd74}{GSN\_\-RTC\_\-GPIO\_\-CTL} \{ \par
+\hyperlink{a00651_gga3481de456997229518bb1895981bfd74a087e1ac97a549039bf46b0ca6f7da567}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-DCDC}, 
+\par
+\hyperlink{a00651_gga3481de456997229518bb1895981bfd74af5391710c39c3af1ce9ee70bc1a5d9ad}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-DCDC\_\-N}, 
+\par
+\hyperlink{a00651_gga3481de456997229518bb1895981bfd74a376a5f6b9f22deac5b1d1b6b19abbe8c}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-RTC\_\-CLK}, 
+\par
+\hyperlink{a00651_gga3481de456997229518bb1895981bfd74a8095290c629ab3e4edaaa422706fe324}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-RIF\_\-GPIO}, 
+\par
+\hyperlink{a00651_gga3481de456997229518bb1895981bfd74a344e9ded945d7d2b627a17c04a980c62}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-STROBE\_\-0}, 
+\par
+\hyperlink{a00651_gga3481de456997229518bb1895981bfd74acc022991bbbfc2142c05b2ad8183fe16}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-STROBE\_\-0\_\-N}, 
+\par
+\hyperlink{a00651_gga3481de456997229518bb1895981bfd74a6b4bbf344813dfbfd8632a50aa7101c3}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-STROBE\_\-1}, 
+\par
+\hyperlink{a00651_gga3481de456997229518bb1895981bfd74a56a87191f515554c1285609343679e85}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-STROBE\_\-1\_\-N}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn RTC gpio control type ENUM. This enum defines RTC gpio control type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00651_ga9b99af1b9b8d009d88640121a1de2e9d}{GSN\_\-RTC\_\-DCDC\_\-CTL} \{ \par
+\hyperlink{a00651_gga9b99af1b9b8d009d88640121a1de2e9daf3e684018015ab18cce64c594a75bd62}{GSN\_\-RTC\_\-DCDC\_\-CTL\_\-DCDC}, 
+\par
+\hyperlink{a00651_gga9b99af1b9b8d009d88640121a1de2e9da0ac25212aa150f2e80f8b0d4e956d763}{GSN\_\-RTC\_\-DCDC\_\-CTL\_\-DCDC\_\-GPIO}
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn RTC DCDC control type ENUM. This enum defines RTC DCDC control type. \end{DoxyCompactList}\item 
+enum \hyperlink{a00651_ga77c3be59f640309dc97a21e937aa9b3c}{GSN\_\-RTC\_\-SRAM\_\-BANK} \{ \par
+\hyperlink{a00651_gga77c3be59f640309dc97a21e937aa9b3caa481224f5d0b2b672d7c38b1d3cc5383}{GSN\_\-RTC\_\-SRAM\_\-BANK0} =  1, 
+\par
+\hyperlink{a00651_gga77c3be59f640309dc97a21e937aa9b3caf3331fec66ab355fcd5fca5f462288e0}{GSN\_\-RTC\_\-SRAM\_\-BANK1} =  2, 
+\par
+\hyperlink{a00651_gga77c3be59f640309dc97a21e937aa9b3cacb7bb34d2570a60af50b8439087c8082}{GSN\_\-RTC\_\-SRAM\_\-BANK2} =  4, 
+\par
+\hyperlink{a00651_gga77c3be59f640309dc97a21e937aa9b3ca3627ad8546d0cfcb89da5f16d6679a70}{GSN\_\-RTC\_\-SRAM\_\-BANK3} =  8, 
+\par
+\hyperlink{a00651_gga77c3be59f640309dc97a21e937aa9b3ca26e2b1b8786c612a464c7b638e13c308}{GSN\_\-RTC\_\-SRAM\_\-BANK\_\-ALL} =  15
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn RTC SRAM block type ENUM. This enum defines RTC SRAM block number. \end{DoxyCompactList}\item 
+enum \hyperlink{a00651_gaec3839be6e64287f1c0981aafc08548b}{GSN\_\-RTC\_\-SRAM\_\-BLOCK\_\-ADDR} \{ \par
+\hyperlink{a00651_ggaec3839be6e64287f1c0981aafc08548ba9645b34f89a1114967cc3273b138e76a}{GSN\_\-RTC\_\-SRAM\_\-BLOCK0\_\-ADDR} =  0x41100000, 
+\par
+\hyperlink{a00651_ggaec3839be6e64287f1c0981aafc08548ba0e2e7ff5dcf4d136ec56d8cd92e3c920}{GSN\_\-RTC\_\-SRAM\_\-BLOCK1\_\-ADDR} =  0x41100000 + 0x1000, 
+\par
+\hyperlink{a00651_ggaec3839be6e64287f1c0981aafc08548ba42da0e4e8aaee1e47cc8a6500816ee3b}{GSN\_\-RTC\_\-SRAM\_\-BLOCK2\_\-ADDR} =  0x41100000 + 0x2000, 
+\par
+\hyperlink{a00651_ggaec3839be6e64287f1c0981aafc08548ba6a983ff757cfc02c7840260c15197f91}{GSN\_\-RTC\_\-SRAM\_\-BLOCK3\_\-ADDR} =  0x41100000 + 0x3000
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn RTC SRAM block address ENUM. This enum defines RTC SRAM block address. \end{DoxyCompactList}\item 
+enum \hyperlink{a00651_gae287d9e78906e2c47d820fbde51a862e}{GSN\_\-RTC\_\-WAKEUP\_\-SOURCE} \{ \par
+\hyperlink{a00651_ggae287d9e78906e2c47d820fbde51a862eafcbc2880dd529fe46dcbf1d7869ad389}{GSN\_\-RTC\_\-WAKEUP\_\-SOURCE\_\-ANY\_\-ALRM} =  0x1F, 
+\par
+\hyperlink{a00651_ggae287d9e78906e2c47d820fbde51a862ea693f6f3681d8eaf9cac688c9ba3e2d21}{GSN\_\-RTC\_\-WAKEUP\_\-SOURCE\_\-ALRM\_\-0} =  (1 $<$$<$ 0), 
+\par
+\hyperlink{a00651_ggae287d9e78906e2c47d820fbde51a862eaade77c053e65f4fd35cb3df984d09c86}{GSN\_\-RTC\_\-WAKEUP\_\-SOURCE\_\-ALRM\_\-1} =  (1 $<$$<$ 1), 
+\par
+\hyperlink{a00651_ggae287d9e78906e2c47d820fbde51a862ea62248bb900330f84d559f46e186eca45}{GSN\_\-RTC\_\-WAKEUP\_\-SOURCE\_\-ALRM\_\-2} =  (1 $<$$<$ 2), 
+\par
+\hyperlink{a00651_ggae287d9e78906e2c47d820fbde51a862ea61615cc6fccf9780e9bc48cbd1e83a0b}{GSN\_\-RTC\_\-WAKEUP\_\-SOURCE\_\-ALRM\_\-3} =  (1 $<$$<$ 3), 
+\par
+\hyperlink{a00651_ggae287d9e78906e2c47d820fbde51a862eabba5a79a5565593894719cc5bb2aa51e}{GSN\_\-RTC\_\-WAKEUP\_\-SOURCE\_\-ALRM\_\-4} =  (1 $<$$<$ 4), 
+\par
+\hyperlink{a00651_ggae287d9e78906e2c47d820fbde51a862ea3bd6daf06f67ddb4e61b18d1b7005c17}{GSN\_\-RTC\_\-WAKEUP\_\-SOURCE\_\-POR} =  (1 $<$$<$ 0x5), 
+\par
+\hyperlink{a00651_ggae287d9e78906e2c47d820fbde51a862eab31ebe3924b7427e49f2cfd644822a1f}{GSN\_\-RTC\_\-WAKEUP\_\-SOURCE\_\-TIMER} =  (1 $<$$<$ 0x6)
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn RTC WAKEUP SOURCE ENUM. This enum defines RTC wakeup source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+INLINE VOID \hyperlink{a00651_ga6b4bcb149ee20725f2fc899a65d7fdf9}{GsnRtc\_\-SMemBank01En} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver APP SRAM Enable API. This function Enables the bank 0 and bank 1 of shared sram. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga7adb0e944f2c0f0dfffddd0afca63382}{GsnRtc\_\-SMemBank01Disable} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver APP SRAM Enable API. This function disables the bank 0 and bank 1 of shared sram. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga7540c91773261a93185b2bef4969277a}{GsnRtc\_\-SMemBank2En} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver Share SRAM Enable API. This function Enables the bank 2 of Shared sram. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_gae72a40c37c187ab506437b3592a59cf2}{GsnRtc\_\-SMemBank2Disable} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver Share SRAM Enable API. This function Disables the bank 2 of Shared sram. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga7b62ca77d978a7abc09284be65ea845e}{GsnRtc\_\-SMemBank34En} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver WLAN SRAM Enable API. This function Enables the bank 3 and bank 4 of shared sram. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga0fae00cfd76574f86968b438f6ce9e02}{GsnRtc\_\-SMemBank34Disable} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver WLAN SRAM Enable API. This function Disables the bank 3 and bank 4 of shared sram. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga41ce100b896cbdf73f0a874d673a2c52}{GsnRtc\_\-CryptoEn} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver Crypto Enable API. This function Enables the Crypto. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00582_a995995f2a8052a79ce0d12fe690a5758}{GsnRtc\_\-CryptoDisable} ()
+\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00582_a633cfcfa275cbbbc1a36834a69d7f0ed}{GsnRtc\_\-IsCryptoDisabled} ()
+\item 
+INLINE VOID \hyperlink{a00651_ga84346acd50525b7a6a298aa42f727d05}{GsnRtc\_\-WlanCoreEn} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver WLAN Core Enable API. This function Enables the WLAN core for RTC. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00582_aee55eeef8864b3f23efff80af3cbb1ae}{GsnRtc\_\-WlanCoreDisable} ()
+\item 
+INLINE VOID \hyperlink{a00651_ga82230ca9245f726272600fd645e0b544}{GsnRtc\_\-RtcSramBankEn} (\hyperlink{a00651_ga70bc76d00099ffb3dabb49354ff57870}{GSN\_\-RTC\_\-SRAM\_\-BANK\_\-T} block)
+\begin{DoxyCompactList}\small\item\em RTC Driver SRAM BLOCK Enable API. This function Enables the SRAM BLOCK for RTC. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00582_a993860e963231f5f026398c297d33926}{GsnRtc\_\-RtcSramBankDisable} (\hyperlink{a00651_ga70bc76d00099ffb3dabb49354ff57870}{GSN\_\-RTC\_\-SRAM\_\-BANK\_\-T} block)
+\item 
+INLINE VOID \hyperlink{a00651_ga2a5f3b06d3e70d254d4b9044b87c8006}{GsnRtc\_\-DcDcCtl\_\-0} (\hyperlink{a00651_gadac67c4bef428c38b07db46ce0a24d23}{GSN\_\-RTC\_\-DCDC\_\-CTL\_\-T} ctl)
+\begin{DoxyCompactList}\small\item\em RTC Driver DCDC control-\/0 API. This function Sets or Clears the DCDC control-\/0. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga139c57e6eaeffd048de0c51ccee20b64}{GsnRtc\_\-DcDcCtl\_\-1} (\hyperlink{a00651_gadac67c4bef428c38b07db46ce0a24d23}{GSN\_\-RTC\_\-DCDC\_\-CTL\_\-T} ctl)
+\begin{DoxyCompactList}\small\item\em RTC Driver DCDC control-\/1 API. This function Sets or Clears the DCDC control-\/1. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_gac9cef74b21e7fdac330f246e7ff778fb}{GsnRtc\_\-Gpio\_\-0\_\-Cfg} (\hyperlink{a00651_gaac2b2cc7a6f64a96caddc19f3b3df78b}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-T} cfg)
+\begin{DoxyCompactList}\small\item\em RTC Driver RTC GPIO-\/0 Config API. This function Sets RTC GPIO-\/0 configuration. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga2c81792265698c13ab7088ba3195e08e}{GsnRtc\_\-Gpio\_\-1\_\-Cfg} (\hyperlink{a00651_gaac2b2cc7a6f64a96caddc19f3b3df78b}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-T} cfg)
+\begin{DoxyCompactList}\small\item\em RTC Driver RTC GPIO-\/1 Config API. This function Sets RTC GPIO-\/1 configuration. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga7d27ee4a3acaf387ff12a497d7ae2120}{GsnRtc\_\-Gpio\_\-2\_\-Cfg} (\hyperlink{a00651_gaac2b2cc7a6f64a96caddc19f3b3df78b}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-T} cfg)
+\begin{DoxyCompactList}\small\item\em RTC Driver RTC GPIO-\/2 Config API. This function Sets RTC GPIO-\/2 configuration. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga3cdaf161d94738dcd5f84a2b38a52c92}{GsnRtc\_\-Gpio\_\-3\_\-Cfg} (\hyperlink{a00651_gaac2b2cc7a6f64a96caddc19f3b3df78b}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-T} cfg)
+\begin{DoxyCompactList}\small\item\em RTC Driver RTC GPIO-\/3 Config API. This function Sets RTC GPIO-\/3 configuration. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_gac809bed7d40c3c9feb0cda54de5860d2}{GsnRtc\_\-Gpio\_\-4\_\-Cfg} (\hyperlink{a00651_gaac2b2cc7a6f64a96caddc19f3b3df78b}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-T} cfg)
+\begin{DoxyCompactList}\small\item\em RTC Driver RTC GPIO-\/4 Config API. This function Sets RTC GPIO-\/4 configuration. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga799fcbbbd4834b39baee8d35767872d2}{GsnRtc\_\-Gpio\_\-5\_\-Cfg} (\hyperlink{a00651_gaac2b2cc7a6f64a96caddc19f3b3df78b}{GSN\_\-RTC\_\-GPIO\_\-CTL\_\-T} cfg)
+\begin{DoxyCompactList}\small\item\em RTC Driver RTC GPIO-\/5 Config API. This function Sets RTC GPIO-\/5 configuration. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga4a163d7eb12d94ff92451b040f3863ec}{GsnRtc\_\-ClkSrcSel} (\hyperlink{a00651_gadb97e494297aadf7b5dda5f239d96c80}{GSN\_\-RTC\_\-CLK\_\-SRC\_\-T} src)
+\begin{DoxyCompactList}\small\item\em RTC Driver RTC Clock Source Select API. This function Selects RTC Clock Source. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_gacd65e7f250f4ff9d765a52cb7a98364d}{GsnRtc\_\-LpRcSettleTimeSet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} time)
+\begin{DoxyCompactList}\small\item\em RTC Driver LP\_\-RC Settle Time Set API. This function Sets Low power RC settle time. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga6a60c0b7cae76518688a439962271516}{GsnRtc\_\-LpRcSettleTimeGet} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver LP\_\-RC Settle Time Get API. This function used to Get Low power RC settle time. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga538ed2973406041682e66fd8034a0134}{GsnRtc\_\-LpXtalSettleTimeSet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} time)
+\begin{DoxyCompactList}\small\item\em RTC Driver LP\_\-XTAL Settle Time Set API. This function Sets Low power XTAL settle time. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga1274c4c1efb74b9a17b712f530363ccb}{GsnRtc\_\-LpXtalSettleTimeGet} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver LP\_\-XTAL Settle Time Get API. This function used to Get Low power XTAL settle time. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga1357f8d86bead303212bbbb6b8eb2e93}{GsnRtc\_\-HsRcSettleTimeSet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} time)
+\begin{DoxyCompactList}\small\item\em RTC Driver HSRC Settle Time Set API. This function Sets HSRC settle time. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gaf435dc6510168b10df7f98b5a9729ff3}{GsnRtc\_\-HsRcSettleTimeGet} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver LP\_\-XTAL Settle Time Get API. This function used to Get Low power XTAL settle time. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga6f74fe904609b816930c14d107ebf828}{GsnRtc\_\-HsXtalSettleTimeSet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} time)
+\begin{DoxyCompactList}\small\item\em RTC Driver HS\_\-XTAL Settle Time Set API. This function Sets HS\_\-XTAL settle time. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gac8e4d362029658a699c14fa3ceec4802}{GsnRtc\_\-HsXtalSettleTimeGet} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver LP\_\-XTAL Settle Time Get API. This function used to Get Low power XTAL settle time. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00582_a57bfca25bd97d3ed9c50f91db2ab3a9e}{GsnRtc\_\-PllSettleTimeSet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} time)
+\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga76272338daff01b78ecb5c4e92ff6bb8}{GsnRtc\_\-PllSettleTimeGet} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver PLL Settle Time Get API. This function used to Get Low power PLL settle time. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga46bf97151e65ad7c2eff132d8f158ac7}{GsnRtc\_\-WakeUpSourcesGet} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver WakeUp Sources Get API. This function used to Get WakeUp Sources. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gac5f85e1752f44da34bca2d3166fa9216}{GsnRtc\_\-IsTmrWakeUp} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsTmrWakeUp API. Wake up is due to Time out configured in RTC Timer. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gac8dbdbc4b1c56ab9676f530d5c2a3832}{GsnRtc\_\-IsPorWakeUp} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsPorWakeUp API. Wake up is due to Power On Reset. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gad1ed2ab29251cd12aa6111b17f0e2cd3}{GsnRtc\_\-IsAlarmWakeUp} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsAlarmWakeUp API. Wake up is due to Any of the 5 Alarm Inputs. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga29ead4066eafd8132311c4930354dda9}{GsnRtc\_\-IsAlarm0WakeUp} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsAlarm0WakeUp API. Wake up is due to Alarm 1 Input. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga2847e2771d32e17781aa788bd01e514b}{GsnRtc\_\-IsAlarm1WakeUp} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsAlarm1WakeUp API. Wake up is due to Alarm 2 Input. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gacc97418bf621c4596f24bfc475ed51f7}{GsnRtc\_\-IsAlarm2WakeUp} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsAlarm2WakeUp API. Wake up is due to Alarm 3 Input. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gadb9866fc21dcef32deabace308a78200}{GsnRtc\_\-IsAlarm3WakeUp} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsAlarm3WakeUp API. Wake up is due to Alarm 4 Input. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga8b0b40139b7b358a239851f0f4784a3d}{GsnRtc\_\-IsAlarm4WakeUp} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsAlarm4WakeUp API. Wake up is due to Alarm 5 Input. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gaf64956b6c0d9bad7a2af010b0f5fbf15}{GsnRtc\_\-IsAppWdWakeUp} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsAppWdWakeUp API. Wake up is due to App wd. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga4562094b52ee5ba2c4eda48dc602929f}{GsnRtc\_\-GpioPullDownEn} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} mask)
+\begin{DoxyCompactList}\small\item\em RTC Driver GPIO Pull Down Enable API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga5c7e28c93ba1d286490bf3fa8286022b}{GsnRtc\_\-WDogRstClr} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver WatchDog Reset Clear API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga34f15d48bb91c7bbad8388e7e88195b1}{GsnRtc\_\-PorRstClr} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver Por Reset Clear API. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gae89e16f4b3c227c10f40a7ad9bf7f37a}{GsnRtc\_\-IsPorRst} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsPor Reset API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga2813f8a6b6eb71b15d51405f92c9e65a}{GsnRtc\_\-StbWakeUpTmrClr} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver StbWakeUpTmr Clear API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_gaa52a7c31e385f908bda2607f4d069696}{GsnRtc\_\-AlarmStatusClr} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver AlarmStatus Clear API. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gaa9261c1d12f3040818e2b433f1d9643e}{GsnRtc\_\-IsPorEvent} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsPorEvent API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga4ccf506d6700a1107e70eb8044f6cc22}{GsnRtc\_\-PorEventClr} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsPorEvent Clear API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga7bf5618aa3aa43eb2dccc62f1c66cd37}{GsnRtc\_\-FwAppRstClr} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver FwApp Reset Clear API. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gaa5d760275a8669e3b861bee05767cd26}{GsnRtc\_\-IsFwAppRst} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver FwApp Reset API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga8a8abb14d43d7af443c2e07b342b3f4e}{GsnRtc\_\-FwWlanRstClr} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver FwWlan Reset Clear API. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga54506f747cfe33c09c82f934cf1d6cbc}{GsnRtc\_\-IsFwWlanRst} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver FwWlan Reset API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga69571c7ee93a3ed18f576557ea11b910}{GsnRtc\_\-FwCryptoRstClr} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver FwCrypto Reset Clear API. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga1da3332c034dc38aadd907988b6d9042}{GsnRtc\_\-IsFwCyptoRst} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver FwCypto Reset API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_gad04bf17aa8b0e9b43f4634141f96cad8}{GsnRtc\_\-Acm3AircClr} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver Acm3Airc Clear API. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga5c05ee5001b9f01bbc6a53013e19ad45}{GsnRtc\_\-IsAcm3Airc} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsAcm3Airc API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga632c40dd335598894425055eea63c026}{GsnRtc\_\-Wcm3AircClr} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver Wcm3Airc Clear API. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga58b4ca2b64aa5c74b2b37b4d11b1bf18}{GsnRtc\_\-IsWcm3Airc} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsWcm3Airc API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga3365cb4710337f2a1c7bd6659a5d5f41}{GsnRtc\_\-CboRstClr} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver Cbo Reset Clear API. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_ga1f5315d552e66d73b39f0f328f4e6005}{GsnRtc\_\-IsCboRst} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver IsCbo Reset API. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00651_gafcd931e3dc1dbfe114beb37e38eb2f78}{GsnRtc\_\-AlarmIrqStatusGet} ()
+\begin{DoxyCompactList}\small\item\em RTC Driver Alarm interrupt Status Get API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_ga4f7823684634c18971a213e32d4ebcf1}{GsnRtc\_\-AlarmIrqClear} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} bitmask)
+\begin{DoxyCompactList}\small\item\em RTC Driver Alarm interrupt Clear API. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00651_ga2b1fc2ebca2e882feb0edf4dcce10ae1}{GsnRtc\_\-AlarmRegisterCb} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} number, \hyperlink{a00582_a624c15b10850050c5064e7949e4bd15f}{GSN\_\-RTC\_\-ALARM\_\-CB\_\-T} CallBack, VOID $\ast$pCtx)
+\begin{DoxyCompactList}\small\item\em RTC Driver Alarm interrupt Callback register API. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00651_ga113ab50d758e2a3aa9231666c14e5caa}{GsnRtc\_\-AlarmDeRegisterCb} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} number)
+\begin{DoxyCompactList}\small\item\em RTC Driver Alarm interrupt calback Deregister API. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00651_ga6fc5ea8da5e29c2fa1363b0a3a6c6e4a}{GsnRtc\_\-AlarmCfg} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} alarm, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} polarity, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} interrupt)
+\begin{DoxyCompactList}\small\item\em RTC Driver Alarm input configure API. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00651_gabd93fb337eb2179a3a9d5073c869037e}{GsnRtc\_\-CryptoReset} ()
+\begin{DoxyCompactList}\small\item\em Crypto Block Reset API. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00582_a239c16937c0e8067c3b3efb32c79527e}{GsnRtc\_\-AlarmConfig} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} alarm, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} polarity, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} interrupt)
+\item 
+VOID \hyperlink{a00582_a3507bc0ef01856100aa56f82c621bae4}{GsnRtc\_\-AlarmDisable} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} alarm)
+\item 
+INLINE VOID \hyperlink{a00582_a6a27d7a4a2d435d42d2a5f1635e1ab32}{GsnRtc\_\-Ldo2Disable} ()
+\item 
+INLINE VOID \hyperlink{a00582_a1dcbcbb53e0459901823e6b6ef70f37b}{GsnRtc\_\-Ldo2Enable} ()
+\item 
+INLINE VOID \hyperlink{a00582_abdee32f92cfdcac7eedf89839ca52331}{GsnRtc\_\-Ldo1Disable} ()
+\item 
+INLINE VOID \hyperlink{a00582_adea699fc677cf84b30c90574593d6fc1}{GsnRtc\_\-Ldo1Enable} ()
+\item 
+INLINE VOID \hyperlink{a00582_a144d7e5609f1965cf48e91987066478c}{GsnRtc\_\-microLdoEnable} ()
+\item 
+INLINE VOID \hyperlink{a00582_a946a7caa07d180fa1f41c36db7187e17}{GsnRtc\_\-microLdoDisable} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN RTC Public Header. This file contains the public APIs and structures for the RTC (real time clock) module. 
+
+Definition in file \hyperlink{a00582_source}{gsn\_\-rtc.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00582_aa084e6874d928e77815dbe7381d6b97b}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GSN\_\-RTC\_\-LATCH\_\-MEM\_\-ADDR@{GSN\_\-RTC\_\-LATCH\_\-MEM\_\-ADDR}}
+\index{GSN\_\-RTC\_\-LATCH\_\-MEM\_\-ADDR@{GSN\_\-RTC\_\-LATCH\_\-MEM\_\-ADDR}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GSN\_\-RTC\_\-LATCH\_\-MEM\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RTC\_\-LATCH\_\-MEM\_\-ADDR~0x41010000}}
+\label{a00582_aa084e6874d928e77815dbe7381d6b97b}
+
+
+Definition at line 165 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_a7372cd2c556667ff0089643241db715c}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GSN\_\-RTC\_\-LATCH\_\-MEM\_\-BLOCK\_\-SIZE@{GSN\_\-RTC\_\-LATCH\_\-MEM\_\-BLOCK\_\-SIZE}}
+\index{GSN\_\-RTC\_\-LATCH\_\-MEM\_\-BLOCK\_\-SIZE@{GSN\_\-RTC\_\-LATCH\_\-MEM\_\-BLOCK\_\-SIZE}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GSN\_\-RTC\_\-LATCH\_\-MEM\_\-BLOCK\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RTC\_\-LATCH\_\-MEM\_\-BLOCK\_\-SIZE~1024}}
+\label{a00582_a7372cd2c556667ff0089643241db715c}
+
+
+Definition at line 164 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_ac30a46cb77d2c913ade1d5585bac19f5}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GSN\_\-RTC\_\-SRAM\_\-BLOCK\_\-SIZE@{GSN\_\-RTC\_\-SRAM\_\-BLOCK\_\-SIZE}}
+\index{GSN\_\-RTC\_\-SRAM\_\-BLOCK\_\-SIZE@{GSN\_\-RTC\_\-SRAM\_\-BLOCK\_\-SIZE}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GSN\_\-RTC\_\-SRAM\_\-BLOCK\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RTC\_\-SRAM\_\-BLOCK\_\-SIZE~(1024 $\ast$4)}}
+\label{a00582_ac30a46cb77d2c913ade1d5585bac19f5}
+
+
+Definition at line 147 of file gsn\_\-rtc.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00582_a624c15b10850050c5064e7949e4bd15f}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GSN\_\-RTC\_\-ALARM\_\-CB\_\-T@{GSN\_\-RTC\_\-ALARM\_\-CB\_\-T}}
+\index{GSN\_\-RTC\_\-ALARM\_\-CB\_\-T@{GSN\_\-RTC\_\-ALARM\_\-CB\_\-T}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GSN\_\-RTC\_\-ALARM\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf GSN\_\-RTC\_\-ALARM\_\-CB\_\-T})(VOID $\ast$pCtx)}}
+\label{a00582_a624c15b10850050c5064e7949e4bd15f}
+
+
+Definition at line 75 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_a55a97ef6cc63c0ef0c4032ed2324bd2f}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GSN\_\-RTC\_\-ALARM\_\-T@{GSN\_\-RTC\_\-ALARM\_\-T}}
+\index{GSN\_\-RTC\_\-ALARM\_\-T@{GSN\_\-RTC\_\-ALARM\_\-T}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GSN\_\-RTC\_\-ALARM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-RTC\_\-ALARM} {\bf GSN\_\-RTC\_\-ALARM\_\-T}}}
+\label{a00582_a55a97ef6cc63c0ef0c4032ed2324bd2f}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00582_a7ac2ec492b22971df1e2f294bdb35a06}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GSN\_\-RTC\_\-ALARM@{GSN\_\-RTC\_\-ALARM}}
+\index{GSN\_\-RTC\_\-ALARM@{GSN\_\-RTC\_\-ALARM}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GSN\_\-RTC\_\-ALARM}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-RTC\_\-ALARM}}}
+\label{a00582_a7ac2ec492b22971df1e2f294bdb35a06}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-RTC\_\-ALARM\_\-0@{GSN\_\-RTC\_\-ALARM\_\-0}!gsn\_\-rtc.h@{gsn\_\-rtc.h}}\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GSN\_\-RTC\_\-ALARM\_\-0@{GSN\_\-RTC\_\-ALARM\_\-0}}\item[{\em 
+\hypertarget{a00582_a7ac2ec492b22971df1e2f294bdb35a06abecb97663dcbc46a57076ce23a4f92bd}{
+GSN\_\-RTC\_\-ALARM\_\-0}
+\label{a00582_a7ac2ec492b22971df1e2f294bdb35a06abecb97663dcbc46a57076ce23a4f92bd}
+}]\index{GSN\_\-RTC\_\-ALARM\_\-1@{GSN\_\-RTC\_\-ALARM\_\-1}!gsn\_\-rtc.h@{gsn\_\-rtc.h}}\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GSN\_\-RTC\_\-ALARM\_\-1@{GSN\_\-RTC\_\-ALARM\_\-1}}\item[{\em 
+\hypertarget{a00582_a7ac2ec492b22971df1e2f294bdb35a06adc9593222c178deec345196e2273ee4e}{
+GSN\_\-RTC\_\-ALARM\_\-1}
+\label{a00582_a7ac2ec492b22971df1e2f294bdb35a06adc9593222c178deec345196e2273ee4e}
+}]\index{GSN\_\-RTC\_\-ALARM\_\-2@{GSN\_\-RTC\_\-ALARM\_\-2}!gsn\_\-rtc.h@{gsn\_\-rtc.h}}\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GSN\_\-RTC\_\-ALARM\_\-2@{GSN\_\-RTC\_\-ALARM\_\-2}}\item[{\em 
+\hypertarget{a00582_a7ac2ec492b22971df1e2f294bdb35a06af6460e5c96bcf15c981d6ef7db825187}{
+GSN\_\-RTC\_\-ALARM\_\-2}
+\label{a00582_a7ac2ec492b22971df1e2f294bdb35a06af6460e5c96bcf15c981d6ef7db825187}
+}]\index{GSN\_\-RTC\_\-ALARM\_\-3@{GSN\_\-RTC\_\-ALARM\_\-3}!gsn\_\-rtc.h@{gsn\_\-rtc.h}}\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GSN\_\-RTC\_\-ALARM\_\-3@{GSN\_\-RTC\_\-ALARM\_\-3}}\item[{\em 
+\hypertarget{a00582_a7ac2ec492b22971df1e2f294bdb35a06a3b72350180c03ce5d7299d0c3d6ab692}{
+GSN\_\-RTC\_\-ALARM\_\-3}
+\label{a00582_a7ac2ec492b22971df1e2f294bdb35a06a3b72350180c03ce5d7299d0c3d6ab692}
+}]\index{GSN\_\-RTC\_\-ALARM\_\-4@{GSN\_\-RTC\_\-ALARM\_\-4}!gsn\_\-rtc.h@{gsn\_\-rtc.h}}\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GSN\_\-RTC\_\-ALARM\_\-4@{GSN\_\-RTC\_\-ALARM\_\-4}}\item[{\em 
+\hypertarget{a00582_a7ac2ec492b22971df1e2f294bdb35a06a58be24ae33a15219d663648ca4372dc9}{
+GSN\_\-RTC\_\-ALARM\_\-4}
+\label{a00582_a7ac2ec492b22971df1e2f294bdb35a06a58be24ae33a15219d663648ca4372dc9}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 77 of file gsn\_\-rtc.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00582_a239c16937c0e8067c3b3efb32c79527e}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-AlarmConfig@{GsnRtc\_\-AlarmConfig}}
+\index{GsnRtc\_\-AlarmConfig@{GsnRtc\_\-AlarmConfig}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-AlarmConfig}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnRtc\_\-AlarmConfig (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{alarm, }
+\item[{{\bf UINT32}}]{polarity, }
+\item[{{\bf UINT32}}]{interrupt}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_a239c16937c0e8067c3b3efb32c79527e}
+\hypertarget{a00582_a3507bc0ef01856100aa56f82c621bae4}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-AlarmDisable@{GsnRtc\_\-AlarmDisable}}
+\index{GsnRtc\_\-AlarmDisable@{GsnRtc\_\-AlarmDisable}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-AlarmDisable}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnRtc\_\-AlarmDisable (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{alarm}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_a3507bc0ef01856100aa56f82c621bae4}
+\hypertarget{a00582_a995995f2a8052a79ce0d12fe690a5758}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-CryptoDisable@{GsnRtc\_\-CryptoDisable}}
+\index{GsnRtc\_\-CryptoDisable@{GsnRtc\_\-CryptoDisable}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-CryptoDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnRtc\_\-CryptoDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_a995995f2a8052a79ce0d12fe690a5758}
+
+
+Definition at line 302 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_a633cfcfa275cbbbc1a36834a69d7f0ed}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-IsCryptoDisabled@{GsnRtc\_\-IsCryptoDisabled}}
+\index{GsnRtc\_\-IsCryptoDisabled@{GsnRtc\_\-IsCryptoDisabled}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-IsCryptoDisabled}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GsnRtc\_\-IsCryptoDisabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_a633cfcfa275cbbbc1a36834a69d7f0ed}
+
+
+Definition at line 310 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_abdee32f92cfdcac7eedf89839ca52331}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-Ldo1Disable@{GsnRtc\_\-Ldo1Disable}}
+\index{GsnRtc\_\-Ldo1Disable@{GsnRtc\_\-Ldo1Disable}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-Ldo1Disable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnRtc\_\-Ldo1Disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_abdee32f92cfdcac7eedf89839ca52331}
+
+
+Definition at line 1231 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_adea699fc677cf84b30c90574593d6fc1}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-Ldo1Enable@{GsnRtc\_\-Ldo1Enable}}
+\index{GsnRtc\_\-Ldo1Enable@{GsnRtc\_\-Ldo1Enable}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-Ldo1Enable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnRtc\_\-Ldo1Enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_adea699fc677cf84b30c90574593d6fc1}
+
+
+Definition at line 1238 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_a6a27d7a4a2d435d42d2a5f1635e1ab32}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-Ldo2Disable@{GsnRtc\_\-Ldo2Disable}}
+\index{GsnRtc\_\-Ldo2Disable@{GsnRtc\_\-Ldo2Disable}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-Ldo2Disable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnRtc\_\-Ldo2Disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_a6a27d7a4a2d435d42d2a5f1635e1ab32}
+
+
+Definition at line 1218 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_a1dcbcbb53e0459901823e6b6ef70f37b}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-Ldo2Enable@{GsnRtc\_\-Ldo2Enable}}
+\index{GsnRtc\_\-Ldo2Enable@{GsnRtc\_\-Ldo2Enable}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-Ldo2Enable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnRtc\_\-Ldo2Enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_a1dcbcbb53e0459901823e6b6ef70f37b}
+
+
+Definition at line 1225 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_a946a7caa07d180fa1f41c36db7187e17}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-microLdoDisable@{GsnRtc\_\-microLdoDisable}}
+\index{GsnRtc\_\-microLdoDisable@{GsnRtc\_\-microLdoDisable}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-microLdoDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnRtc\_\-microLdoDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_a946a7caa07d180fa1f41c36db7187e17}
+
+
+Definition at line 1249 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_a144d7e5609f1965cf48e91987066478c}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-microLdoEnable@{GsnRtc\_\-microLdoEnable}}
+\index{GsnRtc\_\-microLdoEnable@{GsnRtc\_\-microLdoEnable}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-microLdoEnable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnRtc\_\-microLdoEnable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_a144d7e5609f1965cf48e91987066478c}
+
+
+Definition at line 1244 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_a57bfca25bd97d3ed9c50f91db2ab3a9e}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-PllSettleTimeSet@{GsnRtc\_\-PllSettleTimeSet}}
+\index{GsnRtc\_\-PllSettleTimeSet@{GsnRtc\_\-PllSettleTimeSet}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-PllSettleTimeSet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnRtc\_\-PllSettleTimeSet (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{time}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_a57bfca25bd97d3ed9c50f91db2ab3a9e}
+
+
+Definition at line 654 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_a993860e963231f5f026398c297d33926}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-RtcSramBankDisable@{GsnRtc\_\-RtcSramBankDisable}}
+\index{GsnRtc\_\-RtcSramBankDisable@{GsnRtc\_\-RtcSramBankDisable}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-RtcSramBankDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnRtc\_\-RtcSramBankDisable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RTC\_\-SRAM\_\-BANK\_\-T}}]{block}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_a993860e963231f5f026398c297d33926}
+
+
+Definition at line 355 of file gsn\_\-rtc.h.
+
+\hypertarget{a00582_aee55eeef8864b3f23efff80af3cbb1ae}{
+\index{gsn\_\-rtc.h@{gsn\_\-rtc.h}!GsnRtc\_\-WlanCoreDisable@{GsnRtc\_\-WlanCoreDisable}}
+\index{GsnRtc\_\-WlanCoreDisable@{GsnRtc\_\-WlanCoreDisable}!gsn_rtc.h@{gsn\_\-rtc.h}}
+\subsubsection[{GsnRtc\_\-WlanCoreDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnRtc\_\-WlanCoreDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00582_aee55eeef8864b3f23efff80af3cbb1ae}
+
+
+Definition at line 331 of file gsn\_\-rtc.h.
+

@@ -1,0 +1,96 @@
+\hypertarget{a00614}{
+\section{gsn\_\-wlan\_\-defs.h File Reference}
+\label{a00614}\index{gsn\_\-wlan\_\-defs.h@{gsn\_\-wlan\_\-defs.h}}
+}
+
+
+GSN WLAN definitions public header.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00862}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00416}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-S}
+\begin{DoxyCompactList}\small\item\em structured type for holding MAC address. \end{DoxyCompactList}\item 
+struct \hyperlink{a00417}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-S}
+\begin{DoxyCompactList}\small\item\em GSN WLAN MAC SSID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00641_gab875910eb7b2ccc2d9d632ad20f6564c}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-LEN}~6
+\begin{DoxyCompactList}\small\item\em default value of the length of a MAC address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00641_gabe983e40f4fad264d1750aa6c4bcfcac}{GSN\_\-WLAN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN}~0
+\begin{DoxyCompactList}\small\item\em SSID length options (broadcast or standard). \end{DoxyCompactList}\item 
+\#define \hyperlink{a00641_ga93c24ba92c21c82b929e23b532ec4002}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-LEN}~32
+\item 
+\#define \hyperlink{a00641_ga81f65ed973227d85ed9048e0047663da}{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-CHNLS}~14
+\begin{DoxyCompactList}\small\item\em Maximum number of channels. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00641_gae731ba25818bdbc75a996de819a860e6}{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-FRAME\_\-LEN}~512
+\begin{DoxyCompactList}\small\item\em Max MAC frame length. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00641_ga8c7cea28939d8ce06e159841483e73c9}{GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED}~7
+\begin{DoxyCompactList}\small\item\em MCS supported. \end{DoxyCompactList}\item 
+enum \hyperlink{a00641_ga52dec04a012aa9893ac84e96062c470b}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE} \{ \par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470bae09f79c4995407cd667ad1b5abcc9612}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE} =  0, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470ba0a2c019c8d7d286adeef4d155fdd290d}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE}, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470bac927d28ebd0a87f1039ffad73c3915af}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470bab745f3653e21ca78e739e1a6d353c3cb}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470ba8b4ffffa89d273529027dd15468a235a}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470ba546c8c8247779348d500fa7251e8e86f}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470ba3257c6240a97ccd25ac86623647bfa7f}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}
+ \}
+\begin{DoxyCompactList}\small\item\em enum definig the scan types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00641_ga3f0acfab3987e81164e864f7186c7187}{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-S} \{ \par
+\hyperlink{a00641_gga3f0acfab3987e81164e864f7186c7187a770294a815837fe9c2dc6bde4b3d4dd2}{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-PROBE\_\-RSP} =  0x50, 
+\par
+\hyperlink{a00641_gga3f0acfab3987e81164e864f7186c7187a367086e0b187f766c247e036f4791cac}{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-BEACON} =  0x80
+ \}
+\begin{DoxyCompactList}\small\item\em scan response frame type \end{DoxyCompactList}\item 
+enum \hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38}{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-E} \{ \par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a9258d0f7cded17bc5ab41dd8257f3700}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-B\_\-ONLY}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a1a7b120674a9ec20783b762dedc89a88}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-G\_\-ONLY}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38ae6b5f2dd183f21b571117e253f8d3a5f}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BG\_\-MIXED}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a7d1e257501850ebbe688e222ae2ffcb0}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BGN\_\-MIXED}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a62ad918b30aad8dec0a843c4776e568f}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-ONLY}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a6b517b7ed73031d71230816e95cbdf5c}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-2040}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a350412525ef42f390e738696528ab4ed}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-MAX}
+ \}
+\item 
+typedef enum \hyperlink{a00641_ga52dec04a012aa9893ac84e96062c470b}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE} \hyperlink{a00641_gab674354b3ef30f1389f12adc7d3e887e}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em enum definig the scan types. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00416}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-S} \hyperlink{a00641_gabf7f5cc6656c9288e5d56c8aeafc8477}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T}
+\begin{DoxyCompactList}\small\item\em structured type for holding MAC address. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00641_ga3f0acfab3987e81164e864f7186c7187}{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-S} \hyperlink{a00641_gaa94bed1d5a9ada3dfd819b8719bf6d55}{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em scan response frame type \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00417}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-S} \hyperlink{a00641_gab5c477ba63fc3009f84b8dfc5efb6b81}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WLAN MAC SSID. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38}{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-E} \hyperlink{a00641_ga9f600b5e4ee36d4315abb0cd1e0b1a78}{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-T}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN WLAN definitions public header. This file contains the public WLAN MAC definitions. 
+
+Definition in file \hyperlink{a00614_source}{gsn\_\-wlan\_\-defs.h}.
+

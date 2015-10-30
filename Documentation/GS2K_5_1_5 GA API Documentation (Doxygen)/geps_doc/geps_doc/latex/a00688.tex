@@ -1,0 +1,626 @@
+\hypertarget{a00688}{
+\section{GSN NCM API}
+\label{a00688}\index{GSN NCM API@{GSN NCM API}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00156}{GSN\_\-NCM\_\-AP\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em Ncm provisioning config structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00161}{GSN\_\-NCM\_\-RETRY\_\-COUNTS}
+\begin{DoxyCompactList}\small\item\em Ncm config retry count structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00162}{GSN\_\-NCM\_\-RETRY\_\-PERIOD}
+\begin{DoxyCompactList}\small\item\em Ncm config retry period structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00157}{GSN\_\-NCM\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em Ncm configuration structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00158}{GSN\_\-NCM\_\-CTX}
+\begin{DoxyCompactList}\small\item\em Ncm object structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00688_ga950af3c458482d4fbf1838aaf8b30f2d}{GSN\_\-NCM\_\-CTX\_\-STATES} \hyperlink{a00688_gaf5a85b17466f3a523dbf5643e72f628d}{GSN\_\-NCM\_\-CTX\_\-STATES\_\-T}
+\begin{DoxyCompactList}\small\item\em NCM states. This enum defines the different states the NCM module in. The NCM APIs transition through some or all of these states. After the API operation is complete, the API is back in init state. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00688_ga9e3bfe0ed58e26633d51d10250743b2a}{GSN\_\-NCM\_\-NOTIF\_\-ID} \hyperlink{a00688_ga0be96257e7b0db4dd67006357eb5cec6}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm Notifications enum. This enum describes all notifications from the ncm module to applications. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00688_ga7df8ae3172682e89bfa663208e3f0081}{GSN\_\-NCM\_\-MSGID} \hyperlink{a00688_ga1df95350543744eb99d0ce7433e6db16}{GSN\_\-NCM\_\-MSGID\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm Notifications enum. Defines mesage IDs internally used by NCM module. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00156}{GSN\_\-NCM\_\-AP\_\-CONFIG} \hyperlink{a00688_ga881c978ce73a5c4c2e6e9080d4a07879}{GSN\_\-NCM\_\-AP\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm provisioning config structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00161}{GSN\_\-NCM\_\-RETRY\_\-COUNTS} \hyperlink{a00688_gab0e77b5fbb8b18c829e3cd9170252340}{GSN\_\-NCM\_\-RETRY\_\-COUNTS\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm config retry count structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00162}{GSN\_\-NCM\_\-RETRY\_\-PERIOD} \hyperlink{a00688_ga85c994a3952734087a59e5157a99d8c5}{GSN\_\-NCM\_\-RETRY\_\-PERIOD\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm config retry period structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00157}{GSN\_\-NCM\_\-CONFIG} \hyperlink{a00688_ga9095c8feaa607f7d67a5ff8db069ebf2}{GSN\_\-NCM\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm configuration structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00158}{GSN\_\-NCM\_\-CTX} \hyperlink{a00688_ga102caaf372e99d011f89da1602cdc514}{GSN\_\-NCM\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm object structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00688_ga950af3c458482d4fbf1838aaf8b30f2d}{GSN\_\-NCM\_\-CTX\_\-STATES} \{ \par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da3e09b1bfa5ac8ce7a8e65138193e1ecb}{GSN\_\-NCM\_\-STATE\_\-NOT\_\-INITIALISED}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da830ff14e14067fef8cbf42cead8a871a}{GSN\_\-NCM\_\-STATE\_\-INITIALISED}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da8c30b49c08e6991f83a9b8c208fd8bd5}{GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTING}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da7f3541fe96901cd0e93d2644233482f9}{GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTED}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da39d1f07a068d2c5462c72c33b7b76259}{GSN\_\-NCM\_\-STATE\_\-L2\_\-CONCT\_\-TO\_\-KNOWN\_\-AP}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2dabd8e860d56fd77b264d1db7c518a6f77}{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-KNOWN\_\-CHNL}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da7cb3a6d76e63569079a9ea3adbc7eaef}{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-SPECIFIC\_\-CHNL}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2daa3532bd5ed61d5a5535078d948b1022d}{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-ALL\_\-CHNL}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2daf9087e99e508fd754ef4e32ca8ab4b3b}{GSN\_\-NCM\_\-STATE\_\-L2\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da66eb72fa85fe1d23963fe8daa49d9215}{GSN\_\-NCM\_\-STATE\_\-L3\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2daed4f9e1b80afb22d823328667e4b8e02}{GSN\_\-NCM\_\-STATE\_\-IDLE}
+ \}
+\begin{DoxyCompactList}\small\item\em NCM states. This enum defines the different states the NCM module in. The NCM APIs transition through some or all of these states. After the API operation is complete, the API is back in init state. \end{DoxyCompactList}\item 
+enum \hyperlink{a00688_ga9e3bfe0ed58e26633d51d10250743b2a}{GSN\_\-NCM\_\-NOTIF\_\-ID} \{ \par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aaa469a6d8952fabb7ed031d3632b0ce2a}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aab61142f531039c917939e563b9c35948}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-DISCONNECTED}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa5bce6739a2807e89ec851b581e6950ac}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa106659fe26e5c7b32dc6c053c24119e5}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-DISCONNECTED}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa5c33280f1c2aebc7b446f0f2beb52a13}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECT\_\-FAIL}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa7e3668f406bf505ca49b4f08ff8c7b39}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-STOP}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aac166aef75f66aecaf90efdc4d9cd1c3b}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-DHCP\_\-STOP}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa0da52269d834fdb60f3387386dbf68b2}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-RENEWSUCCESS}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aabdf8839e06c133c9ac4b3596cd3f7fd7}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECT\_\-FAIL}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa49148962df3de573148d7f5f35e26364}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-MAX\_\-EVENTS}
+ \}
+\begin{DoxyCompactList}\small\item\em Ncm Notifications enum. This enum describes all notifications from the ncm module to applications. \end{DoxyCompactList}\item 
+enum \hyperlink{a00688_ga7df8ae3172682e89bfa663208e3f0081}{GSN\_\-NCM\_\-MSGID} \{ \par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081ac1fa29f30c497cc6d0d63e369c4ebc96}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-STOP}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a2f7930cb346bbde0451d5000058a7bbd}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-START}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081ab7c2c3aa92aaa434c756acf574849d7e}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a3d625aa8bd3451c5d6756d7ca12a5a72}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECT\_\-FAIL}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a6d6b2708ec053a54a35533ea89b82dbe}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-DISCONNECTED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a6d6969743dec280c81de97facc785085}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-SYNC\_\-LOSS}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a5a1bac3915a3dc40cb070e75fdd809a0}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-RESTART}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a6f85a2bfe3c47d23f9dd782d433383f4}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECT}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a9645733074e6cf9524c08ecbafe78d78}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081aab5e02a78811b59d9d996952c346681a}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-DISCONNECTED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a1a6bf8dbcf5fd9f73baedb3d92f37810}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-IDLE}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081ac37700bd992d190df8dfbe400d904996}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-DHCP\_\-STOP}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a339e00a57d9d49209c486fa80fa3efb2}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-ALREADY\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081ae284cf6bfa63b7e17d6f074f24a8eed6}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWSUCESS}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a997c45d4f40178db905d5099db419071}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWFAILED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a69add9c8fa35762c0fc5614ee77eaab3}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-MAX}
+ \}
+\begin{DoxyCompactList}\small\item\em Ncm Notifications enum. Defines mesage IDs internally used by NCM module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00688_ga48b1340485aa02c120f63c82f90cca3e}{GsnNcm\_\-Init} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00159}{GSN\_\-NCM\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Initialization API for NCM module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00688_gac8d88feff4bacf5d5acece3f127c937b}{GsnNcm\_\-ConfigSet} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00157}{GSN\_\-NCM\_\-CONFIG\_\-T} $\ast$pConfig)
+\begin{DoxyCompactList}\small\item\em Configuration Set API for NCM module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00688_ga54ecf725bc9a7b85c5cd9b57ecfe8ecb}{GsnNcm\_\-ConfigGet} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00157}{GSN\_\-NCM\_\-CONFIG\_\-T} $\ast$pConfig)
+\begin{DoxyCompactList}\small\item\em Configuration Get API for NCM module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00157}{GSN\_\-NCM\_\-CONFIG\_\-T} $\ast$ \hyperlink{a00688_ga8a003a052b151aeb2bd31b77912a1f13}{GsnNcm\_\-ConfigPtrGet} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm)
+\begin{DoxyCompactList}\small\item\em Get NCM module config structure Address. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00688_ga2250bc85d7e05785da38ecbbd3f3e538}{GsnNcm\_\-Start} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00668_ga9fb71d435556873549a9da8758741a14}{GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB} notifCb, VOID $\ast$notifCbCtx)
+\begin{DoxyCompactList}\small\item\em Start API for NCM module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00688_ga36427555e14041e449831a66dfe58c39}{GsnNcm\_\-Stop} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} context)
+\begin{DoxyCompactList}\small\item\em Stop API for NCM module. This function stops the NCM module. . \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00688_ga3ed4d28d4f2a8195d6c37f5032ee0bbd}{GsnNcm\_\-Execute} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm)
+\begin{DoxyCompactList}\small\item\em Execute API for NCM module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00688_ga881c978ce73a5c4c2e6e9080d4a07879}{
+\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-AP\_\-CONFIG\_\-T@{GSN\_\-NCM\_\-AP\_\-CONFIG\_\-T}}
+\index{GSN\_\-NCM\_\-AP\_\-CONFIG\_\-T@{GSN\_\-NCM\_\-AP\_\-CONFIG\_\-T}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GSN\_\-NCM\_\-AP\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NCM\_\-AP\_\-CONFIG} {\bf GSN\_\-NCM\_\-AP\_\-CONFIG\_\-T}}}
+\label{a00688_ga881c978ce73a5c4c2e6e9080d4a07879}
+
+
+Ncm provisioning config structure. 
+
+\hypertarget{a00688_ga9095c8feaa607f7d67a5ff8db069ebf2}{
+\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CONFIG\_\-T@{GSN\_\-NCM\_\-CONFIG\_\-T}}
+\index{GSN\_\-NCM\_\-CONFIG\_\-T@{GSN\_\-NCM\_\-CONFIG\_\-T}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GSN\_\-NCM\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NCM\_\-CONFIG} {\bf GSN\_\-NCM\_\-CONFIG\_\-T}}}
+\label{a00688_ga9095c8feaa607f7d67a5ff8db069ebf2}
+
+
+Ncm configuration structure. 
+
+\hypertarget{a00688_gaf5a85b17466f3a523dbf5643e72f628d}{
+\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-STATES\_\-T@{GSN\_\-NCM\_\-CTX\_\-STATES\_\-T}}
+\index{GSN\_\-NCM\_\-CTX\_\-STATES\_\-T@{GSN\_\-NCM\_\-CTX\_\-STATES\_\-T}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GSN\_\-NCM\_\-CTX\_\-STATES\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-NCM\_\-CTX\_\-STATES}  {\bf GSN\_\-NCM\_\-CTX\_\-STATES\_\-T}}}
+\label{a00688_gaf5a85b17466f3a523dbf5643e72f628d}
+
+
+NCM states. This enum defines the different states the NCM module in. The NCM APIs transition through some or all of these states. After the API operation is complete, the API is back in init state. 
+
+\hypertarget{a00688_ga102caaf372e99d011f89da1602cdc514}{
+\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-T@{GSN\_\-NCM\_\-CTX\_\-T}}
+\index{GSN\_\-NCM\_\-CTX\_\-T@{GSN\_\-NCM\_\-CTX\_\-T}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GSN\_\-NCM\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NCM\_\-CTX} {\bf GSN\_\-NCM\_\-CTX\_\-T}}}
+\label{a00688_ga102caaf372e99d011f89da1602cdc514}
+
+
+Ncm object structure. 
+
+\hypertarget{a00688_ga1df95350543744eb99d0ce7433e6db16}{
+\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-MSGID\_\-T@{GSN\_\-NCM\_\-MSGID\_\-T}}
+\index{GSN\_\-NCM\_\-MSGID\_\-T@{GSN\_\-NCM\_\-MSGID\_\-T}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GSN\_\-NCM\_\-MSGID\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-NCM\_\-MSGID}  {\bf GSN\_\-NCM\_\-MSGID\_\-T}}}
+\label{a00688_ga1df95350543744eb99d0ce7433e6db16}
+
+
+Ncm Notifications enum. Defines mesage IDs internally used by NCM module. 
+
+\hypertarget{a00688_ga0be96257e7b0db4dd67006357eb5cec6}{
+\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID\_\-T@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-T}}
+\index{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-T@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-T}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-NCM\_\-NOTIF\_\-ID}  {\bf GSN\_\-NCM\_\-NOTIF\_\-ID\_\-T}}}
+\label{a00688_ga0be96257e7b0db4dd67006357eb5cec6}
+
+
+Ncm Notifications enum. This enum describes all notifications from the ncm module to applications. 
+
+\hypertarget{a00688_gab0e77b5fbb8b18c829e3cd9170252340}{
+\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-RETRY\_\-COUNTS\_\-T@{GSN\_\-NCM\_\-RETRY\_\-COUNTS\_\-T}}
+\index{GSN\_\-NCM\_\-RETRY\_\-COUNTS\_\-T@{GSN\_\-NCM\_\-RETRY\_\-COUNTS\_\-T}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GSN\_\-NCM\_\-RETRY\_\-COUNTS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NCM\_\-RETRY\_\-COUNTS} {\bf GSN\_\-NCM\_\-RETRY\_\-COUNTS\_\-T}}}
+\label{a00688_gab0e77b5fbb8b18c829e3cd9170252340}
+
+
+Ncm config retry count structure. 
+
+\hypertarget{a00688_ga85c994a3952734087a59e5157a99d8c5}{
+\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-RETRY\_\-PERIOD\_\-T@{GSN\_\-NCM\_\-RETRY\_\-PERIOD\_\-T}}
+\index{GSN\_\-NCM\_\-RETRY\_\-PERIOD\_\-T@{GSN\_\-NCM\_\-RETRY\_\-PERIOD\_\-T}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GSN\_\-NCM\_\-RETRY\_\-PERIOD\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NCM\_\-RETRY\_\-PERIOD} {\bf GSN\_\-NCM\_\-RETRY\_\-PERIOD\_\-T}}}
+\label{a00688_ga85c994a3952734087a59e5157a99d8c5}
+
+
+Ncm config retry period structure. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00688_ga950af3c458482d4fbf1838aaf8b30f2d}{
+\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-STATES@{GSN\_\-NCM\_\-CTX\_\-STATES}}
+\index{GSN\_\-NCM\_\-CTX\_\-STATES@{GSN\_\-NCM\_\-CTX\_\-STATES}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GSN\_\-NCM\_\-CTX\_\-STATES}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-NCM\_\-CTX\_\-STATES}}}
+\label{a00688_ga950af3c458482d4fbf1838aaf8b30f2d}
+
+
+NCM states. This enum defines the different states the NCM module in. The NCM APIs transition through some or all of these states. After the API operation is complete, the API is back in init state. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-NCM\_\-STATE\_\-NOT\_\-INITIALISED@{GSN\_\-NCM\_\-STATE\_\-NOT\_\-INITIALISED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-STATE\_\-NOT\_\-INITIALISED@{GSN\_\-NCM\_\-STATE\_\-NOT\_\-INITIALISED}}\item[{\em 
+\hypertarget{a00688_gga950af3c458482d4fbf1838aaf8b30f2da3e09b1bfa5ac8ce7a8e65138193e1ecb}{
+GSN\_\-NCM\_\-STATE\_\-NOT\_\-INITIALISED}
+\label{a00688_gga950af3c458482d4fbf1838aaf8b30f2da3e09b1bfa5ac8ce7a8e65138193e1ecb}
+}]The NCM is not initialized \index{GSN\_\-NCM\_\-STATE\_\-INITIALISED@{GSN\_\-NCM\_\-STATE\_\-INITIALISED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-STATE\_\-INITIALISED@{GSN\_\-NCM\_\-STATE\_\-INITIALISED}}\item[{\em 
+\hypertarget{a00688_gga950af3c458482d4fbf1838aaf8b30f2da830ff14e14067fef8cbf42cead8a871a}{
+GSN\_\-NCM\_\-STATE\_\-INITIALISED}
+\label{a00688_gga950af3c458482d4fbf1838aaf8b30f2da830ff14e14067fef8cbf42cead8a871a}
+}]The NCM is initialized and ready \index{GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTING@{GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTING}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTING@{GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTING}}\item[{\em 
+\hypertarget{a00688_gga950af3c458482d4fbf1838aaf8b30f2da8c30b49c08e6991f83a9b8c208fd8bd5}{
+GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTING}
+\label{a00688_gga950af3c458482d4fbf1838aaf8b30f2da8c30b49c08e6991f83a9b8c208fd8bd5}
+}]The NCM has initiated the L2 disconnect with the WLAN and waiting for the disconnect indication from the WLAN. The disconnect is initiated by the NCM when
+\begin{DoxyItemize}
+\item Sync Loss is detected 
+\end{DoxyItemize}\index{GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTED@{GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTED@{GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTED}}\item[{\em 
+\hypertarget{a00688_gga950af3c458482d4fbf1838aaf8b30f2da7f3541fe96901cd0e93d2644233482f9}{
+GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTED}
+\label{a00688_gga950af3c458482d4fbf1838aaf8b30f2da7f3541fe96901cd0e93d2644233482f9}
+}]The NCM has L2 disconnected. This happens
+\begin{DoxyItemize}
+\item At Start
+\item The Disassociation triggered by NCM and confirmed by WLAN
+\item The Disassociation indication from the WLAN 
+\end{DoxyItemize}\index{GSN\_\-NCM\_\-STATE\_\-L2\_\-CONCT\_\-TO\_\-KNOWN\_\-AP@{GSN\_\-NCM\_\-STATE\_\-L2\_\-CONCT\_\-TO\_\-KNOWN\_\-AP}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-STATE\_\-L2\_\-CONCT\_\-TO\_\-KNOWN\_\-AP@{GSN\_\-NCM\_\-STATE\_\-L2\_\-CONCT\_\-TO\_\-KNOWN\_\-AP}}\item[{\em 
+\hypertarget{a00688_gga950af3c458482d4fbf1838aaf8b30f2da39d1f07a068d2c5462c72c33b7b76259}{
+GSN\_\-NCM\_\-STATE\_\-L2\_\-CONCT\_\-TO\_\-KNOWN\_\-AP}
+\label{a00688_gga950af3c458482d4fbf1838aaf8b30f2da39d1f07a068d2c5462c72c33b7b76259}
+}]scanning known AP with previously saned MAC frame \index{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-KNOWN\_\-CHNL@{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-KNOWN\_\-CHNL}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-KNOWN\_\-CHNL@{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-KNOWN\_\-CHNL}}\item[{\em 
+\hypertarget{a00688_gga950af3c458482d4fbf1838aaf8b30f2dabd8e860d56fd77b264d1db7c518a6f77}{
+GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-KNOWN\_\-CHNL}
+\label{a00688_gga950af3c458482d4fbf1838aaf8b30f2dabd8e860d56fd77b264d1db7c518a6f77}
+}]sacnning known channel \index{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-SPECIFIC\_\-CHNL@{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-SPECIFIC\_\-CHNL}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-SPECIFIC\_\-CHNL@{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-SPECIFIC\_\-CHNL}}\item[{\em 
+\hypertarget{a00688_gga950af3c458482d4fbf1838aaf8b30f2da7cb3a6d76e63569079a9ea3adbc7eaef}{
+GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-SPECIFIC\_\-CHNL}
+\label{a00688_gga950af3c458482d4fbf1838aaf8b30f2da7cb3a6d76e63569079a9ea3adbc7eaef}
+}]scanning specific channels \index{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-ALL\_\-CHNL@{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-ALL\_\-CHNL}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-ALL\_\-CHNL@{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-ALL\_\-CHNL}}\item[{\em 
+\hypertarget{a00688_gga950af3c458482d4fbf1838aaf8b30f2daa3532bd5ed61d5a5535078d948b1022d}{
+GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-ALL\_\-CHNL}
+\label{a00688_gga950af3c458482d4fbf1838aaf8b30f2daa3532bd5ed61d5a5535078d948b1022d}
+}]Scanning All channels \index{GSN\_\-NCM\_\-STATE\_\-L2\_\-CONNECTED@{GSN\_\-NCM\_\-STATE\_\-L2\_\-CONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-STATE\_\-L2\_\-CONNECTED@{GSN\_\-NCM\_\-STATE\_\-L2\_\-CONNECTED}}\item[{\em 
+\hypertarget{a00688_gga950af3c458482d4fbf1838aaf8b30f2daf9087e99e508fd754ef4e32ca8ab4b3b}{
+GSN\_\-NCM\_\-STATE\_\-L2\_\-CONNECTED}
+\label{a00688_gga950af3c458482d4fbf1838aaf8b30f2daf9087e99e508fd754ef4e32ca8ab4b3b}
+}]L2 Connected. L3 is not connected yet \index{GSN\_\-NCM\_\-STATE\_\-L3\_\-CONNECTED@{GSN\_\-NCM\_\-STATE\_\-L3\_\-CONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-STATE\_\-L3\_\-CONNECTED@{GSN\_\-NCM\_\-STATE\_\-L3\_\-CONNECTED}}\item[{\em 
+\hypertarget{a00688_gga950af3c458482d4fbf1838aaf8b30f2da66eb72fa85fe1d23963fe8daa49d9215}{
+GSN\_\-NCM\_\-STATE\_\-L3\_\-CONNECTED}
+\label{a00688_gga950af3c458482d4fbf1838aaf8b30f2da66eb72fa85fe1d23963fe8daa49d9215}
+}]and L3 both are Connected \index{GSN\_\-NCM\_\-STATE\_\-IDLE@{GSN\_\-NCM\_\-STATE\_\-IDLE}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-STATE\_\-IDLE@{GSN\_\-NCM\_\-STATE\_\-IDLE}}\item[{\em 
+\hypertarget{a00688_gga950af3c458482d4fbf1838aaf8b30f2daed4f9e1b80afb22d823328667e4b8e02}{
+GSN\_\-NCM\_\-STATE\_\-IDLE}
+\label{a00688_gga950af3c458482d4fbf1838aaf8b30f2daed4f9e1b80afb22d823328667e4b8e02}
+}]Wait/idle state \end{description}
+\end{Desc}
+
+
+
+Definition at line 161 of file gsn\_\-ncm.h.
+
+\hypertarget{a00688_ga7df8ae3172682e89bfa663208e3f0081}{
+\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-MSGID@{GSN\_\-NCM\_\-MSGID}}
+\index{GSN\_\-NCM\_\-MSGID@{GSN\_\-NCM\_\-MSGID}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GSN\_\-NCM\_\-MSGID}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-NCM\_\-MSGID}}}
+\label{a00688_ga7df8ae3172682e89bfa663208e3f0081}
+
+
+Ncm Notifications enum. Defines mesage IDs internally used by NCM module. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-STOP@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-STOP}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-STOP@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-STOP}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081ac1fa29f30c497cc6d0d63e369c4ebc96}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-STOP}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081ac1fa29f30c497cc6d0d63e369c4ebc96}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-START@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-START}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-START@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-START}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081a2f7930cb346bbde0451d5000058a7bbd}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-START}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081a2f7930cb346bbde0451d5000058a7bbd}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECTED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECTED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECTED}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081ab7c2c3aa92aaa434c756acf574849d7e}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECTED}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081ab7c2c3aa92aaa434c756acf574849d7e}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECT\_\-FAIL@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECT\_\-FAIL}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECT\_\-FAIL@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECT\_\-FAIL}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081a3d625aa8bd3451c5d6756d7ca12a5a72}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECT\_\-FAIL}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081a3d625aa8bd3451c5d6756d7ca12a5a72}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-DISCONNECTED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-DISCONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-DISCONNECTED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-DISCONNECTED}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081a6d6b2708ec053a54a35533ea89b82dbe}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-DISCONNECTED}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081a6d6b2708ec053a54a35533ea89b82dbe}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-SYNC\_\-LOSS@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-SYNC\_\-LOSS}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-SYNC\_\-LOSS@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-SYNC\_\-LOSS}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081a6d6969743dec280c81de97facc785085}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-SYNC\_\-LOSS}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081a6d6969743dec280c81de97facc785085}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-RESTART@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-RESTART}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-RESTART@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-RESTART}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081a5a1bac3915a3dc40cb070e75fdd809a0}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-RESTART}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081a5a1bac3915a3dc40cb070e75fdd809a0}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECT@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECT}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECT@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECT}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081a6f85a2bfe3c47d23f9dd782d433383f4}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECT}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081a6f85a2bfe3c47d23f9dd782d433383f4}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECTED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECTED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECTED}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081a9645733074e6cf9524c08ecbafe78d78}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECTED}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081a9645733074e6cf9524c08ecbafe78d78}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-DISCONNECTED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-DISCONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-DISCONNECTED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-DISCONNECTED}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081aab5e02a78811b59d9d996952c346681a}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-DISCONNECTED}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081aab5e02a78811b59d9d996952c346681a}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-IDLE@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-IDLE}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-IDLE@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-IDLE}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081a1a6bf8dbcf5fd9f73baedb3d92f37810}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-IDLE}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081a1a6bf8dbcf5fd9f73baedb3d92f37810}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-DHCP\_\-STOP@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-DHCP\_\-STOP}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-DHCP\_\-STOP@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-DHCP\_\-STOP}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081ac37700bd992d190df8dfbe400d904996}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-DHCP\_\-STOP}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081ac37700bd992d190df8dfbe400d904996}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-ALREADY\_\-CONNECTED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-ALREADY\_\-CONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-ALREADY\_\-CONNECTED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-ALREADY\_\-CONNECTED}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081a339e00a57d9d49209c486fa80fa3efb2}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-ALREADY\_\-CONNECTED}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081a339e00a57d9d49209c486fa80fa3efb2}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWSUCESS@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWSUCESS}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWSUCESS@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWSUCESS}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081ae284cf6bfa63b7e17d6f074f24a8eed6}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWSUCESS}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081ae284cf6bfa63b7e17d6f074f24a8eed6}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWFAILED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWFAILED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWFAILED@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWFAILED}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081a997c45d4f40178db905d5099db419071}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWFAILED}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081a997c45d4f40178db905d5099db419071}
+}]\index{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-MAX@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-MAX}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-MAX@{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-MAX}}\item[{\em 
+\hypertarget{a00688_gga7df8ae3172682e89bfa663208e3f0081a69add9c8fa35762c0fc5614ee77eaab3}{
+GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-MAX}
+\label{a00688_gga7df8ae3172682e89bfa663208e3f0081a69add9c8fa35762c0fc5614ee77eaab3}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 211 of file gsn\_\-ncm.h.
+
+\hypertarget{a00688_ga9e3bfe0ed58e26633d51d10250743b2a}{
+\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID@{GSN\_\-NCM\_\-NOTIF\_\-ID}}
+\index{GSN\_\-NCM\_\-NOTIF\_\-ID@{GSN\_\-NCM\_\-NOTIF\_\-ID}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GSN\_\-NCM\_\-NOTIF\_\-ID}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-NCM\_\-NOTIF\_\-ID}}}
+\label{a00688_ga9e3bfe0ed58e26633d51d10250743b2a}
+
+
+Ncm Notifications enum. This enum describes all notifications from the ncm module to applications. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECTED@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECTED@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECTED}}\item[{\em 
+\hypertarget{a00688_gga9e3bfe0ed58e26633d51d10250743b2aaa469a6d8952fabb7ed031d3632b0ce2a}{
+GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECTED}
+\label{a00688_gga9e3bfe0ed58e26633d51d10250743b2aaa469a6d8952fabb7ed031d3632b0ce2a}
+}]\index{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-DISCONNECTED@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-DISCONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-DISCONNECTED@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-DISCONNECTED}}\item[{\em 
+\hypertarget{a00688_gga9e3bfe0ed58e26633d51d10250743b2aab61142f531039c917939e563b9c35948}{
+GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-DISCONNECTED}
+\label{a00688_gga9e3bfe0ed58e26633d51d10250743b2aab61142f531039c917939e563b9c35948}
+}]\index{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECTED@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECTED@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECTED}}\item[{\em 
+\hypertarget{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa5bce6739a2807e89ec851b581e6950ac}{
+GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECTED}
+\label{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa5bce6739a2807e89ec851b581e6950ac}
+}]\index{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-DISCONNECTED@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-DISCONNECTED}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-DISCONNECTED@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-DISCONNECTED}}\item[{\em 
+\hypertarget{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa106659fe26e5c7b32dc6c053c24119e5}{
+GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-DISCONNECTED}
+\label{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa106659fe26e5c7b32dc6c053c24119e5}
+}]\index{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECT\_\-FAIL@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECT\_\-FAIL}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECT\_\-FAIL@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECT\_\-FAIL}}\item[{\em 
+\hypertarget{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa5c33280f1c2aebc7b446f0f2beb52a13}{
+GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECT\_\-FAIL}
+\label{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa5c33280f1c2aebc7b446f0f2beb52a13}
+}]\index{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-STOP@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-STOP}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID\_\-STOP@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-STOP}}\item[{\em 
+\hypertarget{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa7e3668f406bf505ca49b4f08ff8c7b39}{
+GSN\_\-NCM\_\-NOTIF\_\-ID\_\-STOP}
+\label{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa7e3668f406bf505ca49b4f08ff8c7b39}
+}]\index{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-DHCP\_\-STOP@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-DHCP\_\-STOP}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID\_\-DHCP\_\-STOP@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-DHCP\_\-STOP}}\item[{\em 
+\hypertarget{a00688_gga9e3bfe0ed58e26633d51d10250743b2aac166aef75f66aecaf90efdc4d9cd1c3b}{
+GSN\_\-NCM\_\-NOTIF\_\-ID\_\-DHCP\_\-STOP}
+\label{a00688_gga9e3bfe0ed58e26633d51d10250743b2aac166aef75f66aecaf90efdc4d9cd1c3b}
+}]\index{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-RENEWSUCCESS@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-RENEWSUCCESS}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-RENEWSUCCESS@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-RENEWSUCCESS}}\item[{\em 
+\hypertarget{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa0da52269d834fdb60f3387386dbf68b2}{
+GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-RENEWSUCCESS}
+\label{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa0da52269d834fdb60f3387386dbf68b2}
+}]\index{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECT\_\-FAIL@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECT\_\-FAIL}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECT\_\-FAIL@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECT\_\-FAIL}}\item[{\em 
+\hypertarget{a00688_gga9e3bfe0ed58e26633d51d10250743b2aabdf8839e06c133c9ac4b3596cd3f7fd7}{
+GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECT\_\-FAIL}
+\label{a00688_gga9e3bfe0ed58e26633d51d10250743b2aabdf8839e06c133c9ac4b3596cd3f7fd7}
+}]\index{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-MAX\_\-EVENTS@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-MAX\_\-EVENTS}!GSN NCM API@{GSN NCM API}}\index{GSN NCM API@{GSN NCM API}!GSN\_\-NCM\_\-NOTIF\_\-ID\_\-MAX\_\-EVENTS@{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-MAX\_\-EVENTS}}\item[{\em 
+\hypertarget{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa49148962df3de573148d7f5f35e26364}{
+GSN\_\-NCM\_\-NOTIF\_\-ID\_\-MAX\_\-EVENTS}
+\label{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa49148962df3de573148d7f5f35e26364}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 189 of file gsn\_\-ncm.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00688_ga54ecf725bc9a7b85c5cd9b57ecfe8ecb}{
+\index{GSN NCM API@{GSN NCM API}!GsnNcm\_\-ConfigGet@{GsnNcm\_\-ConfigGet}}
+\index{GsnNcm\_\-ConfigGet@{GsnNcm\_\-ConfigGet}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GsnNcm\_\-ConfigGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS\_\-T} GsnNcm\_\-ConfigGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-T} $\ast$}]{pNcm, }
+\item[{{\bf GSN\_\-NCM\_\-CONFIG\_\-T} $\ast$}]{pConfig}
+\end{DoxyParamCaption}
+)}}
+\label{a00688_ga54ecf725bc9a7b85c5cd9b57ecfe8ecb}
+
+
+Configuration Get API for NCM module. 
+
+This function performs the configuration get from the NCM object to the user provided config structure. 
+\begin{DoxyParams}{Parameters}
+{\em pNcm} & -\/ IN pointer to NCM object. \\
+\hline
+{\em pConfig} & -\/ IN pointer to NCM config structure.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em GSN\_\-FAILURE} & Operation failed. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\hypertarget{a00688_ga8a003a052b151aeb2bd31b77912a1f13}{
+\index{GSN NCM API@{GSN NCM API}!GsnNcm\_\-ConfigPtrGet@{GsnNcm\_\-ConfigPtrGet}}
+\index{GsnNcm\_\-ConfigPtrGet@{GsnNcm\_\-ConfigPtrGet}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GsnNcm\_\-ConfigPtrGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-NCM\_\-CONFIG\_\-T}$\ast$ GsnNcm\_\-ConfigPtrGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-T} $\ast$}]{pNcm}
+\end{DoxyParamCaption}
+)}}
+\label{a00688_ga8a003a052b151aeb2bd31b77912a1f13}
+
+
+Get NCM module config structure Address. 
+
+This function returns pointer to ncm context configuration structure. \hypertarget{a00688_gac8d88feff4bacf5d5acece3f127c937b}{
+\index{GSN NCM API@{GSN NCM API}!GsnNcm\_\-ConfigSet@{GsnNcm\_\-ConfigSet}}
+\index{GsnNcm\_\-ConfigSet@{GsnNcm\_\-ConfigSet}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GsnNcm\_\-ConfigSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS\_\-T} GsnNcm\_\-ConfigSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-T} $\ast$}]{pNcm, }
+\item[{{\bf GSN\_\-NCM\_\-CONFIG\_\-T} $\ast$}]{pConfig}
+\end{DoxyParamCaption}
+)}}
+\label{a00688_gac8d88feff4bacf5d5acece3f127c937b}
+
+
+Configuration Set API for NCM module. 
+
+This function performs the configuration set from the data structure provided by the caller to the NCM object. 
+\begin{DoxyParams}{Parameters}
+{\em pNcm} & -\/ IN pointer to NCM object. \\
+\hline
+{\em pConfig} & -\/ IN pointer to NCM config structure.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em GSN\_\-FAILURE} & Operation failed. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\hypertarget{a00688_ga3ed4d28d4f2a8195d6c37f5032ee0bbd}{
+\index{GSN NCM API@{GSN NCM API}!GsnNcm\_\-Execute@{GsnNcm\_\-Execute}}
+\index{GsnNcm\_\-Execute@{GsnNcm\_\-Execute}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GsnNcm\_\-Execute}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnNcm\_\-Execute (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-T} $\ast$}]{pNcm}
+\end{DoxyParamCaption}
+)}}
+\label{a00688_ga3ed4d28d4f2a8195d6c37f5032ee0bbd}
+
+
+Execute API for NCM module. 
+
+This function should be called from an application Task context . 
+\begin{DoxyParams}{Parameters}
+{\em pNcm} & -\/ IN pointer to NCM object. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em GSN\_\-FAILURE} & Operation failed. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\hypertarget{a00688_ga48b1340485aa02c120f63c82f90cca3e}{
+\index{GSN NCM API@{GSN NCM API}!GsnNcm\_\-Init@{GsnNcm\_\-Init}}
+\index{GsnNcm\_\-Init@{GsnNcm\_\-Init}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GsnNcm\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS\_\-T} GsnNcm\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-T} $\ast$}]{pNcm, }
+\item[{{\bf GSN\_\-NCM\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00688_ga48b1340485aa02c120f63c82f90cca3e}
+
+
+Initialization API for NCM module. 
+
+This function performs initialization of NCM module. It initializes the NCM object to a known state. 
+\begin{DoxyParams}{Parameters}
+{\em pNcm} & -\/ IN pointer to NCM object. \\
+\hline
+{\em pParam} & -\/ IN pointer to the initialization parameters \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em GSN\_\-FAILURE} & Initialization failed. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00688_ga2250bc85d7e05785da38ecbbd3f3e538}{
+\index{GSN NCM API@{GSN NCM API}!GsnNcm\_\-Start@{GsnNcm\_\-Start}}
+\index{GsnNcm\_\-Start@{GsnNcm\_\-Start}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GsnNcm\_\-Start}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS\_\-T} GsnNcm\_\-Start (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-T} $\ast$}]{pNcm, }
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB}}]{notifCb, }
+\item[{VOID $\ast$}]{notifCbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00688_ga2250bc85d7e05785da38ecbbd3f3e538}
+
+
+Start API for NCM module. 
+
+This function starts the NCM module by associating to the AP which configured. 
+\begin{DoxyParams}{Parameters}
+{\em pNcm} & -\/ IN pointer to NCM object. \\
+\hline
+{\em notifCb} & -\/ IN pointer to user callback function. \\
+\hline
+{\em notifCbCtx} & -\/ IN pointer to user callback context. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em GSN\_\-FAILURE} & Operation failed. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}
+\hypertarget{a00688_ga36427555e14041e449831a66dfe58c39}{
+\index{GSN NCM API@{GSN NCM API}!GsnNcm\_\-Stop@{GsnNcm\_\-Stop}}
+\index{GsnNcm\_\-Stop@{GsnNcm\_\-Stop}!GSN NCM API@{GSN NCM API}}
+\subsubsection[{GsnNcm\_\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS\_\-T} GsnNcm\_\-Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-T} $\ast$}]{pNcm, }
+\item[{{\bf UINT32}}]{context}
+\end{DoxyParamCaption}
+)}}
+\label{a00688_ga36427555e14041e449831a66dfe58c39}
+
+
+Stop API for NCM module. This function stops the NCM module. . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pNcm} & -\/ IN pointer to NCM object. \\
+\hline
+{\em context} & -\/ IN context from which it is called \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em GSN\_\-FAILURE} & Operation failed. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+None 
+\end{DoxyNote}

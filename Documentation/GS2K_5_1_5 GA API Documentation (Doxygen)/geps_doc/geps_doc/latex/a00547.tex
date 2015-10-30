@@ -1,0 +1,3431 @@
+\hypertarget{a00547}{
+\section{gsn\_\-reg\_\-dma\_\-op.h File Reference}
+\label{a00547}\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00547_a8a7d92a4f5077c21611200903b7fe8b6}{DMA\_\-CTRL}~0x40060000
+\item 
+\#define \hyperlink{a00547_a7468fcbcee275ca417ae33054686e3f5}{DMA\_\-STATUS\_\-OFFSETADDRESS}~0x00000000
+\item 
+\#define \hyperlink{a00547_a0883a182ca745da40ee167a33546ddf2}{DMA\_\-STATUS\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_ab1c1e1c0c8bc5feb7ea7354fbf782b70}{DMA\_\-STATUS\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_abbb907be2c04d2a418451bd7e67d1d31}{DMA\_\-STATUS\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_a07b3d23f33e476a2b250a6c5fdb63aab}{DMA\_\-STATUS\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a3fcea040d62dc0c15c7685b07b420554}{DMA\_\-TS\_\-OFFSETADDRESS}~DMA\_\-STATUS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a7f2d788f03475a58acf436e9358a977d}{DMA\_\-TS\_\-BITOFFSET}~28
+\item 
+\#define \hyperlink{a00547_a072f1546fc8ea82bd5e3434dc3f0822f}{DMA\_\-TS\_\-BITFIELDSIZE}~4
+\item 
+\#define \hyperlink{a00547_a6e865711108670ff65f50eebb85c6e6d}{DMA\_\-TS\_\-BITMASK}~0xf0000000
+\item 
+\#define \hyperlink{a00547_a0bfb3a78fa4daa78b640b8cfd9568247}{DMA\_\-TS\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a0caf9f2f89504b6f6c0adf2f789b750b}{DMA\_\-CHS\_\-OFFSETADDRESS}~DMA\_\-STATUS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_adadd26e82ada74d711ae27f63de8ec9d}{DMA\_\-CHS\_\-BITOFFSET}~16
+\item 
+\#define \hyperlink{a00547_a134f4735b50e2d6636b7c082b2057f14}{DMA\_\-CHS\_\-BITFIELDSIZE}~5
+\item 
+\#define \hyperlink{a00547_a206b7f6a5fd6825d63adce73eb67d29d}{DMA\_\-CHS\_\-BITMASK}~0x001f0000
+\item 
+\#define \hyperlink{a00547_a9e3e6d6c98a2c203c72cee4f2af8c047}{DMA\_\-CHS\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_ac7e7a79a4c4739fbf9669e6bf96cc4ff}{DMA\_\-ST\_\-OFFSETADDRESS}~DMA\_\-STATUS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_ab86bc68bfb1dca7b3d90155b4103c3d0}{DMA\_\-ST\_\-BITOFFSET}~4
+\item 
+\#define \hyperlink{a00547_a8f73d54fc0c18d5e34dc3d38b52e7530}{DMA\_\-ST\_\-BITFIELDSIZE}~4
+\item 
+\#define \hyperlink{a00547_a2807548dce19bf6af704d4105594f939}{DMA\_\-ST\_\-BITMASK}~0x000000f0
+\item 
+\#define \hyperlink{a00547_a7225e7cc30263f04e1d64a6e733395e6}{DMA\_\-ST\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a8374a7407aee39edbbb903b5513078a7}{DMA\_\-ME\_\-RO\_\-OFFSETADDRESS}~DMA\_\-STATUS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_aa9fdcb43a5bb459dc7c50fc9efe07104}{DMA\_\-ME\_\-RO\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_ab191598835ef6e704ce74741f59ef514}{DMA\_\-ME\_\-RO\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a259092933e96607ce026d7e333d1f03d}{DMA\_\-ME\_\-RO\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_ae7e5eb61b947420f6832373c2e47c033}{DMA\_\-ME\_\-RO\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a8a7b68f545ca97d9c238efb1ff7d9005}{DMA\_\-CONFIG\_\-OFFSETADDRESS}~0x00000004
+\item 
+\#define \hyperlink{a00547_aac655fa012c21874055c777f49c4c7ff}{DMA\_\-CONFIG\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a622ed5f1635239477a54329777259eaf}{DMA\_\-CONFIG\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_accf659d57fc0a37d95980ede8a99b1d6}{DMA\_\-CONFIG\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_ada82320bd161f2e5b75c28cbd0da748c}{DMA\_\-CONFIG\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_aaa4e3b81c7de5fa6b230b23d3671ec8d}{DMA\_\-CPC\_\-CONFIG\_\-OFFSETADDRESS}~DMA\_\-CONFIG\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_ab242bf9b2f92d776f1019ef9ffcb8a4c}{DMA\_\-CPC\_\-CONFIG\_\-BITOFFSET}~5
+\item 
+\#define \hyperlink{a00547_a4f72a0c45e3181273b66098bcc479228}{DMA\_\-CPC\_\-CONFIG\_\-BITFIELDSIZE}~3
+\item 
+\#define \hyperlink{a00547_ac5e794e02a86f98fdb696b4d3e71aecd}{DMA\_\-CPC\_\-CONFIG\_\-BITMASK}~0x000000e0
+\item 
+\#define \hyperlink{a00547_afa9e72d773ecb33158a9a13a2408647a}{DMA\_\-CPC\_\-CONFIG\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a7af40d196784d21fc22c5e8f1c9f471e}{DMA\_\-ME\_\-OFFSETADDRESS}~DMA\_\-CONFIG\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_af26e520e052c29bec34ee52bab49bb9b}{DMA\_\-ME\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_aff6beddf89e8b7af7377279431360c01}{DMA\_\-ME\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_aafb9aa03d070970b79fd94037619f61a}{DMA\_\-ME\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_aeaa1845f74e1ae1db7a24a7dcd2b7438}{DMA\_\-ME\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a8f559ca9f5e7a90713050f67560878c2}{DMA\_\-CCDBP\_\-OFFSETADDRESS}~0x00000008
+\item 
+\#define \hyperlink{a00547_a6e09a969715ff30c8d11bc90818a6ba4}{DMA\_\-CCDBP\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a989faedaed8ced3e17f0d877644eece3}{DMA\_\-CCDBP\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_a275a38cf1823e3a27c3e0e91725466d4}{DMA\_\-CCDBP\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_af9d68df9474a8192e40826367158ed19}{DMA\_\-CCDBP\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a1ba53edcece39b3c172d2b073a747e09}{DMA\_\-ECRVAL\_\-OFFSETADDRESS}~DMA\_\-CCDBP\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a16c269acf3f99d66899dd002b91f80d5}{DMA\_\-ECRVAL\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a402e7b3a5891401d10193789541a34cb}{DMA\_\-ECRVAL\_\-BITFIELDSIZE}~8
+\item 
+\#define \hyperlink{a00547_a4d2ec1d32bbd0155bd23334b293f82ad}{DMA\_\-ECRVAL\_\-BITMASK}~0x000000ff
+\item 
+\#define \hyperlink{a00547_a3f41220330670a57a67cbaab18fc5e95}{DMA\_\-ECRVAL\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_aa27683ff86911fe87d8d98d51a74800d}{DMA\_\-CACDBP\_\-OFFSETADDRESS}~0x0000000c
+\item 
+\#define \hyperlink{a00547_ab0eb3182f93b277d7d51d49c3f001c44}{DMA\_\-CACDBP\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_adc7f51f4243fb65d2a8e4c449743c5d3}{DMA\_\-CACDBP\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_a03df02dd206bb041d832f9cbad038bc0}{DMA\_\-CACDBP\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_a89d1fca86188262766d80354702c886e}{DMA\_\-CACDBP\_\-INIT}~0x00000090
+\item 
+\#define \hyperlink{a00547_aa3a17523e030ad7528d006fea3a92fad}{DMA\_\-BP\_\-OFFSETADDRESS}~DMA\_\-CACDBP\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a0d06b0e33818e8168abd28cf8d627170}{DMA\_\-BP\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_af93275ca2ea7ba28fb05b3934cf992fc}{DMA\_\-BP\_\-BITFIELDSIZE}~31
+\item 
+\#define \hyperlink{a00547_ad2c65e3d63ad7b26cec172fdce245628}{DMA\_\-BP\_\-BITMASK}~0x7fffffff
+\item 
+\#define \hyperlink{a00547_aff9cdfce242a1dea85c03a03280b1490}{DMA\_\-BP\_\-INIT}~0x90
+\item 
+\#define \hyperlink{a00547_a88cc8dbd632d8174697ce8a77e166671}{DMA\_\-CWRS\_\-OFFSETADDRESS}~0x00000010
+\item 
+\#define \hyperlink{a00547_ad84e190579dc1c15d699d2c8ffed4697}{DMA\_\-CWRS\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_ac981427fe25c5e12ec664b71a9b852ae}{DMA\_\-CWRS\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_a5e80fdf1891b59ecb90195e590e9e9ce}{DMA\_\-CWRS\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_aada4a90fe97149be3cb8edf32137cd5b}{DMA\_\-CWRS\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a71acfd5f9cdb623b78969dbf75a70fed}{DMA\_\-RS2\_\-OFFSETADDRESS}~DMA\_\-CWRS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a654dd517ba48234f2afe03fefd92c815}{DMA\_\-RS2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_ac22c9357145e1a9f2d4762af98539378}{DMA\_\-RS2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a9217ea018c1d8adea8a815edcc8895cc}{DMA\_\-RS2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_acf403dbc6f7c038de5dbe612f2e4cff5}{DMA\_\-RS2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_aad1b0e86fac1c051f44735132090216a}{DMA\_\-RS1\_\-OFFSETADDRESS}~DMA\_\-CWRS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_ab3cecf007e51d2a7735c33e9021d9f92}{DMA\_\-RS1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_a0ac6f5b050444b2a00967ea6a51db34c}{DMA\_\-RS1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_ab504fb006839c4a9e67dc144ec32efff}{DMA\_\-RS1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_af8c13a81cc73860bcb15d6a7d4ca16d7}{DMA\_\-RS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_acb14db5c688af99267d8520a441073e3}{DMA\_\-RS0\_\-OFFSETADDRESS}~DMA\_\-CWRS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a04e836a71aa1a1b7c3d94d315cbec34b}{DMA\_\-RS0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a530918fc7f88b1a6acbd32a5cbba4fd9}{DMA\_\-RS0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_aa369513e546dacde1f08eb76869894c5}{DMA\_\-RS0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_a29e2fa5db3db9c693c3ad57f77edd9f7}{DMA\_\-RS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_ab811917abbde7042aac98e5cd68a2b57}{DMA\_\-CSR\_\-OFFSETADDRESS}~0x00000014
+\item 
+\#define \hyperlink{a00547_a60aa2a57bebc64a52d6f59cae5992e24}{DMA\_\-CSR\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_aabcdec1620a7c21914768bec9d7d15f3}{DMA\_\-CSR\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_ae27eb5f31031160b8c236fdedc4e6bab}{DMA\_\-CSR\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_addd2e3f858b46b2a67caa2010fef501d}{DMA\_\-CSR\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a572efc5b5c8c74bbb08f69c023b7a776}{DMA\_\-SR2\_\-OFFSETADDRESS}~DMA\_\-CSR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a04709a58304f2d8e896081ed6cf6815c}{DMA\_\-SR2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_ad366e18f388c97c7fa1c05106ed5b94f}{DMA\_\-SR2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_aaf7ab40ea8ae2ad0865247654987b347}{DMA\_\-SR2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_a813c497e81e26f04cb817525f4e76832}{DMA\_\-SR2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_ada0e235423bd4db7ed48117ea4e5351a}{DMA\_\-SR1\_\-OFFSETADDRESS}~DMA\_\-CSR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a006e4b58517a5dceeb10c5c8dcb43443}{DMA\_\-SR1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_aa887312016f95805db5303802fc00992}{DMA\_\-SR1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a4fdaa0cb47057b0f86f4557acb74d498}{DMA\_\-SR1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_a31b34fd5f312ae07fac98416c94975cb}{DMA\_\-SR1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a12acfae055f8d089c0dbe4d97c0b7204}{DMA\_\-SR0\_\-OFFSETADDRESS}~DMA\_\-CSR\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_acf94b64a824bad73e99bc994cc10f5b3}{DMA\_\-SR0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a2aca63d82ec9757351340b7e0e9a2f46}{DMA\_\-SR0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_af658b00712f16d1fa959c76271802034}{DMA\_\-SR0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_a3926fc1ed04ea79e16d3b15b0471fdb3}{DMA\_\-SR0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_ae42ec34ee47aeb93de341a6ef4087d21}{DMA\_\-CUBS\_\-OFFSETADDRESS}~0x00000018
+\item 
+\#define \hyperlink{a00547_a03295c1564a9a1804f4a2d7186a4a0f0}{DMA\_\-CUBS\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_aa9969448e57b7405a1c5a99f998012f9}{DMA\_\-CUBS\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_a93acd3ca9a406ea92b1fe47474e59e3c}{DMA\_\-CUBS\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_a949b53f83e9d5dc492fdc1b7a08c8bf9}{DMA\_\-CUBS\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a58a43cfc475c82cce863a3d389ec247b}{DMA\_\-UBS2\_\-OFFSETADDRESS}~DMA\_\-CUBS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a39c705909c5c5b581e63d83bb178d940}{DMA\_\-UBS2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_a9f255ee2eb710d462fc908f1c43634b7}{DMA\_\-UBS2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a1b78974148ef350a161c3b9197f213e2}{DMA\_\-UBS2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_ab54c7aead38fa343411178576e1e82dc}{DMA\_\-UBS2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_aecf79555d74ae18894265e76340d9512}{DMA\_\-UBS1\_\-OFFSETADDRESS}~DMA\_\-CUBS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a46105c7a3f7eef51b62bc01ab43dc1e0}{DMA\_\-UBS1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_ad8b65d19365227f764e3906c72f7a96b}{DMA\_\-UBS1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a6464b961077ef5a80528065aca28c708}{DMA\_\-UBS1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_a6bfc4dcd01d578ce62d107a0b62ef746}{DMA\_\-UBS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a3fcb52ea5762aec6e08d9402b01d0f32}{DMA\_\-UBS0\_\-OFFSETADDRESS}~DMA\_\-CUBS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_ad1f484910de0d7511f11eae9c6ea26b1}{DMA\_\-UBS0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a8042a05749b9a48b9d1297b6f18421b0}{DMA\_\-UBS0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_ae8bde4517976f8b9a435695635769a2b}{DMA\_\-UBS0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_ab4b7b4598f9c3fec92c514fae4e89c02}{DMA\_\-UBS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_ad058d6e38845a244f2613c7f06e75468}{DMA\_\-CUBC\_\-OFFSETADDRESS}~0x0000001c
+\item 
+\#define \hyperlink{a00547_a8c931af4b32c78702551037d3a575726}{DMA\_\-CUBC\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_adb6f5ea392a7d8e8a6554096eed8fd81}{DMA\_\-CUBC\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_a50a757f8b7afdafeb9a9ce72799cbbb6}{DMA\_\-CUBC\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_a585beb2ca81b46173e78cec8544d35fb}{DMA\_\-CUBC\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a4cbc6b413253fd99a49bf340dd1840d7}{DMA\_\-UBC2\_\-OFFSETADDRESS}~DMA\_\-CUBC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_ada4233f031183ef63d59438052f3b7b9}{DMA\_\-UBC2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_a9c414d2c2138cc764fadd4cc108193b2}{DMA\_\-UBC2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_aac5bcaab524998e45b1a9c6518a4dfdc}{DMA\_\-UBC2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_a5c433d5388778bd7d73919f800246aa8}{DMA\_\-UBC2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a0b26abcc7063d07a8d444322a7298b77}{DMA\_\-UBC1\_\-OFFSETADDRESS}~DMA\_\-CUBC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_acdb464b248cc252121d84a3ce18d8669}{DMA\_\-UBC1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_a081663bd259232b0190739875dc8f854}{DMA\_\-UBC1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a8a03a43519b98675b8e2b8f74bdb7808}{DMA\_\-UBC1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_a7dc34a4ca9ded0568d6e4d792f892144}{DMA\_\-UBC1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a379cfb51ce3d0e0869d99cc0707562a2}{DMA\_\-UBC0\_\-OFFSETADDRESS}~DMA\_\-CUBC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a36678462030ef0892600f230d11a1fe7}{DMA\_\-UBC0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a6d33db6d777264fea94bb5ae6407a90f}{DMA\_\-UBC0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_ab9ec03fa356d8c60b990db7f21824aa2}{DMA\_\-UBC0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_ad75ed5b05e9d95734b846b6aaab6abe5}{DMA\_\-UBC0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_aada584c5cb620cb77911f073356bcd45}{DMA\_\-CRMS\_\-OFFSETADDRESS}~0x00000020
+\item 
+\#define \hyperlink{a00547_af2bcab329158e22243dd9ad3b44debd0}{DMA\_\-CRMS\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a2e7e27db7c47366e6c23b0c3d98e7426}{DMA\_\-CRMS\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_a3caa1ec0922839b9befe7c804a7a4e7b}{DMA\_\-CRMS\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_a2ed4d76d0f76f21be3cadc602c0a1125}{DMA\_\-CRMS\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a4963a9bfd5c5dd08132f7bfa8da05583}{DMA\_\-RMS2\_\-OFFSETADDRESS}~DMA\_\-CRMS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_ac40999a5d03946f8f9ae30b9918013a4}{DMA\_\-RMS2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_a9476c50057bc6010fd8ddc59dcca2b66}{DMA\_\-RMS2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a6ffdb406a6ebfe102c8162fe72fcc2af}{DMA\_\-RMS2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_a550649debe6017fa73f1f4b1d788d85d}{DMA\_\-RMS2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_adb3fdf021da84959e8e6b79e5005f1fa}{DMA\_\-RMS1\_\-OFFSETADDRESS}~DMA\_\-CRMS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a0e0ffe41bd1e2055978844ea0d5ca479}{DMA\_\-RMS1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_a2410508b4a08a0f86d6a0be09e3b57a5}{DMA\_\-RMS1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a7a3dc6c9367c782aef23aef7c763a806}{DMA\_\-RMS1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_acaee22bc62c9866ff41a7b47bcb54355}{DMA\_\-RMS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_aedeb04809cfbf6d0c2dc3bd5d503d470}{DMA\_\-RMS0\_\-OFFSETADDRESS}~DMA\_\-CRMS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a6ebf67c449c9c00749228c4f304fb640}{DMA\_\-RMS0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_aa01b985a3b6babbd3ec5c020fe03662a}{DMA\_\-RMS0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_af253ac96297350671140c674f6c04b98}{DMA\_\-RMS0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_ac4aee16fc5d09a3013a79bfe80dd0679}{DMA\_\-RMS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_ab593331124f5415f59ad68c3ae690b64}{DMA\_\-CRMC\_\-OFFSETADDRESS}~0x00000024
+\item 
+\#define \hyperlink{a00547_a72ebeac28cdf9162668b8908367c370d}{DMA\_\-CRMC\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a823f60716f78a2c3a66eb5a139d6d436}{DMA\_\-CRMC\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_a0b33b42fa957d2ff26cc8b7b2988ccfb}{DMA\_\-CRMC\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_a3251d4d44ab7778d9bffcf0a89156981}{DMA\_\-CRMC\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a274aa4d9df3d885c6f22ab728c344cc6}{DMA\_\-RMC2\_\-OFFSETADDRESS}~DMA\_\-CRMC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a9024fc0ebbf15bf06caf6eed604362ac}{DMA\_\-RMC2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_a084db9480bac43cebae8198fff82ad17}{DMA\_\-RMC2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a7489009b1a8178a381e272ceec884efa}{DMA\_\-RMC2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_af43b6b91df8724bea9bb011a2097680b}{DMA\_\-RMC2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_ab33eef90d93c3c0d0038af568d569928}{DMA\_\-RMC1\_\-OFFSETADDRESS}~DMA\_\-CRMC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a4c27204c100375906d3c717e1db66986}{DMA\_\-RMC1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_aca19d261f11d5272f20a429386f1e46f}{DMA\_\-RMC1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a06d57ad7f6a2245687d354c61a9762ff}{DMA\_\-RMC1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_aded926e34290e2d81d63d57f791484e2}{DMA\_\-RMC1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_adbc08a82326f5ff788b0f0b5ecc549c2}{DMA\_\-RMC0\_\-OFFSETADDRESS}~DMA\_\-CRMC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a4d7f484b0f74d9099476be859120c47a}{DMA\_\-RMC0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a14a52b9dc893b21683e2758a670e0951}{DMA\_\-RMC0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_adc5576d54a689000d389aeb7fd2910a1}{DMA\_\-RMC0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_aae6295b5f54ed72955ea189017408db7}{DMA\_\-RMC0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_af8ae013ff52a23e48cd01f345547195e}{DMA\_\-CES\_\-OFFSETADDRESS}~0x00000028
+\item 
+\#define \hyperlink{a00547_ae1d36d6341b4d5562b615dff0e250d48}{DMA\_\-CES\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a23459780394d9e772421e46079e8f950}{DMA\_\-CES\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_a23edb24829fc4301c693453d6d7bcd58}{DMA\_\-CES\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_ac640871d7a2d0fea50fe89e96deb3f4a}{DMA\_\-CES\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_adcd2772d3ff3420ffc5bf3909d5df76e}{DMA\_\-ENS2\_\-OFFSETADDRESS}~DMA\_\-CES\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a573a85efa3a415c849b5fe629ed8965c}{DMA\_\-ENS2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_a711a0f3d2ef3380b5cdddc1d56bf5e64}{DMA\_\-ENS2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a1c20c2d890871cae41d3543f4c0bf9ba}{DMA\_\-ENS2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_ae962cbddf17d216ea3a6ed53580c6f96}{DMA\_\-ENS2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_ae876a147c5a848a5f1cb93e66160340d}{DMA\_\-ENS1\_\-OFFSETADDRESS}~DMA\_\-CES\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a8a065a913f8488a836ab4e176aaa5ca8}{DMA\_\-ENS1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_ad4ec8d52c1da03b09c103f95a9562dc9}{DMA\_\-ENS1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a9a018c3f3788b54c59594b91742a4287}{DMA\_\-ENS1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_a5a405b1664866a600b78c2af3b525002}{DMA\_\-ENS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a22d32b205272ad0675e5cabe96946b37}{DMA\_\-ENS0\_\-OFFSETADDRESS}~DMA\_\-CES\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a8c2ee451a3a83cc383f7b6df839e0e94}{DMA\_\-ENS0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_ad852bf260d86a03c492dda890f706436}{DMA\_\-ENS0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a9c2795aef353c9f52ec90d1902a4b06c}{DMA\_\-ENS0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_a61559eafe4af3c6a976af93c32e548b4}{DMA\_\-ENS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_aa20030582964128876b5c66ee9c73b71}{DMA\_\-CEC\_\-OFFSETADDRESS}~0x0000002c
+\item 
+\#define \hyperlink{a00547_a80f794076518f1e4fce55dd2600392e8}{DMA\_\-CEC\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a9562638fe2d229b2a5e35ad6f6a1f059}{DMA\_\-CEC\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_a5e6dc4ed79f7cb0e5d5d23c37e6838d8}{DMA\_\-CEC\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_a22414a3b0c649c6daa0829a9dd7701ff}{DMA\_\-CEC\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_aff08d49030a7e049806294a7e7b64113}{DMA\_\-ENC2\_\-OFFSETADDRESS}~DMA\_\-CEC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a42e056fab0b0a89352bced5ac3d33fdd}{DMA\_\-ENC2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_aae284ba10854d4b9d0c4b4bc01fc54e2}{DMA\_\-ENC2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a80c48492165f72c698d4131cc8dd6bcc}{DMA\_\-ENC2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_a90af2a70e5bbcfb5e4bbc7b25a958f78}{DMA\_\-ENC2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a9e62a6f40a6bd7a4c2d220a3e979bf61}{DMA\_\-ENC1\_\-OFFSETADDRESS}~DMA\_\-CEC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a5665d25f0b0a7d87974aa69374eae06c}{DMA\_\-ENC1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_a028791b275fc7885453223defe8cc621}{DMA\_\-ENC1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a03035720981ee88338fb36db0dc5fc4d}{DMA\_\-ENC1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_a77329e16de9737f86123818e56a538f8}{DMA\_\-ENC1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_afd17ceb26b10783c0e9a75fb71b59c58}{DMA\_\-ENC0\_\-OFFSETADDRESS}~DMA\_\-CEC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a51805221f0eead88a3117ce96401034e}{DMA\_\-ENC0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a43b7b8c4115ad0c48348575c006b0c93}{DMA\_\-ENC0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_ab043380a7b62306b88650d2576278839}{DMA\_\-ENC0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_a471b7e728bf00f081a271e4d9d059703}{DMA\_\-ENC0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a2d0e0c971d49c174c17485ec07bfd858}{DMA\_\-CPAS\_\-OFFSETADDRESS}~0x00000030
+\item 
+\#define \hyperlink{a00547_af28721122278e380bce65f3eccafca96}{DMA\_\-CPAS\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a6a4be6421656f9441bcfc4f13c592ccb}{DMA\_\-CPAS\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_aa581767bbc03109ac7c77e8dc94bdbeb}{DMA\_\-CPAS\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_a28d602f9acd61477951276ecf61ae35a}{DMA\_\-CPAS\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a36b6b7e7f9dd401f092a6910d5244091}{DMA\_\-PAS2\_\-OFFSETADDRESS}~DMA\_\-CPAS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a94c7da41f0237a1fbbe4476d8f99c991}{DMA\_\-PAS2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_af5e2335b39cfc91dbc4ee39ba6531804}{DMA\_\-PAS2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_af8c4e3089e94a831564acfd1a85a95bb}{DMA\_\-PAS2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_a2139cf00ca58fa907b6a254c2b662cb6}{DMA\_\-PAS2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_adfeca7ea4b143ed349bd23de9a0bb9fd}{DMA\_\-PAS1\_\-OFFSETADDRESS}~DMA\_\-CPAS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_aa6ae0da6647d82b9b1d74b9761ad0d62}{DMA\_\-PAS1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_a97550444879097fc90d1688f874d3c04}{DMA\_\-PAS1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a043f8004332a35a2aa477785c156085f}{DMA\_\-PAS1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_ab297c98415d9bb6ab9fb929899f1613a}{DMA\_\-PAS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a7e0d3ff0470468d27f03666b5885dd0e}{DMA\_\-PAS0\_\-OFFSETADDRESS}~DMA\_\-CPAS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a4f74a5041ded7ccff94284b7ca154911}{DMA\_\-PAS0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a65408e57bcc7c804db7b0f9af76ea34e}{DMA\_\-PAS0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a327873e68c74c1b5f34c28543a3bff71}{DMA\_\-PAS0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_a200255c9b463780b848010247a6faacb}{DMA\_\-PAS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a15aa12f396c9727bab38b98cae8dccdd}{DMA\_\-CPAC\_\-OFFSETADDRESS}~0x00000034
+\item 
+\#define \hyperlink{a00547_a889aade1ad8ede0eb7a6ec9911811f43}{DMA\_\-CPAC\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_acdbb5f934b4ac2a30073ca24f65c9d90}{DMA\_\-CPAC\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_af1c0aa27b7d86a883d3ad593dd7ae040}{DMA\_\-CPAC\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_afa5087223be1650ae0942f5e5866363b}{DMA\_\-CPAC\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a59f4ab931db8721c4394452c101c96ca}{DMA\_\-PAC2\_\-OFFSETADDRESS}~DMA\_\-CPAC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a9342ba6285d494612a2d4344ed4066c4}{DMA\_\-PAC2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_a52048befe5b9124eb26a89bf2ecc1e70}{DMA\_\-PAC2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a8f1e8594124d2ea615ed054eeda05934}{DMA\_\-PAC2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_a5a5806a142faf81c12709459dcd1dff9}{DMA\_\-PAC2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a783969ef9cf7d77624256638aea0607d}{DMA\_\-PAC1\_\-OFFSETADDRESS}~DMA\_\-CPAC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a39a9a547f920ef1b2415ce818f0eb851}{DMA\_\-PAC1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_a3755ff2c8c120d396297191509f57143}{DMA\_\-PAC1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a46c1faee347ffe228aa53722623840ad}{DMA\_\-PAC1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_a75e2957dfa1d8e879d082440f009abcb}{DMA\_\-PAC1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a63df217e6567438f3faca9f75ffb0241}{DMA\_\-PAC0\_\-OFFSETADDRESS}~DMA\_\-CPAC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a68c0d2ea155f8df33cf9fd72d16afb11}{DMA\_\-PAC0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a3a77fe95412ab94a5b83079bb53ef926}{DMA\_\-PAC0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a4ee449924178c03e13d18c8c345ce85b}{DMA\_\-PAC0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_af6f5ce2c38878637b9b4f267b6a37e97}{DMA\_\-PAC0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a095941c30599b8102b075d48152ae6bb}{DMA\_\-CPS\_\-OFFSETADDRESS}~0x00000038
+\item 
+\#define \hyperlink{a00547_aad96f845b4d5d72bbf83b09a3b0dfffb}{DMA\_\-CPS\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a1da186b1b23199c9bc3486e9f504873a}{DMA\_\-CPS\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_ae0ab8709a990ea2cf47cd89689992122}{DMA\_\-CPS\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_aa8ddbb7e180bae2401c41b3996bb01a6}{DMA\_\-CPS\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a4974d5a13dd6c22f59c9ff0ffc881f89}{DMA\_\-PS2\_\-OFFSETADDRESS}~DMA\_\-CPS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_ae77308ced0668fa34a3cee8c777d42fa}{DMA\_\-PS2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_acc88795653fbe3cbb2f8b52e4415a11b}{DMA\_\-PS2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a98305e718e8fe3559e2d9d0f0d4b70ff}{DMA\_\-PS2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_a4c993ea5e44be4f0180b682a95aa8e2b}{DMA\_\-PS2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_aaafa59c050b16495d5530d0682380e87}{DMA\_\-PS1\_\-OFFSETADDRESS}~DMA\_\-CPS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_ad8174403f75638ab5556d21935f255b1}{DMA\_\-PS1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_a6899e55753002b5d85c721bc3ee832d0}{DMA\_\-PS1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a374f7f39fd94bccc38496e571e768133}{DMA\_\-PS1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_af7cd569bed2d5a72910feff0d9a83247}{DMA\_\-PS1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a2e5513883969ce188f238b95fe889c53}{DMA\_\-PS0\_\-OFFSETADDRESS}~DMA\_\-CPS\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a0509ac9faa4e7810fe7e2fce18a3b491}{DMA\_\-PS0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a9c92e09941478b3ffe3b570d8c4bfcef}{DMA\_\-PS0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a68cb7e1cf6a811f4f71ff2c79ed31612}{DMA\_\-PS0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_ad301b17707fb742f1438c755cee96ee0}{DMA\_\-PS0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_aee4ad4fa572e344f5f60f98ef3a04f2e}{DMA\_\-CPC\_\-OFFSETADDRESS}~0x0000003c
+\item 
+\#define \hyperlink{a00547_adaf660c298b54dad3b51399247ae5da4}{DMA\_\-CPC\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a7ac4c3c92092bff10cd763c503fe5777}{DMA\_\-CPC\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_a6c781d0134dfdae9d772eb8729653b88}{DMA\_\-CPC\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_a928380a4adf5ce1ac5b2045a9cfdaa3b}{DMA\_\-CPC\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_aed95caeafb0768984755ed3f1ab4a356}{DMA\_\-PC2\_\-OFFSETADDRESS}~DMA\_\-CPC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_aaaf484ef479d07ffcb985d91abc294b8}{DMA\_\-PC2\_\-BITOFFSET}~2
+\item 
+\#define \hyperlink{a00547_ab207c60bc52ee0c47873be92b6683d45}{DMA\_\-PC2\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a8bc6bf603200c5576041f5efb1bbb3fa}{DMA\_\-PC2\_\-BITMASK}~0x00000004
+\item 
+\#define \hyperlink{a00547_ae8f8f5cafa7cb5a3432330f6bd7c8545}{DMA\_\-PC2\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a5bcf743628bf5a288525da9914231160}{DMA\_\-PC1\_\-OFFSETADDRESS}~DMA\_\-CPC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_ab5d5d1413dcb4e0e265b75527d54b991}{DMA\_\-PC1\_\-BITOFFSET}~1
+\item 
+\#define \hyperlink{a00547_adc953b9a63b8aea304f5fd3c5a5b37c1}{DMA\_\-PC1\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a4aba948f4d1d8fbb5a006d0c6fd04f9c}{DMA\_\-PC1\_\-BITMASK}~0x00000002
+\item 
+\#define \hyperlink{a00547_afc2289327605fe02ebfeb946919fe5b5}{DMA\_\-PC1\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_a92fb05b33dcfaa49dc3e177695413b2f}{DMA\_\-PC0\_\-OFFSETADDRESS}~DMA\_\-CPC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_a3d27bc23ca5e54a254421a73b26cdb19}{DMA\_\-PC0\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_aea542224fcd0fbadd5ab1ee3094c85da}{DMA\_\-PC0\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_aba1f7f5aa23a474f5887516c98b26563}{DMA\_\-PC0\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_a8452ecb69e450977ef4360e923801cf6}{DMA\_\-PC0\_\-INIT}~0x0
+\item 
+\#define \hyperlink{a00547_ad80e0c9431c46cb3e1fde5b2297b8ed1}{DMA\_\-BEC\_\-OFFSETADDRESS}~0x0000004c
+\item 
+\#define \hyperlink{a00547_a57a67b1d0edc6422548771bdbc019af8}{DMA\_\-BEC\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_a5ae1e4fd1ad40538223e030c5e7c4f70}{DMA\_\-BEC\_\-BITFIELDSIZE}~32
+\item 
+\#define \hyperlink{a00547_a2becfaea83418cc2f99c46ebf387894f}{DMA\_\-BEC\_\-BITMASK}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00547_acf064bbaf030b22a8b1f9945eb74dfd0}{DMA\_\-BEC\_\-INIT}~0x00000000
+\item 
+\#define \hyperlink{a00547_a39e33436d3c28d4a8b7d8e7072520a5b}{DMA\_\-EC\_\-OFFSETADDRESS}~DMA\_\-BEC\_\-OFFSETADDRESS
+\item 
+\#define \hyperlink{a00547_acc506476718b2cfe23271dbe3e44ce65}{DMA\_\-EC\_\-BITOFFSET}~0
+\item 
+\#define \hyperlink{a00547_ada973e36f7e38a6d9edca0e71196aba6}{DMA\_\-EC\_\-BITFIELDSIZE}~1
+\item 
+\#define \hyperlink{a00547_a41f64ebe1a7720a097009d1cac847137}{DMA\_\-EC\_\-BITMASK}~0x00000001
+\item 
+\#define \hyperlink{a00547_ada87a117788b6d9d5533d8e95d32a971}{DMA\_\-EC\_\-INIT}~0x0
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00547_a5ae1e4fd1ad40538223e030c5e7c4f70}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-BEC\_\-BITFIELDSIZE@{DMA\_\-BEC\_\-BITFIELDSIZE}}
+\index{DMA\_\-BEC\_\-BITFIELDSIZE@{DMA\_\-BEC\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-BEC\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BEC\_\-BITFIELDSIZE~32}}
+\label{a00547_a5ae1e4fd1ad40538223e030c5e7c4f70}
+
+
+Definition at line 613 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a2becfaea83418cc2f99c46ebf387894f}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-BEC\_\-BITMASK@{DMA\_\-BEC\_\-BITMASK}}
+\index{DMA\_\-BEC\_\-BITMASK@{DMA\_\-BEC\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-BEC\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BEC\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_a2becfaea83418cc2f99c46ebf387894f}
+
+
+Definition at line 614 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a57a67b1d0edc6422548771bdbc019af8}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-BEC\_\-BITOFFSET@{DMA\_\-BEC\_\-BITOFFSET}}
+\index{DMA\_\-BEC\_\-BITOFFSET@{DMA\_\-BEC\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-BEC\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BEC\_\-BITOFFSET~0}}
+\label{a00547_a57a67b1d0edc6422548771bdbc019af8}
+
+
+Definition at line 612 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_acf064bbaf030b22a8b1f9945eb74dfd0}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-BEC\_\-INIT@{DMA\_\-BEC\_\-INIT}}
+\index{DMA\_\-BEC\_\-INIT@{DMA\_\-BEC\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-BEC\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BEC\_\-INIT~0x00000000}}
+\label{a00547_acf064bbaf030b22a8b1f9945eb74dfd0}
+
+
+Definition at line 615 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad80e0c9431c46cb3e1fde5b2297b8ed1}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-BEC\_\-OFFSETADDRESS@{DMA\_\-BEC\_\-OFFSETADDRESS}}
+\index{DMA\_\-BEC\_\-OFFSETADDRESS@{DMA\_\-BEC\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-BEC\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BEC\_\-OFFSETADDRESS~0x0000004c}}
+\label{a00547_ad80e0c9431c46cb3e1fde5b2297b8ed1}
+
+
+Definition at line 611 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af93275ca2ea7ba28fb05b3934cf992fc}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-BP\_\-BITFIELDSIZE@{DMA\_\-BP\_\-BITFIELDSIZE}}
+\index{DMA\_\-BP\_\-BITFIELDSIZE@{DMA\_\-BP\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-BP\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BP\_\-BITFIELDSIZE~31}}
+\label{a00547_af93275ca2ea7ba28fb05b3934cf992fc}
+
+
+Definition at line 159 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad2c65e3d63ad7b26cec172fdce245628}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-BP\_\-BITMASK@{DMA\_\-BP\_\-BITMASK}}
+\index{DMA\_\-BP\_\-BITMASK@{DMA\_\-BP\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-BP\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BP\_\-BITMASK~0x7fffffff}}
+\label{a00547_ad2c65e3d63ad7b26cec172fdce245628}
+
+
+Definition at line 160 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a0d06b0e33818e8168abd28cf8d627170}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-BP\_\-BITOFFSET@{DMA\_\-BP\_\-BITOFFSET}}
+\index{DMA\_\-BP\_\-BITOFFSET@{DMA\_\-BP\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-BP\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BP\_\-BITOFFSET~0}}
+\label{a00547_a0d06b0e33818e8168abd28cf8d627170}
+
+
+Definition at line 158 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aff9cdfce242a1dea85c03a03280b1490}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-BP\_\-INIT@{DMA\_\-BP\_\-INIT}}
+\index{DMA\_\-BP\_\-INIT@{DMA\_\-BP\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-BP\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BP\_\-INIT~0x90}}
+\label{a00547_aff9cdfce242a1dea85c03a03280b1490}
+
+
+Definition at line 161 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aa3a17523e030ad7528d006fea3a92fad}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-BP\_\-OFFSETADDRESS@{DMA\_\-BP\_\-OFFSETADDRESS}}
+\index{DMA\_\-BP\_\-OFFSETADDRESS@{DMA\_\-BP\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-BP\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-BP\_\-OFFSETADDRESS~DMA\_\-CACDBP\_\-OFFSETADDRESS}}
+\label{a00547_aa3a17523e030ad7528d006fea3a92fad}
+
+
+Definition at line 157 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_adc7f51f4243fb65d2a8e4c449743c5d3}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CACDBP\_\-BITFIELDSIZE@{DMA\_\-CACDBP\_\-BITFIELDSIZE}}
+\index{DMA\_\-CACDBP\_\-BITFIELDSIZE@{DMA\_\-CACDBP\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CACDBP\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CACDBP\_\-BITFIELDSIZE~32}}
+\label{a00547_adc7f51f4243fb65d2a8e4c449743c5d3}
+
+
+Definition at line 150 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a03df02dd206bb041d832f9cbad038bc0}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CACDBP\_\-BITMASK@{DMA\_\-CACDBP\_\-BITMASK}}
+\index{DMA\_\-CACDBP\_\-BITMASK@{DMA\_\-CACDBP\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CACDBP\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CACDBP\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_a03df02dd206bb041d832f9cbad038bc0}
+
+
+Definition at line 151 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab0eb3182f93b277d7d51d49c3f001c44}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CACDBP\_\-BITOFFSET@{DMA\_\-CACDBP\_\-BITOFFSET}}
+\index{DMA\_\-CACDBP\_\-BITOFFSET@{DMA\_\-CACDBP\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CACDBP\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CACDBP\_\-BITOFFSET~0}}
+\label{a00547_ab0eb3182f93b277d7d51d49c3f001c44}
+
+
+Definition at line 149 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a89d1fca86188262766d80354702c886e}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CACDBP\_\-INIT@{DMA\_\-CACDBP\_\-INIT}}
+\index{DMA\_\-CACDBP\_\-INIT@{DMA\_\-CACDBP\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CACDBP\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CACDBP\_\-INIT~0x00000090}}
+\label{a00547_a89d1fca86188262766d80354702c886e}
+
+
+Definition at line 152 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aa27683ff86911fe87d8d98d51a74800d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CACDBP\_\-OFFSETADDRESS@{DMA\_\-CACDBP\_\-OFFSETADDRESS}}
+\index{DMA\_\-CACDBP\_\-OFFSETADDRESS@{DMA\_\-CACDBP\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CACDBP\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CACDBP\_\-OFFSETADDRESS~0x0000000c}}
+\label{a00547_aa27683ff86911fe87d8d98d51a74800d}
+
+
+Definition at line 148 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a989faedaed8ced3e17f0d877644eece3}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CCDBP\_\-BITFIELDSIZE@{DMA\_\-CCDBP\_\-BITFIELDSIZE}}
+\index{DMA\_\-CCDBP\_\-BITFIELDSIZE@{DMA\_\-CCDBP\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CCDBP\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CCDBP\_\-BITFIELDSIZE~32}}
+\label{a00547_a989faedaed8ced3e17f0d877644eece3}
+
+
+Definition at line 131 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a275a38cf1823e3a27c3e0e91725466d4}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CCDBP\_\-BITMASK@{DMA\_\-CCDBP\_\-BITMASK}}
+\index{DMA\_\-CCDBP\_\-BITMASK@{DMA\_\-CCDBP\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CCDBP\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CCDBP\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_a275a38cf1823e3a27c3e0e91725466d4}
+
+
+Definition at line 132 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a6e09a969715ff30c8d11bc90818a6ba4}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CCDBP\_\-BITOFFSET@{DMA\_\-CCDBP\_\-BITOFFSET}}
+\index{DMA\_\-CCDBP\_\-BITOFFSET@{DMA\_\-CCDBP\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CCDBP\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CCDBP\_\-BITOFFSET~0}}
+\label{a00547_a6e09a969715ff30c8d11bc90818a6ba4}
+
+
+Definition at line 130 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af9d68df9474a8192e40826367158ed19}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CCDBP\_\-INIT@{DMA\_\-CCDBP\_\-INIT}}
+\index{DMA\_\-CCDBP\_\-INIT@{DMA\_\-CCDBP\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CCDBP\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CCDBP\_\-INIT~0x00000000}}
+\label{a00547_af9d68df9474a8192e40826367158ed19}
+
+
+Definition at line 133 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8f559ca9f5e7a90713050f67560878c2}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CCDBP\_\-OFFSETADDRESS@{DMA\_\-CCDBP\_\-OFFSETADDRESS}}
+\index{DMA\_\-CCDBP\_\-OFFSETADDRESS@{DMA\_\-CCDBP\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CCDBP\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CCDBP\_\-OFFSETADDRESS~0x00000008}}
+\label{a00547_a8f559ca9f5e7a90713050f67560878c2}
+
+
+Definition at line 129 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9562638fe2d229b2a5e35ad6f6a1f059}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CEC\_\-BITFIELDSIZE@{DMA\_\-CEC\_\-BITFIELDSIZE}}
+\index{DMA\_\-CEC\_\-BITFIELDSIZE@{DMA\_\-CEC\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CEC\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CEC\_\-BITFIELDSIZE~32}}
+\label{a00547_a9562638fe2d229b2a5e35ad6f6a1f059}
+
+
+Definition at line 428 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a5e6dc4ed79f7cb0e5d5d23c37e6838d8}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CEC\_\-BITMASK@{DMA\_\-CEC\_\-BITMASK}}
+\index{DMA\_\-CEC\_\-BITMASK@{DMA\_\-CEC\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CEC\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CEC\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_a5e6dc4ed79f7cb0e5d5d23c37e6838d8}
+
+
+Definition at line 429 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a80f794076518f1e4fce55dd2600392e8}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CEC\_\-BITOFFSET@{DMA\_\-CEC\_\-BITOFFSET}}
+\index{DMA\_\-CEC\_\-BITOFFSET@{DMA\_\-CEC\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CEC\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CEC\_\-BITOFFSET~0}}
+\label{a00547_a80f794076518f1e4fce55dd2600392e8}
+
+
+Definition at line 427 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a22414a3b0c649c6daa0829a9dd7701ff}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CEC\_\-INIT@{DMA\_\-CEC\_\-INIT}}
+\index{DMA\_\-CEC\_\-INIT@{DMA\_\-CEC\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CEC\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CEC\_\-INIT~0x00000000}}
+\label{a00547_a22414a3b0c649c6daa0829a9dd7701ff}
+
+
+Definition at line 430 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aa20030582964128876b5c66ee9c73b71}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CEC\_\-OFFSETADDRESS@{DMA\_\-CEC\_\-OFFSETADDRESS}}
+\index{DMA\_\-CEC\_\-OFFSETADDRESS@{DMA\_\-CEC\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CEC\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CEC\_\-OFFSETADDRESS~0x0000002c}}
+\label{a00547_aa20030582964128876b5c66ee9c73b71}
+
+
+Definition at line 426 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a23459780394d9e772421e46079e8f950}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CES\_\-BITFIELDSIZE@{DMA\_\-CES\_\-BITFIELDSIZE}}
+\index{DMA\_\-CES\_\-BITFIELDSIZE@{DMA\_\-CES\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CES\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CES\_\-BITFIELDSIZE~32}}
+\label{a00547_a23459780394d9e772421e46079e8f950}
+
+
+Definition at line 391 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a23edb24829fc4301c693453d6d7bcd58}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CES\_\-BITMASK@{DMA\_\-CES\_\-BITMASK}}
+\index{DMA\_\-CES\_\-BITMASK@{DMA\_\-CES\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CES\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CES\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_a23edb24829fc4301c693453d6d7bcd58}
+
+
+Definition at line 392 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ae1d36d6341b4d5562b615dff0e250d48}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CES\_\-BITOFFSET@{DMA\_\-CES\_\-BITOFFSET}}
+\index{DMA\_\-CES\_\-BITOFFSET@{DMA\_\-CES\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CES\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CES\_\-BITOFFSET~0}}
+\label{a00547_ae1d36d6341b4d5562b615dff0e250d48}
+
+
+Definition at line 390 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ac640871d7a2d0fea50fe89e96deb3f4a}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CES\_\-INIT@{DMA\_\-CES\_\-INIT}}
+\index{DMA\_\-CES\_\-INIT@{DMA\_\-CES\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CES\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CES\_\-INIT~0x00000000}}
+\label{a00547_ac640871d7a2d0fea50fe89e96deb3f4a}
+
+
+Definition at line 393 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af8ae013ff52a23e48cd01f345547195e}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CES\_\-OFFSETADDRESS@{DMA\_\-CES\_\-OFFSETADDRESS}}
+\index{DMA\_\-CES\_\-OFFSETADDRESS@{DMA\_\-CES\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CES\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CES\_\-OFFSETADDRESS~0x00000028}}
+\label{a00547_af8ae013ff52a23e48cd01f345547195e}
+
+
+Definition at line 389 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a134f4735b50e2d6636b7c082b2057f14}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CHS\_\-BITFIELDSIZE@{DMA\_\-CHS\_\-BITFIELDSIZE}}
+\index{DMA\_\-CHS\_\-BITFIELDSIZE@{DMA\_\-CHS\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CHS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CHS\_\-BITFIELDSIZE~5}}
+\label{a00547_a134f4735b50e2d6636b7c082b2057f14}
+
+
+Definition at line 75 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a206b7f6a5fd6825d63adce73eb67d29d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CHS\_\-BITMASK@{DMA\_\-CHS\_\-BITMASK}}
+\index{DMA\_\-CHS\_\-BITMASK@{DMA\_\-CHS\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CHS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CHS\_\-BITMASK~0x001f0000}}
+\label{a00547_a206b7f6a5fd6825d63adce73eb67d29d}
+
+
+Definition at line 76 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_adadd26e82ada74d711ae27f63de8ec9d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CHS\_\-BITOFFSET@{DMA\_\-CHS\_\-BITOFFSET}}
+\index{DMA\_\-CHS\_\-BITOFFSET@{DMA\_\-CHS\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CHS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CHS\_\-BITOFFSET~16}}
+\label{a00547_adadd26e82ada74d711ae27f63de8ec9d}
+
+
+Definition at line 74 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9e3e6d6c98a2c203c72cee4f2af8c047}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CHS\_\-INIT@{DMA\_\-CHS\_\-INIT}}
+\index{DMA\_\-CHS\_\-INIT@{DMA\_\-CHS\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CHS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CHS\_\-INIT~0x0}}
+\label{a00547_a9e3e6d6c98a2c203c72cee4f2af8c047}
+
+
+Definition at line 77 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a0caf9f2f89504b6f6c0adf2f789b750b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CHS\_\-OFFSETADDRESS@{DMA\_\-CHS\_\-OFFSETADDRESS}}
+\index{DMA\_\-CHS\_\-OFFSETADDRESS@{DMA\_\-CHS\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CHS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CHS\_\-OFFSETADDRESS~DMA\_\-STATUS\_\-OFFSETADDRESS}}
+\label{a00547_a0caf9f2f89504b6f6c0adf2f789b750b}
+
+
+Definition at line 73 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a622ed5f1635239477a54329777259eaf}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CONFIG\_\-BITFIELDSIZE@{DMA\_\-CONFIG\_\-BITFIELDSIZE}}
+\index{DMA\_\-CONFIG\_\-BITFIELDSIZE@{DMA\_\-CONFIG\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CONFIG\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CONFIG\_\-BITFIELDSIZE~32}}
+\label{a00547_a622ed5f1635239477a54329777259eaf}
+
+
+Definition at line 103 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_accf659d57fc0a37d95980ede8a99b1d6}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CONFIG\_\-BITMASK@{DMA\_\-CONFIG\_\-BITMASK}}
+\index{DMA\_\-CONFIG\_\-BITMASK@{DMA\_\-CONFIG\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CONFIG\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CONFIG\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_accf659d57fc0a37d95980ede8a99b1d6}
+
+
+Definition at line 104 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aac655fa012c21874055c777f49c4c7ff}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CONFIG\_\-BITOFFSET@{DMA\_\-CONFIG\_\-BITOFFSET}}
+\index{DMA\_\-CONFIG\_\-BITOFFSET@{DMA\_\-CONFIG\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CONFIG\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CONFIG\_\-BITOFFSET~0}}
+\label{a00547_aac655fa012c21874055c777f49c4c7ff}
+
+
+Definition at line 102 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ada82320bd161f2e5b75c28cbd0da748c}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CONFIG\_\-INIT@{DMA\_\-CONFIG\_\-INIT}}
+\index{DMA\_\-CONFIG\_\-INIT@{DMA\_\-CONFIG\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CONFIG\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CONFIG\_\-INIT~0x00000000}}
+\label{a00547_ada82320bd161f2e5b75c28cbd0da748c}
+
+
+Definition at line 105 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8a7b68f545ca97d9c238efb1ff7d9005}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CONFIG\_\-OFFSETADDRESS@{DMA\_\-CONFIG\_\-OFFSETADDRESS}}
+\index{DMA\_\-CONFIG\_\-OFFSETADDRESS@{DMA\_\-CONFIG\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CONFIG\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CONFIG\_\-OFFSETADDRESS~0x00000004}}
+\label{a00547_a8a7b68f545ca97d9c238efb1ff7d9005}
+
+
+Definition at line 101 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_acdbb5f934b4ac2a30073ca24f65c9d90}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPAC\_\-BITFIELDSIZE@{DMA\_\-CPAC\_\-BITFIELDSIZE}}
+\index{DMA\_\-CPAC\_\-BITFIELDSIZE@{DMA\_\-CPAC\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPAC\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAC\_\-BITFIELDSIZE~32}}
+\label{a00547_acdbb5f934b4ac2a30073ca24f65c9d90}
+
+
+Definition at line 502 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af1c0aa27b7d86a883d3ad593dd7ae040}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPAC\_\-BITMASK@{DMA\_\-CPAC\_\-BITMASK}}
+\index{DMA\_\-CPAC\_\-BITMASK@{DMA\_\-CPAC\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPAC\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAC\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_af1c0aa27b7d86a883d3ad593dd7ae040}
+
+
+Definition at line 503 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a889aade1ad8ede0eb7a6ec9911811f43}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPAC\_\-BITOFFSET@{DMA\_\-CPAC\_\-BITOFFSET}}
+\index{DMA\_\-CPAC\_\-BITOFFSET@{DMA\_\-CPAC\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPAC\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAC\_\-BITOFFSET~0}}
+\label{a00547_a889aade1ad8ede0eb7a6ec9911811f43}
+
+
+Definition at line 501 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_afa5087223be1650ae0942f5e5866363b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPAC\_\-INIT@{DMA\_\-CPAC\_\-INIT}}
+\index{DMA\_\-CPAC\_\-INIT@{DMA\_\-CPAC\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPAC\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAC\_\-INIT~0x00000000}}
+\label{a00547_afa5087223be1650ae0942f5e5866363b}
+
+
+Definition at line 504 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a15aa12f396c9727bab38b98cae8dccdd}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPAC\_\-OFFSETADDRESS@{DMA\_\-CPAC\_\-OFFSETADDRESS}}
+\index{DMA\_\-CPAC\_\-OFFSETADDRESS@{DMA\_\-CPAC\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPAC\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAC\_\-OFFSETADDRESS~0x00000034}}
+\label{a00547_a15aa12f396c9727bab38b98cae8dccdd}
+
+
+Definition at line 500 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a6a4be6421656f9441bcfc4f13c592ccb}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPAS\_\-BITFIELDSIZE@{DMA\_\-CPAS\_\-BITFIELDSIZE}}
+\index{DMA\_\-CPAS\_\-BITFIELDSIZE@{DMA\_\-CPAS\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPAS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAS\_\-BITFIELDSIZE~32}}
+\label{a00547_a6a4be6421656f9441bcfc4f13c592ccb}
+
+
+Definition at line 465 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aa581767bbc03109ac7c77e8dc94bdbeb}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPAS\_\-BITMASK@{DMA\_\-CPAS\_\-BITMASK}}
+\index{DMA\_\-CPAS\_\-BITMASK@{DMA\_\-CPAS\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPAS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAS\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_aa581767bbc03109ac7c77e8dc94bdbeb}
+
+
+Definition at line 466 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af28721122278e380bce65f3eccafca96}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPAS\_\-BITOFFSET@{DMA\_\-CPAS\_\-BITOFFSET}}
+\index{DMA\_\-CPAS\_\-BITOFFSET@{DMA\_\-CPAS\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPAS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAS\_\-BITOFFSET~0}}
+\label{a00547_af28721122278e380bce65f3eccafca96}
+
+
+Definition at line 464 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a28d602f9acd61477951276ecf61ae35a}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPAS\_\-INIT@{DMA\_\-CPAS\_\-INIT}}
+\index{DMA\_\-CPAS\_\-INIT@{DMA\_\-CPAS\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPAS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAS\_\-INIT~0x00000000}}
+\label{a00547_a28d602f9acd61477951276ecf61ae35a}
+
+
+Definition at line 467 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a2d0e0c971d49c174c17485ec07bfd858}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPAS\_\-OFFSETADDRESS@{DMA\_\-CPAS\_\-OFFSETADDRESS}}
+\index{DMA\_\-CPAS\_\-OFFSETADDRESS@{DMA\_\-CPAS\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPAS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPAS\_\-OFFSETADDRESS~0x00000030}}
+\label{a00547_a2d0e0c971d49c174c17485ec07bfd858}
+
+
+Definition at line 463 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a7ac4c3c92092bff10cd763c503fe5777}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPC\_\-BITFIELDSIZE@{DMA\_\-CPC\_\-BITFIELDSIZE}}
+\index{DMA\_\-CPC\_\-BITFIELDSIZE@{DMA\_\-CPC\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPC\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-BITFIELDSIZE~32}}
+\label{a00547_a7ac4c3c92092bff10cd763c503fe5777}
+
+
+Definition at line 576 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a6c781d0134dfdae9d772eb8729653b88}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPC\_\-BITMASK@{DMA\_\-CPC\_\-BITMASK}}
+\index{DMA\_\-CPC\_\-BITMASK@{DMA\_\-CPC\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPC\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_a6c781d0134dfdae9d772eb8729653b88}
+
+
+Definition at line 577 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_adaf660c298b54dad3b51399247ae5da4}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPC\_\-BITOFFSET@{DMA\_\-CPC\_\-BITOFFSET}}
+\index{DMA\_\-CPC\_\-BITOFFSET@{DMA\_\-CPC\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPC\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-BITOFFSET~0}}
+\label{a00547_adaf660c298b54dad3b51399247ae5da4}
+
+
+Definition at line 575 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4f72a0c45e3181273b66098bcc479228}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPC\_\-CONFIG\_\-BITFIELDSIZE@{DMA\_\-CPC\_\-CONFIG\_\-BITFIELDSIZE}}
+\index{DMA\_\-CPC\_\-CONFIG\_\-BITFIELDSIZE@{DMA\_\-CPC\_\-CONFIG\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPC\_\-CONFIG\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-CONFIG\_\-BITFIELDSIZE~3}}
+\label{a00547_a4f72a0c45e3181273b66098bcc479228}
+
+
+Definition at line 112 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ac5e794e02a86f98fdb696b4d3e71aecd}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPC\_\-CONFIG\_\-BITMASK@{DMA\_\-CPC\_\-CONFIG\_\-BITMASK}}
+\index{DMA\_\-CPC\_\-CONFIG\_\-BITMASK@{DMA\_\-CPC\_\-CONFIG\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPC\_\-CONFIG\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-CONFIG\_\-BITMASK~0x000000e0}}
+\label{a00547_ac5e794e02a86f98fdb696b4d3e71aecd}
+
+
+Definition at line 113 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab242bf9b2f92d776f1019ef9ffcb8a4c}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPC\_\-CONFIG\_\-BITOFFSET@{DMA\_\-CPC\_\-CONFIG\_\-BITOFFSET}}
+\index{DMA\_\-CPC\_\-CONFIG\_\-BITOFFSET@{DMA\_\-CPC\_\-CONFIG\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPC\_\-CONFIG\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-CONFIG\_\-BITOFFSET~5}}
+\label{a00547_ab242bf9b2f92d776f1019ef9ffcb8a4c}
+
+
+Definition at line 111 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_afa9e72d773ecb33158a9a13a2408647a}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPC\_\-CONFIG\_\-INIT@{DMA\_\-CPC\_\-CONFIG\_\-INIT}}
+\index{DMA\_\-CPC\_\-CONFIG\_\-INIT@{DMA\_\-CPC\_\-CONFIG\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPC\_\-CONFIG\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-CONFIG\_\-INIT~0x0}}
+\label{a00547_afa9e72d773ecb33158a9a13a2408647a}
+
+
+Definition at line 114 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aaa4e3b81c7de5fa6b230b23d3671ec8d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPC\_\-CONFIG\_\-OFFSETADDRESS@{DMA\_\-CPC\_\-CONFIG\_\-OFFSETADDRESS}}
+\index{DMA\_\-CPC\_\-CONFIG\_\-OFFSETADDRESS@{DMA\_\-CPC\_\-CONFIG\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPC\_\-CONFIG\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-CONFIG\_\-OFFSETADDRESS~DMA\_\-CONFIG\_\-OFFSETADDRESS}}
+\label{a00547_aaa4e3b81c7de5fa6b230b23d3671ec8d}
+
+
+Definition at line 110 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a928380a4adf5ce1ac5b2045a9cfdaa3b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPC\_\-INIT@{DMA\_\-CPC\_\-INIT}}
+\index{DMA\_\-CPC\_\-INIT@{DMA\_\-CPC\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPC\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-INIT~0x00000000}}
+\label{a00547_a928380a4adf5ce1ac5b2045a9cfdaa3b}
+
+
+Definition at line 578 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aee4ad4fa572e344f5f60f98ef3a04f2e}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPC\_\-OFFSETADDRESS@{DMA\_\-CPC\_\-OFFSETADDRESS}}
+\index{DMA\_\-CPC\_\-OFFSETADDRESS@{DMA\_\-CPC\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPC\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPC\_\-OFFSETADDRESS~0x0000003c}}
+\label{a00547_aee4ad4fa572e344f5f60f98ef3a04f2e}
+
+
+Definition at line 574 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a1da186b1b23199c9bc3486e9f504873a}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPS\_\-BITFIELDSIZE@{DMA\_\-CPS\_\-BITFIELDSIZE}}
+\index{DMA\_\-CPS\_\-BITFIELDSIZE@{DMA\_\-CPS\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPS\_\-BITFIELDSIZE~32}}
+\label{a00547_a1da186b1b23199c9bc3486e9f504873a}
+
+
+Definition at line 539 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ae0ab8709a990ea2cf47cd89689992122}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPS\_\-BITMASK@{DMA\_\-CPS\_\-BITMASK}}
+\index{DMA\_\-CPS\_\-BITMASK@{DMA\_\-CPS\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPS\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_ae0ab8709a990ea2cf47cd89689992122}
+
+
+Definition at line 540 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aad96f845b4d5d72bbf83b09a3b0dfffb}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPS\_\-BITOFFSET@{DMA\_\-CPS\_\-BITOFFSET}}
+\index{DMA\_\-CPS\_\-BITOFFSET@{DMA\_\-CPS\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPS\_\-BITOFFSET~0}}
+\label{a00547_aad96f845b4d5d72bbf83b09a3b0dfffb}
+
+
+Definition at line 538 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aa8ddbb7e180bae2401c41b3996bb01a6}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPS\_\-INIT@{DMA\_\-CPS\_\-INIT}}
+\index{DMA\_\-CPS\_\-INIT@{DMA\_\-CPS\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPS\_\-INIT~0x00000000}}
+\label{a00547_aa8ddbb7e180bae2401c41b3996bb01a6}
+
+
+Definition at line 541 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a095941c30599b8102b075d48152ae6bb}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CPS\_\-OFFSETADDRESS@{DMA\_\-CPS\_\-OFFSETADDRESS}}
+\index{DMA\_\-CPS\_\-OFFSETADDRESS@{DMA\_\-CPS\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CPS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CPS\_\-OFFSETADDRESS~0x00000038}}
+\label{a00547_a095941c30599b8102b075d48152ae6bb}
+
+
+Definition at line 537 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a823f60716f78a2c3a66eb5a139d6d436}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CRMC\_\-BITFIELDSIZE@{DMA\_\-CRMC\_\-BITFIELDSIZE}}
+\index{DMA\_\-CRMC\_\-BITFIELDSIZE@{DMA\_\-CRMC\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CRMC\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMC\_\-BITFIELDSIZE~32}}
+\label{a00547_a823f60716f78a2c3a66eb5a139d6d436}
+
+
+Definition at line 354 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a0b33b42fa957d2ff26cc8b7b2988ccfb}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CRMC\_\-BITMASK@{DMA\_\-CRMC\_\-BITMASK}}
+\index{DMA\_\-CRMC\_\-BITMASK@{DMA\_\-CRMC\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CRMC\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMC\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_a0b33b42fa957d2ff26cc8b7b2988ccfb}
+
+
+Definition at line 355 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a72ebeac28cdf9162668b8908367c370d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CRMC\_\-BITOFFSET@{DMA\_\-CRMC\_\-BITOFFSET}}
+\index{DMA\_\-CRMC\_\-BITOFFSET@{DMA\_\-CRMC\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CRMC\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMC\_\-BITOFFSET~0}}
+\label{a00547_a72ebeac28cdf9162668b8908367c370d}
+
+
+Definition at line 353 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a3251d4d44ab7778d9bffcf0a89156981}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CRMC\_\-INIT@{DMA\_\-CRMC\_\-INIT}}
+\index{DMA\_\-CRMC\_\-INIT@{DMA\_\-CRMC\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CRMC\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMC\_\-INIT~0x00000000}}
+\label{a00547_a3251d4d44ab7778d9bffcf0a89156981}
+
+
+Definition at line 356 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab593331124f5415f59ad68c3ae690b64}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CRMC\_\-OFFSETADDRESS@{DMA\_\-CRMC\_\-OFFSETADDRESS}}
+\index{DMA\_\-CRMC\_\-OFFSETADDRESS@{DMA\_\-CRMC\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CRMC\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMC\_\-OFFSETADDRESS~0x00000024}}
+\label{a00547_ab593331124f5415f59ad68c3ae690b64}
+
+
+Definition at line 352 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a2e7e27db7c47366e6c23b0c3d98e7426}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CRMS\_\-BITFIELDSIZE@{DMA\_\-CRMS\_\-BITFIELDSIZE}}
+\index{DMA\_\-CRMS\_\-BITFIELDSIZE@{DMA\_\-CRMS\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CRMS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMS\_\-BITFIELDSIZE~32}}
+\label{a00547_a2e7e27db7c47366e6c23b0c3d98e7426}
+
+
+Definition at line 317 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a3caa1ec0922839b9befe7c804a7a4e7b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CRMS\_\-BITMASK@{DMA\_\-CRMS\_\-BITMASK}}
+\index{DMA\_\-CRMS\_\-BITMASK@{DMA\_\-CRMS\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CRMS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMS\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_a3caa1ec0922839b9befe7c804a7a4e7b}
+
+
+Definition at line 318 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af2bcab329158e22243dd9ad3b44debd0}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CRMS\_\-BITOFFSET@{DMA\_\-CRMS\_\-BITOFFSET}}
+\index{DMA\_\-CRMS\_\-BITOFFSET@{DMA\_\-CRMS\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CRMS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMS\_\-BITOFFSET~0}}
+\label{a00547_af2bcab329158e22243dd9ad3b44debd0}
+
+
+Definition at line 316 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a2ed4d76d0f76f21be3cadc602c0a1125}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CRMS\_\-INIT@{DMA\_\-CRMS\_\-INIT}}
+\index{DMA\_\-CRMS\_\-INIT@{DMA\_\-CRMS\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CRMS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMS\_\-INIT~0x00000000}}
+\label{a00547_a2ed4d76d0f76f21be3cadc602c0a1125}
+
+
+Definition at line 319 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aada584c5cb620cb77911f073356bcd45}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CRMS\_\-OFFSETADDRESS@{DMA\_\-CRMS\_\-OFFSETADDRESS}}
+\index{DMA\_\-CRMS\_\-OFFSETADDRESS@{DMA\_\-CRMS\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CRMS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CRMS\_\-OFFSETADDRESS~0x00000020}}
+\label{a00547_aada584c5cb620cb77911f073356bcd45}
+
+
+Definition at line 315 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aabcdec1620a7c21914768bec9d7d15f3}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CSR\_\-BITFIELDSIZE@{DMA\_\-CSR\_\-BITFIELDSIZE}}
+\index{DMA\_\-CSR\_\-BITFIELDSIZE@{DMA\_\-CSR\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CSR\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CSR\_\-BITFIELDSIZE~32}}
+\label{a00547_aabcdec1620a7c21914768bec9d7d15f3}
+
+
+Definition at line 206 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ae27eb5f31031160b8c236fdedc4e6bab}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CSR\_\-BITMASK@{DMA\_\-CSR\_\-BITMASK}}
+\index{DMA\_\-CSR\_\-BITMASK@{DMA\_\-CSR\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CSR\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CSR\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_ae27eb5f31031160b8c236fdedc4e6bab}
+
+
+Definition at line 207 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a60aa2a57bebc64a52d6f59cae5992e24}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CSR\_\-BITOFFSET@{DMA\_\-CSR\_\-BITOFFSET}}
+\index{DMA\_\-CSR\_\-BITOFFSET@{DMA\_\-CSR\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CSR\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CSR\_\-BITOFFSET~0}}
+\label{a00547_a60aa2a57bebc64a52d6f59cae5992e24}
+
+
+Definition at line 205 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_addd2e3f858b46b2a67caa2010fef501d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CSR\_\-INIT@{DMA\_\-CSR\_\-INIT}}
+\index{DMA\_\-CSR\_\-INIT@{DMA\_\-CSR\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CSR\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CSR\_\-INIT~0x00000000}}
+\label{a00547_addd2e3f858b46b2a67caa2010fef501d}
+
+
+Definition at line 208 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab811917abbde7042aac98e5cd68a2b57}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CSR\_\-OFFSETADDRESS@{DMA\_\-CSR\_\-OFFSETADDRESS}}
+\index{DMA\_\-CSR\_\-OFFSETADDRESS@{DMA\_\-CSR\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CSR\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CSR\_\-OFFSETADDRESS~0x00000014}}
+\label{a00547_ab811917abbde7042aac98e5cd68a2b57}
+
+
+Definition at line 204 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8a7d92a4f5077c21611200903b7fe8b6}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CTRL@{DMA\_\-CTRL}}
+\index{DMA\_\-CTRL@{DMA\_\-CTRL}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CTRL}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CTRL~0x40060000}}
+\label{a00547_a8a7d92a4f5077c21611200903b7fe8b6}
+
+
+Definition at line 49 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_adb6f5ea392a7d8e8a6554096eed8fd81}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CUBC\_\-BITFIELDSIZE@{DMA\_\-CUBC\_\-BITFIELDSIZE}}
+\index{DMA\_\-CUBC\_\-BITFIELDSIZE@{DMA\_\-CUBC\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CUBC\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBC\_\-BITFIELDSIZE~32}}
+\label{a00547_adb6f5ea392a7d8e8a6554096eed8fd81}
+
+
+Definition at line 280 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a50a757f8b7afdafeb9a9ce72799cbbb6}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CUBC\_\-BITMASK@{DMA\_\-CUBC\_\-BITMASK}}
+\index{DMA\_\-CUBC\_\-BITMASK@{DMA\_\-CUBC\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CUBC\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBC\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_a50a757f8b7afdafeb9a9ce72799cbbb6}
+
+
+Definition at line 281 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8c931af4b32c78702551037d3a575726}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CUBC\_\-BITOFFSET@{DMA\_\-CUBC\_\-BITOFFSET}}
+\index{DMA\_\-CUBC\_\-BITOFFSET@{DMA\_\-CUBC\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CUBC\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBC\_\-BITOFFSET~0}}
+\label{a00547_a8c931af4b32c78702551037d3a575726}
+
+
+Definition at line 279 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a585beb2ca81b46173e78cec8544d35fb}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CUBC\_\-INIT@{DMA\_\-CUBC\_\-INIT}}
+\index{DMA\_\-CUBC\_\-INIT@{DMA\_\-CUBC\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CUBC\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBC\_\-INIT~0x00000000}}
+\label{a00547_a585beb2ca81b46173e78cec8544d35fb}
+
+
+Definition at line 282 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad058d6e38845a244f2613c7f06e75468}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CUBC\_\-OFFSETADDRESS@{DMA\_\-CUBC\_\-OFFSETADDRESS}}
+\index{DMA\_\-CUBC\_\-OFFSETADDRESS@{DMA\_\-CUBC\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CUBC\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBC\_\-OFFSETADDRESS~0x0000001c}}
+\label{a00547_ad058d6e38845a244f2613c7f06e75468}
+
+
+Definition at line 278 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aa9969448e57b7405a1c5a99f998012f9}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CUBS\_\-BITFIELDSIZE@{DMA\_\-CUBS\_\-BITFIELDSIZE}}
+\index{DMA\_\-CUBS\_\-BITFIELDSIZE@{DMA\_\-CUBS\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CUBS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBS\_\-BITFIELDSIZE~32}}
+\label{a00547_aa9969448e57b7405a1c5a99f998012f9}
+
+
+Definition at line 243 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a93acd3ca9a406ea92b1fe47474e59e3c}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CUBS\_\-BITMASK@{DMA\_\-CUBS\_\-BITMASK}}
+\index{DMA\_\-CUBS\_\-BITMASK@{DMA\_\-CUBS\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CUBS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBS\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_a93acd3ca9a406ea92b1fe47474e59e3c}
+
+
+Definition at line 244 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a03295c1564a9a1804f4a2d7186a4a0f0}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CUBS\_\-BITOFFSET@{DMA\_\-CUBS\_\-BITOFFSET}}
+\index{DMA\_\-CUBS\_\-BITOFFSET@{DMA\_\-CUBS\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CUBS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBS\_\-BITOFFSET~0}}
+\label{a00547_a03295c1564a9a1804f4a2d7186a4a0f0}
+
+
+Definition at line 242 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a949b53f83e9d5dc492fdc1b7a08c8bf9}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CUBS\_\-INIT@{DMA\_\-CUBS\_\-INIT}}
+\index{DMA\_\-CUBS\_\-INIT@{DMA\_\-CUBS\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CUBS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBS\_\-INIT~0x00000000}}
+\label{a00547_a949b53f83e9d5dc492fdc1b7a08c8bf9}
+
+
+Definition at line 245 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ae42ec34ee47aeb93de341a6ef4087d21}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CUBS\_\-OFFSETADDRESS@{DMA\_\-CUBS\_\-OFFSETADDRESS}}
+\index{DMA\_\-CUBS\_\-OFFSETADDRESS@{DMA\_\-CUBS\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CUBS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CUBS\_\-OFFSETADDRESS~0x00000018}}
+\label{a00547_ae42ec34ee47aeb93de341a6ef4087d21}
+
+
+Definition at line 241 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ac981427fe25c5e12ec664b71a9b852ae}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CWRS\_\-BITFIELDSIZE@{DMA\_\-CWRS\_\-BITFIELDSIZE}}
+\index{DMA\_\-CWRS\_\-BITFIELDSIZE@{DMA\_\-CWRS\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CWRS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CWRS\_\-BITFIELDSIZE~32}}
+\label{a00547_ac981427fe25c5e12ec664b71a9b852ae}
+
+
+Definition at line 169 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a5e80fdf1891b59ecb90195e590e9e9ce}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CWRS\_\-BITMASK@{DMA\_\-CWRS\_\-BITMASK}}
+\index{DMA\_\-CWRS\_\-BITMASK@{DMA\_\-CWRS\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CWRS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CWRS\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_a5e80fdf1891b59ecb90195e590e9e9ce}
+
+
+Definition at line 170 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad84e190579dc1c15d699d2c8ffed4697}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CWRS\_\-BITOFFSET@{DMA\_\-CWRS\_\-BITOFFSET}}
+\index{DMA\_\-CWRS\_\-BITOFFSET@{DMA\_\-CWRS\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CWRS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CWRS\_\-BITOFFSET~0}}
+\label{a00547_ad84e190579dc1c15d699d2c8ffed4697}
+
+
+Definition at line 168 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aada4a90fe97149be3cb8edf32137cd5b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CWRS\_\-INIT@{DMA\_\-CWRS\_\-INIT}}
+\index{DMA\_\-CWRS\_\-INIT@{DMA\_\-CWRS\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CWRS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CWRS\_\-INIT~0x00000000}}
+\label{a00547_aada4a90fe97149be3cb8edf32137cd5b}
+
+
+Definition at line 171 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a88cc8dbd632d8174697ce8a77e166671}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-CWRS\_\-OFFSETADDRESS@{DMA\_\-CWRS\_\-OFFSETADDRESS}}
+\index{DMA\_\-CWRS\_\-OFFSETADDRESS@{DMA\_\-CWRS\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-CWRS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CWRS\_\-OFFSETADDRESS~0x00000010}}
+\label{a00547_a88cc8dbd632d8174697ce8a77e166671}
+
+
+Definition at line 167 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ada973e36f7e38a6d9edca0e71196aba6}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-EC\_\-BITFIELDSIZE@{DMA\_\-EC\_\-BITFIELDSIZE}}
+\index{DMA\_\-EC\_\-BITFIELDSIZE@{DMA\_\-EC\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-EC\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-EC\_\-BITFIELDSIZE~1}}
+\label{a00547_ada973e36f7e38a6d9edca0e71196aba6}
+
+
+Definition at line 622 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a41f64ebe1a7720a097009d1cac847137}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-EC\_\-BITMASK@{DMA\_\-EC\_\-BITMASK}}
+\index{DMA\_\-EC\_\-BITMASK@{DMA\_\-EC\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-EC\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-EC\_\-BITMASK~0x00000001}}
+\label{a00547_a41f64ebe1a7720a097009d1cac847137}
+
+
+Definition at line 623 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_acc506476718b2cfe23271dbe3e44ce65}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-EC\_\-BITOFFSET@{DMA\_\-EC\_\-BITOFFSET}}
+\index{DMA\_\-EC\_\-BITOFFSET@{DMA\_\-EC\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-EC\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-EC\_\-BITOFFSET~0}}
+\label{a00547_acc506476718b2cfe23271dbe3e44ce65}
+
+
+Definition at line 621 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ada87a117788b6d9d5533d8e95d32a971}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-EC\_\-INIT@{DMA\_\-EC\_\-INIT}}
+\index{DMA\_\-EC\_\-INIT@{DMA\_\-EC\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-EC\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-EC\_\-INIT~0x0}}
+\label{a00547_ada87a117788b6d9d5533d8e95d32a971}
+
+
+Definition at line 624 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a39e33436d3c28d4a8b7d8e7072520a5b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-EC\_\-OFFSETADDRESS@{DMA\_\-EC\_\-OFFSETADDRESS}}
+\index{DMA\_\-EC\_\-OFFSETADDRESS@{DMA\_\-EC\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-EC\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-EC\_\-OFFSETADDRESS~DMA\_\-BEC\_\-OFFSETADDRESS}}
+\label{a00547_a39e33436d3c28d4a8b7d8e7072520a5b}
+
+
+Definition at line 620 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a402e7b3a5891401d10193789541a34cb}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ECRVAL\_\-BITFIELDSIZE@{DMA\_\-ECRVAL\_\-BITFIELDSIZE}}
+\index{DMA\_\-ECRVAL\_\-BITFIELDSIZE@{DMA\_\-ECRVAL\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ECRVAL\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ECRVAL\_\-BITFIELDSIZE~8}}
+\label{a00547_a402e7b3a5891401d10193789541a34cb}
+
+
+Definition at line 140 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4d2ec1d32bbd0155bd23334b293f82ad}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ECRVAL\_\-BITMASK@{DMA\_\-ECRVAL\_\-BITMASK}}
+\index{DMA\_\-ECRVAL\_\-BITMASK@{DMA\_\-ECRVAL\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ECRVAL\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ECRVAL\_\-BITMASK~0x000000ff}}
+\label{a00547_a4d2ec1d32bbd0155bd23334b293f82ad}
+
+
+Definition at line 141 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a16c269acf3f99d66899dd002b91f80d5}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ECRVAL\_\-BITOFFSET@{DMA\_\-ECRVAL\_\-BITOFFSET}}
+\index{DMA\_\-ECRVAL\_\-BITOFFSET@{DMA\_\-ECRVAL\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ECRVAL\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ECRVAL\_\-BITOFFSET~0}}
+\label{a00547_a16c269acf3f99d66899dd002b91f80d5}
+
+
+Definition at line 139 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a3f41220330670a57a67cbaab18fc5e95}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ECRVAL\_\-INIT@{DMA\_\-ECRVAL\_\-INIT}}
+\index{DMA\_\-ECRVAL\_\-INIT@{DMA\_\-ECRVAL\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ECRVAL\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ECRVAL\_\-INIT~0x0}}
+\label{a00547_a3f41220330670a57a67cbaab18fc5e95}
+
+
+Definition at line 142 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a1ba53edcece39b3c172d2b073a747e09}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ECRVAL\_\-OFFSETADDRESS@{DMA\_\-ECRVAL\_\-OFFSETADDRESS}}
+\index{DMA\_\-ECRVAL\_\-OFFSETADDRESS@{DMA\_\-ECRVAL\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ECRVAL\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ECRVAL\_\-OFFSETADDRESS~DMA\_\-CCDBP\_\-OFFSETADDRESS}}
+\label{a00547_a1ba53edcece39b3c172d2b073a747e09}
+
+
+Definition at line 138 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a43b7b8c4115ad0c48348575c006b0c93}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC0\_\-BITFIELDSIZE@{DMA\_\-ENC0\_\-BITFIELDSIZE}}
+\index{DMA\_\-ENC0\_\-BITFIELDSIZE@{DMA\_\-ENC0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC0\_\-BITFIELDSIZE~1}}
+\label{a00547_a43b7b8c4115ad0c48348575c006b0c93}
+
+
+Definition at line 455 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab043380a7b62306b88650d2576278839}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC0\_\-BITMASK@{DMA\_\-ENC0\_\-BITMASK}}
+\index{DMA\_\-ENC0\_\-BITMASK@{DMA\_\-ENC0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC0\_\-BITMASK~0x00000001}}
+\label{a00547_ab043380a7b62306b88650d2576278839}
+
+
+Definition at line 456 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a51805221f0eead88a3117ce96401034e}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC0\_\-BITOFFSET@{DMA\_\-ENC0\_\-BITOFFSET}}
+\index{DMA\_\-ENC0\_\-BITOFFSET@{DMA\_\-ENC0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC0\_\-BITOFFSET~0}}
+\label{a00547_a51805221f0eead88a3117ce96401034e}
+
+
+Definition at line 454 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a471b7e728bf00f081a271e4d9d059703}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC0\_\-INIT@{DMA\_\-ENC0\_\-INIT}}
+\index{DMA\_\-ENC0\_\-INIT@{DMA\_\-ENC0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC0\_\-INIT~0x0}}
+\label{a00547_a471b7e728bf00f081a271e4d9d059703}
+
+
+Definition at line 457 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_afd17ceb26b10783c0e9a75fb71b59c58}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC0\_\-OFFSETADDRESS@{DMA\_\-ENC0\_\-OFFSETADDRESS}}
+\index{DMA\_\-ENC0\_\-OFFSETADDRESS@{DMA\_\-ENC0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC0\_\-OFFSETADDRESS~DMA\_\-CEC\_\-OFFSETADDRESS}}
+\label{a00547_afd17ceb26b10783c0e9a75fb71b59c58}
+
+
+Definition at line 453 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a028791b275fc7885453223defe8cc621}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC1\_\-BITFIELDSIZE@{DMA\_\-ENC1\_\-BITFIELDSIZE}}
+\index{DMA\_\-ENC1\_\-BITFIELDSIZE@{DMA\_\-ENC1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC1\_\-BITFIELDSIZE~1}}
+\label{a00547_a028791b275fc7885453223defe8cc621}
+
+
+Definition at line 446 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a03035720981ee88338fb36db0dc5fc4d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC1\_\-BITMASK@{DMA\_\-ENC1\_\-BITMASK}}
+\index{DMA\_\-ENC1\_\-BITMASK@{DMA\_\-ENC1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC1\_\-BITMASK~0x00000002}}
+\label{a00547_a03035720981ee88338fb36db0dc5fc4d}
+
+
+Definition at line 447 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a5665d25f0b0a7d87974aa69374eae06c}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC1\_\-BITOFFSET@{DMA\_\-ENC1\_\-BITOFFSET}}
+\index{DMA\_\-ENC1\_\-BITOFFSET@{DMA\_\-ENC1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC1\_\-BITOFFSET~1}}
+\label{a00547_a5665d25f0b0a7d87974aa69374eae06c}
+
+
+Definition at line 445 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a77329e16de9737f86123818e56a538f8}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC1\_\-INIT@{DMA\_\-ENC1\_\-INIT}}
+\index{DMA\_\-ENC1\_\-INIT@{DMA\_\-ENC1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC1\_\-INIT~0x0}}
+\label{a00547_a77329e16de9737f86123818e56a538f8}
+
+
+Definition at line 448 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9e62a6f40a6bd7a4c2d220a3e979bf61}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC1\_\-OFFSETADDRESS@{DMA\_\-ENC1\_\-OFFSETADDRESS}}
+\index{DMA\_\-ENC1\_\-OFFSETADDRESS@{DMA\_\-ENC1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC1\_\-OFFSETADDRESS~DMA\_\-CEC\_\-OFFSETADDRESS}}
+\label{a00547_a9e62a6f40a6bd7a4c2d220a3e979bf61}
+
+
+Definition at line 444 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aae284ba10854d4b9d0c4b4bc01fc54e2}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC2\_\-BITFIELDSIZE@{DMA\_\-ENC2\_\-BITFIELDSIZE}}
+\index{DMA\_\-ENC2\_\-BITFIELDSIZE@{DMA\_\-ENC2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC2\_\-BITFIELDSIZE~1}}
+\label{a00547_aae284ba10854d4b9d0c4b4bc01fc54e2}
+
+
+Definition at line 437 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a80c48492165f72c698d4131cc8dd6bcc}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC2\_\-BITMASK@{DMA\_\-ENC2\_\-BITMASK}}
+\index{DMA\_\-ENC2\_\-BITMASK@{DMA\_\-ENC2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC2\_\-BITMASK~0x00000004}}
+\label{a00547_a80c48492165f72c698d4131cc8dd6bcc}
+
+
+Definition at line 438 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a42e056fab0b0a89352bced5ac3d33fdd}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC2\_\-BITOFFSET@{DMA\_\-ENC2\_\-BITOFFSET}}
+\index{DMA\_\-ENC2\_\-BITOFFSET@{DMA\_\-ENC2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC2\_\-BITOFFSET~2}}
+\label{a00547_a42e056fab0b0a89352bced5ac3d33fdd}
+
+
+Definition at line 436 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a90af2a70e5bbcfb5e4bbc7b25a958f78}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC2\_\-INIT@{DMA\_\-ENC2\_\-INIT}}
+\index{DMA\_\-ENC2\_\-INIT@{DMA\_\-ENC2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC2\_\-INIT~0x0}}
+\label{a00547_a90af2a70e5bbcfb5e4bbc7b25a958f78}
+
+
+Definition at line 439 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aff08d49030a7e049806294a7e7b64113}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENC2\_\-OFFSETADDRESS@{DMA\_\-ENC2\_\-OFFSETADDRESS}}
+\index{DMA\_\-ENC2\_\-OFFSETADDRESS@{DMA\_\-ENC2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENC2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENC2\_\-OFFSETADDRESS~DMA\_\-CEC\_\-OFFSETADDRESS}}
+\label{a00547_aff08d49030a7e049806294a7e7b64113}
+
+
+Definition at line 435 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad852bf260d86a03c492dda890f706436}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS0\_\-BITFIELDSIZE@{DMA\_\-ENS0\_\-BITFIELDSIZE}}
+\index{DMA\_\-ENS0\_\-BITFIELDSIZE@{DMA\_\-ENS0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS0\_\-BITFIELDSIZE~1}}
+\label{a00547_ad852bf260d86a03c492dda890f706436}
+
+
+Definition at line 418 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9c2795aef353c9f52ec90d1902a4b06c}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS0\_\-BITMASK@{DMA\_\-ENS0\_\-BITMASK}}
+\index{DMA\_\-ENS0\_\-BITMASK@{DMA\_\-ENS0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS0\_\-BITMASK~0x00000001}}
+\label{a00547_a9c2795aef353c9f52ec90d1902a4b06c}
+
+
+Definition at line 419 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8c2ee451a3a83cc383f7b6df839e0e94}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS0\_\-BITOFFSET@{DMA\_\-ENS0\_\-BITOFFSET}}
+\index{DMA\_\-ENS0\_\-BITOFFSET@{DMA\_\-ENS0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS0\_\-BITOFFSET~0}}
+\label{a00547_a8c2ee451a3a83cc383f7b6df839e0e94}
+
+
+Definition at line 417 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a61559eafe4af3c6a976af93c32e548b4}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS0\_\-INIT@{DMA\_\-ENS0\_\-INIT}}
+\index{DMA\_\-ENS0\_\-INIT@{DMA\_\-ENS0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS0\_\-INIT~0x0}}
+\label{a00547_a61559eafe4af3c6a976af93c32e548b4}
+
+
+Definition at line 420 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a22d32b205272ad0675e5cabe96946b37}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS0\_\-OFFSETADDRESS@{DMA\_\-ENS0\_\-OFFSETADDRESS}}
+\index{DMA\_\-ENS0\_\-OFFSETADDRESS@{DMA\_\-ENS0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS0\_\-OFFSETADDRESS~DMA\_\-CES\_\-OFFSETADDRESS}}
+\label{a00547_a22d32b205272ad0675e5cabe96946b37}
+
+
+Definition at line 416 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad4ec8d52c1da03b09c103f95a9562dc9}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS1\_\-BITFIELDSIZE@{DMA\_\-ENS1\_\-BITFIELDSIZE}}
+\index{DMA\_\-ENS1\_\-BITFIELDSIZE@{DMA\_\-ENS1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS1\_\-BITFIELDSIZE~1}}
+\label{a00547_ad4ec8d52c1da03b09c103f95a9562dc9}
+
+
+Definition at line 409 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9a018c3f3788b54c59594b91742a4287}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS1\_\-BITMASK@{DMA\_\-ENS1\_\-BITMASK}}
+\index{DMA\_\-ENS1\_\-BITMASK@{DMA\_\-ENS1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS1\_\-BITMASK~0x00000002}}
+\label{a00547_a9a018c3f3788b54c59594b91742a4287}
+
+
+Definition at line 410 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8a065a913f8488a836ab4e176aaa5ca8}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS1\_\-BITOFFSET@{DMA\_\-ENS1\_\-BITOFFSET}}
+\index{DMA\_\-ENS1\_\-BITOFFSET@{DMA\_\-ENS1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS1\_\-BITOFFSET~1}}
+\label{a00547_a8a065a913f8488a836ab4e176aaa5ca8}
+
+
+Definition at line 408 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a5a405b1664866a600b78c2af3b525002}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS1\_\-INIT@{DMA\_\-ENS1\_\-INIT}}
+\index{DMA\_\-ENS1\_\-INIT@{DMA\_\-ENS1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS1\_\-INIT~0x0}}
+\label{a00547_a5a405b1664866a600b78c2af3b525002}
+
+
+Definition at line 411 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ae876a147c5a848a5f1cb93e66160340d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS1\_\-OFFSETADDRESS@{DMA\_\-ENS1\_\-OFFSETADDRESS}}
+\index{DMA\_\-ENS1\_\-OFFSETADDRESS@{DMA\_\-ENS1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS1\_\-OFFSETADDRESS~DMA\_\-CES\_\-OFFSETADDRESS}}
+\label{a00547_ae876a147c5a848a5f1cb93e66160340d}
+
+
+Definition at line 407 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a711a0f3d2ef3380b5cdddc1d56bf5e64}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS2\_\-BITFIELDSIZE@{DMA\_\-ENS2\_\-BITFIELDSIZE}}
+\index{DMA\_\-ENS2\_\-BITFIELDSIZE@{DMA\_\-ENS2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS2\_\-BITFIELDSIZE~1}}
+\label{a00547_a711a0f3d2ef3380b5cdddc1d56bf5e64}
+
+
+Definition at line 400 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a1c20c2d890871cae41d3543f4c0bf9ba}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS2\_\-BITMASK@{DMA\_\-ENS2\_\-BITMASK}}
+\index{DMA\_\-ENS2\_\-BITMASK@{DMA\_\-ENS2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS2\_\-BITMASK~0x00000004}}
+\label{a00547_a1c20c2d890871cae41d3543f4c0bf9ba}
+
+
+Definition at line 401 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a573a85efa3a415c849b5fe629ed8965c}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS2\_\-BITOFFSET@{DMA\_\-ENS2\_\-BITOFFSET}}
+\index{DMA\_\-ENS2\_\-BITOFFSET@{DMA\_\-ENS2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS2\_\-BITOFFSET~2}}
+\label{a00547_a573a85efa3a415c849b5fe629ed8965c}
+
+
+Definition at line 399 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ae962cbddf17d216ea3a6ed53580c6f96}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS2\_\-INIT@{DMA\_\-ENS2\_\-INIT}}
+\index{DMA\_\-ENS2\_\-INIT@{DMA\_\-ENS2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS2\_\-INIT~0x0}}
+\label{a00547_ae962cbddf17d216ea3a6ed53580c6f96}
+
+
+Definition at line 402 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_adcd2772d3ff3420ffc5bf3909d5df76e}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ENS2\_\-OFFSETADDRESS@{DMA\_\-ENS2\_\-OFFSETADDRESS}}
+\index{DMA\_\-ENS2\_\-OFFSETADDRESS@{DMA\_\-ENS2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ENS2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ENS2\_\-OFFSETADDRESS~DMA\_\-CES\_\-OFFSETADDRESS}}
+\label{a00547_adcd2772d3ff3420ffc5bf3909d5df76e}
+
+
+Definition at line 398 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aff6beddf89e8b7af7377279431360c01}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ME\_\-BITFIELDSIZE@{DMA\_\-ME\_\-BITFIELDSIZE}}
+\index{DMA\_\-ME\_\-BITFIELDSIZE@{DMA\_\-ME\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ME\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-BITFIELDSIZE~1}}
+\label{a00547_aff6beddf89e8b7af7377279431360c01}
+
+
+Definition at line 121 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aafb9aa03d070970b79fd94037619f61a}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ME\_\-BITMASK@{DMA\_\-ME\_\-BITMASK}}
+\index{DMA\_\-ME\_\-BITMASK@{DMA\_\-ME\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ME\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-BITMASK~0x00000001}}
+\label{a00547_aafb9aa03d070970b79fd94037619f61a}
+
+
+Definition at line 122 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af26e520e052c29bec34ee52bab49bb9b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ME\_\-BITOFFSET@{DMA\_\-ME\_\-BITOFFSET}}
+\index{DMA\_\-ME\_\-BITOFFSET@{DMA\_\-ME\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ME\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-BITOFFSET~0}}
+\label{a00547_af26e520e052c29bec34ee52bab49bb9b}
+
+
+Definition at line 120 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aeaa1845f74e1ae1db7a24a7dcd2b7438}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ME\_\-INIT@{DMA\_\-ME\_\-INIT}}
+\index{DMA\_\-ME\_\-INIT@{DMA\_\-ME\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ME\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-INIT~0x0}}
+\label{a00547_aeaa1845f74e1ae1db7a24a7dcd2b7438}
+
+
+Definition at line 123 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a7af40d196784d21fc22c5e8f1c9f471e}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ME\_\-OFFSETADDRESS@{DMA\_\-ME\_\-OFFSETADDRESS}}
+\index{DMA\_\-ME\_\-OFFSETADDRESS@{DMA\_\-ME\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ME\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-OFFSETADDRESS~DMA\_\-CONFIG\_\-OFFSETADDRESS}}
+\label{a00547_a7af40d196784d21fc22c5e8f1c9f471e}
+
+
+Definition at line 119 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab191598835ef6e704ce74741f59ef514}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ME\_\-RO\_\-BITFIELDSIZE@{DMA\_\-ME\_\-RO\_\-BITFIELDSIZE}}
+\index{DMA\_\-ME\_\-RO\_\-BITFIELDSIZE@{DMA\_\-ME\_\-RO\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ME\_\-RO\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-RO\_\-BITFIELDSIZE~1}}
+\label{a00547_ab191598835ef6e704ce74741f59ef514}
+
+
+Definition at line 93 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a259092933e96607ce026d7e333d1f03d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ME\_\-RO\_\-BITMASK@{DMA\_\-ME\_\-RO\_\-BITMASK}}
+\index{DMA\_\-ME\_\-RO\_\-BITMASK@{DMA\_\-ME\_\-RO\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ME\_\-RO\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-RO\_\-BITMASK~0x00000001}}
+\label{a00547_a259092933e96607ce026d7e333d1f03d}
+
+
+Definition at line 94 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aa9fdcb43a5bb459dc7c50fc9efe07104}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ME\_\-RO\_\-BITOFFSET@{DMA\_\-ME\_\-RO\_\-BITOFFSET}}
+\index{DMA\_\-ME\_\-RO\_\-BITOFFSET@{DMA\_\-ME\_\-RO\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ME\_\-RO\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-RO\_\-BITOFFSET~0}}
+\label{a00547_aa9fdcb43a5bb459dc7c50fc9efe07104}
+
+
+Definition at line 92 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ae7e5eb61b947420f6832373c2e47c033}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ME\_\-RO\_\-INIT@{DMA\_\-ME\_\-RO\_\-INIT}}
+\index{DMA\_\-ME\_\-RO\_\-INIT@{DMA\_\-ME\_\-RO\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ME\_\-RO\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-RO\_\-INIT~0x0}}
+\label{a00547_ae7e5eb61b947420f6832373c2e47c033}
+
+
+Definition at line 95 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8374a7407aee39edbbb903b5513078a7}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ME\_\-RO\_\-OFFSETADDRESS@{DMA\_\-ME\_\-RO\_\-OFFSETADDRESS}}
+\index{DMA\_\-ME\_\-RO\_\-OFFSETADDRESS@{DMA\_\-ME\_\-RO\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ME\_\-RO\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ME\_\-RO\_\-OFFSETADDRESS~DMA\_\-STATUS\_\-OFFSETADDRESS}}
+\label{a00547_a8374a7407aee39edbbb903b5513078a7}
+
+
+Definition at line 91 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a3a77fe95412ab94a5b83079bb53ef926}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC0\_\-BITFIELDSIZE@{DMA\_\-PAC0\_\-BITFIELDSIZE}}
+\index{DMA\_\-PAC0\_\-BITFIELDSIZE@{DMA\_\-PAC0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC0\_\-BITFIELDSIZE~1}}
+\label{a00547_a3a77fe95412ab94a5b83079bb53ef926}
+
+
+Definition at line 529 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4ee449924178c03e13d18c8c345ce85b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC0\_\-BITMASK@{DMA\_\-PAC0\_\-BITMASK}}
+\index{DMA\_\-PAC0\_\-BITMASK@{DMA\_\-PAC0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC0\_\-BITMASK~0x00000001}}
+\label{a00547_a4ee449924178c03e13d18c8c345ce85b}
+
+
+Definition at line 530 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a68c0d2ea155f8df33cf9fd72d16afb11}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC0\_\-BITOFFSET@{DMA\_\-PAC0\_\-BITOFFSET}}
+\index{DMA\_\-PAC0\_\-BITOFFSET@{DMA\_\-PAC0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC0\_\-BITOFFSET~0}}
+\label{a00547_a68c0d2ea155f8df33cf9fd72d16afb11}
+
+
+Definition at line 528 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af6f5ce2c38878637b9b4f267b6a37e97}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC0\_\-INIT@{DMA\_\-PAC0\_\-INIT}}
+\index{DMA\_\-PAC0\_\-INIT@{DMA\_\-PAC0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC0\_\-INIT~0x0}}
+\label{a00547_af6f5ce2c38878637b9b4f267b6a37e97}
+
+
+Definition at line 531 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a63df217e6567438f3faca9f75ffb0241}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC0\_\-OFFSETADDRESS@{DMA\_\-PAC0\_\-OFFSETADDRESS}}
+\index{DMA\_\-PAC0\_\-OFFSETADDRESS@{DMA\_\-PAC0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC0\_\-OFFSETADDRESS~DMA\_\-CPAC\_\-OFFSETADDRESS}}
+\label{a00547_a63df217e6567438f3faca9f75ffb0241}
+
+
+Definition at line 527 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a3755ff2c8c120d396297191509f57143}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC1\_\-BITFIELDSIZE@{DMA\_\-PAC1\_\-BITFIELDSIZE}}
+\index{DMA\_\-PAC1\_\-BITFIELDSIZE@{DMA\_\-PAC1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC1\_\-BITFIELDSIZE~1}}
+\label{a00547_a3755ff2c8c120d396297191509f57143}
+
+
+Definition at line 520 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a46c1faee347ffe228aa53722623840ad}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC1\_\-BITMASK@{DMA\_\-PAC1\_\-BITMASK}}
+\index{DMA\_\-PAC1\_\-BITMASK@{DMA\_\-PAC1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC1\_\-BITMASK~0x00000002}}
+\label{a00547_a46c1faee347ffe228aa53722623840ad}
+
+
+Definition at line 521 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a39a9a547f920ef1b2415ce818f0eb851}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC1\_\-BITOFFSET@{DMA\_\-PAC1\_\-BITOFFSET}}
+\index{DMA\_\-PAC1\_\-BITOFFSET@{DMA\_\-PAC1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC1\_\-BITOFFSET~1}}
+\label{a00547_a39a9a547f920ef1b2415ce818f0eb851}
+
+
+Definition at line 519 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a75e2957dfa1d8e879d082440f009abcb}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC1\_\-INIT@{DMA\_\-PAC1\_\-INIT}}
+\index{DMA\_\-PAC1\_\-INIT@{DMA\_\-PAC1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC1\_\-INIT~0x0}}
+\label{a00547_a75e2957dfa1d8e879d082440f009abcb}
+
+
+Definition at line 522 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a783969ef9cf7d77624256638aea0607d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC1\_\-OFFSETADDRESS@{DMA\_\-PAC1\_\-OFFSETADDRESS}}
+\index{DMA\_\-PAC1\_\-OFFSETADDRESS@{DMA\_\-PAC1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC1\_\-OFFSETADDRESS~DMA\_\-CPAC\_\-OFFSETADDRESS}}
+\label{a00547_a783969ef9cf7d77624256638aea0607d}
+
+
+Definition at line 518 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a52048befe5b9124eb26a89bf2ecc1e70}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC2\_\-BITFIELDSIZE@{DMA\_\-PAC2\_\-BITFIELDSIZE}}
+\index{DMA\_\-PAC2\_\-BITFIELDSIZE@{DMA\_\-PAC2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC2\_\-BITFIELDSIZE~1}}
+\label{a00547_a52048befe5b9124eb26a89bf2ecc1e70}
+
+
+Definition at line 511 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8f1e8594124d2ea615ed054eeda05934}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC2\_\-BITMASK@{DMA\_\-PAC2\_\-BITMASK}}
+\index{DMA\_\-PAC2\_\-BITMASK@{DMA\_\-PAC2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC2\_\-BITMASK~0x00000004}}
+\label{a00547_a8f1e8594124d2ea615ed054eeda05934}
+
+
+Definition at line 512 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9342ba6285d494612a2d4344ed4066c4}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC2\_\-BITOFFSET@{DMA\_\-PAC2\_\-BITOFFSET}}
+\index{DMA\_\-PAC2\_\-BITOFFSET@{DMA\_\-PAC2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC2\_\-BITOFFSET~2}}
+\label{a00547_a9342ba6285d494612a2d4344ed4066c4}
+
+
+Definition at line 510 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a5a5806a142faf81c12709459dcd1dff9}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC2\_\-INIT@{DMA\_\-PAC2\_\-INIT}}
+\index{DMA\_\-PAC2\_\-INIT@{DMA\_\-PAC2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC2\_\-INIT~0x0}}
+\label{a00547_a5a5806a142faf81c12709459dcd1dff9}
+
+
+Definition at line 513 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a59f4ab931db8721c4394452c101c96ca}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAC2\_\-OFFSETADDRESS@{DMA\_\-PAC2\_\-OFFSETADDRESS}}
+\index{DMA\_\-PAC2\_\-OFFSETADDRESS@{DMA\_\-PAC2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAC2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAC2\_\-OFFSETADDRESS~DMA\_\-CPAC\_\-OFFSETADDRESS}}
+\label{a00547_a59f4ab931db8721c4394452c101c96ca}
+
+
+Definition at line 509 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a65408e57bcc7c804db7b0f9af76ea34e}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS0\_\-BITFIELDSIZE@{DMA\_\-PAS0\_\-BITFIELDSIZE}}
+\index{DMA\_\-PAS0\_\-BITFIELDSIZE@{DMA\_\-PAS0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS0\_\-BITFIELDSIZE~1}}
+\label{a00547_a65408e57bcc7c804db7b0f9af76ea34e}
+
+
+Definition at line 492 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a327873e68c74c1b5f34c28543a3bff71}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS0\_\-BITMASK@{DMA\_\-PAS0\_\-BITMASK}}
+\index{DMA\_\-PAS0\_\-BITMASK@{DMA\_\-PAS0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS0\_\-BITMASK~0x00000001}}
+\label{a00547_a327873e68c74c1b5f34c28543a3bff71}
+
+
+Definition at line 493 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4f74a5041ded7ccff94284b7ca154911}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS0\_\-BITOFFSET@{DMA\_\-PAS0\_\-BITOFFSET}}
+\index{DMA\_\-PAS0\_\-BITOFFSET@{DMA\_\-PAS0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS0\_\-BITOFFSET~0}}
+\label{a00547_a4f74a5041ded7ccff94284b7ca154911}
+
+
+Definition at line 491 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a200255c9b463780b848010247a6faacb}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS0\_\-INIT@{DMA\_\-PAS0\_\-INIT}}
+\index{DMA\_\-PAS0\_\-INIT@{DMA\_\-PAS0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS0\_\-INIT~0x0}}
+\label{a00547_a200255c9b463780b848010247a6faacb}
+
+
+Definition at line 494 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a7e0d3ff0470468d27f03666b5885dd0e}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS0\_\-OFFSETADDRESS@{DMA\_\-PAS0\_\-OFFSETADDRESS}}
+\index{DMA\_\-PAS0\_\-OFFSETADDRESS@{DMA\_\-PAS0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS0\_\-OFFSETADDRESS~DMA\_\-CPAS\_\-OFFSETADDRESS}}
+\label{a00547_a7e0d3ff0470468d27f03666b5885dd0e}
+
+
+Definition at line 490 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a97550444879097fc90d1688f874d3c04}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS1\_\-BITFIELDSIZE@{DMA\_\-PAS1\_\-BITFIELDSIZE}}
+\index{DMA\_\-PAS1\_\-BITFIELDSIZE@{DMA\_\-PAS1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS1\_\-BITFIELDSIZE~1}}
+\label{a00547_a97550444879097fc90d1688f874d3c04}
+
+
+Definition at line 483 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a043f8004332a35a2aa477785c156085f}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS1\_\-BITMASK@{DMA\_\-PAS1\_\-BITMASK}}
+\index{DMA\_\-PAS1\_\-BITMASK@{DMA\_\-PAS1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS1\_\-BITMASK~0x00000002}}
+\label{a00547_a043f8004332a35a2aa477785c156085f}
+
+
+Definition at line 484 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aa6ae0da6647d82b9b1d74b9761ad0d62}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS1\_\-BITOFFSET@{DMA\_\-PAS1\_\-BITOFFSET}}
+\index{DMA\_\-PAS1\_\-BITOFFSET@{DMA\_\-PAS1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS1\_\-BITOFFSET~1}}
+\label{a00547_aa6ae0da6647d82b9b1d74b9761ad0d62}
+
+
+Definition at line 482 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab297c98415d9bb6ab9fb929899f1613a}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS1\_\-INIT@{DMA\_\-PAS1\_\-INIT}}
+\index{DMA\_\-PAS1\_\-INIT@{DMA\_\-PAS1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS1\_\-INIT~0x0}}
+\label{a00547_ab297c98415d9bb6ab9fb929899f1613a}
+
+
+Definition at line 485 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_adfeca7ea4b143ed349bd23de9a0bb9fd}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS1\_\-OFFSETADDRESS@{DMA\_\-PAS1\_\-OFFSETADDRESS}}
+\index{DMA\_\-PAS1\_\-OFFSETADDRESS@{DMA\_\-PAS1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS1\_\-OFFSETADDRESS~DMA\_\-CPAS\_\-OFFSETADDRESS}}
+\label{a00547_adfeca7ea4b143ed349bd23de9a0bb9fd}
+
+
+Definition at line 481 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af5e2335b39cfc91dbc4ee39ba6531804}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS2\_\-BITFIELDSIZE@{DMA\_\-PAS2\_\-BITFIELDSIZE}}
+\index{DMA\_\-PAS2\_\-BITFIELDSIZE@{DMA\_\-PAS2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS2\_\-BITFIELDSIZE~1}}
+\label{a00547_af5e2335b39cfc91dbc4ee39ba6531804}
+
+
+Definition at line 474 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af8c4e3089e94a831564acfd1a85a95bb}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS2\_\-BITMASK@{DMA\_\-PAS2\_\-BITMASK}}
+\index{DMA\_\-PAS2\_\-BITMASK@{DMA\_\-PAS2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS2\_\-BITMASK~0x00000004}}
+\label{a00547_af8c4e3089e94a831564acfd1a85a95bb}
+
+
+Definition at line 475 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a94c7da41f0237a1fbbe4476d8f99c991}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS2\_\-BITOFFSET@{DMA\_\-PAS2\_\-BITOFFSET}}
+\index{DMA\_\-PAS2\_\-BITOFFSET@{DMA\_\-PAS2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS2\_\-BITOFFSET~2}}
+\label{a00547_a94c7da41f0237a1fbbe4476d8f99c991}
+
+
+Definition at line 473 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a2139cf00ca58fa907b6a254c2b662cb6}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS2\_\-INIT@{DMA\_\-PAS2\_\-INIT}}
+\index{DMA\_\-PAS2\_\-INIT@{DMA\_\-PAS2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS2\_\-INIT~0x0}}
+\label{a00547_a2139cf00ca58fa907b6a254c2b662cb6}
+
+
+Definition at line 476 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a36b6b7e7f9dd401f092a6910d5244091}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PAS2\_\-OFFSETADDRESS@{DMA\_\-PAS2\_\-OFFSETADDRESS}}
+\index{DMA\_\-PAS2\_\-OFFSETADDRESS@{DMA\_\-PAS2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PAS2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PAS2\_\-OFFSETADDRESS~DMA\_\-CPAS\_\-OFFSETADDRESS}}
+\label{a00547_a36b6b7e7f9dd401f092a6910d5244091}
+
+
+Definition at line 472 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aea542224fcd0fbadd5ab1ee3094c85da}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC0\_\-BITFIELDSIZE@{DMA\_\-PC0\_\-BITFIELDSIZE}}
+\index{DMA\_\-PC0\_\-BITFIELDSIZE@{DMA\_\-PC0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC0\_\-BITFIELDSIZE~1}}
+\label{a00547_aea542224fcd0fbadd5ab1ee3094c85da}
+
+
+Definition at line 603 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aba1f7f5aa23a474f5887516c98b26563}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC0\_\-BITMASK@{DMA\_\-PC0\_\-BITMASK}}
+\index{DMA\_\-PC0\_\-BITMASK@{DMA\_\-PC0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC0\_\-BITMASK~0x00000001}}
+\label{a00547_aba1f7f5aa23a474f5887516c98b26563}
+
+
+Definition at line 604 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a3d27bc23ca5e54a254421a73b26cdb19}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC0\_\-BITOFFSET@{DMA\_\-PC0\_\-BITOFFSET}}
+\index{DMA\_\-PC0\_\-BITOFFSET@{DMA\_\-PC0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC0\_\-BITOFFSET~0}}
+\label{a00547_a3d27bc23ca5e54a254421a73b26cdb19}
+
+
+Definition at line 602 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8452ecb69e450977ef4360e923801cf6}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC0\_\-INIT@{DMA\_\-PC0\_\-INIT}}
+\index{DMA\_\-PC0\_\-INIT@{DMA\_\-PC0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC0\_\-INIT~0x0}}
+\label{a00547_a8452ecb69e450977ef4360e923801cf6}
+
+
+Definition at line 605 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a92fb05b33dcfaa49dc3e177695413b2f}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC0\_\-OFFSETADDRESS@{DMA\_\-PC0\_\-OFFSETADDRESS}}
+\index{DMA\_\-PC0\_\-OFFSETADDRESS@{DMA\_\-PC0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC0\_\-OFFSETADDRESS~DMA\_\-CPC\_\-OFFSETADDRESS}}
+\label{a00547_a92fb05b33dcfaa49dc3e177695413b2f}
+
+
+Definition at line 601 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_adc953b9a63b8aea304f5fd3c5a5b37c1}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC1\_\-BITFIELDSIZE@{DMA\_\-PC1\_\-BITFIELDSIZE}}
+\index{DMA\_\-PC1\_\-BITFIELDSIZE@{DMA\_\-PC1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC1\_\-BITFIELDSIZE~1}}
+\label{a00547_adc953b9a63b8aea304f5fd3c5a5b37c1}
+
+
+Definition at line 594 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4aba948f4d1d8fbb5a006d0c6fd04f9c}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC1\_\-BITMASK@{DMA\_\-PC1\_\-BITMASK}}
+\index{DMA\_\-PC1\_\-BITMASK@{DMA\_\-PC1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC1\_\-BITMASK~0x00000002}}
+\label{a00547_a4aba948f4d1d8fbb5a006d0c6fd04f9c}
+
+
+Definition at line 595 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab5d5d1413dcb4e0e265b75527d54b991}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC1\_\-BITOFFSET@{DMA\_\-PC1\_\-BITOFFSET}}
+\index{DMA\_\-PC1\_\-BITOFFSET@{DMA\_\-PC1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC1\_\-BITOFFSET~1}}
+\label{a00547_ab5d5d1413dcb4e0e265b75527d54b991}
+
+
+Definition at line 593 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_afc2289327605fe02ebfeb946919fe5b5}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC1\_\-INIT@{DMA\_\-PC1\_\-INIT}}
+\index{DMA\_\-PC1\_\-INIT@{DMA\_\-PC1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC1\_\-INIT~0x0}}
+\label{a00547_afc2289327605fe02ebfeb946919fe5b5}
+
+
+Definition at line 596 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a5bcf743628bf5a288525da9914231160}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC1\_\-OFFSETADDRESS@{DMA\_\-PC1\_\-OFFSETADDRESS}}
+\index{DMA\_\-PC1\_\-OFFSETADDRESS@{DMA\_\-PC1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC1\_\-OFFSETADDRESS~DMA\_\-CPC\_\-OFFSETADDRESS}}
+\label{a00547_a5bcf743628bf5a288525da9914231160}
+
+
+Definition at line 592 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab207c60bc52ee0c47873be92b6683d45}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC2\_\-BITFIELDSIZE@{DMA\_\-PC2\_\-BITFIELDSIZE}}
+\index{DMA\_\-PC2\_\-BITFIELDSIZE@{DMA\_\-PC2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC2\_\-BITFIELDSIZE~1}}
+\label{a00547_ab207c60bc52ee0c47873be92b6683d45}
+
+
+Definition at line 585 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8bc6bf603200c5576041f5efb1bbb3fa}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC2\_\-BITMASK@{DMA\_\-PC2\_\-BITMASK}}
+\index{DMA\_\-PC2\_\-BITMASK@{DMA\_\-PC2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC2\_\-BITMASK~0x00000004}}
+\label{a00547_a8bc6bf603200c5576041f5efb1bbb3fa}
+
+
+Definition at line 586 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aaaf484ef479d07ffcb985d91abc294b8}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC2\_\-BITOFFSET@{DMA\_\-PC2\_\-BITOFFSET}}
+\index{DMA\_\-PC2\_\-BITOFFSET@{DMA\_\-PC2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC2\_\-BITOFFSET~2}}
+\label{a00547_aaaf484ef479d07ffcb985d91abc294b8}
+
+
+Definition at line 584 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ae8f8f5cafa7cb5a3432330f6bd7c8545}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC2\_\-INIT@{DMA\_\-PC2\_\-INIT}}
+\index{DMA\_\-PC2\_\-INIT@{DMA\_\-PC2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC2\_\-INIT~0x0}}
+\label{a00547_ae8f8f5cafa7cb5a3432330f6bd7c8545}
+
+
+Definition at line 587 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aed95caeafb0768984755ed3f1ab4a356}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PC2\_\-OFFSETADDRESS@{DMA\_\-PC2\_\-OFFSETADDRESS}}
+\index{DMA\_\-PC2\_\-OFFSETADDRESS@{DMA\_\-PC2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PC2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PC2\_\-OFFSETADDRESS~DMA\_\-CPC\_\-OFFSETADDRESS}}
+\label{a00547_aed95caeafb0768984755ed3f1ab4a356}
+
+
+Definition at line 583 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9c92e09941478b3ffe3b570d8c4bfcef}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS0\_\-BITFIELDSIZE@{DMA\_\-PS0\_\-BITFIELDSIZE}}
+\index{DMA\_\-PS0\_\-BITFIELDSIZE@{DMA\_\-PS0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS0\_\-BITFIELDSIZE~1}}
+\label{a00547_a9c92e09941478b3ffe3b570d8c4bfcef}
+
+
+Definition at line 566 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a68cb7e1cf6a811f4f71ff2c79ed31612}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS0\_\-BITMASK@{DMA\_\-PS0\_\-BITMASK}}
+\index{DMA\_\-PS0\_\-BITMASK@{DMA\_\-PS0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS0\_\-BITMASK~0x00000001}}
+\label{a00547_a68cb7e1cf6a811f4f71ff2c79ed31612}
+
+
+Definition at line 567 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a0509ac9faa4e7810fe7e2fce18a3b491}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS0\_\-BITOFFSET@{DMA\_\-PS0\_\-BITOFFSET}}
+\index{DMA\_\-PS0\_\-BITOFFSET@{DMA\_\-PS0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS0\_\-BITOFFSET~0}}
+\label{a00547_a0509ac9faa4e7810fe7e2fce18a3b491}
+
+
+Definition at line 565 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad301b17707fb742f1438c755cee96ee0}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS0\_\-INIT@{DMA\_\-PS0\_\-INIT}}
+\index{DMA\_\-PS0\_\-INIT@{DMA\_\-PS0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS0\_\-INIT~0x0}}
+\label{a00547_ad301b17707fb742f1438c755cee96ee0}
+
+
+Definition at line 568 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a2e5513883969ce188f238b95fe889c53}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS0\_\-OFFSETADDRESS@{DMA\_\-PS0\_\-OFFSETADDRESS}}
+\index{DMA\_\-PS0\_\-OFFSETADDRESS@{DMA\_\-PS0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS0\_\-OFFSETADDRESS~DMA\_\-CPS\_\-OFFSETADDRESS}}
+\label{a00547_a2e5513883969ce188f238b95fe889c53}
+
+
+Definition at line 564 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a6899e55753002b5d85c721bc3ee832d0}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS1\_\-BITFIELDSIZE@{DMA\_\-PS1\_\-BITFIELDSIZE}}
+\index{DMA\_\-PS1\_\-BITFIELDSIZE@{DMA\_\-PS1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS1\_\-BITFIELDSIZE~1}}
+\label{a00547_a6899e55753002b5d85c721bc3ee832d0}
+
+
+Definition at line 557 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a374f7f39fd94bccc38496e571e768133}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS1\_\-BITMASK@{DMA\_\-PS1\_\-BITMASK}}
+\index{DMA\_\-PS1\_\-BITMASK@{DMA\_\-PS1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS1\_\-BITMASK~0x00000002}}
+\label{a00547_a374f7f39fd94bccc38496e571e768133}
+
+
+Definition at line 558 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad8174403f75638ab5556d21935f255b1}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS1\_\-BITOFFSET@{DMA\_\-PS1\_\-BITOFFSET}}
+\index{DMA\_\-PS1\_\-BITOFFSET@{DMA\_\-PS1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS1\_\-BITOFFSET~1}}
+\label{a00547_ad8174403f75638ab5556d21935f255b1}
+
+
+Definition at line 556 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af7cd569bed2d5a72910feff0d9a83247}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS1\_\-INIT@{DMA\_\-PS1\_\-INIT}}
+\index{DMA\_\-PS1\_\-INIT@{DMA\_\-PS1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS1\_\-INIT~0x0}}
+\label{a00547_af7cd569bed2d5a72910feff0d9a83247}
+
+
+Definition at line 559 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aaafa59c050b16495d5530d0682380e87}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS1\_\-OFFSETADDRESS@{DMA\_\-PS1\_\-OFFSETADDRESS}}
+\index{DMA\_\-PS1\_\-OFFSETADDRESS@{DMA\_\-PS1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS1\_\-OFFSETADDRESS~DMA\_\-CPS\_\-OFFSETADDRESS}}
+\label{a00547_aaafa59c050b16495d5530d0682380e87}
+
+
+Definition at line 555 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_acc88795653fbe3cbb2f8b52e4415a11b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS2\_\-BITFIELDSIZE@{DMA\_\-PS2\_\-BITFIELDSIZE}}
+\index{DMA\_\-PS2\_\-BITFIELDSIZE@{DMA\_\-PS2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS2\_\-BITFIELDSIZE~1}}
+\label{a00547_acc88795653fbe3cbb2f8b52e4415a11b}
+
+
+Definition at line 548 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a98305e718e8fe3559e2d9d0f0d4b70ff}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS2\_\-BITMASK@{DMA\_\-PS2\_\-BITMASK}}
+\index{DMA\_\-PS2\_\-BITMASK@{DMA\_\-PS2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS2\_\-BITMASK~0x00000004}}
+\label{a00547_a98305e718e8fe3559e2d9d0f0d4b70ff}
+
+
+Definition at line 549 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ae77308ced0668fa34a3cee8c777d42fa}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS2\_\-BITOFFSET@{DMA\_\-PS2\_\-BITOFFSET}}
+\index{DMA\_\-PS2\_\-BITOFFSET@{DMA\_\-PS2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS2\_\-BITOFFSET~2}}
+\label{a00547_ae77308ced0668fa34a3cee8c777d42fa}
+
+
+Definition at line 547 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4c993ea5e44be4f0180b682a95aa8e2b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS2\_\-INIT@{DMA\_\-PS2\_\-INIT}}
+\index{DMA\_\-PS2\_\-INIT@{DMA\_\-PS2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS2\_\-INIT~0x0}}
+\label{a00547_a4c993ea5e44be4f0180b682a95aa8e2b}
+
+
+Definition at line 550 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4974d5a13dd6c22f59c9ff0ffc881f89}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-PS2\_\-OFFSETADDRESS@{DMA\_\-PS2\_\-OFFSETADDRESS}}
+\index{DMA\_\-PS2\_\-OFFSETADDRESS@{DMA\_\-PS2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-PS2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-PS2\_\-OFFSETADDRESS~DMA\_\-CPS\_\-OFFSETADDRESS}}
+\label{a00547_a4974d5a13dd6c22f59c9ff0ffc881f89}
+
+
+Definition at line 546 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a14a52b9dc893b21683e2758a670e0951}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC0\_\-BITFIELDSIZE@{DMA\_\-RMC0\_\-BITFIELDSIZE}}
+\index{DMA\_\-RMC0\_\-BITFIELDSIZE@{DMA\_\-RMC0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC0\_\-BITFIELDSIZE~1}}
+\label{a00547_a14a52b9dc893b21683e2758a670e0951}
+
+
+Definition at line 381 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_adc5576d54a689000d389aeb7fd2910a1}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC0\_\-BITMASK@{DMA\_\-RMC0\_\-BITMASK}}
+\index{DMA\_\-RMC0\_\-BITMASK@{DMA\_\-RMC0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC0\_\-BITMASK~0x00000001}}
+\label{a00547_adc5576d54a689000d389aeb7fd2910a1}
+
+
+Definition at line 382 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4d7f484b0f74d9099476be859120c47a}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC0\_\-BITOFFSET@{DMA\_\-RMC0\_\-BITOFFSET}}
+\index{DMA\_\-RMC0\_\-BITOFFSET@{DMA\_\-RMC0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC0\_\-BITOFFSET~0}}
+\label{a00547_a4d7f484b0f74d9099476be859120c47a}
+
+
+Definition at line 380 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aae6295b5f54ed72955ea189017408db7}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC0\_\-INIT@{DMA\_\-RMC0\_\-INIT}}
+\index{DMA\_\-RMC0\_\-INIT@{DMA\_\-RMC0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC0\_\-INIT~0x0}}
+\label{a00547_aae6295b5f54ed72955ea189017408db7}
+
+
+Definition at line 383 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_adbc08a82326f5ff788b0f0b5ecc549c2}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC0\_\-OFFSETADDRESS@{DMA\_\-RMC0\_\-OFFSETADDRESS}}
+\index{DMA\_\-RMC0\_\-OFFSETADDRESS@{DMA\_\-RMC0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC0\_\-OFFSETADDRESS~DMA\_\-CRMC\_\-OFFSETADDRESS}}
+\label{a00547_adbc08a82326f5ff788b0f0b5ecc549c2}
+
+
+Definition at line 379 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aca19d261f11d5272f20a429386f1e46f}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC1\_\-BITFIELDSIZE@{DMA\_\-RMC1\_\-BITFIELDSIZE}}
+\index{DMA\_\-RMC1\_\-BITFIELDSIZE@{DMA\_\-RMC1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC1\_\-BITFIELDSIZE~1}}
+\label{a00547_aca19d261f11d5272f20a429386f1e46f}
+
+
+Definition at line 372 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a06d57ad7f6a2245687d354c61a9762ff}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC1\_\-BITMASK@{DMA\_\-RMC1\_\-BITMASK}}
+\index{DMA\_\-RMC1\_\-BITMASK@{DMA\_\-RMC1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC1\_\-BITMASK~0x00000002}}
+\label{a00547_a06d57ad7f6a2245687d354c61a9762ff}
+
+
+Definition at line 373 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4c27204c100375906d3c717e1db66986}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC1\_\-BITOFFSET@{DMA\_\-RMC1\_\-BITOFFSET}}
+\index{DMA\_\-RMC1\_\-BITOFFSET@{DMA\_\-RMC1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC1\_\-BITOFFSET~1}}
+\label{a00547_a4c27204c100375906d3c717e1db66986}
+
+
+Definition at line 371 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aded926e34290e2d81d63d57f791484e2}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC1\_\-INIT@{DMA\_\-RMC1\_\-INIT}}
+\index{DMA\_\-RMC1\_\-INIT@{DMA\_\-RMC1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC1\_\-INIT~0x0}}
+\label{a00547_aded926e34290e2d81d63d57f791484e2}
+
+
+Definition at line 374 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab33eef90d93c3c0d0038af568d569928}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC1\_\-OFFSETADDRESS@{DMA\_\-RMC1\_\-OFFSETADDRESS}}
+\index{DMA\_\-RMC1\_\-OFFSETADDRESS@{DMA\_\-RMC1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC1\_\-OFFSETADDRESS~DMA\_\-CRMC\_\-OFFSETADDRESS}}
+\label{a00547_ab33eef90d93c3c0d0038af568d569928}
+
+
+Definition at line 370 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a084db9480bac43cebae8198fff82ad17}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC2\_\-BITFIELDSIZE@{DMA\_\-RMC2\_\-BITFIELDSIZE}}
+\index{DMA\_\-RMC2\_\-BITFIELDSIZE@{DMA\_\-RMC2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC2\_\-BITFIELDSIZE~1}}
+\label{a00547_a084db9480bac43cebae8198fff82ad17}
+
+
+Definition at line 363 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a7489009b1a8178a381e272ceec884efa}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC2\_\-BITMASK@{DMA\_\-RMC2\_\-BITMASK}}
+\index{DMA\_\-RMC2\_\-BITMASK@{DMA\_\-RMC2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC2\_\-BITMASK~0x00000004}}
+\label{a00547_a7489009b1a8178a381e272ceec884efa}
+
+
+Definition at line 364 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9024fc0ebbf15bf06caf6eed604362ac}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC2\_\-BITOFFSET@{DMA\_\-RMC2\_\-BITOFFSET}}
+\index{DMA\_\-RMC2\_\-BITOFFSET@{DMA\_\-RMC2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC2\_\-BITOFFSET~2}}
+\label{a00547_a9024fc0ebbf15bf06caf6eed604362ac}
+
+
+Definition at line 362 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af43b6b91df8724bea9bb011a2097680b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC2\_\-INIT@{DMA\_\-RMC2\_\-INIT}}
+\index{DMA\_\-RMC2\_\-INIT@{DMA\_\-RMC2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC2\_\-INIT~0x0}}
+\label{a00547_af43b6b91df8724bea9bb011a2097680b}
+
+
+Definition at line 365 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a274aa4d9df3d885c6f22ab728c344cc6}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMC2\_\-OFFSETADDRESS@{DMA\_\-RMC2\_\-OFFSETADDRESS}}
+\index{DMA\_\-RMC2\_\-OFFSETADDRESS@{DMA\_\-RMC2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMC2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMC2\_\-OFFSETADDRESS~DMA\_\-CRMC\_\-OFFSETADDRESS}}
+\label{a00547_a274aa4d9df3d885c6f22ab728c344cc6}
+
+
+Definition at line 361 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aa01b985a3b6babbd3ec5c020fe03662a}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS0\_\-BITFIELDSIZE@{DMA\_\-RMS0\_\-BITFIELDSIZE}}
+\index{DMA\_\-RMS0\_\-BITFIELDSIZE@{DMA\_\-RMS0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS0\_\-BITFIELDSIZE~1}}
+\label{a00547_aa01b985a3b6babbd3ec5c020fe03662a}
+
+
+Definition at line 344 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af253ac96297350671140c674f6c04b98}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS0\_\-BITMASK@{DMA\_\-RMS0\_\-BITMASK}}
+\index{DMA\_\-RMS0\_\-BITMASK@{DMA\_\-RMS0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS0\_\-BITMASK~0x00000001}}
+\label{a00547_af253ac96297350671140c674f6c04b98}
+
+
+Definition at line 345 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a6ebf67c449c9c00749228c4f304fb640}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS0\_\-BITOFFSET@{DMA\_\-RMS0\_\-BITOFFSET}}
+\index{DMA\_\-RMS0\_\-BITOFFSET@{DMA\_\-RMS0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS0\_\-BITOFFSET~0}}
+\label{a00547_a6ebf67c449c9c00749228c4f304fb640}
+
+
+Definition at line 343 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ac4aee16fc5d09a3013a79bfe80dd0679}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS0\_\-INIT@{DMA\_\-RMS0\_\-INIT}}
+\index{DMA\_\-RMS0\_\-INIT@{DMA\_\-RMS0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS0\_\-INIT~0x0}}
+\label{a00547_ac4aee16fc5d09a3013a79bfe80dd0679}
+
+
+Definition at line 346 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aedeb04809cfbf6d0c2dc3bd5d503d470}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS0\_\-OFFSETADDRESS@{DMA\_\-RMS0\_\-OFFSETADDRESS}}
+\index{DMA\_\-RMS0\_\-OFFSETADDRESS@{DMA\_\-RMS0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS0\_\-OFFSETADDRESS~DMA\_\-CRMS\_\-OFFSETADDRESS}}
+\label{a00547_aedeb04809cfbf6d0c2dc3bd5d503d470}
+
+
+Definition at line 342 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a2410508b4a08a0f86d6a0be09e3b57a5}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS1\_\-BITFIELDSIZE@{DMA\_\-RMS1\_\-BITFIELDSIZE}}
+\index{DMA\_\-RMS1\_\-BITFIELDSIZE@{DMA\_\-RMS1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS1\_\-BITFIELDSIZE~1}}
+\label{a00547_a2410508b4a08a0f86d6a0be09e3b57a5}
+
+
+Definition at line 335 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a7a3dc6c9367c782aef23aef7c763a806}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS1\_\-BITMASK@{DMA\_\-RMS1\_\-BITMASK}}
+\index{DMA\_\-RMS1\_\-BITMASK@{DMA\_\-RMS1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS1\_\-BITMASK~0x00000002}}
+\label{a00547_a7a3dc6c9367c782aef23aef7c763a806}
+
+
+Definition at line 336 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a0e0ffe41bd1e2055978844ea0d5ca479}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS1\_\-BITOFFSET@{DMA\_\-RMS1\_\-BITOFFSET}}
+\index{DMA\_\-RMS1\_\-BITOFFSET@{DMA\_\-RMS1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS1\_\-BITOFFSET~1}}
+\label{a00547_a0e0ffe41bd1e2055978844ea0d5ca479}
+
+
+Definition at line 334 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_acaee22bc62c9866ff41a7b47bcb54355}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS1\_\-INIT@{DMA\_\-RMS1\_\-INIT}}
+\index{DMA\_\-RMS1\_\-INIT@{DMA\_\-RMS1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS1\_\-INIT~0x0}}
+\label{a00547_acaee22bc62c9866ff41a7b47bcb54355}
+
+
+Definition at line 337 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_adb3fdf021da84959e8e6b79e5005f1fa}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS1\_\-OFFSETADDRESS@{DMA\_\-RMS1\_\-OFFSETADDRESS}}
+\index{DMA\_\-RMS1\_\-OFFSETADDRESS@{DMA\_\-RMS1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS1\_\-OFFSETADDRESS~DMA\_\-CRMS\_\-OFFSETADDRESS}}
+\label{a00547_adb3fdf021da84959e8e6b79e5005f1fa}
+
+
+Definition at line 333 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9476c50057bc6010fd8ddc59dcca2b66}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS2\_\-BITFIELDSIZE@{DMA\_\-RMS2\_\-BITFIELDSIZE}}
+\index{DMA\_\-RMS2\_\-BITFIELDSIZE@{DMA\_\-RMS2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS2\_\-BITFIELDSIZE~1}}
+\label{a00547_a9476c50057bc6010fd8ddc59dcca2b66}
+
+
+Definition at line 326 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a6ffdb406a6ebfe102c8162fe72fcc2af}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS2\_\-BITMASK@{DMA\_\-RMS2\_\-BITMASK}}
+\index{DMA\_\-RMS2\_\-BITMASK@{DMA\_\-RMS2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS2\_\-BITMASK~0x00000004}}
+\label{a00547_a6ffdb406a6ebfe102c8162fe72fcc2af}
+
+
+Definition at line 327 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ac40999a5d03946f8f9ae30b9918013a4}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS2\_\-BITOFFSET@{DMA\_\-RMS2\_\-BITOFFSET}}
+\index{DMA\_\-RMS2\_\-BITOFFSET@{DMA\_\-RMS2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS2\_\-BITOFFSET~2}}
+\label{a00547_ac40999a5d03946f8f9ae30b9918013a4}
+
+
+Definition at line 325 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a550649debe6017fa73f1f4b1d788d85d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS2\_\-INIT@{DMA\_\-RMS2\_\-INIT}}
+\index{DMA\_\-RMS2\_\-INIT@{DMA\_\-RMS2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS2\_\-INIT~0x0}}
+\label{a00547_a550649debe6017fa73f1f4b1d788d85d}
+
+
+Definition at line 328 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4963a9bfd5c5dd08132f7bfa8da05583}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RMS2\_\-OFFSETADDRESS@{DMA\_\-RMS2\_\-OFFSETADDRESS}}
+\index{DMA\_\-RMS2\_\-OFFSETADDRESS@{DMA\_\-RMS2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RMS2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RMS2\_\-OFFSETADDRESS~DMA\_\-CRMS\_\-OFFSETADDRESS}}
+\label{a00547_a4963a9bfd5c5dd08132f7bfa8da05583}
+
+
+Definition at line 324 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a530918fc7f88b1a6acbd32a5cbba4fd9}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS0\_\-BITFIELDSIZE@{DMA\_\-RS0\_\-BITFIELDSIZE}}
+\index{DMA\_\-RS0\_\-BITFIELDSIZE@{DMA\_\-RS0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS0\_\-BITFIELDSIZE~1}}
+\label{a00547_a530918fc7f88b1a6acbd32a5cbba4fd9}
+
+
+Definition at line 196 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aa369513e546dacde1f08eb76869894c5}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS0\_\-BITMASK@{DMA\_\-RS0\_\-BITMASK}}
+\index{DMA\_\-RS0\_\-BITMASK@{DMA\_\-RS0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS0\_\-BITMASK~0x00000001}}
+\label{a00547_aa369513e546dacde1f08eb76869894c5}
+
+
+Definition at line 197 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a04e836a71aa1a1b7c3d94d315cbec34b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS0\_\-BITOFFSET@{DMA\_\-RS0\_\-BITOFFSET}}
+\index{DMA\_\-RS0\_\-BITOFFSET@{DMA\_\-RS0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS0\_\-BITOFFSET~0}}
+\label{a00547_a04e836a71aa1a1b7c3d94d315cbec34b}
+
+
+Definition at line 195 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a29e2fa5db3db9c693c3ad57f77edd9f7}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS0\_\-INIT@{DMA\_\-RS0\_\-INIT}}
+\index{DMA\_\-RS0\_\-INIT@{DMA\_\-RS0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS0\_\-INIT~0x0}}
+\label{a00547_a29e2fa5db3db9c693c3ad57f77edd9f7}
+
+
+Definition at line 198 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_acb14db5c688af99267d8520a441073e3}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS0\_\-OFFSETADDRESS@{DMA\_\-RS0\_\-OFFSETADDRESS}}
+\index{DMA\_\-RS0\_\-OFFSETADDRESS@{DMA\_\-RS0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS0\_\-OFFSETADDRESS~DMA\_\-CWRS\_\-OFFSETADDRESS}}
+\label{a00547_acb14db5c688af99267d8520a441073e3}
+
+
+Definition at line 194 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a0ac6f5b050444b2a00967ea6a51db34c}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS1\_\-BITFIELDSIZE@{DMA\_\-RS1\_\-BITFIELDSIZE}}
+\index{DMA\_\-RS1\_\-BITFIELDSIZE@{DMA\_\-RS1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS1\_\-BITFIELDSIZE~1}}
+\label{a00547_a0ac6f5b050444b2a00967ea6a51db34c}
+
+
+Definition at line 187 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab504fb006839c4a9e67dc144ec32efff}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS1\_\-BITMASK@{DMA\_\-RS1\_\-BITMASK}}
+\index{DMA\_\-RS1\_\-BITMASK@{DMA\_\-RS1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS1\_\-BITMASK~0x00000002}}
+\label{a00547_ab504fb006839c4a9e67dc144ec32efff}
+
+
+Definition at line 188 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab3cecf007e51d2a7735c33e9021d9f92}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS1\_\-BITOFFSET@{DMA\_\-RS1\_\-BITOFFSET}}
+\index{DMA\_\-RS1\_\-BITOFFSET@{DMA\_\-RS1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS1\_\-BITOFFSET~1}}
+\label{a00547_ab3cecf007e51d2a7735c33e9021d9f92}
+
+
+Definition at line 186 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af8c13a81cc73860bcb15d6a7d4ca16d7}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS1\_\-INIT@{DMA\_\-RS1\_\-INIT}}
+\index{DMA\_\-RS1\_\-INIT@{DMA\_\-RS1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS1\_\-INIT~0x0}}
+\label{a00547_af8c13a81cc73860bcb15d6a7d4ca16d7}
+
+
+Definition at line 189 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aad1b0e86fac1c051f44735132090216a}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS1\_\-OFFSETADDRESS@{DMA\_\-RS1\_\-OFFSETADDRESS}}
+\index{DMA\_\-RS1\_\-OFFSETADDRESS@{DMA\_\-RS1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS1\_\-OFFSETADDRESS~DMA\_\-CWRS\_\-OFFSETADDRESS}}
+\label{a00547_aad1b0e86fac1c051f44735132090216a}
+
+
+Definition at line 185 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ac22c9357145e1a9f2d4762af98539378}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS2\_\-BITFIELDSIZE@{DMA\_\-RS2\_\-BITFIELDSIZE}}
+\index{DMA\_\-RS2\_\-BITFIELDSIZE@{DMA\_\-RS2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS2\_\-BITFIELDSIZE~1}}
+\label{a00547_ac22c9357145e1a9f2d4762af98539378}
+
+
+Definition at line 178 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9217ea018c1d8adea8a815edcc8895cc}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS2\_\-BITMASK@{DMA\_\-RS2\_\-BITMASK}}
+\index{DMA\_\-RS2\_\-BITMASK@{DMA\_\-RS2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS2\_\-BITMASK~0x00000004}}
+\label{a00547_a9217ea018c1d8adea8a815edcc8895cc}
+
+
+Definition at line 179 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a654dd517ba48234f2afe03fefd92c815}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS2\_\-BITOFFSET@{DMA\_\-RS2\_\-BITOFFSET}}
+\index{DMA\_\-RS2\_\-BITOFFSET@{DMA\_\-RS2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS2\_\-BITOFFSET~2}}
+\label{a00547_a654dd517ba48234f2afe03fefd92c815}
+
+
+Definition at line 177 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_acf403dbc6f7c038de5dbe612f2e4cff5}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS2\_\-INIT@{DMA\_\-RS2\_\-INIT}}
+\index{DMA\_\-RS2\_\-INIT@{DMA\_\-RS2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS2\_\-INIT~0x0}}
+\label{a00547_acf403dbc6f7c038de5dbe612f2e4cff5}
+
+
+Definition at line 180 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a71acfd5f9cdb623b78969dbf75a70fed}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-RS2\_\-OFFSETADDRESS@{DMA\_\-RS2\_\-OFFSETADDRESS}}
+\index{DMA\_\-RS2\_\-OFFSETADDRESS@{DMA\_\-RS2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-RS2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-RS2\_\-OFFSETADDRESS~DMA\_\-CWRS\_\-OFFSETADDRESS}}
+\label{a00547_a71acfd5f9cdb623b78969dbf75a70fed}
+
+
+Definition at line 176 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a2aca63d82ec9757351340b7e0e9a2f46}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR0\_\-BITFIELDSIZE@{DMA\_\-SR0\_\-BITFIELDSIZE}}
+\index{DMA\_\-SR0\_\-BITFIELDSIZE@{DMA\_\-SR0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR0\_\-BITFIELDSIZE~1}}
+\label{a00547_a2aca63d82ec9757351340b7e0e9a2f46}
+
+
+Definition at line 233 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_af658b00712f16d1fa959c76271802034}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR0\_\-BITMASK@{DMA\_\-SR0\_\-BITMASK}}
+\index{DMA\_\-SR0\_\-BITMASK@{DMA\_\-SR0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR0\_\-BITMASK~0x00000001}}
+\label{a00547_af658b00712f16d1fa959c76271802034}
+
+
+Definition at line 234 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_acf94b64a824bad73e99bc994cc10f5b3}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR0\_\-BITOFFSET@{DMA\_\-SR0\_\-BITOFFSET}}
+\index{DMA\_\-SR0\_\-BITOFFSET@{DMA\_\-SR0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR0\_\-BITOFFSET~0}}
+\label{a00547_acf94b64a824bad73e99bc994cc10f5b3}
+
+
+Definition at line 232 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a3926fc1ed04ea79e16d3b15b0471fdb3}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR0\_\-INIT@{DMA\_\-SR0\_\-INIT}}
+\index{DMA\_\-SR0\_\-INIT@{DMA\_\-SR0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR0\_\-INIT~0x0}}
+\label{a00547_a3926fc1ed04ea79e16d3b15b0471fdb3}
+
+
+Definition at line 235 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a12acfae055f8d089c0dbe4d97c0b7204}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR0\_\-OFFSETADDRESS@{DMA\_\-SR0\_\-OFFSETADDRESS}}
+\index{DMA\_\-SR0\_\-OFFSETADDRESS@{DMA\_\-SR0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR0\_\-OFFSETADDRESS~DMA\_\-CSR\_\-OFFSETADDRESS}}
+\label{a00547_a12acfae055f8d089c0dbe4d97c0b7204}
+
+
+Definition at line 231 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aa887312016f95805db5303802fc00992}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR1\_\-BITFIELDSIZE@{DMA\_\-SR1\_\-BITFIELDSIZE}}
+\index{DMA\_\-SR1\_\-BITFIELDSIZE@{DMA\_\-SR1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR1\_\-BITFIELDSIZE~1}}
+\label{a00547_aa887312016f95805db5303802fc00992}
+
+
+Definition at line 224 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4fdaa0cb47057b0f86f4557acb74d498}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR1\_\-BITMASK@{DMA\_\-SR1\_\-BITMASK}}
+\index{DMA\_\-SR1\_\-BITMASK@{DMA\_\-SR1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR1\_\-BITMASK~0x00000002}}
+\label{a00547_a4fdaa0cb47057b0f86f4557acb74d498}
+
+
+Definition at line 225 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a006e4b58517a5dceeb10c5c8dcb43443}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR1\_\-BITOFFSET@{DMA\_\-SR1\_\-BITOFFSET}}
+\index{DMA\_\-SR1\_\-BITOFFSET@{DMA\_\-SR1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR1\_\-BITOFFSET~1}}
+\label{a00547_a006e4b58517a5dceeb10c5c8dcb43443}
+
+
+Definition at line 223 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a31b34fd5f312ae07fac98416c94975cb}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR1\_\-INIT@{DMA\_\-SR1\_\-INIT}}
+\index{DMA\_\-SR1\_\-INIT@{DMA\_\-SR1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR1\_\-INIT~0x0}}
+\label{a00547_a31b34fd5f312ae07fac98416c94975cb}
+
+
+Definition at line 226 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ada0e235423bd4db7ed48117ea4e5351a}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR1\_\-OFFSETADDRESS@{DMA\_\-SR1\_\-OFFSETADDRESS}}
+\index{DMA\_\-SR1\_\-OFFSETADDRESS@{DMA\_\-SR1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR1\_\-OFFSETADDRESS~DMA\_\-CSR\_\-OFFSETADDRESS}}
+\label{a00547_ada0e235423bd4db7ed48117ea4e5351a}
+
+
+Definition at line 222 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad366e18f388c97c7fa1c05106ed5b94f}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR2\_\-BITFIELDSIZE@{DMA\_\-SR2\_\-BITFIELDSIZE}}
+\index{DMA\_\-SR2\_\-BITFIELDSIZE@{DMA\_\-SR2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR2\_\-BITFIELDSIZE~1}}
+\label{a00547_ad366e18f388c97c7fa1c05106ed5b94f}
+
+
+Definition at line 215 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aaf7ab40ea8ae2ad0865247654987b347}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR2\_\-BITMASK@{DMA\_\-SR2\_\-BITMASK}}
+\index{DMA\_\-SR2\_\-BITMASK@{DMA\_\-SR2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR2\_\-BITMASK~0x00000004}}
+\label{a00547_aaf7ab40ea8ae2ad0865247654987b347}
+
+
+Definition at line 216 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a04709a58304f2d8e896081ed6cf6815c}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR2\_\-BITOFFSET@{DMA\_\-SR2\_\-BITOFFSET}}
+\index{DMA\_\-SR2\_\-BITOFFSET@{DMA\_\-SR2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR2\_\-BITOFFSET~2}}
+\label{a00547_a04709a58304f2d8e896081ed6cf6815c}
+
+
+Definition at line 214 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a813c497e81e26f04cb817525f4e76832}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR2\_\-INIT@{DMA\_\-SR2\_\-INIT}}
+\index{DMA\_\-SR2\_\-INIT@{DMA\_\-SR2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR2\_\-INIT~0x0}}
+\label{a00547_a813c497e81e26f04cb817525f4e76832}
+
+
+Definition at line 217 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a572efc5b5c8c74bbb08f69c023b7a776}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-SR2\_\-OFFSETADDRESS@{DMA\_\-SR2\_\-OFFSETADDRESS}}
+\index{DMA\_\-SR2\_\-OFFSETADDRESS@{DMA\_\-SR2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-SR2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-SR2\_\-OFFSETADDRESS~DMA\_\-CSR\_\-OFFSETADDRESS}}
+\label{a00547_a572efc5b5c8c74bbb08f69c023b7a776}
+
+
+Definition at line 213 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8f73d54fc0c18d5e34dc3d38b52e7530}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ST\_\-BITFIELDSIZE@{DMA\_\-ST\_\-BITFIELDSIZE}}
+\index{DMA\_\-ST\_\-BITFIELDSIZE@{DMA\_\-ST\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ST\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ST\_\-BITFIELDSIZE~4}}
+\label{a00547_a8f73d54fc0c18d5e34dc3d38b52e7530}
+
+
+Definition at line 84 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a2807548dce19bf6af704d4105594f939}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ST\_\-BITMASK@{DMA\_\-ST\_\-BITMASK}}
+\index{DMA\_\-ST\_\-BITMASK@{DMA\_\-ST\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ST\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ST\_\-BITMASK~0x000000f0}}
+\label{a00547_a2807548dce19bf6af704d4105594f939}
+
+
+Definition at line 85 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab86bc68bfb1dca7b3d90155b4103c3d0}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ST\_\-BITOFFSET@{DMA\_\-ST\_\-BITOFFSET}}
+\index{DMA\_\-ST\_\-BITOFFSET@{DMA\_\-ST\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ST\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ST\_\-BITOFFSET~4}}
+\label{a00547_ab86bc68bfb1dca7b3d90155b4103c3d0}
+
+
+Definition at line 83 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a7225e7cc30263f04e1d64a6e733395e6}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ST\_\-INIT@{DMA\_\-ST\_\-INIT}}
+\index{DMA\_\-ST\_\-INIT@{DMA\_\-ST\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ST\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ST\_\-INIT~0x0}}
+\label{a00547_a7225e7cc30263f04e1d64a6e733395e6}
+
+
+Definition at line 86 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ac7e7a79a4c4739fbf9669e6bf96cc4ff}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-ST\_\-OFFSETADDRESS@{DMA\_\-ST\_\-OFFSETADDRESS}}
+\index{DMA\_\-ST\_\-OFFSETADDRESS@{DMA\_\-ST\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-ST\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-ST\_\-OFFSETADDRESS~DMA\_\-STATUS\_\-OFFSETADDRESS}}
+\label{a00547_ac7e7a79a4c4739fbf9669e6bf96cc4ff}
+
+
+Definition at line 82 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab1c1e1c0c8bc5feb7ea7354fbf782b70}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-STATUS\_\-BITFIELDSIZE@{DMA\_\-STATUS\_\-BITFIELDSIZE}}
+\index{DMA\_\-STATUS\_\-BITFIELDSIZE@{DMA\_\-STATUS\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-STATUS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-STATUS\_\-BITFIELDSIZE~32}}
+\label{a00547_ab1c1e1c0c8bc5feb7ea7354fbf782b70}
+
+
+Definition at line 57 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_abbb907be2c04d2a418451bd7e67d1d31}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-STATUS\_\-BITMASK@{DMA\_\-STATUS\_\-BITMASK}}
+\index{DMA\_\-STATUS\_\-BITMASK@{DMA\_\-STATUS\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-STATUS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-STATUS\_\-BITMASK~0xFFFFFFFF}}
+\label{a00547_abbb907be2c04d2a418451bd7e67d1d31}
+
+
+Definition at line 58 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a0883a182ca745da40ee167a33546ddf2}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-STATUS\_\-BITOFFSET@{DMA\_\-STATUS\_\-BITOFFSET}}
+\index{DMA\_\-STATUS\_\-BITOFFSET@{DMA\_\-STATUS\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-STATUS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-STATUS\_\-BITOFFSET~0}}
+\label{a00547_a0883a182ca745da40ee167a33546ddf2}
+
+
+Definition at line 56 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a07b3d23f33e476a2b250a6c5fdb63aab}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-STATUS\_\-INIT@{DMA\_\-STATUS\_\-INIT}}
+\index{DMA\_\-STATUS\_\-INIT@{DMA\_\-STATUS\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-STATUS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-STATUS\_\-INIT~0x00000000}}
+\label{a00547_a07b3d23f33e476a2b250a6c5fdb63aab}
+
+
+Definition at line 59 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a7468fcbcee275ca417ae33054686e3f5}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-STATUS\_\-OFFSETADDRESS@{DMA\_\-STATUS\_\-OFFSETADDRESS}}
+\index{DMA\_\-STATUS\_\-OFFSETADDRESS@{DMA\_\-STATUS\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-STATUS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-STATUS\_\-OFFSETADDRESS~0x00000000}}
+\label{a00547_a7468fcbcee275ca417ae33054686e3f5}
+
+
+Definition at line 55 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a072f1546fc8ea82bd5e3434dc3f0822f}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-TS\_\-BITFIELDSIZE@{DMA\_\-TS\_\-BITFIELDSIZE}}
+\index{DMA\_\-TS\_\-BITFIELDSIZE@{DMA\_\-TS\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-TS\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-TS\_\-BITFIELDSIZE~4}}
+\label{a00547_a072f1546fc8ea82bd5e3434dc3f0822f}
+
+
+Definition at line 66 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a6e865711108670ff65f50eebb85c6e6d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-TS\_\-BITMASK@{DMA\_\-TS\_\-BITMASK}}
+\index{DMA\_\-TS\_\-BITMASK@{DMA\_\-TS\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-TS\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-TS\_\-BITMASK~0xf0000000}}
+\label{a00547_a6e865711108670ff65f50eebb85c6e6d}
+
+
+Definition at line 67 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a7f2d788f03475a58acf436e9358a977d}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-TS\_\-BITOFFSET@{DMA\_\-TS\_\-BITOFFSET}}
+\index{DMA\_\-TS\_\-BITOFFSET@{DMA\_\-TS\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-TS\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-TS\_\-BITOFFSET~28}}
+\label{a00547_a7f2d788f03475a58acf436e9358a977d}
+
+
+Definition at line 65 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a0bfb3a78fa4daa78b640b8cfd9568247}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-TS\_\-INIT@{DMA\_\-TS\_\-INIT}}
+\index{DMA\_\-TS\_\-INIT@{DMA\_\-TS\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-TS\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-TS\_\-INIT~0x0}}
+\label{a00547_a0bfb3a78fa4daa78b640b8cfd9568247}
+
+
+Definition at line 68 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a3fcea040d62dc0c15c7685b07b420554}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-TS\_\-OFFSETADDRESS@{DMA\_\-TS\_\-OFFSETADDRESS}}
+\index{DMA\_\-TS\_\-OFFSETADDRESS@{DMA\_\-TS\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-TS\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-TS\_\-OFFSETADDRESS~DMA\_\-STATUS\_\-OFFSETADDRESS}}
+\label{a00547_a3fcea040d62dc0c15c7685b07b420554}
+
+
+Definition at line 64 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a6d33db6d777264fea94bb5ae6407a90f}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC0\_\-BITFIELDSIZE@{DMA\_\-UBC0\_\-BITFIELDSIZE}}
+\index{DMA\_\-UBC0\_\-BITFIELDSIZE@{DMA\_\-UBC0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC0\_\-BITFIELDSIZE~1}}
+\label{a00547_a6d33db6d777264fea94bb5ae6407a90f}
+
+
+Definition at line 307 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab9ec03fa356d8c60b990db7f21824aa2}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC0\_\-BITMASK@{DMA\_\-UBC0\_\-BITMASK}}
+\index{DMA\_\-UBC0\_\-BITMASK@{DMA\_\-UBC0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC0\_\-BITMASK~0x00000001}}
+\label{a00547_ab9ec03fa356d8c60b990db7f21824aa2}
+
+
+Definition at line 308 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a36678462030ef0892600f230d11a1fe7}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC0\_\-BITOFFSET@{DMA\_\-UBC0\_\-BITOFFSET}}
+\index{DMA\_\-UBC0\_\-BITOFFSET@{DMA\_\-UBC0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC0\_\-BITOFFSET~0}}
+\label{a00547_a36678462030ef0892600f230d11a1fe7}
+
+
+Definition at line 306 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad75ed5b05e9d95734b846b6aaab6abe5}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC0\_\-INIT@{DMA\_\-UBC0\_\-INIT}}
+\index{DMA\_\-UBC0\_\-INIT@{DMA\_\-UBC0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC0\_\-INIT~0x0}}
+\label{a00547_ad75ed5b05e9d95734b846b6aaab6abe5}
+
+
+Definition at line 309 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a379cfb51ce3d0e0869d99cc0707562a2}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC0\_\-OFFSETADDRESS@{DMA\_\-UBC0\_\-OFFSETADDRESS}}
+\index{DMA\_\-UBC0\_\-OFFSETADDRESS@{DMA\_\-UBC0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC0\_\-OFFSETADDRESS~DMA\_\-CUBC\_\-OFFSETADDRESS}}
+\label{a00547_a379cfb51ce3d0e0869d99cc0707562a2}
+
+
+Definition at line 305 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a081663bd259232b0190739875dc8f854}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC1\_\-BITFIELDSIZE@{DMA\_\-UBC1\_\-BITFIELDSIZE}}
+\index{DMA\_\-UBC1\_\-BITFIELDSIZE@{DMA\_\-UBC1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC1\_\-BITFIELDSIZE~1}}
+\label{a00547_a081663bd259232b0190739875dc8f854}
+
+
+Definition at line 298 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8a03a43519b98675b8e2b8f74bdb7808}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC1\_\-BITMASK@{DMA\_\-UBC1\_\-BITMASK}}
+\index{DMA\_\-UBC1\_\-BITMASK@{DMA\_\-UBC1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC1\_\-BITMASK~0x00000002}}
+\label{a00547_a8a03a43519b98675b8e2b8f74bdb7808}
+
+
+Definition at line 299 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_acdb464b248cc252121d84a3ce18d8669}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC1\_\-BITOFFSET@{DMA\_\-UBC1\_\-BITOFFSET}}
+\index{DMA\_\-UBC1\_\-BITOFFSET@{DMA\_\-UBC1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC1\_\-BITOFFSET~1}}
+\label{a00547_acdb464b248cc252121d84a3ce18d8669}
+
+
+Definition at line 297 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a7dc34a4ca9ded0568d6e4d792f892144}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC1\_\-INIT@{DMA\_\-UBC1\_\-INIT}}
+\index{DMA\_\-UBC1\_\-INIT@{DMA\_\-UBC1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC1\_\-INIT~0x0}}
+\label{a00547_a7dc34a4ca9ded0568d6e4d792f892144}
+
+
+Definition at line 300 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a0b26abcc7063d07a8d444322a7298b77}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC1\_\-OFFSETADDRESS@{DMA\_\-UBC1\_\-OFFSETADDRESS}}
+\index{DMA\_\-UBC1\_\-OFFSETADDRESS@{DMA\_\-UBC1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC1\_\-OFFSETADDRESS~DMA\_\-CUBC\_\-OFFSETADDRESS}}
+\label{a00547_a0b26abcc7063d07a8d444322a7298b77}
+
+
+Definition at line 296 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9c414d2c2138cc764fadd4cc108193b2}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC2\_\-BITFIELDSIZE@{DMA\_\-UBC2\_\-BITFIELDSIZE}}
+\index{DMA\_\-UBC2\_\-BITFIELDSIZE@{DMA\_\-UBC2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC2\_\-BITFIELDSIZE~1}}
+\label{a00547_a9c414d2c2138cc764fadd4cc108193b2}
+
+
+Definition at line 289 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aac5bcaab524998e45b1a9c6518a4dfdc}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC2\_\-BITMASK@{DMA\_\-UBC2\_\-BITMASK}}
+\index{DMA\_\-UBC2\_\-BITMASK@{DMA\_\-UBC2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC2\_\-BITMASK~0x00000004}}
+\label{a00547_aac5bcaab524998e45b1a9c6518a4dfdc}
+
+
+Definition at line 290 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ada4233f031183ef63d59438052f3b7b9}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC2\_\-BITOFFSET@{DMA\_\-UBC2\_\-BITOFFSET}}
+\index{DMA\_\-UBC2\_\-BITOFFSET@{DMA\_\-UBC2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC2\_\-BITOFFSET~2}}
+\label{a00547_ada4233f031183ef63d59438052f3b7b9}
+
+
+Definition at line 288 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a5c433d5388778bd7d73919f800246aa8}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC2\_\-INIT@{DMA\_\-UBC2\_\-INIT}}
+\index{DMA\_\-UBC2\_\-INIT@{DMA\_\-UBC2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC2\_\-INIT~0x0}}
+\label{a00547_a5c433d5388778bd7d73919f800246aa8}
+
+
+Definition at line 291 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a4cbc6b413253fd99a49bf340dd1840d7}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBC2\_\-OFFSETADDRESS@{DMA\_\-UBC2\_\-OFFSETADDRESS}}
+\index{DMA\_\-UBC2\_\-OFFSETADDRESS@{DMA\_\-UBC2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBC2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBC2\_\-OFFSETADDRESS~DMA\_\-CUBC\_\-OFFSETADDRESS}}
+\label{a00547_a4cbc6b413253fd99a49bf340dd1840d7}
+
+
+Definition at line 287 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a8042a05749b9a48b9d1297b6f18421b0}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS0\_\-BITFIELDSIZE@{DMA\_\-UBS0\_\-BITFIELDSIZE}}
+\index{DMA\_\-UBS0\_\-BITFIELDSIZE@{DMA\_\-UBS0\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS0\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS0\_\-BITFIELDSIZE~1}}
+\label{a00547_a8042a05749b9a48b9d1297b6f18421b0}
+
+
+Definition at line 270 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ae8bde4517976f8b9a435695635769a2b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS0\_\-BITMASK@{DMA\_\-UBS0\_\-BITMASK}}
+\index{DMA\_\-UBS0\_\-BITMASK@{DMA\_\-UBS0\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS0\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS0\_\-BITMASK~0x00000001}}
+\label{a00547_ae8bde4517976f8b9a435695635769a2b}
+
+
+Definition at line 271 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad1f484910de0d7511f11eae9c6ea26b1}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS0\_\-BITOFFSET@{DMA\_\-UBS0\_\-BITOFFSET}}
+\index{DMA\_\-UBS0\_\-BITOFFSET@{DMA\_\-UBS0\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS0\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS0\_\-BITOFFSET~0}}
+\label{a00547_ad1f484910de0d7511f11eae9c6ea26b1}
+
+
+Definition at line 269 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab4b7b4598f9c3fec92c514fae4e89c02}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS0\_\-INIT@{DMA\_\-UBS0\_\-INIT}}
+\index{DMA\_\-UBS0\_\-INIT@{DMA\_\-UBS0\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS0\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS0\_\-INIT~0x0}}
+\label{a00547_ab4b7b4598f9c3fec92c514fae4e89c02}
+
+
+Definition at line 272 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a3fcb52ea5762aec6e08d9402b01d0f32}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS0\_\-OFFSETADDRESS@{DMA\_\-UBS0\_\-OFFSETADDRESS}}
+\index{DMA\_\-UBS0\_\-OFFSETADDRESS@{DMA\_\-UBS0\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS0\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS0\_\-OFFSETADDRESS~DMA\_\-CUBS\_\-OFFSETADDRESS}}
+\label{a00547_a3fcb52ea5762aec6e08d9402b01d0f32}
+
+
+Definition at line 268 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ad8b65d19365227f764e3906c72f7a96b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS1\_\-BITFIELDSIZE@{DMA\_\-UBS1\_\-BITFIELDSIZE}}
+\index{DMA\_\-UBS1\_\-BITFIELDSIZE@{DMA\_\-UBS1\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS1\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS1\_\-BITFIELDSIZE~1}}
+\label{a00547_ad8b65d19365227f764e3906c72f7a96b}
+
+
+Definition at line 261 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a6464b961077ef5a80528065aca28c708}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS1\_\-BITMASK@{DMA\_\-UBS1\_\-BITMASK}}
+\index{DMA\_\-UBS1\_\-BITMASK@{DMA\_\-UBS1\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS1\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS1\_\-BITMASK~0x00000002}}
+\label{a00547_a6464b961077ef5a80528065aca28c708}
+
+
+Definition at line 262 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a46105c7a3f7eef51b62bc01ab43dc1e0}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS1\_\-BITOFFSET@{DMA\_\-UBS1\_\-BITOFFSET}}
+\index{DMA\_\-UBS1\_\-BITOFFSET@{DMA\_\-UBS1\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS1\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS1\_\-BITOFFSET~1}}
+\label{a00547_a46105c7a3f7eef51b62bc01ab43dc1e0}
+
+
+Definition at line 260 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a6bfc4dcd01d578ce62d107a0b62ef746}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS1\_\-INIT@{DMA\_\-UBS1\_\-INIT}}
+\index{DMA\_\-UBS1\_\-INIT@{DMA\_\-UBS1\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS1\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS1\_\-INIT~0x0}}
+\label{a00547_a6bfc4dcd01d578ce62d107a0b62ef746}
+
+
+Definition at line 263 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_aecf79555d74ae18894265e76340d9512}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS1\_\-OFFSETADDRESS@{DMA\_\-UBS1\_\-OFFSETADDRESS}}
+\index{DMA\_\-UBS1\_\-OFFSETADDRESS@{DMA\_\-UBS1\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS1\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS1\_\-OFFSETADDRESS~DMA\_\-CUBS\_\-OFFSETADDRESS}}
+\label{a00547_aecf79555d74ae18894265e76340d9512}
+
+
+Definition at line 259 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a9f255ee2eb710d462fc908f1c43634b7}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS2\_\-BITFIELDSIZE@{DMA\_\-UBS2\_\-BITFIELDSIZE}}
+\index{DMA\_\-UBS2\_\-BITFIELDSIZE@{DMA\_\-UBS2\_\-BITFIELDSIZE}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS2\_\-BITFIELDSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS2\_\-BITFIELDSIZE~1}}
+\label{a00547_a9f255ee2eb710d462fc908f1c43634b7}
+
+
+Definition at line 252 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a1b78974148ef350a161c3b9197f213e2}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS2\_\-BITMASK@{DMA\_\-UBS2\_\-BITMASK}}
+\index{DMA\_\-UBS2\_\-BITMASK@{DMA\_\-UBS2\_\-BITMASK}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS2\_\-BITMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS2\_\-BITMASK~0x00000004}}
+\label{a00547_a1b78974148ef350a161c3b9197f213e2}
+
+
+Definition at line 253 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a39c705909c5c5b581e63d83bb178d940}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS2\_\-BITOFFSET@{DMA\_\-UBS2\_\-BITOFFSET}}
+\index{DMA\_\-UBS2\_\-BITOFFSET@{DMA\_\-UBS2\_\-BITOFFSET}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS2\_\-BITOFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS2\_\-BITOFFSET~2}}
+\label{a00547_a39c705909c5c5b581e63d83bb178d940}
+
+
+Definition at line 251 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_ab54c7aead38fa343411178576e1e82dc}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS2\_\-INIT@{DMA\_\-UBS2\_\-INIT}}
+\index{DMA\_\-UBS2\_\-INIT@{DMA\_\-UBS2\_\-INIT}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS2\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS2\_\-INIT~0x0}}
+\label{a00547_ab54c7aead38fa343411178576e1e82dc}
+
+
+Definition at line 254 of file gsn\_\-reg\_\-dma\_\-op.h.
+
+\hypertarget{a00547_a58a43cfc475c82cce863a3d389ec247b}{
+\index{gsn\_\-reg\_\-dma\_\-op.h@{gsn\_\-reg\_\-dma\_\-op.h}!DMA\_\-UBS2\_\-OFFSETADDRESS@{DMA\_\-UBS2\_\-OFFSETADDRESS}}
+\index{DMA\_\-UBS2\_\-OFFSETADDRESS@{DMA\_\-UBS2\_\-OFFSETADDRESS}!gsn_reg_dma_op.h@{gsn\_\-reg\_\-dma\_\-op.h}}
+\subsubsection[{DMA\_\-UBS2\_\-OFFSETADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-UBS2\_\-OFFSETADDRESS~DMA\_\-CUBS\_\-OFFSETADDRESS}}
+\label{a00547_a58a43cfc475c82cce863a3d389ec247b}
+
+
+Definition at line 250 of file gsn\_\-reg\_\-dma\_\-op.h.
+

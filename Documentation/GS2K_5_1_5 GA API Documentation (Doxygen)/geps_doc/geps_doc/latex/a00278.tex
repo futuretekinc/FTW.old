@@ -1,0 +1,55 @@
+\hypertarget{a00278}{
+\section{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO Struct Reference}
+\label{a00278}\index{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO@{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO}}
+}
+
+
+MIC Fail Countermeasure Info.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wdd.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00278_acfe7ff83cae14c2fd857788864162be6}{micFailCounterMeasureEndTime}: 31
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00278_af8060b49986206c9a762eb3872a1ebe7}{micFailCounterMeasureOn}: 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+MIC Fail Countermeasure Info. 
+
+This structure defines the MIC Failure Countermeasure information that can be stored in NVRAM to handle MIC failure countermeasures across standby cycles. 
+
+Definition at line 536 of file gsn\_\-wdd.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00278_acfe7ff83cae14c2fd857788864162be6}{
+\index{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO@{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO}!micFailCounterMeasureEndTime@{micFailCounterMeasureEndTime}}
+\index{micFailCounterMeasureEndTime@{micFailCounterMeasureEndTime}!GSN_WDD_MIC_FAIL_INFO@{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO}}
+\subsubsection[{micFailCounterMeasureEndTime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf micFailCounterMeasureEndTime}}}
+\label{a00278_acfe7ff83cae14c2fd857788864162be6}
+This uses TSYNC timer value wherein 2$^\wedge$25 cycles is 1s. So we just need to store the most significant 31 bits to keep track of seconds. 
+
+Definition at line 538 of file gsn\_\-wdd.h.
+
+\hypertarget{a00278_af8060b49986206c9a762eb3872a1ebe7}{
+\index{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO@{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO}!micFailCounterMeasureOn@{micFailCounterMeasureOn}}
+\index{micFailCounterMeasureOn@{micFailCounterMeasureOn}!GSN_WDD_MIC_FAIL_INFO@{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO}}
+\subsubsection[{micFailCounterMeasureOn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf micFailCounterMeasureOn}}}
+\label{a00278_af8060b49986206c9a762eb3872a1ebe7}
+If 1, then counter measure is ON and hence association should not be allowed. 
+
+Definition at line 544 of file gsn\_\-wdd.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00603}{gsn\_\-wdd.h}\end{DoxyCompactItemize}

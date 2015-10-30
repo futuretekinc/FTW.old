@@ -1,0 +1,143 @@
+\hypertarget{a00043}{
+\section{GSN\_\-DHCP\_\-SRVR Struct Reference}
+\label{a00043}\index{GSN\_\-DHCP\_\-SRVR@{GSN\_\-DHCP\_\-SRVR}}
+}
+
+
+DHCP server context structure.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-dhcp\_\-srvr.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00043_a09261ac30de0001f89753c8f3869ad2f}{serverIpAddr}
+\item 
+\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} \hyperlink{a00043_a99352b33eae768a9ac49ad9cd195a03f}{recvTmrHndl}
+\item 
+\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} \hyperlink{a00043_aceccc0d31027efd5c8c774981cb782f3}{recvTmr}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00043_a4664a1e7fa506ea9a7864c6847d8af4b}{sockDesc}
+\item 
+\hyperlink{a00044}{GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T} \hyperlink{a00043_a68dcf77b495ff3cbf9a6ef828ce8542e}{srvrCfg}
+\item 
+\hyperlink{a00046}{GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG\_\-T} $\ast$ \hyperlink{a00043_ac271af693c1a7a5d647f0f1b76e2e633}{dhcpPkt}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00043_ada3b5c6b062e8c88e941dd4fd6cd85b6}{dhcpMsgLen}
+\item 
+\hyperlink{a00045}{GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T} \hyperlink{a00043_a9cd6bdb415f7200b23fd5e9a2c9cf5e7}{clients} \mbox{[}GSN\_\-DHCP\_\-SRVR\_\-MAX\_\-CLIENTS\mbox{]}
+\item 
+\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$ \hyperlink{a00043_a98d510676ecd134a5e9ac61bf222cded}{pNwif}
+\item 
+\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$ \hyperlink{a00043_a97684b58b7a05f9b282a86a26929e1ba}{pWdd}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+DHCP server context structure. 
+
+This structure contains the parameters that define an instance of the DHCP server. 
+
+Definition at line 218 of file gsn\_\-dhcp\_\-srvr.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00043_a9cd6bdb415f7200b23fd5e9a2c9cf5e7}{
+\index{GSN\_\-DHCP\_\-SRVR@{GSN\_\-DHCP\_\-SRVR}!clients@{clients}}
+\index{clients@{clients}!GSN_DHCP_SRVR@{GSN\_\-DHCP\_\-SRVR}}
+\subsubsection[{clients}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-DHCP\_\-SRVR\_\-CLIENT\_\-T} {\bf clients}\mbox{[}GSN\_\-DHCP\_\-SRVR\_\-MAX\_\-CLIENTS\mbox{]}}}
+\label{a00043_a9cd6bdb415f7200b23fd5e9a2c9cf5e7}
+
+
+Definition at line 229 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00043_ada3b5c6b062e8c88e941dd4fd6cd85b6}{
+\index{GSN\_\-DHCP\_\-SRVR@{GSN\_\-DHCP\_\-SRVR}!dhcpMsgLen@{dhcpMsgLen}}
+\index{dhcpMsgLen@{dhcpMsgLen}!GSN_DHCP_SRVR@{GSN\_\-DHCP\_\-SRVR}}
+\subsubsection[{dhcpMsgLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf dhcpMsgLen}}}
+\label{a00043_ada3b5c6b062e8c88e941dd4fd6cd85b6}
+
+
+Definition at line 227 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00043_ac271af693c1a7a5d647f0f1b76e2e633}{
+\index{GSN\_\-DHCP\_\-SRVR@{GSN\_\-DHCP\_\-SRVR}!dhcpPkt@{dhcpPkt}}
+\index{dhcpPkt@{dhcpPkt}!GSN_DHCP_SRVR@{GSN\_\-DHCP\_\-SRVR}}
+\subsubsection[{dhcpPkt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-DHCP\_\-SRVR\_\-DHCP\_\-MSG\_\-T}$\ast$ {\bf dhcpPkt}}}
+\label{a00043_ac271af693c1a7a5d647f0f1b76e2e633}
+
+
+Definition at line 226 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00043_a98d510676ecd134a5e9ac61bf222cded}{
+\index{GSN\_\-DHCP\_\-SRVR@{GSN\_\-DHCP\_\-SRVR}!pNwif@{pNwif}}
+\index{pNwif@{pNwif}!GSN_DHCP_SRVR@{GSN\_\-DHCP\_\-SRVR}}
+\subsubsection[{pNwif}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-CTX\_\-T}$\ast$ {\bf pNwif}}}
+\label{a00043_a98d510676ecd134a5e9ac61bf222cded}
+
+
+Definition at line 231 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00043_a97684b58b7a05f9b282a86a26929e1ba}{
+\index{GSN\_\-DHCP\_\-SRVR@{GSN\_\-DHCP\_\-SRVR}!pWdd@{pWdd}}
+\index{pWdd@{pWdd}!GSN_DHCP_SRVR@{GSN\_\-DHCP\_\-SRVR}}
+\subsubsection[{pWdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WDD\_\-CTX\_\-T}$\ast$ {\bf pWdd}}}
+\label{a00043_a97684b58b7a05f9b282a86a26929e1ba}
+
+
+Definition at line 232 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00043_aceccc0d31027efd5c8c774981cb782f3}{
+\index{GSN\_\-DHCP\_\-SRVR@{GSN\_\-DHCP\_\-SRVR}!recvTmr@{recvTmr}}
+\index{recvTmr@{recvTmr}!GSN_DHCP_SRVR@{GSN\_\-DHCP\_\-SRVR}}
+\subsubsection[{recvTmr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SOFT\_\-TMR\_\-T} {\bf recvTmr}}}
+\label{a00043_aceccc0d31027efd5c8c774981cb782f3}
+
+
+Definition at line 222 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00043_a99352b33eae768a9ac49ad9cd195a03f}{
+\index{GSN\_\-DHCP\_\-SRVR@{GSN\_\-DHCP\_\-SRVR}!recvTmrHndl@{recvTmrHndl}}
+\index{recvTmrHndl@{recvTmrHndl}!GSN_DHCP_SRVR@{GSN\_\-DHCP\_\-SRVR}}
+\subsubsection[{recvTmrHndl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} {\bf recvTmrHndl}}}
+\label{a00043_a99352b33eae768a9ac49ad9cd195a03f}
+
+
+Definition at line 221 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00043_a09261ac30de0001f89753c8f3869ad2f}{
+\index{GSN\_\-DHCP\_\-SRVR@{GSN\_\-DHCP\_\-SRVR}!serverIpAddr@{serverIpAddr}}
+\index{serverIpAddr@{serverIpAddr}!GSN_DHCP_SRVR@{GSN\_\-DHCP\_\-SRVR}}
+\subsubsection[{serverIpAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf serverIpAddr}}}
+\label{a00043_a09261ac30de0001f89753c8f3869ad2f}
+
+
+Definition at line 220 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00043_a4664a1e7fa506ea9a7864c6847d8af4b}{
+\index{GSN\_\-DHCP\_\-SRVR@{GSN\_\-DHCP\_\-SRVR}!sockDesc@{sockDesc}}
+\index{sockDesc@{sockDesc}!GSN_DHCP_SRVR@{GSN\_\-DHCP\_\-SRVR}}
+\subsubsection[{sockDesc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf sockDesc}}}
+\label{a00043_a4664a1e7fa506ea9a7864c6847d8af4b}
+
+
+Definition at line 223 of file gsn\_\-dhcp\_\-srvr.h.
+
+\hypertarget{a00043_a68dcf77b495ff3cbf9a6ef828ce8542e}{
+\index{GSN\_\-DHCP\_\-SRVR@{GSN\_\-DHCP\_\-SRVR}!srvrCfg@{srvrCfg}}
+\index{srvrCfg@{srvrCfg}!GSN_DHCP_SRVR@{GSN\_\-DHCP\_\-SRVR}}
+\subsubsection[{srvrCfg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-DHCP\_\-SRVR\_\-CFG\_\-T} {\bf srvrCfg}}}
+\label{a00043_a68dcf77b495ff3cbf9a6ef828ce8542e}
+
+
+Definition at line 225 of file gsn\_\-dhcp\_\-srvr.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00482}{gsn\_\-dhcp\_\-srvr.h}\end{DoxyCompactItemize}

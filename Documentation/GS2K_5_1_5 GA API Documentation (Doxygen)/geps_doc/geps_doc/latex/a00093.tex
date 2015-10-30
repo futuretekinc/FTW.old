@@ -1,0 +1,264 @@
+\hypertarget{a00093}{
+\section{GSN\_\-HTTPC\_\-CONF\_\-INFO Struct Reference}
+\label{a00093}\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+}
+
+
+Http Config structure.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-httpc.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00665_ga8a5357a42219f22430d5bf97d136092d}{GSN\_\-HTTP\_\-USER\_\-VERSION\_\-T} \hyperlink{a00093_abb6e9745613c073afeb3e2caa30ec30b}{reqVersion}
+\item 
+\hyperlink{a00665_ga19c754176c7cf6f41749aa60c125ee7e}{GSN\_\-HTTP\_\-USER\_\-METHOD\_\-T} \hyperlink{a00093_af0a2fd6f6a7f7d2f17fc4e968a22377d}{reqMethod}
+\item 
+\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$ \hyperlink{a00093_a89c93815bbc36a53553865e3a843157e}{reqPathPtr}
+\item 
+\hyperlink{a00665_gacdf2ed5f026ce7b549a8151c0a5f0129}{GSN\_\-HTTP\_\-USER\_\-HEADER\_\-TYPE\_\-T} $\ast$ \hyperlink{a00093_a2893ecdbedbe657c632357e8651e4a1d}{reqHeaderTypes}
+\item 
+\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$$\ast$ \hyperlink{a00093_afad42cc06ee73f9d4741c7390a3960ad}{reqHeaderValues}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00093_af8c823ceca7898af08fb3720c9986639}{reqHeaderCount}
+\item 
+\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$ \hyperlink{a00093_ada90e2ecee9c50c7d2018d6e394492f1}{reqBodyPtr}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00093_a58695d31385d9e33538edf494e1cff76}{reqBodyLen}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00093_af375053fba5740b0113160f149404c23}{reqBodyTotalLen}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00093_ad2788be66932fd0137193d01dff57d90}{reqBodySentLen}
+\item 
+\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$$\ast$ \hyperlink{a00093_a78dccb1521490a4806f1802202cc4e7f}{resHeadersPtr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00093_aa68bd8d7285bf790da46959c3b33af35}{copiedLen}
+\item 
+\hyperlink{a00507_ac8f1951ac3188114d05c988f1c689b0f}{GSN\_\-HTTP\_\-RX\_\-HDRS\_\-CB\_\-T} \hyperlink{a00093_a21342c1a913caebce98cfd93751f3511}{rxHdrsCb}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00093_a83c62158f40d2e96e39eec76f840d403}{sendStatus}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00093_ab135b0058d995a60e5d68bb6ae5f1cdb}{httpcHdrBmap}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00093_a5d6c4b9c75815c9cdac4984781c96e46}{hconHttpcHdrSent}
+\item 
+\hyperlink{a00665_ga4f384de3cef47243fc55fee382201152}{GSN\_\-HTTP\_\-RX\_\-BUFFER\_\-MGMT\_\-CB\_\-T} \hyperlink{a00093_ad0f2e9fb5c7aa9fe8b272479e3ea415b}{rxBufferMgmtCb}
+\item 
+VOID $\ast$ \hyperlink{a00093_a8ccdb1d001da18b5348d6b9c43f9d51f}{rxBufferMgmtCbCtx}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00093_aa22363befcb31b7539f282109cf5a926}{httpTimeOut}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00093_a691b9a4f8694ea2cee930a97d5082533}{moredata}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00093_a2c234173930245803f6c71de3f819749}{reqSendState}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Http Config structure. 
+
+This structure contains the parameters that define an instance of the Http Configuration. 
+
+Definition at line 229 of file gsn\_\-httpc.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00093_aa68bd8d7285bf790da46959c3b33af35}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!copiedLen@{copiedLen}}
+\index{copiedLen@{copiedLen}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{copiedLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf copiedLen}}}
+\label{a00093_aa68bd8d7285bf790da46959c3b33af35}
+
+
+Definition at line 257 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_a5d6c4b9c75815c9cdac4984781c96e46}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!hconHttpcHdrSent@{hconHttpcHdrSent}}
+\index{hconHttpcHdrSent@{hconHttpcHdrSent}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{hconHttpcHdrSent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf hconHttpcHdrSent}}}
+\label{a00093_a5d6c4b9c75815c9cdac4984781c96e46}
+
+
+Definition at line 263 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_ab135b0058d995a60e5d68bb6ae5f1cdb}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!httpcHdrBmap@{httpcHdrBmap}}
+\index{httpcHdrBmap@{httpcHdrBmap}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{httpcHdrBmap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf httpcHdrBmap}}}
+\label{a00093_ab135b0058d995a60e5d68bb6ae5f1cdb}
+
+
+Definition at line 262 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_aa22363befcb31b7539f282109cf5a926}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!httpTimeOut@{httpTimeOut}}
+\index{httpTimeOut@{httpTimeOut}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{httpTimeOut}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf httpTimeOut}}}
+\label{a00093_aa22363befcb31b7539f282109cf5a926}
+
+
+Definition at line 270 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_a691b9a4f8694ea2cee930a97d5082533}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!moredata@{moredata}}
+\index{moredata@{moredata}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{moredata}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf moredata}}}
+\label{a00093_a691b9a4f8694ea2cee930a97d5082533}
+
+
+Definition at line 271 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_a58695d31385d9e33538edf494e1cff76}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!reqBodyLen@{reqBodyLen}}
+\index{reqBodyLen@{reqBodyLen}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{reqBodyLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf reqBodyLen}}}
+\label{a00093_a58695d31385d9e33538edf494e1cff76}
+
+
+Definition at line 243 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_ada90e2ecee9c50c7d2018d6e394492f1}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!reqBodyPtr@{reqBodyPtr}}
+\index{reqBodyPtr@{reqBodyPtr}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{reqBodyPtr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT8}$\ast$ {\bf reqBodyPtr}}}
+\label{a00093_ada90e2ecee9c50c7d2018d6e394492f1}
+
+
+Definition at line 242 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_ad2788be66932fd0137193d01dff57d90}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!reqBodySentLen@{reqBodySentLen}}
+\index{reqBodySentLen@{reqBodySentLen}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{reqBodySentLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf reqBodySentLen}}}
+\label{a00093_ad2788be66932fd0137193d01dff57d90}
+
+
+Definition at line 245 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_af375053fba5740b0113160f149404c23}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!reqBodyTotalLen@{reqBodyTotalLen}}
+\index{reqBodyTotalLen@{reqBodyTotalLen}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{reqBodyTotalLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf reqBodyTotalLen}}}
+\label{a00093_af375053fba5740b0113160f149404c23}
+
+
+Definition at line 244 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_af8c823ceca7898af08fb3720c9986639}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!reqHeaderCount@{reqHeaderCount}}
+\index{reqHeaderCount@{reqHeaderCount}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{reqHeaderCount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf reqHeaderCount}}}
+\label{a00093_af8c823ceca7898af08fb3720c9986639}
+
+
+Definition at line 239 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_a2893ecdbedbe657c632357e8651e4a1d}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!reqHeaderTypes@{reqHeaderTypes}}
+\index{reqHeaderTypes@{reqHeaderTypes}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{reqHeaderTypes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HTTP\_\-USER\_\-HEADER\_\-TYPE\_\-T}$\ast$ {\bf reqHeaderTypes}}}
+\label{a00093_a2893ecdbedbe657c632357e8651e4a1d}
+
+
+Definition at line 237 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_afad42cc06ee73f9d4741c7390a3960ad}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!reqHeaderValues@{reqHeaderValues}}
+\index{reqHeaderValues@{reqHeaderValues}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{reqHeaderValues}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT8}$\ast$$\ast$ {\bf reqHeaderValues}}}
+\label{a00093_afad42cc06ee73f9d4741c7390a3960ad}
+
+
+Definition at line 238 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_af0a2fd6f6a7f7d2f17fc4e968a22377d}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!reqMethod@{reqMethod}}
+\index{reqMethod@{reqMethod}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{reqMethod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HTTP\_\-USER\_\-METHOD\_\-T} {\bf reqMethod}}}
+\label{a00093_af0a2fd6f6a7f7d2f17fc4e968a22377d}
+
+
+Definition at line 233 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_a89c93815bbc36a53553865e3a843157e}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!reqPathPtr@{reqPathPtr}}
+\index{reqPathPtr@{reqPathPtr}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{reqPathPtr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT8}$\ast$ {\bf reqPathPtr}}}
+\label{a00093_a89c93815bbc36a53553865e3a843157e}
+
+
+Definition at line 234 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_a2c234173930245803f6c71de3f819749}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!reqSendState@{reqSendState}}
+\index{reqSendState@{reqSendState}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{reqSendState}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf reqSendState}}}
+\label{a00093_a2c234173930245803f6c71de3f819749}
+
+
+Definition at line 272 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_abb6e9745613c073afeb3e2caa30ec30b}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!reqVersion@{reqVersion}}
+\index{reqVersion@{reqVersion}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{reqVersion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HTTP\_\-USER\_\-VERSION\_\-T} {\bf reqVersion}}}
+\label{a00093_abb6e9745613c073afeb3e2caa30ec30b}
+
+
+Definition at line 232 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_a78dccb1521490a4806f1802202cc4e7f}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!resHeadersPtr@{resHeadersPtr}}
+\index{resHeadersPtr@{resHeadersPtr}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{resHeadersPtr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT8}$\ast$$\ast$ {\bf resHeadersPtr}}}
+\label{a00093_a78dccb1521490a4806f1802202cc4e7f}
+
+
+Definition at line 254 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_ad0f2e9fb5c7aa9fe8b272479e3ea415b}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!rxBufferMgmtCb@{rxBufferMgmtCb}}
+\index{rxBufferMgmtCb@{rxBufferMgmtCb}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{rxBufferMgmtCb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HTTP\_\-RX\_\-BUFFER\_\-MGMT\_\-CB\_\-T} {\bf rxBufferMgmtCb}}}
+\label{a00093_ad0f2e9fb5c7aa9fe8b272479e3ea415b}
+
+
+Definition at line 266 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_a8ccdb1d001da18b5348d6b9c43f9d51f}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!rxBufferMgmtCbCtx@{rxBufferMgmtCbCtx}}
+\index{rxBufferMgmtCbCtx@{rxBufferMgmtCbCtx}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{rxBufferMgmtCbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf rxBufferMgmtCbCtx}}}
+\label{a00093_a8ccdb1d001da18b5348d6b9c43f9d51f}
+
+
+Definition at line 267 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_a21342c1a913caebce98cfd93751f3511}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!rxHdrsCb@{rxHdrsCb}}
+\index{rxHdrsCb@{rxHdrsCb}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{rxHdrsCb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-HTTP\_\-RX\_\-HDRS\_\-CB\_\-T} {\bf rxHdrsCb}}}
+\label{a00093_a21342c1a913caebce98cfd93751f3511}
+
+
+Definition at line 260 of file gsn\_\-httpc.h.
+
+\hypertarget{a00093_a83c62158f40d2e96e39eec76f840d403}{
+\index{GSN\_\-HTTPC\_\-CONF\_\-INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}!sendStatus@{sendStatus}}
+\index{sendStatus@{sendStatus}!GSN_HTTPC_CONF_INFO@{GSN\_\-HTTPC\_\-CONF\_\-INFO}}
+\subsubsection[{sendStatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf sendStatus}}}
+\label{a00093_a83c62158f40d2e96e39eec76f840d403}
+
+
+Definition at line 261 of file gsn\_\-httpc.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00507}{gsn\_\-httpc.h}\end{DoxyCompactItemize}

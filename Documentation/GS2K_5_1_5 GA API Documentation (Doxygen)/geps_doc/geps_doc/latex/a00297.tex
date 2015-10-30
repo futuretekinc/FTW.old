@@ -1,0 +1,122 @@
+\hypertarget{a00297}{
+\section{GSN\_\-WDD\_\-SECURITY\_\-CONFIG Struct Reference}
+\label{a00297}\index{GSN\_\-WDD\_\-SECURITY\_\-CONFIG@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}}
+}
+
+
+WLAN Security configuration. This structure defines the security configuration used by the Wireless Device Driver (WDD).  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wdd\_\-security.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00604_a99d01b68f744000378664161f66e73c9}{GSN\_\-WDD\_\-SEC\_\-MODE\_\-T} \hyperlink{a00297_a07f5ab6b033b5775266d7c9c196897cf}{mode}
+\item 
+\hyperlink{a00295}{GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY\_\-T} \hyperlink{a00297_ab32ca0d9b8cddea90b888dc1854fe971}{wepConfig}
+\item 
+\hyperlink{a00294}{GSN\_\-WDD\_\-SEC\_\-PSK\_\-CONFIG\_\-T} \hyperlink{a00297_a4f7d73999f35d675d76a167ed2ca4afb}{pskConfig}
+\item 
+\hyperlink{a00287}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG\_\-T} \hyperlink{a00297_a99bcdfb3a660b4a529e3bdedc05bc9a1}{eapConfig}
+\item 
+\hyperlink{a00296}{GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG\_\-T} \hyperlink{a00297_ad2e086a3b4e51ed61f5504c96455732d}{wpsConfig}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+WLAN Security configuration. This structure defines the security configuration used by the Wireless Device Driver (WDD). 
+
+\begin{DoxyVerb}
+ *
+ * User can select one of the secutiy mode it wants to operate:
+ *
+ *  These values have the following significance:
+ *
+ *  GSN_WDD_SEC_MODE_DISABLE - Connects/Forms Network with open security.In
+ *  this case user need not provide any of the other information in this
+ *  structure.
+ *
+ *  GSN_WDD_SEC_MODE_ANY - Connects to any network security with the specified
+ *  SSID and channel. For this user has to give all the information in this
+ *  structure. Based on the security mode of the network, WDD will select
+ *  appropriate configuration.
+ *
+ *  GSN_WDD_SEC_MODE_WEP - Connects/Forms Network with WEP security.In
+ *  this case user need to provide WEP field information in this
+ *  structure.
+ *
+ *  GSN_WDD_SEC_MODE_WPA_PERSONAL or GSN_WDD_SEC_MODE_WPA2_PERSONAL -
+ *  Connects/Forms Network with WPS PSK security. In this case user need to
+ *  provide PSK field information in this structure.
+ *
+ *  GSN_WDD_SEC_MODE_WPA_ENTERPRISE or GSN_WDD_SEC_MODE_WPA2_ENTERPRISE -
+ *  Connects Network with WPS Enterprise security. In this case user need to
+ *  provide EAP field information in this structure.
+ *
+ *
+ * \end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+GSN\_\-WDD\_\-WLAN\_\-CONFIG\_\-T. 
+\end{DoxySeeAlso}
+
+
+Definition at line 489 of file gsn\_\-wdd\_\-security.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00297_a99bcdfb3a660b4a529e3bdedc05bc9a1}{
+\index{GSN\_\-WDD\_\-SECURITY\_\-CONFIG@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}!eapConfig@{eapConfig}}
+\index{eapConfig@{eapConfig}!GSN_WDD_SECURITY_CONFIG@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}}
+\subsubsection[{eapConfig}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WDD\_\-SEC\_\-EAP\_\-CONFIG\_\-T} {\bf eapConfig}}}
+\label{a00297_a99bcdfb3a660b4a529e3bdedc05bc9a1}
+
+
+Definition at line 494 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00297_a07f5ab6b033b5775266d7c9c196897cf}{
+\index{GSN\_\-WDD\_\-SECURITY\_\-CONFIG@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}!mode@{mode}}
+\index{mode@{mode}!GSN_WDD_SECURITY_CONFIG@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WDD\_\-SEC\_\-MODE\_\-T} {\bf mode}}}
+\label{a00297_a07f5ab6b033b5775266d7c9c196897cf}
+
+
+Definition at line 491 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00297_a4f7d73999f35d675d76a167ed2ca4afb}{
+\index{GSN\_\-WDD\_\-SECURITY\_\-CONFIG@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}!pskConfig@{pskConfig}}
+\index{pskConfig@{pskConfig}!GSN_WDD_SECURITY_CONFIG@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}}
+\subsubsection[{pskConfig}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WDD\_\-SEC\_\-PSK\_\-CONFIG\_\-T} {\bf pskConfig}}}
+\label{a00297_a4f7d73999f35d675d76a167ed2ca4afb}
+
+
+Definition at line 493 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00297_ab32ca0d9b8cddea90b888dc1854fe971}{
+\index{GSN\_\-WDD\_\-SECURITY\_\-CONFIG@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}!wepConfig@{wepConfig}}
+\index{wepConfig@{wepConfig}!GSN_WDD_SECURITY_CONFIG@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}}
+\subsubsection[{wepConfig}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WDD\_\-SEC\_\-WEP\_\-KEY\_\-T} {\bf wepConfig}}}
+\label{a00297_ab32ca0d9b8cddea90b888dc1854fe971}
+
+
+Definition at line 492 of file gsn\_\-wdd\_\-security.h.
+
+\hypertarget{a00297_ad2e086a3b4e51ed61f5504c96455732d}{
+\index{GSN\_\-WDD\_\-SECURITY\_\-CONFIG@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}!wpsConfig@{wpsConfig}}
+\index{wpsConfig@{wpsConfig}!GSN_WDD_SECURITY_CONFIG@{GSN\_\-WDD\_\-SECURITY\_\-CONFIG}}
+\subsubsection[{wpsConfig}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WDD\_\-SEC\_\-WPS\_\-CONFIG\_\-T} {\bf wpsConfig}}}
+\label{a00297_ad2e086a3b4e51ed61f5504c96455732d}
+
+
+Definition at line 495 of file gsn\_\-wdd\_\-security.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00604}{gsn\_\-wdd\_\-security.h}\end{DoxyCompactItemize}

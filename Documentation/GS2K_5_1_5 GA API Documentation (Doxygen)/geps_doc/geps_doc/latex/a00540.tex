@@ -1,0 +1,244 @@
+\hypertarget{a00540}{
+\section{gsn\_\-pwm.h File Reference}
+\label{a00540}\index{gsn\_\-pwm.h@{gsn\_\-pwm.h}}
+}
+
+
+GSN PWM public header. This file contains the public APIs and structures of PWM module.  
+
+
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include \char`\"{}drivers$\backslash$reg$\backslash$gsn\_\-reg\_\-pwm\_\-spec.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}drivers$\backslash$reg$\backslash$gsn\_\-reg\_\-pwm\_\-op.h\char`\"{}}\par
+Include dependency graph for gsn\_\-pwm.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00777}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00778}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00183}{GSN\_\-PWM\_\-PATTERN}
+\begin{DoxyCompactList}\small\item\em pwm pattern structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00454}{PWM\_\-INFO}
+\begin{DoxyCompactList}\small\item\em pwm config structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00181}{GSN\_\-PWM\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em pwm config structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00180}{GSN\_\-PWM}
+\begin{DoxyCompactList}\small\item\em pwm structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE}
+\begin{DoxyCompactList}\small\item\em handle to pwm module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00540_ac1d538c0ad6a4ce7763e402480772401}{GSN\_\-PWM\_\-MAX\_\-CHANNEL}~3
+\item 
+\#define \hyperlink{a00540_ad5f01d5e224e1e2f9999c0367906aca2}{GSN\_\-PWM\_\-NOT\_\-INITIALIZED}~0x0
+\item 
+\#define \hyperlink{a00540_a0205531029f293297fd611e1833e2639}{GSN\_\-PWM\_\-CHNL0}~0
+\item 
+\#define \hyperlink{a00540_a3a03545733cc892b722dc8344e6ecdcc}{GSN\_\-PWM\_\-CHNL1}~1
+\item 
+\#define \hyperlink{a00540_a6d9d2d70da4c41d70df246b2e6532348}{GSN\_\-PWM\_\-CHNL2}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00540_aa93497a56b4caa3bd5b0084edd9d256a}{PWMCALLBACK\_\-FP} )(VOID $\ast$, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})
+\item 
+typedef enum \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} \hyperlink{a00650_ga6c0d8b08ff5dfcf29b094374033312e9}{GSN\_\-PWM\_\-CLOCKSEL}
+\begin{DoxyCompactList}\small\item\em pwm clock source select. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00650_ga110e33b4ac34f5c1b7e1f1e3b27d2281}{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL} \hyperlink{a00650_ga5b3a1c776cee49d77ba7c367502eeb53}{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL}
+\begin{DoxyCompactList}\small\item\em system clock source select. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00650_ga52371d0feb719879e34584cfa2ef6733}{GSN\_\-PWM\_\-CLOCKFREQ} \hyperlink{a00650_ga66c6af105ee29581b24b10edad6bb0b9}{GSN\_\-PWM\_\-CLOCKFREQ}
+\begin{DoxyCompactList}\small\item\em pwm clock frequency. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00650_gaea0350ae8992c56b4a1bad6bc7ad5de1}{GSN\_\-PWM\_\-POLARITY} \hyperlink{a00650_ga852441593095a912d86bc01bbe8678f0}{GSN\_\-PWM\_\-POLARITY}
+\begin{DoxyCompactList}\small\item\em pwm polarity. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00650_ga2ce321cf068e815e8a30642d73f1bdd4}{GSN\_\-PMW\_\-MODE} \hyperlink{a00650_gae68dbc7fb3fb9bb56a6d4abcbbba43b2}{GSN\_\-PMW\_\-MODE}
+\begin{DoxyCompactList}\small\item\em pwm mode. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00183}{GSN\_\-PWM\_\-PATTERN} \hyperlink{a00650_ga3a1ee0c27116f4c45c7d0369eb2723a3}{GSN\_\-PWM\_\-PATTERN\_\-T}
+\begin{DoxyCompactList}\small\item\em pwm pattern structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00454}{PWM\_\-INFO} \hyperlink{a00650_gaf27034c3354002d4d9ab5141852aea8a}{GSN\_\-PWM\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em pwm config structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00181}{GSN\_\-PWM\_\-CONFIG} \hyperlink{a00650_ga635ed55bc6092da2e511379b0b6f6c64}{GSN\_\-PWM\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em pwm config structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00180}{GSN\_\-PWM} \hyperlink{a00650_gad6886352df79f09ac5070d71f1117f7f}{GSN\_\-PWM\_\-T}
+\begin{DoxyCompactList}\small\item\em pwm structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE} \hyperlink{a00650_ga8be9b48972007ba1d54815d6743d13e6}{GSN\_\-PWM\_\-HANDLE\_\-T}
+\begin{DoxyCompactList}\small\item\em handle to pwm module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} \{ \par
+\hyperlink{a00650_gga9afe1c7d571460ff2f6780bef6b433dfaa98b11eb3f872045951a4d429320d108}{GSN\_\-PWM\_\-1} =  0, 
+\par
+\hyperlink{a00650_gga9afe1c7d571460ff2f6780bef6b433dfae2615df5505d8686938fa54bbbff433c}{GSN\_\-PWM\_\-2} =  1, 
+\par
+\hyperlink{a00650_gga9afe1c7d571460ff2f6780bef6b433dfa4929db9be22abdd0bd3698a0364a0fe0}{GSN\_\-PWM\_\-3} =  2, 
+\par
+\hyperlink{a00650_gga9afe1c7d571460ff2f6780bef6b433dfaad51216337aa6e9b1ebac9acfe3305d4}{GSN\_\-PWM\_\-SYNC} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em pwm number select. \end{DoxyCompactList}\item 
+enum \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} \{ \par
+\hyperlink{a00650_ggafda5110eb592af71b799ed22c7ebf902ac40082bae4532a6c63a739bbc5163aec}{GSN\_\-PWM\_\-CLOCKSEL\_\-BUSCLOCK}, 
+\par
+\hyperlink{a00650_ggafda5110eb592af71b799ed22c7ebf902a449ae8fe8e0cdf0a007d1789cebdae8d}{GSN\_\-PWM\_\-CLOCKSEL\_\-PRESCALECLOCK}
+ \}
+\begin{DoxyCompactList}\small\item\em pwm clock source select. \end{DoxyCompactList}\item 
+enum \hyperlink{a00650_ga110e33b4ac34f5c1b7e1f1e3b27d2281}{GSN\_\-PWM\_\-SYSTEM\_\-CLOCKSEL} \{ \par
+\hyperlink{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281afd82432453c917ab0e752a1e4aeef74c}{GSN\_\-PWM\_\-CLK\_\-RC}, 
+\par
+\hyperlink{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a5fe2bd939dbc6480858e898fa3d2b5f3}{GSN\_\-PWM\_\-CLK\_\-XTAL}, 
+\par
+\hyperlink{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a21baaf60b294988a2796310d4bdc56c6}{GSN\_\-PWM\_\-CLK\_\-PLL}, 
+\par
+\hyperlink{a00650_gga110e33b4ac34f5c1b7e1f1e3b27d2281a8f24e9a7e26bc8cf4774484739bb0d3d}{GSN\_\-PWM\_\-CLK\_\-LP}
+ \}
+\begin{DoxyCompactList}\small\item\em system clock source select. \end{DoxyCompactList}\item 
+enum \hyperlink{a00650_ga52371d0feb719879e34584cfa2ef6733}{GSN\_\-PWM\_\-CLOCKFREQ} \{ \par
+\hyperlink{a00650_gga52371d0feb719879e34584cfa2ef6733af5206b3c38acc666f31b9e983a15a976}{GSN\_\-PWM\_\-CLOCKFREQ\_\-11MHZ}, 
+\par
+\hyperlink{a00650_gga52371d0feb719879e34584cfa2ef6733abfabf3386290830ba5535eaeec958549}{GSN\_\-PWM\_\-CLOCKFREQ\_\-44MHZ}
+ \}
+\begin{DoxyCompactList}\small\item\em pwm clock frequency. \end{DoxyCompactList}\item 
+enum \hyperlink{a00650_gaea0350ae8992c56b4a1bad6bc7ad5de1}{GSN\_\-PWM\_\-POLARITY} \{ \par
+\hyperlink{a00650_ggaea0350ae8992c56b4a1bad6bc7ad5de1a52b06fef71cae3aec176796d4c9b1ac5}{GSN\_\-PWM\_\-POLARITY\_\-NORMAL}, 
+\par
+\hyperlink{a00650_ggaea0350ae8992c56b4a1bad6bc7ad5de1a585764d58b3de6209961d2b9787d26dd}{GSN\_\-PWM\_\-POLARITY\_\-INVERTED}
+ \}
+\begin{DoxyCompactList}\small\item\em pwm polarity. \end{DoxyCompactList}\item 
+enum \hyperlink{a00650_ga2ce321cf068e815e8a30642d73f1bdd4}{GSN\_\-PMW\_\-MODE} \{ \par
+\hyperlink{a00650_gga2ce321cf068e815e8a30642d73f1bdd4a53c59d2f203c604754f20a6b7ec71555}{GSN\_\-PWM\_\-MODE\_\-INDIVIDUAl}, 
+\par
+\hyperlink{a00650_gga2ce321cf068e815e8a30642d73f1bdd4a7a23dfc92d04b1e2f8fc60ea8579453b}{GSN\_\-PWM\_\-MODE\_\-SYNCHRONIZED}
+ \}
+\begin{DoxyCompactList}\small\item\em pwm mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00650_gaf4c38119e4c204818801ffb1b4e2c6b6}{GsnPwm\_\-Open} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00181}{GSN\_\-PWM\_\-CONFIG\_\-T} $\ast$pPwmConfig)
+\begin{DoxyCompactList}\small\item\em Open Pwm module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00650_gaa394019a88d51b5f716cabf35bc5e6c8}{GsnPwm\_\-Start} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber, \hyperlink{a00181}{GSN\_\-PWM\_\-CONFIG\_\-T} $\ast$pPwmConfig, \hyperlink{a00183}{GSN\_\-PWM\_\-PATTERN\_\-T} $\ast$pPwmPattern, \hyperlink{a00454}{GSN\_\-PWM\_\-INFO\_\-T} $\ast$pPwmInfo)
+\begin{DoxyCompactList}\small\item\em start Pwm module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00650_gae88f3b2ecf7fc90d29edb3176435af5a}{GsnPwm\_\-Stop} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber)
+\begin{DoxyCompactList}\small\item\em Stops Pwm module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00650_gad8fcb2f6f84a57099c5ca178dafa7286}{GsnPwm\_\-Close} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle)
+\begin{DoxyCompactList}\small\item\em Closes Pwm module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00650_gafebd1cc305dbd45194b7474691752be4}{GsnPwm\_\-PatternUpdate} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber, \hyperlink{a00183}{GSN\_\-PWM\_\-PATTERN\_\-T} $\ast$pPwmPattern)
+\begin{DoxyCompactList}\small\item\em updates Pwm output pattern. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00650_ga52371d0feb719879e34584cfa2ef6733}{GSN\_\-PWM\_\-CLOCKFREQ} \hyperlink{a00650_ga5a50ab57dd9fb26747a69f3e347a2680}{GsnPwm\_\-ClockFreqGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle)
+\begin{DoxyCompactList}\small\item\em clock frequency get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_ga86973f0fd8f4d941598f19d65b5b2da9}{GsnPwm\_\-ClockFreqSet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga52371d0feb719879e34584cfa2ef6733}{GSN\_\-PWM\_\-CLOCKFREQ} eClockFreq)
+\begin{DoxyCompactList}\small\item\em clock frequency set. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00650_gaa6f74f03d046c5f1e95ad36065c9e538}{GsnPwm\_\-PrescaleValueGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle)
+\begin{DoxyCompactList}\small\item\em clock prescale value get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_gac52e516f0ba211226a2cdff62f54bdc8}{GsnPwm\_\-PrescaleValueSet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} prescaleValue)
+\begin{DoxyCompactList}\small\item\em clock prescale value set. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} \hyperlink{a00650_ga31992b0d90dbf78c04dd3aa695d41004}{GsnPwm\_\-IndividualClockSelectGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber)
+\begin{DoxyCompactList}\small\item\em individual clock get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_gac6c42db84fde1e336b73ddc0e7099f34}{GsnPwm\_\-IndividualClockSelectSet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber, \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} eClockSelect)
+\begin{DoxyCompactList}\small\item\em individual clock select. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00650_gaea0350ae8992c56b4a1bad6bc7ad5de1}{GSN\_\-PWM\_\-POLARITY} \hyperlink{a00650_ga6be7ff3ec663dc5896cd59c400e1c00b}{GsnPwm\_\-IndividualPolarityGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber)
+\begin{DoxyCompactList}\small\item\em individual polarity get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_ga37d8d36f2d0d597eb82ebebd1c4b9953}{GsnPwm\_\-IndividualPolaritySet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_ga9afe1c7d571460ff2f6780bef6b433df}{GSN\_\-PWM\_\-NO} pwmNumber, \hyperlink{a00650_gaea0350ae8992c56b4a1bad6bc7ad5de1}{GSN\_\-PWM\_\-POLARITY} ePolarity)
+\begin{DoxyCompactList}\small\item\em individual polarity set. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_ga8b61d6d4ed2a03b4130ece4db9f2949a}{GsnPwm\_\-SynchronizedPhaseDelayGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} $\ast$pPhase01, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} $\ast$pPhase12)
+\begin{DoxyCompactList}\small\item\em synchronized phase delay get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_ga18d17db7a2e95c82aa8e84d1e1897e3e}{GsnPwm\_\-SynchronizedPhaseDelaySet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} phase01, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} phase12)
+\begin{DoxyCompactList}\small\item\em synchronized phase delay set. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} \hyperlink{a00650_gaabf0051a6ce2882eb1a734c029c7d4b9}{GsnPwm\_\-SynchronizedClockSelectGet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle)
+\begin{DoxyCompactList}\small\item\em synchronized clock get. \end{DoxyCompactList}\item 
+PUBLIC INLINE void \hyperlink{a00650_ga177c51254727205e45ddd643abd59b14}{GsnPwm\_\-SynchronizedClockSelectSet} (\hyperlink{a00182}{GSN\_\-PWM\_\-HANDLE\_\-T} $\ast$pPwmHandle, \hyperlink{a00650_gafda5110eb592af71b799ed22c7ebf902}{GSN\_\-PWM\_\-CLOCKSEL} eClockSelect)
+\begin{DoxyCompactList}\small\item\em synchronized clock select. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00540_a2f1f4ac54f2ee84ac0707e06f8e88105}{\_\-\_\-GsnPwm\_\-Isr} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN PWM public header. This file contains the public APIs and structures of PWM module. 
+
+Definition in file \hyperlink{a00540_source}{gsn\_\-pwm.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00540_a0205531029f293297fd611e1833e2639}{
+\index{gsn\_\-pwm.h@{gsn\_\-pwm.h}!GSN\_\-PWM\_\-CHNL0@{GSN\_\-PWM\_\-CHNL0}}
+\index{GSN\_\-PWM\_\-CHNL0@{GSN\_\-PWM\_\-CHNL0}!gsn_pwm.h@{gsn\_\-pwm.h}}
+\subsubsection[{GSN\_\-PWM\_\-CHNL0}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-PWM\_\-CHNL0~0}}
+\label{a00540_a0205531029f293297fd611e1833e2639}
+
+
+Definition at line 104 of file gsn\_\-pwm.h.
+
+\hypertarget{a00540_a3a03545733cc892b722dc8344e6ecdcc}{
+\index{gsn\_\-pwm.h@{gsn\_\-pwm.h}!GSN\_\-PWM\_\-CHNL1@{GSN\_\-PWM\_\-CHNL1}}
+\index{GSN\_\-PWM\_\-CHNL1@{GSN\_\-PWM\_\-CHNL1}!gsn_pwm.h@{gsn\_\-pwm.h}}
+\subsubsection[{GSN\_\-PWM\_\-CHNL1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-PWM\_\-CHNL1~1}}
+\label{a00540_a3a03545733cc892b722dc8344e6ecdcc}
+
+
+Definition at line 105 of file gsn\_\-pwm.h.
+
+\hypertarget{a00540_a6d9d2d70da4c41d70df246b2e6532348}{
+\index{gsn\_\-pwm.h@{gsn\_\-pwm.h}!GSN\_\-PWM\_\-CHNL2@{GSN\_\-PWM\_\-CHNL2}}
+\index{GSN\_\-PWM\_\-CHNL2@{GSN\_\-PWM\_\-CHNL2}!gsn_pwm.h@{gsn\_\-pwm.h}}
+\subsubsection[{GSN\_\-PWM\_\-CHNL2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-PWM\_\-CHNL2~2}}
+\label{a00540_a6d9d2d70da4c41d70df246b2e6532348}
+
+
+Definition at line 106 of file gsn\_\-pwm.h.
+
+\hypertarget{a00540_ac1d538c0ad6a4ce7763e402480772401}{
+\index{gsn\_\-pwm.h@{gsn\_\-pwm.h}!GSN\_\-PWM\_\-MAX\_\-CHANNEL@{GSN\_\-PWM\_\-MAX\_\-CHANNEL}}
+\index{GSN\_\-PWM\_\-MAX\_\-CHANNEL@{GSN\_\-PWM\_\-MAX\_\-CHANNEL}!gsn_pwm.h@{gsn\_\-pwm.h}}
+\subsubsection[{GSN\_\-PWM\_\-MAX\_\-CHANNEL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-PWM\_\-MAX\_\-CHANNEL~3}}
+\label{a00540_ac1d538c0ad6a4ce7763e402480772401}
+
+
+Definition at line 102 of file gsn\_\-pwm.h.
+
+\hypertarget{a00540_ad5f01d5e224e1e2f9999c0367906aca2}{
+\index{gsn\_\-pwm.h@{gsn\_\-pwm.h}!GSN\_\-PWM\_\-NOT\_\-INITIALIZED@{GSN\_\-PWM\_\-NOT\_\-INITIALIZED}}
+\index{GSN\_\-PWM\_\-NOT\_\-INITIALIZED@{GSN\_\-PWM\_\-NOT\_\-INITIALIZED}!gsn_pwm.h@{gsn\_\-pwm.h}}
+\subsubsection[{GSN\_\-PWM\_\-NOT\_\-INITIALIZED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-PWM\_\-NOT\_\-INITIALIZED~0x0}}
+\label{a00540_ad5f01d5e224e1e2f9999c0367906aca2}
+
+
+Definition at line 103 of file gsn\_\-pwm.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00540_aa93497a56b4caa3bd5b0084edd9d256a}{
+\index{gsn\_\-pwm.h@{gsn\_\-pwm.h}!PWMCALLBACK\_\-FP@{PWMCALLBACK\_\-FP}}
+\index{PWMCALLBACK\_\-FP@{PWMCALLBACK\_\-FP}!gsn_pwm.h@{gsn\_\-pwm.h}}
+\subsubsection[{PWMCALLBACK\_\-FP}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf PWMCALLBACK\_\-FP})(VOID $\ast$, {\bf UINT32})}}
+\label{a00540_aa93497a56b4caa3bd5b0084edd9d256a}
+
+
+Definition at line 50 of file gsn\_\-pwm.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00540_a2f1f4ac54f2ee84ac0707e06f8e88105}{
+\index{gsn\_\-pwm.h@{gsn\_\-pwm.h}!\_\-\_\-GsnPwm\_\-Isr@{\_\-\_\-GsnPwm\_\-Isr}}
+\index{\_\-\_\-GsnPwm\_\-Isr@{\_\-\_\-GsnPwm\_\-Isr}!gsn_pwm.h@{gsn\_\-pwm.h}}
+\subsubsection[{\_\-\_\-GsnPwm\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnPwm\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00540_a2f1f4ac54f2ee84ac0707e06f8e88105}

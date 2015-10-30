@@ -1,0 +1,649 @@
+\hypertarget{a00659}{
+\section{GSN Errors}
+\label{a00659}\index{GSN Errors@{GSN Errors}}
+}
+
+
+This group Contains the Error Codes.  
+
+
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00659_ga476ae1caf992f8287176b2cc414c8707}{GSN\_\-STATUS\_\-E} \{ \par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707aa518ede9f4651bd315723e868d18f1e2}{GSN\_\-SUCCESS} =  0x00, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a7110267b17c4bb48d3308f4a993e95a4}{GSN\_\-OSAL\_\-SUCCESS} =  GSN\_\-SUCCESS, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a61f45bbd1257398ddf7091b017d43f88}{GSN\_\-FAILURE} =  0x80000000, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707adaba31fb7820d714c2f8cb66ed6d5bcf}{GSN\_\-OPERATION\_\-IN\_\-PROGRESS}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a86a353d31341ffaea1673dcd88573bad}{GSN\_\-READ\_\-SUCCESS}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a99d3442f05ae3d0d5c76484f3bd4c3eb}{GSN\_\-WRITE\_\-SUCCESS}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a9afd53c81a711623ea31bb9f25471dfa}{GSN\_\-INVALID\_\-PARAM}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a33bdc119848b9830b26add61fed7a377}{GSN\_\-ALREADY\_\-INITIALIZED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ad2cf00de07c6a4961d4f5d6c333ea5a0}{GSN\_\-NOT\_\-INITIALIZED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a9b5f488607db28aa9b06e4f085e99b27}{GSN\_\-MSGSEND\_\-FAILED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a10812f5beec9c2c2c0e316439f3395d3}{GSN\_\-READ\_\-WRITE\_\-BUSY}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707adebd73fde19b042cd871ac4c7ec49028}{GSN\_\-TIME\_\-OUT}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ad1d314b954e6cfaf6db84ea20660bbb7}{GSN\_\-BUFFER\_\-OVERFLOW}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a7c75a1442d986e545085ed00ad16af0e}{GSN\_\-BUFFER\_\-FULL}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a01ca11b8e39bf12989020ac800aeed79}{GSN\_\-XML\_\-PARTIAL\_\-ELEMENT}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a73f0a3dccf9843f14a74761932fd6932}{GSN\_\-XML\_\-ATTRIBUTE\_\-PRESENT}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a67b0a2de82e6b35ba5177aecd7a2f9fb}{GSN\_\-XML\_\-COMPLEX\_\-ELEMENT}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a03fb9d27f1ba83873fd20c3248c1da65}{GSN\_\-XML\_\-COMPLEX\_\-ELEMENT\_\-END}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a77edf0492ca255a3ab7158e082d5cac9}{GSN\_\-OSAL\_\-STATUS\_\-CODE\_\-START} =  0x90000100, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707abf5c8b05a529fac33b93e5716054d2e3}{GSN\_\-OSAL\_\-RESOURCE\_\-NOT\_\-AVAILABLE} =  GSN\_\-OSAL\_\-STATUS\_\-CODE\_\-START + 0x0D, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a2f265a93e157558b25a4247a22b9eb45}{GSN\_\-OSAL\_\-OPERATION\_\-PREEMPTED} =  GSN\_\-OSAL\_\-STATUS\_\-CODE\_\-START + 0x1A, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a8c382363ca44bf1579bc072a6b16ea69}{GSN\_\-OSAL\_\-OBJECT\_\-CLOSED} =  GSN\_\-OSAL\_\-STATUS\_\-CODE\_\-START + 0x01, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a0172fcec91604abac7da9a4da9acb827}{GSN\_\-OSAL\_\-SEMAPHORE\_\-ERROR} =  GSN\_\-OSAL\_\-STATUS\_\-CODE\_\-START + 0x0C, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a4372275b7acc4c09a807c107819a87c0}{GSN\_\-OSAL\_\-WAIT\_\-ERROR} =  GSN\_\-OSAL\_\-STATUS\_\-CODE\_\-START + 0x04, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a1b812b67c4e93506fb34b25d01fa3a7d}{GSN\_\-FLASH\_\-WRITE\_\-NOT\_\-ALLOWED} =  0xA0000100, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a71daf09c6c80f9f705611efd5ab8decd}{GSN\_\-FLASH\_\-ERASE\_\-NOT\_\-ALLOWED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ab38cfabb3bb4d30421e9116b1e6c0b6d}{GSN\_\-SPI\_\-BUSY} =  0xA0000200, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707af46c15379661c98701c00ce5acb4b116}{GSN\_\-SPI\_\-TXDONE}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a3cfe27cbe2005a1d8ddf6156eaeb4312}{GSN\_\-SPI\_\-TXUNDERRUN}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a4c586d25e7256e9978e4325cac4e6b18}{GSN\_\-SPI\_\-TXOVERFLOW}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a2a61e951b8d398c0173fc0343088355f}{GSN\_\-SPI\_\-RXABOVETHRESHOLD}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a799df9c083791f31fc9f02982bcc15ec}{GSN\_\-SPI\_\-RXUNDERFLOW}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ad0e88b53b9168c4576474042be20f541}{GSN\_\-SPI\_\-RXOVERRUN}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a41b807a10317c36700991f8d1fed4c6a}{GSN\_\-SPI\_\-RXTIMEOUT}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a21486332ecdcecbbbcc57fdb5342dad3}{GSN\_\-SPI\_\-TRANSFERDONE}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a4da8fc3c4d065325cada3810776a38ef}{GSN\_\-SPI\_\-SIZE\_\-ERROR}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707aedc36b7e3779184cb5d5a15e60739c7b}{GSN\_\-SPI\_\-RX\_\-TIME\_\-OUT}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707aea3bb908643b0bd4618bb808fe4dc8ff}{GSN\_\-ADC\_\-STATUS\_\-BUSY} =  0xA0000300, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707afd368d701e428c449255a9462f8aa2d3}{GSN\_\-ADC\_\-STATUS\_\-ERROR}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a3451755dbd5ce7fc3191b09b80a79ae4}{GSN\_\-ADC\_\-STATUS\_\-FIFOOVERFLOW}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a4010bdec33fcbc86932406ee6bc688bf}{GSN\_\-ADC\_\-LOCK\_\-UNAVAILABLE}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ab8779ad9899ef8da7a52e7d695004592}{GSN\_\-PWM\_\-STATUS\_\-STARTED} =  0xA0000400, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ae48f6d7ea6dec76e87a1125db12c1787}{GSN\_\-PWM\_\-STATUS\_\-BUSY}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a5aa4c16091395243516364657aff2fe9}{GSN\_\-PWM\_\-INVALID\_\-PATTERN}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a95a7a7b5c092515d04c24c6388e9905c}{GSN\_\-PWM\_\-STATUS\_\-NOTSTARTED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ad021dcbdc8e141eed8f82badd8bf12b4}{GSN\_\-FLASHCACHE\_\-DMA\_\-BUSY} =  0xA0000500, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ac38623a21b92fe4732336265f1af2fcf}{GSN\_\-FLASHCACHE\_\-DMAREQ\_\-QED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a5c9613626f43ec72e0d76dc99b699d2c}{GSN\_\-FLASHCACHE\_\-DMA\_\-STARTED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707aa282f94d90cedc1d3a198026cb052218}{GSN\_\-FLASHIF\_\-MUTEX\_\-LOCK\_\-FAIL}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707aeee05439ac123ff8e591714cb9c89a44}{GSN\_\-BRFLASHLRD\_\-FLASH\_\-NO\_\-FW} =  0xA0000600, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a4d536d2369771fb198475b0431b77c90}{GSN\_\-WDD\_\-BUSY} =  0xB0000100, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ae4e500af9a63d9892265ebe5d7131544}{GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-TIMEOUT}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a7d29b0c6df61d8c975f0dfc1380235cd}{GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-IN\_\-PROGRESS}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a39a1d90a1788404b1e5751a3ffd547f4}{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-COUNTERMEASURE}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ab2321655a5c470b9ff45d82e8391f309}{GSN\_\-WDD\_\-WPS\_\-SESSION\_\-OVERLAP}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a6a629838a54b64ede667d8a1b9c5adf4}{GSN\_\-WDD\_\-SSID\_\-NOT\_\-FOUND}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ac3620a5c96c62e4658076868851218db}{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-INVALID\_\-PSK}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a725564e28dca7eb97907f548b0f40dd6}{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-TIMEOUT}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a561bc7dacb093e9b39e76202a5ca8dba}{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-FAILURE}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ad61ac3fa7b748e9c982067f14b4c2e65}{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CRED\_\-INVALID}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a5493fe620f8cceca33e723f17861edba}{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CERT\_\-INVALID}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707aa99c07bc1b6c819f5e04398362953e04}{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-AUTH\_\-INVALID}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a83eebf46865ac5391ca2921f09413e30}{GSN\_\-WDD\_\-ASSO\_\-FAIL\_\-TIMEOUT}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a094706054ce496aaf5f6da26f7e36541}{GSN\_\-WDD\_\-SCAN\_\-COMPLETE}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a68971dcaaef7eb226b006bf237b2bdda}{GSN\_\-WDD\_\-WPS\_\-DONE}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a555a8446aac8b73d3b85c8bb4e9bc61c}{GSN\_\-NW\_\-ALREADY\_\-INITIALIZED} =  0xB0000200, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a64abcaf92b3dbbaede3601f2f22d9220}{GSN\_\-NW\_\-NOT\_\-INITIALIZED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ab3e49950d09ad8831823af935dafba4a}{GSN\_\-NW\_\-DHCP\_\-FAILED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a789dbdb3fc16ca9b3c90480b91459283}{GSN\_\-NW\_\-OPEN\_\-FAILED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a42bbbe92fc85a0baefb07f63f1c392bb}{GSN\_\-NW\_\-ALREADY\_\-OPENED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707aa1061f5002a7468c6dcae80272b26b64}{GSN\_\-NW\_\-OPEN\_\-IN\_\-PROGRESS}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a2f544f63345dfce84cc353c6155f9eca}{GSN\_\-NW\_\-DHCP\_\-LEASE\_\-EXPIRED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ac559e6ea3217b9084e13b8191ef71163}{GSN\_\-NVDS\_\-INIT\_\-FAILED} =  0xB0000300, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ae659084f1f26f351daa26577f93bfc03}{GSN\_\-NVDS\_\-NO\_\-VALID\_\-STORE}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a44c7d2ef1d710f2fe0930ded1a8a93e4}{GSN\_\-NVDS\_\-ELMT\_\-NOT\_\-FOUND}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a2e8a700dee5ddcc6ecdec80a1ada8eff}{GSN\_\-NVDS\_\-BAD\_\-PARAMS}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a87b3d3e5582de3a30a79a7221d4f37ef}{GSN\_\-NVDS\_\-ALLOC\_\-FAILED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ab05b1be1a92406332c4dcb37495f52aa}{GSN\_\-NVDS\_\-ELMT\_\-ALREADY\_\-INITED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a41697e2b124c9f5cb6b603760c5c8d73}{GSN\_\-BATTERY\_\-LOW} =  0xB0000400, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a536840c09ce54ca8f42dd322a65e571d}{GSN\_\-FWUP\_\-FAILED\_\-TO\_\-SEND\_\-INITIATION\_\-REQ} =  0xB0000500, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a51931f93c1276a07391c5211a0a2af83}{GSN\_\-FWUP\_\-RECOVERY\_\-NEEDED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a1ae2f602601c58011635de1fa0276394}{GSN\_\-SSL\_\-CLOSE\_\-ALERT} =  0xB0000600, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a1b773f03003e4a584d03028fc62a9ca9}{GSN\_\-APP\_\-RETURN\_\-CODE\_\-START} =  0xC0000000, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ab30124a198f96ecae0ef1bee80cc0130}{GSN\_\-UART\_\-STATUS\_\-OK} =  0xC0000100, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a81c4ae50b1a9af34e521dd80347de5d3}{GSN\_\-UART\_\-STATUS\_\-BUSY}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a22bc4731bca9188f3d9001b69c349f5c}{GSN\_\-UART\_\-STATUS\_\-ERROR}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ad3a46887bde88aa698d160c80935838d}{GSN\_\-UART\_\-BUFF\_\-FULL}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a4d787651d018dcdd087347ded4469a5a}{GSN\_\-UART\_\-BUFF\_\-EMPTY}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a3c45c26b1877d1d7634c0abc3d11183b}{GSN\_\-DMA\_\-STATUS\_\-OK} =  0xC0000200, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a90fcdff06b4ecb1e25f8cc4487015a0e}{GSN\_\-DMA\_\-STATUS\_\-BUSY}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a434f62dca4f16b8ae560e91a3ce209a4}{GSN\_\-DMA\_\-STATUS\_\-ERROR}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707a5aa7e4499d893c43f068448558ffcac7}{GSN\_\-NW\_\-IF\_\-CLOSED}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707aa43bf552ed9aee790552b1805eb525cd}{GSN\_\-NW\_\-IPV4\_\-CONFIG\_\-IN\_\-PROGRESS}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ac151d4d3b71542ed8b8c6e218efb47a3}{GSN\_\-NW\_\-IPV6\_\-CONFIG\_\-IN\_\-PROGRESS}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ad280f6a2f89e50934e488964f06bf1c0}{GSN\_\-SDIO\_\-STATUS\_\-OK} =  0xC0000300, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707ad4a9b0b4eda759e9da615ff11aa037e2}{GSN\_\-SDIO\_\-STATUS\_\-ERROR}, 
+\par
+\hyperlink{a00659_gga476ae1caf992f8287176b2cc414c8707aaff7e73f13814d77b99071d629394f0b}{GSN\_\-SNTP\_\-BUSY} =  0xC0000400
+ \}
+\begin{DoxyCompactList}\small\item\em Error Codes Used in the System. This enum defines the error codes used in the software. The error codes are categorized by module for easy identification. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00659_ga476ae1caf992f8287176b2cc414c8707}{GSN\_\-STATUS\_\-E} \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em Error Codes Used in the System. This enum defines the error codes used in the software. The error codes are categorized by module for easy identification. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T}
+\begin{DoxyCompactList}\small\item\em Error Codes Used in the OSAL. This enum defines the error codes used in the OSAL. GSN\_\-OSAL\_\-ERROR\_\-T is used in OSAL module so just typedef it to GSN\_\-STATUS\_\-T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group Contains the Error Codes. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{
+\index{GSN Errors@{GSN Errors}!GSN\_\-OSAL\_\-ERROR\_\-T@{GSN\_\-OSAL\_\-ERROR\_\-T}}
+\index{GSN\_\-OSAL\_\-ERROR\_\-T@{GSN\_\-OSAL\_\-ERROR\_\-T}!GSN Errors@{GSN Errors}}
+\subsubsection[{GSN\_\-OSAL\_\-ERROR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS\_\-T} {\bf GSN\_\-OSAL\_\-ERROR\_\-T}}}
+\label{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}
+
+
+Error Codes Used in the OSAL. This enum defines the error codes used in the OSAL. GSN\_\-OSAL\_\-ERROR\_\-T is used in OSAL module so just typedef it to GSN\_\-STATUS\_\-T. 
+
+
+
+Definition at line 236 of file gsn\_\-error.h.
+
+\hypertarget{a00659_gae36517c0f5872426a7034c9551eb96ac}{
+\index{GSN Errors@{GSN Errors}!GSN\_\-STATUS\_\-T@{GSN\_\-STATUS\_\-T}}
+\index{GSN\_\-STATUS\_\-T@{GSN\_\-STATUS\_\-T}!GSN Errors@{GSN Errors}}
+\subsubsection[{GSN\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-STATUS\_\-E}  {\bf GSN\_\-STATUS\_\-T}}}
+\label{a00659_gae36517c0f5872426a7034c9551eb96ac}
+
+
+Error Codes Used in the System. This enum defines the error codes used in the software. The error codes are categorized by module for easy identification. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00659_ga476ae1caf992f8287176b2cc414c8707}{
+\index{GSN Errors@{GSN Errors}!GSN\_\-STATUS\_\-E@{GSN\_\-STATUS\_\-E}}
+\index{GSN\_\-STATUS\_\-E@{GSN\_\-STATUS\_\-E}!GSN Errors@{GSN Errors}}
+\subsubsection[{GSN\_\-STATUS\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-STATUS\_\-E}}}
+\label{a00659_ga476ae1caf992f8287176b2cc414c8707}
+
+
+Error Codes Used in the System. This enum defines the error codes used in the software. The error codes are categorized by module for easy identification. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-SUCCESS@{GSN\_\-SUCCESS}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SUCCESS@{GSN\_\-SUCCESS}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707aa518ede9f4651bd315723e868d18f1e2}{
+GSN\_\-SUCCESS}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707aa518ede9f4651bd315723e868d18f1e2}
+}]\index{GSN\_\-OSAL\_\-SUCCESS@{GSN\_\-OSAL\_\-SUCCESS}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-OSAL\_\-SUCCESS@{GSN\_\-OSAL\_\-SUCCESS}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a7110267b17c4bb48d3308f4a993e95a4}{
+GSN\_\-OSAL\_\-SUCCESS}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a7110267b17c4bb48d3308f4a993e95a4}
+}]If the API execution is success \index{GSN\_\-FAILURE@{GSN\_\-FAILURE}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-FAILURE@{GSN\_\-FAILURE}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a61f45bbd1257398ddf7091b017d43f88}{
+GSN\_\-FAILURE}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a61f45bbd1257398ddf7091b017d43f88}
+}]\index{GSN\_\-OPERATION\_\-IN\_\-PROGRESS@{GSN\_\-OPERATION\_\-IN\_\-PROGRESS}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-OPERATION\_\-IN\_\-PROGRESS@{GSN\_\-OPERATION\_\-IN\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707adaba31fb7820d714c2f8cb66ed6d5bcf}{
+GSN\_\-OPERATION\_\-IN\_\-PROGRESS}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707adaba31fb7820d714c2f8cb66ed6d5bcf}
+}]\index{GSN\_\-READ\_\-SUCCESS@{GSN\_\-READ\_\-SUCCESS}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-READ\_\-SUCCESS@{GSN\_\-READ\_\-SUCCESS}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a86a353d31341ffaea1673dcd88573bad}{
+GSN\_\-READ\_\-SUCCESS}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a86a353d31341ffaea1673dcd88573bad}
+}]\index{GSN\_\-WRITE\_\-SUCCESS@{GSN\_\-WRITE\_\-SUCCESS}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WRITE\_\-SUCCESS@{GSN\_\-WRITE\_\-SUCCESS}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a99d3442f05ae3d0d5c76484f3bd4c3eb}{
+GSN\_\-WRITE\_\-SUCCESS}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a99d3442f05ae3d0d5c76484f3bd4c3eb}
+}]\index{GSN\_\-INVALID\_\-PARAM@{GSN\_\-INVALID\_\-PARAM}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-INVALID\_\-PARAM@{GSN\_\-INVALID\_\-PARAM}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a9afd53c81a711623ea31bb9f25471dfa}{
+GSN\_\-INVALID\_\-PARAM}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a9afd53c81a711623ea31bb9f25471dfa}
+}]\index{GSN\_\-ALREADY\_\-INITIALIZED@{GSN\_\-ALREADY\_\-INITIALIZED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-ALREADY\_\-INITIALIZED@{GSN\_\-ALREADY\_\-INITIALIZED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a33bdc119848b9830b26add61fed7a377}{
+GSN\_\-ALREADY\_\-INITIALIZED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a33bdc119848b9830b26add61fed7a377}
+}]\index{GSN\_\-NOT\_\-INITIALIZED@{GSN\_\-NOT\_\-INITIALIZED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NOT\_\-INITIALIZED@{GSN\_\-NOT\_\-INITIALIZED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ad2cf00de07c6a4961d4f5d6c333ea5a0}{
+GSN\_\-NOT\_\-INITIALIZED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ad2cf00de07c6a4961d4f5d6c333ea5a0}
+}]\index{GSN\_\-MSGSEND\_\-FAILED@{GSN\_\-MSGSEND\_\-FAILED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-MSGSEND\_\-FAILED@{GSN\_\-MSGSEND\_\-FAILED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a9b5f488607db28aa9b06e4f085e99b27}{
+GSN\_\-MSGSEND\_\-FAILED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a9b5f488607db28aa9b06e4f085e99b27}
+}]\index{GSN\_\-READ\_\-WRITE\_\-BUSY@{GSN\_\-READ\_\-WRITE\_\-BUSY}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-READ\_\-WRITE\_\-BUSY@{GSN\_\-READ\_\-WRITE\_\-BUSY}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a10812f5beec9c2c2c0e316439f3395d3}{
+GSN\_\-READ\_\-WRITE\_\-BUSY}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a10812f5beec9c2c2c0e316439f3395d3}
+}]\index{GSN\_\-TIME\_\-OUT@{GSN\_\-TIME\_\-OUT}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-TIME\_\-OUT@{GSN\_\-TIME\_\-OUT}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707adebd73fde19b042cd871ac4c7ec49028}{
+GSN\_\-TIME\_\-OUT}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707adebd73fde19b042cd871ac4c7ec49028}
+}]\index{GSN\_\-BUFFER\_\-OVERFLOW@{GSN\_\-BUFFER\_\-OVERFLOW}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-BUFFER\_\-OVERFLOW@{GSN\_\-BUFFER\_\-OVERFLOW}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ad1d314b954e6cfaf6db84ea20660bbb7}{
+GSN\_\-BUFFER\_\-OVERFLOW}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ad1d314b954e6cfaf6db84ea20660bbb7}
+}]\index{GSN\_\-BUFFER\_\-FULL@{GSN\_\-BUFFER\_\-FULL}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-BUFFER\_\-FULL@{GSN\_\-BUFFER\_\-FULL}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a7c75a1442d986e545085ed00ad16af0e}{
+GSN\_\-BUFFER\_\-FULL}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a7c75a1442d986e545085ed00ad16af0e}
+}]\index{GSN\_\-XML\_\-PARTIAL\_\-ELEMENT@{GSN\_\-XML\_\-PARTIAL\_\-ELEMENT}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-XML\_\-PARTIAL\_\-ELEMENT@{GSN\_\-XML\_\-PARTIAL\_\-ELEMENT}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a01ca11b8e39bf12989020ac800aeed79}{
+GSN\_\-XML\_\-PARTIAL\_\-ELEMENT}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a01ca11b8e39bf12989020ac800aeed79}
+}]\index{GSN\_\-XML\_\-ATTRIBUTE\_\-PRESENT@{GSN\_\-XML\_\-ATTRIBUTE\_\-PRESENT}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-XML\_\-ATTRIBUTE\_\-PRESENT@{GSN\_\-XML\_\-ATTRIBUTE\_\-PRESENT}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a73f0a3dccf9843f14a74761932fd6932}{
+GSN\_\-XML\_\-ATTRIBUTE\_\-PRESENT}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a73f0a3dccf9843f14a74761932fd6932}
+}]\index{GSN\_\-XML\_\-COMPLEX\_\-ELEMENT@{GSN\_\-XML\_\-COMPLEX\_\-ELEMENT}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-XML\_\-COMPLEX\_\-ELEMENT@{GSN\_\-XML\_\-COMPLEX\_\-ELEMENT}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a67b0a2de82e6b35ba5177aecd7a2f9fb}{
+GSN\_\-XML\_\-COMPLEX\_\-ELEMENT}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a67b0a2de82e6b35ba5177aecd7a2f9fb}
+}]\index{GSN\_\-XML\_\-COMPLEX\_\-ELEMENT\_\-END@{GSN\_\-XML\_\-COMPLEX\_\-ELEMENT\_\-END}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-XML\_\-COMPLEX\_\-ELEMENT\_\-END@{GSN\_\-XML\_\-COMPLEX\_\-ELEMENT\_\-END}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a03fb9d27f1ba83873fd20c3248c1da65}{
+GSN\_\-XML\_\-COMPLEX\_\-ELEMENT\_\-END}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a03fb9d27f1ba83873fd20c3248c1da65}
+}]\index{GSN\_\-OSAL\_\-STATUS\_\-CODE\_\-START@{GSN\_\-OSAL\_\-STATUS\_\-CODE\_\-START}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-OSAL\_\-STATUS\_\-CODE\_\-START@{GSN\_\-OSAL\_\-STATUS\_\-CODE\_\-START}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a77edf0492ca255a3ab7158e082d5cac9}{
+GSN\_\-OSAL\_\-STATUS\_\-CODE\_\-START}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a77edf0492ca255a3ab7158e082d5cac9}
+}]Service was unable to retrieve an instance of the counting semaphore (semaphore count is zero within the specified time to wait). \index{GSN\_\-OSAL\_\-RESOURCE\_\-NOT\_\-AVAILABLE@{GSN\_\-OSAL\_\-RESOURCE\_\-NOT\_\-AVAILABLE}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-OSAL\_\-RESOURCE\_\-NOT\_\-AVAILABLE@{GSN\_\-OSAL\_\-RESOURCE\_\-NOT\_\-AVAILABLE}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707abf5c8b05a529fac33b93e5716054d2e3}{
+GSN\_\-OSAL\_\-RESOURCE\_\-NOT\_\-AVAILABLE}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707abf5c8b05a529fac33b93e5716054d2e3}
+}]Suspension was aborted by another thread, timer, or ISR.. \index{GSN\_\-OSAL\_\-OPERATION\_\-PREEMPTED@{GSN\_\-OSAL\_\-OPERATION\_\-PREEMPTED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-OSAL\_\-OPERATION\_\-PREEMPTED@{GSN\_\-OSAL\_\-OPERATION\_\-PREEMPTED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a2f265a93e157558b25a4247a22b9eb45}{
+GSN\_\-OSAL\_\-OPERATION\_\-PREEMPTED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a2f265a93e157558b25a4247a22b9eb45}
+}]Counting semaphore was deleted while thread was suspended.. \index{GSN\_\-OSAL\_\-OBJECT\_\-CLOSED@{GSN\_\-OSAL\_\-OBJECT\_\-CLOSED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-OSAL\_\-OBJECT\_\-CLOSED@{GSN\_\-OSAL\_\-OBJECT\_\-CLOSED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a8c382363ca44bf1579bc072a6b16ea69}{
+GSN\_\-OSAL\_\-OBJECT\_\-CLOSED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a8c382363ca44bf1579bc072a6b16ea69}
+}]Invalid counting semaphore pointer. \index{GSN\_\-OSAL\_\-SEMAPHORE\_\-ERROR@{GSN\_\-OSAL\_\-SEMAPHORE\_\-ERROR}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-OSAL\_\-SEMAPHORE\_\-ERROR@{GSN\_\-OSAL\_\-SEMAPHORE\_\-ERROR}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a0172fcec91604abac7da9a4da9acb827}{
+GSN\_\-OSAL\_\-SEMAPHORE\_\-ERROR}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a0172fcec91604abac7da9a4da9acb827}
+}]A wait option other than TX\_\-NO\_\-WAIT was specified on a call from a non-\/thread. \index{GSN\_\-OSAL\_\-WAIT\_\-ERROR@{GSN\_\-OSAL\_\-WAIT\_\-ERROR}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-OSAL\_\-WAIT\_\-ERROR@{GSN\_\-OSAL\_\-WAIT\_\-ERROR}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a4372275b7acc4c09a807c107819a87c0}{
+GSN\_\-OSAL\_\-WAIT\_\-ERROR}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a4372275b7acc4c09a807c107819a87c0}
+}]\index{GSN\_\-FLASH\_\-WRITE\_\-NOT\_\-ALLOWED@{GSN\_\-FLASH\_\-WRITE\_\-NOT\_\-ALLOWED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-FLASH\_\-WRITE\_\-NOT\_\-ALLOWED@{GSN\_\-FLASH\_\-WRITE\_\-NOT\_\-ALLOWED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a1b812b67c4e93506fb34b25d01fa3a7d}{
+GSN\_\-FLASH\_\-WRITE\_\-NOT\_\-ALLOWED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a1b812b67c4e93506fb34b25d01fa3a7d}
+}]\index{GSN\_\-FLASH\_\-ERASE\_\-NOT\_\-ALLOWED@{GSN\_\-FLASH\_\-ERASE\_\-NOT\_\-ALLOWED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-FLASH\_\-ERASE\_\-NOT\_\-ALLOWED@{GSN\_\-FLASH\_\-ERASE\_\-NOT\_\-ALLOWED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a71daf09c6c80f9f705611efd5ab8decd}{
+GSN\_\-FLASH\_\-ERASE\_\-NOT\_\-ALLOWED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a71daf09c6c80f9f705611efd5ab8decd}
+}]\index{GSN\_\-SPI\_\-BUSY@{GSN\_\-SPI\_\-BUSY}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SPI\_\-BUSY@{GSN\_\-SPI\_\-BUSY}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ab38cfabb3bb4d30421e9116b1e6c0b6d}{
+GSN\_\-SPI\_\-BUSY}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ab38cfabb3bb4d30421e9116b1e6c0b6d}
+}]\index{GSN\_\-SPI\_\-TXDONE@{GSN\_\-SPI\_\-TXDONE}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SPI\_\-TXDONE@{GSN\_\-SPI\_\-TXDONE}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707af46c15379661c98701c00ce5acb4b116}{
+GSN\_\-SPI\_\-TXDONE}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707af46c15379661c98701c00ce5acb4b116}
+}]\index{GSN\_\-SPI\_\-TXUNDERRUN@{GSN\_\-SPI\_\-TXUNDERRUN}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SPI\_\-TXUNDERRUN@{GSN\_\-SPI\_\-TXUNDERRUN}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a3cfe27cbe2005a1d8ddf6156eaeb4312}{
+GSN\_\-SPI\_\-TXUNDERRUN}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a3cfe27cbe2005a1d8ddf6156eaeb4312}
+}]\index{GSN\_\-SPI\_\-TXOVERFLOW@{GSN\_\-SPI\_\-TXOVERFLOW}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SPI\_\-TXOVERFLOW@{GSN\_\-SPI\_\-TXOVERFLOW}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a4c586d25e7256e9978e4325cac4e6b18}{
+GSN\_\-SPI\_\-TXOVERFLOW}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a4c586d25e7256e9978e4325cac4e6b18}
+}]\index{GSN\_\-SPI\_\-RXABOVETHRESHOLD@{GSN\_\-SPI\_\-RXABOVETHRESHOLD}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SPI\_\-RXABOVETHRESHOLD@{GSN\_\-SPI\_\-RXABOVETHRESHOLD}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a2a61e951b8d398c0173fc0343088355f}{
+GSN\_\-SPI\_\-RXABOVETHRESHOLD}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a2a61e951b8d398c0173fc0343088355f}
+}]\index{GSN\_\-SPI\_\-RXUNDERFLOW@{GSN\_\-SPI\_\-RXUNDERFLOW}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SPI\_\-RXUNDERFLOW@{GSN\_\-SPI\_\-RXUNDERFLOW}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a799df9c083791f31fc9f02982bcc15ec}{
+GSN\_\-SPI\_\-RXUNDERFLOW}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a799df9c083791f31fc9f02982bcc15ec}
+}]\index{GSN\_\-SPI\_\-RXOVERRUN@{GSN\_\-SPI\_\-RXOVERRUN}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SPI\_\-RXOVERRUN@{GSN\_\-SPI\_\-RXOVERRUN}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ad0e88b53b9168c4576474042be20f541}{
+GSN\_\-SPI\_\-RXOVERRUN}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ad0e88b53b9168c4576474042be20f541}
+}]\index{GSN\_\-SPI\_\-RXTIMEOUT@{GSN\_\-SPI\_\-RXTIMEOUT}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SPI\_\-RXTIMEOUT@{GSN\_\-SPI\_\-RXTIMEOUT}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a41b807a10317c36700991f8d1fed4c6a}{
+GSN\_\-SPI\_\-RXTIMEOUT}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a41b807a10317c36700991f8d1fed4c6a}
+}]\index{GSN\_\-SPI\_\-TRANSFERDONE@{GSN\_\-SPI\_\-TRANSFERDONE}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SPI\_\-TRANSFERDONE@{GSN\_\-SPI\_\-TRANSFERDONE}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a21486332ecdcecbbbcc57fdb5342dad3}{
+GSN\_\-SPI\_\-TRANSFERDONE}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a21486332ecdcecbbbcc57fdb5342dad3}
+}]\index{GSN\_\-SPI\_\-SIZE\_\-ERROR@{GSN\_\-SPI\_\-SIZE\_\-ERROR}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SPI\_\-SIZE\_\-ERROR@{GSN\_\-SPI\_\-SIZE\_\-ERROR}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a4da8fc3c4d065325cada3810776a38ef}{
+GSN\_\-SPI\_\-SIZE\_\-ERROR}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a4da8fc3c4d065325cada3810776a38ef}
+}]\index{GSN\_\-SPI\_\-RX\_\-TIME\_\-OUT@{GSN\_\-SPI\_\-RX\_\-TIME\_\-OUT}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SPI\_\-RX\_\-TIME\_\-OUT@{GSN\_\-SPI\_\-RX\_\-TIME\_\-OUT}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707aedc36b7e3779184cb5d5a15e60739c7b}{
+GSN\_\-SPI\_\-RX\_\-TIME\_\-OUT}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707aedc36b7e3779184cb5d5a15e60739c7b}
+}]\index{GSN\_\-ADC\_\-STATUS\_\-BUSY@{GSN\_\-ADC\_\-STATUS\_\-BUSY}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-ADC\_\-STATUS\_\-BUSY@{GSN\_\-ADC\_\-STATUS\_\-BUSY}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707aea3bb908643b0bd4618bb808fe4dc8ff}{
+GSN\_\-ADC\_\-STATUS\_\-BUSY}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707aea3bb908643b0bd4618bb808fe4dc8ff}
+}]\index{GSN\_\-ADC\_\-STATUS\_\-ERROR@{GSN\_\-ADC\_\-STATUS\_\-ERROR}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-ADC\_\-STATUS\_\-ERROR@{GSN\_\-ADC\_\-STATUS\_\-ERROR}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707afd368d701e428c449255a9462f8aa2d3}{
+GSN\_\-ADC\_\-STATUS\_\-ERROR}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707afd368d701e428c449255a9462f8aa2d3}
+}]\index{GSN\_\-ADC\_\-STATUS\_\-FIFOOVERFLOW@{GSN\_\-ADC\_\-STATUS\_\-FIFOOVERFLOW}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-ADC\_\-STATUS\_\-FIFOOVERFLOW@{GSN\_\-ADC\_\-STATUS\_\-FIFOOVERFLOW}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a3451755dbd5ce7fc3191b09b80a79ae4}{
+GSN\_\-ADC\_\-STATUS\_\-FIFOOVERFLOW}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a3451755dbd5ce7fc3191b09b80a79ae4}
+}]\index{GSN\_\-ADC\_\-LOCK\_\-UNAVAILABLE@{GSN\_\-ADC\_\-LOCK\_\-UNAVAILABLE}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-ADC\_\-LOCK\_\-UNAVAILABLE@{GSN\_\-ADC\_\-LOCK\_\-UNAVAILABLE}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a4010bdec33fcbc86932406ee6bc688bf}{
+GSN\_\-ADC\_\-LOCK\_\-UNAVAILABLE}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a4010bdec33fcbc86932406ee6bc688bf}
+}]\index{GSN\_\-PWM\_\-STATUS\_\-STARTED@{GSN\_\-PWM\_\-STATUS\_\-STARTED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-PWM\_\-STATUS\_\-STARTED@{GSN\_\-PWM\_\-STATUS\_\-STARTED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ab8779ad9899ef8da7a52e7d695004592}{
+GSN\_\-PWM\_\-STATUS\_\-STARTED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ab8779ad9899ef8da7a52e7d695004592}
+}]\index{GSN\_\-PWM\_\-STATUS\_\-BUSY@{GSN\_\-PWM\_\-STATUS\_\-BUSY}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-PWM\_\-STATUS\_\-BUSY@{GSN\_\-PWM\_\-STATUS\_\-BUSY}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ae48f6d7ea6dec76e87a1125db12c1787}{
+GSN\_\-PWM\_\-STATUS\_\-BUSY}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ae48f6d7ea6dec76e87a1125db12c1787}
+}]\index{GSN\_\-PWM\_\-INVALID\_\-PATTERN@{GSN\_\-PWM\_\-INVALID\_\-PATTERN}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-PWM\_\-INVALID\_\-PATTERN@{GSN\_\-PWM\_\-INVALID\_\-PATTERN}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a5aa4c16091395243516364657aff2fe9}{
+GSN\_\-PWM\_\-INVALID\_\-PATTERN}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a5aa4c16091395243516364657aff2fe9}
+}]\index{GSN\_\-PWM\_\-STATUS\_\-NOTSTARTED@{GSN\_\-PWM\_\-STATUS\_\-NOTSTARTED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-PWM\_\-STATUS\_\-NOTSTARTED@{GSN\_\-PWM\_\-STATUS\_\-NOTSTARTED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a95a7a7b5c092515d04c24c6388e9905c}{
+GSN\_\-PWM\_\-STATUS\_\-NOTSTARTED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a95a7a7b5c092515d04c24c6388e9905c}
+}]\index{GSN\_\-FLASHCACHE\_\-DMA\_\-BUSY@{GSN\_\-FLASHCACHE\_\-DMA\_\-BUSY}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-FLASHCACHE\_\-DMA\_\-BUSY@{GSN\_\-FLASHCACHE\_\-DMA\_\-BUSY}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ad021dcbdc8e141eed8f82badd8bf12b4}{
+GSN\_\-FLASHCACHE\_\-DMA\_\-BUSY}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ad021dcbdc8e141eed8f82badd8bf12b4}
+}]\index{GSN\_\-FLASHCACHE\_\-DMAREQ\_\-QED@{GSN\_\-FLASHCACHE\_\-DMAREQ\_\-QED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-FLASHCACHE\_\-DMAREQ\_\-QED@{GSN\_\-FLASHCACHE\_\-DMAREQ\_\-QED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ac38623a21b92fe4732336265f1af2fcf}{
+GSN\_\-FLASHCACHE\_\-DMAREQ\_\-QED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ac38623a21b92fe4732336265f1af2fcf}
+}]\index{GSN\_\-FLASHCACHE\_\-DMA\_\-STARTED@{GSN\_\-FLASHCACHE\_\-DMA\_\-STARTED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-FLASHCACHE\_\-DMA\_\-STARTED@{GSN\_\-FLASHCACHE\_\-DMA\_\-STARTED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a5c9613626f43ec72e0d76dc99b699d2c}{
+GSN\_\-FLASHCACHE\_\-DMA\_\-STARTED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a5c9613626f43ec72e0d76dc99b699d2c}
+}]\index{GSN\_\-FLASHIF\_\-MUTEX\_\-LOCK\_\-FAIL@{GSN\_\-FLASHIF\_\-MUTEX\_\-LOCK\_\-FAIL}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-FLASHIF\_\-MUTEX\_\-LOCK\_\-FAIL@{GSN\_\-FLASHIF\_\-MUTEX\_\-LOCK\_\-FAIL}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707aa282f94d90cedc1d3a198026cb052218}{
+GSN\_\-FLASHIF\_\-MUTEX\_\-LOCK\_\-FAIL}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707aa282f94d90cedc1d3a198026cb052218}
+}]\index{GSN\_\-BRFLASHLRD\_\-FLASH\_\-NO\_\-FW@{GSN\_\-BRFLASHLRD\_\-FLASH\_\-NO\_\-FW}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-BRFLASHLRD\_\-FLASH\_\-NO\_\-FW@{GSN\_\-BRFLASHLRD\_\-FLASH\_\-NO\_\-FW}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707aeee05439ac123ff8e591714cb9c89a44}{
+GSN\_\-BRFLASHLRD\_\-FLASH\_\-NO\_\-FW}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707aeee05439ac123ff8e591714cb9c89a44}
+}]\index{GSN\_\-WDD\_\-BUSY@{GSN\_\-WDD\_\-BUSY}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-BUSY@{GSN\_\-WDD\_\-BUSY}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a4d536d2369771fb198475b0431b77c90}{
+GSN\_\-WDD\_\-BUSY}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a4d536d2369771fb198475b0431b77c90}
+}]\index{GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-TIMEOUT@{GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-TIMEOUT}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-TIMEOUT@{GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-TIMEOUT}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ae4e500af9a63d9892265ebe5d7131544}{
+GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-TIMEOUT}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ae4e500af9a63d9892265ebe5d7131544}
+}]\index{GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-IN\_\-PROGRESS@{GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-IN\_\-PROGRESS}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-IN\_\-PROGRESS@{GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-IN\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a7d29b0c6df61d8c975f0dfc1380235cd}{
+GSN\_\-WDD\_\-LISTEN\_\-NXT\_\-BEACON\_\-IN\_\-PROGRESS}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a7d29b0c6df61d8c975f0dfc1380235cd}
+}]\index{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-COUNTERMEASURE@{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-COUNTERMEASURE}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-MIC\_\-FAIL\_\-COUNTERMEASURE@{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-COUNTERMEASURE}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a39a1d90a1788404b1e5751a3ffd547f4}{
+GSN\_\-WDD\_\-MIC\_\-FAIL\_\-COUNTERMEASURE}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a39a1d90a1788404b1e5751a3ffd547f4}
+}]\index{GSN\_\-WDD\_\-WPS\_\-SESSION\_\-OVERLAP@{GSN\_\-WDD\_\-WPS\_\-SESSION\_\-OVERLAP}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-WPS\_\-SESSION\_\-OVERLAP@{GSN\_\-WDD\_\-WPS\_\-SESSION\_\-OVERLAP}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ab2321655a5c470b9ff45d82e8391f309}{
+GSN\_\-WDD\_\-WPS\_\-SESSION\_\-OVERLAP}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ab2321655a5c470b9ff45d82e8391f309}
+}]\index{GSN\_\-WDD\_\-SSID\_\-NOT\_\-FOUND@{GSN\_\-WDD\_\-SSID\_\-NOT\_\-FOUND}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-SSID\_\-NOT\_\-FOUND@{GSN\_\-WDD\_\-SSID\_\-NOT\_\-FOUND}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a6a629838a54b64ede667d8a1b9c5adf4}{
+GSN\_\-WDD\_\-SSID\_\-NOT\_\-FOUND}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a6a629838a54b64ede667d8a1b9c5adf4}
+}]\index{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-INVALID\_\-PSK@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-INVALID\_\-PSK}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-INVALID\_\-PSK@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-INVALID\_\-PSK}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ac3620a5c96c62e4658076868851218db}{
+GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-INVALID\_\-PSK}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ac3620a5c96c62e4658076868851218db}
+}]\index{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-TIMEOUT@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-TIMEOUT}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-TIMEOUT@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-TIMEOUT}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a725564e28dca7eb97907f548b0f40dd6}{
+GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-TIMEOUT}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a725564e28dca7eb97907f548b0f40dd6}
+}]\index{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-FAILURE@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-FAILURE}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-FAILURE@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-FAILURE}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a561bc7dacb093e9b39e76202a5ca8dba}{
+GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-FAILURE}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a561bc7dacb093e9b39e76202a5ca8dba}
+}]\index{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CRED\_\-INVALID@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CRED\_\-INVALID}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CRED\_\-INVALID@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CRED\_\-INVALID}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ad61ac3fa7b748e9c982067f14b4c2e65}{
+GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CRED\_\-INVALID}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ad61ac3fa7b748e9c982067f14b4c2e65}
+}]\index{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CERT\_\-INVALID@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CERT\_\-INVALID}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CERT\_\-INVALID@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CERT\_\-INVALID}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a5493fe620f8cceca33e723f17861edba}{
+GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-CERT\_\-INVALID}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a5493fe620f8cceca33e723f17861edba}
+}]\index{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-AUTH\_\-INVALID@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-AUTH\_\-INVALID}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-AUTH\_\-INVALID@{GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-AUTH\_\-INVALID}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707aa99c07bc1b6c819f5e04398362953e04}{
+GSN\_\-WDD\_\-AUTH\_\-FAIL\_\-EAP\_\-AUTH\_\-INVALID}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707aa99c07bc1b6c819f5e04398362953e04}
+}]\index{GSN\_\-WDD\_\-ASSO\_\-FAIL\_\-TIMEOUT@{GSN\_\-WDD\_\-ASSO\_\-FAIL\_\-TIMEOUT}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-ASSO\_\-FAIL\_\-TIMEOUT@{GSN\_\-WDD\_\-ASSO\_\-FAIL\_\-TIMEOUT}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a83eebf46865ac5391ca2921f09413e30}{
+GSN\_\-WDD\_\-ASSO\_\-FAIL\_\-TIMEOUT}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a83eebf46865ac5391ca2921f09413e30}
+}]\index{GSN\_\-WDD\_\-SCAN\_\-COMPLETE@{GSN\_\-WDD\_\-SCAN\_\-COMPLETE}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-SCAN\_\-COMPLETE@{GSN\_\-WDD\_\-SCAN\_\-COMPLETE}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a094706054ce496aaf5f6da26f7e36541}{
+GSN\_\-WDD\_\-SCAN\_\-COMPLETE}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a094706054ce496aaf5f6da26f7e36541}
+}]\index{GSN\_\-WDD\_\-WPS\_\-DONE@{GSN\_\-WDD\_\-WPS\_\-DONE}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-WDD\_\-WPS\_\-DONE@{GSN\_\-WDD\_\-WPS\_\-DONE}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a68971dcaaef7eb226b006bf237b2bdda}{
+GSN\_\-WDD\_\-WPS\_\-DONE}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a68971dcaaef7eb226b006bf237b2bdda}
+}]\index{GSN\_\-NW\_\-ALREADY\_\-INITIALIZED@{GSN\_\-NW\_\-ALREADY\_\-INITIALIZED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NW\_\-ALREADY\_\-INITIALIZED@{GSN\_\-NW\_\-ALREADY\_\-INITIALIZED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a555a8446aac8b73d3b85c8bb4e9bc61c}{
+GSN\_\-NW\_\-ALREADY\_\-INITIALIZED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a555a8446aac8b73d3b85c8bb4e9bc61c}
+}]\index{GSN\_\-NW\_\-NOT\_\-INITIALIZED@{GSN\_\-NW\_\-NOT\_\-INITIALIZED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NW\_\-NOT\_\-INITIALIZED@{GSN\_\-NW\_\-NOT\_\-INITIALIZED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a64abcaf92b3dbbaede3601f2f22d9220}{
+GSN\_\-NW\_\-NOT\_\-INITIALIZED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a64abcaf92b3dbbaede3601f2f22d9220}
+}]\index{GSN\_\-NW\_\-DHCP\_\-FAILED@{GSN\_\-NW\_\-DHCP\_\-FAILED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NW\_\-DHCP\_\-FAILED@{GSN\_\-NW\_\-DHCP\_\-FAILED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ab3e49950d09ad8831823af935dafba4a}{
+GSN\_\-NW\_\-DHCP\_\-FAILED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ab3e49950d09ad8831823af935dafba4a}
+}]\index{GSN\_\-NW\_\-OPEN\_\-FAILED@{GSN\_\-NW\_\-OPEN\_\-FAILED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NW\_\-OPEN\_\-FAILED@{GSN\_\-NW\_\-OPEN\_\-FAILED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a789dbdb3fc16ca9b3c90480b91459283}{
+GSN\_\-NW\_\-OPEN\_\-FAILED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a789dbdb3fc16ca9b3c90480b91459283}
+}]\index{GSN\_\-NW\_\-ALREADY\_\-OPENED@{GSN\_\-NW\_\-ALREADY\_\-OPENED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NW\_\-ALREADY\_\-OPENED@{GSN\_\-NW\_\-ALREADY\_\-OPENED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a42bbbe92fc85a0baefb07f63f1c392bb}{
+GSN\_\-NW\_\-ALREADY\_\-OPENED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a42bbbe92fc85a0baefb07f63f1c392bb}
+}]\index{GSN\_\-NW\_\-OPEN\_\-IN\_\-PROGRESS@{GSN\_\-NW\_\-OPEN\_\-IN\_\-PROGRESS}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NW\_\-OPEN\_\-IN\_\-PROGRESS@{GSN\_\-NW\_\-OPEN\_\-IN\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707aa1061f5002a7468c6dcae80272b26b64}{
+GSN\_\-NW\_\-OPEN\_\-IN\_\-PROGRESS}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707aa1061f5002a7468c6dcae80272b26b64}
+}]\index{GSN\_\-NW\_\-DHCP\_\-LEASE\_\-EXPIRED@{GSN\_\-NW\_\-DHCP\_\-LEASE\_\-EXPIRED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NW\_\-DHCP\_\-LEASE\_\-EXPIRED@{GSN\_\-NW\_\-DHCP\_\-LEASE\_\-EXPIRED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a2f544f63345dfce84cc353c6155f9eca}{
+GSN\_\-NW\_\-DHCP\_\-LEASE\_\-EXPIRED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a2f544f63345dfce84cc353c6155f9eca}
+}]\index{GSN\_\-NVDS\_\-INIT\_\-FAILED@{GSN\_\-NVDS\_\-INIT\_\-FAILED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NVDS\_\-INIT\_\-FAILED@{GSN\_\-NVDS\_\-INIT\_\-FAILED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ac559e6ea3217b9084e13b8191ef71163}{
+GSN\_\-NVDS\_\-INIT\_\-FAILED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ac559e6ea3217b9084e13b8191ef71163}
+}]\index{GSN\_\-NVDS\_\-NO\_\-VALID\_\-STORE@{GSN\_\-NVDS\_\-NO\_\-VALID\_\-STORE}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NVDS\_\-NO\_\-VALID\_\-STORE@{GSN\_\-NVDS\_\-NO\_\-VALID\_\-STORE}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ae659084f1f26f351daa26577f93bfc03}{
+GSN\_\-NVDS\_\-NO\_\-VALID\_\-STORE}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ae659084f1f26f351daa26577f93bfc03}
+}]\index{GSN\_\-NVDS\_\-ELMT\_\-NOT\_\-FOUND@{GSN\_\-NVDS\_\-ELMT\_\-NOT\_\-FOUND}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NVDS\_\-ELMT\_\-NOT\_\-FOUND@{GSN\_\-NVDS\_\-ELMT\_\-NOT\_\-FOUND}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a44c7d2ef1d710f2fe0930ded1a8a93e4}{
+GSN\_\-NVDS\_\-ELMT\_\-NOT\_\-FOUND}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a44c7d2ef1d710f2fe0930ded1a8a93e4}
+}]\index{GSN\_\-NVDS\_\-BAD\_\-PARAMS@{GSN\_\-NVDS\_\-BAD\_\-PARAMS}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NVDS\_\-BAD\_\-PARAMS@{GSN\_\-NVDS\_\-BAD\_\-PARAMS}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a2e8a700dee5ddcc6ecdec80a1ada8eff}{
+GSN\_\-NVDS\_\-BAD\_\-PARAMS}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a2e8a700dee5ddcc6ecdec80a1ada8eff}
+}]\index{GSN\_\-NVDS\_\-ALLOC\_\-FAILED@{GSN\_\-NVDS\_\-ALLOC\_\-FAILED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NVDS\_\-ALLOC\_\-FAILED@{GSN\_\-NVDS\_\-ALLOC\_\-FAILED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a87b3d3e5582de3a30a79a7221d4f37ef}{
+GSN\_\-NVDS\_\-ALLOC\_\-FAILED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a87b3d3e5582de3a30a79a7221d4f37ef}
+}]\index{GSN\_\-NVDS\_\-ELMT\_\-ALREADY\_\-INITED@{GSN\_\-NVDS\_\-ELMT\_\-ALREADY\_\-INITED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NVDS\_\-ELMT\_\-ALREADY\_\-INITED@{GSN\_\-NVDS\_\-ELMT\_\-ALREADY\_\-INITED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ab05b1be1a92406332c4dcb37495f52aa}{
+GSN\_\-NVDS\_\-ELMT\_\-ALREADY\_\-INITED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ab05b1be1a92406332c4dcb37495f52aa}
+}]\index{GSN\_\-BATTERY\_\-LOW@{GSN\_\-BATTERY\_\-LOW}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-BATTERY\_\-LOW@{GSN\_\-BATTERY\_\-LOW}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a41697e2b124c9f5cb6b603760c5c8d73}{
+GSN\_\-BATTERY\_\-LOW}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a41697e2b124c9f5cb6b603760c5c8d73}
+}]\index{GSN\_\-FWUP\_\-FAILED\_\-TO\_\-SEND\_\-INITIATION\_\-REQ@{GSN\_\-FWUP\_\-FAILED\_\-TO\_\-SEND\_\-INITIATION\_\-REQ}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-FWUP\_\-FAILED\_\-TO\_\-SEND\_\-INITIATION\_\-REQ@{GSN\_\-FWUP\_\-FAILED\_\-TO\_\-SEND\_\-INITIATION\_\-REQ}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a536840c09ce54ca8f42dd322a65e571d}{
+GSN\_\-FWUP\_\-FAILED\_\-TO\_\-SEND\_\-INITIATION\_\-REQ}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a536840c09ce54ca8f42dd322a65e571d}
+}]\index{GSN\_\-FWUP\_\-RECOVERY\_\-NEEDED@{GSN\_\-FWUP\_\-RECOVERY\_\-NEEDED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-FWUP\_\-RECOVERY\_\-NEEDED@{GSN\_\-FWUP\_\-RECOVERY\_\-NEEDED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a51931f93c1276a07391c5211a0a2af83}{
+GSN\_\-FWUP\_\-RECOVERY\_\-NEEDED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a51931f93c1276a07391c5211a0a2af83}
+}]\index{GSN\_\-SSL\_\-CLOSE\_\-ALERT@{GSN\_\-SSL\_\-CLOSE\_\-ALERT}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SSL\_\-CLOSE\_\-ALERT@{GSN\_\-SSL\_\-CLOSE\_\-ALERT}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a1ae2f602601c58011635de1fa0276394}{
+GSN\_\-SSL\_\-CLOSE\_\-ALERT}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a1ae2f602601c58011635de1fa0276394}
+}]\index{GSN\_\-APP\_\-RETURN\_\-CODE\_\-START@{GSN\_\-APP\_\-RETURN\_\-CODE\_\-START}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-APP\_\-RETURN\_\-CODE\_\-START@{GSN\_\-APP\_\-RETURN\_\-CODE\_\-START}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a1b773f03003e4a584d03028fc62a9ca9}{
+GSN\_\-APP\_\-RETURN\_\-CODE\_\-START}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a1b773f03003e4a584d03028fc62a9ca9}
+}]\index{GSN\_\-UART\_\-STATUS\_\-OK@{GSN\_\-UART\_\-STATUS\_\-OK}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-UART\_\-STATUS\_\-OK@{GSN\_\-UART\_\-STATUS\_\-OK}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ab30124a198f96ecae0ef1bee80cc0130}{
+GSN\_\-UART\_\-STATUS\_\-OK}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ab30124a198f96ecae0ef1bee80cc0130}
+}]\index{GSN\_\-UART\_\-STATUS\_\-BUSY@{GSN\_\-UART\_\-STATUS\_\-BUSY}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-UART\_\-STATUS\_\-BUSY@{GSN\_\-UART\_\-STATUS\_\-BUSY}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a81c4ae50b1a9af34e521dd80347de5d3}{
+GSN\_\-UART\_\-STATUS\_\-BUSY}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a81c4ae50b1a9af34e521dd80347de5d3}
+}]\index{GSN\_\-UART\_\-STATUS\_\-ERROR@{GSN\_\-UART\_\-STATUS\_\-ERROR}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-UART\_\-STATUS\_\-ERROR@{GSN\_\-UART\_\-STATUS\_\-ERROR}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a22bc4731bca9188f3d9001b69c349f5c}{
+GSN\_\-UART\_\-STATUS\_\-ERROR}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a22bc4731bca9188f3d9001b69c349f5c}
+}]\index{GSN\_\-UART\_\-BUFF\_\-FULL@{GSN\_\-UART\_\-BUFF\_\-FULL}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-UART\_\-BUFF\_\-FULL@{GSN\_\-UART\_\-BUFF\_\-FULL}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ad3a46887bde88aa698d160c80935838d}{
+GSN\_\-UART\_\-BUFF\_\-FULL}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ad3a46887bde88aa698d160c80935838d}
+}]\index{GSN\_\-UART\_\-BUFF\_\-EMPTY@{GSN\_\-UART\_\-BUFF\_\-EMPTY}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-UART\_\-BUFF\_\-EMPTY@{GSN\_\-UART\_\-BUFF\_\-EMPTY}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a4d787651d018dcdd087347ded4469a5a}{
+GSN\_\-UART\_\-BUFF\_\-EMPTY}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a4d787651d018dcdd087347ded4469a5a}
+}]\index{GSN\_\-DMA\_\-STATUS\_\-OK@{GSN\_\-DMA\_\-STATUS\_\-OK}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-DMA\_\-STATUS\_\-OK@{GSN\_\-DMA\_\-STATUS\_\-OK}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a3c45c26b1877d1d7634c0abc3d11183b}{
+GSN\_\-DMA\_\-STATUS\_\-OK}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a3c45c26b1877d1d7634c0abc3d11183b}
+}]\index{GSN\_\-DMA\_\-STATUS\_\-BUSY@{GSN\_\-DMA\_\-STATUS\_\-BUSY}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-DMA\_\-STATUS\_\-BUSY@{GSN\_\-DMA\_\-STATUS\_\-BUSY}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a90fcdff06b4ecb1e25f8cc4487015a0e}{
+GSN\_\-DMA\_\-STATUS\_\-BUSY}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a90fcdff06b4ecb1e25f8cc4487015a0e}
+}]\index{GSN\_\-DMA\_\-STATUS\_\-ERROR@{GSN\_\-DMA\_\-STATUS\_\-ERROR}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-DMA\_\-STATUS\_\-ERROR@{GSN\_\-DMA\_\-STATUS\_\-ERROR}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a434f62dca4f16b8ae560e91a3ce209a4}{
+GSN\_\-DMA\_\-STATUS\_\-ERROR}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a434f62dca4f16b8ae560e91a3ce209a4}
+}]\index{GSN\_\-NW\_\-IF\_\-CLOSED@{GSN\_\-NW\_\-IF\_\-CLOSED}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NW\_\-IF\_\-CLOSED@{GSN\_\-NW\_\-IF\_\-CLOSED}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707a5aa7e4499d893c43f068448558ffcac7}{
+GSN\_\-NW\_\-IF\_\-CLOSED}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707a5aa7e4499d893c43f068448558ffcac7}
+}]!!!!! NOTE : Add any ne definitions After C1 ROM Release Here. Donot add in between \index{GSN\_\-NW\_\-IPV4\_\-CONFIG\_\-IN\_\-PROGRESS@{GSN\_\-NW\_\-IPV4\_\-CONFIG\_\-IN\_\-PROGRESS}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NW\_\-IPV4\_\-CONFIG\_\-IN\_\-PROGRESS@{GSN\_\-NW\_\-IPV4\_\-CONFIG\_\-IN\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707aa43bf552ed9aee790552b1805eb525cd}{
+GSN\_\-NW\_\-IPV4\_\-CONFIG\_\-IN\_\-PROGRESS}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707aa43bf552ed9aee790552b1805eb525cd}
+}]\index{GSN\_\-NW\_\-IPV6\_\-CONFIG\_\-IN\_\-PROGRESS@{GSN\_\-NW\_\-IPV6\_\-CONFIG\_\-IN\_\-PROGRESS}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-NW\_\-IPV6\_\-CONFIG\_\-IN\_\-PROGRESS@{GSN\_\-NW\_\-IPV6\_\-CONFIG\_\-IN\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ac151d4d3b71542ed8b8c6e218efb47a3}{
+GSN\_\-NW\_\-IPV6\_\-CONFIG\_\-IN\_\-PROGRESS}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ac151d4d3b71542ed8b8c6e218efb47a3}
+}]\index{GSN\_\-SDIO\_\-STATUS\_\-OK@{GSN\_\-SDIO\_\-STATUS\_\-OK}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SDIO\_\-STATUS\_\-OK@{GSN\_\-SDIO\_\-STATUS\_\-OK}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ad280f6a2f89e50934e488964f06bf1c0}{
+GSN\_\-SDIO\_\-STATUS\_\-OK}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ad280f6a2f89e50934e488964f06bf1c0}
+}]\index{GSN\_\-SDIO\_\-STATUS\_\-ERROR@{GSN\_\-SDIO\_\-STATUS\_\-ERROR}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SDIO\_\-STATUS\_\-ERROR@{GSN\_\-SDIO\_\-STATUS\_\-ERROR}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707ad4a9b0b4eda759e9da615ff11aa037e2}{
+GSN\_\-SDIO\_\-STATUS\_\-ERROR}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707ad4a9b0b4eda759e9da615ff11aa037e2}
+}]\index{GSN\_\-SNTP\_\-BUSY@{GSN\_\-SNTP\_\-BUSY}!GSN Errors@{GSN Errors}}\index{GSN Errors@{GSN Errors}!GSN\_\-SNTP\_\-BUSY@{GSN\_\-SNTP\_\-BUSY}}\item[{\em 
+\hypertarget{a00659_gga476ae1caf992f8287176b2cc414c8707aaff7e73f13814d77b99071d629394f0b}{
+GSN\_\-SNTP\_\-BUSY}
+\label{a00659_gga476ae1caf992f8287176b2cc414c8707aaff7e73f13814d77b99071d629394f0b}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 72 of file gsn\_\-error.h.
+

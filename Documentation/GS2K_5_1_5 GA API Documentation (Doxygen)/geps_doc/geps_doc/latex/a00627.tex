@@ -1,0 +1,218 @@
+\hypertarget{a00627}{
+\section{GSN Message Handler}
+\label{a00627}\index{GSN Message Handler@{GSN Message Handler}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Message Handler context. type definition of the message handler context. \end{DoxyCompactList}\item 
+struct \hyperlink{a00154}{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Message Handler configuration. type definition of the message handler configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL}($\ast$ \hyperlink{a00627_ga638c4ec452bde3b70fae3b7239e05cca}{GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T} )(VOID $\ast$pCtx, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN Message Handler callback type. type definition of the handler used in message handler. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} \hyperlink{a00627_gaf399ebe34f6e083a27eab240f852ac4d}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Message Handler context. type definition of the message handler context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00154}{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T} \hyperlink{a00627_gafb3b653c75d46a7789b82f2f3aff8321}{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Message Handler configuration. type definition of the message handler configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00627_gacc70d680d0d460b942143107dca09514}{GsnMsgHandler\_\-Create} (\hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$pCtx, \hyperlink{a00154}{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T} $\ast$pCfg, VOID $\ast$pMsg, \hyperlink{a00627_ga638c4ec452bde3b70fae3b7239e05cca}{GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T} handlerCb, VOID $\ast$pHandlerCtx)
+\begin{DoxyCompactList}\small\item\em Create Message Handler. This function is used to create a message handler. \end{DoxyCompactList}\item 
+INLINE PUBLIC VOID \hyperlink{a00627_gaf9aa1fcf54621e2f9cc80cd0c8697d70}{GsnMsgHandler\_\-Delete} (\hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$pCtx)
+\begin{DoxyCompactList}\small\item\em Delete Message Handler. This function is used to create a message handler. \end{DoxyCompactList}\item 
+INLINE PUBLIC VOID \hyperlink{a00627_ga1658d3ee7bb4baeaccbfb3350b834674}{GsnMsgHandler\_\-Install} (\hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$pCtx, VOID $\ast$pHandlerCtx, \hyperlink{a00627_ga638c4ec452bde3b70fae3b7239e05cca}{GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T} handlerCb)
+\begin{DoxyCompactList}\small\item\em Install handler in Message Handler. This function is used to install handler and its context in message handler. \end{DoxyCompactList}\item 
+INLINE PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00627_gae27cb95242e79adb4d3ed617f0126c4b}{GsnMsgHandler\_\-Post} (\hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$pCtx, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em Post message to Message Handler. This function is used to post a message to a message handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group of API functions implements a generic message handler, by creating a thread and mailbox. The entry function waits on the mailbox and calls the registered callback function. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00627_ga638c4ec452bde3b70fae3b7239e05cca}{
+\index{GSN Message Handler@{GSN Message Handler}!GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T@{GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T}}
+\index{GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T@{GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T}!GSN Message Handler@{GSN Message Handler}}
+\subsubsection[{GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf BOOL}( $\ast$ {\bf GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T})(VOID $\ast$pCtx, VOID $\ast$pMsg)}}
+\label{a00627_ga638c4ec452bde3b70fae3b7239e05cca}
+
+
+GSN Message Handler callback type. type definition of the handler used in message handler. 
+
+
+
+Definition at line 84 of file gsn\_\-msg\_\-handler.h.
+
+\hypertarget{a00627_gafb3b653c75d46a7789b82f2f3aff8321}{
+\index{GSN Message Handler@{GSN Message Handler}!GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T@{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T}}
+\index{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T@{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T}!GSN Message Handler@{GSN Message Handler}}
+\subsubsection[{GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T}  {\bf GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T}}}
+\label{a00627_gafb3b653c75d46a7789b82f2f3aff8321}
+
+
+GSN Message Handler configuration. type definition of the message handler configuration structure. 
+
+\hypertarget{a00627_gaf399ebe34f6e083a27eab240f852ac4d}{
+\index{GSN Message Handler@{GSN Message Handler}!GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T@{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T}}
+\index{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T@{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T}!GSN Message Handler@{GSN Message Handler}}
+\subsubsection[{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T}  {\bf GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T}}}
+\label{a00627_gaf399ebe34f6e083a27eab240f852ac4d}
+
+
+GSN Message Handler context. type definition of the message handler context. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00627_gacc70d680d0d460b942143107dca09514}{
+\index{GSN Message Handler@{GSN Message Handler}!GsnMsgHandler\_\-Create@{GsnMsgHandler\_\-Create}}
+\index{GsnMsgHandler\_\-Create@{GsnMsgHandler\_\-Create}!GSN Message Handler@{GSN Message Handler}}
+\subsubsection[{GsnMsgHandler\_\-Create}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnMsgHandler\_\-Create (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$}]{pCtx, }
+\item[{{\bf GSN\_\-MSG\_\-HANDLER\_\-CFG\_\-T} $\ast$}]{pCfg, }
+\item[{VOID $\ast$}]{pMsg, }
+\item[{{\bf GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T}}]{handlerCb, }
+\item[{VOID $\ast$}]{pHandlerCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00627_gacc70d680d0d460b942143107dca09514}
+
+
+Create Message Handler. This function is used to create a message handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to the memory to be used by the message handler. \\
+\hline
+{\em pCfg} & -\/ IN Configuration details for the message handler. \\
+\hline
+{\em pMsg} & -\/ IN Pointer to the memory in SRAM to read the message from the mailbox. The size of the memory should be same as the size of message stored in mailbox. \\
+\hline
+{\em handlerCb} & -\/ IN Handler function to be called to process the message. \\
+\hline
+{\em pHandlerCtx} & -\/ IN Handler context to be passed to process the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00627_gaf9aa1fcf54621e2f9cc80cd0c8697d70}{
+\index{GSN Message Handler@{GSN Message Handler}!GsnMsgHandler\_\-Delete@{GsnMsgHandler\_\-Delete}}
+\index{GsnMsgHandler\_\-Delete@{GsnMsgHandler\_\-Delete}!GSN Message Handler@{GSN Message Handler}}
+\subsubsection[{GsnMsgHandler\_\-Delete}]{\setlength{\rightskip}{0pt plus 5cm}INLINE PUBLIC VOID GsnMsgHandler\_\-Delete (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$}]{pCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00627_gaf9aa1fcf54621e2f9cc80cd0c8697d70}
+
+
+Delete Message Handler. This function is used to create a message handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to the memory used by the message handler. This should be same as passed in the Create API. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+$<$ Must close task first, otherwise closed mailbox could cause context switch which allows GsnOsal\_\-MailboxGet to return GH\_\-ERROR\_\-OBJECT\_\-CLOSED which would not be handled. 
+
+
+
+Definition at line 154 of file gsn\_\-msg\_\-handler.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00627_gaf9aa1fcf54621e2f9cc80cd0c8697d70_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00627_ga1658d3ee7bb4baeaccbfb3350b834674}{
+\index{GSN Message Handler@{GSN Message Handler}!GsnMsgHandler\_\-Install@{GsnMsgHandler\_\-Install}}
+\index{GsnMsgHandler\_\-Install@{GsnMsgHandler\_\-Install}!GSN Message Handler@{GSN Message Handler}}
+\subsubsection[{GsnMsgHandler\_\-Install}]{\setlength{\rightskip}{0pt plus 5cm}INLINE PUBLIC VOID GsnMsgHandler\_\-Install (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$}]{pCtx, }
+\item[{VOID $\ast$}]{pHandlerCtx, }
+\item[{{\bf GSN\_\-MSG\_\-HANDLER\_\-CB\_\-T}}]{handlerCb}
+\end{DoxyParamCaption}
+)}}
+\label{a00627_ga1658d3ee7bb4baeaccbfb3350b834674}
+
+
+Install handler in Message Handler. This function is used to install handler and its context in message handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to the memory to be used by the message handler. \\
+\hline
+{\em handlerCb} & -\/ IN Handler function to be called to process the message. \\
+\hline
+{\em pHandlerCtx} & -\/ IN Handler context to be passed to process the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Must not be called from msgHandler's own Task! 
+
+Must not be called if msgHandler's handler owns any mutexes! 
+\end{DoxyNote}
+
+
+Definition at line 176 of file gsn\_\-msg\_\-handler.h.
+
+\hypertarget{a00627_gae27cb95242e79adb4d3ed617f0126c4b}{
+\index{GSN Message Handler@{GSN Message Handler}!GsnMsgHandler\_\-Post@{GsnMsgHandler\_\-Post}}
+\index{GsnMsgHandler\_\-Post@{GsnMsgHandler\_\-Post}!GSN Message Handler@{GSN Message Handler}}
+\subsubsection[{GsnMsgHandler\_\-Post}]{\setlength{\rightskip}{0pt plus 5cm}INLINE PUBLIC {\bf GSN\_\-STATUS} GsnMsgHandler\_\-Post (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$}]{pCtx, }
+\item[{VOID $\ast$}]{pMsg}
+\end{DoxyParamCaption}
+)}}
+\label{a00627_gae27cb95242e79adb4d3ed617f0126c4b}
+
+
+Post message to Message Handler. This function is used to post a message to a message handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to the memory used by the message handler. This should be same as passed in the Create API. \\
+\hline
+{\em pMsg} & -\/ IN Pointer to the memory that contins the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 194 of file gsn\_\-msg\_\-handler.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=388pt]{a00627_gae27cb95242e79adb4d3ed617f0126c4b_cgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,1074 @@
+\hypertarget{a00647}{
+\section{GSN Flash IF API.}
+\label{a00647}\index{GSN Flash IF API.@{GSN Flash IF API.}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00080}{GSN\_\-FLASHIF\_\-DMACTL\_\-S}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf DMA control structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00078}{GSN\_\-FLASHIF\_\-CFG\_\-S}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Config structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00079}{GSN\_\-FLASHIF\_\-CTX\_\-S}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Context. \end{DoxyCompactList}\item 
+struct \hyperlink{a00081}{GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-S}
+\begin{DoxyCompactList}\small\item\em Flash Status Register structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00647_gaaf02993c8f105b4a90a6b27ef19dae0f}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-E} \hyperlink{a00647_gad02bc7e7274fd3ba828e7ed35c282eaf}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf PIO Enum for Dir Read and Write. This enum defines FlashIf PIO Dir Read and Write. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00647_ga21630134ac87b1ff38712e4f4c0b4a4e}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-E} \hyperlink{a00647_gad29e842797fae82ccad1e80f4fc97a1c}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf PIO Enum for Dummy bytes. This enum defines FlashIf PIO zero, nonzero dummy bytes. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00647_gad00f759b28a1db7a281e681f949cd164}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-E} \hyperlink{a00647_gaf1a2041a13f5df83afd39cc00dd1f5c0}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Enum for FLASH BITLANE. This enum defines flash bitlane. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00080}{GSN\_\-FLASHIF\_\-DMACTL\_\-S} \hyperlink{a00647_ga3191e2eabef0c8e1b95922431d75565f}{GSN\_\-FLASHIF\_\-DMACTL\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf DMA control structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00078}{GSN\_\-FLASHIF\_\-CFG\_\-S} \hyperlink{a00647_gaaf4a476f19c5d44c391a5e5dab872e9b}{GSN\_\-FLASHIF\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Config structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00079}{GSN\_\-FLASHIF\_\-CTX\_\-S} \hyperlink{a00647_gacef88670392e2c2c8f6cc45eab1ad658}{GSN\_\-FLASHIF\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00081}{GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-S} \hyperlink{a00647_ga817ad96ff2f6956f431999227f67c3ca}{GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-T}
+\begin{DoxyCompactList}\small\item\em Flash Status Register structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00647_gaaf02993c8f105b4a90a6b27ef19dae0f}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-E} \{ \par
+\hyperlink{a00647_ggaaf02993c8f105b4a90a6b27ef19dae0fafe8b742258651fa64d0b4c4012346bda}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-READ} =  0, 
+\par
+\hyperlink{a00647_ggaaf02993c8f105b4a90a6b27ef19dae0faf5c50092b2e7d13c595cf3c2e0723aaa}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-WRITE} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf PIO Enum for Dir Read and Write. This enum defines FlashIf PIO Dir Read and Write. \end{DoxyCompactList}\item 
+enum \hyperlink{a00647_ga21630134ac87b1ff38712e4f4c0b4a4e}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-E} \{ \par
+\hyperlink{a00647_gga21630134ac87b1ff38712e4f4c0b4a4eaecca8709c0b664eeabca124be5cb94e2}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-ZERO} =  0, 
+\par
+\hyperlink{a00647_gga21630134ac87b1ff38712e4f4c0b4a4ea9994e4e9597b9fbf54d26239248e08c2}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-NONZERO} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf PIO Enum for Dummy bytes. This enum defines FlashIf PIO zero, nonzero dummy bytes. \end{DoxyCompactList}\item 
+enum \hyperlink{a00647_gad00f759b28a1db7a281e681f949cd164}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-E} \{ \par
+\hyperlink{a00647_ggad00f759b28a1db7a281e681f949cd164a82324c677576b831a7a6306b1ea3466d}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-1} =  0, 
+\par
+\hyperlink{a00647_ggad00f759b28a1db7a281e681f949cd164ad2aecd6be0e0851d10f33a12223b4cd7}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-2} =  1, 
+\par
+\hyperlink{a00647_ggad00f759b28a1db7a281e681f949cd164a7e743bb40684d8ff42f8503216dcc6c6}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-4} =  2
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Enum for FLASH BITLANE. This enum defines flash bitlane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga0e52d153a54a5e099ea53b4ab2ba02bc}{GsnFlashIf\_\-PioTxFifoEmptyWait} ()
+\begin{DoxyCompactList}\small\item\em Wait for FlashIf Pio Tx fifo empty. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga31cfba744b7133b256ba57713dc14e0f}{GsnFlashIf\_\-PioTxFifoWrite} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} data)
+\begin{DoxyCompactList}\small\item\em FlashIf Pio Tx fifo write. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga035c5d3ec64ab8e86cacf6cd39762303}{GsnFlashIf\_\-PioRxFifoDataWait} ()
+\begin{DoxyCompactList}\small\item\em Wait for FlashIf Pio Rx fifo Data. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00647_ga3c41c43e8ea5c81f7c5307820685fdaf}{GsnFlashIf\_\-PioRxFifoRead} ()
+\begin{DoxyCompactList}\small\item\em Read FlashIf Pio Rx fifo Data. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga2e7a4bf76eb4e6da69d976bd9337a863}{GsnFlashIf\_\-StatusIdleWait} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Status Idle wait. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga5acfd4e90824451ba8ac4ec7f2aef58e}{GsnFlashIf\_\-PioReq} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Pio Request. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_gafdff247602c68652a230d5335f34f519}{GsnFlashIf\_\-PioRelease} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Pio Release. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00647_ga9bd33077456561b3a74960e3b59fd3a1}{GsnFlashIf\_\-FlashIdRead} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Id Read. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00647_ga48297488ec4d500970cb6950cae78570}{GsnFlashIf\_\-FlashStatusRead} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Status Read. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_gaa4154e89e9e4a898ea3201fe01399563}{GsnFlashIf\_\-FlashWelBitSetWait} ()
+\begin{DoxyCompactList}\small\item\em FlashIf FlashWelBitSetWait. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_gacbb20c31b55b63691495359dad00ccc6}{GsnFlashIf\_\-FlashWelBitClrWait} ()
+\begin{DoxyCompactList}\small\item\em FlashIf FlashWelBitClrWait. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga73f637bd9c4acf82825974b750102043}{GsnFlashIf\_\-FlashWriteEnable} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Write Enable. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_gaa765eb6f46ca5e3787deb574e035a43b}{GsnFlashIf\_\-FlashWriteDisable} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Write Disable. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga3a7eea5fe3bb3b96a573037b355c0c0e}{GsnFlashIf\_\-FlashStatusWrite} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} val, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} numBytes)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash status Write. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00647_gaca0cbeb5224273baff05b9bb8f18f28f}{GsnFlashIf\_\-Init} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Init. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00647_ga2e45a3d239aacf23775f49d45451cb39}{GsnFlashIf\_\-Open} ()
+\begin{DoxyCompactList}\small\item\em FlashIf open. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00647_ga35472b38e5592af65b2c3a043f12804a}{GsnFlashIf\_\-Close} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Close. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_ga9984f334abe4f56660d9c05462bfd0cf}{GsnFlashIf\_\-FlashRegWrite} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} cmd, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} val, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Register Write. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_gaca1b3713dbed6c6ebc74ffd2c690aeea}{GsnFlashIf\_\-FlashErase} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Erase. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00647_gac89f308125de8d40656d8a9e77decc7e}{GsnFlashIf\_\-FlashBulkErase} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Bulk Erase. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_ga204ff2b722664894838958d449b76f0d}{GsnFlashIf\_\-FlashSectorErase} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Sector Erase. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_gaba565cfc9046eef09ab9934e687f6044}{GsnFlashIf\_\-FlashSubsectorErase} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash SubSector Erase. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_ga3998be9c292aba1e22142a3987b5f5c8}{GsnFlashIf\_\-FlashProgram} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pData, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Program. \end{DoxyCompactList}\item 
+PRIVATE VOID \hyperlink{a00647_ga0df0295551b38ea8a75b6bbfa748cde4}{GsnFlashIf\_\-FlashPageProgram} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pData)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Page Program. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_ga3ed4044178d723647df832021c3a609d}{GsnFlashIf\_\-FlashRead} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pData, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Read. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00647_ga0fdd893814aead99338aea969b2cfc0a}{GsnFlashIf\_\-FlashPowerDown} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash PowerDown. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group of APIs implements the Flash IF driver features. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00647_gaaf4a476f19c5d44c391a5e5dab872e9b}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-CFG\_\-T@{GSN\_\-FLASHIF\_\-CFG\_\-T}}
+\index{GSN\_\-FLASHIF\_\-CFG\_\-T@{GSN\_\-FLASHIF\_\-CFG\_\-T}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GSN\_\-FLASHIF\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-FLASHIF\_\-CFG\_\-S}  {\bf GSN\_\-FLASHIF\_\-CFG\_\-T}}}
+\label{a00647_gaaf4a476f19c5d44c391a5e5dab872e9b}
+
+
+Gsn FlashIf Config structure. 
+
+This structure defines FlashIf Config structure
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00647_gaaf4a476f19c5d44c391a5e5dab872e9b}{GSN\_\-FLASHIF\_\-CFG\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00647_gacef88670392e2c2c8f6cc45eab1ad658}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-CTX\_\-T@{GSN\_\-FLASHIF\_\-CTX\_\-T}}
+\index{GSN\_\-FLASHIF\_\-CTX\_\-T@{GSN\_\-FLASHIF\_\-CTX\_\-T}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GSN\_\-FLASHIF\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-FLASHIF\_\-CTX\_\-S}  {\bf GSN\_\-FLASHIF\_\-CTX\_\-T}}}
+\label{a00647_gacef88670392e2c2c8f6cc45eab1ad658}
+
+
+Gsn FlashIf Context. 
+
+This structure defines FlashIf Context.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00647_gacef88670392e2c2c8f6cc45eab1ad658}{GSN\_\-FLASHIF\_\-CTX\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00647_ga3191e2eabef0c8e1b95922431d75565f}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-DMACTL\_\-T@{GSN\_\-FLASHIF\_\-DMACTL\_\-T}}
+\index{GSN\_\-FLASHIF\_\-DMACTL\_\-T@{GSN\_\-FLASHIF\_\-DMACTL\_\-T}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GSN\_\-FLASHIF\_\-DMACTL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-FLASHIF\_\-DMACTL\_\-S}  {\bf GSN\_\-FLASHIF\_\-DMACTL\_\-T}}}
+\label{a00647_ga3191e2eabef0c8e1b95922431d75565f}
+
+
+Gsn FlashIf DMA control structure. 
+
+This structure defines FlashIf DMA control structure
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00647_ga3191e2eabef0c8e1b95922431d75565f}{GSN\_\-FLASHIF\_\-DMACTL\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00647_gaf1a2041a13f5df83afd39cc00dd1f5c0}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-T@{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-T}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-T@{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-T}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-E}  {\bf GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-T}}}
+\label{a00647_gaf1a2041a13f5df83afd39cc00dd1f5c0}
+
+
+Gsn FlashIf Enum for FLASH BITLANE. This enum defines flash bitlane. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00647_gaf1a2041a13f5df83afd39cc00dd1f5c0}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00647_ga817ad96ff2f6956f431999227f67c3ca}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-T@{GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-T}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-T@{GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-T}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-S}  {\bf GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-T}}}
+\label{a00647_ga817ad96ff2f6956f431999227f67c3ca}
+
+
+Flash Status Register structure. 
+
+This structure defines Status Registers of Flash.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00647_ga817ad96ff2f6956f431999227f67c3ca}{GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00647_gad02bc7e7274fd3ba828e7ed35c282eaf}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-T@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-T}}
+\index{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-T@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-T}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-E}  {\bf GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-T}}}
+\label{a00647_gad02bc7e7274fd3ba828e7ed35c282eaf}
+
+
+Gsn FlashIf PIO Enum for Dir Read and Write. This enum defines FlashIf PIO Dir Read and Write. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00647_gad02bc7e7274fd3ba828e7ed35c282eaf}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00647_gad29e842797fae82ccad1e80f4fc97a1c}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-T@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-T}}
+\index{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-T@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-T}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-E}  {\bf GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-T}}}
+\label{a00647_gad29e842797fae82ccad1e80f4fc97a1c}
+
+
+Gsn FlashIf PIO Enum for Dummy bytes. This enum defines FlashIf PIO zero, nonzero dummy bytes. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00647_gad29e842797fae82ccad1e80f4fc97a1c}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-T}. 
+\end{DoxySeeAlso}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00647_gad00f759b28a1db7a281e681f949cd164}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-E@{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-E}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-E@{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-E}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-E}}}
+\label{a00647_gad00f759b28a1db7a281e681f949cd164}
+
+
+Gsn FlashIf Enum for FLASH BITLANE. This enum defines flash bitlane. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00647_gaf1a2041a13f5df83afd39cc00dd1f5c0}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-1@{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-1}!GSN Flash IF API.@{GSN Flash IF API.}}\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-1@{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-1}}\item[{\em 
+\hypertarget{a00647_ggad00f759b28a1db7a281e681f949cd164a82324c677576b831a7a6306b1ea3466d}{
+GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-1}
+\label{a00647_ggad00f759b28a1db7a281e681f949cd164a82324c677576b831a7a6306b1ea3466d}
+}]\index{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-2@{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-2}!GSN Flash IF API.@{GSN Flash IF API.}}\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-2@{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-2}}\item[{\em 
+\hypertarget{a00647_ggad00f759b28a1db7a281e681f949cd164ad2aecd6be0e0851d10f33a12223b4cd7}{
+GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-2}
+\label{a00647_ggad00f759b28a1db7a281e681f949cd164ad2aecd6be0e0851d10f33a12223b4cd7}
+}]\index{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-4@{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-4}!GSN Flash IF API.@{GSN Flash IF API.}}\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-4@{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-4}}\item[{\em 
+\hypertarget{a00647_ggad00f759b28a1db7a281e681f949cd164a7e743bb40684d8ff42f8503216dcc6c6}{
+GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-4}
+\label{a00647_ggad00f759b28a1db7a281e681f949cd164a7e743bb40684d8ff42f8503216dcc6c6}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 126 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00647_gaaf02993c8f105b4a90a6b27ef19dae0f}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-E@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-E}}
+\index{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-E@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-E}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-E}}}
+\label{a00647_gaaf02993c8f105b4a90a6b27ef19dae0f}
+
+
+Gsn FlashIf PIO Enum for Dir Read and Write. This enum defines FlashIf PIO Dir Read and Write. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00647_gad02bc7e7274fd3ba828e7ed35c282eaf}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-READ@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-READ}!GSN Flash IF API.@{GSN Flash IF API.}}\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-READ@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-READ}}\item[{\em 
+\hypertarget{a00647_ggaaf02993c8f105b4a90a6b27ef19dae0fafe8b742258651fa64d0b4c4012346bda}{
+GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-READ}
+\label{a00647_ggaaf02993c8f105b4a90a6b27ef19dae0fafe8b742258651fa64d0b4c4012346bda}
+}]\index{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-WRITE@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-WRITE}!GSN Flash IF API.@{GSN Flash IF API.}}\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-WRITE@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-WRITE}}\item[{\em 
+\hypertarget{a00647_ggaaf02993c8f105b4a90a6b27ef19dae0faf5c50092b2e7d13c595cf3c2e0723aaa}{
+GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-WRITE}
+\label{a00647_ggaaf02993c8f105b4a90a6b27ef19dae0faf5c50092b2e7d13c595cf3c2e0723aaa}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 100 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00647_ga21630134ac87b1ff38712e4f4c0b4a4e}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-E@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-E}}
+\index{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-E@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-E}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-E}}}
+\label{a00647_ga21630134ac87b1ff38712e4f4c0b4a4e}
+
+
+Gsn FlashIf PIO Enum for Dummy bytes. This enum defines FlashIf PIO zero, nonzero dummy bytes. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00647_gad29e842797fae82ccad1e80f4fc97a1c}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-ZERO@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-ZERO}!GSN Flash IF API.@{GSN Flash IF API.}}\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-ZERO@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-ZERO}}\item[{\em 
+\hypertarget{a00647_gga21630134ac87b1ff38712e4f4c0b4a4eaecca8709c0b664eeabca124be5cb94e2}{
+GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-ZERO}
+\label{a00647_gga21630134ac87b1ff38712e4f4c0b4a4eaecca8709c0b664eeabca124be5cb94e2}
+}]\index{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-NONZERO@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-NONZERO}!GSN Flash IF API.@{GSN Flash IF API.}}\index{GSN Flash IF API.@{GSN Flash IF API.}!GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-NONZERO@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-NONZERO}}\item[{\em 
+\hypertarget{a00647_gga21630134ac87b1ff38712e4f4c0b4a4ea9994e4e9597b9fbf54d26239248e08c2}{
+GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-NONZERO}
+\label{a00647_gga21630134ac87b1ff38712e4f4c0b4a4ea9994e4e9597b9fbf54d26239248e08c2}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 113 of file gsn\_\-flash\_\-if.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00647_ga35472b38e5592af65b2c3a043f12804a}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-Close@{GsnFlashIf\_\-Close}}
+\index{GsnFlashIf\_\-Close@{GsnFlashIf\_\-Close}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-Close}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnFlashIf\_\-Close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga35472b38e5592af65b2c3a043f12804a}
+
+
+FlashIf Close. 
+
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+\hypertarget{a00647_gac89f308125de8d40656d8a9e77decc7e}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashBulkErase@{GsnFlashIf\_\-FlashBulkErase}}
+\index{GsnFlashIf\_\-FlashBulkErase@{GsnFlashIf\_\-FlashBulkErase}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashBulkErase}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnFlashIf\_\-FlashBulkErase (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_gac89f308125de8d40656d8a9e77decc7e}
+
+
+FlashIf Flash Bulk Erase. 
+
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\hypertarget{a00647_gaca1b3713dbed6c6ebc74ffd2c690aeea}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashErase@{GsnFlashIf\_\-FlashErase}}
+\index{GsnFlashIf\_\-FlashErase@{GsnFlashIf\_\-FlashErase}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashErase}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC UINT GsnFlashIf\_\-FlashErase (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{addr, }
+\item[{{\bf UINT32}}]{len, }
+\item[{{\bf BOOL}}]{blocking}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_gaca1b3713dbed6c6ebc74ffd2c690aeea}
+
+
+FlashIf Flash Erase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & -\/ IN UINT32 type address \\
+\hline
+{\em len} & -\/ IN length to erase of UINT32 type \\
+\hline
+{\em blocking} & -\/ IN blocking flag of BOOL type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status -\/ returns GSN\_\-SUCCESS or GSN\_\-FAILURE of type UINT. 
+\end{DoxyReturn}
+\hypertarget{a00647_ga9bd33077456561b3a74960e3b59fd3a1}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashIdRead@{GsnFlashIf\_\-FlashIdRead}}
+\index{GsnFlashIf\_\-FlashIdRead@{GsnFlashIf\_\-FlashIdRead}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashIdRead}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf UINT32} GsnFlashIf\_\-FlashIdRead (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga9bd33077456561b3a74960e3b59fd3a1}
+
+
+FlashIf Flash Id Read. 
+
+\begin{DoxyReturn}{Returns}
+data -\/ Data read from Rx fifo. 
+\end{DoxyReturn}
+
+
+Definition at line 585 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga9bd33077456561b3a74960e3b59fd3a1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00647_ga0df0295551b38ea8a75b6bbfa748cde4}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashPageProgram@{GsnFlashIf\_\-FlashPageProgram}}
+\index{GsnFlashIf\_\-FlashPageProgram@{GsnFlashIf\_\-FlashPageProgram}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashPageProgram}]{\setlength{\rightskip}{0pt plus 5cm}PRIVATE VOID GsnFlashIf\_\-FlashPageProgram (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{addr, }
+\item[{{\bf UINT32}}]{len, }
+\item[{{\bf UINT8} $\ast$}]{pData}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga0df0295551b38ea8a75b6bbfa748cde4}
+
+
+FlashIf Flash Page Program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & -\/ IN UINT32 type address \\
+\hline
+{\em len} & -\/ IN length to program of UINT32 type \\
+\hline
+{\em pData} & -\/ IN pointer to hold data of type UINT8 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\hypertarget{a00647_ga0fdd893814aead99338aea969b2cfc0a}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashPowerDown@{GsnFlashIf\_\-FlashPowerDown}}
+\index{GsnFlashIf\_\-FlashPowerDown@{GsnFlashIf\_\-FlashPowerDown}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashPowerDown}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnFlashIf\_\-FlashPowerDown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga0fdd893814aead99338aea969b2cfc0a}
+
+
+FlashIf Flash PowerDown. 
+
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\hypertarget{a00647_ga3998be9c292aba1e22142a3987b5f5c8}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashProgram@{GsnFlashIf\_\-FlashProgram}}
+\index{GsnFlashIf\_\-FlashProgram@{GsnFlashIf\_\-FlashProgram}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashProgram}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC UINT GsnFlashIf\_\-FlashProgram (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{addr, }
+\item[{{\bf UINT32}}]{len, }
+\item[{{\bf UINT8} $\ast$}]{pData, }
+\item[{{\bf BOOL}}]{blocking}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga3998be9c292aba1e22142a3987b5f5c8}
+
+
+FlashIf Flash Program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & -\/ IN UINT32 type address \\
+\hline
+{\em len} & -\/ IN length to program of UINT32 type \\
+\hline
+{\em pData} & -\/ IN pointer to hold data of type UINT8 \\
+\hline
+{\em blocking} & -\/ IN blocking flag of BOOL type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status -\/ returns GSN\_\-SUCCESS or GSN\_\-FAILURE of type UINT. 
+\end{DoxyReturn}
+\hypertarget{a00647_ga3ed4044178d723647df832021c3a609d}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashRead@{GsnFlashIf\_\-FlashRead}}
+\index{GsnFlashIf\_\-FlashRead@{GsnFlashIf\_\-FlashRead}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashRead}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC UINT GsnFlashIf\_\-FlashRead (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{addr, }
+\item[{{\bf UINT32}}]{len, }
+\item[{{\bf UINT8} $\ast$}]{pData, }
+\item[{{\bf BOOL}}]{blocking}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga3ed4044178d723647df832021c3a609d}
+
+
+FlashIf Flash Read. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & -\/ IN UINT32 type address \\
+\hline
+{\em len} & -\/ IN length to read of UINT32 type \\
+\hline
+{\em pData} & -\/ IN pointer to hold data of type UINT8 \\
+\hline
+{\em blocking} & -\/ IN blocking flag of BOOL type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status -\/ returns GSN\_\-SUCCESS or GSN\_\-FAILURE of type UINT. 
+\end{DoxyReturn}
+\hypertarget{a00647_ga9984f334abe4f56660d9c05462bfd0cf}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashRegWrite@{GsnFlashIf\_\-FlashRegWrite}}
+\index{GsnFlashIf\_\-FlashRegWrite@{GsnFlashIf\_\-FlashRegWrite}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashRegWrite}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC UINT GsnFlashIf\_\-FlashRegWrite (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8}}]{cmd, }
+\item[{{\bf UINT32}}]{val, }
+\item[{{\bf BOOL}}]{blocking}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga9984f334abe4f56660d9c05462bfd0cf}
+
+
+FlashIf Flash Register Write. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & -\/ IN UINT8 type command \\
+\hline
+{\em val} & -\/ IN UINT32 type value to be written \\
+\hline
+{\em blocking} & -\/ IN blocking flag of BOOL type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status -\/ returns GSN\_\-SUCCESS or GSN\_\-FAILURE of type UINT. 
+\end{DoxyReturn}
+\hypertarget{a00647_ga204ff2b722664894838958d449b76f0d}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashSectorErase@{GsnFlashIf\_\-FlashSectorErase}}
+\index{GsnFlashIf\_\-FlashSectorErase@{GsnFlashIf\_\-FlashSectorErase}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashSectorErase}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC UINT GsnFlashIf\_\-FlashSectorErase (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{addr, }
+\item[{{\bf BOOL}}]{blocking}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga204ff2b722664894838958d449b76f0d}
+
+
+FlashIf Flash Sector Erase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & -\/ IN UINT32 type address \\
+\hline
+{\em blocking} & -\/ IN blocking flag of BOOL type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status -\/ returns GSN\_\-SUCCESS or GSN\_\-FAILURE of type UINT. 
+\end{DoxyReturn}
+\hypertarget{a00647_ga48297488ec4d500970cb6950cae78570}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashStatusRead@{GsnFlashIf\_\-FlashStatusRead}}
+\index{GsnFlashIf\_\-FlashStatusRead@{GsnFlashIf\_\-FlashStatusRead}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashStatusRead}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf UINT32} GsnFlashIf\_\-FlashStatusRead (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga48297488ec4d500970cb6950cae78570}
+
+
+FlashIf Flash Status Read. 
+
+\begin{DoxyReturn}{Returns}
+statusReg -\/ return status reg of type GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-T. 
+\end{DoxyReturn}
+
+
+Definition at line 614 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga48297488ec4d500970cb6950cae78570_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga48297488ec4d500970cb6950cae78570_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00647_ga3a7eea5fe3bb3b96a573037b355c0c0e}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashStatusWrite@{GsnFlashIf\_\-FlashStatusWrite}}
+\index{GsnFlashIf\_\-FlashStatusWrite@{GsnFlashIf\_\-FlashStatusWrite}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashStatusWrite}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-FlashStatusWrite (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{val, }
+\item[{{\bf UINT32}}]{numBytes}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga3a7eea5fe3bb3b96a573037b355c0c0e}
+
+
+FlashIf Flash status Write. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & -\/ IN Value to write \\
+\hline
+{\em numBytes} & -\/ IN Number of bytes to Write\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+
+
+Definition at line 742 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga3a7eea5fe3bb3b96a573037b355c0c0e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00647_gaba565cfc9046eef09ab9934e687f6044}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashSubsectorErase@{GsnFlashIf\_\-FlashSubsectorErase}}
+\index{GsnFlashIf\_\-FlashSubsectorErase@{GsnFlashIf\_\-FlashSubsectorErase}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashSubsectorErase}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC UINT GsnFlashIf\_\-FlashSubsectorErase (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{addr, }
+\item[{{\bf BOOL}}]{blocking}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_gaba565cfc9046eef09ab9934e687f6044}
+
+
+FlashIf Flash SubSector Erase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & -\/ IN UINT32 type address \\
+\hline
+{\em blocking} & -\/ IN blocking flag of BOOL type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status -\/ returns GSN\_\-SUCCESS or GSN\_\-FAILURE of type UINT. 
+\end{DoxyReturn}
+\hypertarget{a00647_gacbb20c31b55b63691495359dad00ccc6}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashWelBitClrWait@{GsnFlashIf\_\-FlashWelBitClrWait}}
+\index{GsnFlashIf\_\-FlashWelBitClrWait@{GsnFlashIf\_\-FlashWelBitClrWait}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashWelBitClrWait}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-FlashWelBitClrWait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_gacbb20c31b55b63691495359dad00ccc6}
+
+
+FlashIf FlashWelBitClrWait. 
+
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+
+
+Definition at line 664 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_gacbb20c31b55b63691495359dad00ccc6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_gacbb20c31b55b63691495359dad00ccc6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00647_gaa4154e89e9e4a898ea3201fe01399563}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashWelBitSetWait@{GsnFlashIf\_\-FlashWelBitSetWait}}
+\index{GsnFlashIf\_\-FlashWelBitSetWait@{GsnFlashIf\_\-FlashWelBitSetWait}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashWelBitSetWait}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-FlashWelBitSetWait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_gaa4154e89e9e4a898ea3201fe01399563}
+
+
+FlashIf FlashWelBitSetWait. 
+
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+
+
+Definition at line 646 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_gaa4154e89e9e4a898ea3201fe01399563_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_gaa4154e89e9e4a898ea3201fe01399563_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00647_gaa765eb6f46ca5e3787deb574e035a43b}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashWriteDisable@{GsnFlashIf\_\-FlashWriteDisable}}
+\index{GsnFlashIf\_\-FlashWriteDisable@{GsnFlashIf\_\-FlashWriteDisable}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashWriteDisable}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-FlashWriteDisable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_gaa765eb6f46ca5e3787deb574e035a43b}
+
+
+FlashIf Flash Write Disable. 
+
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+
+
+Definition at line 710 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_gaa765eb6f46ca5e3787deb574e035a43b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00647_ga73f637bd9c4acf82825974b750102043}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-FlashWriteEnable@{GsnFlashIf\_\-FlashWriteEnable}}
+\index{GsnFlashIf\_\-FlashWriteEnable@{GsnFlashIf\_\-FlashWriteEnable}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-FlashWriteEnable}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-FlashWriteEnable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga73f637bd9c4acf82825974b750102043}
+
+
+FlashIf Flash Write Enable. 
+
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+
+
+Definition at line 682 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga73f637bd9c4acf82825974b750102043_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga73f637bd9c4acf82825974b750102043_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00647_gaca0cbeb5224273baff05b9bb8f18f28f}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-Init@{GsnFlashIf\_\-Init}}
+\index{GsnFlashIf\_\-Init@{GsnFlashIf\_\-Init}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnFlashIf\_\-Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_gaca0cbeb5224273baff05b9bb8f18f28f}
+
+
+FlashIf Init. 
+
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+\hypertarget{a00647_ga2e45a3d239aacf23775f49d45451cb39}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-Open@{GsnFlashIf\_\-Open}}
+\index{GsnFlashIf\_\-Open@{GsnFlashIf\_\-Open}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-Open}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnFlashIf\_\-Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga2e45a3d239aacf23775f49d45451cb39}
+
+
+FlashIf open. 
+
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+\hypertarget{a00647_gafdff247602c68652a230d5335f34f519}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-PioRelease@{GsnFlashIf\_\-PioRelease}}
+\index{GsnFlashIf\_\-PioRelease@{GsnFlashIf\_\-PioRelease}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-PioRelease}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-PioRelease (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_gafdff247602c68652a230d5335f34f519}
+
+
+FlashIf Pio Release. 
+
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+
+
+Definition at line 560 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00647_ga5acfd4e90824451ba8ac4ec7f2aef58e}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-PioReq@{GsnFlashIf\_\-PioReq}}
+\index{GsnFlashIf\_\-PioReq@{GsnFlashIf\_\-PioReq}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-PioReq}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-PioReq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga5acfd4e90824451ba8ac4ec7f2aef58e}
+
+
+FlashIf Pio Request. 
+
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+
+
+Definition at line 539 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00647_ga035c5d3ec64ab8e86cacf6cd39762303}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-PioRxFifoDataWait@{GsnFlashIf\_\-PioRxFifoDataWait}}
+\index{GsnFlashIf\_\-PioRxFifoDataWait@{GsnFlashIf\_\-PioRxFifoDataWait}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-PioRxFifoDataWait}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-PioRxFifoDataWait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga035c5d3ec64ab8e86cacf6cd39762303}
+
+
+Wait for FlashIf Pio Rx fifo Data. 
+
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+
+
+Definition at line 479 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga035c5d3ec64ab8e86cacf6cd39762303_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00647_ga3c41c43e8ea5c81f7c5307820685fdaf}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-PioRxFifoRead@{GsnFlashIf\_\-PioRxFifoRead}}
+\index{GsnFlashIf\_\-PioRxFifoRead@{GsnFlashIf\_\-PioRxFifoRead}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-PioRxFifoRead}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf UINT32} GsnFlashIf\_\-PioRxFifoRead (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga3c41c43e8ea5c81f7c5307820685fdaf}
+
+
+Read FlashIf Pio Rx fifo Data. 
+
+\begin{DoxyReturn}{Returns}
+data. 
+\end{DoxyReturn}
+
+
+Definition at line 499 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga3c41c43e8ea5c81f7c5307820685fdaf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga3c41c43e8ea5c81f7c5307820685fdaf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00647_ga0e52d153a54a5e099ea53b4ab2ba02bc}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-PioTxFifoEmptyWait@{GsnFlashIf\_\-PioTxFifoEmptyWait}}
+\index{GsnFlashIf\_\-PioTxFifoEmptyWait@{GsnFlashIf\_\-PioTxFifoEmptyWait}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-PioTxFifoEmptyWait}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-PioTxFifoEmptyWait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga0e52d153a54a5e099ea53b4ab2ba02bc}
+
+
+Wait for FlashIf Pio Tx fifo empty. 
+
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+
+
+Definition at line 443 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga0e52d153a54a5e099ea53b4ab2ba02bc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00647_ga31cfba744b7133b256ba57713dc14e0f}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-PioTxFifoWrite@{GsnFlashIf\_\-PioTxFifoWrite}}
+\index{GsnFlashIf\_\-PioTxFifoWrite@{GsnFlashIf\_\-PioTxFifoWrite}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-PioTxFifoWrite}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-PioTxFifoWrite (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{data}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga31cfba744b7133b256ba57713dc14e0f}
+
+
+FlashIf Pio Tx fifo write. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ IN data to be written to fifo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+
+
+Definition at line 464 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga31cfba744b7133b256ba57713dc14e0f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00647_ga31cfba744b7133b256ba57713dc14e0f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00647_ga2e7a4bf76eb4e6da69d976bd9337a863}{
+\index{GSN Flash IF API.@{GSN Flash IF API.}!GsnFlashIf\_\-StatusIdleWait@{GsnFlashIf\_\-StatusIdleWait}}
+\index{GsnFlashIf\_\-StatusIdleWait@{GsnFlashIf\_\-StatusIdleWait}!GSN Flash IF API.@{GSN Flash IF API.}}
+\subsubsection[{GsnFlashIf\_\-StatusIdleWait}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-StatusIdleWait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00647_ga2e7a4bf76eb4e6da69d976bd9337a863}
+
+
+FlashIf Status Idle wait. 
+
+This function waits if FlashIf status is Idle \begin{DoxyReturn}{Returns}
+VOID. 
+\end{DoxyReturn}
+
+
+Definition at line 519 of file gsn\_\-flash\_\-if.h.
+

@@ -1,0 +1,25 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="12",labelfontname="FreeSans",labelfontsize="12"];
+  node [fontname="FreeSans",fontsize="12",shape=record];
+  Node1 [label="gsn_uart.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="12",style="solid"];
+  Node2 [label="gsn_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00621.html",tooltip="GSN Basic types. This file contains the basic types."];
+  Node1 -> Node3 [color="midnightblue",fontsize="12",style="solid"];
+  Node3 [label="gsn_defines.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00498.html",tooltip="GSN General Definitions. This file contains general definitions."];
+  Node3 -> Node2 [color="midnightblue",fontsize="12",style="solid"];
+  Node1 -> Node4 [color="midnightblue",fontsize="12",style="solid"];
+  Node4 [label="gsn_error.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00510.html",tooltip="GSN Error Codes. This file contains the error codes used throughout the GSN software."];
+  Node1 -> Node5 [color="midnightblue",fontsize="12",style="solid"];
+  Node5 [label="core\\osal\\gsn_osal_threadx.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00553.html",tooltip="GSN OSAL public header file for threadx. This file contains the public APIs and structures of OSAL mo..."];
+  Node5 -> Node6 [color="midnightblue",fontsize="12",style="solid"];
+  Node6 [label="tx_api.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node7 [color="midnightblue",fontsize="12",style="solid"];
+  Node7 [label="tx_port.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node8 [color="midnightblue",fontsize="12",style="solid"];
+  Node8 [label="clk_ctl\\gsn_clk_ctl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00494.html",tooltip="GSN CLK CTL API Definitions. This file contains the public APIs definitions and structures of Clock C..."];
+  Node8 -> Node9 [color="midnightblue",fontsize="12",style="solid"];
+  Node9 [label="core\\reg\\gsn_reg_rtc_spec.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00589.html"];
+  Node8 -> Node10 [color="midnightblue",fontsize="12",style="solid"];
+  Node10 [label="core\\reg\\gsn_reg_rtc_op.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00588.html"];
+}

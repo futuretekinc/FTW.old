@@ -1,0 +1,169 @@
+\hypertarget{a00248}{
+\section{GSN\_\-SYS\_\-CTL\_\-CTX Struct Reference}
+\label{a00248}\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+}
+
+
+{\ttfamily \#include $<$gsn\_\-sys\_\-ctl.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} \hyperlink{a00248_afe071d7dcf0fdfb6314fefc4b6f663df}{tcb}
+\item 
+\hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T} \hyperlink{a00248_a3525baeed8d9f795ed0c44437f548da2}{msgQueue}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00248_a3e06cb8fa58f49b7004a85c6f387ddc7}{sysQualTskID}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00248_ae57ae92e651751e7978e237c55133b4c}{macIfNum}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00248_a608e9ec21e3e188328d47a7bba1483ec}{fsDriveNum}
+\item 
+\hyperlink{a00261}{GSN\_\-SYSIF\_\-CTX\_\-T} $\ast$ \hyperlink{a00248_a48d2f968a8bd5038d7077bf2e4384997}{pSysifCtx}
+\item 
+\hyperlink{a00253}{GSN\_\-SYS\_\-CTL\_\-NOTIF\_\-CB\_\-T} \hyperlink{a00248_a370ca4360a52490e9882d4057c6acdb8}{notif}
+\item 
+\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} \hyperlink{a00248_a1375db10dcc5c2669543b8bdea7c9294}{blockngApiEntryLock}
+\item 
+\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} \hyperlink{a00248_ad31b28c2c1d66a49676adefa0939184e}{blockngApiExitLock}
+\item 
+VOID $\ast$ \hyperlink{a00248_a578079528c6283b8779beb3a12945bf9}{blockngApiUserBuf}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00248_ad828642fbf78687924f94c89931c9e13}{blockngApiUserBufSize}
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00248_a9058d044509dc3901de07c426d816472}{blockngApiStatus}
+\item 
+\hyperlink{a00254}{GSN\_\-SYS\_\-CTL\_\-NOTIF\_\-EXTN\_\-CB\_\-T} \hyperlink{a00248_a1fe815b73d4c098303ba56581ebf1cd3}{notifExtn}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 108 of file gsn\_\-sys\_\-ctl.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00248_a1375db10dcc5c2669543b8bdea7c9294}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!blockngApiEntryLock@{blockngApiEntryLock}}
+\index{blockngApiEntryLock@{blockngApiEntryLock}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{blockngApiEntryLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-SEM\_\-T} {\bf blockngApiEntryLock}}}
+\label{a00248_a1375db10dcc5c2669543b8bdea7c9294}
+Multiple Tasks may pend on thi ssemaphore 
+
+Definition at line 118 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_ad31b28c2c1d66a49676adefa0939184e}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!blockngApiExitLock@{blockngApiExitLock}}
+\index{blockngApiExitLock@{blockngApiExitLock}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{blockngApiExitLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-SEM\_\-T} {\bf blockngApiExitLock}}}
+\label{a00248_ad31b28c2c1d66a49676adefa0939184e}
+Only a single task pend on this at a time 
+
+Definition at line 119 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_a9058d044509dc3901de07c426d816472}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!blockngApiStatus@{blockngApiStatus}}
+\index{blockngApiStatus@{blockngApiStatus}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{blockngApiStatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} {\bf blockngApiStatus}}}
+\label{a00248_a9058d044509dc3901de07c426d816472}
+
+
+Definition at line 122 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_a578079528c6283b8779beb3a12945bf9}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!blockngApiUserBuf@{blockngApiUserBuf}}
+\index{blockngApiUserBuf@{blockngApiUserBuf}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{blockngApiUserBuf}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf blockngApiUserBuf}}}
+\label{a00248_a578079528c6283b8779beb3a12945bf9}
+
+
+Definition at line 120 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_ad828642fbf78687924f94c89931c9e13}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!blockngApiUserBufSize@{blockngApiUserBufSize}}
+\index{blockngApiUserBufSize@{blockngApiUserBufSize}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{blockngApiUserBufSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf blockngApiUserBufSize}}}
+\label{a00248_ad828642fbf78687924f94c89931c9e13}
+
+
+Definition at line 121 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_a608e9ec21e3e188328d47a7bba1483ec}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!fsDriveNum@{fsDriveNum}}
+\index{fsDriveNum@{fsDriveNum}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{fsDriveNum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf fsDriveNum}}}
+\label{a00248_a608e9ec21e3e188328d47a7bba1483ec}
+File SSystem Drive Number 
+
+Definition at line 115 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_ae57ae92e651751e7978e237c55133b4c}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!macIfNum@{macIfNum}}
+\index{macIfNum@{macIfNum}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{macIfNum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf macIfNum}}}
+\label{a00248_ae57ae92e651751e7978e237c55133b4c}
+
+
+Definition at line 114 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_a3525baeed8d9f795ed0c44437f548da2}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!msgQueue@{msgQueue}}
+\index{msgQueue@{msgQueue}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{msgQueue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-QUEUE\_\-T} {\bf msgQueue}}}
+\label{a00248_a3525baeed8d9f795ed0c44437f548da2}
+message queue handle 
+
+Definition at line 111 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_a370ca4360a52490e9882d4057c6acdb8}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!notif@{notif}}
+\index{notif@{notif}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{notif}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SYS\_\-CTL\_\-NOTIF\_\-CB\_\-T} {\bf notif}}}
+\label{a00248_a370ca4360a52490e9882d4057c6acdb8}
+
+
+Definition at line 117 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_a1fe815b73d4c098303ba56581ebf1cd3}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!notifExtn@{notifExtn}}
+\index{notifExtn@{notifExtn}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{notifExtn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SYS\_\-CTL\_\-NOTIF\_\-EXTN\_\-CB\_\-T} {\bf notifExtn}}}
+\label{a00248_a1fe815b73d4c098303ba56581ebf1cd3}
+
+
+Definition at line 123 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_a48d2f968a8bd5038d7077bf2e4384997}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!pSysifCtx@{pSysifCtx}}
+\index{pSysifCtx@{pSysifCtx}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{pSysifCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SYSIF\_\-CTX\_\-T}$\ast$ {\bf pSysifCtx}}}
+\label{a00248_a48d2f968a8bd5038d7077bf2e4384997}
+
+
+Definition at line 116 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_a3e06cb8fa58f49b7004a85c6f387ddc7}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!sysQualTskID@{sysQualTskID}}
+\index{sysQualTskID@{sysQualTskID}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{sysQualTskID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf sysQualTskID}}}
+\label{a00248_a3e06cb8fa58f49b7004a85c6f387ddc7}
+sys qual task ID for the Message handler task 
+
+Definition at line 112 of file gsn\_\-sys\_\-ctl.h.
+
+\hypertarget{a00248_afe071d7dcf0fdfb6314fefc4b6f663df}{
+\index{GSN\_\-SYS\_\-CTL\_\-CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}!tcb@{tcb}}
+\index{tcb@{tcb}!GSN_SYS_CTL_CTX@{GSN\_\-SYS\_\-CTL\_\-CTX}}
+\subsubsection[{tcb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} {\bf tcb}}}
+\label{a00248_afe071d7dcf0fdfb6314fefc4b6f663df}
+Message handler task control block 
+
+Definition at line 110 of file gsn\_\-sys\_\-ctl.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00592}{gsn\_\-sys\_\-ctl.h}\end{DoxyCompactItemize}

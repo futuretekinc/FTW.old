@@ -1,0 +1,157 @@
+\hypertarget{a00636}{
+\section{GSN WIF WLAN Control API}
+\label{a00636}\index{GSN WIF WLAN Control API@{GSN WIF WLAN Control API}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00247}{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em Boot Request Parameter This defines the Boot request API parameter structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00636_ga3c3fb4bb2d829ffe7098bdd4ee283a42}{GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT}~10
+\begin{DoxyCompactList}\small\item\em API type identifier definition. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00636_ga1bd275f0a8f47dba99b6e22adcb67ca4}{GSN\_\-WIF\_\-API\_\-TYPE\_\-SYS\_\-CTL}~0x0
+\begin{DoxyCompactList}\small\item\em API types. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00636_ga35490aa95424208d771f9ce5466c4dc2}{GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-REQ}~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 0)
+\begin{DoxyCompactList}\small\item\em System Control API. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00636_ga807417e493752092e13b44e6f31b896e}{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-REQ}~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 0)
+\begin{DoxyCompactList}\small\item\em WLAN Control API. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00636_gaaf48f3ebb3fabb793cc8b5663aff7251}{GSN\_\-WIF\_\-API\_\-ISOTX\_\-BLINK\_\-REQ}~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ 0)
+\begin{DoxyCompactList}\small\item\em ISOTX Control API. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00636_ga65249c647288361df35fafec69154f96}{GSN\_\-WIF\_\-API\_\-CAL\_\-RUN}~(GSN\_\-WIF\_\-API\_\-CAL\_\-CTL $|$ 0)
+\begin{DoxyCompactList}\small\item\em CAL Control API. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00636_ga141fe1f244ec03a374f1efba9524991c}{GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-PEEK\_\-REQ}~(GSN\_\-WIF\_\-API\_\-DBG $|$ 0)
+\begin{DoxyCompactList}\small\item\em Debug API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00636_gad3465a5565359704a4c7d30e8e3ff127}{GSN\_\-WIF\_\-INIT\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} status)
+\begin{DoxyCompactList}\small\item\em Boot indication CB definition. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00247}{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM} \hyperlink{a00636_ga131a12dab3ad56372462964539832fe9}{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Boot Request Parameter This defines the Boot request API parameter structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+END of coresvcdoc.
+
+This group of APIs provides WLAN control path. 
+
+\subsection{Define Documentation}
+\hypertarget{a00636_ga65249c647288361df35fafec69154f96}{
+\index{GSN WIF WLAN Control API@{GSN WIF WLAN Control API}!GSN\_\-WIF\_\-API\_\-CAL\_\-RUN@{GSN\_\-WIF\_\-API\_\-CAL\_\-RUN}}
+\index{GSN\_\-WIF\_\-API\_\-CAL\_\-RUN@{GSN\_\-WIF\_\-API\_\-CAL\_\-RUN}!GSN WIF WLAN Control API@{GSN WIF WLAN Control API}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-CAL\_\-RUN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-CAL\_\-RUN~(GSN\_\-WIF\_\-API\_\-CAL\_\-CTL $|$ 0)}}
+\label{a00636_ga65249c647288361df35fafec69154f96}
+
+
+CAL Control API. 
+
+CAL Control APIs 
+
+Definition at line 330 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00636_ga141fe1f244ec03a374f1efba9524991c}{
+\index{GSN WIF WLAN Control API@{GSN WIF WLAN Control API}!GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-PEEK\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-PEEK\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-PEEK\_\-REQ@{GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-PEEK\_\-REQ}!GSN WIF WLAN Control API@{GSN WIF WLAN Control API}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-PEEK\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-DBG\_\-REG\_\-PEEK\_\-REQ~(GSN\_\-WIF\_\-API\_\-DBG $|$ 0)}}
+\label{a00636_ga141fe1f244ec03a374f1efba9524991c}
+
+
+Debug API. 
+
+Debug APIs 
+
+Definition at line 352 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00636_gaaf48f3ebb3fabb793cc8b5663aff7251}{
+\index{GSN WIF WLAN Control API@{GSN WIF WLAN Control API}!GSN\_\-WIF\_\-API\_\-ISOTX\_\-BLINK\_\-REQ@{GSN\_\-WIF\_\-API\_\-ISOTX\_\-BLINK\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-ISOTX\_\-BLINK\_\-REQ@{GSN\_\-WIF\_\-API\_\-ISOTX\_\-BLINK\_\-REQ}!GSN WIF WLAN Control API@{GSN WIF WLAN Control API}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-ISOTX\_\-BLINK\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-ISOTX\_\-BLINK\_\-REQ~(GSN\_\-WIF\_\-API\_\-ISOTX\_\-CTL $|$ 0)}}
+\label{a00636_gaaf48f3ebb3fabb793cc8b5663aff7251}
+
+
+ISOTX Control API. 
+
+ISOTX Control APIs 
+
+Definition at line 307 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00636_ga35490aa95424208d771f9ce5466c4dc2}{
+\index{GSN WIF WLAN Control API@{GSN WIF WLAN Control API}!GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-REQ@{GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-REQ}!GSN WIF WLAN Control API@{GSN WIF WLAN Control API}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-SYS\_\-BOOT\_\-REQ~(GSN\_\-WIF\_\-API\_\-SYS\_\-CTL $|$ 0)}}
+\label{a00636_ga35490aa95424208d771f9ce5466c4dc2}
+
+
+System Control API. 
+
+System Control APIs 
+
+Definition at line 144 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00636_ga3c3fb4bb2d829ffe7098bdd4ee283a42}{
+\index{GSN WIF WLAN Control API@{GSN WIF WLAN Control API}!GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT@{GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT@{GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT}!GSN WIF WLAN Control API@{GSN WIF WLAN Control API}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-SHIFT~10}}
+\label{a00636_ga3c3fb4bb2d829ffe7098bdd4ee283a42}
+
+
+API type identifier definition. 
+
+This defines the API type identifier format. The upper 6 bits are for API type and lower 10 bits are for subtype. 
+
+Definition at line 102 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00636_ga1bd275f0a8f47dba99b6e22adcb67ca4}{
+\index{GSN WIF WLAN Control API@{GSN WIF WLAN Control API}!GSN\_\-WIF\_\-API\_\-TYPE\_\-SYS\_\-CTL@{GSN\_\-WIF\_\-API\_\-TYPE\_\-SYS\_\-CTL}}
+\index{GSN\_\-WIF\_\-API\_\-TYPE\_\-SYS\_\-CTL@{GSN\_\-WIF\_\-API\_\-TYPE\_\-SYS\_\-CTL}!GSN WIF WLAN Control API@{GSN WIF WLAN Control API}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-TYPE\_\-SYS\_\-CTL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-TYPE\_\-SYS\_\-CTL~0x0}}
+\label{a00636_ga1bd275f0a8f47dba99b6e22adcb67ca4}
+
+
+API types. 
+
+API type identifier 
+
+Definition at line 114 of file gsn\_\-wif\_\-api.h.
+
+\hypertarget{a00636_ga807417e493752092e13b44e6f31b896e}{
+\index{GSN WIF WLAN Control API@{GSN WIF WLAN Control API}!GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-REQ}}
+\index{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-REQ@{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-REQ}!GSN WIF WLAN Control API@{GSN WIF WLAN Control API}}
+\subsubsection[{GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-REQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-API\_\-WLAN\_\-CONNECT\_\-REQ~(GSN\_\-WIF\_\-API\_\-WLAN\_\-CTL $|$ 0)}}
+\label{a00636_ga807417e493752092e13b44e6f31b896e}
+
+
+WLAN Control API. 
+
+WLAN Control APIs 
+
+Definition at line 188 of file gsn\_\-wif\_\-api.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00636_ga131a12dab3ad56372462964539832fe9}{
+\index{GSN WIF WLAN Control API@{GSN WIF WLAN Control API}!GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM\_\-T@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM\_\-T}}
+\index{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM\_\-T@{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM\_\-T}!GSN WIF WLAN Control API@{GSN WIF WLAN Control API}}
+\subsubsection[{GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM} {\bf GSN\_\-SYS\_\-CTL\_\-BOOT\_\-REQ\_\-PARAM\_\-T}}}
+\label{a00636_ga131a12dab3ad56372462964539832fe9}
+
+
+Boot Request Parameter This defines the Boot request API parameter structure. 
+
+\hypertarget{a00636_gad3465a5565359704a4c7d30e8e3ff127}{
+\index{GSN WIF WLAN Control API@{GSN WIF WLAN Control API}!GSN\_\-WIF\_\-INIT\_\-CB\_\-T@{GSN\_\-WIF\_\-INIT\_\-CB\_\-T}}
+\index{GSN\_\-WIF\_\-INIT\_\-CB\_\-T@{GSN\_\-WIF\_\-INIT\_\-CB\_\-T}!GSN WIF WLAN Control API@{GSN WIF WLAN Control API}}
+\subsubsection[{GSN\_\-WIF\_\-INIT\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-WIF\_\-INIT\_\-CB\_\-T})(VOID $\ast$ctx, {\bf GSN\_\-STATUS} status)}}
+\label{a00636_gad3465a5565359704a4c7d30e8e3ff127}
+
+
+Boot indication CB definition. 
+
+
+
+Definition at line 96 of file gsn\_\-wif\_\-common.h.
+

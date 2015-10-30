@@ -1,0 +1,322 @@
+\hypertarget{a00641}{
+\section{GSN WLAN Definitions}
+\label{a00641}\index{GSN WLAN Definitions@{GSN WLAN Definitions}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00416}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-S}
+\begin{DoxyCompactList}\small\item\em structured type for holding MAC address. \end{DoxyCompactList}\item 
+struct \hyperlink{a00417}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-S}
+\begin{DoxyCompactList}\small\item\em GSN WLAN MAC SSID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00641_gab875910eb7b2ccc2d9d632ad20f6564c}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-LEN}~6
+\begin{DoxyCompactList}\small\item\em default value of the length of a MAC address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00641_ga52dec04a012aa9893ac84e96062c470b}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE} \{ \par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470bae09f79c4995407cd667ad1b5abcc9612}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE} =  0, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470ba0a2c019c8d7d286adeef4d155fdd290d}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE}, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470bac927d28ebd0a87f1039ffad73c3915af}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470bab745f3653e21ca78e739e1a6d353c3cb}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470ba8b4ffffa89d273529027dd15468a235a}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470ba546c8c8247779348d500fa7251e8e86f}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}, 
+\par
+\hyperlink{a00641_gga52dec04a012aa9893ac84e96062c470ba3257c6240a97ccd25ac86623647bfa7f}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}
+ \}
+\begin{DoxyCompactList}\small\item\em enum definig the scan types. \end{DoxyCompactList}\item 
+enum \hyperlink{a00641_ga3f0acfab3987e81164e864f7186c7187}{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-S} \{ \par
+\hyperlink{a00641_gga3f0acfab3987e81164e864f7186c7187a770294a815837fe9c2dc6bde4b3d4dd2}{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-PROBE\_\-RSP} =  0x50, 
+\par
+\hyperlink{a00641_gga3f0acfab3987e81164e864f7186c7187a367086e0b187f766c247e036f4791cac}{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-BEACON} =  0x80
+ \}
+\begin{DoxyCompactList}\small\item\em scan response frame type \end{DoxyCompactList}\item 
+enum \hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38}{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-E} \{ \par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a9258d0f7cded17bc5ab41dd8257f3700}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-B\_\-ONLY}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a1a7b120674a9ec20783b762dedc89a88}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-G\_\-ONLY}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38ae6b5f2dd183f21b571117e253f8d3a5f}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BG\_\-MIXED}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a7d1e257501850ebbe688e222ae2ffcb0}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BGN\_\-MIXED}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a62ad918b30aad8dec0a843c4776e568f}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-ONLY}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a6b517b7ed73031d71230816e95cbdf5c}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-2040}, 
+\par
+\hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a350412525ef42f390e738696528ab4ed}{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-MAX}
+ \}
+\item 
+typedef enum \hyperlink{a00641_ga52dec04a012aa9893ac84e96062c470b}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE} \hyperlink{a00641_gab674354b3ef30f1389f12adc7d3e887e}{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em enum definig the scan types. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00416}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-S} \hyperlink{a00641_gabf7f5cc6656c9288e5d56c8aeafc8477}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T}
+\begin{DoxyCompactList}\small\item\em structured type for holding MAC address. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00641_ga3f0acfab3987e81164e864f7186c7187}{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-S} \hyperlink{a00641_gaa94bed1d5a9ada3dfd819b8719bf6d55}{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em scan response frame type \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00417}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-S} \hyperlink{a00641_gab5c477ba63fc3009f84b8dfc5efb6b81}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WLAN MAC SSID. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00641_ga9150700f5a8033a0c34dba0d69e2ff38}{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-E} \hyperlink{a00641_ga9f600b5e4ee36d4315abb0cd1e0b1a78}{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-T}
+\item 
+\#define \hyperlink{a00641_gabe983e40f4fad264d1750aa6c4bcfcac}{GSN\_\-WLAN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN}~0
+\begin{DoxyCompactList}\small\item\em SSID length options (broadcast or standard). \end{DoxyCompactList}\item 
+\#define \hyperlink{a00641_ga81f65ed973227d85ed9048e0047663da}{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-CHNLS}~14
+\begin{DoxyCompactList}\small\item\em Maximum number of channels. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00641_gae731ba25818bdbc75a996de819a860e6}{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-FRAME\_\-LEN}~512
+\begin{DoxyCompactList}\small\item\em Max MAC frame length. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00641_ga8c7cea28939d8ce06e159841483e73c9}{GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED}~7
+\begin{DoxyCompactList}\small\item\em MCS supported. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00641_ga93c24ba92c21c82b929e23b532ec4002}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-LEN}~32
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+END of coresvcdoc.
+
+This group contains WLAN definitions. 
+
+\subsection{Define Documentation}
+\hypertarget{a00641_gab875910eb7b2ccc2d9d632ad20f6564c}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-LEN@{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-LEN}}
+\index{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-LEN@{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-LEN}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-LEN~6}}
+\label{a00641_gab875910eb7b2ccc2d9d632ad20f6564c}
+
+
+default value of the length of a MAC address. 
+
+
+
+Definition at line 98 of file gsn\_\-wlan\_\-defs.h.
+
+\hypertarget{a00641_gabe983e40f4fad264d1750aa6c4bcfcac}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN@{GSN\_\-WLAN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN}}
+\index{GSN\_\-WLAN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN@{GSN\_\-WLAN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WLAN\_\-MAC\_\-BROADCAST\_\-SSID\_\-LEN~0}}
+\label{a00641_gabe983e40f4fad264d1750aa6c4bcfcac}
+
+
+SSID length options (broadcast or standard). 
+
+
+
+Definition at line 107 of file gsn\_\-wlan\_\-defs.h.
+
+\hypertarget{a00641_ga81f65ed973227d85ed9048e0047663da}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-MAX\_\-CHNLS@{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-CHNLS}}
+\index{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-CHNLS@{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-CHNLS}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-CHNLS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WLAN\_\-MAC\_\-MAX\_\-CHNLS~14}}
+\label{a00641_ga81f65ed973227d85ed9048e0047663da}
+
+
+Maximum number of channels. 
+
+
+
+Definition at line 117 of file gsn\_\-wlan\_\-defs.h.
+
+\hypertarget{a00641_gae731ba25818bdbc75a996de819a860e6}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-MAX\_\-FRAME\_\-LEN@{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-FRAME\_\-LEN}}
+\index{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-FRAME\_\-LEN@{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-FRAME\_\-LEN}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-MAC\_\-MAX\_\-FRAME\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WLAN\_\-MAC\_\-MAX\_\-FRAME\_\-LEN~512}}
+\label{a00641_gae731ba25818bdbc75a996de819a860e6}
+
+
+Max MAC frame length. 
+
+
+
+Definition at line 125 of file gsn\_\-wlan\_\-defs.h.
+
+\hypertarget{a00641_ga93c24ba92c21c82b929e23b532ec4002}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-SSID\_\-LEN@{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-LEN}}
+\index{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-LEN@{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-LEN}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WLAN\_\-MAC\_\-SSID\_\-LEN~32}}
+\label{a00641_ga93c24ba92c21c82b929e23b532ec4002}
+
+
+Definition at line 108 of file gsn\_\-wlan\_\-defs.h.
+
+\hypertarget{a00641_ga8c7cea28939d8ce06e159841483e73c9}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED@{GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED}}
+\index{GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED@{GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WLAN\_\-MAX\_\-MCS\_\-SUPPORTED~7}}
+\label{a00641_ga8c7cea28939d8ce06e159841483e73c9}
+
+
+MCS supported. 
+
+
+
+Definition at line 133 of file gsn\_\-wlan\_\-defs.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00641_ga9f600b5e4ee36d4315abb0cd1e0b1a78}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-T@{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-T}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-E}  {\bf GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-T}}}
+\label{a00641_ga9f600b5e4ee36d4315abb0cd1e0b1a78}
+\hypertarget{a00641_gabf7f5cc6656c9288e5d56c8aeafc8477}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T@{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T}}
+\index{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T@{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-S}  {\bf GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T}}}
+\label{a00641_gabf7f5cc6656c9288e5d56c8aeafc8477}
+
+
+structured type for holding MAC address. 
+
+\hypertarget{a00641_gab674354b3ef30f1389f12adc7d3e887e}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-T@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-T}}
+\index{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-T@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-T}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE}  {\bf GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-T}}}
+\label{a00641_gab674354b3ef30f1389f12adc7d3e887e}
+
+
+enum definig the scan types. 
+
+\hypertarget{a00641_gab5c477ba63fc3009f84b8dfc5efb6b81}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T@{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T}}
+\index{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T@{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WLAN\_\-MAC\_\-SSID\_\-S}  {\bf GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T}}}
+\label{a00641_gab5c477ba63fc3009f84b8dfc5efb6b81}
+
+
+GSN WLAN MAC SSID. 
+
+Structure defining SSID type. \hypertarget{a00641_gaa94bed1d5a9ada3dfd819b8719bf6d55}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-T@{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-T}}
+\index{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-T@{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-T}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-S} {\bf GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-T}}}
+\label{a00641_gaa94bed1d5a9ada3dfd819b8719bf6d55}
+
+
+scan response frame type 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00641_ga9150700f5a8033a0c34dba0d69e2ff38}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-E}}
+\index{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-E@{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-E}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-WLAN\_\-PHY\_\-MODE\_\-E}}}
+\label{a00641_ga9150700f5a8033a0c34dba0d69e2ff38}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-B\_\-ONLY@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-B\_\-ONLY}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-PHY\_\-MODE\_\-B\_\-ONLY@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-B\_\-ONLY}}\item[{\em 
+\hypertarget{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a9258d0f7cded17bc5ab41dd8257f3700}{
+GSN\_\-WLAN\_\-PHY\_\-MODE\_\-B\_\-ONLY}
+\label{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a9258d0f7cded17bc5ab41dd8257f3700}
+}]\index{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-G\_\-ONLY@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-G\_\-ONLY}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-PHY\_\-MODE\_\-G\_\-ONLY@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-G\_\-ONLY}}\item[{\em 
+\hypertarget{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a1a7b120674a9ec20783b762dedc89a88}{
+GSN\_\-WLAN\_\-PHY\_\-MODE\_\-G\_\-ONLY}
+\label{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a1a7b120674a9ec20783b762dedc89a88}
+}]\index{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BG\_\-MIXED@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BG\_\-MIXED}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BG\_\-MIXED@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BG\_\-MIXED}}\item[{\em 
+\hypertarget{a00641_ga9150700f5a8033a0c34dba0d69e2ff38ae6b5f2dd183f21b571117e253f8d3a5f}{
+GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BG\_\-MIXED}
+\label{a00641_ga9150700f5a8033a0c34dba0d69e2ff38ae6b5f2dd183f21b571117e253f8d3a5f}
+}]\index{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BGN\_\-MIXED@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BGN\_\-MIXED}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BGN\_\-MIXED@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BGN\_\-MIXED}}\item[{\em 
+\hypertarget{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a7d1e257501850ebbe688e222ae2ffcb0}{
+GSN\_\-WLAN\_\-PHY\_\-MODE\_\-BGN\_\-MIXED}
+\label{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a7d1e257501850ebbe688e222ae2ffcb0}
+}]\index{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-ONLY@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-ONLY}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-ONLY@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-ONLY}}\item[{\em 
+\hypertarget{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a62ad918b30aad8dec0a843c4776e568f}{
+GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-ONLY}
+\label{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a62ad918b30aad8dec0a843c4776e568f}
+}]\index{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-2040@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-2040}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-2040@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-2040}}\item[{\em 
+\hypertarget{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a6b517b7ed73031d71230816e95cbdf5c}{
+GSN\_\-WLAN\_\-PHY\_\-MODE\_\-N\_\-2040}
+\label{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a6b517b7ed73031d71230816e95cbdf5c}
+}]\index{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-MAX@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-MAX}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-PHY\_\-MODE\_\-MAX@{GSN\_\-WLAN\_\-PHY\_\-MODE\_\-MAX}}\item[{\em 
+\hypertarget{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a350412525ef42f390e738696528ab4ed}{
+GSN\_\-WLAN\_\-PHY\_\-MODE\_\-MAX}
+\label{a00641_ga9150700f5a8033a0c34dba0d69e2ff38a350412525ef42f390e738696528ab4ed}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 188 of file gsn\_\-wlan\_\-defs.h.
+
+\hypertarget{a00641_ga52dec04a012aa9893ac84e96062c470b}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE}}
+\index{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE}}}
+\label{a00641_ga52dec04a012aa9893ac84e96062c470b}
+
+
+enum definig the scan types. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE}}\item[{\em 
+\hypertarget{a00641_gga52dec04a012aa9893ac84e96062c470bae09f79c4995407cd667ad1b5abcc9612}{
+GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-PASSIVE}
+\label{a00641_gga52dec04a012aa9893ac84e96062c470bae09f79c4995407cd667ad1b5abcc9612}
+}]passive scan \index{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE}}\item[{\em 
+\hypertarget{a00641_gga52dec04a012aa9893ac84e96062c470ba0a2c019c8d7d286adeef4d155fdd290d}{
+GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-ACTIVE}
+\label{a00641_gga52dec04a012aa9893ac84e96062c470ba0a2c019c8d7d286adeef4d155fdd290d}
+}]active scan \index{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}}\item[{\em 
+\hypertarget{a00641_gga52dec04a012aa9893ac84e96062c470bac927d28ebd0a87f1039ffad73c3915af}{
+GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-ONLY}
+\label{a00641_gga52dec04a012aa9893ac84e96062c470bac927d28ebd0a87f1039ffad73c3915af}
+}]scan for p2p devices only \index{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}}\item[{\em 
+\hypertarget{a00641_gga52dec04a012aa9893ac84e96062c470bab745f3653e21ca78e739e1a6d353c3cb}{
+GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVTYPE}
+\label{a00641_gga52dec04a012aa9893ac84e96062c470bab745f3653e21ca78e739e1a6d353c3cb}
+}]scan for given p2p device type \index{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}}\item[{\em 
+\hypertarget{a00641_gga52dec04a012aa9893ac84e96062c470ba8b4ffffa89d273529027dd15468a235a}{
+GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-P2P\_\-DEVID}
+\label{a00641_gga52dec04a012aa9893ac84e96062c470ba8b4ffffa89d273529027dd15468a235a}
+}]scan for given p2p device Id \index{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}}\item[{\em 
+\hypertarget{a00641_gga52dec04a012aa9893ac84e96062c470ba546c8c8247779348d500fa7251e8e86f}{
+GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PGRPS}
+\label{a00641_gga52dec04a012aa9893ac84e96062c470ba546c8c8247779348d500fa7251e8e86f}
+}]scan for wlan and p2p groups \index{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS@{GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}}\item[{\em 
+\hypertarget{a00641_gga52dec04a012aa9893ac84e96062c470ba3257c6240a97ccd25ac86623647bfa7f}{
+GSN\_\-WLAN\_\-MAC\_\-SCAN\_\-TYPE\_\-WLAN\_\-AND\_\-P2PDEVS}
+\label{a00641_gga52dec04a012aa9893ac84e96062c470ba3257c6240a97ccd25ac86623647bfa7f}
+}]scan for wlan and p2p devices \end{description}
+\end{Desc}
+
+
+
+Definition at line 141 of file gsn\_\-wlan\_\-defs.h.
+
+\hypertarget{a00641_ga3f0acfab3987e81164e864f7186c7187}{
+\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-S@{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-S}}
+\index{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-S@{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-S}!GSN WLAN Definitions@{GSN WLAN Definitions}}
+\subsubsection[{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-S}}}
+\label{a00641_ga3f0acfab3987e81164e864f7186c7187}
+
+
+scan response frame type 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-PROBE\_\-RSP@{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-PROBE\_\-RSP}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-PROBE\_\-RSP@{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-PROBE\_\-RSP}}\item[{\em 
+\hypertarget{a00641_gga3f0acfab3987e81164e864f7186c7187a770294a815837fe9c2dc6bde4b3d4dd2}{
+GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-PROBE\_\-RSP}
+\label{a00641_gga3f0acfab3987e81164e864f7186c7187a770294a815837fe9c2dc6bde4b3d4dd2}
+}]\index{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-BEACON@{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-BEACON}!GSN WLAN Definitions@{GSN WLAN Definitions}}\index{GSN WLAN Definitions@{GSN WLAN Definitions}!GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-BEACON@{GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-BEACON}}\item[{\em 
+\hypertarget{a00641_gga3f0acfab3987e81164e864f7186c7187a367086e0b187f766c247e036f4791cac}{
+GSN\_\-WLAN\_\-SCAN\_\-RESP\_\-FRAME\_\-TYPE\_\-BEACON}
+\label{a00641_gga3f0acfab3987e81164e864f7186c7187a367086e0b187f766c247e036f4791cac}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 169 of file gsn\_\-wlan\_\-defs.h.
+

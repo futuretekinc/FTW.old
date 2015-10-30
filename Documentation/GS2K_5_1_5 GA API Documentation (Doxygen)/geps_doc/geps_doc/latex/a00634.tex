@@ -1,0 +1,268 @@
+\hypertarget{a00634}{
+\section{GSN Bit and Byte Utilities}
+\label{a00634}\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+}
+\begin{DoxyCompactItemize}
+\item 
+INLINE VOID \hyperlink{a00634_ga93c806730a69f0c559fda3ef2e14ff8e}{GSN\_\-WR\_\-LITEND\_\-U16} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr, const \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} value)
+\begin{DoxyCompactList}\small\item\em This function places the parts of a UINT16 value in two UINT8 buffer slots. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00634_gab1d0f5affe1791a54558477434c44f81}{GSN\_\-WR\_\-LITEND\_\-U32} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr, const \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} value)
+\begin{DoxyCompactList}\small\item\em This function places the parts of a UINT32 value in four UINT8 buffer slots. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00634_ga93374a2fc02fc77a519bb8c23b9968a5}{GSN\_\-RD\_\-LITEND\_\-U16} (const \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr)
+\begin{DoxyCompactList}\small\item\em This function constructs a UINT16 value from two UINT8 buffer slots. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00634_gaa66275afb4728d1a19813412f1867b38}{GSN\_\-RD\_\-LITEND\_\-U32} (const \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr)
+\begin{DoxyCompactList}\small\item\em This function constructs a UINT32 value from four UINT8 buffer slots. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00634_ga33948c00f14501bc1db7b052d0c5f349}{GSN\_\-WR\_\-BIGEND\_\-U16} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr, const \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} value)
+\begin{DoxyCompactList}\small\item\em This function writes a UINT16 to buffer slots in BIG ENDIAN format. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00634_ga60ab53941c9f097c11682045248d549d}{GSN\_\-WR\_\-BIGEND\_\-U32} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr, const \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} value)
+\begin{DoxyCompactList}\small\item\em This function writes a UINT32 to buffer slots in BIG ENDIAN format. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00634_ga56b3884cf803598729efac09feda672e}{GSN\_\-RD\_\-BIGEND\_\-U16} (const \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr)
+\begin{DoxyCompactList}\small\item\em This function reads a UINT16 from buffer slots in BIG ENDIAN format. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00634_gae9bb82c2969564282b416ad9981dc542}{GSN\_\-RD\_\-BIGEND\_\-U32} (const \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$const bufferPtr)
+\begin{DoxyCompactList}\small\item\em This function reads a UINT32 from buffer slots in BIG ENDIAN format. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00634_gab2242ecb8ffd8b5fb6a1647a5b1c9f2a}{swap\_\-16}(x)
+\item 
+\#define \hyperlink{a00634_ga1eb2a90e9ab14824a64a2f6a62b37890}{GSN\_\-MAX}(a, b)~((( a ) $>$= ( b )) ? ( a ) : ( b ))
+\item 
+\#define \hyperlink{a00634_gaca41fe743680cba6df3cbecbc9ab08a9}{GSN\_\-MIN}(a, b)~((( a ) $<$= ( b )) ? ( a ) : ( b ))
+\item 
+\#define \hyperlink{a00634_ga98384a3c4b654dfd7254b0ff4cfb425b}{GSN\_\-NB\_\-ELT}(array)~( sizeof( array )/sizeof(( array )\mbox{[} 0 \mbox{]}))
+\item 
+\#define \hyperlink{a00634_ga3f85373e426f9724f7a911dfbd36e090}{GSN\_\-ALIGN4\_\-SUP}(a)~((( a ) + 3 ) \& ( $\sim$3 ))
+\item 
+\#define \hyperlink{a00634_ga38c4278d40641d58d348be55a4fd91da}{GSN\_\-ALIGN4\_\-INF}(a)~(( a ) \& ( $\sim$3 ))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group contains utilities for manipulating bits, nibbles, and bytes, including big-\/endian and little-\/endian number conversion. 
+
+\subsection{Define Documentation}
+\hypertarget{a00634_ga38c4278d40641d58d348be55a4fd91da}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-ALIGN4\_\-INF@{GSN\_\-ALIGN4\_\-INF}}
+\index{GSN\_\-ALIGN4\_\-INF@{GSN\_\-ALIGN4\_\-INF}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-ALIGN4\_\-INF}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ALIGN4\_\-INF(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~(( a ) \& ( $\sim$3 ))}}
+\label{a00634_ga38c4278d40641d58d348be55a4fd91da}
+
+
+Definition at line 126 of file gsn\_\-util.h.
+
+\hypertarget{a00634_ga3f85373e426f9724f7a911dfbd36e090}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-ALIGN4\_\-SUP@{GSN\_\-ALIGN4\_\-SUP}}
+\index{GSN\_\-ALIGN4\_\-SUP@{GSN\_\-ALIGN4\_\-SUP}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-ALIGN4\_\-SUP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ALIGN4\_\-SUP(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~((( a ) + 3 ) \& ( $\sim$3 ))}}
+\label{a00634_ga3f85373e426f9724f7a911dfbd36e090}
+
+
+Definition at line 118 of file gsn\_\-util.h.
+
+\hypertarget{a00634_ga1eb2a90e9ab14824a64a2f6a62b37890}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-MAX@{GSN\_\-MAX}}
+\index{GSN\_\-MAX@{GSN\_\-MAX}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MAX(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~((( a ) $>$= ( b )) ? ( a ) : ( b ))}}
+\label{a00634_ga1eb2a90e9ab14824a64a2f6a62b37890}
+
+
+Definition at line 91 of file gsn\_\-util.h.
+
+\hypertarget{a00634_gaca41fe743680cba6df3cbecbc9ab08a9}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-MIN@{GSN\_\-MIN}}
+\index{GSN\_\-MIN@{GSN\_\-MIN}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-MIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MIN(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~((( a ) $<$= ( b )) ? ( a ) : ( b ))}}
+\label{a00634_gaca41fe743680cba6df3cbecbc9ab08a9}
+
+
+Definition at line 100 of file gsn\_\-util.h.
+
+\hypertarget{a00634_ga98384a3c4b654dfd7254b0ff4cfb425b}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-NB\_\-ELT@{GSN\_\-NB\_\-ELT}}
+\index{GSN\_\-NB\_\-ELT@{GSN\_\-NB\_\-ELT}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-NB\_\-ELT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NB\_\-ELT(
+\begin{DoxyParamCaption}
+\item[{}]{array}
+\end{DoxyParamCaption}
+)~( sizeof( array )/sizeof(( array )\mbox{[} 0 \mbox{]}))}}
+\label{a00634_ga98384a3c4b654dfd7254b0ff4cfb425b}
+
+
+Definition at line 108 of file gsn\_\-util.h.
+
+\hypertarget{a00634_gab2242ecb8ffd8b5fb6a1647a5b1c9f2a}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!swap\_\-16@{swap\_\-16}}
+\index{swap\_\-16@{swap\_\-16}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{swap\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define swap\_\-16(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}}
+\label{a00634_gab2242ecb8ffd8b5fb6a1647a5b1c9f2a}
+{\bfseries Value:}
+\begin{DoxyCode}
+(unsigned short)((unsigned short) \
+  (((x) >> 8) & 0xffU) | (unsigned short)(((x) & 0xffU) << 8))
+\end{DoxyCode}
+
+
+Definition at line 77 of file gsn\_\-util.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00634_ga56b3884cf803598729efac09feda672e}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-RD\_\-BIGEND\_\-U16@{GSN\_\-RD\_\-BIGEND\_\-U16}}
+\index{GSN\_\-RD\_\-BIGEND\_\-U16@{GSN\_\-RD\_\-BIGEND\_\-U16}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-RD\_\-BIGEND\_\-U16}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT16} GSN\_\-RD\_\-BIGEND\_\-U16 (
+\begin{DoxyParamCaption}
+\item[{const {\bf UINT8} $\ast$const}]{bufferPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00634_ga56b3884cf803598729efac09feda672e}
+
+
+This function reads a UINT16 from buffer slots in BIG ENDIAN format. 
+
+
+
+Definition at line 239 of file gsn\_\-util.h.
+
+\hypertarget{a00634_gae9bb82c2969564282b416ad9981dc542}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-RD\_\-BIGEND\_\-U32@{GSN\_\-RD\_\-BIGEND\_\-U32}}
+\index{GSN\_\-RD\_\-BIGEND\_\-U32@{GSN\_\-RD\_\-BIGEND\_\-U32}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-RD\_\-BIGEND\_\-U32}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GSN\_\-RD\_\-BIGEND\_\-U32 (
+\begin{DoxyParamCaption}
+\item[{const {\bf UINT8} $\ast$const}]{bufferPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00634_gae9bb82c2969564282b416ad9981dc542}
+
+
+This function reads a UINT32 from buffer slots in BIG ENDIAN format. 
+
+
+
+Definition at line 256 of file gsn\_\-util.h.
+
+\hypertarget{a00634_ga93374a2fc02fc77a519bb8c23b9968a5}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-RD\_\-LITEND\_\-U16@{GSN\_\-RD\_\-LITEND\_\-U16}}
+\index{GSN\_\-RD\_\-LITEND\_\-U16@{GSN\_\-RD\_\-LITEND\_\-U16}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-RD\_\-LITEND\_\-U16}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT16} GSN\_\-RD\_\-LITEND\_\-U16 (
+\begin{DoxyParamCaption}
+\item[{const {\bf UINT8} $\ast$const}]{bufferPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00634_ga93374a2fc02fc77a519bb8c23b9968a5}
+
+
+This function constructs a UINT16 value from two UINT8 buffer slots. 
+
+
+
+Definition at line 168 of file gsn\_\-util.h.
+
+\hypertarget{a00634_gaa66275afb4728d1a19813412f1867b38}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-RD\_\-LITEND\_\-U32@{GSN\_\-RD\_\-LITEND\_\-U32}}
+\index{GSN\_\-RD\_\-LITEND\_\-U32@{GSN\_\-RD\_\-LITEND\_\-U32}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-RD\_\-LITEND\_\-U32}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GSN\_\-RD\_\-LITEND\_\-U32 (
+\begin{DoxyParamCaption}
+\item[{const {\bf UINT8} $\ast$const}]{bufferPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00634_gaa66275afb4728d1a19813412f1867b38}
+
+
+This function constructs a UINT32 value from four UINT8 buffer slots. 
+
+
+
+Definition at line 187 of file gsn\_\-util.h.
+
+\hypertarget{a00634_ga33948c00f14501bc1db7b052d0c5f349}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-WR\_\-BIGEND\_\-U16@{GSN\_\-WR\_\-BIGEND\_\-U16}}
+\index{GSN\_\-WR\_\-BIGEND\_\-U16@{GSN\_\-WR\_\-BIGEND\_\-U16}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-WR\_\-BIGEND\_\-U16}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GSN\_\-WR\_\-BIGEND\_\-U16 (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$const}]{bufferPtr, }
+\item[{const {\bf UINT16}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{a00634_ga33948c00f14501bc1db7b052d0c5f349}
+
+
+This function writes a UINT16 to buffer slots in BIG ENDIAN format. 
+
+
+
+Definition at line 211 of file gsn\_\-util.h.
+
+\hypertarget{a00634_ga60ab53941c9f097c11682045248d549d}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-WR\_\-BIGEND\_\-U32@{GSN\_\-WR\_\-BIGEND\_\-U32}}
+\index{GSN\_\-WR\_\-BIGEND\_\-U32@{GSN\_\-WR\_\-BIGEND\_\-U32}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-WR\_\-BIGEND\_\-U32}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GSN\_\-WR\_\-BIGEND\_\-U32 (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$const}]{bufferPtr, }
+\item[{const {\bf UINT32}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{a00634_ga60ab53941c9f097c11682045248d549d}
+
+
+This function writes a UINT32 to buffer slots in BIG ENDIAN format. 
+
+
+
+Definition at line 224 of file gsn\_\-util.h.
+
+\hypertarget{a00634_ga93c806730a69f0c559fda3ef2e14ff8e}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-WR\_\-LITEND\_\-U16@{GSN\_\-WR\_\-LITEND\_\-U16}}
+\index{GSN\_\-WR\_\-LITEND\_\-U16@{GSN\_\-WR\_\-LITEND\_\-U16}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-WR\_\-LITEND\_\-U16}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GSN\_\-WR\_\-LITEND\_\-U16 (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$const}]{bufferPtr, }
+\item[{const {\bf UINT16}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{a00634_ga93c806730a69f0c559fda3ef2e14ff8e}
+
+
+This function places the parts of a UINT16 value in two UINT8 buffer slots. 
+
+
+
+Definition at line 139 of file gsn\_\-util.h.
+
+\hypertarget{a00634_gab1d0f5affe1791a54558477434c44f81}{
+\index{GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}!GSN\_\-WR\_\-LITEND\_\-U32@{GSN\_\-WR\_\-LITEND\_\-U32}}
+\index{GSN\_\-WR\_\-LITEND\_\-U32@{GSN\_\-WR\_\-LITEND\_\-U32}!GSN Bit and Byte Utilities@{GSN Bit and Byte Utilities}}
+\subsubsection[{GSN\_\-WR\_\-LITEND\_\-U32}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GSN\_\-WR\_\-LITEND\_\-U32 (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$const}]{bufferPtr, }
+\item[{const {\bf UINT32}}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{a00634_gab1d0f5affe1791a54558477434c44f81}
+
+
+This function places the parts of a UINT32 value in four UINT8 buffer slots. 
+
+
+
+Definition at line 152 of file gsn\_\-util.h.
+

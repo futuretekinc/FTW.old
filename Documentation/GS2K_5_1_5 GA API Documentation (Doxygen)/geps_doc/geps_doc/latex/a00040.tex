@@ -1,0 +1,143 @@
+\hypertarget{a00040}{
+\section{GSN\_\-COAP\_\-CONN\_\-PARAMS Struct Reference}
+\label{a00040}\index{GSN\_\-COAP\_\-CONN\_\-PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}}
+}
+
+
+Coap request parameters.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-coap.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \hyperlink{a00040_af2c03b6965ce2fbbb29b97a2818c96a2}{uri}
+\item 
+unsigned int \hyperlink{a00040_ac9014e89602db993be93ac49af0826c2}{uriLength}
+\item 
+char $\ast$ \hyperlink{a00040_a18f141cb2726073503afb9f1d6c85efb}{payload}
+\item 
+unsigned char $\ast$ \hyperlink{a00040_a11d323097991f661a8433d7a8de8d401}{payloadType}
+\item 
+unsigned int \hyperlink{a00040_aaeb932b3bf79799bf0ee8a418682d486}{payloadSize}
+\item 
+enum \hyperlink{a00538_a60b3db981099ef05a78fd3a008890d4a}{coap\_\-conn\_\-method} \hyperlink{a00040_a082b4f8f68989edcecc0e9f24f219b12}{method}
+\item 
+enum \hyperlink{a00538_a4d3cbe1c9f1d4b500c83635a57a37d94}{coap\_\-conn\_\-type} \hyperlink{a00040_a0732b6df1426f35ef3677a29fbdb5786}{type}
+\item 
+unsigned int \hyperlink{a00040_ac927f3777727f3e6531ce7ddbd12c405}{responseTimeout}
+\item 
+char $\ast$ \hyperlink{a00040_aeb021c3121e95e8f02b5b3e2c856636a}{responseBuffer}
+\item 
+unsigned int \hyperlink{a00040_afd3ab8c211af1d9d40ede0157631dbb2}{responseBufLen}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Coap request parameters. 
+
+This structure defines some of the parameters used for sending the Coap request to the server. This structure needs to be filled and passed to \hyperlink{a00478_ae817954f9719fe38e7f16d85984c6667}{GsnCoap\_\-Send\_\-And\_\-Recieve()} 
+
+Definition at line 56 of file gsn\_\-coap.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00040_a082b4f8f68989edcecc0e9f24f219b12}{
+\index{GSN\_\-COAP\_\-CONN\_\-PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}!method@{method}}
+\index{method@{method}!GSN_COAP_CONN_PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}}
+\subsubsection[{method}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf coap\_\-conn\_\-method} {\bf method}}}
+\label{a00040_a082b4f8f68989edcecc0e9f24f219b12}
+
+
+Definition at line 63 of file gsn\_\-coap.h.
+
+\hypertarget{a00040_a18f141cb2726073503afb9f1d6c85efb}{
+\index{GSN\_\-COAP\_\-CONN\_\-PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}!payload@{payload}}
+\index{payload@{payload}!GSN_COAP_CONN_PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}}
+\subsubsection[{payload}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf payload}}}
+\label{a00040_a18f141cb2726073503afb9f1d6c85efb}
+
+
+Definition at line 60 of file gsn\_\-coap.h.
+
+\hypertarget{a00040_aaeb932b3bf79799bf0ee8a418682d486}{
+\index{GSN\_\-COAP\_\-CONN\_\-PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}!payloadSize@{payloadSize}}
+\index{payloadSize@{payloadSize}!GSN_COAP_CONN_PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}}
+\subsubsection[{payloadSize}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf payloadSize}}}
+\label{a00040_aaeb932b3bf79799bf0ee8a418682d486}
+
+
+Definition at line 62 of file gsn\_\-coap.h.
+
+\hypertarget{a00040_a11d323097991f661a8433d7a8de8d401}{
+\index{GSN\_\-COAP\_\-CONN\_\-PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}!payloadType@{payloadType}}
+\index{payloadType@{payloadType}!GSN_COAP_CONN_PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}}
+\subsubsection[{payloadType}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ {\bf payloadType}}}
+\label{a00040_a11d323097991f661a8433d7a8de8d401}
+
+
+Definition at line 61 of file gsn\_\-coap.h.
+
+\hypertarget{a00040_aeb021c3121e95e8f02b5b3e2c856636a}{
+\index{GSN\_\-COAP\_\-CONN\_\-PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}!responseBuffer@{responseBuffer}}
+\index{responseBuffer@{responseBuffer}!GSN_COAP_CONN_PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}}
+\subsubsection[{responseBuffer}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf responseBuffer}}}
+\label{a00040_aeb021c3121e95e8f02b5b3e2c856636a}
+
+
+Definition at line 66 of file gsn\_\-coap.h.
+
+\hypertarget{a00040_afd3ab8c211af1d9d40ede0157631dbb2}{
+\index{GSN\_\-COAP\_\-CONN\_\-PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}!responseBufLen@{responseBufLen}}
+\index{responseBufLen@{responseBufLen}!GSN_COAP_CONN_PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}}
+\subsubsection[{responseBufLen}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf responseBufLen}}}
+\label{a00040_afd3ab8c211af1d9d40ede0157631dbb2}
+
+
+Definition at line 67 of file gsn\_\-coap.h.
+
+\hypertarget{a00040_ac927f3777727f3e6531ce7ddbd12c405}{
+\index{GSN\_\-COAP\_\-CONN\_\-PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}!responseTimeout@{responseTimeout}}
+\index{responseTimeout@{responseTimeout}!GSN_COAP_CONN_PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}}
+\subsubsection[{responseTimeout}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf responseTimeout}}}
+\label{a00040_ac927f3777727f3e6531ce7ddbd12c405}
+
+
+Definition at line 65 of file gsn\_\-coap.h.
+
+\hypertarget{a00040_a0732b6df1426f35ef3677a29fbdb5786}{
+\index{GSN\_\-COAP\_\-CONN\_\-PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}!type@{type}}
+\index{type@{type}!GSN_COAP_CONN_PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf coap\_\-conn\_\-type} {\bf type}}}
+\label{a00040_a0732b6df1426f35ef3677a29fbdb5786}
+
+
+Definition at line 64 of file gsn\_\-coap.h.
+
+\hypertarget{a00040_af2c03b6965ce2fbbb29b97a2818c96a2}{
+\index{GSN\_\-COAP\_\-CONN\_\-PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}!uri@{uri}}
+\index{uri@{uri}!GSN_COAP_CONN_PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}}
+\subsubsection[{uri}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ {\bf uri}}}
+\label{a00040_af2c03b6965ce2fbbb29b97a2818c96a2}
+
+
+Definition at line 58 of file gsn\_\-coap.h.
+
+\hypertarget{a00040_ac9014e89602db993be93ac49af0826c2}{
+\index{GSN\_\-COAP\_\-CONN\_\-PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}!uriLength@{uriLength}}
+\index{uriLength@{uriLength}!GSN_COAP_CONN_PARAMS@{GSN\_\-COAP\_\-CONN\_\-PARAMS}}
+\subsubsection[{uriLength}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf uriLength}}}
+\label{a00040_ac9014e89602db993be93ac49af0826c2}
+
+
+Definition at line 59 of file gsn\_\-coap.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00478}{gsn\_\-coap.h}\end{DoxyCompactItemize}

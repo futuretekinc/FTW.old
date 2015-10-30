@@ -1,0 +1,360 @@
+\hypertarget{a00529}{
+\section{gsn\_\-ncm.h File Reference}
+\label{a00529}\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}}
+}
+
+
+GSN NCM public header. This file contains the public APIs and structures of NCM module.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+Include dependency graph for gsn\_\-ncm.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{a00764}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00160}{GSN\_\-NCM\_\-MSG}
+\item 
+struct \hyperlink{a00156}{GSN\_\-NCM\_\-AP\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em Ncm provisioning config structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00161}{GSN\_\-NCM\_\-RETRY\_\-COUNTS}
+\begin{DoxyCompactList}\small\item\em Ncm config retry count structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00162}{GSN\_\-NCM\_\-RETRY\_\-PERIOD}
+\begin{DoxyCompactList}\small\item\em Ncm config retry period structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00157}{GSN\_\-NCM\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em Ncm configuration structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00158}{GSN\_\-NCM\_\-CTX}
+\begin{DoxyCompactList}\small\item\em Ncm object structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00159}{GSN\_\-NCM\_\-INIT\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em mDns module init param \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00529_a4d23ec736944f85655e86e558fd07a4d}{NCM\_\-DFLT\_\-HIDDENSSID\_\-VALUE}~0
+\item 
+\#define \hyperlink{a00529_a5fb27317dccb3b61dcc8bd59522c849f}{NCM\_\-DFLT\_\-DTIMPERIOD\_\-VALUE}~3
+\item 
+\#define \hyperlink{a00529_abb43ee4a73e404382808c773bee9f98b}{NCM\_\-DFLT\_\-INACTIVITY\_\-TMEOUT\_\-VALUE}~360
+\item 
+\#define \hyperlink{a00529_a6f9abd3777110673629c1ccc4f63ff05}{NCM\_\-DFLT\_\-GRP\_\-KEY\_\-UPDATE\_\-INTERVAL}~3600
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00688_ga950af3c458482d4fbf1838aaf8b30f2d}{GSN\_\-NCM\_\-CTX\_\-STATES} \hyperlink{a00688_gaf5a85b17466f3a523dbf5643e72f628d}{GSN\_\-NCM\_\-CTX\_\-STATES\_\-T}
+\begin{DoxyCompactList}\small\item\em NCM states. This enum defines the different states the NCM module in. The NCM APIs transition through some or all of these states. After the API operation is complete, the API is back in init state. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00688_ga9e3bfe0ed58e26633d51d10250743b2a}{GSN\_\-NCM\_\-NOTIF\_\-ID} \hyperlink{a00688_ga0be96257e7b0db4dd67006357eb5cec6}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm Notifications enum. This enum describes all notifications from the ncm module to applications. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00688_ga7df8ae3172682e89bfa663208e3f0081}{GSN\_\-NCM\_\-MSGID} \hyperlink{a00688_ga1df95350543744eb99d0ce7433e6db16}{GSN\_\-NCM\_\-MSGID\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm Notifications enum. Defines mesage IDs internally used by NCM module. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00160}{GSN\_\-NCM\_\-MSG} \hyperlink{a00529_aad1d86cebf715133449a991798027533}{GSN\_\-NCM\_\-MSG\_\-T}
+\item 
+typedef struct \hyperlink{a00156}{GSN\_\-NCM\_\-AP\_\-CONFIG} \hyperlink{a00688_ga881c978ce73a5c4c2e6e9080d4a07879}{GSN\_\-NCM\_\-AP\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm provisioning config structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00161}{GSN\_\-NCM\_\-RETRY\_\-COUNTS} \hyperlink{a00688_gab0e77b5fbb8b18c829e3cd9170252340}{GSN\_\-NCM\_\-RETRY\_\-COUNTS\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm config retry count structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00162}{GSN\_\-NCM\_\-RETRY\_\-PERIOD} \hyperlink{a00688_ga85c994a3952734087a59e5157a99d8c5}{GSN\_\-NCM\_\-RETRY\_\-PERIOD\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm config retry period structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00157}{GSN\_\-NCM\_\-CONFIG} \hyperlink{a00688_ga9095c8feaa607f7d67a5ff8db069ebf2}{GSN\_\-NCM\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm configuration structure. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00668_gaf3a0737ada4d7a112e4fff6779bc8162}{GSN\_\-NCM\_\-CTX\_\-EXECUTE\_\-MSG\_\-POST\_\-CB} )(VOID $\ast$cbCtx, VOID $\ast$pNcm)
+\begin{DoxyCompactList}\small\item\em call back to be called for posting message to an application task. This is to indicate \hyperlink{a00688_ga3ed4d28d4f2a8195d6c37f5032ee0bbd}{GsnNcm\_\-Execute()} to be called in an application task context. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00668_ga9fb71d435556873549a9da8758741a14}{GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB} )(VOID $\ast$cbCtx, VOID $\ast$pNcm, \hyperlink{a00688_ga0be96257e7b0db4dd67006357eb5cec6}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-T} notifId)
+\begin{DoxyCompactList}\small\item\em call back to be called for posting message to an application task. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00158}{GSN\_\-NCM\_\-CTX} \hyperlink{a00688_ga102caaf372e99d011f89da1602cdc514}{GSN\_\-NCM\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em Ncm object structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00159}{GSN\_\-NCM\_\-INIT\_\-PARAM} \hyperlink{a00668_ga82bd88bbe87405a2e10adc0ee4645d7f}{GSN\_\-NCM\_\-INIT\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em mDns module init param \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00529_a0b425c0b83594b7c2c4fef04ac90fa69}{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T} \hyperlink{a00529_a6860aabee0941013271f1956b85eb8b6}{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00688_ga950af3c458482d4fbf1838aaf8b30f2d}{GSN\_\-NCM\_\-CTX\_\-STATES} \{ \par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da3e09b1bfa5ac8ce7a8e65138193e1ecb}{GSN\_\-NCM\_\-STATE\_\-NOT\_\-INITIALISED}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da830ff14e14067fef8cbf42cead8a871a}{GSN\_\-NCM\_\-STATE\_\-INITIALISED}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da8c30b49c08e6991f83a9b8c208fd8bd5}{GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTING}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da7f3541fe96901cd0e93d2644233482f9}{GSN\_\-NCM\_\-STATE\_\-L2\_\-DISCONNECTED}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da39d1f07a068d2c5462c72c33b7b76259}{GSN\_\-NCM\_\-STATE\_\-L2\_\-CONCT\_\-TO\_\-KNOWN\_\-AP}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2dabd8e860d56fd77b264d1db7c518a6f77}{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-KNOWN\_\-CHNL}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da7cb3a6d76e63569079a9ea3adbc7eaef}{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-SPECIFIC\_\-CHNL}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2daa3532bd5ed61d5a5535078d948b1022d}{GSN\_\-NCM\_\-STATE\_\-L2\_\-SCAN\_\-ALL\_\-CHNL}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2daf9087e99e508fd754ef4e32ca8ab4b3b}{GSN\_\-NCM\_\-STATE\_\-L2\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2da66eb72fa85fe1d23963fe8daa49d9215}{GSN\_\-NCM\_\-STATE\_\-L3\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga950af3c458482d4fbf1838aaf8b30f2daed4f9e1b80afb22d823328667e4b8e02}{GSN\_\-NCM\_\-STATE\_\-IDLE}
+ \}
+\begin{DoxyCompactList}\small\item\em NCM states. This enum defines the different states the NCM module in. The NCM APIs transition through some or all of these states. After the API operation is complete, the API is back in init state. \end{DoxyCompactList}\item 
+enum \hyperlink{a00688_ga9e3bfe0ed58e26633d51d10250743b2a}{GSN\_\-NCM\_\-NOTIF\_\-ID} \{ \par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aaa469a6d8952fabb7ed031d3632b0ce2a}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aab61142f531039c917939e563b9c35948}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-DISCONNECTED}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa5bce6739a2807e89ec851b581e6950ac}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa106659fe26e5c7b32dc6c053c24119e5}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-DISCONNECTED}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa5c33280f1c2aebc7b446f0f2beb52a13}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L2\_\-CONNECT\_\-FAIL}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa7e3668f406bf505ca49b4f08ff8c7b39}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-STOP}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aac166aef75f66aecaf90efdc4d9cd1c3b}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-DHCP\_\-STOP}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa0da52269d834fdb60f3387386dbf68b2}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-RENEWSUCCESS}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aabdf8839e06c133c9ac4b3596cd3f7fd7}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-L3\_\-CONNECT\_\-FAIL}, 
+\par
+\hyperlink{a00688_gga9e3bfe0ed58e26633d51d10250743b2aa49148962df3de573148d7f5f35e26364}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-MAX\_\-EVENTS}
+ \}
+\begin{DoxyCompactList}\small\item\em Ncm Notifications enum. This enum describes all notifications from the ncm module to applications. \end{DoxyCompactList}\item 
+enum \hyperlink{a00688_ga7df8ae3172682e89bfa663208e3f0081}{GSN\_\-NCM\_\-MSGID} \{ \par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081ac1fa29f30c497cc6d0d63e369c4ebc96}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-STOP}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a2f7930cb346bbde0451d5000058a7bbd}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-START}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081ab7c2c3aa92aaa434c756acf574849d7e}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a3d625aa8bd3451c5d6756d7ca12a5a72}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-CONNECT\_\-FAIL}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a6d6b2708ec053a54a35533ea89b82dbe}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-DISCONNECTED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a6d6969743dec280c81de97facc785085}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-SYNC\_\-LOSS}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a5a1bac3915a3dc40cb070e75fdd809a0}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-RESTART}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a6f85a2bfe3c47d23f9dd782d433383f4}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECT}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a9645733074e6cf9524c08ecbafe78d78}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081aab5e02a78811b59d9d996952c346681a}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-DISCONNECTED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a1a6bf8dbcf5fd9f73baedb3d92f37810}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-IDLE}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081ac37700bd992d190df8dfbe400d904996}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-DHCP\_\-STOP}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a339e00a57d9d49209c486fa80fa3efb2}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L2\_\-ALREADY\_\-CONNECTED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081ae284cf6bfa63b7e17d6f074f24a8eed6}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWSUCESS}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a997c45d4f40178db905d5099db419071}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-L3\_\-RENEWFAILED}, 
+\par
+\hyperlink{a00688_gga7df8ae3172682e89bfa663208e3f0081a69add9c8fa35762c0fc5614ee77eaab3}{GSN\_\-NCM\_\-CTX\_\-MSG\_\-ID\_\-MAX}
+ \}
+\begin{DoxyCompactList}\small\item\em Ncm Notifications enum. Defines mesage IDs internally used by NCM module. \end{DoxyCompactList}\item 
+enum \hyperlink{a00529_a0b425c0b83594b7c2c4fef04ac90fa69}{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T} \{ \par
+\hyperlink{a00529_a0b425c0b83594b7c2c4fef04ac90fa69a4f639a29533dc8e681c9417b158ae959}{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-FCC} =  0, 
+\par
+\hyperlink{a00529_a0b425c0b83594b7c2c4fef04ac90fa69af8ef035ca60ffa6afe2e029b208c7d66}{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-ETSI} =  1, 
+\par
+\hyperlink{a00529_a0b425c0b83594b7c2c4fef04ac90fa69ac325df2f36eec4925d7a565cd0fa48a8}{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-TELEC} =  2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00688_ga48b1340485aa02c120f63c82f90cca3e}{GsnNcm\_\-Init} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00159}{GSN\_\-NCM\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Initialization API for NCM module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00688_gac8d88feff4bacf5d5acece3f127c937b}{GsnNcm\_\-ConfigSet} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00157}{GSN\_\-NCM\_\-CONFIG\_\-T} $\ast$pConfig)
+\begin{DoxyCompactList}\small\item\em Configuration Set API for NCM module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00688_ga54ecf725bc9a7b85c5cd9b57ecfe8ecb}{GsnNcm\_\-ConfigGet} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00157}{GSN\_\-NCM\_\-CONFIG\_\-T} $\ast$pConfig)
+\begin{DoxyCompactList}\small\item\em Configuration Get API for NCM module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00157}{GSN\_\-NCM\_\-CONFIG\_\-T} $\ast$ \hyperlink{a00688_ga8a003a052b151aeb2bd31b77912a1f13}{GsnNcm\_\-ConfigPtrGet} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm)
+\begin{DoxyCompactList}\small\item\em Get NCM module config structure Address. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00688_ga2250bc85d7e05785da38ecbbd3f3e538}{GsnNcm\_\-Start} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00668_ga9fb71d435556873549a9da8758741a14}{GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB} notifCb, VOID $\ast$notifCbCtx)
+\begin{DoxyCompactList}\small\item\em Start API for NCM module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00688_ga36427555e14041e449831a66dfe58c39}{GsnNcm\_\-Stop} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} context)
+\begin{DoxyCompactList}\small\item\em Stop API for NCM module. This function stops the NCM module. . \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00688_ga3ed4d28d4f2a8195d6c37f5032ee0bbd}{GsnNcm\_\-Execute} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm)
+\begin{DoxyCompactList}\small\item\em Execute API for NCM module. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00529_abd7dadd35e85f09d6227e80e9a75290a}{GsnNcm\_\-MsgPost} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msgId)
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00529_af3880755f0a49f23616ae321836388a0}{GsnNcm\_\-L2Disconnect} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm)
+\item 
+VOID \hyperlink{a00529_a7fa16651dadcb00c43cba00489532392}{GsnNcm\_\-BeconMissIndCb} (VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} beaconMissCnt)
+\item 
+VOID \hyperlink{a00529_a6de95d07431b057ab399dffcd3e2acd2}{GsnNcm\_\-DisassocIndCb} (VOID $\ast$ctx, \hyperlink{a00379}{GSN\_\-WDD\_\-DISASSOCIATION\_\-CB\_\-INFO} $\ast$pDisAssocInfo)
+\item 
+VOID \hyperlink{a00529_a14368355956e7acc3bd676d7f3954c5e}{GsnNcm\_\-ChannelFill} (\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$pWdd, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$chTable, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} domain)
+\item 
+PRIVATE VOID \hyperlink{a00529_a2313f4fa85fed24072bc2e1a07e94449}{GsnNcm\_\-L2ConnectProcess} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} alreadyConnectedEvent)
+\item 
+PRIVATE VOID \hyperlink{a00529_a020a013b462b810d9a0ee50b8ba96dd0}{GsnNcm\_\-L2DisconnectProcess} (\hyperlink{a00158}{GSN\_\-NCM\_\-CTX\_\-T} $\ast$pNcm)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN NCM public header. This file contains the public APIs and structures of NCM module. 
+
+Definition in file \hyperlink{a00529_source}{gsn\_\-ncm.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00529_a5fb27317dccb3b61dcc8bd59522c849f}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!NCM\_\-DFLT\_\-DTIMPERIOD\_\-VALUE@{NCM\_\-DFLT\_\-DTIMPERIOD\_\-VALUE}}
+\index{NCM\_\-DFLT\_\-DTIMPERIOD\_\-VALUE@{NCM\_\-DFLT\_\-DTIMPERIOD\_\-VALUE}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{NCM\_\-DFLT\_\-DTIMPERIOD\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define NCM\_\-DFLT\_\-DTIMPERIOD\_\-VALUE~3}}
+\label{a00529_a5fb27317dccb3b61dcc8bd59522c849f}
+
+
+Definition at line 85 of file gsn\_\-ncm.h.
+
+\hypertarget{a00529_a6f9abd3777110673629c1ccc4f63ff05}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!NCM\_\-DFLT\_\-GRP\_\-KEY\_\-UPDATE\_\-INTERVAL@{NCM\_\-DFLT\_\-GRP\_\-KEY\_\-UPDATE\_\-INTERVAL}}
+\index{NCM\_\-DFLT\_\-GRP\_\-KEY\_\-UPDATE\_\-INTERVAL@{NCM\_\-DFLT\_\-GRP\_\-KEY\_\-UPDATE\_\-INTERVAL}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{NCM\_\-DFLT\_\-GRP\_\-KEY\_\-UPDATE\_\-INTERVAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define NCM\_\-DFLT\_\-GRP\_\-KEY\_\-UPDATE\_\-INTERVAL~3600}}
+\label{a00529_a6f9abd3777110673629c1ccc4f63ff05}
+
+
+Definition at line 91 of file gsn\_\-ncm.h.
+
+\hypertarget{a00529_a4d23ec736944f85655e86e558fd07a4d}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!NCM\_\-DFLT\_\-HIDDENSSID\_\-VALUE@{NCM\_\-DFLT\_\-HIDDENSSID\_\-VALUE}}
+\index{NCM\_\-DFLT\_\-HIDDENSSID\_\-VALUE@{NCM\_\-DFLT\_\-HIDDENSSID\_\-VALUE}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{NCM\_\-DFLT\_\-HIDDENSSID\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define NCM\_\-DFLT\_\-HIDDENSSID\_\-VALUE~0}}
+\label{a00529_a4d23ec736944f85655e86e558fd07a4d}
+END of Modules group include 
+
+Definition at line 82 of file gsn\_\-ncm.h.
+
+\hypertarget{a00529_abb43ee4a73e404382808c773bee9f98b}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!NCM\_\-DFLT\_\-INACTIVITY\_\-TMEOUT\_\-VALUE@{NCM\_\-DFLT\_\-INACTIVITY\_\-TMEOUT\_\-VALUE}}
+\index{NCM\_\-DFLT\_\-INACTIVITY\_\-TMEOUT\_\-VALUE@{NCM\_\-DFLT\_\-INACTIVITY\_\-TMEOUT\_\-VALUE}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{NCM\_\-DFLT\_\-INACTIVITY\_\-TMEOUT\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define NCM\_\-DFLT\_\-INACTIVITY\_\-TMEOUT\_\-VALUE~360}}
+\label{a00529_abb43ee4a73e404382808c773bee9f98b}
+
+
+Definition at line 88 of file gsn\_\-ncm.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00529_aad1d86cebf715133449a991798027533}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GSN\_\-NCM\_\-MSG\_\-T@{GSN\_\-NCM\_\-MSG\_\-T}}
+\index{GSN\_\-NCM\_\-MSG\_\-T@{GSN\_\-NCM\_\-MSG\_\-T}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{GSN\_\-NCM\_\-MSG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NCM\_\-MSG} {\bf GSN\_\-NCM\_\-MSG\_\-T}}}
+\label{a00529_aad1d86cebf715133449a991798027533}
+\hypertarget{a00529_a6860aabee0941013271f1956b85eb8b6}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T@{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T}}
+\index{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T@{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T}  {\bf GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T}}}
+\label{a00529_a6860aabee0941013271f1956b85eb8b6}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00529_a0b425c0b83594b7c2c4fef04ac90fa69}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T@{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T}}
+\index{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T@{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-T}}}
+\label{a00529_a0b425c0b83594b7c2c4fef04ac90fa69}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-FCC@{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-FCC}!gsn\_\-ncm.h@{gsn\_\-ncm.h}}\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-FCC@{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-FCC}}\item[{\em 
+\hypertarget{a00529_a0b425c0b83594b7c2c4fef04ac90fa69a4f639a29533dc8e681c9417b158ae959}{
+GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-FCC}
+\label{a00529_a0b425c0b83594b7c2c4fef04ac90fa69a4f639a29533dc8e681c9417b158ae959}
+}]\index{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-ETSI@{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-ETSI}!gsn\_\-ncm.h@{gsn\_\-ncm.h}}\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-ETSI@{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-ETSI}}\item[{\em 
+\hypertarget{a00529_a0b425c0b83594b7c2c4fef04ac90fa69af8ef035ca60ffa6afe2e029b208c7d66}{
+GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-ETSI}
+\label{a00529_a0b425c0b83594b7c2c4fef04ac90fa69af8ef035ca60ffa6afe2e029b208c7d66}
+}]\index{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-TELEC@{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-TELEC}!gsn\_\-ncm.h@{gsn\_\-ncm.h}}\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-TELEC@{GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-TELEC}}\item[{\em 
+\hypertarget{a00529_a0b425c0b83594b7c2c4fef04ac90fa69ac325df2f36eec4925d7a565cd0fa48a8}{
+GSN\_\-NCM\_\-REG\_\-DOMAIN\_\-TELEC}
+\label{a00529_a0b425c0b83594b7c2c4fef04ac90fa69ac325df2f36eec4925d7a565cd0fa48a8}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 394 of file gsn\_\-ncm.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00529_a7fa16651dadcb00c43cba00489532392}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GsnNcm\_\-BeconMissIndCb@{GsnNcm\_\-BeconMissIndCb}}
+\index{GsnNcm\_\-BeconMissIndCb@{GsnNcm\_\-BeconMissIndCb}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{GsnNcm\_\-BeconMissIndCb}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnNcm\_\-BeconMissIndCb (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{ctx, }
+\item[{{\bf UINT32}}]{beaconMissCnt}
+\end{DoxyParamCaption}
+)}}
+\label{a00529_a7fa16651dadcb00c43cba00489532392}
+\hypertarget{a00529_a14368355956e7acc3bd676d7f3954c5e}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GsnNcm\_\-ChannelFill@{GsnNcm\_\-ChannelFill}}
+\index{GsnNcm\_\-ChannelFill@{GsnNcm\_\-ChannelFill}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{GsnNcm\_\-ChannelFill}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnNcm\_\-ChannelFill (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WDD\_\-CTX\_\-T} $\ast$}]{pWdd, }
+\item[{{\bf UINT8} $\ast$}]{chTable, }
+\item[{{\bf UINT8}}]{domain}
+\end{DoxyParamCaption}
+)}}
+\label{a00529_a14368355956e7acc3bd676d7f3954c5e}
+\hypertarget{a00529_a6de95d07431b057ab399dffcd3e2acd2}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GsnNcm\_\-DisassocIndCb@{GsnNcm\_\-DisassocIndCb}}
+\index{GsnNcm\_\-DisassocIndCb@{GsnNcm\_\-DisassocIndCb}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{GsnNcm\_\-DisassocIndCb}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnNcm\_\-DisassocIndCb (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{ctx, }
+\item[{{\bf GSN\_\-WDD\_\-DISASSOCIATION\_\-CB\_\-INFO} $\ast$}]{pDisAssocInfo}
+\end{DoxyParamCaption}
+)}}
+\label{a00529_a6de95d07431b057ab399dffcd3e2acd2}
+\hypertarget{a00529_a2313f4fa85fed24072bc2e1a07e94449}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GsnNcm\_\-L2ConnectProcess@{GsnNcm\_\-L2ConnectProcess}}
+\index{GsnNcm\_\-L2ConnectProcess@{GsnNcm\_\-L2ConnectProcess}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{GsnNcm\_\-L2ConnectProcess}]{\setlength{\rightskip}{0pt plus 5cm}PRIVATE VOID GsnNcm\_\-L2ConnectProcess (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-T} $\ast$}]{pNcm, }
+\item[{{\bf UINT8}}]{alreadyConnectedEvent}
+\end{DoxyParamCaption}
+)}}
+\label{a00529_a2313f4fa85fed24072bc2e1a07e94449}
+\hypertarget{a00529_af3880755f0a49f23616ae321836388a0}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GsnNcm\_\-L2Disconnect@{GsnNcm\_\-L2Disconnect}}
+\index{GsnNcm\_\-L2Disconnect@{GsnNcm\_\-L2Disconnect}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{GsnNcm\_\-L2Disconnect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnNcm\_\-L2Disconnect (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-T} $\ast$}]{pNcm}
+\end{DoxyParamCaption}
+)}}
+\label{a00529_af3880755f0a49f23616ae321836388a0}
+\hypertarget{a00529_a020a013b462b810d9a0ee50b8ba96dd0}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GsnNcm\_\-L2DisconnectProcess@{GsnNcm\_\-L2DisconnectProcess}}
+\index{GsnNcm\_\-L2DisconnectProcess@{GsnNcm\_\-L2DisconnectProcess}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{GsnNcm\_\-L2DisconnectProcess}]{\setlength{\rightskip}{0pt plus 5cm}PRIVATE VOID GsnNcm\_\-L2DisconnectProcess (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-T} $\ast$}]{pNcm}
+\end{DoxyParamCaption}
+)}}
+\label{a00529_a020a013b462b810d9a0ee50b8ba96dd0}
+\hypertarget{a00529_abd7dadd35e85f09d6227e80e9a75290a}{
+\index{gsn\_\-ncm.h@{gsn\_\-ncm.h}!GsnNcm\_\-MsgPost@{GsnNcm\_\-MsgPost}}
+\index{GsnNcm\_\-MsgPost@{GsnNcm\_\-MsgPost}!gsn_ncm.h@{gsn\_\-ncm.h}}
+\subsubsection[{GsnNcm\_\-MsgPost}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnNcm\_\-MsgPost (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NCM\_\-CTX\_\-T} $\ast$}]{pNcm, }
+\item[{{\bf UINT32}}]{msgId}
+\end{DoxyParamCaption}
+)}}
+\label{a00529_abd7dadd35e85f09d6227e80e9a75290a}

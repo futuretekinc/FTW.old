@@ -1,0 +1,244 @@
+\hypertarget{a00505}{
+\section{gsn\_\-hi\_\-buf.h File Reference}
+\label{a00505}\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}}
+}
+
+
+GSN WIF shared memory Tx and Rx buffer management public header. This file contains the public APIs and structures of WIF shared memory Tx and Rx buffer management.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00736}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00090}{GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM}
+\item 
+struct \hyperlink{a00091}{GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00505_af1aed68d5f6d2f9a744d8de12b9adbbe}{GSN\_\-HI\_\-BUF\_\-TYPE} \hyperlink{a00505_a9d5b1f6ad823b77a15f4d0e02f96e4ea}{GSN\_\-HI\_\-BUF\_\-TYPE\_\-T}
+\item 
+typedef struct \hyperlink{a00090}{GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM} \hyperlink{a00505_a167c1fbff0676dbb63af937f637cc207}{GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM\_\-T}
+\item 
+typedef struct \hyperlink{a00091}{GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM} \hyperlink{a00505_ae0bc0c176070bfb57aa0b92ee170f66a}{GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM\_\-T}
+\end{DoxyCompactItemize}
+\paragraph*{}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-T} \hyperlink{a00505_a5592ee510b1e204faaca8ef7fa3fcf49}{GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-T}
+\item 
+typedef \hyperlink{a00191}{GSN\_\-RING\_\-BUF\_\-T} $\ast$ \hyperlink{a00505_a2b3143f617f573da4922c5888ce7ab72}{GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-HNDL\_\-T}
+\end{DoxyCompactItemize}
+
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00505_af1aed68d5f6d2f9a744d8de12b9adbbe}{GSN\_\-HI\_\-BUF\_\-TYPE} \{ \par
+\hyperlink{a00505_af1aed68d5f6d2f9a744d8de12b9adbbea52d186a62d72e859badbc83f426dd566}{GSN\_\-HI\_\-BUF\_\-TYPE\_\-SMALL}, 
+\par
+\hyperlink{a00505_af1aed68d5f6d2f9a744d8de12b9adbbea53a7c87871450313e72c37988bd04544}{GSN\_\-HI\_\-BUF\_\-TYPE\_\-LARGE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+INLINE VOID \hyperlink{a00505_a4f1899901cd2eba1f6dfd6fe610b2ec2}{GsnHi\_\-TxBufInit} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00091}{GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM\_\-T} $\ast$params)
+\item 
+INLINE VOID $\ast$ \hyperlink{a00505_ad2866488cc3982386eb5537d46581091}{GsnHi\_\-TxBufGet} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size)
+\item 
+INLINE VOID \hyperlink{a00505_aad1b8f80f818515f9b785a1051075a43}{GsnHi\_\-TxBufRelease} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$ptr)
+\item 
+PUBLIC VOID \hyperlink{a00505_abf6f6a5a7601a77d1b12fafb55d11c98}{GsnHi\_\-RxBufInit} (\hyperlink{a00191}{GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-T} $\ast$pHiBufQdesc, \hyperlink{a00090}{GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM\_\-T} $\ast$params)
+\item 
+PUBLIC VOID \hyperlink{a00505_aa067efcd37efd5878d2415b26baac06e}{GsnHi\_\-RxBufRelease} (\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$ptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN WIF shared memory Tx and Rx buffer management public header. This file contains the public APIs and structures of WIF shared memory Tx and Rx buffer management. 
+
+Definition in file \hyperlink{a00505_source}{gsn\_\-hi\_\-buf.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00505_a2b3143f617f573da4922c5888ce7ab72}{
+\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-HNDL\_\-T@{GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-HNDL\_\-T}}
+\index{GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-HNDL\_\-T@{GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-HNDL\_\-T}!gsn_hi_buf.h@{gsn\_\-hi\_\-buf.h}}
+\subsubsection[{GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-HNDL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-RING\_\-BUF\_\-T}$\ast$ {\bf GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-HNDL\_\-T}}}
+\label{a00505_a2b3143f617f573da4922c5888ce7ab72}
+
+
+Definition at line 67 of file gsn\_\-hi\_\-buf.h.
+
+\hypertarget{a00505_a5592ee510b1e204faaca8ef7fa3fcf49}{
+\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-T@{GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-T}}
+\index{GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-T@{GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-T}!gsn_hi_buf.h@{gsn\_\-hi\_\-buf.h}}
+\subsubsection[{GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-RING\_\-BUF\_\-T} {\bf GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-T}}}
+\label{a00505_a5592ee510b1e204faaca8ef7fa3fcf49}
+END of coresvcdoc. 
+
+Definition at line 66 of file gsn\_\-hi\_\-buf.h.
+
+\hypertarget{a00505_a9d5b1f6ad823b77a15f4d0e02f96e4ea}{
+\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GSN\_\-HI\_\-BUF\_\-TYPE\_\-T@{GSN\_\-HI\_\-BUF\_\-TYPE\_\-T}}
+\index{GSN\_\-HI\_\-BUF\_\-TYPE\_\-T@{GSN\_\-HI\_\-BUF\_\-TYPE\_\-T}!gsn_hi_buf.h@{gsn\_\-hi\_\-buf.h}}
+\subsubsection[{GSN\_\-HI\_\-BUF\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-HI\_\-BUF\_\-TYPE} {\bf GSN\_\-HI\_\-BUF\_\-TYPE\_\-T}}}
+\label{a00505_a9d5b1f6ad823b77a15f4d0e02f96e4ea}
+\hypertarget{a00505_a167c1fbff0676dbb63af937f637cc207}{
+\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM\_\-T@{GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM\_\-T@{GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM\_\-T}!gsn_hi_buf.h@{gsn\_\-hi\_\-buf.h}}
+\subsubsection[{GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM} {\bf GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00505_a167c1fbff0676dbb63af937f637cc207}
+\hypertarget{a00505_ae0bc0c176070bfb57aa0b92ee170f66a}{
+\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM\_\-T@{GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM\_\-T@{GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM\_\-T}!gsn_hi_buf.h@{gsn\_\-hi\_\-buf.h}}
+\subsubsection[{GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM} {\bf GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00505_ae0bc0c176070bfb57aa0b92ee170f66a}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00505_af1aed68d5f6d2f9a744d8de12b9adbbe}{
+\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GSN\_\-HI\_\-BUF\_\-TYPE@{GSN\_\-HI\_\-BUF\_\-TYPE}}
+\index{GSN\_\-HI\_\-BUF\_\-TYPE@{GSN\_\-HI\_\-BUF\_\-TYPE}!gsn_hi_buf.h@{gsn\_\-hi\_\-buf.h}}
+\subsubsection[{GSN\_\-HI\_\-BUF\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-HI\_\-BUF\_\-TYPE}}}
+\label{a00505_af1aed68d5f6d2f9a744d8de12b9adbbe}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-HI\_\-BUF\_\-TYPE\_\-SMALL@{GSN\_\-HI\_\-BUF\_\-TYPE\_\-SMALL}!gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}}\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GSN\_\-HI\_\-BUF\_\-TYPE\_\-SMALL@{GSN\_\-HI\_\-BUF\_\-TYPE\_\-SMALL}}\item[{\em 
+\hypertarget{a00505_af1aed68d5f6d2f9a744d8de12b9adbbea52d186a62d72e859badbc83f426dd566}{
+GSN\_\-HI\_\-BUF\_\-TYPE\_\-SMALL}
+\label{a00505_af1aed68d5f6d2f9a744d8de12b9adbbea52d186a62d72e859badbc83f426dd566}
+}]Small buffer \index{GSN\_\-HI\_\-BUF\_\-TYPE\_\-LARGE@{GSN\_\-HI\_\-BUF\_\-TYPE\_\-LARGE}!gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}}\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GSN\_\-HI\_\-BUF\_\-TYPE\_\-LARGE@{GSN\_\-HI\_\-BUF\_\-TYPE\_\-LARGE}}\item[{\em 
+\hypertarget{a00505_af1aed68d5f6d2f9a744d8de12b9adbbea53a7c87871450313e72c37988bd04544}{
+GSN\_\-HI\_\-BUF\_\-TYPE\_\-LARGE}
+\label{a00505_af1aed68d5f6d2f9a744d8de12b9adbbea53a7c87871450313e72c37988bd04544}
+}]Large buffer \end{description}
+\end{Desc}
+
+
+
+Definition at line 76 of file gsn\_\-hi\_\-buf.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00505_abf6f6a5a7601a77d1b12fafb55d11c98}{
+\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GsnHi\_\-RxBufInit@{GsnHi\_\-RxBufInit}}
+\index{GsnHi\_\-RxBufInit@{GsnHi\_\-RxBufInit}!gsn_hi_buf.h@{gsn\_\-hi\_\-buf.h}}
+\subsubsection[{GsnHi\_\-RxBufInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnHi\_\-RxBufInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-BUF\_\-Q\_\-DESC\_\-T} $\ast$}]{pHiBufQdesc, }
+\item[{{\bf GSN\_\-HI\_\-RX\_\-BUF\_\-INIT\_\-PARAM\_\-T} $\ast$}]{params}
+\end{DoxyParamCaption}
+)}}
+\label{a00505_abf6f6a5a7601a77d1b12fafb55d11c98}
+\hypertarget{a00505_aa067efcd37efd5878d2415b26baac06e}{
+\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GsnHi\_\-RxBufRelease@{GsnHi\_\-RxBufRelease}}
+\index{GsnHi\_\-RxBufRelease@{GsnHi\_\-RxBufRelease}!gsn_hi_buf.h@{gsn\_\-hi\_\-buf.h}}
+\subsubsection[{GsnHi\_\-RxBufRelease}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnHi\_\-RxBufRelease (
+\begin{DoxyParamCaption}
+\item[{{\bf INT8} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00505_aa067efcd37efd5878d2415b26baac06e}
+\hypertarget{a00505_ad2866488cc3982386eb5537d46581091}{
+\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GsnHi\_\-TxBufGet@{GsnHi\_\-TxBufGet}}
+\index{GsnHi\_\-TxBufGet@{GsnHi\_\-TxBufGet}!gsn_hi_buf.h@{gsn\_\-hi\_\-buf.h}}
+\subsubsection[{GsnHi\_\-TxBufGet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID$\ast$ GsnHi\_\-TxBufGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-CTX\_\-T} $\ast$}]{pHiCtx, }
+\item[{{\bf UINT32}}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{a00505_ad2866488cc3982386eb5537d46581091}
+
+
+Definition at line 129 of file gsn\_\-hi\_\-buf.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=372pt]{a00505_ad2866488cc3982386eb5537d46581091_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=398pt]{a00505_ad2866488cc3982386eb5537d46581091_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00505_a4f1899901cd2eba1f6dfd6fe610b2ec2}{
+\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GsnHi\_\-TxBufInit@{GsnHi\_\-TxBufInit}}
+\index{GsnHi\_\-TxBufInit@{GsnHi\_\-TxBufInit}!gsn_hi_buf.h@{gsn\_\-hi\_\-buf.h}}
+\subsubsection[{GsnHi\_\-TxBufInit}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnHi\_\-TxBufInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-CTX\_\-T} $\ast$}]{pHiCtx, }
+\item[{{\bf GSN\_\-HI\_\-TX\_\-BUF\_\-INIT\_\-PARAM\_\-T} $\ast$}]{params}
+\end{DoxyParamCaption}
+)}}
+\label{a00505_a4f1899901cd2eba1f6dfd6fe610b2ec2}
+
+
+Definition at line 115 of file gsn\_\-hi\_\-buf.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=388pt]{a00505_a4f1899901cd2eba1f6dfd6fe610b2ec2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00505_aad1b8f80f818515f9b785a1051075a43}{
+\index{gsn\_\-hi\_\-buf.h@{gsn\_\-hi\_\-buf.h}!GsnHi\_\-TxBufRelease@{GsnHi\_\-TxBufRelease}}
+\index{GsnHi\_\-TxBufRelease@{GsnHi\_\-TxBufRelease}!gsn_hi_buf.h@{gsn\_\-hi\_\-buf.h}}
+\subsubsection[{GsnHi\_\-TxBufRelease}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnHi\_\-TxBufRelease (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-CTX\_\-T} $\ast$}]{pHiCtx, }
+\item[{{\bf INT8} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00505_aad1b8f80f818515f9b785a1051075a43}
+
+
+Definition at line 154 of file gsn\_\-hi\_\-buf.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=394pt]{a00505_aad1b8f80f818515f9b785a1051075a43_cgraph}
+\end{center}
+\end{figure}
+
+

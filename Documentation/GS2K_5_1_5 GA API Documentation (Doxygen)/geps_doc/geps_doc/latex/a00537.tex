@@ -1,0 +1,468 @@
+\hypertarget{a00537}{
+\section{gsn\_\-ov788.h File Reference}
+\label{a00537}\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00179}{GSN\_\-OV788\_\-CTX}
+\item 
+struct \hyperlink{a00178}{GSN\_\-OV788\_\-CONFIG}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00537_a12d82eaeafad6bf9d726f8ada951c26a}{APP\_\-VIDEO\_\-DEBUG\_\-FAILURE}
+\item 
+\#define \hyperlink{a00537_a31d384363afc62e31bcc256be1630044}{OV788\_\-DMA\_\-MODE}
+\item 
+\#define \hyperlink{a00537_a81f4980cc3162540e05310924e7a8d09}{OV788\_\-DEBUG\_\-FAIL}
+\item 
+\#define \hyperlink{a00537_a8112c985f7444e82198d7571ce0a9160}{SPI\_\-PORT}~GSN\_\-SPI\_\-NUM\_\-MSPI
+\item 
+\#define \hyperlink{a00537_a01e018e4c5178685fbc46c045ac5d00a}{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CS}~29
+\item 
+\#define \hyperlink{a00537_aba66b4f5e20b47e226bff2aac9976fed}{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DIN}~34
+\item 
+\#define \hyperlink{a00537_a585ac48a0172ee6b25f0f9795c2fea76}{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CLK}~35
+\item 
+\#define \hyperlink{a00537_aa3b461392852b0d010ac54ff333c84d3}{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DOUT}~36
+\item 
+\#define \hyperlink{a00537_ace8e0326ad3e1b1b382dde589ab73c5d}{GSN\_\-OV\_\-RESET}~0x100000
+\item 
+\#define \hyperlink{a00537_a4453254e3a83038e9b0c9166e37a2afd}{GSN\_\-OV788\_\-SPI\_\-CS}~0x20000000
+\item 
+\#define \hyperlink{a00537_a2933565a79ef8d01d18fa21575e7289e}{GSN\_\-OV788\_\-GS\_\-TO\_\-OV\_\-INT}~0x100
+\item 
+\#define \hyperlink{a00537_af9417255b91078af42a150e6127bd7ba}{GSN\_\-OV788\_\-OV\_\-TO\_\-GS\_\-INT}~0x200
+\item 
+\#define \hyperlink{a00537_a6410c456ee5a94f559cc29a19593c562}{GSN\_\-OV788\_\-GPIO\_\-BITMAP}~0xdffffeff
+\item 
+\#define \hyperlink{a00537_a442fd9e3b0731ad257cc101fe54c1626}{GSN\_\-OV788\_\-HEADER\_\-LEN}~24
+\item 
+\#define \hyperlink{a00537_a572ce14a1306ec5a06c6e323e727d392}{GSN\_\-OV788\_\-SPI\_\-BUFF\_\-SIZE}~(2048$\ast$5)
+\item 
+\#define \hyperlink{a00537_a09855a349dab58d6e38434e1cdb56cfb}{GSN\_\-OV788\_\-READ\_\-MODE\_\-POLL}~0
+\item 
+\#define \hyperlink{a00537_aed3b15baaeb2570db93ae67dad6ea899}{GSN\_\-OV788\_\-READ\_\-MODE\_\-INTR\_\-DMA}~1
+\item 
+\#define \hyperlink{a00537_aaa8e2c17023f689a4163090e05fb4848}{GSN\_\-OV788\_\-BYTE0\_\-SOF}~0
+\item 
+\#define \hyperlink{a00537_a88b389ef35586d2c4bea20e141ac2fc1}{GSN\_\-OV788\_\-BYTE1\_\-RSD}~1
+\item 
+\#define \hyperlink{a00537_a0e8d18eaf1c23389ea9a7de8a0e1e613}{GSN\_\-OV788\_\-BYTE2\_\-CKS}~2
+\item 
+\#define \hyperlink{a00537_acbed1be004ffad78affe265811ea03ce}{GSN\_\-OV788\_\-BYTE3\_\-TYP}~3
+\item 
+\#define \hyperlink{a00537_a8e05d473154cc480cf10794ecda8ecf5}{GSN\_\-OV788\_\-BYTE4\_\-LEN0}~4
+\item 
+\#define \hyperlink{a00537_a0d5b5bdc4512e025e30a7c01472efe31}{GSN\_\-OV788\_\-BYTE5\_\-LEN1}~5
+\item 
+\#define \hyperlink{a00537_a9e51ee53b7b2ac998aa22793436b5c4c}{GSN\_\-OV788\_\-BYTE6\_\-LEN2}~6
+\item 
+\#define \hyperlink{a00537_a620bfbde906f1a1960482e5bd1c65206}{GSN\_\-OV788\_\-BYTE7\_\-LEN3}~7
+\item 
+\#define \hyperlink{a00537_a34d25a484933f1f2e2f801ced7d31cb0}{GSN\_\-OV788\_\-MAX\_\-BYTES\_\-PER\_\-DMA}~1024
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00537_aaca340fbce9b168b056214ae64de57df}{GSN\_\-OV788\_\-CALLBACK\_\-T} )(VOID $\ast$context, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} status, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$$\ast$rxBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$rxLen)
+\item 
+typedef enum \hyperlink{a00537_a7c0cb78d762a84b48d1857dafbad0455}{GSN\_\-OV788\_\-STATUS} \hyperlink{a00537_ad1eec137ad450b79f2207a5a6e87d9ac}{GSN\_\-OV788\_\-STATUS\_\-E}
+\item 
+typedef struct \hyperlink{a00179}{GSN\_\-OV788\_\-CTX} \hyperlink{a00537_aba3a60421c8b885cc0dc9d7931274351}{GSN\_\-OV788\_\-CTX\_\-T}
+\item 
+typedef struct \hyperlink{a00178}{GSN\_\-OV788\_\-CONFIG} \hyperlink{a00537_a22a37c1e556e0ca8d35c488ab3589319}{GSN\_\-OV788\_\-CONFIG\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00537_a7c0cb78d762a84b48d1857dafbad0455}{GSN\_\-OV788\_\-STATUS} \{ \par
+\hyperlink{a00537_a7c0cb78d762a84b48d1857dafbad0455a41409673eef3a45043bfeee889ebefff}{GSN\_\-OV788\_\-STATUS\_\-SUCCESS}, 
+\par
+\hyperlink{a00537_a7c0cb78d762a84b48d1857dafbad0455a85bb9218f89c2659ff04e8e453208d12}{GSN\_\-OV788\_\-STATUS\_\-IDLE}, 
+\par
+\hyperlink{a00537_a7c0cb78d762a84b48d1857dafbad0455aacc5f2733d3cebac06e368266c808cac}{GSN\_\-OV788\_\-STATUS\_\-READING}, 
+\par
+\hyperlink{a00537_a7c0cb78d762a84b48d1857dafbad0455a9afdf5dd0d48ac17d784d73f6ec895ad}{GSN\_\-OV788\_\-STATUS\_\-READY}, 
+\par
+\hyperlink{a00537_a7c0cb78d762a84b48d1857dafbad0455a3c97fa155eef8dc021b25e0162a0e1d5}{GSN\_\-OV788\_\-STATUS\_\-FAILURE}, 
+\par
+\hyperlink{a00537_a7c0cb78d762a84b48d1857dafbad0455aa95c918200098527f1a5c81a054048bf}{GSN\_\-OV788\_\-STATUS\_\-IN\_\-PROGRESS}, 
+\par
+\hyperlink{a00537_a7c0cb78d762a84b48d1857dafbad0455a847604ad060345a1a1fa19296f75275e}{GSN\_\-OV788\_\-STATUS\_\-NO\_\-DATA\_\-FROM\_\-OV}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00537_ad1eec137ad450b79f2207a5a6e87d9ac}{GSN\_\-OV788\_\-STATUS\_\-E} \hyperlink{a00537_aca76f19f3c9e424e01912ed3a3718cdd}{gsnOv788\_\-Init} (\hyperlink{a00179}{GSN\_\-OV788\_\-CTX\_\-T} $\ast$pOv788Ctx, \hyperlink{a00178}{GSN\_\-OV788\_\-CONFIG\_\-T} $\ast$pOv788Config)
+\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00537_a04ccba3f0e08718595c61cef1bcf517c}{gsnOv788\_\-PacketRead} (\hyperlink{a00179}{GSN\_\-OV788\_\-CTX\_\-T} $\ast$pOv788Ctx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$rxBuff, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rxLen, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} mode, \hyperlink{a00537_aaca340fbce9b168b056214ae64de57df}{GSN\_\-OV788\_\-CALLBACK\_\-T} $\ast$pOv788Cb, VOID $\ast$cbCtx)
+\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00537_a9eb6198e01f301a5fd7259a122a9b09d}{gsnOv788\_\-Read} (\hyperlink{a00179}{GSN\_\-OV788\_\-CTX\_\-T} $\ast$pOv788Ctx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$rxBuff, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rxLen, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} mode, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen, \hyperlink{a00537_aaca340fbce9b168b056214ae64de57df}{GSN\_\-OV788\_\-CALLBACK\_\-T} $\ast$pOv788Cb, VOID $\ast$cbCtx)
+\item 
+PUBLIC \hyperlink{a00537_ad1eec137ad450b79f2207a5a6e87d9ac}{GSN\_\-OV788\_\-STATUS\_\-E} \hyperlink{a00537_a8ab692cbf99fbee26df8efd13c65f1fe}{gsnOv788\_\-DeInit} (\hyperlink{a00179}{GSN\_\-OV788\_\-CTX\_\-T} $\ast$pOv788Ctx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00537_a12d82eaeafad6bf9d726f8ada951c26a}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!APP\_\-VIDEO\_\-DEBUG\_\-FAILURE@{APP\_\-VIDEO\_\-DEBUG\_\-FAILURE}}
+\index{APP\_\-VIDEO\_\-DEBUG\_\-FAILURE@{APP\_\-VIDEO\_\-DEBUG\_\-FAILURE}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{APP\_\-VIDEO\_\-DEBUG\_\-FAILURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define APP\_\-VIDEO\_\-DEBUG\_\-FAILURE}}
+\label{a00537_a12d82eaeafad6bf9d726f8ada951c26a}
+
+
+Definition at line 42 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_aaa8e2c17023f689a4163090e05fb4848}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-BYTE0\_\-SOF@{GSN\_\-OV788\_\-BYTE0\_\-SOF}}
+\index{GSN\_\-OV788\_\-BYTE0\_\-SOF@{GSN\_\-OV788\_\-BYTE0\_\-SOF}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-BYTE0\_\-SOF}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-BYTE0\_\-SOF~0}}
+\label{a00537_aaa8e2c17023f689a4163090e05fb4848}
+
+
+Definition at line 125 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a88b389ef35586d2c4bea20e141ac2fc1}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-BYTE1\_\-RSD@{GSN\_\-OV788\_\-BYTE1\_\-RSD}}
+\index{GSN\_\-OV788\_\-BYTE1\_\-RSD@{GSN\_\-OV788\_\-BYTE1\_\-RSD}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-BYTE1\_\-RSD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-BYTE1\_\-RSD~1}}
+\label{a00537_a88b389ef35586d2c4bea20e141ac2fc1}
+
+
+Definition at line 126 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a0e8d18eaf1c23389ea9a7de8a0e1e613}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-BYTE2\_\-CKS@{GSN\_\-OV788\_\-BYTE2\_\-CKS}}
+\index{GSN\_\-OV788\_\-BYTE2\_\-CKS@{GSN\_\-OV788\_\-BYTE2\_\-CKS}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-BYTE2\_\-CKS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-BYTE2\_\-CKS~2}}
+\label{a00537_a0e8d18eaf1c23389ea9a7de8a0e1e613}
+
+
+Definition at line 127 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_acbed1be004ffad78affe265811ea03ce}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-BYTE3\_\-TYP@{GSN\_\-OV788\_\-BYTE3\_\-TYP}}
+\index{GSN\_\-OV788\_\-BYTE3\_\-TYP@{GSN\_\-OV788\_\-BYTE3\_\-TYP}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-BYTE3\_\-TYP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-BYTE3\_\-TYP~3}}
+\label{a00537_acbed1be004ffad78affe265811ea03ce}
+
+
+Definition at line 128 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a8e05d473154cc480cf10794ecda8ecf5}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-BYTE4\_\-LEN0@{GSN\_\-OV788\_\-BYTE4\_\-LEN0}}
+\index{GSN\_\-OV788\_\-BYTE4\_\-LEN0@{GSN\_\-OV788\_\-BYTE4\_\-LEN0}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-BYTE4\_\-LEN0}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-BYTE4\_\-LEN0~4}}
+\label{a00537_a8e05d473154cc480cf10794ecda8ecf5}
+
+
+Definition at line 129 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a0d5b5bdc4512e025e30a7c01472efe31}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-BYTE5\_\-LEN1@{GSN\_\-OV788\_\-BYTE5\_\-LEN1}}
+\index{GSN\_\-OV788\_\-BYTE5\_\-LEN1@{GSN\_\-OV788\_\-BYTE5\_\-LEN1}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-BYTE5\_\-LEN1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-BYTE5\_\-LEN1~5}}
+\label{a00537_a0d5b5bdc4512e025e30a7c01472efe31}
+
+
+Definition at line 130 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a9e51ee53b7b2ac998aa22793436b5c4c}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-BYTE6\_\-LEN2@{GSN\_\-OV788\_\-BYTE6\_\-LEN2}}
+\index{GSN\_\-OV788\_\-BYTE6\_\-LEN2@{GSN\_\-OV788\_\-BYTE6\_\-LEN2}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-BYTE6\_\-LEN2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-BYTE6\_\-LEN2~6}}
+\label{a00537_a9e51ee53b7b2ac998aa22793436b5c4c}
+
+
+Definition at line 131 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a620bfbde906f1a1960482e5bd1c65206}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-BYTE7\_\-LEN3@{GSN\_\-OV788\_\-BYTE7\_\-LEN3}}
+\index{GSN\_\-OV788\_\-BYTE7\_\-LEN3@{GSN\_\-OV788\_\-BYTE7\_\-LEN3}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-BYTE7\_\-LEN3}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-BYTE7\_\-LEN3~7}}
+\label{a00537_a620bfbde906f1a1960482e5bd1c65206}
+
+
+Definition at line 132 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a6410c456ee5a94f559cc29a19593c562}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-GPIO\_\-BITMAP@{GSN\_\-OV788\_\-GPIO\_\-BITMAP}}
+\index{GSN\_\-OV788\_\-GPIO\_\-BITMAP@{GSN\_\-OV788\_\-GPIO\_\-BITMAP}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-GPIO\_\-BITMAP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-GPIO\_\-BITMAP~0xdffffeff}}
+\label{a00537_a6410c456ee5a94f559cc29a19593c562}
+
+
+Definition at line 113 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a585ac48a0172ee6b25f0f9795c2fea76}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CLK@{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CLK}}
+\index{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CLK@{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CLK}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CLK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CLK~35}}
+\label{a00537_a585ac48a0172ee6b25f0f9795c2fea76}
+
+
+Definition at line 81 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a01e018e4c5178685fbc46c045ac5d00a}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CS@{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CS}}
+\index{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CS@{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CS}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-CS~29}}
+\label{a00537_a01e018e4c5178685fbc46c045ac5d00a}
+
+
+Definition at line 77 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_aba66b4f5e20b47e226bff2aac9976fed}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DIN@{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DIN}}
+\index{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DIN@{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DIN}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DIN~34}}
+\label{a00537_aba66b4f5e20b47e226bff2aac9976fed}
+
+
+Definition at line 80 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_aa3b461392852b0d010ac54ff333c84d3}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DOUT@{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DOUT}}
+\index{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DOUT@{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DOUT}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DOUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-GPIO\_\-SPI0\_\-DOUT~36}}
+\label{a00537_aa3b461392852b0d010ac54ff333c84d3}
+
+
+Definition at line 82 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a2933565a79ef8d01d18fa21575e7289e}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-GS\_\-TO\_\-OV\_\-INT@{GSN\_\-OV788\_\-GS\_\-TO\_\-OV\_\-INT}}
+\index{GSN\_\-OV788\_\-GS\_\-TO\_\-OV\_\-INT@{GSN\_\-OV788\_\-GS\_\-TO\_\-OV\_\-INT}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-GS\_\-TO\_\-OV\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-GS\_\-TO\_\-OV\_\-INT~0x100}}
+\label{a00537_a2933565a79ef8d01d18fa21575e7289e}
+
+
+Definition at line 107 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a442fd9e3b0731ad257cc101fe54c1626}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-HEADER\_\-LEN@{GSN\_\-OV788\_\-HEADER\_\-LEN}}
+\index{GSN\_\-OV788\_\-HEADER\_\-LEN@{GSN\_\-OV788\_\-HEADER\_\-LEN}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-HEADER\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-HEADER\_\-LEN~24}}
+\label{a00537_a442fd9e3b0731ad257cc101fe54c1626}
+
+
+Definition at line 119 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a34d25a484933f1f2e2f801ced7d31cb0}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-MAX\_\-BYTES\_\-PER\_\-DMA@{GSN\_\-OV788\_\-MAX\_\-BYTES\_\-PER\_\-DMA}}
+\index{GSN\_\-OV788\_\-MAX\_\-BYTES\_\-PER\_\-DMA@{GSN\_\-OV788\_\-MAX\_\-BYTES\_\-PER\_\-DMA}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-MAX\_\-BYTES\_\-PER\_\-DMA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-MAX\_\-BYTES\_\-PER\_\-DMA~1024}}
+\label{a00537_a34d25a484933f1f2e2f801ced7d31cb0}
+
+
+Definition at line 135 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_af9417255b91078af42a150e6127bd7ba}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-OV\_\-TO\_\-GS\_\-INT@{GSN\_\-OV788\_\-OV\_\-TO\_\-GS\_\-INT}}
+\index{GSN\_\-OV788\_\-OV\_\-TO\_\-GS\_\-INT@{GSN\_\-OV788\_\-OV\_\-TO\_\-GS\_\-INT}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-OV\_\-TO\_\-GS\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-OV\_\-TO\_\-GS\_\-INT~0x200}}
+\label{a00537_af9417255b91078af42a150e6127bd7ba}
+
+
+Definition at line 108 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_aed3b15baaeb2570db93ae67dad6ea899}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-READ\_\-MODE\_\-INTR\_\-DMA@{GSN\_\-OV788\_\-READ\_\-MODE\_\-INTR\_\-DMA}}
+\index{GSN\_\-OV788\_\-READ\_\-MODE\_\-INTR\_\-DMA@{GSN\_\-OV788\_\-READ\_\-MODE\_\-INTR\_\-DMA}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-READ\_\-MODE\_\-INTR\_\-DMA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-READ\_\-MODE\_\-INTR\_\-DMA~1}}
+\label{a00537_aed3b15baaeb2570db93ae67dad6ea899}
+
+
+Definition at line 123 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a09855a349dab58d6e38434e1cdb56cfb}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-READ\_\-MODE\_\-POLL@{GSN\_\-OV788\_\-READ\_\-MODE\_\-POLL}}
+\index{GSN\_\-OV788\_\-READ\_\-MODE\_\-POLL@{GSN\_\-OV788\_\-READ\_\-MODE\_\-POLL}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-READ\_\-MODE\_\-POLL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-READ\_\-MODE\_\-POLL~0}}
+\label{a00537_a09855a349dab58d6e38434e1cdb56cfb}
+
+
+Definition at line 122 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a572ce14a1306ec5a06c6e323e727d392}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-SPI\_\-BUFF\_\-SIZE@{GSN\_\-OV788\_\-SPI\_\-BUFF\_\-SIZE}}
+\index{GSN\_\-OV788\_\-SPI\_\-BUFF\_\-SIZE@{GSN\_\-OV788\_\-SPI\_\-BUFF\_\-SIZE}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-SPI\_\-BUFF\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-SPI\_\-BUFF\_\-SIZE~(2048$\ast$5)}}
+\label{a00537_a572ce14a1306ec5a06c6e323e727d392}
+
+
+Definition at line 120 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a4453254e3a83038e9b0c9166e37a2afd}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-SPI\_\-CS@{GSN\_\-OV788\_\-SPI\_\-CS}}
+\index{GSN\_\-OV788\_\-SPI\_\-CS@{GSN\_\-OV788\_\-SPI\_\-CS}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-SPI\_\-CS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV788\_\-SPI\_\-CS~0x20000000}}
+\label{a00537_a4453254e3a83038e9b0c9166e37a2afd}
+
+
+Definition at line 104 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_ace8e0326ad3e1b1b382dde589ab73c5d}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV\_\-RESET@{GSN\_\-OV\_\-RESET}}
+\index{GSN\_\-OV\_\-RESET@{GSN\_\-OV\_\-RESET}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV\_\-RESET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-OV\_\-RESET~0x100000}}
+\label{a00537_ace8e0326ad3e1b1b382dde589ab73c5d}
+
+
+Definition at line 99 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a81f4980cc3162540e05310924e7a8d09}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!OV788\_\-DEBUG\_\-FAIL@{OV788\_\-DEBUG\_\-FAIL}}
+\index{OV788\_\-DEBUG\_\-FAIL@{OV788\_\-DEBUG\_\-FAIL}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{OV788\_\-DEBUG\_\-FAIL}]{\setlength{\rightskip}{0pt plus 5cm}\#define OV788\_\-DEBUG\_\-FAIL}}
+\label{a00537_a81f4980cc3162540e05310924e7a8d09}
+
+
+Definition at line 50 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a31d384363afc62e31bcc256be1630044}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!OV788\_\-DMA\_\-MODE@{OV788\_\-DMA\_\-MODE}}
+\index{OV788\_\-DMA\_\-MODE@{OV788\_\-DMA\_\-MODE}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{OV788\_\-DMA\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define OV788\_\-DMA\_\-MODE}}
+\label{a00537_a31d384363afc62e31bcc256be1630044}
+
+
+Definition at line 46 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a8112c985f7444e82198d7571ce0a9160}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!SPI\_\-PORT@{SPI\_\-PORT}}
+\index{SPI\_\-PORT@{SPI\_\-PORT}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{SPI\_\-PORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI\_\-PORT~GSN\_\-SPI\_\-NUM\_\-MSPI}}
+\label{a00537_a8112c985f7444e82198d7571ce0a9160}
+
+
+Definition at line 59 of file gsn\_\-ov788.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00537_aaca340fbce9b168b056214ae64de57df}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-CALLBACK\_\-T@{GSN\_\-OV788\_\-CALLBACK\_\-T}}
+\index{GSN\_\-OV788\_\-CALLBACK\_\-T@{GSN\_\-OV788\_\-CALLBACK\_\-T}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-CALLBACK\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-OV788\_\-CALLBACK\_\-T})(VOID $\ast$context, {\bf UINT32} status, {\bf UINT8} $\ast$$\ast$rxBuf, {\bf UINT32} $\ast$rxLen)}}
+\label{a00537_aaca340fbce9b168b056214ae64de57df}
+
+
+Definition at line 137 of file gsn\_\-ov788.h.
+
+\hypertarget{a00537_a22a37c1e556e0ca8d35c488ab3589319}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-CONFIG\_\-T@{GSN\_\-OV788\_\-CONFIG\_\-T}}
+\index{GSN\_\-OV788\_\-CONFIG\_\-T@{GSN\_\-OV788\_\-CONFIG\_\-T}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-OV788\_\-CONFIG} {\bf GSN\_\-OV788\_\-CONFIG\_\-T}}}
+\label{a00537_a22a37c1e556e0ca8d35c488ab3589319}
+\hypertarget{a00537_aba3a60421c8b885cc0dc9d7931274351}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-CTX\_\-T@{GSN\_\-OV788\_\-CTX\_\-T}}
+\index{GSN\_\-OV788\_\-CTX\_\-T@{GSN\_\-OV788\_\-CTX\_\-T}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-OV788\_\-CTX} {\bf GSN\_\-OV788\_\-CTX\_\-T}}}
+\label{a00537_aba3a60421c8b885cc0dc9d7931274351}
+\hypertarget{a00537_ad1eec137ad450b79f2207a5a6e87d9ac}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-STATUS\_\-E@{GSN\_\-OV788\_\-STATUS\_\-E}}
+\index{GSN\_\-OV788\_\-STATUS\_\-E@{GSN\_\-OV788\_\-STATUS\_\-E}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-STATUS\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-OV788\_\-STATUS} {\bf GSN\_\-OV788\_\-STATUS\_\-E}}}
+\label{a00537_ad1eec137ad450b79f2207a5a6e87d9ac}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00537_a7c0cb78d762a84b48d1857dafbad0455}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-STATUS@{GSN\_\-OV788\_\-STATUS}}
+\index{GSN\_\-OV788\_\-STATUS@{GSN\_\-OV788\_\-STATUS}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{GSN\_\-OV788\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-OV788\_\-STATUS}}}
+\label{a00537_a7c0cb78d762a84b48d1857dafbad0455}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-OV788\_\-STATUS\_\-SUCCESS@{GSN\_\-OV788\_\-STATUS\_\-SUCCESS}!gsn\_\-ov788.h@{gsn\_\-ov788.h}}\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-STATUS\_\-SUCCESS@{GSN\_\-OV788\_\-STATUS\_\-SUCCESS}}\item[{\em 
+\hypertarget{a00537_a7c0cb78d762a84b48d1857dafbad0455a41409673eef3a45043bfeee889ebefff}{
+GSN\_\-OV788\_\-STATUS\_\-SUCCESS}
+\label{a00537_a7c0cb78d762a84b48d1857dafbad0455a41409673eef3a45043bfeee889ebefff}
+}]\index{GSN\_\-OV788\_\-STATUS\_\-IDLE@{GSN\_\-OV788\_\-STATUS\_\-IDLE}!gsn\_\-ov788.h@{gsn\_\-ov788.h}}\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-STATUS\_\-IDLE@{GSN\_\-OV788\_\-STATUS\_\-IDLE}}\item[{\em 
+\hypertarget{a00537_a7c0cb78d762a84b48d1857dafbad0455a85bb9218f89c2659ff04e8e453208d12}{
+GSN\_\-OV788\_\-STATUS\_\-IDLE}
+\label{a00537_a7c0cb78d762a84b48d1857dafbad0455a85bb9218f89c2659ff04e8e453208d12}
+}]\index{GSN\_\-OV788\_\-STATUS\_\-READING@{GSN\_\-OV788\_\-STATUS\_\-READING}!gsn\_\-ov788.h@{gsn\_\-ov788.h}}\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-STATUS\_\-READING@{GSN\_\-OV788\_\-STATUS\_\-READING}}\item[{\em 
+\hypertarget{a00537_a7c0cb78d762a84b48d1857dafbad0455aacc5f2733d3cebac06e368266c808cac}{
+GSN\_\-OV788\_\-STATUS\_\-READING}
+\label{a00537_a7c0cb78d762a84b48d1857dafbad0455aacc5f2733d3cebac06e368266c808cac}
+}]\index{GSN\_\-OV788\_\-STATUS\_\-READY@{GSN\_\-OV788\_\-STATUS\_\-READY}!gsn\_\-ov788.h@{gsn\_\-ov788.h}}\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-STATUS\_\-READY@{GSN\_\-OV788\_\-STATUS\_\-READY}}\item[{\em 
+\hypertarget{a00537_a7c0cb78d762a84b48d1857dafbad0455a9afdf5dd0d48ac17d784d73f6ec895ad}{
+GSN\_\-OV788\_\-STATUS\_\-READY}
+\label{a00537_a7c0cb78d762a84b48d1857dafbad0455a9afdf5dd0d48ac17d784d73f6ec895ad}
+}]\index{GSN\_\-OV788\_\-STATUS\_\-FAILURE@{GSN\_\-OV788\_\-STATUS\_\-FAILURE}!gsn\_\-ov788.h@{gsn\_\-ov788.h}}\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-STATUS\_\-FAILURE@{GSN\_\-OV788\_\-STATUS\_\-FAILURE}}\item[{\em 
+\hypertarget{a00537_a7c0cb78d762a84b48d1857dafbad0455a3c97fa155eef8dc021b25e0162a0e1d5}{
+GSN\_\-OV788\_\-STATUS\_\-FAILURE}
+\label{a00537_a7c0cb78d762a84b48d1857dafbad0455a3c97fa155eef8dc021b25e0162a0e1d5}
+}]\index{GSN\_\-OV788\_\-STATUS\_\-IN\_\-PROGRESS@{GSN\_\-OV788\_\-STATUS\_\-IN\_\-PROGRESS}!gsn\_\-ov788.h@{gsn\_\-ov788.h}}\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-STATUS\_\-IN\_\-PROGRESS@{GSN\_\-OV788\_\-STATUS\_\-IN\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00537_a7c0cb78d762a84b48d1857dafbad0455aa95c918200098527f1a5c81a054048bf}{
+GSN\_\-OV788\_\-STATUS\_\-IN\_\-PROGRESS}
+\label{a00537_a7c0cb78d762a84b48d1857dafbad0455aa95c918200098527f1a5c81a054048bf}
+}]\index{GSN\_\-OV788\_\-STATUS\_\-NO\_\-DATA\_\-FROM\_\-OV@{GSN\_\-OV788\_\-STATUS\_\-NO\_\-DATA\_\-FROM\_\-OV}!gsn\_\-ov788.h@{gsn\_\-ov788.h}}\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!GSN\_\-OV788\_\-STATUS\_\-NO\_\-DATA\_\-FROM\_\-OV@{GSN\_\-OV788\_\-STATUS\_\-NO\_\-DATA\_\-FROM\_\-OV}}\item[{\em 
+\hypertarget{a00537_a7c0cb78d762a84b48d1857dafbad0455a847604ad060345a1a1fa19296f75275e}{
+GSN\_\-OV788\_\-STATUS\_\-NO\_\-DATA\_\-FROM\_\-OV}
+\label{a00537_a7c0cb78d762a84b48d1857dafbad0455a847604ad060345a1a1fa19296f75275e}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 139 of file gsn\_\-ov788.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00537_a8ab692cbf99fbee26df8efd13c65f1fe}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!gsnOv788\_\-DeInit@{gsnOv788\_\-DeInit}}
+\index{gsnOv788\_\-DeInit@{gsnOv788\_\-DeInit}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{gsnOv788\_\-DeInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-OV788\_\-STATUS\_\-E} gsnOv788\_\-DeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OV788\_\-CTX\_\-T} $\ast$}]{pOv788Ctx}
+\end{DoxyParamCaption}
+)}}
+\label{a00537_a8ab692cbf99fbee26df8efd13c65f1fe}
+\hypertarget{a00537_aca76f19f3c9e424e01912ed3a3718cdd}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!gsnOv788\_\-Init@{gsnOv788\_\-Init}}
+\index{gsnOv788\_\-Init@{gsnOv788\_\-Init}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{gsnOv788\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-OV788\_\-STATUS\_\-E} gsnOv788\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OV788\_\-CTX\_\-T} $\ast$}]{pOv788Ctx, }
+\item[{{\bf GSN\_\-OV788\_\-CONFIG\_\-T} $\ast$}]{pOv788Config}
+\end{DoxyParamCaption}
+)}}
+\label{a00537_aca76f19f3c9e424e01912ed3a3718cdd}
+\hypertarget{a00537_a04ccba3f0e08718595c61cef1bcf517c}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!gsnOv788\_\-PacketRead@{gsnOv788\_\-PacketRead}}
+\index{gsnOv788\_\-PacketRead@{gsnOv788\_\-PacketRead}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{gsnOv788\_\-PacketRead}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} gsnOv788\_\-PacketRead (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OV788\_\-CTX\_\-T} $\ast$}]{pOv788Ctx, }
+\item[{{\bf UINT8} $\ast$}]{rxBuff, }
+\item[{{\bf UINT32}}]{rxLen, }
+\item[{{\bf UINT32}}]{mode, }
+\item[{{\bf GSN\_\-OV788\_\-CALLBACK\_\-T} $\ast$}]{pOv788Cb, }
+\item[{VOID $\ast$}]{cbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00537_a04ccba3f0e08718595c61cef1bcf517c}
+\hypertarget{a00537_a9eb6198e01f301a5fd7259a122a9b09d}{
+\index{gsn\_\-ov788.h@{gsn\_\-ov788.h}!gsnOv788\_\-Read@{gsnOv788\_\-Read}}
+\index{gsnOv788\_\-Read@{gsnOv788\_\-Read}!gsn_ov788.h@{gsn\_\-ov788.h}}
+\subsubsection[{gsnOv788\_\-Read}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} gsnOv788\_\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OV788\_\-CTX\_\-T} $\ast$}]{pOv788Ctx, }
+\item[{{\bf UINT8} $\ast$}]{rxBuff, }
+\item[{{\bf UINT32}}]{rxLen, }
+\item[{{\bf UINT32}}]{mode, }
+\item[{{\bf UINT32}}]{dataLen, }
+\item[{{\bf GSN\_\-OV788\_\-CALLBACK\_\-T} $\ast$}]{pOv788Cb, }
+\item[{VOID $\ast$}]{cbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00537_a9eb6198e01f301a5fd7259a122a9b09d}

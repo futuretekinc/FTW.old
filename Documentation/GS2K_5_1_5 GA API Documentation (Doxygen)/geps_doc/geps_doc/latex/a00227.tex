@@ -1,0 +1,141 @@
+\hypertarget{a00227}{
+\section{GSN\_\-SNTP\_\-CTX Struct Reference}
+\label{a00227}\index{GSN\_\-SNTP\_\-CTX@{GSN\_\-SNTP\_\-CTX}}
+}
+
+
+SNTP context structure. This structure contains the parameters that define an instance of the SNTP object.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-sntp.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00227_a09261ac30de0001f89753c8f3869ad2f}{serverIpAddr}
+\item 
+\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} \hyperlink{a00227_a99352b33eae768a9ac49ad9cd195a03f}{recvTmrHndl}
+\item 
+\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} \hyperlink{a00227_aceccc0d31027efd5c8c774981cb782f3}{recvTmr}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00227_a4664a1e7fa506ea9a7864c6847d8af4b}{sockDesc}
+\item 
+\hyperlink{a00481_aac7371fae4e423f90332caf551b62cf1}{GSN\_\-NOTIFICATION\_\-FUNC\_\-T} \hyperlink{a00227_a44a3261584f04cfe1ae8e254fcea6b61}{cb}
+\item 
+VOID $\ast$ \hyperlink{a00227_abc1717c5357c7dda5c2abef096a06f1f}{cbCtx}
+\item 
+\hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00227_aa1d801da8079e893c423290b7f12041d}{timeDiff}
+\item 
+\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00227_ab4a2b87d4c1759e4e8bd2e472d2a0985}{diffNegative}
+\item 
+\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00227_a25ee748bd783b7df54ec68bcade63962}{sntpDone}
+\item 
+\hyperlink{a00108}{GSN\_\-WDD\_\-CTX\_\-T} $\ast$ \hyperlink{a00227_a97684b58b7a05f9b282a86a26929e1ba}{pWdd}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+SNTP context structure. This structure contains the parameters that define an instance of the SNTP object. 
+
+Definition at line 111 of file gsn\_\-sntp.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00227_a44a3261584f04cfe1ae8e254fcea6b61}{
+\index{GSN\_\-SNTP\_\-CTX@{GSN\_\-SNTP\_\-CTX}!cb@{cb}}
+\index{cb@{cb}!GSN_SNTP_CTX@{GSN\_\-SNTP\_\-CTX}}
+\subsubsection[{cb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NOTIFICATION\_\-FUNC\_\-T} {\bf cb}}}
+\label{a00227_a44a3261584f04cfe1ae8e254fcea6b61}
+Callback Function 
+
+Definition at line 117 of file gsn\_\-sntp.h.
+
+\hypertarget{a00227_abc1717c5357c7dda5c2abef096a06f1f}{
+\index{GSN\_\-SNTP\_\-CTX@{GSN\_\-SNTP\_\-CTX}!cbCtx@{cbCtx}}
+\index{cbCtx@{cbCtx}!GSN_SNTP_CTX@{GSN\_\-SNTP\_\-CTX}}
+\subsubsection[{cbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf cbCtx}}}
+\label{a00227_abc1717c5357c7dda5c2abef096a06f1f}
+Context for Callback Function 
+
+Definition at line 118 of file gsn\_\-sntp.h.
+
+\hypertarget{a00227_ab4a2b87d4c1759e4e8bd2e472d2a0985}{
+\index{GSN\_\-SNTP\_\-CTX@{GSN\_\-SNTP\_\-CTX}!diffNegative@{diffNegative}}
+\index{diffNegative@{diffNegative}!GSN_SNTP_CTX@{GSN\_\-SNTP\_\-CTX}}
+\subsubsection[{diffNegative}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BOOL} {\bf diffNegative}}}
+\label{a00227_ab4a2b87d4c1759e4e8bd2e472d2a0985}
+Difference is additive or negative 
+
+Definition at line 120 of file gsn\_\-sntp.h.
+
+\hypertarget{a00227_a97684b58b7a05f9b282a86a26929e1ba}{
+\index{GSN\_\-SNTP\_\-CTX@{GSN\_\-SNTP\_\-CTX}!pWdd@{pWdd}}
+\index{pWdd@{pWdd}!GSN_SNTP_CTX@{GSN\_\-SNTP\_\-CTX}}
+\subsubsection[{pWdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WDD\_\-CTX\_\-T}$\ast$ {\bf pWdd}}}
+\label{a00227_a97684b58b7a05f9b282a86a26929e1ba}
+
+
+Definition at line 122 of file gsn\_\-sntp.h.
+
+\hypertarget{a00227_aceccc0d31027efd5c8c774981cb782f3}{
+\index{GSN\_\-SNTP\_\-CTX@{GSN\_\-SNTP\_\-CTX}!recvTmr@{recvTmr}}
+\index{recvTmr@{recvTmr}!GSN_SNTP_CTX@{GSN\_\-SNTP\_\-CTX}}
+\subsubsection[{recvTmr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SOFT\_\-TMR\_\-T} {\bf recvTmr}}}
+\label{a00227_aceccc0d31027efd5c8c774981cb782f3}
+Receive Timer 
+
+Definition at line 115 of file gsn\_\-sntp.h.
+
+\hypertarget{a00227_a99352b33eae768a9ac49ad9cd195a03f}{
+\index{GSN\_\-SNTP\_\-CTX@{GSN\_\-SNTP\_\-CTX}!recvTmrHndl@{recvTmrHndl}}
+\index{recvTmrHndl@{recvTmrHndl}!GSN_SNTP_CTX@{GSN\_\-SNTP\_\-CTX}}
+\subsubsection[{recvTmrHndl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} {\bf recvTmrHndl}}}
+\label{a00227_a99352b33eae768a9ac49ad9cd195a03f}
+Receive Timer Handle 
+
+Definition at line 114 of file gsn\_\-sntp.h.
+
+\hypertarget{a00227_a09261ac30de0001f89753c8f3869ad2f}{
+\index{GSN\_\-SNTP\_\-CTX@{GSN\_\-SNTP\_\-CTX}!serverIpAddr@{serverIpAddr}}
+\index{serverIpAddr@{serverIpAddr}!GSN_SNTP_CTX@{GSN\_\-SNTP\_\-CTX}}
+\subsubsection[{serverIpAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf serverIpAddr}}}
+\label{a00227_a09261ac30de0001f89753c8f3869ad2f}
+Server IP Address 
+
+Definition at line 113 of file gsn\_\-sntp.h.
+
+\hypertarget{a00227_a25ee748bd783b7df54ec68bcade63962}{
+\index{GSN\_\-SNTP\_\-CTX@{GSN\_\-SNTP\_\-CTX}!sntpDone@{sntpDone}}
+\index{sntpDone@{sntpDone}!GSN_SNTP_CTX@{GSN\_\-SNTP\_\-CTX}}
+\subsubsection[{sntpDone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BOOL} {\bf sntpDone}}}
+\label{a00227_a25ee748bd783b7df54ec68bcade63962}
+Flag for SNTP Done 
+
+Definition at line 121 of file gsn\_\-sntp.h.
+
+\hypertarget{a00227_a4664a1e7fa506ea9a7864c6847d8af4b}{
+\index{GSN\_\-SNTP\_\-CTX@{GSN\_\-SNTP\_\-CTX}!sockDesc@{sockDesc}}
+\index{sockDesc@{sockDesc}!GSN_SNTP_CTX@{GSN\_\-SNTP\_\-CTX}}
+\subsubsection[{sockDesc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf sockDesc}}}
+\label{a00227_a4664a1e7fa506ea9a7864c6847d8af4b}
+Socket Descriptor 
+
+Definition at line 116 of file gsn\_\-sntp.h.
+
+\hypertarget{a00227_aa1d801da8079e893c423290b7f12041d}{
+\index{GSN\_\-SNTP\_\-CTX@{GSN\_\-SNTP\_\-CTX}!timeDiff@{timeDiff}}
+\index{timeDiff@{timeDiff}!GSN_SNTP_CTX@{GSN\_\-SNTP\_\-CTX}}
+\subsubsection[{timeDiff}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ULONG64} {\bf timeDiff}}}
+\label{a00227_aa1d801da8079e893c423290b7f12041d}
+Time Difference 
+
+Definition at line 119 of file gsn\_\-sntp.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00585}{gsn\_\-sntp.h}\end{DoxyCompactItemize}

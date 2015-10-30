@@ -1,0 +1,877 @@
+\hypertarget{a00673}{
+\section{GSN Soft Timer API}
+\label{a00673}\index{GSN Soft Timer API@{GSN Soft Timer API}}
+}
+
+
+This module provides a number of soft timers based on a single hardware timer.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00083}{GSN\_\-GS2000\_\-TIME}
+\begin{DoxyCompactList}\small\item\em structure to hold the 64-\/bit time value. \end{DoxyCompactList}\item 
+struct \hyperlink{a00228}{GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft timer callback information. A callback includes both a Callback Routine, and its execution context. \end{DoxyCompactList}\item 
+struct \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft timer structure. Timer structure to store the context of the soft timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00673_ga05ec5d63e2ba7621d706137124efca7d}{TIMER\_\-CLOCK}~32768
+\begin{DoxyCompactList}\small\item\em micro, milli seconds to system time and vice-\/versa conversion. MACROs to convert time to system time and vice-\/versa. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00673_gad5a672b2263743c1daf0ee6797d2fbfd}{TIMER\_\-INTERRUPT\_\-1\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) / 1000 )
+\begin{DoxyCompactList}\small\item\em Ticks in one millisecond This macro gives number of ticks in one millisecond. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00673_gaf705ea28da184c29e230284fead5a65c}{GSN\_\-SOFT\_\-TMR\_\-TICKS\_\-TO\_\-MILLISECONDS}(sysTicks)~SYSTIME\_\-TO\_\-MSEC(sysTicks)
+\begin{DoxyCompactList}\small\item\em Milliseconds to ticks coversion This macro converts time in milliseconds to ticks. msec should be ULONG64. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00673_gadf848291010b1f5e5b666443103cdb89}{GSN\_\-SOFT\_\-TMR\_\-MILLISECONDS\_\-TO\_\-TICKS}(msec)~MSEC\_\-TO\_\-SYSTIME(msec)
+\begin{DoxyCompactList}\small\item\em Milliseconds to ticks coversion This macro converts time in milliseconds to ticks. msec should be ULONG64. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00673_ga55580feca337034720758e6ca520adb3}{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOP}~0x0
+\begin{DoxyCompactList}\small\item\em Timer status. MACRO for timer status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00083}{GSN\_\-GS2000\_\-TIME} \hyperlink{a00673_gac2ea272727157e0cb9e61106986796ab}{GSN\_\-GS2000\_\-TIME\_\-T}
+\begin{DoxyCompactList}\small\item\em structure to hold the 64-\/bit time value. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00673_ga599ea0a212c1bcd484a64610d070b5af}{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T} \hyperlink{a00673_ga9a084f729d0bbf7175b1b4f1b1ed9f2e}{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft Timer Type. enum for soft timer timer type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00673_gad1e755eb904493a09bf8df25a4519bf0}{GSN\_\-SYSTEM\_\-TIME\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN System Timer Type. type definition for the system time. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} $\ast$ \hyperlink{a00673_gaf35989ebc15417c38bca69fd5c17cceb}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft timer handle. Timer handle type. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00673_ga9bb74ab1272c117587bf1fadf84849de}{GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T} )(VOID $\ast$context, \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} timerHandle)
+\begin{DoxyCompactList}\small\item\em GSN Soft timer callback prototype. A Timer Callback routine gets passed: (1) its execution context and (2) a pointer to the Timer structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00228}{GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T} \hyperlink{a00673_ga0f3896e8f6fd92de3aa0d40428ffa23a}{GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft timer callback information. A callback includes both a Callback Routine, and its execution context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} \hyperlink{a00673_gac713d53bc7c13a7102bfce1b01b30c60}{GSN\_\-SOFT\_\-TMR\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft timer structure. Timer structure to store the context of the soft timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00673_ga599ea0a212c1bcd484a64610d070b5af}{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T} \{ \par
+\hyperlink{a00673_gga599ea0a212c1bcd484a64610d070b5afaed34a4f447dd6a4da5771c0a29d502c3}{GSN\_\-SOFT\_\-TMR\_\-ONESHOT}, 
+\par
+\hyperlink{a00673_gga599ea0a212c1bcd484a64610d070b5afa0fdc43c704fbf8c462b2e87ddc6aea6d}{GSN\_\-SOFT\_\-TMR\_\-PERIODIC}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN Soft Timer Type. enum for soft timer timer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00673_gad1e755eb904493a09bf8df25a4519bf0}{GSN\_\-SYSTEM\_\-TIME\_\-T} \hyperlink{a00673_gab43287ce366da3d600e6c49ccb30a0ef}{GsnSoftTmr\_\-CurrentSystemTime} (VOID)
+\begin{DoxyCompactList}\small\item\em Gets the system time. This function gives the current system time. \end{DoxyCompactList}\item 
+PUBLIC VOID $\ast$ \hyperlink{a00673_gab432d57164d1bfe35b788fc811549755}{GsnSoftTmr\_\-Init} (int bootInd, \hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$pMsgHandlerCtx)
+\begin{DoxyCompactList}\small\item\em Initialization for Soft Timer module. This function performs initialization of Soft timer module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} \hyperlink{a00673_ga942fccace7c0d212530861bdb68ca1dd}{GsnSoftTmr\_\-Start} (\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} $\ast$timer, \hyperlink{a00673_ga599ea0a212c1bcd484a64610d070b5af}{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T} type, \hyperlink{a00673_gad1e755eb904493a09bf8df25a4519bf0}{GSN\_\-SYSTEM\_\-TIME\_\-T} expireTime, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} period, \hyperlink{a00673_ga9bb74ab1272c117587bf1fadf84849de}{GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T} cbr, VOID $\ast$context)
+\begin{DoxyCompactList}\small\item\em Start a soft timer. This function starts a soft timer with the spcified value. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00673_gad048a3743bc158c60bc6382309d04398}{GsnSoftTmr\_\-Stop} (\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} timerHandle)
+\begin{DoxyCompactList}\small\item\em Stop a soft timer. This function stops the soft timer. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00673_gaa4dc761b52f892e3c5190db7d1bc8eac}{GsnSoftTmr\_\-RemainingTimeGet} (\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} hTmr)
+\begin{DoxyCompactList}\small\item\em Remaining time get. Returns the remaining time left to expire for a give timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00673_gac722c11a548ed0b5994c9adbc753c28a}{GsnSoftTmr\_\-MinRemainingTimeGet} ()
+\begin{DoxyCompactList}\small\item\em Minimum Remaining time of all active timer get. Returns the minimum remaining time left to expire of all the active timer. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00673_ga784a1e62206ba30a4f7141e67cdd94ae}{GsnSoftTmr\_\-IsActive} (\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} hTmr)
+\begin{DoxyCompactList}\small\item\em A timer is active or not. Returns whether the timer is active or not. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00673_ga12c97d9f8952a41772dd116afd1cd801}{GsnSoftTmr\_\-PeriodGet} (\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} hTmr)
+\begin{DoxyCompactList}\small\item\em Period of the timer. Returns the period timer is active or not. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00673_ga9e0fc424d9ba323bca2e72480969fe45}{GsnSoftTmr\_\-ShutDown} (VOID)
+\begin{DoxyCompactList}\small\item\em Shutdown the sfot timer module. Stops the hardware timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00673_ga14b04d16861c3ae86cbd69b254e60873}{GsnSoftTmr\_\-Run} (VOID $\ast$context, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em Soft Timer Expire message Handler. This is function gets executed once the ISR posts a message to the message handler. This calls the callback function of the expired timer(s) and start the timer with the next expire time. User has to create an instance of message handler and call this API, in the message handler routine to handle the time expire event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00673_ga85adb3cf09e71797fa296930193832b4}{TIMER\_\-INTERRUPT\_\-5\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 / 1000 )
+\begin{DoxyCompactList}\small\item\em Milliseconds to ticks conversion. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00673_ga15be38412cbf707fb1713528a5f5e6b3}{TIMER\_\-INTERRUPT\_\-10\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 2 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga0680372985c2ad123fd4e1984f1ff9a1}{TIMER\_\-INTERRUPT\_\-20\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 4 / 1000 )
+\item 
+\#define \hyperlink{a00673_gac9f2593e6b663668cd0d1420e4a5f609}{TIMER\_\-INTERRUPT\_\-30\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 6 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga13b2586797ac950024aa46134ba569ab}{TIMER\_\-INTERRUPT\_\-40\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 8 / 1000 )
+\item 
+\#define \hyperlink{a00673_gac0bd52bbc8f9d73f2e518d376e775d03}{TIMER\_\-INTERRUPT\_\-50\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 10 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga05c2fdd777df5b88de99e08ab97b882b}{TIMER\_\-INTERRUPT\_\-60\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 12 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga2e708b60d3621f4c13bcd07001696d57}{TIMER\_\-INTERRUPT\_\-70\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 14 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga363db70188865e3d222337dfd68cd5f1}{TIMER\_\-INTERRUPT\_\-80\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 16 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga2cd73fada37ee4d173af1cb7dda9eca8}{TIMER\_\-INTERRUPT\_\-90\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 18 / 1000 )
+\item 
+\#define \hyperlink{a00673_gad5a78b2ffba4f82dde6607a5cf7af659}{TIMER\_\-INTERRUPT\_\-100\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 20 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga59d6708c9cba03cf6fd9cf6c72529ab6}{TIMER\_\-INTERRUPT\_\-200\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 40 / 1000 )
+\item 
+\#define \hyperlink{a00673_gaa4940d6bdf476029bda023939a17b096}{TIMER\_\-INTERRUPT\_\-300\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 60 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga876a37d4588162417327081c31249a09}{TIMER\_\-INTERRUPT\_\-400\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 80 / 1000 )
+\item 
+\#define \hyperlink{a00673_gaa2d9363dd86d3618f88763c9a220b7a6}{TIMER\_\-INTERRUPT\_\-500\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 100 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga8911ab7a7dcc03f488617e3f11cd5d5b}{TIMER\_\-INTERRUPT\_\-600\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 120 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga444096811394aa490ec470aa1894e703}{TIMER\_\-INTERRUPT\_\-700\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 140 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga1d84a0363d80e46ecec3bf811837242b}{TIMER\_\-INTERRUPT\_\-800\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 160 / 1000 )
+\item 
+\#define \hyperlink{a00673_gadb278155a97d15ad4ac348c292c9b60f}{TIMER\_\-INTERRUPT\_\-900\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 180 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga1bf445c2d853b42c6c8f7d704f0c99ce}{TIMER\_\-INTERRUPT\_\-1\_\-S}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 200 / 1000 )
+\item 
+\#define \hyperlink{a00673_gabe6b8cc50a953b9686cec098e74ab340}{TIMER\_\-INTERRUPT\_\-2\_\-S}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 400 / 1000 )
+\item 
+\#define \hyperlink{a00673_gaf80325273d8e20207f0914fd0c8b89ec}{TIMER\_\-INTERRUPT\_\-3\_\-S}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 600 / 1000 )
+\item 
+\#define \hyperlink{a00673_gaab56eb2c0a9908dff18f586c3b83c0e9}{TIMER\_\-INTERRUPT\_\-4\_\-S}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 800 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga0e66fa016e02f9158c8c7ed5ca54c11d}{TIMER\_\-INTERRUPT\_\-5\_\-S}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 1000 / 1000 )
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module provides a number of soft timers based on a single hardware timer. The soft timer module provides multiple timers using a single hardware timer. It generates interrupts only when a soft timer expires. Currently the auxiliary timer of the TSYNC module is used to give a hardware timeout.
+
+The GEPS Timer module, once initialized, creates a queue in which individual timer structures are stored. Each structure consists of an identifying handle, a timer type (e.g. one-\/shot or periodic), an expiration time, a period, and a callback function. The Tsync module, which manages the real-\/time clock functions, will throw an interrupt when a timer expires. This interrupt can be used to cause the Timer module to review the queue and call the callback routines for any expired timers. If the expired timers are periodic, their entry receives a new expiration time and is moved to the correct order in the queue. The response to the Tsync interrupt should be in a separate operating-\/system task from the main User Application, in order to ensure that response to timer expiration is not blocked. Therefore, before any timer is started, the User Application should create a message-\/handling task and associate the message queue of that task with the interrupt handler for timer expiration. For example:
+
+\begin{DoxyVerb}
+ *    GSN_MSG_HANDLER_CFG_T cfg = {…};     // configure a message queue
+ *       tmrCtx = GsnSoftTmr_Init (…);     // initialize the timer
+ *       GsnMsgHandler_Create (…);         // start a message handling task
+ *    \end{DoxyVerb}
+
+
+where the message handler context and handle are passed in as arguments of the call to the handler creation function. After this code is executed, a message-\/handling task is started and then waits on its message queue. Each time a message is received on that message queue, the task will call the function \hyperlink{a00673_ga14b04d16861c3ae86cbd69b254e60873}{GsnSoftTmr\_\-Run()}, which causes the timer module to review and update the timer listing, while calling the callbacks of expired timers. \par
+ \par
+ Once the required initialization steps are completed, new timer instances can be created as required with a call to \begin{DoxyVerb}
+ *    GsnSoftTmr_Start(&myTmr, 	// timer handle
+ *       GSN_SOFT_TMR_PERIODIC,	// timer type
+ *       0,	                    // expire time (see below)
+ *       TIMER_INTERRUPT_1_S, 	// period
+ *       myCb, 	                // callback
+ *       pAppCtx);	            // callback argument
+ *    \end{DoxyVerb}
+
+
+The timer handle is a pointer to the location in memory where the structure corresponding to this timer instance will be stored. The type is an enumeration, either periodic or one-\/shot as described above. The expire time can be specified in system time ticks, but it will often be convenient to provide a value of 0 for this argument, in which case the expire time is computed by adding the current system time to the value of the period given in the next argument. (When a non-\/zero expiration time is given for a one-\/shot timer, the period argument is ignored.) The period is a 64-\/bit number giving a time interval in ticks of the constant 225 = 33,554,432 Hz system clock; it is recommended that the human-\/readable macros provided by GEPS be substituted for numeric literals to improve readability and maintainability of your code. \par
+ \par
+ Each timer that is created will correspond to an entry in the timer queue, and the relevant callback routine will be called when it expires. If the timer is periodic, it will receive a new expiration time and be relocated at the appropriate position in the timer queue. GEPS provides a number of API functions for managing timer operation. \hyperlink{a00673_gad048a3743bc158c60bc6382309d04398}{GsnSoftTmr\_\-Stop()} removes the corresponding timer from the timer queue. GsnSoftTmr\_\-Ioctl() can perform a variety of operations for elements in the queue, including getting the expiration time of timers, checking for the existence of a specific timer, or retrieving the next expiration time in the queue. \par
+ \par
+
+
+Example code to initialize the soft timer module: \begin{DoxyVerb}
+ *    DEFINE VARIABLES IN GLOBAL SPACE:
+ *  
+ *    GSN_MSG_HANDLER_CTX_T timerMsgHandlerCtx;
+ *    UINT8 timerMsgHandlerStack[ 2048 ] - size depends on the stack usage of 
+ *                                         the cb passed in soft timer start.
+ *    UINT32 mailboxBuff[ 8 ] - mailboxBuff for the mailbox, Since this module
+ *                              takes 1 word per message, so in this case max, 
+ *                              8 messages can be queued in the mailbox.
+ *    UINT32 softTmrMsg;
+ *
+ *    IN LOCAL SPACE:
+ *    
+ *    GSN_MSG_HANDLER_CFG_T cfg = { "TMR_MSG_HANDLER", timerMsgHandlerStack,
+ *        sizeof( timerMsgHandlerStack ), priority (- should be highest),; 
+ *        mailboxBuff, sizeof( mailboxBuff ), 1 };
+ *
+ *    VOID * tmrCtx = GsnSoftTmr_Init( bootInd, &timerMsgHandlerCtx );  
+ *    GsnMsgHandler_Create( GSN_MSG_HANDLER_CTX_T pCtx, &cfg, &softTmrMsg,
+ *    GsnSoftTmr_Run, tmrCtx );
+ *
+ *    \end{DoxyVerb}
+ 
+
+\subsection{Define Documentation}
+\hypertarget{a00673_gadf848291010b1f5e5b666443103cdb89}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SOFT\_\-TMR\_\-MILLISECONDS\_\-TO\_\-TICKS@{GSN\_\-SOFT\_\-TMR\_\-MILLISECONDS\_\-TO\_\-TICKS}}
+\index{GSN\_\-SOFT\_\-TMR\_\-MILLISECONDS\_\-TO\_\-TICKS@{GSN\_\-SOFT\_\-TMR\_\-MILLISECONDS\_\-TO\_\-TICKS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-MILLISECONDS\_\-TO\_\-TICKS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SOFT\_\-TMR\_\-MILLISECONDS\_\-TO\_\-TICKS(
+\begin{DoxyParamCaption}
+\item[{}]{msec}
+\end{DoxyParamCaption}
+)~MSEC\_\-TO\_\-SYSTIME(msec)}}
+\label{a00673_gadf848291010b1f5e5b666443103cdb89}
+
+
+Milliseconds to ticks coversion This macro converts time in milliseconds to ticks. msec should be ULONG64. 
+
+
+
+Definition at line 197 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga55580feca337034720758e6ca520adb3}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOP@{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOP}}
+\index{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOP@{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOP}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOP~0x0}}
+\label{a00673_ga55580feca337034720758e6ca520adb3}
+
+
+Timer status. MACRO for timer status. 
+
+
+
+Definition at line 246 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gaf705ea28da184c29e230284fead5a65c}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SOFT\_\-TMR\_\-TICKS\_\-TO\_\-MILLISECONDS@{GSN\_\-SOFT\_\-TMR\_\-TICKS\_\-TO\_\-MILLISECONDS}}
+\index{GSN\_\-SOFT\_\-TMR\_\-TICKS\_\-TO\_\-MILLISECONDS@{GSN\_\-SOFT\_\-TMR\_\-TICKS\_\-TO\_\-MILLISECONDS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-TICKS\_\-TO\_\-MILLISECONDS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SOFT\_\-TMR\_\-TICKS\_\-TO\_\-MILLISECONDS(
+\begin{DoxyParamCaption}
+\item[{}]{sysTicks}
+\end{DoxyParamCaption}
+)~SYSTIME\_\-TO\_\-MSEC(sysTicks)}}
+\label{a00673_gaf705ea28da184c29e230284fead5a65c}
+
+
+Milliseconds to ticks coversion This macro converts time in milliseconds to ticks. msec should be ULONG64. 
+
+
+
+Definition at line 189 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga05ec5d63e2ba7621d706137124efca7d}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-CLOCK@{TIMER\_\-CLOCK}}
+\index{TIMER\_\-CLOCK@{TIMER\_\-CLOCK}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-CLOCK}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-CLOCK~32768}}
+\label{a00673_ga05ec5d63e2ba7621d706137124efca7d}
+
+
+micro, milli seconds to system time and vice-\/versa conversion. MACROs to convert time to system time and vice-\/versa. 
+
+
+
+Definition at line 162 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gad5a78b2ffba4f82dde6607a5cf7af659}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-100\_\-MS@{TIMER\_\-INTERRUPT\_\-100\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-100\_\-MS@{TIMER\_\-INTERRUPT\_\-100\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-100\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-100\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 20 / 1000 )}}
+\label{a00673_gad5a78b2ffba4f82dde6607a5cf7af659}
+
+
+Definition at line 219 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga15be38412cbf707fb1713528a5f5e6b3}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-10\_\-MS@{TIMER\_\-INTERRUPT\_\-10\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-10\_\-MS@{TIMER\_\-INTERRUPT\_\-10\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-10\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-10\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 2 / 1000 )}}
+\label{a00673_ga15be38412cbf707fb1713528a5f5e6b3}
+
+
+Definition at line 210 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gad5a672b2263743c1daf0ee6797d2fbfd}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-1\_\-MS@{TIMER\_\-INTERRUPT\_\-1\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-1\_\-MS@{TIMER\_\-INTERRUPT\_\-1\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-1\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-1\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) / 1000 )}}
+\label{a00673_gad5a672b2263743c1daf0ee6797d2fbfd}
+
+
+Ticks in one millisecond This macro gives number of ticks in one millisecond. 
+
+
+
+Definition at line 181 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga1bf445c2d853b42c6c8f7d704f0c99ce}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-1\_\-S@{TIMER\_\-INTERRUPT\_\-1\_\-S}}
+\index{TIMER\_\-INTERRUPT\_\-1\_\-S@{TIMER\_\-INTERRUPT\_\-1\_\-S}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-1\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-1\_\-S~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 200 / 1000 )}}
+\label{a00673_ga1bf445c2d853b42c6c8f7d704f0c99ce}
+
+
+Definition at line 228 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga59d6708c9cba03cf6fd9cf6c72529ab6}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-200\_\-MS@{TIMER\_\-INTERRUPT\_\-200\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-200\_\-MS@{TIMER\_\-INTERRUPT\_\-200\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-200\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-200\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 40 / 1000 )}}
+\label{a00673_ga59d6708c9cba03cf6fd9cf6c72529ab6}
+
+
+Definition at line 220 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga0680372985c2ad123fd4e1984f1ff9a1}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-20\_\-MS@{TIMER\_\-INTERRUPT\_\-20\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-20\_\-MS@{TIMER\_\-INTERRUPT\_\-20\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-20\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-20\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 4 / 1000 )}}
+\label{a00673_ga0680372985c2ad123fd4e1984f1ff9a1}
+
+
+Definition at line 211 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gabe6b8cc50a953b9686cec098e74ab340}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-2\_\-S@{TIMER\_\-INTERRUPT\_\-2\_\-S}}
+\index{TIMER\_\-INTERRUPT\_\-2\_\-S@{TIMER\_\-INTERRUPT\_\-2\_\-S}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-2\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-2\_\-S~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 400 / 1000 )}}
+\label{a00673_gabe6b8cc50a953b9686cec098e74ab340}
+
+
+Definition at line 229 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gaa4940d6bdf476029bda023939a17b096}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-300\_\-MS@{TIMER\_\-INTERRUPT\_\-300\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-300\_\-MS@{TIMER\_\-INTERRUPT\_\-300\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-300\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-300\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 60 / 1000 )}}
+\label{a00673_gaa4940d6bdf476029bda023939a17b096}
+
+
+Definition at line 221 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gac9f2593e6b663668cd0d1420e4a5f609}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-30\_\-MS@{TIMER\_\-INTERRUPT\_\-30\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-30\_\-MS@{TIMER\_\-INTERRUPT\_\-30\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-30\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-30\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 6 / 1000 )}}
+\label{a00673_gac9f2593e6b663668cd0d1420e4a5f609}
+
+
+Definition at line 212 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gaf80325273d8e20207f0914fd0c8b89ec}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-3\_\-S@{TIMER\_\-INTERRUPT\_\-3\_\-S}}
+\index{TIMER\_\-INTERRUPT\_\-3\_\-S@{TIMER\_\-INTERRUPT\_\-3\_\-S}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-3\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-3\_\-S~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 600 / 1000 )}}
+\label{a00673_gaf80325273d8e20207f0914fd0c8b89ec}
+
+
+Definition at line 230 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga876a37d4588162417327081c31249a09}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-400\_\-MS@{TIMER\_\-INTERRUPT\_\-400\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-400\_\-MS@{TIMER\_\-INTERRUPT\_\-400\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-400\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-400\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 80 / 1000 )}}
+\label{a00673_ga876a37d4588162417327081c31249a09}
+
+
+Definition at line 222 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga13b2586797ac950024aa46134ba569ab}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-40\_\-MS@{TIMER\_\-INTERRUPT\_\-40\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-40\_\-MS@{TIMER\_\-INTERRUPT\_\-40\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-40\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-40\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 8 / 1000 )}}
+\label{a00673_ga13b2586797ac950024aa46134ba569ab}
+
+
+Definition at line 213 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gaab56eb2c0a9908dff18f586c3b83c0e9}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-4\_\-S@{TIMER\_\-INTERRUPT\_\-4\_\-S}}
+\index{TIMER\_\-INTERRUPT\_\-4\_\-S@{TIMER\_\-INTERRUPT\_\-4\_\-S}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-4\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-4\_\-S~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 800 / 1000 )}}
+\label{a00673_gaab56eb2c0a9908dff18f586c3b83c0e9}
+
+
+Definition at line 231 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gaa2d9363dd86d3618f88763c9a220b7a6}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-500\_\-MS@{TIMER\_\-INTERRUPT\_\-500\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-500\_\-MS@{TIMER\_\-INTERRUPT\_\-500\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-500\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-500\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 100 / 1000 )}}
+\label{a00673_gaa2d9363dd86d3618f88763c9a220b7a6}
+
+
+Definition at line 223 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gac0bd52bbc8f9d73f2e518d376e775d03}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-50\_\-MS@{TIMER\_\-INTERRUPT\_\-50\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-50\_\-MS@{TIMER\_\-INTERRUPT\_\-50\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-50\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-50\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 10 / 1000 )}}
+\label{a00673_gac0bd52bbc8f9d73f2e518d376e775d03}
+
+
+Definition at line 214 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga85adb3cf09e71797fa296930193832b4}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-5\_\-MS@{TIMER\_\-INTERRUPT\_\-5\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-5\_\-MS@{TIMER\_\-INTERRUPT\_\-5\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-5\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-5\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 / 1000 )}}
+\label{a00673_ga85adb3cf09e71797fa296930193832b4}
+
+
+Milliseconds to ticks conversion. 
+
+These macros give milliseconds-\/to-\/ticks conversion for common time periods. These are just for convenience. 
+
+Definition at line 209 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga0e66fa016e02f9158c8c7ed5ca54c11d}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-5\_\-S@{TIMER\_\-INTERRUPT\_\-5\_\-S}}
+\index{TIMER\_\-INTERRUPT\_\-5\_\-S@{TIMER\_\-INTERRUPT\_\-5\_\-S}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-5\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-5\_\-S~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 1000 / 1000 )}}
+\label{a00673_ga0e66fa016e02f9158c8c7ed5ca54c11d}
+
+
+Definition at line 232 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga8911ab7a7dcc03f488617e3f11cd5d5b}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-600\_\-MS@{TIMER\_\-INTERRUPT\_\-600\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-600\_\-MS@{TIMER\_\-INTERRUPT\_\-600\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-600\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-600\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 120 / 1000 )}}
+\label{a00673_ga8911ab7a7dcc03f488617e3f11cd5d5b}
+
+
+Definition at line 224 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga05c2fdd777df5b88de99e08ab97b882b}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-60\_\-MS@{TIMER\_\-INTERRUPT\_\-60\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-60\_\-MS@{TIMER\_\-INTERRUPT\_\-60\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-60\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-60\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 12 / 1000 )}}
+\label{a00673_ga05c2fdd777df5b88de99e08ab97b882b}
+
+
+Definition at line 215 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga444096811394aa490ec470aa1894e703}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-700\_\-MS@{TIMER\_\-INTERRUPT\_\-700\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-700\_\-MS@{TIMER\_\-INTERRUPT\_\-700\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-700\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-700\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 140 / 1000 )}}
+\label{a00673_ga444096811394aa490ec470aa1894e703}
+
+
+Definition at line 225 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga2e708b60d3621f4c13bcd07001696d57}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-70\_\-MS@{TIMER\_\-INTERRUPT\_\-70\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-70\_\-MS@{TIMER\_\-INTERRUPT\_\-70\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-70\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-70\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 14 / 1000 )}}
+\label{a00673_ga2e708b60d3621f4c13bcd07001696d57}
+
+
+Definition at line 216 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga1d84a0363d80e46ecec3bf811837242b}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-800\_\-MS@{TIMER\_\-INTERRUPT\_\-800\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-800\_\-MS@{TIMER\_\-INTERRUPT\_\-800\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-800\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-800\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 160 / 1000 )}}
+\label{a00673_ga1d84a0363d80e46ecec3bf811837242b}
+
+
+Definition at line 226 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga363db70188865e3d222337dfd68cd5f1}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-80\_\-MS@{TIMER\_\-INTERRUPT\_\-80\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-80\_\-MS@{TIMER\_\-INTERRUPT\_\-80\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-80\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-80\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 16 / 1000 )}}
+\label{a00673_ga363db70188865e3d222337dfd68cd5f1}
+
+
+Definition at line 217 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gadb278155a97d15ad4ac348c292c9b60f}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-900\_\-MS@{TIMER\_\-INTERRUPT\_\-900\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-900\_\-MS@{TIMER\_\-INTERRUPT\_\-900\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-900\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-900\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 180 / 1000 )}}
+\label{a00673_gadb278155a97d15ad4ac348c292c9b60f}
+
+
+Definition at line 227 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_ga2cd73fada37ee4d173af1cb7dda9eca8}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!TIMER\_\-INTERRUPT\_\-90\_\-MS@{TIMER\_\-INTERRUPT\_\-90\_\-MS}}
+\index{TIMER\_\-INTERRUPT\_\-90\_\-MS@{TIMER\_\-INTERRUPT\_\-90\_\-MS}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{TIMER\_\-INTERRUPT\_\-90\_\-MS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER\_\-INTERRUPT\_\-90\_\-MS~((( {\bf ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 18 / 1000 )}}
+\label{a00673_ga2cd73fada37ee4d173af1cb7dda9eca8}
+
+
+Definition at line 218 of file gsn\_\-soft\_\-timer.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00673_gac2ea272727157e0cb9e61106986796ab}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-GS2000\_\-TIME\_\-T@{GSN\_\-GS2000\_\-TIME\_\-T}}
+\index{GSN\_\-GS2000\_\-TIME\_\-T@{GSN\_\-GS2000\_\-TIME\_\-T}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GSN\_\-GS2000\_\-TIME\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-GS2000\_\-TIME}  {\bf GSN\_\-GS2000\_\-TIME\_\-T}}}
+\label{a00673_gac2ea272727157e0cb9e61106986796ab}
+
+
+structure to hold the 64-\/bit time value. 
+
+\hypertarget{a00673_ga0f3896e8f6fd92de3aa0d40428ffa23a}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T@{GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T}}
+\index{GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T@{GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T}  {\bf GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T}}}
+\label{a00673_ga0f3896e8f6fd92de3aa0d40428ffa23a}
+
+
+GSN Soft timer callback information. A callback includes both a Callback Routine, and its execution context. 
+
+\hypertarget{a00673_ga9bb74ab1272c117587bf1fadf84849de}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T@{GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T}}
+\index{GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T@{GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T})(VOID $\ast$context, {\bf GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} timerHandle)}}
+\label{a00673_ga9bb74ab1272c117587bf1fadf84849de}
+
+
+GSN Soft timer callback prototype. A Timer Callback routine gets passed: (1) its execution context and (2) a pointer to the Timer structure. 
+
+
+
+Definition at line 299 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gaf35989ebc15417c38bca69fd5c17cceb}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T@{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T}}
+\index{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T@{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SOFT\_\-TMR\_\-T}$\ast$ {\bf GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T}}}
+\label{a00673_gaf35989ebc15417c38bca69fd5c17cceb}
+
+
+GSN Soft timer handle. Timer handle type. 
+
+
+
+Definition at line 289 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gac713d53bc7c13a7102bfce1b01b30c60}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SOFT\_\-TMR\_\-T@{GSN\_\-SOFT\_\-TMR\_\-T}}
+\index{GSN\_\-SOFT\_\-TMR\_\-T@{GSN\_\-SOFT\_\-TMR\_\-T}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SOFT\_\-TMR\_\-T}  {\bf GSN\_\-SOFT\_\-TMR\_\-T}}}
+\label{a00673_gac713d53bc7c13a7102bfce1b01b30c60}
+
+
+GSN Soft timer structure. Timer structure to store the context of the soft timer. 
+
+\hypertarget{a00673_ga9a084f729d0bbf7175b1b4f1b1ed9f2e}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T@{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T}}
+\index{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T@{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T} {\bf GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T}}}
+\label{a00673_ga9a084f729d0bbf7175b1b4f1b1ed9f2e}
+
+
+GSN Soft Timer Type. enum for soft timer timer type. 
+
+\hypertarget{a00673_gad1e755eb904493a09bf8df25a4519bf0}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SYSTEM\_\-TIME\_\-T@{GSN\_\-SYSTEM\_\-TIME\_\-T}}
+\index{GSN\_\-SYSTEM\_\-TIME\_\-T@{GSN\_\-SYSTEM\_\-TIME\_\-T}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GSN\_\-SYSTEM\_\-TIME\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ULONG64} {\bf GSN\_\-SYSTEM\_\-TIME\_\-T}}}
+\label{a00673_gad1e755eb904493a09bf8df25a4519bf0}
+
+
+GSN System Timer Type. type definition for the system time. 
+
+
+
+Definition at line 281 of file gsn\_\-soft\_\-timer.h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00673_ga599ea0a212c1bcd484a64610d070b5af}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T@{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T}}
+\index{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T@{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T}}}
+\label{a00673_ga599ea0a212c1bcd484a64610d070b5af}
+
+
+GSN Soft Timer Type. enum for soft timer timer type. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-SOFT\_\-TMR\_\-ONESHOT@{GSN\_\-SOFT\_\-TMR\_\-ONESHOT}!GSN Soft Timer API@{GSN Soft Timer API}}\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SOFT\_\-TMR\_\-ONESHOT@{GSN\_\-SOFT\_\-TMR\_\-ONESHOT}}\item[{\em 
+\hypertarget{a00673_gga599ea0a212c1bcd484a64610d070b5afaed34a4f447dd6a4da5771c0a29d502c3}{
+GSN\_\-SOFT\_\-TMR\_\-ONESHOT}
+\label{a00673_gga599ea0a212c1bcd484a64610d070b5afaed34a4f447dd6a4da5771c0a29d502c3}
+}]\index{GSN\_\-SOFT\_\-TMR\_\-PERIODIC@{GSN\_\-SOFT\_\-TMR\_\-PERIODIC}!GSN Soft Timer API@{GSN Soft Timer API}}\index{GSN Soft Timer API@{GSN Soft Timer API}!GSN\_\-SOFT\_\-TMR\_\-PERIODIC@{GSN\_\-SOFT\_\-TMR\_\-PERIODIC}}\item[{\em 
+\hypertarget{a00673_gga599ea0a212c1bcd484a64610d070b5afa0fdc43c704fbf8c462b2e87ddc6aea6d}{
+GSN\_\-SOFT\_\-TMR\_\-PERIODIC}
+\label{a00673_gga599ea0a212c1bcd484a64610d070b5afa0fdc43c704fbf8c462b2e87ddc6aea6d}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 269 of file gsn\_\-soft\_\-timer.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00673_gab43287ce366da3d600e6c49ccb30a0ef}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GsnSoftTmr\_\-CurrentSystemTime@{GsnSoftTmr\_\-CurrentSystemTime}}
+\index{GsnSoftTmr\_\-CurrentSystemTime@{GsnSoftTmr\_\-CurrentSystemTime}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GsnSoftTmr\_\-CurrentSystemTime}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-SYSTEM\_\-TIME\_\-T} GsnSoftTmr\_\-CurrentSystemTime (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00673_gab43287ce366da3d600e6c49ccb30a0ef}
+
+
+Gets the system time. This function gives the current system time. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 64} & bit system time. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00673_gab43287ce366da3d600e6c49ccb30a0ef_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00673_gab432d57164d1bfe35b788fc811549755}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GsnSoftTmr\_\-Init@{GsnSoftTmr\_\-Init}}
+\index{GsnSoftTmr\_\-Init@{GsnSoftTmr\_\-Init}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GsnSoftTmr\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID$\ast$ GsnSoftTmr\_\-Init (
+\begin{DoxyParamCaption}
+\item[{int}]{bootInd, }
+\item[{{\bf GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$}]{pMsgHandlerCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00673_gab432d57164d1bfe35b788fc811549755}
+
+
+Initialization for Soft Timer module. This function performs initialization of Soft timer module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bootInd} & -\/ IN Reason the system woke-\/up and called this function. \\
+\hline
+{\em pMsgHandlerCtx} & -\/ IN Pointer to the context of message handler, where the expire events are handled. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Returns} & the context of the soft timer module, which has to be passed in GsnSoftTmr\_\-Run API. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function must be called during INIT before calling other soft timer API. 
+\end{DoxyNote}
+\hypertarget{a00673_ga784a1e62206ba30a4f7141e67cdd94ae}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GsnSoftTmr\_\-IsActive@{GsnSoftTmr\_\-IsActive}}
+\index{GsnSoftTmr\_\-IsActive@{GsnSoftTmr\_\-IsActive}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GsnSoftTmr\_\-IsActive}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf BOOL} GsnSoftTmr\_\-IsActive (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T}}]{hTmr}
+\end{DoxyParamCaption}
+)}}
+\label{a00673_ga784a1e62206ba30a4f7141e67cdd94ae}
+
+
+A timer is active or not. Returns whether the timer is active or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hTmr} & -\/ IN timer handle returned in the timer start API. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & if the timer is active else FALSE \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+User should pass a valid timer handle. 
+\end{DoxyNote}
+
+
+Definition at line 458 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gac722c11a548ed0b5994c9adbc753c28a}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GsnSoftTmr\_\-MinRemainingTimeGet@{GsnSoftTmr\_\-MinRemainingTimeGet}}
+\index{GsnSoftTmr\_\-MinRemainingTimeGet@{GsnSoftTmr\_\-MinRemainingTimeGet}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GsnSoftTmr\_\-MinRemainingTimeGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf ULONG64} GsnSoftTmr\_\-MinRemainingTimeGet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00673_gac722c11a548ed0b5994c9adbc753c28a}
+
+
+Minimum Remaining time of all active timer get. Returns the minimum remaining time left to expire of all the active timer. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em remaining} & time in timer ticks. retunrns 0xFFFFFFFFFFFFFFFF ($\sim$0L) if no timer is active. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+User should pass a valid timer handle. 
+\end{DoxyNote}
+\hypertarget{a00673_ga12c97d9f8952a41772dd116afd1cd801}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GsnSoftTmr\_\-PeriodGet@{GsnSoftTmr\_\-PeriodGet}}
+\index{GsnSoftTmr\_\-PeriodGet@{GsnSoftTmr\_\-PeriodGet}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GsnSoftTmr\_\-PeriodGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf ULONG64} GsnSoftTmr\_\-PeriodGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T}}]{hTmr}
+\end{DoxyParamCaption}
+)}}
+\label{a00673_ga12c97d9f8952a41772dd116afd1cd801}
+
+
+Period of the timer. Returns the period timer is active or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hTmr} & -\/ IN timer handle returned in the timer start API. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & if the timer is active else FALSE \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+User should pass a valid timer handle. 
+\end{DoxyNote}
+
+
+Definition at line 475 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00673_gaa4dc761b52f892e3c5190db7d1bc8eac}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GsnSoftTmr\_\-RemainingTimeGet@{GsnSoftTmr\_\-RemainingTimeGet}}
+\index{GsnSoftTmr\_\-RemainingTimeGet@{GsnSoftTmr\_\-RemainingTimeGet}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GsnSoftTmr\_\-RemainingTimeGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf ULONG64} GsnSoftTmr\_\-RemainingTimeGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T}}]{hTmr}
+\end{DoxyParamCaption}
+)}}
+\label{a00673_gaa4dc761b52f892e3c5190db7d1bc8eac}
+
+
+Remaining time get. Returns the remaining time left to expire for a give timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hTmr} & -\/ IN timer handle returned in the timer start API. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em remaining} & time in timer ticks. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+User should pass a valid timer handle. 
+\end{DoxyNote}
+
+
+Definition at line 427 of file gsn\_\-soft\_\-timer.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00673_gaa4dc761b52f892e3c5190db7d1bc8eac_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00673_ga14b04d16861c3ae86cbd69b254e60873}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GsnSoftTmr\_\-Run@{GsnSoftTmr\_\-Run}}
+\index{GsnSoftTmr\_\-Run@{GsnSoftTmr\_\-Run}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GsnSoftTmr\_\-Run}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT32} GsnSoftTmr\_\-Run (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{context, }
+\item[{VOID $\ast$}]{pMsg}
+\end{DoxyParamCaption}
+)}}
+\label{a00673_ga14b04d16861c3ae86cbd69b254e60873}
+
+
+Soft Timer Expire message Handler. This is function gets executed once the ISR posts a message to the message handler. This calls the callback function of the expired timer(s) and start the timer with the next expire time. User has to create an instance of message handler and call this API, in the message handler routine to handle the time expire event. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00673_ga9e0fc424d9ba323bca2e72480969fe45}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GsnSoftTmr\_\-ShutDown@{GsnSoftTmr\_\-ShutDown}}
+\index{GsnSoftTmr\_\-ShutDown@{GsnSoftTmr\_\-ShutDown}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GsnSoftTmr\_\-ShutDown}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnSoftTmr\_\-ShutDown (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00673_ga9e0fc424d9ba323bca2e72480969fe45}
+
+
+Shutdown the sfot timer module. Stops the hardware timer. 
+
+\hypertarget{a00673_ga942fccace7c0d212530861bdb68ca1dd}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GsnSoftTmr\_\-Start@{GsnSoftTmr\_\-Start}}
+\index{GsnSoftTmr\_\-Start@{GsnSoftTmr\_\-Start}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GsnSoftTmr\_\-Start}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} GsnSoftTmr\_\-Start (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SOFT\_\-TMR\_\-T} $\ast$}]{timer, }
+\item[{{\bf GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T}}]{type, }
+\item[{{\bf GSN\_\-SYSTEM\_\-TIME\_\-T}}]{expireTime, }
+\item[{{\bf ULONG64}}]{period, }
+\item[{{\bf GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T}}]{cbr, }
+\item[{VOID $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}
+\label{a00673_ga942fccace7c0d212530861bdb68ca1dd}
+
+
+Start a soft timer. This function starts a soft timer with the spcified value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & -\/ IN Pointer to memory location where the soft timer module stores the context for this timer. \\
+\hline
+{\em type} & -\/ IN Periodic or One-\/Shot. \\
+\hline
+{\em expireTime} & -\/ IN System time when timer will first expire. Set to 0 to trigger the first expiration of a periodic timer immediately. Set $>$0 to offset first expiration. \\
+\hline
+{\em period} & -\/ IN For Periodic Timers, the period of repeating expirations, after initial expiration. For One-\/Shot, period is ignored. \\
+\hline
+{\em cbr} & -\/ IN callback function to be called once the timer expires. \\
+\hline
+{\em context} & -\/ IN Context to be stored by the soft timer module and to be passed with the callback function once the timer expires. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Timer} & handle will have a non-\/zero value if Operation is successful. \\
+\hline
+{\em zero} & if failed. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00673_gad048a3743bc158c60bc6382309d04398}{
+\index{GSN Soft Timer API@{GSN Soft Timer API}!GsnSoftTmr\_\-Stop@{GsnSoftTmr\_\-Stop}}
+\index{GsnSoftTmr\_\-Stop@{GsnSoftTmr\_\-Stop}!GSN Soft Timer API@{GSN Soft Timer API}}
+\subsubsection[{GsnSoftTmr\_\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnSoftTmr\_\-Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T}}]{timerHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00673_gad048a3743bc158c60bc6382309d04398}
+
+
+Stop a soft timer. This function stops the soft timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerHandle} & -\/ IN timer handle returned in the timer start API. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & if Operation is successful i.e. the timerHandle passed is a active and it is removed from the list. \\
+\hline
+{\em GSN\_\-FAILURE} & if timer is not active. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}

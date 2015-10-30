@@ -1,0 +1,885 @@
+\hypertarget{a00670}{
+\section{GSN Network Stack Wrapper}
+\label{a00670}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+}
+
+
+This group contains definitions and functions used to initialize, open, close, and configure IP Network objects.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00068}{GSN\_\-ETHERNET\_\-FRAME}
+\begin{DoxyCompactList}\small\item\em GSN Ethernet frame format. This structue defines the format for the data frames between APP and WLAN. \end{DoxyCompactList}\item 
+struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV}
+\begin{DoxyCompactList}\small\item\em Layer 2 device open type. \end{DoxyCompactList}\item 
+struct \hyperlink{a00164}{GSN\_\-NW\_\-CTX}
+\begin{DoxyCompactList}\small\item\em Network structure type, including a message handler, stack timer, ARP context structure, and a pointer for the network interface in use. \end{DoxyCompactList}\item 
+struct \hyperlink{a00170}{GSN\_\-NWIF\_\-IP4\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00171}{GSN\_\-NWIF\_\-IP6\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00172}{GSN\_\-NWIF\_\-IP\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00168}{GSN\_\-NWIF\_\-DHCP\_\-PARAMS}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+struct \hyperlink{a00167}{GSN\_\-NWIF\_\-CTX}
+\begin{DoxyCompactList}\small\item\em Network Interface Object. \end{DoxyCompactList}\item 
+struct \hyperlink{a00169}{GSN\_\-NWIF\_\-INIT\_\-PARAMS}
+\begin{DoxyCompactList}\small\item\em Info required by NWIF. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00670_gab119822a51c7045db3244c577058c0ea}{GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V4}~NX\_\-IP\_\-VERSION\_\-V4
+\begin{DoxyCompactList}\small\item\em NWIF IP version definition. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00670_ga300d647d9982a854748fe98d79ebd77b}{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-NOT\_\-DONE}~0
+\begin{DoxyCompactList}\small\item\em NWIF IP V4 address configuration status. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00670_ga758c2a6db263eed36e543de3fa913fc3}{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-NOT\_\-DONE}~0
+\begin{DoxyCompactList}\small\item\em NWIF IP V6 address configuration status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00670_ga5be81e41aa75406c2f3b778aa073e052}{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE} \hyperlink{a00670_ga0144cadb46845e8150cdf57ae4a57ca5}{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Ethernet frame protocol field values. This enum contains the relevant ethernet protocol field values. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00068}{GSN\_\-ETHERNET\_\-FRAME} \hyperlink{a00670_ga4c2283c8c30055ade4fd96a34a9110aa}{GSN\_\-ETHERNET\_\-FRAME\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Ethernet frame format. This structue defines the format for the data frames between APP and WLAN. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00670_ga8d699f24bea4c9cf889e2cd1e854d06e}{GSN\_\-L2DEV\_\-IOCTL\_\-CODE} \hyperlink{a00670_ga462b6ae25d126945eeb2bc9743ca3288}{GSN\_\-L2DEV\_\-IOCTL\_\-CODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Layer 2 device I/O control (assumes a wireless L2 device). \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00670_ga528d617c85be4b1aed82ce677f941587}{GSN\_\-L2\_\-DEV\_\-RX\_\-CB\_\-T} )(VOID $\ast$pL3Ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} frameLen, VOID $\ast$pFrame)
+\begin{DoxyCompactList}\small\item\em Receive callback type. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00670_ga4d5db18667f665fc99ec6171cf27b5be}{GSN\_\-L2\_\-DEV\_\-TX\_\-DONE\_\-CB\_\-T} )(VOID $\ast$pL3Ctx, VOID $\ast$pData)
+\begin{DoxyCompactList}\small\item\em Transmit done callback type. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00670_ga6c639d0fa9b75482d68bfa97834a0ca9}{GSN\_\-L2\_\-DEV\_\-SEND\_\-PKT\_\-COPY\_\-CB} )(VOID $\ast$pL3Ctx, VOID $\ast$inBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} inLen, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$outBuf)
+\begin{DoxyCompactList}\small\item\em L2Dev will call this call back to copy the data to be sent by L3, in to its own buffer. Different Nw stack has different packet mechnisms. For example, in cae of NetX the out going packet may be really a chain of packets and need to call special PAI to copy data from chain of packets in to a single buffer to be sent. This function may do as simple as a memcpy... \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_gaea3ffbbb6ea57c5335f9011b4dcfe651}{GSN\_\-L2\_\-DEV\_\-OPEN\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev, VOID $\ast$l3Hndl, \hyperlink{a00670_ga528d617c85be4b1aed82ce677f941587}{GSN\_\-L2\_\-DEV\_\-RX\_\-CB\_\-T} rxCb, \hyperlink{a00670_ga4d5db18667f665fc99ec6171cf27b5be}{GSN\_\-L2\_\-DEV\_\-TX\_\-DONE\_\-CB\_\-T} txDoneCb, \hyperlink{a00670_ga6c639d0fa9b75482d68bfa97834a0ca9}{GSN\_\-L2\_\-DEV\_\-SEND\_\-PKT\_\-COPY\_\-CB} sendPktCopyCb)
+\begin{DoxyCompactList}\small\item\em Layer 2 device open type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_ga76681abc89c36ea37c57cedb070f1ec2}{GSN\_\-L2\_\-DEV\_\-CLOSE\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev)
+\begin{DoxyCompactList}\small\item\em Layer 2 device close type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_gab40e032c5bca66cf4f59d6c8cfa82e0a}{GSN\_\-L2\_\-DEV\_\-SEND\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev, \hyperlink{a00068}{GSN\_\-ETHERNET\_\-FRAME\_\-T} $\ast$pFrame, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} frameLen)
+\begin{DoxyCompactList}\small\item\em Layer 2 device send frame type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_ga6bea88ae2a22023e68f1b064e1455411}{GSN\_\-L2\_\-DEV\_\-SEND2\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev, \hyperlink{a00068}{GSN\_\-ETHERNET\_\-FRAME\_\-T} $\ast$pFrame, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rxOnTime)
+\begin{DoxyCompactList}\small\item\em Layer 2 device send frame 2 type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_gaffd1598183dbe1898e975c2993aa4966}{GSN\_\-L2\_\-DEV\_\-RECEIVE\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev, \hyperlink{a00068}{GSN\_\-ETHERNET\_\-FRAME\_\-T} $\ast$pFrame)
+\begin{DoxyCompactList}\small\item\em Layer 2 device receive frame type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00670_gaeb9c0acdcf9376e138e61f00a424042a}{GSN\_\-L2\_\-DEV\_\-IOCTL\_\-T} )(struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} $\ast$pL2Dev, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} cmd, void $\ast$pData)
+\begin{DoxyCompactList}\small\item\em Layer 2 device I/O control type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00107}{GSN\_\-L2\_\-DEV} \hyperlink{a00670_ga215517eb3a6f411a5378158abec2f574}{GSN\_\-L2\_\-DEV\_\-T}
+\begin{DoxyCompactList}\small\item\em Layer 2 device open type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00164}{GSN\_\-NW\_\-CTX} \hyperlink{a00670_ga086f6dd63b1ad2f2008312cc8c24b606}{GSN\_\-NW\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em Network structure type, including a message handler, stack timer, ARP context structure, and a pointer for the network interface in use. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00670_ga6831d8e94870e58c8ba6de3fd14e829d}{GSN\_\-NWIF\_\-STATUS} \hyperlink{a00670_ga31b009654c9ee4d7037151b19f1f213a}{GSN\_\-NWIF\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF status. This enum defines the NWIF status. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00170}{GSN\_\-NWIF\_\-IP4\_\-CONFIG} \hyperlink{a00670_ga30485b44668b2a98ecdc5571f9a6fed5}{GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00670_ga283a80240d803667a00eb79d19d53fd6}{GSN\_\-NWIF\_\-IP6\_\-FLG} \hyperlink{a00670_gaeae6a78e867541f488c5b1db9f7508f7}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00171}{GSN\_\-NWIF\_\-IP6\_\-CONFIG} \hyperlink{a00670_gab09a924a18be9757c337786abe5903f0}{GSN\_\-NWIF\_\-IPv6\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00670_gaa290d30cd14afde370ebe3cc0bc80713}{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG} \hyperlink{a00670_ga952c642f49bc1ff0ab65d34c4843b5e9}{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration flags. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00172}{GSN\_\-NWIF\_\-IP\_\-CONFIG} \hyperlink{a00670_ga72947a68a092d535f5989c7c5e2fe71b}{GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00670_gaa0ec94e77c73c9648888a870bd0f041a}{GSN\_\-NWIF\_\-FLAGS} \hyperlink{a00670_ga2c209f2b9b6b2b6b0b2e1132acd45891}{GSN\_\-NWIF\_\-FLAGS\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00168}{GSN\_\-NWIF\_\-DHCP\_\-PARAMS} \hyperlink{a00670_ga9f9d4b76c96f7c8444291e1706c4fcff}{GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00167}{GSN\_\-NWIF\_\-CTX} \hyperlink{a00670_ga47d94474618770f1d7c6ef6b783b9d24}{GSN\_\-NWIF\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em Network Interface Object. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00169}{GSN\_\-NWIF\_\-INIT\_\-PARAMS} \hyperlink{a00670_gaa7bcca8daa18d56c6d5f107fc3523370}{GSN\_\-NWIF\_\-INIT\_\-PARAMS\_\-T}
+\begin{DoxyCompactList}\small\item\em Info required by NWIF. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00670_gaf67ac3e77c7a5742b9b0bc7672529533}{GSN\_\-WDD\_\-IOCTL\_\-CMD} \hyperlink{a00670_ga0c5055a50e14741ff0accb7d8d5bf039}{GSN\_\-WDD\_\-IOCTL\_\-CMD\_\-T}
+\begin{DoxyCompactList}\small\item\em Layer 2 device I/O control (assumes a wireless L2 device). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00670_ga5be81e41aa75406c2f3b778aa073e052}{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE} \{ \par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052a97192703872038779e4de9e92df50b06}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IP} =  0x0800, 
+\par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052aafef0478501576893ebb9786b441130e}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-ARP} =  0x0806, 
+\par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052a26245450afddbdbad797e8eb9a3344b1}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RARP} =  0x0835, 
+\par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052a5e2c8dbf59e0d7a50f91e1132cbdd462}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IPv6} =  0x86dd, 
+\par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052a9a560452870b9062c401688e7c6a133d}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-EAPOL} =  0x888E, 
+\par
+\hyperlink{a00670_gga5be81e41aa75406c2f3b778aa073e052aa6085d61a973526b9a05262cd6c301b2}{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RSN\_\-PREAUTH} =  0x888C
+ \}
+\begin{DoxyCompactList}\small\item\em Ethernet frame protocol field values. This enum contains the relevant ethernet protocol field values. \end{DoxyCompactList}\item 
+enum \hyperlink{a00670_ga8d699f24bea4c9cf889e2cd1e854d06e}{GSN\_\-L2DEV\_\-IOCTL\_\-CODE} \{ \par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea409e1730531dd9d13865f463c790e9af}{GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-ON} =  0, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea4a8743a76cfc411624f4628f99e6a16a}{GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ead2aa23f87d755f6451f1a57b1277d041}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea84400faa87927ff618b22b1fd9f3a3dc}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea91a8bb3cf452c123d373d10055b3056c}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa8650c6bbf86242e8d10384073894f4d}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea41e5f14dfcdd5084cccdfdcf188c9c12}{GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea22b65238a5b76daf10c1c8dfa51374a5}{GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa9cbcab3a1533297188cbb315c2525d3}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa7cefeecba35a72029c8318038a52e6f}{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-OFF}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea9cd933f898f7daf3dc334f75fc9d9577}{GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-SET}, 
+\par
+\hyperlink{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea50d8640fbca1d94a5c60aa20034b20c0}{GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-GET}
+ \}
+\begin{DoxyCompactList}\small\item\em Layer 2 device I/O control (assumes a wireless L2 device). \end{DoxyCompactList}\item 
+enum \hyperlink{a00670_ga6831d8e94870e58c8ba6de3fd14e829d}{GSN\_\-NWIF\_\-STATUS} \{ \par
+\hyperlink{a00670_gga6831d8e94870e58c8ba6de3fd14e829dab86b0ac682d8405ae1ab5f27193b5f8c}{GSN\_\-NWIF\_\-STATUS\_\-NOT\_\-INITIALIZED}, 
+\par
+\hyperlink{a00670_gga6831d8e94870e58c8ba6de3fd14e829dab64258dc583468badc6b259d23e29a3b}{GSN\_\-NWIF\_\-STATUS\_\-INITIALIZED}, 
+\par
+\hyperlink{a00670_gga6831d8e94870e58c8ba6de3fd14e829daf1dad44940ad39f72a1b4e8e32cfc57a}{GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-IN\_\-PROGRESS}, 
+\par
+\hyperlink{a00670_gga6831d8e94870e58c8ba6de3fd14e829da00983344dccba515ab60c8b49d08e99a}{GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-DONE}
+ \}
+\begin{DoxyCompactList}\small\item\em NWIF status. This enum defines the NWIF status. \end{DoxyCompactList}\item 
+enum \hyperlink{a00670_ga283a80240d803667a00eb79d19d53fd6}{GSN\_\-NWIF\_\-IP6\_\-FLG} \{ \par
+\hyperlink{a00670_gga283a80240d803667a00eb79d19d53fd6a996c32a475b164cb2153706931f80fa1}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-LINK\_\-LOCAL\_\-ADDR} =  BIT(0), 
+\par
+\hyperlink{a00670_gga283a80240d803667a00eb79d19d53fd6a6c066705f0add82f314cdeda98179b58}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-GLOBAL\_\-ADDR} =  BIT(1), 
+\par
+\hyperlink{a00670_gga283a80240d803667a00eb79d19d53fd6a5cfda1f3737e1d1d7aa79b8b821ba5fc}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-STATELESS\_\-AUTO\_\-CONFIG} =  BIT(2), 
+\par
+\hyperlink{a00670_gga283a80240d803667a00eb79d19d53fd6a8d099635d50df7a353bde782e0d3b0c5}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-DHCP\_\-V6\_\-CONFIG} =  BIT(3), 
+\par
+\hyperlink{a00670_gga283a80240d803667a00eb79d19d53fd6a22c3526ea733e9e3e571b9e47455ad14}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-AUTO\_\-LINK\_\-LOCAL\_\-ADDR} = BIT(4)
+ \}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+enum \hyperlink{a00670_gaa290d30cd14afde370ebe3cc0bc80713}{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG} \{ \par
+\hyperlink{a00670_ggaa290d30cd14afde370ebe3cc0bc80713ad2faaf1e7aa840a7a5e6f0b87f771010}{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV4\_\-INIT} =  BIT(0), 
+\par
+\hyperlink{a00670_ggaa290d30cd14afde370ebe3cc0bc80713aee3c914de355b83ae9273c0cf45f1fe3}{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV6\_\-INIT} =  BIT(1)
+ \}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration flags. \end{DoxyCompactList}\item 
+enum \hyperlink{a00670_gaa0ec94e77c73c9648888a870bd0f041a}{GSN\_\-NWIF\_\-FLAGS} \{ \par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa9dc36bd7a233781adb8c75441c6179b8}{GSN\_\-NWIF\_\-FLG\_\-ARP\_\-ENABLE} =  BIT(0), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa0666e123f6937fbd3deb7024c9f25236}{GSN\_\-NWIF\_\-FLG\_\-DHCP\_\-CLIENT\_\-ENABLE} =  BIT(1), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aae868de24a703223a0d1e00aa33f83531}{GSN\_\-NWIF\_\-FLG\_\-DNS\_\-CLIENT\_\-ENABLE} =  BIT(2), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa349cb4e40a71e0a0419792354d68a10d}{GSN\_\-NWIF\_\-FLG\_\-ICMP\_\-ENABLE} =  BIT(3), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aaf1e3613168c79494813f43bd2fd779db}{GSN\_\-NWIF\_\-FLG\_\-IGMP\_\-ENABLE} =  BIT(4), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa3d237bb1f68c4dc2e7c4774cd71ce30c}{GSN\_\-NWIF\_\-FLG\_\-IPV6\_\-ENABLE} =  BIT(5), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa9291be9bc46fefc2f9309978d2211765}{GSN\_\-NWIF\_\-FLG\_\-RPL\_\-ENABLE} =  BIT(6)
+ \}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+enum \hyperlink{a00670_gaf67ac3e77c7a5742b9b0bc7672529533}{GSN\_\-WDD\_\-IOCTL\_\-CMD} \{ \par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a90643fa9ea5beb1e71ac9dc1fc53cec9}{GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-ON} =  0, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a05ac24f3b915cf763e622bcbb05b3f4f}{GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a60c5f074f918453013d7c738761add62}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533aff1d4dffa5b49df8c650ace2823be8b1}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a4eadb52c59da5af23a4976dca90f2d73}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533ac24a8e559457d883784645d80c09d27d}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a8a81d1c493fdcdc77180b01c800a206a}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-MODE\_\-COUNTER\_\-CLEAR}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a36fc54ac07dd47f6d6b86b07a41ace72}{GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a13b9b199720d5323049dc71fa3abbb0f}{GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a37563cd4302ca3be0f252a5b431f807a}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-ON}, 
+\par
+\hyperlink{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533ad7bdc6ddeb1968420616edcb71644a66}{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-OFF}
+ \}
+\begin{DoxyCompactList}\small\item\em Layer 2 device I/O control (assumes a wireless L2 device). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00670_ga86680611203d42252fc6f05608b7d75d}{GsnNw\_\-Init} (\hyperlink{a00164}{GSN\_\-NW\_\-CTX\_\-T} $\ast$pNwCtx, \hyperlink{a00165}{GSN\_\-NW\_\-INIT\_\-PARAMS\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em NW Initialization. This function initializes the NW module. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00670_ga4dd1a9b0b97290fe2749d1f9834f5c19}{GsnNwIf\_\-IpV4AddrGet} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf)
+\begin{DoxyCompactList}\small\item\em Get IP Address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group contains definitions and functions used to initialize, open, close, and configure IP Network objects. 
+
+\subsection{Define Documentation}
+\hypertarget{a00670_gab119822a51c7045db3244c577058c0ea}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V4@{GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V4}}
+\index{GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V4@{GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V4}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V4}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V4~NX\_\-IP\_\-VERSION\_\-V4}}
+\label{a00670_gab119822a51c7045db3244c577058c0ea}
+
+
+NWIF IP version definition. 
+
+
+
+Definition at line 94 of file gsn\_\-nwif.h.
+
+\hypertarget{a00670_ga300d647d9982a854748fe98d79ebd77b}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-NOT\_\-DONE@{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-NOT\_\-DONE}}
+\index{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-NOT\_\-DONE@{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-NOT\_\-DONE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-NOT\_\-DONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-NOT\_\-DONE~0}}
+\label{a00670_ga300d647d9982a854748fe98d79ebd77b}
+
+
+NWIF IP V4 address configuration status. 
+
+
+
+Definition at line 141 of file gsn\_\-nwif.h.
+
+\hypertarget{a00670_ga758c2a6db263eed36e543de3fa913fc3}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-NOT\_\-DONE@{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-NOT\_\-DONE}}
+\index{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-NOT\_\-DONE@{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-NOT\_\-DONE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-NOT\_\-DONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-NOT\_\-DONE~0}}
+\label{a00670_ga758c2a6db263eed36e543de3fa913fc3}
+
+
+NWIF IP V6 address configuration status. 
+
+
+
+Definition at line 152 of file gsn\_\-nwif.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00670_ga0144cadb46845e8150cdf57ae4a57ca5}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-ETH\_\-PROTOCOL\_\-TYPE\_\-T@{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE\_\-T}}
+\index{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE\_\-T@{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ETH\_\-PROTOCOL\_\-TYPE}  {\bf GSN\_\-ETH\_\-PROTOCOL\_\-TYPE\_\-T}}}
+\label{a00670_ga0144cadb46845e8150cdf57ae4a57ca5}
+
+
+Ethernet frame protocol field values. This enum contains the relevant ethernet protocol field values. 
+
+\hypertarget{a00670_ga4c2283c8c30055ade4fd96a34a9110aa}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-ETHERNET\_\-FRAME\_\-T@{GSN\_\-ETHERNET\_\-FRAME\_\-T}}
+\index{GSN\_\-ETHERNET\_\-FRAME\_\-T@{GSN\_\-ETHERNET\_\-FRAME\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-ETHERNET\_\-FRAME\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ETHERNET\_\-FRAME}  {\bf GSN\_\-ETHERNET\_\-FRAME\_\-T}}}
+\label{a00670_ga4c2283c8c30055ade4fd96a34a9110aa}
+
+
+GSN Ethernet frame format. This structue defines the format for the data frames between APP and WLAN. 
+
+\hypertarget{a00670_ga76681abc89c36ea37c57cedb070f1ec2}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2\_\-DEV\_\-CLOSE\_\-T@{GSN\_\-L2\_\-DEV\_\-CLOSE\_\-T}}
+\index{GSN\_\-L2\_\-DEV\_\-CLOSE\_\-T@{GSN\_\-L2\_\-DEV\_\-CLOSE\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2\_\-DEV\_\-CLOSE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}($\ast$ {\bf GSN\_\-L2\_\-DEV\_\-CLOSE\_\-T})(struct {\bf GSN\_\-L2\_\-DEV} $\ast$pL2Dev)}}
+\label{a00670_ga76681abc89c36ea37c57cedb070f1ec2}
+
+
+Layer 2 device close type. 
+
+
+
+Definition at line 147 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00670_gaeb9c0acdcf9376e138e61f00a424042a}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2\_\-DEV\_\-IOCTL\_\-T@{GSN\_\-L2\_\-DEV\_\-IOCTL\_\-T}}
+\index{GSN\_\-L2\_\-DEV\_\-IOCTL\_\-T@{GSN\_\-L2\_\-DEV\_\-IOCTL\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2\_\-DEV\_\-IOCTL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}($\ast$ {\bf GSN\_\-L2\_\-DEV\_\-IOCTL\_\-T})(struct {\bf GSN\_\-L2\_\-DEV} $\ast$pL2Dev, {\bf UINT32} cmd, void $\ast$pData)}}
+\label{a00670_gaeb9c0acdcf9376e138e61f00a424042a}
+
+
+Layer 2 device I/O control type. 
+
+
+
+Definition at line 182 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00670_gaea3ffbbb6ea57c5335f9011b4dcfe651}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2\_\-DEV\_\-OPEN\_\-T@{GSN\_\-L2\_\-DEV\_\-OPEN\_\-T}}
+\index{GSN\_\-L2\_\-DEV\_\-OPEN\_\-T@{GSN\_\-L2\_\-DEV\_\-OPEN\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2\_\-DEV\_\-OPEN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}($\ast$ {\bf GSN\_\-L2\_\-DEV\_\-OPEN\_\-T})(struct {\bf GSN\_\-L2\_\-DEV} $\ast$pL2Dev, VOID $\ast$l3Hndl, {\bf GSN\_\-L2\_\-DEV\_\-RX\_\-CB\_\-T} rxCb, {\bf GSN\_\-L2\_\-DEV\_\-TX\_\-DONE\_\-CB\_\-T} txDoneCb, {\bf GSN\_\-L2\_\-DEV\_\-SEND\_\-PKT\_\-COPY\_\-CB} sendPktCopyCb)}}
+\label{a00670_gaea3ffbbb6ea57c5335f9011b4dcfe651}
+
+
+Layer 2 device open type. 
+
+
+
+Definition at line 136 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00670_gaffd1598183dbe1898e975c2993aa4966}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2\_\-DEV\_\-RECEIVE\_\-T@{GSN\_\-L2\_\-DEV\_\-RECEIVE\_\-T}}
+\index{GSN\_\-L2\_\-DEV\_\-RECEIVE\_\-T@{GSN\_\-L2\_\-DEV\_\-RECEIVE\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2\_\-DEV\_\-RECEIVE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}($\ast$ {\bf GSN\_\-L2\_\-DEV\_\-RECEIVE\_\-T})(struct {\bf GSN\_\-L2\_\-DEV} $\ast$pL2Dev, {\bf GSN\_\-ETHERNET\_\-FRAME\_\-T} $\ast$pFrame)}}
+\label{a00670_gaffd1598183dbe1898e975c2993aa4966}
+
+
+Layer 2 device receive frame type. 
+
+
+
+Definition at line 173 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00670_ga528d617c85be4b1aed82ce677f941587}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2\_\-DEV\_\-RX\_\-CB\_\-T@{GSN\_\-L2\_\-DEV\_\-RX\_\-CB\_\-T}}
+\index{GSN\_\-L2\_\-DEV\_\-RX\_\-CB\_\-T@{GSN\_\-L2\_\-DEV\_\-RX\_\-CB\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2\_\-DEV\_\-RX\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$  {\bf GSN\_\-L2\_\-DEV\_\-RX\_\-CB\_\-T})(VOID $\ast$pL3Ctx, {\bf UINT32} frameLen, VOID $\ast$pFrame)}}
+\label{a00670_ga528d617c85be4b1aed82ce677f941587}
+
+
+Receive callback type. 
+
+
+
+Definition at line 107 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00670_ga6bea88ae2a22023e68f1b064e1455411}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2\_\-DEV\_\-SEND2\_\-T@{GSN\_\-L2\_\-DEV\_\-SEND2\_\-T}}
+\index{GSN\_\-L2\_\-DEV\_\-SEND2\_\-T@{GSN\_\-L2\_\-DEV\_\-SEND2\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2\_\-DEV\_\-SEND2\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}($\ast$ {\bf GSN\_\-L2\_\-DEV\_\-SEND2\_\-T})(struct {\bf GSN\_\-L2\_\-DEV} $\ast$pL2Dev, {\bf GSN\_\-ETHERNET\_\-FRAME\_\-T} $\ast$pFrame, {\bf UINT32} rxOnTime)}}
+\label{a00670_ga6bea88ae2a22023e68f1b064e1455411}
+
+
+Layer 2 device send frame 2 type. 
+
+
+
+Definition at line 164 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00670_ga6c639d0fa9b75482d68bfa97834a0ca9}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2\_\-DEV\_\-SEND\_\-PKT\_\-COPY\_\-CB@{GSN\_\-L2\_\-DEV\_\-SEND\_\-PKT\_\-COPY\_\-CB}}
+\index{GSN\_\-L2\_\-DEV\_\-SEND\_\-PKT\_\-COPY\_\-CB@{GSN\_\-L2\_\-DEV\_\-SEND\_\-PKT\_\-COPY\_\-CB}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2\_\-DEV\_\-SEND\_\-PKT\_\-COPY\_\-CB}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-L2\_\-DEV\_\-SEND\_\-PKT\_\-COPY\_\-CB})(VOID $\ast$pL3Ctx, VOID $\ast$inBuf, {\bf UINT32} inLen, {\bf INT8} $\ast$outBuf)}}
+\label{a00670_ga6c639d0fa9b75482d68bfa97834a0ca9}
+
+
+L2Dev will call this call back to copy the data to be sent by L3, in to its own buffer. Different Nw stack has different packet mechnisms. For example, in cae of NetX the out going packet may be really a chain of packets and need to call special PAI to copy data from chain of packets in to a single buffer to be sent. This function may do as simple as a memcpy... 
+
+
+
+Definition at line 126 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00670_gab40e032c5bca66cf4f59d6c8cfa82e0a}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2\_\-DEV\_\-SEND\_\-T@{GSN\_\-L2\_\-DEV\_\-SEND\_\-T}}
+\index{GSN\_\-L2\_\-DEV\_\-SEND\_\-T@{GSN\_\-L2\_\-DEV\_\-SEND\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2\_\-DEV\_\-SEND\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}($\ast$ {\bf GSN\_\-L2\_\-DEV\_\-SEND\_\-T})(struct {\bf GSN\_\-L2\_\-DEV} $\ast$pL2Dev, {\bf GSN\_\-ETHERNET\_\-FRAME\_\-T} $\ast$pFrame, {\bf UINT32} frameLen)}}
+\label{a00670_gab40e032c5bca66cf4f59d6c8cfa82e0a}
+
+
+Layer 2 device send frame type. 
+
+
+
+Definition at line 155 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00670_ga215517eb3a6f411a5378158abec2f574}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2\_\-DEV\_\-T@{GSN\_\-L2\_\-DEV\_\-T}}
+\index{GSN\_\-L2\_\-DEV\_\-T@{GSN\_\-L2\_\-DEV\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2\_\-DEV\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-L2\_\-DEV}  {\bf GSN\_\-L2\_\-DEV\_\-T}}}
+\label{a00670_ga215517eb3a6f411a5378158abec2f574}
+
+
+Layer 2 device open type. 
+
+\hypertarget{a00670_ga4d5db18667f665fc99ec6171cf27b5be}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2\_\-DEV\_\-TX\_\-DONE\_\-CB\_\-T@{GSN\_\-L2\_\-DEV\_\-TX\_\-DONE\_\-CB\_\-T}}
+\index{GSN\_\-L2\_\-DEV\_\-TX\_\-DONE\_\-CB\_\-T@{GSN\_\-L2\_\-DEV\_\-TX\_\-DONE\_\-CB\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2\_\-DEV\_\-TX\_\-DONE\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$  {\bf GSN\_\-L2\_\-DEV\_\-TX\_\-DONE\_\-CB\_\-T})(VOID $\ast$pL3Ctx, VOID $\ast$pData)}}
+\label{a00670_ga4d5db18667f665fc99ec6171cf27b5be}
+
+
+Transmit done callback type. 
+
+
+
+Definition at line 115 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00670_ga462b6ae25d126945eeb2bc9743ca3288}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-CODE\_\-T@{GSN\_\-L2DEV\_\-IOCTL\_\-CODE\_\-T}}
+\index{GSN\_\-L2DEV\_\-IOCTL\_\-CODE\_\-T@{GSN\_\-L2DEV\_\-IOCTL\_\-CODE\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2DEV\_\-IOCTL\_\-CODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-L2DEV\_\-IOCTL\_\-CODE}  {\bf GSN\_\-L2DEV\_\-IOCTL\_\-CODE\_\-T}}}
+\label{a00670_ga462b6ae25d126945eeb2bc9743ca3288}
+
+
+Layer 2 device I/O control (assumes a wireless L2 device). 
+
+\hypertarget{a00670_ga086f6dd63b1ad2f2008312cc8c24b606}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NW\_\-CTX\_\-T@{GSN\_\-NW\_\-CTX\_\-T}}
+\index{GSN\_\-NW\_\-CTX\_\-T@{GSN\_\-NW\_\-CTX\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NW\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NW\_\-CTX}  {\bf GSN\_\-NW\_\-CTX\_\-T}}}
+\label{a00670_ga086f6dd63b1ad2f2008312cc8c24b606}
+
+
+Network structure type, including a message handler, stack timer, ARP context structure, and a pointer for the network interface in use. 
+
+\hypertarget{a00670_ga47d94474618770f1d7c6ef6b783b9d24}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-CTX\_\-T@{GSN\_\-NWIF\_\-CTX\_\-T}}
+\index{GSN\_\-NWIF\_\-CTX\_\-T@{GSN\_\-NWIF\_\-CTX\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NWIF\_\-CTX}  {\bf GSN\_\-NWIF\_\-CTX\_\-T}}}
+\label{a00670_ga47d94474618770f1d7c6ef6b783b9d24}
+
+
+Network Interface Object. 
+
+This type defines the network interface object. The network interface object is used to configure and open a network interface on a given L2 device. There could be multiple network interface objects in the system each providing a network interface. \hypertarget{a00670_ga9f9d4b76c96f7c8444291e1706c4fcff}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T@{GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T}}
+\index{GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T@{GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NWIF\_\-DHCP\_\-PARAMS} {\bf GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T}}}
+\label{a00670_ga9f9d4b76c96f7c8444291e1706c4fcff}
+
+
+NWIF IP v6 configuration flags. 
+
+This enum defines the IP v6 configuration flags. \hypertarget{a00670_ga2c209f2b9b6b2b6b0b2e1132acd45891}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-FLAGS\_\-T@{GSN\_\-NWIF\_\-FLAGS\_\-T}}
+\index{GSN\_\-NWIF\_\-FLAGS\_\-T@{GSN\_\-NWIF\_\-FLAGS\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-FLAGS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-NWIF\_\-FLAGS} {\bf GSN\_\-NWIF\_\-FLAGS\_\-T}}}
+\label{a00670_ga2c209f2b9b6b2b6b0b2e1132acd45891}
+
+
+NWIF IP v6 configuration flags. 
+
+This enum defines the IP v6 configuration flags. \hypertarget{a00670_gaa7bcca8daa18d56c6d5f107fc3523370}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-INIT\_\-PARAMS\_\-T@{GSN\_\-NWIF\_\-INIT\_\-PARAMS\_\-T}}
+\index{GSN\_\-NWIF\_\-INIT\_\-PARAMS\_\-T@{GSN\_\-NWIF\_\-INIT\_\-PARAMS\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-INIT\_\-PARAMS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NWIF\_\-INIT\_\-PARAMS}  {\bf GSN\_\-NWIF\_\-INIT\_\-PARAMS\_\-T}}}
+\label{a00670_gaa7bcca8daa18d56c6d5f107fc3523370}
+
+
+Info required by NWIF. 
+
+This structure defines info needed by NWIF and need to be passed in Init function. \hypertarget{a00670_gaeae6a78e867541f488c5b1db9f7508f7}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IP6\_\-FLG\_\-T@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-T}}
+\index{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-T@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-NWIF\_\-IP6\_\-FLG} {\bf GSN\_\-NWIF\_\-IP6\_\-FLG\_\-T}}}
+\label{a00670_gaeae6a78e867541f488c5b1db9f7508f7}
+
+
+NWIF IP v6 configuration flags. 
+
+This enum defines the IP v6 configuration flags. \hypertarget{a00670_ga72947a68a092d535f5989c7c5e2fe71b}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T@{GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T}}
+\index{GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T@{GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NWIF\_\-IP\_\-CONFIG}  {\bf GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T}}}
+\label{a00670_ga72947a68a092d535f5989c7c5e2fe71b}
+
+
+NWIF IP configuration. 
+
+This structure defines the NWIF IP configuration used for configuring the network interface. This structure must be filled up for opening the network interface. \hypertarget{a00670_ga952c642f49bc1ff0ab65d34c4843b5e9}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-T@{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-T}}
+\index{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-T@{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG} {\bf GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-T}}}
+\label{a00670_ga952c642f49bc1ff0ab65d34c4843b5e9}
+
+
+NWIF IP configuration flags. 
+
+This enum defines the IP configuration flags. \hypertarget{a00670_ga30485b44668b2a98ecdc5571f9a6fed5}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T@{GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T}}
+\index{GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T@{GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NWIF\_\-IP4\_\-CONFIG}  {\bf GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T}}}
+\label{a00670_ga30485b44668b2a98ecdc5571f9a6fed5}
+
+
+NWIF IP configuration. 
+
+This structure defines the NWIF IP V4configuration used for configuring the network interface. \hypertarget{a00670_gab09a924a18be9757c337786abe5903f0}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IPv6\_\-CONFIG\_\-T@{GSN\_\-NWIF\_\-IPv6\_\-CONFIG\_\-T}}
+\index{GSN\_\-NWIF\_\-IPv6\_\-CONFIG\_\-T@{GSN\_\-NWIF\_\-IPv6\_\-CONFIG\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-IPv6\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NWIF\_\-IP6\_\-CONFIG}  {\bf GSN\_\-NWIF\_\-IPv6\_\-CONFIG\_\-T}}}
+\label{a00670_gab09a924a18be9757c337786abe5903f0}
+
+
+NWIF IP configuration. 
+
+This structure defines the NWIF IP V6 configuration used for configuring the network interface. \hypertarget{a00670_ga31b009654c9ee4d7037151b19f1f213a}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-STATUS\_\-T@{GSN\_\-NWIF\_\-STATUS\_\-T}}
+\index{GSN\_\-NWIF\_\-STATUS\_\-T@{GSN\_\-NWIF\_\-STATUS\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-NWIF\_\-STATUS}  {\bf GSN\_\-NWIF\_\-STATUS\_\-T}}}
+\label{a00670_ga31b009654c9ee4d7037151b19f1f213a}
+
+
+NWIF status. This enum defines the NWIF status. 
+
+\hypertarget{a00670_ga0c5055a50e14741ff0accb7d8d5bf039}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-CMD\_\-T@{GSN\_\-WDD\_\-IOCTL\_\-CMD\_\-T}}
+\index{GSN\_\-WDD\_\-IOCTL\_\-CMD\_\-T@{GSN\_\-WDD\_\-IOCTL\_\-CMD\_\-T}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-WDD\_\-IOCTL\_\-CMD\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WDD\_\-IOCTL\_\-CMD}  {\bf GSN\_\-WDD\_\-IOCTL\_\-CMD\_\-T}}}
+\label{a00670_ga0c5055a50e14741ff0accb7d8d5bf039}
+
+
+Layer 2 device I/O control (assumes a wireless L2 device). 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00670_ga5be81e41aa75406c2f3b778aa073e052}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-ETH\_\-PROTOCOL\_\-TYPE@{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE}}
+\index{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE@{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-ETH\_\-PROTOCOL\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ETH\_\-PROTOCOL\_\-TYPE}}}
+\label{a00670_ga5be81e41aa75406c2f3b778aa073e052}
+
+
+Ethernet frame protocol field values. This enum contains the relevant ethernet protocol field values. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IP@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IP}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IP@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IP}}\item[{\em 
+\hypertarget{a00670_gga5be81e41aa75406c2f3b778aa073e052a97192703872038779e4de9e92df50b06}{
+GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IP}
+\label{a00670_gga5be81e41aa75406c2f3b778aa073e052a97192703872038779e4de9e92df50b06}
+}]\index{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-ARP@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-ARP}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-ARP@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-ARP}}\item[{\em 
+\hypertarget{a00670_gga5be81e41aa75406c2f3b778aa073e052aafef0478501576893ebb9786b441130e}{
+GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-ARP}
+\label{a00670_gga5be81e41aa75406c2f3b778aa073e052aafef0478501576893ebb9786b441130e}
+}]\index{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RARP@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RARP}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RARP@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RARP}}\item[{\em 
+\hypertarget{a00670_gga5be81e41aa75406c2f3b778aa073e052a26245450afddbdbad797e8eb9a3344b1}{
+GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RARP}
+\label{a00670_gga5be81e41aa75406c2f3b778aa073e052a26245450afddbdbad797e8eb9a3344b1}
+}]\index{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IPv6@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IPv6}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IPv6@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IPv6}}\item[{\em 
+\hypertarget{a00670_gga5be81e41aa75406c2f3b778aa073e052a5e2c8dbf59e0d7a50f91e1132cbdd462}{
+GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-IPv6}
+\label{a00670_gga5be81e41aa75406c2f3b778aa073e052a5e2c8dbf59e0d7a50f91e1132cbdd462}
+}]\index{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-EAPOL@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-EAPOL}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-EAPOL@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-EAPOL}}\item[{\em 
+\hypertarget{a00670_gga5be81e41aa75406c2f3b778aa073e052a9a560452870b9062c401688e7c6a133d}{
+GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-EAPOL}
+\label{a00670_gga5be81e41aa75406c2f3b778aa073e052a9a560452870b9062c401688e7c6a133d}
+}]\index{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RSN\_\-PREAUTH@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RSN\_\-PREAUTH}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RSN\_\-PREAUTH@{GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RSN\_\-PREAUTH}}\item[{\em 
+\hypertarget{a00670_gga5be81e41aa75406c2f3b778aa073e052aa6085d61a973526b9a05262cd6c301b2}{
+GSN\_\-ETH\_\-PROTO\_\-TYPE\_\-RSN\_\-PREAUTH}
+\label{a00670_gga5be81e41aa75406c2f3b778aa073e052aa6085d61a973526b9a05262cd6c301b2}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 54 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00670_ga8d699f24bea4c9cf889e2cd1e854d06e}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-CODE@{GSN\_\-L2DEV\_\-IOCTL\_\-CODE}}
+\index{GSN\_\-L2DEV\_\-IOCTL\_\-CODE@{GSN\_\-L2DEV\_\-IOCTL\_\-CODE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-L2DEV\_\-IOCTL\_\-CODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-L2DEV\_\-IOCTL\_\-CODE}}}
+\label{a00670_ga8d699f24bea4c9cf889e2cd1e854d06e}
+
+
+Layer 2 device I/O control (assumes a wireless L2 device). 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-ON@{GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-ON}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-ON@{GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-ON}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea409e1730531dd9d13865f463c790e9af}{
+GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-ON}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea409e1730531dd9d13865f463c790e9af}
+}]\index{GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF@{GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF@{GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea4a8743a76cfc411624f4628f99e6a16a}{
+GSN\_\-L2DEV\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea4a8743a76cfc411624f4628f99e6a16a}
+}]\index{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ead2aa23f87d755f6451f1a57b1277d041}{
+GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ead2aa23f87d755f6451f1a57b1277d041}
+}]\index{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea84400faa87927ff618b22b1fd9f3a3dc}{
+GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea84400faa87927ff618b22b1fd9f3a3dc}
+}]\index{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea91a8bb3cf452c123d373d10055b3056c}{
+GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea91a8bb3cf452c123d373d10055b3056c}
+}]\index{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa8650c6bbf86242e8d10384073894f4d}{
+GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa8650c6bbf86242e8d10384073894f4d}
+}]\index{GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET@{GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET@{GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea41e5f14dfcdd5084cccdfdcf188c9c12}{
+GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea41e5f14dfcdd5084cccdfdcf188c9c12}
+}]\index{GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET@{GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET@{GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea22b65238a5b76daf10c1c8dfa51374a5}{
+GSN\_\-L2DEV\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea22b65238a5b76daf10c1c8dfa51374a5}
+}]\index{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-ON@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-ON}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-ON@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-ON}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa9cbcab3a1533297188cbb315c2525d3}{
+GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-ON}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa9cbcab3a1533297188cbb315c2525d3}
+}]\index{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-OFF@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-OFF}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-OFF@{GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-OFF}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa7cefeecba35a72029c8318038a52e6f}{
+GSN\_\-L2DEV\_\-IOCTL\_\-RX\_\-IEEE\_\-PS\_\-MODE\_\-OFF}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06eaa7cefeecba35a72029c8318038a52e6f}
+}]\index{GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-SET@{GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-SET}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-SET@{GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-SET}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea9cd933f898f7daf3dc334f75fc9d9577}{
+GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-SET}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea9cd933f898f7daf3dc334f75fc9d9577}
+}]\index{GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-GET@{GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-GET}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-GET@{GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-GET}}\item[{\em 
+\hypertarget{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea50d8640fbca1d94a5c60aa20034b20c0}{
+GSN\_\-L2DEV\_\-IOCTL\_\-PS\_\-MODE\_\-RX\_\-STATE\_\-GET}
+\label{a00670_gga8d699f24bea4c9cf889e2cd1e854d06ea50d8640fbca1d94a5c60aa20034b20c0}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 84 of file gsn\_\-nw\_\-defines.h.
+
+\hypertarget{a00670_gaa0ec94e77c73c9648888a870bd0f041a}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-FLAGS@{GSN\_\-NWIF\_\-FLAGS}}
+\index{GSN\_\-NWIF\_\-FLAGS@{GSN\_\-NWIF\_\-FLAGS}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-FLAGS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-NWIF\_\-FLAGS}}}
+\label{a00670_gaa0ec94e77c73c9648888a870bd0f041a}
+
+
+NWIF IP v6 configuration flags. 
+
+This enum defines the IP v6 configuration flags. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-NWIF\_\-FLG\_\-ARP\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-ARP\_\-ENABLE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-FLG\_\-ARP\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-ARP\_\-ENABLE}}\item[{\em 
+\hypertarget{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa9dc36bd7a233781adb8c75441c6179b8}{
+GSN\_\-NWIF\_\-FLG\_\-ARP\_\-ENABLE}
+\label{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa9dc36bd7a233781adb8c75441c6179b8}
+}]\index{GSN\_\-NWIF\_\-FLG\_\-DHCP\_\-CLIENT\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-DHCP\_\-CLIENT\_\-ENABLE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-FLG\_\-DHCP\_\-CLIENT\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-DHCP\_\-CLIENT\_\-ENABLE}}\item[{\em 
+\hypertarget{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa0666e123f6937fbd3deb7024c9f25236}{
+GSN\_\-NWIF\_\-FLG\_\-DHCP\_\-CLIENT\_\-ENABLE}
+\label{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa0666e123f6937fbd3deb7024c9f25236}
+}]\index{GSN\_\-NWIF\_\-FLG\_\-DNS\_\-CLIENT\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-DNS\_\-CLIENT\_\-ENABLE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-FLG\_\-DNS\_\-CLIENT\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-DNS\_\-CLIENT\_\-ENABLE}}\item[{\em 
+\hypertarget{a00670_ggaa0ec94e77c73c9648888a870bd0f041aae868de24a703223a0d1e00aa33f83531}{
+GSN\_\-NWIF\_\-FLG\_\-DNS\_\-CLIENT\_\-ENABLE}
+\label{a00670_ggaa0ec94e77c73c9648888a870bd0f041aae868de24a703223a0d1e00aa33f83531}
+}]\index{GSN\_\-NWIF\_\-FLG\_\-ICMP\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-ICMP\_\-ENABLE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-FLG\_\-ICMP\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-ICMP\_\-ENABLE}}\item[{\em 
+\hypertarget{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa349cb4e40a71e0a0419792354d68a10d}{
+GSN\_\-NWIF\_\-FLG\_\-ICMP\_\-ENABLE}
+\label{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa349cb4e40a71e0a0419792354d68a10d}
+}]\index{GSN\_\-NWIF\_\-FLG\_\-IGMP\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-IGMP\_\-ENABLE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-FLG\_\-IGMP\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-IGMP\_\-ENABLE}}\item[{\em 
+\hypertarget{a00670_ggaa0ec94e77c73c9648888a870bd0f041aaf1e3613168c79494813f43bd2fd779db}{
+GSN\_\-NWIF\_\-FLG\_\-IGMP\_\-ENABLE}
+\label{a00670_ggaa0ec94e77c73c9648888a870bd0f041aaf1e3613168c79494813f43bd2fd779db}
+}]\index{GSN\_\-NWIF\_\-FLG\_\-IPV6\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-IPV6\_\-ENABLE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-FLG\_\-IPV6\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-IPV6\_\-ENABLE}}\item[{\em 
+\hypertarget{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa3d237bb1f68c4dc2e7c4774cd71ce30c}{
+GSN\_\-NWIF\_\-FLG\_\-IPV6\_\-ENABLE}
+\label{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa3d237bb1f68c4dc2e7c4774cd71ce30c}
+}]enable ICMP and IGMP along with this \index{GSN\_\-NWIF\_\-FLG\_\-RPL\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-RPL\_\-ENABLE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-FLG\_\-RPL\_\-ENABLE@{GSN\_\-NWIF\_\-FLG\_\-RPL\_\-ENABLE}}\item[{\em 
+\hypertarget{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa9291be9bc46fefc2f9309978d2211765}{
+GSN\_\-NWIF\_\-FLG\_\-RPL\_\-ENABLE}
+\label{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa9291be9bc46fefc2f9309978d2211765}
+}]enable ICMP and IGMP along with this \end{description}
+\end{Desc}
+
+
+
+Definition at line 266 of file gsn\_\-nwif.h.
+
+\hypertarget{a00670_ga283a80240d803667a00eb79d19d53fd6}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IP6\_\-FLG@{GSN\_\-NWIF\_\-IP6\_\-FLG}}
+\index{GSN\_\-NWIF\_\-IP6\_\-FLG@{GSN\_\-NWIF\_\-IP6\_\-FLG}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-IP6\_\-FLG}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-NWIF\_\-IP6\_\-FLG}}}
+\label{a00670_ga283a80240d803667a00eb79d19d53fd6}
+
+
+NWIF IP v6 configuration flags. 
+
+This enum defines the IP v6 configuration flags. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-LINK\_\-LOCAL\_\-ADDR@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-LINK\_\-LOCAL\_\-ADDR}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-LINK\_\-LOCAL\_\-ADDR@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-LINK\_\-LOCAL\_\-ADDR}}\item[{\em 
+\hypertarget{a00670_gga283a80240d803667a00eb79d19d53fd6a996c32a475b164cb2153706931f80fa1}{
+GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-LINK\_\-LOCAL\_\-ADDR}
+\label{a00670_gga283a80240d803667a00eb79d19d53fd6a996c32a475b164cb2153706931f80fa1}
+}]\index{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-GLOBAL\_\-ADDR@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-GLOBAL\_\-ADDR}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-GLOBAL\_\-ADDR@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-GLOBAL\_\-ADDR}}\item[{\em 
+\hypertarget{a00670_gga283a80240d803667a00eb79d19d53fd6a6c066705f0add82f314cdeda98179b58}{
+GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-GLOBAL\_\-ADDR}
+\label{a00670_gga283a80240d803667a00eb79d19d53fd6a6c066705f0add82f314cdeda98179b58}
+}]\index{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-STATELESS\_\-AUTO\_\-CONFIG@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-STATELESS\_\-AUTO\_\-CONFIG}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IP6\_\-FLG\_\-STATELESS\_\-AUTO\_\-CONFIG@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-STATELESS\_\-AUTO\_\-CONFIG}}\item[{\em 
+\hypertarget{a00670_gga283a80240d803667a00eb79d19d53fd6a5cfda1f3737e1d1d7aa79b8b821ba5fc}{
+GSN\_\-NWIF\_\-IP6\_\-FLG\_\-STATELESS\_\-AUTO\_\-CONFIG}
+\label{a00670_gga283a80240d803667a00eb79d19d53fd6a5cfda1f3737e1d1d7aa79b8b821ba5fc}
+}]\index{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-DHCP\_\-V6\_\-CONFIG@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-DHCP\_\-V6\_\-CONFIG}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IP6\_\-FLG\_\-DHCP\_\-V6\_\-CONFIG@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-DHCP\_\-V6\_\-CONFIG}}\item[{\em 
+\hypertarget{a00670_gga283a80240d803667a00eb79d19d53fd6a8d099635d50df7a353bde782e0d3b0c5}{
+GSN\_\-NWIF\_\-IP6\_\-FLG\_\-DHCP\_\-V6\_\-CONFIG}
+\label{a00670_gga283a80240d803667a00eb79d19d53fd6a8d099635d50df7a353bde782e0d3b0c5}
+}]\index{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-AUTO\_\-LINK\_\-LOCAL\_\-ADDR@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-AUTO\_\-LINK\_\-LOCAL\_\-ADDR}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IP6\_\-FLG\_\-AUTO\_\-LINK\_\-LOCAL\_\-ADDR@{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-AUTO\_\-LINK\_\-LOCAL\_\-ADDR}}\item[{\em 
+\hypertarget{a00670_gga283a80240d803667a00eb79d19d53fd6a22c3526ea733e9e3e571b9e47455ad14}{
+GSN\_\-NWIF\_\-IP6\_\-FLG\_\-AUTO\_\-LINK\_\-LOCAL\_\-ADDR}
+\label{a00670_gga283a80240d803667a00eb79d19d53fd6a22c3526ea733e9e3e571b9e47455ad14}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 193 of file gsn\_\-nwif.h.
+
+\hypertarget{a00670_gaa290d30cd14afde370ebe3cc0bc80713}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG@{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG}}
+\index{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG@{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG}}}
+\label{a00670_gaa290d30cd14afde370ebe3cc0bc80713}
+
+
+NWIF IP configuration flags. 
+
+This enum defines the IP configuration flags. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV4\_\-INIT@{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV4\_\-INIT}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV4\_\-INIT@{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV4\_\-INIT}}\item[{\em 
+\hypertarget{a00670_ggaa290d30cd14afde370ebe3cc0bc80713ad2faaf1e7aa840a7a5e6f0b87f771010}{
+GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV4\_\-INIT}
+\label{a00670_ggaa290d30cd14afde370ebe3cc0bc80713ad2faaf1e7aa840a7a5e6f0b87f771010}
+}]\index{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV6\_\-INIT@{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV6\_\-INIT}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV6\_\-INIT@{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV6\_\-INIT}}\item[{\em 
+\hypertarget{a00670_ggaa290d30cd14afde370ebe3cc0bc80713aee3c914de355b83ae9273c0cf45f1fe3}{
+GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV6\_\-INIT}
+\label{a00670_ggaa290d30cd14afde370ebe3cc0bc80713aee3c914de355b83ae9273c0cf45f1fe3}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 235 of file gsn\_\-nwif.h.
+
+\hypertarget{a00670_ga6831d8e94870e58c8ba6de3fd14e829d}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-STATUS@{GSN\_\-NWIF\_\-STATUS}}
+\index{GSN\_\-NWIF\_\-STATUS@{GSN\_\-NWIF\_\-STATUS}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-NWIF\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-NWIF\_\-STATUS}}}
+\label{a00670_ga6831d8e94870e58c8ba6de3fd14e829d}
+
+
+NWIF status. This enum defines the NWIF status. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-NWIF\_\-STATUS\_\-NOT\_\-INITIALIZED@{GSN\_\-NWIF\_\-STATUS\_\-NOT\_\-INITIALIZED}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-STATUS\_\-NOT\_\-INITIALIZED@{GSN\_\-NWIF\_\-STATUS\_\-NOT\_\-INITIALIZED}}\item[{\em 
+\hypertarget{a00670_gga6831d8e94870e58c8ba6de3fd14e829dab86b0ac682d8405ae1ab5f27193b5f8c}{
+GSN\_\-NWIF\_\-STATUS\_\-NOT\_\-INITIALIZED}
+\label{a00670_gga6831d8e94870e58c8ba6de3fd14e829dab86b0ac682d8405ae1ab5f27193b5f8c}
+}]\index{GSN\_\-NWIF\_\-STATUS\_\-INITIALIZED@{GSN\_\-NWIF\_\-STATUS\_\-INITIALIZED}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-STATUS\_\-INITIALIZED@{GSN\_\-NWIF\_\-STATUS\_\-INITIALIZED}}\item[{\em 
+\hypertarget{a00670_gga6831d8e94870e58c8ba6de3fd14e829dab64258dc583468badc6b259d23e29a3b}{
+GSN\_\-NWIF\_\-STATUS\_\-INITIALIZED}
+\label{a00670_gga6831d8e94870e58c8ba6de3fd14e829dab64258dc583468badc6b259d23e29a3b}
+}]\index{GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-IN\_\-PROGRESS@{GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-IN\_\-PROGRESS}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-IN\_\-PROGRESS@{GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-IN\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00670_gga6831d8e94870e58c8ba6de3fd14e829daf1dad44940ad39f72a1b4e8e32cfc57a}{
+GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-IN\_\-PROGRESS}
+\label{a00670_gga6831d8e94870e58c8ba6de3fd14e829daf1dad44940ad39f72a1b4e8e32cfc57a}
+}]\index{GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-DONE@{GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-DONE}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-DONE@{GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-DONE}}\item[{\em 
+\hypertarget{a00670_gga6831d8e94870e58c8ba6de3fd14e829da00983344dccba515ab60c8b49d08e99a}{
+GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-DONE}
+\label{a00670_gga6831d8e94870e58c8ba6de3fd14e829da00983344dccba515ab60c8b49d08e99a}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 126 of file gsn\_\-nwif.h.
+
+\hypertarget{a00670_gaf67ac3e77c7a5742b9b0bc7672529533}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-CMD@{GSN\_\-WDD\_\-IOCTL\_\-CMD}}
+\index{GSN\_\-WDD\_\-IOCTL\_\-CMD@{GSN\_\-WDD\_\-IOCTL\_\-CMD}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GSN\_\-WDD\_\-IOCTL\_\-CMD}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WDD\_\-IOCTL\_\-CMD}}}
+\label{a00670_gaf67ac3e77c7a5742b9b0bc7672529533}
+
+
+Layer 2 device I/O control (assumes a wireless L2 device). 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-ON@{GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-ON}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-ON@{GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-ON}}\item[{\em 
+\hypertarget{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a90643fa9ea5beb1e71ac9dc1fc53cec9}{
+GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-ON}
+\label{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a90643fa9ea5beb1e71ac9dc1fc53cec9}
+}]\index{GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF@{GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF@{GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF}}\item[{\em 
+\hypertarget{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a05ac24f3b915cf763e622bcbb05b3f4f}{
+GSN\_\-WDD\_\-IOCTL\_\-MCAST\_\-RX\_\-OFF}
+\label{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a05ac24f3b915cf763e622bcbb05b3f4f}
+}]\index{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON}}\item[{\em 
+\hypertarget{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a60c5f074f918453013d7c738761add62}{
+GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-ON}
+\label{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a60c5f074f918453013d7c738761add62}
+}]\index{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF}}\item[{\em 
+\hypertarget{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533aff1d4dffa5b49df8c650ace2823be8b1}{
+GSN\_\-WDD\_\-IOCTL\_\-RX\_\-ACTIVE\_\-MODE\_\-OFF}
+\label{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533aff1d4dffa5b49df8c650ace2823be8b1}
+}]\index{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON}}\item[{\em 
+\hypertarget{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a4eadb52c59da5af23a4976dca90f2d73}{
+GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-ON}
+\label{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a4eadb52c59da5af23a4976dca90f2d73}
+}]\index{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF}}\item[{\em 
+\hypertarget{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533ac24a8e559457d883784645d80c09d27d}{
+GSN\_\-WDD\_\-IOCTL\_\-RX\_\-PS\_\-MODE\_\-OFF}
+\label{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533ac24a8e559457d883784645d80c09d27d}
+}]\index{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-MODE\_\-COUNTER\_\-CLEAR@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-MODE\_\-COUNTER\_\-CLEAR}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-RX\_\-MODE\_\-COUNTER\_\-CLEAR@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-MODE\_\-COUNTER\_\-CLEAR}}\item[{\em 
+\hypertarget{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a8a81d1c493fdcdc77180b01c800a206a}{
+GSN\_\-WDD\_\-IOCTL\_\-RX\_\-MODE\_\-COUNTER\_\-CLEAR}
+\label{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a8a81d1c493fdcdc77180b01c800a206a}
+}]\index{GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET@{GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET@{GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET}}\item[{\em 
+\hypertarget{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a36fc54ac07dd47f6d6b86b07a41ace72}{
+GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-SET}
+\label{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a36fc54ac07dd47f6d6b86b07a41ace72}
+}]\index{GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET@{GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET@{GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET}}\item[{\em 
+\hypertarget{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a13b9b199720d5323049dc71fa3abbb0f}{
+GSN\_\-WDD\_\-IOCTL\_\-PHY\_\-ADDR\_\-GET}
+\label{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a13b9b199720d5323049dc71fa3abbb0f}
+}]\index{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-ON@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-ON}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-ON@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-ON}}\item[{\em 
+\hypertarget{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a37563cd4302ca3be0f252a5b431f807a}{
+GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-ON}
+\label{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533a37563cd4302ca3be0f252a5b431f807a}
+}]\index{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-OFF@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-OFF}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-OFF@{GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-OFF}}\item[{\em 
+\hypertarget{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533ad7bdc6ddeb1968420616edcb71644a66}{
+GSN\_\-WDD\_\-IOCTL\_\-RX\_\-IEEEPS\_\-MODE\_\-OFF}
+\label{a00670_ggaf67ac3e77c7a5742b9b0bc7672529533ad7bdc6ddeb1968420616edcb71644a66}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 228 of file gsn\_\-wdd.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00670_ga86680611203d42252fc6f05608b7d75d}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GsnNw\_\-Init@{GsnNw\_\-Init}}
+\index{GsnNw\_\-Init@{GsnNw\_\-Init}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GsnNw\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNw\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NW\_\-CTX\_\-T} $\ast$}]{pNwCtx, }
+\item[{{\bf GSN\_\-NW\_\-INIT\_\-PARAMS\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00670_ga86680611203d42252fc6f05608b7d75d}
+
+
+NW Initialization. This function initializes the NW module. 
+
+\hypertarget{a00670_ga4dd1a9b0b97290fe2749d1f9834f5c19}{
+\index{GSN Network Stack Wrapper@{GSN Network Stack Wrapper}!GsnNwIf\_\-IpV4AddrGet@{GsnNwIf\_\-IpV4AddrGet}}
+\index{GsnNwIf\_\-IpV4AddrGet@{GsnNwIf\_\-IpV4AddrGet}!GSN Network Stack Wrapper@{GSN Network Stack Wrapper}}
+\subsubsection[{GsnNwIf\_\-IpV4AddrGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf UINT32} GsnNwIf\_\-IpV4AddrGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00670_ga4dd1a9b0b97290fe2749d1f9834f5c19}
+
+
+Get IP Address. 
+
+This function returns the IP address configured for the given network interface. 
+\begin{DoxyParams}{Parameters}
+{\em pNwIf} & -\/ IN Pointer to NWIF object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+IP address. 
+\end{DoxyReturn}
+
+
+Definition at line 476 of file gsn\_\-nwif.h.
+

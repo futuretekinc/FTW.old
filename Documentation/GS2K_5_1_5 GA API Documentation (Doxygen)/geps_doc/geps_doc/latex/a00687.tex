@@ -1,0 +1,656 @@
+\hypertarget{a00687}{
+\section{GSN WPA Interface}
+\label{a00687}\index{GSN WPA Interface@{GSN WPA Interface}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00424}{GSN\_\-WPAIF\_\-PASSPHRASE}
+\begin{DoxyCompactList}\small\item\em WPAIF Passphrase configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00425}{GSN\_\-WPAIF\_\-PSK\_\-CFG}
+\begin{DoxyCompactList}\small\item\em WPAIF PSK configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00421}{GSN\_\-WPAIF\_\-CERT}
+\begin{DoxyCompactList}\small\item\em WPAIF EAP Certificate configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00427}{GSN\_\-WPAIF\_\-WPS\_\-CFG}
+\begin{DoxyCompactList}\small\item\em WPAIF WPS configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00423}{GSN\_\-WPAIF\_\-EAP\_\-CFG}
+\begin{DoxyCompactList}\small\item\em WPAIF EAP configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00420}{GSN\_\-WPAIF\_\-BASIC\_\-CFG}
+\begin{DoxyCompactList}\small\item\em WPAIF WPA basic configuration. \end{DoxyCompactList}\item 
+union \hyperlink{a00426}{GSN\_\-WPAIF\_\-SPECFIC\_\-CFG}
+\begin{DoxyCompactList}\small\item\em WPAIF specific configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00422}{GSN\_\-WPAIF\_\-CFG}
+\begin{DoxyCompactList}\small\item\em WPAIF WPA configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00687_gaa611307c118e60b86fe3447c4dd9ef03}{GSN\_\-WPAIF\_\-MODE} \hyperlink{a00687_gafdd00105be3584713f485995fb16fc07}{GSN\_\-WPAIF\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF mode. This enum defines the WPAIF operation mode. This mode specifies the Wi-\/Fi operating mode. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00424}{GSN\_\-WPAIF\_\-PASSPHRASE} \hyperlink{a00687_ga3cab0646203b96a6bc26d38587ecba02}{GSN\_\-WPAIF\_\-PASSPHRASE\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF Passphrase configuration. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00425}{GSN\_\-WPAIF\_\-PSK\_\-CFG} \hyperlink{a00687_ga76d386ef77db02abc848f5e9a50cd8e5}{GSN\_\-WPAIF\_\-PSK\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF PSK configuration. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00290}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME\_\-T} \hyperlink{a00687_ga0200d673ac133f30a5c4eb16fef8c3a4}{GSN\_\-WPAIF\_\-EAP\_\-USER\_\-NAME\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF EAP User name configuration. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00289}{GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD\_\-T} \hyperlink{a00687_gad6577531dfde003b7207ae0eb46aabee}{GSN\_\-WPAIF\_\-EAP\_\-PWD\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF EAP password configuration. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00421}{GSN\_\-WPAIF\_\-CERT} \hyperlink{a00687_ga00bd42b52d889cc88227a999dda345d9}{GSN\_\-WPAIF\_\-CERT\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF EAP Certificate configuration. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00427}{GSN\_\-WPAIF\_\-WPS\_\-CFG} \hyperlink{a00687_gad51d45617a4ed8eff4b53f1196737959}{GSN\_\-WPAIF\_\-WPS\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF WPS configuration. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00423}{GSN\_\-WPAIF\_\-EAP\_\-CFG} \hyperlink{a00687_gaca9adbc88af0681a3cfbc31eb772a548}{GSN\_\-WPAIF\_\-EAP\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF EAP configuration. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00420}{GSN\_\-WPAIF\_\-BASIC\_\-CFG} \hyperlink{a00687_gae101e1cf8fc4d75a8d0f652d2a4fa298}{GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF WPA basic configuration. \end{DoxyCompactList}\item 
+typedef union \hyperlink{a00426}{GSN\_\-WPAIF\_\-SPECFIC\_\-CFG} \hyperlink{a00687_ga976816e9ade6b55dce10949691396249}{GSN\_\-WPAIF\_\-SPECFIC\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF specific configuration. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00422}{GSN\_\-WPAIF\_\-CFG} \hyperlink{a00687_ga7cc823d929ee57574f3590cd8af66f18}{GSN\_\-WPAIF\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF WPA configuration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00687_ga0f2a6686511220638235644511dee215}{GSN\_\-WPAIF\_\-CFG\_\-OPT} \hyperlink{a00687_ga40c2baeb843f878b19724138a045f065}{GSN\_\-WPAIF\_\-CFG\_\-OPT\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF configuration options. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00687_gab34b81549296cd8fc0728be0cfa16e87}{GSN\_\-WPAIF\_\-EVENT} \hyperlink{a00687_ga73929543fff4d9b512803f4cb0e94b47}{GSN\_\-WPAIF\_\-EVENT\_\-T}
+\begin{DoxyCompactList}\small\item\em WPAIF Events. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00687_ga84bfdf616b263689a81c060d1bdf224b}{GSN\_\-WPAIF\_\-TMR\_\-NITIF\_\-CB\_\-T} )(VOID $\ast$pCtx)
+\begin{DoxyCompactList}\small\item\em WPAIF Timer notification callback type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00687_gaa611307c118e60b86fe3447c4dd9ef03}{GSN\_\-WPAIF\_\-MODE} \{ \par
+\hyperlink{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a8f02aa9b67e320b42a583c337a06032c}{GSN\_\-WPAIF\_\-MODE\_\-INFRA}, 
+\par
+\hyperlink{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a7c79ee92b43c049eb8820c6526f83c7b}{GSN\_\-WPAIF\_\-MODE\_\-IBSS}, 
+\par
+\hyperlink{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a1824a98b218f76b78f6d4aec183dd95a}{GSN\_\-WPAIF\_\-MODE\_\-AP}, 
+\par
+\hyperlink{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a29cd0996b9ecb2e8c37f1d4a3e3b489c}{GSN\_\-WPAIF\_\-MODE\_\-INFRA\_\-RESTORE}
+ \}
+\begin{DoxyCompactList}\small\item\em WPAIF mode. This enum defines the WPAIF operation mode. This mode specifies the Wi-\/Fi operating mode. \end{DoxyCompactList}\item 
+enum \hyperlink{a00687_ga0f2a6686511220638235644511dee215}{GSN\_\-WPAIF\_\-CFG\_\-OPT} \{ \par
+\hyperlink{a00687_gga0f2a6686511220638235644511dee215a4bc8f7a5e627200ce23927fdbd6bd035}{GSN\_\-WPAIF\_\-OPT\_\-SSID\_\-PTR}, 
+\par
+\hyperlink{a00687_gga0f2a6686511220638235644511dee215a1dfeb9a125e497101305800dccac1b8c}{GSN\_\-WPAIF\_\-OPT\_\-PTK}, 
+\par
+\hyperlink{a00687_gga0f2a6686511220638235644511dee215a047df613fbb70a0656f02f7da2e90bc5}{GSN\_\-WPAIF\_\-OPT\_\-PMKID}, 
+\par
+\hyperlink{a00687_gga0f2a6686511220638235644511dee215a005f740966425393bfcfdf3701f52852}{GSN\_\-WPAIF\_\-OPT\_\-STATE}, 
+\par
+\hyperlink{a00687_gga0f2a6686511220638235644511dee215af1d9eb946929ad5adb45397ce028fb63}{GSN\_\-WPAIF\_\-OPT\_\-PSK\_\-CFG}, 
+\par
+\hyperlink{a00687_gga0f2a6686511220638235644511dee215ab301a42eaf26381c3661b7c4d796052b}{GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CFG}, 
+\par
+\hyperlink{a00687_gga0f2a6686511220638235644511dee215ac7c1de1b14107e27fbf404718d49c6fa}{GSN\_\-WPAIF\_\-OPT\_\-EAP\_\-CFG}, 
+\par
+\hyperlink{a00687_gga0f2a6686511220638235644511dee215ad7faa17670befa8fc80e316af9a3b733}{GSN\_\-WPAIF\_\-OPT\_\-PAC}, 
+\par
+\hyperlink{a00687_gga0f2a6686511220638235644511dee215af3bd357d3a9d824dd1e977d66c831f8d}{GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CRED\_\-GET}
+ \}
+\begin{DoxyCompactList}\small\item\em WPAIF configuration options. \end{DoxyCompactList}\item 
+enum \hyperlink{a00687_gab34b81549296cd8fc0728be0cfa16e87}{GSN\_\-WPAIF\_\-EVENT} \{ \par
+\hyperlink{a00687_ggab34b81549296cd8fc0728be0cfa16e87adf4f66b0da0bcca3db633796f43d1222}{GSN\_\-WPAIF\_\-EVENT\_\-CONNECT\_\-IND}, 
+\par
+\hyperlink{a00687_ggab34b81549296cd8fc0728be0cfa16e87a63abaaa5c7d17b4afc4dff551a26bfa4}{GSN\_\-WPAIF\_\-EVENT\_\-DISCONNECT\_\-IND}, 
+\par
+\hyperlink{a00687_ggab34b81549296cd8fc0728be0cfa16e87a4b28b3c400f21b493ec3d005b365a07d}{GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-CONNECTE\_\-IND}, 
+\par
+\hyperlink{a00687_ggab34b81549296cd8fc0728be0cfa16e87a8fa700eb1fdc0dcf80f2b33af0ec50c1}{GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-DISCONNECT\_\-IND}, 
+\par
+\hyperlink{a00687_ggab34b81549296cd8fc0728be0cfa16e87a064f89c4740c28020afc8b7a494a30ba}{GSN\_\-WPAIF\_\-EVENT\_\-EAPOL\_\-RECEIVE\_\-IND}
+ \}
+\begin{DoxyCompactList}\small\item\em WPAIF Events. \end{DoxyCompactList}\item 
+enum \{ \par
+\hyperlink{a00687_gga80155586fa275b28773c9b203f52cabaa57ccee1d732b55d646bb693db54c68b3}{GSN\_\-WPAIF\_\-EAP\_\-CHAP} =  250, 
+\par
+\hyperlink{a00687_gga80155586fa275b28773c9b203f52cabaa5d6fefd10ba8ff083da0148f8bf64dd7}{GSN\_\-WPAIF\_\-EAP\_\-MSCHAP} =  251, 
+\par
+\hyperlink{a00687_gga80155586fa275b28773c9b203f52cabaa2711360a255c4e42bbf0a9100905336c}{GSN\_\-WPAIF\_\-EAP\_\-EAP} =  252, 
+\par
+\hyperlink{a00687_gga80155586fa275b28773c9b203f52cabaa597f80719023ea574e28f5a25679f284}{GSN\_\-WPAIF\_\-EAP\_\-PAP} =  253
+ \}
+\begin{DoxyCompactList}\small\item\em WPAIF EAP Phase2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00687_ga49429fc4b151d4d9d2da3fab4f0d1ac1}{GsnWpa\_\-Init} (\hyperlink{a00687_ga84bfdf616b263689a81c060d1bdf224b}{GSN\_\-WPAIF\_\-TMR\_\-NITIF\_\-CB\_\-T} cb, void $\ast$pCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} seed\mbox{[}TRNG\_\-NONCE\_\-SIZE\_\-WORDS\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initialize WPA module. This API initializes the WPA module. To initialize each WPA IF user has to call GsnWpaIf\_\-Init. This API has to be called only once before calling any of the WPA IF APIs. This API takes a callback pointer which is called when a timer expire event happens. User can post a message to appropriate thread to give an execution context to handle the expire event. To handle the expire event the user has to call GsnWpaTmrIf\_\-Handler API. GsnWpaTmrIf\_\-Handler handles time out events for all the interface. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00687_ga217dd44d571805052c1977dc467daa42}{GsnWpaTmrIf\_\-Handler} (VOID)
+\begin{DoxyCompactList}\small\item\em WPAIF Timer handler API. API to handle timeout event. This is provided in order to execute the timeout activity in a thread context to avoid executing it in timer thread context. \end{DoxyCompactList}\item 
+PUBLIC VOID $\ast$ \hyperlink{a00687_ga0f9e51e12292ff32189550c167593fd7}{GsnWpaIf\_\-Init} (\hyperlink{a00687_gafdd00105be3584713f485995fb16fc07}{GSN\_\-WPAIF\_\-MODE\_\-T} mode, VOID $\ast$pDrvIf, \hyperlink{a00420}{GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T} $\ast$pCfg, \hyperlink{a00426}{GSN\_\-WPAIF\_\-SPECFIC\_\-CFG\_\-T} $\ast$pSpecCfg)
+\begin{DoxyCompactList}\small\item\em Initialize the WPAIF. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00687_ga5c5fa045eb04e3e56b671b73f35c10b1}{GsnWpaIf\_\-Deinit} (VOID $\ast$pWpaIf)
+\begin{DoxyCompactList}\small\item\em De-\/initialize the WPAIF. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00687_ga6e525a3280fe21d508c41995dde92810}{GsnWpaIf\_\-Notif} (void $\ast$pCtx, \hyperlink{a00687_ga73929543fff4d9b512803f4cb0e94b47}{GSN\_\-WPAIF\_\-EVENT\_\-T} event, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pData, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} length)
+\begin{DoxyCompactList}\small\item\em Callback function to notify WPAIF. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00687_ga491c93619d44c8ec38f554c8e27af35e}{GsnWpaIf\_\-CfgGet} (void $\ast$pWpaIf, \hyperlink{a00687_ga40c2baeb843f878b19724138a045f065}{GSN\_\-WPAIF\_\-CFG\_\-OPT\_\-T} cfgOpt, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pData, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pLen)
+\begin{DoxyCompactList}\small\item\em WPAIF configuration get API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00687_gacafd704886a83992ea38f3f7adf3f931}{GsnWpaIf\_\-CfgSet} (void $\ast$pWpaIf, \hyperlink{a00687_ga40c2baeb843f878b19724138a045f065}{GSN\_\-WPAIF\_\-CFG\_\-OPT\_\-T} cfgOpt, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pData, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} length)
+\begin{DoxyCompactList}\small\item\em WPAIF configuration set API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00687_ga7ee0d07f06c42b115e50d8d0f5c68690}{GsnWpaIf\_\-ExtractCfg} (\hyperlink{a00116}{GSN\_\-MAC\_\-FRAME\_\-T} $\ast$framePtr, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} frameLen, \hyperlink{a00420}{GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T} $\ast$pCfg, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$pIE, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$pIElen)
+\begin{DoxyCompactList}\small\item\em WPAIF configuration extract API. API to extract the basic configuration from the probe response or beacon frame. \end{DoxyCompactList}\item 
+INLINE PUBLIC \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00687_gae1ac16436501065ce3743135464cacb2}{GsnWpaIf\_\-GetBuff} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen)
+\begin{DoxyCompactList}\small\item\em WPAIF Data receive notification API. This API notify the WPAIF of data receive. This API copies the data frame and queues the packet to process it later. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00687_gae101e1cf8fc4d75a8d0f652d2a4fa298}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T}}
+\index{GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WPAIF\_\-BASIC\_\-CFG} {\bf GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T}}}
+\label{a00687_gae101e1cf8fc4d75a8d0f652d2a4fa298}
+
+
+WPAIF WPA basic configuration. 
+
+This structure defines the WPAIF basic configuration. \hypertarget{a00687_ga00bd42b52d889cc88227a999dda345d9}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-CERT\_\-T@{GSN\_\-WPAIF\_\-CERT\_\-T}}
+\index{GSN\_\-WPAIF\_\-CERT\_\-T@{GSN\_\-WPAIF\_\-CERT\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-CERT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WPAIF\_\-CERT}  {\bf GSN\_\-WPAIF\_\-CERT\_\-T}}}
+\label{a00687_ga00bd42b52d889cc88227a999dda345d9}
+
+
+WPAIF EAP Certificate configuration. 
+
+This structure defines the WPAIF EAP certificate configuration. It stores the length of the certificate and the pointer to the certificate. WPAIF stores the pointer to reduce the memory requirement. \hypertarget{a00687_ga40c2baeb843f878b19724138a045f065}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-CFG\_\-OPT\_\-T@{GSN\_\-WPAIF\_\-CFG\_\-OPT\_\-T}}
+\index{GSN\_\-WPAIF\_\-CFG\_\-OPT\_\-T@{GSN\_\-WPAIF\_\-CFG\_\-OPT\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-CFG\_\-OPT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WPAIF\_\-CFG\_\-OPT} {\bf GSN\_\-WPAIF\_\-CFG\_\-OPT\_\-T}}}
+\label{a00687_ga40c2baeb843f878b19724138a045f065}
+
+
+WPAIF configuration options. 
+
+This enum defines the WPAIF configuration options. \hypertarget{a00687_ga7cc823d929ee57574f3590cd8af66f18}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-CFG\_\-T}}
+\index{GSN\_\-WPAIF\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-CFG\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WPAIF\_\-CFG} {\bf GSN\_\-WPAIF\_\-CFG\_\-T}}}
+\label{a00687_ga7cc823d929ee57574f3590cd8af66f18}
+
+
+WPAIF WPA configuration. 
+
+This structure defines the WPAIF WPA configuration. \hypertarget{a00687_gaca9adbc88af0681a3cfbc31eb772a548}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EAP\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-EAP\_\-CFG\_\-T}}
+\index{GSN\_\-WPAIF\_\-EAP\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-EAP\_\-CFG\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-EAP\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WPAIF\_\-EAP\_\-CFG}  {\bf GSN\_\-WPAIF\_\-EAP\_\-CFG\_\-T}}}
+\label{a00687_gaca9adbc88af0681a3cfbc31eb772a548}
+
+
+WPAIF EAP configuration. 
+
+This structure defines the WPAIF EAP configuration. \hypertarget{a00687_gad6577531dfde003b7207ae0eb46aabee}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EAP\_\-PWD\_\-T@{GSN\_\-WPAIF\_\-EAP\_\-PWD\_\-T}}
+\index{GSN\_\-WPAIF\_\-EAP\_\-PWD\_\-T@{GSN\_\-WPAIF\_\-EAP\_\-PWD\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-EAP\_\-PWD\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WDD\_\-SEC\_\-EAP\_\-PWD\_\-T} {\bf GSN\_\-WPAIF\_\-EAP\_\-PWD\_\-T}}}
+\label{a00687_gad6577531dfde003b7207ae0eb46aabee}
+
+
+WPAIF EAP password configuration. 
+
+This structure defines the WPAIF EAP password configuration. It stores the length of the password and the pointer to the password. WPAIF stores the pointer to reduce the memory requirement. 
+
+Definition at line 141 of file gsn\_\-wpaif.h.
+
+\hypertarget{a00687_ga0200d673ac133f30a5c4eb16fef8c3a4}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EAP\_\-USER\_\-NAME\_\-T@{GSN\_\-WPAIF\_\-EAP\_\-USER\_\-NAME\_\-T}}
+\index{GSN\_\-WPAIF\_\-EAP\_\-USER\_\-NAME\_\-T@{GSN\_\-WPAIF\_\-EAP\_\-USER\_\-NAME\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-EAP\_\-USER\_\-NAME\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WDD\_\-SEC\_\-EAP\_\-UNAME\_\-T} {\bf GSN\_\-WPAIF\_\-EAP\_\-USER\_\-NAME\_\-T}}}
+\label{a00687_ga0200d673ac133f30a5c4eb16fef8c3a4}
+
+
+WPAIF EAP User name configuration. 
+
+This structure defines the WPAIF EAP user name configuration. It stores the length of the user name and the pointer to the user name. WPAIF stores the pointer to reduce the memory requirement. 
+
+Definition at line 130 of file gsn\_\-wpaif.h.
+
+\hypertarget{a00687_ga73929543fff4d9b512803f4cb0e94b47}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EVENT\_\-T@{GSN\_\-WPAIF\_\-EVENT\_\-T}}
+\index{GSN\_\-WPAIF\_\-EVENT\_\-T@{GSN\_\-WPAIF\_\-EVENT\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-EVENT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WPAIF\_\-EVENT} {\bf GSN\_\-WPAIF\_\-EVENT\_\-T}}}
+\label{a00687_ga73929543fff4d9b512803f4cb0e94b47}
+
+
+WPAIF Events. 
+
+This enum defines the WPAIF events. \hypertarget{a00687_gafdd00105be3584713f485995fb16fc07}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-MODE\_\-T@{GSN\_\-WPAIF\_\-MODE\_\-T}}
+\index{GSN\_\-WPAIF\_\-MODE\_\-T@{GSN\_\-WPAIF\_\-MODE\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-MODE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WPAIF\_\-MODE} {\bf GSN\_\-WPAIF\_\-MODE\_\-T}}}
+\label{a00687_gafdd00105be3584713f485995fb16fc07}
+
+
+WPAIF mode. This enum defines the WPAIF operation mode. This mode specifies the Wi-\/Fi operating mode. 
+
+\hypertarget{a00687_ga3cab0646203b96a6bc26d38587ecba02}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-PASSPHRASE\_\-T@{GSN\_\-WPAIF\_\-PASSPHRASE\_\-T}}
+\index{GSN\_\-WPAIF\_\-PASSPHRASE\_\-T@{GSN\_\-WPAIF\_\-PASSPHRASE\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-PASSPHRASE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WPAIF\_\-PASSPHRASE} {\bf GSN\_\-WPAIF\_\-PASSPHRASE\_\-T}}}
+\label{a00687_ga3cab0646203b96a6bc26d38587ecba02}
+
+
+WPAIF Passphrase configuration. 
+
+This structure defines the WPAIF passphrase configuration. It stores the length of the passphrase and the pointer to the passphrase. It is assumbed that the passphrase pointer will persist the value. WPAIF stores the pointer to reduce the memory requirement. \hypertarget{a00687_ga76d386ef77db02abc848f5e9a50cd8e5}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-PSK\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-PSK\_\-CFG\_\-T}}
+\index{GSN\_\-WPAIF\_\-PSK\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-PSK\_\-CFG\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-PSK\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WPAIF\_\-PSK\_\-CFG} {\bf GSN\_\-WPAIF\_\-PSK\_\-CFG\_\-T}}}
+\label{a00687_ga76d386ef77db02abc848f5e9a50cd8e5}
+
+
+WPAIF PSK configuration. 
+
+This structure defines the WPAIF PSK configuration. It stores either the passphrase configuration or the pointer to the PMK. User can provide the PMK if it is already calculated to save on the time required to re-\/calculate it again. The PMK filed is a pointer and it is assumed that it will persist the value. WPAIF stores the pointer to reduce the memory requirement. \hypertarget{a00687_ga976816e9ade6b55dce10949691396249}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-SPECFIC\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-SPECFIC\_\-CFG\_\-T}}
+\index{GSN\_\-WPAIF\_\-SPECFIC\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-SPECFIC\_\-CFG\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-SPECFIC\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf GSN\_\-WPAIF\_\-SPECFIC\_\-CFG} {\bf GSN\_\-WPAIF\_\-SPECFIC\_\-CFG\_\-T}}}
+\label{a00687_ga976816e9ade6b55dce10949691396249}
+
+
+WPAIF specific configuration. 
+
+This structure defines the WPAIF specific configuration, based on the security selected. \hypertarget{a00687_ga84bfdf616b263689a81c060d1bdf224b}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-TMR\_\-NITIF\_\-CB\_\-T@{GSN\_\-WPAIF\_\-TMR\_\-NITIF\_\-CB\_\-T}}
+\index{GSN\_\-WPAIF\_\-TMR\_\-NITIF\_\-CB\_\-T@{GSN\_\-WPAIF\_\-TMR\_\-NITIF\_\-CB\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-TMR\_\-NITIF\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-WPAIF\_\-TMR\_\-NITIF\_\-CB\_\-T})(VOID $\ast$pCtx)}}
+\label{a00687_ga84bfdf616b263689a81c060d1bdf224b}
+
+
+WPAIF Timer notification callback type. 
+
+This function type defination defines the WPAIF timer notification callback type. 
+
+Definition at line 330 of file gsn\_\-wpaif.h.
+
+\hypertarget{a00687_gad51d45617a4ed8eff4b53f1196737959}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-WPS\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-WPS\_\-CFG\_\-T}}
+\index{GSN\_\-WPAIF\_\-WPS\_\-CFG\_\-T@{GSN\_\-WPAIF\_\-WPS\_\-CFG\_\-T}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-WPS\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WPAIF\_\-WPS\_\-CFG} {\bf GSN\_\-WPAIF\_\-WPS\_\-CFG\_\-T}}}
+\label{a00687_gad51d45617a4ed8eff4b53f1196737959}
+
+
+WPAIF WPS configuration. 
+
+This structure defines the WPAIF WPS configuration. All the pointers should be NULL terminated. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00687_ga80155586fa275b28773c9b203f52caba}{
+\subsubsection[{"@17}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{a00687_ga80155586fa275b28773c9b203f52caba}
+
+
+WPAIF EAP Phase2. 
+
+This enum defines the Phase 2 authentication in EAP security. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WPAIF\_\-EAP\_\-CHAP@{GSN\_\-WPAIF\_\-EAP\_\-CHAP}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EAP\_\-CHAP@{GSN\_\-WPAIF\_\-EAP\_\-CHAP}}\item[{\em 
+\hypertarget{a00687_gga80155586fa275b28773c9b203f52cabaa57ccee1d732b55d646bb693db54c68b3}{
+GSN\_\-WPAIF\_\-EAP\_\-CHAP}
+\label{a00687_gga80155586fa275b28773c9b203f52cabaa57ccee1d732b55d646bb693db54c68b3}
+}]\index{GSN\_\-WPAIF\_\-EAP\_\-MSCHAP@{GSN\_\-WPAIF\_\-EAP\_\-MSCHAP}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EAP\_\-MSCHAP@{GSN\_\-WPAIF\_\-EAP\_\-MSCHAP}}\item[{\em 
+\hypertarget{a00687_gga80155586fa275b28773c9b203f52cabaa5d6fefd10ba8ff083da0148f8bf64dd7}{
+GSN\_\-WPAIF\_\-EAP\_\-MSCHAP}
+\label{a00687_gga80155586fa275b28773c9b203f52cabaa5d6fefd10ba8ff083da0148f8bf64dd7}
+}]\index{GSN\_\-WPAIF\_\-EAP\_\-EAP@{GSN\_\-WPAIF\_\-EAP\_\-EAP}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EAP\_\-EAP@{GSN\_\-WPAIF\_\-EAP\_\-EAP}}\item[{\em 
+\hypertarget{a00687_gga80155586fa275b28773c9b203f52cabaa2711360a255c4e42bbf0a9100905336c}{
+GSN\_\-WPAIF\_\-EAP\_\-EAP}
+\label{a00687_gga80155586fa275b28773c9b203f52cabaa2711360a255c4e42bbf0a9100905336c}
+}]\index{GSN\_\-WPAIF\_\-EAP\_\-PAP@{GSN\_\-WPAIF\_\-EAP\_\-PAP}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EAP\_\-PAP@{GSN\_\-WPAIF\_\-EAP\_\-PAP}}\item[{\em 
+\hypertarget{a00687_gga80155586fa275b28773c9b203f52cabaa597f80719023ea574e28f5a25679f284}{
+GSN\_\-WPAIF\_\-EAP\_\-PAP}
+\label{a00687_gga80155586fa275b28773c9b203f52cabaa597f80719023ea574e28f5a25679f284}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 314 of file gsn\_\-wpaif.h.
+
+\hypertarget{a00687_ga0f2a6686511220638235644511dee215}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-CFG\_\-OPT@{GSN\_\-WPAIF\_\-CFG\_\-OPT}}
+\index{GSN\_\-WPAIF\_\-CFG\_\-OPT@{GSN\_\-WPAIF\_\-CFG\_\-OPT}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-CFG\_\-OPT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WPAIF\_\-CFG\_\-OPT}}}
+\label{a00687_ga0f2a6686511220638235644511dee215}
+
+
+WPAIF configuration options. 
+
+This enum defines the WPAIF configuration options. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WPAIF\_\-OPT\_\-SSID\_\-PTR@{GSN\_\-WPAIF\_\-OPT\_\-SSID\_\-PTR}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-OPT\_\-SSID\_\-PTR@{GSN\_\-WPAIF\_\-OPT\_\-SSID\_\-PTR}}\item[{\em 
+\hypertarget{a00687_gga0f2a6686511220638235644511dee215a4bc8f7a5e627200ce23927fdbd6bd035}{
+GSN\_\-WPAIF\_\-OPT\_\-SSID\_\-PTR}
+\label{a00687_gga0f2a6686511220638235644511dee215a4bc8f7a5e627200ce23927fdbd6bd035}
+}]\index{GSN\_\-WPAIF\_\-OPT\_\-PTK@{GSN\_\-WPAIF\_\-OPT\_\-PTK}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-OPT\_\-PTK@{GSN\_\-WPAIF\_\-OPT\_\-PTK}}\item[{\em 
+\hypertarget{a00687_gga0f2a6686511220638235644511dee215a1dfeb9a125e497101305800dccac1b8c}{
+GSN\_\-WPAIF\_\-OPT\_\-PTK}
+\label{a00687_gga0f2a6686511220638235644511dee215a1dfeb9a125e497101305800dccac1b8c}
+}]\index{GSN\_\-WPAIF\_\-OPT\_\-PMKID@{GSN\_\-WPAIF\_\-OPT\_\-PMKID}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-OPT\_\-PMKID@{GSN\_\-WPAIF\_\-OPT\_\-PMKID}}\item[{\em 
+\hypertarget{a00687_gga0f2a6686511220638235644511dee215a047df613fbb70a0656f02f7da2e90bc5}{
+GSN\_\-WPAIF\_\-OPT\_\-PMKID}
+\label{a00687_gga0f2a6686511220638235644511dee215a047df613fbb70a0656f02f7da2e90bc5}
+}]\index{GSN\_\-WPAIF\_\-OPT\_\-STATE@{GSN\_\-WPAIF\_\-OPT\_\-STATE}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-OPT\_\-STATE@{GSN\_\-WPAIF\_\-OPT\_\-STATE}}\item[{\em 
+\hypertarget{a00687_gga0f2a6686511220638235644511dee215a005f740966425393bfcfdf3701f52852}{
+GSN\_\-WPAIF\_\-OPT\_\-STATE}
+\label{a00687_gga0f2a6686511220638235644511dee215a005f740966425393bfcfdf3701f52852}
+}]\index{GSN\_\-WPAIF\_\-OPT\_\-PSK\_\-CFG@{GSN\_\-WPAIF\_\-OPT\_\-PSK\_\-CFG}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-OPT\_\-PSK\_\-CFG@{GSN\_\-WPAIF\_\-OPT\_\-PSK\_\-CFG}}\item[{\em 
+\hypertarget{a00687_gga0f2a6686511220638235644511dee215af1d9eb946929ad5adb45397ce028fb63}{
+GSN\_\-WPAIF\_\-OPT\_\-PSK\_\-CFG}
+\label{a00687_gga0f2a6686511220638235644511dee215af1d9eb946929ad5adb45397ce028fb63}
+}]\index{GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CFG@{GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CFG}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CFG@{GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CFG}}\item[{\em 
+\hypertarget{a00687_gga0f2a6686511220638235644511dee215ab301a42eaf26381c3661b7c4d796052b}{
+GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CFG}
+\label{a00687_gga0f2a6686511220638235644511dee215ab301a42eaf26381c3661b7c4d796052b}
+}]\index{GSN\_\-WPAIF\_\-OPT\_\-EAP\_\-CFG@{GSN\_\-WPAIF\_\-OPT\_\-EAP\_\-CFG}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-OPT\_\-EAP\_\-CFG@{GSN\_\-WPAIF\_\-OPT\_\-EAP\_\-CFG}}\item[{\em 
+\hypertarget{a00687_gga0f2a6686511220638235644511dee215ac7c1de1b14107e27fbf404718d49c6fa}{
+GSN\_\-WPAIF\_\-OPT\_\-EAP\_\-CFG}
+\label{a00687_gga0f2a6686511220638235644511dee215ac7c1de1b14107e27fbf404718d49c6fa}
+}]\index{GSN\_\-WPAIF\_\-OPT\_\-PAC@{GSN\_\-WPAIF\_\-OPT\_\-PAC}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-OPT\_\-PAC@{GSN\_\-WPAIF\_\-OPT\_\-PAC}}\item[{\em 
+\hypertarget{a00687_gga0f2a6686511220638235644511dee215ad7faa17670befa8fc80e316af9a3b733}{
+GSN\_\-WPAIF\_\-OPT\_\-PAC}
+\label{a00687_gga0f2a6686511220638235644511dee215ad7faa17670befa8fc80e316af9a3b733}
+}]\index{GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CRED\_\-GET@{GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CRED\_\-GET}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CRED\_\-GET@{GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CRED\_\-GET}}\item[{\em 
+\hypertarget{a00687_gga0f2a6686511220638235644511dee215af3bd357d3a9d824dd1e977d66c831f8d}{
+GSN\_\-WPAIF\_\-OPT\_\-WPS\_\-CRED\_\-GET}
+\label{a00687_gga0f2a6686511220638235644511dee215af3bd357d3a9d824dd1e977d66c831f8d}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 272 of file gsn\_\-wpaif.h.
+
+\hypertarget{a00687_gab34b81549296cd8fc0728be0cfa16e87}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EVENT@{GSN\_\-WPAIF\_\-EVENT}}
+\index{GSN\_\-WPAIF\_\-EVENT@{GSN\_\-WPAIF\_\-EVENT}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-EVENT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WPAIF\_\-EVENT}}}
+\label{a00687_gab34b81549296cd8fc0728be0cfa16e87}
+
+
+WPAIF Events. 
+
+This enum defines the WPAIF events. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WPAIF\_\-EVENT\_\-CONNECT\_\-IND@{GSN\_\-WPAIF\_\-EVENT\_\-CONNECT\_\-IND}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EVENT\_\-CONNECT\_\-IND@{GSN\_\-WPAIF\_\-EVENT\_\-CONNECT\_\-IND}}\item[{\em 
+\hypertarget{a00687_ggab34b81549296cd8fc0728be0cfa16e87adf4f66b0da0bcca3db633796f43d1222}{
+GSN\_\-WPAIF\_\-EVENT\_\-CONNECT\_\-IND}
+\label{a00687_ggab34b81549296cd8fc0728be0cfa16e87adf4f66b0da0bcca3db633796f43d1222}
+}]\index{GSN\_\-WPAIF\_\-EVENT\_\-DISCONNECT\_\-IND@{GSN\_\-WPAIF\_\-EVENT\_\-DISCONNECT\_\-IND}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EVENT\_\-DISCONNECT\_\-IND@{GSN\_\-WPAIF\_\-EVENT\_\-DISCONNECT\_\-IND}}\item[{\em 
+\hypertarget{a00687_ggab34b81549296cd8fc0728be0cfa16e87a63abaaa5c7d17b4afc4dff551a26bfa4}{
+GSN\_\-WPAIF\_\-EVENT\_\-DISCONNECT\_\-IND}
+\label{a00687_ggab34b81549296cd8fc0728be0cfa16e87a63abaaa5c7d17b4afc4dff551a26bfa4}
+}]\index{GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-CONNECTE\_\-IND@{GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-CONNECTE\_\-IND}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-CONNECTE\_\-IND@{GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-CONNECTE\_\-IND}}\item[{\em 
+\hypertarget{a00687_ggab34b81549296cd8fc0728be0cfa16e87a4b28b3c400f21b493ec3d005b365a07d}{
+GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-CONNECTE\_\-IND}
+\label{a00687_ggab34b81549296cd8fc0728be0cfa16e87a4b28b3c400f21b493ec3d005b365a07d}
+}]\index{GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-DISCONNECT\_\-IND@{GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-DISCONNECT\_\-IND}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-DISCONNECT\_\-IND@{GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-DISCONNECT\_\-IND}}\item[{\em 
+\hypertarget{a00687_ggab34b81549296cd8fc0728be0cfa16e87a8fa700eb1fdc0dcf80f2b33af0ec50c1}{
+GSN\_\-WPAIF\_\-EVENT\_\-STA\_\-DISCONNECT\_\-IND}
+\label{a00687_ggab34b81549296cd8fc0728be0cfa16e87a8fa700eb1fdc0dcf80f2b33af0ec50c1}
+}]\index{GSN\_\-WPAIF\_\-EVENT\_\-EAPOL\_\-RECEIVE\_\-IND@{GSN\_\-WPAIF\_\-EVENT\_\-EAPOL\_\-RECEIVE\_\-IND}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-EVENT\_\-EAPOL\_\-RECEIVE\_\-IND@{GSN\_\-WPAIF\_\-EVENT\_\-EAPOL\_\-RECEIVE\_\-IND}}\item[{\em 
+\hypertarget{a00687_ggab34b81549296cd8fc0728be0cfa16e87a064f89c4740c28020afc8b7a494a30ba}{
+GSN\_\-WPAIF\_\-EVENT\_\-EAPOL\_\-RECEIVE\_\-IND}
+\label{a00687_ggab34b81549296cd8fc0728be0cfa16e87a064f89c4740c28020afc8b7a494a30ba}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 297 of file gsn\_\-wpaif.h.
+
+\hypertarget{a00687_gaa611307c118e60b86fe3447c4dd9ef03}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-MODE@{GSN\_\-WPAIF\_\-MODE}}
+\index{GSN\_\-WPAIF\_\-MODE@{GSN\_\-WPAIF\_\-MODE}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GSN\_\-WPAIF\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WPAIF\_\-MODE}}}
+\label{a00687_gaa611307c118e60b86fe3447c4dd9ef03}
+
+
+WPAIF mode. This enum defines the WPAIF operation mode. This mode specifies the Wi-\/Fi operating mode. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WPAIF\_\-MODE\_\-INFRA@{GSN\_\-WPAIF\_\-MODE\_\-INFRA}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-MODE\_\-INFRA@{GSN\_\-WPAIF\_\-MODE\_\-INFRA}}\item[{\em 
+\hypertarget{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a8f02aa9b67e320b42a583c337a06032c}{
+GSN\_\-WPAIF\_\-MODE\_\-INFRA}
+\label{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a8f02aa9b67e320b42a583c337a06032c}
+}]\index{GSN\_\-WPAIF\_\-MODE\_\-IBSS@{GSN\_\-WPAIF\_\-MODE\_\-IBSS}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-MODE\_\-IBSS@{GSN\_\-WPAIF\_\-MODE\_\-IBSS}}\item[{\em 
+\hypertarget{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a7c79ee92b43c049eb8820c6526f83c7b}{
+GSN\_\-WPAIF\_\-MODE\_\-IBSS}
+\label{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a7c79ee92b43c049eb8820c6526f83c7b}
+}]\index{GSN\_\-WPAIF\_\-MODE\_\-AP@{GSN\_\-WPAIF\_\-MODE\_\-AP}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-MODE\_\-AP@{GSN\_\-WPAIF\_\-MODE\_\-AP}}\item[{\em 
+\hypertarget{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a1824a98b218f76b78f6d4aec183dd95a}{
+GSN\_\-WPAIF\_\-MODE\_\-AP}
+\label{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a1824a98b218f76b78f6d4aec183dd95a}
+}]\index{GSN\_\-WPAIF\_\-MODE\_\-INFRA\_\-RESTORE@{GSN\_\-WPAIF\_\-MODE\_\-INFRA\_\-RESTORE}!GSN WPA Interface@{GSN WPA Interface}}\index{GSN WPA Interface@{GSN WPA Interface}!GSN\_\-WPAIF\_\-MODE\_\-INFRA\_\-RESTORE@{GSN\_\-WPAIF\_\-MODE\_\-INFRA\_\-RESTORE}}\item[{\em 
+\hypertarget{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a29cd0996b9ecb2e8c37f1d4a3e3b489c}{
+GSN\_\-WPAIF\_\-MODE\_\-INFRA\_\-RESTORE}
+\label{a00687_ggaa611307c118e60b86fe3447c4dd9ef03a29cd0996b9ecb2e8c37f1d4a3e3b489c}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 76 of file gsn\_\-wpaif.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00687_ga49429fc4b151d4d9d2da3fab4f0d1ac1}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GsnWpa\_\-Init@{GsnWpa\_\-Init}}
+\index{GsnWpa\_\-Init@{GsnWpa\_\-Init}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GsnWpa\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnWpa\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WPAIF\_\-TMR\_\-NITIF\_\-CB\_\-T}}]{cb, }
+\item[{void $\ast$}]{pCtx, }
+\item[{{\bf UINT32}}]{seed\mbox{[}TRNG\_\-NONCE\_\-SIZE\_\-WORDS\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{a00687_ga49429fc4b151d4d9d2da3fab4f0d1ac1}
+
+
+Initialize WPA module. This API initializes the WPA module. To initialize each WPA IF user has to call GsnWpaIf\_\-Init. This API has to be called only once before calling any of the WPA IF APIs. This API takes a callback pointer which is called when a timer expire event happens. User can post a message to appropriate thread to give an execution context to handle the expire event. To handle the expire event the user has to call GsnWpaTmrIf\_\-Handler API. GsnWpaTmrIf\_\-Handler handles time out events for all the interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & -\/ IN Pointer to the callback function, that has to be called when WPA timer expire event happens. \\
+\hline
+{\em pCtx} & -\/ IN context to be passed in the cb. \\
+\hline
+{\em seed} & -\/ IN seed \\
+\hline
+\end{DoxyParams}
+\hypertarget{a00687_ga491c93619d44c8ec38f554c8e27af35e}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GsnWpaIf\_\-CfgGet@{GsnWpaIf\_\-CfgGet}}
+\index{GsnWpaIf\_\-CfgGet@{GsnWpaIf\_\-CfgGet}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GsnWpaIf\_\-CfgGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWpaIf\_\-CfgGet (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{pWpaIf, }
+\item[{{\bf GSN\_\-WPAIF\_\-CFG\_\-OPT\_\-T}}]{cfgOpt, }
+\item[{{\bf UINT8} $\ast$}]{pData, }
+\item[{{\bf UINT32} $\ast$}]{pLen}
+\end{DoxyParamCaption}
+)}}
+\label{a00687_ga491c93619d44c8ec38f554c8e27af35e}
+
+
+WPAIF configuration get API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pWpaIf} & -\/ IN Pointer to the WPAIF context, returned in GsnWpaIf\_\-Init call API. \\
+\hline
+{\em cfgOpt} & -\/ IN Configuration option \\
+\hline
+{\em pData} & -\/ IN Pointer to the data. \\
+\hline
+{\em pLen} & -\/ IN/OUT Pointer to length of the data. \\
+\hline
+\end{DoxyParams}
+\hypertarget{a00687_gacafd704886a83992ea38f3f7adf3f931}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GsnWpaIf\_\-CfgSet@{GsnWpaIf\_\-CfgSet}}
+\index{GsnWpaIf\_\-CfgSet@{GsnWpaIf\_\-CfgSet}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GsnWpaIf\_\-CfgSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWpaIf\_\-CfgSet (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{pWpaIf, }
+\item[{{\bf GSN\_\-WPAIF\_\-CFG\_\-OPT\_\-T}}]{cfgOpt, }
+\item[{{\bf UINT8} $\ast$}]{pData, }
+\item[{{\bf UINT32}}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{a00687_gacafd704886a83992ea38f3f7adf3f931}
+
+
+WPAIF configuration set API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pWpaIf} & -\/ IN Pointer to the WPAIF context, returned in GsnWpaIf\_\-Init call API. \\
+\hline
+{\em cfgOpt} & -\/ IN Configuration option \\
+\hline
+{\em pData} & -\/ IN Pointer to the data. \\
+\hline
+{\em length} & -\/ IN length of the data. \\
+\hline
+\end{DoxyParams}
+\hypertarget{a00687_ga5c5fa045eb04e3e56b671b73f35c10b1}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GsnWpaIf\_\-Deinit@{GsnWpaIf\_\-Deinit}}
+\index{GsnWpaIf\_\-Deinit@{GsnWpaIf\_\-Deinit}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GsnWpaIf\_\-Deinit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWpaIf\_\-Deinit (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pWpaIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00687_ga5c5fa045eb04e3e56b671b73f35c10b1}
+
+
+De-\/initialize the WPAIF. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pWpaIf} & -\/ IN Pointer to the WPAIF context, returned in GsnWpaIf\_\-Init call API. \\
+\hline
+\end{DoxyParams}
+\hypertarget{a00687_ga7ee0d07f06c42b115e50d8d0f5c68690}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GsnWpaIf\_\-ExtractCfg@{GsnWpaIf\_\-ExtractCfg}}
+\index{GsnWpaIf\_\-ExtractCfg@{GsnWpaIf\_\-ExtractCfg}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GsnWpaIf\_\-ExtractCfg}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWpaIf\_\-ExtractCfg (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MAC\_\-FRAME\_\-T} $\ast$}]{framePtr, }
+\item[{{\bf UINT16}}]{frameLen, }
+\item[{{\bf GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T} $\ast$}]{pCfg, }
+\item[{{\bf INT8} $\ast$}]{pIE, }
+\item[{{\bf INT8} $\ast$}]{pIElen}
+\end{DoxyParamCaption}
+)}}
+\label{a00687_ga7ee0d07f06c42b115e50d8d0f5c68690}
+
+
+WPAIF configuration extract API. API to extract the basic configuration from the probe response or beacon frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em framePtr} & -\/ IN Pointer to the frame. \\
+\hline
+{\em frameLen} & -\/ IN Size of the frame \\
+\hline
+{\em pCfg} & -\/ OUT Pointer to store the basic configuration. \\
+\hline
+{\em pIE} & -\/ OUT Pointer to store the IE \\
+\hline
+{\em pIElen} & -\/ OUT length of the IE \\
+\hline
+\end{DoxyParams}
+\hypertarget{a00687_gae1ac16436501065ce3743135464cacb2}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GsnWpaIf\_\-GetBuff@{GsnWpaIf\_\-GetBuff}}
+\index{GsnWpaIf\_\-GetBuff@{GsnWpaIf\_\-GetBuff}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GsnWpaIf\_\-GetBuff}]{\setlength{\rightskip}{0pt plus 5cm}INLINE PUBLIC {\bf UINT8}$\ast$ GsnWpaIf\_\-GetBuff (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{dataLen}
+\end{DoxyParamCaption}
+)}}
+\label{a00687_gae1ac16436501065ce3743135464cacb2}
+
+
+WPAIF Data receive notification API. This API notify the WPAIF of data receive. This API copies the data frame and queues the packet to process it later. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataLen} & -\/ IN Size of the frame \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 481 of file gsn\_\-wpaif.h.
+
+\hypertarget{a00687_ga0f9e51e12292ff32189550c167593fd7}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GsnWpaIf\_\-Init@{GsnWpaIf\_\-Init}}
+\index{GsnWpaIf\_\-Init@{GsnWpaIf\_\-Init}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GsnWpaIf\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID$\ast$ GsnWpaIf\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-WPAIF\_\-MODE\_\-T}}]{mode, }
+\item[{VOID $\ast$}]{pDrvIf, }
+\item[{{\bf GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T} $\ast$}]{pCfg, }
+\item[{{\bf GSN\_\-WPAIF\_\-SPECFIC\_\-CFG\_\-T} $\ast$}]{pSpecCfg}
+\end{DoxyParamCaption}
+)}}
+\label{a00687_ga0f9e51e12292ff32189550c167593fd7}
+
+
+Initialize the WPAIF. 
+
+This function is called to initialize the WPAIF module. This API has to be called before calling any other APIs of WPAIF. This API is called once the user has decided to join/create a network. At this point user will have the basic and the specific configuration of the network. To derive the basic configuration from the scan response user can call GsnWpaIf\_\-ExtractCfg API provided. User has to fill the pSsid in the basic configuration. In case of WPS connection, the user has to set the \char`\"{}proto\char`\"{} to \char`\"{}WPA\_\-PROTO\_\-WPS\char`\"{} (defined in defs.h) and has to provide the WPS configuration in pSpecCfg to initiate WPS joining procedure. If the node is already connected to a network and decides to join another network, it can disconnect and then again call this API. To change the mode, say from IBSS to INFRA or to AP mode it has to call GsnWpaIf\_\-Deinit and then call GsnWpaIf\_\-Init.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & -\/ IN WiFi operation mode. \\
+\hline
+{\em pDrvIf} & -\/ IN Pointer to the WiFi driver interface (WDD). \\
+\hline
+{\em pCfg} & -\/ IN Pointer to basic configuration. This API copies the content of this pointer to its context memory. \\
+\hline
+{\em pSpecCfg} & -\/ IN Pointer to the specific configuration. This field is used if user wants to provide WPA, EAP or WPS configuartion. In case of WPS, this field is mandatory. Based on the value given in proto element of basic configuration, the special configuration is interpreted. If this field is not set in this API, then user has to provide this information by calling GsnWpaIf\_\-CfgSet API. \\
+\hline
+\end{DoxyParams}
+\hypertarget{a00687_ga6e525a3280fe21d508c41995dde92810}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GsnWpaIf\_\-Notif@{GsnWpaIf\_\-Notif}}
+\index{GsnWpaIf\_\-Notif@{GsnWpaIf\_\-Notif}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GsnWpaIf\_\-Notif}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnWpaIf\_\-Notif (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{pCtx, }
+\item[{{\bf GSN\_\-WPAIF\_\-EVENT\_\-T}}]{event, }
+\item[{{\bf UINT8} $\ast$}]{pData, }
+\item[{{\bf UINT32}}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{a00687_ga6e525a3280fe21d508c41995dde92810}
+
+
+Callback function to notify WPAIF. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to the WPAIF context, returned in GsnWpaIf\_\-Init call API. \\
+\hline
+{\em event} & -\/ IN event to notify \\
+\hline
+{\em pData} & -\/ IN Pointer to the data. \\
+\hline
+{\em length} & -\/ IN length of the data. \\
+\hline
+\end{DoxyParams}
+\hypertarget{a00687_ga217dd44d571805052c1977dc467daa42}{
+\index{GSN WPA Interface@{GSN WPA Interface}!GsnWpaTmrIf\_\-Handler@{GsnWpaTmrIf\_\-Handler}}
+\index{GsnWpaTmrIf\_\-Handler@{GsnWpaTmrIf\_\-Handler}!GSN WPA Interface@{GSN WPA Interface}}
+\subsubsection[{GsnWpaTmrIf\_\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnWpaTmrIf\_\-Handler (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00687_ga217dd44d571805052c1977dc467daa42}
+
+
+WPAIF Timer handler API. API to handle timeout event. This is provided in order to execute the timeout activity in a thread context to avoid executing it in timer thread context. 
+

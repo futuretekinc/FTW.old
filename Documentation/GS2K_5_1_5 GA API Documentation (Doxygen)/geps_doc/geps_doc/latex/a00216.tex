@@ -1,0 +1,234 @@
+\hypertarget{a00216}{
+\section{GSN\_\-SDIO Struct Reference}
+\label{a00216}\index{GSN\_\-SDIO@{GSN\_\-SDIO}}
+}
+
+
+SDIO GSN Structure. This structure defines a SDIO driver handling parameters.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-sdio.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00216_a733fb7afbc3bd37a546de0e37c12f150}{pReg}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00216_ae1125ef709bd2329399f5350bc6968de}{blockRead}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00216_a96ecaff82c1cc0fe60c48e5eb2b2e471}{noOfBytesToRead}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00216_ae09323dd91f7fb30eeaa3d7e3ec1c2a8}{noOfBytesToBeWritten}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00216_a2bbf2fcbc8e54eea4413aa5214f4e0aa}{actualBytesRead}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00216_acaadb3f45d67507c5f8f58ab6df0a970}{actualBytesWritten}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00216_aaa16ff66d9982ada7aebae8e16dd1579}{txBuffer}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00216_ab193a10d1ff3641a6f7675c7f15b1fd5}{rxUserBuffer}
+\item 
+\hyperlink{a00225}{GSN\_\-SDIO\_\-RX\_\-BUFF\_\-T} \hyperlink{a00216_ab33acc5a2a02cec5e984720d9be033c6}{rxBuffer}
+\item 
+\hyperlink{a00584_ac80005f1e9ff1e1e884583938336474b}{SDIOCALLBACK\_\-FP} \hyperlink{a00216_a13c6299f64f8152d048be374004adc1d}{ReadCallback}
+\item 
+VOID $\ast$ \hyperlink{a00216_ab670c794162551aa7f8c6a4103007e7b}{ReadCbCtx}
+\item 
+\hyperlink{a00584_ac80005f1e9ff1e1e884583938336474b}{SDIOCALLBACK\_\-FP} \hyperlink{a00216_a0d869ce47f1054167ac5c8bbd7ac6835}{WriteCallback}
+\item 
+VOID $\ast$ \hyperlink{a00216_aa649829459755e39af4893f8557347e5}{WriteCbCtx}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00216_afcbed2858d28642dec8c21f42bf0ccb0}{sdioDeviceState}
+\item 
+\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} \hyperlink{a00216_a0e257037e5914a566c80658b7aece012}{sdioSyncWriteSemId}
+\item 
+\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} \hyperlink{a00216_ad60c142866b2430f69242ce7a3232d39}{sdioBlockReadSemId}
+\item 
+\hyperlink{a00217}{GSN\_\-SDIO\_\-CIS0\_\-STRUCTURE\_\-T} \hyperlink{a00216_a0bf26a6eea35d59f303591cd6501afa0}{sdioCis0Structure}
+\item 
+\hyperlink{a00218}{GSN\_\-SDIO\_\-CIS1\_\-STRUCTURE\_\-T} \hyperlink{a00216_af0ecceae9290e2a184c9f8a9b7b98240}{sdioCis1Structure}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+SDIO GSN Structure. This structure defines a SDIO driver handling parameters. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00653_gadc47bf5efb9097e51608305810d29895}{GSN\_\-SDIO\_\-T}. 
+\end{DoxySeeAlso}
+
+
+Definition at line 354 of file gsn\_\-sdio.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00216_a2bbf2fcbc8e54eea4413aa5214f4e0aa}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!actualBytesRead@{actualBytesRead}}
+\index{actualBytesRead@{actualBytesRead}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{actualBytesRead}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf actualBytesRead}}}
+\label{a00216_a2bbf2fcbc8e54eea4413aa5214f4e0aa}
+
+
+Definition at line 360 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_acaadb3f45d67507c5f8f58ab6df0a970}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!actualBytesWritten@{actualBytesWritten}}
+\index{actualBytesWritten@{actualBytesWritten}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{actualBytesWritten}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf actualBytesWritten}}}
+\label{a00216_acaadb3f45d67507c5f8f58ab6df0a970}
+
+
+Definition at line 361 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_ae1125ef709bd2329399f5350bc6968de}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!blockRead@{blockRead}}
+\index{blockRead@{blockRead}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{blockRead}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf blockRead}}}
+\label{a00216_ae1125ef709bd2329399f5350bc6968de}
+
+
+Definition at line 357 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_ae09323dd91f7fb30eeaa3d7e3ec1c2a8}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!noOfBytesToBeWritten@{noOfBytesToBeWritten}}
+\index{noOfBytesToBeWritten@{noOfBytesToBeWritten}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{noOfBytesToBeWritten}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf noOfBytesToBeWritten}}}
+\label{a00216_ae09323dd91f7fb30eeaa3d7e3ec1c2a8}
+
+
+Definition at line 359 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_a96ecaff82c1cc0fe60c48e5eb2b2e471}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!noOfBytesToRead@{noOfBytesToRead}}
+\index{noOfBytesToRead@{noOfBytesToRead}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{noOfBytesToRead}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf noOfBytesToRead}}}
+\label{a00216_a96ecaff82c1cc0fe60c48e5eb2b2e471}
+
+
+Definition at line 358 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_a733fb7afbc3bd37a546de0e37c12f150}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!pReg@{pReg}}
+\index{pReg@{pReg}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{pReg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf pReg}}}
+\label{a00216_a733fb7afbc3bd37a546de0e37c12f150}
+
+
+Definition at line 356 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_a13c6299f64f8152d048be374004adc1d}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!ReadCallback@{ReadCallback}}
+\index{ReadCallback@{ReadCallback}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{ReadCallback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SDIOCALLBACK\_\-FP} {\bf ReadCallback}}}
+\label{a00216_a13c6299f64f8152d048be374004adc1d}
+
+
+Definition at line 365 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_ab670c794162551aa7f8c6a4103007e7b}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!ReadCbCtx@{ReadCbCtx}}
+\index{ReadCbCtx@{ReadCbCtx}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{ReadCbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf ReadCbCtx}}}
+\label{a00216_ab670c794162551aa7f8c6a4103007e7b}
+
+
+Definition at line 366 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_ab33acc5a2a02cec5e984720d9be033c6}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!rxBuffer@{rxBuffer}}
+\index{rxBuffer@{rxBuffer}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{rxBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SDIO\_\-RX\_\-BUFF\_\-T} {\bf rxBuffer}}}
+\label{a00216_ab33acc5a2a02cec5e984720d9be033c6}
+
+
+Definition at line 364 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_ab193a10d1ff3641a6f7675c7f15b1fd5}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!rxUserBuffer@{rxUserBuffer}}
+\index{rxUserBuffer@{rxUserBuffer}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{rxUserBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf rxUserBuffer}}}
+\label{a00216_ab193a10d1ff3641a6f7675c7f15b1fd5}
+
+
+Definition at line 363 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_ad60c142866b2430f69242ce7a3232d39}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!sdioBlockReadSemId@{sdioBlockReadSemId}}
+\index{sdioBlockReadSemId@{sdioBlockReadSemId}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{sdioBlockReadSemId}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-SEM\_\-T} {\bf sdioBlockReadSemId}}}
+\label{a00216_ad60c142866b2430f69242ce7a3232d39}
+
+
+Definition at line 371 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_a0bf26a6eea35d59f303591cd6501afa0}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!sdioCis0Structure@{sdioCis0Structure}}
+\index{sdioCis0Structure@{sdioCis0Structure}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{sdioCis0Structure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SDIO\_\-CIS0\_\-STRUCTURE\_\-T} {\bf sdioCis0Structure}}}
+\label{a00216_a0bf26a6eea35d59f303591cd6501afa0}
+
+
+Definition at line 372 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_af0ecceae9290e2a184c9f8a9b7b98240}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!sdioCis1Structure@{sdioCis1Structure}}
+\index{sdioCis1Structure@{sdioCis1Structure}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{sdioCis1Structure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SDIO\_\-CIS1\_\-STRUCTURE\_\-T} {\bf sdioCis1Structure}}}
+\label{a00216_af0ecceae9290e2a184c9f8a9b7b98240}
+
+
+Definition at line 373 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_afcbed2858d28642dec8c21f42bf0ccb0}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!sdioDeviceState@{sdioDeviceState}}
+\index{sdioDeviceState@{sdioDeviceState}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{sdioDeviceState}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf sdioDeviceState}}}
+\label{a00216_afcbed2858d28642dec8c21f42bf0ccb0}
+
+
+Definition at line 369 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_a0e257037e5914a566c80658b7aece012}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!sdioSyncWriteSemId@{sdioSyncWriteSemId}}
+\index{sdioSyncWriteSemId@{sdioSyncWriteSemId}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{sdioSyncWriteSemId}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-SEM\_\-T} {\bf sdioSyncWriteSemId}}}
+\label{a00216_a0e257037e5914a566c80658b7aece012}
+
+
+Definition at line 370 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_aaa16ff66d9982ada7aebae8e16dd1579}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!txBuffer@{txBuffer}}
+\index{txBuffer@{txBuffer}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{txBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf txBuffer}}}
+\label{a00216_aaa16ff66d9982ada7aebae8e16dd1579}
+
+
+Definition at line 362 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_a0d869ce47f1054167ac5c8bbd7ac6835}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!WriteCallback@{WriteCallback}}
+\index{WriteCallback@{WriteCallback}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{WriteCallback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SDIOCALLBACK\_\-FP} {\bf WriteCallback}}}
+\label{a00216_a0d869ce47f1054167ac5c8bbd7ac6835}
+
+
+Definition at line 367 of file gsn\_\-sdio.h.
+
+\hypertarget{a00216_aa649829459755e39af4893f8557347e5}{
+\index{GSN\_\-SDIO@{GSN\_\-SDIO}!WriteCbCtx@{WriteCbCtx}}
+\index{WriteCbCtx@{WriteCbCtx}!GSN_SDIO@{GSN\_\-SDIO}}
+\subsubsection[{WriteCbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf WriteCbCtx}}}
+\label{a00216_aa649829459755e39af4893f8557347e5}
+
+
+Definition at line 368 of file gsn\_\-sdio.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00584}{gsn\_\-sdio.h}\end{DoxyCompactItemize}

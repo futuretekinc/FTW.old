@@ -1,0 +1,609 @@
+\hypertarget{a00671}{
+\section{GSN Persistent Timer}
+\label{a00671}\index{GSN Persistent Timer@{GSN Persistent Timer}}
+}
+
+
+This module manages timers whose state persists through Standby.  
+
+
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00671_gaf983eb2e91bbb6a2e9a7d373419d69dd}{GSN\_\-P\_\-TMR\_\-NVDS\_\-MEM\_\-SIZE}(maxNumOfPTmr)
+\begin{DoxyCompactList}\small\item\em Memory needed in NVDS for persistent timer module. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00671_ga814ac6b7dfd3d718d276b4794cb4b5d3}{GSN\_\-P\_\-TMR\_\-NVRAM\_\-MEM\_\-SIZE}(maxNumOfConstPTmr, maxNumOfVarPTmr)
+\begin{DoxyCompactList}\small\item\em Memory needed in NVRAM for persistent timer module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00671_gadc3540874fb3842b2eb56edd0c82945b}{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T} \hyperlink{a00671_gad756dc4e5d1d8eb116b9daf7bddddb69}{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Persistent Timer type definition. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00671_ga9aa5599a087c6080868052f86ecad7df}{GSN\_\-P\_\-TMR\_\-REF\_\-TIME} \hyperlink{a00671_ga8d27b193b47e23bf2bd68b439badf3d6}{GSN\_\-P\_\-TMR\_\-REF\_\-TIME\_\-T}
+\begin{DoxyCompactList}\small\item\em enum for the reference time for the re-\/start API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00671_gadc3540874fb3842b2eb56edd0c82945b}{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T} \{ \par
+\hyperlink{a00671_ggadc3540874fb3842b2eb56edd0c82945bac4338c7c860b0a33c9371d86d41b87c8}{GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-CONSTANT}, 
+\par
+\hyperlink{a00671_ggadc3540874fb3842b2eb56edd0c82945bae46518ab7c9f147305e08200cf63b9ed}{GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-VARIABLE}
+ \}
+\begin{DoxyCompactList}\small\item\em Persistent Timer type definition. \end{DoxyCompactList}\item 
+enum \hyperlink{a00671_ga9aa5599a087c6080868052f86ecad7df}{GSN\_\-P\_\-TMR\_\-REF\_\-TIME} \{ \par
+\hyperlink{a00671_gga9aa5599a087c6080868052f86ecad7dfa2ab194528197fe1eeed47e7efabb3701}{GSN\_\-P\_\-TMR\_\-CURRENT\_\-TIME}, 
+\par
+\hyperlink{a00671_gga9aa5599a087c6080868052f86ecad7dfad4c5b6ce85e5ffed6b4474dd639db19e}{GSN\_\-P\_\-TMR\_\-PREV\_\-EXP\_\-TIME}
+ \}
+\begin{DoxyCompactList}\small\item\em enum for the reference time for the re-\/start API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00671_ga5e91b9000f2f5e74d9d70ee0591035ae}{GsnPersistTmr\_\-Init} (VOID $\ast$pNvRamLoc, VOID $\ast$pNvdsLoc, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} numOfVarTimer, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} numOfConstTimer, \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} $\ast$pSoftTmrStructTbl)
+\begin{DoxyCompactList}\small\item\em Initialization for Persistent Timer module. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00671_ga21c2beb3a3544b189800c56051ca9b6f}{GsnPersistTmr\_\-Restore} (VOID)
+\begin{DoxyCompactList}\small\item\em Persistent timer restore. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00671_ga9af57957c6755f2cc4c6c3d140c623a2}{GsnPersistTmr\_\-Store} (VOID)
+\begin{DoxyCompactList}\small\item\em Persistent timer Store. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00671_ga17f353c07fe849751becba1144e0f8f8}{GsnPersistTmr\_\-Create} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId, \hyperlink{a00671_gadc3540874fb3842b2eb56edd0c82945b}{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T} type, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} period, \hyperlink{a00673_ga9bb74ab1272c117587bf1fadf84849de}{GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T} cb, VOID $\ast$context, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} autoStart)
+\begin{DoxyCompactList}\small\item\em Create a Persistent Timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00671_gaacdba3e378b84c6d8d5373afebb43f6b}{GsnPersistTmr\_\-Delete} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Deletes a Persistent Timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00671_ga13a97f1941e64cdab5ad524f5d244985}{GsnPersistTmr\_\-Start} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Start the Persistent Timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00671_ga038419003a0a454c1e3641818a4a8a1b}{GsnPersistTmr\_\-Stop} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Stop the Persistent Timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00671_ga1caf8a120d6264cd9e8780110d306e98}{GsnPersistTmr\_\-ReStart} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} period, \hyperlink{a00671_ga8d27b193b47e23bf2bd68b439badf3d6}{GSN\_\-P\_\-TMR\_\-REF\_\-TIME\_\-T} refTime)
+\begin{DoxyCompactList}\small\item\em Re-\/starts a Persistent Timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00671_ga6f5bc2af45625f650fe1de1b30274d4c}{GsnPersistTmr\_\-SystemTimeAtExpire} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em System time at expire. Gives the system time at expire for the requested persistent timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00671_ga72958206fd50e03c6e781bcca39728da}{GsnPersistTmr\_\-RemainingTimeGet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Persistent Timer remaining time. Gives the remaining time to expire for the requested persistent timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00671_ga267caddf2e14e33f5b59cd084fbc090a}{GsnPersistTmr\_\-MinExpireTime} ()
+\begin{DoxyCompactList}\small\item\em Minimum expire time of all persistenet timer. Gives the min expire time of all persistent timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00671_ga7faefe68a4dfa5d59f0f04e8f4eb4a15}{GsnPersistTmr\_\-IsActive} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Timer is active or not. Finds whether the requested persistent timer is active. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00671_ga2acab3c99e8f6bd8a1573c3811092c02}{GsnPersistTmr\_\-PeriodGet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Period of the persistent timer. Gives the current period of the requested persistent timer. The period of the variable persistent timer may be different then the period with which it was created or started. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00671_gae8bc845575767075c35df8096dd08fbc}{GsnPersistTmr\_\-DfltPeriodGet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Default period of the persistenet timer. Gives the period stores in NVDS for the requested persistent timer. This is useful for variable persistent timer type to find the period passed when it was created or started.. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00671_ga72f5225fa0da29f815d14a417c29611e}{GsnPersistTmr\_\-DfltPeriodSet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} period)
+\begin{DoxyCompactList}\small\item\em Set default period of the persistenet timer. Chnages the default period. It stores the period in NVDS, If it is set to 0, the timer is stopped, else it is restarted with the set value maintaining the previous reference time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module manages timers whose state persists through Standby. This group of API functions manages timers whose state can persist across Standby/Wakeup cycles. This module permits the user to manage multiple software timers based on a single hardware timer.
+
+A soft timer provides timer capabilities when the system is running. Without special provisions, the state of a soft timer will be lost in Standby. To retain the timer state through a Standby-\/Wakeup cycle, GEPS provides persistent timers. Persistent timers are soft timers whose active timer context is saved in NVRAM(defaulted to RTC) and NVDS(flash).
+
+The user can decide how many persistent timers to use. Based on this value, module functions reserve space in NVRAM and NVDS. The user must provide the NVRAM and NVDS content reserved for this module in the init routine, and then can call the restore routine to restore all the context of the active persistent timer(s). If a persistent timer has expired, this function calls the corresponding callback routine. In every boot, the user has to call these two routines. Before going to Standby, the user must call the store routine to store the context of the persistent timer into the NVDS and NVRAM. The user must take care to copy the relevant SRAM data into NVDS and NVRAM.
+
+To create a persistent timer, the user calls Tmr\_\-Create; to delete it, call Tmr\_\-Delete. Tmr\_\-Create is called only once to create a persistent timer. If deleted, the resources used by this timer are released (soft timer, NVRAM and NVDS), so that any other persistent timer can use them. Functions are provided to start, stop and restart a persistent timer. The user must manage the timer Id. The persistent timer module uses this timer Id as an index to the array stored in the NVRAM / NVDS structure, so the timer Id should be between 0 and \mbox{[}(the maximum number of persistent timers allowed) -\/ 1\mbox{]}. 
+
+\subsection{Define Documentation}
+\hypertarget{a00671_gaf983eb2e91bbb6a2e9a7d373419d69dd}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GSN\_\-P\_\-TMR\_\-NVDS\_\-MEM\_\-SIZE@{GSN\_\-P\_\-TMR\_\-NVDS\_\-MEM\_\-SIZE}}
+\index{GSN\_\-P\_\-TMR\_\-NVDS\_\-MEM\_\-SIZE@{GSN\_\-P\_\-TMR\_\-NVDS\_\-MEM\_\-SIZE}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GSN\_\-P\_\-TMR\_\-NVDS\_\-MEM\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-P\_\-TMR\_\-NVDS\_\-MEM\_\-SIZE(
+\begin{DoxyParamCaption}
+\item[{}]{maxNumOfPTmr}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_gaf983eb2e91bbb6a2e9a7d373419d69dd}
+{\bfseries Value:}
+\begin{DoxyCode}
+( 2 * sizeof( UINT32 )) +                                       \
+    (( maxNumOfPTmr ) *                                             \
+        ( sizeof( GSN_SOFT_TMR_CALLBACK_T ) + sizeof( ULONG64 )))
+\end{DoxyCode}
+
+
+Memory needed in NVDS for persistent timer module. 
+
+MACRO to get NVDS memory size for the persistent timer module for a given number of persistent timers.
+
+User can allocate memory of this size in NVDS using this MACRO.
+
+Here NVDS is refered to flash memory. The information which rarely changes are written to this segment. 
+
+Definition at line 125 of file gsn\_\-persistent\_\-timer.h.
+
+\hypertarget{a00671_ga814ac6b7dfd3d718d276b4794cb4b5d3}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GSN\_\-P\_\-TMR\_\-NVRAM\_\-MEM\_\-SIZE@{GSN\_\-P\_\-TMR\_\-NVRAM\_\-MEM\_\-SIZE}}
+\index{GSN\_\-P\_\-TMR\_\-NVRAM\_\-MEM\_\-SIZE@{GSN\_\-P\_\-TMR\_\-NVRAM\_\-MEM\_\-SIZE}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GSN\_\-P\_\-TMR\_\-NVRAM\_\-MEM\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-P\_\-TMR\_\-NVRAM\_\-MEM\_\-SIZE(
+\begin{DoxyParamCaption}
+\item[{}]{maxNumOfConstPTmr, }
+\item[{}]{maxNumOfVarPTmr}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga814ac6b7dfd3d718d276b4794cb4b5d3}
+{\bfseries Value:}
+\begin{DoxyCode}
+sizeof( UINT32 ) +                                                  \
+    ( sizeof( ULONG64 ) * ( maxNumOfVarPTmr )) +                        \
+    ((( maxNumOfConstPTmr ) + ( maxNumOfVarPTmr )) * sizeof( ULONG64 ))
+\end{DoxyCode}
+
+
+Memory needed in NVRAM for persistent timer module. 
+
+MACRO to get NVRAM memory size for the persistent timer module for a given number of const and variable persistent timer.
+
+User can allocate memory of this size in NVRAM using this MACRO.
+
+Here NVRAM is refered to RTC memory in our case. The information which changes frequenty and need to be retained over standby wakeup cycle are written to this segment. 
+
+Definition at line 144 of file gsn\_\-persistent\_\-timer.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00671_gad756dc4e5d1d8eb116b9daf7bddddb69}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GSN\_\-P\_\-TIMER\_\-TYPE\_\-T@{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}}
+\index{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T@{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}  {\bf GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}}}
+\label{a00671_gad756dc4e5d1d8eb116b9daf7bddddb69}
+
+
+Persistent Timer type definition. 
+
+A Persistent Constant timer's state can persist during Standby, but the timeout value can only be changed if we update the timeout in NVDS.
+
+A Persistent Variable timer's state persists during Standby, and the timeout value can be changed in any wakeup cycle. This timer starts with the value provided in the Create function, and the period of the timer is stored into NVDS. The timeout can be changed without updating the NVDS, unlike GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-CONSTANT timer. If a persistent timer has to be started with different period frequently then user should use this timer type, but a variable timer uses 64 bits of NVRAM! There is not enough room many variable timers; use only when needed. \hypertarget{a00671_ga8d27b193b47e23bf2bd68b439badf3d6}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GSN\_\-P\_\-TMR\_\-REF\_\-TIME\_\-T@{GSN\_\-P\_\-TMR\_\-REF\_\-TIME\_\-T}}
+\index{GSN\_\-P\_\-TMR\_\-REF\_\-TIME\_\-T@{GSN\_\-P\_\-TMR\_\-REF\_\-TIME\_\-T}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GSN\_\-P\_\-TMR\_\-REF\_\-TIME\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-P\_\-TMR\_\-REF\_\-TIME} {\bf GSN\_\-P\_\-TMR\_\-REF\_\-TIME\_\-T}}}
+\label{a00671_ga8d27b193b47e23bf2bd68b439badf3d6}
+
+
+enum for the reference time for the re-\/start API. 
+
+Reference time to restart the timer. If GSN\_\-TMR\_\-CURRENT\_\-TIME is choosed then the timer is restarted with the period from the current time. If GSN\_\-TMR\_\-PREV\_\-EXP\_\-TIME is choosed then timer is started from the previous expire time, and the callback is called after Nth period such that
+
+PrevExpTime + N$\ast$Period $>$ CurrentTime, where PrevExpTime is the previous expire time and period is the period passed in the Restart API. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00671_gadc3540874fb3842b2eb56edd0c82945b}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GSN\_\-P\_\-TIMER\_\-TYPE\_\-T@{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}}
+\index{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T@{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}}}
+\label{a00671_gadc3540874fb3842b2eb56edd0c82945b}
+
+
+Persistent Timer type definition. 
+
+A Persistent Constant timer's state can persist during Standby, but the timeout value can only be changed if we update the timeout in NVDS.
+
+A Persistent Variable timer's state persists during Standby, and the timeout value can be changed in any wakeup cycle. This timer starts with the value provided in the Create function, and the period of the timer is stored into NVDS. The timeout can be changed without updating the NVDS, unlike GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-CONSTANT timer. If a persistent timer has to be started with different period frequently then user should use this timer type, but a variable timer uses 64 bits of NVRAM! There is not enough room many variable timers; use only when needed. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-CONSTANT@{GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-CONSTANT}!GSN Persistent Timer@{GSN Persistent Timer}}\index{GSN Persistent Timer@{GSN Persistent Timer}!GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-CONSTANT@{GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-CONSTANT}}\item[{\em 
+\hypertarget{a00671_ggadc3540874fb3842b2eb56edd0c82945bac4338c7c860b0a33c9371d86d41b87c8}{
+GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-CONSTANT}
+\label{a00671_ggadc3540874fb3842b2eb56edd0c82945bac4338c7c860b0a33c9371d86d41b87c8}
+}]\index{GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-VARIABLE@{GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-VARIABLE}!GSN Persistent Timer@{GSN Persistent Timer}}\index{GSN Persistent Timer@{GSN Persistent Timer}!GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-VARIABLE@{GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-VARIABLE}}\item[{\em 
+\hypertarget{a00671_ggadc3540874fb3842b2eb56edd0c82945bae46518ab7c9f147305e08200cf63b9ed}{
+GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-VARIABLE}
+\label{a00671_ggadc3540874fb3842b2eb56edd0c82945bae46518ab7c9f147305e08200cf63b9ed}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 171 of file gsn\_\-persistent\_\-timer.h.
+
+\hypertarget{a00671_ga9aa5599a087c6080868052f86ecad7df}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GSN\_\-P\_\-TMR\_\-REF\_\-TIME@{GSN\_\-P\_\-TMR\_\-REF\_\-TIME}}
+\index{GSN\_\-P\_\-TMR\_\-REF\_\-TIME@{GSN\_\-P\_\-TMR\_\-REF\_\-TIME}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GSN\_\-P\_\-TMR\_\-REF\_\-TIME}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-P\_\-TMR\_\-REF\_\-TIME}}}
+\label{a00671_ga9aa5599a087c6080868052f86ecad7df}
+
+
+enum for the reference time for the re-\/start API. 
+
+Reference time to restart the timer. If GSN\_\-TMR\_\-CURRENT\_\-TIME is choosed then the timer is restarted with the period from the current time. If GSN\_\-TMR\_\-PREV\_\-EXP\_\-TIME is choosed then timer is started from the previous expire time, and the callback is called after Nth period such that
+
+PrevExpTime + N$\ast$Period $>$ CurrentTime, where PrevExpTime is the previous expire time and period is the period passed in the Restart API. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-P\_\-TMR\_\-CURRENT\_\-TIME@{GSN\_\-P\_\-TMR\_\-CURRENT\_\-TIME}!GSN Persistent Timer@{GSN Persistent Timer}}\index{GSN Persistent Timer@{GSN Persistent Timer}!GSN\_\-P\_\-TMR\_\-CURRENT\_\-TIME@{GSN\_\-P\_\-TMR\_\-CURRENT\_\-TIME}}\item[{\em 
+\hypertarget{a00671_gga9aa5599a087c6080868052f86ecad7dfa2ab194528197fe1eeed47e7efabb3701}{
+GSN\_\-P\_\-TMR\_\-CURRENT\_\-TIME}
+\label{a00671_gga9aa5599a087c6080868052f86ecad7dfa2ab194528197fe1eeed47e7efabb3701}
+}]\index{GSN\_\-P\_\-TMR\_\-PREV\_\-EXP\_\-TIME@{GSN\_\-P\_\-TMR\_\-PREV\_\-EXP\_\-TIME}!GSN Persistent Timer@{GSN Persistent Timer}}\index{GSN Persistent Timer@{GSN Persistent Timer}!GSN\_\-P\_\-TMR\_\-PREV\_\-EXP\_\-TIME@{GSN\_\-P\_\-TMR\_\-PREV\_\-EXP\_\-TIME}}\item[{\em 
+\hypertarget{a00671_gga9aa5599a087c6080868052f86ecad7dfad4c5b6ce85e5ffed6b4474dd639db19e}{
+GSN\_\-P\_\-TMR\_\-PREV\_\-EXP\_\-TIME}
+\label{a00671_gga9aa5599a087c6080868052f86ecad7dfad4c5b6ce85e5ffed6b4474dd639db19e}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 194 of file gsn\_\-persistent\_\-timer.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00671_ga17f353c07fe849751becba1144e0f8f8}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-Create@{GsnPersistTmr\_\-Create}}
+\index{GsnPersistTmr\_\-Create@{GsnPersistTmr\_\-Create}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-Create}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnPersistTmr\_\-Create (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{timerId, }
+\item[{{\bf GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}}]{type, }
+\item[{{\bf ULONG64}}]{period, }
+\item[{{\bf GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T}}]{cb, }
+\item[{VOID $\ast$}]{context, }
+\item[{{\bf BOOL}}]{autoStart}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga17f353c07fe849751becba1144e0f8f8}
+
+
+Create a Persistent Timer. 
+
+This function creates a persistent timer. 
+\begin{DoxyParams}{Parameters}
+{\em timerId} & -\/ IN ID of the timer to create. It should be less than the maximum persistenet timer supported i.e. numOfVarTimer + numOfConstTimer
+\begin{DoxyItemize}
+\item 1 passed in GsnPersistTmr\_\-Init API. 
+\end{DoxyItemize}\\
+\hline
+{\em type} & -\/ IN Type of the persistent timer. \\
+\hline
+{\em period} & -\/ IN period of the persistent timer. \\
+\hline
+{\em cb} & -\/ IN Callback function of the timer. \\
+\hline
+{\em context} & -\/ IN Context to be passed in the callback function. \\
+\hline
+{\em autoStart} & -\/ IN Starts the timer if passed true. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This API is called to give the callback information and the period to the persistent timer module. This API is expected to be called when the cb and context changes, i.e. after doing FWUP(Firmware upgrade).
+\end{DoxyNote}
+If autoStart is passed TRUE then the persistent timer is started automatically, else user has to call GsnPersistTmr\_\-Start to explictly start it. Once started, the cb is called when the timer expires, and the persistent timer starts running when GsnPersistTmr\_\-Init is called after every wakeup. If any persistent timer has expired when GsnPersistTmr\_\-Init is called, the cb of the corresponding persistent timer is called.
+
+User has to manage the timer Id. \hypertarget{a00671_gaacdba3e378b84c6d8d5373afebb43f6b}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-Delete@{GsnPersistTmr\_\-Delete}}
+\index{GsnPersistTmr\_\-Delete@{GsnPersistTmr\_\-Delete}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-Delete}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnPersistTmr\_\-Delete (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{timerId}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_gaacdba3e378b84c6d8d5373afebb43f6b}
+
+
+Deletes a Persistent Timer. 
+
+This function deletes a persistent timer. 
+\begin{DoxyParams}{Parameters}
+{\em timerId} & -\/ IN ID of the timer to create. It should be less than the maximum persistenet timer supported i.e. numOfVarTimer + numOfConstTimer
+\begin{DoxyItemize}
+\item 1 passed in GsnPersistTmr\_\-Init API. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This API is called to delete a persistent timer. Once deleted the timer Id can be reused and the NVRAM and NVDS resource can be reused for some other timer. 
+\end{DoxyNote}
+\hypertarget{a00671_gae8bc845575767075c35df8096dd08fbc}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-DfltPeriodGet@{GsnPersistTmr\_\-DfltPeriodGet}}
+\index{GsnPersistTmr\_\-DfltPeriodGet@{GsnPersistTmr\_\-DfltPeriodGet}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-DfltPeriodGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf ULONG64} GsnPersistTmr\_\-DfltPeriodGet (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{timerId}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_gae8bc845575767075c35df8096dd08fbc}
+
+
+Default period of the persistenet timer. Gives the period stores in NVDS for the requested persistent timer. This is useful for variable persistent timer type to find the period passed when it was created or started.. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerId} & -\/ IN ID of the timer. It should be less than the maximum persistenet timer supported i.e. numOfVarTimer + numOfConstTimer passed in GsnPersistTmr\_\-Init API. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Remaining} & time in timer ticks \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00671_ga72f5225fa0da29f815d14a417c29611e}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-DfltPeriodSet@{GsnPersistTmr\_\-DfltPeriodSet}}
+\index{GsnPersistTmr\_\-DfltPeriodSet@{GsnPersistTmr\_\-DfltPeriodSet}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-DfltPeriodSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnPersistTmr\_\-DfltPeriodSet (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{timerId, }
+\item[{{\bf ULONG64}}]{period}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga72f5225fa0da29f815d14a417c29611e}
+
+
+Set default period of the persistenet timer. Chnages the default period. It stores the period in NVDS, If it is set to 0, the timer is stopped, else it is restarted with the set value maintaining the previous reference time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerId} & -\/ IN ID of the timer. It should be less than the maximum persistenet timer supported i.e. numOfVarTimer + numOfConstTimer passed in GsnPersistTmr\_\-Init API. \\
+\hline
+{\em period} & -\/ IN Period to Set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00671_ga5e91b9000f2f5e74d9d70ee0591035ae}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-Init@{GsnPersistTmr\_\-Init}}
+\index{GsnPersistTmr\_\-Init@{GsnPersistTmr\_\-Init}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnPersistTmr\_\-Init (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pNvRamLoc, }
+\item[{VOID $\ast$}]{pNvdsLoc, }
+\item[{{\bf UINT32}}]{numOfVarTimer, }
+\item[{{\bf UINT8}}]{numOfConstTimer, }
+\item[{{\bf GSN\_\-SOFT\_\-TMR\_\-T} $\ast$}]{pSoftTmrStructTbl}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga5e91b9000f2f5e74d9d70ee0591035ae}
+
+
+Initialization for Persistent Timer module. 
+
+This function performs initialization of Persistent timer module. 
+\begin{DoxyParams}{Parameters}
+{\em pNvRamLoc} & -\/ IN SRAM loc where the NVRAM details for this module is stored. \\
+\hline
+{\em pNvdsLoc} & -\/ IN SRAM loc where the NVDS detaild for this module is stored. \\
+\hline
+{\em numOfVarTimer} & -\/ IN Number of varibale timer the user wants. \\
+\hline
+{\em numOfConstTimer} & -\/ IN Number of const timer the user wants. \\
+\hline
+{\em pSoftTmrStructTbl} & -\/ IN Pointer to the soft timer table which would be used to start/stop soft timers. The size of the memory buffer should be sizeof( GSN\_\-SOFT\_\-TMR\_\-T ) $\ast$ ( numOfVarTimer + numOfConstTimer ). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function must be called after calling the initialization function of the soft timer module. 
+\end{DoxyNote}
+\hypertarget{a00671_ga7faefe68a4dfa5d59f0f04e8f4eb4a15}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-IsActive@{GsnPersistTmr\_\-IsActive}}
+\index{GsnPersistTmr\_\-IsActive@{GsnPersistTmr\_\-IsActive}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-IsActive}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf BOOL} GsnPersistTmr\_\-IsActive (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{timerId}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga7faefe68a4dfa5d59f0f04e8f4eb4a15}
+
+
+Timer is active or not. Finds whether the requested persistent timer is active. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerId} & -\/ IN ID of the timer. It should be less than the maximum persistenet timer supported i.e. numOfVarTimer + numOfConstTimer passed in GsnPersistTmr\_\-Init API. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & if active else FALSE. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00671_ga267caddf2e14e33f5b59cd084fbc090a}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-MinExpireTime@{GsnPersistTmr\_\-MinExpireTime}}
+\index{GsnPersistTmr\_\-MinExpireTime@{GsnPersistTmr\_\-MinExpireTime}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-MinExpireTime}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf ULONG64} GsnPersistTmr\_\-MinExpireTime (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga267caddf2e14e33f5b59cd084fbc090a}
+
+
+Minimum expire time of all persistenet timer. Gives the min expire time of all persistent timer. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Remaining} & time in timer ticks \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00671_ga2acab3c99e8f6bd8a1573c3811092c02}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-PeriodGet@{GsnPersistTmr\_\-PeriodGet}}
+\index{GsnPersistTmr\_\-PeriodGet@{GsnPersistTmr\_\-PeriodGet}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-PeriodGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf ULONG64} GsnPersistTmr\_\-PeriodGet (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{timerId}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga2acab3c99e8f6bd8a1573c3811092c02}
+
+
+Period of the persistent timer. Gives the current period of the requested persistent timer. The period of the variable persistent timer may be different then the period with which it was created or started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerId} & -\/ IN ID of the timer. It should be less than the maximum persistenet timer supported i.e. numOfVarTimer + numOfConstTimer passed in GsnPersistTmr\_\-Init API. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Remaining} & time in timer ticks \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00671_ga72958206fd50e03c6e781bcca39728da}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-RemainingTimeGet@{GsnPersistTmr\_\-RemainingTimeGet}}
+\index{GsnPersistTmr\_\-RemainingTimeGet@{GsnPersistTmr\_\-RemainingTimeGet}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-RemainingTimeGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf ULONG64} GsnPersistTmr\_\-RemainingTimeGet (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{timerId}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga72958206fd50e03c6e781bcca39728da}
+
+
+Persistent Timer remaining time. Gives the remaining time to expire for the requested persistent timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerId} & -\/ IN ID of the timer. It should be less than the maximum persistenet timer supported i.e. numOfVarTimer + numOfConstTimer passed in GsnPersistTmr\_\-Init API. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Remaining} & time in timer ticks \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00671_ga1caf8a120d6264cd9e8780110d306e98}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-ReStart@{GsnPersistTmr\_\-ReStart}}
+\index{GsnPersistTmr\_\-ReStart@{GsnPersistTmr\_\-ReStart}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-ReStart}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnPersistTmr\_\-ReStart (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{timerId, }
+\item[{{\bf ULONG64}}]{period, }
+\item[{{\bf GSN\_\-P\_\-TMR\_\-REF\_\-TIME\_\-T}}]{refTime}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga1caf8a120d6264cd9e8780110d306e98}
+
+
+Re-\/starts a Persistent Timer. 
+
+This function re-\/starts a persistent timer. This API is mainly used to change the period of the persistent timer if the timer is already active or to start the timer if it is de-\/active. In case of persistent const timer the change in period triggers a NVDS write. 
+\begin{DoxyParams}{Parameters}
+{\em timerId} & -\/ IN ID of the timer to re-\/start. It should be less than the maximum persistenet timer supported i.e. numOfVarTimer + numOfConstTimer passed in GsnPersistTmr\_\-Init API. \\
+\hline
+{\em period} & -\/ Period in system ticks \\
+\hline
+{\em refTime} & -\/ Reference time to restart the timer. If GSN\_\-P\_\-TMR\_\-CURRENT\_\-TIME is passed then the timer is restarted with the period from the current time. If GSN\_\-P\_\-TMR\_\-PREV\_\-EXP\_\-TIME is passed then timer is started from the previous expire time, and the callback is called after Nth period such that PrevExpTime + N $\ast$ Period $>$ CurrentTime, where \char`\"{}PrevExpTime\char`\"{} is the previous expire time, \char`\"{}N\char`\"{} is any integer value and \char`\"{}period\char`\"{} is the period passed in this API.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This API is expected to be called for a persistent timer, only if the persistent timer is already started. It returns error if it is do so. A persistent timer is assumed to be started if the start API is called once in any boot or create API is called with autoStart TRUE. It is assumed that all the input parameters are passed correctly. 
+\end{DoxyNote}
+\hypertarget{a00671_ga21c2beb3a3544b189800c56051ca9b6f}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-Restore@{GsnPersistTmr\_\-Restore}}
+\index{GsnPersistTmr\_\-Restore@{GsnPersistTmr\_\-Restore}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-Restore}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnPersistTmr\_\-Restore (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga21c2beb3a3544b189800c56051ca9b6f}
+
+
+Persistent timer restore. 
+
+Loads the Persistent timer details from the NVDS and NVRAM to the SRAM in \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} format. And calls callback function of the expired persistent timers. \begin{DoxyNote}{Note}
+This calls the callback function of the expired timer and starts the timer. 
+\end{DoxyNote}
+\hypertarget{a00671_ga13a97f1941e64cdab5ad524f5d244985}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-Start@{GsnPersistTmr\_\-Start}}
+\index{GsnPersistTmr\_\-Start@{GsnPersistTmr\_\-Start}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-Start}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnPersistTmr\_\-Start (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{timerId}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga13a97f1941e64cdab5ad524f5d244985}
+
+
+Start the Persistent Timer. 
+
+This function starts a persistent timer. 
+\begin{DoxyParams}{Parameters}
+{\em timerId} & -\/ IN ID of the timer to create. It should be less than the maximum persistenet timer supported i.e. numOfVarTimer + numOfConstTimer
+\begin{DoxyItemize}
+\item 1 passed in GsnPersistTmr\_\-Init API. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+It is assumed that the input parameter passed is correct. 
+\end{DoxyNote}
+\hypertarget{a00671_ga038419003a0a454c1e3641818a4a8a1b}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-Stop@{GsnPersistTmr\_\-Stop}}
+\index{GsnPersistTmr\_\-Stop@{GsnPersistTmr\_\-Stop}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnPersistTmr\_\-Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{timerId}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga038419003a0a454c1e3641818a4a8a1b}
+
+
+Stop the Persistent Timer. 
+
+This function stops a persistent timer. 
+\begin{DoxyParams}{Parameters}
+{\em timerId} & -\/ IN ID of the timer to create. It should be less than the maximum persistenet timer supported i.e. numOfVarTimer + numOfConstTimer
+\begin{DoxyItemize}
+\item 1 passed in GsnPersistTmr\_\-Init API. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+It is assumed that the input parameter passed is correct. 
+\end{DoxyNote}
+\hypertarget{a00671_ga9af57957c6755f2cc4c6c3d140c623a2}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-Store@{GsnPersistTmr\_\-Store}}
+\index{GsnPersistTmr\_\-Store@{GsnPersistTmr\_\-Store}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-Store}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf BOOL} GsnPersistTmr\_\-Store (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga9af57957c6755f2cc4c6c3d140c623a2}
+
+
+Persistent timer Store. 
+
+Updates the information that has to be stored in NVRAM section and into the NVDS if there is any change in the NVDS data. It return TRUE if NVDS section has changed. \hypertarget{a00671_ga6f5bc2af45625f650fe1de1b30274d4c}{
+\index{GSN Persistent Timer@{GSN Persistent Timer}!GsnPersistTmr\_\-SystemTimeAtExpire@{GsnPersistTmr\_\-SystemTimeAtExpire}}
+\index{GsnPersistTmr\_\-SystemTimeAtExpire@{GsnPersistTmr\_\-SystemTimeAtExpire}!GSN Persistent Timer@{GSN Persistent Timer}}
+\subsubsection[{GsnPersistTmr\_\-SystemTimeAtExpire}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf ULONG64} GsnPersistTmr\_\-SystemTimeAtExpire (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{timerId}
+\end{DoxyParamCaption}
+)}}
+\label{a00671_ga6f5bc2af45625f650fe1de1b30274d4c}
+
+
+System time at expire. Gives the system time at expire for the requested persistent timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerId} & -\/ IN ID of the timer. It should be less than the maximum persistenet timer supported i.e. numOfVarTimer + numOfConstTimer passed in GsnPersistTmr\_\-Init API. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Remaining} & time in timer ticks \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}

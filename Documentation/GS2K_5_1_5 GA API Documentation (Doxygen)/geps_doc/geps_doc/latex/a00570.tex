@@ -1,0 +1,2887 @@
+\hypertarget{a00570}{
+\section{gsn\_\-reg\_\-sdio\_\-op.h File Reference}
+\label{a00570}\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00807}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00570_a8160167e3cac1c6dc7696082fde775eb}{SDIO\_\-DATAPORT\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT))
+\item 
+\#define \hyperlink{a00570_ac78e83c0862393d1e7ceb26f42ef3182}{SDIO\_\-DATAPORT\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT, (value))
+\item 
+\#define \hyperlink{a00570_a1e7eea4f269affd976008a4ec67f47eb}{SDIO\_\-DATAPORT\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT) $|$ (value))
+\item 
+\#define \hyperlink{a00570_a30ff7fa57be218c166f101c85013020a}{SDIO\_\-DATAPORT\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_ac0fef7a5ca6b165fa6c046b219b0efeb}{SDIO\_\-DATA\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-DATA)
+\item 
+\#define \hyperlink{a00570_a8bf738b6ed1b69f0b14fa2c4a901722a}{SDIO\_\-DATA\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-DATA, (value))
+\item 
+\#define \hyperlink{a00570_aca671e0d223bea7ba401d40b692150cf}{SDIO\_\-IIR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR))
+\item 
+\#define \hyperlink{a00570_a1bd3a35a67412524fcd8ba3bff5c08a0}{SDIO\_\-IIR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR, (value))
+\item 
+\#define \hyperlink{a00570_a234124a15e97857969acdb69ef6c35b6}{SDIO\_\-IIR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR) $|$ (value))
+\item 
+\#define \hyperlink{a00570_a69d7e6cc274370f68a9da4dc7fe9f74e}{SDIO\_\-IIR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_a79884766254c4cfd2bfc7e42eff6265e}{SDIO\_\-DATARDY\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-DATARDY)
+\item 
+\#define \hyperlink{a00570_ac82f2a6a86fb932dbb6284e7954783c8}{SDIO\_\-DATARDY\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-DATARDY, 1)
+\item 
+\#define \hyperlink{a00570_a061e7d3b5e5ca97cc89bc7e9ec52f720}{SDIO\_\-DATARDY\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-DATARDY, 0)
+\item 
+\#define \hyperlink{a00570_a510510ec7cb2a973ec21f8c96ea9030b}{SDIO\_\-ERROR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ERROR)
+\item 
+\#define \hyperlink{a00570_af4b395073018d105db5c737adf6ec38f}{SDIO\_\-ERROR\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ERROR, 1)
+\item 
+\#define \hyperlink{a00570_afc6dc96345e2744cf476c750a052540a}{SDIO\_\-ERROR\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ERROR, 0)
+\item 
+\#define \hyperlink{a00570_af748b806fcda6ecceda24b260156ebb3}{SDIO\_\-CISFUN0ADDREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG))
+\item 
+\#define \hyperlink{a00570_a563faf74b0d8311fdb3b1634ff54ab1d}{SDIO\_\-CISFUN0ADDREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG, (value))
+\item 
+\#define \hyperlink{a00570_a9f28e3bbb0367eeef1764b84a3fbcd83}{SDIO\_\-CISFUN0ADDREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_ae6d366931003fd3fe8962cb23a950cdd}{SDIO\_\-CISFUN0ADDREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_ad482e8f358993a07e9405a10cee26b18}{SDIO\_\-CISFUN0ADDRESS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CISFUN0ADDREG)
+\item 
+\#define \hyperlink{a00570_af3fa42606bafa7325f4558aef0807bbb}{SDIO\_\-CISFUN0ADDRESS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CISFUN0ADDREG, (value))
+\item 
+\#define \hyperlink{a00570_a4bdc537a2f9f4c71770cbf83f60229b3}{SDIO\_\-CISFUN1ADDREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN1ADDREG))
+\item 
+\#define \hyperlink{a00570_ab3b80f7f4bc056bcc12dce5837718c5b}{SDIO\_\-CISFUN1ADDRESS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CISFUN1ADDREG)
+\item 
+\#define \hyperlink{a00570_a93fc4e6e24873336152ed68e0d24588d}{SDIO\_\-CISFUN1ADDRESS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CISFUN1ADDREG, (value))
+\item 
+\#define \hyperlink{a00570_a4078cb6ed3a75f40c586b094b1054987}{SDIO\_\-CSAADDREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG))
+\item 
+\#define \hyperlink{a00570_a4e21f8df2417f965e07536a68d40655b}{SDIO\_\-CSAADDREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG, (value))
+\item 
+\#define \hyperlink{a00570_a4c566fe2391ff676e793464f49d5d19f}{SDIO\_\-CSAADDREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_adff9f89fbf73cf94f32c4ec75147076b}{SDIO\_\-CSAADDREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_ad4c321fccad1905168326d839d1d1576}{SDIO\_\-CSAADDRESS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CSAADDREG)
+\item 
+\#define \hyperlink{a00570_a2cf6f49b5801398f6cf620eddd8d4286}{SDIO\_\-CSAADDRESS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CSAADDREG, (value))
+\item 
+\#define \hyperlink{a00570_a388c04163ca51e2d469fe2d43a61299c}{SDIO\_\-RDADDREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG))
+\item 
+\#define \hyperlink{a00570_adcce97fc9f4e4a32a6dddc8dc92c2072}{SDIO\_\-RDADDREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG, (value))
+\item 
+\#define \hyperlink{a00570_af7d7da98e096bb917a7e3efe21087df3}{SDIO\_\-RDADDREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_adf003fc64a6417fed2a6a6753128dfe6}{SDIO\_\-RDADDREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_a0dc88fce8bcfbfc8affc446ebb7905e8}{SDIO\_\-RDADDRESS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ADDRESS)
+\item 
+\#define \hyperlink{a00570_aec52f8f18b2cefbf09adf438ccb5f1b2}{SDIO\_\-RDADDRESS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ADDRESS, (value))
+\item 
+\#define \hyperlink{a00570_aedc9c84a822a595d5f1c6f4facb72139}{SDIO\_\-WRADDREGL\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL))
+\item 
+\#define \hyperlink{a00570_a112da1534feace192a8d143dd135a2c9}{SDIO\_\-WRADDREGL\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL, (value))
+\item 
+\#define \hyperlink{a00570_ac7098ea41b526e2998bcd12e1519453e}{SDIO\_\-WRADDREGL\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL) $|$ (value))
+\item 
+\#define \hyperlink{a00570_a3d0e22367b82c26863f76369782e9552}{SDIO\_\-WRADDREGL\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_afbfa39c4a662c6b3e5594fdeb71a1651}{SDIO\_\-WRADDRESS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ADDRESS)
+\item 
+\#define \hyperlink{a00570_a6703bc8e0000dcd6eafd09aa15cc8a64}{SDIO\_\-WRADDRESS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ADDRESS, (value))
+\item 
+\#define \hyperlink{a00570_aaf78ff11a13c7eac61ce91c6f010d656}{SDIO\_\-PRGMREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG))
+\item 
+\#define \hyperlink{a00570_adbad3f2b96f6bfec2d832cfa7919586f}{SDIO\_\-PRGMREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG, (value))
+\item 
+\#define \hyperlink{a00570_ab6580f90ead1a9fcac3a9ee29ebcf3ee}{SDIO\_\-PRGMREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_ab8ac04755aa864fda128e2bde5504d4e}{SDIO\_\-PRGMREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_aa58cfa6e924501afb76ff5533bc4b089}{SDIO\_\-FUNREADY\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUNREADY)
+\item 
+\#define \hyperlink{a00570_ab4e2d2ecac165f77be6aeee7f208fb53}{SDIO\_\-FUNREADY\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUNREADY, 1)
+\item 
+\#define \hyperlink{a00570_a12d6276db92cbfedaf612790154d9d12}{SDIO\_\-FUNREADY\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUNREADY, 0)
+\item 
+\#define \hyperlink{a00570_a1026c0d36790e10eafb7ae9657c855e2}{SDIO\_\-FUN1RDDATAREADY\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUN1RDDATAREADY)
+\item 
+\#define \hyperlink{a00570_a6b4bb4541e42a03f7468c80c6704305e}{SDIO\_\-FUN1RDDATAREADY\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUN1RDDATAREADY, 1)
+\item 
+\#define \hyperlink{a00570_a8ae3103c43586244a30e0b23701c6750}{SDIO\_\-FUN1RDDATAREADY\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUN1RDDATAREADY, 0)
+\item 
+\#define \hyperlink{a00570_a8cb1c60db0be24c99d39bfe8b1bb1f87}{SDIO\_\-SCS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SCS1)
+\item 
+\#define \hyperlink{a00570_a642b439f9118fad23b5c61dbbd45ac77}{SDIO\_\-SCS1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SCS1, 1)
+\item 
+\#define \hyperlink{a00570_ad23580810f3d380982b07a4f52775b31}{SDIO\_\-SCS1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SCS1, 0)
+\item 
+\#define \hyperlink{a00570_a090c300bbe0221653c83b6735b319282}{SDIO\_\-SDC\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDC)
+\item 
+\#define \hyperlink{a00570_aa6d202e168b767603231026f9e2fa19e}{SDIO\_\-SDC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDC, 1)
+\item 
+\#define \hyperlink{a00570_a13f478bd5decc7081a54a07245e09d2e}{SDIO\_\-SDC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDC, 0)
+\item 
+\#define \hyperlink{a00570_a4f8a93b15ac201e674d110ec716b3090}{SDIO\_\-SMB\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMB)
+\item 
+\#define \hyperlink{a00570_a927903bf4f8e8dedaa261ba4cb218841}{SDIO\_\-SMB\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMB, 1)
+\item 
+\#define \hyperlink{a00570_af699b2d05defdcb318f79497001656b5}{SDIO\_\-SMB\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMB, 0)
+\item 
+\#define \hyperlink{a00570_af8fc9dd094e094a7000036c3761b12e5}{SDIO\_\-SRW\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SRW)
+\item 
+\#define \hyperlink{a00570_a70cc4f32dfdd80fbf7febbae1f7cff80}{SDIO\_\-SRW\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SRW, 1)
+\item 
+\#define \hyperlink{a00570_a209ae6d34b6752a059abadfbb9c2cf46}{SDIO\_\-SRW\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SRW, 0)
+\item 
+\#define \hyperlink{a00570_a8c72e541837b551c067a42989d61d56f}{SDIO\_\-SBS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SBS)
+\item 
+\#define \hyperlink{a00570_a9d2117ef27f43a12b27e1e3cc9b3f006}{SDIO\_\-SBS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SBS, 1)
+\item 
+\#define \hyperlink{a00570_a7d995ae9fd12cdb09859606bab260710}{SDIO\_\-SBS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SBS, 0)
+\item 
+\#define \hyperlink{a00570_a3a61744ec17969103bdaf667f4a81db3}{SDIO\_\-S4MI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-S4MI)
+\item 
+\#define \hyperlink{a00570_a3db55190ad0832494c0f3070fc2114e7}{SDIO\_\-S4MI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-S4MI, 1)
+\item 
+\#define \hyperlink{a00570_ac097ba6e3a0978c18dce9ee233750fb1}{SDIO\_\-S4MI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-S4MI, 0)
+\item 
+\#define \hyperlink{a00570_a00be070b5c2fe530e501ecee232fde14}{SDIO\_\-LSC\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-LSC)
+\item 
+\#define \hyperlink{a00570_a7286800cc70914272c0f6d89d022f8ef}{SDIO\_\-LSC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-LSC, 1)
+\item 
+\#define \hyperlink{a00570_a8befda210246d8abc41ee21c3ebb8a7c}{SDIO\_\-LSC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-LSC, 0)
+\item 
+\#define \hyperlink{a00570_a0a6a525c837dbabecbf435f4355fd648}{SDIO\_\-BLS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-BLS)
+\item 
+\#define \hyperlink{a00570_a6f7e5bdc6df797023108694cf982a97b}{SDIO\_\-BLS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-BLS, 1)
+\item 
+\#define \hyperlink{a00570_a1c93e0559c5854688d5eac94d9ac22a7}{SDIO\_\-BLS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-BLS, 0)
+\item 
+\#define \hyperlink{a00570_a59bf7bcfc2e0bfcafa562c8753d5e22a}{SDIO\_\-CARDREADY\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CARDREADY)
+\item 
+\#define \hyperlink{a00570_a7117adc5790a250207ed5db4a75af0df}{SDIO\_\-CARDREADY\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CARDREADY, 1)
+\item 
+\#define \hyperlink{a00570_a996c129198815dc913fc11a275105cb0}{SDIO\_\-CARDREADY\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CARDREADY, 0)
+\item 
+\#define \hyperlink{a00570_a210c6d473a0d76355d5608581054f523}{SDIO\_\-INTRSTATUSREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG))
+\item 
+\#define \hyperlink{a00570_a702d511898eca228f67bee021b472052}{SDIO\_\-INTRSTATUSREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG, (value))
+\item 
+\#define \hyperlink{a00570_a48dae6de24b4eb379ca33ab4dfe9aaa2}{SDIO\_\-INTRSTATUSREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_af810a4bb736cc242aa9be66165f6d9d7}{SDIO\_\-INTRSTATUSREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_a167f655309af12e2ae264c0f49882837}{SDIO\_\-WRTOVER\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER)
+\item 
+\#define \hyperlink{a00570_aa6ab06ee5b6b9c6f9adaf76c95f8a805}{SDIO\_\-WRTOVER\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER, 1)
+\item 
+\#define \hyperlink{a00570_a853a64ebc95c78cf7870fd7a6659b68a}{SDIO\_\-WRTOVER\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER, 0)
+\item 
+\#define \hyperlink{a00570_a7b1975ad6def0257234d3fc1cdc3ef42}{SDIO\_\-RDTOVER\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER)
+\item 
+\#define \hyperlink{a00570_a0716bd507f59f0390acd2401f363386f}{SDIO\_\-RDTOVER\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER, 1)
+\item 
+\#define \hyperlink{a00570_ac985664f3eb0711a351d2a1a2788f115}{SDIO\_\-RDTOVER\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER, 0)
+\item 
+\#define \hyperlink{a00570_ac99a1c45f8740dfb1d11d0152ac9862d}{SDIO\_\-RDERROR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR)
+\item 
+\#define \hyperlink{a00570_adffbf7b56d5c6f16581de468f48eec4d}{SDIO\_\-RDERROR\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR, 1)
+\item 
+\#define \hyperlink{a00570_ada192b1e46458d2ced6e79ed03943077}{SDIO\_\-RDERROR\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR, 0)
+\item 
+\#define \hyperlink{a00570_a2267b35d8a8d6ec107e805bb2078ad00}{SDIO\_\-RSTSOFTINT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT)
+\item 
+\#define \hyperlink{a00570_ab8e19c829ec6fe7b6f43466c97b2205e}{SDIO\_\-RSTSOFTINT\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT, 1)
+\item 
+\#define \hyperlink{a00570_a2a33f404f8d7e62bc44baba30aa481bc}{SDIO\_\-RSTSOFTINT\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT, 0)
+\item 
+\#define \hyperlink{a00570_a22588cc0a45ea32a57de15b92f891253}{SDIO\_\-RSTFUN1INt\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt)
+\item 
+\#define \hyperlink{a00570_a2b953d731a4d97ab74500f65b496ccc9}{SDIO\_\-RSTFUN1INt\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt, 1)
+\item 
+\#define \hyperlink{a00570_a4fe41b8a6f1e7dada20edb2e4b89503c}{SDIO\_\-RSTFUN1INt\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt, 0)
+\item 
+\#define \hyperlink{a00570_a3a4be97664d67629b060f0f17fb21775}{SDIO\_\-INTRENREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG))
+\item 
+\#define \hyperlink{a00570_a306ee49e5932820c16f8ba143762d55d}{SDIO\_\-INTRENREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG, (value))
+\item 
+\#define \hyperlink{a00570_aa82e4a96775a91d9525d0f64518e9f66}{SDIO\_\-INTRENREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_a73cfe3e18d647770bb7d1875a8fe6bc1}{SDIO\_\-INTRENREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_a167f655309af12e2ae264c0f49882837}{SDIO\_\-WRTOVER\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER)
+\item 
+\#define \hyperlink{a00570_aa6ab06ee5b6b9c6f9adaf76c95f8a805}{SDIO\_\-WRTOVER\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER, 1)
+\item 
+\#define \hyperlink{a00570_a853a64ebc95c78cf7870fd7a6659b68a}{SDIO\_\-WRTOVER\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER, 0)
+\item 
+\#define \hyperlink{a00570_a7b1975ad6def0257234d3fc1cdc3ef42}{SDIO\_\-RDTOVER\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER)
+\item 
+\#define \hyperlink{a00570_a0716bd507f59f0390acd2401f363386f}{SDIO\_\-RDTOVER\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER, 1)
+\item 
+\#define \hyperlink{a00570_ac985664f3eb0711a351d2a1a2788f115}{SDIO\_\-RDTOVER\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER, 0)
+\item 
+\#define \hyperlink{a00570_ac99a1c45f8740dfb1d11d0152ac9862d}{SDIO\_\-RDERROR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR)
+\item 
+\#define \hyperlink{a00570_adffbf7b56d5c6f16581de468f48eec4d}{SDIO\_\-RDERROR\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR, 1)
+\item 
+\#define \hyperlink{a00570_ada192b1e46458d2ced6e79ed03943077}{SDIO\_\-RDERROR\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR, 0)
+\item 
+\#define \hyperlink{a00570_a2267b35d8a8d6ec107e805bb2078ad00}{SDIO\_\-RSTSOFTINT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT)
+\item 
+\#define \hyperlink{a00570_ab8e19c829ec6fe7b6f43466c97b2205e}{SDIO\_\-RSTSOFTINT\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT, 1)
+\item 
+\#define \hyperlink{a00570_a2a33f404f8d7e62bc44baba30aa481bc}{SDIO\_\-RSTSOFTINT\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT, 0)
+\item 
+\#define \hyperlink{a00570_a22588cc0a45ea32a57de15b92f891253}{SDIO\_\-RSTFUN1INt\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt)
+\item 
+\#define \hyperlink{a00570_a2b953d731a4d97ab74500f65b496ccc9}{SDIO\_\-RSTFUN1INt\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt, 1)
+\item 
+\#define \hyperlink{a00570_a4fe41b8a6f1e7dada20edb2e4b89503c}{SDIO\_\-RSTFUN1INt\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt, 0)
+\item 
+\#define \hyperlink{a00570_a7a71b5366371acf5506f42f3f989da9b}{SDIO\_\-AHBTXCOUNTREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG))
+\item 
+\#define \hyperlink{a00570_a8090bf8a0946932b4f045d0d3d35b95f}{SDIO\_\-AHBTXCOUNTREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG, (value))
+\item 
+\#define \hyperlink{a00570_a66ef6a5ea6d654e409bcfa8e88d0b472}{SDIO\_\-AHBTXCOUNTREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_afd1962d3b2b1b1ea23a962b81af793ad}{SDIO\_\-AHBTXCOUNTREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_a6d8311034beebb894ff187dfe3953fdf}{SDIO\_\-AHBTXCOUNT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-AHBTXCOUNT)
+\item 
+\#define \hyperlink{a00570_a7b895fd0d0da630067c2ab45bb8357ea}{SDIO\_\-AHBTXCOUNT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-AHBTXCOUNT, (value))
+\item 
+\#define \hyperlink{a00570_a8ef644baa3250cc09defadc84e114f56}{SDIO\_\-SDIOTXCOUNTREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG))
+\item 
+\#define \hyperlink{a00570_a4a5954c6c50bcab0a93d25bf4e60a177}{SDIO\_\-SDIOTXCOUNTREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG, (value))
+\item 
+\#define \hyperlink{a00570_a890bc54f282e3ec5c00a06a5e0bd061b}{SDIO\_\-SDIOTXCOUNTREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_a29a48a00db03e3c21bc44f8c49690d5b}{SDIO\_\-SDIOTXCOUNTREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_ac6556ca78f61c753ba70c729eaf13ae4}{SDIO\_\-SDTXCOUNT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDTXCOUNT)
+\item 
+\#define \hyperlink{a00570_a9274b6b15e195aa6517df7ac05d51158}{SDIO\_\-SDTXCOUNT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDTXCOUNT, (value))
+\item 
+\#define \hyperlink{a00570_aa8e2c62d3aa5fd7b9aff76e281c02b12}{SDIO\_\-CIAREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG))
+\item 
+\#define \hyperlink{a00570_a5ca65e26c93282e29db818d91c91fe46}{SDIO\_\-CIAREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG, (value))
+\item 
+\#define \hyperlink{a00570_a770b2e2fdbcfd0712072c9cf64032b7a}{SDIO\_\-CIAREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_a846935185639976b91e3566953f922d3}{SDIO\_\-CIAREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_a2385a70217ad6b91d786a21a3699fc12}{SDIO\_\-CCCRREV\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CCCRREV)
+\item 
+\#define \hyperlink{a00570_a29beb805127c3a871248a640791c915b}{SDIO\_\-CCCRREV\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CCCRREV, (value))
+\item 
+\#define \hyperlink{a00570_a54ef33e642ab876614eaa1d9e3d17897}{SDIO\_\-SDIOREV\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDIOREV)
+\item 
+\#define \hyperlink{a00570_a06ac380b28af52b65b70b98e754094c9}{SDIO\_\-SDIOREV\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDIOREV, (value))
+\item 
+\#define \hyperlink{a00570_a1221d80f186e302f719daaa6f808c258}{SDIO\_\-SDREV\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDREV)
+\item 
+\#define \hyperlink{a00570_a811e1a0d115653f53d2f31a6c9ad083c}{SDIO\_\-SDREV\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDREV, (value))
+\item 
+\#define \hyperlink{a00570_ab92e631b96272e90b0527b6dd174d078}{SDIO\_\-IODEVCODE1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-IODEVCODE1)
+\item 
+\#define \hyperlink{a00570_a83b8c32790582b1e767357e891c363c7}{SDIO\_\-IODEVCODE1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-IODEVCODE1, (value))
+\item 
+\#define \hyperlink{a00570_ac7d935891e6ee9ca784f67b61c9b52f5}{SDIO\_\-CSASUPPORT1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CSASUPPORT1)
+\item 
+\#define \hyperlink{a00570_a9283dcf45c0de07066996bd8349a2117}{SDIO\_\-CSASUPPORT1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CSASUPPORT1, 1)
+\item 
+\#define \hyperlink{a00570_af833fe2ddea8a2c756085250f2b5f2f0}{SDIO\_\-CSASUPPORT1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CSASUPPORT1, 0)
+\item 
+\#define \hyperlink{a00570_ac2bdbf975f1bae176b2340c8f71d27df}{SDIO\_\-EIODEVCODE1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-EIODEVCODE1)
+\item 
+\#define \hyperlink{a00570_aec514c513c5307a50b1831371218b831}{SDIO\_\-EIODEVCODE1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-EIODEVCODE1, (value))
+\item 
+\#define \hyperlink{a00570_a77616cf7fe307b0abe8963844b1465b2}{SDIO\_\-SPS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SPS)
+\item 
+\#define \hyperlink{a00570_ab367c2a8c3b432d5328cde17f70cd453}{SDIO\_\-SPS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SPS, 1)
+\item 
+\#define \hyperlink{a00570_a778aea611b05aa7889303c123fec4e2a}{SDIO\_\-SPS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SPS, 0)
+\item 
+\#define \hyperlink{a00570_af6ad11b27716a01f9a38cb386f08e916}{SDIO\_\-SHS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SHS)
+\item 
+\#define \hyperlink{a00570_ac43eadcb8c484ab4fc01ead857d4d130}{SDIO\_\-SHS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SHS, 1)
+\item 
+\#define \hyperlink{a00570_a9febe39a5f331ae33939e5e79b6d3ce6}{SDIO\_\-SHS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SHS, 0)
+\item 
+\#define \hyperlink{a00570_a092d7c46d49376417a8b49cbab6bc60b}{SDIO\_\-SMPC\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMPC)
+\item 
+\#define \hyperlink{a00570_a817bc979aac0abfd45a40c4bfab0754b}{SDIO\_\-SMPC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMPC, 1)
+\item 
+\#define \hyperlink{a00570_a977bcbfba55ce6d0919ffe3d813213c9}{SDIO\_\-SMPC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMPC, 0)
+\item 
+\#define \hyperlink{a00570_abca1e1e5bde5590ded832fa726a70930}{SDIO\_\-RFU\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RFU)
+\item 
+\#define \hyperlink{a00570_ac8475d9a298acbf0faacf16bbb0e6386}{SDIO\_\-RFU\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RFU, (value))
+\item 
+\#define \hyperlink{a00570_a9f479606fcd81de48c0c1ad7571f4410}{SDIO\_\-OCRREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG))
+\item 
+\#define \hyperlink{a00570_af73bfe37cac0bd7306b2ea360920b5bf}{SDIO\_\-OCRREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG, (value))
+\item 
+\#define \hyperlink{a00570_a4c9aeb8ed6efdefc2d4c350a12eed58f}{SDIO\_\-OCRREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_ad967707628f3e23b4c7546c621d216ef}{SDIO\_\-OCRREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_aaefdac7f54871989a8ece0005ddbb667}{SDIO\_\-OCR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-OCR)
+\item 
+\#define \hyperlink{a00570_ac7eb4e45cec051e682e3ec16e0762d04}{SDIO\_\-OCR\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-OCR, (value))
+\item 
+\#define \hyperlink{a00570_ad3606617d9bbf42dc98989db369fddff}{SDIO\_\-CLKWAKEREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG))
+\item 
+\#define \hyperlink{a00570_a603b6e1d375a3bdcde7c51f10c948794}{SDIO\_\-CLKWAKEREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG, (value))
+\item 
+\#define \hyperlink{a00570_a9fa1b5bc96fdcd0765ef49d406ab220a}{SDIO\_\-CLKWAKEREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_a8211ed5f1997d3577e54535b8f8199ed}{SDIO\_\-CLKWAKEREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_a9573dd7876ca8c95cd0a4b5473e073c5}{SDIO\_\-AUTOCLKEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-AUTOCLKEN)
+\item 
+\#define \hyperlink{a00570_a76740b9fb992cfa6a37f3e1ce5aa73e4}{SDIO\_\-AUTOCLKEN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-AUTOCLKEN, 1)
+\item 
+\#define \hyperlink{a00570_a7ecc626a5b057fea17b95d4273f14fd2}{SDIO\_\-AUTOCLKEN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-AUTOCLKEN, 0)
+\item 
+\#define \hyperlink{a00570_a9b3fb004705fb62eb0b82700d5d9a11a}{SDIO\_\-MANUALOCLKEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-MANUALOCLKEN)
+\item 
+\#define \hyperlink{a00570_a06744058030886d34fa2e69fe6e2268f}{SDIO\_\-MANUALOCLKEN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-MANUALOCLKEN, 1)
+\item 
+\#define \hyperlink{a00570_a8bec8045787e4dc9774ee17149477bc1}{SDIO\_\-MANUALOCLKEN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-MANUALOCLKEN, 0)
+\item 
+\#define \hyperlink{a00570_a8e1fc6cf6f95042ae1e28ff125e41e9f}{SDIO\_\-AHBBSIZE\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE))
+\item 
+\#define \hyperlink{a00570_ac3536c94468eb958256185ab9dc43058}{SDIO\_\-AHBBSIZE\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE, (value))
+\item 
+\#define \hyperlink{a00570_ae5cf2760b72358e203070252835363b8}{SDIO\_\-AHBBSIZE\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE) $|$ (value))
+\item 
+\#define \hyperlink{a00570_a9b9e3c2a0f517d120eb9e6d42a593dfb}{SDIO\_\-AHBBSIZE\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_af69073e0025d79057faf94ff04bb88da}{SDIO\_\-SIZE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SIZE)
+\item 
+\#define \hyperlink{a00570_a4b08cc98dc8da4263265252dde0981db}{SDIO\_\-SIZE\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SIZE, (value))
+\item 
+\#define \hyperlink{a00570_a2b512d97072bf4f2d46594963531f144}{SDIO\_\-AHBSOFTRSTREG\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG))
+\item 
+\#define \hyperlink{a00570_a5da498eab018318137636be7809ba64a}{SDIO\_\-AHBSOFTRSTREG\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG, (value))
+\item 
+\#define \hyperlink{a00570_a58ed36cddf3ff6bb8469cbd8d46da413}{SDIO\_\-AHBSOFTRSTREG\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG) $|$ (value))
+\item 
+\#define \hyperlink{a00570_acab946f2ab7769764104e090c0142db8}{SDIO\_\-AHBSOFTRSTREG\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00570_aff903766289be1cee7eee8cc41c817b3}{SDIO\_\-VALID\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-VALID)
+\item 
+\#define \hyperlink{a00570_a512cfd843577b1502a1e8ccaea302bd8}{SDIO\_\-VALID\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-VALID, 1)
+\item 
+\#define \hyperlink{a00570_a0c24afeb0f19fc3c61652e893b910a04}{SDIO\_\-VALID\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-VALID, 0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00570_a9b9e3c2a0f517d120eb9e6d42a593dfb}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBBSIZE\_\-CLEARBIT@{SDIO\_\-AHBBSIZE\_\-CLEARBIT}}
+\index{SDIO\_\-AHBBSIZE\_\-CLEARBIT@{SDIO\_\-AHBBSIZE\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBBSIZE\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBBSIZE\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE) \& ($\sim$(value)))}}
+\label{a00570_a9b9e3c2a0f517d120eb9e6d42a593dfb}
+
+
+Definition at line 698 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a8e1fc6cf6f95042ae1e28ff125e41e9f}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBBSIZE\_\-GET@{SDIO\_\-AHBBSIZE\_\-GET}}
+\index{SDIO\_\-AHBBSIZE\_\-GET@{SDIO\_\-AHBBSIZE\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBBSIZE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBBSIZE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE))}}
+\label{a00570_a8e1fc6cf6f95042ae1e28ff125e41e9f}
+
+
+Definition at line 692 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac3536c94468eb958256185ab9dc43058}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBBSIZE\_\-SET@{SDIO\_\-AHBBSIZE\_\-SET}}
+\index{SDIO\_\-AHBBSIZE\_\-SET@{SDIO\_\-AHBBSIZE\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBBSIZE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBBSIZE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE, (value))}}
+\label{a00570_ac3536c94468eb958256185ab9dc43058}
+
+
+Definition at line 694 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ae5cf2760b72358e203070252835363b8}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBBSIZE\_\-SETBIT@{SDIO\_\-AHBBSIZE\_\-SETBIT}}
+\index{SDIO\_\-AHBBSIZE\_\-SETBIT@{SDIO\_\-AHBBSIZE\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBBSIZE\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBBSIZE\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBBSIZE) $|$ (value))}}
+\label{a00570_ae5cf2760b72358e203070252835363b8}
+
+
+Definition at line 696 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_acab946f2ab7769764104e090c0142db8}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBSOFTRSTREG\_\-CLEARBIT@{SDIO\_\-AHBSOFTRSTREG\_\-CLEARBIT}}
+\index{SDIO\_\-AHBSOFTRSTREG\_\-CLEARBIT@{SDIO\_\-AHBSOFTRSTREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBSOFTRSTREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBSOFTRSTREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG) \& ($\sim$(value)))}}
+\label{a00570_acab946f2ab7769764104e090c0142db8}
+
+
+Definition at line 721 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a2b512d97072bf4f2d46594963531f144}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBSOFTRSTREG\_\-GET@{SDIO\_\-AHBSOFTRSTREG\_\-GET}}
+\index{SDIO\_\-AHBSOFTRSTREG\_\-GET@{SDIO\_\-AHBSOFTRSTREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBSOFTRSTREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBSOFTRSTREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG))}}
+\label{a00570_a2b512d97072bf4f2d46594963531f144}
+
+
+Definition at line 715 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a5da498eab018318137636be7809ba64a}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBSOFTRSTREG\_\-SET@{SDIO\_\-AHBSOFTRSTREG\_\-SET}}
+\index{SDIO\_\-AHBSOFTRSTREG\_\-SET@{SDIO\_\-AHBSOFTRSTREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBSOFTRSTREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBSOFTRSTREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG, (value))}}
+\label{a00570_a5da498eab018318137636be7809ba64a}
+
+
+Definition at line 717 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a58ed36cddf3ff6bb8469cbd8d46da413}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBSOFTRSTREG\_\-SETBIT@{SDIO\_\-AHBSOFTRSTREG\_\-SETBIT}}
+\index{SDIO\_\-AHBSOFTRSTREG\_\-SETBIT@{SDIO\_\-AHBSOFTRSTREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBSOFTRSTREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBSOFTRSTREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBSOFTRSTREG) $|$ (value))}}
+\label{a00570_a58ed36cddf3ff6bb8469cbd8d46da413}
+
+
+Definition at line 719 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a6d8311034beebb894ff187dfe3953fdf}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBTXCOUNT\_\-GET@{SDIO\_\-AHBTXCOUNT\_\-GET}}
+\index{SDIO\_\-AHBTXCOUNT\_\-GET@{SDIO\_\-AHBTXCOUNT\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBTXCOUNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBTXCOUNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-AHBTXCOUNT)}}
+\label{a00570_a6d8311034beebb894ff187dfe3953fdf}
+
+
+Definition at line 488 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a7b895fd0d0da630067c2ab45bb8357ea}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBTXCOUNT\_\-SET@{SDIO\_\-AHBTXCOUNT\_\-SET}}
+\index{SDIO\_\-AHBTXCOUNT\_\-SET@{SDIO\_\-AHBTXCOUNT\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBTXCOUNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBTXCOUNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-AHBTXCOUNT, (value))}}
+\label{a00570_a7b895fd0d0da630067c2ab45bb8357ea}
+
+
+Definition at line 490 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_afd1962d3b2b1b1ea23a962b81af793ad}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBTXCOUNTREG\_\-CLEARBIT@{SDIO\_\-AHBTXCOUNTREG\_\-CLEARBIT}}
+\index{SDIO\_\-AHBTXCOUNTREG\_\-CLEARBIT@{SDIO\_\-AHBTXCOUNTREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBTXCOUNTREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBTXCOUNTREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG) \& ($\sim$(value)))}}
+\label{a00570_afd1962d3b2b1b1ea23a962b81af793ad}
+
+
+Definition at line 481 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a7a71b5366371acf5506f42f3f989da9b}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBTXCOUNTREG\_\-GET@{SDIO\_\-AHBTXCOUNTREG\_\-GET}}
+\index{SDIO\_\-AHBTXCOUNTREG\_\-GET@{SDIO\_\-AHBTXCOUNTREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBTXCOUNTREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBTXCOUNTREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG))}}
+\label{a00570_a7a71b5366371acf5506f42f3f989da9b}
+
+
+Definition at line 475 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a8090bf8a0946932b4f045d0d3d35b95f}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBTXCOUNTREG\_\-SET@{SDIO\_\-AHBTXCOUNTREG\_\-SET}}
+\index{SDIO\_\-AHBTXCOUNTREG\_\-SET@{SDIO\_\-AHBTXCOUNTREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBTXCOUNTREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBTXCOUNTREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG, (value))}}
+\label{a00570_a8090bf8a0946932b4f045d0d3d35b95f}
+
+
+Definition at line 477 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a66ef6a5ea6d654e409bcfa8e88d0b472}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AHBTXCOUNTREG\_\-SETBIT@{SDIO\_\-AHBTXCOUNTREG\_\-SETBIT}}
+\index{SDIO\_\-AHBTXCOUNTREG\_\-SETBIT@{SDIO\_\-AHBTXCOUNTREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AHBTXCOUNTREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AHBTXCOUNTREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-AHBTXCOUNTREG) $|$ (value))}}
+\label{a00570_a66ef6a5ea6d654e409bcfa8e88d0b472}
+
+
+Definition at line 479 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a7ecc626a5b057fea17b95d4273f14fd2}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AUTOCLKEN\_\-CLEAR@{SDIO\_\-AUTOCLKEN\_\-CLEAR}}
+\index{SDIO\_\-AUTOCLKEN\_\-CLEAR@{SDIO\_\-AUTOCLKEN\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AUTOCLKEN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AUTOCLKEN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-AUTOCLKEN, 0)}}
+\label{a00570_a7ecc626a5b057fea17b95d4273f14fd2}
+
+
+Definition at line 673 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a9573dd7876ca8c95cd0a4b5473e073c5}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AUTOCLKEN\_\-GET@{SDIO\_\-AUTOCLKEN\_\-GET}}
+\index{SDIO\_\-AUTOCLKEN\_\-GET@{SDIO\_\-AUTOCLKEN\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AUTOCLKEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AUTOCLKEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-AUTOCLKEN)}}
+\label{a00570_a9573dd7876ca8c95cd0a4b5473e073c5}
+
+
+Definition at line 669 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a76740b9fb992cfa6a37f3e1ce5aa73e4}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-AUTOCLKEN\_\-SET@{SDIO\_\-AUTOCLKEN\_\-SET}}
+\index{SDIO\_\-AUTOCLKEN\_\-SET@{SDIO\_\-AUTOCLKEN\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-AUTOCLKEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-AUTOCLKEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-AUTOCLKEN, 1)}}
+\label{a00570_a76740b9fb992cfa6a37f3e1ce5aa73e4}
+
+
+Definition at line 671 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a1c93e0559c5854688d5eac94d9ac22a7}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-BLS\_\-CLEAR@{SDIO\_\-BLS\_\-CLEAR}}
+\index{SDIO\_\-BLS\_\-CLEAR@{SDIO\_\-BLS\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-BLS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-BLS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-BLS, 0)}}
+\label{a00570_a1c93e0559c5854688d5eac94d9ac22a7}
+
+
+Definition at line 318 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a0a6a525c837dbabecbf435f4355fd648}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-BLS\_\-GET@{SDIO\_\-BLS\_\-GET}}
+\index{SDIO\_\-BLS\_\-GET@{SDIO\_\-BLS\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-BLS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-BLS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-BLS)}}
+\label{a00570_a0a6a525c837dbabecbf435f4355fd648}
+
+
+Definition at line 314 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a6f7e5bdc6df797023108694cf982a97b}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-BLS\_\-SET@{SDIO\_\-BLS\_\-SET}}
+\index{SDIO\_\-BLS\_\-SET@{SDIO\_\-BLS\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-BLS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-BLS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-BLS, 1)}}
+\label{a00570_a6f7e5bdc6df797023108694cf982a97b}
+
+
+Definition at line 316 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a996c129198815dc913fc11a275105cb0}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CARDREADY\_\-CLEAR@{SDIO\_\-CARDREADY\_\-CLEAR}}
+\index{SDIO\_\-CARDREADY\_\-CLEAR@{SDIO\_\-CARDREADY\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CARDREADY\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CARDREADY\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CARDREADY, 0)}}
+\label{a00570_a996c129198815dc913fc11a275105cb0}
+
+
+Definition at line 329 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a59bf7bcfc2e0bfcafa562c8753d5e22a}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CARDREADY\_\-GET@{SDIO\_\-CARDREADY\_\-GET}}
+\index{SDIO\_\-CARDREADY\_\-GET@{SDIO\_\-CARDREADY\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CARDREADY\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CARDREADY\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CARDREADY)}}
+\label{a00570_a59bf7bcfc2e0bfcafa562c8753d5e22a}
+
+
+Definition at line 325 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a7117adc5790a250207ed5db4a75af0df}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CARDREADY\_\-SET@{SDIO\_\-CARDREADY\_\-SET}}
+\index{SDIO\_\-CARDREADY\_\-SET@{SDIO\_\-CARDREADY\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CARDREADY\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CARDREADY\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CARDREADY, 1)}}
+\label{a00570_a7117adc5790a250207ed5db4a75af0df}
+
+
+Definition at line 327 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a2385a70217ad6b91d786a21a3699fc12}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CCCRREV\_\-GET@{SDIO\_\-CCCRREV\_\-GET}}
+\index{SDIO\_\-CCCRREV\_\-GET@{SDIO\_\-CCCRREV\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CCCRREV\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CCCRREV\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CCCRREV)}}
+\label{a00570_a2385a70217ad6b91d786a21a3699fc12}
+
+
+Definition at line 534 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a29beb805127c3a871248a640791c915b}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CCCRREV\_\-SET@{SDIO\_\-CCCRREV\_\-SET}}
+\index{SDIO\_\-CCCRREV\_\-SET@{SDIO\_\-CCCRREV\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CCCRREV\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CCCRREV\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CCCRREV, (value))}}
+\label{a00570_a29beb805127c3a871248a640791c915b}
+
+
+Definition at line 536 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a846935185639976b91e3566953f922d3}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CIAREG\_\-CLEARBIT@{SDIO\_\-CIAREG\_\-CLEARBIT}}
+\index{SDIO\_\-CIAREG\_\-CLEARBIT@{SDIO\_\-CIAREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CIAREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CIAREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG) \& ($\sim$(value)))}}
+\label{a00570_a846935185639976b91e3566953f922d3}
+
+
+Definition at line 527 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aa8e2c62d3aa5fd7b9aff76e281c02b12}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CIAREG\_\-GET@{SDIO\_\-CIAREG\_\-GET}}
+\index{SDIO\_\-CIAREG\_\-GET@{SDIO\_\-CIAREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CIAREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CIAREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG))}}
+\label{a00570_aa8e2c62d3aa5fd7b9aff76e281c02b12}
+
+
+Definition at line 521 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a5ca65e26c93282e29db818d91c91fe46}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CIAREG\_\-SET@{SDIO\_\-CIAREG\_\-SET}}
+\index{SDIO\_\-CIAREG\_\-SET@{SDIO\_\-CIAREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CIAREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CIAREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG, (value))}}
+\label{a00570_a5ca65e26c93282e29db818d91c91fe46}
+
+
+Definition at line 523 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a770b2e2fdbcfd0712072c9cf64032b7a}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CIAREG\_\-SETBIT@{SDIO\_\-CIAREG\_\-SETBIT}}
+\index{SDIO\_\-CIAREG\_\-SETBIT@{SDIO\_\-CIAREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CIAREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CIAREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CIAREG) $|$ (value))}}
+\label{a00570_a770b2e2fdbcfd0712072c9cf64032b7a}
+
+
+Definition at line 525 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ae6d366931003fd3fe8962cb23a950cdd}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CISFUN0ADDREG\_\-CLEARBIT@{SDIO\_\-CISFUN0ADDREG\_\-CLEARBIT}}
+\index{SDIO\_\-CISFUN0ADDREG\_\-CLEARBIT@{SDIO\_\-CISFUN0ADDREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CISFUN0ADDREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CISFUN0ADDREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG) \& ($\sim$(value)))}}
+\label{a00570_ae6d366931003fd3fe8962cb23a950cdd}
+
+
+Definition at line 99 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_af748b806fcda6ecceda24b260156ebb3}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CISFUN0ADDREG\_\-GET@{SDIO\_\-CISFUN0ADDREG\_\-GET}}
+\index{SDIO\_\-CISFUN0ADDREG\_\-GET@{SDIO\_\-CISFUN0ADDREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CISFUN0ADDREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CISFUN0ADDREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG))}}
+\label{a00570_af748b806fcda6ecceda24b260156ebb3}
+
+
+Definition at line 93 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a563faf74b0d8311fdb3b1634ff54ab1d}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CISFUN0ADDREG\_\-SET@{SDIO\_\-CISFUN0ADDREG\_\-SET}}
+\index{SDIO\_\-CISFUN0ADDREG\_\-SET@{SDIO\_\-CISFUN0ADDREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CISFUN0ADDREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CISFUN0ADDREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG, (value))}}
+\label{a00570_a563faf74b0d8311fdb3b1634ff54ab1d}
+
+
+Definition at line 95 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a9f28e3bbb0367eeef1764b84a3fbcd83}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CISFUN0ADDREG\_\-SETBIT@{SDIO\_\-CISFUN0ADDREG\_\-SETBIT}}
+\index{SDIO\_\-CISFUN0ADDREG\_\-SETBIT@{SDIO\_\-CISFUN0ADDREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CISFUN0ADDREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CISFUN0ADDREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN0ADDREG) $|$ (value))}}
+\label{a00570_a9f28e3bbb0367eeef1764b84a3fbcd83}
+
+
+Definition at line 97 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ad482e8f358993a07e9405a10cee26b18}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CISFUN0ADDRESS\_\-GET@{SDIO\_\-CISFUN0ADDRESS\_\-GET}}
+\index{SDIO\_\-CISFUN0ADDRESS\_\-GET@{SDIO\_\-CISFUN0ADDRESS\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CISFUN0ADDRESS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CISFUN0ADDRESS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CISFUN0ADDREG)}}
+\label{a00570_ad482e8f358993a07e9405a10cee26b18}
+
+
+Definition at line 106 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_af3fa42606bafa7325f4558aef0807bbb}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CISFUN0ADDRESS\_\-SET@{SDIO\_\-CISFUN0ADDRESS\_\-SET}}
+\index{SDIO\_\-CISFUN0ADDRESS\_\-SET@{SDIO\_\-CISFUN0ADDRESS\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CISFUN0ADDRESS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CISFUN0ADDRESS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CISFUN0ADDREG, (value))}}
+\label{a00570_af3fa42606bafa7325f4558aef0807bbb}
+
+
+Definition at line 108 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a4bdc537a2f9f4c71770cbf83f60229b3}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CISFUN1ADDREG\_\-GET@{SDIO\_\-CISFUN1ADDREG\_\-GET}}
+\index{SDIO\_\-CISFUN1ADDREG\_\-GET@{SDIO\_\-CISFUN1ADDREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CISFUN1ADDREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CISFUN1ADDREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CISFUN1ADDREG))}}
+\label{a00570_a4bdc537a2f9f4c71770cbf83f60229b3}
+
+
+Definition at line 116 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ab3b80f7f4bc056bcc12dce5837718c5b}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CISFUN1ADDRESS\_\-GET@{SDIO\_\-CISFUN1ADDRESS\_\-GET}}
+\index{SDIO\_\-CISFUN1ADDRESS\_\-GET@{SDIO\_\-CISFUN1ADDRESS\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CISFUN1ADDRESS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CISFUN1ADDRESS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CISFUN1ADDREG)}}
+\label{a00570_ab3b80f7f4bc056bcc12dce5837718c5b}
+
+
+Definition at line 123 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a93fc4e6e24873336152ed68e0d24588d}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CISFUN1ADDRESS\_\-SET@{SDIO\_\-CISFUN1ADDRESS\_\-SET}}
+\index{SDIO\_\-CISFUN1ADDRESS\_\-SET@{SDIO\_\-CISFUN1ADDRESS\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CISFUN1ADDRESS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CISFUN1ADDRESS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CISFUN1ADDREG, (value))}}
+\label{a00570_a93fc4e6e24873336152ed68e0d24588d}
+
+
+Definition at line 125 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a8211ed5f1997d3577e54535b8f8199ed}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CLKWAKEREG\_\-CLEARBIT@{SDIO\_\-CLKWAKEREG\_\-CLEARBIT}}
+\index{SDIO\_\-CLKWAKEREG\_\-CLEARBIT@{SDIO\_\-CLKWAKEREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CLKWAKEREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CLKWAKEREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG) \& ($\sim$(value)))}}
+\label{a00570_a8211ed5f1997d3577e54535b8f8199ed}
+
+
+Definition at line 662 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ad3606617d9bbf42dc98989db369fddff}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CLKWAKEREG\_\-GET@{SDIO\_\-CLKWAKEREG\_\-GET}}
+\index{SDIO\_\-CLKWAKEREG\_\-GET@{SDIO\_\-CLKWAKEREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CLKWAKEREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CLKWAKEREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG))}}
+\label{a00570_ad3606617d9bbf42dc98989db369fddff}
+
+
+Definition at line 656 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a603b6e1d375a3bdcde7c51f10c948794}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CLKWAKEREG\_\-SET@{SDIO\_\-CLKWAKEREG\_\-SET}}
+\index{SDIO\_\-CLKWAKEREG\_\-SET@{SDIO\_\-CLKWAKEREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CLKWAKEREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CLKWAKEREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG, (value))}}
+\label{a00570_a603b6e1d375a3bdcde7c51f10c948794}
+
+
+Definition at line 658 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a9fa1b5bc96fdcd0765ef49d406ab220a}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CLKWAKEREG\_\-SETBIT@{SDIO\_\-CLKWAKEREG\_\-SETBIT}}
+\index{SDIO\_\-CLKWAKEREG\_\-SETBIT@{SDIO\_\-CLKWAKEREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CLKWAKEREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CLKWAKEREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CLKWAKEREG) $|$ (value))}}
+\label{a00570_a9fa1b5bc96fdcd0765ef49d406ab220a}
+
+
+Definition at line 660 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_adff9f89fbf73cf94f32c4ec75147076b}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CSAADDREG\_\-CLEARBIT@{SDIO\_\-CSAADDREG\_\-CLEARBIT}}
+\index{SDIO\_\-CSAADDREG\_\-CLEARBIT@{SDIO\_\-CSAADDREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CSAADDREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CSAADDREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG) \& ($\sim$(value)))}}
+\label{a00570_adff9f89fbf73cf94f32c4ec75147076b}
+
+
+Definition at line 139 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a4078cb6ed3a75f40c586b094b1054987}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CSAADDREG\_\-GET@{SDIO\_\-CSAADDREG\_\-GET}}
+\index{SDIO\_\-CSAADDREG\_\-GET@{SDIO\_\-CSAADDREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CSAADDREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CSAADDREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG))}}
+\label{a00570_a4078cb6ed3a75f40c586b094b1054987}
+
+
+Definition at line 133 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a4e21f8df2417f965e07536a68d40655b}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CSAADDREG\_\-SET@{SDIO\_\-CSAADDREG\_\-SET}}
+\index{SDIO\_\-CSAADDREG\_\-SET@{SDIO\_\-CSAADDREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CSAADDREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CSAADDREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG, (value))}}
+\label{a00570_a4e21f8df2417f965e07536a68d40655b}
+
+
+Definition at line 135 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a4c566fe2391ff676e793464f49d5d19f}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CSAADDREG\_\-SETBIT@{SDIO\_\-CSAADDREG\_\-SETBIT}}
+\index{SDIO\_\-CSAADDREG\_\-SETBIT@{SDIO\_\-CSAADDREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CSAADDREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CSAADDREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-CSAADDREG) $|$ (value))}}
+\label{a00570_a4c566fe2391ff676e793464f49d5d19f}
+
+
+Definition at line 137 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ad4c321fccad1905168326d839d1d1576}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CSAADDRESS\_\-GET@{SDIO\_\-CSAADDRESS\_\-GET}}
+\index{SDIO\_\-CSAADDRESS\_\-GET@{SDIO\_\-CSAADDRESS\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CSAADDRESS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CSAADDRESS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CSAADDREG)}}
+\label{a00570_ad4c321fccad1905168326d839d1d1576}
+
+
+Definition at line 146 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a2cf6f49b5801398f6cf620eddd8d4286}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CSAADDRESS\_\-SET@{SDIO\_\-CSAADDRESS\_\-SET}}
+\index{SDIO\_\-CSAADDRESS\_\-SET@{SDIO\_\-CSAADDRESS\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CSAADDRESS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CSAADDRESS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CSAADDREG, (value))}}
+\label{a00570_a2cf6f49b5801398f6cf620eddd8d4286}
+
+
+Definition at line 148 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_af833fe2ddea8a2c756085250f2b5f2f0}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CSASUPPORT1\_\-CLEAR@{SDIO\_\-CSASUPPORT1\_\-CLEAR}}
+\index{SDIO\_\-CSASUPPORT1\_\-CLEAR@{SDIO\_\-CSASUPPORT1\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CSASUPPORT1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CSASUPPORT1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CSASUPPORT1, 0)}}
+\label{a00570_af833fe2ddea8a2c756085250f2b5f2f0}
+
+
+Definition at line 574 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac7d935891e6ee9ca784f67b61c9b52f5}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CSASUPPORT1\_\-GET@{SDIO\_\-CSASUPPORT1\_\-GET}}
+\index{SDIO\_\-CSASUPPORT1\_\-GET@{SDIO\_\-CSASUPPORT1\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CSASUPPORT1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CSASUPPORT1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CSASUPPORT1)}}
+\label{a00570_ac7d935891e6ee9ca784f67b61c9b52f5}
+
+
+Definition at line 570 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a9283dcf45c0de07066996bd8349a2117}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-CSASUPPORT1\_\-SET@{SDIO\_\-CSASUPPORT1\_\-SET}}
+\index{SDIO\_\-CSASUPPORT1\_\-SET@{SDIO\_\-CSASUPPORT1\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-CSASUPPORT1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CSASUPPORT1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-CSASUPPORT1, 1)}}
+\label{a00570_a9283dcf45c0de07066996bd8349a2117}
+
+
+Definition at line 572 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac0fef7a5ca6b165fa6c046b219b0efeb}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-DATA\_\-GET@{SDIO\_\-DATA\_\-GET}}
+\index{SDIO\_\-DATA\_\-GET@{SDIO\_\-DATA\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-DATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-DATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-DATA)}}
+\label{a00570_ac0fef7a5ca6b165fa6c046b219b0efeb}
+
+
+Definition at line 47 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a8bf738b6ed1b69f0b14fa2c4a901722a}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-DATA\_\-SET@{SDIO\_\-DATA\_\-SET}}
+\index{SDIO\_\-DATA\_\-SET@{SDIO\_\-DATA\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-DATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-DATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-DATA, (value))}}
+\label{a00570_a8bf738b6ed1b69f0b14fa2c4a901722a}
+
+
+Definition at line 49 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a30ff7fa57be218c166f101c85013020a}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-DATAPORT\_\-CLEARBIT@{SDIO\_\-DATAPORT\_\-CLEARBIT}}
+\index{SDIO\_\-DATAPORT\_\-CLEARBIT@{SDIO\_\-DATAPORT\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-DATAPORT\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-DATAPORT\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT) \& ($\sim$(value)))}}
+\label{a00570_a30ff7fa57be218c166f101c85013020a}
+
+
+Definition at line 40 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a8160167e3cac1c6dc7696082fde775eb}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-DATAPORT\_\-GET@{SDIO\_\-DATAPORT\_\-GET}}
+\index{SDIO\_\-DATAPORT\_\-GET@{SDIO\_\-DATAPORT\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-DATAPORT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-DATAPORT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT))}}
+\label{a00570_a8160167e3cac1c6dc7696082fde775eb}
+
+
+Definition at line 34 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac78e83c0862393d1e7ceb26f42ef3182}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-DATAPORT\_\-SET@{SDIO\_\-DATAPORT\_\-SET}}
+\index{SDIO\_\-DATAPORT\_\-SET@{SDIO\_\-DATAPORT\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-DATAPORT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-DATAPORT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT, (value))}}
+\label{a00570_ac78e83c0862393d1e7ceb26f42ef3182}
+
+
+Definition at line 36 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a1e7eea4f269affd976008a4ec67f47eb}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-DATAPORT\_\-SETBIT@{SDIO\_\-DATAPORT\_\-SETBIT}}
+\index{SDIO\_\-DATAPORT\_\-SETBIT@{SDIO\_\-DATAPORT\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-DATAPORT\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-DATAPORT\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-DATAPORT) $|$ (value))}}
+\label{a00570_a1e7eea4f269affd976008a4ec67f47eb}
+
+
+Definition at line 38 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a061e7d3b5e5ca97cc89bc7e9ec52f720}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-DATARDY\_\-CLEAR@{SDIO\_\-DATARDY\_\-CLEAR}}
+\index{SDIO\_\-DATARDY\_\-CLEAR@{SDIO\_\-DATARDY\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-DATARDY\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-DATARDY\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-DATARDY, 0)}}
+\label{a00570_a061e7d3b5e5ca97cc89bc7e9ec52f720}
+
+
+Definition at line 74 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a79884766254c4cfd2bfc7e42eff6265e}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-DATARDY\_\-GET@{SDIO\_\-DATARDY\_\-GET}}
+\index{SDIO\_\-DATARDY\_\-GET@{SDIO\_\-DATARDY\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-DATARDY\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-DATARDY\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-DATARDY)}}
+\label{a00570_a79884766254c4cfd2bfc7e42eff6265e}
+
+
+Definition at line 70 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac82f2a6a86fb932dbb6284e7954783c8}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-DATARDY\_\-SET@{SDIO\_\-DATARDY\_\-SET}}
+\index{SDIO\_\-DATARDY\_\-SET@{SDIO\_\-DATARDY\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-DATARDY\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-DATARDY\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-DATARDY, 1)}}
+\label{a00570_ac82f2a6a86fb932dbb6284e7954783c8}
+
+
+Definition at line 72 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac2bdbf975f1bae176b2340c8f71d27df}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-EIODEVCODE1\_\-GET@{SDIO\_\-EIODEVCODE1\_\-GET}}
+\index{SDIO\_\-EIODEVCODE1\_\-GET@{SDIO\_\-EIODEVCODE1\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-EIODEVCODE1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-EIODEVCODE1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-EIODEVCODE1)}}
+\label{a00570_ac2bdbf975f1bae176b2340c8f71d27df}
+
+
+Definition at line 581 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aec514c513c5307a50b1831371218b831}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-EIODEVCODE1\_\-SET@{SDIO\_\-EIODEVCODE1\_\-SET}}
+\index{SDIO\_\-EIODEVCODE1\_\-SET@{SDIO\_\-EIODEVCODE1\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-EIODEVCODE1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-EIODEVCODE1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-EIODEVCODE1, (value))}}
+\label{a00570_aec514c513c5307a50b1831371218b831}
+
+
+Definition at line 583 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_afc6dc96345e2744cf476c750a052540a}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-ERROR\_\-CLEAR@{SDIO\_\-ERROR\_\-CLEAR}}
+\index{SDIO\_\-ERROR\_\-CLEAR@{SDIO\_\-ERROR\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-ERROR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-ERROR\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ERROR, 0)}}
+\label{a00570_afc6dc96345e2744cf476c750a052540a}
+
+
+Definition at line 85 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a510510ec7cb2a973ec21f8c96ea9030b}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-ERROR\_\-GET@{SDIO\_\-ERROR\_\-GET}}
+\index{SDIO\_\-ERROR\_\-GET@{SDIO\_\-ERROR\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-ERROR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-ERROR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ERROR)}}
+\label{a00570_a510510ec7cb2a973ec21f8c96ea9030b}
+
+
+Definition at line 81 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_af4b395073018d105db5c737adf6ec38f}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-ERROR\_\-SET@{SDIO\_\-ERROR\_\-SET}}
+\index{SDIO\_\-ERROR\_\-SET@{SDIO\_\-ERROR\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-ERROR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-ERROR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ERROR, 1)}}
+\label{a00570_af4b395073018d105db5c737adf6ec38f}
+
+
+Definition at line 83 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a8ae3103c43586244a30e0b23701c6750}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-FUN1RDDATAREADY\_\-CLEAR@{SDIO\_\-FUN1RDDATAREADY\_\-CLEAR}}
+\index{SDIO\_\-FUN1RDDATAREADY\_\-CLEAR@{SDIO\_\-FUN1RDDATAREADY\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-FUN1RDDATAREADY\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-FUN1RDDATAREADY\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUN1RDDATAREADY, 0)}}
+\label{a00570_a8ae3103c43586244a30e0b23701c6750}
+
+
+Definition at line 230 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a1026c0d36790e10eafb7ae9657c855e2}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-FUN1RDDATAREADY\_\-GET@{SDIO\_\-FUN1RDDATAREADY\_\-GET}}
+\index{SDIO\_\-FUN1RDDATAREADY\_\-GET@{SDIO\_\-FUN1RDDATAREADY\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-FUN1RDDATAREADY\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-FUN1RDDATAREADY\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUN1RDDATAREADY)}}
+\label{a00570_a1026c0d36790e10eafb7ae9657c855e2}
+
+
+Definition at line 226 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a6b4bb4541e42a03f7468c80c6704305e}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-FUN1RDDATAREADY\_\-SET@{SDIO\_\-FUN1RDDATAREADY\_\-SET}}
+\index{SDIO\_\-FUN1RDDATAREADY\_\-SET@{SDIO\_\-FUN1RDDATAREADY\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-FUN1RDDATAREADY\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-FUN1RDDATAREADY\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUN1RDDATAREADY, 1)}}
+\label{a00570_a6b4bb4541e42a03f7468c80c6704305e}
+
+
+Definition at line 228 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a12d6276db92cbfedaf612790154d9d12}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-FUNREADY\_\-CLEAR@{SDIO\_\-FUNREADY\_\-CLEAR}}
+\index{SDIO\_\-FUNREADY\_\-CLEAR@{SDIO\_\-FUNREADY\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-FUNREADY\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-FUNREADY\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUNREADY, 0)}}
+\label{a00570_a12d6276db92cbfedaf612790154d9d12}
+
+
+Definition at line 219 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aa58cfa6e924501afb76ff5533bc4b089}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-FUNREADY\_\-GET@{SDIO\_\-FUNREADY\_\-GET}}
+\index{SDIO\_\-FUNREADY\_\-GET@{SDIO\_\-FUNREADY\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-FUNREADY\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-FUNREADY\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUNREADY)}}
+\label{a00570_aa58cfa6e924501afb76ff5533bc4b089}
+
+
+Definition at line 215 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ab4e2d2ecac165f77be6aeee7f208fb53}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-FUNREADY\_\-SET@{SDIO\_\-FUNREADY\_\-SET}}
+\index{SDIO\_\-FUNREADY\_\-SET@{SDIO\_\-FUNREADY\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-FUNREADY\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-FUNREADY\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-FUNREADY, 1)}}
+\label{a00570_ab4e2d2ecac165f77be6aeee7f208fb53}
+
+
+Definition at line 217 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a69d7e6cc274370f68a9da4dc7fe9f74e}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-IIR\_\-CLEARBIT@{SDIO\_\-IIR\_\-CLEARBIT}}
+\index{SDIO\_\-IIR\_\-CLEARBIT@{SDIO\_\-IIR\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-IIR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-IIR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR) \& ($\sim$(value)))}}
+\label{a00570_a69d7e6cc274370f68a9da4dc7fe9f74e}
+
+
+Definition at line 63 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aca671e0d223bea7ba401d40b692150cf}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-IIR\_\-GET@{SDIO\_\-IIR\_\-GET}}
+\index{SDIO\_\-IIR\_\-GET@{SDIO\_\-IIR\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-IIR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-IIR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR))}}
+\label{a00570_aca671e0d223bea7ba401d40b692150cf}
+
+
+Definition at line 57 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a1bd3a35a67412524fcd8ba3bff5c08a0}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-IIR\_\-SET@{SDIO\_\-IIR\_\-SET}}
+\index{SDIO\_\-IIR\_\-SET@{SDIO\_\-IIR\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-IIR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-IIR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR, (value))}}
+\label{a00570_a1bd3a35a67412524fcd8ba3bff5c08a0}
+
+
+Definition at line 59 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a234124a15e97857969acdb69ef6c35b6}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-IIR\_\-SETBIT@{SDIO\_\-IIR\_\-SETBIT}}
+\index{SDIO\_\-IIR\_\-SETBIT@{SDIO\_\-IIR\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-IIR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-IIR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-IIR) $|$ (value))}}
+\label{a00570_a234124a15e97857969acdb69ef6c35b6}
+
+
+Definition at line 61 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a73cfe3e18d647770bb7d1875a8fe6bc1}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-INTRENREG\_\-CLEARBIT@{SDIO\_\-INTRENREG\_\-CLEARBIT}}
+\index{SDIO\_\-INTRENREG\_\-CLEARBIT@{SDIO\_\-INTRENREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-INTRENREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-INTRENREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG) \& ($\sim$(value)))}}
+\label{a00570_a73cfe3e18d647770bb7d1875a8fe6bc1}
+
+
+Definition at line 412 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a3a4be97664d67629b060f0f17fb21775}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-INTRENREG\_\-GET@{SDIO\_\-INTRENREG\_\-GET}}
+\index{SDIO\_\-INTRENREG\_\-GET@{SDIO\_\-INTRENREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-INTRENREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-INTRENREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG))}}
+\label{a00570_a3a4be97664d67629b060f0f17fb21775}
+
+
+Definition at line 406 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a306ee49e5932820c16f8ba143762d55d}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-INTRENREG\_\-SET@{SDIO\_\-INTRENREG\_\-SET}}
+\index{SDIO\_\-INTRENREG\_\-SET@{SDIO\_\-INTRENREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-INTRENREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-INTRENREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG, (value))}}
+\label{a00570_a306ee49e5932820c16f8ba143762d55d}
+
+
+Definition at line 408 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aa82e4a96775a91d9525d0f64518e9f66}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-INTRENREG\_\-SETBIT@{SDIO\_\-INTRENREG\_\-SETBIT}}
+\index{SDIO\_\-INTRENREG\_\-SETBIT@{SDIO\_\-INTRENREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-INTRENREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-INTRENREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRENREG) $|$ (value))}}
+\label{a00570_aa82e4a96775a91d9525d0f64518e9f66}
+
+
+Definition at line 410 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_af810a4bb736cc242aa9be66165f6d9d7}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-INTRSTATUSREG\_\-CLEARBIT@{SDIO\_\-INTRSTATUSREG\_\-CLEARBIT}}
+\index{SDIO\_\-INTRSTATUSREG\_\-CLEARBIT@{SDIO\_\-INTRSTATUSREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-INTRSTATUSREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-INTRSTATUSREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG) \& ($\sim$(value)))}}
+\label{a00570_af810a4bb736cc242aa9be66165f6d9d7}
+
+
+Definition at line 343 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a210c6d473a0d76355d5608581054f523}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-INTRSTATUSREG\_\-GET@{SDIO\_\-INTRSTATUSREG\_\-GET}}
+\index{SDIO\_\-INTRSTATUSREG\_\-GET@{SDIO\_\-INTRSTATUSREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-INTRSTATUSREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-INTRSTATUSREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG))}}
+\label{a00570_a210c6d473a0d76355d5608581054f523}
+
+
+Definition at line 337 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a702d511898eca228f67bee021b472052}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-INTRSTATUSREG\_\-SET@{SDIO\_\-INTRSTATUSREG\_\-SET}}
+\index{SDIO\_\-INTRSTATUSREG\_\-SET@{SDIO\_\-INTRSTATUSREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-INTRSTATUSREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-INTRSTATUSREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG, (value))}}
+\label{a00570_a702d511898eca228f67bee021b472052}
+
+
+Definition at line 339 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a48dae6de24b4eb379ca33ab4dfe9aaa2}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-INTRSTATUSREG\_\-SETBIT@{SDIO\_\-INTRSTATUSREG\_\-SETBIT}}
+\index{SDIO\_\-INTRSTATUSREG\_\-SETBIT@{SDIO\_\-INTRSTATUSREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-INTRSTATUSREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-INTRSTATUSREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-INTRSTATUSREG) $|$ (value))}}
+\label{a00570_a48dae6de24b4eb379ca33ab4dfe9aaa2}
+
+
+Definition at line 341 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ab92e631b96272e90b0527b6dd174d078}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-IODEVCODE1\_\-GET@{SDIO\_\-IODEVCODE1\_\-GET}}
+\index{SDIO\_\-IODEVCODE1\_\-GET@{SDIO\_\-IODEVCODE1\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-IODEVCODE1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-IODEVCODE1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-IODEVCODE1)}}
+\label{a00570_ab92e631b96272e90b0527b6dd174d078}
+
+
+Definition at line 561 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a83b8c32790582b1e767357e891c363c7}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-IODEVCODE1\_\-SET@{SDIO\_\-IODEVCODE1\_\-SET}}
+\index{SDIO\_\-IODEVCODE1\_\-SET@{SDIO\_\-IODEVCODE1\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-IODEVCODE1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-IODEVCODE1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-IODEVCODE1, (value))}}
+\label{a00570_a83b8c32790582b1e767357e891c363c7}
+
+
+Definition at line 563 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a8befda210246d8abc41ee21c3ebb8a7c}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-LSC\_\-CLEAR@{SDIO\_\-LSC\_\-CLEAR}}
+\index{SDIO\_\-LSC\_\-CLEAR@{SDIO\_\-LSC\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-LSC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-LSC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-LSC, 0)}}
+\label{a00570_a8befda210246d8abc41ee21c3ebb8a7c}
+
+
+Definition at line 307 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a00be070b5c2fe530e501ecee232fde14}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-LSC\_\-GET@{SDIO\_\-LSC\_\-GET}}
+\index{SDIO\_\-LSC\_\-GET@{SDIO\_\-LSC\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-LSC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-LSC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-LSC)}}
+\label{a00570_a00be070b5c2fe530e501ecee232fde14}
+
+
+Definition at line 303 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a7286800cc70914272c0f6d89d022f8ef}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-LSC\_\-SET@{SDIO\_\-LSC\_\-SET}}
+\index{SDIO\_\-LSC\_\-SET@{SDIO\_\-LSC\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-LSC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-LSC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-LSC, 1)}}
+\label{a00570_a7286800cc70914272c0f6d89d022f8ef}
+
+
+Definition at line 305 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a8bec8045787e4dc9774ee17149477bc1}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-MANUALOCLKEN\_\-CLEAR@{SDIO\_\-MANUALOCLKEN\_\-CLEAR}}
+\index{SDIO\_\-MANUALOCLKEN\_\-CLEAR@{SDIO\_\-MANUALOCLKEN\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-MANUALOCLKEN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-MANUALOCLKEN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-MANUALOCLKEN, 0)}}
+\label{a00570_a8bec8045787e4dc9774ee17149477bc1}
+
+
+Definition at line 684 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a9b3fb004705fb62eb0b82700d5d9a11a}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-MANUALOCLKEN\_\-GET@{SDIO\_\-MANUALOCLKEN\_\-GET}}
+\index{SDIO\_\-MANUALOCLKEN\_\-GET@{SDIO\_\-MANUALOCLKEN\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-MANUALOCLKEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-MANUALOCLKEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-MANUALOCLKEN)}}
+\label{a00570_a9b3fb004705fb62eb0b82700d5d9a11a}
+
+
+Definition at line 680 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a06744058030886d34fa2e69fe6e2268f}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-MANUALOCLKEN\_\-SET@{SDIO\_\-MANUALOCLKEN\_\-SET}}
+\index{SDIO\_\-MANUALOCLKEN\_\-SET@{SDIO\_\-MANUALOCLKEN\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-MANUALOCLKEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-MANUALOCLKEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-MANUALOCLKEN, 1)}}
+\label{a00570_a06744058030886d34fa2e69fe6e2268f}
+
+
+Definition at line 682 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aaefdac7f54871989a8ece0005ddbb667}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-OCR\_\-GET@{SDIO\_\-OCR\_\-GET}}
+\index{SDIO\_\-OCR\_\-GET@{SDIO\_\-OCR\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-OCR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-OCR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-OCR)}}
+\label{a00570_aaefdac7f54871989a8ece0005ddbb667}
+
+
+Definition at line 646 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac7eb4e45cec051e682e3ec16e0762d04}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-OCR\_\-SET@{SDIO\_\-OCR\_\-SET}}
+\index{SDIO\_\-OCR\_\-SET@{SDIO\_\-OCR\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-OCR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-OCR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-OCR, (value))}}
+\label{a00570_ac7eb4e45cec051e682e3ec16e0762d04}
+
+
+Definition at line 648 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ad967707628f3e23b4c7546c621d216ef}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-OCRREG\_\-CLEARBIT@{SDIO\_\-OCRREG\_\-CLEARBIT}}
+\index{SDIO\_\-OCRREG\_\-CLEARBIT@{SDIO\_\-OCRREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-OCRREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-OCRREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG) \& ($\sim$(value)))}}
+\label{a00570_ad967707628f3e23b4c7546c621d216ef}
+
+
+Definition at line 639 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a9f479606fcd81de48c0c1ad7571f4410}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-OCRREG\_\-GET@{SDIO\_\-OCRREG\_\-GET}}
+\index{SDIO\_\-OCRREG\_\-GET@{SDIO\_\-OCRREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-OCRREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-OCRREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG))}}
+\label{a00570_a9f479606fcd81de48c0c1ad7571f4410}
+
+
+Definition at line 633 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_af73bfe37cac0bd7306b2ea360920b5bf}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-OCRREG\_\-SET@{SDIO\_\-OCRREG\_\-SET}}
+\index{SDIO\_\-OCRREG\_\-SET@{SDIO\_\-OCRREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-OCRREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-OCRREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG, (value))}}
+\label{a00570_af73bfe37cac0bd7306b2ea360920b5bf}
+
+
+Definition at line 635 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a4c9aeb8ed6efdefc2d4c350a12eed58f}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-OCRREG\_\-SETBIT@{SDIO\_\-OCRREG\_\-SETBIT}}
+\index{SDIO\_\-OCRREG\_\-SETBIT@{SDIO\_\-OCRREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-OCRREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-OCRREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-OCRREG) $|$ (value))}}
+\label{a00570_a4c9aeb8ed6efdefc2d4c350a12eed58f}
+
+
+Definition at line 637 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ab8ac04755aa864fda128e2bde5504d4e}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-PRGMREG\_\-CLEARBIT@{SDIO\_\-PRGMREG\_\-CLEARBIT}}
+\index{SDIO\_\-PRGMREG\_\-CLEARBIT@{SDIO\_\-PRGMREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-PRGMREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-PRGMREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG) \& ($\sim$(value)))}}
+\label{a00570_ab8ac04755aa864fda128e2bde5504d4e}
+
+
+Definition at line 208 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aaf78ff11a13c7eac61ce91c6f010d656}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-PRGMREG\_\-GET@{SDIO\_\-PRGMREG\_\-GET}}
+\index{SDIO\_\-PRGMREG\_\-GET@{SDIO\_\-PRGMREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-PRGMREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-PRGMREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG))}}
+\label{a00570_aaf78ff11a13c7eac61ce91c6f010d656}
+
+
+Definition at line 202 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_adbad3f2b96f6bfec2d832cfa7919586f}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-PRGMREG\_\-SET@{SDIO\_\-PRGMREG\_\-SET}}
+\index{SDIO\_\-PRGMREG\_\-SET@{SDIO\_\-PRGMREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-PRGMREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-PRGMREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG, (value))}}
+\label{a00570_adbad3f2b96f6bfec2d832cfa7919586f}
+
+
+Definition at line 204 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ab6580f90ead1a9fcac3a9ee29ebcf3ee}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-PRGMREG\_\-SETBIT@{SDIO\_\-PRGMREG\_\-SETBIT}}
+\index{SDIO\_\-PRGMREG\_\-SETBIT@{SDIO\_\-PRGMREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-PRGMREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-PRGMREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-PRGMREG) $|$ (value))}}
+\label{a00570_ab6580f90ead1a9fcac3a9ee29ebcf3ee}
+
+
+Definition at line 206 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_adf003fc64a6417fed2a6a6753128dfe6}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDADDREG\_\-CLEARBIT@{SDIO\_\-RDADDREG\_\-CLEARBIT}}
+\index{SDIO\_\-RDADDREG\_\-CLEARBIT@{SDIO\_\-RDADDREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDADDREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDADDREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG) \& ($\sim$(value)))}}
+\label{a00570_adf003fc64a6417fed2a6a6753128dfe6}
+
+
+Definition at line 162 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a388c04163ca51e2d469fe2d43a61299c}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDADDREG\_\-GET@{SDIO\_\-RDADDREG\_\-GET}}
+\index{SDIO\_\-RDADDREG\_\-GET@{SDIO\_\-RDADDREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDADDREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDADDREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG))}}
+\label{a00570_a388c04163ca51e2d469fe2d43a61299c}
+
+
+Definition at line 156 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_adcce97fc9f4e4a32a6dddc8dc92c2072}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDADDREG\_\-SET@{SDIO\_\-RDADDREG\_\-SET}}
+\index{SDIO\_\-RDADDREG\_\-SET@{SDIO\_\-RDADDREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDADDREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDADDREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG, (value))}}
+\label{a00570_adcce97fc9f4e4a32a6dddc8dc92c2072}
+
+
+Definition at line 158 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_af7d7da98e096bb917a7e3efe21087df3}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDADDREG\_\-SETBIT@{SDIO\_\-RDADDREG\_\-SETBIT}}
+\index{SDIO\_\-RDADDREG\_\-SETBIT@{SDIO\_\-RDADDREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDADDREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDADDREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-RDADDREG) $|$ (value))}}
+\label{a00570_af7d7da98e096bb917a7e3efe21087df3}
+
+
+Definition at line 160 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a0dc88fce8bcfbfc8affc446ebb7905e8}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDADDRESS\_\-GET@{SDIO\_\-RDADDRESS\_\-GET}}
+\index{SDIO\_\-RDADDRESS\_\-GET@{SDIO\_\-RDADDRESS\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDADDRESS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDADDRESS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ADDRESS)}}
+\label{a00570_a0dc88fce8bcfbfc8affc446ebb7905e8}
+
+
+Definition at line 169 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aec52f8f18b2cefbf09adf438ccb5f1b2}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDADDRESS\_\-SET@{SDIO\_\-RDADDRESS\_\-SET}}
+\index{SDIO\_\-RDADDRESS\_\-SET@{SDIO\_\-RDADDRESS\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDADDRESS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDADDRESS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ADDRESS, (value))}}
+\label{a00570_aec52f8f18b2cefbf09adf438ccb5f1b2}
+
+
+Definition at line 171 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ada192b1e46458d2ced6e79ed03943077}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDERROR\_\-CLEAR@{SDIO\_\-RDERROR\_\-CLEAR}}
+\index{SDIO\_\-RDERROR\_\-CLEAR@{SDIO\_\-RDERROR\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDERROR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDERROR\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR, 0)}}
+\label{a00570_ada192b1e46458d2ced6e79ed03943077}
+
+
+Definition at line 445 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ada192b1e46458d2ced6e79ed03943077}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDERROR\_\-CLEAR@{SDIO\_\-RDERROR\_\-CLEAR}}
+\index{SDIO\_\-RDERROR\_\-CLEAR@{SDIO\_\-RDERROR\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDERROR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDERROR\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR, 0)}}
+\label{a00570_ada192b1e46458d2ced6e79ed03943077}
+
+
+Definition at line 445 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac99a1c45f8740dfb1d11d0152ac9862d}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDERROR\_\-GET@{SDIO\_\-RDERROR\_\-GET}}
+\index{SDIO\_\-RDERROR\_\-GET@{SDIO\_\-RDERROR\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDERROR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDERROR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR)}}
+\label{a00570_ac99a1c45f8740dfb1d11d0152ac9862d}
+
+
+Definition at line 441 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac99a1c45f8740dfb1d11d0152ac9862d}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDERROR\_\-GET@{SDIO\_\-RDERROR\_\-GET}}
+\index{SDIO\_\-RDERROR\_\-GET@{SDIO\_\-RDERROR\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDERROR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDERROR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR)}}
+\label{a00570_ac99a1c45f8740dfb1d11d0152ac9862d}
+
+
+Definition at line 441 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_adffbf7b56d5c6f16581de468f48eec4d}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDERROR\_\-SET@{SDIO\_\-RDERROR\_\-SET}}
+\index{SDIO\_\-RDERROR\_\-SET@{SDIO\_\-RDERROR\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDERROR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDERROR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR, 1)}}
+\label{a00570_adffbf7b56d5c6f16581de468f48eec4d}
+
+
+Definition at line 443 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_adffbf7b56d5c6f16581de468f48eec4d}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDERROR\_\-SET@{SDIO\_\-RDERROR\_\-SET}}
+\index{SDIO\_\-RDERROR\_\-SET@{SDIO\_\-RDERROR\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDERROR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDERROR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDERROR, 1)}}
+\label{a00570_adffbf7b56d5c6f16581de468f48eec4d}
+
+
+Definition at line 443 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac985664f3eb0711a351d2a1a2788f115}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDTOVER\_\-CLEAR@{SDIO\_\-RDTOVER\_\-CLEAR}}
+\index{SDIO\_\-RDTOVER\_\-CLEAR@{SDIO\_\-RDTOVER\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDTOVER\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDTOVER\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER, 0)}}
+\label{a00570_ac985664f3eb0711a351d2a1a2788f115}
+
+
+Definition at line 434 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac985664f3eb0711a351d2a1a2788f115}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDTOVER\_\-CLEAR@{SDIO\_\-RDTOVER\_\-CLEAR}}
+\index{SDIO\_\-RDTOVER\_\-CLEAR@{SDIO\_\-RDTOVER\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDTOVER\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDTOVER\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER, 0)}}
+\label{a00570_ac985664f3eb0711a351d2a1a2788f115}
+
+
+Definition at line 434 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a7b1975ad6def0257234d3fc1cdc3ef42}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDTOVER\_\-GET@{SDIO\_\-RDTOVER\_\-GET}}
+\index{SDIO\_\-RDTOVER\_\-GET@{SDIO\_\-RDTOVER\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDTOVER\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDTOVER\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER)}}
+\label{a00570_a7b1975ad6def0257234d3fc1cdc3ef42}
+
+
+Definition at line 430 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a7b1975ad6def0257234d3fc1cdc3ef42}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDTOVER\_\-GET@{SDIO\_\-RDTOVER\_\-GET}}
+\index{SDIO\_\-RDTOVER\_\-GET@{SDIO\_\-RDTOVER\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDTOVER\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDTOVER\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER)}}
+\label{a00570_a7b1975ad6def0257234d3fc1cdc3ef42}
+
+
+Definition at line 430 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a0716bd507f59f0390acd2401f363386f}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDTOVER\_\-SET@{SDIO\_\-RDTOVER\_\-SET}}
+\index{SDIO\_\-RDTOVER\_\-SET@{SDIO\_\-RDTOVER\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDTOVER\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDTOVER\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER, 1)}}
+\label{a00570_a0716bd507f59f0390acd2401f363386f}
+
+
+Definition at line 432 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a0716bd507f59f0390acd2401f363386f}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RDTOVER\_\-SET@{SDIO\_\-RDTOVER\_\-SET}}
+\index{SDIO\_\-RDTOVER\_\-SET@{SDIO\_\-RDTOVER\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RDTOVER\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RDTOVER\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RDTOVER, 1)}}
+\label{a00570_a0716bd507f59f0390acd2401f363386f}
+
+
+Definition at line 432 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_abca1e1e5bde5590ded832fa726a70930}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RFU\_\-GET@{SDIO\_\-RFU\_\-GET}}
+\index{SDIO\_\-RFU\_\-GET@{SDIO\_\-RFU\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RFU\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RFU\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RFU)}}
+\label{a00570_abca1e1e5bde5590ded832fa726a70930}
+
+
+Definition at line 623 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac8475d9a298acbf0faacf16bbb0e6386}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RFU\_\-SET@{SDIO\_\-RFU\_\-SET}}
+\index{SDIO\_\-RFU\_\-SET@{SDIO\_\-RFU\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RFU\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RFU\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RFU, (value))}}
+\label{a00570_ac8475d9a298acbf0faacf16bbb0e6386}
+
+
+Definition at line 625 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a4fe41b8a6f1e7dada20edb2e4b89503c}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTFUN1INt\_\-CLEAR@{SDIO\_\-RSTFUN1INt\_\-CLEAR}}
+\index{SDIO\_\-RSTFUN1INt\_\-CLEAR@{SDIO\_\-RSTFUN1INt\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTFUN1INt\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTFUN1INt\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt, 0)}}
+\label{a00570_a4fe41b8a6f1e7dada20edb2e4b89503c}
+
+
+Definition at line 467 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a4fe41b8a6f1e7dada20edb2e4b89503c}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTFUN1INt\_\-CLEAR@{SDIO\_\-RSTFUN1INt\_\-CLEAR}}
+\index{SDIO\_\-RSTFUN1INt\_\-CLEAR@{SDIO\_\-RSTFUN1INt\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTFUN1INt\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTFUN1INt\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt, 0)}}
+\label{a00570_a4fe41b8a6f1e7dada20edb2e4b89503c}
+
+
+Definition at line 467 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a22588cc0a45ea32a57de15b92f891253}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTFUN1INt\_\-GET@{SDIO\_\-RSTFUN1INt\_\-GET}}
+\index{SDIO\_\-RSTFUN1INt\_\-GET@{SDIO\_\-RSTFUN1INt\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTFUN1INt\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTFUN1INt\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt)}}
+\label{a00570_a22588cc0a45ea32a57de15b92f891253}
+
+
+Definition at line 463 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a22588cc0a45ea32a57de15b92f891253}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTFUN1INt\_\-GET@{SDIO\_\-RSTFUN1INt\_\-GET}}
+\index{SDIO\_\-RSTFUN1INt\_\-GET@{SDIO\_\-RSTFUN1INt\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTFUN1INt\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTFUN1INt\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt)}}
+\label{a00570_a22588cc0a45ea32a57de15b92f891253}
+
+
+Definition at line 463 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a2b953d731a4d97ab74500f65b496ccc9}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTFUN1INt\_\-SET@{SDIO\_\-RSTFUN1INt\_\-SET}}
+\index{SDIO\_\-RSTFUN1INt\_\-SET@{SDIO\_\-RSTFUN1INt\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTFUN1INt\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTFUN1INt\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt, 1)}}
+\label{a00570_a2b953d731a4d97ab74500f65b496ccc9}
+
+
+Definition at line 465 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a2b953d731a4d97ab74500f65b496ccc9}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTFUN1INt\_\-SET@{SDIO\_\-RSTFUN1INt\_\-SET}}
+\index{SDIO\_\-RSTFUN1INt\_\-SET@{SDIO\_\-RSTFUN1INt\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTFUN1INt\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTFUN1INt\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTFUN1INt, 1)}}
+\label{a00570_a2b953d731a4d97ab74500f65b496ccc9}
+
+
+Definition at line 465 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a2a33f404f8d7e62bc44baba30aa481bc}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTSOFTINT\_\-CLEAR@{SDIO\_\-RSTSOFTINT\_\-CLEAR}}
+\index{SDIO\_\-RSTSOFTINT\_\-CLEAR@{SDIO\_\-RSTSOFTINT\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTSOFTINT\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTSOFTINT\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT, 0)}}
+\label{a00570_a2a33f404f8d7e62bc44baba30aa481bc}
+
+
+Definition at line 456 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a2a33f404f8d7e62bc44baba30aa481bc}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTSOFTINT\_\-CLEAR@{SDIO\_\-RSTSOFTINT\_\-CLEAR}}
+\index{SDIO\_\-RSTSOFTINT\_\-CLEAR@{SDIO\_\-RSTSOFTINT\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTSOFTINT\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTSOFTINT\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT, 0)}}
+\label{a00570_a2a33f404f8d7e62bc44baba30aa481bc}
+
+
+Definition at line 456 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a2267b35d8a8d6ec107e805bb2078ad00}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTSOFTINT\_\-GET@{SDIO\_\-RSTSOFTINT\_\-GET}}
+\index{SDIO\_\-RSTSOFTINT\_\-GET@{SDIO\_\-RSTSOFTINT\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTSOFTINT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTSOFTINT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT)}}
+\label{a00570_a2267b35d8a8d6ec107e805bb2078ad00}
+
+
+Definition at line 452 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a2267b35d8a8d6ec107e805bb2078ad00}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTSOFTINT\_\-GET@{SDIO\_\-RSTSOFTINT\_\-GET}}
+\index{SDIO\_\-RSTSOFTINT\_\-GET@{SDIO\_\-RSTSOFTINT\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTSOFTINT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTSOFTINT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT)}}
+\label{a00570_a2267b35d8a8d6ec107e805bb2078ad00}
+
+
+Definition at line 452 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ab8e19c829ec6fe7b6f43466c97b2205e}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTSOFTINT\_\-SET@{SDIO\_\-RSTSOFTINT\_\-SET}}
+\index{SDIO\_\-RSTSOFTINT\_\-SET@{SDIO\_\-RSTSOFTINT\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTSOFTINT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTSOFTINT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT, 1)}}
+\label{a00570_ab8e19c829ec6fe7b6f43466c97b2205e}
+
+
+Definition at line 454 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ab8e19c829ec6fe7b6f43466c97b2205e}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-RSTSOFTINT\_\-SET@{SDIO\_\-RSTSOFTINT\_\-SET}}
+\index{SDIO\_\-RSTSOFTINT\_\-SET@{SDIO\_\-RSTSOFTINT\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-RSTSOFTINT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-RSTSOFTINT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-RSTSOFTINT, 1)}}
+\label{a00570_ab8e19c829ec6fe7b6f43466c97b2205e}
+
+
+Definition at line 454 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac097ba6e3a0978c18dce9ee233750fb1}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-S4MI\_\-CLEAR@{SDIO\_\-S4MI\_\-CLEAR}}
+\index{SDIO\_\-S4MI\_\-CLEAR@{SDIO\_\-S4MI\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-S4MI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-S4MI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-S4MI, 0)}}
+\label{a00570_ac097ba6e3a0978c18dce9ee233750fb1}
+
+
+Definition at line 296 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a3a61744ec17969103bdaf667f4a81db3}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-S4MI\_\-GET@{SDIO\_\-S4MI\_\-GET}}
+\index{SDIO\_\-S4MI\_\-GET@{SDIO\_\-S4MI\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-S4MI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-S4MI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-S4MI)}}
+\label{a00570_a3a61744ec17969103bdaf667f4a81db3}
+
+
+Definition at line 292 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a3db55190ad0832494c0f3070fc2114e7}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-S4MI\_\-SET@{SDIO\_\-S4MI\_\-SET}}
+\index{SDIO\_\-S4MI\_\-SET@{SDIO\_\-S4MI\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-S4MI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-S4MI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-S4MI, 1)}}
+\label{a00570_a3db55190ad0832494c0f3070fc2114e7}
+
+
+Definition at line 294 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a7d995ae9fd12cdb09859606bab260710}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SBS\_\-CLEAR@{SDIO\_\-SBS\_\-CLEAR}}
+\index{SDIO\_\-SBS\_\-CLEAR@{SDIO\_\-SBS\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SBS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SBS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SBS, 0)}}
+\label{a00570_a7d995ae9fd12cdb09859606bab260710}
+
+
+Definition at line 285 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a8c72e541837b551c067a42989d61d56f}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SBS\_\-GET@{SDIO\_\-SBS\_\-GET}}
+\index{SDIO\_\-SBS\_\-GET@{SDIO\_\-SBS\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SBS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SBS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SBS)}}
+\label{a00570_a8c72e541837b551c067a42989d61d56f}
+
+
+Definition at line 281 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a9d2117ef27f43a12b27e1e3cc9b3f006}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SBS\_\-SET@{SDIO\_\-SBS\_\-SET}}
+\index{SDIO\_\-SBS\_\-SET@{SDIO\_\-SBS\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SBS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SBS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SBS, 1)}}
+\label{a00570_a9d2117ef27f43a12b27e1e3cc9b3f006}
+
+
+Definition at line 283 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ad23580810f3d380982b07a4f52775b31}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SCS1\_\-CLEAR@{SDIO\_\-SCS1\_\-CLEAR}}
+\index{SDIO\_\-SCS1\_\-CLEAR@{SDIO\_\-SCS1\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SCS1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SCS1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SCS1, 0)}}
+\label{a00570_ad23580810f3d380982b07a4f52775b31}
+
+
+Definition at line 241 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a8cb1c60db0be24c99d39bfe8b1bb1f87}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SCS1\_\-GET@{SDIO\_\-SCS1\_\-GET}}
+\index{SDIO\_\-SCS1\_\-GET@{SDIO\_\-SCS1\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SCS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SCS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SCS1)}}
+\label{a00570_a8cb1c60db0be24c99d39bfe8b1bb1f87}
+
+
+Definition at line 237 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a642b439f9118fad23b5c61dbbd45ac77}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SCS1\_\-SET@{SDIO\_\-SCS1\_\-SET}}
+\index{SDIO\_\-SCS1\_\-SET@{SDIO\_\-SCS1\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SCS1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SCS1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SCS1, 1)}}
+\label{a00570_a642b439f9118fad23b5c61dbbd45ac77}
+
+
+Definition at line 239 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a13f478bd5decc7081a54a07245e09d2e}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDC\_\-CLEAR@{SDIO\_\-SDC\_\-CLEAR}}
+\index{SDIO\_\-SDC\_\-CLEAR@{SDIO\_\-SDC\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDC, 0)}}
+\label{a00570_a13f478bd5decc7081a54a07245e09d2e}
+
+
+Definition at line 252 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a090c300bbe0221653c83b6735b319282}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDC\_\-GET@{SDIO\_\-SDC\_\-GET}}
+\index{SDIO\_\-SDC\_\-GET@{SDIO\_\-SDC\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDC)}}
+\label{a00570_a090c300bbe0221653c83b6735b319282}
+
+
+Definition at line 248 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aa6d202e168b767603231026f9e2fa19e}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDC\_\-SET@{SDIO\_\-SDC\_\-SET}}
+\index{SDIO\_\-SDC\_\-SET@{SDIO\_\-SDC\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDC, 1)}}
+\label{a00570_aa6d202e168b767603231026f9e2fa19e}
+
+
+Definition at line 250 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a54ef33e642ab876614eaa1d9e3d17897}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDIOREV\_\-GET@{SDIO\_\-SDIOREV\_\-GET}}
+\index{SDIO\_\-SDIOREV\_\-GET@{SDIO\_\-SDIOREV\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDIOREV\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDIOREV\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDIOREV)}}
+\label{a00570_a54ef33e642ab876614eaa1d9e3d17897}
+
+
+Definition at line 543 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a06ac380b28af52b65b70b98e754094c9}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDIOREV\_\-SET@{SDIO\_\-SDIOREV\_\-SET}}
+\index{SDIO\_\-SDIOREV\_\-SET@{SDIO\_\-SDIOREV\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDIOREV\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDIOREV\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDIOREV, (value))}}
+\label{a00570_a06ac380b28af52b65b70b98e754094c9}
+
+
+Definition at line 545 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a29a48a00db03e3c21bc44f8c49690d5b}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDIOTXCOUNTREG\_\-CLEARBIT@{SDIO\_\-SDIOTXCOUNTREG\_\-CLEARBIT}}
+\index{SDIO\_\-SDIOTXCOUNTREG\_\-CLEARBIT@{SDIO\_\-SDIOTXCOUNTREG\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDIOTXCOUNTREG\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDIOTXCOUNTREG\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG) \& ($\sim$(value)))}}
+\label{a00570_a29a48a00db03e3c21bc44f8c49690d5b}
+
+
+Definition at line 504 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a8ef644baa3250cc09defadc84e114f56}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDIOTXCOUNTREG\_\-GET@{SDIO\_\-SDIOTXCOUNTREG\_\-GET}}
+\index{SDIO\_\-SDIOTXCOUNTREG\_\-GET@{SDIO\_\-SDIOTXCOUNTREG\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDIOTXCOUNTREG\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDIOTXCOUNTREG\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG))}}
+\label{a00570_a8ef644baa3250cc09defadc84e114f56}
+
+
+Definition at line 498 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a4a5954c6c50bcab0a93d25bf4e60a177}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDIOTXCOUNTREG\_\-SET@{SDIO\_\-SDIOTXCOUNTREG\_\-SET}}
+\index{SDIO\_\-SDIOTXCOUNTREG\_\-SET@{SDIO\_\-SDIOTXCOUNTREG\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDIOTXCOUNTREG\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDIOTXCOUNTREG\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG, (value))}}
+\label{a00570_a4a5954c6c50bcab0a93d25bf4e60a177}
+
+
+Definition at line 500 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a890bc54f282e3ec5c00a06a5e0bd061b}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDIOTXCOUNTREG\_\-SETBIT@{SDIO\_\-SDIOTXCOUNTREG\_\-SETBIT}}
+\index{SDIO\_\-SDIOTXCOUNTREG\_\-SETBIT@{SDIO\_\-SDIOTXCOUNTREG\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDIOTXCOUNTREG\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDIOTXCOUNTREG\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-SDIOTXCOUNTREG) $|$ (value))}}
+\label{a00570_a890bc54f282e3ec5c00a06a5e0bd061b}
+
+
+Definition at line 502 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a1221d80f186e302f719daaa6f808c258}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDREV\_\-GET@{SDIO\_\-SDREV\_\-GET}}
+\index{SDIO\_\-SDREV\_\-GET@{SDIO\_\-SDREV\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDREV\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDREV\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDREV)}}
+\label{a00570_a1221d80f186e302f719daaa6f808c258}
+
+
+Definition at line 552 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a811e1a0d115653f53d2f31a6c9ad083c}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDREV\_\-SET@{SDIO\_\-SDREV\_\-SET}}
+\index{SDIO\_\-SDREV\_\-SET@{SDIO\_\-SDREV\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDREV\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDREV\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDREV, (value))}}
+\label{a00570_a811e1a0d115653f53d2f31a6c9ad083c}
+
+
+Definition at line 554 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac6556ca78f61c753ba70c729eaf13ae4}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDTXCOUNT\_\-GET@{SDIO\_\-SDTXCOUNT\_\-GET}}
+\index{SDIO\_\-SDTXCOUNT\_\-GET@{SDIO\_\-SDTXCOUNT\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDTXCOUNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDTXCOUNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDTXCOUNT)}}
+\label{a00570_ac6556ca78f61c753ba70c729eaf13ae4}
+
+
+Definition at line 511 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a9274b6b15e195aa6517df7ac05d51158}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SDTXCOUNT\_\-SET@{SDIO\_\-SDTXCOUNT\_\-SET}}
+\index{SDIO\_\-SDTXCOUNT\_\-SET@{SDIO\_\-SDTXCOUNT\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SDTXCOUNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SDTXCOUNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SDTXCOUNT, (value))}}
+\label{a00570_a9274b6b15e195aa6517df7ac05d51158}
+
+
+Definition at line 513 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a9febe39a5f331ae33939e5e79b6d3ce6}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SHS\_\-CLEAR@{SDIO\_\-SHS\_\-CLEAR}}
+\index{SDIO\_\-SHS\_\-CLEAR@{SDIO\_\-SHS\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SHS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SHS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SHS, 0)}}
+\label{a00570_a9febe39a5f331ae33939e5e79b6d3ce6}
+
+
+Definition at line 605 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_af6ad11b27716a01f9a38cb386f08e916}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SHS\_\-GET@{SDIO\_\-SHS\_\-GET}}
+\index{SDIO\_\-SHS\_\-GET@{SDIO\_\-SHS\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SHS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SHS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SHS)}}
+\label{a00570_af6ad11b27716a01f9a38cb386f08e916}
+
+
+Definition at line 601 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac43eadcb8c484ab4fc01ead857d4d130}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SHS\_\-SET@{SDIO\_\-SHS\_\-SET}}
+\index{SDIO\_\-SHS\_\-SET@{SDIO\_\-SHS\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SHS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SHS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SHS, 1)}}
+\label{a00570_ac43eadcb8c484ab4fc01ead857d4d130}
+
+
+Definition at line 603 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_af69073e0025d79057faf94ff04bb88da}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SIZE\_\-GET@{SDIO\_\-SIZE\_\-GET}}
+\index{SDIO\_\-SIZE\_\-GET@{SDIO\_\-SIZE\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SIZE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SIZE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SIZE)}}
+\label{a00570_af69073e0025d79057faf94ff04bb88da}
+
+
+Definition at line 705 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a4b08cc98dc8da4263265252dde0981db}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SIZE\_\-SET@{SDIO\_\-SIZE\_\-SET}}
+\index{SDIO\_\-SIZE\_\-SET@{SDIO\_\-SIZE\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SIZE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SIZE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SIZE, (value))}}
+\label{a00570_a4b08cc98dc8da4263265252dde0981db}
+
+
+Definition at line 707 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_af699b2d05defdcb318f79497001656b5}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SMB\_\-CLEAR@{SDIO\_\-SMB\_\-CLEAR}}
+\index{SDIO\_\-SMB\_\-CLEAR@{SDIO\_\-SMB\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SMB\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SMB\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMB, 0)}}
+\label{a00570_af699b2d05defdcb318f79497001656b5}
+
+
+Definition at line 263 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a4f8a93b15ac201e674d110ec716b3090}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SMB\_\-GET@{SDIO\_\-SMB\_\-GET}}
+\index{SDIO\_\-SMB\_\-GET@{SDIO\_\-SMB\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SMB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SMB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMB)}}
+\label{a00570_a4f8a93b15ac201e674d110ec716b3090}
+
+
+Definition at line 259 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a927903bf4f8e8dedaa261ba4cb218841}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SMB\_\-SET@{SDIO\_\-SMB\_\-SET}}
+\index{SDIO\_\-SMB\_\-SET@{SDIO\_\-SMB\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SMB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SMB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMB, 1)}}
+\label{a00570_a927903bf4f8e8dedaa261ba4cb218841}
+
+
+Definition at line 261 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a977bcbfba55ce6d0919ffe3d813213c9}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SMPC\_\-CLEAR@{SDIO\_\-SMPC\_\-CLEAR}}
+\index{SDIO\_\-SMPC\_\-CLEAR@{SDIO\_\-SMPC\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SMPC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SMPC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMPC, 0)}}
+\label{a00570_a977bcbfba55ce6d0919ffe3d813213c9}
+
+
+Definition at line 616 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a092d7c46d49376417a8b49cbab6bc60b}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SMPC\_\-GET@{SDIO\_\-SMPC\_\-GET}}
+\index{SDIO\_\-SMPC\_\-GET@{SDIO\_\-SMPC\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SMPC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SMPC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMPC)}}
+\label{a00570_a092d7c46d49376417a8b49cbab6bc60b}
+
+
+Definition at line 612 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a817bc979aac0abfd45a40c4bfab0754b}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SMPC\_\-SET@{SDIO\_\-SMPC\_\-SET}}
+\index{SDIO\_\-SMPC\_\-SET@{SDIO\_\-SMPC\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SMPC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SMPC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SMPC, 1)}}
+\label{a00570_a817bc979aac0abfd45a40c4bfab0754b}
+
+
+Definition at line 614 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a778aea611b05aa7889303c123fec4e2a}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SPS\_\-CLEAR@{SDIO\_\-SPS\_\-CLEAR}}
+\index{SDIO\_\-SPS\_\-CLEAR@{SDIO\_\-SPS\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SPS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SPS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SPS, 0)}}
+\label{a00570_a778aea611b05aa7889303c123fec4e2a}
+
+
+Definition at line 594 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a77616cf7fe307b0abe8963844b1465b2}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SPS\_\-GET@{SDIO\_\-SPS\_\-GET}}
+\index{SDIO\_\-SPS\_\-GET@{SDIO\_\-SPS\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SPS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SPS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SPS)}}
+\label{a00570_a77616cf7fe307b0abe8963844b1465b2}
+
+
+Definition at line 590 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ab367c2a8c3b432d5328cde17f70cd453}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SPS\_\-SET@{SDIO\_\-SPS\_\-SET}}
+\index{SDIO\_\-SPS\_\-SET@{SDIO\_\-SPS\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SPS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SPS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SPS, 1)}}
+\label{a00570_ab367c2a8c3b432d5328cde17f70cd453}
+
+
+Definition at line 592 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a209ae6d34b6752a059abadfbb9c2cf46}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SRW\_\-CLEAR@{SDIO\_\-SRW\_\-CLEAR}}
+\index{SDIO\_\-SRW\_\-CLEAR@{SDIO\_\-SRW\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SRW\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SRW\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SRW, 0)}}
+\label{a00570_a209ae6d34b6752a059abadfbb9c2cf46}
+
+
+Definition at line 274 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_af8fc9dd094e094a7000036c3761b12e5}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SRW\_\-GET@{SDIO\_\-SRW\_\-GET}}
+\index{SDIO\_\-SRW\_\-GET@{SDIO\_\-SRW\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SRW\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SRW\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SRW)}}
+\label{a00570_af8fc9dd094e094a7000036c3761b12e5}
+
+
+Definition at line 270 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a70cc4f32dfdd80fbf7febbae1f7cff80}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-SRW\_\-SET@{SDIO\_\-SRW\_\-SET}}
+\index{SDIO\_\-SRW\_\-SET@{SDIO\_\-SRW\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-SRW\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-SRW\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-SRW, 1)}}
+\label{a00570_a70cc4f32dfdd80fbf7febbae1f7cff80}
+
+
+Definition at line 272 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a0c24afeb0f19fc3c61652e893b910a04}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-VALID\_\-CLEAR@{SDIO\_\-VALID\_\-CLEAR}}
+\index{SDIO\_\-VALID\_\-CLEAR@{SDIO\_\-VALID\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-VALID\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-VALID\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-VALID, 0)}}
+\label{a00570_a0c24afeb0f19fc3c61652e893b910a04}
+
+
+Definition at line 732 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aff903766289be1cee7eee8cc41c817b3}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-VALID\_\-GET@{SDIO\_\-VALID\_\-GET}}
+\index{SDIO\_\-VALID\_\-GET@{SDIO\_\-VALID\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-VALID\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-VALID\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-VALID)}}
+\label{a00570_aff903766289be1cee7eee8cc41c817b3}
+
+
+Definition at line 728 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a512cfd843577b1502a1e8ccaea302bd8}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-VALID\_\-SET@{SDIO\_\-VALID\_\-SET}}
+\index{SDIO\_\-VALID\_\-SET@{SDIO\_\-VALID\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-VALID\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-VALID\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-VALID, 1)}}
+\label{a00570_a512cfd843577b1502a1e8ccaea302bd8}
+
+
+Definition at line 730 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a3d0e22367b82c26863f76369782e9552}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRADDREGL\_\-CLEARBIT@{SDIO\_\-WRADDREGL\_\-CLEARBIT}}
+\index{SDIO\_\-WRADDREGL\_\-CLEARBIT@{SDIO\_\-WRADDREGL\_\-CLEARBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRADDREGL\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRADDREGL\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL) \& ($\sim$(value)))}}
+\label{a00570_a3d0e22367b82c26863f76369782e9552}
+
+
+Definition at line 185 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aedc9c84a822a595d5f1c6f4facb72139}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRADDREGL\_\-GET@{SDIO\_\-WRADDREGL\_\-GET}}
+\index{SDIO\_\-WRADDREGL\_\-GET@{SDIO\_\-WRADDREGL\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRADDREGL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRADDREGL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL))}}
+\label{a00570_aedc9c84a822a595d5f1c6f4facb72139}
+
+
+Definition at line 179 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a112da1534feace192a8d143dd135a2c9}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRADDREGL\_\-SET@{SDIO\_\-WRADDREGL\_\-SET}}
+\index{SDIO\_\-WRADDREGL\_\-SET@{SDIO\_\-WRADDREGL\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRADDREGL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRADDREGL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL, (value))}}
+\label{a00570_a112da1534feace192a8d143dd135a2c9}
+
+
+Definition at line 181 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_ac7098ea41b526e2998bcd12e1519453e}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRADDREGL\_\-SETBIT@{SDIO\_\-WRADDREGL\_\-SETBIT}}
+\index{SDIO\_\-WRADDREGL\_\-SETBIT@{SDIO\_\-WRADDREGL\_\-SETBIT}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRADDREGL\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRADDREGL\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDIO\_\-WRADDREGL) $|$ (value))}}
+\label{a00570_ac7098ea41b526e2998bcd12e1519453e}
+
+
+Definition at line 183 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_afbfa39c4a662c6b3e5594fdeb71a1651}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRADDRESS\_\-GET@{SDIO\_\-WRADDRESS\_\-GET}}
+\index{SDIO\_\-WRADDRESS\_\-GET@{SDIO\_\-WRADDRESS\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRADDRESS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRADDRESS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ADDRESS)}}
+\label{a00570_afbfa39c4a662c6b3e5594fdeb71a1651}
+
+
+Definition at line 192 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a6703bc8e0000dcd6eafd09aa15cc8a64}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRADDRESS\_\-SET@{SDIO\_\-WRADDRESS\_\-SET}}
+\index{SDIO\_\-WRADDRESS\_\-SET@{SDIO\_\-WRADDRESS\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRADDRESS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRADDRESS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-ADDRESS, (value))}}
+\label{a00570_a6703bc8e0000dcd6eafd09aa15cc8a64}
+
+
+Definition at line 194 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a853a64ebc95c78cf7870fd7a6659b68a}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRTOVER\_\-CLEAR@{SDIO\_\-WRTOVER\_\-CLEAR}}
+\index{SDIO\_\-WRTOVER\_\-CLEAR@{SDIO\_\-WRTOVER\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRTOVER\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRTOVER\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER, 0)}}
+\label{a00570_a853a64ebc95c78cf7870fd7a6659b68a}
+
+
+Definition at line 423 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a853a64ebc95c78cf7870fd7a6659b68a}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRTOVER\_\-CLEAR@{SDIO\_\-WRTOVER\_\-CLEAR}}
+\index{SDIO\_\-WRTOVER\_\-CLEAR@{SDIO\_\-WRTOVER\_\-CLEAR}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRTOVER\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRTOVER\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER, 0)}}
+\label{a00570_a853a64ebc95c78cf7870fd7a6659b68a}
+
+
+Definition at line 423 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a167f655309af12e2ae264c0f49882837}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRTOVER\_\-GET@{SDIO\_\-WRTOVER\_\-GET}}
+\index{SDIO\_\-WRTOVER\_\-GET@{SDIO\_\-WRTOVER\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRTOVER\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRTOVER\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER)}}
+\label{a00570_a167f655309af12e2ae264c0f49882837}
+
+
+Definition at line 419 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_a167f655309af12e2ae264c0f49882837}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRTOVER\_\-GET@{SDIO\_\-WRTOVER\_\-GET}}
+\index{SDIO\_\-WRTOVER\_\-GET@{SDIO\_\-WRTOVER\_\-GET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRTOVER\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRTOVER\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER)}}
+\label{a00570_a167f655309af12e2ae264c0f49882837}
+
+
+Definition at line 419 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aa6ab06ee5b6b9c6f9adaf76c95f8a805}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRTOVER\_\-SET@{SDIO\_\-WRTOVER\_\-SET}}
+\index{SDIO\_\-WRTOVER\_\-SET@{SDIO\_\-WRTOVER\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRTOVER\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRTOVER\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER, 1)}}
+\label{a00570_aa6ab06ee5b6b9c6f9adaf76c95f8a805}
+
+
+Definition at line 421 of file gsn\_\-reg\_\-sdio\_\-op.h.
+
+\hypertarget{a00570_aa6ab06ee5b6b9c6f9adaf76c95f8a805}{
+\index{gsn\_\-reg\_\-sdio\_\-op.h@{gsn\_\-reg\_\-sdio\_\-op.h}!SDIO\_\-WRTOVER\_\-SET@{SDIO\_\-WRTOVER\_\-SET}}
+\index{SDIO\_\-WRTOVER\_\-SET@{SDIO\_\-WRTOVER\_\-SET}!gsn_reg_sdio_op.h@{gsn\_\-reg\_\-sdio\_\-op.h}}
+\subsubsection[{SDIO\_\-WRTOVER\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-WRTOVER\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDIO\_\-WRTOVER, 1)}}
+\label{a00570_aa6ab06ee5b6b9c6f9adaf76c95f8a805}
+
+
+Definition at line 421 of file gsn\_\-reg\_\-sdio\_\-op.h.
+

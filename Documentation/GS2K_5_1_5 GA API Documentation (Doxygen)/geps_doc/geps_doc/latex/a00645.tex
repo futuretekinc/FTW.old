@@ -1,0 +1,1632 @@
+\hypertarget{a00645}{
+\section{GSN DMA API}
+\label{a00645}\index{GSN DMA API@{GSN DMA API}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00051}{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL}
+\begin{DoxyCompactList}\small\item\em GSN DMA ping pong parameters. This enum defines DMA ping pong handling structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00050}{GSN\_\-DMA\_\-CONTROL}
+\begin{DoxyCompactList}\small\item\em GSN DMA control data Structure. This structure defines DMA control data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00049}{GSN\_\-DMA}
+\begin{DoxyCompactList}\small\item\em GSN DMA Structure. This structure defines DMA handling parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{a00053}{GSN\_\-DMACONFIG}
+\begin{DoxyCompactList}\small\item\em GSN DMA Structure. This structure defines DMA base register. \end{DoxyCompactList}\item 
+union \hyperlink{a00052}{GSN\_\-DMACHANNEL\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em GSN DMA Channel Configuration union. This Union defines DMA channel configuration values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00645_ga6b06d19717ade6dfd815a84e83d2388c}{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT} \hyperlink{a00645_gab17cf1a2935d52f5490128aeddd1eb07}{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA available peripherals. This enum defines DMA available peripherals. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_ga5ae8eaac9f901eb2607d04c46b8141e9}{GSN\_\-DMA\_\-SRC\_\-SIZE} \hyperlink{a00645_ga30dffcfe8e6fc270f93048d90cd440ec}{GSN\_\-DMA\_\-SRC\_\-SIZE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA source data sizes. This enum defines available source data sizes of DMA . \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_ga592093c11bfd36ebbe08e1446e26f37a}{GSN\_\-DMA\_\-SRC\_\-INC} \hyperlink{a00645_gadfad5571e188cca605e051802c24ada0}{GSN\_\-DMA\_\-SRC\_\-INC\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA source data increment. This enum defines available DMA source data increment values . \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_gab66304fcaa89e7d7dd7d514eb086c56c}{GSN\_\-DMA\_\-DEST\_\-SIZE} \hyperlink{a00645_ga911fde9b2a20ed7759a9d2a8849e34f4}{GSN\_\-DMA\_\-DEST\_\-SIZE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA destination data sizes. This enum defines available Destination data sizes of DMA . \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_gaeec51ec6ddb024d9e8bb0c011cb167ef}{GSN\_\-DMA\_\-DEST\_\-INC} \hyperlink{a00645_gad729aa817bfd135b589e7c5d589c6c24}{GSN\_\-DMA\_\-DEST\_\-INC\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA destination data increment. This enum defines available DMA destination data increment values . \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_ga0dab047350d5c343038b0c017077dab7}{GSN\_\-DMA\_\-R\_\-POWER} \hyperlink{a00645_gadf8a8e2066de9043a495c7764612c35f}{GSN\_\-DMA\_\-R\_\-POWER\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA arbitration values. This enum defines Available arbitration values of Dma. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_ga05b9b2e87ca35c2d0564ceca307d349c}{GSN\_\-DMA\_\-CYCLE\_\-TYPE} \hyperlink{a00645_gab5fced5a7e633077a493c6353edef6de}{GSN\_\-DMA\_\-CYCLE\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA cycle Types. This enum defines DMA cycle types. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00051}{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL} \hyperlink{a00645_gae146d7793ab9cfe1a37249ffc98ccf5d}{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA ping pong parameters. This enum defines DMA ping pong handling structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00050}{GSN\_\-DMA\_\-CONTROL} \hyperlink{a00645_gad93c4855c9b915891cbdcfcdf2fd0ee5}{GSN\_\-DMA\_\-CONTROL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA control data Structure. This structure defines DMA control data structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00049}{GSN\_\-DMA} \hyperlink{a00645_ga61edafecbc46e3ba81ec48b9cf3aa1fa}{GSN\_\-DMA\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA Structure. This structure defines DMA handling parameters. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00053}{GSN\_\-DMACONFIG} \hyperlink{a00645_ga64a1083039794c33e6a904f799f730c5}{GSN\_\-DMACONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA Structure. This structure defines DMA base register. \end{DoxyCompactList}\item 
+typedef union \hyperlink{a00052}{GSN\_\-DMACHANNEL\_\-CONFIG} \hyperlink{a00645_ga39663b303d8a6ba93086369a284e1334}{GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA Channel Configuration union. This Union defines DMA channel configuration values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00645_gae429fb6067bac27636298d334042de5f}{GSN\_\-DMA\_\-CONTROLLER\_\-STATE} \{ \par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa0d1e91ccd13f6bd142fd6eb1385e78bc}{GSN\_\-DMA\_\-NOT\_\-INITIALIZED}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa0433ffe774a15bcfdcd9b21200e85208}{GSN\_\-DMA\_\-INITIALIZED}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa3f84bcdf20eef7fe9e6e90260a20d4d2}{GSN\_\-DMA\_\-READ\_\-PROGRESS}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa76c62ae5f70d75b8c5d13a7aa4cd3b4d}{GSN\_\-DMA\_\-READ\_\-FINISHED}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa177f0d0180ad7c6fec9aa2e0bdbab18a}{GSN\_\-DMA\_\-WRITE\_\-PROGRESS}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa8c4aba63d65be601ef1bd9e3797e9740}{GSN\_\-DMA\_\-WRITE\_\-FINISHED}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa97fc87797fc55f072f93fcfb08e823d9}{GSN\_\-DMA\_\-CLOSED}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA current state values. This enum defines DMA controller state. \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_ga6b06d19717ade6dfd815a84e83d2388c}{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT} \{ \par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca8d81a773b5a1dcfdfb741cfbfbf5330d}{GSN\_\-DMA\_\-CH0}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca67e0d61a7ec720eed458dbdf9eeb791a}{GSN\_\-DMA\_\-CH1}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388cac5675c7dde41ebb7a1777403463362ed}{GSN\_\-DMA\_\-SSP0\_\-RX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca55b975756ec5f35fe79579374eacdfd3}{GSN\_\-DMA\_\-SSP0\_\-TX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca468b318f813ebdf54dbdf450f16a5732}{GSN\_\-DMA\_\-UART0\_\-RX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388caa4f202e8206de2d1ebfad1ad912bcd8d}{GSN\_\-DMA\_\-UART0\_\-TX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca328799f2ecf2b7883c1d7e4fce9664b7}{GSN\_\-DMA\_\-SSP1\_\-RX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca4f93148490d2139f20dfd6d88405f15d}{GSN\_\-DMA\_\-SSP1\_\-TX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca3066765ac1cd87c8ef4d029be6e620e6}{GSN\_\-DMA\_\-UART1\_\-RX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca9a3ace920959df147a2c3d35dcaa3013}{GSN\_\-DMA\_\-UART1\_\-TX}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA available peripherals. This enum defines DMA available peripherals. \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_ga5ae8eaac9f901eb2607d04c46b8141e9}{GSN\_\-DMA\_\-SRC\_\-SIZE} \{ \par
+\hyperlink{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9a2b2932e85c3b4fc18d56c38f39d31dd8}{GSN\_\-DMA\_\-BYTE\_\-SRC\_\-SIZE} =  0, 
+\par
+\hyperlink{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9acb13c0f2739cfa4759bb75be01f0c5d6}{GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-SIZE} =  1, 
+\par
+\hyperlink{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9a881ac284185eaa1f1eb431452ce9bbe5}{GSN\_\-DMA\_\-WORD\_\-SRC\_\-SIZE} =  2
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA source data sizes. This enum defines available source data sizes of DMA . \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_ga592093c11bfd36ebbe08e1446e26f37a}{GSN\_\-DMA\_\-SRC\_\-INC} \{ \par
+\hyperlink{a00645_gga592093c11bfd36ebbe08e1446e26f37aa33e61f45484d1c2ae0d2c8ad6a520b0b}{GSN\_\-DMA\_\-BYTE\_\-SRC\_\-INC} =  0, 
+\par
+\hyperlink{a00645_gga592093c11bfd36ebbe08e1446e26f37aa0fb26d608d6f3abb56aa50dc5e3588ab}{GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-INC} =  1, 
+\par
+\hyperlink{a00645_gga592093c11bfd36ebbe08e1446e26f37aa5a0832151e665289a8604b6fc1b4c889}{GSN\_\-DMA\_\-WORD\_\-SRC\_\-INC} =  2, 
+\par
+\hyperlink{a00645_gga592093c11bfd36ebbe08e1446e26f37aabfed1c5dc35a6299af6df490ead8fda7}{GSN\_\-DMA\_\-NO\_\-SRC\_\-INC} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA source data increment. This enum defines available DMA source data increment values . \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_gab66304fcaa89e7d7dd7d514eb086c56c}{GSN\_\-DMA\_\-DEST\_\-SIZE} \{ \par
+\hyperlink{a00645_ggab66304fcaa89e7d7dd7d514eb086c56ca7f7232d325387c63bae0b7cdebe3ef3c}{GSN\_\-DMA\_\-BYTE\_\-DEST\_\-SIZE} =  0, 
+\par
+\hyperlink{a00645_ggab66304fcaa89e7d7dd7d514eb086c56ca28318509efbc694dcf60dda8baa5c95b}{GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-SIZE} =  1, 
+\par
+\hyperlink{a00645_ggab66304fcaa89e7d7dd7d514eb086c56cac6e70114b9ef1f20fbc46047d09838c4}{GSN\_\-DMA\_\-WORD\_\-DEST\_\-SIZE} =  2
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA destination data sizes. This enum defines available Destination data sizes of DMA . \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_gaeec51ec6ddb024d9e8bb0c011cb167ef}{GSN\_\-DMA\_\-DEST\_\-INC} \{ \par
+\hyperlink{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efaa6992a725913ef984b166f6a3e589f0d}{GSN\_\-DMA\_\-BYTE\_\-DEST\_\-INC} =  0, 
+\par
+\hyperlink{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa101a527a312a5d717e4f146f4c626967}{GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-INC} =  1, 
+\par
+\hyperlink{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa409e63c6cd5348719d9dc3a327c9d265}{GSN\_\-DMA\_\-WORD\_\-DEST\_\-INC} =  2, 
+\par
+\hyperlink{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa5caac0f560125a4488ba7f550df78add}{GSN\_\-DMA\_\-NO\_\-DEST\_\-INC} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA destination data increment. This enum defines available DMA destination data increment values . \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_ga0dab047350d5c343038b0c017077dab7}{GSN\_\-DMA\_\-R\_\-POWER} \{ \par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7ac74ac5fa1175bc387937b6bc7ba3da77}{GSN\_\-ARBITRATION\_\-1\_\-DMATRANSFER} =  0, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a42ae3fcedf49db936b008bd50ae8072c}{GSN\_\-ARBITRATION\_\-2\_\-DMATRANSFER} =  1, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a2b53a376a12af3ac31c906c74ed1914f}{GSN\_\-ARBITRATION\_\-4\_\-DMATRANSFER} =  2, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a7e995ff22c877407b324332944e778ee}{GSN\_\-ARBITRATION\_\-8\_\-DMATRANSFER} =  3, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a27da9e0084aa1b51b2bb0853ddea9036}{GSN\_\-ARBITRATION\_\-16\_\-DMATRANSFER} =  4, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a4509d1db470e4622ceeb5093bc3ad534}{GSN\_\-ARBITRATION\_\-32\_\-DMATRANSFER} =  5, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a639f508d032a5dbf57d7b91c2da5504f}{GSN\_\-ARBITRATION\_\-64\_\-DMATRANSFER} =  6, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7ae69c39e2419566697087b9bbd6e574e3}{GSN\_\-ARBITRATION\_\-128\_\-DMATRANSFER} =  7, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7ab8d73acb8fe19c193ad43a0ccf3d8849}{GSN\_\-ARBITRATION\_\-256\_\-DMATRANSFER} =  8, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7ae40c66cc1004676d5c628cf479f658c8}{GSN\_\-ARBITRATION\_\-512\_\-DMATRANSFER} =  9, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a9a6dd4b1c4e3039f312c7e123adee60b}{GSN\_\-ARBITRATION\_\-1024\_\-DMATRANSFER} =  10
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA arbitration values. This enum defines Available arbitration values of Dma. \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_ga05b9b2e87ca35c2d0564ceca307d349c}{GSN\_\-DMA\_\-CYCLE\_\-TYPE} \{ \par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca5eaed8b81e9aea1d36a55808cafc764a}{GSN\_\-DMACYCLE\_\-STOP} =  0, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca21df7e7c776bc4d180db56aa034cebc5}{GSN\_\-DMACYCLE\_\-BASIC} =  1, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca2fe044a6cdf6ea525f1f151576023352}{GSN\_\-DMACYCLE\_\-AUTOREQUEST} =  2, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349cab734d1a5b321ede92d3e1ada87c12348}{GSN\_\-DMACYCLE\_\-PING\_\-PONG} =  3, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349caf430059a345ba3a661d4b005e77563bb}{GSN\_\-DMACYCLE\_\-MSG\_\-PRIMARY} =  4, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349caf5103d4e5d0db5ee3a988ef2225d7208}{GSN\_\-DMACYCLE\_\-MSG\_\-ALTERNATE} =  5, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca67efd25800552979993c637030a04f3c}{GSN\_\-DMACYCLE\_\-PSG\_\-PRIMARY} =  6, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca0f46e759cd5e60ea89a85e50352ec8c6}{GSN\_\-DMACYCLE\_\-PSG\_\-ALTERNATE} =  7
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA cycle Types. This enum defines DMA cycle types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00645_ga5ceeca071a5842ca89987a6409d7622f}{GsnDma\_\-ChannelIDValid} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This function checks the DMA channel ID is valid or not. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga449241f212ec11818862d4b3d09f78e4}{GsnDma\_\-CallBackRegister} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00484_a74d23c3cb3acf00134600795aef55b6e}{DMACALLBACK\_\-FP} ptCallBackFunc, VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\begin{DoxyCompactList}\small\item\em This function registers all the call back functions from the peripheral modules in dma driver. \end{DoxyCompactList}\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00645_ga562863c56fadab4dacb22c1701a44f7b}{GsnDma\_\-IndividualClose} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelsToClose)
+\begin{DoxyCompactList}\small\item\em DMA Driver Individual Channel Close API. This function closes the particular channel. \end{DoxyCompactList}\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00645_ga5aa9630791f923d9584eca792db30693}{GsnDma\_\-Close} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma)
+\begin{DoxyCompactList}\small\item\em DMA Driver Close API. This function closes PL230 DMA. \end{DoxyCompactList}\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00645_gac9b681a85c07c6f76d4a5b5c3578770d}{GsnDma\_\-Open} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00053}{GSN\_\-DMACONFIG\_\-T} $\ast$ptConfig, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelsToConfigure)
+\begin{DoxyCompactList}\small\item\em DMA Driver open API. This function initializes PL230 DMA. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga7c2e3e52f4e9a058280bb12c28bcae98}{GsnDma\_\-Enable} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma)
+\begin{DoxyCompactList}\small\item\em DMA module enable API. This function Enables PL230 DMA. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga70900a6c4c67014eb4ab3b6fb1e07e7b}{GsnDma\_\-ChannelPriAltClear} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelsToConfigure)
+\begin{DoxyCompactList}\small\item\em DMA module Primary-\/Alternate-\/Set API. This function set the alternate data structure of Dma. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga83809527ab278dc141bcbf1aff7d4261}{GsnDma\_\-ChannelPriAltSet} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelsToConfigure)
+\begin{DoxyCompactList}\small\item\em DMA module Primary-\/Alternate-\/Clear API. This function clear the alternate data structure of Dma. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gae768fe52b1ab8f2cf674638e82c4a223}{GsnDma\_\-Disable} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma)
+\begin{DoxyCompactList}\small\item\em DMA module disable API. This function disables PL230 DMA. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga839dcf0e2fc6ddc1fa8fa3895b763da0}{GsnDma\_\-StatusGet} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma)
+\begin{DoxyCompactList}\small\item\em DMA Driver DMA status (enable or disable) get API. This API can use for getting the current status of DMA. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gafe8f53f9d44f015348fa1dc566a535a9}{GsnDma\_\-ChannelEnable} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This function will enable the specified dma channel. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gae368b9082da7ffdcf71880d0ee0d5322}{GsnDma\_\-ChannelDisable} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This function will disable the specified channel. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga4b168b176e39643a79d1e17a35509ddd}{GsnDma\_\-ChannelSoftwareRequest} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This function can use for the software request for a channel. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga508b5fe55e9c637738cf2661a571363c}{GsnDma\_\-CycleControl} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00052}{GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T} $\ast$ptChannelConfig, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} noOfBytesToTransfer, VOID $\ast$pvSrcAddr, VOID $\ast$pvDstAddr)
+\begin{DoxyCompactList}\small\item\em In PL230 DMA ,transfer can done using one of the 5 dma cycle types. 1.)basic 2.)auto request 3.)memory scatter gather 4.)peripheral scatter gather 5.)ping pong. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gac94ecec6e71b0486e190f0416ac0aafe}{GsnDma\_\-ChannelControlSetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ulControl, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em Sets the control parameter for a particular channel in primarary data structure. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga20dfa4fbdf89c9623e33349ac917a0f7}{GsnDma\_\-ChannelControlSetAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ulControl, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em Sets the control parameter for a particular channel in Alternate data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_gae299f12e8d6fe7d3e1aed64ca683e5d4}{GsnDma\_\-ChannelControlGetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the channel configuration of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga3f2ad549f5231785b43dcdafff7dad76}{GsnDma\_\-ChannelControlGetAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the channel configuration of a particular channel in alternate data structure. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gacf14d2b733378887f57720111f5a273c}{GsnDma\_\-ChannelTransferSetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, VOID $\ast$pvSrcAddr, VOID $\ast$pvDstAddr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API sets the source address and destination address of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gafa916751ce4bc1ff2e107afa8e105b23}{GsnDma\_\-ChannelTransferSetAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, VOID $\ast$pvSrcAddr, VOID $\ast$pvDstAddr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API sets the source address and destination address of a particular channel in Alternate data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga19ae102a0c571013f52c40ca8f7829f4}{GsnDma\_\-CurrentSourceAddrGet} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API Gets the Current Source Address of a particular channel. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_gaf793f914fc28383eb27b9f4697df3627}{GsnDma\_\-CurrentDestAddrGet} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API Gets the Current Destination Address of a particular channel. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga4041bdc9579ac5a6544a433217b33ec2}{GsnDma\_\-CurrentDestAddrGetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API Gets the Current Destination Address of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga471064b999c9fbe35dae71e46ca0d6be}{GsnDma\_\-RemainTransferCountGet} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current N\_\-MINUS\_\-1 value of a particular channel. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga41c22392f7c2bcb6371732f7b4262458}{GsnDma\_\-RemainTransferCountGetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current N\_\-MINUS\_\-1 value of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga77f7365ca642ec971dd49bae1d30b204}{GsnDma\_\-RemainTransferCountGetAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current N\_\-MINUS\_\-1 value of a particular channel in alternate data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_gad08a96af8d3b08b5353491f376838f04}{GsnDma\_\-CycleTypeGetAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current dma cycle type value of a particular channel in alternate data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_gaeec67a57b069b989d58c6ee008406dc2}{GsnDma\_\-CycleTypeGetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current dma cycle type value of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_gaa773c3c1a9478d26317cc2f8f6221be4}{GsnDma\_\-specificChannelAddressPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current channel address of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga9fcb9e0aa7d752da1a090711fbff8a3d}{GsnDma\_\-specificChannelAddressAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current channel address of a particular channel in alternate data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group contains public definitions and functions providing access to the GS2000 DMA. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00645_ga39663b303d8a6ba93086369a284e1334}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T@{GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T}}
+\index{GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T@{GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf GSN\_\-DMACHANNEL\_\-CONFIG} {\bf GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T}}}
+\label{a00645_ga39663b303d8a6ba93086369a284e1334}
+
+
+GSN DMA Channel Configuration union. This Union defines DMA channel configuration values. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_ga39663b303d8a6ba93086369a284e1334}{GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00645_gad93c4855c9b915891cbdcfcdf2fd0ee5}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-CONTROL\_\-T@{GSN\_\-DMA\_\-CONTROL\_\-T}}
+\index{GSN\_\-DMA\_\-CONTROL\_\-T@{GSN\_\-DMA\_\-CONTROL\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-CONTROL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DMA\_\-CONTROL} {\bf GSN\_\-DMA\_\-CONTROL\_\-T}}}
+\label{a00645_gad93c4855c9b915891cbdcfcdf2fd0ee5}
+
+
+GSN DMA control data Structure. This structure defines DMA control data structure. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gad93c4855c9b915891cbdcfcdf2fd0ee5}{GSN\_\-DMA\_\-CONTROL\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00645_gab5fced5a7e633077a493c6353edef6de}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-CYCLE\_\-TYPE\_\-T@{GSN\_\-DMA\_\-CYCLE\_\-TYPE\_\-T}}
+\index{GSN\_\-DMA\_\-CYCLE\_\-TYPE\_\-T@{GSN\_\-DMA\_\-CYCLE\_\-TYPE\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-CYCLE\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-DMA\_\-CYCLE\_\-TYPE}  {\bf GSN\_\-DMA\_\-CYCLE\_\-TYPE\_\-T}}}
+\label{a00645_gab5fced5a7e633077a493c6353edef6de}
+
+
+GSN DMA cycle Types. This enum defines DMA cycle types. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gab5fced5a7e633077a493c6353edef6de}{GSN\_\-DMA\_\-CYCLE\_\-TYPE\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00645_gad729aa817bfd135b589e7c5d589c6c24}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-DEST\_\-INC\_\-T@{GSN\_\-DMA\_\-DEST\_\-INC\_\-T}}
+\index{GSN\_\-DMA\_\-DEST\_\-INC\_\-T@{GSN\_\-DMA\_\-DEST\_\-INC\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-DEST\_\-INC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-DMA\_\-DEST\_\-INC}  {\bf GSN\_\-DMA\_\-DEST\_\-INC\_\-T}}}
+\label{a00645_gad729aa817bfd135b589e7c5d589c6c24}
+
+
+GSN DMA destination data increment. This enum defines available DMA destination data increment values . 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gad729aa817bfd135b589e7c5d589c6c24}{GSN\_\-DMA\_\-DEST\_\-INC\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00645_ga911fde9b2a20ed7759a9d2a8849e34f4}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-DEST\_\-SIZE\_\-T@{GSN\_\-DMA\_\-DEST\_\-SIZE\_\-T}}
+\index{GSN\_\-DMA\_\-DEST\_\-SIZE\_\-T@{GSN\_\-DMA\_\-DEST\_\-SIZE\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-DEST\_\-SIZE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-DMA\_\-DEST\_\-SIZE}  {\bf GSN\_\-DMA\_\-DEST\_\-SIZE\_\-T}}}
+\label{a00645_ga911fde9b2a20ed7759a9d2a8849e34f4}
+
+
+GSN DMA destination data sizes. This enum defines available Destination data sizes of DMA . 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_ga911fde9b2a20ed7759a9d2a8849e34f4}{GSN\_\-DMA\_\-DEST\_\-SIZE\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00645_gab17cf1a2935d52f5490128aeddd1eb07}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT\_\-T@{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT\_\-T}}
+\index{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT\_\-T@{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT}  {\bf GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT\_\-T}}}
+\label{a00645_gab17cf1a2935d52f5490128aeddd1eb07}
+
+
+GSN DMA available peripherals. This enum defines DMA available peripherals. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gab17cf1a2935d52f5490128aeddd1eb07}{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00645_gae146d7793ab9cfe1a37249ffc98ccf5d}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-PINGPONG\_\-CONTROL\_\-T@{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL\_\-T}}
+\index{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL\_\-T@{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DMA\_\-PINGPONG\_\-CONTROL}  {\bf GSN\_\-DMA\_\-PINGPONG\_\-CONTROL\_\-T}}}
+\label{a00645_gae146d7793ab9cfe1a37249ffc98ccf5d}
+
+
+GSN DMA ping pong parameters. This enum defines DMA ping pong handling structure. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gae146d7793ab9cfe1a37249ffc98ccf5d}{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00645_gadf8a8e2066de9043a495c7764612c35f}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-R\_\-POWER\_\-T@{GSN\_\-DMA\_\-R\_\-POWER\_\-T}}
+\index{GSN\_\-DMA\_\-R\_\-POWER\_\-T@{GSN\_\-DMA\_\-R\_\-POWER\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-R\_\-POWER\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-DMA\_\-R\_\-POWER}  {\bf GSN\_\-DMA\_\-R\_\-POWER\_\-T}}}
+\label{a00645_gadf8a8e2066de9043a495c7764612c35f}
+
+
+GSN DMA arbitration values. This enum defines Available arbitration values of Dma. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gadf8a8e2066de9043a495c7764612c35f}{GSN\_\-DMA\_\-R\_\-POWER\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00645_gadfad5571e188cca605e051802c24ada0}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-SRC\_\-INC\_\-T@{GSN\_\-DMA\_\-SRC\_\-INC\_\-T}}
+\index{GSN\_\-DMA\_\-SRC\_\-INC\_\-T@{GSN\_\-DMA\_\-SRC\_\-INC\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-SRC\_\-INC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-DMA\_\-SRC\_\-INC}  {\bf GSN\_\-DMA\_\-SRC\_\-INC\_\-T}}}
+\label{a00645_gadfad5571e188cca605e051802c24ada0}
+
+
+GSN DMA source data increment. This enum defines available DMA source data increment values . 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gadfad5571e188cca605e051802c24ada0}{GSN\_\-DMA\_\-SRC\_\-INC\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00645_ga30dffcfe8e6fc270f93048d90cd440ec}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-SRC\_\-SIZE\_\-T@{GSN\_\-DMA\_\-SRC\_\-SIZE\_\-T}}
+\index{GSN\_\-DMA\_\-SRC\_\-SIZE\_\-T@{GSN\_\-DMA\_\-SRC\_\-SIZE\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-SRC\_\-SIZE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-DMA\_\-SRC\_\-SIZE}  {\bf GSN\_\-DMA\_\-SRC\_\-SIZE\_\-T}}}
+\label{a00645_ga30dffcfe8e6fc270f93048d90cd440ec}
+
+
+GSN DMA source data sizes. This enum defines available source data sizes of DMA . 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_ga30dffcfe8e6fc270f93048d90cd440ec}{GSN\_\-DMA\_\-SRC\_\-SIZE\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00645_ga61edafecbc46e3ba81ec48b9cf3aa1fa}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-T@{GSN\_\-DMA\_\-T}}
+\index{GSN\_\-DMA\_\-T@{GSN\_\-DMA\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DMA} {\bf GSN\_\-DMA\_\-T}}}
+\label{a00645_ga61edafecbc46e3ba81ec48b9cf3aa1fa}
+
+
+GSN DMA Structure. This structure defines DMA handling parameters. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_ga61edafecbc46e3ba81ec48b9cf3aa1fa}{GSN\_\-DMA\_\-T}. 
+\end{DoxySeeAlso}
+\hypertarget{a00645_ga64a1083039794c33e6a904f799f730c5}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMACONFIG\_\-T@{GSN\_\-DMACONFIG\_\-T}}
+\index{GSN\_\-DMACONFIG\_\-T@{GSN\_\-DMACONFIG\_\-T}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMACONFIG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DMACONFIG} {\bf GSN\_\-DMACONFIG\_\-T}}}
+\label{a00645_ga64a1083039794c33e6a904f799f730c5}
+
+
+GSN DMA Structure. This structure defines DMA base register. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_ga64a1083039794c33e6a904f799f730c5}{GSN\_\-DMACONFIG\_\-T}. 
+\end{DoxySeeAlso}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00645_gae429fb6067bac27636298d334042de5f}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-CONTROLLER\_\-STATE@{GSN\_\-DMA\_\-CONTROLLER\_\-STATE}}
+\index{GSN\_\-DMA\_\-CONTROLLER\_\-STATE@{GSN\_\-DMA\_\-CONTROLLER\_\-STATE}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-CONTROLLER\_\-STATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-DMA\_\-CONTROLLER\_\-STATE}}}
+\label{a00645_gae429fb6067bac27636298d334042de5f}
+
+
+GSN DMA current state values. This enum defines DMA controller state. 
+
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-DMA\_\-NOT\_\-INITIALIZED@{GSN\_\-DMA\_\-NOT\_\-INITIALIZED}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-NOT\_\-INITIALIZED@{GSN\_\-DMA\_\-NOT\_\-INITIALIZED}}\item[{\em 
+\hypertarget{a00645_ggae429fb6067bac27636298d334042de5fa0d1e91ccd13f6bd142fd6eb1385e78bc}{
+GSN\_\-DMA\_\-NOT\_\-INITIALIZED}
+\label{a00645_ggae429fb6067bac27636298d334042de5fa0d1e91ccd13f6bd142fd6eb1385e78bc}
+}]\index{GSN\_\-DMA\_\-INITIALIZED@{GSN\_\-DMA\_\-INITIALIZED}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-INITIALIZED@{GSN\_\-DMA\_\-INITIALIZED}}\item[{\em 
+\hypertarget{a00645_ggae429fb6067bac27636298d334042de5fa0433ffe774a15bcfdcd9b21200e85208}{
+GSN\_\-DMA\_\-INITIALIZED}
+\label{a00645_ggae429fb6067bac27636298d334042de5fa0433ffe774a15bcfdcd9b21200e85208}
+}]\index{GSN\_\-DMA\_\-READ\_\-PROGRESS@{GSN\_\-DMA\_\-READ\_\-PROGRESS}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-READ\_\-PROGRESS@{GSN\_\-DMA\_\-READ\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00645_ggae429fb6067bac27636298d334042de5fa3f84bcdf20eef7fe9e6e90260a20d4d2}{
+GSN\_\-DMA\_\-READ\_\-PROGRESS}
+\label{a00645_ggae429fb6067bac27636298d334042de5fa3f84bcdf20eef7fe9e6e90260a20d4d2}
+}]\index{GSN\_\-DMA\_\-READ\_\-FINISHED@{GSN\_\-DMA\_\-READ\_\-FINISHED}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-READ\_\-FINISHED@{GSN\_\-DMA\_\-READ\_\-FINISHED}}\item[{\em 
+\hypertarget{a00645_ggae429fb6067bac27636298d334042de5fa76c62ae5f70d75b8c5d13a7aa4cd3b4d}{
+GSN\_\-DMA\_\-READ\_\-FINISHED}
+\label{a00645_ggae429fb6067bac27636298d334042de5fa76c62ae5f70d75b8c5d13a7aa4cd3b4d}
+}]\index{GSN\_\-DMA\_\-WRITE\_\-PROGRESS@{GSN\_\-DMA\_\-WRITE\_\-PROGRESS}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-WRITE\_\-PROGRESS@{GSN\_\-DMA\_\-WRITE\_\-PROGRESS}}\item[{\em 
+\hypertarget{a00645_ggae429fb6067bac27636298d334042de5fa177f0d0180ad7c6fec9aa2e0bdbab18a}{
+GSN\_\-DMA\_\-WRITE\_\-PROGRESS}
+\label{a00645_ggae429fb6067bac27636298d334042de5fa177f0d0180ad7c6fec9aa2e0bdbab18a}
+}]\index{GSN\_\-DMA\_\-WRITE\_\-FINISHED@{GSN\_\-DMA\_\-WRITE\_\-FINISHED}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-WRITE\_\-FINISHED@{GSN\_\-DMA\_\-WRITE\_\-FINISHED}}\item[{\em 
+\hypertarget{a00645_ggae429fb6067bac27636298d334042de5fa8c4aba63d65be601ef1bd9e3797e9740}{
+GSN\_\-DMA\_\-WRITE\_\-FINISHED}
+\label{a00645_ggae429fb6067bac27636298d334042de5fa8c4aba63d65be601ef1bd9e3797e9740}
+}]\index{GSN\_\-DMA\_\-CLOSED@{GSN\_\-DMA\_\-CLOSED}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-CLOSED@{GSN\_\-DMA\_\-CLOSED}}\item[{\em 
+\hypertarget{a00645_ggae429fb6067bac27636298d334042de5fa97fc87797fc55f072f93fcfb08e823d9}{
+GSN\_\-DMA\_\-CLOSED}
+\label{a00645_ggae429fb6067bac27636298d334042de5fa97fc87797fc55f072f93fcfb08e823d9}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 191 of file gsn\_\-dma.h.
+
+\hypertarget{a00645_ga05b9b2e87ca35c2d0564ceca307d349c}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-CYCLE\_\-TYPE@{GSN\_\-DMA\_\-CYCLE\_\-TYPE}}
+\index{GSN\_\-DMA\_\-CYCLE\_\-TYPE@{GSN\_\-DMA\_\-CYCLE\_\-TYPE}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-CYCLE\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-DMA\_\-CYCLE\_\-TYPE}}}
+\label{a00645_ga05b9b2e87ca35c2d0564ceca307d349c}
+
+
+GSN DMA cycle Types. This enum defines DMA cycle types. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gab5fced5a7e633077a493c6353edef6de}{GSN\_\-DMA\_\-CYCLE\_\-TYPE\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-DMACYCLE\_\-STOP@{GSN\_\-DMACYCLE\_\-STOP}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMACYCLE\_\-STOP@{GSN\_\-DMACYCLE\_\-STOP}}\item[{\em 
+\hypertarget{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca5eaed8b81e9aea1d36a55808cafc764a}{
+GSN\_\-DMACYCLE\_\-STOP}
+\label{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca5eaed8b81e9aea1d36a55808cafc764a}
+}]\index{GSN\_\-DMACYCLE\_\-BASIC@{GSN\_\-DMACYCLE\_\-BASIC}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMACYCLE\_\-BASIC@{GSN\_\-DMACYCLE\_\-BASIC}}\item[{\em 
+\hypertarget{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca21df7e7c776bc4d180db56aa034cebc5}{
+GSN\_\-DMACYCLE\_\-BASIC}
+\label{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca21df7e7c776bc4d180db56aa034cebc5}
+}]\index{GSN\_\-DMACYCLE\_\-AUTOREQUEST@{GSN\_\-DMACYCLE\_\-AUTOREQUEST}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMACYCLE\_\-AUTOREQUEST@{GSN\_\-DMACYCLE\_\-AUTOREQUEST}}\item[{\em 
+\hypertarget{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca2fe044a6cdf6ea525f1f151576023352}{
+GSN\_\-DMACYCLE\_\-AUTOREQUEST}
+\label{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca2fe044a6cdf6ea525f1f151576023352}
+}]\index{GSN\_\-DMACYCLE\_\-PING\_\-PONG@{GSN\_\-DMACYCLE\_\-PING\_\-PONG}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMACYCLE\_\-PING\_\-PONG@{GSN\_\-DMACYCLE\_\-PING\_\-PONG}}\item[{\em 
+\hypertarget{a00645_gga05b9b2e87ca35c2d0564ceca307d349cab734d1a5b321ede92d3e1ada87c12348}{
+GSN\_\-DMACYCLE\_\-PING\_\-PONG}
+\label{a00645_gga05b9b2e87ca35c2d0564ceca307d349cab734d1a5b321ede92d3e1ada87c12348}
+}]\index{GSN\_\-DMACYCLE\_\-MSG\_\-PRIMARY@{GSN\_\-DMACYCLE\_\-MSG\_\-PRIMARY}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMACYCLE\_\-MSG\_\-PRIMARY@{GSN\_\-DMACYCLE\_\-MSG\_\-PRIMARY}}\item[{\em 
+\hypertarget{a00645_gga05b9b2e87ca35c2d0564ceca307d349caf430059a345ba3a661d4b005e77563bb}{
+GSN\_\-DMACYCLE\_\-MSG\_\-PRIMARY}
+\label{a00645_gga05b9b2e87ca35c2d0564ceca307d349caf430059a345ba3a661d4b005e77563bb}
+}]\index{GSN\_\-DMACYCLE\_\-MSG\_\-ALTERNATE@{GSN\_\-DMACYCLE\_\-MSG\_\-ALTERNATE}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMACYCLE\_\-MSG\_\-ALTERNATE@{GSN\_\-DMACYCLE\_\-MSG\_\-ALTERNATE}}\item[{\em 
+\hypertarget{a00645_gga05b9b2e87ca35c2d0564ceca307d349caf5103d4e5d0db5ee3a988ef2225d7208}{
+GSN\_\-DMACYCLE\_\-MSG\_\-ALTERNATE}
+\label{a00645_gga05b9b2e87ca35c2d0564ceca307d349caf5103d4e5d0db5ee3a988ef2225d7208}
+}]\index{GSN\_\-DMACYCLE\_\-PSG\_\-PRIMARY@{GSN\_\-DMACYCLE\_\-PSG\_\-PRIMARY}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMACYCLE\_\-PSG\_\-PRIMARY@{GSN\_\-DMACYCLE\_\-PSG\_\-PRIMARY}}\item[{\em 
+\hypertarget{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca67efd25800552979993c637030a04f3c}{
+GSN\_\-DMACYCLE\_\-PSG\_\-PRIMARY}
+\label{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca67efd25800552979993c637030a04f3c}
+}]\index{GSN\_\-DMACYCLE\_\-PSG\_\-ALTERNATE@{GSN\_\-DMACYCLE\_\-PSG\_\-ALTERNATE}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMACYCLE\_\-PSG\_\-ALTERNATE@{GSN\_\-DMACYCLE\_\-PSG\_\-ALTERNATE}}\item[{\em 
+\hypertarget{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca0f46e759cd5e60ea89a85e50352ec8c6}{
+GSN\_\-DMACYCLE\_\-PSG\_\-ALTERNATE}
+\label{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca0f46e759cd5e60ea89a85e50352ec8c6}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 321 of file gsn\_\-dma.h.
+
+\hypertarget{a00645_gaeec51ec6ddb024d9e8bb0c011cb167ef}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-DEST\_\-INC@{GSN\_\-DMA\_\-DEST\_\-INC}}
+\index{GSN\_\-DMA\_\-DEST\_\-INC@{GSN\_\-DMA\_\-DEST\_\-INC}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-DEST\_\-INC}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-DMA\_\-DEST\_\-INC}}}
+\label{a00645_gaeec51ec6ddb024d9e8bb0c011cb167ef}
+
+
+GSN DMA destination data increment. This enum defines available DMA destination data increment values . 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gad729aa817bfd135b589e7c5d589c6c24}{GSN\_\-DMA\_\-DEST\_\-INC\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-DMA\_\-BYTE\_\-DEST\_\-INC@{GSN\_\-DMA\_\-BYTE\_\-DEST\_\-INC}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-BYTE\_\-DEST\_\-INC@{GSN\_\-DMA\_\-BYTE\_\-DEST\_\-INC}}\item[{\em 
+\hypertarget{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efaa6992a725913ef984b166f6a3e589f0d}{
+GSN\_\-DMA\_\-BYTE\_\-DEST\_\-INC}
+\label{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efaa6992a725913ef984b166f6a3e589f0d}
+}]\index{GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-INC@{GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-INC}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-INC@{GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-INC}}\item[{\em 
+\hypertarget{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa101a527a312a5d717e4f146f4c626967}{
+GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-INC}
+\label{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa101a527a312a5d717e4f146f4c626967}
+}]\index{GSN\_\-DMA\_\-WORD\_\-DEST\_\-INC@{GSN\_\-DMA\_\-WORD\_\-DEST\_\-INC}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-WORD\_\-DEST\_\-INC@{GSN\_\-DMA\_\-WORD\_\-DEST\_\-INC}}\item[{\em 
+\hypertarget{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa409e63c6cd5348719d9dc3a327c9d265}{
+GSN\_\-DMA\_\-WORD\_\-DEST\_\-INC}
+\label{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa409e63c6cd5348719d9dc3a327c9d265}
+}]\index{GSN\_\-DMA\_\-NO\_\-DEST\_\-INC@{GSN\_\-DMA\_\-NO\_\-DEST\_\-INC}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-NO\_\-DEST\_\-INC@{GSN\_\-DMA\_\-NO\_\-DEST\_\-INC}}\item[{\em 
+\hypertarget{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa5caac0f560125a4488ba7f550df78add}{
+GSN\_\-DMA\_\-NO\_\-DEST\_\-INC}
+\label{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa5caac0f560125a4488ba7f550df78add}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 279 of file gsn\_\-dma.h.
+
+\hypertarget{a00645_gab66304fcaa89e7d7dd7d514eb086c56c}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-DEST\_\-SIZE@{GSN\_\-DMA\_\-DEST\_\-SIZE}}
+\index{GSN\_\-DMA\_\-DEST\_\-SIZE@{GSN\_\-DMA\_\-DEST\_\-SIZE}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-DEST\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-DMA\_\-DEST\_\-SIZE}}}
+\label{a00645_gab66304fcaa89e7d7dd7d514eb086c56c}
+
+
+GSN DMA destination data sizes. This enum defines available Destination data sizes of DMA . 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_ga911fde9b2a20ed7759a9d2a8849e34f4}{GSN\_\-DMA\_\-DEST\_\-SIZE\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-DMA\_\-BYTE\_\-DEST\_\-SIZE@{GSN\_\-DMA\_\-BYTE\_\-DEST\_\-SIZE}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-BYTE\_\-DEST\_\-SIZE@{GSN\_\-DMA\_\-BYTE\_\-DEST\_\-SIZE}}\item[{\em 
+\hypertarget{a00645_ggab66304fcaa89e7d7dd7d514eb086c56ca7f7232d325387c63bae0b7cdebe3ef3c}{
+GSN\_\-DMA\_\-BYTE\_\-DEST\_\-SIZE}
+\label{a00645_ggab66304fcaa89e7d7dd7d514eb086c56ca7f7232d325387c63bae0b7cdebe3ef3c}
+}]\index{GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-SIZE@{GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-SIZE}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-SIZE@{GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-SIZE}}\item[{\em 
+\hypertarget{a00645_ggab66304fcaa89e7d7dd7d514eb086c56ca28318509efbc694dcf60dda8baa5c95b}{
+GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-SIZE}
+\label{a00645_ggab66304fcaa89e7d7dd7d514eb086c56ca28318509efbc694dcf60dda8baa5c95b}
+}]\index{GSN\_\-DMA\_\-WORD\_\-DEST\_\-SIZE@{GSN\_\-DMA\_\-WORD\_\-DEST\_\-SIZE}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-WORD\_\-DEST\_\-SIZE@{GSN\_\-DMA\_\-WORD\_\-DEST\_\-SIZE}}\item[{\em 
+\hypertarget{a00645_ggab66304fcaa89e7d7dd7d514eb086c56cac6e70114b9ef1f20fbc46047d09838c4}{
+GSN\_\-DMA\_\-WORD\_\-DEST\_\-SIZE}
+\label{a00645_ggab66304fcaa89e7d7dd7d514eb086c56cac6e70114b9ef1f20fbc46047d09838c4}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 264 of file gsn\_\-dma.h.
+
+\hypertarget{a00645_ga6b06d19717ade6dfd815a84e83d2388c}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT@{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT}}
+\index{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT@{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT}}}
+\label{a00645_ga6b06d19717ade6dfd815a84e83d2388c}
+
+
+GSN DMA available peripherals. This enum defines DMA available peripherals. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gab17cf1a2935d52f5490128aeddd1eb07}{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-DMA\_\-CH0@{GSN\_\-DMA\_\-CH0}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-CH0@{GSN\_\-DMA\_\-CH0}}\item[{\em 
+\hypertarget{a00645_gga6b06d19717ade6dfd815a84e83d2388ca8d81a773b5a1dcfdfb741cfbfbf5330d}{
+GSN\_\-DMA\_\-CH0}
+\label{a00645_gga6b06d19717ade6dfd815a84e83d2388ca8d81a773b5a1dcfdfb741cfbfbf5330d}
+}]\index{GSN\_\-DMA\_\-CH1@{GSN\_\-DMA\_\-CH1}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-CH1@{GSN\_\-DMA\_\-CH1}}\item[{\em 
+\hypertarget{a00645_gga6b06d19717ade6dfd815a84e83d2388ca67e0d61a7ec720eed458dbdf9eeb791a}{
+GSN\_\-DMA\_\-CH1}
+\label{a00645_gga6b06d19717ade6dfd815a84e83d2388ca67e0d61a7ec720eed458dbdf9eeb791a}
+}]\index{GSN\_\-DMA\_\-SSP0\_\-RX@{GSN\_\-DMA\_\-SSP0\_\-RX}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-SSP0\_\-RX@{GSN\_\-DMA\_\-SSP0\_\-RX}}\item[{\em 
+\hypertarget{a00645_gga6b06d19717ade6dfd815a84e83d2388cac5675c7dde41ebb7a1777403463362ed}{
+GSN\_\-DMA\_\-SSP0\_\-RX}
+\label{a00645_gga6b06d19717ade6dfd815a84e83d2388cac5675c7dde41ebb7a1777403463362ed}
+}]\index{GSN\_\-DMA\_\-SSP0\_\-TX@{GSN\_\-DMA\_\-SSP0\_\-TX}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-SSP0\_\-TX@{GSN\_\-DMA\_\-SSP0\_\-TX}}\item[{\em 
+\hypertarget{a00645_gga6b06d19717ade6dfd815a84e83d2388ca55b975756ec5f35fe79579374eacdfd3}{
+GSN\_\-DMA\_\-SSP0\_\-TX}
+\label{a00645_gga6b06d19717ade6dfd815a84e83d2388ca55b975756ec5f35fe79579374eacdfd3}
+}]\index{GSN\_\-DMA\_\-UART0\_\-RX@{GSN\_\-DMA\_\-UART0\_\-RX}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-UART0\_\-RX@{GSN\_\-DMA\_\-UART0\_\-RX}}\item[{\em 
+\hypertarget{a00645_gga6b06d19717ade6dfd815a84e83d2388ca468b318f813ebdf54dbdf450f16a5732}{
+GSN\_\-DMA\_\-UART0\_\-RX}
+\label{a00645_gga6b06d19717ade6dfd815a84e83d2388ca468b318f813ebdf54dbdf450f16a5732}
+}]\index{GSN\_\-DMA\_\-UART0\_\-TX@{GSN\_\-DMA\_\-UART0\_\-TX}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-UART0\_\-TX@{GSN\_\-DMA\_\-UART0\_\-TX}}\item[{\em 
+\hypertarget{a00645_gga6b06d19717ade6dfd815a84e83d2388caa4f202e8206de2d1ebfad1ad912bcd8d}{
+GSN\_\-DMA\_\-UART0\_\-TX}
+\label{a00645_gga6b06d19717ade6dfd815a84e83d2388caa4f202e8206de2d1ebfad1ad912bcd8d}
+}]\index{GSN\_\-DMA\_\-SSP1\_\-RX@{GSN\_\-DMA\_\-SSP1\_\-RX}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-SSP1\_\-RX@{GSN\_\-DMA\_\-SSP1\_\-RX}}\item[{\em 
+\hypertarget{a00645_gga6b06d19717ade6dfd815a84e83d2388ca328799f2ecf2b7883c1d7e4fce9664b7}{
+GSN\_\-DMA\_\-SSP1\_\-RX}
+\label{a00645_gga6b06d19717ade6dfd815a84e83d2388ca328799f2ecf2b7883c1d7e4fce9664b7}
+}]\index{GSN\_\-DMA\_\-SSP1\_\-TX@{GSN\_\-DMA\_\-SSP1\_\-TX}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-SSP1\_\-TX@{GSN\_\-DMA\_\-SSP1\_\-TX}}\item[{\em 
+\hypertarget{a00645_gga6b06d19717ade6dfd815a84e83d2388ca4f93148490d2139f20dfd6d88405f15d}{
+GSN\_\-DMA\_\-SSP1\_\-TX}
+\label{a00645_gga6b06d19717ade6dfd815a84e83d2388ca4f93148490d2139f20dfd6d88405f15d}
+}]\index{GSN\_\-DMA\_\-UART1\_\-RX@{GSN\_\-DMA\_\-UART1\_\-RX}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-UART1\_\-RX@{GSN\_\-DMA\_\-UART1\_\-RX}}\item[{\em 
+\hypertarget{a00645_gga6b06d19717ade6dfd815a84e83d2388ca3066765ac1cd87c8ef4d029be6e620e6}{
+GSN\_\-DMA\_\-UART1\_\-RX}
+\label{a00645_gga6b06d19717ade6dfd815a84e83d2388ca3066765ac1cd87c8ef4d029be6e620e6}
+}]\index{GSN\_\-DMA\_\-UART1\_\-TX@{GSN\_\-DMA\_\-UART1\_\-TX}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-UART1\_\-TX@{GSN\_\-DMA\_\-UART1\_\-TX}}\item[{\em 
+\hypertarget{a00645_gga6b06d19717ade6dfd815a84e83d2388ca9a3ace920959df147a2c3d35dcaa3013}{
+GSN\_\-DMA\_\-UART1\_\-TX}
+\label{a00645_gga6b06d19717ade6dfd815a84e83d2388ca9a3ace920959df147a2c3d35dcaa3013}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 209 of file gsn\_\-dma.h.
+
+\hypertarget{a00645_ga0dab047350d5c343038b0c017077dab7}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-R\_\-POWER@{GSN\_\-DMA\_\-R\_\-POWER}}
+\index{GSN\_\-DMA\_\-R\_\-POWER@{GSN\_\-DMA\_\-R\_\-POWER}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-R\_\-POWER}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-DMA\_\-R\_\-POWER}}}
+\label{a00645_ga0dab047350d5c343038b0c017077dab7}
+
+
+GSN DMA arbitration values. This enum defines Available arbitration values of Dma. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gadf8a8e2066de9043a495c7764612c35f}{GSN\_\-DMA\_\-R\_\-POWER\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ARBITRATION\_\-1\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-1\_\-DMATRANSFER}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-ARBITRATION\_\-1\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-1\_\-DMATRANSFER}}\item[{\em 
+\hypertarget{a00645_gga0dab047350d5c343038b0c017077dab7ac74ac5fa1175bc387937b6bc7ba3da77}{
+GSN\_\-ARBITRATION\_\-1\_\-DMATRANSFER}
+\label{a00645_gga0dab047350d5c343038b0c017077dab7ac74ac5fa1175bc387937b6bc7ba3da77}
+}]\index{GSN\_\-ARBITRATION\_\-2\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-2\_\-DMATRANSFER}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-ARBITRATION\_\-2\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-2\_\-DMATRANSFER}}\item[{\em 
+\hypertarget{a00645_gga0dab047350d5c343038b0c017077dab7a42ae3fcedf49db936b008bd50ae8072c}{
+GSN\_\-ARBITRATION\_\-2\_\-DMATRANSFER}
+\label{a00645_gga0dab047350d5c343038b0c017077dab7a42ae3fcedf49db936b008bd50ae8072c}
+}]\index{GSN\_\-ARBITRATION\_\-4\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-4\_\-DMATRANSFER}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-ARBITRATION\_\-4\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-4\_\-DMATRANSFER}}\item[{\em 
+\hypertarget{a00645_gga0dab047350d5c343038b0c017077dab7a2b53a376a12af3ac31c906c74ed1914f}{
+GSN\_\-ARBITRATION\_\-4\_\-DMATRANSFER}
+\label{a00645_gga0dab047350d5c343038b0c017077dab7a2b53a376a12af3ac31c906c74ed1914f}
+}]\index{GSN\_\-ARBITRATION\_\-8\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-8\_\-DMATRANSFER}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-ARBITRATION\_\-8\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-8\_\-DMATRANSFER}}\item[{\em 
+\hypertarget{a00645_gga0dab047350d5c343038b0c017077dab7a7e995ff22c877407b324332944e778ee}{
+GSN\_\-ARBITRATION\_\-8\_\-DMATRANSFER}
+\label{a00645_gga0dab047350d5c343038b0c017077dab7a7e995ff22c877407b324332944e778ee}
+}]\index{GSN\_\-ARBITRATION\_\-16\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-16\_\-DMATRANSFER}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-ARBITRATION\_\-16\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-16\_\-DMATRANSFER}}\item[{\em 
+\hypertarget{a00645_gga0dab047350d5c343038b0c017077dab7a27da9e0084aa1b51b2bb0853ddea9036}{
+GSN\_\-ARBITRATION\_\-16\_\-DMATRANSFER}
+\label{a00645_gga0dab047350d5c343038b0c017077dab7a27da9e0084aa1b51b2bb0853ddea9036}
+}]\index{GSN\_\-ARBITRATION\_\-32\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-32\_\-DMATRANSFER}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-ARBITRATION\_\-32\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-32\_\-DMATRANSFER}}\item[{\em 
+\hypertarget{a00645_gga0dab047350d5c343038b0c017077dab7a4509d1db470e4622ceeb5093bc3ad534}{
+GSN\_\-ARBITRATION\_\-32\_\-DMATRANSFER}
+\label{a00645_gga0dab047350d5c343038b0c017077dab7a4509d1db470e4622ceeb5093bc3ad534}
+}]\index{GSN\_\-ARBITRATION\_\-64\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-64\_\-DMATRANSFER}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-ARBITRATION\_\-64\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-64\_\-DMATRANSFER}}\item[{\em 
+\hypertarget{a00645_gga0dab047350d5c343038b0c017077dab7a639f508d032a5dbf57d7b91c2da5504f}{
+GSN\_\-ARBITRATION\_\-64\_\-DMATRANSFER}
+\label{a00645_gga0dab047350d5c343038b0c017077dab7a639f508d032a5dbf57d7b91c2da5504f}
+}]\index{GSN\_\-ARBITRATION\_\-128\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-128\_\-DMATRANSFER}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-ARBITRATION\_\-128\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-128\_\-DMATRANSFER}}\item[{\em 
+\hypertarget{a00645_gga0dab047350d5c343038b0c017077dab7ae69c39e2419566697087b9bbd6e574e3}{
+GSN\_\-ARBITRATION\_\-128\_\-DMATRANSFER}
+\label{a00645_gga0dab047350d5c343038b0c017077dab7ae69c39e2419566697087b9bbd6e574e3}
+}]\index{GSN\_\-ARBITRATION\_\-256\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-256\_\-DMATRANSFER}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-ARBITRATION\_\-256\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-256\_\-DMATRANSFER}}\item[{\em 
+\hypertarget{a00645_gga0dab047350d5c343038b0c017077dab7ab8d73acb8fe19c193ad43a0ccf3d8849}{
+GSN\_\-ARBITRATION\_\-256\_\-DMATRANSFER}
+\label{a00645_gga0dab047350d5c343038b0c017077dab7ab8d73acb8fe19c193ad43a0ccf3d8849}
+}]\index{GSN\_\-ARBITRATION\_\-512\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-512\_\-DMATRANSFER}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-ARBITRATION\_\-512\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-512\_\-DMATRANSFER}}\item[{\em 
+\hypertarget{a00645_gga0dab047350d5c343038b0c017077dab7ae40c66cc1004676d5c628cf479f658c8}{
+GSN\_\-ARBITRATION\_\-512\_\-DMATRANSFER}
+\label{a00645_gga0dab047350d5c343038b0c017077dab7ae40c66cc1004676d5c628cf479f658c8}
+}]\index{GSN\_\-ARBITRATION\_\-1024\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-1024\_\-DMATRANSFER}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-ARBITRATION\_\-1024\_\-DMATRANSFER@{GSN\_\-ARBITRATION\_\-1024\_\-DMATRANSFER}}\item[{\em 
+\hypertarget{a00645_gga0dab047350d5c343038b0c017077dab7a9a6dd4b1c4e3039f312c7e123adee60b}{
+GSN\_\-ARBITRATION\_\-1024\_\-DMATRANSFER}
+\label{a00645_gga0dab047350d5c343038b0c017077dab7a9a6dd4b1c4e3039f312c7e123adee60b}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 296 of file gsn\_\-dma.h.
+
+\hypertarget{a00645_ga592093c11bfd36ebbe08e1446e26f37a}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-SRC\_\-INC@{GSN\_\-DMA\_\-SRC\_\-INC}}
+\index{GSN\_\-DMA\_\-SRC\_\-INC@{GSN\_\-DMA\_\-SRC\_\-INC}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-SRC\_\-INC}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-DMA\_\-SRC\_\-INC}}}
+\label{a00645_ga592093c11bfd36ebbe08e1446e26f37a}
+
+
+GSN DMA source data increment. This enum defines available DMA source data increment values . 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_gadfad5571e188cca605e051802c24ada0}{GSN\_\-DMA\_\-SRC\_\-INC\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-DMA\_\-BYTE\_\-SRC\_\-INC@{GSN\_\-DMA\_\-BYTE\_\-SRC\_\-INC}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-BYTE\_\-SRC\_\-INC@{GSN\_\-DMA\_\-BYTE\_\-SRC\_\-INC}}\item[{\em 
+\hypertarget{a00645_gga592093c11bfd36ebbe08e1446e26f37aa33e61f45484d1c2ae0d2c8ad6a520b0b}{
+GSN\_\-DMA\_\-BYTE\_\-SRC\_\-INC}
+\label{a00645_gga592093c11bfd36ebbe08e1446e26f37aa33e61f45484d1c2ae0d2c8ad6a520b0b}
+}]\index{GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-INC@{GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-INC}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-INC@{GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-INC}}\item[{\em 
+\hypertarget{a00645_gga592093c11bfd36ebbe08e1446e26f37aa0fb26d608d6f3abb56aa50dc5e3588ab}{
+GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-INC}
+\label{a00645_gga592093c11bfd36ebbe08e1446e26f37aa0fb26d608d6f3abb56aa50dc5e3588ab}
+}]\index{GSN\_\-DMA\_\-WORD\_\-SRC\_\-INC@{GSN\_\-DMA\_\-WORD\_\-SRC\_\-INC}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-WORD\_\-SRC\_\-INC@{GSN\_\-DMA\_\-WORD\_\-SRC\_\-INC}}\item[{\em 
+\hypertarget{a00645_gga592093c11bfd36ebbe08e1446e26f37aa5a0832151e665289a8604b6fc1b4c889}{
+GSN\_\-DMA\_\-WORD\_\-SRC\_\-INC}
+\label{a00645_gga592093c11bfd36ebbe08e1446e26f37aa5a0832151e665289a8604b6fc1b4c889}
+}]\index{GSN\_\-DMA\_\-NO\_\-SRC\_\-INC@{GSN\_\-DMA\_\-NO\_\-SRC\_\-INC}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-NO\_\-SRC\_\-INC@{GSN\_\-DMA\_\-NO\_\-SRC\_\-INC}}\item[{\em 
+\hypertarget{a00645_gga592093c11bfd36ebbe08e1446e26f37aabfed1c5dc35a6299af6df490ead8fda7}{
+GSN\_\-DMA\_\-NO\_\-SRC\_\-INC}
+\label{a00645_gga592093c11bfd36ebbe08e1446e26f37aabfed1c5dc35a6299af6df490ead8fda7}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 247 of file gsn\_\-dma.h.
+
+\hypertarget{a00645_ga5ae8eaac9f901eb2607d04c46b8141e9}{
+\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-SRC\_\-SIZE@{GSN\_\-DMA\_\-SRC\_\-SIZE}}
+\index{GSN\_\-DMA\_\-SRC\_\-SIZE@{GSN\_\-DMA\_\-SRC\_\-SIZE}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GSN\_\-DMA\_\-SRC\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-DMA\_\-SRC\_\-SIZE}}}
+\label{a00645_ga5ae8eaac9f901eb2607d04c46b8141e9}
+
+
+GSN DMA source data sizes. This enum defines available source data sizes of DMA . 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_ga30dffcfe8e6fc270f93048d90cd440ec}{GSN\_\-DMA\_\-SRC\_\-SIZE\_\-T}. 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-DMA\_\-BYTE\_\-SRC\_\-SIZE@{GSN\_\-DMA\_\-BYTE\_\-SRC\_\-SIZE}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-BYTE\_\-SRC\_\-SIZE@{GSN\_\-DMA\_\-BYTE\_\-SRC\_\-SIZE}}\item[{\em 
+\hypertarget{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9a2b2932e85c3b4fc18d56c38f39d31dd8}{
+GSN\_\-DMA\_\-BYTE\_\-SRC\_\-SIZE}
+\label{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9a2b2932e85c3b4fc18d56c38f39d31dd8}
+}]\index{GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-SIZE@{GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-SIZE}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-SIZE@{GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-SIZE}}\item[{\em 
+\hypertarget{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9acb13c0f2739cfa4759bb75be01f0c5d6}{
+GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-SIZE}
+\label{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9acb13c0f2739cfa4759bb75be01f0c5d6}
+}]\index{GSN\_\-DMA\_\-WORD\_\-SRC\_\-SIZE@{GSN\_\-DMA\_\-WORD\_\-SRC\_\-SIZE}!GSN DMA API@{GSN DMA API}}\index{GSN DMA API@{GSN DMA API}!GSN\_\-DMA\_\-WORD\_\-SRC\_\-SIZE@{GSN\_\-DMA\_\-WORD\_\-SRC\_\-SIZE}}\item[{\em 
+\hypertarget{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9a881ac284185eaa1f1eb431452ce9bbe5}{
+GSN\_\-DMA\_\-WORD\_\-SRC\_\-SIZE}
+\label{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9a881ac284185eaa1f1eb431452ce9bbe5}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 232 of file gsn\_\-dma.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00645_ga449241f212ec11818862d4b3d09f78e4}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-CallBackRegister@{GsnDma\_\-CallBackRegister}}
+\index{GsnDma\_\-CallBackRegister@{GsnDma\_\-CallBackRegister}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-CallBackRegister}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-CallBackRegister (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf DMACALLBACK\_\-FP}}]{ptCallBackFunc, }
+\item[{VOID $\ast$}]{ctx, }
+\item[{{\bf UINT32}}]{channelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga449241f212ec11818862d4b3d09f78e4}
+
+
+This function registers all the call back functions from the peripheral modules in dma driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ Dma handle structure \\
+\hline
+{\em ptCallBackFunc} & -\/ call back function from the peripheral. \\
+\hline
+{\em ctx} & -\/ context from the peripheral \\
+\hline
+{\em channelID} & -\/ channel ID. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em VOID} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga3f2ad549f5231785b43dcdafff7dad76}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelControlGetAlternate@{GsnDma\_\-ChannelControlGetAlternate}}
+\index{GsnDma\_\-ChannelControlGetAlternate@{GsnDma\_\-ChannelControlGetAlternate}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelControlGetAlternate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-ChannelControlGetAlternate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga3f2ad549f5231785b43dcdafff7dad76}
+
+
+This API gets the channel configuration of a particular channel in alternate data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Channel configuration value. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gae299f12e8d6fe7d3e1aed64ca683e5d4}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelControlGetPrimary@{GsnDma\_\-ChannelControlGetPrimary}}
+\index{GsnDma\_\-ChannelControlGetPrimary@{GsnDma\_\-ChannelControlGetPrimary}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelControlGetPrimary}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-ChannelControlGetPrimary (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gae299f12e8d6fe7d3e1aed64ca683e5d4}
+
+
+This API gets the channel configuration of a particular channel in primary data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Channel configuration value. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga20dfa4fbdf89c9623e33349ac917a0f7}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelControlSetAlternate@{GsnDma\_\-ChannelControlSetAlternate}}
+\index{GsnDma\_\-ChannelControlSetAlternate@{GsnDma\_\-ChannelControlSetAlternate}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelControlSetAlternate}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-ChannelControlSetAlternate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT32}}]{ulControl, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga20dfa4fbdf89c9623e33349ac917a0f7}
+
+
+Sets the control parameter for a particular channel in Alternate data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+{\em ulControl} & -\/ channel configuration parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gac94ecec6e71b0486e190f0416ac0aafe}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelControlSetPrimary@{GsnDma\_\-ChannelControlSetPrimary}}
+\index{GsnDma\_\-ChannelControlSetPrimary@{GsnDma\_\-ChannelControlSetPrimary}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelControlSetPrimary}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-ChannelControlSetPrimary (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT32}}]{ulControl, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gac94ecec6e71b0486e190f0416ac0aafe}
+
+
+Sets the control parameter for a particular channel in primarary data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+{\em ulControl} & -\/ channel configuration parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gae368b9082da7ffdcf71880d0ee0d5322}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelDisable@{GsnDma\_\-ChannelDisable}}
+\index{GsnDma\_\-ChannelDisable@{GsnDma\_\-ChannelDisable}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelDisable}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-ChannelDisable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gae368b9082da7ffdcf71880d0ee0d5322}
+
+
+This function will disable the specified channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gafe8f53f9d44f015348fa1dc566a535a9}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelEnable@{GsnDma\_\-ChannelEnable}}
+\index{GsnDma\_\-ChannelEnable@{GsnDma\_\-ChannelEnable}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelEnable}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-ChannelEnable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gafe8f53f9d44f015348fa1dc566a535a9}
+
+
+This function will enable the specified dma channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga5ceeca071a5842ca89987a6409d7622f}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelIDValid@{GsnDma\_\-ChannelIDValid}}
+\index{GsnDma\_\-ChannelIDValid@{GsnDma\_\-ChannelIDValid}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelIDValid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BOOL} GsnDma\_\-ChannelIDValid (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga5ceeca071a5842ca89987a6409d7622f}
+
+
+This function checks the DMA channel ID is valid or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ulChannelID} & -\/ Channel ID. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & on success \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga70900a6c4c67014eb4ab3b6fb1e07e7b}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelPriAltClear@{GsnDma\_\-ChannelPriAltClear}}
+\index{GsnDma\_\-ChannelPriAltClear@{GsnDma\_\-ChannelPriAltClear}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelPriAltClear}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-ChannelPriAltClear (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT32}}]{channelsToConfigure}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga70900a6c4c67014eb4ab3b6fb1e07e7b}
+
+
+DMA module Primary-\/Alternate-\/Set API. This function set the alternate data structure of Dma. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure . \\
+\hline
+{\em channelsToConfigure} & -\/ Channel no-\/to enable the alternate data stru cture of a particular channel \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em VOID} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga83809527ab278dc141bcbf1aff7d4261}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelPriAltSet@{GsnDma\_\-ChannelPriAltSet}}
+\index{GsnDma\_\-ChannelPriAltSet@{GsnDma\_\-ChannelPriAltSet}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelPriAltSet}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-ChannelPriAltSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT32}}]{channelsToConfigure}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga83809527ab278dc141bcbf1aff7d4261}
+
+
+DMA module Primary-\/Alternate-\/Clear API. This function clear the alternate data structure of Dma. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure . \\
+\hline
+{\em channelsToConfigure} & -\/ Channel no-\/to clear the alternate data stru cture of a particular channel \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em VOID} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga4b168b176e39643a79d1e17a35509ddd}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelSoftwareRequest@{GsnDma\_\-ChannelSoftwareRequest}}
+\index{GsnDma\_\-ChannelSoftwareRequest@{GsnDma\_\-ChannelSoftwareRequest}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelSoftwareRequest}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-ChannelSoftwareRequest (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga4b168b176e39643a79d1e17a35509ddd}
+
+
+This function can use for the software request for a channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gafa916751ce4bc1ff2e107afa8e105b23}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelTransferSetAlternate@{GsnDma\_\-ChannelTransferSetAlternate}}
+\index{GsnDma\_\-ChannelTransferSetAlternate@{GsnDma\_\-ChannelTransferSetAlternate}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelTransferSetAlternate}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-ChannelTransferSetAlternate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{VOID $\ast$}]{pvSrcAddr, }
+\item[{VOID $\ast$}]{pvDstAddr, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gafa916751ce4bc1ff2e107afa8e105b23}
+
+
+This API sets the source address and destination address of a particular channel in Alternate data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+{\em pvSrcAddr} & -\/is the source address for the DMA transfer. \\
+\hline
+{\em pvDstAddr} & -\/is the destination address for the DMA transfer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gacf14d2b733378887f57720111f5a273c}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-ChannelTransferSetPrimary@{GsnDma\_\-ChannelTransferSetPrimary}}
+\index{GsnDma\_\-ChannelTransferSetPrimary@{GsnDma\_\-ChannelTransferSetPrimary}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-ChannelTransferSetPrimary}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-ChannelTransferSetPrimary (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{VOID $\ast$}]{pvSrcAddr, }
+\item[{VOID $\ast$}]{pvDstAddr, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gacf14d2b733378887f57720111f5a273c}
+
+
+This API sets the source address and destination address of a particular channel in primary data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+{\em pvSrcAddr} & -\/is the source address for the DMA transfer. \\
+\hline
+{\em pvDstAddr} & -\/is the destination address for the DMA transfer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga5aa9630791f923d9584eca792db30693}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-Close@{GsnDma\_\-Close}}
+\index{GsnDma\_\-Close@{GsnDma\_\-Close}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-Close}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnDma\_\-Close (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga5aa9630791f923d9584eca792db30693}
+
+
+DMA Driver Close API. This function closes PL230 DMA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-DMA\_\-STATUS\_\-ERROR} & on error \\
+\hline
+{\em GSN\_\-DMA\_\-STATUS\_\-OK} & on success. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gaf793f914fc28383eb27b9f4697df3627}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-CurrentDestAddrGet@{GsnDma\_\-CurrentDestAddrGet}}
+\index{GsnDma\_\-CurrentDestAddrGet@{GsnDma\_\-CurrentDestAddrGet}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-CurrentDestAddrGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-CurrentDestAddrGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gaf793f914fc28383eb27b9f4697df3627}
+
+
+This API Gets the Current Destination Address of a particular channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current destination address 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga4041bdc9579ac5a6544a433217b33ec2}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-CurrentDestAddrGetPrimary@{GsnDma\_\-CurrentDestAddrGetPrimary}}
+\index{GsnDma\_\-CurrentDestAddrGetPrimary@{GsnDma\_\-CurrentDestAddrGetPrimary}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-CurrentDestAddrGetPrimary}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-CurrentDestAddrGetPrimary (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga4041bdc9579ac5a6544a433217b33ec2}
+
+
+This API Gets the Current Destination Address of a particular channel in primary data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current destination address 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga19ae102a0c571013f52c40ca8f7829f4}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-CurrentSourceAddrGet@{GsnDma\_\-CurrentSourceAddrGet}}
+\index{GsnDma\_\-CurrentSourceAddrGet@{GsnDma\_\-CurrentSourceAddrGet}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-CurrentSourceAddrGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-CurrentSourceAddrGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga19ae102a0c571013f52c40ca8f7829f4}
+
+
+This API Gets the Current Source Address of a particular channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current source address 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga508b5fe55e9c637738cf2661a571363c}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-CycleControl@{GsnDma\_\-CycleControl}}
+\index{GsnDma\_\-CycleControl@{GsnDma\_\-CycleControl}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-CycleControl}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-CycleControl (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T} $\ast$}]{ptChannelConfig, }
+\item[{{\bf UINT8}}]{ulChannelID, }
+\item[{{\bf UINT32}}]{noOfBytesToTransfer, }
+\item[{VOID $\ast$}]{pvSrcAddr, }
+\item[{VOID $\ast$}]{pvDstAddr}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga508b5fe55e9c637738cf2661a571363c}
+
+
+In PL230 DMA ,transfer can done using one of the 5 dma cycle types. 1.)basic 2.)auto request 3.)memory scatter gather 4.)peripheral scatter gather 5.)ping pong. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ptChannelConfig} & -\/ IN pointer to GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+{\em noOfBytesToTransfer} & -\/ No of bytes to transfer. \\
+\hline
+{\em pvSrcAddr} & -\/ Source address of dma transfer. \\
+\hline
+{\em pvDstAddr} & -\/ Destination address of dma transfer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+VOID 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gad08a96af8d3b08b5353491f376838f04}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-CycleTypeGetAlternate@{GsnDma\_\-CycleTypeGetAlternate}}
+\index{GsnDma\_\-CycleTypeGetAlternate@{GsnDma\_\-CycleTypeGetAlternate}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-CycleTypeGetAlternate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-CycleTypeGetAlternate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gad08a96af8d3b08b5353491f376838f04}
+
+
+This API gets the current dma cycle type value of a particular channel in alternate data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em current} & dma cycle type \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gaeec67a57b069b989d58c6ee008406dc2}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-CycleTypeGetPrimary@{GsnDma\_\-CycleTypeGetPrimary}}
+\index{GsnDma\_\-CycleTypeGetPrimary@{GsnDma\_\-CycleTypeGetPrimary}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-CycleTypeGetPrimary}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-CycleTypeGetPrimary (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gaeec67a57b069b989d58c6ee008406dc2}
+
+
+This API gets the current dma cycle type value of a particular channel in primary data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em current} & dma cycle type \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gae768fe52b1ab8f2cf674638e82c4a223}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-Disable@{GsnDma\_\-Disable}}
+\index{GsnDma\_\-Disable@{GsnDma\_\-Disable}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gae768fe52b1ab8f2cf674638e82c4a223}
+
+
+DMA module disable API. This function disables PL230 DMA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure . \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em VOID} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga7c2e3e52f4e9a058280bb12c28bcae98}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-Enable@{GsnDma\_\-Enable}}
+\index{GsnDma\_\-Enable@{GsnDma\_\-Enable}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga7c2e3e52f4e9a058280bb12c28bcae98}
+
+
+DMA module enable API. This function Enables PL230 DMA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure . \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em VOID} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga562863c56fadab4dacb22c1701a44f7b}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-IndividualClose@{GsnDma\_\-IndividualClose}}
+\index{GsnDma\_\-IndividualClose@{GsnDma\_\-IndividualClose}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-IndividualClose}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnDma\_\-IndividualClose (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT32}}]{channelsToClose}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga562863c56fadab4dacb22c1701a44f7b}
+
+
+DMA Driver Individual Channel Close API. This function closes the particular channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure . \\
+\hline
+{\em channelsToClose} & -\/ Channel that upper layer want to close. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-DMA\_\-STATUS\_\-ERROR} & on error \\
+\hline
+{\em GSN\_\-DMA\_\-STATUS\_\-OK} & on success. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gac9b681a85c07c6f76d4a5b5c3578770d}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-Open@{GsnDma\_\-Open}}
+\index{GsnDma\_\-Open@{GsnDma\_\-Open}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-Open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnDma\_\-Open (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf GSN\_\-DMACONFIG\_\-T} $\ast$}]{ptConfig, }
+\item[{{\bf UINT32}}]{channelsToConfigure}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gac9b681a85c07c6f76d4a5b5c3578770d}
+
+
+DMA Driver open API. This function initializes PL230 DMA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure. \\
+\hline
+{\em ptConfig} & -\/ IN pointer to DMA Config structure. \\
+\hline
+{\em channelsToConfigure} & -\/ IN Channels to Configure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-DMA\_\-STATUS\_\-ERROR} & on error \\
+\hline
+{\em GSN\_\-DMA\_\-STATUS\_\-OK} & on success. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga471064b999c9fbe35dae71e46ca0d6be}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-RemainTransferCountGet@{GsnDma\_\-RemainTransferCountGet}}
+\index{GsnDma\_\-RemainTransferCountGet@{GsnDma\_\-RemainTransferCountGet}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-RemainTransferCountGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-RemainTransferCountGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga471064b999c9fbe35dae71e46ca0d6be}
+
+
+This API gets the current N\_\-MINUS\_\-1 value of a particular channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Remaining} & transfer count \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga77f7365ca642ec971dd49bae1d30b204}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-RemainTransferCountGetAlternate@{GsnDma\_\-RemainTransferCountGetAlternate}}
+\index{GsnDma\_\-RemainTransferCountGetAlternate@{GsnDma\_\-RemainTransferCountGetAlternate}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-RemainTransferCountGetAlternate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-RemainTransferCountGetAlternate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga77f7365ca642ec971dd49bae1d30b204}
+
+
+This API gets the current N\_\-MINUS\_\-1 value of a particular channel in alternate data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Remaining} & transfer count \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga41c22392f7c2bcb6371732f7b4262458}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-RemainTransferCountGetPrimary@{GsnDma\_\-RemainTransferCountGetPrimary}}
+\index{GsnDma\_\-RemainTransferCountGetPrimary@{GsnDma\_\-RemainTransferCountGetPrimary}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-RemainTransferCountGetPrimary}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-RemainTransferCountGetPrimary (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga41c22392f7c2bcb6371732f7b4262458}
+
+
+This API gets the current N\_\-MINUS\_\-1 value of a particular channel in primary data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Remaining} & transfer count \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga9fcb9e0aa7d752da1a090711fbff8a3d}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-specificChannelAddressAlternate@{GsnDma\_\-specificChannelAddressAlternate}}
+\index{GsnDma\_\-specificChannelAddressAlternate@{GsnDma\_\-specificChannelAddressAlternate}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-specificChannelAddressAlternate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-specificChannelAddressAlternate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga9fcb9e0aa7d752da1a090711fbff8a3d}
+
+
+This API gets the current channel address of a particular channel in alternate data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em channel} & address \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_gaa773c3c1a9478d26317cc2f8f6221be4}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-specificChannelAddressPrimary@{GsnDma\_\-specificChannelAddressPrimary}}
+\index{GsnDma\_\-specificChannelAddressPrimary@{GsnDma\_\-specificChannelAddressPrimary}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-specificChannelAddressPrimary}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-specificChannelAddressPrimary (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT8}}]{ulChannelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_gaa773c3c1a9478d26317cc2f8f6221be4}
+
+
+This API gets the current channel address of a particular channel in primary data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure \\
+\hline
+{\em ulChannelID} & -\/ ulChannelID is the DMA channel ID. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em channel} & address \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00645_ga839dcf0e2fc6ddc1fa8fa3895b763da0}{
+\index{GSN DMA API@{GSN DMA API}!GsnDma\_\-StatusGet@{GsnDma\_\-StatusGet}}
+\index{GsnDma\_\-StatusGet@{GsnDma\_\-StatusGet}!GSN DMA API@{GSN DMA API}}
+\subsubsection[{GsnDma\_\-StatusGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnDma\_\-StatusGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma}
+\end{DoxyParamCaption}
+)}}
+\label{a00645_ga839dcf0e2fc6ddc1fa8fa3895b763da0}
+
+
+DMA Driver DMA status (enable or disable) get API. This API can use for getting the current status of DMA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptGsnDma} & -\/ IN pointer to GSN\_\-DMA\_\-T structure . \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em If} & 1 DMA is enabled. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}

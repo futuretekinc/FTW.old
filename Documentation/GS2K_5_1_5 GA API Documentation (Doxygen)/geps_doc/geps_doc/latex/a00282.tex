@@ -1,0 +1,185 @@
+\hypertarget{a00282}{
+\section{GSN\_\-WDD\_\-PERSIST\_\-INFO Struct Reference}
+\label{a00282}\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+}
+
+
+Persistent info required by WDD. This structure defines persistent info needed by WDD and need to be passed in Init function. Ideally this info should be stored by app in persistent storage like NVRAM or flash, but if the system does not go to standby and if app not have persistent storage, it could store this in RAM as well but with loss of some functionality if a reset happens and this info is lost.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wdd.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00282_a816407436e0034386b9105d7a178503c}{validityFlag}
+\item 
+\hyperlink{a00278}{GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO\_\-T} \hyperlink{a00282_ac30e33b6d4676a7edce742595bc2132a}{micFailInfo}
+\item 
+\hyperlink{a00291}{GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA\_\-T} \hyperlink{a00282_a80250fb031ce539c4d61c3af0fb90b98}{groupKeyData}
+\item 
+\hyperlink{a00420}{GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T} \hyperlink{a00282_ab7ebd92c07a37e5734d4a013a626c921}{wpaIfBsicCfg}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00282_ab51ac124f098a070cec5bf8c41f50af9}{lastRssi}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00282_a125a8eaa4e3d225ee2ef6a97c49b1623}{rxActiveReqCnt}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00282_ae1c83e85aa9154a9e18cc1c67b25eceb}{rxPSPollReqCnt}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00282_a95f3bbf9ee9798a1df6a44a639127d06}{rxPSPollCfgSetFlag}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00282_a0a22ab1c8db99c09340bf3a95b81095e}{rxIeeePSPollCfgSetFlag}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00282_a3b37e1014c34c7ae4be0ee648aa3be61}{rxIeeePSPollReqCnt}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00282_a0a4ec0bdbd4cdf3511df5e31f1b8eeed}{lastPsStateReqsted}
+\item 
+\hyperlink{a00403}{GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-CFG\_\-T} \hyperlink{a00282_a5a308a3717827f3646911070ac15edb3}{rxIeeePSCfg}
+\item 
+\hyperlink{a00417}{GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} \hyperlink{a00282_ad6372ee4a4f4b10d14ac0b82ebefb1c8}{conctedSsid}
+\item 
+\hyperlink{a00416}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T} \hyperlink{a00282_ab56e7a67403a851a38b9d031d7417ffd}{conctedBssid}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Persistent info required by WDD. This structure defines persistent info needed by WDD and need to be passed in Init function. Ideally this info should be stored by app in persistent storage like NVRAM or flash, but if the system does not go to standby and if app not have persistent storage, it could store this in RAM as well but with loss of some functionality if a reset happens and this info is lost. 
+
+Definition at line 566 of file gsn\_\-wdd.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00282_ab56e7a67403a851a38b9d031d7417ffd}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!conctedBssid@{conctedBssid}}
+\index{conctedBssid@{conctedBssid}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{conctedBssid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T} {\bf conctedBssid}}}
+\label{a00282_ab56e7a67403a851a38b9d031d7417ffd}
+
+
+Definition at line 600 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_ad6372ee4a4f4b10d14ac0b82ebefb1c8}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!conctedSsid@{conctedSsid}}
+\index{conctedSsid@{conctedSsid}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{conctedSsid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WLAN\_\-MAC\_\-SSID\_\-T} {\bf conctedSsid}}}
+\label{a00282_ad6372ee4a4f4b10d14ac0b82ebefb1c8}
+
+
+Definition at line 599 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_a80250fb031ce539c4d61c3af0fb90b98}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!groupKeyData@{groupKeyData}}
+\index{groupKeyData@{groupKeyData}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{groupKeyData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WDD\_\-SEC\_\-GKU\_\-DATA\_\-T} {\bf groupKeyData}}}
+\label{a00282_a80250fb031ce539c4d61c3af0fb90b98}
+Pointer to GKU handling information used to initialze supplicant for handling GKUs; this should be pointer to GKU information in non-\/volatile memory like NVRAM so that GKUs can be handled across standby cycles without disassociating and associating again 
+
+Definition at line 579 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_a0a4ec0bdbd4cdf3511df5e31f1b8eeed}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!lastPsStateReqsted@{lastPsStateReqsted}}
+\index{lastPsStateReqsted@{lastPsStateReqsted}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{lastPsStateReqsted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf lastPsStateReqsted}}}
+\label{a00282_a0a4ec0bdbd4cdf3511df5e31f1b8eeed}
+
+
+Definition at line 597 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_ab51ac124f098a070cec5bf8c41f50af9}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!lastRssi@{lastRssi}}
+\index{lastRssi@{lastRssi}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{lastRssi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf lastRssi}}}
+\label{a00282_ab51ac124f098a070cec5bf8c41f50af9}
+
+
+Definition at line 591 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_ac30e33b6d4676a7edce742595bc2132a}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!micFailInfo@{micFailInfo}}
+\index{micFailInfo@{micFailInfo}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{micFailInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WDD\_\-MIC\_\-FAIL\_\-INFO\_\-T} {\bf micFailInfo}}}
+\label{a00282_ac30e33b6d4676a7edce742595bc2132a}
+pointer to MIC Fail information; this should be pointer to MIC fail information in non-\/volatile memory like NVRAM so that MIC failure can be tracked across standby cycles and MIC failure countermeasures can be initiated 
+
+Definition at line 569 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_a125a8eaa4e3d225ee2ef6a97c49b1623}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!rxActiveReqCnt@{rxActiveReqCnt}}
+\index{rxActiveReqCnt@{rxActiveReqCnt}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{rxActiveReqCnt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf rxActiveReqCnt}}}
+\label{a00282_a125a8eaa4e3d225ee2ef6a97c49b1623}
+
+
+Definition at line 592 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_a5a308a3717827f3646911070ac15edb3}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!rxIeeePSCfg@{rxIeeePSCfg}}
+\index{rxIeeePSCfg@{rxIeeePSCfg}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{rxIeeePSCfg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WIF\_\-WLAN\_\-STA\_\-PS\_\-CFG\_\-T} {\bf rxIeeePSCfg}}}
+\label{a00282_a5a308a3717827f3646911070ac15edb3}
+
+
+Definition at line 598 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_a0a22ab1c8db99c09340bf3a95b81095e}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!rxIeeePSPollCfgSetFlag@{rxIeeePSPollCfgSetFlag}}
+\index{rxIeeePSPollCfgSetFlag@{rxIeeePSPollCfgSetFlag}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{rxIeeePSPollCfgSetFlag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf rxIeeePSPollCfgSetFlag}}}
+\label{a00282_a0a22ab1c8db99c09340bf3a95b81095e}
+
+
+Definition at line 595 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_a3b37e1014c34c7ae4be0ee648aa3be61}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!rxIeeePSPollReqCnt@{rxIeeePSPollReqCnt}}
+\index{rxIeeePSPollReqCnt@{rxIeeePSPollReqCnt}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{rxIeeePSPollReqCnt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf rxIeeePSPollReqCnt}}}
+\label{a00282_a3b37e1014c34c7ae4be0ee648aa3be61}
+
+
+Definition at line 596 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_a95f3bbf9ee9798a1df6a44a639127d06}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!rxPSPollCfgSetFlag@{rxPSPollCfgSetFlag}}
+\index{rxPSPollCfgSetFlag@{rxPSPollCfgSetFlag}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{rxPSPollCfgSetFlag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf rxPSPollCfgSetFlag}}}
+\label{a00282_a95f3bbf9ee9798a1df6a44a639127d06}
+
+
+Definition at line 594 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_ae1c83e85aa9154a9e18cc1c67b25eceb}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!rxPSPollReqCnt@{rxPSPollReqCnt}}
+\index{rxPSPollReqCnt@{rxPSPollReqCnt}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{rxPSPollReqCnt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf rxPSPollReqCnt}}}
+\label{a00282_ae1c83e85aa9154a9e18cc1c67b25eceb}
+
+
+Definition at line 593 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_a816407436e0034386b9105d7a178503c}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!validityFlag@{validityFlag}}
+\index{validityFlag@{validityFlag}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{validityFlag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf validityFlag}}}
+\label{a00282_a816407436e0034386b9105d7a178503c}
+
+
+Definition at line 568 of file gsn\_\-wdd.h.
+
+\hypertarget{a00282_ab7ebd92c07a37e5734d4a013a626c921}{
+\index{GSN\_\-WDD\_\-PERSIST\_\-INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}!wpaIfBsicCfg@{wpaIfBsicCfg}}
+\index{wpaIfBsicCfg@{wpaIfBsicCfg}!GSN_WDD_PERSIST_INFO@{GSN\_\-WDD\_\-PERSIST\_\-INFO}}
+\subsubsection[{wpaIfBsicCfg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WPAIF\_\-BASIC\_\-CFG\_\-T} {\bf wpaIfBsicCfg}}}
+\label{a00282_ab7ebd92c07a37e5734d4a013a626c921}
+
+
+Definition at line 589 of file gsn\_\-wdd.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00603}{gsn\_\-wdd.h}\end{DoxyCompactItemize}

@@ -1,0 +1,66 @@
+\hypertarget{a00364}{
+\section{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S Struct Reference}
+\label{a00364}\index{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S}}
+}
+
+
+Standby request msg format.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wif\_\-sys\_\-defs.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00364_a3aa7b6bbc3592496f826582ca64fa8db}{wakeUpForWlanEvents}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00364_ab4a5a2d52316894cb4be373f46bf30ac}{restoreIfBitMap}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00364_abefee9d661c8d167ae23c6fc64b0f54e}{waitPeriod} \mbox{[}GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Standby request msg format. 
+
+Standby request msg format 
+
+Definition at line 581 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00364_ab4a5a2d52316894cb4be373f46bf30ac}{
+\index{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S}!restoreIfBitMap@{restoreIfBitMap}}
+\index{restoreIfBitMap@{restoreIfBitMap}!GSN_WIF_SYS_STDBY_REQ_S@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S}}
+\subsubsection[{restoreIfBitMap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf restoreIfBitMap}}}
+\label{a00364_ab4a5a2d52316894cb4be373f46bf30ac}
+Interfaces which needs to be restored BIT\#0 -\/ First i/f, BIT\#1 for second i/f and so on 
+
+Definition at line 586 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00364_abefee9d661c8d167ae23c6fc64b0f54e}{
+\index{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S}!waitPeriod@{waitPeriod}}
+\index{waitPeriod@{waitPeriod}!GSN_WIF_SYS_STDBY_REQ_S@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S}}
+\subsubsection[{waitPeriod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf waitPeriod}\mbox{[}GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM\mbox{]}}}
+\label{a00364_abefee9d661c8d167ae23c6fc64b0f54e}
+Wait period in milliseconds. 0 -\/ No wait; 0xFFFFFFFF -\/ Wait till TX completion 
+
+Definition at line 588 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00364_a3aa7b6bbc3592496f826582ca64fa8db}{
+\index{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S}!wakeUpForWlanEvents@{wakeUpForWlanEvents}}
+\index{wakeUpForWlanEvents@{wakeUpForWlanEvents}!GSN_WIF_SYS_STDBY_REQ_S@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S}}
+\subsubsection[{wakeUpForWlanEvents}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf wakeUpForWlanEvents}}}
+\label{a00364_a3aa7b6bbc3592496f826582ca64fa8db}
+0 -\/ don't care for next wakeup event of WLAN 1 -\/ WLAN must honor the next wakeup event 
+
+Definition at line 583 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00612}{gsn\_\-wif\_\-sys\_\-defs.h}\end{DoxyCompactItemize}

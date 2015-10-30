@@ -1,0 +1,120 @@
+\hypertarget{a00672}{
+\section{GSN Simple Network Time Protocol}
+\label{a00672}\index{GSN Simple Network Time Protocol@{GSN Simple Network Time Protocol}}
+}
+
+
+SNTP functions.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00227}{GSN\_\-SNTP\_\-CTX}
+\begin{DoxyCompactList}\small\item\em SNTP context structure. This structure contains the parameters that define an instance of the SNTP object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00227}{GSN\_\-SNTP\_\-CTX} \hyperlink{a00672_gae0179c63a9e6988c361e8d0deb285a24}{GSN\_\-SNTP\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em SNTP context structure. This structure contains the parameters that define an instance of the SNTP object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00672_ga71cfb857bfbf8d5de080ef4f5807b0d0}{GsnSntp\_\-TimeSync} (\hyperlink{a00227}{GSN\_\-SNTP\_\-CTX\_\-T} $\ast$sntpCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} serverIpAddr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} serverTimeout, \hyperlink{a00481_aac7371fae4e423f90332caf551b62cf1}{GSN\_\-NOTIFICATION\_\-FUNC\_\-T} cb, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em Synchronize time with server. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00672_ga0e7313023463ed1799f84c4b49ad4f91}{GsnSntp\_\-TimeDiffGet} (\hyperlink{a00227}{GSN\_\-SNTP\_\-CTX\_\-T} $\ast$sntpCtx, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} $\ast$pTimeDiff, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} $\ast$pDiffNegative)
+\begin{DoxyCompactList}\small\item\em Get adjustment time value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+SNTP functions. This file contains public definitions and functions for synchronizing TSync time with a specified SNTP server. \par
+
+
+\par
+ The TSync block, low-\/ and high-\/power clocks, and associated platform software provide a clock that can be synchronized to an external reference by adjusting the offset value, and will thereafter maintain synchronization despite sojourns in power-\/conserving states. In order to have System Time accurately reflect absolute calendar time, it is merely necessary to add a means of establishing the value of the offset. GEPS versions 2.0 and above support the use of SNTP for this purpose. The API function \hyperlink{a00672_ga71cfb857bfbf8d5de080ef4f5807b0d0}{GsnSntp\_\-TimeSync()} sends a Time Request to a known server address (using the function GsnSntp\_\-Send()), and registers a callback function to handle the Time Response when it is received. The callback function (\hyperlink{a00585_a899703a2f77e7e303de46351018c09e8}{GsnSntp\_\-SocketCb()}) extracts the difference between the SNTP time and the System Time, and corrects System Time for this difference. The calling application may also pass in its own callback function, to be launched once the time difference has been established. \par
+ \par
+ In setting System Time, the calling application must take into account other activities that may depend on the absolute value of System Time. For example, any soft timers that are active will be affected by a Sys-\/tem Time offset; if the timers are intended to mark relative rather than absolute times, their values must be reset. Other relative times, such as the duration of a DHCP lease, may also need to be adjusted. The User Application must attend to these issues if it adjusts System Time as a consequence of an SNTP synchronization. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00672_gae0179c63a9e6988c361e8d0deb285a24}{
+\index{GSN Simple Network Time Protocol@{GSN Simple Network Time Protocol}!GSN\_\-SNTP\_\-CTX\_\-T@{GSN\_\-SNTP\_\-CTX\_\-T}}
+\index{GSN\_\-SNTP\_\-CTX\_\-T@{GSN\_\-SNTP\_\-CTX\_\-T}!GSN Simple Network Time Protocol@{GSN Simple Network Time Protocol}}
+\subsubsection[{GSN\_\-SNTP\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SNTP\_\-CTX}  {\bf GSN\_\-SNTP\_\-CTX\_\-T}}}
+\label{a00672_gae0179c63a9e6988c361e8d0deb285a24}
+
+
+SNTP context structure. This structure contains the parameters that define an instance of the SNTP object. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00672_ga0e7313023463ed1799f84c4b49ad4f91}{
+\index{GSN Simple Network Time Protocol@{GSN Simple Network Time Protocol}!GsnSntp\_\-TimeDiffGet@{GsnSntp\_\-TimeDiffGet}}
+\index{GsnSntp\_\-TimeDiffGet@{GsnSntp\_\-TimeDiffGet}!GSN Simple Network Time Protocol@{GSN Simple Network Time Protocol}}
+\subsubsection[{GsnSntp\_\-TimeDiffGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnSntp\_\-TimeDiffGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SNTP\_\-CTX\_\-T} $\ast$}]{sntpCtx, }
+\item[{{\bf ULONG64} $\ast$}]{pTimeDiff, }
+\item[{{\bf BOOL} $\ast$}]{pDiffNegative}
+\end{DoxyParamCaption}
+)}}
+\label{a00672_ga0e7313023463ed1799f84c4b49ad4f91}
+
+
+Get adjustment time value. 
+
+This function gives the time adjustment value and whether the adjustment is negative or positive. 
+\begin{DoxyParams}{Parameters}
+{\em sntpCtx} & -\/ IN Pointer to SNTP context provided by user. \\
+\hline
+{\em pTimeDiff} & -\/ OUT Pointer to time difference value. \\
+\hline
+{\em pDiffNegative} & -\/ OUT Pointer to a BOOL for returning the adjustment type, positive or negative. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 185 of file gsn\_\-sntp.h.
+
+\hypertarget{a00672_ga71cfb857bfbf8d5de080ef4f5807b0d0}{
+\index{GSN Simple Network Time Protocol@{GSN Simple Network Time Protocol}!GsnSntp\_\-TimeSync@{GsnSntp\_\-TimeSync}}
+\index{GsnSntp\_\-TimeSync@{GsnSntp\_\-TimeSync}!GSN Simple Network Time Protocol@{GSN Simple Network Time Protocol}}
+\subsubsection[{GsnSntp\_\-TimeSync}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnSntp\_\-TimeSync (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SNTP\_\-CTX\_\-T} $\ast$}]{sntpCtx, }
+\item[{{\bf UINT32}}]{serverIpAddr, }
+\item[{{\bf UINT32}}]{serverTimeout, }
+\item[{{\bf GSN\_\-NOTIFICATION\_\-FUNC\_\-T}}]{cb, }
+\item[{VOID $\ast$}]{cbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00672_ga71cfb857bfbf8d5de080ef4f5807b0d0}
+
+
+Synchronize time with server. 
+
+This function performs time synchronization with the given SNTP server. It does not adjust the system time but just gets the server time and computes the time difference. It is up to application to adjust the time after the successful callback. 
+\begin{DoxyParams}{Parameters}
+{\em sntpCtx} & -\/ IN Pointer to SNTP context provided by user. \\
+\hline
+{\em serverIpAddr} & -\/ IN Server IP address. \\
+\hline
+{\em serverTimeout} & -\/ IN time in seconds to wait for server response. \\
+\hline
+{\em cb} & -\/ IN Function that will be called to notify the result. \\
+\hline
+{\em cbCtx} & -\/ IN User context that will be passed back in callback. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-FAILURE} & Operation failed. \\
+\hline
+{\em GSN\_\-OPERATION\_\-IN\_\-PROGRESS} & Operation in progress. Callback function will be called to indicate the result. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+If this function returns anything other than GSN\_\-OPERATION\_\-IN\_\-PROGRESS, then the API execution is complete and callback will not be called. If GSN\_\-OPERATION\_\-IN\_\-PROGRESS is returned, then the callback will be called after the operation is complete to indicate the final result. 
+
+The callback function is called after the operation is complete or upon timeout (20sec). If the callback status is GSN\_\-FAILURE, then it indicates timeout. If the callback status is GSN\_\-SUCCESS, then it indicates the server response was received and the time difference can be obtained by calling GsnSntp\_\-TimeDiffGet. 
+\end{DoxyNote}

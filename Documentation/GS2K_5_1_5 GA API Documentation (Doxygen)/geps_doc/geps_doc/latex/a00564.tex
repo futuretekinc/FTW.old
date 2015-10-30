@@ -1,0 +1,2072 @@
+\hypertarget{a00564}{
+\section{gsn\_\-reg\_\-pwm\_\-op.h File Reference}
+\label{a00564}\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00801}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00564_a9ca96287c76d806aaf80ecd8bdea2780}{PWM\_\-PWMCR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR))
+\item 
+\#define \hyperlink{a00564_a63b6ca52bb8683da75423d6cbc5e6dad}{PWM\_\-PWMCR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR, (value))
+\item 
+\#define \hyperlink{a00564_aa27a948fb01f49edcb55fa4d1733d666}{PWM\_\-PWMCR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR) $|$ (value))
+\item 
+\#define \hyperlink{a00564_a9f0d1b9df47048caa7fa5c06d25bbe35}{PWM\_\-PWMCR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00564_a2423061150fcccea7c39c1f8f9a04c21}{PWM\_\-CLKFREQ\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLKFREQ)
+\item 
+\#define \hyperlink{a00564_a6c27b15f0bb5e6d1feb3db63d74b4b73}{PWM\_\-CLKFREQ\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLKFREQ, 1)
+\item 
+\#define \hyperlink{a00564_a400b9772036d907dda9504b67b108f4f}{PWM\_\-CLKFREQ\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLKFREQ, 0)
+\item 
+\#define \hyperlink{a00564_a9a8550a68459aa9bf9ef3fc92a560c97}{PWM\_\-SCLS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SCLS)
+\item 
+\#define \hyperlink{a00564_a9fde8ec4775161b94d3fce67ba36d6fe}{PWM\_\-SCLS\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SCLS, 1)
+\item 
+\#define \hyperlink{a00564_a88a12d6dcc36bc6f1089228999192fd0}{PWM\_\-SCLS\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SCLS, 0)
+\item 
+\#define \hyperlink{a00564_a18b3d60afb481bf5b9e3a1125e2a31ca}{PWM\_\-SEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SEN)
+\item 
+\#define \hyperlink{a00564_a9242f83ae01ab324f99b87b0f94a2ff3}{PWM\_\-SEN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SEN, 1)
+\item 
+\#define \hyperlink{a00564_a034aae47939380f387230201c7f1274e}{PWM\_\-SEN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SEN, 0)
+\item 
+\#define \hyperlink{a00564_ac3861967d757bbe658bd178f22f1faf9}{PWM\_\-POL2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL2)
+\item 
+\#define \hyperlink{a00564_a3cf36929a0204cf9b459b3baf53a8788}{PWM\_\-POL2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL2, 1)
+\item 
+\#define \hyperlink{a00564_a36caff72143fa6007ee9252c30c22e22}{PWM\_\-POL2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL2, 0)
+\item 
+\#define \hyperlink{a00564_a3f38f44db6c84ac925932b3b8c7c3fbd}{PWM\_\-CLS2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS2)
+\item 
+\#define \hyperlink{a00564_af55cb269b9c76d640209e286c8f94ffc}{PWM\_\-CLS2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS2, 1)
+\item 
+\#define \hyperlink{a00564_a1ba0976f87cd390582bc472a8cf3d9e8}{PWM\_\-CLS2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS2, 0)
+\item 
+\#define \hyperlink{a00564_aa0de269e9d261e256c561e5143bcef78}{PWM\_\-EN2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN2)
+\item 
+\#define \hyperlink{a00564_a56aefca82f7d7b5edb18bdaebea0db6a}{PWM\_\-EN2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN2, 1)
+\item 
+\#define \hyperlink{a00564_a2684de4c2445d0662924e1c73f923fad}{PWM\_\-EN2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN2, 0)
+\item 
+\#define \hyperlink{a00564_a99bdcd1c7117714230d87bca18ed71eb}{PWM\_\-POL1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL1)
+\item 
+\#define \hyperlink{a00564_a34cd56e735c1f620b6dfffad6128a3c5}{PWM\_\-POL1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL1, 1)
+\item 
+\#define \hyperlink{a00564_a4b189c63bdda09213e5d5315da80384c}{PWM\_\-POL1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL1, 0)
+\item 
+\#define \hyperlink{a00564_abcd88bc573372dee69fab4cee42e67a4}{PWM\_\-CLS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS1)
+\item 
+\#define \hyperlink{a00564_af74ce61781a665d55d1ee4250668b33d}{PWM\_\-CLS1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS1, 1)
+\item 
+\#define \hyperlink{a00564_ad14da03f8413dd7ea49705c8407d0742}{PWM\_\-CLS1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS1, 0)
+\item 
+\#define \hyperlink{a00564_aeb1489216bb185b2585f738b6c600f3a}{PWM\_\-EN1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN1)
+\item 
+\#define \hyperlink{a00564_acdabe8d1151b6554b11e48c125be50f5}{PWM\_\-EN1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN1, 1)
+\item 
+\#define \hyperlink{a00564_ab0e2c328397c79db3ac0ab71cd90a02e}{PWM\_\-EN1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN1, 0)
+\item 
+\#define \hyperlink{a00564_ab053c37a5ad78b9a3634a5d7907786e2}{PWM\_\-POL0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL0)
+\item 
+\#define \hyperlink{a00564_a23974fba299be6bb27c67a2e529d7018}{PWM\_\-POL0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL0, 1)
+\item 
+\#define \hyperlink{a00564_a056abf01d914aaa1b97134414fe649b4}{PWM\_\-POL0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL0, 0)
+\item 
+\#define \hyperlink{a00564_a0bab0efa676fb73652087e4614b9d333}{PWM\_\-CLS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS0)
+\item 
+\#define \hyperlink{a00564_a48025db825d2e6af9549b185761bef9f}{PWM\_\-CLS0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS0, 1)
+\item 
+\#define \hyperlink{a00564_a1fd2b9908d334f02cfd31d12c3c234a2}{PWM\_\-CLS0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS0, 0)
+\item 
+\#define \hyperlink{a00564_aa6094a998396ecf9acb2e07fc581d49f}{PWM\_\-EN0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN0)
+\item 
+\#define \hyperlink{a00564_a57752a099ffdae1e07ccad1a0fe37a73}{PWM\_\-EN0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN0, 1)
+\item 
+\#define \hyperlink{a00564_ad02f26a336a3d7068d60d970ae48d0fc}{PWM\_\-EN0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN0, 0)
+\item 
+\#define \hyperlink{a00564_a2a214b3e7868ddd56c44b2eabdc42ca4}{PWM\_\-PWMCPS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS))
+\item 
+\#define \hyperlink{a00564_a45cf8dce025850209b19d0a27f54dcf9}{PWM\_\-PWMCPS\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS, (value))
+\item 
+\#define \hyperlink{a00564_a0e5cccf621db80dd75372e2ec3f3ed32}{PWM\_\-PWMCPS\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS) $|$ (value))
+\item 
+\#define \hyperlink{a00564_afd02755319269c5044ba59d94bd16753}{PWM\_\-PWMCPS\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00564_a837568afee3176a95e570fc3b3e80b4a}{PWM\_\-CPS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CPS)
+\item 
+\#define \hyperlink{a00564_abc827d21f392fe1b73e614af119d2260}{PWM\_\-CPS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CPS, (value))
+\item 
+\#define \hyperlink{a00564_a9848f48672e2d97f964a8e861204f3a6}{PWM\_\-PWMDCR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR))
+\item 
+\#define \hyperlink{a00564_a525343af70a11ea863801e070724aa57}{PWM\_\-PWMDCR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR, (value))
+\item 
+\#define \hyperlink{a00564_ad1b66d41c08d17b9687a2e640d4d2410}{PWM\_\-PWMDCR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR) $|$ (value))
+\item 
+\#define \hyperlink{a00564_a8cfa0f8d5fc6e6443de1e9d8b6f6f38b}{PWM\_\-PWMDCR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00564_aed2a3963a64ac1bdafd860e341d2b337}{PWM\_\-PDS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-PDS1)
+\item 
+\#define \hyperlink{a00564_a3846da2403b76b1f6861c354f88c2328}{PWM\_\-PDS1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-PDS1, (value))
+\item 
+\#define \hyperlink{a00564_a654457a9292548c1fa4c346541e347b1}{PWM\_\-PDS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-PDS0)
+\item 
+\#define \hyperlink{a00564_a954404f4582c5426b22d956c49302166}{PWM\_\-PDS0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-PDS0, (value))
+\item 
+\#define \hyperlink{a00564_ac933448d0f2ed1bf1084b2ea506b7aa8}{PWM\_\-PWMID\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMID))
+\item 
+\#define \hyperlink{a00564_a767fdad327b65acf06fbbfe1f06c12d1}{PWM\_\-ID\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ID)
+\item 
+\#define \hyperlink{a00564_afe07d2c0427d1ec34be0ac6d9675ba3b}{PWM\_\-PWMCCR0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0))
+\item 
+\#define \hyperlink{a00564_a09030af97a6e09da5fe1c0d663c4930b}{PWM\_\-PWMCCR0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0, (value))
+\item 
+\#define \hyperlink{a00564_a94a26b004f2492705496dc85791e770e}{PWM\_\-PWMCCR0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0) $|$ (value))
+\item 
+\#define \hyperlink{a00564_aa201d1abdea112b4f327a5cde99c16dd}{PWM\_\-PWMCCR0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00564_a2bf14b98aad5acd66236bae57022d39c}{PWM\_\-ONCNT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONCNT)
+\item 
+\#define \hyperlink{a00564_a45b8deeab360cfc85fc20156ef08ab4f}{PWM\_\-ONCNT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONCNT, (value))
+\item 
+\#define \hyperlink{a00564_af933308db9d9895acaa200900d29b412}{PWM\_\-OFFCNT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFCNT)
+\item 
+\#define \hyperlink{a00564_ac324e18dceb1d8cccf9e2e555d4d6cdf}{PWM\_\-OFFCNT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFCNT, (value))
+\item 
+\#define \hyperlink{a00564_ae6716c663a9aa408810909f8f5de0393}{PWM\_\-PWMCCR1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1))
+\item 
+\#define \hyperlink{a00564_a876bfd2fc653def0282fbc6d35e546f5}{PWM\_\-PWMCCR1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1, (value))
+\item 
+\#define \hyperlink{a00564_a8ce20fbe7cdc55d946a64bc15ebe2f43}{PWM\_\-PWMCCR1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1) $|$ (value))
+\item 
+\#define \hyperlink{a00564_a643ed63e44bd433f344946684c2b1698}{PWM\_\-PWMCCR1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00564_a94307f654ce6af547c79da0108c16c1c}{PWM\_\-PWMCCR2\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2))
+\item 
+\#define \hyperlink{a00564_a302314df237d0329288ed2ff3687a0f1}{PWM\_\-PWMCCR2\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2, (value))
+\item 
+\#define \hyperlink{a00564_a138bbe1e549d57512a3a3b4c7a6cbd43}{PWM\_\-PWMCCR2\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2) $|$ (value))
+\item 
+\#define \hyperlink{a00564_a6c6d615793502c3077897e32c7ffc16d}{PWM\_\-PWMCCR2\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00564_a3886a1704767e5b7df2aca90138cc427}{PWM\_\-PWMCST0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCST0))
+\item 
+\#define \hyperlink{a00564_a2204276d5249d12131c8f4681edad0e8}{PWM\_\-CNTST\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CNTST)
+\item 
+\#define \hyperlink{a00564_a0c9dc455d6cbf5f4447b072b1265acc8}{PWM\_\-CNTVAL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CNTVAL)
+\item 
+\#define \hyperlink{a00564_a616c856c9be6c244bf771a1a1fa80242}{PWM\_\-PWMCST1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCST1))
+\item 
+\#define \hyperlink{a00564_aaabd65f6f32888657ae301ecf4b58cc9}{PWM\_\-PWMCST2\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCST2))
+\item 
+\#define \hyperlink{a00564_a727918a05305d53b9116708f3d97e5cb}{PWM\_\-PWMIS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIS))
+\item 
+\#define \hyperlink{a00564_a40c8025e9535e016b6fa6a8462672ac3}{PWM\_\-OFFIS2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIS2)
+\item 
+\#define \hyperlink{a00564_ad9940b9e942341eff1768c15c0df6666}{PWM\_\-ONIS2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIS2)
+\item 
+\#define \hyperlink{a00564_af1b696108734f645d9091293466d626c}{PWM\_\-OFFIS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIS1)
+\item 
+\#define \hyperlink{a00564_ab781b7edd34ab5f46112c74b851ee1f0}{PWM\_\-ONIS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIS1)
+\item 
+\#define \hyperlink{a00564_abc061c469d0837671b228ff13e6949ed}{PWM\_\-OFFIS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIS0)
+\item 
+\#define \hyperlink{a00564_a5716b2334368aa5866c105118073f985}{PWM\_\-ONIS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIS0)
+\item 
+\#define \hyperlink{a00564_abb4de69cd44cdd3ccab023678d8ca4b2}{PWM\_\-PWMRIS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMRIS))
+\item 
+\#define \hyperlink{a00564_a99beda9773b5c86a802715dff74fafa7}{PWM\_\-OFFRIS2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFRIS2)
+\item 
+\#define \hyperlink{a00564_a6c904fbd80a70de0c3868608fd826cba}{PWM\_\-ONRIS2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONRIS2)
+\item 
+\#define \hyperlink{a00564_a08d834292aa0a713c2a441fe098808c1}{PWM\_\-OFFRIS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFRIS1)
+\item 
+\#define \hyperlink{a00564_a8282d1e3240e6f881c10ea744180f50f}{PWM\_\-ONRIS1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONRIS1)
+\item 
+\#define \hyperlink{a00564_a6d2b48e5e650b2ba1c43c4000fdbfbef}{PWM\_\-OFFRIS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFRIS0)
+\item 
+\#define \hyperlink{a00564_a270e4d9efd9ce344e2fcfaa25b653824}{PWM\_\-ONRIS0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONRIS0)
+\item 
+\#define \hyperlink{a00564_a32520bded8b3ea2fc4c5799e7c728912}{PWM\_\-PWMIM\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM))
+\item 
+\#define \hyperlink{a00564_a0cfa0f4b4c29d8e3a8f971cb70ea994d}{PWM\_\-PWMIM\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM, (value))
+\item 
+\#define \hyperlink{a00564_a732394f55fb9335162b2b73a45529da7}{PWM\_\-PWMIM\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM) $|$ (value))
+\item 
+\#define \hyperlink{a00564_a18c5fb63a322174cf0f0244ce3580221}{PWM\_\-PWMIM\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00564_a076f66341d1dfb8f5b759a26f6bf06dc}{PWM\_\-OFFIM2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM2)
+\item 
+\#define \hyperlink{a00564_a4b9f89e43199d1c1408372c24c181710}{PWM\_\-OFFIM2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM2, 1)
+\item 
+\#define \hyperlink{a00564_a40e554d32814688a04f796488221abf5}{PWM\_\-OFFIM2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM2, 0)
+\item 
+\#define \hyperlink{a00564_af8dd4c9c3b9b0be6f12a9b5ceed329bc}{PWM\_\-ONIM2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM2)
+\item 
+\#define \hyperlink{a00564_a629d987b32c7a9f1d8cb8a6070246a50}{PWM\_\-ONIM2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM2, 1)
+\item 
+\#define \hyperlink{a00564_a6ed931eb5a575f34b8875e3584a232cf}{PWM\_\-ONIM2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM2, 0)
+\item 
+\#define \hyperlink{a00564_a60ba6888b590e1809d4ed46f9ee1608f}{PWM\_\-OFFIM1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM1)
+\item 
+\#define \hyperlink{a00564_a5e3e0229b2d437e034807dc1bb993dec}{PWM\_\-OFFIM1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM1, 1)
+\item 
+\#define \hyperlink{a00564_a888b1599a7ce5f9ff7fcfe8dd9a97f5b}{PWM\_\-OFFIM1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM1, 0)
+\item 
+\#define \hyperlink{a00564_ac533abc358718d1bbf58c4afc18450d0}{PWM\_\-ONIM1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM1)
+\item 
+\#define \hyperlink{a00564_a49725b8d2710967e8290a9af796be5f8}{PWM\_\-ONIM1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM1, 1)
+\item 
+\#define \hyperlink{a00564_a1af2b52371baac8cd1da572d75c1c77a}{PWM\_\-ONIM1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM1, 0)
+\item 
+\#define \hyperlink{a00564_a966bac96f84175156beca44f9c6a9d9c}{PWM\_\-OFFIM0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM0)
+\item 
+\#define \hyperlink{a00564_a5fbfce9dce7d28867a9e5a75fbdeddac}{PWM\_\-OFFIM0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM0, 1)
+\item 
+\#define \hyperlink{a00564_a38641f9f624ed70d84c1064309573174}{PWM\_\-OFFIM0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM0, 0)
+\item 
+\#define \hyperlink{a00564_abd847fa0b251340bd92912f9455304b4}{PWM\_\-ONIM0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM0)
+\item 
+\#define \hyperlink{a00564_a11c00c0e5b95ea29321b2735e57bb0c5}{PWM\_\-ONIM0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM0, 1)
+\item 
+\#define \hyperlink{a00564_a2c393cdedfb3d39b190499ac83d0fad0}{PWM\_\-ONIM0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM0, 0)
+\item 
+\#define \hyperlink{a00564_ab988f3432631a858b256f9e4f6ab6aaf}{PWM\_\-PWMIC\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC))
+\item 
+\#define \hyperlink{a00564_a7c2dc5fdb484679748ca37d54cc41700}{PWM\_\-PWMIC\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC, (value))
+\item 
+\#define \hyperlink{a00564_aaab2a23f2b8e3cbf04055b9634f1bdfb}{PWM\_\-PWMIC\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC) $|$ (value))
+\item 
+\#define \hyperlink{a00564_a91c4dd08ef9ee509cd6e262b30ac1d7a}{PWM\_\-PWMIC\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00564_ae3131268199fa291039ff5ab10c7f6f2}{PWM\_\-OFFIC2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC2)
+\item 
+\#define \hyperlink{a00564_af5564be3bf443234350c2b80211b1567}{PWM\_\-OFFIC2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC2, 1)
+\item 
+\#define \hyperlink{a00564_ae42a1fe5e4518bc0dfee492676b2c96c}{PWM\_\-OFFIC2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC2, 0)
+\item 
+\#define \hyperlink{a00564_a060d2b37e47acd8e1de9245607a5c4d8}{PWM\_\-ONIC2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC2)
+\item 
+\#define \hyperlink{a00564_af70b10ed5190f3b1a9613e31b97fb93b}{PWM\_\-ONIC2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC2, 1)
+\item 
+\#define \hyperlink{a00564_a5f0912d18454d6050667c4e7d17c7a46}{PWM\_\-ONIC2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC2, 0)
+\item 
+\#define \hyperlink{a00564_a3550d9589a0cd7345b8e7019cf81fa03}{PWM\_\-OFFIC1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC1)
+\item 
+\#define \hyperlink{a00564_adcba3c74c2052236dbe0f3c96c5b400f}{PWM\_\-OFFIC1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC1, 1)
+\item 
+\#define \hyperlink{a00564_afb3d18e631b5e741ae8236585f451e3d}{PWM\_\-OFFIC1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC1, 0)
+\item 
+\#define \hyperlink{a00564_a84e1d9087c566fdc4592ef904f8d40e4}{PWM\_\-ONIC1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC1)
+\item 
+\#define \hyperlink{a00564_adc0cbd5f1ef7f2f7253df5f213283fa8}{PWM\_\-ONIC1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC1, 1)
+\item 
+\#define \hyperlink{a00564_a504dffd7096900c3ed0d8b95180649b7}{PWM\_\-ONIC1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC1, 0)
+\item 
+\#define \hyperlink{a00564_aec3427bd9b2093025de0184955e43345}{PWM\_\-OFFIC0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC0)
+\item 
+\#define \hyperlink{a00564_a9379080a1862ff4ecc4d7589776f95cf}{PWM\_\-OFFIC0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC0, 1)
+\item 
+\#define \hyperlink{a00564_a3819a251e9df11cee8f45cabf5a6724f}{PWM\_\-OFFIC0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC0, 0)
+\item 
+\#define \hyperlink{a00564_ac0d8ed268422f4e736e23d78a45a88ea}{PWM\_\-ONIC0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC0)
+\item 
+\#define \hyperlink{a00564_a2e4beb18a25a212ad023649da445c40f}{PWM\_\-ONIC0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC0, 1)
+\item 
+\#define \hyperlink{a00564_a8245441fae1de69895459bdd19e7aeea}{PWM\_\-ONIC0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC0, 0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00564_a400b9772036d907dda9504b67b108f4f}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLKFREQ\_\-CLEAR@{PWM\_\-CLKFREQ\_\-CLEAR}}
+\index{PWM\_\-CLKFREQ\_\-CLEAR@{PWM\_\-CLKFREQ\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLKFREQ\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLKFREQ\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLKFREQ, 0)}}
+\label{a00564_a400b9772036d907dda9504b67b108f4f}
+
+
+Definition at line 73 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a2423061150fcccea7c39c1f8f9a04c21}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLKFREQ\_\-GET@{PWM\_\-CLKFREQ\_\-GET}}
+\index{PWM\_\-CLKFREQ\_\-GET@{PWM\_\-CLKFREQ\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLKFREQ\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLKFREQ\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLKFREQ)}}
+\label{a00564_a2423061150fcccea7c39c1f8f9a04c21}
+
+
+Definition at line 69 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a6c27b15f0bb5e6d1feb3db63d74b4b73}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLKFREQ\_\-SET@{PWM\_\-CLKFREQ\_\-SET}}
+\index{PWM\_\-CLKFREQ\_\-SET@{PWM\_\-CLKFREQ\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLKFREQ\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLKFREQ\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLKFREQ, 1)}}
+\label{a00564_a6c27b15f0bb5e6d1feb3db63d74b4b73}
+
+
+Definition at line 71 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a1fd2b9908d334f02cfd31d12c3c234a2}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLS0\_\-CLEAR@{PWM\_\-CLS0\_\-CLEAR}}
+\index{PWM\_\-CLS0\_\-CLEAR@{PWM\_\-CLS0\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLS0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS0, 0)}}
+\label{a00564_a1fd2b9908d334f02cfd31d12c3c234a2}
+
+
+Definition at line 183 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a0bab0efa676fb73652087e4614b9d333}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLS0\_\-GET@{PWM\_\-CLS0\_\-GET}}
+\index{PWM\_\-CLS0\_\-GET@{PWM\_\-CLS0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS0)}}
+\label{a00564_a0bab0efa676fb73652087e4614b9d333}
+
+
+Definition at line 179 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a48025db825d2e6af9549b185761bef9f}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLS0\_\-SET@{PWM\_\-CLS0\_\-SET}}
+\index{PWM\_\-CLS0\_\-SET@{PWM\_\-CLS0\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLS0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS0, 1)}}
+\label{a00564_a48025db825d2e6af9549b185761bef9f}
+
+
+Definition at line 181 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ad14da03f8413dd7ea49705c8407d0742}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLS1\_\-CLEAR@{PWM\_\-CLS1\_\-CLEAR}}
+\index{PWM\_\-CLS1\_\-CLEAR@{PWM\_\-CLS1\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLS1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS1, 0)}}
+\label{a00564_ad14da03f8413dd7ea49705c8407d0742}
+
+
+Definition at line 150 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_abcd88bc573372dee69fab4cee42e67a4}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLS1\_\-GET@{PWM\_\-CLS1\_\-GET}}
+\index{PWM\_\-CLS1\_\-GET@{PWM\_\-CLS1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS1)}}
+\label{a00564_abcd88bc573372dee69fab4cee42e67a4}
+
+
+Definition at line 146 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_af74ce61781a665d55d1ee4250668b33d}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLS1\_\-SET@{PWM\_\-CLS1\_\-SET}}
+\index{PWM\_\-CLS1\_\-SET@{PWM\_\-CLS1\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLS1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS1, 1)}}
+\label{a00564_af74ce61781a665d55d1ee4250668b33d}
+
+
+Definition at line 148 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a1ba0976f87cd390582bc472a8cf3d9e8}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLS2\_\-CLEAR@{PWM\_\-CLS2\_\-CLEAR}}
+\index{PWM\_\-CLS2\_\-CLEAR@{PWM\_\-CLS2\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLS2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS2, 0)}}
+\label{a00564_a1ba0976f87cd390582bc472a8cf3d9e8}
+
+
+Definition at line 117 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a3f38f44db6c84ac925932b3b8c7c3fbd}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLS2\_\-GET@{PWM\_\-CLS2\_\-GET}}
+\index{PWM\_\-CLS2\_\-GET@{PWM\_\-CLS2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS2)}}
+\label{a00564_a3f38f44db6c84ac925932b3b8c7c3fbd}
+
+
+Definition at line 113 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_af55cb269b9c76d640209e286c8f94ffc}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CLS2\_\-SET@{PWM\_\-CLS2\_\-SET}}
+\index{PWM\_\-CLS2\_\-SET@{PWM\_\-CLS2\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CLS2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CLS2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CLS2, 1)}}
+\label{a00564_af55cb269b9c76d640209e286c8f94ffc}
+
+
+Definition at line 115 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a2204276d5249d12131c8f4681edad0e8}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CNTST\_\-GET@{PWM\_\-CNTST\_\-GET}}
+\index{PWM\_\-CNTST\_\-GET@{PWM\_\-CNTST\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CNTST\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTST\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CNTST)}}
+\label{a00564_a2204276d5249d12131c8f4681edad0e8}
+
+
+Definition at line 339 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a0c9dc455d6cbf5f4447b072b1265acc8}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CNTVAL\_\-GET@{PWM\_\-CNTVAL\_\-GET}}
+\index{PWM\_\-CNTVAL\_\-GET@{PWM\_\-CNTVAL\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CNTVAL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CNTVAL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CNTVAL)}}
+\label{a00564_a0c9dc455d6cbf5f4447b072b1265acc8}
+
+
+Definition at line 346 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a837568afee3176a95e570fc3b3e80b4a}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CPS\_\-GET@{PWM\_\-CPS\_\-GET}}
+\index{PWM\_\-CPS\_\-GET@{PWM\_\-CPS\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CPS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CPS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CPS)}}
+\label{a00564_a837568afee3176a95e570fc3b3e80b4a}
+
+
+Definition at line 215 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_abc827d21f392fe1b73e614af119d2260}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-CPS\_\-SET@{PWM\_\-CPS\_\-SET}}
+\index{PWM\_\-CPS\_\-SET@{PWM\_\-CPS\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-CPS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-CPS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-CPS, (value))}}
+\label{a00564_abc827d21f392fe1b73e614af119d2260}
+
+
+Definition at line 217 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ad02f26a336a3d7068d60d970ae48d0fc}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-EN0\_\-CLEAR@{PWM\_\-EN0\_\-CLEAR}}
+\index{PWM\_\-EN0\_\-CLEAR@{PWM\_\-EN0\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-EN0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN0, 0)}}
+\label{a00564_ad02f26a336a3d7068d60d970ae48d0fc}
+
+
+Definition at line 194 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_aa6094a998396ecf9acb2e07fc581d49f}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-EN0\_\-GET@{PWM\_\-EN0\_\-GET}}
+\index{PWM\_\-EN0\_\-GET@{PWM\_\-EN0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-EN0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN0)}}
+\label{a00564_aa6094a998396ecf9acb2e07fc581d49f}
+
+
+Definition at line 190 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a57752a099ffdae1e07ccad1a0fe37a73}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-EN0\_\-SET@{PWM\_\-EN0\_\-SET}}
+\index{PWM\_\-EN0\_\-SET@{PWM\_\-EN0\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-EN0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN0, 1)}}
+\label{a00564_a57752a099ffdae1e07ccad1a0fe37a73}
+
+
+Definition at line 192 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ab0e2c328397c79db3ac0ab71cd90a02e}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-EN1\_\-CLEAR@{PWM\_\-EN1\_\-CLEAR}}
+\index{PWM\_\-EN1\_\-CLEAR@{PWM\_\-EN1\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-EN1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN1, 0)}}
+\label{a00564_ab0e2c328397c79db3ac0ab71cd90a02e}
+
+
+Definition at line 161 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_aeb1489216bb185b2585f738b6c600f3a}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-EN1\_\-GET@{PWM\_\-EN1\_\-GET}}
+\index{PWM\_\-EN1\_\-GET@{PWM\_\-EN1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-EN1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN1)}}
+\label{a00564_aeb1489216bb185b2585f738b6c600f3a}
+
+
+Definition at line 157 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_acdabe8d1151b6554b11e48c125be50f5}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-EN1\_\-SET@{PWM\_\-EN1\_\-SET}}
+\index{PWM\_\-EN1\_\-SET@{PWM\_\-EN1\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-EN1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN1, 1)}}
+\label{a00564_acdabe8d1151b6554b11e48c125be50f5}
+
+
+Definition at line 159 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a2684de4c2445d0662924e1c73f923fad}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-EN2\_\-CLEAR@{PWM\_\-EN2\_\-CLEAR}}
+\index{PWM\_\-EN2\_\-CLEAR@{PWM\_\-EN2\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-EN2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN2, 0)}}
+\label{a00564_a2684de4c2445d0662924e1c73f923fad}
+
+
+Definition at line 128 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_aa0de269e9d261e256c561e5143bcef78}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-EN2\_\-GET@{PWM\_\-EN2\_\-GET}}
+\index{PWM\_\-EN2\_\-GET@{PWM\_\-EN2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-EN2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN2)}}
+\label{a00564_aa0de269e9d261e256c561e5143bcef78}
+
+
+Definition at line 124 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a56aefca82f7d7b5edb18bdaebea0db6a}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-EN2\_\-SET@{PWM\_\-EN2\_\-SET}}
+\index{PWM\_\-EN2\_\-SET@{PWM\_\-EN2\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-EN2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-EN2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-EN2, 1)}}
+\label{a00564_a56aefca82f7d7b5edb18bdaebea0db6a}
+
+
+Definition at line 126 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a767fdad327b65acf06fbbfe1f06c12d1}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ID\_\-GET@{PWM\_\-ID\_\-GET}}
+\index{PWM\_\-ID\_\-GET@{PWM\_\-ID\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ID\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ID\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ID)}}
+\label{a00564_a767fdad327b65acf06fbbfe1f06c12d1}
+
+
+Definition at line 264 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_af933308db9d9895acaa200900d29b412}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFCNT\_\-GET@{PWM\_\-OFFCNT\_\-GET}}
+\index{PWM\_\-OFFCNT\_\-GET@{PWM\_\-OFFCNT\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFCNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFCNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFCNT)}}
+\label{a00564_af933308db9d9895acaa200900d29b412}
+
+
+Definition at line 294 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ac324e18dceb1d8cccf9e2e555d4d6cdf}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFCNT\_\-SET@{PWM\_\-OFFCNT\_\-SET}}
+\index{PWM\_\-OFFCNT\_\-SET@{PWM\_\-OFFCNT\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFCNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFCNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFCNT, (value))}}
+\label{a00564_ac324e18dceb1d8cccf9e2e555d4d6cdf}
+
+
+Definition at line 296 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a3819a251e9df11cee8f45cabf5a6724f}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIC0\_\-CLEAR@{PWM\_\-OFFIC0\_\-CLEAR}}
+\index{PWM\_\-OFFIC0\_\-CLEAR@{PWM\_\-OFFIC0\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIC0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC0, 0)}}
+\label{a00564_a3819a251e9df11cee8f45cabf5a6724f}
+
+
+Definition at line 611 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_aec3427bd9b2093025de0184955e43345}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIC0\_\-GET@{PWM\_\-OFFIC0\_\-GET}}
+\index{PWM\_\-OFFIC0\_\-GET@{PWM\_\-OFFIC0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIC0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC0)}}
+\label{a00564_aec3427bd9b2093025de0184955e43345}
+
+
+Definition at line 607 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a9379080a1862ff4ecc4d7589776f95cf}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIC0\_\-SET@{PWM\_\-OFFIC0\_\-SET}}
+\index{PWM\_\-OFFIC0\_\-SET@{PWM\_\-OFFIC0\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIC0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC0, 1)}}
+\label{a00564_a9379080a1862ff4ecc4d7589776f95cf}
+
+
+Definition at line 609 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_afb3d18e631b5e741ae8236585f451e3d}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIC1\_\-CLEAR@{PWM\_\-OFFIC1\_\-CLEAR}}
+\index{PWM\_\-OFFIC1\_\-CLEAR@{PWM\_\-OFFIC1\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIC1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC1, 0)}}
+\label{a00564_afb3d18e631b5e741ae8236585f451e3d}
+
+
+Definition at line 589 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a3550d9589a0cd7345b8e7019cf81fa03}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIC1\_\-GET@{PWM\_\-OFFIC1\_\-GET}}
+\index{PWM\_\-OFFIC1\_\-GET@{PWM\_\-OFFIC1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIC1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC1)}}
+\label{a00564_a3550d9589a0cd7345b8e7019cf81fa03}
+
+
+Definition at line 585 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_adcba3c74c2052236dbe0f3c96c5b400f}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIC1\_\-SET@{PWM\_\-OFFIC1\_\-SET}}
+\index{PWM\_\-OFFIC1\_\-SET@{PWM\_\-OFFIC1\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIC1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC1, 1)}}
+\label{a00564_adcba3c74c2052236dbe0f3c96c5b400f}
+
+
+Definition at line 587 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ae42a1fe5e4518bc0dfee492676b2c96c}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIC2\_\-CLEAR@{PWM\_\-OFFIC2\_\-CLEAR}}
+\index{PWM\_\-OFFIC2\_\-CLEAR@{PWM\_\-OFFIC2\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIC2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC2, 0)}}
+\label{a00564_ae42a1fe5e4518bc0dfee492676b2c96c}
+
+
+Definition at line 567 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ae3131268199fa291039ff5ab10c7f6f2}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIC2\_\-GET@{PWM\_\-OFFIC2\_\-GET}}
+\index{PWM\_\-OFFIC2\_\-GET@{PWM\_\-OFFIC2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIC2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC2)}}
+\label{a00564_ae3131268199fa291039ff5ab10c7f6f2}
+
+
+Definition at line 563 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_af5564be3bf443234350c2b80211b1567}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIC2\_\-SET@{PWM\_\-OFFIC2\_\-SET}}
+\index{PWM\_\-OFFIC2\_\-SET@{PWM\_\-OFFIC2\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIC2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIC2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIC2, 1)}}
+\label{a00564_af5564be3bf443234350c2b80211b1567}
+
+
+Definition at line 565 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a38641f9f624ed70d84c1064309573174}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIM0\_\-CLEAR@{PWM\_\-OFFIM0\_\-CLEAR}}
+\index{PWM\_\-OFFIM0\_\-CLEAR@{PWM\_\-OFFIM0\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIM0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM0, 0)}}
+\label{a00564_a38641f9f624ed70d84c1064309573174}
+
+
+Definition at line 531 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a966bac96f84175156beca44f9c6a9d9c}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIM0\_\-GET@{PWM\_\-OFFIM0\_\-GET}}
+\index{PWM\_\-OFFIM0\_\-GET@{PWM\_\-OFFIM0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIM0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM0)}}
+\label{a00564_a966bac96f84175156beca44f9c6a9d9c}
+
+
+Definition at line 527 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a5fbfce9dce7d28867a9e5a75fbdeddac}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIM0\_\-SET@{PWM\_\-OFFIM0\_\-SET}}
+\index{PWM\_\-OFFIM0\_\-SET@{PWM\_\-OFFIM0\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIM0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM0, 1)}}
+\label{a00564_a5fbfce9dce7d28867a9e5a75fbdeddac}
+
+
+Definition at line 529 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a888b1599a7ce5f9ff7fcfe8dd9a97f5b}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIM1\_\-CLEAR@{PWM\_\-OFFIM1\_\-CLEAR}}
+\index{PWM\_\-OFFIM1\_\-CLEAR@{PWM\_\-OFFIM1\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIM1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM1, 0)}}
+\label{a00564_a888b1599a7ce5f9ff7fcfe8dd9a97f5b}
+
+
+Definition at line 509 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a60ba6888b590e1809d4ed46f9ee1608f}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIM1\_\-GET@{PWM\_\-OFFIM1\_\-GET}}
+\index{PWM\_\-OFFIM1\_\-GET@{PWM\_\-OFFIM1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIM1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM1)}}
+\label{a00564_a60ba6888b590e1809d4ed46f9ee1608f}
+
+
+Definition at line 505 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a5e3e0229b2d437e034807dc1bb993dec}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIM1\_\-SET@{PWM\_\-OFFIM1\_\-SET}}
+\index{PWM\_\-OFFIM1\_\-SET@{PWM\_\-OFFIM1\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIM1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM1, 1)}}
+\label{a00564_a5e3e0229b2d437e034807dc1bb993dec}
+
+
+Definition at line 507 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a40e554d32814688a04f796488221abf5}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIM2\_\-CLEAR@{PWM\_\-OFFIM2\_\-CLEAR}}
+\index{PWM\_\-OFFIM2\_\-CLEAR@{PWM\_\-OFFIM2\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIM2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM2, 0)}}
+\label{a00564_a40e554d32814688a04f796488221abf5}
+
+
+Definition at line 487 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a076f66341d1dfb8f5b759a26f6bf06dc}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIM2\_\-GET@{PWM\_\-OFFIM2\_\-GET}}
+\index{PWM\_\-OFFIM2\_\-GET@{PWM\_\-OFFIM2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIM2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM2)}}
+\label{a00564_a076f66341d1dfb8f5b759a26f6bf06dc}
+
+
+Definition at line 483 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a4b9f89e43199d1c1408372c24c181710}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIM2\_\-SET@{PWM\_\-OFFIM2\_\-SET}}
+\index{PWM\_\-OFFIM2\_\-SET@{PWM\_\-OFFIM2\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIM2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIM2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIM2, 1)}}
+\label{a00564_a4b9f89e43199d1c1408372c24c181710}
+
+
+Definition at line 485 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_abc061c469d0837671b228ff13e6949ed}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIS0\_\-GET@{PWM\_\-OFFIS0\_\-GET}}
+\index{PWM\_\-OFFIS0\_\-GET@{PWM\_\-OFFIS0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIS0)}}
+\label{a00564_abc061c469d0837671b228ff13e6949ed}
+
+
+Definition at line 405 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_af1b696108734f645d9091293466d626c}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIS1\_\-GET@{PWM\_\-OFFIS1\_\-GET}}
+\index{PWM\_\-OFFIS1\_\-GET@{PWM\_\-OFFIS1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIS1)}}
+\label{a00564_af1b696108734f645d9091293466d626c}
+
+
+Definition at line 391 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a40c8025e9535e016b6fa6a8462672ac3}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFIS2\_\-GET@{PWM\_\-OFFIS2\_\-GET}}
+\index{PWM\_\-OFFIS2\_\-GET@{PWM\_\-OFFIS2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFIS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFIS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFIS2)}}
+\label{a00564_a40c8025e9535e016b6fa6a8462672ac3}
+
+
+Definition at line 377 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a6d2b48e5e650b2ba1c43c4000fdbfbef}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFRIS0\_\-GET@{PWM\_\-OFFRIS0\_\-GET}}
+\index{PWM\_\-OFFRIS0\_\-GET@{PWM\_\-OFFRIS0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFRIS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFRIS0)}}
+\label{a00564_a6d2b48e5e650b2ba1c43c4000fdbfbef}
+
+
+Definition at line 455 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a08d834292aa0a713c2a441fe098808c1}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFRIS1\_\-GET@{PWM\_\-OFFRIS1\_\-GET}}
+\index{PWM\_\-OFFRIS1\_\-GET@{PWM\_\-OFFRIS1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFRIS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFRIS1)}}
+\label{a00564_a08d834292aa0a713c2a441fe098808c1}
+
+
+Definition at line 441 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a99beda9773b5c86a802715dff74fafa7}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-OFFRIS2\_\-GET@{PWM\_\-OFFRIS2\_\-GET}}
+\index{PWM\_\-OFFRIS2\_\-GET@{PWM\_\-OFFRIS2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-OFFRIS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-OFFRIS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-OFFRIS2)}}
+\label{a00564_a99beda9773b5c86a802715dff74fafa7}
+
+
+Definition at line 427 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a2bf14b98aad5acd66236bae57022d39c}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONCNT\_\-GET@{PWM\_\-ONCNT\_\-GET}}
+\index{PWM\_\-ONCNT\_\-GET@{PWM\_\-ONCNT\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONCNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONCNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONCNT)}}
+\label{a00564_a2bf14b98aad5acd66236bae57022d39c}
+
+
+Definition at line 285 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a45b8deeab360cfc85fc20156ef08ab4f}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONCNT\_\-SET@{PWM\_\-ONCNT\_\-SET}}
+\index{PWM\_\-ONCNT\_\-SET@{PWM\_\-ONCNT\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONCNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONCNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONCNT, (value))}}
+\label{a00564_a45b8deeab360cfc85fc20156ef08ab4f}
+
+
+Definition at line 287 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a8245441fae1de69895459bdd19e7aeea}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIC0\_\-CLEAR@{PWM\_\-ONIC0\_\-CLEAR}}
+\index{PWM\_\-ONIC0\_\-CLEAR@{PWM\_\-ONIC0\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIC0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC0, 0)}}
+\label{a00564_a8245441fae1de69895459bdd19e7aeea}
+
+
+Definition at line 622 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ac0d8ed268422f4e736e23d78a45a88ea}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIC0\_\-GET@{PWM\_\-ONIC0\_\-GET}}
+\index{PWM\_\-ONIC0\_\-GET@{PWM\_\-ONIC0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIC0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC0)}}
+\label{a00564_ac0d8ed268422f4e736e23d78a45a88ea}
+
+
+Definition at line 618 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a2e4beb18a25a212ad023649da445c40f}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIC0\_\-SET@{PWM\_\-ONIC0\_\-SET}}
+\index{PWM\_\-ONIC0\_\-SET@{PWM\_\-ONIC0\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIC0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC0, 1)}}
+\label{a00564_a2e4beb18a25a212ad023649da445c40f}
+
+
+Definition at line 620 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a504dffd7096900c3ed0d8b95180649b7}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIC1\_\-CLEAR@{PWM\_\-ONIC1\_\-CLEAR}}
+\index{PWM\_\-ONIC1\_\-CLEAR@{PWM\_\-ONIC1\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIC1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC1, 0)}}
+\label{a00564_a504dffd7096900c3ed0d8b95180649b7}
+
+
+Definition at line 600 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a84e1d9087c566fdc4592ef904f8d40e4}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIC1\_\-GET@{PWM\_\-ONIC1\_\-GET}}
+\index{PWM\_\-ONIC1\_\-GET@{PWM\_\-ONIC1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIC1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC1)}}
+\label{a00564_a84e1d9087c566fdc4592ef904f8d40e4}
+
+
+Definition at line 596 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_adc0cbd5f1ef7f2f7253df5f213283fa8}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIC1\_\-SET@{PWM\_\-ONIC1\_\-SET}}
+\index{PWM\_\-ONIC1\_\-SET@{PWM\_\-ONIC1\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIC1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC1, 1)}}
+\label{a00564_adc0cbd5f1ef7f2f7253df5f213283fa8}
+
+
+Definition at line 598 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a5f0912d18454d6050667c4e7d17c7a46}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIC2\_\-CLEAR@{PWM\_\-ONIC2\_\-CLEAR}}
+\index{PWM\_\-ONIC2\_\-CLEAR@{PWM\_\-ONIC2\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIC2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC2, 0)}}
+\label{a00564_a5f0912d18454d6050667c4e7d17c7a46}
+
+
+Definition at line 578 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a060d2b37e47acd8e1de9245607a5c4d8}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIC2\_\-GET@{PWM\_\-ONIC2\_\-GET}}
+\index{PWM\_\-ONIC2\_\-GET@{PWM\_\-ONIC2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIC2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC2)}}
+\label{a00564_a060d2b37e47acd8e1de9245607a5c4d8}
+
+
+Definition at line 574 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_af70b10ed5190f3b1a9613e31b97fb93b}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIC2\_\-SET@{PWM\_\-ONIC2\_\-SET}}
+\index{PWM\_\-ONIC2\_\-SET@{PWM\_\-ONIC2\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIC2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIC2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIC2, 1)}}
+\label{a00564_af70b10ed5190f3b1a9613e31b97fb93b}
+
+
+Definition at line 576 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a2c393cdedfb3d39b190499ac83d0fad0}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIM0\_\-CLEAR@{PWM\_\-ONIM0\_\-CLEAR}}
+\index{PWM\_\-ONIM0\_\-CLEAR@{PWM\_\-ONIM0\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIM0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM0, 0)}}
+\label{a00564_a2c393cdedfb3d39b190499ac83d0fad0}
+
+
+Definition at line 542 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_abd847fa0b251340bd92912f9455304b4}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIM0\_\-GET@{PWM\_\-ONIM0\_\-GET}}
+\index{PWM\_\-ONIM0\_\-GET@{PWM\_\-ONIM0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIM0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM0)}}
+\label{a00564_abd847fa0b251340bd92912f9455304b4}
+
+
+Definition at line 538 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a11c00c0e5b95ea29321b2735e57bb0c5}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIM0\_\-SET@{PWM\_\-ONIM0\_\-SET}}
+\index{PWM\_\-ONIM0\_\-SET@{PWM\_\-ONIM0\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIM0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM0, 1)}}
+\label{a00564_a11c00c0e5b95ea29321b2735e57bb0c5}
+
+
+Definition at line 540 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a1af2b52371baac8cd1da572d75c1c77a}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIM1\_\-CLEAR@{PWM\_\-ONIM1\_\-CLEAR}}
+\index{PWM\_\-ONIM1\_\-CLEAR@{PWM\_\-ONIM1\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIM1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM1, 0)}}
+\label{a00564_a1af2b52371baac8cd1da572d75c1c77a}
+
+
+Definition at line 520 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ac533abc358718d1bbf58c4afc18450d0}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIM1\_\-GET@{PWM\_\-ONIM1\_\-GET}}
+\index{PWM\_\-ONIM1\_\-GET@{PWM\_\-ONIM1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIM1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM1)}}
+\label{a00564_ac533abc358718d1bbf58c4afc18450d0}
+
+
+Definition at line 516 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a49725b8d2710967e8290a9af796be5f8}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIM1\_\-SET@{PWM\_\-ONIM1\_\-SET}}
+\index{PWM\_\-ONIM1\_\-SET@{PWM\_\-ONIM1\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIM1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM1, 1)}}
+\label{a00564_a49725b8d2710967e8290a9af796be5f8}
+
+
+Definition at line 518 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a6ed931eb5a575f34b8875e3584a232cf}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIM2\_\-CLEAR@{PWM\_\-ONIM2\_\-CLEAR}}
+\index{PWM\_\-ONIM2\_\-CLEAR@{PWM\_\-ONIM2\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIM2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM2, 0)}}
+\label{a00564_a6ed931eb5a575f34b8875e3584a232cf}
+
+
+Definition at line 498 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_af8dd4c9c3b9b0be6f12a9b5ceed329bc}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIM2\_\-GET@{PWM\_\-ONIM2\_\-GET}}
+\index{PWM\_\-ONIM2\_\-GET@{PWM\_\-ONIM2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIM2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM2)}}
+\label{a00564_af8dd4c9c3b9b0be6f12a9b5ceed329bc}
+
+
+Definition at line 494 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a629d987b32c7a9f1d8cb8a6070246a50}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIM2\_\-SET@{PWM\_\-ONIM2\_\-SET}}
+\index{PWM\_\-ONIM2\_\-SET@{PWM\_\-ONIM2\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIM2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIM2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIM2, 1)}}
+\label{a00564_a629d987b32c7a9f1d8cb8a6070246a50}
+
+
+Definition at line 496 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a5716b2334368aa5866c105118073f985}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIS0\_\-GET@{PWM\_\-ONIS0\_\-GET}}
+\index{PWM\_\-ONIS0\_\-GET@{PWM\_\-ONIS0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIS0)}}
+\label{a00564_a5716b2334368aa5866c105118073f985}
+
+
+Definition at line 412 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ab781b7edd34ab5f46112c74b851ee1f0}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIS1\_\-GET@{PWM\_\-ONIS1\_\-GET}}
+\index{PWM\_\-ONIS1\_\-GET@{PWM\_\-ONIS1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIS1)}}
+\label{a00564_ab781b7edd34ab5f46112c74b851ee1f0}
+
+
+Definition at line 398 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ad9940b9e942341eff1768c15c0df6666}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONIS2\_\-GET@{PWM\_\-ONIS2\_\-GET}}
+\index{PWM\_\-ONIS2\_\-GET@{PWM\_\-ONIS2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONIS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONIS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONIS2)}}
+\label{a00564_ad9940b9e942341eff1768c15c0df6666}
+
+
+Definition at line 384 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a270e4d9efd9ce344e2fcfaa25b653824}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONRIS0\_\-GET@{PWM\_\-ONRIS0\_\-GET}}
+\index{PWM\_\-ONRIS0\_\-GET@{PWM\_\-ONRIS0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONRIS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONRIS0)}}
+\label{a00564_a270e4d9efd9ce344e2fcfaa25b653824}
+
+
+Definition at line 462 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a8282d1e3240e6f881c10ea744180f50f}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONRIS1\_\-GET@{PWM\_\-ONRIS1\_\-GET}}
+\index{PWM\_\-ONRIS1\_\-GET@{PWM\_\-ONRIS1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONRIS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONRIS1)}}
+\label{a00564_a8282d1e3240e6f881c10ea744180f50f}
+
+
+Definition at line 448 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a6c904fbd80a70de0c3868608fd826cba}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-ONRIS2\_\-GET@{PWM\_\-ONRIS2\_\-GET}}
+\index{PWM\_\-ONRIS2\_\-GET@{PWM\_\-ONRIS2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-ONRIS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-ONRIS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-ONRIS2)}}
+\label{a00564_a6c904fbd80a70de0c3868608fd826cba}
+
+
+Definition at line 434 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a654457a9292548c1fa4c346541e347b1}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PDS0\_\-GET@{PWM\_\-PDS0\_\-GET}}
+\index{PWM\_\-PDS0\_\-GET@{PWM\_\-PDS0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PDS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-PDS0)}}
+\label{a00564_a654457a9292548c1fa4c346541e347b1}
+
+
+Definition at line 247 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a954404f4582c5426b22d956c49302166}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PDS0\_\-SET@{PWM\_\-PDS0\_\-SET}}
+\index{PWM\_\-PDS0\_\-SET@{PWM\_\-PDS0\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PDS0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-PDS0, (value))}}
+\label{a00564_a954404f4582c5426b22d956c49302166}
+
+
+Definition at line 249 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_aed2a3963a64ac1bdafd860e341d2b337}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PDS1\_\-GET@{PWM\_\-PDS1\_\-GET}}
+\index{PWM\_\-PDS1\_\-GET@{PWM\_\-PDS1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PDS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-PDS1)}}
+\label{a00564_aed2a3963a64ac1bdafd860e341d2b337}
+
+
+Definition at line 238 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a3846da2403b76b1f6861c354f88c2328}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PDS1\_\-SET@{PWM\_\-PDS1\_\-SET}}
+\index{PWM\_\-PDS1\_\-SET@{PWM\_\-PDS1\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PDS1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PDS1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-PDS1, (value))}}
+\label{a00564_a3846da2403b76b1f6861c354f88c2328}
+
+
+Definition at line 240 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a056abf01d914aaa1b97134414fe649b4}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-POL0\_\-CLEAR@{PWM\_\-POL0\_\-CLEAR}}
+\index{PWM\_\-POL0\_\-CLEAR@{PWM\_\-POL0\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-POL0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL0, 0)}}
+\label{a00564_a056abf01d914aaa1b97134414fe649b4}
+
+
+Definition at line 172 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ab053c37a5ad78b9a3634a5d7907786e2}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-POL0\_\-GET@{PWM\_\-POL0\_\-GET}}
+\index{PWM\_\-POL0\_\-GET@{PWM\_\-POL0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-POL0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL0)}}
+\label{a00564_ab053c37a5ad78b9a3634a5d7907786e2}
+
+
+Definition at line 168 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a23974fba299be6bb27c67a2e529d7018}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-POL0\_\-SET@{PWM\_\-POL0\_\-SET}}
+\index{PWM\_\-POL0\_\-SET@{PWM\_\-POL0\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-POL0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL0, 1)}}
+\label{a00564_a23974fba299be6bb27c67a2e529d7018}
+
+
+Definition at line 170 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a4b189c63bdda09213e5d5315da80384c}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-POL1\_\-CLEAR@{PWM\_\-POL1\_\-CLEAR}}
+\index{PWM\_\-POL1\_\-CLEAR@{PWM\_\-POL1\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-POL1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL1, 0)}}
+\label{a00564_a4b189c63bdda09213e5d5315da80384c}
+
+
+Definition at line 139 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a99bdcd1c7117714230d87bca18ed71eb}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-POL1\_\-GET@{PWM\_\-POL1\_\-GET}}
+\index{PWM\_\-POL1\_\-GET@{PWM\_\-POL1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-POL1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL1)}}
+\label{a00564_a99bdcd1c7117714230d87bca18ed71eb}
+
+
+Definition at line 135 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a34cd56e735c1f620b6dfffad6128a3c5}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-POL1\_\-SET@{PWM\_\-POL1\_\-SET}}
+\index{PWM\_\-POL1\_\-SET@{PWM\_\-POL1\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-POL1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL1, 1)}}
+\label{a00564_a34cd56e735c1f620b6dfffad6128a3c5}
+
+
+Definition at line 137 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a36caff72143fa6007ee9252c30c22e22}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-POL2\_\-CLEAR@{PWM\_\-POL2\_\-CLEAR}}
+\index{PWM\_\-POL2\_\-CLEAR@{PWM\_\-POL2\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-POL2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL2, 0)}}
+\label{a00564_a36caff72143fa6007ee9252c30c22e22}
+
+
+Definition at line 106 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ac3861967d757bbe658bd178f22f1faf9}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-POL2\_\-GET@{PWM\_\-POL2\_\-GET}}
+\index{PWM\_\-POL2\_\-GET@{PWM\_\-POL2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-POL2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL2)}}
+\label{a00564_ac3861967d757bbe658bd178f22f1faf9}
+
+
+Definition at line 102 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a3cf36929a0204cf9b459b3baf53a8788}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-POL2\_\-SET@{PWM\_\-POL2\_\-SET}}
+\index{PWM\_\-POL2\_\-SET@{PWM\_\-POL2\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-POL2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-POL2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-POL2, 1)}}
+\label{a00564_a3cf36929a0204cf9b459b3baf53a8788}
+
+
+Definition at line 104 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_aa201d1abdea112b4f327a5cde99c16dd}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR0\_\-CLEARBIT@{PWM\_\-PWMCCR0\_\-CLEARBIT}}
+\index{PWM\_\-PWMCCR0\_\-CLEARBIT@{PWM\_\-PWMCCR0\_\-CLEARBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0) \& ($\sim$(value)))}}
+\label{a00564_aa201d1abdea112b4f327a5cde99c16dd}
+
+
+Definition at line 278 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_afe07d2c0427d1ec34be0ac6d9675ba3b}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR0\_\-GET@{PWM\_\-PWMCCR0\_\-GET}}
+\index{PWM\_\-PWMCCR0\_\-GET@{PWM\_\-PWMCCR0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0))}}
+\label{a00564_afe07d2c0427d1ec34be0ac6d9675ba3b}
+
+
+Definition at line 272 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a09030af97a6e09da5fe1c0d663c4930b}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR0\_\-SET@{PWM\_\-PWMCCR0\_\-SET}}
+\index{PWM\_\-PWMCCR0\_\-SET@{PWM\_\-PWMCCR0\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0, (value))}}
+\label{a00564_a09030af97a6e09da5fe1c0d663c4930b}
+
+
+Definition at line 274 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a94a26b004f2492705496dc85791e770e}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR0\_\-SETBIT@{PWM\_\-PWMCCR0\_\-SETBIT}}
+\index{PWM\_\-PWMCCR0\_\-SETBIT@{PWM\_\-PWMCCR0\_\-SETBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR0) $|$ (value))}}
+\label{a00564_a94a26b004f2492705496dc85791e770e}
+
+
+Definition at line 276 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a643ed63e44bd433f344946684c2b1698}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR1\_\-CLEARBIT@{PWM\_\-PWMCCR1\_\-CLEARBIT}}
+\index{PWM\_\-PWMCCR1\_\-CLEARBIT@{PWM\_\-PWMCCR1\_\-CLEARBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1) \& ($\sim$(value)))}}
+\label{a00564_a643ed63e44bd433f344946684c2b1698}
+
+
+Definition at line 310 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ae6716c663a9aa408810909f8f5de0393}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR1\_\-GET@{PWM\_\-PWMCCR1\_\-GET}}
+\index{PWM\_\-PWMCCR1\_\-GET@{PWM\_\-PWMCCR1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1))}}
+\label{a00564_ae6716c663a9aa408810909f8f5de0393}
+
+
+Definition at line 304 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a876bfd2fc653def0282fbc6d35e546f5}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR1\_\-SET@{PWM\_\-PWMCCR1\_\-SET}}
+\index{PWM\_\-PWMCCR1\_\-SET@{PWM\_\-PWMCCR1\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1, (value))}}
+\label{a00564_a876bfd2fc653def0282fbc6d35e546f5}
+
+
+Definition at line 306 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a8ce20fbe7cdc55d946a64bc15ebe2f43}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR1\_\-SETBIT@{PWM\_\-PWMCCR1\_\-SETBIT}}
+\index{PWM\_\-PWMCCR1\_\-SETBIT@{PWM\_\-PWMCCR1\_\-SETBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR1) $|$ (value))}}
+\label{a00564_a8ce20fbe7cdc55d946a64bc15ebe2f43}
+
+
+Definition at line 308 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a6c6d615793502c3077897e32c7ffc16d}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR2\_\-CLEARBIT@{PWM\_\-PWMCCR2\_\-CLEARBIT}}
+\index{PWM\_\-PWMCCR2\_\-CLEARBIT@{PWM\_\-PWMCCR2\_\-CLEARBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR2\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR2\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2) \& ($\sim$(value)))}}
+\label{a00564_a6c6d615793502c3077897e32c7ffc16d}
+
+
+Definition at line 324 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a94307f654ce6af547c79da0108c16c1c}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR2\_\-GET@{PWM\_\-PWMCCR2\_\-GET}}
+\index{PWM\_\-PWMCCR2\_\-GET@{PWM\_\-PWMCCR2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2))}}
+\label{a00564_a94307f654ce6af547c79da0108c16c1c}
+
+
+Definition at line 318 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a302314df237d0329288ed2ff3687a0f1}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR2\_\-SET@{PWM\_\-PWMCCR2\_\-SET}}
+\index{PWM\_\-PWMCCR2\_\-SET@{PWM\_\-PWMCCR2\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2, (value))}}
+\label{a00564_a302314df237d0329288ed2ff3687a0f1}
+
+
+Definition at line 320 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a138bbe1e549d57512a3a3b4c7a6cbd43}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCCR2\_\-SETBIT@{PWM\_\-PWMCCR2\_\-SETBIT}}
+\index{PWM\_\-PWMCCR2\_\-SETBIT@{PWM\_\-PWMCCR2\_\-SETBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCCR2\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCCR2\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCCR2) $|$ (value))}}
+\label{a00564_a138bbe1e549d57512a3a3b4c7a6cbd43}
+
+
+Definition at line 322 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_afd02755319269c5044ba59d94bd16753}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCPS\_\-CLEARBIT@{PWM\_\-PWMCPS\_\-CLEARBIT}}
+\index{PWM\_\-PWMCPS\_\-CLEARBIT@{PWM\_\-PWMCPS\_\-CLEARBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCPS\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCPS\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS) \& ($\sim$(value)))}}
+\label{a00564_afd02755319269c5044ba59d94bd16753}
+
+
+Definition at line 208 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a2a214b3e7868ddd56c44b2eabdc42ca4}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCPS\_\-GET@{PWM\_\-PWMCPS\_\-GET}}
+\index{PWM\_\-PWMCPS\_\-GET@{PWM\_\-PWMCPS\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCPS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCPS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS))}}
+\label{a00564_a2a214b3e7868ddd56c44b2eabdc42ca4}
+
+
+Definition at line 202 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a45cf8dce025850209b19d0a27f54dcf9}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCPS\_\-SET@{PWM\_\-PWMCPS\_\-SET}}
+\index{PWM\_\-PWMCPS\_\-SET@{PWM\_\-PWMCPS\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCPS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCPS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS, (value))}}
+\label{a00564_a45cf8dce025850209b19d0a27f54dcf9}
+
+
+Definition at line 204 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a0e5cccf621db80dd75372e2ec3f3ed32}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCPS\_\-SETBIT@{PWM\_\-PWMCPS\_\-SETBIT}}
+\index{PWM\_\-PWMCPS\_\-SETBIT@{PWM\_\-PWMCPS\_\-SETBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCPS\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCPS\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCPS) $|$ (value))}}
+\label{a00564_a0e5cccf621db80dd75372e2ec3f3ed32}
+
+
+Definition at line 206 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a9f0d1b9df47048caa7fa5c06d25bbe35}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCR\_\-CLEARBIT@{PWM\_\-PWMCR\_\-CLEARBIT}}
+\index{PWM\_\-PWMCR\_\-CLEARBIT@{PWM\_\-PWMCR\_\-CLEARBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR) \& ($\sim$(value)))}}
+\label{a00564_a9f0d1b9df47048caa7fa5c06d25bbe35}
+
+
+Definition at line 62 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a9ca96287c76d806aaf80ecd8bdea2780}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCR\_\-GET@{PWM\_\-PWMCR\_\-GET}}
+\index{PWM\_\-PWMCR\_\-GET@{PWM\_\-PWMCR\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR))}}
+\label{a00564_a9ca96287c76d806aaf80ecd8bdea2780}
+
+
+Definition at line 56 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a63b6ca52bb8683da75423d6cbc5e6dad}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCR\_\-SET@{PWM\_\-PWMCR\_\-SET}}
+\index{PWM\_\-PWMCR\_\-SET@{PWM\_\-PWMCR\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR, (value))}}
+\label{a00564_a63b6ca52bb8683da75423d6cbc5e6dad}
+
+
+Definition at line 58 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_aa27a948fb01f49edcb55fa4d1733d666}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCR\_\-SETBIT@{PWM\_\-PWMCR\_\-SETBIT}}
+\index{PWM\_\-PWMCR\_\-SETBIT@{PWM\_\-PWMCR\_\-SETBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCR) $|$ (value))}}
+\label{a00564_aa27a948fb01f49edcb55fa4d1733d666}
+
+
+Definition at line 60 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a3886a1704767e5b7df2aca90138cc427}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCST0\_\-GET@{PWM\_\-PWMCST0\_\-GET}}
+\index{PWM\_\-PWMCST0\_\-GET@{PWM\_\-PWMCST0\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCST0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCST0))}}
+\label{a00564_a3886a1704767e5b7df2aca90138cc427}
+
+
+Definition at line 332 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a616c856c9be6c244bf771a1a1fa80242}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCST1\_\-GET@{PWM\_\-PWMCST1\_\-GET}}
+\index{PWM\_\-PWMCST1\_\-GET@{PWM\_\-PWMCST1\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCST1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCST1))}}
+\label{a00564_a616c856c9be6c244bf771a1a1fa80242}
+
+
+Definition at line 354 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_aaabd65f6f32888657ae301ecf4b58cc9}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMCST2\_\-GET@{PWM\_\-PWMCST2\_\-GET}}
+\index{PWM\_\-PWMCST2\_\-GET@{PWM\_\-PWMCST2\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMCST2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMCST2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMCST2))}}
+\label{a00564_aaabd65f6f32888657ae301ecf4b58cc9}
+
+
+Definition at line 362 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a8cfa0f8d5fc6e6443de1e9d8b6f6f38b}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMDCR\_\-CLEARBIT@{PWM\_\-PWMDCR\_\-CLEARBIT}}
+\index{PWM\_\-PWMDCR\_\-CLEARBIT@{PWM\_\-PWMDCR\_\-CLEARBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMDCR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMDCR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR) \& ($\sim$(value)))}}
+\label{a00564_a8cfa0f8d5fc6e6443de1e9d8b6f6f38b}
+
+
+Definition at line 231 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a9848f48672e2d97f964a8e861204f3a6}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMDCR\_\-GET@{PWM\_\-PWMDCR\_\-GET}}
+\index{PWM\_\-PWMDCR\_\-GET@{PWM\_\-PWMDCR\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMDCR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMDCR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR))}}
+\label{a00564_a9848f48672e2d97f964a8e861204f3a6}
+
+
+Definition at line 225 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a525343af70a11ea863801e070724aa57}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMDCR\_\-SET@{PWM\_\-PWMDCR\_\-SET}}
+\index{PWM\_\-PWMDCR\_\-SET@{PWM\_\-PWMDCR\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMDCR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMDCR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR, (value))}}
+\label{a00564_a525343af70a11ea863801e070724aa57}
+
+
+Definition at line 227 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ad1b66d41c08d17b9687a2e640d4d2410}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMDCR\_\-SETBIT@{PWM\_\-PWMDCR\_\-SETBIT}}
+\index{PWM\_\-PWMDCR\_\-SETBIT@{PWM\_\-PWMDCR\_\-SETBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMDCR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMDCR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMDCR) $|$ (value))}}
+\label{a00564_ad1b66d41c08d17b9687a2e640d4d2410}
+
+
+Definition at line 229 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a91c4dd08ef9ee509cd6e262b30ac1d7a}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMIC\_\-CLEARBIT@{PWM\_\-PWMIC\_\-CLEARBIT}}
+\index{PWM\_\-PWMIC\_\-CLEARBIT@{PWM\_\-PWMIC\_\-CLEARBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMIC\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIC\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC) \& ($\sim$(value)))}}
+\label{a00564_a91c4dd08ef9ee509cd6e262b30ac1d7a}
+
+
+Definition at line 556 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ab988f3432631a858b256f9e4f6ab6aaf}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMIC\_\-GET@{PWM\_\-PWMIC\_\-GET}}
+\index{PWM\_\-PWMIC\_\-GET@{PWM\_\-PWMIC\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMIC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC))}}
+\label{a00564_ab988f3432631a858b256f9e4f6ab6aaf}
+
+
+Definition at line 550 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a7c2dc5fdb484679748ca37d54cc41700}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMIC\_\-SET@{PWM\_\-PWMIC\_\-SET}}
+\index{PWM\_\-PWMIC\_\-SET@{PWM\_\-PWMIC\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMIC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC, (value))}}
+\label{a00564_a7c2dc5fdb484679748ca37d54cc41700}
+
+
+Definition at line 552 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_aaab2a23f2b8e3cbf04055b9634f1bdfb}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMIC\_\-SETBIT@{PWM\_\-PWMIC\_\-SETBIT}}
+\index{PWM\_\-PWMIC\_\-SETBIT@{PWM\_\-PWMIC\_\-SETBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMIC\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIC\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIC) $|$ (value))}}
+\label{a00564_aaab2a23f2b8e3cbf04055b9634f1bdfb}
+
+
+Definition at line 554 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_ac933448d0f2ed1bf1084b2ea506b7aa8}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMID\_\-GET@{PWM\_\-PWMID\_\-GET}}
+\index{PWM\_\-PWMID\_\-GET@{PWM\_\-PWMID\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMID\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMID\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMID))}}
+\label{a00564_ac933448d0f2ed1bf1084b2ea506b7aa8}
+
+
+Definition at line 257 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a18c5fb63a322174cf0f0244ce3580221}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMIM\_\-CLEARBIT@{PWM\_\-PWMIM\_\-CLEARBIT}}
+\index{PWM\_\-PWMIM\_\-CLEARBIT@{PWM\_\-PWMIM\_\-CLEARBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMIM\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIM\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM) \& ($\sim$(value)))}}
+\label{a00564_a18c5fb63a322174cf0f0244ce3580221}
+
+
+Definition at line 476 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a32520bded8b3ea2fc4c5799e7c728912}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMIM\_\-GET@{PWM\_\-PWMIM\_\-GET}}
+\index{PWM\_\-PWMIM\_\-GET@{PWM\_\-PWMIM\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMIM\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIM\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM))}}
+\label{a00564_a32520bded8b3ea2fc4c5799e7c728912}
+
+
+Definition at line 470 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a0cfa0f4b4c29d8e3a8f971cb70ea994d}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMIM\_\-SET@{PWM\_\-PWMIM\_\-SET}}
+\index{PWM\_\-PWMIM\_\-SET@{PWM\_\-PWMIM\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMIM\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIM\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM, (value))}}
+\label{a00564_a0cfa0f4b4c29d8e3a8f971cb70ea994d}
+
+
+Definition at line 472 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a732394f55fb9335162b2b73a45529da7}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMIM\_\-SETBIT@{PWM\_\-PWMIM\_\-SETBIT}}
+\index{PWM\_\-PWMIM\_\-SETBIT@{PWM\_\-PWMIM\_\-SETBIT}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMIM\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIM\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIM) $|$ (value))}}
+\label{a00564_a732394f55fb9335162b2b73a45529da7}
+
+
+Definition at line 474 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a727918a05305d53b9116708f3d97e5cb}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMIS\_\-GET@{PWM\_\-PWMIS\_\-GET}}
+\index{PWM\_\-PWMIS\_\-GET@{PWM\_\-PWMIS\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMIS))}}
+\label{a00564_a727918a05305d53b9116708f3d97e5cb}
+
+
+Definition at line 370 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_abb4de69cd44cdd3ccab023678d8ca4b2}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-PWMRIS\_\-GET@{PWM\_\-PWMRIS\_\-GET}}
+\index{PWM\_\-PWMRIS\_\-GET@{PWM\_\-PWMRIS\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-PWMRIS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-PWMRIS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, PWM\_\-PWMRIS))}}
+\label{a00564_abb4de69cd44cdd3ccab023678d8ca4b2}
+
+
+Definition at line 420 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a88a12d6dcc36bc6f1089228999192fd0}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-SCLS\_\-CLEAR@{PWM\_\-SCLS\_\-CLEAR}}
+\index{PWM\_\-SCLS\_\-CLEAR@{PWM\_\-SCLS\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-SCLS\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SCLS\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SCLS, 0)}}
+\label{a00564_a88a12d6dcc36bc6f1089228999192fd0}
+
+
+Definition at line 84 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a9a8550a68459aa9bf9ef3fc92a560c97}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-SCLS\_\-GET@{PWM\_\-SCLS\_\-GET}}
+\index{PWM\_\-SCLS\_\-GET@{PWM\_\-SCLS\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-SCLS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SCLS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SCLS)}}
+\label{a00564_a9a8550a68459aa9bf9ef3fc92a560c97}
+
+
+Definition at line 80 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a9fde8ec4775161b94d3fce67ba36d6fe}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-SCLS\_\-SET@{PWM\_\-SCLS\_\-SET}}
+\index{PWM\_\-SCLS\_\-SET@{PWM\_\-SCLS\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-SCLS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SCLS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SCLS, 1)}}
+\label{a00564_a9fde8ec4775161b94d3fce67ba36d6fe}
+
+
+Definition at line 82 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a034aae47939380f387230201c7f1274e}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-SEN\_\-CLEAR@{PWM\_\-SEN\_\-CLEAR}}
+\index{PWM\_\-SEN\_\-CLEAR@{PWM\_\-SEN\_\-CLEAR}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-SEN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SEN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SEN, 0)}}
+\label{a00564_a034aae47939380f387230201c7f1274e}
+
+
+Definition at line 95 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a18b3d60afb481bf5b9e3a1125e2a31ca}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-SEN\_\-GET@{PWM\_\-SEN\_\-GET}}
+\index{PWM\_\-SEN\_\-GET@{PWM\_\-SEN\_\-GET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-SEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SEN)}}
+\label{a00564_a18b3d60afb481bf5b9e3a1125e2a31ca}
+
+
+Definition at line 91 of file gsn\_\-reg\_\-pwm\_\-op.h.
+
+\hypertarget{a00564_a9242f83ae01ab324f99b87b0f94a2ff3}{
+\index{gsn\_\-reg\_\-pwm\_\-op.h@{gsn\_\-reg\_\-pwm\_\-op.h}!PWM\_\-SEN\_\-SET@{PWM\_\-SEN\_\-SET}}
+\index{PWM\_\-SEN\_\-SET@{PWM\_\-SEN\_\-SET}!gsn_reg_pwm_op.h@{gsn\_\-reg\_\-pwm\_\-op.h}}
+\subsubsection[{PWM\_\-SEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM\_\-SEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, PWM\_\-SEN, 1)}}
+\label{a00564_a9242f83ae01ab324f99b87b0f94a2ff3}
+
+
+Definition at line 93 of file gsn\_\-reg\_\-pwm\_\-op.h.
+

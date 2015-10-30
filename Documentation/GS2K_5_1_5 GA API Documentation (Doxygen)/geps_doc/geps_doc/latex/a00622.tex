@@ -1,0 +1,186 @@
+\hypertarget{a00622}{
+\section{GSN Event Handler}
+\label{a00622}\index{GSN Event Handler@{GSN Event Handler}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER}
+\begin{DoxyCompactList}\small\item\em GSN Event Handler context. type definition of the Event handler context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00622_ga570a795e4730bcaa1c17b58223336526}{GSN\_\-EVENT\_\-HANDLER\_\-CB\_\-T} )(\hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$)
+\begin{DoxyCompactList}\small\item\em GSN Event Handler callback type. type definition of the handler used in Event handler. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER} \hyperlink{a00622_ga6b24ca227651d8ca08bb5e95b709dc49}{GSN\_\-EVENT\_\-HANDLER\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Event Handler context. type definition of the Event handler context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00622_ga1444fb0959aa0a4116350050672123e8}{GsnEventHandler\_\-Create} (\hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$pEventHandler)
+\begin{DoxyCompactList}\small\item\em Create Event Handler. This function is used to create a Event handler group. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00622_gad6d98740195b5df6efecc955027ca980}{GsnEventHandler\_\-EventGet} (\hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$pEventHandler, ULONG requested\_\-flags, \hyperlink{a00536_a3782687de549490574b44f3374fb5731}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T} get\_\-option, ULONG $\ast$pActualFlags, ULONG wait\_\-option)
+\begin{DoxyCompactList}\small\item\em gets the Events. This function is used to get the events. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00622_ga4303e460164a4a63050c356c1d9e7371}{GsnEventHandler\_\-EventSet} (\hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$pEventHandler, ULONG flags\_\-to\_\-set, \hyperlink{a00536_a3782687de549490574b44f3374fb5731}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T} set\_\-option)
+\begin{DoxyCompactList}\small\item\em Sets Events . This function is used to set the events. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00622_ga838bf8879aab1d57f5ef7981f9a5e3d0}{GsnEventHandler\_\-EventNotifyCb} (\hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$pEventHandler, \hyperlink{a00622_ga570a795e4730bcaa1c17b58223336526}{GSN\_\-EVENT\_\-HANDLER\_\-CB\_\-T} events\_\-set\_\-notify\_\-cb)
+\begin{DoxyCompactList}\small\item\em registers call back for events group. This function is used to register call back for events group. \end{DoxyCompactList}\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00622_gaae25cea2c623ec738b13c0b039151e3a}{GsnEventHandler\_\-Delete} (\hyperlink{a00069}{GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$pEventHandler)
+\begin{DoxyCompactList}\small\item\em deletes event group. This function is used to delet events group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group of API functions implements a generic Event handler, by creating an event group. Functions can wait on an event or register a callback function. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00622_ga570a795e4730bcaa1c17b58223336526}{
+\index{GSN Event Handler@{GSN Event Handler}!GSN\_\-EVENT\_\-HANDLER\_\-CB\_\-T@{GSN\_\-EVENT\_\-HANDLER\_\-CB\_\-T}}
+\index{GSN\_\-EVENT\_\-HANDLER\_\-CB\_\-T@{GSN\_\-EVENT\_\-HANDLER\_\-CB\_\-T}!GSN Event Handler@{GSN Event Handler}}
+\subsubsection[{GSN\_\-EVENT\_\-HANDLER\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-EVENT\_\-HANDLER\_\-CB\_\-T})({\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$)}}
+\label{a00622_ga570a795e4730bcaa1c17b58223336526}
+
+
+GSN Event Handler callback type. type definition of the handler used in Event handler. 
+
+
+
+Definition at line 79 of file gsn\_\-event\_\-handler.h.
+
+\hypertarget{a00622_ga6b24ca227651d8ca08bb5e95b709dc49}{
+\index{GSN Event Handler@{GSN Event Handler}!GSN\_\-EVENT\_\-HANDLER\_\-T@{GSN\_\-EVENT\_\-HANDLER\_\-T}}
+\index{GSN\_\-EVENT\_\-HANDLER\_\-T@{GSN\_\-EVENT\_\-HANDLER\_\-T}!GSN Event Handler@{GSN Event Handler}}
+\subsubsection[{GSN\_\-EVENT\_\-HANDLER\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-EVENT\_\-HANDLER} {\bf GSN\_\-EVENT\_\-HANDLER\_\-T}}}
+\label{a00622_ga6b24ca227651d8ca08bb5e95b709dc49}
+
+
+GSN Event Handler context. type definition of the Event handler context. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00622_ga1444fb0959aa0a4116350050672123e8}{
+\index{GSN Event Handler@{GSN Event Handler}!GsnEventHandler\_\-Create@{GsnEventHandler\_\-Create}}
+\index{GsnEventHandler\_\-Create@{GsnEventHandler\_\-Create}!GSN Event Handler@{GSN Event Handler}}
+\subsubsection[{GsnEventHandler\_\-Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnEventHandler\_\-Create (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$}]{pEventHandler}
+\end{DoxyParamCaption}
+)}}
+\label{a00622_ga1444fb0959aa0a4116350050672123e8}
+
+
+Create Event Handler. This function is used to create a Event handler group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pEventHandler} & -\/ IN Pointer to event handler context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00622_gaae25cea2c623ec738b13c0b039151e3a}{
+\index{GSN Event Handler@{GSN Event Handler}!GsnEventHandler\_\-Delete@{GsnEventHandler\_\-Delete}}
+\index{GsnEventHandler\_\-Delete@{GsnEventHandler\_\-Delete}!GSN Event Handler@{GSN Event Handler}}
+\subsubsection[{GsnEventHandler\_\-Delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnEventHandler\_\-Delete (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$}]{pEventHandler}
+\end{DoxyParamCaption}
+)}}
+\label{a00622_gaae25cea2c623ec738b13c0b039151e3a}
+
+
+deletes event group. This function is used to delet events group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pEventHandler} & -\/ IN Pointer to event handler context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00622_gad6d98740195b5df6efecc955027ca980}{
+\index{GSN Event Handler@{GSN Event Handler}!GsnEventHandler\_\-EventGet@{GsnEventHandler\_\-EventGet}}
+\index{GsnEventHandler\_\-EventGet@{GsnEventHandler\_\-EventGet}!GSN Event Handler@{GSN Event Handler}}
+\subsubsection[{GsnEventHandler\_\-EventGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnEventHandler\_\-EventGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$}]{pEventHandler, }
+\item[{ULONG}]{requested\_\-flags, }
+\item[{{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T}}]{get\_\-option, }
+\item[{ULONG $\ast$}]{pActualFlags, }
+\item[{ULONG}]{wait\_\-option}
+\end{DoxyParamCaption}
+)}}
+\label{a00622_gad6d98740195b5df6efecc955027ca980}
+
+
+gets the Events. This function is used to get the events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pEventHandler} & -\/ IN Pointer to event handler context. \\
+\hline
+{\em requested\_\-flags} & -\/ IN group of event flags requested. \\
+\hline
+{\em get\_\-option} & -\/ IN GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND : All requested event flags must be set in the specified event flags group. GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND\_\-CLEAR : All requested event flags must be set in the specified event flags group; event flags that satisfy the request are cleared. GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR : At least one requested event flag must be set in the specified event flags group. GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR\_\-CLEAR : At least one requested event flag must be set in the specified event flags group; event flags that satisfy the request are cleared. \\
+\hline
+{\em pActualFlags} & -\/ OUT Pointer to destination of where the retrieved event flags are placed. \\
+\hline
+{\em wait\_\-option} & -\/ IN wait option. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00622_ga838bf8879aab1d57f5ef7981f9a5e3d0}{
+\index{GSN Event Handler@{GSN Event Handler}!GsnEventHandler\_\-EventNotifyCb@{GsnEventHandler\_\-EventNotifyCb}}
+\index{GsnEventHandler\_\-EventNotifyCb@{GsnEventHandler\_\-EventNotifyCb}!GSN Event Handler@{GSN Event Handler}}
+\subsubsection[{GsnEventHandler\_\-EventNotifyCb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnEventHandler\_\-EventNotifyCb (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$}]{pEventHandler, }
+\item[{{\bf GSN\_\-EVENT\_\-HANDLER\_\-CB\_\-T}}]{events\_\-set\_\-notify\_\-cb}
+\end{DoxyParamCaption}
+)}}
+\label{a00622_ga838bf8879aab1d57f5ef7981f9a5e3d0}
+
+
+registers call back for events group. This function is used to register call back for events group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pEventHandler} & -\/ IN Pointer to event handler context. \\
+\hline
+{\em events\_\-set\_\-notify\_\-cb} & -\/ IN pointer to call back. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+giving pEventHandler = NULL deregisters callback. 
+\end{DoxyNote}
+\hypertarget{a00622_ga4303e460164a4a63050c356c1d9e7371}{
+\index{GSN Event Handler@{GSN Event Handler}!GsnEventHandler\_\-EventSet@{GsnEventHandler\_\-EventSet}}
+\index{GsnEventHandler\_\-EventSet@{GsnEventHandler\_\-EventSet}!GSN Event Handler@{GSN Event Handler}}
+\subsubsection[{GsnEventHandler\_\-EventSet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnEventHandler\_\-EventSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EVENT\_\-HANDLER\_\-T} $\ast$}]{pEventHandler, }
+\item[{ULONG}]{flags\_\-to\_\-set, }
+\item[{{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T}}]{set\_\-option}
+\end{DoxyParamCaption}
+)}}
+\label{a00622_ga4303e460164a4a63050c356c1d9e7371}
+
+
+Sets Events . This function is used to set the events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pEventHandler} & -\/ IN Pointer to event handler context. \\
+\hline
+{\em flags\_\-to\_\-set} & -\/ IN group of event flags requested. \\
+\hline
+{\em set\_\-option} & -\/ IN GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND : The specified event flags are ANDed in to the current event flags in a group. GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR : The specified event flags are ORed in to the current event flags in a group. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}

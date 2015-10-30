@@ -1,0 +1,481 @@
+\hypertarget{a00612}{
+\section{gsn\_\-wif\_\-sys\_\-defs.h File Reference}
+\label{a00612}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+}
+
+
+GSN WIF System messages public header.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00859}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00348}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Boot Indication Message. \end{DoxyCompactList}\item 
+struct \hyperlink{a00347}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-S}
+\begin{DoxyCompactList}\small\item\em boot indication msg format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00353}{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Start Interface Message. \end{DoxyCompactList}\item 
+struct \hyperlink{a00355}{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Stop Interface Message. \end{DoxyCompactList}\item 
+struct \hyperlink{a00356}{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-RSP\_\-S}
+\item 
+struct \hyperlink{a00354}{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-RSP\_\-S}
+\item 
+struct \hyperlink{a00352}{GSN\_\-WIF\_\-SYS\_\-FW\_\-VERSION\_\-RSP\_\-S}
+\item 
+struct \hyperlink{a00362}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-S}
+\item 
+struct \hyperlink{a00360}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em opt write command format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00361}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-S}
+\begin{DoxyCompactList}\small\item\em opt write command acknowledge format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00358}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em opt read command format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00359}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-S}
+\begin{DoxyCompactList}\small\item\em opt read command acknowledge format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00357}{GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Memory/Reg read/Write command format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00350}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em File Operation Request. \end{DoxyCompactList}\item 
+struct \hyperlink{a00351}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}
+\begin{DoxyCompactList}\small\item\em File Operation Response. \end{DoxyCompactList}\item 
+struct \hyperlink{a00364}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Standby request msg format. \end{DoxyCompactList}\item 
+struct \hyperlink{a00363}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-S}
+\item 
+struct \hyperlink{a00346}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em Battery Measurement Deatials. \end{DoxyCompactList}\item 
+struct \hyperlink{a00345}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-S}
+\begin{DoxyCompactList}\small\item\em Battery Measurement Deatials. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00639_ga89d2e01544259ce81d97d4161d5f3c51}{GSN\_\-WIF\_\-SYS\_\-CTL\_\-DEV\_\-INDEX}~0xff
+\begin{DoxyCompactList}\small\item\em sysctl device number \end{DoxyCompactList}\item 
+\#define \hyperlink{a00612_aaa47aebadfeb0f51841b56c5dfa56bf4}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-MAX\_\-IF\_\-NUM}~GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM
+\item 
+\#define \hyperlink{a00612_a4398fd372a03b37ae3fdc1ba14232e94}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-WAKEUP\_\-OFFSET}~(300)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00639_ga36af0a76d3b3d7cad5c5dd1f60c39091}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON} \hyperlink{a00639_ga213ad232655e90fd6ca561d772ef7b96}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON\_\-T}
+\begin{DoxyCompactList}\small\item\em Boot reason. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_gaf19dc62e1c923b6383337e8e8296c242}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT} \hyperlink{a00639_ga0c8b91590ceaee6ceb3d5267d191318d}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-T}
+\begin{DoxyCompactList}\small\item\em Normal boot reason. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga9d8caf6999c8508aaf8d3b414693a0a2}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET} \hyperlink{a00639_ga932935c40cc08491352069856307cf6e}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-T}
+\begin{DoxyCompactList}\small\item\em SW Reset boot reason. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga93cc8ed01d7724e043b553774ec3df16}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET} \hyperlink{a00639_ga1e2be305dad8c272f3e260243e3af8fe}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-T}
+\begin{DoxyCompactList}\small\item\em Watchdog boot reason. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga9447df4a60ba9be14d372720213b2c23}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP} \hyperlink{a00639_ga908aa6facf38cbcd28fae2a91d83d4e7}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-T}
+\begin{DoxyCompactList}\small\item\em Exception boot reason. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga39cb2f02fc6abae8ae5a431aa24944c0}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS} \hyperlink{a00639_ga0a757a76eb611c307f5c94e57d0a462a}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em FWUP download status. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga8df4566faa9edce0748124e2d08c1efe}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS} \hyperlink{a00639_ga48fd5cab26a503fd58913132ff62487b}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em FWUP other status. Enumeration of other Firmware Update status options. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_gaa1aae8d2007a2f4b746672dbc9c8efbb}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE} \hyperlink{a00639_gaa8a4795d26e385102aa6e91b2a088c6d}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em host interface type Enumeration of host interface types \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00348}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S} \hyperlink{a00639_ga1d3de3e01c42d56351a808bbea56786d}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Boot Indication Message. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00347}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-S} \hyperlink{a00639_gad38929b3e09d60d08210d2b83a89b43f}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-IND\_\-T}
+\begin{DoxyCompactList}\small\item\em boot indication msg format. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_ga5b5ea6b444509449484db8bf22612b98}{GSN\_\-WIF\_\-IF\_\-STATE\_\-S} \hyperlink{a00639_ga7ff7134a0bdba9e91d4edf9cea797de7}{GSN\_\-WIF\_\-IF\_\-STATE\_\-T}
+\begin{DoxyCompactList}\small\item\em L2 Interface state. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00612_a130509bc0cea8325a8be3adb5d7f4bd8}{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-E} \hyperlink{a00612_a95a21392fdd498964fccb4f7c1d161ac}{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-T}
+\item 
+typedef struct \hyperlink{a00353}{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-S} \hyperlink{a00639_gae60d074a50101f9b50a01707e3d4f437}{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Start Interface Message. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00355}{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-S} \hyperlink{a00639_ga1e2d9e30a2dac9894c1d8c54d6b2b68e}{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Stop Interface Message. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00356}{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-RSP\_\-S} \hyperlink{a00612_a471b870bb57e6c8f0723e15c1bdebc59}{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-RSP\_\-T}
+\item 
+typedef struct \hyperlink{a00354}{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-RSP\_\-S} \hyperlink{a00612_aa817647e9a90367153a9c5f5841dddee}{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-RSP\_\-T}
+\item 
+typedef struct \hyperlink{a00352}{GSN\_\-WIF\_\-SYS\_\-FW\_\-VERSION\_\-RSP\_\-S} \hyperlink{a00612_a7aabfad3317f43a3b7ed24a7cbd9a525}{GSN\_\-WIF\_\-SYS\_\-FW\_\-VERSION\_\-RSP\_\-T}
+\item 
+typedef enum \hyperlink{a00612_a6412fcc10baf67871043051f04fb42d4}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-E} \hyperlink{a00612_ac093cc24636c47d2eb47dbce3ae8be17}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-T}
+\item 
+typedef enum \hyperlink{a00612_aba0b2b7ee12a62ff72fa5ffa83622746}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-E} \hyperlink{a00612_a9066276aeca288e6c17ee9c7f3351478}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-T}
+\item 
+typedef struct \hyperlink{a00362}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-S} \hyperlink{a00612_a02f22acdace6e4ec546b18f2803d2935}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-T}
+\item 
+typedef enum \hyperlink{a00639_ga24ebbde6925db9b03e4648c99be320b4}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-E} \hyperlink{a00639_ga87b927b7d702c16024b46557013dbb64}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-T}
+\begin{DoxyCompactList}\small\item\em File Operation codes. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00360}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-S} \hyperlink{a00639_gaa1cf18e499f7fd325969144c10fdd54a}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em opt write command format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00361}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-S} \hyperlink{a00639_gac6f93d0889c0fdbf82aa2e0af7c0d988}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-WRITE\_\-RSP\_\-T}
+\begin{DoxyCompactList}\small\item\em opt write command acknowledge format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00358}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-S} \hyperlink{a00639_gab7804e5393f417c861691706760684ef}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em opt read command format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00359}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-S} \hyperlink{a00639_gae38db03f3f15f58fb7e7d6bcdc07474a}{GSN\_\-WIF\_\-SYS\_\-OTP\_\-READ\_\-RSP\_\-T}
+\begin{DoxyCompactList}\small\item\em opt read command acknowledge format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00357}{GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-S} \hyperlink{a00639_ga9e7044ea584df3b45c6e9811e5de6731}{GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Memory/Reg read/Write command format. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00357}{GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-T} \hyperlink{a00612_a84498c5c575611f447294242aea8a874}{GSN\_\-WIF\_\-SYS\_\-MEM\_\-READ\_\-RSP\_\-T}
+\item 
+typedef enum \hyperlink{a00639_ga4ab9f7b6980d4b5c3f3a0199250b8923}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-E} \hyperlink{a00639_gafae04713b42d9bf1e40e2f94397416e3}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em File Operation result codes. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00639_gac5b276b2a9ea66f27afb0f35e0e75257}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-E} \hyperlink{a00639_ga7719428a1c7dead37acbe115df44fad9}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-T}
+\begin{DoxyCompactList}\small\item\em File Operation flags. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00612_a7df5e29e60c1b277e846cfb371ab25f0}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-E} \hyperlink{a00612_abd4fe8ad19cc5a4a9f488b23b08afbd3}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-T}
+\item 
+typedef struct \hyperlink{a00350}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-S} \hyperlink{a00639_ga1808a8f4a69150d0761c6d965d5527d0}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em File Operation Request. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00351}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S} \hyperlink{a00639_gace03eed872f0520e74fbcb1eb8faa065}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-T}
+\begin{DoxyCompactList}\small\item\em File Operation Response. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00364}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-S} \hyperlink{a00639_gac5574c4a3e73dabf551d5bdbe8a1c59e}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Standby request msg format. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00363}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-S} \hyperlink{a00639_ga682020519e40d5d988f8edece8ec693c}{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-RDY\_\-IND\_\-T}
+\item 
+typedef struct \hyperlink{a00346}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-S} \hyperlink{a00639_ga5da12fbc2ff8e811daefb22efe2ea035}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em Battery Measurement Deatials. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00345}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-S} \hyperlink{a00639_gad097596826952565d80cccae8d9f10c0}{GSN\_\-WIF\_\-SYS\_\-BATT\_\-CHK\_\-IND\_\-T}
+\begin{DoxyCompactList}\small\item\em Battery Measurement Deatials. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00639_ga36af0a76d3b3d7cad5c5dd1f60c39091}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REASON} \{ \par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091ac285fff9dba8dc2ba60fdacd33619829}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FIRST\_\-BOOT} =  0, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091aeb9feea283c362b0c0e9d78bb5762bb2}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-NORMAL\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a398f4e2af9200a6c92a0e5efdbfa72bd}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FW\_\-UPDATE\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a00a2ab01a491601e24d1609e84d51f50}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WATCHDOG\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a4a77c0d04ab7ee1c0aeb06b46bf3127c}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SW\_\-RESET\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a57c1bc088be599019fbc84f6a8691480}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXCEPTION\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a091d2c23baba77524f56e8160707ea37}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-EXT\_\-RESET\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a1bf68122c5be8c2214712adf99074a86}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-DBG\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a56db5479c0f77a1912d28b8515263fa4}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-WLAN\_\-TEST\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a6ae80cef6eb41a7eaa9581ff6dab4d2d}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-FACTORY\_\-FW\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a69530a2da30366e453bf136a6ef32df0}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CORE\_\-BROWNOUT\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091af069096b1d74063e2a81f51cb9de8d63}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-CRYPTO\_\-SW\_\-BOOT}, 
+\par
+\hyperlink{a00639_gga36af0a76d3b3d7cad5c5dd1f60c39091a3105a241e957797a7f6042c7c77b197c}{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-SRC\_\-MAX}
+ \}
+\begin{DoxyCompactList}\small\item\em Boot reason. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_gaf19dc62e1c923b6383337e8e8296c242}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT} \{ \par
+\hyperlink{a00639_ggaf19dc62e1c923b6383337e8e8296c242aaa34679749818c0b6b49589c05b1d2d8}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-RTC} =  0, 
+\par
+\hyperlink{a00639_ggaf19dc62e1c923b6383337e8e8296c242ab0c3999cf0b0db563677fc197d848d5f}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-NORMALBOOT\_\-ALARM} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em Normal boot reason. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga9d8caf6999c8508aaf8d3b414693a0a2}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET} \{ \par
+\hyperlink{a00639_gga9d8caf6999c8508aaf8d3b414693a0a2a5fa5611bcc8a6b4df4bd0210e6f861d0}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-WLAN} =  0x1, 
+\par
+\hyperlink{a00639_gga9d8caf6999c8508aaf8d3b414693a0a2ae91706337a69766a937c6ce4d5934cdd}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-SWRESET\_\-APP} =  0x2
+ \}
+\begin{DoxyCompactList}\small\item\em SW Reset boot reason. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga93cc8ed01d7724e043b553774ec3df16}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET} \{ \par
+\hyperlink{a00639_gga93cc8ed01d7724e043b553774ec3df16a5b3dea32336a204e17485b63635d0fba}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-WLAN} =  0x1, 
+\par
+\hyperlink{a00639_gga93cc8ed01d7724e043b553774ec3df16ab015077ed326c799fa21c7fc48115940}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-WDOG\_\-RESET\_\-APP} =  0x2
+ \}
+\begin{DoxyCompactList}\small\item\em Watchdog boot reason. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga9447df4a60ba9be14d372720213b2c23}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP} \{ \par
+\hyperlink{a00639_gga9447df4a60ba9be14d372720213b2c23abc4bb520cfdd57e022e7e5e2b2a5f555}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ABORT} =  0, 
+\par
+\hyperlink{a00639_gga9447df4a60ba9be14d372720213b2c23a488c8769b3249bdb8329bb1bbdaaea86}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-APP\_\-ASSERT} =  1, 
+\par
+\hyperlink{a00639_gga9447df4a60ba9be14d372720213b2c23acb5b82fa9415893bb5fd62f0c514d290}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ABORT} =  2, 
+\par
+\hyperlink{a00639_gga9447df4a60ba9be14d372720213b2c23a51c2d92fe86618628ee3208796512b03}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-EXCP\_\-WLAN\_\-ASSERT} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em Exception boot reason. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga39cb2f02fc6abae8ae5a431aa24944c0}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-DWNLD\_\-STATUS} \{ \par
+\hyperlink{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a20c7f10721b308522548859ef16917e7}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SUCCESS} =  0, 
+\par
+\hyperlink{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a9dd90ed3f631644b1d936a9844d7eaab}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-CHKSUM\_\-ERROR}, 
+\par
+\hyperlink{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a6fcf93a4efae3973b0142a839ebb654b}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-FLASH\_\-FAIL}, 
+\par
+\hyperlink{a00639_gga39cb2f02fc6abae8ae5a431aa24944c0a6b82080d96a8397aceb85f9ecc03bf78}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-DWNLD\_\-STATUS\_\-SWAP\_\-ERROR}
+ \}
+\begin{DoxyCompactList}\small\item\em FWUP download status. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga8df4566faa9edce0748124e2d08c1efe}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-FWUP\_\-OTHER\_\-STATUS} \{ \par
+\hyperlink{a00639_gga8df4566faa9edce0748124e2d08c1efea7bd77a34da3f7cf36884f4ed738101c5}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-NO\_\-ERROR} =  0, 
+\par
+\hyperlink{a00639_gga8df4566faa9edce0748124e2d08c1efeabf7f11d1ce41bb8d8cba0dff0b3df92a}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-TIMEOUT}, 
+\par
+\hyperlink{a00639_gga8df4566faa9edce0748124e2d08c1efeaa6cd7e26354e8e53f8a1cb9c94a7ad54}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-SEQNUM}, 
+\par
+\hyperlink{a00639_gga8df4566faa9edce0748124e2d08c1efead2bdb2dd956827ac45f9dab635622eae}{GSN\_\-WIF\_\-SYS\_\-FWUP\_\-OTHER\_\-STATUS\_\-BAD\_\-PARAMS}
+ \}
+\begin{DoxyCompactList}\small\item\em FWUP other status. Enumeration of other Firmware Update status options. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_gaa1aae8d2007a2f4b746672dbc9c8efbb}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE} \{ \par
+\hyperlink{a00639_ggaa1aae8d2007a2f4b746672dbc9c8efbbaef814f4355ae06b21e9b99429e4e32e1}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-MB} =  0, 
+\par
+\hyperlink{a00639_ggaa1aae8d2007a2f4b746672dbc9c8efbba9d391bc48ffc1354dc5af474787f9f09}{GSN\_\-WIF\_\-SYS\_\-BOOTINFO\_\-HOST\_\-IF\_\-TYPE\_\-UART} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em host interface type Enumeration of host interface types \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga5b5ea6b444509449484db8bf22612b98}{GSN\_\-WIF\_\-IF\_\-STATE\_\-S} \{ \par
+\hyperlink{a00639_gga5b5ea6b444509449484db8bf22612b98aa658b0b0b1fc66453cc3aabbf296110e}{GSN\_\-WIF\_\-IF\_\-STATE\_\-NOT\_\-INITED} =  0, 
+\par
+\hyperlink{a00639_gga5b5ea6b444509449484db8bf22612b98aef6747e4a65b293ee9bee94928ec1e1a}{GSN\_\-WIF\_\-IF\_\-STATE\_\-SUSPENDED}, 
+\par
+\hyperlink{a00639_gga5b5ea6b444509449484db8bf22612b98a53425b647ada0e1a9e599d699b20cebf}{GSN\_\-WIF\_\-IF\_\-STATE\_\-RUNNING}, 
+\par
+\hyperlink{a00639_gga5b5ea6b444509449484db8bf22612b98a772f04af861bc5f56c255305c5354365}{GSN\_\-WIF\_\-IF\_\-STATE\_\-STOP\_\-REQUESTED\_\-WAITING\_\-FOR\_\-TX\_\-COMPLETION}, 
+\par
+\hyperlink{a00639_gga5b5ea6b444509449484db8bf22612b98a993c121d2959bd02efde4f10104b0ad3}{GSN\_\-WIF\_\-IF\_\-STATE\_\-STOPPED}
+ \}
+\begin{DoxyCompactList}\small\item\em L2 Interface state. \end{DoxyCompactList}\item 
+enum \hyperlink{a00612_a130509bc0cea8325a8be3adb5d7f4bd8}{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-E} \{ \par
+\hyperlink{a00612_a130509bc0cea8325a8be3adb5d7f4bd8a5f57577583e62def7a5a70dc0edcb87a}{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-LSSTA} =  0, 
+\par
+\hyperlink{a00612_a130509bc0cea8325a8be3adb5d7f4bd8a79509557fc53ad3a04a7294c6457073d}{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-HSSTA} =  1
+ \}
+\item 
+enum \hyperlink{a00612_a6412fcc10baf67871043051f04fb42d4}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-E} \{ \par
+\hyperlink{a00612_a6412fcc10baf67871043051f04fb42d4aa14896d2f4ebe90e88f8965a0daf7378}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-WLAN\_\-ONLY} =  0x1, 
+\par
+\hyperlink{a00612_a6412fcc10baf67871043051f04fb42d4af045511de8b76a204570370ec0b0f606}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-SYSTEM} =  0x2, 
+\par
+\hyperlink{a00612_a6412fcc10baf67871043051f04fb42d4abd8b477460780125b6e3596a2cf2762c}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-FULL\_\-CHIP} =  0x3
+ \}
+\item 
+enum \hyperlink{a00612_aba0b2b7ee12a62ff72fa5ffa83622746}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-E} \{ \par
+\hyperlink{a00612_aba0b2b7ee12a62ff72fa5ffa83622746ac6a4355cb4d81cc01299fcbd5a23c107}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-EXCP} =  0x1, 
+\par
+\hyperlink{a00612_aba0b2b7ee12a62ff72fa5ffa83622746abef82aaf1f94b754fa8e071bd178c89f}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-ASSERT} =  0x2, 
+\par
+\hyperlink{a00612_aba0b2b7ee12a62ff72fa5ffa83622746a2ddeba9871976fa46984911b026f1e00}{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-SYSQUAL} =  0x3
+ \}
+\item 
+enum \hyperlink{a00639_ga24ebbde6925db9b03e4648c99be320b4}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-E} \{ \par
+\hyperlink{a00639_gga24ebbde6925db9b03e4648c99be320b4a9297e545d68f2bbfb23886d76258954d}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-OPEN} =  0, 
+\par
+\hyperlink{a00639_gga24ebbde6925db9b03e4648c99be320b4a8fda2104e936080f682793861eed2af2}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-CLOSE} =  1, 
+\par
+\hyperlink{a00639_gga24ebbde6925db9b03e4648c99be320b4a80cebc45da04e421658eb57baa0b75df}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-READ} =  2, 
+\par
+\hyperlink{a00639_gga24ebbde6925db9b03e4648c99be320b4a000e53ca67ec09e29f77da0415fe675e}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OPCODE\_\-WRITE} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em File Operation codes. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_ga4ab9f7b6980d4b5c3f3a0199250b8923}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-E} \{ \hyperlink{a00639_gga4ab9f7b6980d4b5c3f3a0199250b8923a8f28cfe76fca5043418aaa6eaeec9e0a}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-STATUS\_\-SUCCESS} =  0
+ \}
+\begin{DoxyCompactList}\small\item\em File Operation result codes. \end{DoxyCompactList}\item 
+enum \hyperlink{a00639_gac5b276b2a9ea66f27afb0f35e0e75257}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-E} \{ \par
+\hyperlink{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a70c4828a84c7b58dbd61131c8bebfb1a}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-CREAT} =  1, 
+\par
+\hyperlink{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a3e3b02fa7233e93586c27fd95a8395aa}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RD}, 
+\par
+\hyperlink{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257a0afd71ef921c94f1b97cf8722f9235a4}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-WR}, 
+\par
+\hyperlink{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257aea0bd02aef90199065c6bbe0d4c84c21}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-RDWR}, 
+\par
+\hyperlink{a00639_ggac5b276b2a9ea66f27afb0f35e0e75257acaacf27fc6f8dbce410f3651a6d9952c}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-FLAGS\_\-DEL}
+ \}
+\begin{DoxyCompactList}\small\item\em File Operation flags. \end{DoxyCompactList}\item 
+enum \hyperlink{a00612_a7df5e29e60c1b277e846cfb371ab25f0}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-E} \{ \par
+\hyperlink{a00612_a7df5e29e60c1b277e846cfb371ab25f0a0b4a7ba0d5fc35fdaa20582eef6eaf85}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-CUR}, 
+\par
+\hyperlink{a00612_a7df5e29e60c1b277e846cfb371ab25f0a4d89b7d65d9896e62767c6da830ec1ba}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-END}, 
+\par
+\hyperlink{a00612_a7df5e29e60c1b277e846cfb371ab25f0a08719b66803a416593d3363af117e05e}{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-SET}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN WIF System messages public header. This file contains the public APIs and structures of System control interface. 
+
+Definition in file \hyperlink{a00612_source}{gsn\_\-wif\_\-sys\_\-defs.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00612_aaa47aebadfeb0f51841b56c5dfa56bf4}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-STDBY\_\-MAX\_\-IF\_\-NUM@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-MAX\_\-IF\_\-NUM}}
+\index{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-MAX\_\-IF\_\-NUM@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-MAX\_\-IF\_\-NUM}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-MAX\_\-IF\_\-NUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-SYS\_\-STDBY\_\-MAX\_\-IF\_\-NUM~GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM}}
+\label{a00612_aaa47aebadfeb0f51841b56c5dfa56bf4}
+
+
+Definition at line 108 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00612_a4398fd372a03b37ae3fdc1ba14232e94}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-STDBY\_\-WAKEUP\_\-OFFSET@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-WAKEUP\_\-OFFSET}}
+\index{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-WAKEUP\_\-OFFSET@{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-WAKEUP\_\-OFFSET}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-STDBY\_\-WAKEUP\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-SYS\_\-STDBY\_\-WAKEUP\_\-OFFSET~(300)}}
+\label{a00612_a4398fd372a03b37ae3fdc1ba14232e94}
+
+
+Definition at line 109 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00612_abd4fe8ad19cc5a4a9f488b23b08afbd3}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-T@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-T}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-E} {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-T}}}
+\label{a00612_abd4fe8ad19cc5a4a9f488b23b08afbd3}
+\hypertarget{a00612_a7aabfad3317f43a3b7ed24a7cbd9a525}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-FW\_\-VERSION\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-FW\_\-VERSION\_\-RSP\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-FW\_\-VERSION\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-FW\_\-VERSION\_\-RSP\_\-T}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-FW\_\-VERSION\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-FW\_\-VERSION\_\-RSP\_\-S} {\bf GSN\_\-WIF\_\-SYS\_\-FW\_\-VERSION\_\-RSP\_\-T}}}
+\label{a00612_a7aabfad3317f43a3b7ed24a7cbd9a525}
+\hypertarget{a00612_aa817647e9a90367153a9c5f5841dddee}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-RSP\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-RSP\_\-T}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-RSP\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-IF\_\-START\_\-RSP\_\-T}}}
+\label{a00612_aa817647e9a90367153a9c5f5841dddee}
+\hypertarget{a00612_a471b870bb57e6c8f0723e15c1bdebc59}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-RSP\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-RSP\_\-T}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-RSP\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-IF\_\-STOP\_\-RSP\_\-T}}}
+\label{a00612_a471b870bb57e6c8f0723e15c1bdebc59}
+\hypertarget{a00612_a84498c5c575611f447294242aea8a874}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-MEM\_\-READ\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-MEM\_\-READ\_\-RSP\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-MEM\_\-READ\_\-RSP\_\-T@{GSN\_\-WIF\_\-SYS\_\-MEM\_\-READ\_\-RSP\_\-T}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-MEM\_\-READ\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-SYS\_\-MEM\_\-RW\_\-REQ\_\-T} {\bf GSN\_\-WIF\_\-SYS\_\-MEM\_\-READ\_\-RSP\_\-T}}}
+\label{a00612_a84498c5c575611f447294242aea8a874}
+
+
+Definition at line 495 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00612_a9066276aeca288e6c17ee9c7f3351478}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-T@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-T@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-T}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-E}  {\bf GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-T}}}
+\label{a00612_a9066276aeca288e6c17ee9c7f3351478}
+\hypertarget{a00612_a02f22acdace6e4ec546b18f2803d2935}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-T@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-T}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-T}}}
+\label{a00612_a02f22acdace6e4ec546b18f2803d2935}
+\hypertarget{a00612_ac093cc24636c47d2eb47dbce3ae8be17}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-T@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-T@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-T}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-E}  {\bf GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-T}}}
+\label{a00612_ac093cc24636c47d2eb47dbce3ae8be17}
+\hypertarget{a00612_a95a21392fdd498964fccb4f7c1d161ac}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-T@{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-T@{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-T}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-E}  {\bf GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-T}}}
+\label{a00612_a95a21392fdd498964fccb4f7c1d161ac}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00612_a7df5e29e60c1b277e846cfb371ab25f0}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-E@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-E}}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-E@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-E}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-FILE\_\-WHENCE\_\-E}}}
+\label{a00612_a7df5e29e60c1b277e846cfb371ab25f0}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-CUR@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-CUR}!gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-CUR@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-CUR}}\item[{\em 
+\hypertarget{a00612_a7df5e29e60c1b277e846cfb371ab25f0a0b4a7ba0d5fc35fdaa20582eef6eaf85}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-CUR}
+\label{a00612_a7df5e29e60c1b277e846cfb371ab25f0a0b4a7ba0d5fc35fdaa20582eef6eaf85}
+}]\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-END@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-END}!gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-END@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-END}}\item[{\em 
+\hypertarget{a00612_a7df5e29e60c1b277e846cfb371ab25f0a4d89b7d65d9896e62767c6da830ec1ba}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-END}
+\label{a00612_a7df5e29e60c1b277e846cfb371ab25f0a4d89b7d65d9896e62767c6da830ec1ba}
+}]\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-SET@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-SET}!gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-SET@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-SET}}\item[{\em 
+\hypertarget{a00612_a7df5e29e60c1b277e846cfb371ab25f0a08719b66803a416593d3363af117e05e}{
+GSN\_\-WIF\_\-SYS\_\-FILE\_\-F\_\-SEEK\_\-SET}
+\label{a00612_a7df5e29e60c1b277e846cfb371ab25f0a08719b66803a416593d3363af117e05e}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 529 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00612_aba0b2b7ee12a62ff72fa5ffa83622746}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-E@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-E}}
+\index{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-E@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-E}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-E}}}
+\label{a00612_aba0b2b7ee12a62ff72fa5ffa83622746}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-EXCP@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-EXCP}!gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-EXCP@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-EXCP}}\item[{\em 
+\hypertarget{a00612_aba0b2b7ee12a62ff72fa5ffa83622746ac6a4355cb4d81cc01299fcbd5a23c107}{
+GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-EXCP}
+\label{a00612_aba0b2b7ee12a62ff72fa5ffa83622746ac6a4355cb4d81cc01299fcbd5a23c107}
+}]\index{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-ASSERT@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-ASSERT}!gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-ASSERT@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-ASSERT}}\item[{\em 
+\hypertarget{a00612_aba0b2b7ee12a62ff72fa5ffa83622746abef82aaf1f94b754fa8e071bd178c89f}{
+GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-ASSERT}
+\label{a00612_aba0b2b7ee12a62ff72fa5ffa83622746abef82aaf1f94b754fa8e071bd178c89f}
+}]\index{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-SYSQUAL@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-SYSQUAL}!gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-SYSQUAL@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-SYSQUAL}}\item[{\em 
+\hypertarget{a00612_aba0b2b7ee12a62ff72fa5ffa83622746a2ddeba9871976fa46984911b026f1e00}{
+GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-REASON\_\-SYSQUAL}
+\label{a00612_aba0b2b7ee12a62ff72fa5ffa83622746a2ddeba9871976fa46984911b026f1e00}
+}]including RTC \end{description}
+\end{Desc}
+
+
+
+Definition at line 391 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00612_a6412fcc10baf67871043051f04fb42d4}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-E@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-E}}
+\index{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-E@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-E}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-E}}}
+\label{a00612_a6412fcc10baf67871043051f04fb42d4}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-WLAN\_\-ONLY@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-WLAN\_\-ONLY}!gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-WLAN\_\-ONLY@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-WLAN\_\-ONLY}}\item[{\em 
+\hypertarget{a00612_a6412fcc10baf67871043051f04fb42d4aa14896d2f4ebe90e88f8965a0daf7378}{
+GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-WLAN\_\-ONLY}
+\label{a00612_a6412fcc10baf67871043051f04fb42d4aa14896d2f4ebe90e88f8965a0daf7378}
+}]\index{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-SYSTEM@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-SYSTEM}!gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-SYSTEM@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-SYSTEM}}\item[{\em 
+\hypertarget{a00612_a6412fcc10baf67871043051f04fb42d4af045511de8b76a204570370ec0b0f606}{
+GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-SYSTEM}
+\label{a00612_a6412fcc10baf67871043051f04fb42d4af045511de8b76a204570370ec0b0f606}
+}]\index{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-FULL\_\-CHIP@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-FULL\_\-CHIP}!gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-FULL\_\-CHIP@{GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-FULL\_\-CHIP}}\item[{\em 
+\hypertarget{a00612_a6412fcc10baf67871043051f04fb42d4abd8b477460780125b6e3596a2cf2762c}{
+GSN\_\-WIF\_\-SYS\_\-RESET\_\-REQ\_\-TYPE\_\-FULL\_\-CHIP}
+\label{a00612_a6412fcc10baf67871043051f04fb42d4abd8b477460780125b6e3596a2cf2762c}
+}]including RTC \end{description}
+\end{Desc}
+
+
+
+Definition at line 383 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00612_a130509bc0cea8325a8be3adb5d7f4bd8}{
+\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-E@{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-E}}
+\index{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-E@{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-E}!gsn_wif_sys_defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-E}}}
+\label{a00612_a130509bc0cea8325a8be3adb5d7f4bd8}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-LSSTA@{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-LSSTA}!gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-LSSTA@{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-LSSTA}}\item[{\em 
+\hypertarget{a00612_a130509bc0cea8325a8be3adb5d7f4bd8a5f57577583e62def7a5a70dc0edcb87a}{
+GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-LSSTA}
+\label{a00612_a130509bc0cea8325a8be3adb5d7f4bd8a5f57577583e62def7a5a70dc0edcb87a}
+}]\index{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-HSSTA@{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-HSSTA}!gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}}\index{gsn\_\-wif\_\-sys\_\-defs.h@{gsn\_\-wif\_\-sys\_\-defs.h}!GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-HSSTA@{GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-HSSTA}}\item[{\em 
+\hypertarget{a00612_a130509bc0cea8325a8be3adb5d7f4bd8a79509557fc53ad3a04a7294c6457073d}{
+GSN\_\-WIF\_\-SYS\_\-WLAN\_\-STA\_\-TYPE\_\-HSSTA}
+\label{a00612_a130509bc0cea8325a8be3adb5d7f4bd8a79509557fc53ad3a04a7294c6457073d}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 317 of file gsn\_\-wif\_\-sys\_\-defs.h.
+

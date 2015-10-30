@@ -1,0 +1,2496 @@
+\hypertarget{a00568}{
+\section{gsn\_\-reg\_\-sdadcdac\_\-op.h File Reference}
+\label{a00568}\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00805}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00568_af3ca9e3699d8ba3e203e54691a107b12}{SDADCDAC\_\-CONTROL\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL))
+\item 
+\#define \hyperlink{a00568_a7f2fba8fdec04eeae40b25ebae69a2b7}{SDADCDAC\_\-CONTROL\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL, (value))
+\item 
+\#define \hyperlink{a00568_a3b4329735f525e701fe84e4642a47921}{SDADCDAC\_\-CONTROL\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL) $|$ (value))
+\item 
+\#define \hyperlink{a00568_a87b95e173234ae207229802c974a1bd6}{SDADCDAC\_\-CONTROL\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00568_a7f4c054ff2322049573c626ba4f7983d}{SDADCDAC\_\-ENDACFIFO\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENDACFIFO)
+\item 
+\#define \hyperlink{a00568_a256d6dd132bbb796f1e2a82768e37102}{SDADCDAC\_\-ENDACFIFO\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENDACFIFO, 1)
+\item 
+\#define \hyperlink{a00568_ad2cf41d3f1355dd30f8a501908410ee0}{SDADCDAC\_\-ENDACFIFO\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENDACFIFO, 0)
+\item 
+\#define \hyperlink{a00568_a11d8abec1040623e168e401f9013b015}{SDADCDAC\_\-ENADCFIFO\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENADCFIFO)
+\item 
+\#define \hyperlink{a00568_a6d9f841683f53688f038ab78838b9e69}{SDADCDAC\_\-ENADCFIFO\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENADCFIFO, 1)
+\item 
+\#define \hyperlink{a00568_aa28d9e587d2bc2f0566cbc2d42fcc587}{SDADCDAC\_\-ENADCFIFO\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENADCFIFO, 0)
+\item 
+\#define \hyperlink{a00568_ab9349ab717a24b312c094d51e046351a}{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK ))
+\item 
+\#define \hyperlink{a00568_a25754791a57b26415c132d2f3f017c8f}{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK, 1)
+\item 
+\#define \hyperlink{a00568_a2507b7b519c515a66323a2fc77954c4a}{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK, 0)
+\item 
+\#define \hyperlink{a00568_ab71faa7e7ec4b3a1a97feca78d5b7a94}{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK ))
+\item 
+\#define \hyperlink{a00568_a67782369b678daa856c04a9c34c79cee}{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK, 1)
+\item 
+\#define \hyperlink{a00568_a44ae40ed2b23e1103b4cf545ffdc33c7}{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK, 0)
+\item 
+\#define \hyperlink{a00568_a5f09a80c88714661ab9a6b4e342aaaed}{SDADCDAC\_\-STATUS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS))
+\item 
+\#define \hyperlink{a00568_ae68c414804ff0419aa5c0abfbe46d875}{SDADCDAC\_\-STATUS\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS, (value))
+\item 
+\#define \hyperlink{a00568_a75ee53ca94389184dadeea7674440e5e}{SDADCDAC\_\-STATUS\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS) $|$ (value))
+\item 
+\#define \hyperlink{a00568_a50c5087d2ba0add96ed9049be025c634}{SDADCDAC\_\-STATUS\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00568_adeb87c98ac71668f33d229e616183b1c}{SDADCDAC\_\-DACFIFOFULL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOFULL)
+\item 
+\#define \hyperlink{a00568_a5215d199d5e3b1b9b754e4a9f82c707d}{SDADCDAC\_\-DACFIFOFULL\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOFULL, 1)
+\item 
+\#define \hyperlink{a00568_a9e006a66d1599d2d76c268ac9b5ffa5e}{SDADCDAC\_\-DACFIFOFULL\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOFULL, 0)
+\item 
+\#define \hyperlink{a00568_a253e3324cd0f1aa8dde90958bb900b4c}{SDADCDAC\_\-DACFIFOEMPTY\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOEMPTY)
+\item 
+\#define \hyperlink{a00568_ac2de5edb933d7dc36818d3fd9418f522}{SDADCDAC\_\-DACFIFOEMPTY\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOEMPTY, 1)
+\item 
+\#define \hyperlink{a00568_a6c60ee25a41ead26c356868a277c5d16}{SDADCDAC\_\-DACFIFOEMPTY\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOEMPTY, 0)
+\item 
+\#define \hyperlink{a00568_aa886cd0b2c8beeff09d0708e78c891e4}{SDADCDAC\_\-ADCFIFOFULL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOFULL)
+\item 
+\#define \hyperlink{a00568_a728b1dc126b612d7e5bfecb4e3aee469}{SDADCDAC\_\-ADCFIFOFULL\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOFULL, 1)
+\item 
+\#define \hyperlink{a00568_a1206765f3650fffe2d0dbb969b8f191d}{SDADCDAC\_\-ADCFIFOFULL\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOFULL, 0)
+\item 
+\#define \hyperlink{a00568_afbf7c01745f8ea849545b6a2fc712587}{SDADCDAC\_\-ADCFIFOEMPTY\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOEMPTY)
+\item 
+\#define \hyperlink{a00568_ae0b0600b387244caead0b11097fad23a}{SDADCDAC\_\-ADCFIFOEMPTY\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOEMPTY, 1)
+\item 
+\#define \hyperlink{a00568_a2b061714685907f24baa4638e7c4c276}{SDADCDAC\_\-ADCFIFOEMPTY\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOEMPTY, 0)
+\item 
+\#define \hyperlink{a00568_a967e0a64f88488518f7e69f8baf9aa28}{SDADCDAC\_\-DACFIFO\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO))
+\item 
+\#define \hyperlink{a00568_a3291acdb8bd76b487cf704555bea5289}{SDADCDAC\_\-DACFIFO\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO, (value))
+\item 
+\#define \hyperlink{a00568_a3198c2d5be5f44277a1b94b67711a83d}{SDADCDAC\_\-DACFIFO\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO) $|$ (value))
+\item 
+\#define \hyperlink{a00568_a5dc1b5a5940f76baebdfa26465fb6738}{SDADCDAC\_\-DACFIFO\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00568_ab7ebf433337d61c9d85f3bda8695dd78}{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK)
+\item 
+\#define \hyperlink{a00568_a30410bda7ed9ca668de515d23b64cc8e}{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK, 1)
+\item 
+\#define \hyperlink{a00568_ab9c61b6f3c1897d04c24e3c640d137c4}{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK, 0)
+\item 
+\#define \hyperlink{a00568_aded7c21ad48cd9e04d7455ba918d6a67}{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-ADCFIFOUNDERWMARK)
+\item 
+\#define \hyperlink{a00568_a3cb490811ad786d0ccbb90e3befd764b}{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-ADCFIFOUNDERWMARK, 1)
+\item 
+\#define \hyperlink{a00568_a52b06b6e0f2c0d251acef0bf94211db4}{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-ADCFIFOUNDERWMARK, 0)
+\item 
+\#define \hyperlink{a00568_ae45dc219193dafd93782f286f26cd63c}{SDADCDAC\_\-DATA\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DATA)
+\item 
+\#define \hyperlink{a00568_ab97b2855d8b6e6c782fe22d9348d49c3}{SDADCDAC\_\-DATA\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DATA, (value))
+\item 
+\#define \hyperlink{a00568_a9a00f48ea4db150061560470cd5d0589}{SDADCDAC\_\-ADCFIFO\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFO))
+\item 
+\#define \hyperlink{a00568_a08f92452ac87dba9f6fb59d228d512bd}{SDADCDAC\_\-ADC0FIFO\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0FIFO)
+\item 
+\#define \hyperlink{a00568_a29753ccf493c6b0cc28f1d86b49d4401}{SDADCDAC\_\-ADC0FIFO\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0FIFO, (value))
+\item 
+\#define \hyperlink{a00568_a9f79763d73d0b7e49e875061c7494de6}{SDADCDAC\_\-ADC1FIFO\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1FIFO)
+\item 
+\#define \hyperlink{a00568_aaeb37c428959fe4a4d8a9f2a64d3df6a}{SDADCDAC\_\-ADC1FIFO\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1FIFO, (value))
+\item 
+\#define \hyperlink{a00568_a7cec46403bef10744a1e385fe597a08b}{SDADCDAC\_\-ADCFIFOMSB\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB))
+\item 
+\#define \hyperlink{a00568_acd2bbd6422ee3af73d3e58eecabffd3b}{SDADCDAC\_\-ADCFIFOMSB\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB, (value))
+\item 
+\#define \hyperlink{a00568_a8278796ab260203186646928b4b17fe7}{SDADCDAC\_\-ADCFIFOMSB\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB) $|$ (value))
+\item 
+\#define \hyperlink{a00568_aa1e95a23758bf5ad192f9acc4ab55f92}{SDADCDAC\_\-ADCFIFOMSB\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00568_ad77dfc7a2b1d43261072ecb13420ab27}{SDADCDAC\_\-ADC2FIFO\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2FIFO)
+\item 
+\#define \hyperlink{a00568_ad646937d26f29811548ec3afd7b238d2}{SDADCDAC\_\-ADC2FIFO\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2FIFO, (value))
+\item 
+\#define \hyperlink{a00568_a775807582635c7911cabb644ff2bb849}{SDADCDAC\_\-BITDATA\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA))
+\item 
+\#define \hyperlink{a00568_a30743776be4b6b803eccea16d5a88b6f}{SDADCDAC\_\-BITDATA\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA, (value))
+\item 
+\#define \hyperlink{a00568_a3c3d96c1427cd9de5c0e97bd47336398}{SDADCDAC\_\-BITDATA\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA) $|$ (value))
+\item 
+\#define \hyperlink{a00568_a17dc375efe6fac49a701ad12cfa22fe7}{SDADCDAC\_\-BITDATA\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00568_ac2910c55e1df33349ca3c6434fa9fb16}{SDADCDAC\_\-DACDATA\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACDATA)
+\item 
+\#define \hyperlink{a00568_adedd78e53866f33ac81b4bff97e960c1}{SDADCDAC\_\-DACDATA\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACDATA, 1)
+\item 
+\#define \hyperlink{a00568_a8b025dc295156c4cbfd9559f69834a82}{SDADCDAC\_\-DACDATA\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACDATA, 0)
+\item 
+\#define \hyperlink{a00568_ad6fd3b0df8eb3a645f4d1e1c483158ae}{SDADCDAC\_\-ADC0DATA\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0DATA)
+\item 
+\#define \hyperlink{a00568_ad4b8c7c01bc86df47126393f241001fd}{SDADCDAC\_\-ADC0DATA\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0DATA, 1)
+\item 
+\#define \hyperlink{a00568_a3fbf4da7eaefbae8b936edf282910f7b}{SDADCDAC\_\-ADC0DATA\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0DATA, 0)
+\item 
+\#define \hyperlink{a00568_a4b5991dcb76953f7237472cffcab8772}{SDADCDAC\_\-ADC1DATA\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1DATA)
+\item 
+\#define \hyperlink{a00568_a36d224b76aa0a1e73354f5ea15c3e1c1}{SDADCDAC\_\-ADC1DATA\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1DATA, 1)
+\item 
+\#define \hyperlink{a00568_a73dd1e87c7150a2e5a9f07c9b47a02c4}{SDADCDAC\_\-ADC1DATA\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1DATA, 0)
+\item 
+\#define \hyperlink{a00568_ae50b5cb44f8d5ce85d26e17c98a0170b}{SDADCDAC\_\-ADC2DATA\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2DATA)
+\item 
+\#define \hyperlink{a00568_af7010979594ff3aaa27ac860f0ca99fa}{SDADCDAC\_\-ADC2DATA\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2DATA, 1)
+\item 
+\#define \hyperlink{a00568_a5fcecfbef7f667a616612a2fd372b4df}{SDADCDAC\_\-ADC2DATA\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2DATA, 0)
+\item 
+\#define \hyperlink{a00568_a05842ec341ab68cd36ea521476d2c67e}{SDADCDAC\_\-DACFIFOWMARK\_\-GET}
+\item 
+\#define \hyperlink{a00568_a7d644ce92dcc20a0dbc3794cfcd77732}{SDADCDAC\_\-DACFIFOWMARK\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFOWMARK, (value))
+\item 
+\#define \hyperlink{a00568_ae2996fa177b28061d754bc7eccc325c4}{SDADCDAC\_\-DACFIFOWMARK\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFOWMARK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO\_\-WMARK) $|$ (value))
+\item 
+\#define \hyperlink{a00568_a69498d66319b98963e6dfce384849726}{SDADCDAC\_\-DACFIFOWMARK\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFOWMARK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO\_\-WMARK) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00568_aef4e190953d6a9e95d94c4394251b319}{SDADCDAC\_\-DACWMARK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACWMARK)
+\item 
+\#define \hyperlink{a00568_ac5770464853118ccc9839b2ec6ccb513}{SDADCDAC\_\-DACWMARK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACWMARK, (value))
+\item 
+\#define \hyperlink{a00568_a612770f95830818381a7bd03db27e435}{SDADCDAC\_\-ADCFIFOWMARK\_\-GET}
+\item 
+\#define \hyperlink{a00568_a6c031ddf1193a4e48b892e2332f759c2}{SDADCDAC\_\-ADCFIFOWMARK\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOWMARK, (value))
+\item 
+\#define \hyperlink{a00568_aaef0b0cb0a49365e1b8459b867a2f10c}{SDADCDAC\_\-ADCFIFOWMARK\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOWMARK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO\_\-WMARK) $|$ (value))
+\item 
+\#define \hyperlink{a00568_a0e2b972524a4319c5de26d2bf66bd371}{SDADCDAC\_\-ADCFIFOWMARK\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOWMARK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO\_\-WMARK) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00568_a93a1d4cbf8f63ea501e827c098355ec3}{SDADCDAC\_\-ADCWMARK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCWMARK)
+\item 
+\#define \hyperlink{a00568_a40cf8d4bbc94a9caa3852b909b409409}{SDADCDAC\_\-ADCWMARK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCWMARK , (value))
+\item 
+\#define \hyperlink{a00568_adffdefe93093f38d033c051b903181ce}{SDADCDAC\_\-PWRDNCTRL\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL))
+\item 
+\#define \hyperlink{a00568_a576679d8e1fc5ba989feee7c0ddc012c}{SDADCDAC\_\-PWRDNCTRL\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL, (value))
+\item 
+\#define \hyperlink{a00568_a431b5c676057a3493dc5c2c76cd5497f}{SDADCDAC\_\-PWRDNCTRL\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL) $|$ (value))
+\item 
+\#define \hyperlink{a00568_a41f7d02f9331ad4aa2558baed5b3c7f8}{SDADCDAC\_\-PWRDNCTRL\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00568_a51fe52556a9251eca94d4b4ee2937d42}{SDADCDAC\_\-DAC\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DAC)
+\item 
+\#define \hyperlink{a00568_a6163b9ad505e734676c31a8e9666bd53}{SDADCDAC\_\-DAC\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DAC, 1)
+\item 
+\#define \hyperlink{a00568_aaea44aecfc1b6217d1312982f67ab8ad}{SDADCDAC\_\-DAC\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DAC, 0)
+\item 
+\#define \hyperlink{a00568_afbee08cf2d578575688b49a37c311827}{SDADCDAC\_\-ADC0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0)
+\item 
+\#define \hyperlink{a00568_a70bf3299ea21ff6763b8bcb9e0c4e176}{SDADCDAC\_\-ADC0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0, 1)
+\item 
+\#define \hyperlink{a00568_ae46a8d7ce04c43fea08410d70cf50a89}{SDADCDAC\_\-ADC0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0, 0)
+\item 
+\#define \hyperlink{a00568_a11a9262119049ab4bd4a45c4aadfc6e7}{SDADCDAC\_\-ADC1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1)
+\item 
+\#define \hyperlink{a00568_a33ff385381d748fee474095647e67bd3}{SDADCDAC\_\-ADC1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1, 1)
+\item 
+\#define \hyperlink{a00568_a706718a6256279808b4d05f9e62a0ec4}{SDADCDAC\_\-ADC1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1, 0)
+\item 
+\#define \hyperlink{a00568_aedfef3d4890bd9c5d13ab6100d18a575}{SDADCDAC\_\-ADC2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2)
+\item 
+\#define \hyperlink{a00568_af1eaf2e448987de5c2255103dd0caf85}{SDADCDAC\_\-ADC2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2, 1)
+\item 
+\#define \hyperlink{a00568_a5c74ae2dd1f2193c0955ff50e7ad2ccf}{SDADCDAC\_\-ADC2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2, 0)
+\item 
+\#define \hyperlink{a00568_a418d16b80b5a7500783d90c36de12c02}{SDADCDAC\_\-PREF\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-REF)
+\item 
+\#define \hyperlink{a00568_a844581b4378fcd6fb310091c450249f3}{SDADCDAC\_\-PREF\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-REF, 1)
+\item 
+\#define \hyperlink{a00568_ac8cf4f7e7fc02859f3d06fb04755746e}{SDADCDAC\_\-PREF\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-REF, 0)
+\item 
+\#define \hyperlink{a00568_a6b7c85301cf1ff407f038e9d43b6fa2a}{SDADCDAC\_\-ANACTRL1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1))
+\item 
+\#define \hyperlink{a00568_aa4da160defcc2a1284caaf67f3fa4391}{SDADCDAC\_\-ANACTRL1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1, (value))
+\item 
+\#define \hyperlink{a00568_a9a0e5106f63484f55d979bf0a7a5b65b}{SDADCDAC\_\-ANACTRL1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1) $|$ (value))
+\item 
+\#define \hyperlink{a00568_a1cb58b697c31a3889196cddfeb60d024}{SDADCDAC\_\-ANACTRL1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00568_a9933884effec1c188c9bb7e74173bee4}{SDADCDAC\_\-A3VEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-A3VEN)
+\item 
+\#define \hyperlink{a00568_ae9f70dbe89461a59ba165f9ca35a785d}{SDADCDAC\_\-A3VEN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-A3VEN, 1)
+\item 
+\#define \hyperlink{a00568_af8315c618025934f5e71569770867ba1}{SDADCDAC\_\-A3VEN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-A3VEN, 0)
+\item 
+\#define \hyperlink{a00568_a0fcdddce35ffeadb217bd02b23ebbfcb}{SDADCDAC\_\-SEL0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL0)
+\item 
+\#define \hyperlink{a00568_a3face213c069b912e2329bab697f462f}{SDADCDAC\_\-SEL0\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL0, 1)
+\item 
+\#define \hyperlink{a00568_a2ead8ddc82d96d4940530c830a68f306}{SDADCDAC\_\-SEL0\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL0, 0)
+\item 
+\#define \hyperlink{a00568_aec171bfda0b80f81939dbc0c8cf9e3b6}{SDADCDAC\_\-GAIN0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN0)
+\item 
+\#define \hyperlink{a00568_a124fc4de72e65e0689ad9fed65e71eae}{SDADCDAC\_\-GAIN0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN0, (value))
+\item 
+\#define \hyperlink{a00568_aaab76e5157a3244b786307dd5e1b0a71}{SDADCDAC\_\-SEL1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL1)
+\item 
+\#define \hyperlink{a00568_a23864f8090ea746db95a3b594d4968d3}{SDADCDAC\_\-SEL1\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL1, 1)
+\item 
+\#define \hyperlink{a00568_ab69f63c7dec35d7c854f92f1de8adee0}{SDADCDAC\_\-SEL1\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL1, 0)
+\item 
+\#define \hyperlink{a00568_ad34d3a01dda708c3d635d11630bac133}{SDADCDAC\_\-GAIN1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN1)
+\item 
+\#define \hyperlink{a00568_a969201456b3e0b7deb4d85bcebb6cf81}{SDADCDAC\_\-GAIN1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN1, (value))
+\item 
+\#define \hyperlink{a00568_ada048fbaac39c2abdd81bb4ffbfbac48}{SDADCDAC\_\-SEL2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL2)
+\item 
+\#define \hyperlink{a00568_ab28bfd9ef0dcd3bbfcd3a19ffe67392b}{SDADCDAC\_\-SEL2\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL2, 1)
+\item 
+\#define \hyperlink{a00568_adc1b45a60cf8f22f52eb4fef1655ed8f}{SDADCDAC\_\-SEL2\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL2, 0)
+\item 
+\#define \hyperlink{a00568_a7d53a04b2e52a2c56b463b10f07c1f26}{SDADCDAC\_\-GAIN2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN2)
+\item 
+\#define \hyperlink{a00568_aa5cc710c957bae540fe8ed5e6ead7f11}{SDADCDAC\_\-GAIN2\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN2, (value))
+\item 
+\#define \hyperlink{a00568_acdfa99846a90a1cfc3e790045d6a46be}{SDADCDAC\_\-AVDDEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-AVDDEN)
+\item 
+\#define \hyperlink{a00568_a64ba91c52a897d6dfa5c42e0a411dd30}{SDADCDAC\_\-AVDDEN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-AVDDEN, 1)
+\item 
+\#define \hyperlink{a00568_a6cf62754ebc34941987d595e7f8cdc18}{SDADCDAC\_\-AVDDEN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-AVDDEN, 0)
+\item 
+\#define \hyperlink{a00568_a803001b4a6578d21205eef756edcea4c}{SDADCDAC\_\-ANACTRL2\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2))
+\item 
+\#define \hyperlink{a00568_a12ee90d141df804822564b076e28ab30}{SDADCDAC\_\-ANACTRL2\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2, (value))
+\item 
+\#define \hyperlink{a00568_a2b512ca870cd4e8cdf02d1ad8fb7212a}{SDADCDAC\_\-ANACTRL2\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2) $|$ (value))
+\item 
+\#define \hyperlink{a00568_ac7bc40521540da8a34d6b895ea1515b0}{SDADCDAC\_\-ANACTRL2\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00568_a78e4742272404aa57b160f3c87fb8a4c}{SDADCDAC\_\-BIAS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-BIAS)
+\item 
+\#define \hyperlink{a00568_adad1aa22736433f25608f989f6295c2f}{SDADCDAC\_\-BIAS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-BIAS, (value))
+\item 
+\#define \hyperlink{a00568_aaa8bec53631675c1b1c7dce20277f38a}{SDADCDAC\_\-TMPCO\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-TMPCO)
+\item 
+\#define \hyperlink{a00568_acf4d8e94ba9b93890d425428a16c5c91}{SDADCDAC\_\-TMPCO\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-TMPCO, (value))
+\item 
+\#define \hyperlink{a00568_a42c62441c844149f8bf8df9372bcf453}{SDADCDAC\_\-REF\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-REF)
+\item 
+\#define \hyperlink{a00568_aba0e73228ee6cca7b12e1c4170e7e51d}{SDADCDAC\_\-REF\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-REF, (value))
+\item 
+\#define \hyperlink{a00568_a82c24e117aaf062d9066f5ab8d73aadd}{SDADCDAC\_\-PHASE1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASE1)
+\item 
+\#define \hyperlink{a00568_aec17b61376d276ca5a7263fc8ec3331b}{SDADCDAC\_\-PHASE1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASE1, (value))
+\item 
+\#define \hyperlink{a00568_a32310539f3627d9a537056eb3923fbcd}{SDADCDAC\_\-PHASE2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASE2)
+\item 
+\#define \hyperlink{a00568_a7f44b2eee94c6afcada697b91c0de32c}{SDADCDAC\_\-PHASE2\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASE2, (value))
+\item 
+\#define \hyperlink{a00568_ad01fbf62e1e40c87c3b0cc7176ea4884}{SDADCDAC\_\-PHASESTEP\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASE2)
+\item 
+\#define \hyperlink{a00568_ae944b18d5567083c689979493740e06b}{SDADCDAC\_\-PHASESTEP\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASESTEP, (value))
+\item 
+\#define \hyperlink{a00568_a9545ba79eb6343bfed7c112b498bd1d3}{SDADCDAC\_\-ANATEST\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST))
+\item 
+\#define \hyperlink{a00568_a07bb6aef5bd8d90762c61e20fb7a33fa}{SDADCDAC\_\-ANATEST\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST, (value))
+\item 
+\#define \hyperlink{a00568_a5d71edd9011f1286262d720343b5ed11}{SDADCDAC\_\-ANATEST\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST) $|$ (value))
+\item 
+\#define \hyperlink{a00568_a0cbd28154127e1a621c46989ab21014e}{SDADCDAC\_\-ANATEST\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00568_ab73f38b699823d24e66ef7cb07092766}{SDADCDAC\_\-ADCTEST\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCTEST)
+\item 
+\#define \hyperlink{a00568_ae499bed580b787c48939d0a211660120}{SDADCDAC\_\-ADCTEST\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCTEST, 1)
+\item 
+\#define \hyperlink{a00568_a308bacd7224e41253588b8ef30a85cd8}{SDADCDAC\_\-ADCTEST\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCTEST, 0)
+\item 
+\#define \hyperlink{a00568_acd1c8a846e88994528589fd21e0c1398}{SDADCDAC\_\-DI\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DI)
+\item 
+\#define \hyperlink{a00568_ae1cdbd0680cb3a21a665332fffd7619f}{SDADCDAC\_\-DI\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DI, 1)
+\item 
+\#define \hyperlink{a00568_a4b8394013d1840b59ceb31fd31d815cb}{SDADCDAC\_\-DI\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DI, 0)
+\item 
+\#define \hyperlink{a00568_a4922c8a314ff13f989b5e9d0a7e110ae}{SDADCDAC\_\-RST\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-RST)
+\item 
+\#define \hyperlink{a00568_a14ab3f2f9aa707d111a61c32588b662c}{SDADCDAC\_\-RST\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-RST, 1)
+\item 
+\#define \hyperlink{a00568_a0c73fa1b111f1df348e50f0f9c275798}{SDADCDAC\_\-RST\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-RST, 0)
+\item 
+\#define \hyperlink{a00568_ac247e452ff988238debcef8831196399}{SDADCDAC\_\-TESTREF\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-TESTREF)
+\item 
+\#define \hyperlink{a00568_a4ba0842001e35623e02d7cb603404b39}{SDADCDAC\_\-TESTREF\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-TESTREF, 1)
+\item 
+\#define \hyperlink{a00568_a32d8da36f85377d725e5db1bdac1324d}{SDADCDAC\_\-TESTREF\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-TESTREF, 0)
+\item 
+\#define \hyperlink{a00568_a8be90cf09cf37106445ad842beeb1d9a}{SDADCDAC\_\-BYPASSEN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-BYPASSEN)
+\item 
+\#define \hyperlink{a00568_ab4b836f22f45d9a5fa1816108acd4f91}{SDADCDAC\_\-BYPASSEN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-BYPASSEN, 1)
+\item 
+\#define \hyperlink{a00568_acb7f2213fcafdfcfeb24dbe5e84dc245}{SDADCDAC\_\-BYPASSEN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-BYPASSEN, 0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00568_af8315c618025934f5e71569770867ba1}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-A3VEN\_\-CLEAR@{SDADCDAC\_\-A3VEN\_\-CLEAR}}
+\index{SDADCDAC\_\-A3VEN\_\-CLEAR@{SDADCDAC\_\-A3VEN\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-A3VEN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-A3VEN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-A3VEN, 0)}}
+\label{a00568_af8315c618025934f5e71569770867ba1}
+
+
+Definition at line 447 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a9933884effec1c188c9bb7e74173bee4}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-A3VEN\_\-GET@{SDADCDAC\_\-A3VEN\_\-GET}}
+\index{SDADCDAC\_\-A3VEN\_\-GET@{SDADCDAC\_\-A3VEN\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-A3VEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-A3VEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-A3VEN)}}
+\label{a00568_a9933884effec1c188c9bb7e74173bee4}
+
+
+Definition at line 443 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ae9f70dbe89461a59ba165f9ca35a785d}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-A3VEN\_\-SET@{SDADCDAC\_\-A3VEN\_\-SET}}
+\index{SDADCDAC\_\-A3VEN\_\-SET@{SDADCDAC\_\-A3VEN\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-A3VEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-A3VEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-A3VEN, 1)}}
+\label{a00568_ae9f70dbe89461a59ba165f9ca35a785d}
+
+
+Definition at line 445 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ae46a8d7ce04c43fea08410d70cf50a89}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC0\_\-CLEAR@{SDADCDAC\_\-ADC0\_\-CLEAR}}
+\index{SDADCDAC\_\-ADC0\_\-CLEAR@{SDADCDAC\_\-ADC0\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0, 0)}}
+\label{a00568_ae46a8d7ce04c43fea08410d70cf50a89}
+
+
+Definition at line 389 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_afbee08cf2d578575688b49a37c311827}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC0\_\-GET@{SDADCDAC\_\-ADC0\_\-GET}}
+\index{SDADCDAC\_\-ADC0\_\-GET@{SDADCDAC\_\-ADC0\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0)}}
+\label{a00568_afbee08cf2d578575688b49a37c311827}
+
+
+Definition at line 385 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a70bf3299ea21ff6763b8bcb9e0c4e176}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC0\_\-SET@{SDADCDAC\_\-ADC0\_\-SET}}
+\index{SDADCDAC\_\-ADC0\_\-SET@{SDADCDAC\_\-ADC0\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0, 1)}}
+\label{a00568_a70bf3299ea21ff6763b8bcb9e0c4e176}
+
+
+Definition at line 387 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a3fbf4da7eaefbae8b936edf282910f7b}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC0DATA\_\-CLEAR@{SDADCDAC\_\-ADC0DATA\_\-CLEAR}}
+\index{SDADCDAC\_\-ADC0DATA\_\-CLEAR@{SDADCDAC\_\-ADC0DATA\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC0DATA\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC0DATA\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0DATA, 0)}}
+\label{a00568_a3fbf4da7eaefbae8b936edf282910f7b}
+
+
+Definition at line 287 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ad6fd3b0df8eb3a645f4d1e1c483158ae}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC0DATA\_\-GET@{SDADCDAC\_\-ADC0DATA\_\-GET}}
+\index{SDADCDAC\_\-ADC0DATA\_\-GET@{SDADCDAC\_\-ADC0DATA\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC0DATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC0DATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0DATA)}}
+\label{a00568_ad6fd3b0df8eb3a645f4d1e1c483158ae}
+
+
+Definition at line 283 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ad4b8c7c01bc86df47126393f241001fd}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC0DATA\_\-SET@{SDADCDAC\_\-ADC0DATA\_\-SET}}
+\index{SDADCDAC\_\-ADC0DATA\_\-SET@{SDADCDAC\_\-ADC0DATA\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC0DATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC0DATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0DATA, 1)}}
+\label{a00568_ad4b8c7c01bc86df47126393f241001fd}
+
+
+Definition at line 285 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a08f92452ac87dba9f6fb59d228d512bd}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC0FIFO\_\-GET@{SDADCDAC\_\-ADC0FIFO\_\-GET}}
+\index{SDADCDAC\_\-ADC0FIFO\_\-GET@{SDADCDAC\_\-ADC0FIFO\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC0FIFO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC0FIFO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0FIFO)}}
+\label{a00568_a08f92452ac87dba9f6fb59d228d512bd}
+
+
+Definition at line 217 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a29753ccf493c6b0cc28f1d86b49d4401}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC0FIFO\_\-SET@{SDADCDAC\_\-ADC0FIFO\_\-SET}}
+\index{SDADCDAC\_\-ADC0FIFO\_\-SET@{SDADCDAC\_\-ADC0FIFO\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC0FIFO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC0FIFO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC0FIFO, (value))}}
+\label{a00568_a29753ccf493c6b0cc28f1d86b49d4401}
+
+
+Definition at line 219 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a706718a6256279808b4d05f9e62a0ec4}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC1\_\-CLEAR@{SDADCDAC\_\-ADC1\_\-CLEAR}}
+\index{SDADCDAC\_\-ADC1\_\-CLEAR@{SDADCDAC\_\-ADC1\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1, 0)}}
+\label{a00568_a706718a6256279808b4d05f9e62a0ec4}
+
+
+Definition at line 400 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a11a9262119049ab4bd4a45c4aadfc6e7}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC1\_\-GET@{SDADCDAC\_\-ADC1\_\-GET}}
+\index{SDADCDAC\_\-ADC1\_\-GET@{SDADCDAC\_\-ADC1\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1)}}
+\label{a00568_a11a9262119049ab4bd4a45c4aadfc6e7}
+
+
+Definition at line 396 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a33ff385381d748fee474095647e67bd3}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC1\_\-SET@{SDADCDAC\_\-ADC1\_\-SET}}
+\index{SDADCDAC\_\-ADC1\_\-SET@{SDADCDAC\_\-ADC1\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1, 1)}}
+\label{a00568_a33ff385381d748fee474095647e67bd3}
+
+
+Definition at line 398 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a73dd1e87c7150a2e5a9f07c9b47a02c4}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC1DATA\_\-CLEAR@{SDADCDAC\_\-ADC1DATA\_\-CLEAR}}
+\index{SDADCDAC\_\-ADC1DATA\_\-CLEAR@{SDADCDAC\_\-ADC1DATA\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC1DATA\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC1DATA\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1DATA, 0)}}
+\label{a00568_a73dd1e87c7150a2e5a9f07c9b47a02c4}
+
+
+Definition at line 298 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a4b5991dcb76953f7237472cffcab8772}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC1DATA\_\-GET@{SDADCDAC\_\-ADC1DATA\_\-GET}}
+\index{SDADCDAC\_\-ADC1DATA\_\-GET@{SDADCDAC\_\-ADC1DATA\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC1DATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC1DATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1DATA)}}
+\label{a00568_a4b5991dcb76953f7237472cffcab8772}
+
+
+Definition at line 294 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a36d224b76aa0a1e73354f5ea15c3e1c1}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC1DATA\_\-SET@{SDADCDAC\_\-ADC1DATA\_\-SET}}
+\index{SDADCDAC\_\-ADC1DATA\_\-SET@{SDADCDAC\_\-ADC1DATA\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC1DATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC1DATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1DATA, 1)}}
+\label{a00568_a36d224b76aa0a1e73354f5ea15c3e1c1}
+
+
+Definition at line 296 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a9f79763d73d0b7e49e875061c7494de6}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC1FIFO\_\-GET@{SDADCDAC\_\-ADC1FIFO\_\-GET}}
+\index{SDADCDAC\_\-ADC1FIFO\_\-GET@{SDADCDAC\_\-ADC1FIFO\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC1FIFO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC1FIFO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1FIFO)}}
+\label{a00568_a9f79763d73d0b7e49e875061c7494de6}
+
+
+Definition at line 226 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aaeb37c428959fe4a4d8a9f2a64d3df6a}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC1FIFO\_\-SET@{SDADCDAC\_\-ADC1FIFO\_\-SET}}
+\index{SDADCDAC\_\-ADC1FIFO\_\-SET@{SDADCDAC\_\-ADC1FIFO\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC1FIFO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC1FIFO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC1FIFO, (value))}}
+\label{a00568_aaeb37c428959fe4a4d8a9f2a64d3df6a}
+
+
+Definition at line 228 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a5c74ae2dd1f2193c0955ff50e7ad2ccf}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC2\_\-CLEAR@{SDADCDAC\_\-ADC2\_\-CLEAR}}
+\index{SDADCDAC\_\-ADC2\_\-CLEAR@{SDADCDAC\_\-ADC2\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2, 0)}}
+\label{a00568_a5c74ae2dd1f2193c0955ff50e7ad2ccf}
+
+
+Definition at line 411 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aedfef3d4890bd9c5d13ab6100d18a575}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC2\_\-GET@{SDADCDAC\_\-ADC2\_\-GET}}
+\index{SDADCDAC\_\-ADC2\_\-GET@{SDADCDAC\_\-ADC2\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2)}}
+\label{a00568_aedfef3d4890bd9c5d13ab6100d18a575}
+
+
+Definition at line 407 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_af1eaf2e448987de5c2255103dd0caf85}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC2\_\-SET@{SDADCDAC\_\-ADC2\_\-SET}}
+\index{SDADCDAC\_\-ADC2\_\-SET@{SDADCDAC\_\-ADC2\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2, 1)}}
+\label{a00568_af1eaf2e448987de5c2255103dd0caf85}
+
+
+Definition at line 409 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a5fcecfbef7f667a616612a2fd372b4df}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC2DATA\_\-CLEAR@{SDADCDAC\_\-ADC2DATA\_\-CLEAR}}
+\index{SDADCDAC\_\-ADC2DATA\_\-CLEAR@{SDADCDAC\_\-ADC2DATA\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC2DATA\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC2DATA\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2DATA, 0)}}
+\label{a00568_a5fcecfbef7f667a616612a2fd372b4df}
+
+
+Definition at line 309 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ae50b5cb44f8d5ce85d26e17c98a0170b}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC2DATA\_\-GET@{SDADCDAC\_\-ADC2DATA\_\-GET}}
+\index{SDADCDAC\_\-ADC2DATA\_\-GET@{SDADCDAC\_\-ADC2DATA\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC2DATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC2DATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2DATA)}}
+\label{a00568_ae50b5cb44f8d5ce85d26e17c98a0170b}
+
+
+Definition at line 305 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_af7010979594ff3aaa27ac860f0ca99fa}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC2DATA\_\-SET@{SDADCDAC\_\-ADC2DATA\_\-SET}}
+\index{SDADCDAC\_\-ADC2DATA\_\-SET@{SDADCDAC\_\-ADC2DATA\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC2DATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC2DATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2DATA, 1)}}
+\label{a00568_af7010979594ff3aaa27ac860f0ca99fa}
+
+
+Definition at line 307 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ad77dfc7a2b1d43261072ecb13420ab27}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC2FIFO\_\-GET@{SDADCDAC\_\-ADC2FIFO\_\-GET}}
+\index{SDADCDAC\_\-ADC2FIFO\_\-GET@{SDADCDAC\_\-ADC2FIFO\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC2FIFO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC2FIFO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2FIFO)}}
+\label{a00568_ad77dfc7a2b1d43261072ecb13420ab27}
+
+
+Definition at line 249 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ad646937d26f29811548ec3afd7b238d2}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADC2FIFO\_\-SET@{SDADCDAC\_\-ADC2FIFO\_\-SET}}
+\index{SDADCDAC\_\-ADC2FIFO\_\-SET@{SDADCDAC\_\-ADC2FIFO\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADC2FIFO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADC2FIFO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADC2FIFO, (value))}}
+\label{a00568_ad646937d26f29811548ec3afd7b238d2}
+
+
+Definition at line 251 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a9a00f48ea4db150061560470cd5d0589}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFO\_\-GET@{SDADCDAC\_\-ADCFIFO\_\-GET}}
+\index{SDADCDAC\_\-ADCFIFO\_\-GET@{SDADCDAC\_\-ADCFIFO\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFO))}}
+\label{a00568_a9a00f48ea4db150061560470cd5d0589}
+
+
+Definition at line 210 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a2b061714685907f24baa4638e7c4c276}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOEMPTY\_\-CLEAR@{SDADCDAC\_\-ADCFIFOEMPTY\_\-CLEAR}}
+\index{SDADCDAC\_\-ADCFIFOEMPTY\_\-CLEAR@{SDADCDAC\_\-ADCFIFOEMPTY\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOEMPTY\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOEMPTY\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOEMPTY, 0)}}
+\label{a00568_a2b061714685907f24baa4638e7c4c276}
+
+
+Definition at line 157 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_afbf7c01745f8ea849545b6a2fc712587}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOEMPTY\_\-GET@{SDADCDAC\_\-ADCFIFOEMPTY\_\-GET}}
+\index{SDADCDAC\_\-ADCFIFOEMPTY\_\-GET@{SDADCDAC\_\-ADCFIFOEMPTY\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOEMPTY\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOEMPTY\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOEMPTY)}}
+\label{a00568_afbf7c01745f8ea849545b6a2fc712587}
+
+
+Definition at line 153 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ae0b0600b387244caead0b11097fad23a}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOEMPTY\_\-SET@{SDADCDAC\_\-ADCFIFOEMPTY\_\-SET}}
+\index{SDADCDAC\_\-ADCFIFOEMPTY\_\-SET@{SDADCDAC\_\-ADCFIFOEMPTY\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOEMPTY\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOEMPTY\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOEMPTY, 1)}}
+\label{a00568_ae0b0600b387244caead0b11097fad23a}
+
+
+Definition at line 155 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a1206765f3650fffe2d0dbb969b8f191d}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOFULL\_\-CLEAR@{SDADCDAC\_\-ADCFIFOFULL\_\-CLEAR}}
+\index{SDADCDAC\_\-ADCFIFOFULL\_\-CLEAR@{SDADCDAC\_\-ADCFIFOFULL\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOFULL\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOFULL\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOFULL, 0)}}
+\label{a00568_a1206765f3650fffe2d0dbb969b8f191d}
+
+
+Definition at line 146 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aa886cd0b2c8beeff09d0708e78c891e4}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOFULL\_\-GET@{SDADCDAC\_\-ADCFIFOFULL\_\-GET}}
+\index{SDADCDAC\_\-ADCFIFOFULL\_\-GET@{SDADCDAC\_\-ADCFIFOFULL\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOFULL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOFULL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOFULL)}}
+\label{a00568_aa886cd0b2c8beeff09d0708e78c891e4}
+
+
+Definition at line 142 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a728b1dc126b612d7e5bfecb4e3aee469}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOFULL\_\-SET@{SDADCDAC\_\-ADCFIFOFULL\_\-SET}}
+\index{SDADCDAC\_\-ADCFIFOFULL\_\-SET@{SDADCDAC\_\-ADCFIFOFULL\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOFULL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOFULL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCFIFOFULL, 1)}}
+\label{a00568_a728b1dc126b612d7e5bfecb4e3aee469}
+
+
+Definition at line 144 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aa1e95a23758bf5ad192f9acc4ab55f92}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOMSB\_\-CLEARBIT@{SDADCDAC\_\-ADCFIFOMSB\_\-CLEARBIT}}
+\index{SDADCDAC\_\-ADCFIFOMSB\_\-CLEARBIT@{SDADCDAC\_\-ADCFIFOMSB\_\-CLEARBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOMSB\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOMSB\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB) \& ($\sim$(value)))}}
+\label{a00568_aa1e95a23758bf5ad192f9acc4ab55f92}
+
+
+Definition at line 242 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a7cec46403bef10744a1e385fe597a08b}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOMSB\_\-GET@{SDADCDAC\_\-ADCFIFOMSB\_\-GET}}
+\index{SDADCDAC\_\-ADCFIFOMSB\_\-GET@{SDADCDAC\_\-ADCFIFOMSB\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOMSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOMSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB))}}
+\label{a00568_a7cec46403bef10744a1e385fe597a08b}
+
+
+Definition at line 236 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_acd2bbd6422ee3af73d3e58eecabffd3b}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOMSB\_\-SET@{SDADCDAC\_\-ADCFIFOMSB\_\-SET}}
+\index{SDADCDAC\_\-ADCFIFOMSB\_\-SET@{SDADCDAC\_\-ADCFIFOMSB\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOMSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOMSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB, (value))}}
+\label{a00568_acd2bbd6422ee3af73d3e58eecabffd3b}
+
+
+Definition at line 238 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a8278796ab260203186646928b4b17fe7}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOMSB\_\-SETBIT@{SDADCDAC\_\-ADCFIFOMSB\_\-SETBIT}}
+\index{SDADCDAC\_\-ADCFIFOMSB\_\-SETBIT@{SDADCDAC\_\-ADCFIFOMSB\_\-SETBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOMSB\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOMSB\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOMSB) $|$ (value))}}
+\label{a00568_a8278796ab260203186646928b4b17fe7}
+
+
+Definition at line 240 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a0e2b972524a4319c5de26d2bf66bd371}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOWMARK\_\-CLEARBIT@{SDADCDAC\_\-ADCFIFOWMARK\_\-CLEARBIT}}
+\index{SDADCDAC\_\-ADCFIFOWMARK\_\-CLEARBIT@{SDADCDAC\_\-ADCFIFOWMARK\_\-CLEARBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOWMARK\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOWMARK\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOWMARK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO\_\-WMARK) \& ($\sim$(value)))}}
+\label{a00568_a0e2b972524a4319c5de26d2bf66bd371}
+
+
+Definition at line 345 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a612770f95830818381a7bd03db27e435}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOWMARK\_\-GET@{SDADCDAC\_\-ADCFIFOWMARK\_\-GET}}
+\index{SDADCDAC\_\-ADCFIFOWMARK\_\-GET@{SDADCDAC\_\-ADCFIFOWMARK\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOWMARK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOWMARK\_\-GET}}
+\label{a00568_a612770f95830818381a7bd03db27e435}
+{\bfseries Value:}
+\begin{DoxyCode}
+(addr) \
+        (GET_WORD_EXCLUSIVE_BITFIELD(addr, SDADCDAC_ADCFIFOWMARK))
+\end{DoxyCode}
+
+
+Definition at line 339 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a6c031ddf1193a4e48b892e2332f759c2}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOWMARK\_\-SET@{SDADCDAC\_\-ADCFIFOWMARK\_\-SET}}
+\index{SDADCDAC\_\-ADCFIFOWMARK\_\-SET@{SDADCDAC\_\-ADCFIFOWMARK\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOWMARK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOWMARK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOWMARK, (value))}}
+\label{a00568_a6c031ddf1193a4e48b892e2332f759c2}
+
+
+Definition at line 341 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aaef0b0cb0a49365e1b8459b867a2f10c}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCFIFOWMARK\_\-SETBIT@{SDADCDAC\_\-ADCFIFOWMARK\_\-SETBIT}}
+\index{SDADCDAC\_\-ADCFIFOWMARK\_\-SETBIT@{SDADCDAC\_\-ADCFIFOWMARK\_\-SETBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCFIFOWMARK\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCFIFOWMARK\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ADCFIFOWMARK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO\_\-WMARK) $|$ (value))}}
+\label{a00568_aaef0b0cb0a49365e1b8459b867a2f10c}
+
+
+Definition at line 343 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a308bacd7224e41253588b8ef30a85cd8}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCTEST\_\-CLEAR@{SDADCDAC\_\-ADCTEST\_\-CLEAR}}
+\index{SDADCDAC\_\-ADCTEST\_\-CLEAR@{SDADCDAC\_\-ADCTEST\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCTEST\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCTEST\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCTEST, 0)}}
+\label{a00568_a308bacd7224e41253588b8ef30a85cd8}
+
+
+Definition at line 610 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ab73f38b699823d24e66ef7cb07092766}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCTEST\_\-GET@{SDADCDAC\_\-ADCTEST\_\-GET}}
+\index{SDADCDAC\_\-ADCTEST\_\-GET@{SDADCDAC\_\-ADCTEST\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCTEST\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCTEST\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCTEST)}}
+\label{a00568_ab73f38b699823d24e66ef7cb07092766}
+
+
+Definition at line 606 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ae499bed580b787c48939d0a211660120}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCTEST\_\-SET@{SDADCDAC\_\-ADCTEST\_\-SET}}
+\index{SDADCDAC\_\-ADCTEST\_\-SET@{SDADCDAC\_\-ADCTEST\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCTEST\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCTEST\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCTEST, 1)}}
+\label{a00568_ae499bed580b787c48939d0a211660120}
+
+
+Definition at line 608 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a93a1d4cbf8f63ea501e827c098355ec3}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCWMARK\_\-GET@{SDADCDAC\_\-ADCWMARK\_\-GET}}
+\index{SDADCDAC\_\-ADCWMARK\_\-GET@{SDADCDAC\_\-ADCWMARK\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCWMARK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCWMARK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCWMARK)}}
+\label{a00568_a93a1d4cbf8f63ea501e827c098355ec3}
+
+
+Definition at line 352 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a40cf8d4bbc94a9caa3852b909b409409}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ADCWMARK\_\-SET@{SDADCDAC\_\-ADCWMARK\_\-SET}}
+\index{SDADCDAC\_\-ADCWMARK\_\-SET@{SDADCDAC\_\-ADCWMARK\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ADCWMARK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ADCWMARK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ADCWMARK , (value))}}
+\label{a00568_a40cf8d4bbc94a9caa3852b909b409409}
+
+
+Definition at line 354 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a1cb58b697c31a3889196cddfeb60d024}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANACTRL1\_\-CLEARBIT@{SDADCDAC\_\-ANACTRL1\_\-CLEARBIT}}
+\index{SDADCDAC\_\-ANACTRL1\_\-CLEARBIT@{SDADCDAC\_\-ANACTRL1\_\-CLEARBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANACTRL1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANACTRL1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1) \& ($\sim$(value)))}}
+\label{a00568_a1cb58b697c31a3889196cddfeb60d024}
+
+
+Definition at line 436 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a6b7c85301cf1ff407f038e9d43b6fa2a}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANACTRL1\_\-GET@{SDADCDAC\_\-ANACTRL1\_\-GET}}
+\index{SDADCDAC\_\-ANACTRL1\_\-GET@{SDADCDAC\_\-ANACTRL1\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANACTRL1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANACTRL1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1))}}
+\label{a00568_a6b7c85301cf1ff407f038e9d43b6fa2a}
+
+
+Definition at line 430 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aa4da160defcc2a1284caaf67f3fa4391}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANACTRL1\_\-SET@{SDADCDAC\_\-ANACTRL1\_\-SET}}
+\index{SDADCDAC\_\-ANACTRL1\_\-SET@{SDADCDAC\_\-ANACTRL1\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANACTRL1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANACTRL1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1, (value))}}
+\label{a00568_aa4da160defcc2a1284caaf67f3fa4391}
+
+
+Definition at line 432 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a9a0e5106f63484f55d979bf0a7a5b65b}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANACTRL1\_\-SETBIT@{SDADCDAC\_\-ANACTRL1\_\-SETBIT}}
+\index{SDADCDAC\_\-ANACTRL1\_\-SETBIT@{SDADCDAC\_\-ANACTRL1\_\-SETBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANACTRL1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANACTRL1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL1) $|$ (value))}}
+\label{a00568_a9a0e5106f63484f55d979bf0a7a5b65b}
+
+
+Definition at line 434 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ac7bc40521540da8a34d6b895ea1515b0}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANACTRL2\_\-CLEARBIT@{SDADCDAC\_\-ANACTRL2\_\-CLEARBIT}}
+\index{SDADCDAC\_\-ANACTRL2\_\-CLEARBIT@{SDADCDAC\_\-ANACTRL2\_\-CLEARBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANACTRL2\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANACTRL2\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2) \& ($\sim$(value)))}}
+\label{a00568_ac7bc40521540da8a34d6b895ea1515b0}
+
+
+Definition at line 532 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a803001b4a6578d21205eef756edcea4c}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANACTRL2\_\-GET@{SDADCDAC\_\-ANACTRL2\_\-GET}}
+\index{SDADCDAC\_\-ANACTRL2\_\-GET@{SDADCDAC\_\-ANACTRL2\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANACTRL2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANACTRL2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2))}}
+\label{a00568_a803001b4a6578d21205eef756edcea4c}
+
+
+Definition at line 526 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a12ee90d141df804822564b076e28ab30}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANACTRL2\_\-SET@{SDADCDAC\_\-ANACTRL2\_\-SET}}
+\index{SDADCDAC\_\-ANACTRL2\_\-SET@{SDADCDAC\_\-ANACTRL2\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANACTRL2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANACTRL2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2, (value))}}
+\label{a00568_a12ee90d141df804822564b076e28ab30}
+
+
+Definition at line 528 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a2b512ca870cd4e8cdf02d1ad8fb7212a}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANACTRL2\_\-SETBIT@{SDADCDAC\_\-ANACTRL2\_\-SETBIT}}
+\index{SDADCDAC\_\-ANACTRL2\_\-SETBIT@{SDADCDAC\_\-ANACTRL2\_\-SETBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANACTRL2\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANACTRL2\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANACTRL2) $|$ (value))}}
+\label{a00568_a2b512ca870cd4e8cdf02d1ad8fb7212a}
+
+
+Definition at line 530 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a0cbd28154127e1a621c46989ab21014e}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANATEST\_\-CLEARBIT@{SDADCDAC\_\-ANATEST\_\-CLEARBIT}}
+\index{SDADCDAC\_\-ANATEST\_\-CLEARBIT@{SDADCDAC\_\-ANATEST\_\-CLEARBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANATEST\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANATEST\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST) \& ($\sim$(value)))}}
+\label{a00568_a0cbd28154127e1a621c46989ab21014e}
+
+
+Definition at line 599 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a9545ba79eb6343bfed7c112b498bd1d3}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANATEST\_\-GET@{SDADCDAC\_\-ANATEST\_\-GET}}
+\index{SDADCDAC\_\-ANATEST\_\-GET@{SDADCDAC\_\-ANATEST\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANATEST\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANATEST\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST))}}
+\label{a00568_a9545ba79eb6343bfed7c112b498bd1d3}
+
+
+Definition at line 593 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a07bb6aef5bd8d90762c61e20fb7a33fa}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANATEST\_\-SET@{SDADCDAC\_\-ANATEST\_\-SET}}
+\index{SDADCDAC\_\-ANATEST\_\-SET@{SDADCDAC\_\-ANATEST\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANATEST\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANATEST\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST, (value))}}
+\label{a00568_a07bb6aef5bd8d90762c61e20fb7a33fa}
+
+
+Definition at line 595 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a5d71edd9011f1286262d720343b5ed11}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ANATEST\_\-SETBIT@{SDADCDAC\_\-ANATEST\_\-SETBIT}}
+\index{SDADCDAC\_\-ANATEST\_\-SETBIT@{SDADCDAC\_\-ANATEST\_\-SETBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ANATEST\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ANATEST\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-ANATEST) $|$ (value))}}
+\label{a00568_a5d71edd9011f1286262d720343b5ed11}
+
+
+Definition at line 597 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a6cf62754ebc34941987d595e7f8cdc18}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-AVDDEN\_\-CLEAR@{SDADCDAC\_\-AVDDEN\_\-CLEAR}}
+\index{SDADCDAC\_\-AVDDEN\_\-CLEAR@{SDADCDAC\_\-AVDDEN\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-AVDDEN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-AVDDEN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-AVDDEN, 0)}}
+\label{a00568_a6cf62754ebc34941987d595e7f8cdc18}
+
+
+Definition at line 518 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_acdfa99846a90a1cfc3e790045d6a46be}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-AVDDEN\_\-GET@{SDADCDAC\_\-AVDDEN\_\-GET}}
+\index{SDADCDAC\_\-AVDDEN\_\-GET@{SDADCDAC\_\-AVDDEN\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-AVDDEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-AVDDEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-AVDDEN)}}
+\label{a00568_acdfa99846a90a1cfc3e790045d6a46be}
+
+
+Definition at line 514 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a64ba91c52a897d6dfa5c42e0a411dd30}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-AVDDEN\_\-SET@{SDADCDAC\_\-AVDDEN\_\-SET}}
+\index{SDADCDAC\_\-AVDDEN\_\-SET@{SDADCDAC\_\-AVDDEN\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-AVDDEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-AVDDEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-AVDDEN, 1)}}
+\label{a00568_a64ba91c52a897d6dfa5c42e0a411dd30}
+
+
+Definition at line 516 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a78e4742272404aa57b160f3c87fb8a4c}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-BIAS\_\-GET@{SDADCDAC\_\-BIAS\_\-GET}}
+\index{SDADCDAC\_\-BIAS\_\-GET@{SDADCDAC\_\-BIAS\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-BIAS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-BIAS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-BIAS)}}
+\label{a00568_a78e4742272404aa57b160f3c87fb8a4c}
+
+
+Definition at line 539 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_adad1aa22736433f25608f989f6295c2f}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-BIAS\_\-SET@{SDADCDAC\_\-BIAS\_\-SET}}
+\index{SDADCDAC\_\-BIAS\_\-SET@{SDADCDAC\_\-BIAS\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-BIAS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-BIAS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-BIAS, (value))}}
+\label{a00568_adad1aa22736433f25608f989f6295c2f}
+
+
+Definition at line 541 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a17dc375efe6fac49a701ad12cfa22fe7}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-BITDATA\_\-CLEARBIT@{SDADCDAC\_\-BITDATA\_\-CLEARBIT}}
+\index{SDADCDAC\_\-BITDATA\_\-CLEARBIT@{SDADCDAC\_\-BITDATA\_\-CLEARBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-BITDATA\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-BITDATA\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA) \& ($\sim$(value)))}}
+\label{a00568_a17dc375efe6fac49a701ad12cfa22fe7}
+
+
+Definition at line 265 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a775807582635c7911cabb644ff2bb849}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-BITDATA\_\-GET@{SDADCDAC\_\-BITDATA\_\-GET}}
+\index{SDADCDAC\_\-BITDATA\_\-GET@{SDADCDAC\_\-BITDATA\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-BITDATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-BITDATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA))}}
+\label{a00568_a775807582635c7911cabb644ff2bb849}
+
+
+Definition at line 259 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a30743776be4b6b803eccea16d5a88b6f}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-BITDATA\_\-SET@{SDADCDAC\_\-BITDATA\_\-SET}}
+\index{SDADCDAC\_\-BITDATA\_\-SET@{SDADCDAC\_\-BITDATA\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-BITDATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-BITDATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA, (value))}}
+\label{a00568_a30743776be4b6b803eccea16d5a88b6f}
+
+
+Definition at line 261 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a3c3d96c1427cd9de5c0e97bd47336398}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-BITDATA\_\-SETBIT@{SDADCDAC\_\-BITDATA\_\-SETBIT}}
+\index{SDADCDAC\_\-BITDATA\_\-SETBIT@{SDADCDAC\_\-BITDATA\_\-SETBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-BITDATA\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-BITDATA\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-BITDATA) $|$ (value))}}
+\label{a00568_a3c3d96c1427cd9de5c0e97bd47336398}
+
+
+Definition at line 263 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_acb7f2213fcafdfcfeb24dbe5e84dc245}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-BYPASSEN\_\-CLEAR@{SDADCDAC\_\-BYPASSEN\_\-CLEAR}}
+\index{SDADCDAC\_\-BYPASSEN\_\-CLEAR@{SDADCDAC\_\-BYPASSEN\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-BYPASSEN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-BYPASSEN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-BYPASSEN, 0)}}
+\label{a00568_acb7f2213fcafdfcfeb24dbe5e84dc245}
+
+
+Definition at line 654 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a8be90cf09cf37106445ad842beeb1d9a}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-BYPASSEN\_\-GET@{SDADCDAC\_\-BYPASSEN\_\-GET}}
+\index{SDADCDAC\_\-BYPASSEN\_\-GET@{SDADCDAC\_\-BYPASSEN\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-BYPASSEN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-BYPASSEN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-BYPASSEN)}}
+\label{a00568_a8be90cf09cf37106445ad842beeb1d9a}
+
+
+Definition at line 650 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ab4b836f22f45d9a5fa1816108acd4f91}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-BYPASSEN\_\-SET@{SDADCDAC\_\-BYPASSEN\_\-SET}}
+\index{SDADCDAC\_\-BYPASSEN\_\-SET@{SDADCDAC\_\-BYPASSEN\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-BYPASSEN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-BYPASSEN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-BYPASSEN, 1)}}
+\label{a00568_ab4b836f22f45d9a5fa1816108acd4f91}
+
+
+Definition at line 652 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a87b95e173234ae207229802c974a1bd6}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-CONTROL\_\-CLEARBIT@{SDADCDAC\_\-CONTROL\_\-CLEARBIT}}
+\index{SDADCDAC\_\-CONTROL\_\-CLEARBIT@{SDADCDAC\_\-CONTROL\_\-CLEARBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-CONTROL\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-CONTROL\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL) \& ($\sim$(value)))}}
+\label{a00568_a87b95e173234ae207229802c974a1bd6}
+
+
+Definition at line 55 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_af3ca9e3699d8ba3e203e54691a107b12}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-CONTROL\_\-GET@{SDADCDAC\_\-CONTROL\_\-GET}}
+\index{SDADCDAC\_\-CONTROL\_\-GET@{SDADCDAC\_\-CONTROL\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-CONTROL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-CONTROL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL))}}
+\label{a00568_af3ca9e3699d8ba3e203e54691a107b12}
+
+
+Definition at line 49 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a7f2fba8fdec04eeae40b25ebae69a2b7}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-CONTROL\_\-SET@{SDADCDAC\_\-CONTROL\_\-SET}}
+\index{SDADCDAC\_\-CONTROL\_\-SET@{SDADCDAC\_\-CONTROL\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-CONTROL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-CONTROL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL, (value))}}
+\label{a00568_a7f2fba8fdec04eeae40b25ebae69a2b7}
+
+
+Definition at line 51 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a3b4329735f525e701fe84e4642a47921}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-CONTROL\_\-SETBIT@{SDADCDAC\_\-CONTROL\_\-SETBIT}}
+\index{SDADCDAC\_\-CONTROL\_\-SETBIT@{SDADCDAC\_\-CONTROL\_\-SETBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-CONTROL\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-CONTROL\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-CONTROL) $|$ (value))}}
+\label{a00568_a3b4329735f525e701fe84e4642a47921}
+
+
+Definition at line 53 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aaea44aecfc1b6217d1312982f67ab8ad}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DAC\_\-CLEAR@{SDADCDAC\_\-DAC\_\-CLEAR}}
+\index{SDADCDAC\_\-DAC\_\-CLEAR@{SDADCDAC\_\-DAC\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DAC\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DAC\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DAC, 0)}}
+\label{a00568_aaea44aecfc1b6217d1312982f67ab8ad}
+
+
+Definition at line 378 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a51fe52556a9251eca94d4b4ee2937d42}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DAC\_\-GET@{SDADCDAC\_\-DAC\_\-GET}}
+\index{SDADCDAC\_\-DAC\_\-GET@{SDADCDAC\_\-DAC\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DAC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DAC\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DAC)}}
+\label{a00568_a51fe52556a9251eca94d4b4ee2937d42}
+
+
+Definition at line 374 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a6163b9ad505e734676c31a8e9666bd53}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DAC\_\-SET@{SDADCDAC\_\-DAC\_\-SET}}
+\index{SDADCDAC\_\-DAC\_\-SET@{SDADCDAC\_\-DAC\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DAC\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DAC\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DAC, 1)}}
+\label{a00568_a6163b9ad505e734676c31a8e9666bd53}
+
+
+Definition at line 376 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a8b025dc295156c4cbfd9559f69834a82}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACDATA\_\-CLEAR@{SDADCDAC\_\-DACDATA\_\-CLEAR}}
+\index{SDADCDAC\_\-DACDATA\_\-CLEAR@{SDADCDAC\_\-DACDATA\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACDATA\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACDATA\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACDATA, 0)}}
+\label{a00568_a8b025dc295156c4cbfd9559f69834a82}
+
+
+Definition at line 276 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ac2910c55e1df33349ca3c6434fa9fb16}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACDATA\_\-GET@{SDADCDAC\_\-DACDATA\_\-GET}}
+\index{SDADCDAC\_\-DACDATA\_\-GET@{SDADCDAC\_\-DACDATA\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACDATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACDATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACDATA)}}
+\label{a00568_ac2910c55e1df33349ca3c6434fa9fb16}
+
+
+Definition at line 272 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_adedd78e53866f33ac81b4bff97e960c1}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACDATA\_\-SET@{SDADCDAC\_\-DACDATA\_\-SET}}
+\index{SDADCDAC\_\-DACDATA\_\-SET@{SDADCDAC\_\-DACDATA\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACDATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACDATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACDATA, 1)}}
+\label{a00568_adedd78e53866f33ac81b4bff97e960c1}
+
+
+Definition at line 274 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a5dc1b5a5940f76baebdfa26465fb6738}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFO\_\-CLEARBIT@{SDADCDAC\_\-DACFIFO\_\-CLEARBIT}}
+\index{SDADCDAC\_\-DACFIFO\_\-CLEARBIT@{SDADCDAC\_\-DACFIFO\_\-CLEARBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFO\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFO\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO) \& ($\sim$(value)))}}
+\label{a00568_a5dc1b5a5940f76baebdfa26465fb6738}
+
+
+Definition at line 171 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a967e0a64f88488518f7e69f8baf9aa28}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFO\_\-GET@{SDADCDAC\_\-DACFIFO\_\-GET}}
+\index{SDADCDAC\_\-DACFIFO\_\-GET@{SDADCDAC\_\-DACFIFO\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO))}}
+\label{a00568_a967e0a64f88488518f7e69f8baf9aa28}
+
+
+Definition at line 165 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a3291acdb8bd76b487cf704555bea5289}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFO\_\-SET@{SDADCDAC\_\-DACFIFO\_\-SET}}
+\index{SDADCDAC\_\-DACFIFO\_\-SET@{SDADCDAC\_\-DACFIFO\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO, (value))}}
+\label{a00568_a3291acdb8bd76b487cf704555bea5289}
+
+
+Definition at line 167 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a3198c2d5be5f44277a1b94b67711a83d}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFO\_\-SETBIT@{SDADCDAC\_\-DACFIFO\_\-SETBIT}}
+\index{SDADCDAC\_\-DACFIFO\_\-SETBIT@{SDADCDAC\_\-DACFIFO\_\-SETBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFO\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFO\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO) $|$ (value))}}
+\label{a00568_a3198c2d5be5f44277a1b94b67711a83d}
+
+
+Definition at line 169 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a6c60ee25a41ead26c356868a277c5d16}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFOEMPTY\_\-CLEAR@{SDADCDAC\_\-DACFIFOEMPTY\_\-CLEAR}}
+\index{SDADCDAC\_\-DACFIFOEMPTY\_\-CLEAR@{SDADCDAC\_\-DACFIFOEMPTY\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFOEMPTY\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFOEMPTY\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOEMPTY, 0)}}
+\label{a00568_a6c60ee25a41ead26c356868a277c5d16}
+
+
+Definition at line 135 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a253e3324cd0f1aa8dde90958bb900b4c}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFOEMPTY\_\-GET@{SDADCDAC\_\-DACFIFOEMPTY\_\-GET}}
+\index{SDADCDAC\_\-DACFIFOEMPTY\_\-GET@{SDADCDAC\_\-DACFIFOEMPTY\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFOEMPTY\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFOEMPTY\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOEMPTY)}}
+\label{a00568_a253e3324cd0f1aa8dde90958bb900b4c}
+
+
+Definition at line 131 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ac2de5edb933d7dc36818d3fd9418f522}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFOEMPTY\_\-SET@{SDADCDAC\_\-DACFIFOEMPTY\_\-SET}}
+\index{SDADCDAC\_\-DACFIFOEMPTY\_\-SET@{SDADCDAC\_\-DACFIFOEMPTY\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFOEMPTY\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFOEMPTY\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOEMPTY, 1)}}
+\label{a00568_ac2de5edb933d7dc36818d3fd9418f522}
+
+
+Definition at line 133 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a9e006a66d1599d2d76c268ac9b5ffa5e}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFOFULL\_\-CLEAR@{SDADCDAC\_\-DACFIFOFULL\_\-CLEAR}}
+\index{SDADCDAC\_\-DACFIFOFULL\_\-CLEAR@{SDADCDAC\_\-DACFIFOFULL\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFOFULL\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFOFULL\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOFULL, 0)}}
+\label{a00568_a9e006a66d1599d2d76c268ac9b5ffa5e}
+
+
+Definition at line 124 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_adeb87c98ac71668f33d229e616183b1c}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFOFULL\_\-GET@{SDADCDAC\_\-DACFIFOFULL\_\-GET}}
+\index{SDADCDAC\_\-DACFIFOFULL\_\-GET@{SDADCDAC\_\-DACFIFOFULL\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFOFULL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFOFULL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOFULL)}}
+\label{a00568_adeb87c98ac71668f33d229e616183b1c}
+
+
+Definition at line 120 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a5215d199d5e3b1b9b754e4a9f82c707d}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFOFULL\_\-SET@{SDADCDAC\_\-DACFIFOFULL\_\-SET}}
+\index{SDADCDAC\_\-DACFIFOFULL\_\-SET@{SDADCDAC\_\-DACFIFOFULL\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFOFULL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFOFULL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACFIFOFULL, 1)}}
+\label{a00568_a5215d199d5e3b1b9b754e4a9f82c707d}
+
+
+Definition at line 122 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a69498d66319b98963e6dfce384849726}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFOWMARK\_\-CLEARBIT@{SDADCDAC\_\-DACFIFOWMARK\_\-CLEARBIT}}
+\index{SDADCDAC\_\-DACFIFOWMARK\_\-CLEARBIT@{SDADCDAC\_\-DACFIFOWMARK\_\-CLEARBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFOWMARK\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFOWMARK\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFOWMARK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO\_\-WMARK) \& ($\sim$(value)))}}
+\label{a00568_a69498d66319b98963e6dfce384849726}
+
+
+Definition at line 322 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a05842ec341ab68cd36ea521476d2c67e}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFOWMARK\_\-GET@{SDADCDAC\_\-DACFIFOWMARK\_\-GET}}
+\index{SDADCDAC\_\-DACFIFOWMARK\_\-GET@{SDADCDAC\_\-DACFIFOWMARK\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFOWMARK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFOWMARK\_\-GET}}
+\label{a00568_a05842ec341ab68cd36ea521476d2c67e}
+{\bfseries Value:}
+\begin{DoxyCode}
+(addr) \
+        (GET_WORD_EXCLUSIVE_BITFIELD(addr, SDADCDAC_DACFIFOWMARK))
+\end{DoxyCode}
+
+
+Definition at line 316 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a7d644ce92dcc20a0dbc3794cfcd77732}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFOWMARK\_\-SET@{SDADCDAC\_\-DACFIFOWMARK\_\-SET}}
+\index{SDADCDAC\_\-DACFIFOWMARK\_\-SET@{SDADCDAC\_\-DACFIFOWMARK\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFOWMARK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFOWMARK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFOWMARK, (value))}}
+\label{a00568_a7d644ce92dcc20a0dbc3794cfcd77732}
+
+
+Definition at line 318 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ae2996fa177b28061d754bc7eccc325c4}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACFIFOWMARK\_\-SETBIT@{SDADCDAC\_\-DACFIFOWMARK\_\-SETBIT}}
+\index{SDADCDAC\_\-DACFIFOWMARK\_\-SETBIT@{SDADCDAC\_\-DACFIFOWMARK\_\-SETBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACFIFOWMARK\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACFIFOWMARK\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFOWMARK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-DACFIFO\_\-WMARK) $|$ (value))}}
+\label{a00568_ae2996fa177b28061d754bc7eccc325c4}
+
+
+Definition at line 320 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aef4e190953d6a9e95d94c4394251b319}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACWMARK\_\-GET@{SDADCDAC\_\-DACWMARK\_\-GET}}
+\index{SDADCDAC\_\-DACWMARK\_\-GET@{SDADCDAC\_\-DACWMARK\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACWMARK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACWMARK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACWMARK)}}
+\label{a00568_aef4e190953d6a9e95d94c4394251b319}
+
+
+Definition at line 329 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ac5770464853118ccc9839b2ec6ccb513}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DACWMARK\_\-SET@{SDADCDAC\_\-DACWMARK\_\-SET}}
+\index{SDADCDAC\_\-DACWMARK\_\-SET@{SDADCDAC\_\-DACWMARK\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DACWMARK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DACWMARK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DACWMARK, (value))}}
+\label{a00568_ac5770464853118ccc9839b2ec6ccb513}
+
+
+Definition at line 331 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ae45dc219193dafd93782f286f26cd63c}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DATA\_\-GET@{SDADCDAC\_\-DATA\_\-GET}}
+\index{SDADCDAC\_\-DATA\_\-GET@{SDADCDAC\_\-DATA\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DATA)}}
+\label{a00568_ae45dc219193dafd93782f286f26cd63c}
+
+
+Definition at line 200 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ab97b2855d8b6e6c782fe22d9348d49c3}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DATA\_\-SET@{SDADCDAC\_\-DATA\_\-SET}}
+\index{SDADCDAC\_\-DATA\_\-SET@{SDADCDAC\_\-DATA\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DATA, (value))}}
+\label{a00568_ab97b2855d8b6e6c782fe22d9348d49c3}
+
+
+Definition at line 202 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a4b8394013d1840b59ceb31fd31d815cb}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DI\_\-CLEAR@{SDADCDAC\_\-DI\_\-CLEAR}}
+\index{SDADCDAC\_\-DI\_\-CLEAR@{SDADCDAC\_\-DI\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DI\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DI\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DI, 0)}}
+\label{a00568_a4b8394013d1840b59ceb31fd31d815cb}
+
+
+Definition at line 621 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_acd1c8a846e88994528589fd21e0c1398}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DI\_\-GET@{SDADCDAC\_\-DI\_\-GET}}
+\index{SDADCDAC\_\-DI\_\-GET@{SDADCDAC\_\-DI\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DI\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DI\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DI)}}
+\label{a00568_acd1c8a846e88994528589fd21e0c1398}
+
+
+Definition at line 617 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ae1cdbd0680cb3a21a665332fffd7619f}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-DI\_\-SET@{SDADCDAC\_\-DI\_\-SET}}
+\index{SDADCDAC\_\-DI\_\-SET@{SDADCDAC\_\-DI\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-DI\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-DI\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-DI, 1)}}
+\label{a00568_ae1cdbd0680cb3a21a665332fffd7619f}
+
+
+Definition at line 619 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aa28d9e587d2bc2f0566cbc2d42fcc587}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ENADCFIFO\_\-CLEAR@{SDADCDAC\_\-ENADCFIFO\_\-CLEAR}}
+\index{SDADCDAC\_\-ENADCFIFO\_\-CLEAR@{SDADCDAC\_\-ENADCFIFO\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ENADCFIFO\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ENADCFIFO\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENADCFIFO, 0)}}
+\label{a00568_aa28d9e587d2bc2f0566cbc2d42fcc587}
+
+
+Definition at line 77 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a11d8abec1040623e168e401f9013b015}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ENADCFIFO\_\-GET@{SDADCDAC\_\-ENADCFIFO\_\-GET}}
+\index{SDADCDAC\_\-ENADCFIFO\_\-GET@{SDADCDAC\_\-ENADCFIFO\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ENADCFIFO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ENADCFIFO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENADCFIFO)}}
+\label{a00568_a11d8abec1040623e168e401f9013b015}
+
+
+Definition at line 73 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a6d9f841683f53688f038ab78838b9e69}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ENADCFIFO\_\-SET@{SDADCDAC\_\-ENADCFIFO\_\-SET}}
+\index{SDADCDAC\_\-ENADCFIFO\_\-SET@{SDADCDAC\_\-ENADCFIFO\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ENADCFIFO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ENADCFIFO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENADCFIFO, 1)}}
+\label{a00568_a6d9f841683f53688f038ab78838b9e69}
+
+
+Definition at line 75 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ad2cf41d3f1355dd30f8a501908410ee0}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ENDACFIFO\_\-CLEAR@{SDADCDAC\_\-ENDACFIFO\_\-CLEAR}}
+\index{SDADCDAC\_\-ENDACFIFO\_\-CLEAR@{SDADCDAC\_\-ENDACFIFO\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ENDACFIFO\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ENDACFIFO\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENDACFIFO, 0)}}
+\label{a00568_ad2cf41d3f1355dd30f8a501908410ee0}
+
+
+Definition at line 66 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a7f4c054ff2322049573c626ba4f7983d}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ENDACFIFO\_\-GET@{SDADCDAC\_\-ENDACFIFO\_\-GET}}
+\index{SDADCDAC\_\-ENDACFIFO\_\-GET@{SDADCDAC\_\-ENDACFIFO\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ENDACFIFO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ENDACFIFO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENDACFIFO)}}
+\label{a00568_a7f4c054ff2322049573c626ba4f7983d}
+
+
+Definition at line 62 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a256d6dd132bbb796f1e2a82768e37102}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-ENDACFIFO\_\-SET@{SDADCDAC\_\-ENDACFIFO\_\-SET}}
+\index{SDADCDAC\_\-ENDACFIFO\_\-SET@{SDADCDAC\_\-ENDACFIFO\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-ENDACFIFO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-ENDACFIFO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-ENDACFIFO, 1)}}
+\label{a00568_a256d6dd132bbb796f1e2a82768e37102}
+
+
+Definition at line 64 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aec171bfda0b80f81939dbc0c8cf9e3b6}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-GAIN0\_\-GET@{SDADCDAC\_\-GAIN0\_\-GET}}
+\index{SDADCDAC\_\-GAIN0\_\-GET@{SDADCDAC\_\-GAIN0\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-GAIN0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-GAIN0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN0)}}
+\label{a00568_aec171bfda0b80f81939dbc0c8cf9e3b6}
+
+
+Definition at line 465 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a124fc4de72e65e0689ad9fed65e71eae}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-GAIN0\_\-SET@{SDADCDAC\_\-GAIN0\_\-SET}}
+\index{SDADCDAC\_\-GAIN0\_\-SET@{SDADCDAC\_\-GAIN0\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-GAIN0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-GAIN0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN0, (value))}}
+\label{a00568_a124fc4de72e65e0689ad9fed65e71eae}
+
+
+Definition at line 467 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ad34d3a01dda708c3d635d11630bac133}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-GAIN1\_\-GET@{SDADCDAC\_\-GAIN1\_\-GET}}
+\index{SDADCDAC\_\-GAIN1\_\-GET@{SDADCDAC\_\-GAIN1\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-GAIN1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-GAIN1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN1)}}
+\label{a00568_ad34d3a01dda708c3d635d11630bac133}
+
+
+Definition at line 485 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a969201456b3e0b7deb4d85bcebb6cf81}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-GAIN1\_\-SET@{SDADCDAC\_\-GAIN1\_\-SET}}
+\index{SDADCDAC\_\-GAIN1\_\-SET@{SDADCDAC\_\-GAIN1\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-GAIN1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-GAIN1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN1, (value))}}
+\label{a00568_a969201456b3e0b7deb4d85bcebb6cf81}
+
+
+Definition at line 487 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a7d53a04b2e52a2c56b463b10f07c1f26}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-GAIN2\_\-GET@{SDADCDAC\_\-GAIN2\_\-GET}}
+\index{SDADCDAC\_\-GAIN2\_\-GET@{SDADCDAC\_\-GAIN2\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-GAIN2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-GAIN2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN2)}}
+\label{a00568_a7d53a04b2e52a2c56b463b10f07c1f26}
+
+
+Definition at line 505 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aa5cc710c957bae540fe8ed5e6ead7f11}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-GAIN2\_\-SET@{SDADCDAC\_\-GAIN2\_\-SET}}
+\index{SDADCDAC\_\-GAIN2\_\-SET@{SDADCDAC\_\-GAIN2\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-GAIN2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-GAIN2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-GAIN2, (value))}}
+\label{a00568_aa5cc710c957bae540fe8ed5e6ead7f11}
+
+
+Definition at line 507 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a44ae40ed2b23e1103b4cf545ffdc33c7}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-CLEAR@{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-CLEAR}}
+\index{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-CLEAR@{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK, 0)}}
+\label{a00568_a44ae40ed2b23e1103b4cf545ffdc33c7}
+
+
+Definition at line 99 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ab71faa7e7ec4b3a1a97feca78d5b7a94}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-GET@{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-GET}}
+\index{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-GET@{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK ))}}
+\label{a00568_ab71faa7e7ec4b3a1a97feca78d5b7a94}
+
+
+Definition at line 95 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a67782369b678daa856c04a9c34c79cee}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-SET@{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-SET}}
+\index{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-SET@{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENADCFIFOWMARK, 1)}}
+\label{a00568_a67782369b678daa856c04a9c34c79cee}
+
+
+Definition at line 97 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a2507b7b519c515a66323a2fc77954c4a}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-CLEAR@{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-CLEAR}}
+\index{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-CLEAR@{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK, 0)}}
+\label{a00568_a2507b7b519c515a66323a2fc77954c4a}
+
+
+Definition at line 88 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ab9349ab717a24b312c094d51e046351a}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-GET@{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-GET}}
+\index{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-GET@{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK ))}}
+\label{a00568_ab9349ab717a24b312c094d51e046351a}
+
+
+Definition at line 84 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a25754791a57b26415c132d2f3f017c8f}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-SET@{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-SET}}
+\index{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-SET@{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQ\_\-ENDACFIFOWMARK, 1)}}
+\label{a00568_a25754791a57b26415c132d2f3f017c8f}
+
+
+Definition at line 86 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a52b06b6e0f2c0d251acef0bf94211db4}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-CLEAR@{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-CLEAR}}
+\index{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-CLEAR@{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-ADCFIFOUNDERWMARK, 0)}}
+\label{a00568_a52b06b6e0f2c0d251acef0bf94211db4}
+
+
+Definition at line 192 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aded7c21ad48cd9e04d7455ba918d6a67}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-GET@{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-GET}}
+\index{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-GET@{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-ADCFIFOUNDERWMARK)}}
+\label{a00568_aded7c21ad48cd9e04d7455ba918d6a67}
+
+
+Definition at line 188 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a3cb490811ad786d0ccbb90e3befd764b}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-SET@{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-SET}}
+\index{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-SET@{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQS\_\-ADCFIFOVERWMARK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-ADCFIFOUNDERWMARK, 1)}}
+\label{a00568_a3cb490811ad786d0ccbb90e3befd764b}
+
+
+Definition at line 190 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ab9c61b6f3c1897d04c24e3c640d137c4}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-CLEAR@{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-CLEAR}}
+\index{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-CLEAR@{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK, 0)}}
+\label{a00568_ab9c61b6f3c1897d04c24e3c640d137c4}
+
+
+Definition at line 182 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ab7ebf433337d61c9d85f3bda8695dd78}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-GET@{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-GET}}
+\index{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-GET@{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK)}}
+\label{a00568_ab7ebf433337d61c9d85f3bda8695dd78}
+
+
+Definition at line 178 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a30410bda7ed9ca668de515d23b64cc8e}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-SET@{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-SET}}
+\index{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-SET@{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-IRQS\_\-DACFIFOUNDERWMARK, 1)}}
+\label{a00568_a30410bda7ed9ca668de515d23b64cc8e}
+
+
+Definition at line 180 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a82c24e117aaf062d9066f5ab8d73aadd}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PHASE1\_\-GET@{SDADCDAC\_\-PHASE1\_\-GET}}
+\index{SDADCDAC\_\-PHASE1\_\-GET@{SDADCDAC\_\-PHASE1\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PHASE1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PHASE1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASE1)}}
+\label{a00568_a82c24e117aaf062d9066f5ab8d73aadd}
+
+
+Definition at line 566 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aec17b61376d276ca5a7263fc8ec3331b}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PHASE1\_\-SET@{SDADCDAC\_\-PHASE1\_\-SET}}
+\index{SDADCDAC\_\-PHASE1\_\-SET@{SDADCDAC\_\-PHASE1\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PHASE1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PHASE1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASE1, (value))}}
+\label{a00568_aec17b61376d276ca5a7263fc8ec3331b}
+
+
+Definition at line 568 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a32310539f3627d9a537056eb3923fbcd}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PHASE2\_\-GET@{SDADCDAC\_\-PHASE2\_\-GET}}
+\index{SDADCDAC\_\-PHASE2\_\-GET@{SDADCDAC\_\-PHASE2\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PHASE2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PHASE2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASE2)}}
+\label{a00568_a32310539f3627d9a537056eb3923fbcd}
+
+
+Definition at line 575 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a7f44b2eee94c6afcada697b91c0de32c}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PHASE2\_\-SET@{SDADCDAC\_\-PHASE2\_\-SET}}
+\index{SDADCDAC\_\-PHASE2\_\-SET@{SDADCDAC\_\-PHASE2\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PHASE2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PHASE2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASE2, (value))}}
+\label{a00568_a7f44b2eee94c6afcada697b91c0de32c}
+
+
+Definition at line 577 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ad01fbf62e1e40c87c3b0cc7176ea4884}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PHASESTEP\_\-GET@{SDADCDAC\_\-PHASESTEP\_\-GET}}
+\index{SDADCDAC\_\-PHASESTEP\_\-GET@{SDADCDAC\_\-PHASESTEP\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PHASESTEP\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PHASESTEP\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASE2)}}
+\label{a00568_ad01fbf62e1e40c87c3b0cc7176ea4884}
+
+
+Definition at line 584 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ae944b18d5567083c689979493740e06b}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PHASESTEP\_\-SET@{SDADCDAC\_\-PHASESTEP\_\-SET}}
+\index{SDADCDAC\_\-PHASESTEP\_\-SET@{SDADCDAC\_\-PHASESTEP\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PHASESTEP\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PHASESTEP\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-PHASESTEP, (value))}}
+\label{a00568_ae944b18d5567083c689979493740e06b}
+
+
+Definition at line 586 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ac8cf4f7e7fc02859f3d06fb04755746e}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PREF\_\-CLEAR@{SDADCDAC\_\-PREF\_\-CLEAR}}
+\index{SDADCDAC\_\-PREF\_\-CLEAR@{SDADCDAC\_\-PREF\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PREF\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PREF\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-REF, 0)}}
+\label{a00568_ac8cf4f7e7fc02859f3d06fb04755746e}
+
+
+Definition at line 422 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a418d16b80b5a7500783d90c36de12c02}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PREF\_\-GET@{SDADCDAC\_\-PREF\_\-GET}}
+\index{SDADCDAC\_\-PREF\_\-GET@{SDADCDAC\_\-PREF\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PREF\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PREF\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-REF)}}
+\label{a00568_a418d16b80b5a7500783d90c36de12c02}
+
+
+Definition at line 418 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a844581b4378fcd6fb310091c450249f3}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PREF\_\-SET@{SDADCDAC\_\-PREF\_\-SET}}
+\index{SDADCDAC\_\-PREF\_\-SET@{SDADCDAC\_\-PREF\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PREF\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PREF\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-REF, 1)}}
+\label{a00568_a844581b4378fcd6fb310091c450249f3}
+
+
+Definition at line 420 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a41f7d02f9331ad4aa2558baed5b3c7f8}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PWRDNCTRL\_\-CLEARBIT@{SDADCDAC\_\-PWRDNCTRL\_\-CLEARBIT}}
+\index{SDADCDAC\_\-PWRDNCTRL\_\-CLEARBIT@{SDADCDAC\_\-PWRDNCTRL\_\-CLEARBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PWRDNCTRL\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PWRDNCTRL\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL) \& ($\sim$(value)))}}
+\label{a00568_a41f7d02f9331ad4aa2558baed5b3c7f8}
+
+
+Definition at line 367 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_adffdefe93093f38d033c051b903181ce}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PWRDNCTRL\_\-GET@{SDADCDAC\_\-PWRDNCTRL\_\-GET}}
+\index{SDADCDAC\_\-PWRDNCTRL\_\-GET@{SDADCDAC\_\-PWRDNCTRL\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PWRDNCTRL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PWRDNCTRL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL))}}
+\label{a00568_adffdefe93093f38d033c051b903181ce}
+
+
+Definition at line 361 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a576679d8e1fc5ba989feee7c0ddc012c}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PWRDNCTRL\_\-SET@{SDADCDAC\_\-PWRDNCTRL\_\-SET}}
+\index{SDADCDAC\_\-PWRDNCTRL\_\-SET@{SDADCDAC\_\-PWRDNCTRL\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PWRDNCTRL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PWRDNCTRL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL, (value))}}
+\label{a00568_a576679d8e1fc5ba989feee7c0ddc012c}
+
+
+Definition at line 363 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a431b5c676057a3493dc5c2c76cd5497f}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-PWRDNCTRL\_\-SETBIT@{SDADCDAC\_\-PWRDNCTRL\_\-SETBIT}}
+\index{SDADCDAC\_\-PWRDNCTRL\_\-SETBIT@{SDADCDAC\_\-PWRDNCTRL\_\-SETBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-PWRDNCTRL\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-PWRDNCTRL\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-PWRDNCTRL) $|$ (value))}}
+\label{a00568_a431b5c676057a3493dc5c2c76cd5497f}
+
+
+Definition at line 365 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a42c62441c844149f8bf8df9372bcf453}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-REF\_\-GET@{SDADCDAC\_\-REF\_\-GET}}
+\index{SDADCDAC\_\-REF\_\-GET@{SDADCDAC\_\-REF\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-REF\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-REF\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-REF)}}
+\label{a00568_a42c62441c844149f8bf8df9372bcf453}
+
+
+Definition at line 557 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aba0e73228ee6cca7b12e1c4170e7e51d}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-REF\_\-SET@{SDADCDAC\_\-REF\_\-SET}}
+\index{SDADCDAC\_\-REF\_\-SET@{SDADCDAC\_\-REF\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-REF\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-REF\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-REF, (value))}}
+\label{a00568_aba0e73228ee6cca7b12e1c4170e7e51d}
+
+
+Definition at line 559 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a0c73fa1b111f1df348e50f0f9c275798}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-RST\_\-CLEAR@{SDADCDAC\_\-RST\_\-CLEAR}}
+\index{SDADCDAC\_\-RST\_\-CLEAR@{SDADCDAC\_\-RST\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-RST\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-RST\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-RST, 0)}}
+\label{a00568_a0c73fa1b111f1df348e50f0f9c275798}
+
+
+Definition at line 632 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a4922c8a314ff13f989b5e9d0a7e110ae}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-RST\_\-GET@{SDADCDAC\_\-RST\_\-GET}}
+\index{SDADCDAC\_\-RST\_\-GET@{SDADCDAC\_\-RST\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-RST\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-RST\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-RST)}}
+\label{a00568_a4922c8a314ff13f989b5e9d0a7e110ae}
+
+
+Definition at line 628 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a14ab3f2f9aa707d111a61c32588b662c}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-RST\_\-SET@{SDADCDAC\_\-RST\_\-SET}}
+\index{SDADCDAC\_\-RST\_\-SET@{SDADCDAC\_\-RST\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-RST\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-RST\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-RST, 1)}}
+\label{a00568_a14ab3f2f9aa707d111a61c32588b662c}
+
+
+Definition at line 630 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a2ead8ddc82d96d4940530c830a68f306}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-SEL0\_\-CLEAR@{SDADCDAC\_\-SEL0\_\-CLEAR}}
+\index{SDADCDAC\_\-SEL0\_\-CLEAR@{SDADCDAC\_\-SEL0\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-SEL0\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-SEL0\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL0, 0)}}
+\label{a00568_a2ead8ddc82d96d4940530c830a68f306}
+
+
+Definition at line 458 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a0fcdddce35ffeadb217bd02b23ebbfcb}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-SEL0\_\-GET@{SDADCDAC\_\-SEL0\_\-GET}}
+\index{SDADCDAC\_\-SEL0\_\-GET@{SDADCDAC\_\-SEL0\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-SEL0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-SEL0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL0)}}
+\label{a00568_a0fcdddce35ffeadb217bd02b23ebbfcb}
+
+
+Definition at line 454 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a3face213c069b912e2329bab697f462f}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-SEL0\_\-SET@{SDADCDAC\_\-SEL0\_\-SET}}
+\index{SDADCDAC\_\-SEL0\_\-SET@{SDADCDAC\_\-SEL0\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-SEL0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-SEL0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL0, 1)}}
+\label{a00568_a3face213c069b912e2329bab697f462f}
+
+
+Definition at line 456 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ab69f63c7dec35d7c854f92f1de8adee0}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-SEL1\_\-CLEAR@{SDADCDAC\_\-SEL1\_\-CLEAR}}
+\index{SDADCDAC\_\-SEL1\_\-CLEAR@{SDADCDAC\_\-SEL1\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-SEL1\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-SEL1\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL1, 0)}}
+\label{a00568_ab69f63c7dec35d7c854f92f1de8adee0}
+
+
+Definition at line 478 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aaab76e5157a3244b786307dd5e1b0a71}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-SEL1\_\-GET@{SDADCDAC\_\-SEL1\_\-GET}}
+\index{SDADCDAC\_\-SEL1\_\-GET@{SDADCDAC\_\-SEL1\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-SEL1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-SEL1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL1)}}
+\label{a00568_aaab76e5157a3244b786307dd5e1b0a71}
+
+
+Definition at line 474 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a23864f8090ea746db95a3b594d4968d3}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-SEL1\_\-SET@{SDADCDAC\_\-SEL1\_\-SET}}
+\index{SDADCDAC\_\-SEL1\_\-SET@{SDADCDAC\_\-SEL1\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-SEL1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-SEL1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL1, 1)}}
+\label{a00568_a23864f8090ea746db95a3b594d4968d3}
+
+
+Definition at line 476 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_adc1b45a60cf8f22f52eb4fef1655ed8f}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-SEL2\_\-CLEAR@{SDADCDAC\_\-SEL2\_\-CLEAR}}
+\index{SDADCDAC\_\-SEL2\_\-CLEAR@{SDADCDAC\_\-SEL2\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-SEL2\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-SEL2\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL2, 0)}}
+\label{a00568_adc1b45a60cf8f22f52eb4fef1655ed8f}
+
+
+Definition at line 498 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ada048fbaac39c2abdd81bb4ffbfbac48}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-SEL2\_\-GET@{SDADCDAC\_\-SEL2\_\-GET}}
+\index{SDADCDAC\_\-SEL2\_\-GET@{SDADCDAC\_\-SEL2\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-SEL2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-SEL2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL2)}}
+\label{a00568_ada048fbaac39c2abdd81bb4ffbfbac48}
+
+
+Definition at line 494 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ab28bfd9ef0dcd3bbfcd3a19ffe67392b}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-SEL2\_\-SET@{SDADCDAC\_\-SEL2\_\-SET}}
+\index{SDADCDAC\_\-SEL2\_\-SET@{SDADCDAC\_\-SEL2\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-SEL2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-SEL2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-SEL2, 1)}}
+\label{a00568_ab28bfd9ef0dcd3bbfcd3a19ffe67392b}
+
+
+Definition at line 496 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a50c5087d2ba0add96ed9049be025c634}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-STATUS\_\-CLEARBIT@{SDADCDAC\_\-STATUS\_\-CLEARBIT}}
+\index{SDADCDAC\_\-STATUS\_\-CLEARBIT@{SDADCDAC\_\-STATUS\_\-CLEARBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-STATUS\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-STATUS\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS) \& ($\sim$(value)))}}
+\label{a00568_a50c5087d2ba0add96ed9049be025c634}
+
+
+Definition at line 113 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a5f09a80c88714661ab9a6b4e342aaaed}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-STATUS\_\-GET@{SDADCDAC\_\-STATUS\_\-GET}}
+\index{SDADCDAC\_\-STATUS\_\-GET@{SDADCDAC\_\-STATUS\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS))}}
+\label{a00568_a5f09a80c88714661ab9a6b4e342aaaed}
+
+
+Definition at line 107 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ae68c414804ff0419aa5c0abfbe46d875}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-STATUS\_\-SET@{SDADCDAC\_\-STATUS\_\-SET}}
+\index{SDADCDAC\_\-STATUS\_\-SET@{SDADCDAC\_\-STATUS\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-STATUS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-STATUS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS, (value))}}
+\label{a00568_ae68c414804ff0419aa5c0abfbe46d875}
+
+
+Definition at line 109 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a75ee53ca94389184dadeea7674440e5e}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-STATUS\_\-SETBIT@{SDADCDAC\_\-STATUS\_\-SETBIT}}
+\index{SDADCDAC\_\-STATUS\_\-SETBIT@{SDADCDAC\_\-STATUS\_\-SETBIT}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-STATUS\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-STATUS\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, SDADCDAC\_\-STATUS) $|$ (value))}}
+\label{a00568_a75ee53ca94389184dadeea7674440e5e}
+
+
+Definition at line 111 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a32d8da36f85377d725e5db1bdac1324d}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-TESTREF\_\-CLEAR@{SDADCDAC\_\-TESTREF\_\-CLEAR}}
+\index{SDADCDAC\_\-TESTREF\_\-CLEAR@{SDADCDAC\_\-TESTREF\_\-CLEAR}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-TESTREF\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-TESTREF\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-TESTREF, 0)}}
+\label{a00568_a32d8da36f85377d725e5db1bdac1324d}
+
+
+Definition at line 643 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_ac247e452ff988238debcef8831196399}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-TESTREF\_\-GET@{SDADCDAC\_\-TESTREF\_\-GET}}
+\index{SDADCDAC\_\-TESTREF\_\-GET@{SDADCDAC\_\-TESTREF\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-TESTREF\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-TESTREF\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-TESTREF)}}
+\label{a00568_ac247e452ff988238debcef8831196399}
+
+
+Definition at line 639 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_a4ba0842001e35623e02d7cb603404b39}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-TESTREF\_\-SET@{SDADCDAC\_\-TESTREF\_\-SET}}
+\index{SDADCDAC\_\-TESTREF\_\-SET@{SDADCDAC\_\-TESTREF\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-TESTREF\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-TESTREF\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-TESTREF, 1)}}
+\label{a00568_a4ba0842001e35623e02d7cb603404b39}
+
+
+Definition at line 641 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_aaa8bec53631675c1b1c7dce20277f38a}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-TMPCO\_\-GET@{SDADCDAC\_\-TMPCO\_\-GET}}
+\index{SDADCDAC\_\-TMPCO\_\-GET@{SDADCDAC\_\-TMPCO\_\-GET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-TMPCO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-TMPCO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-TMPCO)}}
+\label{a00568_aaa8bec53631675c1b1c7dce20277f38a}
+
+
+Definition at line 548 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+
+\hypertarget{a00568_acf4d8e94ba9b93890d425428a16c5c91}{
+\index{gsn\_\-reg\_\-sdadcdac\_\-op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}!SDADCDAC\_\-TMPCO\_\-SET@{SDADCDAC\_\-TMPCO\_\-SET}}
+\index{SDADCDAC\_\-TMPCO\_\-SET@{SDADCDAC\_\-TMPCO\_\-SET}!gsn_reg_sdadcdac_op.h@{gsn\_\-reg\_\-sdadcdac\_\-op.h}}
+\subsubsection[{SDADCDAC\_\-TMPCO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDADCDAC\_\-TMPCO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, SDADCDAC\_\-TMPCO, (value))}}
+\label{a00568_acf4d8e94ba9b93890d425428a16c5c91}
+
+
+Definition at line 550 of file gsn\_\-reg\_\-sdadcdac\_\-op.h.
+

@@ -1,0 +1,94 @@
+\hypertarget{a00630}{
+\section{GSN WLAN Firmware Interface (SYSIF) module}
+\label{a00630}\index{GSN WLAN Firmware Interface (SYSIF) module@{GSN WLAN Firmware Interface (SYSIF) module}}
+}
+
+
+This group provides the interface with WLAN Firmware running on WLAN CPU.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00261}{GSN\_\-SYSIF\_\-CTX}
+\begin{DoxyCompactList}\small\item\em GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the SYSIF interface will have its own context defined here. \end{DoxyCompactList}\item 
+struct \hyperlink{a00262}{GSN\_\-SYSIF\_\-INIT\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em SYSIF context init function parameter data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00631}{GSN WLAN Firmware Interface (SYSIF) module APIs}
+
+
+\begin{DoxyCompactList}\small\item\em This group contains the the APIs provided by the SYSIF module. \end{DoxyCompactList}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00261}{GSN\_\-SYSIF\_\-CTX} \hyperlink{a00630_ga4109d84173a303c73e534f9bc6e04a03}{GSN\_\-SYSIF\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the SYSIF interface will have its own context defined here. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00262}{GSN\_\-SYSIF\_\-INIT\_\-PARAM} \hyperlink{a00630_gaefe015ce31bfc3747e1caed732284b8e}{GSN\_\-SYSIF\_\-INIT\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em SYSIF context init function parameter data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00630_ga921cdc829cd7b875a0cb53c093c2b9da}{GsnSysif\_\-Init} (\hyperlink{a00261}{GSN\_\-SYSIF\_\-CTX\_\-T} $\ast$pSysifCtx, \hyperlink{a00262}{GSN\_\-SYSIF\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Initialize WLAN IF. This function initializes the WLAN IF instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group provides the interface with WLAN Firmware running on WLAN CPU. Whole GsnSYSIF module is grouped in two parts, APIs and the Msg\_\-Sys. The APIs provide the handling of various requests and indications. Msg\_\-Sys provides the buffer managemnet and shared memeory management infrastructure to trnasfer messages (control/data) between WLAn and APP firmware. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00630_ga4109d84173a303c73e534f9bc6e04a03}{
+\index{GSN WLAN Firmware Interface (SYSIF) module@{GSN WLAN Firmware Interface (SYSIF) module}!GSN\_\-SYSIF\_\-CTX\_\-T@{GSN\_\-SYSIF\_\-CTX\_\-T}}
+\index{GSN\_\-SYSIF\_\-CTX\_\-T@{GSN\_\-SYSIF\_\-CTX\_\-T}!GSN WLAN Firmware Interface (SYSIF) module@{GSN WLAN Firmware Interface (SYSIF) module}}
+\subsubsection[{GSN\_\-SYSIF\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SYSIF\_\-CTX} {\bf GSN\_\-SYSIF\_\-CTX\_\-T}}}
+\label{a00630_ga4109d84173a303c73e534f9bc6e04a03}
+
+
+GSN WLAN Interface context. This defines the Data structure to store the information for the WLAN interface module. Each instance of the SYSIF interface will have its own context defined here. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00630_gaefe015ce31bfc3747e1caed732284b8e}{
+\index{GSN WLAN Firmware Interface (SYSIF) module@{GSN WLAN Firmware Interface (SYSIF) module}!GSN\_\-SYSIF\_\-INIT\_\-PARAM\_\-T@{GSN\_\-SYSIF\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-SYSIF\_\-INIT\_\-PARAM\_\-T@{GSN\_\-SYSIF\_\-INIT\_\-PARAM\_\-T}!GSN WLAN Firmware Interface (SYSIF) module@{GSN WLAN Firmware Interface (SYSIF) module}}
+\subsubsection[{GSN\_\-SYSIF\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SYSIF\_\-INIT\_\-PARAM} {\bf GSN\_\-SYSIF\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00630_gaefe015ce31bfc3747e1caed732284b8e}
+
+
+SYSIF context init function parameter data structure. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00630_ga921cdc829cd7b875a0cb53c093c2b9da}{
+\index{GSN WLAN Firmware Interface (SYSIF) module@{GSN WLAN Firmware Interface (SYSIF) module}!GsnSysif\_\-Init@{GsnSysif\_\-Init}}
+\index{GsnSysif\_\-Init@{GsnSysif\_\-Init}!GSN WLAN Firmware Interface (SYSIF) module@{GSN WLAN Firmware Interface (SYSIF) module}}
+\subsubsection[{GsnSysif\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnSysif\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SYSIF\_\-CTX\_\-T} $\ast$}]{pSysifCtx, }
+\item[{{\bf GSN\_\-SYSIF\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00630_ga921cdc829cd7b875a0cb53c093c2b9da}
+
+
+Initialize WLAN IF. This function initializes the WLAN IF instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSysifCtx} & -\/IN pointer to data structure of type GSN\_\-SYSIF\_\-CTX\_\-T. This the context memory of a WLAN IF instance. \\
+\hline
+{\em pParam} & -\/ IN pointer to data structure of type GSN\_\-SYSIF\_\-INIT\_\-PARAM\_\-T. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GSN\_\-SUCCESS if operation is successful else GSN\_\-FAILURE. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+All the memeres of \char`\"{}pParam\char`\"{} shall be properly initialised before callling this function 
+\end{DoxyNote}

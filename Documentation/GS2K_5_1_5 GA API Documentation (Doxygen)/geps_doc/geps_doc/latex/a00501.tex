@@ -1,0 +1,967 @@
+\hypertarget{a00501}{
+\section{gsn\_\-flash\_\-if.h File Reference}
+\label{a00501}\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}}
+}
+
+
+GSN Flash IF public header. This file contains the public APIs and structures of flash interface driver module.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-bitfield\_\-macros.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$reg$\backslash$gsn\_\-reg\_\-op.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}drivers$\backslash$reg$\backslash$gsn\_\-reg\_\-flashif\_\-spec.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}drivers$\backslash$reg$\backslash$gsn\_\-reg\_\-flashif\_\-op.h\char`\"{}}\par
+Include dependency graph for gsn\_\-flash\_\-if.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00731}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00732}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00080}{GSN\_\-FLASHIF\_\-DMACTL\_\-S}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf DMA control structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00078}{GSN\_\-FLASHIF\_\-CFG\_\-S}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Config structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00079}{GSN\_\-FLASHIF\_\-CTX\_\-S}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Context. \end{DoxyCompactList}\item 
+struct \hyperlink{a00081}{GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-S}
+\begin{DoxyCompactList}\small\item\em Flash Status Register structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00501_a3a6d61a1bfa4bbe3f67b3932cf5a2f43}{GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-SIZE}~0x1000
+\item 
+\#define \hyperlink{a00501_ac3666fef80e278fcf941e4bb6d09c71a}{GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-SIZE}~0x10000
+\item 
+\#define \hyperlink{a00501_aa0142f103c81f61725f292bbe3011531}{GSN\_\-FLASHIF\_\-FLASH\_\-PAGE\_\-SIZE}~0x100
+\item 
+\#define \hyperlink{a00501_aefc555c38511d4a072fcd5a4a6df00d5}{GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-INDEX\_\-TO\_\-ADDR}(subsectorIndex)~((subsectorIndex) $\ast$ GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-SIZE)
+\item 
+\#define \hyperlink{a00501_a24325d9d6b609d61108779b248b0ddaa}{GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-INDEX\_\-TO\_\-ADDR}(sectorIndex)~((sectorIndex) $\ast$ GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-SIZE)
+\item 
+\#define \hyperlink{a00501_afbf57cb7ab68e072618c64e3f5710edc}{GSN\_\-FLASHIF\_\-DELAY}~10
+\item 
+\#define \hyperlink{a00501_a4649957b3872f85bd4ef576eb9b3870e}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-WORD\_\-SIZE}~sizeof(\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})
+\item 
+\#define \hyperlink{a00501_a48db0a1a6487d75cc26e47b6ed5aa530}{GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-READ\_\-CTL\_\-WORD}
+\item 
+\#define \hyperlink{a00501_a33e15dee99ee2bf69a56f4b01787c0c3}{GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-WRITE\_\-CTL\_\-WORD}
+\item 
+\#define \hyperlink{a00501_af14e1b5c6e46794277b498c70f9be271}{GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE\_\-CTL\_\-WORD}
+\item 
+\#define \hyperlink{a00501_af38bcd1228c1bb46d9d949bb2c207027}{GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE4X\_\-CTL\_\-WORD}
+\item 
+\#define \hyperlink{a00501_ae7096c4b9fdda3ba1d4ea1c604c99286}{GSN\_\-FLASHIF\_\-FLASH\_\-READ\_\-CTL\_\-WORD}
+\item 
+\#define \hyperlink{a00501_a8acd7420fe3b33fb01890420fda65a46}{GSN\_\-FLASHIF\_\-FLASH\_\-FASTREAD\_\-CTL\_\-WORD}
+\item 
+\#define \hyperlink{a00501_a1064f47413205b627537f5b62089f921}{GSN\_\-FLASHIF\_\-FLASH\_\-QUADREAD\_\-CTL\_\-WORD}
+\item 
+\#define \hyperlink{a00501_a82c4245515ddf32d66c496d5c01545c8}{GSN\_\-FLASHIF\_\-FLASH\_\-DEEPPWRDOWNREL\_\-CTL\_\-WORD}
+\item 
+\#define \hyperlink{a00501_a329a28a5b24cbcebf1677492a510b8a9}{GSN\_\-FLASHIF\_\-DMA\_\-READ\_\-CTL\_\-WORD}
+\item 
+\#define \hyperlink{a00501_ad74448da0c4a43b719fb51724b212002}{GSN\_\-FLASHIF\_\-DMA\_\-FASTREAD\_\-CTL\_\-WORD}
+\item 
+\#define \hyperlink{a00501_ae7913b164750c89b5861527237f86968}{GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD}
+\item 
+\#define \hyperlink{a00501_a6b34a4b3658f6bb4275412db19e2f597}{GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD\_\-6DUMMYCYCLES}
+\item 
+\#define \hyperlink{a00501_a34322cbcb7fccb290f6f66cfae69df35}{GSN\_\-FLASHIF\_\-FLASH\_\-WREN}~0x06
+\item 
+\#define \hyperlink{a00501_ad413125ceeb0878fad9e5436ef6d515e}{GSN\_\-FLASHIF\_\-FLASH\_\-WRDI}~0x04
+\item 
+\#define \hyperlink{a00501_a97b8d28c1e49792581b7d20cbeb3b9cc}{GSN\_\-FLASHIF\_\-FLASH\_\-RDID}~0x9F
+\item 
+\#define \hyperlink{a00501_a8cd0d8cabe6736a2e99c2186c853a39f}{GSN\_\-FLASHIF\_\-FLASH\_\-RDSR}~0x05
+\item 
+\#define \hyperlink{a00501_ab03bcf572199fc61a6f64a7446961708}{GSN\_\-FLASHIF\_\-FLASH\_\-WRSR}~0x01
+\item 
+\#define \hyperlink{a00501_a79c1ea37a5d7bb3e038e7d67837c64ee}{GSN\_\-FLASHIF\_\-FLASH\_\-READ}~0x03
+\item 
+\#define \hyperlink{a00501_a17279ad9c99a8da3f12b5db340c8108c}{GSN\_\-FLASHIF\_\-FLASH\_\-FAST\_\-READ}~0x0B
+\item 
+\#define \hyperlink{a00501_a2a496e4eb4b67f9cc17856bd0d4e2cfe}{GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-READ}~0x3B
+\item 
+\#define \hyperlink{a00501_a8b471319c08ce9bd14a9fa69536845e9}{GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-READ}~0x6B
+\item 
+\#define \hyperlink{a00501_a7203fc69dc352828cd9c233bfa927790}{GSN\_\-FLASHIF\_\-FLASH\_\-QUADIO\_\-FAST\_\-READ}~0xEB
+\item 
+\#define \hyperlink{a00501_a1db4dc7ecffb9be35ce103ae53585c45}{GSN\_\-FLASHIF\_\-FLASH\_\-PP}~0x02
+\item 
+\#define \hyperlink{a00501_af4275dba6f24912447b7129827a5d8bb}{GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-PP}~0xA2
+\item 
+\#define \hyperlink{a00501_a274fa8a403899c45566125a6feadc764}{GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-PP}~0x32
+\item 
+\#define \hyperlink{a00501_a0c24b2e54b8c103b6a101b70c34de782}{GSN\_\-FLASHIF\_\-FLASH\_\-SE}~0xD8
+\item 
+\#define \hyperlink{a00501_ae96a29a0882c74eb23ccec5f8bacd7e0}{GSN\_\-FLASHIF\_\-FLASH\_\-SSE}~0x20
+\item 
+\#define \hyperlink{a00501_ab7fd0cfaf7e0dc856a389a06650cab92}{GSN\_\-FLASHIF\_\-FLASH\_\-BE}~0xC7
+\item 
+\#define \hyperlink{a00501_aab2968a7a313ab5fb8eb33a9819e90ea}{GSN\_\-FLASHIF\_\-FLASH\_\-VOLCFG}~0x81
+\item 
+\#define \hyperlink{a00501_a99d00ac36ec9a0a644f5e86b4e9cbf60}{GSN\_\-FLASHIF\_\-FLASH\_\-DP}~0xB9
+\item 
+\#define \hyperlink{a00501_af16953f77ced6efee096609e6d22201d}{GSN\_\-FLASHIF\_\-FLASH\_\-RES}~0xAB
+\item 
+\#define \hyperlink{a00501_aac5384128253000bd94033b0ecb54b8d}{GSN\_\-FLASHIF\_\-FLASH\_\-HPM\_\-RESET}~0xFF
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00647_gaaf02993c8f105b4a90a6b27ef19dae0f}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-E} \hyperlink{a00647_gad02bc7e7274fd3ba828e7ed35c282eaf}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf PIO Enum for Dir Read and Write. This enum defines FlashIf PIO Dir Read and Write. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00647_ga21630134ac87b1ff38712e4f4c0b4a4e}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-E} \hyperlink{a00647_gad29e842797fae82ccad1e80f4fc97a1c}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf PIO Enum for Dummy bytes. This enum defines FlashIf PIO zero, nonzero dummy bytes. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00647_gad00f759b28a1db7a281e681f949cd164}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-E} \hyperlink{a00647_gaf1a2041a13f5df83afd39cc00dd1f5c0}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Enum for FLASH BITLANE. This enum defines flash bitlane. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00080}{GSN\_\-FLASHIF\_\-DMACTL\_\-S} \hyperlink{a00647_ga3191e2eabef0c8e1b95922431d75565f}{GSN\_\-FLASHIF\_\-DMACTL\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf DMA control structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00078}{GSN\_\-FLASHIF\_\-CFG\_\-S} \hyperlink{a00647_gaaf4a476f19c5d44c391a5e5dab872e9b}{GSN\_\-FLASHIF\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Config structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00079}{GSN\_\-FLASHIF\_\-CTX\_\-S} \hyperlink{a00647_gacef88670392e2c2c8f6cc45eab1ad658}{GSN\_\-FLASHIF\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00081}{GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-S} \hyperlink{a00647_ga817ad96ff2f6956f431999227f67c3ca}{GSN\_\-FLASHIF\_\-FLASH\_\-STATUS\_\-REG\_\-T}
+\begin{DoxyCompactList}\small\item\em Flash Status Register structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00647_gaaf02993c8f105b4a90a6b27ef19dae0f}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-E} \{ \par
+\hyperlink{a00647_ggaaf02993c8f105b4a90a6b27ef19dae0fafe8b742258651fa64d0b4c4012346bda}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-READ} =  0, 
+\par
+\hyperlink{a00647_ggaaf02993c8f105b4a90a6b27ef19dae0faf5c50092b2e7d13c595cf3c2e0723aaa}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DIR\_\-WRITE} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf PIO Enum for Dir Read and Write. This enum defines FlashIf PIO Dir Read and Write. \end{DoxyCompactList}\item 
+enum \hyperlink{a00647_ga21630134ac87b1ff38712e4f4c0b4a4e}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-E} \{ \par
+\hyperlink{a00647_gga21630134ac87b1ff38712e4f4c0b4a4eaecca8709c0b664eeabca124be5cb94e2}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-ZERO} =  0, 
+\par
+\hyperlink{a00647_gga21630134ac87b1ff38712e4f4c0b4a4ea9994e4e9597b9fbf54d26239248e08c2}{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-NONZERO} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf PIO Enum for Dummy bytes. This enum defines FlashIf PIO zero, nonzero dummy bytes. \end{DoxyCompactList}\item 
+enum \hyperlink{a00647_gad00f759b28a1db7a281e681f949cd164}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANE\_\-E} \{ \par
+\hyperlink{a00647_ggad00f759b28a1db7a281e681f949cd164a82324c677576b831a7a6306b1ea3466d}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-1} =  0, 
+\par
+\hyperlink{a00647_ggad00f759b28a1db7a281e681f949cd164ad2aecd6be0e0851d10f33a12223b4cd7}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-2} =  1, 
+\par
+\hyperlink{a00647_ggad00f759b28a1db7a281e681f949cd164a7e743bb40684d8ff42f8503216dcc6c6}{GSN\_\-FLASHIF\_\-FLASH\_\-BITLANES\_\-4} =  2
+ \}
+\begin{DoxyCompactList}\small\item\em Gsn FlashIf Enum for FLASH BITLANE. This enum defines flash bitlane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00501_ac574964e96e21932c219983ffe865d0f}{CREATE\_\-BITFIELD} (FLASHIF\_\-PIO\_\-CTL\_\-DIR, 0, 0)
+\item 
+\hyperlink{a00501_a8dc5c570a800cbb45e082460e9085bd8}{CREATE\_\-BITFIELD} (FLASHIF\_\-PIO\_\-CTL\_\-CMD\_\-BYTECOUNT, 1, 2)
+\item 
+\hyperlink{a00501_a12cb43657bbade809ac784e832f8100f}{CREATE\_\-BITFIELD} (FLASHIF\_\-PIO\_\-CTL\_\-ADDR\_\-BYTECOUNT, 3, 5)
+\item 
+\hyperlink{a00501_aac30a45d97ea8aa913ba61a794968d8a}{CREATE\_\-BITFIELD} (FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-NONZERO, 6, 6)
+\item 
+\hyperlink{a00501_abdba8e171f084913f6b71eeb7544521b}{CREATE\_\-BITFIELD} (FLASHIF\_\-PIO\_\-CTL\_\-DUMMYCOUNT\_\-CYCLES, 7, 7)
+\item 
+\hyperlink{a00501_a09d84b947def9793c9d6d50aa85d6c9b}{CREATE\_\-BITFIELD} (FLASHIF\_\-PIO\_\-CTL\_\-CMD\_\-BITLANES, 8, 9)
+\item 
+\hyperlink{a00501_abd2c4d0d7ba8b48a983e5e33991771ea}{CREATE\_\-BITFIELD} (FLASHIF\_\-PIO\_\-CTL\_\-ADDR\_\-BITLANES, 10, 11)
+\item 
+\hyperlink{a00501_af3392733f45ae190f8d76372dfc34915}{CREATE\_\-BITFIELD} (FLASHIF\_\-PIO\_\-CTL\_\-DUMMY\_\-BITLANES, 12, 13)
+\item 
+\hyperlink{a00501_abb9bd7dd28d6834de7e09e6be029c759}{CREATE\_\-BITFIELD} (FLASHIF\_\-PIO\_\-CTL\_\-DATA\_\-BITLANES, 14, 15)
+\item 
+\hyperlink{a00501_a114dbc49b1f14a80ac5ba8bcdc90702b}{CREATE\_\-BITFIELD} (FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-NUM, 16, 23)
+\item 
+\hyperlink{a00501_a9e27cad573f52a90684d44953768c020}{CREATE\_\-BITFIELD} (FLASHIF\_\-PIO\_\-CTL\_\-UNUSED2, 24, 31)
+\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga0e52d153a54a5e099ea53b4ab2ba02bc}{GsnFlashIf\_\-PioTxFifoEmptyWait} ()
+\begin{DoxyCompactList}\small\item\em Wait for FlashIf Pio Tx fifo empty. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga31cfba744b7133b256ba57713dc14e0f}{GsnFlashIf\_\-PioTxFifoWrite} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} data)
+\begin{DoxyCompactList}\small\item\em FlashIf Pio Tx fifo write. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga035c5d3ec64ab8e86cacf6cd39762303}{GsnFlashIf\_\-PioRxFifoDataWait} ()
+\begin{DoxyCompactList}\small\item\em Wait for FlashIf Pio Rx fifo Data. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00647_ga3c41c43e8ea5c81f7c5307820685fdaf}{GsnFlashIf\_\-PioRxFifoRead} ()
+\begin{DoxyCompactList}\small\item\em Read FlashIf Pio Rx fifo Data. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga2e7a4bf76eb4e6da69d976bd9337a863}{GsnFlashIf\_\-StatusIdleWait} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Status Idle wait. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga5acfd4e90824451ba8ac4ec7f2aef58e}{GsnFlashIf\_\-PioReq} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Pio Request. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_gafdff247602c68652a230d5335f34f519}{GsnFlashIf\_\-PioRelease} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Pio Release. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00647_ga9bd33077456561b3a74960e3b59fd3a1}{GsnFlashIf\_\-FlashIdRead} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Id Read. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00647_ga48297488ec4d500970cb6950cae78570}{GsnFlashIf\_\-FlashStatusRead} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Status Read. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_gaa4154e89e9e4a898ea3201fe01399563}{GsnFlashIf\_\-FlashWelBitSetWait} ()
+\begin{DoxyCompactList}\small\item\em FlashIf FlashWelBitSetWait. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_gacbb20c31b55b63691495359dad00ccc6}{GsnFlashIf\_\-FlashWelBitClrWait} ()
+\begin{DoxyCompactList}\small\item\em FlashIf FlashWelBitClrWait. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga73f637bd9c4acf82825974b750102043}{GsnFlashIf\_\-FlashWriteEnable} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Write Enable. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_gaa765eb6f46ca5e3787deb574e035a43b}{GsnFlashIf\_\-FlashWriteDisable} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Write Disable. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00647_ga3a7eea5fe3bb3b96a573037b355c0c0e}{GsnFlashIf\_\-FlashStatusWrite} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} val, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} numBytes)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash status Write. \end{DoxyCompactList}\item 
+PUBLIC INLINE VOID \hyperlink{a00501_a7d415448cd70cacfddca202e24c4bb23}{GsnFlashIf\_\-HpmReset} ()
+\item 
+PUBLIC INLINE VOID \hyperlink{a00501_a388105cd1800d0506f951250cf7354e9}{GsnFlashIf\_\-DeepPowerDownRelease} ()
+\item 
+PUBLIC VOID \hyperlink{a00647_gaca0cbeb5224273baff05b9bb8f18f28f}{GsnFlashIf\_\-Init} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Init. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00647_ga2e45a3d239aacf23775f49d45451cb39}{GsnFlashIf\_\-Open} ()
+\begin{DoxyCompactList}\small\item\em FlashIf open. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00647_ga35472b38e5592af65b2c3a043f12804a}{GsnFlashIf\_\-Close} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Close. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_ga9984f334abe4f56660d9c05462bfd0cf}{GsnFlashIf\_\-FlashRegWrite} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} cmd, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} val, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Register Write. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_gaca1b3713dbed6c6ebc74ffd2c690aeea}{GsnFlashIf\_\-FlashErase} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Erase. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00647_gac89f308125de8d40656d8a9e77decc7e}{GsnFlashIf\_\-FlashBulkErase} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Bulk Erase. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_ga204ff2b722664894838958d449b76f0d}{GsnFlashIf\_\-FlashSectorErase} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Sector Erase. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_gaba565cfc9046eef09ab9934e687f6044}{GsnFlashIf\_\-FlashSubsectorErase} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash SubSector Erase. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_ga3998be9c292aba1e22142a3987b5f5c8}{GsnFlashIf\_\-FlashProgram} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pData, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Program. \end{DoxyCompactList}\item 
+PRIVATE VOID \hyperlink{a00647_ga0df0295551b38ea8a75b6bbfa748cde4}{GsnFlashIf\_\-FlashPageProgram} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pData)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Page Program. \end{DoxyCompactList}\item 
+PUBLIC UINT \hyperlink{a00647_ga3ed4044178d723647df832021c3a609d}{GsnFlashIf\_\-FlashRead} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} addr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pData, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blocking)
+\begin{DoxyCompactList}\small\item\em FlashIf Flash Read. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00647_ga0fdd893814aead99338aea969b2cfc0a}{GsnFlashIf\_\-FlashPowerDown} ()
+\begin{DoxyCompactList}\small\item\em FlashIf Flash PowerDown. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00501_aa37d5775a1265f01dfeb546ec298075b}{GsnFlashIf\_\-FlashCheckAndConfigure} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN Flash IF public header. This file contains the public APIs and structures of flash interface driver module. 
+
+Definition in file \hyperlink{a00501_source}{gsn\_\-flash\_\-if.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00501_afbf57cb7ab68e072618c64e3f5710edc}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-DELAY@{GSN\_\-FLASHIF\_\-DELAY}}
+\index{GSN\_\-FLASHIF\_\-DELAY@{GSN\_\-FLASHIF\_\-DELAY}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-DELAY}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-DELAY~10}}
+\label{a00501_afbf57cb7ab68e072618c64e3f5710edc}
+
+
+Definition at line 91 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_ad74448da0c4a43b719fb51724b212002}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-DMA\_\-FASTREAD\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-DMA\_\-FASTREAD\_\-CTL\_\-WORD}}
+\index{GSN\_\-FLASHIF\_\-DMA\_\-FASTREAD\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-DMA\_\-FASTREAD\_\-CTL\_\-WORD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-DMA\_\-FASTREAD\_\-CTL\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-DMA\_\-FASTREAD\_\-CTL\_\-WORD}}
+\label{a00501_ad74448da0c4a43b719fb51724b212002}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_READ) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 3) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 1) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 0) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 0) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 0) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 1) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 294 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_ae7913b164750c89b5861527237f86968}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD}}
+\index{GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD}}
+\label{a00501_ae7913b164750c89b5861527237f86968}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_READ) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 3) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 2) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 2) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 2) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 10) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 308 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a6b34a4b3658f6bb4275412db19e2f597}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD\_\-6DUMMYCYCLES@{GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD\_\-6DUMMYCYCLES}}
+\index{GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD\_\-6DUMMYCYCLES@{GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD\_\-6DUMMYCYCLES}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD\_\-6DUMMYCYCLES}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-DMA\_\-QUADREAD\_\-CTL\_\-WORD\_\-6DUMMYCYCLES}}
+\label{a00501_a6b34a4b3658f6bb4275412db19e2f597}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_READ) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 3) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 2) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 2) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 2) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 6) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 320 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a329a28a5b24cbcebf1677492a510b8a9}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-DMA\_\-READ\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-DMA\_\-READ\_\-CTL\_\-WORD}}
+\index{GSN\_\-FLASHIF\_\-DMA\_\-READ\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-DMA\_\-READ\_\-CTL\_\-WORD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-DMA\_\-READ\_\-CTL\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-DMA\_\-READ\_\-CTL\_\-WORD}}
+\label{a00501_a329a28a5b24cbcebf1677492a510b8a9}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_READ) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 3) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 1) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 0) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 0) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 0) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 0) \
+    | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 280 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_ab7fd0cfaf7e0dc856a389a06650cab92}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-BE@{GSN\_\-FLASHIF\_\-FLASH\_\-BE}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-BE@{GSN\_\-FLASHIF\_\-FLASH\_\-BE}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-BE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-BE~0xC7}}
+\label{a00501_ab7fd0cfaf7e0dc856a389a06650cab92}
+
+
+Definition at line 387 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_af38bcd1228c1bb46d9d949bb2c207027}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE4X\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE4X\_\-CTL\_\-WORD}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE4X\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE4X\_\-CTL\_\-WORD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE4X\_\-CTL\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE4X\_\-CTL\_\-WORD}}
+\label{a00501_af38bcd1228c1bb46d9d949bb2c207027}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_WRITE) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 3) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 4) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 189 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_af14e1b5c6e46794277b498c70f9be271}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE\_\-CTL\_\-WORD}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE\_\-CTL\_\-WORD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE\_\-CTL\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-CMD\_\-ADDR\_\-WRITE\_\-CTL\_\-WORD}}
+\label{a00501_af14e1b5c6e46794277b498c70f9be271}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_WRITE) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 3) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 176 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a82c4245515ddf32d66c496d5c01545c8}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-DEEPPWRDOWNREL\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-DEEPPWRDOWNREL\_\-CTL\_\-WORD}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-DEEPPWRDOWNREL\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-DEEPPWRDOWNREL\_\-CTL\_\-WORD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-DEEPPWRDOWNREL\_\-CTL\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-DEEPPWRDOWNREL\_\-CTL\_\-WORD}}
+\label{a00501_a82c4245515ddf32d66c496d5c01545c8}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_READ) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 241 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a99d00ac36ec9a0a644f5e86b4e9cbf60}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-DP@{GSN\_\-FLASHIF\_\-FLASH\_\-DP}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-DP@{GSN\_\-FLASHIF\_\-FLASH\_\-DP}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-DP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-DP~0xB9}}
+\label{a00501_a99d00ac36ec9a0a644f5e86b4e9cbf60}
+
+
+Definition at line 389 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_af4275dba6f24912447b7129827a5d8bb}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-PP@{GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-PP}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-PP@{GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-PP}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-PP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-PP~0xA2}}
+\label{a00501_af4275dba6f24912447b7129827a5d8bb}
+
+
+Definition at line 383 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a2a496e4eb4b67f9cc17856bd0d4e2cfe}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-READ@{GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-READ}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-READ@{GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-READ}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-READ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-DUAL\_\-FAST\_\-READ~0x3B}}
+\label{a00501_a2a496e4eb4b67f9cc17856bd0d4e2cfe}
+
+
+Definition at line 379 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a17279ad9c99a8da3f12b5db340c8108c}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-FAST\_\-READ@{GSN\_\-FLASHIF\_\-FLASH\_\-FAST\_\-READ}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-FAST\_\-READ@{GSN\_\-FLASHIF\_\-FLASH\_\-FAST\_\-READ}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-FAST\_\-READ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-FAST\_\-READ~0x0B}}
+\label{a00501_a17279ad9c99a8da3f12b5db340c8108c}
+
+
+Definition at line 378 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a8acd7420fe3b33fb01890420fda65a46}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-FASTREAD\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-FASTREAD\_\-CTL\_\-WORD}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-FASTREAD\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-FASTREAD\_\-CTL\_\-WORD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-FASTREAD\_\-CTL\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-FASTREAD\_\-CTL\_\-WORD}}
+\label{a00501_a8acd7420fe3b33fb01890420fda65a46}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_READ) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 3) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 8) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 215 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_aac5384128253000bd94033b0ecb54b8d}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-HPM\_\-RESET@{GSN\_\-FLASHIF\_\-FLASH\_\-HPM\_\-RESET}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-HPM\_\-RESET@{GSN\_\-FLASHIF\_\-FLASH\_\-HPM\_\-RESET}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-HPM\_\-RESET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-HPM\_\-RESET~0xFF}}
+\label{a00501_aac5384128253000bd94033b0ecb54b8d}
+
+
+Definition at line 391 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_aa0142f103c81f61725f292bbe3011531}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-PAGE\_\-SIZE@{GSN\_\-FLASHIF\_\-FLASH\_\-PAGE\_\-SIZE}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-PAGE\_\-SIZE@{GSN\_\-FLASHIF\_\-FLASH\_\-PAGE\_\-SIZE}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-PAGE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-PAGE\_\-SIZE~0x100}}
+\label{a00501_aa0142f103c81f61725f292bbe3011531}
+
+
+Definition at line 83 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a1db4dc7ecffb9be35ce103ae53585c45}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-PP@{GSN\_\-FLASHIF\_\-FLASH\_\-PP}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-PP@{GSN\_\-FLASHIF\_\-FLASH\_\-PP}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-PP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-PP~0x02}}
+\label{a00501_a1db4dc7ecffb9be35ce103ae53585c45}
+
+
+Definition at line 382 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a274fa8a403899c45566125a6feadc764}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-PP@{GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-PP}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-PP@{GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-PP}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-PP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-PP~0x32}}
+\label{a00501_a274fa8a403899c45566125a6feadc764}
+
+
+Definition at line 384 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a8b471319c08ce9bd14a9fa69536845e9}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-READ@{GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-READ}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-READ@{GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-READ}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-READ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-QUAD\_\-FAST\_\-READ~0x6B}}
+\label{a00501_a8b471319c08ce9bd14a9fa69536845e9}
+
+
+Definition at line 380 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a7203fc69dc352828cd9c233bfa927790}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-QUADIO\_\-FAST\_\-READ@{GSN\_\-FLASHIF\_\-FLASH\_\-QUADIO\_\-FAST\_\-READ}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-QUADIO\_\-FAST\_\-READ@{GSN\_\-FLASHIF\_\-FLASH\_\-QUADIO\_\-FAST\_\-READ}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-QUADIO\_\-FAST\_\-READ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-QUADIO\_\-FAST\_\-READ~0xEB}}
+\label{a00501_a7203fc69dc352828cd9c233bfa927790}
+
+
+Definition at line 381 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a1064f47413205b627537f5b62089f921}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-QUADREAD\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-QUADREAD\_\-CTL\_\-WORD}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-QUADREAD\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-QUADREAD\_\-CTL\_\-WORD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-QUADREAD\_\-CTL\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-QUADREAD\_\-CTL\_\-WORD}}
+\label{a00501_a1064f47413205b627537f5b62089f921}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_READ) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 3) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 2) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 2) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 2) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 10) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 228 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a97b8d28c1e49792581b7d20cbeb3b9cc}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-RDID@{GSN\_\-FLASHIF\_\-FLASH\_\-RDID}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-RDID@{GSN\_\-FLASHIF\_\-FLASH\_\-RDID}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-RDID}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-RDID~0x9F}}
+\label{a00501_a97b8d28c1e49792581b7d20cbeb3b9cc}
+
+
+Definition at line 374 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a8cd0d8cabe6736a2e99c2186c853a39f}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-RDSR@{GSN\_\-FLASHIF\_\-FLASH\_\-RDSR}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-RDSR@{GSN\_\-FLASHIF\_\-FLASH\_\-RDSR}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-RDSR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-RDSR~0x05}}
+\label{a00501_a8cd0d8cabe6736a2e99c2186c853a39f}
+
+
+Definition at line 375 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a79c1ea37a5d7bb3e038e7d67837c64ee}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-READ@{GSN\_\-FLASHIF\_\-FLASH\_\-READ}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-READ@{GSN\_\-FLASHIF\_\-FLASH\_\-READ}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-READ}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-READ~0x03}}
+\label{a00501_a79c1ea37a5d7bb3e038e7d67837c64ee}
+
+
+Definition at line 377 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_ae7096c4b9fdda3ba1d4ea1c604c99286}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-READ\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-READ\_\-CTL\_\-WORD}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-READ\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-READ\_\-CTL\_\-WORD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-READ\_\-CTL\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-READ\_\-CTL\_\-WORD}}
+\label{a00501_ae7096c4b9fdda3ba1d4ea1c604c99286}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_READ) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 3) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 202 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a48db0a1a6487d75cc26e47b6ed5aa530}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-READ\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-READ\_\-CTL\_\-WORD}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-READ\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-READ\_\-CTL\_\-WORD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-READ\_\-CTL\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-READ\_\-CTL\_\-WORD}}
+\label{a00501_a48db0a1a6487d75cc26e47b6ed5aa530}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_READ) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 150 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a33e15dee99ee2bf69a56f4b01787c0c3}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-WRITE\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-WRITE\_\-CTL\_\-WORD}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-WRITE\_\-CTL\_\-WORD@{GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-WRITE\_\-CTL\_\-WORD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-WRITE\_\-CTL\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-REG\_\-WRITE\_\-CTL\_\-WORD}}
+\label{a00501_a33e15dee99ee2bf69a56f4b01787c0c3}
+{\bfseries Value:}
+\begin{DoxyCode}
+MAKE_BITFIELD(FLASHIF_PIO_CTL_DIR, GSN_FLASHIF_PIO_CTL_DIR_WRITE) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BYTECOUNT, 1) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BYTECOUNT, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NONZERO, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYCOUNT_CYCLES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_CMD_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_ADDR_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMY_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DATA_BITLANES, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_DUMMYBYTES_NUM, 0) \
+        | MAKE_BITFIELD(FLASHIF_PIO_CTL_UNUSED2, 0)
+\end{DoxyCode}
+
+
+Definition at line 163 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_af16953f77ced6efee096609e6d22201d}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-RES@{GSN\_\-FLASHIF\_\-FLASH\_\-RES}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-RES@{GSN\_\-FLASHIF\_\-FLASH\_\-RES}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-RES}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-RES~0xAB}}
+\label{a00501_af16953f77ced6efee096609e6d22201d}
+
+
+Definition at line 390 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a0c24b2e54b8c103b6a101b70c34de782}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-SE@{GSN\_\-FLASHIF\_\-FLASH\_\-SE}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-SE@{GSN\_\-FLASHIF\_\-FLASH\_\-SE}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-SE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-SE~0xD8}}
+\label{a00501_a0c24b2e54b8c103b6a101b70c34de782}
+
+
+Definition at line 385 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a24325d9d6b609d61108779b248b0ddaa}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-INDEX\_\-TO\_\-ADDR@{GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-INDEX\_\-TO\_\-ADDR}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-INDEX\_\-TO\_\-ADDR@{GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-INDEX\_\-TO\_\-ADDR}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-INDEX\_\-TO\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-INDEX\_\-TO\_\-ADDR(
+\begin{DoxyParamCaption}
+\item[{}]{sectorIndex}
+\end{DoxyParamCaption}
+)~((sectorIndex) $\ast$ GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-SIZE)}}
+\label{a00501_a24325d9d6b609d61108779b248b0ddaa}
+
+
+Definition at line 88 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_ac3666fef80e278fcf941e4bb6d09c71a}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-SIZE@{GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-SIZE}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-SIZE@{GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-SIZE}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-SECTOR\_\-SIZE~0x10000}}
+\label{a00501_ac3666fef80e278fcf941e4bb6d09c71a}
+
+
+Definition at line 82 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_ae96a29a0882c74eb23ccec5f8bacd7e0}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-SSE@{GSN\_\-FLASHIF\_\-FLASH\_\-SSE}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-SSE@{GSN\_\-FLASHIF\_\-FLASH\_\-SSE}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-SSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-SSE~0x20}}
+\label{a00501_ae96a29a0882c74eb23ccec5f8bacd7e0}
+
+
+Definition at line 386 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_aefc555c38511d4a072fcd5a4a6df00d5}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-INDEX\_\-TO\_\-ADDR@{GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-INDEX\_\-TO\_\-ADDR}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-INDEX\_\-TO\_\-ADDR@{GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-INDEX\_\-TO\_\-ADDR}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-INDEX\_\-TO\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-INDEX\_\-TO\_\-ADDR(
+\begin{DoxyParamCaption}
+\item[{}]{subsectorIndex}
+\end{DoxyParamCaption}
+)~((subsectorIndex) $\ast$ GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-SIZE)}}
+\label{a00501_aefc555c38511d4a072fcd5a4a6df00d5}
+
+
+Definition at line 85 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a3a6d61a1bfa4bbe3f67b3932cf5a2f43}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-SIZE@{GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-SIZE}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-SIZE@{GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-SIZE}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-SUBSECTOR\_\-SIZE~0x1000}}
+\label{a00501_a3a6d61a1bfa4bbe3f67b3932cf5a2f43}
+
+
+Definition at line 81 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_aab2968a7a313ab5fb8eb33a9819e90ea}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-VOLCFG@{GSN\_\-FLASHIF\_\-FLASH\_\-VOLCFG}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-VOLCFG@{GSN\_\-FLASHIF\_\-FLASH\_\-VOLCFG}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-VOLCFG}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-VOLCFG~0x81}}
+\label{a00501_aab2968a7a313ab5fb8eb33a9819e90ea}
+
+
+Definition at line 388 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_ad413125ceeb0878fad9e5436ef6d515e}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-WRDI@{GSN\_\-FLASHIF\_\-FLASH\_\-WRDI}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-WRDI@{GSN\_\-FLASHIF\_\-FLASH\_\-WRDI}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-WRDI}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-WRDI~0x04}}
+\label{a00501_ad413125ceeb0878fad9e5436ef6d515e}
+
+
+Definition at line 373 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a34322cbcb7fccb290f6f66cfae69df35}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-WREN@{GSN\_\-FLASHIF\_\-FLASH\_\-WREN}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-WREN@{GSN\_\-FLASHIF\_\-FLASH\_\-WREN}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-WREN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-WREN~0x06}}
+\label{a00501_a34322cbcb7fccb290f6f66cfae69df35}
+
+
+Definition at line 372 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_ab03bcf572199fc61a6f64a7446961708}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-FLASH\_\-WRSR@{GSN\_\-FLASHIF\_\-FLASH\_\-WRSR}}
+\index{GSN\_\-FLASHIF\_\-FLASH\_\-WRSR@{GSN\_\-FLASHIF\_\-FLASH\_\-WRSR}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-FLASH\_\-WRSR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-FLASH\_\-WRSR~0x01}}
+\label{a00501_ab03bcf572199fc61a6f64a7446961708}
+
+
+Definition at line 376 of file gsn\_\-flash\_\-if.h.
+
+\hypertarget{a00501_a4649957b3872f85bd4ef576eb9b3870e}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-WORD\_\-SIZE@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-WORD\_\-SIZE}}
+\index{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-WORD\_\-SIZE@{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-WORD\_\-SIZE}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-WORD\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FLASHIF\_\-PIO\_\-CTL\_\-WORD\_\-SIZE~sizeof({\bf UINT32})}}
+\label{a00501_a4649957b3872f85bd4ef576eb9b3870e}
+
+
+Definition at line 135 of file gsn\_\-flash\_\-if.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00501_ac574964e96e21932c219983ffe865d0f}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}CREATE\_\-BITFIELD (
+\begin{DoxyParamCaption}
+\item[{FLASHIF\_\-PIO\_\-CTL\_\-DIR}]{, }
+\item[{0}]{, }
+\item[{0}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_ac574964e96e21932c219983ffe865d0f}
+\hypertarget{a00501_a8dc5c570a800cbb45e082460e9085bd8}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}CREATE\_\-BITFIELD (
+\begin{DoxyParamCaption}
+\item[{FLASHIF\_\-PIO\_\-CTL\_\-CMD\_\-BYTECOUNT}]{, }
+\item[{1}]{, }
+\item[{2}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_a8dc5c570a800cbb45e082460e9085bd8}
+\hypertarget{a00501_aac30a45d97ea8aa913ba61a794968d8a}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}CREATE\_\-BITFIELD (
+\begin{DoxyParamCaption}
+\item[{FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-NONZERO}]{, }
+\item[{6}]{, }
+\item[{6}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_aac30a45d97ea8aa913ba61a794968d8a}
+\hypertarget{a00501_af3392733f45ae190f8d76372dfc34915}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}CREATE\_\-BITFIELD (
+\begin{DoxyParamCaption}
+\item[{FLASHIF\_\-PIO\_\-CTL\_\-DUMMY\_\-BITLANES}]{, }
+\item[{12}]{, }
+\item[{13}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_af3392733f45ae190f8d76372dfc34915}
+\hypertarget{a00501_abb9bd7dd28d6834de7e09e6be029c759}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}CREATE\_\-BITFIELD (
+\begin{DoxyParamCaption}
+\item[{FLASHIF\_\-PIO\_\-CTL\_\-DATA\_\-BITLANES}]{, }
+\item[{14}]{, }
+\item[{15}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_abb9bd7dd28d6834de7e09e6be029c759}
+\hypertarget{a00501_abdba8e171f084913f6b71eeb7544521b}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}CREATE\_\-BITFIELD (
+\begin{DoxyParamCaption}
+\item[{FLASHIF\_\-PIO\_\-CTL\_\-DUMMYCOUNT\_\-CYCLES}]{, }
+\item[{7}]{, }
+\item[{7}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_abdba8e171f084913f6b71eeb7544521b}
+\hypertarget{a00501_a114dbc49b1f14a80ac5ba8bcdc90702b}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}CREATE\_\-BITFIELD (
+\begin{DoxyParamCaption}
+\item[{FLASHIF\_\-PIO\_\-CTL\_\-DUMMYBYTES\_\-NUM}]{, }
+\item[{16}]{, }
+\item[{23}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_a114dbc49b1f14a80ac5ba8bcdc90702b}
+\hypertarget{a00501_a9e27cad573f52a90684d44953768c020}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}CREATE\_\-BITFIELD (
+\begin{DoxyParamCaption}
+\item[{FLASHIF\_\-PIO\_\-CTL\_\-UNUSED2}]{, }
+\item[{24}]{, }
+\item[{31}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_a9e27cad573f52a90684d44953768c020}
+\hypertarget{a00501_a12cb43657bbade809ac784e832f8100f}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}CREATE\_\-BITFIELD (
+\begin{DoxyParamCaption}
+\item[{FLASHIF\_\-PIO\_\-CTL\_\-ADDR\_\-BYTECOUNT}]{, }
+\item[{3}]{, }
+\item[{5}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_a12cb43657bbade809ac784e832f8100f}
+\hypertarget{a00501_a09d84b947def9793c9d6d50aa85d6c9b}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}CREATE\_\-BITFIELD (
+\begin{DoxyParamCaption}
+\item[{FLASHIF\_\-PIO\_\-CTL\_\-CMD\_\-BITLANES}]{, }
+\item[{8}]{, }
+\item[{9}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_a09d84b947def9793c9d6d50aa85d6c9b}
+\hypertarget{a00501_abd2c4d0d7ba8b48a983e5e33991771ea}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}}
+\index{CREATE\_\-BITFIELD@{CREATE\_\-BITFIELD}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{CREATE\_\-BITFIELD}]{\setlength{\rightskip}{0pt plus 5cm}CREATE\_\-BITFIELD (
+\begin{DoxyParamCaption}
+\item[{FLASHIF\_\-PIO\_\-CTL\_\-ADDR\_\-BITLANES}]{, }
+\item[{10}]{, }
+\item[{11}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_abd2c4d0d7ba8b48a983e5e33991771ea}
+\hypertarget{a00501_a388105cd1800d0506f951250cf7354e9}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GsnFlashIf\_\-DeepPowerDownRelease@{GsnFlashIf\_\-DeepPowerDownRelease}}
+\index{GsnFlashIf\_\-DeepPowerDownRelease@{GsnFlashIf\_\-DeepPowerDownRelease}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GsnFlashIf\_\-DeepPowerDownRelease}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-DeepPowerDownRelease (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_a388105cd1800d0506f951250cf7354e9}
+
+
+Definition at line 787 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00501_a388105cd1800d0506f951250cf7354e9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00501_aa37d5775a1265f01dfeb546ec298075b}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GsnFlashIf\_\-FlashCheckAndConfigure@{GsnFlashIf\_\-FlashCheckAndConfigure}}
+\index{GsnFlashIf\_\-FlashCheckAndConfigure@{GsnFlashIf\_\-FlashCheckAndConfigure}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GsnFlashIf\_\-FlashCheckAndConfigure}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf BOOL} GsnFlashIf\_\-FlashCheckAndConfigure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_aa37d5775a1265f01dfeb546ec298075b}
+\hypertarget{a00501_a7d415448cd70cacfddca202e24c4bb23}{
+\index{gsn\_\-flash\_\-if.h@{gsn\_\-flash\_\-if.h}!GsnFlashIf\_\-HpmReset@{GsnFlashIf\_\-HpmReset}}
+\index{GsnFlashIf\_\-HpmReset@{GsnFlashIf\_\-HpmReset}!gsn_flash_if.h@{gsn\_\-flash\_\-if.h}}
+\subsubsection[{GsnFlashIf\_\-HpmReset}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnFlashIf\_\-HpmReset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00501_a7d415448cd70cacfddca202e24c4bb23}
+
+
+Definition at line 770 of file gsn\_\-flash\_\-if.h.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00501_a7d415448cd70cacfddca202e24c4bb23_cgraph}
+\end{center}
+\end{figure}
+
+

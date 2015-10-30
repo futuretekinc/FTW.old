@@ -1,0 +1,263 @@
+\hypertarget{a00479}{
+\section{gsn\_\-coap\_\-impl.h File Reference}
+\label{a00479}\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}}
+}
+{\ttfamily \#include $<$..$\backslash$..$\backslash$..$\backslash$src$\backslash$modules$\backslash$coap$\backslash$libcoap-\/4.0.1$\backslash$net.h$>$}\par
+{\ttfamily \#include \char`\"{}gsn\_\-pdu\_\-impl.h\char`\"{}}\par
+{\ttfamily \#include $<$gsn\_\-includes.h$>$}\par
+Include dependency graph for gsn\_\-coap\_\-impl.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00704}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{a00705}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned short \hyperlink{a00479_adc7d7e60daa14476026edb6edc26b0d6}{gsn\_\-coap\_\-tid}
+\item 
+typedef coap\_\-context\_\-t \hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T}
+\item 
+typedef coap\_\-address\_\-t \hyperlink{a00479_a5fe762c7fbc5387bb76de5d8adfc1bc4}{GSN\_\-COAP\_\-ADDR\_\-T}
+\item 
+typedef void($\ast$ \hyperlink{a00479_ab7f36da79cbe8ef013039d64a86a29ae}{GsnCoap\_\-Response\_\-Handler} )(\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$, const \hyperlink{a00479_a5fe762c7fbc5387bb76de5d8adfc1bc4}{GSN\_\-COAP\_\-ADDR\_\-T} $\ast$remote, \hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$sent, \hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$received, const \hyperlink{a00479_adc7d7e60daa14476026edb6edc26b0d6}{gsn\_\-coap\_\-tid} id)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$ \hyperlink{a00479_aff67506d5b81c42a53368b09856be56e}{GsnCoap\_\-New\_\-Context} ()
+\item 
+\hyperlink{a00479_adc7d7e60daa14476026edb6edc26b0d6}{gsn\_\-coap\_\-tid} \hyperlink{a00479_ae722562a1324ca9ce95ad65d039b9fcf}{GsnCoap\_\-Send} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$context, \hyperlink{a00479_a5fe762c7fbc5387bb76de5d8adfc1bc4}{GSN\_\-COAP\_\-ADDR\_\-T} $\ast$dest, \hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$pdu)
+\item 
+int \hyperlink{a00479_a2e15eb777cbf63ad9f6441fb0c9a04b2}{GsnCoap\_\-Read} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$context)
+\item 
+\hyperlink{a00479_adc7d7e60daa14476026edb6edc26b0d6}{gsn\_\-coap\_\-tid} \hyperlink{a00479_accf0e4d45506f9eb32268fcfbbd5b7f9}{GsnCoap\_\-Send\_\-Ack} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$context, const \hyperlink{a00479_a5fe762c7fbc5387bb76de5d8adfc1bc4}{GSN\_\-COAP\_\-ADDR\_\-T} $\ast$dst, \hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$request)
+\item 
+void \hyperlink{a00479_a55363ad52ad92baa3b4360a556cc27a4}{GsnCoap\_\-Free\_\-Context} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$context)
+\item 
+\hyperlink{a00479_adc7d7e60daa14476026edb6edc26b0d6}{gsn\_\-coap\_\-tid} \hyperlink{a00479_ae120897768373f4ce0d91bfce3ffb5aa}{GsnCoap\_\-Send\_\-Rst} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$context, const \hyperlink{a00479_a5fe762c7fbc5387bb76de5d8adfc1bc4}{GSN\_\-COAP\_\-ADDR\_\-T} $\ast$dst, \hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$request)
+\item 
+void \hyperlink{a00479_a97a4082c767911e4bd31c18140f020ec}{GsnCoap\_\-Dispatch} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$context)
+\item 
+int \hyperlink{a00479_a7faa0494ebe3e18e64b996b6d98ffa1f}{GsnCoap\_\-Can\_\-Exit} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$context)
+\item 
+void \hyperlink{a00479_a9864cd63d09c74e0628a62dbbfe942c8}{GsnCoap\_\-Register\_\-Response\_\-Handler} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$context, \hyperlink{a00479_ab7f36da79cbe8ef013039d64a86a29ae}{GsnCoap\_\-Response\_\-Handler} handler)
+\item 
+void \hyperlink{a00479_acab092ce28c8e8bcf6c0589b088e8a54}{GsnCoap\_\-Retransmit\_\-ProcessResponse} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$context)
+\item 
+void \hyperlink{a00479_aa827f547f0fb4491a962d03f4726a6be}{GSnCoap\_\-transaction\_\-id} (const \hyperlink{a00479_a5fe762c7fbc5387bb76de5d8adfc1bc4}{GSN\_\-COAP\_\-ADDR\_\-T} $\ast$peer, const \hyperlink{a00538_afde87a99bfaad4a8beac3df27a309976}{GSN\_\-COAP\_\-PDU\_\-T} $\ast$pdu, \hyperlink{a00479_adc7d7e60daa14476026edb6edc26b0d6}{gsn\_\-coap\_\-tid} $\ast$id)
+\item 
+\hyperlink{a00479_a5fe762c7fbc5387bb76de5d8adfc1bc4}{GSN\_\-COAP\_\-ADDR\_\-T} $\ast$ \hyperlink{a00479_a9fed8142f75934e3d2a3f350fb71bc75}{GsnCoap\_\-Fill\_\-IpAddress} (char $\ast$address, int port)
+\item 
+int \hyperlink{a00479_a87e33c083c77555cbe5458cf7f7711a6}{GsnCoap\_\-Read\_\-With\_\-Timeout} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$context, int timeout)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00479_a5fe762c7fbc5387bb76de5d8adfc1bc4}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GSN\_\-COAP\_\-ADDR\_\-T@{GSN\_\-COAP\_\-ADDR\_\-T}}
+\index{GSN\_\-COAP\_\-ADDR\_\-T@{GSN\_\-COAP\_\-ADDR\_\-T}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-ADDR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef coap\_\-address\_\-t {\bf GSN\_\-COAP\_\-ADDR\_\-T}}}
+\label{a00479_a5fe762c7fbc5387bb76de5d8adfc1bc4}
+
+
+Definition at line 46 of file gsn\_\-coap\_\-impl.h.
+
+\hypertarget{a00479_ab529666f5a53e57a0760df584886eb5b}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GSN\_\-COAP\_\-CONTEXT\_\-T@{GSN\_\-COAP\_\-CONTEXT\_\-T}}
+\index{GSN\_\-COAP\_\-CONTEXT\_\-T@{GSN\_\-COAP\_\-CONTEXT\_\-T}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GSN\_\-COAP\_\-CONTEXT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef coap\_\-context\_\-t {\bf GSN\_\-COAP\_\-CONTEXT\_\-T}}}
+\label{a00479_ab529666f5a53e57a0760df584886eb5b}
+
+
+Definition at line 44 of file gsn\_\-coap\_\-impl.h.
+
+\hypertarget{a00479_adc7d7e60daa14476026edb6edc26b0d6}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!gsn\_\-coap\_\-tid@{gsn\_\-coap\_\-tid}}
+\index{gsn\_\-coap\_\-tid@{gsn\_\-coap\_\-tid}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{gsn\_\-coap\_\-tid}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf gsn\_\-coap\_\-tid}}}
+\label{a00479_adc7d7e60daa14476026edb6edc26b0d6}
+
+
+Definition at line 41 of file gsn\_\-coap\_\-impl.h.
+
+\hypertarget{a00479_ab7f36da79cbe8ef013039d64a86a29ae}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Response\_\-Handler@{GsnCoap\_\-Response\_\-Handler}}
+\index{GsnCoap\_\-Response\_\-Handler@{GsnCoap\_\-Response\_\-Handler}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Response\_\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf GsnCoap\_\-Response\_\-Handler})({\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$, const {\bf GSN\_\-COAP\_\-ADDR\_\-T} $\ast$remote, {\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$sent, {\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$received, const {\bf gsn\_\-coap\_\-tid} id)}}
+\label{a00479_ab7f36da79cbe8ef013039d64a86a29ae}
+Message handler that is used as call-\/back in GSN\_\-COAP\_\-CONTEXT\_\-T 
+
+Definition at line 101 of file gsn\_\-coap\_\-impl.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00479_a7faa0494ebe3e18e64b996b6d98ffa1f}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Can\_\-Exit@{GsnCoap\_\-Can\_\-Exit}}
+\index{GsnCoap\_\-Can\_\-Exit@{GsnCoap\_\-Can\_\-Exit}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Can\_\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}int GsnCoap\_\-Can\_\-Exit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_a7faa0494ebe3e18e64b996b6d98ffa1f}
+Returns 1 if there are no messages to send or to dispatch in the context's queues. \hypertarget{a00479_a97a4082c767911e4bd31c18140f020ec}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Dispatch@{GsnCoap\_\-Dispatch}}
+\index{GsnCoap\_\-Dispatch@{GsnCoap\_\-Dispatch}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}void GsnCoap\_\-Dispatch (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_a97a4082c767911e4bd31c18140f020ec}
+Dispatches the PDUs from the receive queue in given context. \hypertarget{a00479_a9fed8142f75934e3d2a3f350fb71bc75}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Fill\_\-IpAddress@{GsnCoap\_\-Fill\_\-IpAddress}}
+\index{GsnCoap\_\-Fill\_\-IpAddress@{GsnCoap\_\-Fill\_\-IpAddress}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Fill\_\-IpAddress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-COAP\_\-ADDR\_\-T}$\ast$ GsnCoap\_\-Fill\_\-IpAddress (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{address, }
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_a9fed8142f75934e3d2a3f350fb71bc75}
+\hypertarget{a00479_a55363ad52ad92baa3b4360a556cc27a4}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Free\_\-Context@{GsnCoap\_\-Free\_\-Context}}
+\index{GsnCoap\_\-Free\_\-Context@{GsnCoap\_\-Free\_\-Context}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Free\_\-Context}]{\setlength{\rightskip}{0pt plus 5cm}void GsnCoap\_\-Free\_\-Context (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_a55363ad52ad92baa3b4360a556cc27a4}
+\hypertarget{a00479_aff67506d5b81c42a53368b09856be56e}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-New\_\-Context@{GsnCoap\_\-New\_\-Context}}
+\index{GsnCoap\_\-New\_\-Context@{GsnCoap\_\-New\_\-Context}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-New\_\-Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-COAP\_\-CONTEXT\_\-T}$\ast$ GsnCoap\_\-New\_\-Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_aff67506d5b81c42a53368b09856be56e}
+This function Starts the COAP connection.Further this connection can be used to read or write CoAP messages to a specified destination. This call supports both Confirmable and Non Confirmable connections Returns a new CoAP context
+
+\begin{DoxyReturn}{Returns}
+GSN\_\-COAP\_\-CONTEXT\_\-T Coap context object is returned 
+\end{DoxyReturn}
+\hypertarget{a00479_a2e15eb777cbf63ad9f6441fb0c9a04b2}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Read@{GsnCoap\_\-Read}}
+\index{GsnCoap\_\-Read@{GsnCoap\_\-Read}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Read}]{\setlength{\rightskip}{0pt plus 5cm}int GsnCoap\_\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_a2e15eb777cbf63ad9f6441fb0c9a04b2}
+\hypertarget{a00479_a87e33c083c77555cbe5458cf7f7711a6}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Read\_\-With\_\-Timeout@{GsnCoap\_\-Read\_\-With\_\-Timeout}}
+\index{GsnCoap\_\-Read\_\-With\_\-Timeout@{GsnCoap\_\-Read\_\-With\_\-Timeout}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Read\_\-With\_\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}int GsnCoap\_\-Read\_\-With\_\-Timeout (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{context, }
+\item[{int}]{timeout}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_a87e33c083c77555cbe5458cf7f7711a6}
+\hypertarget{a00479_a9864cd63d09c74e0628a62dbbfe942c8}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Register\_\-Response\_\-Handler@{GsnCoap\_\-Register\_\-Response\_\-Handler}}
+\index{GsnCoap\_\-Register\_\-Response\_\-Handler@{GsnCoap\_\-Register\_\-Response\_\-Handler}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Register\_\-Response\_\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void GsnCoap\_\-Register\_\-Response\_\-Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{context, }
+\item[{{\bf GsnCoap\_\-Response\_\-Handler}}]{handler}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_a9864cd63d09c74e0628a62dbbfe942c8}
+\hypertarget{a00479_acab092ce28c8e8bcf6c0589b088e8a54}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Retransmit\_\-ProcessResponse@{GsnCoap\_\-Retransmit\_\-ProcessResponse}}
+\index{GsnCoap\_\-Retransmit\_\-ProcessResponse@{GsnCoap\_\-Retransmit\_\-ProcessResponse}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Retransmit\_\-ProcessResponse}]{\setlength{\rightskip}{0pt plus 5cm}void GsnCoap\_\-Retransmit\_\-ProcessResponse (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_acab092ce28c8e8bcf6c0589b088e8a54}
+\hypertarget{a00479_ae722562a1324ca9ce95ad65d039b9fcf}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Send@{GsnCoap\_\-Send}}
+\index{GsnCoap\_\-Send@{GsnCoap\_\-Send}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gsn\_\-coap\_\-tid} GsnCoap\_\-Send (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{context, }
+\item[{{\bf GSN\_\-COAP\_\-ADDR\_\-T} $\ast$}]{dest, }
+\item[{{\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$}]{pdu}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_ae722562a1324ca9ce95ad65d039b9fcf}
+\hypertarget{a00479_accf0e4d45506f9eb32268fcfbbd5b7f9}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Send\_\-Ack@{GsnCoap\_\-Send\_\-Ack}}
+\index{GsnCoap\_\-Send\_\-Ack@{GsnCoap\_\-Send\_\-Ack}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Send\_\-Ack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gsn\_\-coap\_\-tid} GsnCoap\_\-Send\_\-Ack (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{context, }
+\item[{const {\bf GSN\_\-COAP\_\-ADDR\_\-T} $\ast$}]{dst, }
+\item[{{\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$}]{request}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_accf0e4d45506f9eb32268fcfbbd5b7f9}
+\hypertarget{a00479_ae120897768373f4ce0d91bfce3ffb5aa}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GsnCoap\_\-Send\_\-Rst@{GsnCoap\_\-Send\_\-Rst}}
+\index{GsnCoap\_\-Send\_\-Rst@{GsnCoap\_\-Send\_\-Rst}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GsnCoap\_\-Send\_\-Rst}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gsn\_\-coap\_\-tid} GsnCoap\_\-Send\_\-Rst (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{context, }
+\item[{const {\bf GSN\_\-COAP\_\-ADDR\_\-T} $\ast$}]{dst, }
+\item[{{\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$}]{request}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_ae120897768373f4ce0d91bfce3ffb5aa}
+Sends an RST message with code {\ttfamily 0} for the specified {\ttfamily request} to {\ttfamily dst}. This function returns the corresponding transaction id if the message was sent or {\ttfamily COAP\_\-INVALID\_\-TID} on error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The context to use. \\
+\hline
+{\em dst} & The destination address. \\
+\hline
+{\em request} & The request to be reset.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The transaction id if RST was sent or {\ttfamily COAP\_\-INVALID\_\-TID} on error. 
+\end{DoxyReturn}
+\hypertarget{a00479_aa827f547f0fb4491a962d03f4726a6be}{
+\index{gsn\_\-coap\_\-impl.h@{gsn\_\-coap\_\-impl.h}!GSnCoap\_\-transaction\_\-id@{GSnCoap\_\-transaction\_\-id}}
+\index{GSnCoap\_\-transaction\_\-id@{GSnCoap\_\-transaction\_\-id}!gsn_coap_impl.h@{gsn\_\-coap\_\-impl.h}}
+\subsubsection[{GSnCoap\_\-transaction\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}void GSnCoap\_\-transaction\_\-id (
+\begin{DoxyParamCaption}
+\item[{const {\bf GSN\_\-COAP\_\-ADDR\_\-T} $\ast$}]{peer, }
+\item[{const {\bf GSN\_\-COAP\_\-PDU\_\-T} $\ast$}]{pdu, }
+\item[{{\bf gsn\_\-coap\_\-tid} $\ast$}]{id}
+\end{DoxyParamCaption}
+)}}
+\label{a00479_aa827f547f0fb4491a962d03f4726a6be}
+Calculates a unique transaction id from given arguments {\ttfamily peer} and {\ttfamily pdu}. The id is returned in {\ttfamily id}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em peer} & The remote party who sent {\ttfamily pdu}. \\
+\hline
+{\em pdu} & The message that initiated the transaction. \\
+\hline
+{\em id} & Set to the new id. \\
+\hline
+\end{DoxyParams}

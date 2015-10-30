@@ -1,0 +1,364 @@
+\hypertarget{a00496}{
+\section{gsn\_\-ext\_\-flash\_\-driver.h File Reference}
+\label{a00496}\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00726}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00496_a2e9d396cf9751f126bb75703264ffe22}{GSN\_\-SERIAL\_\-FLASH\_\-APP\_\-START\_\-LOCATION}~0x00060000
+\item 
+\#define \hyperlink{a00496_a6fe277ae9982666f92a5ce2ee623228b}{GSN\_\-EXT\_\-FLASH\_\-MAX\_\-READ\_\-SIZE}~1024
+\item 
+\#define \hyperlink{a00496_a84d812f8d1343cffc3524235f29193ef}{GSN\_\-EXT\_\-FLASH\_\-MAX\_\-WRITE\_\-SIZE}~256
+\item 
+\#define \hyperlink{a00496_a6c36bc07fc8bb1cfddadb07cc7c11057}{WIP}~0x01
+\item 
+\#define \hyperlink{a00496_a2499a677769162b2db9424c0db4c4726}{OPCODE\_\-WREN}~0x06
+\item 
+\#define \hyperlink{a00496_a6ae63072814b0a02c13ae656414436dc}{OPCODE\_\-WRDI}~0x04
+\item 
+\#define \hyperlink{a00496_aa2e0d9ec33e0196631fd677bdf2c539e}{OPCODE\_\-RDSR}~0x05
+\item 
+\#define \hyperlink{a00496_ae79c88f89c9e30942e5aad16d6c68fec}{OPCODE\_\-WRSR}~0x01
+\item 
+\#define \hyperlink{a00496_a53a39a0edaa5fc54b0cf28e4965ada63}{OPCODE\_\-READ}~0x03
+\item 
+\#define \hyperlink{a00496_a190a2117b2ed1073af355e4d90d5ee23}{OPCODE\_\-FAST\_\-READ}~0x0B
+\item 
+\#define \hyperlink{a00496_a3e3acee61fdd12daea9633cbf82ddd86}{OPCODE\_\-PP}~0x02
+\item 
+\#define \hyperlink{a00496_aa22f3d73ba8ba4cea869c3526e2557ea}{OPCODE\_\-SE}~0x20
+\item 
+\#define \hyperlink{a00496_a5416ef17d7dca4bd942b39e05571cc0f}{OPCODE\_\-32BE}~0x52
+\item 
+\#define \hyperlink{a00496_a85cd9f0f5ccb723e21f141a5bc1052d0}{OPCODE\_\-64BE}~0xD8
+\item 
+\#define \hyperlink{a00496_a167172ea361250e989670f06208a3fb3}{OPCODE\_\-CE}~0x60
+\item 
+\#define \hyperlink{a00496_aa2192e62ba531b168de0f2ced5ca0b0c}{OPCODE\_\-DP}~0xb9
+\item 
+\#define \hyperlink{a00496_a1d08eaf1ec3802e1dabb1fc178c87335}{OPCODE\_\-RES}~0xab
+\item 
+\#define \hyperlink{a00496_a3cf8e44b3ab3cc715aa8675fe8376758}{GSN\_\-EXTFLASH\_\-FLASH\_\-PAGE\_\-SIZE}~0x100
+\item 
+\#define \hyperlink{a00496_ac08f086dea3e2c40d9f74cbbbd0e2a0c}{GSN\_\-EXTFLASH\_\-FAILURE}~-\/1
+\item 
+\#define \hyperlink{a00496_af30bc8c03f49335bd37cbea966f04ee1}{GSN\_\-EXTFLASH\_\-SUCCESS}~0
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00496_a78eb37149520ca722a842d9d7634d842}{GSN\_\-FLASH\_\-SPI\_\-FLAG} \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}
+\item 
+typedef enum \hyperlink{a00496_aa52f9dfb770e5b9fb72da1dce229b396}{GSN\_\-EXTFLASH\_\-STATUS} \hyperlink{a00496_a880714aa4bccea65a8e3d427e9e395da}{GSN\_\-EXTFLASH\_\-STATUS\_\-T}
+\item 
+typedef struct \hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX} \hyperlink{a00496_a200382e5889d0c036a3205e38b2666cb}{GSN\_\-EXTFLASH\_\-CTX\_\-T}
+\item 
+typedef VOID($\ast$ \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} )(VOID $\ast$context, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} status)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00496_a78eb37149520ca722a842d9d7634d842}{GSN\_\-FLASH\_\-SPI\_\-FLAG} \{ \par
+\hyperlink{a00496_a78eb37149520ca722a842d9d7634d842a55c00985e020036d0fc78c8fdf55da43}{GSN\_\-FLASH\_\-SPI\_\-POLL}, 
+\par
+\hyperlink{a00496_a78eb37149520ca722a842d9d7634d842a755b8879e5d40e0556e722180ba309f2}{GSN\_\-FLASH\_\-SPI\_\-DMA}
+ \}
+\item 
+enum \hyperlink{a00496_aa52f9dfb770e5b9fb72da1dce229b396}{GSN\_\-EXTFLASH\_\-STATUS} \{ \par
+\hyperlink{a00496_aa52f9dfb770e5b9fb72da1dce229b396a1bf08415ebd0b6f202a5098833461689}{EXTFLASH\_\-NOT\_\-INITIALIZED}, 
+\par
+\hyperlink{a00496_aa52f9dfb770e5b9fb72da1dce229b396a22366d2634a3ce193da3d2707e4b772b}{EXTFLASH\_\-INITIALIZED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00664_gadcfa064597618fbf7cb4c1bac30f4bc8}{GsnExtFlash\_\-Init} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00587_a8158d263babcdfe1b3b113e23acd1bf7}{GSN\_\-SPI\_\-NUM\_\-T} spiPortNumber, \hyperlink{a00231}{GSN\_\-SPI\_\-CONFIG\_\-T} $\ast$spiConfig, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag)
+\begin{DoxyCompactList}\small\item\em serial flash config init. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00664_ga969314425ebd66d21301f5e2a681dee3}{GsnExtFlash\_\-Read} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} readAddr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$dataBuf, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em read the external flash memory using poll and DMA. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00664_ga1e65016bc9bc6e7f219148b64b94213e}{GsnExtFlash\_\-Write} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} writeAddr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$dataBuf, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em page boundary calculation to write data on the external flash memory. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00664_ga8f346bfff1d200c13547335c5e15ee21}{GsnExtFlash\_\-Erase} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} eraseSectorAddr, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em Erase the external flash memory using poll. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00664_gafe4645cffc8fea4258121afb22b7710a}{GsnExtFlash\_\-ChipErase} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em Erase the external flash memory using poll. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00664_gac7cc4c60e6c57cc8516f0657f294e9f8}{GsnExtFlash\_\-32KErase} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} eraseBlockAddr, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em Erase the external flash memory using poll. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00664_ga62708c304046ad8a906a0152cc3487ba}{GsnExtFlash\_\-64KErase} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} eraseBlockAddr, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em Erase the external flash memory using poll. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00664_ga3d33b60e6c2f80993970911c991a899f}{GsnExtFlash\_\-SpiReadWrite} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$rxBuf, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$txBuf, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em SPI Read Write of data with respect to size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00496_a6fe277ae9982666f92a5ce2ee623228b}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-EXT\_\-FLASH\_\-MAX\_\-READ\_\-SIZE@{GSN\_\-EXT\_\-FLASH\_\-MAX\_\-READ\_\-SIZE}}
+\index{GSN\_\-EXT\_\-FLASH\_\-MAX\_\-READ\_\-SIZE@{GSN\_\-EXT\_\-FLASH\_\-MAX\_\-READ\_\-SIZE}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-EXT\_\-FLASH\_\-MAX\_\-READ\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-EXT\_\-FLASH\_\-MAX\_\-READ\_\-SIZE~1024}}
+\label{a00496_a6fe277ae9982666f92a5ce2ee623228b}
+
+
+Definition at line 74 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a84d812f8d1343cffc3524235f29193ef}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-EXT\_\-FLASH\_\-MAX\_\-WRITE\_\-SIZE@{GSN\_\-EXT\_\-FLASH\_\-MAX\_\-WRITE\_\-SIZE}}
+\index{GSN\_\-EXT\_\-FLASH\_\-MAX\_\-WRITE\_\-SIZE@{GSN\_\-EXT\_\-FLASH\_\-MAX\_\-WRITE\_\-SIZE}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-EXT\_\-FLASH\_\-MAX\_\-WRITE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-EXT\_\-FLASH\_\-MAX\_\-WRITE\_\-SIZE~256}}
+\label{a00496_a84d812f8d1343cffc3524235f29193ef}
+
+
+Definition at line 75 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_ac08f086dea3e2c40d9f74cbbbd0e2a0c}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-EXTFLASH\_\-FAILURE@{GSN\_\-EXTFLASH\_\-FAILURE}}
+\index{GSN\_\-EXTFLASH\_\-FAILURE@{GSN\_\-EXTFLASH\_\-FAILURE}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-EXTFLASH\_\-FAILURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-EXTFLASH\_\-FAILURE~-\/1}}
+\label{a00496_ac08f086dea3e2c40d9f74cbbbd0e2a0c}
+
+
+Definition at line 95 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a3cf8e44b3ab3cc715aa8675fe8376758}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-EXTFLASH\_\-FLASH\_\-PAGE\_\-SIZE@{GSN\_\-EXTFLASH\_\-FLASH\_\-PAGE\_\-SIZE}}
+\index{GSN\_\-EXTFLASH\_\-FLASH\_\-PAGE\_\-SIZE@{GSN\_\-EXTFLASH\_\-FLASH\_\-PAGE\_\-SIZE}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-EXTFLASH\_\-FLASH\_\-PAGE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-EXTFLASH\_\-FLASH\_\-PAGE\_\-SIZE~0x100}}
+\label{a00496_a3cf8e44b3ab3cc715aa8675fe8376758}
+
+
+Definition at line 93 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_af30bc8c03f49335bd37cbea966f04ee1}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-EXTFLASH\_\-SUCCESS@{GSN\_\-EXTFLASH\_\-SUCCESS}}
+\index{GSN\_\-EXTFLASH\_\-SUCCESS@{GSN\_\-EXTFLASH\_\-SUCCESS}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-EXTFLASH\_\-SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-EXTFLASH\_\-SUCCESS~0}}
+\label{a00496_af30bc8c03f49335bd37cbea966f04ee1}
+
+
+Definition at line 96 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a2e9d396cf9751f126bb75703264ffe22}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-SERIAL\_\-FLASH\_\-APP\_\-START\_\-LOCATION@{GSN\_\-SERIAL\_\-FLASH\_\-APP\_\-START\_\-LOCATION}}
+\index{GSN\_\-SERIAL\_\-FLASH\_\-APP\_\-START\_\-LOCATION@{GSN\_\-SERIAL\_\-FLASH\_\-APP\_\-START\_\-LOCATION}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-SERIAL\_\-FLASH\_\-APP\_\-START\_\-LOCATION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SERIAL\_\-FLASH\_\-APP\_\-START\_\-LOCATION~0x00060000}}
+\label{a00496_a2e9d396cf9751f126bb75703264ffe22}
+
+
+Definition at line 72 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a5416ef17d7dca4bd942b39e05571cc0f}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-32BE@{OPCODE\_\-32BE}}
+\index{OPCODE\_\-32BE@{OPCODE\_\-32BE}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-32BE}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-32BE~0x52}}
+\label{a00496_a5416ef17d7dca4bd942b39e05571cc0f}
+
+
+Definition at line 87 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a85cd9f0f5ccb723e21f141a5bc1052d0}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-64BE@{OPCODE\_\-64BE}}
+\index{OPCODE\_\-64BE@{OPCODE\_\-64BE}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-64BE}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-64BE~0xD8}}
+\label{a00496_a85cd9f0f5ccb723e21f141a5bc1052d0}
+
+
+Definition at line 88 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a167172ea361250e989670f06208a3fb3}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-CE@{OPCODE\_\-CE}}
+\index{OPCODE\_\-CE@{OPCODE\_\-CE}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-CE}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-CE~0x60}}
+\label{a00496_a167172ea361250e989670f06208a3fb3}
+
+
+Definition at line 89 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_aa2192e62ba531b168de0f2ced5ca0b0c}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-DP@{OPCODE\_\-DP}}
+\index{OPCODE\_\-DP@{OPCODE\_\-DP}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-DP}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-DP~0xb9}}
+\label{a00496_aa2192e62ba531b168de0f2ced5ca0b0c}
+
+
+Definition at line 90 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a190a2117b2ed1073af355e4d90d5ee23}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-FAST\_\-READ@{OPCODE\_\-FAST\_\-READ}}
+\index{OPCODE\_\-FAST\_\-READ@{OPCODE\_\-FAST\_\-READ}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-FAST\_\-READ}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-FAST\_\-READ~0x0B}}
+\label{a00496_a190a2117b2ed1073af355e4d90d5ee23}
+
+
+Definition at line 84 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a3e3acee61fdd12daea9633cbf82ddd86}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-PP@{OPCODE\_\-PP}}
+\index{OPCODE\_\-PP@{OPCODE\_\-PP}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-PP}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-PP~0x02}}
+\label{a00496_a3e3acee61fdd12daea9633cbf82ddd86}
+
+
+Definition at line 85 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_aa2e0d9ec33e0196631fd677bdf2c539e}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-RDSR@{OPCODE\_\-RDSR}}
+\index{OPCODE\_\-RDSR@{OPCODE\_\-RDSR}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-RDSR}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-RDSR~0x05}}
+\label{a00496_aa2e0d9ec33e0196631fd677bdf2c539e}
+
+
+Definition at line 81 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a53a39a0edaa5fc54b0cf28e4965ada63}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-READ@{OPCODE\_\-READ}}
+\index{OPCODE\_\-READ@{OPCODE\_\-READ}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-READ}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-READ~0x03}}
+\label{a00496_a53a39a0edaa5fc54b0cf28e4965ada63}
+
+
+Definition at line 83 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a1d08eaf1ec3802e1dabb1fc178c87335}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-RES@{OPCODE\_\-RES}}
+\index{OPCODE\_\-RES@{OPCODE\_\-RES}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-RES}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-RES~0xab}}
+\label{a00496_a1d08eaf1ec3802e1dabb1fc178c87335}
+
+
+Definition at line 91 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_aa22f3d73ba8ba4cea869c3526e2557ea}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-SE@{OPCODE\_\-SE}}
+\index{OPCODE\_\-SE@{OPCODE\_\-SE}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-SE}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-SE~0x20}}
+\label{a00496_aa22f3d73ba8ba4cea869c3526e2557ea}
+
+
+Definition at line 86 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a6ae63072814b0a02c13ae656414436dc}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-WRDI@{OPCODE\_\-WRDI}}
+\index{OPCODE\_\-WRDI@{OPCODE\_\-WRDI}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-WRDI}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-WRDI~0x04}}
+\label{a00496_a6ae63072814b0a02c13ae656414436dc}
+
+
+Definition at line 80 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a2499a677769162b2db9424c0db4c4726}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-WREN@{OPCODE\_\-WREN}}
+\index{OPCODE\_\-WREN@{OPCODE\_\-WREN}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-WREN}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-WREN~0x06}}
+\label{a00496_a2499a677769162b2db9424c0db4c4726}
+
+
+Definition at line 79 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_ae79c88f89c9e30942e5aad16d6c68fec}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!OPCODE\_\-WRSR@{OPCODE\_\-WRSR}}
+\index{OPCODE\_\-WRSR@{OPCODE\_\-WRSR}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{OPCODE\_\-WRSR}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPCODE\_\-WRSR~0x01}}
+\label{a00496_ae79c88f89c9e30942e5aad16d6c68fec}
+
+
+Definition at line 82 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a6c36bc07fc8bb1cfddadb07cc7c11057}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!WIP@{WIP}}
+\index{WIP@{WIP}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{WIP}]{\setlength{\rightskip}{0pt plus 5cm}\#define WIP~0x01}}
+\label{a00496_a6c36bc07fc8bb1cfddadb07cc7c11057}
+
+
+Definition at line 77 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-EXTFLASH\_\-CALLBACK\_\-T@{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T}}
+\index{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T@{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-EXTFLASH\_\-CALLBACK\_\-T})(VOID $\ast$context, {\bf UINT32} status)}}
+\label{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}
+
+
+Definition at line 128 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a200382e5889d0c036a3205e38b2666cb}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-EXTFLASH\_\-CTX\_\-T@{GSN\_\-EXTFLASH\_\-CTX\_\-T}}
+\index{GSN\_\-EXTFLASH\_\-CTX\_\-T@{GSN\_\-EXTFLASH\_\-CTX\_\-T}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-EXTFLASH\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-EXTFLASH\_\-CTX} {\bf GSN\_\-EXTFLASH\_\-CTX\_\-T}}}
+\label{a00496_a200382e5889d0c036a3205e38b2666cb}
+\hypertarget{a00496_a880714aa4bccea65a8e3d427e9e395da}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-EXTFLASH\_\-STATUS\_\-T@{GSN\_\-EXTFLASH\_\-STATUS\_\-T}}
+\index{GSN\_\-EXTFLASH\_\-STATUS\_\-T@{GSN\_\-EXTFLASH\_\-STATUS\_\-T}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-EXTFLASH\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-EXTFLASH\_\-STATUS}  {\bf GSN\_\-EXTFLASH\_\-STATUS\_\-T}}}
+\label{a00496_a880714aa4bccea65a8e3d427e9e395da}
+\hypertarget{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T@{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}}
+\index{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T@{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-FLASH\_\-SPI\_\-FLAG}  {\bf GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}}}
+\label{a00496_ae69f658e2fd080c54a78eb23e4be2f59}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00496_aa52f9dfb770e5b9fb72da1dce229b396}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-EXTFLASH\_\-STATUS@{GSN\_\-EXTFLASH\_\-STATUS}}
+\index{GSN\_\-EXTFLASH\_\-STATUS@{GSN\_\-EXTFLASH\_\-STATUS}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-EXTFLASH\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-EXTFLASH\_\-STATUS}}}
+\label{a00496_aa52f9dfb770e5b9fb72da1dce229b396}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EXTFLASH\_\-NOT\_\-INITIALIZED@{EXTFLASH\_\-NOT\_\-INITIALIZED}!gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!EXTFLASH\_\-NOT\_\-INITIALIZED@{EXTFLASH\_\-NOT\_\-INITIALIZED}}\item[{\em 
+\hypertarget{a00496_aa52f9dfb770e5b9fb72da1dce229b396a1bf08415ebd0b6f202a5098833461689}{
+EXTFLASH\_\-NOT\_\-INITIALIZED}
+\label{a00496_aa52f9dfb770e5b9fb72da1dce229b396a1bf08415ebd0b6f202a5098833461689}
+}]\index{EXTFLASH\_\-INITIALIZED@{EXTFLASH\_\-INITIALIZED}!gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!EXTFLASH\_\-INITIALIZED@{EXTFLASH\_\-INITIALIZED}}\item[{\em 
+\hypertarget{a00496_aa52f9dfb770e5b9fb72da1dce229b396a22366d2634a3ce193da3d2707e4b772b}{
+EXTFLASH\_\-INITIALIZED}
+\label{a00496_aa52f9dfb770e5b9fb72da1dce229b396a22366d2634a3ce193da3d2707e4b772b}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 104 of file gsn\_\-ext\_\-flash\_\-driver.h.
+
+\hypertarget{a00496_a78eb37149520ca722a842d9d7634d842}{
+\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-FLASH\_\-SPI\_\-FLAG@{GSN\_\-FLASH\_\-SPI\_\-FLAG}}
+\index{GSN\_\-FLASH\_\-SPI\_\-FLAG@{GSN\_\-FLASH\_\-SPI\_\-FLAG}!gsn_ext_flash_driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}
+\subsubsection[{GSN\_\-FLASH\_\-SPI\_\-FLAG}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-FLASH\_\-SPI\_\-FLAG}}}
+\label{a00496_a78eb37149520ca722a842d9d7634d842}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-FLASH\_\-SPI\_\-POLL@{GSN\_\-FLASH\_\-SPI\_\-POLL}!gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-FLASH\_\-SPI\_\-POLL@{GSN\_\-FLASH\_\-SPI\_\-POLL}}\item[{\em 
+\hypertarget{a00496_a78eb37149520ca722a842d9d7634d842a55c00985e020036d0fc78c8fdf55da43}{
+GSN\_\-FLASH\_\-SPI\_\-POLL}
+\label{a00496_a78eb37149520ca722a842d9d7634d842a55c00985e020036d0fc78c8fdf55da43}
+}]\index{GSN\_\-FLASH\_\-SPI\_\-DMA@{GSN\_\-FLASH\_\-SPI\_\-DMA}!gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}}\index{gsn\_\-ext\_\-flash\_\-driver.h@{gsn\_\-ext\_\-flash\_\-driver.h}!GSN\_\-FLASH\_\-SPI\_\-DMA@{GSN\_\-FLASH\_\-SPI\_\-DMA}}\item[{\em 
+\hypertarget{a00496_a78eb37149520ca722a842d9d7634d842a755b8879e5d40e0556e722180ba309f2}{
+GSN\_\-FLASH\_\-SPI\_\-DMA}
+\label{a00496_a78eb37149520ca722a842d9d7634d842a755b8879e5d40e0556e722180ba309f2}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 98 of file gsn\_\-ext\_\-flash\_\-driver.h.
+

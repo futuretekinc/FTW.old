@@ -1,0 +1,893 @@
+\hypertarget{a00534}{
+\section{gsn\_\-nwif.h File Reference}
+\label{a00534}\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}}
+}
+
+
+GSN NWIF module. This file contains the NWIF specific definitions.  
+
+
+{\ttfamily \#include \char`\"{}netx/nx\_\-api.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}netx/netx\_\-applications/dhcp/nxd\_\-dhcp\_\-client.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}netx/netx\_\-applications/dns/nxd\_\-dns.h\char`\"{}}\par
+Include dependency graph for gsn\_\-nwif.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00769}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00770}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00173}{GSN\_\-NWIF\_\-IPADDR}
+\item 
+struct \hyperlink{a00170}{GSN\_\-NWIF\_\-IP4\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00171}{GSN\_\-NWIF\_\-IP6\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00172}{GSN\_\-NWIF\_\-IP\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00168}{GSN\_\-NWIF\_\-DHCP\_\-PARAMS}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+struct \hyperlink{a00167}{GSN\_\-NWIF\_\-CTX}
+\begin{DoxyCompactList}\small\item\em Network Interface Object. \end{DoxyCompactList}\item 
+struct \hyperlink{a00163}{GSN\_\-NW\_\-BSD}
+\item 
+struct \hyperlink{a00169}{GSN\_\-NWIF\_\-INIT\_\-PARAMS}
+\begin{DoxyCompactList}\small\item\em Info required by NWIF. \end{DoxyCompactList}\item 
+struct \hyperlink{a00175}{GSN\_\-NWIF\_\-REINIT\_\-PARAMS}
+\item 
+struct \hyperlink{a00166}{GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM}
+\item 
+struct \hyperlink{a00174}{GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM}
+\item 
+struct \hyperlink{a00177}{GSN\_\-NWIF\_\-TBL\_\-ELEMENT}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00534_a96d191e78da08d8ea8ae4b6bfee9fb97}{GSN\_\-NWIF\_\-DNS\_\-RETRY\_\-COUNT}~2
+\item 
+\#define \hyperlink{a00534_af8b27c58acd985898926d6fe0b6cfb3e}{GSN\_\-NWIF\_\-DNS\_\-CASHE\_\-SIZE}~5
+\item 
+\#define \hyperlink{a00534_ae1cb9c1bbc2f81363b795c9ac1ea048f}{GSN\_\-NWIF\_\-DNS\_\-TIMEOUT}~2
+\item 
+\#define \hyperlink{a00534_adeccef71031ec2c93864f0fbb29198dd}{GSN\_\-NWIF\_\-HOST\_\-NAME\_\-MAX\_\-LEN}~15
+\item 
+\#define \hyperlink{a00534_a6debabbbdf43227c2cae9dd80f7fa657}{MAX\_\-NWIF\_\-SUPPORTED}~4
+\item 
+\#define \hyperlink{a00534_a59c19de5640e80b7ad4bbacc4b15ade1}{GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-SIZE}~16
+\item 
+\#define \hyperlink{a00534_a20193a95dac7e1e54cd39da9c97c6c20}{GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-CPY}(destPtr, srcPtr)~memcpy((\hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$)(destPtr), (const \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$)(srcPtr), 16)
+\item 
+\#define \hyperlink{a00670_gab119822a51c7045db3244c577058c0ea}{GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V4}~NX\_\-IP\_\-VERSION\_\-V4
+\begin{DoxyCompactList}\small\item\em NWIF IP version definition. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00534_a3936013386aac5e27a3faf8871409de0}{GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V6}~NX\_\-IP\_\-VERSION\_\-V6
+\item 
+\#define \hyperlink{a00670_ga300d647d9982a854748fe98d79ebd77b}{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-NOT\_\-DONE}~0
+\begin{DoxyCompactList}\small\item\em NWIF IP V4 address configuration status. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00534_ad8d529addab1393539b7a7872f819321}{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-IN\_\-PROGRESS}~1
+\item 
+\#define \hyperlink{a00534_a377a3d06cfbffd5f1d8679005653a9ae}{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-DONE}~2
+\item 
+\#define \hyperlink{a00534_a62b7215b2b6aafb8cba4f699ff6e1369}{GSN\_\-PRIMARY\_\-DNS\_\-SERVER}~0
+\item 
+\#define \hyperlink{a00534_aba4c680932594158782a3e4771a41dd3}{GSN\_\-SECONDARY\_\-DNS\_\-SERVER}~1
+\item 
+\#define \hyperlink{a00670_ga758c2a6db263eed36e543de3fa913fc3}{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-NOT\_\-DONE}~0
+\begin{DoxyCompactList}\small\item\em NWIF IP V6 address configuration status. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00534_a880d7fa81ce0646c0643b532796ef39f}{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-IN\_\-PROGRESS}~1
+\item 
+\#define \hyperlink{a00534_ad9ffe591a47d210792ccadcdabdf14d1}{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-DONE}~2
+\item 
+\#define \hyperlink{a00534_a70c487092384608962401dd2bef50b2a}{GsnNwIf\_\-DnsRetryCountSet}~nx\_\-dns\_\-retry\_\-count\_\-set
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00534_a58445849a3e6cfa33fbc058bafdb717c}{GSN\_\-NWIF\_\-NOTIF\_\-FUNC\_\-T} )(\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} notifMsg, VOID $\ast$ctx)
+\item 
+typedef \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL}($\ast$ \hyperlink{a00534_a2ab3fab7c51c5e11d061387dd44a2381}{GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T} )(struct \hyperlink{a00167}{GSN\_\-NWIF\_\-CTX} $\ast$, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32}, \hyperlink{a00068}{GSN\_\-ETHERNET\_\-FRAME\_\-T} $\ast$)
+\item 
+typedef enum \hyperlink{a00534_abf9adb0cafd6914964a2ccab114e4bfe}{IP\_\-VERSION} \hyperlink{a00534_af2db652f956f3af146d479868ef42d8f}{IP\_\-VERSION\_\-T}
+\item 
+typedef struct \hyperlink{a00173}{GSN\_\-NWIF\_\-IPADDR} \hyperlink{a00534_afc14e738a321ca724b331f740ee59e14}{GSN\_\-NWIF\_\-IPADDR\_\-T}
+\item 
+typedef enum \hyperlink{a00670_ga6831d8e94870e58c8ba6de3fd14e829d}{GSN\_\-NWIF\_\-STATUS} \hyperlink{a00670_ga31b009654c9ee4d7037151b19f1f213a}{GSN\_\-NWIF\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF status. This enum defines the NWIF status. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00170}{GSN\_\-NWIF\_\-IP4\_\-CONFIG} \hyperlink{a00670_ga30485b44668b2a98ecdc5571f9a6fed5}{GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00670_ga283a80240d803667a00eb79d19d53fd6}{GSN\_\-NWIF\_\-IP6\_\-FLG} \hyperlink{a00670_gaeae6a78e867541f488c5b1db9f7508f7}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00171}{GSN\_\-NWIF\_\-IP6\_\-CONFIG} \hyperlink{a00670_gab09a924a18be9757c337786abe5903f0}{GSN\_\-NWIF\_\-IPv6\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00670_gaa290d30cd14afde370ebe3cc0bc80713}{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG} \hyperlink{a00670_ga952c642f49bc1ff0ab65d34c4843b5e9}{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration flags. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00172}{GSN\_\-NWIF\_\-IP\_\-CONFIG} \hyperlink{a00670_ga72947a68a092d535f5989c7c5e2fe71b}{GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00670_gaa0ec94e77c73c9648888a870bd0f041a}{GSN\_\-NWIF\_\-FLAGS} \hyperlink{a00670_ga2c209f2b9b6b2b6b0b2e1132acd45891}{GSN\_\-NWIF\_\-FLAGS\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00168}{GSN\_\-NWIF\_\-DHCP\_\-PARAMS} \hyperlink{a00670_ga9f9d4b76c96f7c8444291e1706c4fcff}{GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00167}{GSN\_\-NWIF\_\-CTX} \hyperlink{a00670_ga47d94474618770f1d7c6ef6b783b9d24}{GSN\_\-NWIF\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em Network Interface Object. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00163}{GSN\_\-NW\_\-BSD} \hyperlink{a00534_ac7a3fb17a7a529ae15ceec860b9db964}{GSN\_\-NW\_\-BSD\_\-T}
+\item 
+typedef struct \hyperlink{a00169}{GSN\_\-NWIF\_\-INIT\_\-PARAMS} \hyperlink{a00670_gaa7bcca8daa18d56c6d5f107fc3523370}{GSN\_\-NWIF\_\-INIT\_\-PARAMS\_\-T}
+\begin{DoxyCompactList}\small\item\em Info required by NWIF. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00175}{GSN\_\-NWIF\_\-REINIT\_\-PARAMS} \hyperlink{a00534_abe5b22bf98ced0df6c6eb1abfc0230c1}{GSN\_\-NWIF\_\-REINIT\_\-PARAMS\_\-T}
+\item 
+typedef struct \hyperlink{a00166}{GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM} \hyperlink{a00534_a715283228c86aaa90a9329f01dec6287}{GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM\_\-T}
+\item 
+typedef struct \hyperlink{a00174}{GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM} \hyperlink{a00534_a231c2639d51844e6d75b4916c813f293}{GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM\_\-T}
+\item 
+typedef enum \hyperlink{a00534_a00c060a93ce3ad909cef83066fef046b}{GSN\_\-IPv6\_\-TYPE} \hyperlink{a00534_aac8a8005b7e88e230928699f1b2cc0d2}{GSN\_\-IPv6\_\-TYPE\_\-T}
+\item 
+typedef struct \hyperlink{a00177}{GSN\_\-NWIF\_\-TBL\_\-ELEMENT} \hyperlink{a00534_a8a45953bae7352132d28cdd008cf0968}{GSN\_\-NWIF\_\-TBL\_\-ELEMENT\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00534_abf9adb0cafd6914964a2ccab114e4bfe}{IP\_\-VERSION} \{ \par
+\hyperlink{a00534_abf9adb0cafd6914964a2ccab114e4bfea34109b1e0b5d00e2a85bcb1348684a2a}{IP\_\-VERSION\_\-V4} = 0x01, 
+\par
+\hyperlink{a00534_abf9adb0cafd6914964a2ccab114e4bfea494a716dab2d9239bb991db0a32c287c}{IP\_\-VERSION\_\-V6} = 0x02
+ \}
+\item 
+enum \hyperlink{a00670_ga6831d8e94870e58c8ba6de3fd14e829d}{GSN\_\-NWIF\_\-STATUS} \{ \par
+\hyperlink{a00670_gga6831d8e94870e58c8ba6de3fd14e829dab86b0ac682d8405ae1ab5f27193b5f8c}{GSN\_\-NWIF\_\-STATUS\_\-NOT\_\-INITIALIZED}, 
+\par
+\hyperlink{a00670_gga6831d8e94870e58c8ba6de3fd14e829dab64258dc583468badc6b259d23e29a3b}{GSN\_\-NWIF\_\-STATUS\_\-INITIALIZED}, 
+\par
+\hyperlink{a00670_gga6831d8e94870e58c8ba6de3fd14e829daf1dad44940ad39f72a1b4e8e32cfc57a}{GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-IN\_\-PROGRESS}, 
+\par
+\hyperlink{a00670_gga6831d8e94870e58c8ba6de3fd14e829da00983344dccba515ab60c8b49d08e99a}{GSN\_\-NWIF\_\-STATUS\_\-OPEN\_\-DONE}
+ \}
+\begin{DoxyCompactList}\small\item\em NWIF status. This enum defines the NWIF status. \end{DoxyCompactList}\item 
+enum \hyperlink{a00670_ga283a80240d803667a00eb79d19d53fd6}{GSN\_\-NWIF\_\-IP6\_\-FLG} \{ \par
+\hyperlink{a00670_gga283a80240d803667a00eb79d19d53fd6a996c32a475b164cb2153706931f80fa1}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-LINK\_\-LOCAL\_\-ADDR} =  BIT(0), 
+\par
+\hyperlink{a00670_gga283a80240d803667a00eb79d19d53fd6a6c066705f0add82f314cdeda98179b58}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-MANUAL\_\-GLOBAL\_\-ADDR} =  BIT(1), 
+\par
+\hyperlink{a00670_gga283a80240d803667a00eb79d19d53fd6a5cfda1f3737e1d1d7aa79b8b821ba5fc}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-STATELESS\_\-AUTO\_\-CONFIG} =  BIT(2), 
+\par
+\hyperlink{a00670_gga283a80240d803667a00eb79d19d53fd6a8d099635d50df7a353bde782e0d3b0c5}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-DHCP\_\-V6\_\-CONFIG} =  BIT(3), 
+\par
+\hyperlink{a00670_gga283a80240d803667a00eb79d19d53fd6a22c3526ea733e9e3e571b9e47455ad14}{GSN\_\-NWIF\_\-IP6\_\-FLG\_\-AUTO\_\-LINK\_\-LOCAL\_\-ADDR} = BIT(4)
+ \}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+enum \hyperlink{a00670_gaa290d30cd14afde370ebe3cc0bc80713}{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG} \{ \par
+\hyperlink{a00670_ggaa290d30cd14afde370ebe3cc0bc80713ad2faaf1e7aa840a7a5e6f0b87f771010}{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV4\_\-INIT} =  BIT(0), 
+\par
+\hyperlink{a00670_ggaa290d30cd14afde370ebe3cc0bc80713aee3c914de355b83ae9273c0cf45f1fe3}{GSN\_\-NWIF\_\-IPCONFIG\_\-FLAG\_\-IPV6\_\-INIT} =  BIT(1)
+ \}
+\begin{DoxyCompactList}\small\item\em NWIF IP configuration flags. \end{DoxyCompactList}\item 
+enum \hyperlink{a00670_gaa0ec94e77c73c9648888a870bd0f041a}{GSN\_\-NWIF\_\-FLAGS} \{ \par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa9dc36bd7a233781adb8c75441c6179b8}{GSN\_\-NWIF\_\-FLG\_\-ARP\_\-ENABLE} =  BIT(0), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa0666e123f6937fbd3deb7024c9f25236}{GSN\_\-NWIF\_\-FLG\_\-DHCP\_\-CLIENT\_\-ENABLE} =  BIT(1), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aae868de24a703223a0d1e00aa33f83531}{GSN\_\-NWIF\_\-FLG\_\-DNS\_\-CLIENT\_\-ENABLE} =  BIT(2), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa349cb4e40a71e0a0419792354d68a10d}{GSN\_\-NWIF\_\-FLG\_\-ICMP\_\-ENABLE} =  BIT(3), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aaf1e3613168c79494813f43bd2fd779db}{GSN\_\-NWIF\_\-FLG\_\-IGMP\_\-ENABLE} =  BIT(4), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa3d237bb1f68c4dc2e7c4774cd71ce30c}{GSN\_\-NWIF\_\-FLG\_\-IPV6\_\-ENABLE} =  BIT(5), 
+\par
+\hyperlink{a00670_ggaa0ec94e77c73c9648888a870bd0f041aa9291be9bc46fefc2f9309978d2211765}{GSN\_\-NWIF\_\-FLG\_\-RPL\_\-ENABLE} =  BIT(6)
+ \}
+\begin{DoxyCompactList}\small\item\em NWIF IP v6 configuration flags. \end{DoxyCompactList}\item 
+enum \hyperlink{a00534_a00c060a93ce3ad909cef83066fef046b}{GSN\_\-IPv6\_\-TYPE} \{ \par
+\hyperlink{a00534_a00c060a93ce3ad909cef83066fef046bad3170b5a0220495ada1fccfcb0e6006d}{GSN\_\-IPv6\_\-LINK\_\-LOCAL}, 
+\par
+\hyperlink{a00534_a00c060a93ce3ad909cef83066fef046badad41d83199dda41c6c880e1f0233bf7}{GSN\_\-IPv6\_\-GLOBAL}, 
+\par
+\hyperlink{a00534_a00c060a93ce3ad909cef83066fef046ba7a1239fa60f688ee1392d15a937ce945}{GSN\_\-IPv6\_\-INVALID}, 
+\par
+\hyperlink{a00534_a00c060a93ce3ad909cef83066fef046ba97fbed39f3562817d94f0c16a41dbf04}{GSN\_\-IPv6\_\-UNSPECIFIED}, 
+\par
+\hyperlink{a00534_a00c060a93ce3ad909cef83066fef046ba9eeb7bbadb9161482c1c526a4e0ebe46}{GSN\_\-IPv6\_\-LOOPBACK}, 
+\par
+\hyperlink{a00534_a00c060a93ce3ad909cef83066fef046ba6204bec4fee8f931e0eb72057cf8e46a}{GSN\_\-IPv6\_\-MULTICAST}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC INLINE VOID \hyperlink{a00534_a5ad130ccf73221792798ec396a497eec}{GSN\_\-IPv6\_\-CHANGE\_\-ENDIAN} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$a)
+\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00534_afd7bdd70a054ec8427b4f0043dbac155}{GSN\_\-IPv6\_\-ADDR\_\-TYPE} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$a)
+\item 
+PUBLIC INLINE VOID \hyperlink{a00534_aee3688d173845d135daba50d9fb66da9}{GsnNwif\_\-Ipv6AutoConfig} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, UINT flags)
+\item 
+PUBLIC INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00670_ga4dd1a9b0b97290fe2749d1f9834f5c19}{GsnNwIf\_\-IpV4AddrGet} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf)
+\begin{DoxyCompactList}\small\item\em Get IP Address. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00534_a80312c55009d536cdf5229c6535587c2}{GsnNwIf\_\-Init} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00169}{GSN\_\-NWIF\_\-INIT\_\-PARAMS\_\-T} $\ast$pParams)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00534_a7ae07eb99df459cf19b0988a44878fa1}{GsnNwIf\_\-Reinit} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00175}{GSN\_\-NWIF\_\-REINIT\_\-PARAMS\_\-T} $\ast$pParams)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00534_a354eab3e8d1f1df084e53e22cf948c37}{GsnNwif\_\-BsdInitialize} (\hyperlink{a00163}{GSN\_\-NW\_\-BSD\_\-T} $\ast$pBsd, \hyperlink{a00166}{GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00534_a8ec80e9053bfb9952c35af829f14359a}{GsnNwif\_\-IPv6Init} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00174}{GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM\_\-T} $\ast$pParams)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00534_a5f6202ffb14e7becc2f4a933765bee4b}{GsnNwIf\_\-DeInit} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00534_ac34c16941b0c478421518bf4dda11aa7}{GsnNwif\_\-UpdatePhyAddr} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf)
+\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00534_ac810c0ab5151ae273488de8679923e19}{GsnNwIf\_\-Open} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00172}{GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T} $\ast$pIpConfig, \hyperlink{a00168}{GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T} $\ast$pDhcpParams)
+\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00534_a77bfff80b820cd026619abc81b3d9bd4}{GsnNwIf\_\-Close} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf)
+\item 
+PUBLIC \hyperlink{a00534_a2ab3fab7c51c5e11d061387dd44a2381}{GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T} \hyperlink{a00534_a546e248cb0ba3d6fadb2dc408b44c3b8}{GsnNwIf\_\-RecvFilterRegister} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00534_a2ab3fab7c51c5e11d061387dd44a2381}{GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T} recvFilter)
+\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00534_aa7f12d0166f5446bb34584498d1baf7a}{GsnNwIf\_\-IpConfigured} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf)
+\item 
+PUBLIC VOID \hyperlink{a00534_a117d1eca43c85e2a38d4156902c7b77a}{GsnNwIf\_\-IpConfigGet} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00172}{GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T} $\ast$pIpConfig)
+\item 
+PUBLIC VOID \hyperlink{a00534_abc8558b7010c7c7edfc8caea64d11e66}{GsnNwIf\_\-StatsGet} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00176}{GSN\_\-NWIF\_\-STATS\_\-T} $\ast$pStats)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00534_a6586191869986cd46f76fe47d889be01}{GsnNwIf\_\-GratArpSend} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf)
+\item 
+PUBLIC VOID \hyperlink{a00534_abd774857f87aa3940257a3298b1299ef}{GsnNwIf\_\-DhcpLeaseTimeSet} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} dhcpLeaseTime)
+\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00534_aeef793a2c3da25917feb130dad880a82}{GsnNwIf\_\-DhcpLeaseExpired} (\hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} dhcpLeaseExpireTime)
+\item 
+PUBLIC \hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00534_ae401c2332b64b7d4da14329fab309d8c}{GsnNwIf\_\-DhcpStrat} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00168}{GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T} $\ast$pDhcpParams)
+\item 
+VOID \hyperlink{a00534_ad426afd4a106b468b2ba41a59de8bacd}{GsnNwIf\_\-DhcpStop} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf)
+\item 
+VOID \hyperlink{a00534_aeb71dfef7a354215b3847a72ba6cee87}{GsnNwIf\_\-DhcpV6Stop} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf)
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00534_a61054abc511da789e3d8d6ad340010e5}{GsnNwif\_\-PrivateIPv4Config} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00170}{GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T} $\ast$pUsrIPv4Cfg, \hyperlink{a00168}{GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T} $\ast$pDhcpParams)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00534_a67f0c19960ee130c6a6c37e035b0b2f5}{GsnNwIf\_\-DnsHostByNameGet} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pHostName, ULONG $\ast$DnsAddress, ULONG timeout)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00534_a277d2776e17397bbba0ee76d8470bc00}{GsnNwif\_\-IPv4Configure} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00170}{GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T} $\ast$pUsrIPv4Cfg, \hyperlink{a00168}{GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T} $\ast$pDhcpParams)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00534_acf4ee707388061162dad65b686a6174b}{GsnNwif\_\-IPv6Configure} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, \hyperlink{a00171}{GSN\_\-NWIF\_\-IPv6\_\-CONFIG\_\-T} $\ast$pUsrIPv6Cfg, \hyperlink{a00168}{GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T} $\ast$pDhcpParams)
+\item 
+\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$ \hyperlink{a00534_a6d18aa4993dd1d87f313bf079e8a0eb0}{GsnNwIf\_\-NwIfCtxGet} (NX\_\-IP $\ast$ipHndl)
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00534_ad93c46208348880f4e124769fcc1daea}{GsnNwIf\_\-U16FieldGet} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pPkt)
+\item 
+VOID \hyperlink{a00534_a38e642072683d1a5971623d3540db5a7}{GsnNwIf\_\-TableEntrySet} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, NX\_\-IP $\ast$ipHndl)
+\item 
+VOID \hyperlink{a00534_a4e53cd5f3eed0e1415abd9cda43b0945}{GsnNwIf\_\-TableEntryClear} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, NX\_\-IP $\ast$ipHndl)
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00534_a41fa414e85aaf3e85ca651ef6e86c7a8}{GsnNwif\_\-DnsServerAdd} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, ULONG dnsServerAddr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} index)
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00534_a7aaafb9175778a2e4376c7213c5d4dfd}{GsnNwif\_\-DnsServerGet} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, ULONG $\ast$dnsServerAddr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} index)
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00534_a1d6b77efc1ea0c3233453b7912a02f54}{GsnNwIf\_\-dhcpClientCreateRecord} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, NX\_\-DHCP\_\-CLIENT\_\-RECORD $\ast$pDhcpClientRecord)
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00534_ad951c5f3241c7a1d2deab7ecee17f7a8}{GsnNwIf\_\-dhcpClientRestoreRecord} (\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$pNwIf, NX\_\-DHCP\_\-CLIENT\_\-RECORD $\ast$pDhcpClientRecord, ULONG timeElapsed)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN NWIF module. This file contains the NWIF specific definitions. 
+
+Definition in file \hyperlink{a00534_source}{gsn\_\-nwif.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00534_af8b27c58acd985898926d6fe0b6cfb3e}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-DNS\_\-CASHE\_\-SIZE@{GSN\_\-NWIF\_\-DNS\_\-CASHE\_\-SIZE}}
+\index{GSN\_\-NWIF\_\-DNS\_\-CASHE\_\-SIZE@{GSN\_\-NWIF\_\-DNS\_\-CASHE\_\-SIZE}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-DNS\_\-CASHE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-DNS\_\-CASHE\_\-SIZE~5}}
+\label{a00534_af8b27c58acd985898926d6fe0b6cfb3e}
+
+
+Definition at line 50 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a96d191e78da08d8ea8ae4b6bfee9fb97}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-DNS\_\-RETRY\_\-COUNT@{GSN\_\-NWIF\_\-DNS\_\-RETRY\_\-COUNT}}
+\index{GSN\_\-NWIF\_\-DNS\_\-RETRY\_\-COUNT@{GSN\_\-NWIF\_\-DNS\_\-RETRY\_\-COUNT}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-DNS\_\-RETRY\_\-COUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-DNS\_\-RETRY\_\-COUNT~2}}
+\label{a00534_a96d191e78da08d8ea8ae4b6bfee9fb97}
+
+
+Definition at line 49 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_ae1cb9c1bbc2f81363b795c9ac1ea048f}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-DNS\_\-TIMEOUT@{GSN\_\-NWIF\_\-DNS\_\-TIMEOUT}}
+\index{GSN\_\-NWIF\_\-DNS\_\-TIMEOUT@{GSN\_\-NWIF\_\-DNS\_\-TIMEOUT}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-DNS\_\-TIMEOUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-DNS\_\-TIMEOUT~2}}
+\label{a00534_ae1cb9c1bbc2f81363b795c9ac1ea048f}
+
+
+Definition at line 51 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_adeccef71031ec2c93864f0fbb29198dd}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-HOST\_\-NAME\_\-MAX\_\-LEN@{GSN\_\-NWIF\_\-HOST\_\-NAME\_\-MAX\_\-LEN}}
+\index{GSN\_\-NWIF\_\-HOST\_\-NAME\_\-MAX\_\-LEN@{GSN\_\-NWIF\_\-HOST\_\-NAME\_\-MAX\_\-LEN}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-HOST\_\-NAME\_\-MAX\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-HOST\_\-NAME\_\-MAX\_\-LEN~15}}
+\label{a00534_adeccef71031ec2c93864f0fbb29198dd}
+
+
+Definition at line 59 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a3936013386aac5e27a3faf8871409de0}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V6@{GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V6}}
+\index{GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V6@{GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V6}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V6}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-IP\_\-VERSION\_\-V6~NX\_\-IP\_\-VERSION\_\-V6}}
+\label{a00534_a3936013386aac5e27a3faf8871409de0}
+
+
+Definition at line 95 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a377a3d06cfbffd5f1d8679005653a9ae}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-DONE@{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-DONE}}
+\index{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-DONE@{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-DONE}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-DONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-DONE~2}}
+\label{a00534_a377a3d06cfbffd5f1d8679005653a9ae}
+
+
+Definition at line 143 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_ad8d529addab1393539b7a7872f819321}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-IN\_\-PROGRESS@{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-IN\_\-PROGRESS}}
+\index{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-IN\_\-PROGRESS@{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-IN\_\-PROGRESS}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-IN\_\-PROGRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-IPV4\_\-CFG\_\-IN\_\-PROGRESS~1}}
+\label{a00534_ad8d529addab1393539b7a7872f819321}
+
+
+Definition at line 142 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a20193a95dac7e1e54cd39da9c97c6c20}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-CPY@{GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-CPY}}
+\index{GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-CPY@{GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-CPY}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-CPY}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-CPY(
+\begin{DoxyParamCaption}
+\item[{}]{destPtr, }
+\item[{}]{srcPtr}
+\end{DoxyParamCaption}
+)~memcpy(({\bf INT8} $\ast$)(destPtr), (const {\bf INT8} $\ast$)(srcPtr), 16)}}
+\label{a00534_a20193a95dac7e1e54cd39da9c97c6c20}
+
+
+Definition at line 63 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a59c19de5640e80b7ad4bbacc4b15ade1}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-SIZE@{GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-SIZE}}
+\index{GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-SIZE@{GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-SIZE}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-IPV6\_\-ADDR\_\-SIZE~16}}
+\label{a00534_a59c19de5640e80b7ad4bbacc4b15ade1}
+
+
+Definition at line 62 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_ad9ffe591a47d210792ccadcdabdf14d1}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-DONE@{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-DONE}}
+\index{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-DONE@{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-DONE}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-DONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-DONE~2}}
+\label{a00534_ad9ffe591a47d210792ccadcdabdf14d1}
+
+
+Definition at line 154 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a880d7fa81ce0646c0643b532796ef39f}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-IN\_\-PROGRESS@{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-IN\_\-PROGRESS}}
+\index{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-IN\_\-PROGRESS@{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-IN\_\-PROGRESS}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-IN\_\-PROGRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-NWIF\_\-IPV6\_\-CFG\_\-IN\_\-PROGRESS~1}}
+\label{a00534_a880d7fa81ce0646c0643b532796ef39f}
+
+
+Definition at line 153 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a62b7215b2b6aafb8cba4f699ff6e1369}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-PRIMARY\_\-DNS\_\-SERVER@{GSN\_\-PRIMARY\_\-DNS\_\-SERVER}}
+\index{GSN\_\-PRIMARY\_\-DNS\_\-SERVER@{GSN\_\-PRIMARY\_\-DNS\_\-SERVER}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-PRIMARY\_\-DNS\_\-SERVER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-PRIMARY\_\-DNS\_\-SERVER~0}}
+\label{a00534_a62b7215b2b6aafb8cba4f699ff6e1369}
+
+
+Definition at line 144 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_aba4c680932594158782a3e4771a41dd3}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-SECONDARY\_\-DNS\_\-SERVER@{GSN\_\-SECONDARY\_\-DNS\_\-SERVER}}
+\index{GSN\_\-SECONDARY\_\-DNS\_\-SERVER@{GSN\_\-SECONDARY\_\-DNS\_\-SERVER}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-SECONDARY\_\-DNS\_\-SERVER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SECONDARY\_\-DNS\_\-SERVER~1}}
+\label{a00534_aba4c680932594158782a3e4771a41dd3}
+
+
+Definition at line 145 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a70c487092384608962401dd2bef50b2a}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-DnsRetryCountSet@{GsnNwIf\_\-DnsRetryCountSet}}
+\index{GsnNwIf\_\-DnsRetryCountSet@{GsnNwIf\_\-DnsRetryCountSet}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-DnsRetryCountSet}]{\setlength{\rightskip}{0pt plus 5cm}\#define GsnNwIf\_\-DnsRetryCountSet~nx\_\-dns\_\-retry\_\-count\_\-set}}
+\label{a00534_a70c487092384608962401dd2bef50b2a}
+
+
+Definition at line 156 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a6debabbbdf43227c2cae9dd80f7fa657}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!MAX\_\-NWIF\_\-SUPPORTED@{MAX\_\-NWIF\_\-SUPPORTED}}
+\index{MAX\_\-NWIF\_\-SUPPORTED@{MAX\_\-NWIF\_\-SUPPORTED}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{MAX\_\-NWIF\_\-SUPPORTED}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-NWIF\_\-SUPPORTED~4}}
+\label{a00534_a6debabbbdf43227c2cae9dd80f7fa657}
+
+
+Definition at line 60 of file gsn\_\-nwif.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00534_aac8a8005b7e88e230928699f1b2cc0d2}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-IPv6\_\-TYPE\_\-T@{GSN\_\-IPv6\_\-TYPE\_\-T}}
+\index{GSN\_\-IPv6\_\-TYPE\_\-T@{GSN\_\-IPv6\_\-TYPE\_\-T}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-IPv6\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-IPv6\_\-TYPE} {\bf GSN\_\-IPv6\_\-TYPE\_\-T}}}
+\label{a00534_aac8a8005b7e88e230928699f1b2cc0d2}
+\hypertarget{a00534_ac7a3fb17a7a529ae15ceec860b9db964}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NW\_\-BSD\_\-T@{GSN\_\-NW\_\-BSD\_\-T}}
+\index{GSN\_\-NW\_\-BSD\_\-T@{GSN\_\-NW\_\-BSD\_\-T}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NW\_\-BSD\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NW\_\-BSD} {\bf GSN\_\-NW\_\-BSD\_\-T}}}
+\label{a00534_ac7a3fb17a7a529ae15ceec860b9db964}
+\hypertarget{a00534_a715283228c86aaa90a9329f01dec6287}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM\_\-T@{GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM\_\-T@{GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM\_\-T}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM} {\bf GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00534_a715283228c86aaa90a9329f01dec6287}
+\hypertarget{a00534_afc14e738a321ca724b331f740ee59e14}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-IPADDR\_\-T@{GSN\_\-NWIF\_\-IPADDR\_\-T}}
+\index{GSN\_\-NWIF\_\-IPADDR\_\-T@{GSN\_\-NWIF\_\-IPADDR\_\-T}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-IPADDR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NWIF\_\-IPADDR}  {\bf GSN\_\-NWIF\_\-IPADDR\_\-T}}}
+\label{a00534_afc14e738a321ca724b331f740ee59e14}
+\hypertarget{a00534_a231c2639d51844e6d75b4916c813f293}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM\_\-T@{GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM\_\-T@{GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM\_\-T}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM} {\bf GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00534_a231c2639d51844e6d75b4916c813f293}
+\hypertarget{a00534_a58445849a3e6cfa33fbc058bafdb717c}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-NOTIF\_\-FUNC\_\-T@{GSN\_\-NWIF\_\-NOTIF\_\-FUNC\_\-T}}
+\index{GSN\_\-NWIF\_\-NOTIF\_\-FUNC\_\-T@{GSN\_\-NWIF\_\-NOTIF\_\-FUNC\_\-T}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-NOTIF\_\-FUNC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-NWIF\_\-NOTIF\_\-FUNC\_\-T})({\bf INT32} notifMsg, VOID $\ast$ctx)}}
+\label{a00534_a58445849a3e6cfa33fbc058bafdb717c}
+
+
+Definition at line 71 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a2ab3fab7c51c5e11d061387dd44a2381}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T@{GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T}}
+\index{GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T@{GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf BOOL}($\ast$  {\bf GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T})(struct {\bf GSN\_\-NWIF\_\-CTX} $\ast$, {\bf UINT32}, {\bf GSN\_\-ETHERNET\_\-FRAME\_\-T} $\ast$)}}
+\label{a00534_a2ab3fab7c51c5e11d061387dd44a2381}
+
+
+Definition at line 86 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_abe5b22bf98ced0df6c6eb1abfc0230c1}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-REINIT\_\-PARAMS\_\-T@{GSN\_\-NWIF\_\-REINIT\_\-PARAMS\_\-T}}
+\index{GSN\_\-NWIF\_\-REINIT\_\-PARAMS\_\-T@{GSN\_\-NWIF\_\-REINIT\_\-PARAMS\_\-T}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-REINIT\_\-PARAMS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NWIF\_\-REINIT\_\-PARAMS} {\bf GSN\_\-NWIF\_\-REINIT\_\-PARAMS\_\-T}}}
+\label{a00534_abe5b22bf98ced0df6c6eb1abfc0230c1}
+\hypertarget{a00534_a8a45953bae7352132d28cdd008cf0968}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-NWIF\_\-TBL\_\-ELEMENT\_\-T@{GSN\_\-NWIF\_\-TBL\_\-ELEMENT\_\-T}}
+\index{GSN\_\-NWIF\_\-TBL\_\-ELEMENT\_\-T@{GSN\_\-NWIF\_\-TBL\_\-ELEMENT\_\-T}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-NWIF\_\-TBL\_\-ELEMENT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NWIF\_\-TBL\_\-ELEMENT} {\bf GSN\_\-NWIF\_\-TBL\_\-ELEMENT\_\-T}}}
+\label{a00534_a8a45953bae7352132d28cdd008cf0968}
+\hypertarget{a00534_af2db652f956f3af146d479868ef42d8f}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!IP\_\-VERSION\_\-T@{IP\_\-VERSION\_\-T}}
+\index{IP\_\-VERSION\_\-T@{IP\_\-VERSION\_\-T}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{IP\_\-VERSION\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf IP\_\-VERSION} {\bf IP\_\-VERSION\_\-T}}}
+\label{a00534_af2db652f956f3af146d479868ef42d8f}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00534_a00c060a93ce3ad909cef83066fef046b}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-IPv6\_\-TYPE@{GSN\_\-IPv6\_\-TYPE}}
+\index{GSN\_\-IPv6\_\-TYPE@{GSN\_\-IPv6\_\-TYPE}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-IPv6\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-IPv6\_\-TYPE}}}
+\label{a00534_a00c060a93ce3ad909cef83066fef046b}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-IPv6\_\-LINK\_\-LOCAL@{GSN\_\-IPv6\_\-LINK\_\-LOCAL}!gsn\_\-nwif.h@{gsn\_\-nwif.h}}\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-IPv6\_\-LINK\_\-LOCAL@{GSN\_\-IPv6\_\-LINK\_\-LOCAL}}\item[{\em 
+\hypertarget{a00534_a00c060a93ce3ad909cef83066fef046bad3170b5a0220495ada1fccfcb0e6006d}{
+GSN\_\-IPv6\_\-LINK\_\-LOCAL}
+\label{a00534_a00c060a93ce3ad909cef83066fef046bad3170b5a0220495ada1fccfcb0e6006d}
+}]\index{GSN\_\-IPv6\_\-GLOBAL@{GSN\_\-IPv6\_\-GLOBAL}!gsn\_\-nwif.h@{gsn\_\-nwif.h}}\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-IPv6\_\-GLOBAL@{GSN\_\-IPv6\_\-GLOBAL}}\item[{\em 
+\hypertarget{a00534_a00c060a93ce3ad909cef83066fef046badad41d83199dda41c6c880e1f0233bf7}{
+GSN\_\-IPv6\_\-GLOBAL}
+\label{a00534_a00c060a93ce3ad909cef83066fef046badad41d83199dda41c6c880e1f0233bf7}
+}]\index{GSN\_\-IPv6\_\-INVALID@{GSN\_\-IPv6\_\-INVALID}!gsn\_\-nwif.h@{gsn\_\-nwif.h}}\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-IPv6\_\-INVALID@{GSN\_\-IPv6\_\-INVALID}}\item[{\em 
+\hypertarget{a00534_a00c060a93ce3ad909cef83066fef046ba7a1239fa60f688ee1392d15a937ce945}{
+GSN\_\-IPv6\_\-INVALID}
+\label{a00534_a00c060a93ce3ad909cef83066fef046ba7a1239fa60f688ee1392d15a937ce945}
+}]\index{GSN\_\-IPv6\_\-UNSPECIFIED@{GSN\_\-IPv6\_\-UNSPECIFIED}!gsn\_\-nwif.h@{gsn\_\-nwif.h}}\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-IPv6\_\-UNSPECIFIED@{GSN\_\-IPv6\_\-UNSPECIFIED}}\item[{\em 
+\hypertarget{a00534_a00c060a93ce3ad909cef83066fef046ba97fbed39f3562817d94f0c16a41dbf04}{
+GSN\_\-IPv6\_\-UNSPECIFIED}
+\label{a00534_a00c060a93ce3ad909cef83066fef046ba97fbed39f3562817d94f0c16a41dbf04}
+}]\index{GSN\_\-IPv6\_\-LOOPBACK@{GSN\_\-IPv6\_\-LOOPBACK}!gsn\_\-nwif.h@{gsn\_\-nwif.h}}\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-IPv6\_\-LOOPBACK@{GSN\_\-IPv6\_\-LOOPBACK}}\item[{\em 
+\hypertarget{a00534_a00c060a93ce3ad909cef83066fef046ba9eeb7bbadb9161482c1c526a4e0ebe46}{
+GSN\_\-IPv6\_\-LOOPBACK}
+\label{a00534_a00c060a93ce3ad909cef83066fef046ba9eeb7bbadb9161482c1c526a4e0ebe46}
+}]\index{GSN\_\-IPv6\_\-MULTICAST@{GSN\_\-IPv6\_\-MULTICAST}!gsn\_\-nwif.h@{gsn\_\-nwif.h}}\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-IPv6\_\-MULTICAST@{GSN\_\-IPv6\_\-MULTICAST}}\item[{\em 
+\hypertarget{a00534_a00c060a93ce3ad909cef83066fef046ba6204bec4fee8f931e0eb72057cf8e46a}{
+GSN\_\-IPv6\_\-MULTICAST}
+\label{a00534_a00c060a93ce3ad909cef83066fef046ba6204bec4fee8f931e0eb72057cf8e46a}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 406 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_abf9adb0cafd6914964a2ccab114e4bfe}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!IP\_\-VERSION@{IP\_\-VERSION}}
+\index{IP\_\-VERSION@{IP\_\-VERSION}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{IP\_\-VERSION}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf IP\_\-VERSION}}}
+\label{a00534_abf9adb0cafd6914964a2ccab114e4bfe}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{IP\_\-VERSION\_\-V4@{IP\_\-VERSION\_\-V4}!gsn\_\-nwif.h@{gsn\_\-nwif.h}}\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!IP\_\-VERSION\_\-V4@{IP\_\-VERSION\_\-V4}}\item[{\em 
+\hypertarget{a00534_abf9adb0cafd6914964a2ccab114e4bfea34109b1e0b5d00e2a85bcb1348684a2a}{
+IP\_\-VERSION\_\-V4}
+\label{a00534_abf9adb0cafd6914964a2ccab114e4bfea34109b1e0b5d00e2a85bcb1348684a2a}
+}]\index{IP\_\-VERSION\_\-V6@{IP\_\-VERSION\_\-V6}!gsn\_\-nwif.h@{gsn\_\-nwif.h}}\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!IP\_\-VERSION\_\-V6@{IP\_\-VERSION\_\-V6}}\item[{\em 
+\hypertarget{a00534_abf9adb0cafd6914964a2ccab114e4bfea494a716dab2d9239bb991db0a32c287c}{
+IP\_\-VERSION\_\-V6}
+\label{a00534_abf9adb0cafd6914964a2ccab114e4bfea494a716dab2d9239bb991db0a32c287c}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 97 of file gsn\_\-nwif.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00534_afd7bdd70a054ec8427b4f0043dbac155}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-IPv6\_\-ADDR\_\-TYPE@{GSN\_\-IPv6\_\-ADDR\_\-TYPE}}
+\index{GSN\_\-IPv6\_\-ADDR\_\-TYPE@{GSN\_\-IPv6\_\-ADDR\_\-TYPE}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-IPv6\_\-ADDR\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE {\bf UINT32} GSN\_\-IPv6\_\-ADDR\_\-TYPE (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_afd7bdd70a054ec8427b4f0043dbac155}
+
+
+Definition at line 427 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a5ad130ccf73221792798ec396a497eec}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GSN\_\-IPv6\_\-CHANGE\_\-ENDIAN@{GSN\_\-IPv6\_\-CHANGE\_\-ENDIAN}}
+\index{GSN\_\-IPv6\_\-CHANGE\_\-ENDIAN@{GSN\_\-IPv6\_\-CHANGE\_\-ENDIAN}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GSN\_\-IPv6\_\-CHANGE\_\-ENDIAN}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GSN\_\-IPv6\_\-CHANGE\_\-ENDIAN (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a5ad130ccf73221792798ec396a497eec}
+
+
+Definition at line 418 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_a354eab3e8d1f1df084e53e22cf948c37}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwif\_\-BsdInitialize@{GsnNwif\_\-BsdInitialize}}
+\index{GsnNwif\_\-BsdInitialize@{GsnNwif\_\-BsdInitialize}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwif\_\-BsdInitialize}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNwif\_\-BsdInitialize (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NW\_\-BSD\_\-T} $\ast$}]{pBsd, }
+\item[{{\bf GSN\_\-NWIF\_\-BSD\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a354eab3e8d1f1df084e53e22cf948c37}
+\hypertarget{a00534_a77bfff80b820cd026619abc81b3d9bd4}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-Close@{GsnNwIf\_\-Close}}
+\index{GsnNwIf\_\-Close@{GsnNwIf\_\-Close}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-Close}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS\_\-T} GsnNwIf\_\-Close (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a77bfff80b820cd026619abc81b3d9bd4}
+\hypertarget{a00534_a5f6202ffb14e7becc2f4a933765bee4b}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-DeInit@{GsnNwIf\_\-DeInit}}
+\index{GsnNwIf\_\-DeInit@{GsnNwIf\_\-DeInit}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-DeInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNwIf\_\-DeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a5f6202ffb14e7becc2f4a933765bee4b}
+\hypertarget{a00534_a1d6b77efc1ea0c3233453b7912a02f54}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-dhcpClientCreateRecord@{GsnNwIf\_\-dhcpClientCreateRecord}}
+\index{GsnNwIf\_\-dhcpClientCreateRecord@{GsnNwIf\_\-dhcpClientCreateRecord}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-dhcpClientCreateRecord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnNwIf\_\-dhcpClientCreateRecord (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{NX\_\-DHCP\_\-CLIENT\_\-RECORD $\ast$}]{pDhcpClientRecord}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a1d6b77efc1ea0c3233453b7912a02f54}
+\hypertarget{a00534_ad951c5f3241c7a1d2deab7ecee17f7a8}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-dhcpClientRestoreRecord@{GsnNwIf\_\-dhcpClientRestoreRecord}}
+\index{GsnNwIf\_\-dhcpClientRestoreRecord@{GsnNwIf\_\-dhcpClientRestoreRecord}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-dhcpClientRestoreRecord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnNwIf\_\-dhcpClientRestoreRecord (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{NX\_\-DHCP\_\-CLIENT\_\-RECORD $\ast$}]{pDhcpClientRecord, }
+\item[{ULONG}]{timeElapsed}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_ad951c5f3241c7a1d2deab7ecee17f7a8}
+\hypertarget{a00534_aeef793a2c3da25917feb130dad880a82}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-DhcpLeaseExpired@{GsnNwIf\_\-DhcpLeaseExpired}}
+\index{GsnNwIf\_\-DhcpLeaseExpired@{GsnNwIf\_\-DhcpLeaseExpired}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-DhcpLeaseExpired}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf BOOL} GsnNwIf\_\-DhcpLeaseExpired (
+\begin{DoxyParamCaption}
+\item[{{\bf ULONG64}}]{dhcpLeaseExpireTime}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_aeef793a2c3da25917feb130dad880a82}
+\hypertarget{a00534_abd774857f87aa3940257a3298b1299ef}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-DhcpLeaseTimeSet@{GsnNwIf\_\-DhcpLeaseTimeSet}}
+\index{GsnNwIf\_\-DhcpLeaseTimeSet@{GsnNwIf\_\-DhcpLeaseTimeSet}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-DhcpLeaseTimeSet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnNwIf\_\-DhcpLeaseTimeSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf ULONG64}}]{dhcpLeaseTime}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_abd774857f87aa3940257a3298b1299ef}
+\hypertarget{a00534_ad426afd4a106b468b2ba41a59de8bacd}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-DhcpStop@{GsnNwIf\_\-DhcpStop}}
+\index{GsnNwIf\_\-DhcpStop@{GsnNwIf\_\-DhcpStop}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-DhcpStop}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnNwIf\_\-DhcpStop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_ad426afd4a106b468b2ba41a59de8bacd}
+\hypertarget{a00534_ae401c2332b64b7d4da14329fab309d8c}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-DhcpStrat@{GsnNwIf\_\-DhcpStrat}}
+\index{GsnNwIf\_\-DhcpStrat@{GsnNwIf\_\-DhcpStrat}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-DhcpStrat}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS\_\-T} GsnNwIf\_\-DhcpStrat (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T} $\ast$}]{pDhcpParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_ae401c2332b64b7d4da14329fab309d8c}
+\hypertarget{a00534_aeb71dfef7a354215b3847a72ba6cee87}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-DhcpV6Stop@{GsnNwIf\_\-DhcpV6Stop}}
+\index{GsnNwIf\_\-DhcpV6Stop@{GsnNwIf\_\-DhcpV6Stop}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-DhcpV6Stop}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnNwIf\_\-DhcpV6Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_aeb71dfef7a354215b3847a72ba6cee87}
+\hypertarget{a00534_a67f0c19960ee130c6a6c37e035b0b2f5}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-DnsHostByNameGet@{GsnNwIf\_\-DnsHostByNameGet}}
+\index{GsnNwIf\_\-DnsHostByNameGet@{GsnNwIf\_\-DnsHostByNameGet}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-DnsHostByNameGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNwIf\_\-DnsHostByNameGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf UINT8} $\ast$}]{pHostName, }
+\item[{ULONG $\ast$}]{DnsAddress, }
+\item[{ULONG}]{timeout}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a67f0c19960ee130c6a6c37e035b0b2f5}
+\hypertarget{a00534_a41fa414e85aaf3e85ca651ef6e86c7a8}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwif\_\-DnsServerAdd@{GsnNwif\_\-DnsServerAdd}}
+\index{GsnNwif\_\-DnsServerAdd@{GsnNwif\_\-DnsServerAdd}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwif\_\-DnsServerAdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnNwif\_\-DnsServerAdd (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{ULONG}]{dnsServerAddr, }
+\item[{{\bf UINT32}}]{index}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a41fa414e85aaf3e85ca651ef6e86c7a8}
+\hypertarget{a00534_a7aaafb9175778a2e4376c7213c5d4dfd}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwif\_\-DnsServerGet@{GsnNwif\_\-DnsServerGet}}
+\index{GsnNwif\_\-DnsServerGet@{GsnNwif\_\-DnsServerGet}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwif\_\-DnsServerGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnNwif\_\-DnsServerGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{ULONG $\ast$}]{dnsServerAddr, }
+\item[{{\bf UINT32}}]{index}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a7aaafb9175778a2e4376c7213c5d4dfd}
+\hypertarget{a00534_a6586191869986cd46f76fe47d889be01}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-GratArpSend@{GsnNwIf\_\-GratArpSend}}
+\index{GsnNwIf\_\-GratArpSend@{GsnNwIf\_\-GratArpSend}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-GratArpSend}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNwIf\_\-GratArpSend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a6586191869986cd46f76fe47d889be01}
+\hypertarget{a00534_a80312c55009d536cdf5229c6535587c2}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-Init@{GsnNwIf\_\-Init}}
+\index{GsnNwIf\_\-Init@{GsnNwIf\_\-Init}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNwIf\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf GSN\_\-NWIF\_\-INIT\_\-PARAMS\_\-T} $\ast$}]{pParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a80312c55009d536cdf5229c6535587c2}
+\hypertarget{a00534_a117d1eca43c85e2a38d4156902c7b77a}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-IpConfigGet@{GsnNwIf\_\-IpConfigGet}}
+\index{GsnNwIf\_\-IpConfigGet@{GsnNwIf\_\-IpConfigGet}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-IpConfigGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnNwIf\_\-IpConfigGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T} $\ast$}]{pIpConfig}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a117d1eca43c85e2a38d4156902c7b77a}
+\hypertarget{a00534_aa7f12d0166f5446bb34584498d1baf7a}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-IpConfigured@{GsnNwIf\_\-IpConfigured}}
+\index{GsnNwIf\_\-IpConfigured@{GsnNwIf\_\-IpConfigured}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-IpConfigured}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf BOOL} GsnNwIf\_\-IpConfigured (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_aa7f12d0166f5446bb34584498d1baf7a}
+\hypertarget{a00534_a277d2776e17397bbba0ee76d8470bc00}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwif\_\-IPv4Configure@{GsnNwif\_\-IPv4Configure}}
+\index{GsnNwif\_\-IPv4Configure@{GsnNwif\_\-IPv4Configure}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwif\_\-IPv4Configure}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNwif\_\-IPv4Configure (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T} $\ast$}]{pUsrIPv4Cfg, }
+\item[{{\bf GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T} $\ast$}]{pDhcpParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a277d2776e17397bbba0ee76d8470bc00}
+\hypertarget{a00534_aee3688d173845d135daba50d9fb66da9}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwif\_\-Ipv6AutoConfig@{GsnNwif\_\-Ipv6AutoConfig}}
+\index{GsnNwif\_\-Ipv6AutoConfig@{GsnNwif\_\-Ipv6AutoConfig}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwif\_\-Ipv6AutoConfig}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC INLINE VOID GsnNwif\_\-Ipv6AutoConfig (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{UINT}]{flags}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_aee3688d173845d135daba50d9fb66da9}
+
+
+Definition at line 458 of file gsn\_\-nwif.h.
+
+\hypertarget{a00534_acf4ee707388061162dad65b686a6174b}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwif\_\-IPv6Configure@{GsnNwif\_\-IPv6Configure}}
+\index{GsnNwif\_\-IPv6Configure@{GsnNwif\_\-IPv6Configure}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwif\_\-IPv6Configure}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNwif\_\-IPv6Configure (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf GSN\_\-NWIF\_\-IPv6\_\-CONFIG\_\-T} $\ast$}]{pUsrIPv6Cfg, }
+\item[{{\bf GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T} $\ast$}]{pDhcpParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_acf4ee707388061162dad65b686a6174b}
+\hypertarget{a00534_a8ec80e9053bfb9952c35af829f14359a}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwif\_\-IPv6Init@{GsnNwif\_\-IPv6Init}}
+\index{GsnNwif\_\-IPv6Init@{GsnNwif\_\-IPv6Init}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwif\_\-IPv6Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNwif\_\-IPv6Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf GSN\_\-NWIF\_\-IPV6\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a8ec80e9053bfb9952c35af829f14359a}
+\hypertarget{a00534_a6d18aa4993dd1d87f313bf079e8a0eb0}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-NwIfCtxGet@{GsnNwIf\_\-NwIfCtxGet}}
+\index{GsnNwIf\_\-NwIfCtxGet@{GsnNwIf\_\-NwIfCtxGet}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-NwIfCtxGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-CTX\_\-T}$\ast$ GsnNwIf\_\-NwIfCtxGet (
+\begin{DoxyParamCaption}
+\item[{NX\_\-IP $\ast$}]{ipHndl}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a6d18aa4993dd1d87f313bf079e8a0eb0}
+\hypertarget{a00534_ac810c0ab5151ae273488de8679923e19}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-Open@{GsnNwIf\_\-Open}}
+\index{GsnNwIf\_\-Open@{GsnNwIf\_\-Open}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-Open}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS\_\-T} GsnNwIf\_\-Open (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T} $\ast$}]{pIpConfig, }
+\item[{{\bf GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T} $\ast$}]{pDhcpParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_ac810c0ab5151ae273488de8679923e19}
+\hypertarget{a00534_a61054abc511da789e3d8d6ad340010e5}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwif\_\-PrivateIPv4Config@{GsnNwif\_\-PrivateIPv4Config}}
+\index{GsnNwif\_\-PrivateIPv4Config@{GsnNwif\_\-PrivateIPv4Config}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwif\_\-PrivateIPv4Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnNwif\_\-PrivateIPv4Config (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf GSN\_\-NWIF\_\-IPv4\_\-CONFIG\_\-T} $\ast$}]{pUsrIPv4Cfg, }
+\item[{{\bf GSN\_\-NWIF\_\-DHCP\_\-PARAMS\_\-T} $\ast$}]{pDhcpParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a61054abc511da789e3d8d6ad340010e5}
+\hypertarget{a00534_a546e248cb0ba3d6fadb2dc408b44c3b8}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-RecvFilterRegister@{GsnNwIf\_\-RecvFilterRegister}}
+\index{GsnNwIf\_\-RecvFilterRegister@{GsnNwIf\_\-RecvFilterRegister}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-RecvFilterRegister}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T} GsnNwIf\_\-RecvFilterRegister (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T}}]{recvFilter}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a546e248cb0ba3d6fadb2dc408b44c3b8}
+\hypertarget{a00534_a7ae07eb99df459cf19b0988a44878fa1}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-Reinit@{GsnNwIf\_\-Reinit}}
+\index{GsnNwIf\_\-Reinit@{GsnNwIf\_\-Reinit}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-Reinit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNwIf\_\-Reinit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf GSN\_\-NWIF\_\-REINIT\_\-PARAMS\_\-T} $\ast$}]{pParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a7ae07eb99df459cf19b0988a44878fa1}
+\hypertarget{a00534_abc8558b7010c7c7edfc8caea64d11e66}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-StatsGet@{GsnNwIf\_\-StatsGet}}
+\index{GsnNwIf\_\-StatsGet@{GsnNwIf\_\-StatsGet}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-StatsGet}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnNwIf\_\-StatsGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{{\bf GSN\_\-NWIF\_\-STATS\_\-T} $\ast$}]{pStats}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_abc8558b7010c7c7edfc8caea64d11e66}
+\hypertarget{a00534_a4e53cd5f3eed0e1415abd9cda43b0945}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-TableEntryClear@{GsnNwIf\_\-TableEntryClear}}
+\index{GsnNwIf\_\-TableEntryClear@{GsnNwIf\_\-TableEntryClear}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-TableEntryClear}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnNwIf\_\-TableEntryClear (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{NX\_\-IP $\ast$}]{ipHndl}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a4e53cd5f3eed0e1415abd9cda43b0945}
+\hypertarget{a00534_a38e642072683d1a5971623d3540db5a7}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-TableEntrySet@{GsnNwIf\_\-TableEntrySet}}
+\index{GsnNwIf\_\-TableEntrySet@{GsnNwIf\_\-TableEntrySet}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-TableEntrySet}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnNwIf\_\-TableEntrySet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf, }
+\item[{NX\_\-IP $\ast$}]{ipHndl}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_a38e642072683d1a5971623d3540db5a7}
+\hypertarget{a00534_ad93c46208348880f4e124769fcc1daea}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwIf\_\-U16FieldGet@{GsnNwIf\_\-U16FieldGet}}
+\index{GsnNwIf\_\-U16FieldGet@{GsnNwIf\_\-U16FieldGet}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwIf\_\-U16FieldGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} GsnNwIf\_\-U16FieldGet (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{pPkt}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_ad93c46208348880f4e124769fcc1daea}
+\hypertarget{a00534_ac34c16941b0c478421518bf4dda11aa7}{
+\index{gsn\_\-nwif.h@{gsn\_\-nwif.h}!GsnNwif\_\-UpdatePhyAddr@{GsnNwif\_\-UpdatePhyAddr}}
+\index{GsnNwif\_\-UpdatePhyAddr@{GsnNwif\_\-UpdatePhyAddr}!gsn_nwif.h@{gsn\_\-nwif.h}}
+\subsubsection[{GsnNwif\_\-UpdatePhyAddr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnNwif\_\-UpdatePhyAddr (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-NWIF\_\-CTX\_\-T} $\ast$}]{pNwIf}
+\end{DoxyParamCaption}
+)}}
+\label{a00534_ac34c16941b0c478421518bf4dda11aa7}

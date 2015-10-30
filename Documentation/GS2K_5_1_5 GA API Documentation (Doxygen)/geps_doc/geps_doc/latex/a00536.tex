@@ -1,0 +1,268 @@
+\hypertarget{a00536}{
+\section{gsn\_\-osal\_\-threadx.h File Reference}
+\label{a00536}\index{gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}}
+}
+
+
+GSN OSAL public header file for threadx. This file contains the public APIs and structures of OSAL module.  
+
+
+{\ttfamily \#include $<$tx\_\-api.h$>$}\par
+{\ttfamily \#include $<$tx\_\-port.h$>$}\par
+Include dependency graph for gsn\_\-osal\_\-threadx.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{a00773}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00774}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00628_gae961839651f7d7d0065cca8c4efb88f6}{GSN\_\-OSAL\_\-THREAD\_\-STATE\_\-T} \hyperlink{a00628_gac436a5e128feda97ba01f557f15bcc57}{THREAD\_\-STATE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread state. enum for thread state. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00628_ga0aaa82e357c4ce95100dc1df18ec3363}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T} \hyperlink{a00628_gab9843a3f99a06459775b3380ed83f17d}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread initial state. enum for the initial state of the thread. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00628_ga62a09641cac90719fc0cdb5f204df09b}{GSN\_\-OSAL\_\-THREAD\_\-ENTRY\_\-T} )(\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ctx)
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread entry function prototype. Prototype of the thread entry function. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00536_acbde002f87f78d02906adef40c5b6f42}{THREADX\_\-ENTRY\_\-T} )(ULONG)
+\item 
+typedef enum \hyperlink{a00628_ga5568febc25b2751efc49a3eddcee65f5}{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T} \hyperlink{a00628_gae40be9afbdb44361f83e67879b2ac566}{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Wait. enum for the Wait. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00628_ga4b070e363e5202d1c7e6ffe017b981b9}{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE} \hyperlink{a00628_gafc2ee1bc516d2ae2d9a29757cbe45469}{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL priority inheritance type. enum for the priority inheritance. \end{DoxyCompactList}\item 
+typedef TX\_\-THREAD \hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread TCB. type definition for thread TCB. \end{DoxyCompactList}\item 
+typedef TX\_\-SEMAPHORE \hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Semaphore type. type definition for semaphore. \end{DoxyCompactList}\item 
+typedef TX\_\-QUEUE \hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Queue type. type definition for Queue. \end{DoxyCompactList}\item 
+typedef TX\_\-MUTEX \hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Mutex type. type definition for Mutex. \end{DoxyCompactList}\item 
+typedef TX\_\-EVENT\_\-FLAGS\_\-GROUP \hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Event flag group type. type definition for Event flag group. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00536_afb39f905ce07232becc42deeccb9ad4c}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T}
+\item 
+typedef enum \hyperlink{a00536_ab43ce60f761c421854ded68117c8f8f2}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP} \hyperlink{a00536_a3782687de549490574b44f3374fb5731}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T}
+\item 
+typedef TX\_\-BYTE\_\-POOL \hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL byte pool. type definition for byte pool. \end{DoxyCompactList}\item 
+typedef TX\_\-BLOCK\_\-POOL \hyperlink{a00628_ga6adbb87a82d8b5936dd6f535024d81b7}{GSN\_\-OSAL\_\-BLOCK\_\-POOL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL block pool. type definition for block pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00628_gae961839651f7d7d0065cca8c4efb88f6}{GSN\_\-OSAL\_\-THREAD\_\-STATE\_\-T} \{ \par
+\hyperlink{a00628_ggae961839651f7d7d0065cca8c4efb88f6a8c5e43061dfdf8e939c3feaf584c4756}{GSN\_\-OSAL\_\-THREAD\_\-READY} =  TX\_\-READY, 
+\par
+\hyperlink{a00628_ggae961839651f7d7d0065cca8c4efb88f6af4b7e2cc66788d5d82aa0f4e97e32573}{GSN\_\-OSAL\_\-THREAD\_\-SUSPENDED} =  TX\_\-SUSPENDED, 
+\par
+\hyperlink{a00628_ggae961839651f7d7d0065cca8c4efb88f6a8ee2a33c7fe97d7512e9c2c6e3e117ac}{GSN\_\-OSAL\_\-THRAAD\_\-HALTED} =  TX\_\-TERMINATED
+ \}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread state. enum for thread state. \end{DoxyCompactList}\item 
+enum \hyperlink{a00628_ga0aaa82e357c4ce95100dc1df18ec3363}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T} \{ \par
+\hyperlink{a00628_gga0aaa82e357c4ce95100dc1df18ec3363ad09f63f7f5222fec1fffa19c96e195fd}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-READY} =  TX\_\-AUTO\_\-START, 
+\par
+\hyperlink{a00628_gga0aaa82e357c4ce95100dc1df18ec3363a8c847980c5d8cf9772ddb4951ebf58f1}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-SUSPENDED} =  TX\_\-DONT\_\-START
+ \}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread initial state. enum for the initial state of the thread. \end{DoxyCompactList}\item 
+enum \hyperlink{a00628_ga5568febc25b2751efc49a3eddcee65f5}{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T} \{ \par
+\hyperlink{a00628_gga5568febc25b2751efc49a3eddcee65f5ab182840f9fc7dc34a9b3156a929d9a2f}{GSN\_\-OSAL\_\-WAIT\_\-FOREVER} =  TX\_\-WAIT\_\-FOREVER, 
+\par
+\hyperlink{a00628_gga5568febc25b2751efc49a3eddcee65f5a406a6391540b62f9dde0aa96311bfb00}{GSN\_\-OSAL\_\-NO\_\-WAIT} =  TX\_\-NO\_\-WAIT
+ \}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Wait. enum for the Wait. \end{DoxyCompactList}\item 
+enum \hyperlink{a00628_ga4b070e363e5202d1c7e6ffe017b981b9}{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE} \{ \par
+\hyperlink{a00628_gga4b070e363e5202d1c7e6ffe017b981b9a9f5a8464df10078a40932796037dbe21}{GSN\_\-OSAL\_\-PRI\_\-INHERIT} =  TX\_\-INHERIT, 
+\par
+\hyperlink{a00628_gga4b070e363e5202d1c7e6ffe017b981b9af4c1fbe390b0fce01a5e223d4f01364c}{GSN\_\-OSAL\_\-PRI\_\-NO\_\-INHERIT} =  TX\_\-NO\_\-INHERIT
+ \}
+\begin{DoxyCompactList}\small\item\em GSN OSAL priority inheritance type. enum for the priority inheritance. \end{DoxyCompactList}\item 
+enum \hyperlink{a00536_ab43ce60f761c421854ded68117c8f8f2}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP} \{ \par
+\hyperlink{a00536_ab43ce60f761c421854ded68117c8f8f2a8fe27d7399c9dbd00d2bd683f2c36000}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR} =  00, 
+\par
+\hyperlink{a00536_ab43ce60f761c421854ded68117c8f8f2a30ef1c68c1b738b1245698b0ca0c0e35}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR\_\-CLEAR} =  01, 
+\par
+\hyperlink{a00536_ab43ce60f761c421854ded68117c8f8f2ac4ff97c77b4cae846d17061ee4deaeab}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND} =  02, 
+\par
+\hyperlink{a00536_ab43ce60f761c421854ded68117c8f8f2a7caf2f4431cbf9b2eca54ec01720bfca}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND\_\-CLEAR} =  03
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+INLINE \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00628_ga1ed551b8d69faf123769e95f1d1a6a7b}{GsnOsal\_\-IntrDisable} (VOID)
+\begin{DoxyCompactList}\small\item\em Disable interrupts. This function disables interrupts at ARM core level. It returns the interrupt status register value which has to be used to enable the interrupts again. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00628_ga2b636bd2ea78e766272d3b316fc56caf}{GsnOsal\_\-IntrEnable} (\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} intrStatus)
+\begin{DoxyCompactList}\small\item\em Enables interrupts. This function enables interrupts at ARM core level. It takes the interrupt status register value which was returned while disabling the interrupts. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00628_gae0bcbaa3cb7b92d2df26e8894b6b4ee3}{GsnOsal\_\-KernelInit} (VOID)
+\begin{DoxyCompactList}\small\item\em RTOS initialization. This function initializes the RTOS. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00628_gafe9fabb4c27bd3a4544da84919cd1789}{GsnOsal\_\-KernelStart} (VOID)
+\begin{DoxyCompactList}\small\item\em RTOS Start. This function starts the RTOS. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga1b2c29cb19f0f5a40f765072e570ee83}{GsnOsal\_\-ThreadCreate} (\hyperlink{a00628_ga62a09641cac90719fc0cdb5f204df09b}{GSN\_\-OSAL\_\-THREAD\_\-ENTRY\_\-T} fptr, VOID $\ast$pCtx, \hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$pTcb, const \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pName, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} priority, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pStack, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} stackSize, \hyperlink{a00628_ga0aaa82e357c4ce95100dc1df18ec3363}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T} defltState)
+\begin{DoxyCompactList}\small\item\em Thread Create. This function creates the thread. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga5a127d54a6f2daed4353bea344e40ee5}{GsnOsal\_\-ThreadDelete} (\hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$pTcb)
+\begin{DoxyCompactList}\small\item\em Thread delete. This function is used to delete the THREAD. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gaa895749a7c406cfe155217c8c1d57328}{GsnOsal\_\-ThreadResume} (\hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$pTcb)
+\begin{DoxyCompactList}\small\item\em Thread Run. This API is used to make the THREAD ready. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gabd439d54a7fcf906224267e15796287c}{GsnOsal\_\-ThreadSuspend} (\hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$pTcb)
+\begin{DoxyCompactList}\small\item\em Thread suspend. This function is used to suspend the THREAD. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga9ef6b89b782f89f0141efac133b6534b}{GsnOsal\_\-SemCreate} (\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} $\ast$pSem, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} InitialCount)
+\begin{DoxyCompactList}\small\item\em Semaphore Create. This function is used to create the semaphore. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga3542986ec14bf1b3377b3908fb661109}{GsnOsal\_\-SemDelete} (\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} $\ast$pSem)
+\begin{DoxyCompactList}\small\item\em Semaphore Delete. This function is used to delete the semaphore. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga35296c135e578c960847feb173d238da}{GsnOsal\_\-SemAcquire} (\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} $\ast$pSem, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Semaphore Acquire. This function is used to acquire the semaphore. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gac2be1dd2c117010d1c3b7b4c0fbc7323}{GsnOsal\_\-SemRelease} (\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} $\ast$pSem)
+\begin{DoxyCompactList}\small\item\em Semaphore Release. This function is used to release the semaphore. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00628_gaa228381daedb3684e9d77e348d45ce15}{GsnOsal\_\-QueueMsgSizeInWords} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msgSizeInBytes)
+\begin{DoxyCompactList}\small\item\em Calculate Queue Message Size in words. The message size provided during the que cerate should in terms of number of words. if the message is a structure, this API helps to calculate the message size in terms of number of words, at run time. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gad7990e4a518c71f9d9a611b9ee379b9a}{GsnOsal\_\-QueueCreate} (\hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$pQueue, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msgSize, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pMsgBuff, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msgBuffSize)
+\begin{DoxyCompactList}\small\item\em Queue Create. This function is used to create the mailbox. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga52ee4c5716ea5f675b1b11b79dd2c130}{GsnOsal\_\-QueueDelete} (\hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$pQueue)
+\begin{DoxyCompactList}\small\item\em Queue Delete. This function is used to delete the mailbox. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga67adc0a9e709aabc4e9e4c8ff0241e81}{GsnOsal\_\-QueuePut} (\hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$pQueue, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em Queue Put/Send. This function is used to put/send a message to the mailbox. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga4db12c3f53ae65618056f1ebab33f1b5}{GsnOsal\_\-QueueGet} (\hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$pQueue, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pMsg, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Queue Get/Receive. This function is used to get/receive a message from the mailbox. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gabef97b0a9c9c1d341e950d3b415a347d}{GsnOsal\_\-MutexCreate} (\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$pMutex, \hyperlink{a00628_gafc2ee1bc516d2ae2d9a29757cbe45469}{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE\_\-T} priInheritance)
+\begin{DoxyCompactList}\small\item\em Mutex Create. This function is used to create the mutex. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga2d2347555ec07007912ccd61ea62f16a}{GsnOsal\_\-MutexDelete} (\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$pMutex)
+\begin{DoxyCompactList}\small\item\em Mutex Delete. This function is used to delete the mutex. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga0440cf06602f2a414ea1c20a05f139d0}{GsnOsal\_\-MutexPut} (\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$pMutex)
+\begin{DoxyCompactList}\small\item\em Mutex Put. This function is used to take the mutex. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga0528eb3552c6d3ece518c9662ffb143a}{GsnOsal\_\-MutexGet} (\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$pMutex, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Mutex Get. This function is used to get the mutex. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga7a19fa807183b26dc8566a06a44acf38}{GsnOsal\_\-BytePoolCreate} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBytePool, VOID $\ast$pPoolStart, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} poolSize)
+\begin{DoxyCompactList}\small\item\em Byte Pool Create. This function is used to create a byte pool -\/ a pool of memory for dynamic allocation, similar to malloc. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga159b4fdceeb3ce96aa80561bb380987e}{GsnOsal\_\-BytePoolDelete} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBytePool)
+\begin{DoxyCompactList}\small\item\em Byte Pool Delete. This function is used to delete an already created byte pool. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga1d70fb063bb88ee4ac9fa2c2260afeb9}{GsnOsal\_\-ByteAllocate} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBytePool, VOID $\ast$$\ast$pMem, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Byte Allocate. This function is used to allocate memory from byte pool. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga278d0c8b448a24f26c2359b7830c0da2}{GsnOsal\_\-ByteRelease} (VOID $\ast$pMem)
+\begin{DoxyCompactList}\small\item\em Byte Release. This function is used to release the allocated memory. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gafa441a8b3321c0f612fbedbe4a897a49}{GsnOsal\_\-BlockPoolCreate} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBlockPool, VOID $\ast$pPoolStart, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} poolSize)
+\begin{DoxyCompactList}\small\item\em Block Pool Create. This function is used to create a block pool -\/ a pool of memory for dynamic allocation of fixed size blocks. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gaf64e15fd3f730913bdc47d6d237a0ef4}{GsnOsal\_\-BlockPoolDelete} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBlockPool)
+\begin{DoxyCompactList}\small\item\em Byte Pool Delete. This function is used to delete an already created block pool. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga6d021ea7fe89c49b1e58da5bf8c095fc}{GsnOsal\_\-BlockAllocate} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBlockPool, VOID $\ast$$\ast$pMem, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Byte Allocate. This function is used to allocate memory from block pool. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga9130c973fd5ee0e07747cfb48e50a8ae}{GsnOsal\_\-BlockRelease} (VOID $\ast$pMem)
+\begin{DoxyCompactList}\small\item\em Byte Release. This function is used to release the allocated memory. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga7a4f780c8658de6dbb271b4b0cc8fc70}{GsnOsal\_\-EventFlagsCreate} (\hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$pEventFlags)
+\begin{DoxyCompactList}\small\item\em Event flags Create. This function is used to create the event flags. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga71ec8f3dba1277958f09da0e1e2a78a9}{GsnOsal\_\-EventFlagsDelete} (\hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$pEventFlags)
+\begin{DoxyCompactList}\small\item\em Event Flags Delete. This function is used to delete the event flags. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gae83b5f6bc69104f8d1a12659820011b1}{GsnOsal\_\-EventFlagsSet} (\hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$pEventFlags, \hyperlink{a00536_afb39f905ce07232becc42deeccb9ad4c}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T} eventFlagsVal, \hyperlink{a00536_a3782687de549490574b44f3374fb5731}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T} eventFlagsOp)
+\begin{DoxyCompactList}\small\item\em Event Flags Put. This function is used to take the event flags. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gaf776c600539bb9e5945b60e17cef7a4f}{GsnOsal\_\-EventFlagsGet} (\hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$pEventFlags, \hyperlink{a00536_afb39f905ce07232becc42deeccb9ad4c}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T} eventFlagsGet, \hyperlink{a00536_a3782687de549490574b44f3374fb5731}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T} eventFlagsOp, \hyperlink{a00536_afb39f905ce07232becc42deeccb9ad4c}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T} $\ast$pEventFlagsVal, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Event Flags Get. This function is used to get the event flags. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00536_a70ef03b4e0684d322882a09455aa847b}{GsnOsal\_\-SchedulerLock} (VOID)
+\item 
+INLINE VOID \hyperlink{a00536_a88a2be939cc7b964fa1729079e0eb121}{GsnOsal\_\-SchedulerUnlock} (VOID)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN OSAL public header file for threadx. This file contains the public APIs and structures of OSAL module. 
+
+Definition in file \hyperlink{a00536_source}{gsn\_\-osal\_\-threadx.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00536_a3782687de549490574b44f3374fb5731}{
+\index{gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}!GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T}}
+\index{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T}!gsn_osal_threadx.h@{gsn\_\-osal\_\-threadx.h}}
+\subsubsection[{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP}  {\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T}}}
+\label{a00536_a3782687de549490574b44f3374fb5731}
+\hypertarget{a00536_afb39f905ce07232becc42deeccb9ad4c}{
+\index{gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}!GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T}}
+\index{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T}!gsn_osal_threadx.h@{gsn\_\-osal\_\-threadx.h}}
+\subsubsection[{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf UINT32} {\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T}}}
+\label{a00536_afb39f905ce07232becc42deeccb9ad4c}
+
+
+Definition at line 190 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00536_acbde002f87f78d02906adef40c5b6f42}{
+\index{gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}!THREADX\_\-ENTRY\_\-T@{THREADX\_\-ENTRY\_\-T}}
+\index{THREADX\_\-ENTRY\_\-T@{THREADX\_\-ENTRY\_\-T}!gsn_osal_threadx.h@{gsn\_\-osal\_\-threadx.h}}
+\subsubsection[{THREADX\_\-ENTRY\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf THREADX\_\-ENTRY\_\-T})(ULONG)}}
+\label{a00536_acbde002f87f78d02906adef40c5b6f42}
+
+
+Definition at line 123 of file gsn\_\-osal\_\-threadx.h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00536_ab43ce60f761c421854ded68117c8f8f2}{
+\index{gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}!GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP}}
+\index{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP}!gsn_osal_threadx.h@{gsn\_\-osal\_\-threadx.h}}
+\subsubsection[{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP}}}
+\label{a00536_ab43ce60f761c421854ded68117c8f8f2}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR}!gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}}\index{gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}!GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR}}\item[{\em 
+\hypertarget{a00536_ab43ce60f761c421854ded68117c8f8f2a8fe27d7399c9dbd00d2bd683f2c36000}{
+GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR}
+\label{a00536_ab43ce60f761c421854ded68117c8f8f2a8fe27d7399c9dbd00d2bd683f2c36000}
+}]\index{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR\_\-CLEAR@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR\_\-CLEAR}!gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}}\index{gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}!GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR\_\-CLEAR@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR\_\-CLEAR}}\item[{\em 
+\hypertarget{a00536_ab43ce60f761c421854ded68117c8f8f2a30ef1c68c1b738b1245698b0ca0c0e35}{
+GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-OR\_\-CLEAR}
+\label{a00536_ab43ce60f761c421854ded68117c8f8f2a30ef1c68c1b738b1245698b0ca0c0e35}
+}]\index{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND}!gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}}\index{gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}!GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND}}\item[{\em 
+\hypertarget{a00536_ab43ce60f761c421854ded68117c8f8f2ac4ff97c77b4cae846d17061ee4deaeab}{
+GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND}
+\label{a00536_ab43ce60f761c421854ded68117c8f8f2ac4ff97c77b4cae846d17061ee4deaeab}
+}]\index{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND\_\-CLEAR@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND\_\-CLEAR}!gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}}\index{gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}!GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND\_\-CLEAR@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND\_\-CLEAR}}\item[{\em 
+\hypertarget{a00536_ab43ce60f761c421854ded68117c8f8f2a7caf2f4431cbf9b2eca54ec01720bfca}{
+GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-AND\_\-CLEAR}
+\label{a00536_ab43ce60f761c421854ded68117c8f8f2a7caf2f4431cbf9b2eca54ec01720bfca}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 192 of file gsn\_\-osal\_\-threadx.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00536_a70ef03b4e0684d322882a09455aa847b}{
+\index{gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}!GsnOsal\_\-SchedulerLock@{GsnOsal\_\-SchedulerLock}}
+\index{GsnOsal\_\-SchedulerLock@{GsnOsal\_\-SchedulerLock}!gsn_osal_threadx.h@{gsn\_\-osal\_\-threadx.h}}
+\subsubsection[{GsnOsal\_\-SchedulerLock}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnOsal\_\-SchedulerLock (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00536_a70ef03b4e0684d322882a09455aa847b}
+
+
+Definition at line 1072 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00536_a88a2be939cc7b964fa1729079e0eb121}{
+\index{gsn\_\-osal\_\-threadx.h@{gsn\_\-osal\_\-threadx.h}!GsnOsal\_\-SchedulerUnlock@{GsnOsal\_\-SchedulerUnlock}}
+\index{GsnOsal\_\-SchedulerUnlock@{GsnOsal\_\-SchedulerUnlock}!gsn_osal_threadx.h@{gsn\_\-osal\_\-threadx.h}}
+\subsubsection[{GsnOsal\_\-SchedulerUnlock}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnOsal\_\-SchedulerUnlock (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00536_a88a2be939cc7b964fa1729079e0eb121}
+
+
+Definition at line 1078 of file gsn\_\-osal\_\-threadx.h.
+

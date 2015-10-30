@@ -1,0 +1,59 @@
+\hypertarget{a00623}{
+\section{GSN WLAN Firmware Interface (HIF) module Message system}
+\label{a00623}\index{GSN WLAN Firmware Interface (HIF) module Message system@{GSN WLAN Firmware Interface (HIF) module Message system}}
+}
+
+
+This group contains the implementation of message system used for data and control messages between the WLAN and APP firmware.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00085}{GSN\_\-HI\_\-CTX}
+\begin{DoxyCompactList}\small\item\em Shared Memory address Shared RAM (64 K) is used for trnsferring data and control messages between the WLAN and APP firmware. This defines the Address of the shared RAM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00085}{GSN\_\-HI\_\-CTX} \hyperlink{a00623_gab04b88d48bd4d71618f6790808c3484c}{GSN\_\-HI\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em Shared Memory address Shared RAM (64 K) is used for trnsferring data and control messages between the WLAN and APP firmware. This defines the Address of the shared RAM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00623_ga9d165724225b153f84dcf1184ebcf044}{GsnHi\_\-Init} (\hyperlink{a00085}{GSN\_\-HI\_\-CTX\_\-T} $\ast$pHiCtx, \hyperlink{a00088}{GSN\_\-HI\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Initialise Message System. This function initialises the Wif Message system. This wif message system contains the mailbox and the shared memory for message exchange between the WLAN and the APP Fw. All the messages data and Control, are exchanged using the shared RAM. The Hw mail box itself is used for indicating the messages available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group contains the implementation of message system used for data and control messages between the WLAN and APP firmware. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00623_gab04b88d48bd4d71618f6790808c3484c}{
+\index{GSN WLAN Firmware Interface (HIF) module Message system@{GSN WLAN Firmware Interface (HIF) module Message system}!GSN\_\-HI\_\-CTX\_\-T@{GSN\_\-HI\_\-CTX\_\-T}}
+\index{GSN\_\-HI\_\-CTX\_\-T@{GSN\_\-HI\_\-CTX\_\-T}!GSN WLAN Firmware Interface (HIF) module Message system@{GSN WLAN Firmware Interface (HIF) module Message system}}
+\subsubsection[{GSN\_\-HI\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-HI\_\-CTX} {\bf GSN\_\-HI\_\-CTX\_\-T}}}
+\label{a00623_gab04b88d48bd4d71618f6790808c3484c}
+
+
+Shared Memory address Shared RAM (64 K) is used for trnsferring data and control messages between the WLAN and APP firmware. This defines the Address of the shared RAM. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00623_ga9d165724225b153f84dcf1184ebcf044}{
+\index{GSN WLAN Firmware Interface (HIF) module Message system@{GSN WLAN Firmware Interface (HIF) module Message system}!GsnHi\_\-Init@{GsnHi\_\-Init}}
+\index{GsnHi\_\-Init@{GsnHi\_\-Init}!GSN WLAN Firmware Interface (HIF) module Message system@{GSN WLAN Firmware Interface (HIF) module Message system}}
+\subsubsection[{GsnHi\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnHi\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-HI\_\-CTX\_\-T} $\ast$}]{pHiCtx, }
+\item[{{\bf GSN\_\-HI\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00623_ga9d165724225b153f84dcf1184ebcf044}
+
+
+Initialise Message System. This function initialises the Wif Message system. This wif message system contains the mailbox and the shared memory for message exchange between the WLAN and the APP Fw. All the messages data and Control, are exchanged using the shared RAM. The Hw mail box itself is used for indicating the messages available. 
+
+\begin{DoxyNote}{Note}
+This function shall be called during system initilisation. The wif message system should be initilised before any message is sent to WLAN Fw. 
+\end{DoxyNote}

@@ -1,0 +1,204 @@
+\hypertarget{a00525}{
+\section{gsn\_\-mb.h File Reference}
+\label{a00525}\index{gsn\_\-mb.h@{gsn\_\-mb.h}}
+}
+
+
+GSN mailbox public header. This file contains the public APIs and structures of mailbox driver module.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00760}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00139}{GSN\_\-MB\_\-S}
+\begin{DoxyCompactList}\small\item\em GSN MBOX Context. Structure to store the MBOX context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00525_adfbaa97a4590a64dfd56d720fb2f4645}{GSN\_\-MB\_\-SB\_\-INT\_\-CONF}(sb, en)~MB\_\-MB\_\-SB\_\-CONF\_\-SETBIT(MAILBOX, ((en) $<$$<$ (sb)))
+\item 
+\#define \hyperlink{a00525_a85b0babd88d99e1dbd6c323a480cc137}{GSN\_\-MB\_\-RB\_\-INT\_\-CONF}(rb, en)~MB\_\-MB\_\-RB\_\-MASK\_\-SETBIT(MAILBOX, ((en) $<$$<$ (rb)))
+\item 
+\#define \hyperlink{a00525_a84aef445e34477fbec0d2246ae0cd35d}{GSN\_\-MB\_\-SB\_\-INT\_\-SET}(sb)~MB\_\-MB\_\-SB\_\-INT\_\-SET(MAILBOX, (1 $<$$<$ (sb)))
+\item 
+\#define \hyperlink{a00525_a04fc90919358b378b6a48e622756492f}{GSN\_\-MB\_\-RB\_\-INT\_\-CLR}(rb)~MB\_\-MB\_\-RB\_\-CLEAR\_\-SET(MAILBOX, (1 $<$$<$ (rb)))
+\end{DoxyCompactItemize}
+\paragraph*{}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00525_a03fa48378435650e00f73d3b5d822995}{GSN\_\-MB\_\-RB\_\-NUM}~3
+\item 
+\#define \hyperlink{a00525_aee0412ec5b5a95e91d984eadc705156e}{GSN\_\-MB\_\-SB\_\-NUM}~2
+\end{DoxyCompactItemize}
+
+\paragraph*{}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00525_a39c88dda945823a26f93595d4d5c5149}{GSN\_\-MB\_\-MSG\_\-SB}~0
+\item 
+\#define \hyperlink{a00525_a36736dbc3bbc82dec117864da76b7902}{GSN\_\-MB\_\-ACK\_\-SB}~1
+\item 
+\#define \hyperlink{a00525_a71a810f6bb430724f2f85a08d82cbb7a}{GSN\_\-MB\_\-MSG\_\-RB}~1
+\item 
+\#define \hyperlink{a00525_abac20b8f3cace42e16aa0203cade4d34}{GSN\_\-MB\_\-ACK\_\-RB}~0
+\item 
+\#define \hyperlink{a00525_a307bbfd45d760659e6245707ea58558f}{GSN\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB}~2
+\end{DoxyCompactItemize}
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00139}{GSN\_\-MB\_\-S} \hyperlink{a00624_gafb7207d32d68a7fa15928ef5fd8bf5f1}{GSN\_\-MB\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN MBOX Context. Structure to store the MBOX context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00624_ga5c877a50bab8634f61b36946a257d364}{GsnMb\_\-Open} (VOID)
+\begin{DoxyCompactList}\small\item\em mailbox open. opens mail box. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00624_ga3b236d5592b80003e2454e09fdb684f6}{GsnMb\_\-SbMsgPut} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} sb, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msg)
+\begin{DoxyCompactList}\small\item\em Send mailbox message. Send a message through send box. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00624_gae4ec736485020de1b55a348e12692d87}{GsnMb\_\-RbMsgGet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rb)
+\begin{DoxyCompactList}\small\item\em Read mailbox message. Read a message from read box. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00624_gae52a4cb7b044f2fadba7da7ca233e5de}{GsnMb\_\-RbIntRegister} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rb, \hyperlink{a00036}{GSN\_\-CB\_\-T} $\ast$pCb)
+\begin{DoxyCompactList}\small\item\em Read mailbox interrupt register. Registers the Read Mailbox Interrupt. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00624_gad7650d45bacf6a9836945238c052ba80}{GsnMb\_\-RbIntUnregister} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} rb)
+\begin{DoxyCompactList}\small\item\em Read mailbox interrupt unregister. Unregisters the Read Mailbox Interrupt. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00624_ga1bec0f48d9589185fd0e4dc08350fba4}{GsnMb\_\-RbIsr} ()
+\begin{DoxyCompactList}\small\item\em Read mailbox ISR. Read Mailbox ISR. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00624_ga853cbc16429dc144020969ee32fc4d53}{GsnMB\_\-Isr} (VOID)
+\begin{DoxyCompactList}\small\item\em mailbox ISR. Mailbox ISR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN mailbox public header. This file contains the public APIs and structures of mailbox driver module. 
+
+Definition in file \hyperlink{a00525_source}{gsn\_\-mb.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00525_abac20b8f3cace42e16aa0203cade4d34}{
+\index{gsn\_\-mb.h@{gsn\_\-mb.h}!GSN\_\-MB\_\-ACK\_\-RB@{GSN\_\-MB\_\-ACK\_\-RB}}
+\index{GSN\_\-MB\_\-ACK\_\-RB@{GSN\_\-MB\_\-ACK\_\-RB}!gsn_mb.h@{gsn\_\-mb.h}}
+\subsubsection[{GSN\_\-MB\_\-ACK\_\-RB}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MB\_\-ACK\_\-RB~0}}
+\label{a00525_abac20b8f3cace42e16aa0203cade4d34}
+
+
+Definition at line 90 of file gsn\_\-mb.h.
+
+\hypertarget{a00525_a36736dbc3bbc82dec117864da76b7902}{
+\index{gsn\_\-mb.h@{gsn\_\-mb.h}!GSN\_\-MB\_\-ACK\_\-SB@{GSN\_\-MB\_\-ACK\_\-SB}}
+\index{GSN\_\-MB\_\-ACK\_\-SB@{GSN\_\-MB\_\-ACK\_\-SB}!gsn_mb.h@{gsn\_\-mb.h}}
+\subsubsection[{GSN\_\-MB\_\-ACK\_\-SB}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MB\_\-ACK\_\-SB~1}}
+\label{a00525_a36736dbc3bbc82dec117864da76b7902}
+
+
+Definition at line 87 of file gsn\_\-mb.h.
+
+\hypertarget{a00525_a71a810f6bb430724f2f85a08d82cbb7a}{
+\index{gsn\_\-mb.h@{gsn\_\-mb.h}!GSN\_\-MB\_\-MSG\_\-RB@{GSN\_\-MB\_\-MSG\_\-RB}}
+\index{GSN\_\-MB\_\-MSG\_\-RB@{GSN\_\-MB\_\-MSG\_\-RB}!gsn_mb.h@{gsn\_\-mb.h}}
+\subsubsection[{GSN\_\-MB\_\-MSG\_\-RB}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MB\_\-MSG\_\-RB~1}}
+\label{a00525_a71a810f6bb430724f2f85a08d82cbb7a}
+
+
+Definition at line 89 of file gsn\_\-mb.h.
+
+\hypertarget{a00525_a39c88dda945823a26f93595d4d5c5149}{
+\index{gsn\_\-mb.h@{gsn\_\-mb.h}!GSN\_\-MB\_\-MSG\_\-SB@{GSN\_\-MB\_\-MSG\_\-SB}}
+\index{GSN\_\-MB\_\-MSG\_\-SB@{GSN\_\-MB\_\-MSG\_\-SB}!gsn_mb.h@{gsn\_\-mb.h}}
+\subsubsection[{GSN\_\-MB\_\-MSG\_\-SB}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MB\_\-MSG\_\-SB~0}}
+\label{a00525_a39c88dda945823a26f93595d4d5c5149}
+
+
+Definition at line 86 of file gsn\_\-mb.h.
+
+\hypertarget{a00525_a04fc90919358b378b6a48e622756492f}{
+\index{gsn\_\-mb.h@{gsn\_\-mb.h}!GSN\_\-MB\_\-RB\_\-INT\_\-CLR@{GSN\_\-MB\_\-RB\_\-INT\_\-CLR}}
+\index{GSN\_\-MB\_\-RB\_\-INT\_\-CLR@{GSN\_\-MB\_\-RB\_\-INT\_\-CLR}!gsn_mb.h@{gsn\_\-mb.h}}
+\subsubsection[{GSN\_\-MB\_\-RB\_\-INT\_\-CLR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MB\_\-RB\_\-INT\_\-CLR(
+\begin{DoxyParamCaption}
+\item[{}]{rb}
+\end{DoxyParamCaption}
+)~MB\_\-MB\_\-RB\_\-CLEAR\_\-SET(MAILBOX, (1 $<$$<$ (rb)))}}
+\label{a00525_a04fc90919358b378b6a48e622756492f}
+
+
+Definition at line 123 of file gsn\_\-mb.h.
+
+\hypertarget{a00525_a85b0babd88d99e1dbd6c323a480cc137}{
+\index{gsn\_\-mb.h@{gsn\_\-mb.h}!GSN\_\-MB\_\-RB\_\-INT\_\-CONF@{GSN\_\-MB\_\-RB\_\-INT\_\-CONF}}
+\index{GSN\_\-MB\_\-RB\_\-INT\_\-CONF@{GSN\_\-MB\_\-RB\_\-INT\_\-CONF}!gsn_mb.h@{gsn\_\-mb.h}}
+\subsubsection[{GSN\_\-MB\_\-RB\_\-INT\_\-CONF}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MB\_\-RB\_\-INT\_\-CONF(
+\begin{DoxyParamCaption}
+\item[{}]{rb, }
+\item[{}]{en}
+\end{DoxyParamCaption}
+)~MB\_\-MB\_\-RB\_\-MASK\_\-SETBIT(MAILBOX, ((en) $<$$<$ (rb)))}}
+\label{a00525_a85b0babd88d99e1dbd6c323a480cc137}
+
+
+Definition at line 117 of file gsn\_\-mb.h.
+
+\hypertarget{a00525_a03fa48378435650e00f73d3b5d822995}{
+\index{gsn\_\-mb.h@{gsn\_\-mb.h}!GSN\_\-MB\_\-RB\_\-NUM@{GSN\_\-MB\_\-RB\_\-NUM}}
+\index{GSN\_\-MB\_\-RB\_\-NUM@{GSN\_\-MB\_\-RB\_\-NUM}!gsn_mb.h@{gsn\_\-mb.h}}
+\subsubsection[{GSN\_\-MB\_\-RB\_\-NUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MB\_\-RB\_\-NUM~3}}
+\label{a00525_a03fa48378435650e00f73d3b5d822995}
+
+
+Definition at line 74 of file gsn\_\-mb.h.
+
+\hypertarget{a00525_a307bbfd45d760659e6245707ea58558f}{
+\index{gsn\_\-mb.h@{gsn\_\-mb.h}!GSN\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB@{GSN\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB}}
+\index{GSN\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB@{GSN\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB}!gsn_mb.h@{gsn\_\-mb.h}}
+\subsubsection[{GSN\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MB\_\-RESET\_\-REQ\_\-MSG\_\-RB~2}}
+\label{a00525_a307bbfd45d760659e6245707ea58558f}
+
+
+Definition at line 91 of file gsn\_\-mb.h.
+
+\hypertarget{a00525_adfbaa97a4590a64dfd56d720fb2f4645}{
+\index{gsn\_\-mb.h@{gsn\_\-mb.h}!GSN\_\-MB\_\-SB\_\-INT\_\-CONF@{GSN\_\-MB\_\-SB\_\-INT\_\-CONF}}
+\index{GSN\_\-MB\_\-SB\_\-INT\_\-CONF@{GSN\_\-MB\_\-SB\_\-INT\_\-CONF}!gsn_mb.h@{gsn\_\-mb.h}}
+\subsubsection[{GSN\_\-MB\_\-SB\_\-INT\_\-CONF}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MB\_\-SB\_\-INT\_\-CONF(
+\begin{DoxyParamCaption}
+\item[{}]{sb, }
+\item[{}]{en}
+\end{DoxyParamCaption}
+)~MB\_\-MB\_\-SB\_\-CONF\_\-SETBIT(MAILBOX, ((en) $<$$<$ (sb)))}}
+\label{a00525_adfbaa97a4590a64dfd56d720fb2f4645}
+
+
+Definition at line 114 of file gsn\_\-mb.h.
+
+\hypertarget{a00525_a84aef445e34477fbec0d2246ae0cd35d}{
+\index{gsn\_\-mb.h@{gsn\_\-mb.h}!GSN\_\-MB\_\-SB\_\-INT\_\-SET@{GSN\_\-MB\_\-SB\_\-INT\_\-SET}}
+\index{GSN\_\-MB\_\-SB\_\-INT\_\-SET@{GSN\_\-MB\_\-SB\_\-INT\_\-SET}!gsn_mb.h@{gsn\_\-mb.h}}
+\subsubsection[{GSN\_\-MB\_\-SB\_\-INT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MB\_\-SB\_\-INT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{sb}
+\end{DoxyParamCaption}
+)~MB\_\-MB\_\-SB\_\-INT\_\-SET(MAILBOX, (1 $<$$<$ (sb)))}}
+\label{a00525_a84aef445e34477fbec0d2246ae0cd35d}
+
+
+Definition at line 120 of file gsn\_\-mb.h.
+
+\hypertarget{a00525_aee0412ec5b5a95e91d984eadc705156e}{
+\index{gsn\_\-mb.h@{gsn\_\-mb.h}!GSN\_\-MB\_\-SB\_\-NUM@{GSN\_\-MB\_\-SB\_\-NUM}}
+\index{GSN\_\-MB\_\-SB\_\-NUM@{GSN\_\-MB\_\-SB\_\-NUM}!gsn_mb.h@{gsn\_\-mb.h}}
+\subsubsection[{GSN\_\-MB\_\-SB\_\-NUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MB\_\-SB\_\-NUM~2}}
+\label{a00525_aee0412ec5b5a95e91d984eadc705156e}
+
+
+Definition at line 75 of file gsn\_\-mb.h.
+

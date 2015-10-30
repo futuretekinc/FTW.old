@@ -1,0 +1,77 @@
+\hypertarget{a00485}{
+\section{gsn\_\-dns\_\-server.h File Reference}
+\label{a00485}\index{gsn\_\-dns\_\-server.h@{gsn\_\-dns\_\-server.h}}
+}
+
+
+GSN DNS server public header. This file contains the public APIs and structures of DNS Server module.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+Include dependency graph for gsn\_\-dns\_\-server.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{a00714}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00715}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00055}{GSN\_\-DNS\_\-SERVER}
+\begin{DoxyCompactList}\small\item\em DNS Server Structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00054}{GSN\_\-DNS\_\-INIT\_\-PARAM}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00055}{GSN\_\-DNS\_\-SERVER} \hyperlink{a00662_ga85fc2373f7b6a2cfb0ebbbddb036c503}{GSN\_\-DNS\_\-SERVER\_\-T}
+\begin{DoxyCompactList}\small\item\em DNS Server Structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00054}{GSN\_\-DNS\_\-INIT\_\-PARAM} \hyperlink{a00485_aaf7f0a05b9144f9843da3a9e5c814ace}{GSN\_\-DNS\_\-INIT\_\-PARAM\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00662_gab5a185ee52c26ad8cc547eff1f40bd9c}{GsnDnsSrvr\_\-Start} (\hyperlink{a00055}{GSN\_\-DNS\_\-SERVER\_\-T} $\ast$pDnsSrvr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$dnsName, \hyperlink{a00054}{GSN\_\-DNS\_\-INIT\_\-PARAM\_\-T} $\ast$initParams)
+\begin{DoxyCompactList}\small\item\em Start DNS server. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00662_ga61e9319652de6fc7065c3779896c4188}{GsnDnsSrvr\_\-Stop} (\hyperlink{a00055}{GSN\_\-DNS\_\-SERVER\_\-T} $\ast$pDnsSrvr)
+\begin{DoxyCompactList}\small\item\em Stop DNS server. \end{DoxyCompactList}\item 
+PRIVATE \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00485_a365a4708d02688a6532460cb25056c6d}{GsnDnsSrvr\_\-DnsNameConfig} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pName)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN DNS server public header. This file contains the public APIs and structures of DNS Server module. 
+
+Definition in file \hyperlink{a00485_source}{gsn\_\-dns\_\-server.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00485_aaf7f0a05b9144f9843da3a9e5c814ace}{
+\index{gsn\_\-dns\_\-server.h@{gsn\_\-dns\_\-server.h}!GSN\_\-DNS\_\-INIT\_\-PARAM\_\-T@{GSN\_\-DNS\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-DNS\_\-INIT\_\-PARAM\_\-T@{GSN\_\-DNS\_\-INIT\_\-PARAM\_\-T}!gsn_dns_server.h@{gsn\_\-dns\_\-server.h}}
+\subsubsection[{GSN\_\-DNS\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-DNS\_\-INIT\_\-PARAM} {\bf GSN\_\-DNS\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00485_aaf7f0a05b9144f9843da3a9e5c814ace}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00485_a365a4708d02688a6532460cb25056c6d}{
+\index{gsn\_\-dns\_\-server.h@{gsn\_\-dns\_\-server.h}!GsnDnsSrvr\_\-DnsNameConfig@{GsnDnsSrvr\_\-DnsNameConfig}}
+\index{GsnDnsSrvr\_\-DnsNameConfig@{GsnDnsSrvr\_\-DnsNameConfig}!gsn_dns_server.h@{gsn\_\-dns\_\-server.h}}
+\subsubsection[{GsnDnsSrvr\_\-DnsNameConfig}]{\setlength{\rightskip}{0pt plus 5cm}PRIVATE {\bf UINT8}$\ast$ GsnDnsSrvr\_\-DnsNameConfig (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{pName}
+\end{DoxyParamCaption}
+)}}
+\label{a00485_a365a4708d02688a6532460cb25056c6d}

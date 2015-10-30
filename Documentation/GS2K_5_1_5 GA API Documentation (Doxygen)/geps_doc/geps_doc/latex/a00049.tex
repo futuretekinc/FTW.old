@@ -1,0 +1,212 @@
+\hypertarget{a00049}{
+\section{GSN\_\-DMA Struct Reference}
+\label{a00049}\index{GSN\_\-DMA@{GSN\_\-DMA}}
+}
+
+
+GSN DMA Structure. This structure defines DMA handling parameters.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-dma.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00049_a733fb7afbc3bd37a546de0e37c12f150}{pReg}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$ \hyperlink{a00049_aec2f3ffcdad505b0a8d4a1f16e30849b}{basePtr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00049_a942be9a68f7697a36a6c971081311d12}{memPool}
+\item 
+\hyperlink{a00051}{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL\_\-T} \hyperlink{a00049_a12a87a72a8c4742ea0b7fac38996d3f7}{gsnPingpongControl} \mbox{[}10\mbox{]}
+\item 
+\hyperlink{a00484_a74d23c3cb3acf00134600795aef55b6e}{DMACALLBACK\_\-FP} \hyperlink{a00049_a87bff44e43568a32d78369cdd2ebb49e}{channelCallback} \mbox{[}2\mbox{]}
+\item 
+VOID $\ast$ \hyperlink{a00049_a75f196cea4b3c0868b5580fa92a8ad5f}{channelCbCtx} \mbox{[}2\mbox{]}
+\item 
+\hyperlink{a00484_a74d23c3cb3acf00134600795aef55b6e}{DMACALLBACK\_\-FP} \hyperlink{a00049_a80249bc0f9f4b2856087049f02d7d3df}{uartReadCallback} \mbox{[}2\mbox{]}
+\item 
+\hyperlink{a00484_a74d23c3cb3acf00134600795aef55b6e}{DMACALLBACK\_\-FP} \hyperlink{a00049_aa0d74b7ef433fb195c209bb0de4c8fae}{uartWriteCallback} \mbox{[}2\mbox{]}
+\item 
+VOID $\ast$ \hyperlink{a00049_afe05e53d420651ba7555e8db0398b772}{uartWriteCbCtx} \mbox{[}2\mbox{]}
+\item 
+VOID $\ast$ \hyperlink{a00049_a814c350b43f8f659c433aaaac04a2d84}{uartReadCbCtx} \mbox{[}2\mbox{]}
+\item 
+\hyperlink{a00484_a74d23c3cb3acf00134600795aef55b6e}{DMACALLBACK\_\-FP} \hyperlink{a00049_a17036a9850efdc366d026fa74a76f92b}{spiReadCallback} \mbox{[}2\mbox{]}
+\item 
+\hyperlink{a00484_a74d23c3cb3acf00134600795aef55b6e}{DMACALLBACK\_\-FP} \hyperlink{a00049_ade41b4d2f83ca1006ff0d8f85da8ac8c}{spiWriteCallback} \mbox{[}2\mbox{]}
+\item 
+VOID $\ast$ \hyperlink{a00049_a4984962173c9e9fe0bd92332ea75a95e}{spiWriteCbCtx} \mbox{[}2\mbox{]}
+\item 
+VOID $\ast$ \hyperlink{a00049_a310078ceadd325955bf78bccf87e4808}{spiReadCbCtx} \mbox{[}2\mbox{]}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00049_a7238ebf9ce9010563ba1c1a3852df6b4}{dmaDeviceState}
+\item 
+\hyperlink{a00050}{GSN\_\-DMA\_\-CONTROL\_\-T} \hyperlink{a00049_aef9027f3e52eb0793e06c4895858e86e}{dmaControl} \mbox{[}10 $\ast$MAX\_\-NO\_\-OF\_\-TASKS\_\-IN\_\-PERIPHERAL\_\-SCATTER\_\-GATHER\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN DMA Structure. This structure defines DMA handling parameters. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00645_ga61edafecbc46e3ba81ec48b9cf3aa1fa}{GSN\_\-DMA\_\-T}. 
+\end{DoxySeeAlso}
+
+
+Definition at line 378 of file gsn\_\-dma.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00049_aec2f3ffcdad505b0a8d4a1f16e30849b}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!basePtr@{basePtr}}
+\index{basePtr@{basePtr}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{basePtr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32}$\ast$ {\bf basePtr}}}
+\label{a00049_aec2f3ffcdad505b0a8d4a1f16e30849b}
+
+
+Definition at line 381 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_a87bff44e43568a32d78369cdd2ebb49e}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!channelCallback@{channelCallback}}
+\index{channelCallback@{channelCallback}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{channelCallback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DMACALLBACK\_\-FP} {\bf channelCallback}\mbox{[}2\mbox{]}}}
+\label{a00049_a87bff44e43568a32d78369cdd2ebb49e}
+
+
+Definition at line 384 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_a75f196cea4b3c0868b5580fa92a8ad5f}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!channelCbCtx@{channelCbCtx}}
+\index{channelCbCtx@{channelCbCtx}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{channelCbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf channelCbCtx}\mbox{[}2\mbox{]}}}
+\label{a00049_a75f196cea4b3c0868b5580fa92a8ad5f}
+
+
+Definition at line 385 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_aef9027f3e52eb0793e06c4895858e86e}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!dmaControl@{dmaControl}}
+\index{dmaControl@{dmaControl}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{dmaControl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-DMA\_\-CONTROL\_\-T} {\bf dmaControl}\mbox{[}10 $\ast$MAX\_\-NO\_\-OF\_\-TASKS\_\-IN\_\-PERIPHERAL\_\-SCATTER\_\-GATHER\mbox{]}}}
+\label{a00049_aef9027f3e52eb0793e06c4895858e86e}
+
+
+Definition at line 397 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_a7238ebf9ce9010563ba1c1a3852df6b4}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!dmaDeviceState@{dmaDeviceState}}
+\index{dmaDeviceState@{dmaDeviceState}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{dmaDeviceState}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf dmaDeviceState}}}
+\label{a00049_a7238ebf9ce9010563ba1c1a3852df6b4}
+
+
+Definition at line 394 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_a12a87a72a8c4742ea0b7fac38996d3f7}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!gsnPingpongControl@{gsnPingpongControl}}
+\index{gsnPingpongControl@{gsnPingpongControl}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{gsnPingpongControl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-DMA\_\-PINGPONG\_\-CONTROL\_\-T} {\bf gsnPingpongControl}\mbox{[}10\mbox{]}}}
+\label{a00049_a12a87a72a8c4742ea0b7fac38996d3f7}
+
+
+Definition at line 383 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_a942be9a68f7697a36a6c971081311d12}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!memPool@{memPool}}
+\index{memPool@{memPool}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{memPool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf memPool}}}
+\label{a00049_a942be9a68f7697a36a6c971081311d12}
+
+
+Definition at line 382 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_a733fb7afbc3bd37a546de0e37c12f150}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!pReg@{pReg}}
+\index{pReg@{pReg}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{pReg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf pReg}}}
+\label{a00049_a733fb7afbc3bd37a546de0e37c12f150}
+
+
+Definition at line 380 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_a17036a9850efdc366d026fa74a76f92b}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!spiReadCallback@{spiReadCallback}}
+\index{spiReadCallback@{spiReadCallback}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{spiReadCallback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DMACALLBACK\_\-FP} {\bf spiReadCallback}\mbox{[}2\mbox{]}}}
+\label{a00049_a17036a9850efdc366d026fa74a76f92b}
+
+
+Definition at line 390 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_a310078ceadd325955bf78bccf87e4808}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!spiReadCbCtx@{spiReadCbCtx}}
+\index{spiReadCbCtx@{spiReadCbCtx}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{spiReadCbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf spiReadCbCtx}\mbox{[}2\mbox{]}}}
+\label{a00049_a310078ceadd325955bf78bccf87e4808}
+
+
+Definition at line 393 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_ade41b4d2f83ca1006ff0d8f85da8ac8c}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!spiWriteCallback@{spiWriteCallback}}
+\index{spiWriteCallback@{spiWriteCallback}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{spiWriteCallback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DMACALLBACK\_\-FP} {\bf spiWriteCallback}\mbox{[}2\mbox{]}}}
+\label{a00049_ade41b4d2f83ca1006ff0d8f85da8ac8c}
+
+
+Definition at line 391 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_a4984962173c9e9fe0bd92332ea75a95e}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!spiWriteCbCtx@{spiWriteCbCtx}}
+\index{spiWriteCbCtx@{spiWriteCbCtx}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{spiWriteCbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf spiWriteCbCtx}\mbox{[}2\mbox{]}}}
+\label{a00049_a4984962173c9e9fe0bd92332ea75a95e}
+
+
+Definition at line 392 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_a80249bc0f9f4b2856087049f02d7d3df}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!uartReadCallback@{uartReadCallback}}
+\index{uartReadCallback@{uartReadCallback}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{uartReadCallback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DMACALLBACK\_\-FP} {\bf uartReadCallback}\mbox{[}2\mbox{]}}}
+\label{a00049_a80249bc0f9f4b2856087049f02d7d3df}
+
+
+Definition at line 386 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_a814c350b43f8f659c433aaaac04a2d84}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!uartReadCbCtx@{uartReadCbCtx}}
+\index{uartReadCbCtx@{uartReadCbCtx}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{uartReadCbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf uartReadCbCtx}\mbox{[}2\mbox{]}}}
+\label{a00049_a814c350b43f8f659c433aaaac04a2d84}
+
+
+Definition at line 389 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_aa0d74b7ef433fb195c209bb0de4c8fae}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!uartWriteCallback@{uartWriteCallback}}
+\index{uartWriteCallback@{uartWriteCallback}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{uartWriteCallback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DMACALLBACK\_\-FP} {\bf uartWriteCallback}\mbox{[}2\mbox{]}}}
+\label{a00049_aa0d74b7ef433fb195c209bb0de4c8fae}
+
+
+Definition at line 387 of file gsn\_\-dma.h.
+
+\hypertarget{a00049_afe05e53d420651ba7555e8db0398b772}{
+\index{GSN\_\-DMA@{GSN\_\-DMA}!uartWriteCbCtx@{uartWriteCbCtx}}
+\index{uartWriteCbCtx@{uartWriteCbCtx}!GSN_DMA@{GSN\_\-DMA}}
+\subsubsection[{uartWriteCbCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf uartWriteCbCtx}\mbox{[}2\mbox{]}}}
+\label{a00049_afe05e53d420651ba7555e8db0398b772}
+
+
+Definition at line 388 of file gsn\_\-dma.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00484}{gsn\_\-dma.h}\end{DoxyCompactItemize}

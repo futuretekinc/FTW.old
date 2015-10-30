@@ -1,0 +1,295 @@
+\hypertarget{a00608}{
+\section{gsn\_\-wif\_\-common.h File Reference}
+\label{a00608}\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00855}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00349}{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-INFO}
+\item 
+struct \hyperlink{a00344}{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO}
+\item 
+struct \hyperlink{a00378}{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO}
+\item 
+struct \hyperlink{a00318}{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO}
+\item 
+struct \hyperlink{a00339}{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-INFO}
+\item 
+struct \hyperlink{a00335}{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-INFO}
+\item 
+struct \hyperlink{a00324}{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO}
+\item 
+struct \hyperlink{a00340}{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-INFO}
+\item 
+struct \hyperlink{a00336}{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-INFO}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\paragraph*{}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00608_ac20a0c502121937beaabf53f00fd3776}{GSN\_\-WIF\_\-MSG\_\-API\_\-TYPE\_\-MASK}~0xF600
+\item 
+\#define \hyperlink{a00608_a179bc8e8f4f110e10eb55e693f7ae535}{GSN\_\-WIF\_\-MSG\_\-API\_\-MASK}~0x03FF
+\item 
+\#define \hyperlink{a00608_aa680ccc189b1777c2b7e7ae2aecf4137}{GSN\_\-WIF\_\-HI\_\-MSG\_\-LEN\_\-MASK}~0x7FF
+\end{DoxyCompactItemize}
+
+\paragraph*{}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00608_abe13302e016e67142230d1bf7bdb48cf}{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-MAX\_\-IND}~64
+\item 
+\#define \hyperlink{a00608_a692ce45c7b1608292f5ca78251f12d85}{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-MAX\_\-IND}~128
+\item 
+\#define \hyperlink{a00608_a07a5b5cf683f42ec8377572f71520ecb}{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-MAX\_\-IND}~32
+\item 
+\#define \hyperlink{a00608_acc835c7a1353690ebd624e7223d55a39}{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-MAX\_\-IND}~32
+\end{DoxyCompactItemize}
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00608_ad57dfb23fbead4a670f7e5b7de94019a}{GSN\_\-WIF\_\-HI\_\-CLASS} \hyperlink{a00608_a6fed68726c005805e6c3841b055b1b8b}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-T}
+\item 
+typedef VOID($\ast$ \hyperlink{a00636_gad3465a5565359704a4c7d30e8e3ff127}{GSN\_\-WIF\_\-INIT\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} status)
+\begin{DoxyCompactList}\small\item\em Boot indication CB definition. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_ga6079bd2ef0b375f3d1b987c9e3de8f6b}{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Sys Control \char`\"{} indication Cb. Callback definition for the Sys Control indication callback. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00635_gad71afa8e03b517ec379abfa3cb39de92}{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Sys Control \char`\"{} indication Cb. Callback definition for the Sys Control indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_ga1a6c66e709c29a827dc0c07e40f4b9aa}{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_ga713dea098107eba190695d6e868ff027}{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_gac721992ff2f8c904a29e80d4b2eaead3}{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_gaf83e1299bf211f7c06ff40e18f1d3ad4}{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF \char`\"{}Wlan Control \char`\"{} indication Cb. Callback definition for the Wlan Control indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_gad46de129691b078bd6ff8df7f46318d2}{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} status, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} dataClass, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF Data indication Cb. Callback definition for the Data indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_ga9630fce1058035404e218cc275052c03}{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} status, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF Data indication Cb. Callback definition for the Data indication callback. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00635_gaeb1ca28d0827d970df3911f1bd46cf98}{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em GSN WLAN IF Data indication Cb. Callback definition for the Data indication callback. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00349}{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-INFO} \hyperlink{a00608_af3449294e8213905d6a1262eeca51d1d}{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00344}{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO} \hyperlink{a00608_ad8fc5701c1ca18f0e02a58899f1f8e18}{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO}
+\item 
+typedef struct \hyperlink{a00378}{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO} \hyperlink{a00608_ad5a0e6d80f2a6d178d4ee735102839eb}{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00318}{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO} \hyperlink{a00608_a986978710017f6f756b07937f1ef5632}{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00339}{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-INFO} \hyperlink{a00608_ad865213747ea3e3ee3465399543d1bcd}{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00335}{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-INFO} \hyperlink{a00608_aacaf9d08bea1dd5c0df13e784da9937b}{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00324}{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO} \hyperlink{a00608_a7a4ae2bf745d0f7890ec50466bc92bea}{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00340}{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-INFO} \hyperlink{a00608_abd9c83e04e6af53c5504eafe3fef5c0f}{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00336}{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-INFO} \hyperlink{a00608_af7274d9e47e626c3fd7b655a5aecd3f0}{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00608_ad57dfb23fbead4a670f7e5b7de94019a}{GSN\_\-WIF\_\-HI\_\-CLASS} \{ \par
+\hyperlink{a00608_ad57dfb23fbead4a670f7e5b7de94019aae239d4932852e8c7eaa8e243065118e6}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-DCNF}, 
+\par
+\hyperlink{a00608_ad57dfb23fbead4a670f7e5b7de94019aad82ae5066d4b45c308102d24f57b7947}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-WLAN\_\-CTRL} =  GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-CTL, 
+\par
+\hyperlink{a00608_ad57dfb23fbead4a670f7e5b7de94019aacef9de22ec2173bde8f664efd7eba97a}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-SYS\_\-CTRL} =  GSN\_\-WIF\_\-API\_\-TYPE\_\-SYS\_\-CTL, 
+\par
+\hyperlink{a00608_ad57dfb23fbead4a670f7e5b7de94019aaff19fa086edd3147f9213b000c831a0c}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-CTRL} =  GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-CTL, 
+\par
+\hyperlink{a00608_ad57dfb23fbead4a670f7e5b7de94019aa2e660abc5f793a1b577c86186934c78a}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-CAL\_\-CTL} =  GSN\_\-WIF\_\-API\_\-TYPE\_\-CAL\_\-CTL, 
+\par
+\hyperlink{a00608_ad57dfb23fbead4a670f7e5b7de94019aaf903e3fa751d4edb0e2854face4172e3}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-ISOTX\_\-CTL} =  GSN\_\-WIF\_\-API\_\-TYPE\_\-ISOTX\_\-CTL, 
+\par
+\hyperlink{a00608_ad57dfb23fbead4a670f7e5b7de94019aa5ecbc325cdfd76f9e490bc3def8777cd}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-DATA} =  GSN\_\-WIF\_\-API\_\-TYPE\_\-DATA, 
+\par
+\hyperlink{a00608_ad57dfb23fbead4a670f7e5b7de94019aa3e29aec70f494653c3d2623dd254e780}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-DATA} =  GSN\_\-WIF\_\-API\_\-TYPE\_\-154\_\-DATA, 
+\par
+\hyperlink{a00608_ad57dfb23fbead4a670f7e5b7de94019aa55bda601e5518d2c56ec69e3e2f71701}{GSN\_\-WIF\_\-HI\_\-CLASS\_\-UNASSOC\_\-DATA} =  GSN\_\-WIF\_\-API\_\-TYPE\_\-WLAN\_\-UNASSOC\_\-DATA
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00608_a07a5b5cf683f42ec8377572f71520ecb}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-CAL\_\-CTRL\_\-MAX\_\-IND@{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-MAX\_\-IND}}
+\index{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-MAX\_\-IND@{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-MAX\_\-IND}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-MAX\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-CAL\_\-CTRL\_\-MAX\_\-IND~32}}
+\label{a00608_a07a5b5cf683f42ec8377572f71520ecb}
+
+
+Definition at line 78 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00608_aa680ccc189b1777c2b7e7ae2aecf4137}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-MSG\_\-LEN\_\-MASK@{GSN\_\-WIF\_\-HI\_\-MSG\_\-LEN\_\-MASK}}
+\index{GSN\_\-WIF\_\-HI\_\-MSG\_\-LEN\_\-MASK@{GSN\_\-WIF\_\-HI\_\-MSG\_\-LEN\_\-MASK}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-HI\_\-MSG\_\-LEN\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-HI\_\-MSG\_\-LEN\_\-MASK~0x7FF}}
+\label{a00608_aa680ccc189b1777c2b7e7ae2aecf4137}
+11 bits of the length filed indicates the length of the message 
+
+Definition at line 58 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00608_acc835c7a1353690ebd624e7223d55a39}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-MAX\_\-IND@{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-MAX\_\-IND}}
+\index{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-MAX\_\-IND@{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-MAX\_\-IND}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-MAX\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-MAX\_\-IND~32}}
+\label{a00608_acc835c7a1353690ebd624e7223d55a39}
+
+
+Definition at line 81 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00608_a179bc8e8f4f110e10eb55e693f7ae535}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-MSG\_\-API\_\-MASK@{GSN\_\-WIF\_\-MSG\_\-API\_\-MASK}}
+\index{GSN\_\-WIF\_\-MSG\_\-API\_\-MASK@{GSN\_\-WIF\_\-MSG\_\-API\_\-MASK}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-MSG\_\-API\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-MSG\_\-API\_\-MASK~0x03FF}}
+\label{a00608_a179bc8e8f4f110e10eb55e693f7ae535}
+Last 10 LSB bits indicates the API 
+
+Definition at line 57 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00608_ac20a0c502121937beaabf53f00fd3776}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-MSG\_\-API\_\-TYPE\_\-MASK@{GSN\_\-WIF\_\-MSG\_\-API\_\-TYPE\_\-MASK}}
+\index{GSN\_\-WIF\_\-MSG\_\-API\_\-TYPE\_\-MASK@{GSN\_\-WIF\_\-MSG\_\-API\_\-TYPE\_\-MASK}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-MSG\_\-API\_\-TYPE\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-MSG\_\-API\_\-TYPE\_\-MASK~0xF600}}
+\label{a00608_ac20a0c502121937beaabf53f00fd3776}
+6 MSB bits indicates the API type 
+
+Definition at line 56 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00608_abe13302e016e67142230d1bf7bdb48cf}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-SYS\_\-CTRL\_\-MAX\_\-IND@{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-MAX\_\-IND}}
+\index{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-MAX\_\-IND@{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-MAX\_\-IND}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-MAX\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-SYS\_\-CTRL\_\-MAX\_\-IND~64}}
+\label{a00608_abe13302e016e67142230d1bf7bdb48cf}
+
+
+Definition at line 72 of file gsn\_\-wif\_\-common.h.
+
+\hypertarget{a00608_a692ce45c7b1608292f5ca78251f12d85}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-MAX\_\-IND@{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-MAX\_\-IND}}
+\index{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-MAX\_\-IND@{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-MAX\_\-IND}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-MAX\_\-IND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-MAX\_\-IND~128}}
+\label{a00608_a692ce45c7b1608292f5ca78251f12d85}
+
+
+Definition at line 75 of file gsn\_\-wif\_\-common.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00608_a986978710017f6f756b07937f1ef5632}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}}
+\index{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO} {\bf GSN\_\-WIF\_\-CAL\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}}}
+\label{a00608_a986978710017f6f756b07937f1ef5632}
+\hypertarget{a00608_a7a4ae2bf745d0f7890ec50466bc92bea}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}}
+\index{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO} {\bf GSN\_\-WIF\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}}}
+\label{a00608_a7a4ae2bf745d0f7890ec50466bc92bea}
+\hypertarget{a00608_aacaf9d08bea1dd5c0df13e784da9937b}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}}
+\index{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-INFO} {\bf GSN\_\-WIF\_\-DOT154\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}}}
+\label{a00608_aacaf9d08bea1dd5c0df13e784da9937b}
+\hypertarget{a00608_af7274d9e47e626c3fd7b655a5aecd3f0}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}}
+\index{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-INFO} {\bf GSN\_\-WIF\_\-DOT154\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}}}
+\label{a00608_af7274d9e47e626c3fd7b655a5aecd3f0}
+\hypertarget{a00608_a6fed68726c005805e6c3841b055b1b8b}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-CLASS\_\-T@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-T}}
+\index{GSN\_\-WIF\_\-HI\_\-CLASS\_\-T@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-T}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-HI\_\-CLASS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-HI\_\-CLASS} {\bf GSN\_\-WIF\_\-HI\_\-CLASS\_\-T}}}
+\label{a00608_a6fed68726c005805e6c3841b055b1b8b}
+END of coresvcdoc. \hypertarget{a00608_ad865213747ea3e3ee3465399543d1bcd}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}}
+\index{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-INFO} {\bf GSN\_\-WIF\_\-ISOTX\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}}}
+\label{a00608_ad865213747ea3e3ee3465399543d1bcd}
+\hypertarget{a00608_abd9c83e04e6af53c5504eafe3fef5c0f}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}}
+\index{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-INFO} {\bf GSN\_\-WIF\_\-ISOTX\_\-DATA\_\-IND\_\-CB\_\-INFO\_\-T}}}
+\label{a00608_abd9c83e04e6af53c5504eafe3fef5c0f}
+\hypertarget{a00608_ad8fc5701c1ca18f0e02a58899f1f8e18}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO@{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO}}
+\index{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO@{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO} {\bf GSN\_\-WIF\_\-RESET\_\-IND\_\-CB\_\-INFO}}}
+\label{a00608_ad8fc5701c1ca18f0e02a58899f1f8e18}
+\hypertarget{a00608_af3449294e8213905d6a1262eeca51d1d}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}}
+\index{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-INFO} {\bf GSN\_\-WIF\_\-SYS\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}}}
+\label{a00608_af3449294e8213905d6a1262eeca51d1d}
+\hypertarget{a00608_ad5a0e6d80f2a6d178d4ee735102839eb}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}}
+\index{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T@{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO} {\bf GSN\_\-WIF\_\-WLAN\_\-CTRL\_\-IND\_\-CB\_\-INFO\_\-T}}}
+\label{a00608_ad5a0e6d80f2a6d178d4ee735102839eb}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00608_ad57dfb23fbead4a670f7e5b7de94019a}{
+\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-CLASS@{GSN\_\-WIF\_\-HI\_\-CLASS}}
+\index{GSN\_\-WIF\_\-HI\_\-CLASS@{GSN\_\-WIF\_\-HI\_\-CLASS}!gsn_wif_common.h@{gsn\_\-wif\_\-common.h}}
+\subsubsection[{GSN\_\-WIF\_\-HI\_\-CLASS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-HI\_\-CLASS}}}
+\label{a00608_ad57dfb23fbead4a670f7e5b7de94019a}
+END of coresvcdoc. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-HI\_\-CLASS\_\-DCNF@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-DCNF}!gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}}\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-CLASS\_\-DCNF@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-DCNF}}\item[{\em 
+\hypertarget{a00608_ad57dfb23fbead4a670f7e5b7de94019aae239d4932852e8c7eaa8e243065118e6}{
+GSN\_\-WIF\_\-HI\_\-CLASS\_\-DCNF}
+\label{a00608_ad57dfb23fbead4a670f7e5b7de94019aae239d4932852e8c7eaa8e243065118e6}
+}]\index{GSN\_\-WIF\_\-HI\_\-CLASS\_\-WLAN\_\-CTRL@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-WLAN\_\-CTRL}!gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}}\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-CLASS\_\-WLAN\_\-CTRL@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-WLAN\_\-CTRL}}\item[{\em 
+\hypertarget{a00608_ad57dfb23fbead4a670f7e5b7de94019aad82ae5066d4b45c308102d24f57b7947}{
+GSN\_\-WIF\_\-HI\_\-CLASS\_\-WLAN\_\-CTRL}
+\label{a00608_ad57dfb23fbead4a670f7e5b7de94019aad82ae5066d4b45c308102d24f57b7947}
+}]\index{GSN\_\-WIF\_\-HI\_\-CLASS\_\-SYS\_\-CTRL@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-SYS\_\-CTRL}!gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}}\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-CLASS\_\-SYS\_\-CTRL@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-SYS\_\-CTRL}}\item[{\em 
+\hypertarget{a00608_ad57dfb23fbead4a670f7e5b7de94019aacef9de22ec2173bde8f664efd7eba97a}{
+GSN\_\-WIF\_\-HI\_\-CLASS\_\-SYS\_\-CTRL}
+\label{a00608_ad57dfb23fbead4a670f7e5b7de94019aacef9de22ec2173bde8f664efd7eba97a}
+}]\index{GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-CTRL@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-CTRL}!gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}}\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-CTRL@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-CTRL}}\item[{\em 
+\hypertarget{a00608_ad57dfb23fbead4a670f7e5b7de94019aaff19fa086edd3147f9213b000c831a0c}{
+GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-CTRL}
+\label{a00608_ad57dfb23fbead4a670f7e5b7de94019aaff19fa086edd3147f9213b000c831a0c}
+}]\index{GSN\_\-WIF\_\-HI\_\-CLASS\_\-CAL\_\-CTL@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-CAL\_\-CTL}!gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}}\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-CLASS\_\-CAL\_\-CTL@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-CAL\_\-CTL}}\item[{\em 
+\hypertarget{a00608_ad57dfb23fbead4a670f7e5b7de94019aa2e660abc5f793a1b577c86186934c78a}{
+GSN\_\-WIF\_\-HI\_\-CLASS\_\-CAL\_\-CTL}
+\label{a00608_ad57dfb23fbead4a670f7e5b7de94019aa2e660abc5f793a1b577c86186934c78a}
+}]\index{GSN\_\-WIF\_\-HI\_\-CLASS\_\-ISOTX\_\-CTL@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-ISOTX\_\-CTL}!gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}}\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-CLASS\_\-ISOTX\_\-CTL@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-ISOTX\_\-CTL}}\item[{\em 
+\hypertarget{a00608_ad57dfb23fbead4a670f7e5b7de94019aaf903e3fa751d4edb0e2854face4172e3}{
+GSN\_\-WIF\_\-HI\_\-CLASS\_\-ISOTX\_\-CTL}
+\label{a00608_ad57dfb23fbead4a670f7e5b7de94019aaf903e3fa751d4edb0e2854face4172e3}
+}]\index{GSN\_\-WIF\_\-HI\_\-CLASS\_\-DATA@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-DATA}!gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}}\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-CLASS\_\-DATA@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-DATA}}\item[{\em 
+\hypertarget{a00608_ad57dfb23fbead4a670f7e5b7de94019aa5ecbc325cdfd76f9e490bc3def8777cd}{
+GSN\_\-WIF\_\-HI\_\-CLASS\_\-DATA}
+\label{a00608_ad57dfb23fbead4a670f7e5b7de94019aa5ecbc325cdfd76f9e490bc3def8777cd}
+}]\index{GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-DATA@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-DATA}!gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}}\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-DATA@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-DATA}}\item[{\em 
+\hypertarget{a00608_ad57dfb23fbead4a670f7e5b7de94019aa3e29aec70f494653c3d2623dd254e780}{
+GSN\_\-WIF\_\-HI\_\-CLASS\_\-154\_\-DATA}
+\label{a00608_ad57dfb23fbead4a670f7e5b7de94019aa3e29aec70f494653c3d2623dd254e780}
+}]\index{GSN\_\-WIF\_\-HI\_\-CLASS\_\-UNASSOC\_\-DATA@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-UNASSOC\_\-DATA}!gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}}\index{gsn\_\-wif\_\-common.h@{gsn\_\-wif\_\-common.h}!GSN\_\-WIF\_\-HI\_\-CLASS\_\-UNASSOC\_\-DATA@{GSN\_\-WIF\_\-HI\_\-CLASS\_\-UNASSOC\_\-DATA}}\item[{\em 
+\hypertarget{a00608_ad57dfb23fbead4a670f7e5b7de94019aa55bda601e5518d2c56ec69e3e2f71701}{
+GSN\_\-WIF\_\-HI\_\-CLASS\_\-UNASSOC\_\-DATA}
+\label{a00608_ad57dfb23fbead4a670f7e5b7de94019aa55bda601e5518d2c56ec69e3e2f71701}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 32 of file gsn\_\-wif\_\-common.h.
+

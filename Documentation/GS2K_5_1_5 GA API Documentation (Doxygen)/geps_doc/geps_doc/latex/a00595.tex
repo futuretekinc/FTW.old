@@ -1,0 +1,305 @@
+\hypertarget{a00595}{
+\section{gsn\_\-sys\_\-rtc\_\-info.h File Reference}
+\label{a00595}\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+}
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdarg.h$>$}\par
+{\ttfamily \#include $<$ctype.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+Include dependency graph for gsn\_\-sys\_\-rtc\_\-info.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00840}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00841}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00255}{GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO}
+\item 
+struct \hyperlink{a00259}{GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00595_a7a3a4ce1e7c7b69b4bfde0215e0ac8fc}{RTC\_\-LATCH\_\-MEM\_\-ADDR}~0x41010000
+\item 
+\#define \hyperlink{a00595_a058c7e0274d265d046d3f59834005b9a}{GSN\_\-RTC\_\-MAGIC\_\-NUM}~0x95959595
+\item 
+\#define \hyperlink{a00595_a4737841c843e54b342545d80a1cc76d3}{GSN\_\-SYS\_\-RTC\_\-LATCH\_\-MEM\_\-USERAPP\_\-ADDR}~(GSN\_\-RTC\_\-LATCH\_\-MEM\_\-ADDR + sizeof(\hyperlink{a00255}{GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO\_\-T}))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00255}{GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO} \hyperlink{a00595_a7d6f2c57cd64aa41e96d1f18290a30dc}{GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00259}{GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM} \hyperlink{a00595_a8e08e7e2322205f5660173fc444bfebc}{GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+INLINE VOID \hyperlink{a00595_af140d8e44e9509ad2280031fce87f52f}{GsnSysRtcInfo\_\-Init} (\hyperlink{a00259}{GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\item 
+INLINE VOID \hyperlink{a00595_a39eb550aadad243cfca62fc631cfd128}{GSN\_\-BOOTINFO\_\-SET} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} bootReason, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} bootInfo)
+\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00595_a05f46d13cfdcc394dcf70ecc82b1771f}{GSN\_\-IS\_\-RTC\_\-RSVD\_\-INFO\_\-VALID} (VOID)
+\item 
+INLINE VOID \hyperlink{a00595_ac8b05b8e89ded06594074a0386c1db24}{GSN\_\-RTC\_\-RSVD\_\-INFO\_\-VALID\_\-SET} (VOID)
+\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00595_a37568c3c50f44e2afdf150a98a0925a1}{GSN\_\-BOOT\_\-REASON\_\-GET} (VOID)
+\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00595_a7fced0a4ac6a66a844a36f57dc25d0ac}{GSN\_\-BOOT\_\-INFO\_\-GET} (VOID)
+\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00595_a3ceb648d06aa927b3e5cd3f9e1275764}{GSN\_\-SYS\_\-RESET\_\-INFO\_\-LOCATION\_\-GET} (VOID)
+\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00595_a00d95ee661fe7e23c37422c13a5ff9cb}{GSN\_\-SYS\_\-STATS\_\-LOCATION\_\-GET} (VOID)
+\item 
+INLINE VOID \hyperlink{a00595_aab1eb94962bf00e372394bd8dee105fa}{GSN\_\-APP\_\-REQ\_\-SET} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} val)
+\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00595_aad92fc6c06998d9cebee9964282736b9}{GSN\_\-APP\_\-REQ\_\-GET} (VOID)
+\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00595_a481879f9b4ffd36ce8c297420e6dd0fe}{GSN\_\-SYS\_\-CRYPTO\_\-SEED\_\-LOCATION\_\-GET} (VOID)
+\item 
+INLINE VOID \hyperlink{a00595_a850fc46df8147bde93528263087aabbd}{GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-SET} (\hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} offset)
+\item 
+INLINE \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} $\ast$ \hyperlink{a00595_aea7f7049b52ed61dff623083b7056349}{GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-LOC\_\-GET} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00595_a058c7e0274d265d046d3f59834005b9a}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-RTC\_\-MAGIC\_\-NUM@{GSN\_\-RTC\_\-MAGIC\_\-NUM}}
+\index{GSN\_\-RTC\_\-MAGIC\_\-NUM@{GSN\_\-RTC\_\-MAGIC\_\-NUM}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-RTC\_\-MAGIC\_\-NUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RTC\_\-MAGIC\_\-NUM~0x95959595}}
+\label{a00595_a058c7e0274d265d046d3f59834005b9a}
+
+
+Definition at line 42 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_a4737841c843e54b342545d80a1cc76d3}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-SYS\_\-RTC\_\-LATCH\_\-MEM\_\-USERAPP\_\-ADDR@{GSN\_\-SYS\_\-RTC\_\-LATCH\_\-MEM\_\-USERAPP\_\-ADDR}}
+\index{GSN\_\-SYS\_\-RTC\_\-LATCH\_\-MEM\_\-USERAPP\_\-ADDR@{GSN\_\-SYS\_\-RTC\_\-LATCH\_\-MEM\_\-USERAPP\_\-ADDR}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-SYS\_\-RTC\_\-LATCH\_\-MEM\_\-USERAPP\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SYS\_\-RTC\_\-LATCH\_\-MEM\_\-USERAPP\_\-ADDR~(GSN\_\-RTC\_\-LATCH\_\-MEM\_\-ADDR + sizeof({\bf GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO\_\-T}))}}
+\label{a00595_a4737841c843e54b342545d80a1cc76d3}
+
+
+Definition at line 57 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_a7a3a4ce1e7c7b69b4bfde0215e0ac8fc}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!RTC\_\-LATCH\_\-MEM\_\-ADDR@{RTC\_\-LATCH\_\-MEM\_\-ADDR}}
+\index{RTC\_\-LATCH\_\-MEM\_\-ADDR@{RTC\_\-LATCH\_\-MEM\_\-ADDR}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{RTC\_\-LATCH\_\-MEM\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define RTC\_\-LATCH\_\-MEM\_\-ADDR~0x41010000}}
+\label{a00595_a7a3a4ce1e7c7b69b4bfde0215e0ac8fc}
+
+
+Definition at line 40 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00595_a7d6f2c57cd64aa41e96d1f18290a30dc}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO\_\-T@{GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO\_\-T}}
+\index{GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO\_\-T@{GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO\_\-T}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO} {\bf GSN\_\-SYS\_\-RESERVD\_\-RTC\_\-INFO\_\-T}}}
+\label{a00595_a7d6f2c57cd64aa41e96d1f18290a30dc}
+\hypertarget{a00595_a8e08e7e2322205f5660173fc444bfebc}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM\_\-T@{GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM\_\-T@{GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM\_\-T}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM} {\bf GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00595_a8e08e7e2322205f5660173fc444bfebc}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00595_aad92fc6c06998d9cebee9964282736b9}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-APP\_\-REQ\_\-GET@{GSN\_\-APP\_\-REQ\_\-GET}}
+\index{GSN\_\-APP\_\-REQ\_\-GET@{GSN\_\-APP\_\-REQ\_\-GET}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-APP\_\-REQ\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GSN\_\-APP\_\-REQ\_\-GET (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_aad92fc6c06998d9cebee9964282736b9}
+
+
+Definition at line 139 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_aab1eb94962bf00e372394bd8dee105fa}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-APP\_\-REQ\_\-SET@{GSN\_\-APP\_\-REQ\_\-SET}}
+\index{GSN\_\-APP\_\-REQ\_\-SET@{GSN\_\-APP\_\-REQ\_\-SET}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-APP\_\-REQ\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GSN\_\-APP\_\-REQ\_\-SET (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{val}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_aab1eb94962bf00e372394bd8dee105fa}
+
+
+Definition at line 131 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_a7fced0a4ac6a66a844a36f57dc25d0ac}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-BOOT\_\-INFO\_\-GET@{GSN\_\-BOOT\_\-INFO\_\-GET}}
+\index{GSN\_\-BOOT\_\-INFO\_\-GET@{GSN\_\-BOOT\_\-INFO\_\-GET}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-BOOT\_\-INFO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GSN\_\-BOOT\_\-INFO\_\-GET (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_a7fced0a4ac6a66a844a36f57dc25d0ac}
+
+
+Definition at line 110 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_a37568c3c50f44e2afdf150a98a0925a1}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-BOOT\_\-REASON\_\-GET@{GSN\_\-BOOT\_\-REASON\_\-GET}}
+\index{GSN\_\-BOOT\_\-REASON\_\-GET@{GSN\_\-BOOT\_\-REASON\_\-GET}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-BOOT\_\-REASON\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GSN\_\-BOOT\_\-REASON\_\-GET (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_a37568c3c50f44e2afdf150a98a0925a1}
+
+
+Definition at line 103 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_a39eb550aadad243cfca62fc631cfd128}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-BOOTINFO\_\-SET@{GSN\_\-BOOTINFO\_\-SET}}
+\index{GSN\_\-BOOTINFO\_\-SET@{GSN\_\-BOOTINFO\_\-SET}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-BOOTINFO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GSN\_\-BOOTINFO\_\-SET (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{bootReason, }
+\item[{{\bf UINT32}}]{bootInfo}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_a39eb550aadad243cfca62fc631cfd128}
+
+
+Definition at line 76 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_a05f46d13cfdcc394dcf70ecc82b1771f}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-IS\_\-RTC\_\-RSVD\_\-INFO\_\-VALID@{GSN\_\-IS\_\-RTC\_\-RSVD\_\-INFO\_\-VALID}}
+\index{GSN\_\-IS\_\-RTC\_\-RSVD\_\-INFO\_\-VALID@{GSN\_\-IS\_\-RTC\_\-RSVD\_\-INFO\_\-VALID}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-IS\_\-RTC\_\-RSVD\_\-INFO\_\-VALID}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GSN\_\-IS\_\-RTC\_\-RSVD\_\-INFO\_\-VALID (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_a05f46d13cfdcc394dcf70ecc82b1771f}
+
+
+Definition at line 85 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_ac8b05b8e89ded06594074a0386c1db24}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-RTC\_\-RSVD\_\-INFO\_\-VALID\_\-SET@{GSN\_\-RTC\_\-RSVD\_\-INFO\_\-VALID\_\-SET}}
+\index{GSN\_\-RTC\_\-RSVD\_\-INFO\_\-VALID\_\-SET@{GSN\_\-RTC\_\-RSVD\_\-INFO\_\-VALID\_\-SET}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-RTC\_\-RSVD\_\-INFO\_\-VALID\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GSN\_\-RTC\_\-RSVD\_\-INFO\_\-VALID\_\-SET (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_ac8b05b8e89ded06594074a0386c1db24}
+
+
+Definition at line 95 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_a481879f9b4ffd36ce8c297420e6dd0fe}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-SYS\_\-CRYPTO\_\-SEED\_\-LOCATION\_\-GET@{GSN\_\-SYS\_\-CRYPTO\_\-SEED\_\-LOCATION\_\-GET}}
+\index{GSN\_\-SYS\_\-CRYPTO\_\-SEED\_\-LOCATION\_\-GET@{GSN\_\-SYS\_\-CRYPTO\_\-SEED\_\-LOCATION\_\-GET}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-SYS\_\-CRYPTO\_\-SEED\_\-LOCATION\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GSN\_\-SYS\_\-CRYPTO\_\-SEED\_\-LOCATION\_\-GET (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_a481879f9b4ffd36ce8c297420e6dd0fe}
+
+
+Definition at line 148 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_a3ceb648d06aa927b3e5cd3f9e1275764}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-SYS\_\-RESET\_\-INFO\_\-LOCATION\_\-GET@{GSN\_\-SYS\_\-RESET\_\-INFO\_\-LOCATION\_\-GET}}
+\index{GSN\_\-SYS\_\-RESET\_\-INFO\_\-LOCATION\_\-GET@{GSN\_\-SYS\_\-RESET\_\-INFO\_\-LOCATION\_\-GET}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-SYS\_\-RESET\_\-INFO\_\-LOCATION\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GSN\_\-SYS\_\-RESET\_\-INFO\_\-LOCATION\_\-GET (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_a3ceb648d06aa927b3e5cd3f9e1275764}
+
+
+Definition at line 117 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00595_a3ceb648d06aa927b3e5cd3f9e1275764_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00595_a00d95ee661fe7e23c37422c13a5ff9cb}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-SYS\_\-STATS\_\-LOCATION\_\-GET@{GSN\_\-SYS\_\-STATS\_\-LOCATION\_\-GET}}
+\index{GSN\_\-SYS\_\-STATS\_\-LOCATION\_\-GET@{GSN\_\-SYS\_\-STATS\_\-LOCATION\_\-GET}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-SYS\_\-STATS\_\-LOCATION\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GSN\_\-SYS\_\-STATS\_\-LOCATION\_\-GET (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_a00d95ee661fe7e23c37422c13a5ff9cb}
+
+
+Definition at line 124 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_aea7f7049b52ed61dff623083b7056349}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-LOC\_\-GET@{GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-LOC\_\-GET}}
+\index{GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-LOC\_\-GET@{GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-LOC\_\-GET}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-LOC\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf ULONG64}$\ast$ GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-LOC\_\-GET (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_aea7f7049b52ed61dff623083b7056349}
+
+
+Definition at line 162 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_a850fc46df8147bde93528263087aabbd}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-SET@{GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-SET}}
+\index{GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-SET@{GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-SET}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GSN\_\-SYS\_\-TIME\_\-OFFSET\_\-SET (
+\begin{DoxyParamCaption}
+\item[{{\bf ULONG64}}]{offset}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_a850fc46df8147bde93528263087aabbd}
+
+
+Definition at line 155 of file gsn\_\-sys\_\-rtc\_\-info.h.
+
+\hypertarget{a00595_af140d8e44e9509ad2280031fce87f52f}{
+\index{gsn\_\-sys\_\-rtc\_\-info.h@{gsn\_\-sys\_\-rtc\_\-info.h}!GsnSysRtcInfo\_\-Init@{GsnSysRtcInfo\_\-Init}}
+\index{GsnSysRtcInfo\_\-Init@{GsnSysRtcInfo\_\-Init}!gsn_sys_rtc_info.h@{gsn\_\-sys\_\-rtc\_\-info.h}}
+\subsubsection[{GsnSysRtcInfo\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnSysRtcInfo\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SYS\_\-RTC\_\-INFO\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00595_af140d8e44e9509ad2280031fce87f52f}
+
+
+Definition at line 67 of file gsn\_\-sys\_\-rtc\_\-info.h.
+

@@ -1,0 +1,267 @@
+\hypertarget{a00095}{
+\section{GSN\_\-HTTPD\_\-CONFIG Struct Reference}
+\label{a00095}\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+}
+
+
+Definition of Config structure governing behavior of HTTPD server Definition of the Config structure that governs the behavior of the HTTPD server. Application can set the various parameters of this structure and the HTTP server will be configured appropriately when GsnHttpd\_\-Start is called.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-httpd.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00095_ad0126381cf1366366ff4b35d3a79b581}{ip\_\-flag}
+\item 
+char \hyperlink{a00095_ac889b27347bab80192c6fb582870de1b}{ipAddr6} \mbox{[}16\mbox{]}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00095_a48e99cad0feadbd616a0cda7d9628826}{ipAddr}
+\item 
+int \hyperlink{a00095_a63c89c04d1feae07ca35558055155ffb}{port}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00095_a0882f2e0f23795ba45a974d3f8eae786}{maxConnTotal}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00095_a30eac69b4161acf08ca8f59846875220}{maxConnPerIp}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00095_aac2c222f5ad72d02b349e797f5601c8b}{idleTimeout}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00095_a770ddf3431339a8557a2c034d96a7a6d}{blockingState}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00095_a43d5ee14f34535c187383f957878ccbd}{threadPriority}
+\item 
+char $\ast$ \hyperlink{a00095_ad3e53ed21d0e77f5b0af7f29c292919a}{redirectUrl}
+\item 
+char \hyperlink{a00095_a0c0fcc39f73de9a78d2b8866e3164a46}{username} \mbox{[}GSN\_\-HTTPD\_\-MAX\_\-USERNAME\_\-LEN\mbox{]}
+\item 
+char \hyperlink{a00095_ae8e911decf3e8573145b7626e623270e}{password} \mbox{[}GSN\_\-HTTPD\_\-MAX\_\-PASSWORD\_\-LEN\mbox{]}
+\item 
+char $\ast$ \hyperlink{a00095_a8479521b0f87848099a96a1227c893b2}{rootDir}
+\item 
+char $\ast$ \hyperlink{a00095_a7d978795357c23a14bc0c4b22767a9c8}{defaultFileName}
+\item 
+char $\ast$ \hyperlink{a00095_a04f54a405b478d792ae115e74c6236b4}{rootCgiDir}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00095_afe48a70357b70eb2ce3f756fa87b9574}{stack}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00095_a3c4efd56e4d6098acf4db4d2f68ab196}{stackSize}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00095_a9f7ab5e13d82c9b5312c3c3e3dd1dd19}{mallocTimeout}
+\item 
+void $\ast$ \hyperlink{a00095_aa151e2a38086b90e2c33abce22b78e84}{pool\_\-hdl}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00095_a3e06cb8fa58f49b7004a85c6f387ddc7}{sysQualTskID}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00095_a3b8eb219c70a5f7fc6dcb9d9643cbc31}{sysQualTicks}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definition of Config structure governing behavior of HTTPD server Definition of the Config structure that governs the behavior of the HTTPD server. Application can set the various parameters of this structure and the HTTP server will be configured appropriately when GsnHttpd\_\-Start is called. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00666_gae82a556385532a5c373c2c9700fa0959}{GsnHttpd\_\-Start} 
+\end{DoxySeeAlso}
+
+
+Definition at line 256 of file gsn\_\-httpd.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00095_a770ddf3431339a8557a2c034d96a7a6d}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!blockingState@{blockingState}}
+\index{blockingState@{blockingState}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{blockingState}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf blockingState}}}
+\label{a00095_a770ddf3431339a8557a2c034d96a7a6d}
+Blocking state of HTTPD when started 
+
+Definition at line 268 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a7d978795357c23a14bc0c4b22767a9c8}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!defaultFileName@{defaultFileName}}
+\index{defaultFileName@{defaultFileName}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{defaultFileName}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf defaultFileName}}}
+\label{a00095_a7d978795357c23a14bc0c4b22767a9c8}
+Default page to be served 
+
+Definition at line 274 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_aac2c222f5ad72d02b349e797f5601c8b}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!idleTimeout@{idleTimeout}}
+\index{idleTimeout@{idleTimeout}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{idleTimeout}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf idleTimeout}}}
+\label{a00095_aac2c222f5ad72d02b349e797f5601c8b}
+Idle timeout after which HTTP server closes conn 
+
+Definition at line 267 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_ad0126381cf1366366ff4b35d3a79b581}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!ip\_\-flag@{ip\_\-flag}}
+\index{ip\_\-flag@{ip\_\-flag}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{ip\_\-flag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf ip\_\-flag}}}
+\label{a00095_ad0126381cf1366366ff4b35d3a79b581}
+
+
+Definition at line 259 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a48e99cad0feadbd616a0cda7d9628826}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!ipAddr@{ipAddr}}
+\index{ipAddr@{ipAddr}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{ipAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf ipAddr}}}
+\label{a00095_a48e99cad0feadbd616a0cda7d9628826}
+IP address on which HTTPD should start 
+
+Definition at line 262 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_ac889b27347bab80192c6fb582870de1b}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!ipAddr6@{ipAddr6}}
+\index{ipAddr6@{ipAddr6}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{ipAddr6}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf ipAddr6}\mbox{[}16\mbox{]}}}
+\label{a00095_ac889b27347bab80192c6fb582870de1b}
+
+
+Definition at line 260 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a9f7ab5e13d82c9b5312c3c3e3dd1dd19}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!mallocTimeout@{mallocTimeout}}
+\index{mallocTimeout@{mallocTimeout}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{mallocTimeout}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf mallocTimeout}}}
+\label{a00095_a9f7ab5e13d82c9b5312c3c3e3dd1dd19}
+Timeout in ms after which we give up on malloc 
+
+Definition at line 278 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a30eac69b4161acf08ca8f59846875220}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!maxConnPerIp@{maxConnPerIp}}
+\index{maxConnPerIp@{maxConnPerIp}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{maxConnPerIp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf maxConnPerIp}}}
+\label{a00095_a30eac69b4161acf08ca8f59846875220}
+Maximum connections supported per IP 
+
+Definition at line 266 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a0882f2e0f23795ba45a974d3f8eae786}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!maxConnTotal@{maxConnTotal}}
+\index{maxConnTotal@{maxConnTotal}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{maxConnTotal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf maxConnTotal}}}
+\label{a00095_a0882f2e0f23795ba45a974d3f8eae786}
+Maximum connections supported 
+
+Definition at line 265 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_ae8e911decf3e8573145b7626e623270e}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!password@{password}}
+\index{password@{password}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{password}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf password}\mbox{[}GSN\_\-HTTPD\_\-MAX\_\-PASSWORD\_\-LEN\mbox{]}}}
+\label{a00095_ae8e911decf3e8573145b7626e623270e}
+Password for authentication 
+
+Definition at line 272 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_aa151e2a38086b90e2c33abce22b78e84}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!pool\_\-hdl@{pool\_\-hdl}}
+\index{pool\_\-hdl@{pool\_\-hdl}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{pool\_\-hdl}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf pool\_\-hdl}}}
+\label{a00095_aa151e2a38086b90e2c33abce22b78e84}
+
+
+Definition at line 283 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a63c89c04d1feae07ca35558055155ffb}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!port@{port}}
+\index{port@{port}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf port}}}
+\label{a00095_a63c89c04d1feae07ca35558055155ffb}
+Port on which HTTPD should start 
+
+Definition at line 264 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_ad3e53ed21d0e77f5b0af7f29c292919a}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!redirectUrl@{redirectUrl}}
+\index{redirectUrl@{redirectUrl}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{redirectUrl}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf redirectUrl}}}
+\label{a00095_ad3e53ed21d0e77f5b0af7f29c292919a}
+Default page to be served 
+
+Definition at line 270 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a04f54a405b478d792ae115e74c6236b4}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!rootCgiDir@{rootCgiDir}}
+\index{rootCgiDir@{rootCgiDir}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{rootCgiDir}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf rootCgiDir}}}
+\label{a00095_a04f54a405b478d792ae115e74c6236b4}
+Root directory for dynamic pages 
+
+Definition at line 275 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a8479521b0f87848099a96a1227c893b2}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!rootDir@{rootDir}}
+\index{rootDir@{rootDir}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{rootDir}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf rootDir}}}
+\label{a00095_a8479521b0f87848099a96a1227c893b2}
+Root directory for static pages 
+
+Definition at line 273 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_afe48a70357b70eb2ce3f756fa87b9574}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!stack@{stack}}
+\index{stack@{stack}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf stack}}}
+\label{a00095_afe48a70357b70eb2ce3f756fa87b9574}
+Pointer to memory serving as stack 
+
+Definition at line 276 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a3c4efd56e4d6098acf4db4d2f68ab196}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!stackSize@{stackSize}}
+\index{stackSize@{stackSize}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{stackSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf stackSize}}}
+\label{a00095_a3c4efd56e4d6098acf4db4d2f68ab196}
+Size of stack 
+
+Definition at line 277 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a3b8eb219c70a5f7fc6dcb9d9643cbc31}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!sysQualTicks@{sysQualTicks}}
+\index{sysQualTicks@{sysQualTicks}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{sysQualTicks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf sysQualTicks}}}
+\label{a00095_a3b8eb219c70a5f7fc6dcb9d9643cbc31}
+
+
+Definition at line 286 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a3e06cb8fa58f49b7004a85c6f387ddc7}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!sysQualTskID@{sysQualTskID}}
+\index{sysQualTskID@{sysQualTskID}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{sysQualTskID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf sysQualTskID}}}
+\label{a00095_a3e06cb8fa58f49b7004a85c6f387ddc7}
+
+
+Definition at line 285 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a43d5ee14f34535c187383f957878ccbd}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!threadPriority@{threadPriority}}
+\index{threadPriority@{threadPriority}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{threadPriority}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf threadPriority}}}
+\label{a00095_a43d5ee14f34535c187383f957878ccbd}
+Priority of HTTPD task 
+
+Definition at line 269 of file gsn\_\-httpd.h.
+
+\hypertarget{a00095_a0c0fcc39f73de9a78d2b8866e3164a46}{
+\index{GSN\_\-HTTPD\_\-CONFIG@{GSN\_\-HTTPD\_\-CONFIG}!username@{username}}
+\index{username@{username}!GSN_HTTPD_CONFIG@{GSN\_\-HTTPD\_\-CONFIG}}
+\subsubsection[{username}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf username}\mbox{[}GSN\_\-HTTPD\_\-MAX\_\-USERNAME\_\-LEN\mbox{]}}}
+\label{a00095_a0c0fcc39f73de9a78d2b8866e3164a46}
+Username for authentication 
+
+Definition at line 271 of file gsn\_\-httpd.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00508}{gsn\_\-httpd.h}\end{DoxyCompactItemize}

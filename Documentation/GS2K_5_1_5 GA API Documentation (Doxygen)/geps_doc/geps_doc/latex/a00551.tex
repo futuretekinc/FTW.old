@@ -1,0 +1,1574 @@
+\hypertarget{a00551}{
+\section{gsn\_\-reg\_\-flashif\_\-op.h File Reference}
+\label{a00551}\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00787}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00551_a5f03768c1f118e98b751d9fc188d30b5}{FLASHIF\_\-CTL\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL))
+\item 
+\#define \hyperlink{a00551_a918e0725f2622cba4bf1771e6a316421}{FLASHIF\_\-CTL\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL, (value))
+\item 
+\#define \hyperlink{a00551_a7824797c0279b449e89e4fcdf4c6dea7}{FLASHIF\_\-CTL\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL) $|$ (value))
+\item 
+\#define \hyperlink{a00551_a2e46e72be7481437a0a85e28cba1ce75}{FLASHIF\_\-CTL\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00551_ad8f62eb683b3c29efe22ef3e4982535b}{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-WLAN\_\-DMA\_\-EN)
+\item 
+\#define \hyperlink{a00551_a399bd96d2db414b6304868713496346b}{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-WLAN\_\-DMA\_\-EN, 1)
+\item 
+\#define \hyperlink{a00551_ade791f9e1c59f77140ee021d739d915b}{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-WLAN\_\-DMA\_\-EN, 0)
+\item 
+\#define \hyperlink{a00551_a8ff3fb75dbfbe1afe14b5ff142c100a0}{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-APP\_\-DMA\_\-EN)
+\item 
+\#define \hyperlink{a00551_abc8b974f7373e0021a68aa7cbd53ce5e}{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-APP\_\-DMA\_\-EN, 1)
+\item 
+\#define \hyperlink{a00551_a32dadb4a7b93f392c70ec5312eba74cc}{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-APP\_\-DMA\_\-EN, 0)
+\item 
+\#define \hyperlink{a00551_aaa7ec868b98780593657e75890989422}{FLASHIF\_\-EN\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-EN)
+\item 
+\#define \hyperlink{a00551_ae9aa9b45cb670526041e05f842f7cced}{FLASHIF\_\-EN\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-EN, 1)
+\item 
+\#define \hyperlink{a00551_ae9af5bba876e9704ee0d3aee7edf2cba}{FLASHIF\_\-EN\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-EN, 0)
+\item 
+\#define \hyperlink{a00551_ab20b6f8c5d65e67e8010320915135e09}{FLASHIF\_\-STATUS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS))
+\item 
+\#define \hyperlink{a00551_aa4860812dc206966ed6ebda07b45df2d}{FLASHIF\_\-STATUS\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS, (value))
+\item 
+\#define \hyperlink{a00551_a9cdf0e2b4a60cba19d1ca7813dd3c9ce}{FLASHIF\_\-STATUS\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS) $|$ (value))
+\item 
+\#define \hyperlink{a00551_a1f5769b621ba509fdd57dd45f4d8e8f6}{FLASHIF\_\-STATUS\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00551_a02e3c99498752faf6d7f391a0be0810a}{FLASHIF\_\-DMA\_\-STATUS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-STATUS)
+\item 
+\#define \hyperlink{a00551_af2399342aac0b35437e3d28bd7b94b71}{FLASHIF\_\-DMA\_\-STATUS\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-STATUS, (value))
+\item 
+\#define \hyperlink{a00551_a6c6c045c0556c7d2cbc545c4cab88783}{FLASHIF\_\-ACTIVE\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-ACTIVE)
+\item 
+\#define \hyperlink{a00551_a04a5ca88717a75042784e081a3f11e0c}{FLASHIF\_\-ACTIVE\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-ACTIVE, 1)
+\item 
+\#define \hyperlink{a00551_a8887722af6d67723b420ab7e7418ecb3}{FLASHIF\_\-ACTIVE\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-ACTIVE, 0)
+\item 
+\#define \hyperlink{a00551_afdbfb8927827181fa6d0dff54764db0e}{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL)
+\item 
+\#define \hyperlink{a00551_a842ad42b2a962636e27a0dcd1b3a7085}{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL, 1)
+\item 
+\#define \hyperlink{a00551_a40778e72d32f3ad26f79e95d5bfb4e2b}{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL, 0)
+\item 
+\#define \hyperlink{a00551_a442cb0cc2cbc9808ab60b1355825416d}{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY)
+\item 
+\#define \hyperlink{a00551_aeda4107b4efb42ca53028644bcf78a96}{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY, 1)
+\item 
+\#define \hyperlink{a00551_a75d0c3f512941ccfc410591e85484af5}{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY, 0)
+\item 
+\#define \hyperlink{a00551_aed29a25516e9feb0f19ab40439d86646}{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL)
+\item 
+\#define \hyperlink{a00551_aa4e330846a0563c097ae860cb570bd82}{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL, 1)
+\item 
+\#define \hyperlink{a00551_aff9d0596abc044952f585ffe4755df0d}{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL, 0)
+\item 
+\#define \hyperlink{a00551_a571de867a2280388dd46149285e5e87f}{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY)
+\item 
+\#define \hyperlink{a00551_a6e5235b358fb05a175bed65f9f94a2af}{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY, 1)
+\item 
+\#define \hyperlink{a00551_a25b16dc192db44d09b7d9ddc16367244}{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY, 0)
+\item 
+\#define \hyperlink{a00551_a67f6de47ac21f8a1383b2483455fcf5f}{FLASHIF\_\-DMACTL\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL))
+\item 
+\#define \hyperlink{a00551_afa1dc119180b6e7ea20756855ac9edf1}{FLASHIF\_\-DMACTL\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL, (value))
+\item 
+\#define \hyperlink{a00551_a46b3e785b2be5c3d4f5279805bfc973f}{FLASHIF\_\-DMACTL\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL) $|$ (value))
+\item 
+\#define \hyperlink{a00551_a25d26d4a4651cc6cc3d5156d0a32dede}{FLASHIF\_\-DMACTL\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00551_aa9014f0ce7104e9c3ac0952d75ca3351}{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT)
+\item 
+\#define \hyperlink{a00551_a1af6202ed88ce9d75b2d5e34f9b34430}{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT, (value))
+\item 
+\#define \hyperlink{a00551_afcc1b667255973af55398c0f86f66bc2}{FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DATA\_\-BITLANES)
+\item 
+\#define \hyperlink{a00551_adb28a7163f051bc2219d0204bfdfb831}{FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DATA\_\-BITLANES, (value))
+\item 
+\#define \hyperlink{a00551_ab7079c7e71cefa925a9222c7145ba7de}{FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES)
+\item 
+\#define \hyperlink{a00551_ad2a9b494534aa58a094bd5e3a23174da}{FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES, (value))
+\item 
+\#define \hyperlink{a00551_a3afac59c2fb953d36afa61e6c62556ea}{FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES)
+\item 
+\#define \hyperlink{a00551_a87727edc99ee5f6f7bf94268a304be37}{FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES, (value))
+\item 
+\#define \hyperlink{a00551_a25961fd4dd39ebdf84bc78a930ce84f6}{FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-CMD\_\-BITLANES)
+\item 
+\#define \hyperlink{a00551_a0de2ef8b744564011838dcc5b513d8be}{FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-CMD\_\-BITLANES, (value))
+\item 
+\#define \hyperlink{a00551_a55d674cb28fb8ae851d2fcd41c7cade6}{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT)
+\item 
+\#define \hyperlink{a00551_a23c4b3360b25e2abfd5158e4429e9dd1}{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT, 1)
+\item 
+\#define \hyperlink{a00551_a98bd11ab6b5bb37befca8246dcda28be}{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT, 0)
+\item 
+\#define \hyperlink{a00551_a4592db1bfa5a6ba819080061af1b006c}{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO)
+\item 
+\#define \hyperlink{a00551_aed783df036966fae226562661baf0fde}{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO, 1)
+\item 
+\#define \hyperlink{a00551_afe9f6f36ddbbb70efaeeb6d27acea0ba}{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO, 0)
+\item 
+\#define \hyperlink{a00551_aa0dde89d127aa02da5c62e26d8a92f8c}{FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT)
+\item 
+\#define \hyperlink{a00551_a8d77750fcd9bdf21646595739fe32d87}{FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT, (value))
+\item 
+\#define \hyperlink{a00551_ab8ff6863a8f6bdf4d3497ca79a68b50c}{FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT)
+\item 
+\#define \hyperlink{a00551_aeaf5097bd6c37fe4f2f988cd94a89942}{FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT, (value))
+\item 
+\#define \hyperlink{a00551_aa80d790d454a6589cd678c4730acdc86}{FLASHIF\_\-DMA\_\-DIRECTION\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DIRECTION)
+\item 
+\#define \hyperlink{a00551_a5aa2662f4fb53efeac6c4fe1ba924646}{FLASHIF\_\-DMA\_\-DIRECTION\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DIRECTION, 1)
+\item 
+\#define \hyperlink{a00551_a64cb5266099616022278afb7be80b503}{FLASHIF\_\-DMA\_\-DIRECTION\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DIRECTION, 0)
+\item 
+\#define \hyperlink{a00551_ab4f5066a5749d758d01e72975e7069d1}{FLASHIF\_\-DMACMD\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD))
+\item 
+\#define \hyperlink{a00551_a0030c3812bb2287458af6aca05546222}{FLASHIF\_\-DMACMD\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD, (value))
+\item 
+\#define \hyperlink{a00551_a58292aeefd538841135658539c29c392}{FLASHIF\_\-DMACMD\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD) $|$ (value))
+\item 
+\#define \hyperlink{a00551_a4c0cb508b4bf2f2375fe89e33065e660}{FLASHIF\_\-DMACMD\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00551_a14086c6eb3633e1db190357378e99b49}{FLASHIF\_\-DMACMD\_\-WORD\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMACMD\_\-WORD)
+\item 
+\#define \hyperlink{a00551_a513d8232ffd7c98dbfe4bece94c7b0c2}{FLASHIF\_\-DMACMD\_\-WORD\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMACMD\_\-WORD, (value))
+\item 
+\#define \hyperlink{a00551_adf1bf4587940f6af34c1c66e74138176}{FLASHIF\_\-PIO\_\-TXFIFO\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO))
+\item 
+\#define \hyperlink{a00551_a42e4e34b3ade7887b46be7d86d9ab5f6}{FLASHIF\_\-PIO\_\-TXFIFO\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO, (value))
+\item 
+\#define \hyperlink{a00551_a2b4ca60d8d1a10158a23a42154475edd}{FLASHIF\_\-PIO\_\-TXFIFO\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO) $|$ (value))
+\item 
+\#define \hyperlink{a00551_a27c6d46f90a6efbfdf27007e287eb5e5}{FLASHIF\_\-PIO\_\-TXFIFO\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00551_a734cd9e347d0c49f25930db7a51330df}{FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA)
+\item 
+\#define \hyperlink{a00551_a01dbecbeb0015354621b16b4222647cb}{FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA, (value))
+\item 
+\#define \hyperlink{a00551_afaefd1b86f2fb798ede470689471e67d}{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS))
+\item 
+\#define \hyperlink{a00551_a94273e1a052932994405a98fdf5fafed}{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS, (value))
+\item 
+\#define \hyperlink{a00551_a558e3d79ddabda477c4df86fd52aedef}{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS) $|$ (value))
+\item 
+\#define \hyperlink{a00551_a32b6c4ad6177b3ab28c9d4eedfbe8088}{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00551_ab5c1686fd859e57e7bdbc1d73712a880}{FLASHIF\_\-PIO\_\-RXFIFO\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO))
+\item 
+\#define \hyperlink{a00551_a784576c2c4344bbdf77f15d28aefc11f}{FLASHIF\_\-PIO\_\-RXFIFO\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO, (value))
+\item 
+\#define \hyperlink{a00551_a6a4754f07638e8f65f0bd28a0396f5e4}{FLASHIF\_\-PIO\_\-RXFIFO\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO) $|$ (value))
+\item 
+\#define \hyperlink{a00551_ab93a98e231268dfb6ef031bd7c1d41f4}{FLASHIF\_\-PIO\_\-RXFIFO\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00551_a07701298f3399a47127ca5533552b1da}{FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA)
+\item 
+\#define \hyperlink{a00551_a3013394beb609c8f0f61a8d8ba704495}{FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA, (value))
+\item 
+\#define \hyperlink{a00551_a0cfde095734d7146d7d692bcd1521784}{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS))
+\item 
+\#define \hyperlink{a00551_ae0750404620b277e4bc25a745308f86e}{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS, (value))
+\item 
+\#define \hyperlink{a00551_ae6e6cda753b322506fa30b4ec3192ba9}{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS) $|$ (value))
+\item 
+\#define \hyperlink{a00551_acf84531a1b007533213d049df1af7df5}{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00551_abdbd735d176f808b18168e82ce21a57b}{FLASHIF\_\-PIO\_\-REQ\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ))
+\item 
+\#define \hyperlink{a00551_a6681d5e0b8a113bcbf260b4f3bd123e4}{FLASHIF\_\-PIO\_\-REQ\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ, (value))
+\item 
+\#define \hyperlink{a00551_af5dd034dec7754105a46a0fa349a7efa}{FLASHIF\_\-PIO\_\-REQ\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ) $|$ (value))
+\item 
+\#define \hyperlink{a00551_a6678c186ed4ae48897e702217fd10c70}{FLASHIF\_\-PIO\_\-REQ\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00551_a6dace6de4fe38dad9e381fa4d86c301b}{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-REQ\_\-F)
+\item 
+\#define \hyperlink{a00551_aa1698e62535cbec2ca3d70161ebbc8ae}{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-REQ\_\-F, 1)
+\item 
+\#define \hyperlink{a00551_a0f27af19a937a0788932c61c008c253b}{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-REQ\_\-F, 0)
+\item 
+\#define \hyperlink{a00551_a531e363321e73934248f67c7b6722958}{FLASHIF\_\-PIO\_\-GNT\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT))
+\item 
+\#define \hyperlink{a00551_a4add76436ea1aec75c27ea6f34742e37}{FLASHIF\_\-PIO\_\-GNT\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT, (value))
+\item 
+\#define \hyperlink{a00551_a2b46449191e03342c7ee68ec46eb2dba}{FLASHIF\_\-PIO\_\-GNT\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT) $|$ (value))
+\item 
+\#define \hyperlink{a00551_a94dd52c5e4c22e7be4e7780a585426c5}{FLASHIF\_\-PIO\_\-GNT\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00551_a703eab65536867ceb7abafbc5ca386a4}{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-GNT\_\-F)
+\item 
+\#define \hyperlink{a00551_a4772ce1e3f6ff3fa3bc7b6d92ed449c9}{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-GNT\_\-F, 1)
+\item 
+\#define \hyperlink{a00551_a93d453ce04d42b142dc69c0dafa8c591}{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-GNT\_\-F, 0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00551_a8887722af6d67723b420ab7e7418ecb3}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-ACTIVE\_\-CLEAR@{FLASHIF\_\-ACTIVE\_\-CLEAR}}
+\index{FLASHIF\_\-ACTIVE\_\-CLEAR@{FLASHIF\_\-ACTIVE\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-ACTIVE\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-ACTIVE\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-ACTIVE, 0)}}
+\label{a00551_a8887722af6d67723b420ab7e7418ecb3}
+
+
+Definition at line 119 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a6c6c045c0556c7d2cbc545c4cab88783}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-ACTIVE\_\-GET@{FLASHIF\_\-ACTIVE\_\-GET}}
+\index{FLASHIF\_\-ACTIVE\_\-GET@{FLASHIF\_\-ACTIVE\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-ACTIVE\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-ACTIVE\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-ACTIVE)}}
+\label{a00551_a6c6c045c0556c7d2cbc545c4cab88783}
+
+
+Definition at line 115 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a04a5ca88717a75042784e081a3f11e0c}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-ACTIVE\_\-SET@{FLASHIF\_\-ACTIVE\_\-SET}}
+\index{FLASHIF\_\-ACTIVE\_\-SET@{FLASHIF\_\-ACTIVE\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-ACTIVE\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-ACTIVE\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-ACTIVE, 1)}}
+\label{a00551_a04a5ca88717a75042784e081a3f11e0c}
+
+
+Definition at line 117 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a32dadb4a7b93f392c70ec5312eba74cc}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-APP\_\-DMA\_\-EN\_\-CLEAR@{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-CLEAR}}
+\index{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-CLEAR@{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-APP\_\-DMA\_\-EN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-APP\_\-DMA\_\-EN, 0)}}
+\label{a00551_a32dadb4a7b93f392c70ec5312eba74cc}
+
+
+Definition at line 74 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a8ff3fb75dbfbe1afe14b5ff142c100a0}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-APP\_\-DMA\_\-EN\_\-GET@{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-GET}}
+\index{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-GET@{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-APP\_\-DMA\_\-EN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-APP\_\-DMA\_\-EN)}}
+\label{a00551_a8ff3fb75dbfbe1afe14b5ff142c100a0}
+
+
+Definition at line 70 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_abc8b974f7373e0021a68aa7cbd53ce5e}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-APP\_\-DMA\_\-EN\_\-SET@{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-SET}}
+\index{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-SET@{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-APP\_\-DMA\_\-EN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-APP\_\-DMA\_\-EN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-APP\_\-DMA\_\-EN, 1)}}
+\label{a00551_abc8b974f7373e0021a68aa7cbd53ce5e}
+
+
+Definition at line 72 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a2e46e72be7481437a0a85e28cba1ce75}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-CTL\_\-CLEARBIT@{FLASHIF\_\-CTL\_\-CLEARBIT}}
+\index{FLASHIF\_\-CTL\_\-CLEARBIT@{FLASHIF\_\-CTL\_\-CLEARBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-CTL\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-CTL\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL) \& ($\sim$(value)))}}
+\label{a00551_a2e46e72be7481437a0a85e28cba1ce75}
+
+
+Definition at line 52 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a5f03768c1f118e98b751d9fc188d30b5}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-CTL\_\-GET@{FLASHIF\_\-CTL\_\-GET}}
+\index{FLASHIF\_\-CTL\_\-GET@{FLASHIF\_\-CTL\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-CTL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-CTL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL))}}
+\label{a00551_a5f03768c1f118e98b751d9fc188d30b5}
+
+
+Definition at line 46 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a918e0725f2622cba4bf1771e6a316421}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-CTL\_\-SET@{FLASHIF\_\-CTL\_\-SET}}
+\index{FLASHIF\_\-CTL\_\-SET@{FLASHIF\_\-CTL\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-CTL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-CTL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL, (value))}}
+\label{a00551_a918e0725f2622cba4bf1771e6a316421}
+
+
+Definition at line 48 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a7824797c0279b449e89e4fcdf4c6dea7}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-CTL\_\-SETBIT@{FLASHIF\_\-CTL\_\-SETBIT}}
+\index{FLASHIF\_\-CTL\_\-SETBIT@{FLASHIF\_\-CTL\_\-SETBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-CTL\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-CTL\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-CTL) $|$ (value))}}
+\label{a00551_a7824797c0279b449e89e4fcdf4c6dea7}
+
+
+Definition at line 50 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a3afac59c2fb953d36afa61e6c62556ea}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-GET@{FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-GET}}
+\index{FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-GET@{FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES)}}
+\label{a00551_a3afac59c2fb953d36afa61e6c62556ea}
+
+
+Definition at line 211 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a87727edc99ee5f6f7bf94268a304be37}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-SET@{FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-SET}}
+\index{FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-SET@{FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-ADDR\_\-BITLANES, (value))}}
+\label{a00551_a87727edc99ee5f6f7bf94268a304be37}
+
+
+Definition at line 213 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aa0dde89d127aa02da5c62e26d8a92f8c}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-GET@{FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-GET}}
+\index{FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-GET@{FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT)}}
+\label{a00551_aa0dde89d127aa02da5c62e26d8a92f8c}
+
+
+Definition at line 251 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a8d77750fcd9bdf21646595739fe32d87}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-SET@{FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-SET}}
+\index{FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-SET@{FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-ADDR\_\-BYTECOUNT, (value))}}
+\label{a00551_a8d77750fcd9bdf21646595739fe32d87}
+
+
+Definition at line 253 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a25961fd4dd39ebdf84bc78a930ce84f6}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-GET@{FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-GET}}
+\index{FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-GET@{FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-CMD\_\-BITLANES)}}
+\label{a00551_a25961fd4dd39ebdf84bc78a930ce84f6}
+
+
+Definition at line 220 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a0de2ef8b744564011838dcc5b513d8be}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-SET@{FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-SET}}
+\index{FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-SET@{FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-CMD\_\-BITLANES\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-CMD\_\-BITLANES, (value))}}
+\label{a00551_a0de2ef8b744564011838dcc5b513d8be}
+
+
+Definition at line 222 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ab8ff6863a8f6bdf4d3497ca79a68b50c}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-GET@{FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-GET}}
+\index{FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-GET@{FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT)}}
+\label{a00551_ab8ff6863a8f6bdf4d3497ca79a68b50c}
+
+
+Definition at line 260 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aeaf5097bd6c37fe4f2f988cd94a89942}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-SET@{FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-SET}}
+\index{FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-SET@{FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-CMD\_\-BYTECOUNT, (value))}}
+\label{a00551_aeaf5097bd6c37fe4f2f988cd94a89942}
+
+
+Definition at line 262 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_afcc1b667255973af55398c0f86f66bc2}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-GET@{FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-GET}}
+\index{FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-GET@{FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DATA\_\-BITLANES)}}
+\label{a00551_afcc1b667255973af55398c0f86f66bc2}
+
+
+Definition at line 193 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_adb28a7163f051bc2219d0204bfdfb831}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-SET@{FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-SET}}
+\index{FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-SET@{FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DATA\_\-BITLANES\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DATA\_\-BITLANES, (value))}}
+\label{a00551_adb28a7163f051bc2219d0204bfdfb831}
+
+
+Definition at line 195 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a64cb5266099616022278afb7be80b503}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DIRECTION\_\-CLEAR@{FLASHIF\_\-DMA\_\-DIRECTION\_\-CLEAR}}
+\index{FLASHIF\_\-DMA\_\-DIRECTION\_\-CLEAR@{FLASHIF\_\-DMA\_\-DIRECTION\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DIRECTION\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DIRECTION\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DIRECTION, 0)}}
+\label{a00551_a64cb5266099616022278afb7be80b503}
+
+
+Definition at line 273 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aa80d790d454a6589cd678c4730acdc86}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DIRECTION\_\-GET@{FLASHIF\_\-DMA\_\-DIRECTION\_\-GET}}
+\index{FLASHIF\_\-DMA\_\-DIRECTION\_\-GET@{FLASHIF\_\-DMA\_\-DIRECTION\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DIRECTION\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DIRECTION\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DIRECTION)}}
+\label{a00551_aa80d790d454a6589cd678c4730acdc86}
+
+
+Definition at line 269 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a5aa2662f4fb53efeac6c4fe1ba924646}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DIRECTION\_\-SET@{FLASHIF\_\-DMA\_\-DIRECTION\_\-SET}}
+\index{FLASHIF\_\-DMA\_\-DIRECTION\_\-SET@{FLASHIF\_\-DMA\_\-DIRECTION\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DIRECTION\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DIRECTION\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DIRECTION, 1)}}
+\label{a00551_a5aa2662f4fb53efeac6c4fe1ba924646}
+
+
+Definition at line 271 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ab7079c7e71cefa925a9222c7145ba7de}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-GET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-GET}}
+\index{FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-GET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES)}}
+\label{a00551_ab7079c7e71cefa925a9222c7145ba7de}
+
+
+Definition at line 202 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ad2a9b494534aa58a094bd5e3a23174da}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-SET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-SET}}
+\index{FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-SET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BITLANES, (value))}}
+\label{a00551_ad2a9b494534aa58a094bd5e3a23174da}
+
+
+Definition at line 204 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aa9014f0ce7104e9c3ac0952d75ca3351}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-GET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-GET}}
+\index{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-GET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT)}}
+\label{a00551_aa9014f0ce7104e9c3ac0952d75ca3351}
+
+
+Definition at line 184 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a1af6202ed88ce9d75b2d5e34f9b34430}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-SET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-SET}}
+\index{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-SET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BYTECOUNT, (value))}}
+\label{a00551_a1af6202ed88ce9d75b2d5e34f9b34430}
+
+
+Definition at line 186 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_afe9f6f36ddbbb70efaeeb6d27acea0ba}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-CLEAR@{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-CLEAR}}
+\index{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-CLEAR@{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO, 0)}}
+\label{a00551_afe9f6f36ddbbb70efaeeb6d27acea0ba}
+
+
+Definition at line 244 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a4592db1bfa5a6ba819080061af1b006c}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-GET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-GET}}
+\index{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-GET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO)}}
+\label{a00551_a4592db1bfa5a6ba819080061af1b006c}
+
+
+Definition at line 240 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aed783df036966fae226562661baf0fde}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-SET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-SET}}
+\index{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-SET@{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-BYTESNONZERO, 1)}}
+\label{a00551_aed783df036966fae226562661baf0fde}
+
+
+Definition at line 242 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a98bd11ab6b5bb37befca8246dcda28be}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-CLEAR@{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-CLEAR}}
+\index{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-CLEAR@{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT, 0)}}
+\label{a00551_a98bd11ab6b5bb37befca8246dcda28be}
+
+
+Definition at line 233 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a55d674cb28fb8ae851d2fcd41c7cade6}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-GET@{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-GET}}
+\index{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-GET@{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT)}}
+\label{a00551_a55d674cb28fb8ae851d2fcd41c7cade6}
+
+
+Definition at line 229 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a23c4b3360b25e2abfd5158e4429e9dd1}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-SET@{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-SET}}
+\index{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-SET@{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-DUMMY\_\-CYCLECOUNT, 1)}}
+\label{a00551_a23c4b3360b25e2abfd5158e4429e9dd1}
+
+
+Definition at line 231 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a02e3c99498752faf6d7f391a0be0810a}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-STATUS\_\-GET@{FLASHIF\_\-DMA\_\-STATUS\_\-GET}}
+\index{FLASHIF\_\-DMA\_\-STATUS\_\-GET@{FLASHIF\_\-DMA\_\-STATUS\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-STATUS)}}
+\label{a00551_a02e3c99498752faf6d7f391a0be0810a}
+
+
+Definition at line 106 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_af2399342aac0b35437e3d28bd7b94b71}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMA\_\-STATUS\_\-SET@{FLASHIF\_\-DMA\_\-STATUS\_\-SET}}
+\index{FLASHIF\_\-DMA\_\-STATUS\_\-SET@{FLASHIF\_\-DMA\_\-STATUS\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMA\_\-STATUS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMA\_\-STATUS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMA\_\-STATUS, (value))}}
+\label{a00551_af2399342aac0b35437e3d28bd7b94b71}
+
+
+Definition at line 108 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a4c0cb508b4bf2f2375fe89e33065e660}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMACMD\_\-CLEARBIT@{FLASHIF\_\-DMACMD\_\-CLEARBIT}}
+\index{FLASHIF\_\-DMACMD\_\-CLEARBIT@{FLASHIF\_\-DMACMD\_\-CLEARBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMACMD\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMACMD\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD) \& ($\sim$(value)))}}
+\label{a00551_a4c0cb508b4bf2f2375fe89e33065e660}
+
+
+Definition at line 287 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ab4f5066a5749d758d01e72975e7069d1}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMACMD\_\-GET@{FLASHIF\_\-DMACMD\_\-GET}}
+\index{FLASHIF\_\-DMACMD\_\-GET@{FLASHIF\_\-DMACMD\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMACMD\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMACMD\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD))}}
+\label{a00551_ab4f5066a5749d758d01e72975e7069d1}
+
+
+Definition at line 281 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a0030c3812bb2287458af6aca05546222}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMACMD\_\-SET@{FLASHIF\_\-DMACMD\_\-SET}}
+\index{FLASHIF\_\-DMACMD\_\-SET@{FLASHIF\_\-DMACMD\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMACMD\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMACMD\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD, (value))}}
+\label{a00551_a0030c3812bb2287458af6aca05546222}
+
+
+Definition at line 283 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a58292aeefd538841135658539c29c392}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMACMD\_\-SETBIT@{FLASHIF\_\-DMACMD\_\-SETBIT}}
+\index{FLASHIF\_\-DMACMD\_\-SETBIT@{FLASHIF\_\-DMACMD\_\-SETBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMACMD\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMACMD\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACMD) $|$ (value))}}
+\label{a00551_a58292aeefd538841135658539c29c392}
+
+
+Definition at line 285 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a14086c6eb3633e1db190357378e99b49}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMACMD\_\-WORD\_\-GET@{FLASHIF\_\-DMACMD\_\-WORD\_\-GET}}
+\index{FLASHIF\_\-DMACMD\_\-WORD\_\-GET@{FLASHIF\_\-DMACMD\_\-WORD\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMACMD\_\-WORD\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMACMD\_\-WORD\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMACMD\_\-WORD)}}
+\label{a00551_a14086c6eb3633e1db190357378e99b49}
+
+
+Definition at line 294 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a513d8232ffd7c98dbfe4bece94c7b0c2}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMACMD\_\-WORD\_\-SET@{FLASHIF\_\-DMACMD\_\-WORD\_\-SET}}
+\index{FLASHIF\_\-DMACMD\_\-WORD\_\-SET@{FLASHIF\_\-DMACMD\_\-WORD\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMACMD\_\-WORD\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMACMD\_\-WORD\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-DMACMD\_\-WORD, (value))}}
+\label{a00551_a513d8232ffd7c98dbfe4bece94c7b0c2}
+
+
+Definition at line 296 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a25d26d4a4651cc6cc3d5156d0a32dede}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMACTL\_\-CLEARBIT@{FLASHIF\_\-DMACTL\_\-CLEARBIT}}
+\index{FLASHIF\_\-DMACTL\_\-CLEARBIT@{FLASHIF\_\-DMACTL\_\-CLEARBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMACTL\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMACTL\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL) \& ($\sim$(value)))}}
+\label{a00551_a25d26d4a4651cc6cc3d5156d0a32dede}
+
+
+Definition at line 177 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a67f6de47ac21f8a1383b2483455fcf5f}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMACTL\_\-GET@{FLASHIF\_\-DMACTL\_\-GET}}
+\index{FLASHIF\_\-DMACTL\_\-GET@{FLASHIF\_\-DMACTL\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMACTL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMACTL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL))}}
+\label{a00551_a67f6de47ac21f8a1383b2483455fcf5f}
+
+
+Definition at line 171 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_afa1dc119180b6e7ea20756855ac9edf1}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMACTL\_\-SET@{FLASHIF\_\-DMACTL\_\-SET}}
+\index{FLASHIF\_\-DMACTL\_\-SET@{FLASHIF\_\-DMACTL\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMACTL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMACTL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL, (value))}}
+\label{a00551_afa1dc119180b6e7ea20756855ac9edf1}
+
+
+Definition at line 173 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a46b3e785b2be5c3d4f5279805bfc973f}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-DMACTL\_\-SETBIT@{FLASHIF\_\-DMACTL\_\-SETBIT}}
+\index{FLASHIF\_\-DMACTL\_\-SETBIT@{FLASHIF\_\-DMACTL\_\-SETBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-DMACTL\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-DMACTL\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-DMACTL) $|$ (value))}}
+\label{a00551_a46b3e785b2be5c3d4f5279805bfc973f}
+
+
+Definition at line 175 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ae9af5bba876e9704ee0d3aee7edf2cba}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-EN\_\-CLEAR@{FLASHIF\_\-EN\_\-CLEAR}}
+\index{FLASHIF\_\-EN\_\-CLEAR@{FLASHIF\_\-EN\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-EN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-EN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-EN, 0)}}
+\label{a00551_ae9af5bba876e9704ee0d3aee7edf2cba}
+
+
+Definition at line 85 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aaa7ec868b98780593657e75890989422}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-EN\_\-GET@{FLASHIF\_\-EN\_\-GET}}
+\index{FLASHIF\_\-EN\_\-GET@{FLASHIF\_\-EN\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-EN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-EN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-EN)}}
+\label{a00551_aaa7ec868b98780593657e75890989422}
+
+
+Definition at line 81 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ae9aa9b45cb670526041e05f842f7cced}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-EN\_\-SET@{FLASHIF\_\-EN\_\-SET}}
+\index{FLASHIF\_\-EN\_\-SET@{FLASHIF\_\-EN\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-EN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-EN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-EN, 1)}}
+\label{a00551_ae9aa9b45cb670526041e05f842f7cced}
+
+
+Definition at line 83 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a94dd52c5e4c22e7be4e7780a585426c5}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-GNT\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-GNT\_\-CLEARBIT}}
+\index{FLASHIF\_\-PIO\_\-GNT\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-GNT\_\-CLEARBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-GNT\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-GNT\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT) \& ($\sim$(value)))}}
+\label{a00551_a94dd52c5e4c22e7be4e7780a585426c5}
+
+
+Definition at line 455 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a93d453ce04d42b142dc69c0dafa8c591}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-GNT\_\-F\_\-CLEAR@{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-CLEAR}}
+\index{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-CLEAR@{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-GNT\_\-F\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-GNT\_\-F, 0)}}
+\label{a00551_a93d453ce04d42b142dc69c0dafa8c591}
+
+
+Definition at line 466 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a703eab65536867ceb7abafbc5ca386a4}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-GNT\_\-F\_\-GET@{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-GET@{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-GNT\_\-F\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-GNT\_\-F)}}
+\label{a00551_a703eab65536867ceb7abafbc5ca386a4}
+
+
+Definition at line 462 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a4772ce1e3f6ff3fa3bc7b6d92ed449c9}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-GNT\_\-F\_\-SET@{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-SET@{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-GNT\_\-F\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-GNT\_\-F\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-GNT\_\-F, 1)}}
+\label{a00551_a4772ce1e3f6ff3fa3bc7b6d92ed449c9}
+
+
+Definition at line 464 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a531e363321e73934248f67c7b6722958}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-GNT\_\-GET@{FLASHIF\_\-PIO\_\-GNT\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-GNT\_\-GET@{FLASHIF\_\-PIO\_\-GNT\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-GNT\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-GNT\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT))}}
+\label{a00551_a531e363321e73934248f67c7b6722958}
+
+
+Definition at line 449 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a4add76436ea1aec75c27ea6f34742e37}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-GNT\_\-SET@{FLASHIF\_\-PIO\_\-GNT\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-GNT\_\-SET@{FLASHIF\_\-PIO\_\-GNT\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-GNT\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-GNT\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT, (value))}}
+\label{a00551_a4add76436ea1aec75c27ea6f34742e37}
+
+
+Definition at line 451 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a2b46449191e03342c7ee68ec46eb2dba}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-GNT\_\-SETBIT@{FLASHIF\_\-PIO\_\-GNT\_\-SETBIT}}
+\index{FLASHIF\_\-PIO\_\-GNT\_\-SETBIT@{FLASHIF\_\-PIO\_\-GNT\_\-SETBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-GNT\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-GNT\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-GNT) $|$ (value))}}
+\label{a00551_a2b46449191e03342c7ee68ec46eb2dba}
+
+
+Definition at line 453 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a6678c186ed4ae48897e702217fd10c70}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-REQ\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-REQ\_\-CLEARBIT}}
+\index{FLASHIF\_\-PIO\_\-REQ\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-REQ\_\-CLEARBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-REQ\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-REQ\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ) \& ($\sim$(value)))}}
+\label{a00551_a6678c186ed4ae48897e702217fd10c70}
+
+
+Definition at line 430 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a0f27af19a937a0788932c61c008c253b}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-REQ\_\-F\_\-CLEAR@{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-CLEAR}}
+\index{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-CLEAR@{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-REQ\_\-F\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-REQ\_\-F, 0)}}
+\label{a00551_a0f27af19a937a0788932c61c008c253b}
+
+
+Definition at line 441 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a6dace6de4fe38dad9e381fa4d86c301b}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-REQ\_\-F\_\-GET@{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-GET@{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-REQ\_\-F\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-REQ\_\-F)}}
+\label{a00551_a6dace6de4fe38dad9e381fa4d86c301b}
+
+
+Definition at line 437 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aa1698e62535cbec2ca3d70161ebbc8ae}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-REQ\_\-F\_\-SET@{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-SET@{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-REQ\_\-F\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-REQ\_\-F\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-REQ\_\-F, 1)}}
+\label{a00551_aa1698e62535cbec2ca3d70161ebbc8ae}
+
+
+Definition at line 439 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_abdbd735d176f808b18168e82ce21a57b}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-REQ\_\-GET@{FLASHIF\_\-PIO\_\-REQ\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-REQ\_\-GET@{FLASHIF\_\-PIO\_\-REQ\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-REQ\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-REQ\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ))}}
+\label{a00551_abdbd735d176f808b18168e82ce21a57b}
+
+
+Definition at line 424 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a6681d5e0b8a113bcbf260b4f3bd123e4}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-REQ\_\-SET@{FLASHIF\_\-PIO\_\-REQ\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-REQ\_\-SET@{FLASHIF\_\-PIO\_\-REQ\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-REQ\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-REQ\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ, (value))}}
+\label{a00551_a6681d5e0b8a113bcbf260b4f3bd123e4}
+
+
+Definition at line 426 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_af5dd034dec7754105a46a0fa349a7efa}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-REQ\_\-SETBIT@{FLASHIF\_\-PIO\_\-REQ\_\-SETBIT}}
+\index{FLASHIF\_\-PIO\_\-REQ\_\-SETBIT@{FLASHIF\_\-PIO\_\-REQ\_\-SETBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-REQ\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-REQ\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-REQ) $|$ (value))}}
+\label{a00551_af5dd034dec7754105a46a0fa349a7efa}
+
+
+Definition at line 428 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ab93a98e231268dfb6ef031bd7c1d41f4}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-RXFIFO\_\-CLEARBIT}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-RXFIFO\_\-CLEARBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO) \& ($\sim$(value)))}}
+\label{a00551_ab93a98e231268dfb6ef031bd7c1d41f4}
+
+
+Definition at line 370 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a07701298f3399a47127ca5533552b1da}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-GET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-GET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA)}}
+\label{a00551_a07701298f3399a47127ca5533552b1da}
+
+
+Definition at line 377 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a3013394beb609c8f0f61a8d8ba704495}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-SET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-SET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-DATA, (value))}}
+\label{a00551_a3013394beb609c8f0f61a8d8ba704495}
+
+
+Definition at line 379 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a75d0c3f512941ccfc410591e85484af5}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-CLEAR@{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-CLEAR}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-CLEAR@{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY, 0)}}
+\label{a00551_a75d0c3f512941ccfc410591e85484af5}
+
+
+Definition at line 141 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a442cb0cc2cbc9808ab60b1355825416d}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-GET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-GET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY)}}
+\label{a00551_a442cb0cc2cbc9808ab60b1355825416d}
+
+
+Definition at line 137 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aeda4107b4efb42ca53028644bcf78a96}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-SET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-SET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-EMPTY, 1)}}
+\label{a00551_aeda4107b4efb42ca53028644bcf78a96}
+
+
+Definition at line 139 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a40778e72d32f3ad26f79e95d5bfb4e2b}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-CLEAR@{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-CLEAR}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-CLEAR@{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL, 0)}}
+\label{a00551_a40778e72d32f3ad26f79e95d5bfb4e2b}
+
+
+Definition at line 130 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_afdbfb8927827181fa6d0dff54764db0e}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-GET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-GET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL)}}
+\label{a00551_afdbfb8927827181fa6d0dff54764db0e}
+
+
+Definition at line 126 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a842ad42b2a962636e27a0dcd1b3a7085}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-SET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-SET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-FULL, 1)}}
+\label{a00551_a842ad42b2a962636e27a0dcd1b3a7085}
+
+
+Definition at line 128 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ab5c1686fd859e57e7bdbc1d73712a880}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-GET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-GET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO))}}
+\label{a00551_ab5c1686fd859e57e7bdbc1d73712a880}
+
+
+Definition at line 364 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a784576c2c4344bbdf77f15d28aefc11f}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-SET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-SET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO, (value))}}
+\label{a00551_a784576c2c4344bbdf77f15d28aefc11f}
+
+
+Definition at line 366 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a6a4754f07638e8f65f0bd28a0396f5e4}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-SETBIT@{FLASHIF\_\-PIO\_\-RXFIFO\_\-SETBIT}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-SETBIT@{FLASHIF\_\-PIO\_\-RXFIFO\_\-SETBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO) $|$ (value))}}
+\label{a00551_a6a4754f07638e8f65f0bd28a0396f5e4}
+
+
+Definition at line 368 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_acf84531a1b007533213d049df1af7df5}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-CLEARBIT}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-CLEARBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS) \& ($\sim$(value)))}}
+\label{a00551_acf84531a1b007533213d049df1af7df5}
+
+
+Definition at line 393 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a0cfde095734d7146d7d692bcd1521784}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-GET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-GET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS))}}
+\label{a00551_a0cfde095734d7146d7d692bcd1521784}
+
+
+Definition at line 387 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ae0750404620b277e4bc25a745308f86e}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SET@{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS, (value))}}
+\label{a00551_ae0750404620b277e4bc25a745308f86e}
+
+
+Definition at line 389 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ae6e6cda753b322506fa30b4ec3192ba9}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SETBIT@{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SETBIT}}
+\index{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SETBIT@{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SETBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-RXFIFO\_\-STATUS) $|$ (value))}}
+\label{a00551_ae6e6cda753b322506fa30b4ec3192ba9}
+
+
+Definition at line 391 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a27c6d46f90a6efbfdf27007e287eb5e5}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-TXFIFO\_\-CLEARBIT}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-TXFIFO\_\-CLEARBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO) \& ($\sim$(value)))}}
+\label{a00551_a27c6d46f90a6efbfdf27007e287eb5e5}
+
+
+Definition at line 310 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a734cd9e347d0c49f25930db7a51330df}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-GET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-GET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA)}}
+\label{a00551_a734cd9e347d0c49f25930db7a51330df}
+
+
+Definition at line 317 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a01dbecbeb0015354621b16b4222647cb}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-SET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-SET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-DATA, (value))}}
+\label{a00551_a01dbecbeb0015354621b16b4222647cb}
+
+
+Definition at line 319 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a25b16dc192db44d09b7d9ddc16367244}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-CLEAR@{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-CLEAR}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-CLEAR@{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY, 0)}}
+\label{a00551_a25b16dc192db44d09b7d9ddc16367244}
+
+
+Definition at line 163 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a571de867a2280388dd46149285e5e87f}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-GET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-GET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY)}}
+\label{a00551_a571de867a2280388dd46149285e5e87f}
+
+
+Definition at line 159 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a6e5235b358fb05a175bed65f9f94a2af}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-SET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-SET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-EMPTY, 1)}}
+\label{a00551_a6e5235b358fb05a175bed65f9f94a2af}
+
+
+Definition at line 161 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aff9d0596abc044952f585ffe4755df0d}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-CLEAR@{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-CLEAR}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-CLEAR@{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL, 0)}}
+\label{a00551_aff9d0596abc044952f585ffe4755df0d}
+
+
+Definition at line 152 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aed29a25516e9feb0f19ab40439d86646}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-GET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-GET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL)}}
+\label{a00551_aed29a25516e9feb0f19ab40439d86646}
+
+
+Definition at line 148 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aa4e330846a0563c097ae860cb570bd82}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-SET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-SET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-FULL, 1)}}
+\label{a00551_aa4e330846a0563c097ae860cb570bd82}
+
+
+Definition at line 150 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_adf1bf4587940f6af34c1c66e74138176}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-GET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-GET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO))}}
+\label{a00551_adf1bf4587940f6af34c1c66e74138176}
+
+
+Definition at line 304 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a42e4e34b3ade7887b46be7d86d9ab5f6}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-SET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-SET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO, (value))}}
+\label{a00551_a42e4e34b3ade7887b46be7d86d9ab5f6}
+
+
+Definition at line 306 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a2b4ca60d8d1a10158a23a42154475edd}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-SETBIT@{FLASHIF\_\-PIO\_\-TXFIFO\_\-SETBIT}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-SETBIT@{FLASHIF\_\-PIO\_\-TXFIFO\_\-SETBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO) $|$ (value))}}
+\label{a00551_a2b4ca60d8d1a10158a23a42154475edd}
+
+
+Definition at line 308 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a32b6c4ad6177b3ab28c9d4eedfbe8088}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-CLEARBIT}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-CLEARBIT@{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-CLEARBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS) \& ($\sim$(value)))}}
+\label{a00551_a32b6c4ad6177b3ab28c9d4eedfbe8088}
+
+
+Definition at line 333 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_afaefd1b86f2fb798ede470689471e67d}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-GET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-GET}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-GET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS))}}
+\label{a00551_afaefd1b86f2fb798ede470689471e67d}
+
+
+Definition at line 327 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a94273e1a052932994405a98fdf5fafed}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SET}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SET@{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS, (value))}}
+\label{a00551_a94273e1a052932994405a98fdf5fafed}
+
+
+Definition at line 329 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a558e3d79ddabda477c4df86fd52aedef}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SETBIT@{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SETBIT}}
+\index{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SETBIT@{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SETBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-PIO\_\-TXFIFO\_\-STATUS) $|$ (value))}}
+\label{a00551_a558e3d79ddabda477c4df86fd52aedef}
+
+
+Definition at line 331 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a1f5769b621ba509fdd57dd45f4d8e8f6}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-STATUS\_\-CLEARBIT@{FLASHIF\_\-STATUS\_\-CLEARBIT}}
+\index{FLASHIF\_\-STATUS\_\-CLEARBIT@{FLASHIF\_\-STATUS\_\-CLEARBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-STATUS\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-STATUS\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS) \& ($\sim$(value)))}}
+\label{a00551_a1f5769b621ba509fdd57dd45f4d8e8f6}
+
+
+Definition at line 99 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ab20b6f8c5d65e67e8010320915135e09}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-STATUS\_\-GET@{FLASHIF\_\-STATUS\_\-GET}}
+\index{FLASHIF\_\-STATUS\_\-GET@{FLASHIF\_\-STATUS\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS))}}
+\label{a00551_ab20b6f8c5d65e67e8010320915135e09}
+
+
+Definition at line 93 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_aa4860812dc206966ed6ebda07b45df2d}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-STATUS\_\-SET@{FLASHIF\_\-STATUS\_\-SET}}
+\index{FLASHIF\_\-STATUS\_\-SET@{FLASHIF\_\-STATUS\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-STATUS\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-STATUS\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS, (value))}}
+\label{a00551_aa4860812dc206966ed6ebda07b45df2d}
+
+
+Definition at line 95 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a9cdf0e2b4a60cba19d1ca7813dd3c9ce}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-STATUS\_\-SETBIT@{FLASHIF\_\-STATUS\_\-SETBIT}}
+\index{FLASHIF\_\-STATUS\_\-SETBIT@{FLASHIF\_\-STATUS\_\-SETBIT}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-STATUS\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-STATUS\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, FLASHIF\_\-STATUS) $|$ (value))}}
+\label{a00551_a9cdf0e2b4a60cba19d1ca7813dd3c9ce}
+
+
+Definition at line 97 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ade791f9e1c59f77140ee021d739d915b}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-CLEAR@{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-CLEAR}}
+\index{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-CLEAR@{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-CLEAR}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-WLAN\_\-DMA\_\-EN, 0)}}
+\label{a00551_ade791f9e1c59f77140ee021d739d915b}
+
+
+Definition at line 63 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_ad8f62eb683b3c29efe22ef3e4982535b}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-GET@{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-GET}}
+\index{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-GET@{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-GET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-WLAN\_\-DMA\_\-EN)}}
+\label{a00551_ad8f62eb683b3c29efe22ef3e4982535b}
+
+
+Definition at line 59 of file gsn\_\-reg\_\-flashif\_\-op.h.
+
+\hypertarget{a00551_a399bd96d2db414b6304868713496346b}{
+\index{gsn\_\-reg\_\-flashif\_\-op.h@{gsn\_\-reg\_\-flashif\_\-op.h}!FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-SET@{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-SET}}
+\index{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-SET@{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-SET}!gsn_reg_flashif_op.h@{gsn\_\-reg\_\-flashif\_\-op.h}}
+\subsubsection[{FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASHIF\_\-WLAN\_\-DMA\_\-EN\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, FLASHIF\_\-WLAN\_\-DMA\_\-EN, 1)}}
+\label{a00551_a399bd96d2db414b6304868713496346b}
+
+
+Definition at line 61 of file gsn\_\-reg\_\-flashif\_\-op.h.
+

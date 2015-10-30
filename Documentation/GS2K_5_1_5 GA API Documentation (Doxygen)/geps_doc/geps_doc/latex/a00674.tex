@@ -1,0 +1,493 @@
+\hypertarget{a00674}{
+\section{GSN SSL API}
+\label{a00674}\index{GSN SSL API@{GSN SSL API}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID $\ast$ \hyperlink{a00674_ga006730269e57e14d7d8db08d92c6a66f}{GsnSsl\_\-ServerInit} (\hyperlink{a00459}{SERVER\_\-CERT\_\-DETAIL\_\-T} $\ast$pCert)
+\begin{DoxyCompactList}\small\item\em SSL Server Init API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00245}{GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T} $\ast$ \hyperlink{a00674_ga1a963b6c25ebc6d49fc74042b6a04fdc}{GsnSsl\_\-Accept} (VOID $\ast$pServerCtx)
+\begin{DoxyCompactList}\small\item\em SSL Server Accept API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_gae142357dbc08534b840fb7cb3a8ef918}{GsnSsl\_\-Open} (VOID $\ast$pSslConn, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDes, \hyperlink{a00242}{GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T} $\ast$sslConParams)
+\begin{DoxyCompactList}\small\item\em SSL Open connection API. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00674_gadfc449eccdabf03e53cfad9ab4ec84a9}{GsnSsl\_\-Close} (VOID $\ast$sslConn)
+\begin{DoxyCompactList}\small\item\em SSL Close connection API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_ga6b68d0db3b129389d791294c46c0bdc8}{GsnSsl\_\-Alert} (VOID $\ast$pSSLConn, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDesc)
+\begin{DoxyCompactList}\small\item\em SSL Close Alert API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_ga0a0b2a99da357ea291fe513d0d7f9e62}{GsnSsl\_\-Encode} (VOID $\ast$pSSLConn, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pInDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} inDataLen, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$$\ast$pOutDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pOutDataLen)
+\begin{DoxyCompactList}\small\item\em SSL encode API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_ga39281464090e59585ad982be685dbf14}{GsnSsl\_\-Decode} (VOID $\ast$pSSLConn, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pInDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} inDataLen, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$$\ast$pOutDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pOutDataLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDesc)
+\begin{DoxyCompactList}\small\item\em SSL Decode API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00674_ga7f017b2db979edeb90345bd1168434ee}{GsnSsl\_\-DataReceive} (VOID $\ast$pSSLConn, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDes, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$$\ast$pRxDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pRxDataLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} timeOut)
+\begin{DoxyCompactList}\small\item\em SSL Receive API. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00674_ga3ad38224bcf86318bcc28deccbc2b9c9}{GsnSsl\_\-AlertSend} (VOID $\ast$pSSLConn, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} Alert, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} Description, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDesc)
+\begin{DoxyCompactList}\small\item\em SSL Receive API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00674_gaca29d86d80bab0743914793bfab782f9}{GsnSsl\_\-Alloc} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size)
+\begin{DoxyCompactList}\small\item\em SSL Memory allocation API. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_ga959a6dcdcd5671e4a0750019faf4537b}{GsnSsl\_\-Free} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em SSL Memory Free API. \end{DoxyCompactList}\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00674_gab5ead9a9cb96275f43b9c7fa858c2e97}{GsnHttps\_\-DataReceive} (\hyperlink{a00243}{GSN\_\-SSL\_\-CONN\_\-T} $\ast$sslConn, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDes, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$$\ast$rxDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$rxDataLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} timeOut)
+\begin{DoxyCompactList}\small\item\em SSL http receive and decode API. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00674_ga7e797cc2e59a5ec5438f9277f2185095}{GsnSsl\_\-ServerDeInit} (VOID $\ast$cred)
+\begin{DoxyCompactList}\small\item\em SSL Server Deinit API. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00674_gab3a9ba7fc2842812b6deefd016521e81}{GsnSsl\_\-Receive} (VOID $\ast$pSslConn, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} sockDes, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$$\ast$rxDataBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$rxDataLen, \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} timeOut)
+\begin{DoxyCompactList}\small\item\em SSL receive API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00674_gab5ead9a9cb96275f43b9c7fa858c2e97}{
+\index{GSN SSL API@{GSN SSL API}!GsnHttps\_\-DataReceive@{GsnHttps\_\-DataReceive}}
+\index{GsnHttps\_\-DataReceive@{GsnHttps\_\-DataReceive}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnHttps\_\-DataReceive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} GsnHttps\_\-DataReceive (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SSL\_\-CONN\_\-T} $\ast$}]{sslConn, }
+\item[{{\bf INT32}}]{sockDes, }
+\item[{{\bf UINT8} $\ast$$\ast$}]{rxDataBuf, }
+\item[{{\bf UINT32} $\ast$}]{rxDataLen, }
+\item[{{\bf INT32}}]{timeOut}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_gab5ead9a9cb96275f43b9c7fa858c2e97}
+
+
+SSL http receive and decode API. 
+
+This function recieves and decodes https ssl encoded data and returns decoded http data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sslConn} & -\/ IN Context of SSL module. \\
+\hline
+{\em sockDes} & -\/ IN Socket descriptor on which SSL alert to be sent. \\
+\hline
+{\em rxDataBuf} & -\/ OUT Pointer containing decoded http data. \\
+\hline
+{\em rxDataLen} & -\/ OUT length of the decoded http data. \\
+\hline
+{\em timeOut} & -\/ IN Socket recieve timeout.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & if Operation successful, else GSN\_\-FAILURE. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00674_ga1a963b6c25ebc6d49fc74042b6a04fdc}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-Accept@{GsnSsl\_\-Accept}}
+\index{GsnSsl\_\-Accept@{GsnSsl\_\-Accept}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-Accept}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-SSL\_\-SERVER\_\-CONN\_\-T}$\ast$ GsnSsl\_\-Accept (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pServerCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_ga1a963b6c25ebc6d49fc74042b6a04fdc}
+
+
+SSL Server Accept API. 
+
+This function Accepts an SSL connection from SSL client
+
+
+\begin{DoxyParams}{Parameters}
+{\em pServerCtx} & -\/ IN Pointer to the SSL Server context.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Valid} & pointer to the SSL server connection context.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+: Once a TCP connection is established this API has to be called. The context returned by this API has to passed in GsnSsl\_\-Encode, GsnSsl\_\-Decode APIs. 
+\end{DoxyNote}
+\hypertarget{a00674_ga6b68d0db3b129389d791294c46c0bdc8}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-Alert@{GsnSsl\_\-Alert}}
+\index{GsnSsl\_\-Alert@{GsnSsl\_\-Alert}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-Alert}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnSsl\_\-Alert (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pSSLConn, }
+\item[{{\bf INT32}}]{sockDesc}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_ga6b68d0db3b129389d791294c46c0bdc8}
+
+
+SSL Close Alert API. 
+
+This function send the SSL Alert
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSSLConn} & -\/ IN Context of SSL module. \\
+\hline
+{\em sockDesc} & -\/ IN The Socket Descriptor\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if Operation successful, else -\/1. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00674_ga3ad38224bcf86318bcc28deccbc2b9c9}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-AlertSend@{GsnSsl\_\-AlertSend}}
+\index{GsnSsl\_\-AlertSend@{GsnSsl\_\-AlertSend}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-AlertSend}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnSsl\_\-AlertSend (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pSSLConn, }
+\item[{{\bf UINT8}}]{Alert, }
+\item[{{\bf UINT8}}]{Description, }
+\item[{{\bf INT32}}]{sockDesc}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_ga3ad38224bcf86318bcc28deccbc2b9c9}
+
+
+SSL Receive API. 
+
+This function sends ssl alerts messages on the given socket. This particular function can be used by both Client and server, as the pSslConn structures are similar in a way that the elements needed by this function has same position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSSLConn} & -\/ IN Context of SSL module. \\
+\hline
+{\em Alert} & -\/ IN Alert message type. \\
+\hline
+{\em Description} & -\/ IN Alert message description. \\
+\hline
+{\em sockDesc} & -\/ IN Socket descriptor on which SSL alert to be sent.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+User has to free up the memory pointed by the pointer pRxDataBuf after using it. 
+\end{DoxyNote}
+\hypertarget{a00674_gaca29d86d80bab0743914793bfab782f9}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-Alloc@{GsnSsl\_\-Alloc}}
+\index{GsnSsl\_\-Alloc@{GsnSsl\_\-Alloc}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-Alloc}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT8}$\ast$ GsnSsl\_\-Alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_gaca29d86d80bab0743914793bfab782f9}
+
+
+SSL Memory allocation API. 
+
+This function Allocates memory from the SSL Memory pool
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & -\/ IN Size of the memory to alocate.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Address} & of the allocated buffer if allocation is successful else NULL.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+: Memory allocated using this API has to be freeded by calling GsnSsl\_\-Free. In case of SSL server to send the SSL packet out the SSL server code uses this API to allocate memory. But incase of SSL client it uses the gsn\_\-malloc. 
+\end{DoxyNote}
+\hypertarget{a00674_gadfc449eccdabf03e53cfad9ab4ec84a9}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-Close@{GsnSsl\_\-Close}}
+\index{GsnSsl\_\-Close@{GsnSsl\_\-Close}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-Close}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnSsl\_\-Close (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{sslConn}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_gadfc449eccdabf03e53cfad9ab4ec84a9}
+
+
+SSL Close connection API. 
+
+This function closes the SSL session
+
+
+\begin{DoxyParams}{Parameters}
+{\em sslConn} & -\/ IN Context of SSL module.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if Operation successful, else -\/1. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00674_ga7f017b2db979edeb90345bd1168434ee}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-DataReceive@{GsnSsl\_\-DataReceive}}
+\index{GsnSsl\_\-DataReceive@{GsnSsl\_\-DataReceive}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-DataReceive}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnSsl\_\-DataReceive (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pSSLConn, }
+\item[{{\bf INT32}}]{sockDes, }
+\item[{{\bf UINT8} $\ast$$\ast$}]{pRxDataBuf, }
+\item[{{\bf UINT32} $\ast$}]{pRxDataLen, }
+\item[{{\bf INT32}}]{timeOut}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_ga7f017b2db979edeb90345bd1168434ee}
+
+
+SSL Receive API. 
+
+This function Receives the data on the given socket. Since SSL works on TCP, and SSL encryption/decryption is block by nature, the SSL decoing can only be called after recepit of a complete SSL packet. This API receives the complete SSL frame and decodes and gives the frame to user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSSLConn} & -\/ IN Context of SSL module. \\
+\hline
+{\em sockDes} & -\/ IN Socket descriptor on which SSL frame will be received. \\
+\hline
+{\em pRxDataBuf} & -\/ OUT pointer to store the received data. \\
+\hline
+{\em pRxDataLen} & -\/ OUT Length of the received data. \\
+\hline
+{\em timeOut} & -\/ IN time in sec after which the receive process will be abandoned if it doesn't receive any packet on the given socket.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & if Operation successful, else GSN\_\-FAILURE.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+User has to free up the memory pointed by the pointer pRxDataBuf after using it. 
+\end{DoxyNote}
+\hypertarget{a00674_ga39281464090e59585ad982be685dbf14}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-Decode@{GsnSsl\_\-Decode}}
+\index{GsnSsl\_\-Decode@{GsnSsl\_\-Decode}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-Decode}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnSsl\_\-Decode (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pSSLConn, }
+\item[{{\bf UINT8} $\ast$}]{pInDataBuf, }
+\item[{{\bf UINT32}}]{inDataLen, }
+\item[{{\bf UINT8} $\ast$$\ast$}]{pOutDataBuf, }
+\item[{{\bf UINT32} $\ast$}]{pOutDataLen, }
+\item[{{\bf INT32}}]{sockDesc}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_ga39281464090e59585ad982be685dbf14}
+
+
+SSL Decode API. 
+
+This function decodes the data. User has to pass the input data pointer which needs to be decoded. This function does a memory allocation to store the decoded data and passes the pointer in pOutDataBuf. User has free to this memory once the decoded data is utilized.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSSLConn} & -\/ IN Context of SSL module. \\
+\hline
+{\em pInDataBuf} & -\/ IN Pointer to the input data which needs to be decoded. \\
+\hline
+{\em inDataLen} & -\/ IN Length of the input data. \\
+\hline
+{\em pOutDataBuf} & -\/ OUT pointer to store the decoded data buffer location. \\
+\hline
+{\em pOutDataLen} & -\/ OUT Length of the decoded data buffer. \\
+\hline
+{\em sockDesc} & -\/ IN The Socket Descriptor\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if Operation successful, else -\/1. Operation may fail if the memory allocation fails, or the decoding fails. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+User has to free up the memory pointed by the pointer pOutDataBuf after using it. User should call GsnSsl\_\-Free to free up the memory, insted of gsn\_\-free. 
+\end{DoxyNote}
+\hypertarget{a00674_ga0a0b2a99da357ea291fe513d0d7f9e62}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-Encode@{GsnSsl\_\-Encode}}
+\index{GsnSsl\_\-Encode@{GsnSsl\_\-Encode}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-Encode}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnSsl\_\-Encode (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pSSLConn, }
+\item[{{\bf UINT8} $\ast$}]{pInDataBuf, }
+\item[{{\bf UINT32}}]{inDataLen, }
+\item[{{\bf UINT8} $\ast$$\ast$}]{pOutDataBuf, }
+\item[{{\bf UINT32} $\ast$}]{pOutDataLen}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_ga0a0b2a99da357ea291fe513d0d7f9e62}
+
+
+SSL encode API. 
+
+This function encodes the data. User has to pass the input data pointer which needs to be encoded. This function does a memory allocation to store the encoded data and passes the pointer in pOutDataBuf. User has free to this memory once the encoded data is utilized.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSSLConn} & -\/ IN Context of SSL module. \\
+\hline
+{\em pInDataBuf} & -\/ IN Pointer to the input data which needs to be encoded. \\
+\hline
+{\em inDataLen} & -\/ IN Length of the input data. \\
+\hline
+{\em pOutDataBuf} & -\/ OUT pointer to store the encoded data buffer location. \\
+\hline
+{\em pOutDataLen} & -\/ OUT Length of the encoded data buffer.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if Operation successful, else -\/1. Operation may fail if the memory allocation fails, or the encoding fails. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+User has to free up the memory pointed by the pointer pOutDataBuf after using it.User should call GsnSsl\_\-Free to free up the memory, insted of gsn\_\-free. 
+\end{DoxyNote}
+\hypertarget{a00674_ga959a6dcdcd5671e4a0750019faf4537b}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-Free@{GsnSsl\_\-Free}}
+\index{GsnSsl\_\-Free@{GsnSsl\_\-Free}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-Free}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnSsl\_\-Free (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_ga959a6dcdcd5671e4a0750019faf4537b}
+
+
+SSL Memory Free API. 
+
+This function Free memory to the SSL Memory pool
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & -\/ IN Memory buffer to be freed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em returns} & -\/1 if the buffer doesn't belong to SSL memory pool.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+: Memory allocated using SSL alloc API has to be freeded by calling GsnSsl\_\-Free. 
+\end{DoxyNote}
+\hypertarget{a00674_gae142357dbc08534b840fb7cb3a8ef918}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-Open@{GsnSsl\_\-Open}}
+\index{GsnSsl\_\-Open@{GsnSsl\_\-Open}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-Open}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnSsl\_\-Open (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pSslConn, }
+\item[{{\bf INT32}}]{sockDes, }
+\item[{{\bf GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T} $\ast$}]{sslConParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_gae142357dbc08534b840fb7cb3a8ef918}
+
+
+SSL Open connection API. 
+
+This function opens up the SSL session. User has to create a socket and pass the certificate details to open up the SSL connection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSslConn} & -\/ IN Context of SSL module. \\
+\hline
+{\em sockDes} & -\/ IN Socket descriptor on which the SSL connection has to be established. \\
+\hline
+{\em sslConParams} & -\/ IN Pointer to structure of type GSN\_\-SSL\_\-CONN\_\-PARAMS\_\-T\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if Operation successful, else -\/1. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00674_gab3a9ba7fc2842812b6deefd016521e81}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-Receive@{GsnSsl\_\-Receive}}
+\index{GsnSsl\_\-Receive@{GsnSsl\_\-Receive}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnSsl\_\-Receive (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pSslConn, }
+\item[{{\bf INT32}}]{sockDes, }
+\item[{{\bf UINT8} $\ast$$\ast$}]{rxDataBuf, }
+\item[{{\bf UINT32} $\ast$}]{rxDataLen, }
+\item[{{\bf INT32}}]{timeOut}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_gab3a9ba7fc2842812b6deefd016521e81}
+
+
+SSL receive API. 
+
+This function recieves and decodes ssl encoded data and returns decoded data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSslConn} & -\/ IN Context of SSL module. \\
+\hline
+{\em sockDes} & -\/ IN Socket descriptor on which SSL alert to be sent. \\
+\hline
+{\em rxDataBuf} & -\/ OUT Pointer containing decoded data. \\
+\hline
+{\em rxDataLen} & -\/ OUT length of the decoded data. \\
+\hline
+{\em timeOut} & -\/ IN Socket recieve timeout.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & if Operation successful, else GSN\_\-FAILURE. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00674_ga7e797cc2e59a5ec5438f9277f2185095}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-ServerDeInit@{GsnSsl\_\-ServerDeInit}}
+\index{GsnSsl\_\-ServerDeInit@{GsnSsl\_\-ServerDeInit}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-ServerDeInit}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnSsl\_\-ServerDeInit (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{cred}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_ga7e797cc2e59a5ec5438f9277f2185095}
+
+
+SSL Server Deinit API. 
+
+This function Deinitializes the SSL Server
+
+
+\begin{DoxyParams}{Parameters}
+{\em cred} & -\/ IN Tls handle to be used by SSL Server.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00674_ga006730269e57e14d7d8db08d92c6a66f}{
+\index{GSN SSL API@{GSN SSL API}!GsnSsl\_\-ServerInit@{GsnSsl\_\-ServerInit}}
+\index{GsnSsl\_\-ServerInit@{GsnSsl\_\-ServerInit}!GSN SSL API@{GSN SSL API}}
+\subsubsection[{GsnSsl\_\-ServerInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID$\ast$ GsnSsl\_\-ServerInit (
+\begin{DoxyParamCaption}
+\item[{{\bf SERVER\_\-CERT\_\-DETAIL\_\-T} $\ast$}]{pCert}
+\end{DoxyParamCaption}
+)}}
+\label{a00674_ga006730269e57e14d7d8db08d92c6a66f}
+
+
+SSL Server Init API. 
+
+This function Initializes the SSL Server
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCert} & -\/ IN Certificate detail to be used by SSL Server.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Valid} & pointer to the SSL server context, if the operation is successful else returns NULL.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+: Once TCP socket is open this API can be called. The context returned by this API has to passed in GsnSsl\_\-Accept to accept an SSL connection from SSL client. 
+\end{DoxyNote}

@@ -1,0 +1,121 @@
+\hypertarget{a00351}{
+\section{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S Struct Reference}
+\label{a00351}\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}}
+}
+
+
+File Operation Response.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wif\_\-sys\_\-defs.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00351_adcf88f6496d374c89792872ab087189d}{opCode}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00351_a44211bff423210b4e239a8616f8bbd33}{fileName} \mbox{[}32\mbox{]}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00351_a31636a2d20d4a83f03ddba7c789cb00a}{fileHandle}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00351_af7c1ea69079dc905761ed0a19ec036ab}{offset}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00351_a68890417cb73114517d0d8c594bd282e}{size}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00351_a5a821be372043cabb6e452c3ce9bc068}{flags}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00351_ac6b7193d1fe7063cf448ef96398230d8}{status}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00351_a29500e452cff835f2b70d1dff36f918a}{data} \mbox{[}0\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File Operation Response. 
+
+APP sends this message to WLAN as a response of file operation. 
+
+Definition at line 561 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00351_a29500e452cff835f2b70d1dff36f918a}{
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}!data@{data}}
+\index{data@{data}!GSN_WIF_SYS_FILE_OP_RSP_S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf data}\mbox{[}0\mbox{]}}}
+\label{a00351_a29500e452cff835f2b70d1dff36f918a}
+stretch-\/able array for data 
+
+Definition at line 570 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00351_a31636a2d20d4a83f03ddba7c789cb00a}{
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}!fileHandle@{fileHandle}}
+\index{fileHandle@{fileHandle}!GSN_WIF_SYS_FILE_OP_RSP_S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}}
+\subsubsection[{fileHandle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf fileHandle}}}
+\label{a00351_a31636a2d20d4a83f03ddba7c789cb00a}
+This value is returned from APP during open, To be used in all other cases 
+
+Definition at line 565 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00351_a44211bff423210b4e239a8616f8bbd33}{
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}!fileName@{fileName}}
+\index{fileName@{fileName}!GSN_WIF_SYS_FILE_OP_RSP_S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}}
+\subsubsection[{fileName}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf fileName}\mbox{[}32\mbox{]}}}
+\label{a00351_a44211bff423210b4e239a8616f8bbd33}
+string -\/ NULL character terminated 
+
+Definition at line 564 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00351_a5a821be372043cabb6e452c3ce9bc068}{
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}!flags@{flags}}
+\index{flags@{flags}!GSN_WIF_SYS_FILE_OP_RSP_S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf flags}}}
+\label{a00351_a5a821be372043cabb6e452c3ce9bc068}
+flags indicating special request like create 
+
+Definition at line 568 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00351_af7c1ea69079dc905761ed0a19ec036ab}{
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}!offset@{offset}}
+\index{offset@{offset}!GSN_WIF_SYS_FILE_OP_RSP_S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}}
+\subsubsection[{offset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf offset}}}
+\label{a00351_af7c1ea69079dc905761ed0a19ec036ab}
+byte offset in file for operation 
+
+Definition at line 566 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00351_adcf88f6496d374c89792872ab087189d}{
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}!opCode@{opCode}}
+\index{opCode@{opCode}!GSN_WIF_SYS_FILE_OP_RSP_S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}}
+\subsubsection[{opCode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf opCode}}}
+\label{a00351_adcf88f6496d374c89792872ab087189d}
+read, write 
+
+Definition at line 563 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00351_a68890417cb73114517d0d8c594bd282e}{
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}!size@{size}}
+\index{size@{size}!GSN_WIF_SYS_FILE_OP_RSP_S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf size}}}
+\label{a00351_a68890417cb73114517d0d8c594bd282e}
+size in bytes for read/write operation 
+
+Definition at line 567 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00351_ac6b7193d1fe7063cf448ef96398230d8}{
+\index{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}!status@{status}}
+\index{status@{status}!GSN_WIF_SYS_FILE_OP_RSP_S@{GSN\_\-WIF\_\-SYS\_\-FILE\_\-OP\_\-RSP\_\-S}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf status}}}
+\label{a00351_ac6b7193d1fe7063cf448ef96398230d8}
+status indicating success/failure 
+
+Definition at line 569 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00612}{gsn\_\-wif\_\-sys\_\-defs.h}\end{DoxyCompactItemize}

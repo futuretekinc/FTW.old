@@ -1,0 +1,78 @@
+\hypertarget{a00539}{
+\section{gsn\_\-persistent\_\-timer.h File Reference}
+\label{a00539}\index{gsn\_\-persistent\_\-timer.h@{gsn\_\-persistent\_\-timer.h}}
+}
+
+
+GSN Soft Timer public header. This file contains the public APIs and structures of Persistent Timer module.  
+
+
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00671_gaf983eb2e91bbb6a2e9a7d373419d69dd}{GSN\_\-P\_\-TMR\_\-NVDS\_\-MEM\_\-SIZE}(maxNumOfPTmr)
+\begin{DoxyCompactList}\small\item\em Memory needed in NVDS for persistent timer module. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00671_ga814ac6b7dfd3d718d276b4794cb4b5d3}{GSN\_\-P\_\-TMR\_\-NVRAM\_\-MEM\_\-SIZE}(maxNumOfConstPTmr, maxNumOfVarPTmr)
+\begin{DoxyCompactList}\small\item\em Memory needed in NVRAM for persistent timer module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00671_gadc3540874fb3842b2eb56edd0c82945b}{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T} \hyperlink{a00671_gad756dc4e5d1d8eb116b9daf7bddddb69}{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em Persistent Timer type definition. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00671_ga9aa5599a087c6080868052f86ecad7df}{GSN\_\-P\_\-TMR\_\-REF\_\-TIME} \hyperlink{a00671_ga8d27b193b47e23bf2bd68b439badf3d6}{GSN\_\-P\_\-TMR\_\-REF\_\-TIME\_\-T}
+\begin{DoxyCompactList}\small\item\em enum for the reference time for the re-\/start API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00671_gadc3540874fb3842b2eb56edd0c82945b}{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T} \{ \par
+\hyperlink{a00671_ggadc3540874fb3842b2eb56edd0c82945bac4338c7c860b0a33c9371d86d41b87c8}{GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-CONSTANT}, 
+\par
+\hyperlink{a00671_ggadc3540874fb3842b2eb56edd0c82945bae46518ab7c9f147305e08200cf63b9ed}{GSN\_\-TIMER\_\-TYPE\_\-PERSISTENT\_\-VARIABLE}
+ \}
+\begin{DoxyCompactList}\small\item\em Persistent Timer type definition. \end{DoxyCompactList}\item 
+enum \hyperlink{a00671_ga9aa5599a087c6080868052f86ecad7df}{GSN\_\-P\_\-TMR\_\-REF\_\-TIME} \{ \par
+\hyperlink{a00671_gga9aa5599a087c6080868052f86ecad7dfa2ab194528197fe1eeed47e7efabb3701}{GSN\_\-P\_\-TMR\_\-CURRENT\_\-TIME}, 
+\par
+\hyperlink{a00671_gga9aa5599a087c6080868052f86ecad7dfad4c5b6ce85e5ffed6b4474dd639db19e}{GSN\_\-P\_\-TMR\_\-PREV\_\-EXP\_\-TIME}
+ \}
+\begin{DoxyCompactList}\small\item\em enum for the reference time for the re-\/start API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00671_ga5e91b9000f2f5e74d9d70ee0591035ae}{GsnPersistTmr\_\-Init} (VOID $\ast$pNvRamLoc, VOID $\ast$pNvdsLoc, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} numOfVarTimer, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} numOfConstTimer, \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} $\ast$pSoftTmrStructTbl)
+\begin{DoxyCompactList}\small\item\em Initialization for Persistent Timer module. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00671_ga21c2beb3a3544b189800c56051ca9b6f}{GsnPersistTmr\_\-Restore} (VOID)
+\begin{DoxyCompactList}\small\item\em Persistent timer restore. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00671_ga9af57957c6755f2cc4c6c3d140c623a2}{GsnPersistTmr\_\-Store} (VOID)
+\begin{DoxyCompactList}\small\item\em Persistent timer Store. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00671_ga17f353c07fe849751becba1144e0f8f8}{GsnPersistTmr\_\-Create} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId, \hyperlink{a00671_gadc3540874fb3842b2eb56edd0c82945b}{GSN\_\-P\_\-TIMER\_\-TYPE\_\-T} type, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} period, \hyperlink{a00673_ga9bb74ab1272c117587bf1fadf84849de}{GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T} cb, VOID $\ast$context, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} autoStart)
+\begin{DoxyCompactList}\small\item\em Create a Persistent Timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00671_gaacdba3e378b84c6d8d5373afebb43f6b}{GsnPersistTmr\_\-Delete} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Deletes a Persistent Timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00671_ga13a97f1941e64cdab5ad524f5d244985}{GsnPersistTmr\_\-Start} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Start the Persistent Timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00671_ga038419003a0a454c1e3641818a4a8a1b}{GsnPersistTmr\_\-Stop} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Stop the Persistent Timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00671_ga1caf8a120d6264cd9e8780110d306e98}{GsnPersistTmr\_\-ReStart} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} period, \hyperlink{a00671_ga8d27b193b47e23bf2bd68b439badf3d6}{GSN\_\-P\_\-TMR\_\-REF\_\-TIME\_\-T} refTime)
+\begin{DoxyCompactList}\small\item\em Re-\/starts a Persistent Timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00671_ga6f5bc2af45625f650fe1de1b30274d4c}{GsnPersistTmr\_\-SystemTimeAtExpire} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em System time at expire. Gives the system time at expire for the requested persistent timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00671_ga72958206fd50e03c6e781bcca39728da}{GsnPersistTmr\_\-RemainingTimeGet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Persistent Timer remaining time. Gives the remaining time to expire for the requested persistent timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00671_ga267caddf2e14e33f5b59cd084fbc090a}{GsnPersistTmr\_\-MinExpireTime} ()
+\begin{DoxyCompactList}\small\item\em Minimum expire time of all persistenet timer. Gives the min expire time of all persistent timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00671_ga7faefe68a4dfa5d59f0f04e8f4eb4a15}{GsnPersistTmr\_\-IsActive} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Timer is active or not. Finds whether the requested persistent timer is active. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00671_ga2acab3c99e8f6bd8a1573c3811092c02}{GsnPersistTmr\_\-PeriodGet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Period of the persistent timer. Gives the current period of the requested persistent timer. The period of the variable persistent timer may be different then the period with which it was created or started. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00671_gae8bc845575767075c35df8096dd08fbc}{GsnPersistTmr\_\-DfltPeriodGet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId)
+\begin{DoxyCompactList}\small\item\em Default period of the persistenet timer. Gives the period stores in NVDS for the requested persistent timer. This is useful for variable persistent timer type to find the period passed when it was created or started.. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00671_ga72f5225fa0da29f815d14a417c29611e}{GsnPersistTmr\_\-DfltPeriodSet} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} timerId, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} period)
+\begin{DoxyCompactList}\small\item\em Set default period of the persistenet timer. Chnages the default period. It stores the period in NVDS, If it is set to 0, the timer is stopped, else it is restarted with the set value maintaining the previous reference time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN Soft Timer public header. This file contains the public APIs and structures of Persistent Timer module. 
+
+Definition in file \hyperlink{a00539_source}{gsn\_\-persistent\_\-timer.h}.
+

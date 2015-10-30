@@ -1,0 +1,355 @@
+\hypertarget{a00664}{
+\section{GSN EXTERNAL FLASH API}
+\label{a00664}\index{GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00664_gadcfa064597618fbf7cb4c1bac30f4bc8}{GsnExtFlash\_\-Init} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00587_a8158d263babcdfe1b3b113e23acd1bf7}{GSN\_\-SPI\_\-NUM\_\-T} spiPortNumber, \hyperlink{a00231}{GSN\_\-SPI\_\-CONFIG\_\-T} $\ast$spiConfig, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag)
+\begin{DoxyCompactList}\small\item\em serial flash config init. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00664_ga969314425ebd66d21301f5e2a681dee3}{GsnExtFlash\_\-Read} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} readAddr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$dataBuf, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em read the external flash memory using poll and DMA. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00664_ga1e65016bc9bc6e7f219148b64b94213e}{GsnExtFlash\_\-Write} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} writeAddr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$dataBuf, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em page boundary calculation to write data on the external flash memory. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00664_ga8f346bfff1d200c13547335c5e15ee21}{GsnExtFlash\_\-Erase} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} eraseSectorAddr, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em Erase the external flash memory using poll. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00664_gafe4645cffc8fea4258121afb22b7710a}{GsnExtFlash\_\-ChipErase} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em Erase the external flash memory using poll. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00664_gac7cc4c60e6c57cc8516f0657f294e9f8}{GsnExtFlash\_\-32KErase} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} eraseBlockAddr, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em Erase the external flash memory using poll. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00664_ga62708c304046ad8a906a0152cc3487ba}{GsnExtFlash\_\-64KErase} (\hyperlink{a00071}{GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$gsExtFlashCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} eraseBlockAddr, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em Erase the external flash memory using poll. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00664_ga3d33b60e6c2f80993970911c991a899f}{GsnExtFlash\_\-SpiReadWrite} (\hyperlink{a00238}{GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$spiHandle, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$rxBuf, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$txBuf, \hyperlink{a00496_ae69f658e2fd080c54a78eb23e4be2f59}{GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T} spiFlag, \hyperlink{a00496_a501e29be4c0f8b2ab5c186eb8deb8874}{GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$extFlashCallBack, VOID $\ast$cbCtx)
+\begin{DoxyCompactList}\small\item\em SPI Read Write of data with respect to size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This group contains public definitions and functions providing access to the GS2000's SPI. 
+
+\subsection{Function Documentation}
+\hypertarget{a00664_gac7cc4c60e6c57cc8516f0657f294e9f8}{
+\index{GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}!GsnExtFlash\_\-32KErase@{GsnExtFlash\_\-32KErase}}
+\index{GsnExtFlash\_\-32KErase@{GsnExtFlash\_\-32KErase}!GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}}
+\subsubsection[{GsnExtFlash\_\-32KErase}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnExtFlash\_\-32KErase (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$}]{gsExtFlashCtx, }
+\item[{{\bf UINT32}}]{eraseBlockAddr, }
+\item[{{\bf GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}}]{spiFlag, }
+\item[{{\bf GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$}]{extFlashCallBack, }
+\item[{VOID $\ast$}]{cbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00664_gac7cc4c60e6c57cc8516f0657f294e9f8}
+
+
+Erase the external flash memory using poll. 
+
+This API erases the contents of external flash 32k block for the given block address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gsExtFlashCtx} & -\/ IN external flash context \\
+\hline
+{\em eraseBlockAddr} & -\/ IN serial flash sector erase address \\
+\hline
+{\em spiFlag} & -\/ IN spi Polling or DMA flag \\
+\hline
+{\em extFlashCallBack} & -\/ IN callback \\
+\hline
+{\em cbCtx} & -\/ IN callback context \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em NA} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00664_ga62708c304046ad8a906a0152cc3487ba}{
+\index{GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}!GsnExtFlash\_\-64KErase@{GsnExtFlash\_\-64KErase}}
+\index{GsnExtFlash\_\-64KErase@{GsnExtFlash\_\-64KErase}!GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}}
+\subsubsection[{GsnExtFlash\_\-64KErase}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnExtFlash\_\-64KErase (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$}]{gsExtFlashCtx, }
+\item[{{\bf UINT32}}]{eraseBlockAddr, }
+\item[{{\bf GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}}]{spiFlag, }
+\item[{{\bf GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$}]{extFlashCallBack, }
+\item[{VOID $\ast$}]{cbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00664_ga62708c304046ad8a906a0152cc3487ba}
+
+
+Erase the external flash memory using poll. 
+
+This API erases the contents of external flash 64k block for the given block address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gsExtFlashCtx} & -\/ IN external flash context \\
+\hline
+{\em eraseBlockAddr} & -\/ IN serial flash sector erase address \\
+\hline
+{\em spiFlag} & -\/ IN spi Polling or DMA flag \\
+\hline
+{\em extFlashCallBack} & -\/ IN callback \\
+\hline
+{\em cbCtx} & -\/ IN callback context \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em NA} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00664_gafe4645cffc8fea4258121afb22b7710a}{
+\index{GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}!GsnExtFlash\_\-ChipErase@{GsnExtFlash\_\-ChipErase}}
+\index{GsnExtFlash\_\-ChipErase@{GsnExtFlash\_\-ChipErase}!GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}}
+\subsubsection[{GsnExtFlash\_\-ChipErase}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnExtFlash\_\-ChipErase (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$}]{gsExtFlashCtx, }
+\item[{{\bf GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}}]{spiFlag, }
+\item[{{\bf GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$}]{extFlashCallBack, }
+\item[{VOID $\ast$}]{cbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00664_gafe4645cffc8fea4258121afb22b7710a}
+
+
+Erase the external flash memory using poll. 
+
+This API erases the contents of external flash chip.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gsExtFlashCtx} & -\/ IN external flash context \\
+\hline
+{\em spiFlag} & -\/ IN spi Polling or DMA flag \\
+\hline
+{\em extFlashCallBack} & -\/ IN callback \\
+\hline
+{\em cbCtx} & -\/ IN callback context \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em NA} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00664_ga8f346bfff1d200c13547335c5e15ee21}{
+\index{GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}!GsnExtFlash\_\-Erase@{GsnExtFlash\_\-Erase}}
+\index{GsnExtFlash\_\-Erase@{GsnExtFlash\_\-Erase}!GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}}
+\subsubsection[{GsnExtFlash\_\-Erase}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnExtFlash\_\-Erase (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$}]{gsExtFlashCtx, }
+\item[{{\bf UINT32}}]{eraseSectorAddr, }
+\item[{{\bf GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}}]{spiFlag, }
+\item[{{\bf GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$}]{extFlashCallBack, }
+\item[{VOID $\ast$}]{cbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00664_ga8f346bfff1d200c13547335c5e15ee21}
+
+
+Erase the external flash memory using poll. 
+
+This API erases the contents of external flash sector for the given sector address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gsExtFlashCtx} & -\/ IN external flash context \\
+\hline
+{\em eraseSectorAddr} & -\/ IN serial flash sector erase address \\
+\hline
+{\em spiFlag} & -\/ IN spi Polling or DMA flag \\
+\hline
+{\em extFlashCallBack} & -\/ IN callback \\
+\hline
+{\em cbCtx} & -\/ IN callback context \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em NA} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00664_gadcfa064597618fbf7cb4c1bac30f4bc8}{
+\index{GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}!GsnExtFlash\_\-Init@{GsnExtFlash\_\-Init}}
+\index{GsnExtFlash\_\-Init@{GsnExtFlash\_\-Init}!GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}}
+\subsubsection[{GsnExtFlash\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnExtFlash\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$}]{gsExtFlashCtx, }
+\item[{{\bf GSN\_\-SPI\_\-NUM\_\-T}}]{spiPortNumber, }
+\item[{{\bf GSN\_\-SPI\_\-CONFIG\_\-T} $\ast$}]{spiConfig, }
+\item[{{\bf GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}}]{spiFlag}
+\end{DoxyParamCaption}
+)}}
+\label{a00664_gadcfa064597618fbf7cb4c1bac30f4bc8}
+
+
+serial flash config init. 
+
+This function performs the initilization of GSN\_\-SPI\_\-CONFIG\_\-T structure required to access the serial flash in poll mode. API calls GsnSpi\_\-PollOpen() to set the GSN\_\-SPI\_\-CONFIG\_\-T structure values. 
+\begin{DoxyParams}{Parameters}
+{\em gsExtFlashCtx} & -\/ IN external flash context \\
+\hline
+{\em spiPortNumber} & -\/ IN spi port number \\
+\hline
+{\em $\ast$spiConfig} & -\/ IN GSN\_\-SPI\_\-CONFIG\_\-T updated strcuture \\
+\hline
+{\em spiFlag} & -\/ IN spi Polling or DMA flag \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em status} & -\/ IN returns GSN\_\-EXTFLASH\_\-SUCCESS or GSN\_\-EXTFLASH\_\-FAILURE \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function is to demonstrate the serial flash application access in polling mode 
+\end{DoxyNote}
+\hypertarget{a00664_ga969314425ebd66d21301f5e2a681dee3}{
+\index{GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}!GsnExtFlash\_\-Read@{GsnExtFlash\_\-Read}}
+\index{GsnExtFlash\_\-Read@{GsnExtFlash\_\-Read}!GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}}
+\subsubsection[{GsnExtFlash\_\-Read}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT32} GsnExtFlash\_\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$}]{gsExtFlashCtx, }
+\item[{{\bf UINT32}}]{dataLen, }
+\item[{{\bf UINT32}}]{readAddr, }
+\item[{{\bf UINT8} $\ast$}]{dataBuf, }
+\item[{{\bf GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}}]{spiFlag, }
+\item[{{\bf GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$}]{extFlashCallBack, }
+\item[{VOID $\ast$}]{cbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00664_ga969314425ebd66d21301f5e2a681dee3}
+
+
+read the external flash memory using poll and DMA. 
+
+This API reads the data from external flash starting from address readAddr to dataLen. Read data from flash will be updated in dataBuf. 
+\begin{DoxyParams}{Parameters}
+{\em gsExtFlashCtx} & -\/ IN external flash context \\
+\hline
+{\em dataLen} & -\/ IN number of bytes to read \\
+\hline
+{\em readAddr} & -\/ IN serial flash read address \\
+\hline
+{\em $\ast$dataBuf} & -\/ IN user specified buffer to store the read data from flash \\
+\hline
+{\em spiFlag} & -\/ IN spi Polling or DMA flag \\
+\hline
+{\em extFlashCallBack} & -\/ IN callback \\
+\hline
+{\em cbCtx} & -\/ IN callback context \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em UINT32} & returns the total number of bytes read \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00664_ga3d33b60e6c2f80993970911c991a899f}{
+\index{GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}!GsnExtFlash\_\-SpiReadWrite@{GsnExtFlash\_\-SpiReadWrite}}
+\index{GsnExtFlash\_\-SpiReadWrite@{GsnExtFlash\_\-SpiReadWrite}!GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}}
+\subsubsection[{GsnExtFlash\_\-SpiReadWrite}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} GsnExtFlash\_\-SpiReadWrite (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SPI\_\-HANDLE\_\-T} $\ast$}]{spiHandle, }
+\item[{{\bf UINT32}}]{dataLen, }
+\item[{{\bf UINT8} $\ast$}]{rxBuf, }
+\item[{{\bf UINT8} $\ast$}]{txBuf, }
+\item[{{\bf GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}}]{spiFlag, }
+\item[{{\bf GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$}]{extFlashCallBack, }
+\item[{VOID $\ast$}]{cbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00664_ga3d33b60e6c2f80993970911c991a899f}
+
+
+SPI Read Write of data with respect to size. 
+
+This function performs the SPI Read Write operation for the given size depending on the SPI flag set for DMA or POLLING method 
+\begin{DoxyParams}{Parameters}
+{\em spiHandle} & -\/ IN spi handle \\
+\hline
+{\em dataLen} & -\/ IN number of data to write and read. \\
+\hline
+{\em $\ast$rxBuf} & -\/ IN user specified buffer to store the read data from flash \\
+\hline
+{\em $\ast$txBuf} & -\/ IN user specified buffer which has data to be written to flash \\
+\hline
+{\em spiFlag} & -\/ IN spi Polling or DMA flag \\
+\hline
+{\em extFlashCallBack} & -\/ IN callback \\
+\hline
+{\em cbCtx} & -\/ IN callback context \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em INT32} & returns success or failure \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00664_ga1e65016bc9bc6e7f219148b64b94213e}{
+\index{GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}!GsnExtFlash\_\-Write@{GsnExtFlash\_\-Write}}
+\index{GsnExtFlash\_\-Write@{GsnExtFlash\_\-Write}!GSN EXTERNAL FLASH API@{GSN EXTERNAL FLASH API}}
+\subsubsection[{GsnExtFlash\_\-Write}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT32} GsnExtFlash\_\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EXTFLASH\_\-CTX\_\-T} $\ast$}]{gsExtFlashCtx, }
+\item[{{\bf UINT32}}]{dataLen, }
+\item[{{\bf UINT32}}]{writeAddr, }
+\item[{{\bf UINT8} $\ast$}]{dataBuf, }
+\item[{{\bf GSN\_\-FLASH\_\-SPI\_\-FLAG\_\-T}}]{spiFlag, }
+\item[{{\bf GSN\_\-EXTFLASH\_\-CALLBACK\_\-T} $\ast$}]{extFlashCallBack, }
+\item[{VOID $\ast$}]{cbCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00664_ga1e65016bc9bc6e7f219148b64b94213e}
+
+
+page boundary calculation to write data on the external flash memory. 
+
+To write the data , page boundary caluclations are required. For one write cycle its possible to to write 256 bytes of data. Because of this limitation page boundary calculations are done before writing the data to the flash.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gsExtFlashCtx} & -\/ IN external flash context \\
+\hline
+{\em dataLen} & -\/ IN number of bytes to read \\
+\hline
+{\em writeAddr} & -\/ IN serial flash write address \\
+\hline
+{\em dataBuf} & -\/ IN user specified buffer to store the read data from flash \\
+\hline
+{\em spiFlag} & -\/ IN spi Polling or DMA flag \\
+\hline
+{\em extFlashCallBack} & -\/ IN callback \\
+\hline
+{\em cbCtx} & -\/ IN callback context \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em UINT32} & returns the total number of bytes written \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}

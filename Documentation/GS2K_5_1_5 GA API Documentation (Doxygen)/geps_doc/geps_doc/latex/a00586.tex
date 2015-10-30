@@ -1,0 +1,307 @@
+\hypertarget{a00586}{
+\section{gsn\_\-soft\_\-timer.h File Reference}
+\label{a00586}\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}}
+}
+
+
+GSN Soft Timer public header. This file contains the public APIs and structures of Soft Timer module.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00825}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00083}{GSN\_\-GS2000\_\-TIME}
+\begin{DoxyCompactList}\small\item\em structure to hold the 64-\/bit time value. \end{DoxyCompactList}\item 
+struct \hyperlink{a00228}{GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft timer callback information. A callback includes both a Callback Routine, and its execution context. \end{DoxyCompactList}\item 
+struct \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft timer structure. Timer structure to store the context of the soft timer. \end{DoxyCompactList}\item 
+struct \hyperlink{a00084}{GSN\_\-GS2000\_\-TMR}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00673_ga05ec5d63e2ba7621d706137124efca7d}{TIMER\_\-CLOCK}~32768
+\begin{DoxyCompactList}\small\item\em micro, milli seconds to system time and vice-\/versa conversion. MACROs to convert time to system time and vice-\/versa. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00586_a5e020cc782064f4e8b7ba19f9380a484}{GS2000\_\-TMR\_\-INTERRUPT\_\-NUMBER}~39
+\item 
+\#define \hyperlink{a00586_a25d1fcc71108d05dc93def69410e9f16}{USEC\_\-TO\_\-SYSTIME}(T)~(( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) (((T) $<$$<$ 15) / 1000000))
+\item 
+\#define \hyperlink{a00586_a4eec8731cd2a25e176800a1d878bcfe2}{MSEC\_\-TO\_\-SYSTIME}(T)~(( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) (((T) $<$$<$ 15) / 1000))
+\item 
+\#define \hyperlink{a00586_a3f7d544fa099e7d8c53dc3893e3e1021}{SEC\_\-TO\_\-SYSTIME}(T)~(( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) ((T) $<$$<$ 15))
+\item 
+\#define \hyperlink{a00586_afd941402d8fc4e4f2be92021c03896c8}{SYSTIME\_\-TO\_\-USEC}(T)~(( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) ((T $\ast$ 1000000) $>$$>$ 15))
+\item 
+\#define \hyperlink{a00586_a71779934d72f2dfa777d9e6b964e9830}{SYSTIME\_\-TO\_\-MSEC}(T)~(( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) ((T $\ast$ 1000) $>$$>$ 15))
+\item 
+\#define \hyperlink{a00586_afb7802e984a412ff26eafcc98e49a1e3}{SYSTIME\_\-TO\_\-SEC}(T)~(( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) ((T) $>$$>$ 15))
+\item 
+\#define \hyperlink{a00673_gad5a672b2263743c1daf0ee6797d2fbfd}{TIMER\_\-INTERRUPT\_\-1\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) / 1000 )
+\begin{DoxyCompactList}\small\item\em Ticks in one millisecond This macro gives number of ticks in one millisecond. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00673_gaf705ea28da184c29e230284fead5a65c}{GSN\_\-SOFT\_\-TMR\_\-TICKS\_\-TO\_\-MILLISECONDS}(sysTicks)~SYSTIME\_\-TO\_\-MSEC(sysTicks)
+\begin{DoxyCompactList}\small\item\em Milliseconds to ticks coversion This macro converts time in milliseconds to ticks. msec should be ULONG64. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00673_gadf848291010b1f5e5b666443103cdb89}{GSN\_\-SOFT\_\-TMR\_\-MILLISECONDS\_\-TO\_\-TICKS}(msec)~MSEC\_\-TO\_\-SYSTIME(msec)
+\begin{DoxyCompactList}\small\item\em Milliseconds to ticks coversion This macro converts time in milliseconds to ticks. msec should be ULONG64. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00673_ga55580feca337034720758e6ca520adb3}{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOP}~0x0
+\begin{DoxyCompactList}\small\item\em Timer status. MACRO for timer status. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00586_a79c23fe59c4cb256b6e65e15f15f992a}{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-ACTIVE}~0x1
+\item 
+\#define \hyperlink{a00586_aa5620f9cd5903b3dba9f6e7dd428b702}{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-EXPIRED}~0x2
+\item 
+\#define \hyperlink{a00586_a7ab24a5e0ba5f842338cc22e0d00c5f0}{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOPPED\_\-AFTER\_\-EXPIRE}~0x3
+\end{DoxyCompactItemize}
+\paragraph*{}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00673_ga85adb3cf09e71797fa296930193832b4}{TIMER\_\-INTERRUPT\_\-5\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 / 1000 )
+\begin{DoxyCompactList}\small\item\em Milliseconds to ticks conversion. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00673_ga15be38412cbf707fb1713528a5f5e6b3}{TIMER\_\-INTERRUPT\_\-10\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 2 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga0680372985c2ad123fd4e1984f1ff9a1}{TIMER\_\-INTERRUPT\_\-20\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 4 / 1000 )
+\item 
+\#define \hyperlink{a00673_gac9f2593e6b663668cd0d1420e4a5f609}{TIMER\_\-INTERRUPT\_\-30\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 6 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga13b2586797ac950024aa46134ba569ab}{TIMER\_\-INTERRUPT\_\-40\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 8 / 1000 )
+\item 
+\#define \hyperlink{a00673_gac0bd52bbc8f9d73f2e518d376e775d03}{TIMER\_\-INTERRUPT\_\-50\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 10 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga05c2fdd777df5b88de99e08ab97b882b}{TIMER\_\-INTERRUPT\_\-60\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 12 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga2e708b60d3621f4c13bcd07001696d57}{TIMER\_\-INTERRUPT\_\-70\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 14 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga363db70188865e3d222337dfd68cd5f1}{TIMER\_\-INTERRUPT\_\-80\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 16 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga2cd73fada37ee4d173af1cb7dda9eca8}{TIMER\_\-INTERRUPT\_\-90\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 18 / 1000 )
+\item 
+\#define \hyperlink{a00673_gad5a78b2ffba4f82dde6607a5cf7af659}{TIMER\_\-INTERRUPT\_\-100\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 20 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga59d6708c9cba03cf6fd9cf6c72529ab6}{TIMER\_\-INTERRUPT\_\-200\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 40 / 1000 )
+\item 
+\#define \hyperlink{a00673_gaa4940d6bdf476029bda023939a17b096}{TIMER\_\-INTERRUPT\_\-300\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 60 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga876a37d4588162417327081c31249a09}{TIMER\_\-INTERRUPT\_\-400\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 80 / 1000 )
+\item 
+\#define \hyperlink{a00673_gaa2d9363dd86d3618f88763c9a220b7a6}{TIMER\_\-INTERRUPT\_\-500\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 100 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga8911ab7a7dcc03f488617e3f11cd5d5b}{TIMER\_\-INTERRUPT\_\-600\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 120 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga444096811394aa490ec470aa1894e703}{TIMER\_\-INTERRUPT\_\-700\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 140 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga1d84a0363d80e46ecec3bf811837242b}{TIMER\_\-INTERRUPT\_\-800\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 160 / 1000 )
+\item 
+\#define \hyperlink{a00673_gadb278155a97d15ad4ac348c292c9b60f}{TIMER\_\-INTERRUPT\_\-900\_\-MS}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 180 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga1bf445c2d853b42c6c8f7d704f0c99ce}{TIMER\_\-INTERRUPT\_\-1\_\-S}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 200 / 1000 )
+\item 
+\#define \hyperlink{a00673_gabe6b8cc50a953b9686cec098e74ab340}{TIMER\_\-INTERRUPT\_\-2\_\-S}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 400 / 1000 )
+\item 
+\#define \hyperlink{a00673_gaf80325273d8e20207f0914fd0c8b89ec}{TIMER\_\-INTERRUPT\_\-3\_\-S}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 600 / 1000 )
+\item 
+\#define \hyperlink{a00673_gaab56eb2c0a9908dff18f586c3b83c0e9}{TIMER\_\-INTERRUPT\_\-4\_\-S}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 800 / 1000 )
+\item 
+\#define \hyperlink{a00673_ga0e66fa016e02f9158c8c7ed5ca54c11d}{TIMER\_\-INTERRUPT\_\-5\_\-S}~((( \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} ) TIMER\_\-CLOCK ) $\ast$ 5 $\ast$ 1000 / 1000 )
+\end{DoxyCompactItemize}
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00083}{GSN\_\-GS2000\_\-TIME} \hyperlink{a00673_gac2ea272727157e0cb9e61106986796ab}{GSN\_\-GS2000\_\-TIME\_\-T}
+\begin{DoxyCompactList}\small\item\em structure to hold the 64-\/bit time value. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00673_ga599ea0a212c1bcd484a64610d070b5af}{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T} \hyperlink{a00673_ga9a084f729d0bbf7175b1b4f1b1ed9f2e}{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft Timer Type. enum for soft timer timer type. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00673_gad1e755eb904493a09bf8df25a4519bf0}{GSN\_\-SYSTEM\_\-TIME\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN System Timer Type. type definition for the system time. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} $\ast$ \hyperlink{a00673_gaf35989ebc15417c38bca69fd5c17cceb}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft timer handle. Timer handle type. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00673_ga9bb74ab1272c117587bf1fadf84849de}{GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T} )(VOID $\ast$context, \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} timerHandle)
+\begin{DoxyCompactList}\small\item\em GSN Soft timer callback prototype. A Timer Callback routine gets passed: (1) its execution context and (2) a pointer to the Timer structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00228}{GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T} \hyperlink{a00673_ga0f3896e8f6fd92de3aa0d40428ffa23a}{GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft timer callback information. A callback includes both a Callback Routine, and its execution context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} \hyperlink{a00673_gac713d53bc7c13a7102bfce1b01b30c60}{GSN\_\-SOFT\_\-TMR\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN Soft timer structure. Timer structure to store the context of the soft timer. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00586_a108e60c810cf3cd77f8efec30a64360c}{TMR\_\-EXPR\_\-CALLBACK\_\-FP} )(VOID)
+\item 
+typedef struct \hyperlink{a00084}{GSN\_\-GS2000\_\-TMR} \hyperlink{a00586_adfb1858590760717af53362f09f8c373}{GSN\_\-GS2000\_\-TMR\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00673_ga599ea0a212c1bcd484a64610d070b5af}{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T} \{ \par
+\hyperlink{a00673_gga599ea0a212c1bcd484a64610d070b5afaed34a4f447dd6a4da5771c0a29d502c3}{GSN\_\-SOFT\_\-TMR\_\-ONESHOT}, 
+\par
+\hyperlink{a00673_gga599ea0a212c1bcd484a64610d070b5afa0fdc43c704fbf8c462b2e87ddc6aea6d}{GSN\_\-SOFT\_\-TMR\_\-PERIODIC}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN Soft Timer Type. enum for soft timer timer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00673_gad1e755eb904493a09bf8df25a4519bf0}{GSN\_\-SYSTEM\_\-TIME\_\-T} \hyperlink{a00673_gab43287ce366da3d600e6c49ccb30a0ef}{GsnSoftTmr\_\-CurrentSystemTime} (VOID)
+\begin{DoxyCompactList}\small\item\em Gets the system time. This function gives the current system time. \end{DoxyCompactList}\item 
+PUBLIC VOID $\ast$ \hyperlink{a00673_gab432d57164d1bfe35b788fc811549755}{GsnSoftTmr\_\-Init} (int bootInd, \hyperlink{a00155}{GSN\_\-MSG\_\-HANDLER\_\-CTX\_\-T} $\ast$pMsgHandlerCtx)
+\begin{DoxyCompactList}\small\item\em Initialization for Soft Timer module. This function performs initialization of Soft timer module. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} \hyperlink{a00673_ga942fccace7c0d212530861bdb68ca1dd}{GsnSoftTmr\_\-Start} (\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} $\ast$timer, \hyperlink{a00673_ga599ea0a212c1bcd484a64610d070b5af}{GSN\_\-SOFT\_\-TMR\_\-TYPE\_\-T} type, \hyperlink{a00673_gad1e755eb904493a09bf8df25a4519bf0}{GSN\_\-SYSTEM\_\-TIME\_\-T} expireTime, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} period, \hyperlink{a00673_ga9bb74ab1272c117587bf1fadf84849de}{GSN\_\-SOFT\_\-TMR\_\-CBR\_\-T} cbr, VOID $\ast$context)
+\begin{DoxyCompactList}\small\item\em Start a soft timer. This function starts a soft timer with the spcified value. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00673_gad048a3743bc158c60bc6382309d04398}{GsnSoftTmr\_\-Stop} (\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} timerHandle)
+\begin{DoxyCompactList}\small\item\em Stop a soft timer. This function stops the soft timer. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00673_gaa4dc761b52f892e3c5190db7d1bc8eac}{GsnSoftTmr\_\-RemainingTimeGet} (\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} hTmr)
+\begin{DoxyCompactList}\small\item\em Remaining time get. Returns the remaining time left to expire for a give timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00673_gac722c11a548ed0b5994c9adbc753c28a}{GsnSoftTmr\_\-MinRemainingTimeGet} ()
+\begin{DoxyCompactList}\small\item\em Minimum Remaining time of all active timer get. Returns the minimum remaining time left to expire of all the active timer. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00673_ga784a1e62206ba30a4f7141e67cdd94ae}{GsnSoftTmr\_\-IsActive} (\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} hTmr)
+\begin{DoxyCompactList}\small\item\em A timer is active or not. Returns whether the timer is active or not. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00673_ga12c97d9f8952a41772dd116afd1cd801}{GsnSoftTmr\_\-PeriodGet} (\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} hTmr)
+\begin{DoxyCompactList}\small\item\em Period of the timer. Returns the period timer is active or not. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00673_ga9e0fc424d9ba323bca2e72480969fe45}{GsnSoftTmr\_\-ShutDown} (VOID)
+\begin{DoxyCompactList}\small\item\em Shutdown the sfot timer module. Stops the hardware timer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00673_ga14b04d16861c3ae86cbd69b254e60873}{GsnSoftTmr\_\-Run} (VOID $\ast$context, VOID $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em Soft Timer Expire message Handler. This is function gets executed once the ISR posts a message to the message handler. This calls the callback function of the expired timer(s) and start the timer with the next expire time. User has to create an instance of message handler and call this API, in the message handler routine to handle the time expire event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN Soft Timer public header. This file contains the public APIs and structures of Soft Timer module. 
+
+Definition in file \hyperlink{a00586_source}{gsn\_\-soft\_\-timer.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00586_a5e020cc782064f4e8b7ba19f9380a484}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!GS2000\_\-TMR\_\-INTERRUPT\_\-NUMBER@{GS2000\_\-TMR\_\-INTERRUPT\_\-NUMBER}}
+\index{GS2000\_\-TMR\_\-INTERRUPT\_\-NUMBER@{GS2000\_\-TMR\_\-INTERRUPT\_\-NUMBER}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{GS2000\_\-TMR\_\-INTERRUPT\_\-NUMBER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000\_\-TMR\_\-INTERRUPT\_\-NUMBER~39}}
+\label{a00586_a5e020cc782064f4e8b7ba19f9380a484}
+
+
+Definition at line 164 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00586_a79c23fe59c4cb256b6e65e15f15f992a}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-ACTIVE@{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-ACTIVE}}
+\index{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-ACTIVE@{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-ACTIVE}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-ACTIVE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-ACTIVE~0x1}}
+\label{a00586_a79c23fe59c4cb256b6e65e15f15f992a}
+
+
+Definition at line 247 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00586_aa5620f9cd5903b3dba9f6e7dd428b702}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-EXPIRED@{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-EXPIRED}}
+\index{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-EXPIRED@{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-EXPIRED}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-EXPIRED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-EXPIRED~0x2}}
+\label{a00586_aa5620f9cd5903b3dba9f6e7dd428b702}
+
+
+Definition at line 248 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00586_a7ab24a5e0ba5f842338cc22e0d00c5f0}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOPPED\_\-AFTER\_\-EXPIRE@{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOPPED\_\-AFTER\_\-EXPIRE}}
+\index{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOPPED\_\-AFTER\_\-EXPIRE@{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOPPED\_\-AFTER\_\-EXPIRE}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOPPED\_\-AFTER\_\-EXPIRE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SOFT\_\-TMR\_\-STATUS\_\-STOPPED\_\-AFTER\_\-EXPIRE~0x3}}
+\label{a00586_a7ab24a5e0ba5f842338cc22e0d00c5f0}
+
+
+Definition at line 249 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00586_a4eec8731cd2a25e176800a1d878bcfe2}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!MSEC\_\-TO\_\-SYSTIME@{MSEC\_\-TO\_\-SYSTIME}}
+\index{MSEC\_\-TO\_\-SYSTIME@{MSEC\_\-TO\_\-SYSTIME}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{MSEC\_\-TO\_\-SYSTIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define MSEC\_\-TO\_\-SYSTIME(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~(( {\bf ULONG64} ) (((T) $<$$<$ 15) / 1000))}}
+\label{a00586_a4eec8731cd2a25e176800a1d878bcfe2}
+
+
+Definition at line 167 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00586_a3f7d544fa099e7d8c53dc3893e3e1021}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!SEC\_\-TO\_\-SYSTIME@{SEC\_\-TO\_\-SYSTIME}}
+\index{SEC\_\-TO\_\-SYSTIME@{SEC\_\-TO\_\-SYSTIME}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{SEC\_\-TO\_\-SYSTIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define SEC\_\-TO\_\-SYSTIME(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~(( {\bf ULONG64} ) ((T) $<$$<$ 15))}}
+\label{a00586_a3f7d544fa099e7d8c53dc3893e3e1021}
+
+
+Definition at line 168 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00586_a71779934d72f2dfa777d9e6b964e9830}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!SYSTIME\_\-TO\_\-MSEC@{SYSTIME\_\-TO\_\-MSEC}}
+\index{SYSTIME\_\-TO\_\-MSEC@{SYSTIME\_\-TO\_\-MSEC}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{SYSTIME\_\-TO\_\-MSEC}]{\setlength{\rightskip}{0pt plus 5cm}\#define SYSTIME\_\-TO\_\-MSEC(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~(( {\bf ULONG64} ) ((T $\ast$ 1000) $>$$>$ 15))}}
+\label{a00586_a71779934d72f2dfa777d9e6b964e9830}
+
+
+Definition at line 171 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00586_afb7802e984a412ff26eafcc98e49a1e3}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!SYSTIME\_\-TO\_\-SEC@{SYSTIME\_\-TO\_\-SEC}}
+\index{SYSTIME\_\-TO\_\-SEC@{SYSTIME\_\-TO\_\-SEC}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{SYSTIME\_\-TO\_\-SEC}]{\setlength{\rightskip}{0pt plus 5cm}\#define SYSTIME\_\-TO\_\-SEC(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~(( {\bf ULONG64} ) ((T) $>$$>$ 15))}}
+\label{a00586_afb7802e984a412ff26eafcc98e49a1e3}
+
+
+Definition at line 172 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00586_afd941402d8fc4e4f2be92021c03896c8}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!SYSTIME\_\-TO\_\-USEC@{SYSTIME\_\-TO\_\-USEC}}
+\index{SYSTIME\_\-TO\_\-USEC@{SYSTIME\_\-TO\_\-USEC}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{SYSTIME\_\-TO\_\-USEC}]{\setlength{\rightskip}{0pt plus 5cm}\#define SYSTIME\_\-TO\_\-USEC(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~(( {\bf ULONG64} ) ((T $\ast$ 1000000) $>$$>$ 15))}}
+\label{a00586_afd941402d8fc4e4f2be92021c03896c8}
+
+
+Definition at line 170 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00586_a25d1fcc71108d05dc93def69410e9f16}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!USEC\_\-TO\_\-SYSTIME@{USEC\_\-TO\_\-SYSTIME}}
+\index{USEC\_\-TO\_\-SYSTIME@{USEC\_\-TO\_\-SYSTIME}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{USEC\_\-TO\_\-SYSTIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define USEC\_\-TO\_\-SYSTIME(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~(( {\bf ULONG64} ) (((T) $<$$<$ 15) / 1000000))}}
+\label{a00586_a25d1fcc71108d05dc93def69410e9f16}
+
+
+Definition at line 166 of file gsn\_\-soft\_\-timer.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00586_adfb1858590760717af53362f09f8c373}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!GSN\_\-GS2000\_\-TMR\_\-T@{GSN\_\-GS2000\_\-TMR\_\-T}}
+\index{GSN\_\-GS2000\_\-TMR\_\-T@{GSN\_\-GS2000\_\-TMR\_\-T}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{GSN\_\-GS2000\_\-TMR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-GS2000\_\-TMR} {\bf GSN\_\-GS2000\_\-TMR\_\-T}}}
+\label{a00586_adfb1858590760717af53362f09f8c373}
+\hypertarget{a00586_a108e60c810cf3cd77f8efec30a64360c}{
+\index{gsn\_\-soft\_\-timer.h@{gsn\_\-soft\_\-timer.h}!TMR\_\-EXPR\_\-CALLBACK\_\-FP@{TMR\_\-EXPR\_\-CALLBACK\_\-FP}}
+\index{TMR\_\-EXPR\_\-CALLBACK\_\-FP@{TMR\_\-EXPR\_\-CALLBACK\_\-FP}!gsn_soft_timer.h@{gsn\_\-soft\_\-timer.h}}
+\subsubsection[{TMR\_\-EXPR\_\-CALLBACK\_\-FP}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf TMR\_\-EXPR\_\-CALLBACK\_\-FP})(VOID)}}
+\label{a00586_a108e60c810cf3cd77f8efec30a64360c}
+
+
+Definition at line 335 of file gsn\_\-soft\_\-timer.h.
+

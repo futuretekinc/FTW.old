@@ -1,0 +1,177 @@
+\hypertarget{a00511}{
+\section{gsn\_\-httpd\_\-file\_\-api.h File Reference}
+\label{a00511}\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{a00743}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00463}{USER\_\-INPUT\_\-ELEMENT\_\-STRUCTURE}
+\begin{DoxyCompactList}\small\item\em This structure describes file parameters, contents. \end{DoxyCompactList}\item 
+struct \hyperlink{a00461}{STATUS\_\-MSG\_\-STRUCTURE}
+\begin{DoxyCompactList}\small\item\em This structure describes file parameters, contents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00463}{USER\_\-INPUT\_\-ELEMENT\_\-STRUCTURE} \hyperlink{a00511_a43b1190102f272453bf5f9e12fae8565}{GSN\_\-HTTPD\_\-ELEMENT\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em This structure describes file parameters, contents. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00461}{STATUS\_\-MSG\_\-STRUCTURE} \hyperlink{a00511_a7104dada96f24f3d0e996e3a8ad59b19}{GSN\_\-HTTPD\_\-STATUS\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em This structure describes file parameters, contents. \end{DoxyCompactList}\item 
+typedef \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL}($\ast$ \hyperlink{a00511_aa8074d4aaa1ef8e6443148ee81fd9aea}{GSN\_\-HTTPD\_\-APP\_\-HANDLER\_\-FN\_\-T} )(\hyperlink{a00463}{GSN\_\-HTTPD\_\-ELEMENT\_\-INFO\_\-T} inputElementInfo, \hyperlink{a00660_ga307b8734c020247f6bac4fcde0dcfbb9}{INT8} $\ast$buffer, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} bufferLen, \hyperlink{a00511_a08d46f405dab1ea7ad33b522e3604839}{GSN\_\-HTTPD\_\-ELEMENT\_\-EVENTS\_\-T} event, \hyperlink{a00461}{GSN\_\-HTTPD\_\-STATUS\_\-INFO\_\-T} $\ast$statusInfo)
+\begin{DoxyCompactList}\small\item\em This is user call back prototype. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00511_a08d46f405dab1ea7ad33b522e3604839}{GSN\_\-HTTPD\_\-ELEMENT\_\-EVENTS\_\-T} \{ \par
+\hyperlink{a00511_a08d46f405dab1ea7ad33b522e3604839ac325d42b23f8ef33736a502d7b421ea0}{START\_\-FILE} = 1, 
+\par
+\hyperlink{a00511_a08d46f405dab1ea7ad33b522e3604839ab6a85866da85b6c3fae86403155d44f0}{CONTINUE\_\-FILE} = 2, 
+\par
+\hyperlink{a00511_a08d46f405dab1ea7ad33b522e3604839aa4ee7c4def59d9b613ea29682f98ffb0}{END\_\-FILE} = 4, 
+\par
+\hyperlink{a00511_a08d46f405dab1ea7ad33b522e3604839a70f5ed92acb1ca2eafe9d5cf328de952}{START\_\-NON\_\-FILE} = 8, 
+\par
+\hyperlink{a00511_a08d46f405dab1ea7ad33b522e3604839a8717cf01fdbb8967b6195ef6063c0caa}{CONTINUE\_\-NON\_\-FILE} = 16, 
+\par
+\hyperlink{a00511_a08d46f405dab1ea7ad33b522e3604839ace2d0e5a6a7a2c2daed569b6f0a13077}{END\_\-NON\_\-FILE} = 32, 
+\par
+\hyperlink{a00511_a08d46f405dab1ea7ad33b522e3604839acaa53b49cd02fd807160c6361e8afe75}{START\_\-UPLOAD} = 64, 
+\par
+\hyperlink{a00511_a08d46f405dab1ea7ad33b522e3604839aca771bb97cb0a4141a3ba17c310b806b}{END\_\-UPLOAD} = 128, 
+\par
+\hyperlink{a00511_a08d46f405dab1ea7ad33b522e3604839aff2ca90177a8cc5573c189cbcd276f24}{CONNEC\_\-LOST} = 256
+ \}
+\begin{DoxyCompactList}\small\item\em This enum is collection of file upload events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00511_a441fc9a4b5b9fdbbb3cf0bf5aef0ec9d}{GsnHttpd\_\-FileApiConfig} (char $\ast$uri, \hyperlink{a00511_aa8074d4aaa1ef8e6443148ee81fd9aea}{GSN\_\-HTTPD\_\-APP\_\-HANDLER\_\-FN\_\-T} user\_\-app\_\-cb, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} methods)
+\begin{DoxyCompactList}\small\item\em This is user app structure for registration. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00511_a5a475d0de83591cbe67285ea6d1ea0c4}{GsnHttpd\_\-FileApiInit} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00511_aa8074d4aaa1ef8e6443148ee81fd9aea}{
+\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!GSN\_\-HTTPD\_\-APP\_\-HANDLER\_\-FN\_\-T@{GSN\_\-HTTPD\_\-APP\_\-HANDLER\_\-FN\_\-T}}
+\index{GSN\_\-HTTPD\_\-APP\_\-HANDLER\_\-FN\_\-T@{GSN\_\-HTTPD\_\-APP\_\-HANDLER\_\-FN\_\-T}!gsn_httpd_file_api.h@{gsn\_\-httpd\_\-file\_\-api.h}}
+\subsubsection[{GSN\_\-HTTPD\_\-APP\_\-HANDLER\_\-FN\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf BOOL}($\ast$ {\bf GSN\_\-HTTPD\_\-APP\_\-HANDLER\_\-FN\_\-T})({\bf GSN\_\-HTTPD\_\-ELEMENT\_\-INFO\_\-T} inputElementInfo, {\bf INT8} $\ast$buffer, {\bf UINT32} bufferLen, {\bf GSN\_\-HTTPD\_\-ELEMENT\_\-EVENTS\_\-T} event, {\bf GSN\_\-HTTPD\_\-STATUS\_\-INFO\_\-T} $\ast$statusInfo)}}
+\label{a00511_aa8074d4aaa1ef8e6443148ee81fd9aea}
+
+
+This is user call back prototype. 
+
+
+
+Definition at line 101 of file gsn\_\-httpd\_\-file\_\-api.h.
+
+\hypertarget{a00511_a43b1190102f272453bf5f9e12fae8565}{
+\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!GSN\_\-HTTPD\_\-ELEMENT\_\-INFO\_\-T@{GSN\_\-HTTPD\_\-ELEMENT\_\-INFO\_\-T}}
+\index{GSN\_\-HTTPD\_\-ELEMENT\_\-INFO\_\-T@{GSN\_\-HTTPD\_\-ELEMENT\_\-INFO\_\-T}!gsn_httpd_file_api.h@{gsn\_\-httpd\_\-file\_\-api.h}}
+\subsubsection[{GSN\_\-HTTPD\_\-ELEMENT\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf USER\_\-INPUT\_\-ELEMENT\_\-STRUCTURE} {\bf GSN\_\-HTTPD\_\-ELEMENT\_\-INFO\_\-T}}}
+\label{a00511_a43b1190102f272453bf5f9e12fae8565}
+
+
+This structure describes file parameters, contents. 
+
+\hypertarget{a00511_a7104dada96f24f3d0e996e3a8ad59b19}{
+\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!GSN\_\-HTTPD\_\-STATUS\_\-INFO\_\-T@{GSN\_\-HTTPD\_\-STATUS\_\-INFO\_\-T}}
+\index{GSN\_\-HTTPD\_\-STATUS\_\-INFO\_\-T@{GSN\_\-HTTPD\_\-STATUS\_\-INFO\_\-T}!gsn_httpd_file_api.h@{gsn\_\-httpd\_\-file\_\-api.h}}
+\subsubsection[{GSN\_\-HTTPD\_\-STATUS\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf STATUS\_\-MSG\_\-STRUCTURE} {\bf GSN\_\-HTTPD\_\-STATUS\_\-INFO\_\-T}}}
+\label{a00511_a7104dada96f24f3d0e996e3a8ad59b19}
+
+
+This structure describes file parameters, contents. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00511_a08d46f405dab1ea7ad33b522e3604839}{
+\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!GSN\_\-HTTPD\_\-ELEMENT\_\-EVENTS\_\-T@{GSN\_\-HTTPD\_\-ELEMENT\_\-EVENTS\_\-T}}
+\index{GSN\_\-HTTPD\_\-ELEMENT\_\-EVENTS\_\-T@{GSN\_\-HTTPD\_\-ELEMENT\_\-EVENTS\_\-T}!gsn_httpd_file_api.h@{gsn\_\-httpd\_\-file\_\-api.h}}
+\subsubsection[{GSN\_\-HTTPD\_\-ELEMENT\_\-EVENTS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-HTTPD\_\-ELEMENT\_\-EVENTS\_\-T}}}
+\label{a00511_a08d46f405dab1ea7ad33b522e3604839}
+
+
+This enum is collection of file upload events. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{START\_\-FILE@{START\_\-FILE}!gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}}\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!START\_\-FILE@{START\_\-FILE}}\item[{\em 
+\hypertarget{a00511_a08d46f405dab1ea7ad33b522e3604839ac325d42b23f8ef33736a502d7b421ea0}{
+START\_\-FILE}
+\label{a00511_a08d46f405dab1ea7ad33b522e3604839ac325d42b23f8ef33736a502d7b421ea0}
+}]\index{CONTINUE\_\-FILE@{CONTINUE\_\-FILE}!gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}}\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!CONTINUE\_\-FILE@{CONTINUE\_\-FILE}}\item[{\em 
+\hypertarget{a00511_a08d46f405dab1ea7ad33b522e3604839ab6a85866da85b6c3fae86403155d44f0}{
+CONTINUE\_\-FILE}
+\label{a00511_a08d46f405dab1ea7ad33b522e3604839ab6a85866da85b6c3fae86403155d44f0}
+}]\index{END\_\-FILE@{END\_\-FILE}!gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}}\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!END\_\-FILE@{END\_\-FILE}}\item[{\em 
+\hypertarget{a00511_a08d46f405dab1ea7ad33b522e3604839aa4ee7c4def59d9b613ea29682f98ffb0}{
+END\_\-FILE}
+\label{a00511_a08d46f405dab1ea7ad33b522e3604839aa4ee7c4def59d9b613ea29682f98ffb0}
+}]\index{START\_\-NON\_\-FILE@{START\_\-NON\_\-FILE}!gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}}\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!START\_\-NON\_\-FILE@{START\_\-NON\_\-FILE}}\item[{\em 
+\hypertarget{a00511_a08d46f405dab1ea7ad33b522e3604839a70f5ed92acb1ca2eafe9d5cf328de952}{
+START\_\-NON\_\-FILE}
+\label{a00511_a08d46f405dab1ea7ad33b522e3604839a70f5ed92acb1ca2eafe9d5cf328de952}
+}]\index{CONTINUE\_\-NON\_\-FILE@{CONTINUE\_\-NON\_\-FILE}!gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}}\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!CONTINUE\_\-NON\_\-FILE@{CONTINUE\_\-NON\_\-FILE}}\item[{\em 
+\hypertarget{a00511_a08d46f405dab1ea7ad33b522e3604839a8717cf01fdbb8967b6195ef6063c0caa}{
+CONTINUE\_\-NON\_\-FILE}
+\label{a00511_a08d46f405dab1ea7ad33b522e3604839a8717cf01fdbb8967b6195ef6063c0caa}
+}]\index{END\_\-NON\_\-FILE@{END\_\-NON\_\-FILE}!gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}}\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!END\_\-NON\_\-FILE@{END\_\-NON\_\-FILE}}\item[{\em 
+\hypertarget{a00511_a08d46f405dab1ea7ad33b522e3604839ace2d0e5a6a7a2c2daed569b6f0a13077}{
+END\_\-NON\_\-FILE}
+\label{a00511_a08d46f405dab1ea7ad33b522e3604839ace2d0e5a6a7a2c2daed569b6f0a13077}
+}]\index{START\_\-UPLOAD@{START\_\-UPLOAD}!gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}}\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!START\_\-UPLOAD@{START\_\-UPLOAD}}\item[{\em 
+\hypertarget{a00511_a08d46f405dab1ea7ad33b522e3604839acaa53b49cd02fd807160c6361e8afe75}{
+START\_\-UPLOAD}
+\label{a00511_a08d46f405dab1ea7ad33b522e3604839acaa53b49cd02fd807160c6361e8afe75}
+}]\index{END\_\-UPLOAD@{END\_\-UPLOAD}!gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}}\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!END\_\-UPLOAD@{END\_\-UPLOAD}}\item[{\em 
+\hypertarget{a00511_a08d46f405dab1ea7ad33b522e3604839aca771bb97cb0a4141a3ba17c310b806b}{
+END\_\-UPLOAD}
+\label{a00511_a08d46f405dab1ea7ad33b522e3604839aca771bb97cb0a4141a3ba17c310b806b}
+}]\index{CONNEC\_\-LOST@{CONNEC\_\-LOST}!gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}}\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!CONNEC\_\-LOST@{CONNEC\_\-LOST}}\item[{\em 
+\hypertarget{a00511_a08d46f405dab1ea7ad33b522e3604839aff2ca90177a8cc5573c189cbcd276f24}{
+CONNEC\_\-LOST}
+\label{a00511_a08d46f405dab1ea7ad33b522e3604839aff2ca90177a8cc5573c189cbcd276f24}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 81 of file gsn\_\-httpd\_\-file\_\-api.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00511_a441fc9a4b5b9fdbbb3cf0bf5aef0ec9d}{
+\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!GsnHttpd\_\-FileApiConfig@{GsnHttpd\_\-FileApiConfig}}
+\index{GsnHttpd\_\-FileApiConfig@{GsnHttpd\_\-FileApiConfig}!gsn_httpd_file_api.h@{gsn\_\-httpd\_\-file\_\-api.h}}
+\subsubsection[{GsnHttpd\_\-FileApiConfig}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} GsnHttpd\_\-FileApiConfig (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{uri, }
+\item[{{\bf GSN\_\-HTTPD\_\-APP\_\-HANDLER\_\-FN\_\-T}}]{user\_\-app\_\-cb, }
+\item[{{\bf UINT8}}]{methods}
+\end{DoxyParamCaption}
+)}}
+\label{a00511_a441fc9a4b5b9fdbbb3cf0bf5aef0ec9d}
+
+
+This is user app structure for registration. 
+
+\hypertarget{a00511_a5a475d0de83591cbe67285ea6d1ea0c4}{
+\index{gsn\_\-httpd\_\-file\_\-api.h@{gsn\_\-httpd\_\-file\_\-api.h}!GsnHttpd\_\-FileApiInit@{GsnHttpd\_\-FileApiInit}}
+\index{GsnHttpd\_\-FileApiInit@{GsnHttpd\_\-FileApiInit}!gsn_httpd_file_api.h@{gsn\_\-httpd\_\-file\_\-api.h}}
+\subsubsection[{GsnHttpd\_\-FileApiInit}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnHttpd\_\-FileApiInit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00511_a5a475d0de83591cbe67285ea6d1ea0c4}

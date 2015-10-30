@@ -1,0 +1,121 @@
+\hypertarget{a00386}{
+\section{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S Struct Reference}
+\label{a00386}\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}}
+}
+
+
+key install msg format  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wif\_\-wlan\_\-defs.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00386_aebf6381de07ce9af9d9fa581ce41c05e}{keyType}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00386_afcf93136bff6ef3037dec249b48d1eba}{keyIndex}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00386_a53fe92daed71e812f41e8b404d4da106}{keyAlgo}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00386_ad2cde845408f2d2b0237ffb73e9e5a73}{keyUsage}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00386_a2eafab72acba3788c4a792fb72c37a34}{keyRsc} \mbox{[}GSN\_\-WIF\_\-WLAN\_\-KEY\_\-RSC\_\-SIZE\mbox{]}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00386_a19c67de3f96782516f1c496a77e01074}{keyLen}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00386_a2326484148e2be0bd762aa571f9e5ef6}{keyVal} \mbox{[}GSN\_\-WIF\_\-WLAN\_\-KEY\_\-MAX\_\-SIZE\mbox{]}
+\item 
+\hyperlink{a00416}{GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T} \hyperlink{a00386_ab623c15c7dc79be51bcdaa04fba67d90}{macAddr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+key install msg format 
+
+This structure defines the format of key install command 
+
+Definition at line 1294 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00386_a53fe92daed71e812f41e8b404d4da106}{
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}!keyAlgo@{keyAlgo}}
+\index{keyAlgo@{keyAlgo}!GSN_WIF_WLAN_KEY_INSTALL_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}}
+\subsubsection[{keyAlgo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf keyAlgo}}}
+\label{a00386_a53fe92daed71e812f41e8b404d4da106}
+Encryption Algorithm. AES/ TIKIP 
+
+Definition at line 1298 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00386_afcf93136bff6ef3037dec249b48d1eba}{
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}!keyIndex@{keyIndex}}
+\index{keyIndex@{keyIndex}!GSN_WIF_WLAN_KEY_INSTALL_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}}
+\subsubsection[{keyIndex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf keyIndex}}}
+\label{a00386_afcf93136bff6ef3037dec249b48d1eba}
+Key Index 
+
+Definition at line 1297 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00386_a19c67de3f96782516f1c496a77e01074}{
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}!keyLen@{keyLen}}
+\index{keyLen@{keyLen}!GSN_WIF_WLAN_KEY_INSTALL_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}}
+\subsubsection[{keyLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf keyLen}}}
+\label{a00386_a19c67de3f96782516f1c496a77e01074}
+Key length 
+
+Definition at line 1301 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00386_a2eafab72acba3788c4a792fb72c37a34}{
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}!keyRsc@{keyRsc}}
+\index{keyRsc@{keyRsc}!GSN_WIF_WLAN_KEY_INSTALL_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}}
+\subsubsection[{keyRsc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf keyRsc}\mbox{[}GSN\_\-WIF\_\-WLAN\_\-KEY\_\-RSC\_\-SIZE\mbox{]}}}
+\label{a00386_a2eafab72acba3788c4a792fb72c37a34}
+8 Bytes RSC counter value 
+
+Definition at line 1300 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00386_aebf6381de07ce9af9d9fa581ce41c05e}{
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}!keyType@{keyType}}
+\index{keyType@{keyType}!GSN_WIF_WLAN_KEY_INSTALL_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}}
+\subsubsection[{keyType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf keyType}}}
+\label{a00386_aebf6381de07ce9af9d9fa581ce41c05e}
+
+
+Definition at line 1296 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00386_ad2cde845408f2d2b0237ffb73e9e5a73}{
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}!keyUsage@{keyUsage}}
+\index{keyUsage@{keyUsage}!GSN_WIF_WLAN_KEY_INSTALL_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}}
+\subsubsection[{keyUsage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf keyUsage}}}
+\label{a00386_ad2cde845408f2d2b0237ffb73e9e5a73}
+
+
+Definition at line 1299 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00386_a2326484148e2be0bd762aa571f9e5ef6}{
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}!keyVal@{keyVal}}
+\index{keyVal@{keyVal}!GSN_WIF_WLAN_KEY_INSTALL_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}}
+\subsubsection[{keyVal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf keyVal}\mbox{[}GSN\_\-WIF\_\-WLAN\_\-KEY\_\-MAX\_\-SIZE\mbox{]}}}
+\label{a00386_a2326484148e2be0bd762aa571f9e5ef6}
+Key 
+
+Definition at line 1302 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+\hypertarget{a00386_ab623c15c7dc79be51bcdaa04fba67d90}{
+\index{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}!macAddr@{macAddr}}
+\index{macAddr@{macAddr}!GSN_WIF_WLAN_KEY_INSTALL_REQ_S@{GSN\_\-WIF\_\-WLAN\_\-KEY\_\-INSTALL\_\-REQ\_\-S}}
+\subsubsection[{macAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-WLAN\_\-MAC\_\-ADDR\_\-T} {\bf macAddr}}}
+\label{a00386_ab623c15c7dc79be51bcdaa04fba67d90}
+MAC address. This will be used when the Node is acting a AP. MAC address of the client for which the key is installed is provided. 
+
+Definition at line 1303 of file gsn\_\-wif\_\-wlan\_\-defs.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00613}{gsn\_\-wif\_\-wlan\_\-defs.h}\end{DoxyCompactItemize}

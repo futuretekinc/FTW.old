@@ -1,0 +1,2138 @@
+\hypertarget{a00555}{
+\section{gsn\_\-reg\_\-gs2000tmr\_\-op.h File Reference}
+\label{a00555}\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00791}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00555_a0b52d1fcab116de6ecb5cd71e74c1777}{GS2000TMR\_\-PCOUNT\_\-LSB\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-PCOUNT\_\-LSB))
+\item 
+\#define \hyperlink{a00555_a664191c2ed5762ca295d73e60117bf04}{GS2000TMR\_\-COUNT\_\-LSB\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COUNT\_\-LSB)
+\item 
+\#define \hyperlink{a00555_a50c97fb02a4ab8a77b583cd91a2eaee8}{GS2000TMR\_\-COUNT\_\-LSB\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COUNT\_\-LSB, (value))
+\item 
+\#define \hyperlink{a00555_aac040c3a9540039cd7fa5272975ae67d}{GS2000TMR\_\-PCOUNT\_\-MSB\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-PCOUNT\_\-MSB))
+\item 
+\#define \hyperlink{a00555_a4ac420b0b1523d8072ed1e9a0ff2406d}{GS2000TMR\_\-COUNT\_\-MSB\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COUNT\_\-MSB)
+\item 
+\#define \hyperlink{a00555_ae1e2eefd932955c284ce1dda0f4811a8}{GS2000TMR\_\-VALID\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID))
+\item 
+\#define \hyperlink{a00555_a41da72752555e6d4ac79458b5913a795}{GS2000TMR\_\-VALID\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID, (value))
+\item 
+\#define \hyperlink{a00555_a671cd21b6043447f1586626552771d3c}{GS2000TMR\_\-VALID\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID) $|$ (value))
+\item 
+\#define \hyperlink{a00555_a09c648fbb501aabd4caf6bf1ee09952d}{GS2000TMR\_\-VALID\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_a8a4cad5ea0774d9635c6b530485a9ab6}{GS2000TMR\_\-COUNT\_\-VALID\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COUNT\_\-VALID, 1)
+\item 
+\#define \hyperlink{a00555_ac37969395a3ed89d8d0dcb03c0e0d8e3}{GS2000TMR\_\-COMPARE\_\-LSB\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB))
+\item 
+\#define \hyperlink{a00555_a0d5ece214f6fa7e590d012422b7dc75d}{GS2000TMR\_\-COMPARE\_\-LSB\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB, (value))
+\item 
+\#define \hyperlink{a00555_a3a240e6550d4e142d411bc1eb4872fbb}{GS2000TMR\_\-COMPARE\_\-LSB\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB) $|$ (value))
+\item 
+\#define \hyperlink{a00555_a9e11102d98a0c5d5ce81a62b1ec5825a}{GS2000TMR\_\-COMPARE\_\-LSB\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_ae4774e096dc740d4aa0cdd6eae8307ce}{GS2000TMR\_\-COMP\_\-LSB\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-LSB)
+\item 
+\#define \hyperlink{a00555_a3bd2f5a56abb22256f44a1ed21807a6e}{GS2000TMR\_\-COMP\_\-LSB\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-LSB, (value))
+\item 
+\#define \hyperlink{a00555_ad6916c15ab1ca076e16bc3072447a39e}{GS2000TMR\_\-COMPARE\_\-MSB\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB))
+\item 
+\#define \hyperlink{a00555_ae607e49b9826daa219225cb7269750e8}{GS2000TMR\_\-COMPARE\_\-MSB\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB, (value))
+\item 
+\#define \hyperlink{a00555_a90aacbff909a79b07b4ae30a1d050419}{GS2000TMR\_\-COMPARE\_\-MSB\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB) $|$ (value))
+\item 
+\#define \hyperlink{a00555_a47895966f68a992ddb25d2e9a02f840d}{GS2000TMR\_\-COMPARE\_\-MSB\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_ad64a6d18fab173740cb81375752fee16}{GS2000TMR\_\-COMP\_\-MSB\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-MSB)
+\item 
+\#define \hyperlink{a00555_aec5315119d651ca4ac8af92a65decadf}{GS2000TMR\_\-COMP\_\-MSB\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-MSB, (value))
+\item 
+\#define \hyperlink{a00555_a6f7eeb97d23c592a23ee9d8615dc3997}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-STATUS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-STATUS))
+\item 
+\#define \hyperlink{a00555_a3143ac752854ee0f6c9bc91c5d0ff5a8}{GS2000TMR\_\-COMP\_\-IRQ\_\-STATUS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-STATUS)
+\item 
+\#define \hyperlink{a00555_a2c94f9f2d799bd49eadbe2a87ec464ac}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK))
+\item 
+\#define \hyperlink{a00555_a1688769f11c4264d42e78f55872b93b6}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK, (value))
+\item 
+\#define \hyperlink{a00555_a7ee122359598ac37d7f468389196f7b2}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK) $|$ (value))
+\item 
+\#define \hyperlink{a00555_aeb6c750f9ed6c3f8bf0a3fa1f841f28f}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_a828f0e72457fae4c0def4bcc98d739c3}{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-MASK)
+\item 
+\#define \hyperlink{a00555_a0a4d701cfe19980c971f93b4156d77b6}{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-MASK, 1)
+\item 
+\#define \hyperlink{a00555_a4b6a10d7d61294a1123a82b630967375}{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-MASK, 0)
+\item 
+\#define \hyperlink{a00555_a235c4b15015a5e1e15b9cf0c674139df}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR))
+\item 
+\#define \hyperlink{a00555_ac0c6b40905e1d329ff2cd86551a37bd1}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR, (value))
+\item 
+\#define \hyperlink{a00555_a9567b78e454e6e6eda9d5e839783af56}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR) $|$ (value))
+\item 
+\#define \hyperlink{a00555_a83537c4231504b49555364d32f615f3a}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_aead3b1f61dfef8d726570badedaa1855}{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR)
+\item 
+\#define \hyperlink{a00555_ab513e7349b1133860284eb30e889d755}{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR, 1)
+\item 
+\#define \hyperlink{a00555_a05411eca54bddca6b7f65b78d8171d0f}{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR, 0)
+\item 
+\#define \hyperlink{a00555_a915faf9c4f44ffdd339be938aa87f842}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET))
+\item 
+\#define \hyperlink{a00555_ab2b848551ab4ac428be3f1e4b3836953}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET, (value))
+\item 
+\#define \hyperlink{a00555_ac869201b2a5270568c6a18ca325dbc39}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET) $|$ (value))
+\item 
+\#define \hyperlink{a00555_a200976b4cfb2b17863b6a768071345dc}{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_af3869f35db057459b8b8ee0cd2cb5ac0}{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-SET)
+\item 
+\#define \hyperlink{a00555_a7bf5920ba2d71e5e56803ce3e028db35}{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-SET, 1)
+\item 
+\#define \hyperlink{a00555_acffe0489a99b8124869d07352f890543}{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-SET, 0)
+\item 
+\#define \hyperlink{a00555_a236827c008811427c22ac3ae1d41d687}{GS2000TMR\_\-ALARM\_\-IRQ\_\-STATUS\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-STATUS))
+\item 
+\#define \hyperlink{a00555_a11f9420e6c0437608b17f26a91ccc059}{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-STATUS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-STATUS)
+\item 
+\#define \hyperlink{a00555_a22883bf7bca9e801ff2525bf288d61e9}{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-STATUS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-STATUS)
+\item 
+\#define \hyperlink{a00555_aef0c0bda2c9fadb8e69f6477dba7a45a}{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-STATUS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-STATUS)
+\item 
+\#define \hyperlink{a00555_a3053954b389c73531e447f46fb9f1888}{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-STATUS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-STATUS)
+\item 
+\#define \hyperlink{a00555_a42b8c433eaa29f4dcaba1218f649908f}{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-STATUS\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-STATUS)
+\item 
+\#define \hyperlink{a00555_aed8d90891943e431fb745cb2e8cb14fd}{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK))
+\item 
+\#define \hyperlink{a00555_ab42472d22bd9f283e74ee416fddd7725}{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK, (value))
+\item 
+\#define \hyperlink{a00555_af6d92699aa8c392884fbb78362c1c637}{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK) $|$ (value))
+\item 
+\#define \hyperlink{a00555_a7d62dcf039af18d7a47cf52676ae05b5}{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_aee4711e134a065cb407e6c5316b743af}{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK)
+\item 
+\#define \hyperlink{a00555_ad56c81cf79053fefda790626abef5d87}{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK, 1)
+\item 
+\#define \hyperlink{a00555_a43da0679a158eb809a13cac0a3f8d545}{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK, 0)
+\item 
+\#define \hyperlink{a00555_a66a480a744cb1da1164a95a05b9f2f74}{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK)
+\item 
+\#define \hyperlink{a00555_a08d24bb59b201710ccd1d24d9387ca1a}{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK, 1)
+\item 
+\#define \hyperlink{a00555_abb77611d6033f345295cfcc08b17a649}{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK, 0)
+\item 
+\#define \hyperlink{a00555_a2ee01b8d874d75edd2925d560bdc150f}{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK)
+\item 
+\#define \hyperlink{a00555_aa06ae636b99c9d234c250ff0db4d7266}{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK, 1)
+\item 
+\#define \hyperlink{a00555_ae6a3f772dc9fcafa4d4c3d6d423041b2}{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK, 0)
+\item 
+\#define \hyperlink{a00555_ac4d3fbe6b8b0625e770a1d83923cc1a5}{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK)
+\item 
+\#define \hyperlink{a00555_ad94430d9b13da38bac1ade2404770f01}{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK, 1)
+\item 
+\#define \hyperlink{a00555_aed6e6ab75ceb5a3cf32e9923768218f8}{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK, 0)
+\item 
+\#define \hyperlink{a00555_a457102de8bf514ccbb2abf8cf736f9ca}{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK)
+\item 
+\#define \hyperlink{a00555_a63b5941e43ed014034b90e87feee846b}{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK, 1)
+\item 
+\#define \hyperlink{a00555_a2cf9f570d208a6663c24670a5a5716d8}{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK, 0)
+\item 
+\#define \hyperlink{a00555_a38524b732784c0c35cae949bbf52be91}{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR))
+\item 
+\#define \hyperlink{a00555_af29b33e008a25b7d859cf18538bd45da}{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR, (value))
+\item 
+\#define \hyperlink{a00555_a3bb4dc95c973f54afa4ff4818b2ba89e}{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR) $|$ (value))
+\item 
+\#define \hyperlink{a00555_a4bb1e5954ceae9ed5dbb9d1438298a2c}{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_a03f5ef6346bba587be5bc72734dbf485}{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR)
+\item 
+\#define \hyperlink{a00555_a894e396e95d470850e00d2499c6dac4b}{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR, 1)
+\item 
+\#define \hyperlink{a00555_a6607d13af61cb81546e328cf6abcc1a6}{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR, 0)
+\item 
+\#define \hyperlink{a00555_a446a1908d9bec267df1489f8816c0d38}{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR)
+\item 
+\#define \hyperlink{a00555_a40467c32df5178859149af4cc06c6831}{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR, 1)
+\item 
+\#define \hyperlink{a00555_a42b1811e6a36a77901b69bf03dcbdb92}{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR, 0)
+\item 
+\#define \hyperlink{a00555_a0347ff9bff03384c7268b6653612d23e}{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR)
+\item 
+\#define \hyperlink{a00555_aad0a1f8f8c0dca73cce135dcba6ea726}{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR, 1)
+\item 
+\#define \hyperlink{a00555_a99b8ad929e239b33aa78668d16fd0d83}{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR, 0)
+\item 
+\#define \hyperlink{a00555_a183927b3888dbd2b69a10a759541daa2}{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR)
+\item 
+\#define \hyperlink{a00555_ac90807dfc73aff3d7cdd848abcb0a03e}{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR, 1)
+\item 
+\#define \hyperlink{a00555_a1a6ac23a06300bbf5ffeab15168af1cc}{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR, 0)
+\item 
+\#define \hyperlink{a00555_a6989d367fde281bc0df176053c36bc60}{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR)
+\item 
+\#define \hyperlink{a00555_a601d3cc28755dffeb8eff9df11803d2d}{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR, 1)
+\item 
+\#define \hyperlink{a00555_ab8f7e7165f1661d91152f0a965581cb4}{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR, 0)
+\item 
+\#define \hyperlink{a00555_ab4f03afd96eb5936c8c87ccf87162189}{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET))
+\item 
+\#define \hyperlink{a00555_aab654c90512b68a2213b7ac5ebdf9058}{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET, (value))
+\item 
+\#define \hyperlink{a00555_abdca40c470a9d857e3bbd65170bd114c}{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET) $|$ (value))
+\item 
+\#define \hyperlink{a00555_a331d9e838a80e296e71be4e9b3792242}{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_afa3d4c86c39820585d3cb855e5a19775}{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET)
+\item 
+\#define \hyperlink{a00555_ab4ee1906290f1bdc427c121d9850ca21}{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET, 1)
+\item 
+\#define \hyperlink{a00555_ae24fb0626d7ce20504d0cee6a0fcaf83}{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET, 0)
+\item 
+\#define \hyperlink{a00555_abfda9928b1bb4b555b52d0ceab7cb8d5}{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET)
+\item 
+\#define \hyperlink{a00555_a34812d67b1fd74f499f9818495b9a7d8}{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET, 1)
+\item 
+\#define \hyperlink{a00555_a35b10c13b94976777445adb3c2cd64e2}{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET, 0)
+\item 
+\#define \hyperlink{a00555_a87043b8d4ea9a9e394e3d1264aefdfb0}{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET)
+\item 
+\#define \hyperlink{a00555_a671196b17a6042819cb7a9dce68b0e9c}{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET, 1)
+\item 
+\#define \hyperlink{a00555_a95da8e22aa53f2cd1cc9d4283d4b9672}{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET, 0)
+\item 
+\#define \hyperlink{a00555_a5daa6f4d099adc172c8aef3faee4b32c}{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET)
+\item 
+\#define \hyperlink{a00555_a88b0814d9f0e2f0df18597802af09d1c}{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET, 1)
+\item 
+\#define \hyperlink{a00555_a8cb3b43f684e77339bd007164eb6c5ce}{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET, 0)
+\item 
+\#define \hyperlink{a00555_a46e2dfaec49d948329540f82189da2cb}{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET)
+\item 
+\#define \hyperlink{a00555_ab92ceedc02e6ac401aa7916dc14f2631}{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-SET}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET, 1)
+\item 
+\#define \hyperlink{a00555_a201a1e3028df5f22b0bd1e9aa38d3f7b}{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-CLEAR}(addr)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET, 0)
+\item 
+\#define \hyperlink{a00555_a69babd82355c0e6d14e175fd366e2189}{GS2000TMR\_\-ALARM\_\-TS0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0))
+\item 
+\#define \hyperlink{a00555_aa274513a0957fc48af939cde4d6ce2e8}{GS2000TMR\_\-ALARM\_\-TS0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0, (value))
+\item 
+\#define \hyperlink{a00555_ab4f49a212d1033171dbc19333fe50675}{GS2000TMR\_\-ALARM\_\-TS0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0) $|$ (value))
+\item 
+\#define \hyperlink{a00555_afce3dd1d7c06427ae614bd602e8238f6}{GS2000TMR\_\-ALARM\_\-TS0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_a26b933f71989890fa8a379be04c5ca5e}{GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-0)
+\item 
+\#define \hyperlink{a00555_a86bb344f93d0bc2a3a4cac0ecd684c13}{GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-0, (value))
+\item 
+\#define \hyperlink{a00555_a79f865dd53325ea633f73aad291ce514}{GS2000TMR\_\-ALARM\_\-TS1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1))
+\item 
+\#define \hyperlink{a00555_ae2adf63ab307de794a504db442bafa2b}{GS2000TMR\_\-ALARM\_\-TS1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1, (value))
+\item 
+\#define \hyperlink{a00555_aa81e0fb5df83d0a7868cc682129fb9c4}{GS2000TMR\_\-ALARM\_\-TS1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1) $|$ (value))
+\item 
+\#define \hyperlink{a00555_a6b4976c1bdba70acfe31d83465adcc96}{GS2000TMR\_\-ALARM\_\-TS1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_aef15b549130b082669c7ebf10dfa78b3}{GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-1)
+\item 
+\#define \hyperlink{a00555_a81a4a5c05841fcf6a70f8f867028e922}{GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-1, (value))
+\item 
+\#define \hyperlink{a00555_aa58c0350a1c5859aa245fb72c5c1b320}{GS2000TMR\_\-ALARM\_\-TS2\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2))
+\item 
+\#define \hyperlink{a00555_a49074d5c35b278dc66e6d5c2a3eb494e}{GS2000TMR\_\-ALARM\_\-TS2\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2, (value))
+\item 
+\#define \hyperlink{a00555_a09daccb8883a9262263b4f094f5257a5}{GS2000TMR\_\-ALARM\_\-TS2\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2) $|$ (value))
+\item 
+\#define \hyperlink{a00555_a7fc1255e2b159bb901b7d2bc185fd211}{GS2000TMR\_\-ALARM\_\-TS2\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_a003e262f4563fe5103f5faa62e2312b0}{GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-2)
+\item 
+\#define \hyperlink{a00555_a384b0286f5bf55dc60231498867d0c50}{GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-2, (value))
+\item 
+\#define \hyperlink{a00555_a6433b53cd9fac54493d790121d9b4e15}{GS2000TMR\_\-ALARM\_\-TS3\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3))
+\item 
+\#define \hyperlink{a00555_a783b74a9d45e8cdeca11befd8ed668f4}{GS2000TMR\_\-ALARM\_\-TS3\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3, (value))
+\item 
+\#define \hyperlink{a00555_aac0f987317f20588f1fa1650c2acd8d8}{GS2000TMR\_\-ALARM\_\-TS3\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3) $|$ (value))
+\item 
+\#define \hyperlink{a00555_a6289047b4760c5e908fbf8eb43086b1a}{GS2000TMR\_\-ALARM\_\-TS3\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_a471ee25308c0c08e28db0701f72598f0}{GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-3)
+\item 
+\#define \hyperlink{a00555_a85c80dbad9c3051123314791dfa4353d}{GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-3, (value))
+\item 
+\#define \hyperlink{a00555_a78a84ff1c6fbe7b892f20fe217b5bbee}{GS2000TMR\_\-ALARM\_\-TS4\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4))
+\item 
+\#define \hyperlink{a00555_a48561ea3c57b6c641dcfc5aa65ed3675}{GS2000TMR\_\-ALARM\_\-TS4\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4, (value))
+\item 
+\#define \hyperlink{a00555_ab11541f8aa5b2299dead34c4853fbd16}{GS2000TMR\_\-ALARM\_\-TS4\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4) $|$ (value))
+\item 
+\#define \hyperlink{a00555_aa623e61eab6ee3d553a7c6ca18eafe10}{GS2000TMR\_\-ALARM\_\-TS4\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00555_a5f2d42e4dab6a54bf52041e33e264fc4}{GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-4)
+\item 
+\#define \hyperlink{a00555_a092ee2040eb39bd1fcf93e1280788908}{GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-4, (value))
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00555_a6607d13af61cb81546e328cf6abcc1a6}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR, 0)}}
+\label{a00555_a6607d13af61cb81546e328cf6abcc1a6}
+
+
+Definition at line 352 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a03f5ef6346bba587be5bc72734dbf485}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR)}}
+\label{a00555_a03f5ef6346bba587be5bc72734dbf485}
+
+
+Definition at line 348 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a894e396e95d470850e00d2499c6dac4b}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-CLEAR, 1)}}
+\label{a00555_a894e396e95d470850e00d2499c6dac4b}
+
+
+Definition at line 350 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a43da0679a158eb809a13cac0a3f8d545}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK, 0)}}
+\label{a00555_a43da0679a158eb809a13cac0a3f8d545}
+
+
+Definition at line 283 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aee4711e134a065cb407e6c5316b743af}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK)}}
+\label{a00555_aee4711e134a065cb407e6c5316b743af}
+
+
+Definition at line 279 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ad56c81cf79053fefda790626abef5d87}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-MASK, 1)}}
+\label{a00555_ad56c81cf79053fefda790626abef5d87}
+
+
+Definition at line 281 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ae24fb0626d7ce20504d0cee6a0fcaf83}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET, 0)}}
+\label{a00555_ae24fb0626d7ce20504d0cee6a0fcaf83}
+
+
+Definition at line 421 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_afa3d4c86c39820585d3cb855e5a19775}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET)}}
+\label{a00555_afa3d4c86c39820585d3cb855e5a19775}
+
+
+Definition at line 417 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ab4ee1906290f1bdc427c121d9850ca21}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-SET, 1)}}
+\label{a00555_ab4ee1906290f1bdc427c121d9850ca21}
+
+
+Definition at line 419 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a11f9420e6c0437608b17f26a91ccc059}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-STATUS\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-STATUS\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-0\_\-IRQ\_\-STATUS)}}
+\label{a00555_a11f9420e6c0437608b17f26a91ccc059}
+
+
+Definition at line 230 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a42b1811e6a36a77901b69bf03dcbdb92}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR, 0)}}
+\label{a00555_a42b1811e6a36a77901b69bf03dcbdb92}
+
+
+Definition at line 363 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a446a1908d9bec267df1489f8816c0d38}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR)}}
+\label{a00555_a446a1908d9bec267df1489f8816c0d38}
+
+
+Definition at line 359 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a40467c32df5178859149af4cc06c6831}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-CLEAR, 1)}}
+\label{a00555_a40467c32df5178859149af4cc06c6831}
+
+
+Definition at line 361 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_abb77611d6033f345295cfcc08b17a649}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK, 0)}}
+\label{a00555_abb77611d6033f345295cfcc08b17a649}
+
+
+Definition at line 294 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a66a480a744cb1da1164a95a05b9f2f74}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK)}}
+\label{a00555_a66a480a744cb1da1164a95a05b9f2f74}
+
+
+Definition at line 290 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a08d24bb59b201710ccd1d24d9387ca1a}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-MASK, 1)}}
+\label{a00555_a08d24bb59b201710ccd1d24d9387ca1a}
+
+
+Definition at line 292 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a35b10c13b94976777445adb3c2cd64e2}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET, 0)}}
+\label{a00555_a35b10c13b94976777445adb3c2cd64e2}
+
+
+Definition at line 432 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_abfda9928b1bb4b555b52d0ceab7cb8d5}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET)}}
+\label{a00555_abfda9928b1bb4b555b52d0ceab7cb8d5}
+
+
+Definition at line 428 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a34812d67b1fd74f499f9818495b9a7d8}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-SET, 1)}}
+\label{a00555_a34812d67b1fd74f499f9818495b9a7d8}
+
+
+Definition at line 430 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a22883bf7bca9e801ff2525bf288d61e9}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-STATUS\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-STATUS\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-1\_\-IRQ\_\-STATUS)}}
+\label{a00555_a22883bf7bca9e801ff2525bf288d61e9}
+
+
+Definition at line 237 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a99b8ad929e239b33aa78668d16fd0d83}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR, 0)}}
+\label{a00555_a99b8ad929e239b33aa78668d16fd0d83}
+
+
+Definition at line 374 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a0347ff9bff03384c7268b6653612d23e}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR)}}
+\label{a00555_a0347ff9bff03384c7268b6653612d23e}
+
+
+Definition at line 370 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aad0a1f8f8c0dca73cce135dcba6ea726}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-CLEAR, 1)}}
+\label{a00555_aad0a1f8f8c0dca73cce135dcba6ea726}
+
+
+Definition at line 372 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ae6a3f772dc9fcafa4d4c3d6d423041b2}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK, 0)}}
+\label{a00555_ae6a3f772dc9fcafa4d4c3d6d423041b2}
+
+
+Definition at line 305 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a2ee01b8d874d75edd2925d560bdc150f}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK)}}
+\label{a00555_a2ee01b8d874d75edd2925d560bdc150f}
+
+
+Definition at line 301 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aa06ae636b99c9d234c250ff0db4d7266}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-MASK, 1)}}
+\label{a00555_aa06ae636b99c9d234c250ff0db4d7266}
+
+
+Definition at line 303 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a95da8e22aa53f2cd1cc9d4283d4b9672}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET, 0)}}
+\label{a00555_a95da8e22aa53f2cd1cc9d4283d4b9672}
+
+
+Definition at line 443 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a87043b8d4ea9a9e394e3d1264aefdfb0}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET)}}
+\label{a00555_a87043b8d4ea9a9e394e3d1264aefdfb0}
+
+
+Definition at line 439 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a671196b17a6042819cb7a9dce68b0e9c}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-SET, 1)}}
+\label{a00555_a671196b17a6042819cb7a9dce68b0e9c}
+
+
+Definition at line 441 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aef0c0bda2c9fadb8e69f6477dba7a45a}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-STATUS\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-STATUS\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-2\_\-IRQ\_\-STATUS)}}
+\label{a00555_aef0c0bda2c9fadb8e69f6477dba7a45a}
+
+
+Definition at line 244 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a1a6ac23a06300bbf5ffeab15168af1cc}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR, 0)}}
+\label{a00555_a1a6ac23a06300bbf5ffeab15168af1cc}
+
+
+Definition at line 385 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a183927b3888dbd2b69a10a759541daa2}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR)}}
+\label{a00555_a183927b3888dbd2b69a10a759541daa2}
+
+
+Definition at line 381 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ac90807dfc73aff3d7cdd848abcb0a03e}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-CLEAR, 1)}}
+\label{a00555_ac90807dfc73aff3d7cdd848abcb0a03e}
+
+
+Definition at line 383 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aed6e6ab75ceb5a3cf32e9923768218f8}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK, 0)}}
+\label{a00555_aed6e6ab75ceb5a3cf32e9923768218f8}
+
+
+Definition at line 316 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ac4d3fbe6b8b0625e770a1d83923cc1a5}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK)}}
+\label{a00555_ac4d3fbe6b8b0625e770a1d83923cc1a5}
+
+
+Definition at line 312 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ad94430d9b13da38bac1ade2404770f01}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-MASK, 1)}}
+\label{a00555_ad94430d9b13da38bac1ade2404770f01}
+
+
+Definition at line 314 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a8cb3b43f684e77339bd007164eb6c5ce}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET, 0)}}
+\label{a00555_a8cb3b43f684e77339bd007164eb6c5ce}
+
+
+Definition at line 454 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a5daa6f4d099adc172c8aef3faee4b32c}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET)}}
+\label{a00555_a5daa6f4d099adc172c8aef3faee4b32c}
+
+
+Definition at line 450 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a88b0814d9f0e2f0df18597802af09d1c}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-SET, 1)}}
+\label{a00555_a88b0814d9f0e2f0df18597802af09d1c}
+
+
+Definition at line 452 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a3053954b389c73531e447f46fb9f1888}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-STATUS\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-STATUS\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-3\_\-IRQ\_\-STATUS)}}
+\label{a00555_a3053954b389c73531e447f46fb9f1888}
+
+
+Definition at line 251 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ab8f7e7165f1661d91152f0a965581cb4}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR, 0)}}
+\label{a00555_ab8f7e7165f1661d91152f0a965581cb4}
+
+
+Definition at line 396 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a6989d367fde281bc0df176053c36bc60}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR)}}
+\label{a00555_a6989d367fde281bc0df176053c36bc60}
+
+
+Definition at line 392 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a601d3cc28755dffeb8eff9df11803d2d}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-CLEAR, 1)}}
+\label{a00555_a601d3cc28755dffeb8eff9df11803d2d}
+
+
+Definition at line 394 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a2cf9f570d208a6663c24670a5a5716d8}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK, 0)}}
+\label{a00555_a2cf9f570d208a6663c24670a5a5716d8}
+
+
+Definition at line 327 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a457102de8bf514ccbb2abf8cf736f9ca}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK)}}
+\label{a00555_a457102de8bf514ccbb2abf8cf736f9ca}
+
+
+Definition at line 323 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a63b5941e43ed014034b90e87feee846b}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-MASK, 1)}}
+\label{a00555_a63b5941e43ed014034b90e87feee846b}
+
+
+Definition at line 325 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a201a1e3028df5f22b0bd1e9aa38d3f7b}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-CLEAR}}
+\index{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET, 0)}}
+\label{a00555_a201a1e3028df5f22b0bd1e9aa38d3f7b}
+
+
+Definition at line 465 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a46e2dfaec49d948329540f82189da2cb}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET)}}
+\label{a00555_a46e2dfaec49d948329540f82189da2cb}
+
+
+Definition at line 461 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ab92ceedc02e6ac401aa7916dc14f2631}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-SET, 1)}}
+\label{a00555_ab92ceedc02e6ac401aa7916dc14f2631}
+
+
+Definition at line 463 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a42b8c433eaa29f4dcaba1218f649908f}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-STATUS\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-STATUS\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-4\_\-IRQ\_\-STATUS)}}
+\label{a00555_a42b8c433eaa29f4dcaba1218f649908f}
+
+
+Definition at line 258 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a4bb1e5954ceae9ed5dbb9d1438298a2c}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-CLEARBIT}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR) \& ($\sim$(value)))}}
+\label{a00555_a4bb1e5954ceae9ed5dbb9d1438298a2c}
+
+
+Definition at line 341 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a38524b732784c0c35cae949bbf52be91}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR))}}
+\label{a00555_a38524b732784c0c35cae949bbf52be91}
+
+
+Definition at line 335 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_af29b33e008a25b7d859cf18538bd45da}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR, (value))}}
+\label{a00555_af29b33e008a25b7d859cf18538bd45da}
+
+
+Definition at line 337 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a3bb4dc95c973f54afa4ff4818b2ba89e}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SETBIT}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-CLEAR) $|$ (value))}}
+\label{a00555_a3bb4dc95c973f54afa4ff4818b2ba89e}
+
+
+Definition at line 339 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a7d62dcf039af18d7a47cf52676ae05b5}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-CLEARBIT}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK) \& ($\sim$(value)))}}
+\label{a00555_a7d62dcf039af18d7a47cf52676ae05b5}
+
+
+Definition at line 272 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aed8d90891943e431fb745cb2e8cb14fd}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK))}}
+\label{a00555_aed8d90891943e431fb745cb2e8cb14fd}
+
+
+Definition at line 266 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ab42472d22bd9f283e74ee416fddd7725}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK, (value))}}
+\label{a00555_ab42472d22bd9f283e74ee416fddd7725}
+
+
+Definition at line 268 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_af6d92699aa8c392884fbb78362c1c637}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SETBIT}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-MASK) $|$ (value))}}
+\label{a00555_af6d92699aa8c392884fbb78362c1c637}
+
+
+Definition at line 270 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a331d9e838a80e296e71be4e9b3792242}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-CLEARBIT}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET) \& ($\sim$(value)))}}
+\label{a00555_a331d9e838a80e296e71be4e9b3792242}
+
+
+Definition at line 410 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ab4f03afd96eb5936c8c87ccf87162189}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET))}}
+\label{a00555_ab4f03afd96eb5936c8c87ccf87162189}
+
+
+Definition at line 404 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aab654c90512b68a2213b7ac5ebdf9058}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET, (value))}}
+\label{a00555_aab654c90512b68a2213b7ac5ebdf9058}
+
+
+Definition at line 406 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_abdca40c470a9d857e3bbd65170bd114c}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SETBIT}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-SET\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-SET) $|$ (value))}}
+\label{a00555_abdca40c470a9d857e3bbd65170bd114c}
+
+
+Definition at line 408 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a236827c008811427c22ac3ae1d41d687}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-STATUS\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-ALARM\_\-IRQ\_\-STATUS\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-IRQ\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-IRQ\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-IRQ\_\-STATUS))}}
+\label{a00555_a236827c008811427c22ac3ae1d41d687}
+
+
+Definition at line 223 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_afce3dd1d7c06427ae614bd602e8238f6}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS0\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-TS0\_\-CLEARBIT}}
+\index{GS2000TMR\_\-ALARM\_\-TS0\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-TS0\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0) \& ($\sim$(value)))}}
+\label{a00555_afce3dd1d7c06427ae614bd602e8238f6}
+
+
+Definition at line 479 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a69babd82355c0e6d14e175fd366e2189}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS0\_\-GET@{GS2000TMR\_\-ALARM\_\-TS0\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-TS0\_\-GET@{GS2000TMR\_\-ALARM\_\-TS0\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0))}}
+\label{a00555_a69babd82355c0e6d14e175fd366e2189}
+
+
+Definition at line 473 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aa274513a0957fc48af939cde4d6ce2e8}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS0\_\-SET@{GS2000TMR\_\-ALARM\_\-TS0\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-TS0\_\-SET@{GS2000TMR\_\-ALARM\_\-TS0\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0, (value))}}
+\label{a00555_aa274513a0957fc48af939cde4d6ce2e8}
+
+
+Definition at line 475 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ab4f49a212d1033171dbc19333fe50675}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS0\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-TS0\_\-SETBIT}}
+\index{GS2000TMR\_\-ALARM\_\-TS0\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-TS0\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS0) $|$ (value))}}
+\label{a00555_ab4f49a212d1033171dbc19333fe50675}
+
+
+Definition at line 477 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a6b4976c1bdba70acfe31d83465adcc96}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS1\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-TS1\_\-CLEARBIT}}
+\index{GS2000TMR\_\-ALARM\_\-TS1\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-TS1\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1) \& ($\sim$(value)))}}
+\label{a00555_a6b4976c1bdba70acfe31d83465adcc96}
+
+
+Definition at line 502 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a79f865dd53325ea633f73aad291ce514}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS1\_\-GET@{GS2000TMR\_\-ALARM\_\-TS1\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-TS1\_\-GET@{GS2000TMR\_\-ALARM\_\-TS1\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1))}}
+\label{a00555_a79f865dd53325ea633f73aad291ce514}
+
+
+Definition at line 496 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ae2adf63ab307de794a504db442bafa2b}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS1\_\-SET@{GS2000TMR\_\-ALARM\_\-TS1\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-TS1\_\-SET@{GS2000TMR\_\-ALARM\_\-TS1\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1, (value))}}
+\label{a00555_ae2adf63ab307de794a504db442bafa2b}
+
+
+Definition at line 498 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aa81e0fb5df83d0a7868cc682129fb9c4}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS1\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-TS1\_\-SETBIT}}
+\index{GS2000TMR\_\-ALARM\_\-TS1\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-TS1\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS1) $|$ (value))}}
+\label{a00555_aa81e0fb5df83d0a7868cc682129fb9c4}
+
+
+Definition at line 500 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a7fc1255e2b159bb901b7d2bc185fd211}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS2\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-TS2\_\-CLEARBIT}}
+\index{GS2000TMR\_\-ALARM\_\-TS2\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-TS2\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS2\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS2\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2) \& ($\sim$(value)))}}
+\label{a00555_a7fc1255e2b159bb901b7d2bc185fd211}
+
+
+Definition at line 525 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aa58c0350a1c5859aa245fb72c5c1b320}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS2\_\-GET@{GS2000TMR\_\-ALARM\_\-TS2\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-TS2\_\-GET@{GS2000TMR\_\-ALARM\_\-TS2\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2))}}
+\label{a00555_aa58c0350a1c5859aa245fb72c5c1b320}
+
+
+Definition at line 519 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a49074d5c35b278dc66e6d5c2a3eb494e}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS2\_\-SET@{GS2000TMR\_\-ALARM\_\-TS2\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-TS2\_\-SET@{GS2000TMR\_\-ALARM\_\-TS2\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2, (value))}}
+\label{a00555_a49074d5c35b278dc66e6d5c2a3eb494e}
+
+
+Definition at line 521 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a09daccb8883a9262263b4f094f5257a5}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS2\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-TS2\_\-SETBIT}}
+\index{GS2000TMR\_\-ALARM\_\-TS2\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-TS2\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS2\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS2\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS2) $|$ (value))}}
+\label{a00555_a09daccb8883a9262263b4f094f5257a5}
+
+
+Definition at line 523 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a6289047b4760c5e908fbf8eb43086b1a}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS3\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-TS3\_\-CLEARBIT}}
+\index{GS2000TMR\_\-ALARM\_\-TS3\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-TS3\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS3\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS3\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3) \& ($\sim$(value)))}}
+\label{a00555_a6289047b4760c5e908fbf8eb43086b1a}
+
+
+Definition at line 548 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a6433b53cd9fac54493d790121d9b4e15}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS3\_\-GET@{GS2000TMR\_\-ALARM\_\-TS3\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-TS3\_\-GET@{GS2000TMR\_\-ALARM\_\-TS3\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS3\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS3\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3))}}
+\label{a00555_a6433b53cd9fac54493d790121d9b4e15}
+
+
+Definition at line 542 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a783b74a9d45e8cdeca11befd8ed668f4}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS3\_\-SET@{GS2000TMR\_\-ALARM\_\-TS3\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-TS3\_\-SET@{GS2000TMR\_\-ALARM\_\-TS3\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS3\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS3\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3, (value))}}
+\label{a00555_a783b74a9d45e8cdeca11befd8ed668f4}
+
+
+Definition at line 544 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aac0f987317f20588f1fa1650c2acd8d8}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS3\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-TS3\_\-SETBIT}}
+\index{GS2000TMR\_\-ALARM\_\-TS3\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-TS3\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS3\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS3\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS3) $|$ (value))}}
+\label{a00555_aac0f987317f20588f1fa1650c2acd8d8}
+
+
+Definition at line 546 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aa623e61eab6ee3d553a7c6ca18eafe10}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS4\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-TS4\_\-CLEARBIT}}
+\index{GS2000TMR\_\-ALARM\_\-TS4\_\-CLEARBIT@{GS2000TMR\_\-ALARM\_\-TS4\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS4\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS4\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4) \& ($\sim$(value)))}}
+\label{a00555_aa623e61eab6ee3d553a7c6ca18eafe10}
+
+
+Definition at line 571 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a78a84ff1c6fbe7b892f20fe217b5bbee}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS4\_\-GET@{GS2000TMR\_\-ALARM\_\-TS4\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-TS4\_\-GET@{GS2000TMR\_\-ALARM\_\-TS4\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS4\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS4\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4))}}
+\label{a00555_a78a84ff1c6fbe7b892f20fe217b5bbee}
+
+
+Definition at line 565 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a48561ea3c57b6c641dcfc5aa65ed3675}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS4\_\-SET@{GS2000TMR\_\-ALARM\_\-TS4\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-TS4\_\-SET@{GS2000TMR\_\-ALARM\_\-TS4\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS4\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS4\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4, (value))}}
+\label{a00555_a48561ea3c57b6c641dcfc5aa65ed3675}
+
+
+Definition at line 567 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ab11541f8aa5b2299dead34c4853fbd16}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS4\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-TS4\_\-SETBIT}}
+\index{GS2000TMR\_\-ALARM\_\-TS4\_\-SETBIT@{GS2000TMR\_\-ALARM\_\-TS4\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS4\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS4\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-ALARM\_\-TS4) $|$ (value))}}
+\label{a00555_ab11541f8aa5b2299dead34c4853fbd16}
+
+
+Definition at line 569 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a26b933f71989890fa8a379be04c5ca5e}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-GET@{GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-GET@{GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-0)}}
+\label{a00555_a26b933f71989890fa8a379be04c5ca5e}
+
+
+Definition at line 486 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a86bb344f93d0bc2a3a4cac0ecd684c13}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-SET@{GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-SET@{GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-0, (value))}}
+\label{a00555_a86bb344f93d0bc2a3a4cac0ecd684c13}
+
+
+Definition at line 488 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aef15b549130b082669c7ebf10dfa78b3}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-GET@{GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-GET@{GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-1)}}
+\label{a00555_aef15b549130b082669c7ebf10dfa78b3}
+
+
+Definition at line 509 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a81a4a5c05841fcf6a70f8f867028e922}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-SET@{GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-SET@{GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-1, (value))}}
+\label{a00555_a81a4a5c05841fcf6a70f8f867028e922}
+
+
+Definition at line 511 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a003e262f4563fe5103f5faa62e2312b0}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-GET@{GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-GET@{GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-2)}}
+\label{a00555_a003e262f4563fe5103f5faa62e2312b0}
+
+
+Definition at line 532 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a384b0286f5bf55dc60231498867d0c50}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-SET@{GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-SET@{GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS\_\-2\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-2, (value))}}
+\label{a00555_a384b0286f5bf55dc60231498867d0c50}
+
+
+Definition at line 534 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a471ee25308c0c08e28db0701f72598f0}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-GET@{GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-GET@{GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-3)}}
+\label{a00555_a471ee25308c0c08e28db0701f72598f0}
+
+
+Definition at line 555 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a85c80dbad9c3051123314791dfa4353d}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-SET@{GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-SET@{GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS\_\-3\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-3, (value))}}
+\label{a00555_a85c80dbad9c3051123314791dfa4353d}
+
+
+Definition at line 557 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a5f2d42e4dab6a54bf52041e33e264fc4}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-GET@{GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-GET}}
+\index{GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-GET@{GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-4)}}
+\label{a00555_a5f2d42e4dab6a54bf52041e33e264fc4}
+
+
+Definition at line 578 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a092ee2040eb39bd1fcf93e1280788908}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-SET@{GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-SET}}
+\index{GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-SET@{GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-ALARM\_\-TS\_\-4\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-ALARM\_\-TS\_\-4, (value))}}
+\label{a00555_a092ee2040eb39bd1fcf93e1280788908}
+
+
+Definition at line 580 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a05411eca54bddca6b7f65b78d8171d0f}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-CLEAR}}
+\index{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-CLEAR@{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR, 0)}}
+\label{a00555_a05411eca54bddca6b7f65b78d8171d0f}
+
+
+Definition at line 190 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aead3b1f61dfef8d726570badedaa1855}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-GET}}
+\index{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR)}}
+\label{a00555_aead3b1f61dfef8d726570badedaa1855}
+
+
+Definition at line 186 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ab513e7349b1133860284eb30e889d755}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-SET}}
+\index{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-CLEAR, 1)}}
+\label{a00555_ab513e7349b1133860284eb30e889d755}
+
+
+Definition at line 188 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a4b6a10d7d61294a1123a82b630967375}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-CLEAR}}
+\index{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-CLEAR@{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-MASK, 0)}}
+\label{a00555_a4b6a10d7d61294a1123a82b630967375}
+
+
+Definition at line 165 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a828f0e72457fae4c0def4bcc98d739c3}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-GET}}
+\index{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-MASK)}}
+\label{a00555_a828f0e72457fae4c0def4bcc98d739c3}
+
+
+Definition at line 161 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a0a4d701cfe19980c971f93b4156d77b6}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-SET}}
+\index{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-IRQ\_\-MASK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-MASK, 1)}}
+\label{a00555_a0a4d701cfe19980c971f93b4156d77b6}
+
+
+Definition at line 163 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_acffe0489a99b8124869d07352f890543}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-CLEAR}}
+\index{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-CLEAR@{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-CLEAR}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-CLEAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-CLEAR(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-SET, 0)}}
+\label{a00555_acffe0489a99b8124869d07352f890543}
+
+
+Definition at line 215 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_af3869f35db057459b8b8ee0cd2cb5ac0}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-GET}}
+\index{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-SET)}}
+\label{a00555_af3869f35db057459b8b8ee0cd2cb5ac0}
+
+
+Definition at line 211 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a7bf5920ba2d71e5e56803ce3e028db35}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-SET}}
+\index{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-IRQ\_\-SET\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-SET, 1)}}
+\label{a00555_a7bf5920ba2d71e5e56803ce3e028db35}
+
+
+Definition at line 213 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a3143ac752854ee0f6c9bc91c5d0ff5a8}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-COMP\_\-IRQ\_\-STATUS\_\-GET}}
+\index{GS2000TMR\_\-COMP\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-COMP\_\-IRQ\_\-STATUS\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-IRQ\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-IRQ\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-IRQ\_\-STATUS)}}
+\label{a00555_a3143ac752854ee0f6c9bc91c5d0ff5a8}
+
+
+Definition at line 140 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ae4774e096dc740d4aa0cdd6eae8307ce}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-LSB\_\-GET@{GS2000TMR\_\-COMP\_\-LSB\_\-GET}}
+\index{GS2000TMR\_\-COMP\_\-LSB\_\-GET@{GS2000TMR\_\-COMP\_\-LSB\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-LSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-LSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-LSB)}}
+\label{a00555_ae4774e096dc740d4aa0cdd6eae8307ce}
+
+
+Definition at line 100 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a3bd2f5a56abb22256f44a1ed21807a6e}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-LSB\_\-SET@{GS2000TMR\_\-COMP\_\-LSB\_\-SET}}
+\index{GS2000TMR\_\-COMP\_\-LSB\_\-SET@{GS2000TMR\_\-COMP\_\-LSB\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-LSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-LSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-LSB, (value))}}
+\label{a00555_a3bd2f5a56abb22256f44a1ed21807a6e}
+
+
+Definition at line 102 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ad64a6d18fab173740cb81375752fee16}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-MSB\_\-GET@{GS2000TMR\_\-COMP\_\-MSB\_\-GET}}
+\index{GS2000TMR\_\-COMP\_\-MSB\_\-GET@{GS2000TMR\_\-COMP\_\-MSB\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-MSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-MSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-MSB)}}
+\label{a00555_ad64a6d18fab173740cb81375752fee16}
+
+
+Definition at line 123 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aec5315119d651ca4ac8af92a65decadf}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMP\_\-MSB\_\-SET@{GS2000TMR\_\-COMP\_\-MSB\_\-SET}}
+\index{GS2000TMR\_\-COMP\_\-MSB\_\-SET@{GS2000TMR\_\-COMP\_\-MSB\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMP\_\-MSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMP\_\-MSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COMP\_\-MSB, (value))}}
+\label{a00555_aec5315119d651ca4ac8af92a65decadf}
+
+
+Definition at line 125 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a83537c4231504b49555364d32f615f3a}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-CLEARBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-CLEARBIT}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-CLEARBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR) \& ($\sim$(value)))}}
+\label{a00555_a83537c4231504b49555364d32f615f3a}
+
+
+Definition at line 179 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a235c4b15015a5e1e15b9cf0c674139df}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-GET}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-GET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR))}}
+\label{a00555_a235c4b15015a5e1e15b9cf0c674139df}
+
+
+Definition at line 173 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ac0c6b40905e1d329ff2cd86551a37bd1}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SET}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR, (value))}}
+\label{a00555_ac0c6b40905e1d329ff2cd86551a37bd1}
+
+
+Definition at line 175 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a9567b78e454e6e6eda9d5e839783af56}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SETBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SETBIT}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SETBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-CLEAR) $|$ (value))}}
+\label{a00555_a9567b78e454e6e6eda9d5e839783af56}
+
+
+Definition at line 177 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aeb6c750f9ed6c3f8bf0a3fa1f841f28f}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-CLEARBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-CLEARBIT}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-CLEARBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK) \& ($\sim$(value)))}}
+\label{a00555_aeb6c750f9ed6c3f8bf0a3fa1f841f28f}
+
+
+Definition at line 154 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a2c94f9f2d799bd49eadbe2a87ec464ac}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-GET}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-GET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK))}}
+\label{a00555_a2c94f9f2d799bd49eadbe2a87ec464ac}
+
+
+Definition at line 148 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a1688769f11c4264d42e78f55872b93b6}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SET}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK, (value))}}
+\label{a00555_a1688769f11c4264d42e78f55872b93b6}
+
+
+Definition at line 150 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a7ee122359598ac37d7f468389196f7b2}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SETBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SETBIT}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SETBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-MASK) $|$ (value))}}
+\label{a00555_a7ee122359598ac37d7f468389196f7b2}
+
+
+Definition at line 152 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a200976b4cfb2b17863b6a768071345dc}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-CLEARBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-CLEARBIT}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-CLEARBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET) \& ($\sim$(value)))}}
+\label{a00555_a200976b4cfb2b17863b6a768071345dc}
+
+
+Definition at line 204 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a915faf9c4f44ffdd339be938aa87f842}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-GET}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-GET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET))}}
+\label{a00555_a915faf9c4f44ffdd339be938aa87f842}
+
+
+Definition at line 198 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ab2b848551ab4ac428be3f1e4b3836953}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SET}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET, (value))}}
+\label{a00555_ab2b848551ab4ac428be3f1e4b3836953}
+
+
+Definition at line 200 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ac869201b2a5270568c6a18ca325dbc39}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SETBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SETBIT}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SETBIT@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-SET) $|$ (value))}}
+\label{a00555_ac869201b2a5270568c6a18ca325dbc39}
+
+
+Definition at line 202 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a6f7eeb97d23c592a23ee9d8615dc3997}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-STATUS\_\-GET}}
+\index{GS2000TMR\_\-COMPARE\_\-IRQ\_\-STATUS\_\-GET@{GS2000TMR\_\-COMPARE\_\-IRQ\_\-STATUS\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-IRQ\_\-STATUS\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-IRQ\_\-STATUS\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-IRQ\_\-STATUS))}}
+\label{a00555_a6f7eeb97d23c592a23ee9d8615dc3997}
+
+
+Definition at line 133 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a9e11102d98a0c5d5ce81a62b1ec5825a}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-LSB\_\-CLEARBIT@{GS2000TMR\_\-COMPARE\_\-LSB\_\-CLEARBIT}}
+\index{GS2000TMR\_\-COMPARE\_\-LSB\_\-CLEARBIT@{GS2000TMR\_\-COMPARE\_\-LSB\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-LSB\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-LSB\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB) \& ($\sim$(value)))}}
+\label{a00555_a9e11102d98a0c5d5ce81a62b1ec5825a}
+
+
+Definition at line 93 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ac37969395a3ed89d8d0dcb03c0e0d8e3}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-LSB\_\-GET@{GS2000TMR\_\-COMPARE\_\-LSB\_\-GET}}
+\index{GS2000TMR\_\-COMPARE\_\-LSB\_\-GET@{GS2000TMR\_\-COMPARE\_\-LSB\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-LSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-LSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB))}}
+\label{a00555_ac37969395a3ed89d8d0dcb03c0e0d8e3}
+
+
+Definition at line 87 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a0d5ece214f6fa7e590d012422b7dc75d}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-LSB\_\-SET@{GS2000TMR\_\-COMPARE\_\-LSB\_\-SET}}
+\index{GS2000TMR\_\-COMPARE\_\-LSB\_\-SET@{GS2000TMR\_\-COMPARE\_\-LSB\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-LSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-LSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB, (value))}}
+\label{a00555_a0d5ece214f6fa7e590d012422b7dc75d}
+
+
+Definition at line 89 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a3a240e6550d4e142d411bc1eb4872fbb}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-LSB\_\-SETBIT@{GS2000TMR\_\-COMPARE\_\-LSB\_\-SETBIT}}
+\index{GS2000TMR\_\-COMPARE\_\-LSB\_\-SETBIT@{GS2000TMR\_\-COMPARE\_\-LSB\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-LSB\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-LSB\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-LSB) $|$ (value))}}
+\label{a00555_a3a240e6550d4e142d411bc1eb4872fbb}
+
+
+Definition at line 91 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a47895966f68a992ddb25d2e9a02f840d}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-MSB\_\-CLEARBIT@{GS2000TMR\_\-COMPARE\_\-MSB\_\-CLEARBIT}}
+\index{GS2000TMR\_\-COMPARE\_\-MSB\_\-CLEARBIT@{GS2000TMR\_\-COMPARE\_\-MSB\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-MSB\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-MSB\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB) \& ($\sim$(value)))}}
+\label{a00555_a47895966f68a992ddb25d2e9a02f840d}
+
+
+Definition at line 116 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ad6916c15ab1ca076e16bc3072447a39e}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-MSB\_\-GET@{GS2000TMR\_\-COMPARE\_\-MSB\_\-GET}}
+\index{GS2000TMR\_\-COMPARE\_\-MSB\_\-GET@{GS2000TMR\_\-COMPARE\_\-MSB\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-MSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-MSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB))}}
+\label{a00555_ad6916c15ab1ca076e16bc3072447a39e}
+
+
+Definition at line 110 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ae607e49b9826daa219225cb7269750e8}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-MSB\_\-SET@{GS2000TMR\_\-COMPARE\_\-MSB\_\-SET}}
+\index{GS2000TMR\_\-COMPARE\_\-MSB\_\-SET@{GS2000TMR\_\-COMPARE\_\-MSB\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-MSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-MSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB, (value))}}
+\label{a00555_ae607e49b9826daa219225cb7269750e8}
+
+
+Definition at line 112 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a90aacbff909a79b07b4ae30a1d050419}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COMPARE\_\-MSB\_\-SETBIT@{GS2000TMR\_\-COMPARE\_\-MSB\_\-SETBIT}}
+\index{GS2000TMR\_\-COMPARE\_\-MSB\_\-SETBIT@{GS2000TMR\_\-COMPARE\_\-MSB\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COMPARE\_\-MSB\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COMPARE\_\-MSB\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-COMPARE\_\-MSB) $|$ (value))}}
+\label{a00555_a90aacbff909a79b07b4ae30a1d050419}
+
+
+Definition at line 114 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a664191c2ed5762ca295d73e60117bf04}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COUNT\_\-LSB\_\-GET@{GS2000TMR\_\-COUNT\_\-LSB\_\-GET}}
+\index{GS2000TMR\_\-COUNT\_\-LSB\_\-GET@{GS2000TMR\_\-COUNT\_\-LSB\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COUNT\_\-LSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COUNT\_\-LSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COUNT\_\-LSB)}}
+\label{a00555_a664191c2ed5762ca295d73e60117bf04}
+
+
+Definition at line 41 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a50c97fb02a4ab8a77b583cd91a2eaee8}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COUNT\_\-LSB\_\-SET@{GS2000TMR\_\-COUNT\_\-LSB\_\-SET}}
+\index{GS2000TMR\_\-COUNT\_\-LSB\_\-SET@{GS2000TMR\_\-COUNT\_\-LSB\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COUNT\_\-LSB\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COUNT\_\-LSB\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COUNT\_\-LSB, (value))}}
+\label{a00555_a50c97fb02a4ab8a77b583cd91a2eaee8}
+
+
+Definition at line 43 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a4ac420b0b1523d8072ed1e9a0ff2406d}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COUNT\_\-MSB\_\-GET@{GS2000TMR\_\-COUNT\_\-MSB\_\-GET}}
+\index{GS2000TMR\_\-COUNT\_\-MSB\_\-GET@{GS2000TMR\_\-COUNT\_\-MSB\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COUNT\_\-MSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COUNT\_\-MSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COUNT\_\-MSB)}}
+\label{a00555_a4ac420b0b1523d8072ed1e9a0ff2406d}
+
+
+Definition at line 58 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a8a4cad5ea0774d9635c6b530485a9ab6}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-COUNT\_\-VALID\_\-SET@{GS2000TMR\_\-COUNT\_\-VALID\_\-SET}}
+\index{GS2000TMR\_\-COUNT\_\-VALID\_\-SET@{GS2000TMR\_\-COUNT\_\-VALID\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-COUNT\_\-VALID\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-COUNT\_\-VALID\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GS2000TMR\_\-COUNT\_\-VALID, 1)}}
+\label{a00555_a8a4cad5ea0774d9635c6b530485a9ab6}
+
+
+Definition at line 79 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a0b52d1fcab116de6ecb5cd71e74c1777}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-PCOUNT\_\-LSB\_\-GET@{GS2000TMR\_\-PCOUNT\_\-LSB\_\-GET}}
+\index{GS2000TMR\_\-PCOUNT\_\-LSB\_\-GET@{GS2000TMR\_\-PCOUNT\_\-LSB\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-PCOUNT\_\-LSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-PCOUNT\_\-LSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-PCOUNT\_\-LSB))}}
+\label{a00555_a0b52d1fcab116de6ecb5cd71e74c1777}
+
+
+Definition at line 34 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_aac040c3a9540039cd7fa5272975ae67d}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-PCOUNT\_\-MSB\_\-GET@{GS2000TMR\_\-PCOUNT\_\-MSB\_\-GET}}
+\index{GS2000TMR\_\-PCOUNT\_\-MSB\_\-GET@{GS2000TMR\_\-PCOUNT\_\-MSB\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-PCOUNT\_\-MSB\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-PCOUNT\_\-MSB\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-PCOUNT\_\-MSB))}}
+\label{a00555_aac040c3a9540039cd7fa5272975ae67d}
+
+
+Definition at line 51 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a09c648fbb501aabd4caf6bf1ee09952d}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-VALID\_\-CLEARBIT@{GS2000TMR\_\-VALID\_\-CLEARBIT}}
+\index{GS2000TMR\_\-VALID\_\-CLEARBIT@{GS2000TMR\_\-VALID\_\-CLEARBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-VALID\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-VALID\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID) \& ($\sim$(value)))}}
+\label{a00555_a09c648fbb501aabd4caf6bf1ee09952d}
+
+
+Definition at line 72 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_ae1e2eefd932955c284ce1dda0f4811a8}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-VALID\_\-GET@{GS2000TMR\_\-VALID\_\-GET}}
+\index{GS2000TMR\_\-VALID\_\-GET@{GS2000TMR\_\-VALID\_\-GET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-VALID\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-VALID\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID))}}
+\label{a00555_ae1e2eefd932955c284ce1dda0f4811a8}
+
+
+Definition at line 66 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a41da72752555e6d4ac79458b5913a795}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-VALID\_\-SET@{GS2000TMR\_\-VALID\_\-SET}}
+\index{GS2000TMR\_\-VALID\_\-SET@{GS2000TMR\_\-VALID\_\-SET}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-VALID\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-VALID\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID, (value))}}
+\label{a00555_a41da72752555e6d4ac79458b5913a795}
+
+
+Definition at line 68 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+
+\hypertarget{a00555_a671cd21b6043447f1586626552771d3c}{
+\index{gsn\_\-reg\_\-gs2000tmr\_\-op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}!GS2000TMR\_\-VALID\_\-SETBIT@{GS2000TMR\_\-VALID\_\-SETBIT}}
+\index{GS2000TMR\_\-VALID\_\-SETBIT@{GS2000TMR\_\-VALID\_\-SETBIT}!gsn_reg_gs2000tmr_op.h@{gsn\_\-reg\_\-gs2000tmr\_\-op.h}}
+\subsubsection[{GS2000TMR\_\-VALID\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GS2000TMR\_\-VALID\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GS2000TMR\_\-VALID) $|$ (value))}}
+\label{a00555_a671cd21b6043447f1586626552771d3c}
+
+
+Definition at line 70 of file gsn\_\-reg\_\-gs2000tmr\_\-op.h.
+

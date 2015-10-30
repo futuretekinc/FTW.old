@@ -1,0 +1,218 @@
+\hypertarget{a00098}{
+\section{GSN\_\-I2C Struct Reference}
+\label{a00098}\index{GSN\_\-I2C@{GSN\_\-I2C}}
+}
+
+
+I2C Data / Status Structure.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-i2c.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00098_a733fb7afbc3bd37a546de0e37c12f150}{pReg}
+\item 
+\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00098_acaa70240adc835acc872ba55e3bf494d}{readFlag}
+\item 
+\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00098_a549205d9ecbb1ed7a82528163952fd6c}{writeFlag}
+\item 
+\hyperlink{a00649_ga72605883ea904f4ee6c310a25142a0ab}{GSN\_\-I2C\_\-MS\_\-MODE\_\-T} \hyperlink{a00098_ab6c0e135c554375f2356d63427904425}{masterOrSlave}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00098_a8f9a58f073e6e06f613db1a7c471ed1a}{DataWriteBuffer}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00098_ac7efaea2646c7c874764140d2c15894e}{DataReadBuffer}
+\item 
+\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} \hyperlink{a00098_a9fe2614928fcf7fb1cd481dea841923d}{synchronousSemId}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00098_ab3fffdb20c15ad5ef5d0ca8b48de5c58}{numBytesToTransfer}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00098_a3c64997ab8583dffe330d8ffd3097f42}{numBytesTransferred}
+\item 
+\hyperlink{a00649_gac8a6faecb999f4f891344abbbfc08914}{GSN\_\-I2C\_\-CALLBACK\_\-FP} \hyperlink{a00098_a864e2e8a49d07675db4d75a711b96c24}{readWriteCallBack}
+\item 
+VOID $\ast$ \hyperlink{a00098_ae62f152f1a2f6e8ecad552f10d250166}{ctxt}
+\item 
+\hyperlink{a00649_gab1a00d4a51461218cbbafc33b29ddd89}{GSN\_\-I2C\_\-ASYNEVENT\_\-CALLBACK\_\-FP} \hyperlink{a00098_accafc47f269761fd2fb402c5d8a973ea}{asynEventCallBack}
+\item 
+\hyperlink{a00649_ga9787fba32c156c866916dc301e5727c8}{GSN\_\-I2C\_\-STATUS\_\-T} \hyperlink{a00098_ae96954b586843e04b76147a5b69e0d61}{readWriteStatus}
+\item 
+\hyperlink{a00649_ga3e0976c06462690937465a53a0c38cc4}{GSN\_\-I2C\_\-RCAS\_\-T} \hyperlink{a00098_aec66efdce042263a8ec3b44b5bea07c7}{RandomOrCurrentAddr}
+\item 
+\hyperlink{a00649_ga3c8e92172b940c58950060ddbccee36d}{GSN\_\-I2C\_\-MEMADD\_\-SEL\_\-T} \hyperlink{a00098_ae558380c5e3a7dceede8655866dceb63}{MemAddSel}
+\item 
+\hyperlink{a00649_gaced0c2ab1bd7baab4cc105c12ccc1ce0}{GSN\_\-I2C\_\-CLK\_\-SEL\_\-T} \hyperlink{a00098_a1111c14058a32aca1ce149f0a4d9cd5b}{pclockSelect}
+\item 
+\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$ \hyperlink{a00098_a87fd9dda5636bd71a412693b96fed177}{pclkCtlCtx}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I2C Data / Status Structure. 
+
+Definition at line 305 of file gsn\_\-i2c.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00098_accafc47f269761fd2fb402c5d8a973ea}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!asynEventCallBack@{asynEventCallBack}}
+\index{asynEventCallBack@{asynEventCallBack}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{asynEventCallBack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-I2C\_\-ASYNEVENT\_\-CALLBACK\_\-FP} {\bf asynEventCallBack}}}
+\label{a00098_accafc47f269761fd2fb402c5d8a973ea}
+
+
+Definition at line 319 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_ae62f152f1a2f6e8ecad552f10d250166}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!ctxt@{ctxt}}
+\index{ctxt@{ctxt}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{ctxt}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf ctxt}}}
+\label{a00098_ae62f152f1a2f6e8ecad552f10d250166}
+
+
+Definition at line 318 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_ac7efaea2646c7c874764140d2c15894e}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!DataReadBuffer@{DataReadBuffer}}
+\index{DataReadBuffer@{DataReadBuffer}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{DataReadBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf DataReadBuffer}}}
+\label{a00098_ac7efaea2646c7c874764140d2c15894e}
+
+
+Definition at line 313 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_a8f9a58f073e6e06f613db1a7c471ed1a}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!DataWriteBuffer@{DataWriteBuffer}}
+\index{DataWriteBuffer@{DataWriteBuffer}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{DataWriteBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf DataWriteBuffer}}}
+\label{a00098_a8f9a58f073e6e06f613db1a7c471ed1a}
+
+
+Definition at line 312 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_ab6c0e135c554375f2356d63427904425}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!masterOrSlave@{masterOrSlave}}
+\index{masterOrSlave@{masterOrSlave}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{masterOrSlave}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-I2C\_\-MS\_\-MODE\_\-T} {\bf masterOrSlave}}}
+\label{a00098_ab6c0e135c554375f2356d63427904425}
+
+
+Definition at line 311 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_ae558380c5e3a7dceede8655866dceb63}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!MemAddSel@{MemAddSel}}
+\index{MemAddSel@{MemAddSel}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{MemAddSel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-I2C\_\-MEMADD\_\-SEL\_\-T} {\bf MemAddSel}}}
+\label{a00098_ae558380c5e3a7dceede8655866dceb63}
+
+
+Definition at line 322 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_ab3fffdb20c15ad5ef5d0ca8b48de5c58}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!numBytesToTransfer@{numBytesToTransfer}}
+\index{numBytesToTransfer@{numBytesToTransfer}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{numBytesToTransfer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf numBytesToTransfer}}}
+\label{a00098_ab3fffdb20c15ad5ef5d0ca8b48de5c58}
+
+
+Definition at line 315 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_a3c64997ab8583dffe330d8ffd3097f42}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!numBytesTransferred@{numBytesTransferred}}
+\index{numBytesTransferred@{numBytesTransferred}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{numBytesTransferred}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf numBytesTransferred}}}
+\label{a00098_a3c64997ab8583dffe330d8ffd3097f42}
+
+
+Definition at line 316 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_a87fd9dda5636bd71a412693b96fed177}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!pclkCtlCtx@{pclkCtlCtx}}
+\index{pclkCtlCtx@{pclkCtlCtx}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{pclkCtlCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-CLK\_\-CTL\_\-CTX\_\-T}$\ast$ {\bf pclkCtlCtx}}}
+\label{a00098_a87fd9dda5636bd71a412693b96fed177}
+
+
+Definition at line 324 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_a1111c14058a32aca1ce149f0a4d9cd5b}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!pclockSelect@{pclockSelect}}
+\index{pclockSelect@{pclockSelect}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{pclockSelect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-I2C\_\-CLK\_\-SEL\_\-T} {\bf pclockSelect}}}
+\label{a00098_a1111c14058a32aca1ce149f0a4d9cd5b}
+
+
+Definition at line 323 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_a733fb7afbc3bd37a546de0e37c12f150}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!pReg@{pReg}}
+\index{pReg@{pReg}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{pReg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf pReg}}}
+\label{a00098_a733fb7afbc3bd37a546de0e37c12f150}
+
+
+Definition at line 308 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_aec66efdce042263a8ec3b44b5bea07c7}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!RandomOrCurrentAddr@{RandomOrCurrentAddr}}
+\index{RandomOrCurrentAddr@{RandomOrCurrentAddr}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{RandomOrCurrentAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-I2C\_\-RCAS\_\-T} {\bf RandomOrCurrentAddr}}}
+\label{a00098_aec66efdce042263a8ec3b44b5bea07c7}
+
+
+Definition at line 321 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_acaa70240adc835acc872ba55e3bf494d}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!readFlag@{readFlag}}
+\index{readFlag@{readFlag}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{readFlag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BOOL} {\bf readFlag}}}
+\label{a00098_acaa70240adc835acc872ba55e3bf494d}
+
+
+Definition at line 309 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_a864e2e8a49d07675db4d75a711b96c24}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!readWriteCallBack@{readWriteCallBack}}
+\index{readWriteCallBack@{readWriteCallBack}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{readWriteCallBack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-I2C\_\-CALLBACK\_\-FP} {\bf readWriteCallBack}}}
+\label{a00098_a864e2e8a49d07675db4d75a711b96c24}
+
+
+Definition at line 317 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_ae96954b586843e04b76147a5b69e0d61}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!readWriteStatus@{readWriteStatus}}
+\index{readWriteStatus@{readWriteStatus}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{readWriteStatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-I2C\_\-STATUS\_\-T} {\bf readWriteStatus}}}
+\label{a00098_ae96954b586843e04b76147a5b69e0d61}
+
+
+Definition at line 320 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_a9fe2614928fcf7fb1cd481dea841923d}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!synchronousSemId@{synchronousSemId}}
+\index{synchronousSemId@{synchronousSemId}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{synchronousSemId}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-SEM\_\-T} {\bf synchronousSemId}}}
+\label{a00098_a9fe2614928fcf7fb1cd481dea841923d}
+
+
+Definition at line 314 of file gsn\_\-i2c.h.
+
+\hypertarget{a00098_a549205d9ecbb1ed7a82528163952fd6c}{
+\index{GSN\_\-I2C@{GSN\_\-I2C}!writeFlag@{writeFlag}}
+\index{writeFlag@{writeFlag}!GSN_I2C@{GSN\_\-I2C}}
+\subsubsection[{writeFlag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BOOL} {\bf writeFlag}}}
+\label{a00098_a549205d9ecbb1ed7a82528163952fd6c}
+
+
+Definition at line 310 of file gsn\_\-i2c.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00516}{gsn\_\-i2c.h}\end{DoxyCompactItemize}

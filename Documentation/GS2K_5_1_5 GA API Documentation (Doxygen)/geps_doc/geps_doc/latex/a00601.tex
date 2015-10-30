@@ -1,0 +1,96 @@
+\hypertarget{a00601}{
+\section{gsn\_\-uint64\_\-op.h File Reference}
+\label{a00601}\index{gsn\_\-uint64\_\-op.h@{gsn\_\-uint64\_\-op.h}}
+}
+
+
+This file defines a type and functions for handling 64-\/bit integers.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00462}{UINT64}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00601_a6b300f9fe4aff65bbe06f909e44d1fdf}{SIZE\_\-OF\_\-UINT64}~sizeof(\hyperlink{a00462}{UINT64})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00462}{UINT64} \hyperlink{a00660_ga2360b1c5f857c84c180aef97cc0612c9}{UINT64}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+INLINE VOID \hyperlink{a00601_ade1b27552fa7c39d6de87bc2dd218eea}{GsnUint64\_\-Cpy} (\hyperlink{a00462}{UINT64} $\ast$destPtr, \hyperlink{a00462}{UINT64} $\ast$srcPtr)
+\item 
+INLINE VOID \hyperlink{a00601_a7ebf91991dd6ce5dc9342d7d09df4bb6}{GsnUint64\_\-Set} (\hyperlink{a00462}{UINT64} $\ast$destPtr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} l, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} h)
+\end{DoxyCompactItemize}
+\paragraph*{}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00633_gac563e9d0ef4149a2e6bf4b69848b8350}{GsnUint64\_\-Add} (const \hyperlink{a00462}{UINT64} $\ast$const valPtr, const \hyperlink{a00462}{UINT64} $\ast$const addValPtr, \hyperlink{a00462}{UINT64} $\ast$const resultPtr)
+\begin{DoxyCompactList}\small\item\em Adds two \hyperlink{a00462}{UINT64} variables. This function adds two \hyperlink{a00462}{UINT64} variables. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00633_gaa28251a236e953a0f7d7c9cc6d2a4f56}{GsnUint64\_\-Sub} (const \hyperlink{a00462}{UINT64} $\ast$const valPtr, const \hyperlink{a00462}{UINT64} $\ast$const subValPtr, \hyperlink{a00462}{UINT64} $\ast$const resultPtr)
+\begin{DoxyCompactList}\small\item\em Subtracts two \hyperlink{a00462}{UINT64} variables. This function subtracts two \hyperlink{a00462}{UINT64} variables. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00633_ga6f146e62b0ba7c60b788e7567b9a43d7}{GsnUint64\_\-Cmp} (const \hyperlink{a00462}{UINT64} $\ast$const valPtr, const \hyperlink{a00462}{UINT64} $\ast$const cmpValPtr)
+\begin{DoxyCompactList}\small\item\em conpares two \hyperlink{a00462}{UINT64} variables. This function comapres two \hyperlink{a00462}{UINT64} variables. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00633_ga91c8c7e7593d471df3663ac581c75140}{GsnUint64\_\-ToUlong64} (const \hyperlink{a00462}{UINT64} $\ast$const valPtr)
+\begin{DoxyCompactList}\small\item\em convert \hyperlink{a00462}{UINT64} to ULONG64. This function converts \hyperlink{a00462}{UINT64} variable to ULONG64. \end{DoxyCompactList}\item 
+PUBLIC INLINE \hyperlink{a00462}{UINT64} \hyperlink{a00633_gaae22c3035a2dff23ae786020704f0e24}{GsnUint64\_\-FromUlong64} (const \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} $\ast$const valPtr)
+\begin{DoxyCompactList}\small\item\em convert ULONG64 to \hyperlink{a00462}{UINT64}. This function converts ULONG64 variable to \hyperlink{a00462}{UINT64}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+This file defines a type and functions for handling 64-\/bit integers. 
+
+Definition in file \hyperlink{a00601_source}{gsn\_\-uint64\_\-op.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00601_a6b300f9fe4aff65bbe06f909e44d1fdf}{
+\index{gsn\_\-uint64\_\-op.h@{gsn\_\-uint64\_\-op.h}!SIZE\_\-OF\_\-UINT64@{SIZE\_\-OF\_\-UINT64}}
+\index{SIZE\_\-OF\_\-UINT64@{SIZE\_\-OF\_\-UINT64}!gsn_uint64_op.h@{gsn\_\-uint64\_\-op.h}}
+\subsubsection[{SIZE\_\-OF\_\-UINT64}]{\setlength{\rightskip}{0pt plus 5cm}\#define SIZE\_\-OF\_\-UINT64~sizeof({\bf UINT64})}}
+\label{a00601_a6b300f9fe4aff65bbe06f909e44d1fdf}
+
+
+Definition at line 67 of file gsn\_\-uint64\_\-op.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00601_ade1b27552fa7c39d6de87bc2dd218eea}{
+\index{gsn\_\-uint64\_\-op.h@{gsn\_\-uint64\_\-op.h}!GsnUint64\_\-Cpy@{GsnUint64\_\-Cpy}}
+\index{GsnUint64\_\-Cpy@{GsnUint64\_\-Cpy}!gsn_uint64_op.h@{gsn\_\-uint64\_\-op.h}}
+\subsubsection[{GsnUint64\_\-Cpy}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnUint64\_\-Cpy (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT64} $\ast$}]{destPtr, }
+\item[{{\bf UINT64} $\ast$}]{srcPtr}
+\end{DoxyParamCaption}
+)}}
+\label{a00601_ade1b27552fa7c39d6de87bc2dd218eea}
+
+
+Definition at line 73 of file gsn\_\-uint64\_\-op.h.
+
+\hypertarget{a00601_a7ebf91991dd6ce5dc9342d7d09df4bb6}{
+\index{gsn\_\-uint64\_\-op.h@{gsn\_\-uint64\_\-op.h}!GsnUint64\_\-Set@{GsnUint64\_\-Set}}
+\index{GsnUint64\_\-Set@{GsnUint64\_\-Set}!gsn_uint64_op.h@{gsn\_\-uint64\_\-op.h}}
+\subsubsection[{GsnUint64\_\-Set}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnUint64\_\-Set (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT64} $\ast$}]{destPtr, }
+\item[{{\bf UINT32}}]{l, }
+\item[{{\bf UINT32}}]{h}
+\end{DoxyParamCaption}
+)}}
+\label{a00601_a7ebf91991dd6ce5dc9342d7d09df4bb6}
+
+
+Definition at line 79 of file gsn\_\-uint64\_\-op.h.
+

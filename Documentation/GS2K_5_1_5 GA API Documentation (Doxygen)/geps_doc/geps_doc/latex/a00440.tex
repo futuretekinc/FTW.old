@@ -1,0 +1,328 @@
+\hypertarget{a00440}{
+\section{GSN\_\-ZIP\_\-CTX Struct Reference}
+\label{a00440}\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}}
+}
+
+
+ZigBee-\/IP context. This defines the ZigBee-\/IP context. User has to provide the context to the init function of ZigBee-\/IP module.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-zigbee\_\-ip.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00019}{GSN\_\-6LOWPAN\_\-CTX\_\-T} \hyperlink{a00440_a5471b017312565942c51038afa3c7428}{lowpanCtx}
+\item 
+\hyperlink{a00192}{GSN\_\-RPL\_\-T} \hyperlink{a00440_a373ea62293885279791ea1559374aac8}{rplCtx}
+\item 
+const \hyperlink{a00439}{GSN\_\-ZIP\_\-CONST\_\-CFG\_\-T} $\ast$ \hyperlink{a00440_a101a462dccde755d187c3ef31ff31a82}{pCstCfg}
+\item 
+\hyperlink{a00438}{GSN\_\-ZIP\_\-CFG\_\-T} \hyperlink{a00440_a97bc48ebc9b6cd9d2cf5f4eaafe7a6d6}{nwkCfg}
+\item 
+\hyperlink{a00151}{GSN\_\-MLE\_\-CTX\_\-T} \hyperlink{a00440_af6ac1eebeeae7f32a274a7cd914f9bd8}{mle}
+\item 
+VOID $\ast$ \hyperlink{a00440_af31cb5b755e89e35cbdf543491bb5cc8}{pDodagCtx}
+\item 
+\hyperlink{a00618_a7f63a0d767866fd213452687d2666c67}{GSN\_\-ZIP\_\-DELAY\_\-PROCESS\_\-T} \hyperlink{a00440_a29e4d6bffd311d693fce3191c592236c}{delayEventPost}
+\item 
+VOID $\ast$ \hyperlink{a00440_afcc216c129528dccc51653661a14eaef}{pDelayEventPostCtx}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00440_ada69a538b8d3e7311a343b91f2b30f86}{delayEvent}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00440_a6e9c4cbd32a1178b12f3a61f6855c896}{state}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00440_a7d61d79fa98a45545166420dec0d8f3d}{mode}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00440_a9b19e8e3387061f7498579b37cdbabdf}{shortAddr}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00440_a6581a07c1278bb253870b72dc00d386c}{panId}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00440_ab741d6aa310525ebb0f9e4b49f320697}{ParentAddress}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00440_a0d0a983cfc03a9ab24197360ddad6dfb}{LinkQuality}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00440_ace13daabd3fb488dad3214e143d79cf0}{opChannel}
+\item 
+\hyperlink{a00441}{GSN\_\-ZIP\_\-NWK\_\-ID\_\-T} \hyperlink{a00440_aa09adf9d6455e0d08084e30083a043cd}{nwkId}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00440_a4dbf679669c21dfe3cde14a52d6493ba}{bcnPldOptFldLen}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00440_a84b867442a9df3ae3fd28cee436846ed}{bcnPldOptField}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00440_acf6e868d8fc257d3844bc6e9a6e8608f}{reqChannelMask}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00440_a7d5d0df3692ac043cf707cf61b5efe85}{channelSelMask}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00440_a3524862c4c0985e934b9fa8c1dadd475}{scanIndex}
+\item 
+\hyperlink{a00442}{GSN\_\-ZIP\_\-SCAN\_\-INFO\_\-T} $\ast$ \hyperlink{a00440_aa3af50125796e52b0890b911f8413313}{pScanBuf}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00440_af6f0a9ed6e907cc254f87be7ffb7cd4c}{numOfScanBuf}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00440_acdbdc3eb6e942e1f888ea5147db2bcd6}{macExtendedAddr} \mbox{[}2\mbox{]}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00440_a918d9ee8150c76110c706278f1d701d6}{externalReq}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00440_a8ab771887ab75e0ebb14c47d0ab1bca4}{longAddr} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+ZigBee-\/IP context. This defines the ZigBee-\/IP context. User has to provide the context to the init function of ZigBee-\/IP module. 
+
+Definition at line 191 of file gsn\_\-zigbee\_\-ip.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00440_a84b867442a9df3ae3fd28cee436846ed}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!bcnPldOptField@{bcnPldOptField}}
+\index{bcnPldOptField@{bcnPldOptField}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{bcnPldOptField}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf bcnPldOptField}}}
+\label{a00440_a84b867442a9df3ae3fd28cee436846ed}
+
+
+Definition at line 216 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a4dbf679669c21dfe3cde14a52d6493ba}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!bcnPldOptFldLen@{bcnPldOptFldLen}}
+\index{bcnPldOptFldLen@{bcnPldOptFldLen}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{bcnPldOptFldLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf bcnPldOptFldLen}}}
+\label{a00440_a4dbf679669c21dfe3cde14a52d6493ba}
+
+
+Definition at line 215 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a7d5d0df3692ac043cf707cf61b5efe85}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!channelSelMask@{channelSelMask}}
+\index{channelSelMask@{channelSelMask}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{channelSelMask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf channelSelMask}}}
+\label{a00440_a7d5d0df3692ac043cf707cf61b5efe85}
+Stores the shortlisted channels from the user requested channels 
+
+Definition at line 218 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_ada69a538b8d3e7311a343b91f2b30f86}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!delayEvent@{delayEvent}}
+\index{delayEvent@{delayEvent}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{delayEvent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf delayEvent}}}
+\label{a00440_ada69a538b8d3e7311a343b91f2b30f86}
+
+
+Definition at line 204 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a29e4d6bffd311d693fce3191c592236c}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!delayEventPost@{delayEventPost}}
+\index{delayEventPost@{delayEventPost}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{delayEventPost}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ZIP\_\-DELAY\_\-PROCESS\_\-T} {\bf delayEventPost}}}
+\label{a00440_a29e4d6bffd311d693fce3191c592236c}
+
+
+Definition at line 202 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a918d9ee8150c76110c706278f1d701d6}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!externalReq@{externalReq}}
+\index{externalReq@{externalReq}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{externalReq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf externalReq}}}
+\label{a00440_a918d9ee8150c76110c706278f1d701d6}
+Set to TRUE if the Set/Get request is generated by user Assoc Dev Address 
+
+Definition at line 225 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a0d0a983cfc03a9ab24197360ddad6dfb}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!LinkQuality@{LinkQuality}}
+\index{LinkQuality@{LinkQuality}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{LinkQuality}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf LinkQuality}}}
+\label{a00440_a0d0a983cfc03a9ab24197360ddad6dfb}
+
+
+Definition at line 211 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a8ab771887ab75e0ebb14c47d0ab1bca4}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!longAddr@{longAddr}}
+\index{longAddr@{longAddr}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{longAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf longAddr}\mbox{[}2\mbox{]}}}
+\label{a00440_a8ab771887ab75e0ebb14c47d0ab1bca4}
+
+
+Definition at line 228 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a5471b017312565942c51038afa3c7428}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!lowpanCtx@{lowpanCtx}}
+\index{lowpanCtx@{lowpanCtx}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{lowpanCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-6LOWPAN\_\-CTX\_\-T} {\bf lowpanCtx}}}
+\label{a00440_a5471b017312565942c51038afa3c7428}
+
+
+Definition at line 193 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_acdbdc3eb6e942e1f888ea5147db2bcd6}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!macExtendedAddr@{macExtendedAddr}}
+\index{macExtendedAddr@{macExtendedAddr}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{macExtendedAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf macExtendedAddr}\mbox{[}2\mbox{]}}}
+\label{a00440_acdbdc3eb6e942e1f888ea5147db2bcd6}
+
+
+Definition at line 224 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_af6ac1eebeeae7f32a274a7cd914f9bd8}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!mle@{mle}}
+\index{mle@{mle}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{mle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-MLE\_\-CTX\_\-T} {\bf mle}}}
+\label{a00440_af6ac1eebeeae7f32a274a7cd914f9bd8}
+
+
+Definition at line 198 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a7d61d79fa98a45545166420dec0d8f3d}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!mode@{mode}}
+\index{mode@{mode}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf mode}}}
+\label{a00440_a7d61d79fa98a45545166420dec0d8f3d}
+
+
+Definition at line 207 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_af6f0a9ed6e907cc254f87be7ffb7cd4c}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!numOfScanBuf@{numOfScanBuf}}
+\index{numOfScanBuf@{numOfScanBuf}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{numOfScanBuf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf numOfScanBuf}}}
+\label{a00440_af6f0a9ed6e907cc254f87be7ffb7cd4c}
+
+
+Definition at line 222 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a97bc48ebc9b6cd9d2cf5f4eaafe7a6d6}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!nwkCfg@{nwkCfg}}
+\index{nwkCfg@{nwkCfg}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{nwkCfg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ZIP\_\-CFG\_\-T} {\bf nwkCfg}}}
+\label{a00440_a97bc48ebc9b6cd9d2cf5f4eaafe7a6d6}
+
+
+Definition at line 197 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_aa09adf9d6455e0d08084e30083a043cd}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!nwkId@{nwkId}}
+\index{nwkId@{nwkId}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{nwkId}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ZIP\_\-NWK\_\-ID\_\-T} {\bf nwkId}}}
+\label{a00440_aa09adf9d6455e0d08084e30083a043cd}
+
+
+Definition at line 214 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_ace13daabd3fb488dad3214e143d79cf0}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!opChannel@{opChannel}}
+\index{opChannel@{opChannel}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{opChannel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf opChannel}}}
+\label{a00440_ace13daabd3fb488dad3214e143d79cf0}
+
+
+Definition at line 212 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a6581a07c1278bb253870b72dc00d386c}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!panId@{panId}}
+\index{panId@{panId}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{panId}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf panId}}}
+\label{a00440_a6581a07c1278bb253870b72dc00d386c}
+
+
+Definition at line 209 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_ab741d6aa310525ebb0f9e4b49f320697}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!ParentAddress@{ParentAddress}}
+\index{ParentAddress@{ParentAddress}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{ParentAddress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf ParentAddress}}}
+\label{a00440_ab741d6aa310525ebb0f9e4b49f320697}
+
+
+Definition at line 210 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a101a462dccde755d187c3ef31ff31a82}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!pCstCfg@{pCstCfg}}
+\index{pCstCfg@{pCstCfg}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{pCstCfg}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GSN\_\-ZIP\_\-CONST\_\-CFG\_\-T}$\ast$ {\bf pCstCfg}}}
+\label{a00440_a101a462dccde755d187c3ef31ff31a82}
+
+
+Definition at line 196 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_afcc216c129528dccc51653661a14eaef}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!pDelayEventPostCtx@{pDelayEventPostCtx}}
+\index{pDelayEventPostCtx@{pDelayEventPostCtx}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{pDelayEventPostCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf pDelayEventPostCtx}}}
+\label{a00440_afcc216c129528dccc51653661a14eaef}
+
+
+Definition at line 203 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_af31cb5b755e89e35cbdf543491bb5cc8}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!pDodagCtx@{pDodagCtx}}
+\index{pDodagCtx@{pDodagCtx}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{pDodagCtx}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf pDodagCtx}}}
+\label{a00440_af31cb5b755e89e35cbdf543491bb5cc8}
+
+
+Definition at line 199 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_aa3af50125796e52b0890b911f8413313}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!pScanBuf@{pScanBuf}}
+\index{pScanBuf@{pScanBuf}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{pScanBuf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-ZIP\_\-SCAN\_\-INFO\_\-T}$\ast$ {\bf pScanBuf}}}
+\label{a00440_aa3af50125796e52b0890b911f8413313}
+
+
+Definition at line 221 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_acf6e868d8fc257d3844bc6e9a6e8608f}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!reqChannelMask@{reqChannelMask}}
+\index{reqChannelMask@{reqChannelMask}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{reqChannelMask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf reqChannelMask}}}
+\label{a00440_acf6e868d8fc257d3844bc6e9a6e8608f}
+Stores the channels requested by user 
+
+Definition at line 217 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a373ea62293885279791ea1559374aac8}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!rplCtx@{rplCtx}}
+\index{rplCtx@{rplCtx}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{rplCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-RPL\_\-T} {\bf rplCtx}}}
+\label{a00440_a373ea62293885279791ea1559374aac8}
+
+
+Definition at line 195 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a3524862c4c0985e934b9fa8c1dadd475}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!scanIndex@{scanIndex}}
+\index{scanIndex@{scanIndex}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{scanIndex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf scanIndex}}}
+\label{a00440_a3524862c4c0985e934b9fa8c1dadd475}
+
+
+Definition at line 220 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a9b19e8e3387061f7498579b37cdbabdf}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!shortAddr@{shortAddr}}
+\index{shortAddr@{shortAddr}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{shortAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf shortAddr}}}
+\label{a00440_a9b19e8e3387061f7498579b37cdbabdf}
+
+
+Definition at line 208 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00440_a6e9c4cbd32a1178b12f3a61f6855c896}{
+\index{GSN\_\-ZIP\_\-CTX@{GSN\_\-ZIP\_\-CTX}!state@{state}}
+\index{state@{state}!GSN_ZIP_CTX@{GSN\_\-ZIP\_\-CTX}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf state}}}
+\label{a00440_a6e9c4cbd32a1178b12f3a61f6855c896}
+
+
+Definition at line 206 of file gsn\_\-zigbee\_\-ip.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00618}{gsn\_\-zigbee\_\-ip.h}\end{DoxyCompactItemize}

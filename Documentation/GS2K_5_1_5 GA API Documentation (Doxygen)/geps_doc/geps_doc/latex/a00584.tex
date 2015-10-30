@@ -1,0 +1,344 @@
+\hypertarget{a00584}{
+\section{gsn\_\-sdio.h File Reference}
+\label{a00584}\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}}
+}
+
+
+Public Header Containing SDIO Driver Functions.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$osal$\backslash$gsn\_\-osal\_\-threadx.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}clk\_\-ctl$\backslash$gsn\_\-clk\_\-ctl.h\char`\"{}}\par
+Include dependency graph for gsn\_\-sdio.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00821}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00822}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00221}{GSN\_\-SDIO\_\-CISTPL\_\-FUNCID}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00219}{GSN\_\-SDIO\_\-CISTPL\_\-FUNCE0}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00222}{GSN\_\-SDIO\_\-CISTPL\_\-MANFID}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00458}{SDIO\_\-FUNC\_\-EXT\_\-FUNCTION\_\-TPL}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00220}{GSN\_\-SDIO\_\-CISTPL\_\-FUNCE1}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00223}{GSN\_\-SDIO\_\-CISTPL\_\-SDIO\_\-STD}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00217}{GSN\_\-SDIO\_\-CIS0\_\-STRUCTURE}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00218}{GSN\_\-SDIO\_\-CIS1\_\-STRUCTURE}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00225}{GSN\_\-SDIO\_\-RX\_\-BUFF}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines SDIO Rx buffer status parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00226}{GSN\_\-SDIOCONFIG}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{a00216}{GSN\_\-SDIO}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO driver handling parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{a00224}{GSN\_\-SDIO\_\-HANDLE}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO handle, which holds a SDIO config and data parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00584_ae85da24c93589d650ff798c2471a16ca}{SDIO\_\-BASE\_\-ADDRESS}~0X40300000
+\item 
+\#define \hyperlink{a00584_a3b22f24b4f15dd534965c34cb799bfa7}{SDIO\_\-CIS\_\-AREA\_\-BEGIN}~0x00001000
+\item 
+\#define \hyperlink{a00584_a71aae0580975b9c963aecd8228dffd90}{SDIO\_\-CIS\_\-AREA\_\-END}~0X00017FFF
+\item 
+\#define \hyperlink{a00584_a63323d48f25522cf360323ea211adb8f}{CISTPL\_\-NULL}
+\item 
+\#define \hyperlink{a00584_a8f83e4bdfc4ae662c4a952a307dbfc9d}{CISTPL\_\-CHECKSUM}
+\item 
+\#define \hyperlink{a00584_a35ce88e01940df49789578a0a8a17d60}{CISTPL\_\-VERS\_\-1}
+\item 
+\#define \hyperlink{a00584_a371a087a67afaf0ce4f91fd2c46f50af}{CISTPL\_\-ALTSTR}
+\item 
+\#define \hyperlink{a00584_a254d188fdc3d26e69e7a9cd16801bbb0}{CISTPL\_\-MANFID}
+\item 
+\#define \hyperlink{a00584_ac0f38d2fc8e1f138fa9c6710d7bd47ae}{CISTPL\_\-FUNCID}
+\item 
+\#define \hyperlink{a00584_a99af349641e81e3aadae8c3d734bb411}{CISTPL\_\-FUNCE}
+\item 
+\#define \hyperlink{a00584_a3e176ed7d370976c08e92ec312abc459}{CISTPL\_\-VENDOR}
+\item 
+\#define \hyperlink{a00584_ab55b15a6e3e612bbf7acf72c959acf83}{CISTPL\_\-END}
+\item 
+\#define \hyperlink{a00584_ab41c85f42d0e978901276a66d07d1312}{CISTPL\_\-LINK\_\-END}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00584_ac80005f1e9ff1e1e884583938336474b}{SDIOCALLBACK\_\-FP} )(VOID $\ast$, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})
+\item 
+typedef struct \hyperlink{a00221}{GSN\_\-SDIO\_\-CISTPL\_\-FUNCID} \hyperlink{a00653_ga6ed752facb495193a30f5e53dfa13490}{GSN\_\-SDIO\_\-CISTPL\_\-FUNCID\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00219}{GSN\_\-SDIO\_\-CISTPL\_\-FUNCE0} \hyperlink{a00653_ga9437621f0901955674de851edfc146b0}{GSN\_\-SDIO\_\-CISTPL\_\-FUNCE0\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00222}{GSN\_\-SDIO\_\-CISTPL\_\-MANFID} \hyperlink{a00653_gab74bdd813aab97891c103a24000c5131}{GSN\_\-SDIO\_\-CISTPL\_\-MANFID\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00458}{SDIO\_\-FUNC\_\-EXT\_\-FUNCTION\_\-TPL} \hyperlink{a00653_ga3df33f78e69366f3c3feccb1b2ca27c4}{SDIO\_\-FUNC\_\-EXT\_\-FUNCTION\_\-TPL\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00220}{GSN\_\-SDIO\_\-CISTPL\_\-FUNCE1} \hyperlink{a00653_gaad08d4da003d74eb8301281f67bdde39}{GSN\_\-SDIO\_\-CISTPL\_\-FUNCE1\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00223}{GSN\_\-SDIO\_\-CISTPL\_\-SDIO\_\-STD} \hyperlink{a00653_gaddb935698da8d7e7e517565c91ddc01b}{GSN\_\-SDIO\_\-CISTPL\_\-SDIO\_\-STD\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00217}{GSN\_\-SDIO\_\-CIS0\_\-STRUCTURE} \hyperlink{a00653_ga2f12cafa4d1da2cd11c4260521e66faa}{GSN\_\-SDIO\_\-CIS0\_\-STRUCTURE\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00218}{GSN\_\-SDIO\_\-CIS1\_\-STRUCTURE} \hyperlink{a00653_ga5f22dc1b4e23d8bf5f7d492e5c786a47}{GSN\_\-SDIO\_\-CIS1\_\-STRUCTURE\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00653_gaf684dd62de548c59407b206cb1a0251c}{GSN\_\-SDIO\_\-CSA\_\-SUPPORT} \hyperlink{a00653_ga0b8def9125739921da58093450df058e}{GSN\_\-SDIO\_\-CSA\_\-SUPPORT\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00653_ga614d231648d595050ca4379ce506d6e0}{GSN\_\-SDIO\_\-TRANSFER\_\-MODE} \hyperlink{a00653_gab2867e08a941d7ecdca09fd9cbeff66c}{GSN\_\-SDIO\_\-TRANSFER\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00225}{GSN\_\-SDIO\_\-RX\_\-BUFF} \hyperlink{a00653_ga3a7deb851a667b9d2a39d5e1509946ab}{GSN\_\-SDIO\_\-RX\_\-BUFF\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines SDIO Rx buffer status parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00226}{GSN\_\-SDIOCONFIG} \hyperlink{a00653_ga741fda4dc2cd93143a8a73ddaace7de8}{GSN\_\-SDIO\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00216}{GSN\_\-SDIO} \hyperlink{a00653_gadc47bf5efb9097e51608305810d29895}{GSN\_\-SDIO\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO driver handling parameters. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00224}{GSN\_\-SDIO\_\-HANDLE} \hyperlink{a00653_gaa50b5846f8905e5a7ab1cec63e6877a7}{GSN\_\-SDIO\_\-HANDLE\_\-T}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO handle, which holds a SDIO config and data parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00653_gaa3d282bc619a73a9e7363293b8f26cdf}{GSN\_\-SDIO\_\-DEVICE\_\-STATE} \{ \par
+\hyperlink{a00653_ggaa3d282bc619a73a9e7363293b8f26cdfa1e214f0257d6a9a7cba80d685a8b1880}{GSN\_\-SDIO\_\-NOT\_\-INITIALIZED}, 
+\par
+\hyperlink{a00653_ggaa3d282bc619a73a9e7363293b8f26cdfa4db5af1bfb4d5589af139e930823d991}{GSN\_\-SDIO\_\-INITIALIZED}, 
+\par
+\hyperlink{a00653_ggaa3d282bc619a73a9e7363293b8f26cdfa83dfb0b4c0620cf4a85cbd52233e7030}{GSN\_\-SDIO\_\-READ\_\-PROGRESS}, 
+\par
+\hyperlink{a00653_ggaa3d282bc619a73a9e7363293b8f26cdfa3ac1c651a364e447a8358aab28083933}{GSN\_\-SDIO\_\-READ\_\-FINISHED}, 
+\par
+\hyperlink{a00653_ggaa3d282bc619a73a9e7363293b8f26cdfa999232b9670af3678f9402ad4d8dc0bd}{GSN\_\-SDIO\_\-WRITE\_\-PROGRESS}, 
+\par
+\hyperlink{a00653_ggaa3d282bc619a73a9e7363293b8f26cdfac5e2ddee6eeb20c69a6aded95c8f87a2}{GSN\_\-SDIO\_\-WRITE\_\-FINISHED}, 
+\par
+\hyperlink{a00653_ggaa3d282bc619a73a9e7363293b8f26cdfac918198a49746d79497ffe46536c5608}{GSN\_\-SDIO\_\-BLOCK\_\-READ\_\-PROGRESS}, 
+\par
+\hyperlink{a00653_ggaa3d282bc619a73a9e7363293b8f26cdfaec19b191146823868f3abaa22f86d4ff}{GSN\_\-SDIO\_\-RECEIVE\_\-ERROR}, 
+\par
+\hyperlink{a00653_ggaa3d282bc619a73a9e7363293b8f26cdfa1257e3f3ab69a7f527f6c8d792fc36c5}{GSN\_\-SDIO\_\-CLOSED}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN SDIO Types. This enum defines SDIO return values. \end{DoxyCompactList}\item 
+enum \hyperlink{a00653_gaf684dd62de548c59407b206cb1a0251c}{GSN\_\-SDIO\_\-CSA\_\-SUPPORT} \{ \par
+\hyperlink{a00653_ggaf684dd62de548c59407b206cb1a0251ca966180d41a1bee964d8209ffd63fe9cd}{GSN\_\-SDIO\_\-CSA\_\-NO\_\-SUPPORT}, 
+\par
+\hyperlink{a00653_ggaf684dd62de548c59407b206cb1a0251ca8b135a9e2f08a74bda2fd5a6822b9a74}{GSN\_\-SDIO\_\-CSA\_\-SUPPORT}
+ \}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\item 
+enum \hyperlink{a00653_ga614d231648d595050ca4379ce506d6e0}{GSN\_\-SDIO\_\-TRANSFER\_\-MODE} \{ \par
+\hyperlink{a00653_gga614d231648d595050ca4379ce506d6e0a117ced33b4b07570e34d3e051ae8528d}{GSN\_\-SDIO\_\-SPI\_\-MODE}, 
+\par
+\hyperlink{a00653_gga614d231648d595050ca4379ce506d6e0acfd2d43aabc0697963620c4c0b7268db}{GSN\_\-SDIO\_\-SD1\_\-MODE}, 
+\par
+\hyperlink{a00653_gga614d231648d595050ca4379ce506d6e0a811c963889d54272379b13160b604038}{GSN\_\-SDIO\_\-SD4\_\-MODE}
+ \}
+\begin{DoxyCompactList}\small\item\em SDIO GSN Structure. This structure defines a SDIO configuration parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00653_ga8759149a411f2bab32619807abc882b6}{GsnSdio\_\-Open} (\hyperlink{a00224}{GSN\_\-SDIO\_\-HANDLE\_\-T} $\ast$ptSdioHandle, \hyperlink{a00226}{GSN\_\-SDIO\_\-CONFIG\_\-T} $\ast$ptConfig)
+\begin{DoxyCompactList}\small\item\em SDIO Driver open API. This function open a SDIO port. This function initializes the corresponding SDIO. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00653_gaef9addfeef70518b7326d2cb8d7fe435}{GsnSdio\_\-Read} (\hyperlink{a00224}{GSN\_\-SDIO\_\-HANDLE\_\-T} $\ast$ptSdioHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$puBuffer, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} noOfBytesToRead, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} blockRead, \hyperlink{a00584_ac80005f1e9ff1e1e884583938336474b}{SDIOCALLBACK\_\-FP} ptCallBackFunc, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em SDIO GSN Read throgh specified port 1. prepare for transmission. 2. Start data reception by enabling the Rx interrupt. 3. wait on the semaphore for a synchronous read. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00653_ga1f7657660110943adae4d9ca818afbb5}{GsnSdio\_\-Write} (\hyperlink{a00224}{GSN\_\-SDIO\_\-HANDLE\_\-T} $\ast$ptSdioHandle, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$puBuffer, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} noOfBytesToWrite, \hyperlink{a00584_ac80005f1e9ff1e1e884583938336474b}{SDIOCALLBACK\_\-FP} ptCallBackFunc, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em SDIO Write Through Specified Port. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00653_ga2e2284223c578c2adc1675b6aad5d1f3}{GsnSdio\_\-DefaultIsr} (\hyperlink{a00216}{GSN\_\-SDIO\_\-T} $\ast$ptGsnSdio)
+\begin{DoxyCompactList}\small\item\em Sdio Driver ISR handling. Combined interrupt handler This function is getting called whenever sdio interrupt happens. \end{DoxyCompactList}\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00584_a859eacaf0d357416ac837914d0feea2d}{GsnSdio\_\-Close} (\hyperlink{a00224}{GSN\_\-SDIO\_\-HANDLE\_\-T} $\ast$ptSdioHandle)
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00584_a773f052f49b9c8ea476fa92003733fb2}{GsnSdio\_\-RingBuffGet} (\hyperlink{a00216}{GSN\_\-SDIO\_\-T} $\ast$ptGsnSdio, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$usrBuff, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} usrBuffLen)
+\item 
+PUBLIC VOID \hyperlink{a00584_aa5504afe017aad91877a9e13446e9948}{\_\-\_\-GsnSdio\_\-Isr} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Public Header Containing SDIO Driver Functions. This file contains the public APIs and structures of SDIO module. 
+
+Definition in file \hyperlink{a00584_source}{gsn\_\-sdio.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00584_a371a087a67afaf0ce4f91fd2c46f50af}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!CISTPL\_\-ALTSTR@{CISTPL\_\-ALTSTR}}
+\index{CISTPL\_\-ALTSTR@{CISTPL\_\-ALTSTR}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{CISTPL\_\-ALTSTR}]{\setlength{\rightskip}{0pt plus 5cm}\#define CISTPL\_\-ALTSTR}}
+\label{a00584_a371a087a67afaf0ce4f91fd2c46f50af}
+
+
+Definition at line 97 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_a8f83e4bdfc4ae662c4a952a307dbfc9d}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!CISTPL\_\-CHECKSUM@{CISTPL\_\-CHECKSUM}}
+\index{CISTPL\_\-CHECKSUM@{CISTPL\_\-CHECKSUM}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{CISTPL\_\-CHECKSUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define CISTPL\_\-CHECKSUM}}
+\label{a00584_a8f83e4bdfc4ae662c4a952a307dbfc9d}
+
+
+Definition at line 95 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_ab55b15a6e3e612bbf7acf72c959acf83}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!CISTPL\_\-END@{CISTPL\_\-END}}
+\index{CISTPL\_\-END@{CISTPL\_\-END}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{CISTPL\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define CISTPL\_\-END}}
+\label{a00584_ab55b15a6e3e612bbf7acf72c959acf83}
+
+
+Definition at line 102 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_a99af349641e81e3aadae8c3d734bb411}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!CISTPL\_\-FUNCE@{CISTPL\_\-FUNCE}}
+\index{CISTPL\_\-FUNCE@{CISTPL\_\-FUNCE}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{CISTPL\_\-FUNCE}]{\setlength{\rightskip}{0pt plus 5cm}\#define CISTPL\_\-FUNCE}}
+\label{a00584_a99af349641e81e3aadae8c3d734bb411}
+
+
+Definition at line 100 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_ac0f38d2fc8e1f138fa9c6710d7bd47ae}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!CISTPL\_\-FUNCID@{CISTPL\_\-FUNCID}}
+\index{CISTPL\_\-FUNCID@{CISTPL\_\-FUNCID}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{CISTPL\_\-FUNCID}]{\setlength{\rightskip}{0pt plus 5cm}\#define CISTPL\_\-FUNCID}}
+\label{a00584_ac0f38d2fc8e1f138fa9c6710d7bd47ae}
+
+
+Definition at line 99 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_ab41c85f42d0e978901276a66d07d1312}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!CISTPL\_\-LINK\_\-END@{CISTPL\_\-LINK\_\-END}}
+\index{CISTPL\_\-LINK\_\-END@{CISTPL\_\-LINK\_\-END}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{CISTPL\_\-LINK\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define CISTPL\_\-LINK\_\-END}}
+\label{a00584_ab41c85f42d0e978901276a66d07d1312}
+
+
+Definition at line 103 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_a254d188fdc3d26e69e7a9cd16801bbb0}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!CISTPL\_\-MANFID@{CISTPL\_\-MANFID}}
+\index{CISTPL\_\-MANFID@{CISTPL\_\-MANFID}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{CISTPL\_\-MANFID}]{\setlength{\rightskip}{0pt plus 5cm}\#define CISTPL\_\-MANFID}}
+\label{a00584_a254d188fdc3d26e69e7a9cd16801bbb0}
+
+
+Definition at line 98 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_a63323d48f25522cf360323ea211adb8f}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!CISTPL\_\-NULL@{CISTPL\_\-NULL}}
+\index{CISTPL\_\-NULL@{CISTPL\_\-NULL}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{CISTPL\_\-NULL}]{\setlength{\rightskip}{0pt plus 5cm}\#define CISTPL\_\-NULL}}
+\label{a00584_a63323d48f25522cf360323ea211adb8f}
+
+
+Definition at line 94 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_a3e176ed7d370976c08e92ec312abc459}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!CISTPL\_\-VENDOR@{CISTPL\_\-VENDOR}}
+\index{CISTPL\_\-VENDOR@{CISTPL\_\-VENDOR}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{CISTPL\_\-VENDOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define CISTPL\_\-VENDOR}}
+\label{a00584_a3e176ed7d370976c08e92ec312abc459}
+
+
+Definition at line 101 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_a35ce88e01940df49789578a0a8a17d60}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!CISTPL\_\-VERS\_\-1@{CISTPL\_\-VERS\_\-1}}
+\index{CISTPL\_\-VERS\_\-1@{CISTPL\_\-VERS\_\-1}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{CISTPL\_\-VERS\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define CISTPL\_\-VERS\_\-1}}
+\label{a00584_a35ce88e01940df49789578a0a8a17d60}
+
+
+Definition at line 96 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_ae85da24c93589d650ff798c2471a16ca}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!SDIO\_\-BASE\_\-ADDRESS@{SDIO\_\-BASE\_\-ADDRESS}}
+\index{SDIO\_\-BASE\_\-ADDRESS@{SDIO\_\-BASE\_\-ADDRESS}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{SDIO\_\-BASE\_\-ADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-BASE\_\-ADDRESS~0X40300000}}
+\label{a00584_ae85da24c93589d650ff798c2471a16ca}
+
+
+Definition at line 88 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_a3b22f24b4f15dd534965c34cb799bfa7}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!SDIO\_\-CIS\_\-AREA\_\-BEGIN@{SDIO\_\-CIS\_\-AREA\_\-BEGIN}}
+\index{SDIO\_\-CIS\_\-AREA\_\-BEGIN@{SDIO\_\-CIS\_\-AREA\_\-BEGIN}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{SDIO\_\-CIS\_\-AREA\_\-BEGIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CIS\_\-AREA\_\-BEGIN~0x00001000}}
+\label{a00584_a3b22f24b4f15dd534965c34cb799bfa7}
+
+
+Definition at line 89 of file gsn\_\-sdio.h.
+
+\hypertarget{a00584_a71aae0580975b9c963aecd8228dffd90}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!SDIO\_\-CIS\_\-AREA\_\-END@{SDIO\_\-CIS\_\-AREA\_\-END}}
+\index{SDIO\_\-CIS\_\-AREA\_\-END@{SDIO\_\-CIS\_\-AREA\_\-END}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{SDIO\_\-CIS\_\-AREA\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-CIS\_\-AREA\_\-END~0X00017FFF}}
+\label{a00584_a71aae0580975b9c963aecd8228dffd90}
+
+
+Definition at line 90 of file gsn\_\-sdio.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00584_ac80005f1e9ff1e1e884583938336474b}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!SDIOCALLBACK\_\-FP@{SDIOCALLBACK\_\-FP}}
+\index{SDIOCALLBACK\_\-FP@{SDIOCALLBACK\_\-FP}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{SDIOCALLBACK\_\-FP}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf SDIOCALLBACK\_\-FP})(VOID $\ast$, {\bf UINT32})}}
+\label{a00584_ac80005f1e9ff1e1e884583938336474b}
+
+
+Definition at line 84 of file gsn\_\-sdio.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00584_aa5504afe017aad91877a9e13446e9948}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!\_\-\_\-GsnSdio\_\-Isr@{\_\-\_\-GsnSdio\_\-Isr}}
+\index{\_\-\_\-GsnSdio\_\-Isr@{\_\-\_\-GsnSdio\_\-Isr}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{\_\-\_\-GsnSdio\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnSdio\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00584_aa5504afe017aad91877a9e13446e9948}
+\hypertarget{a00584_a859eacaf0d357416ac837914d0feea2d}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!GsnSdio\_\-Close@{GsnSdio\_\-Close}}
+\index{GsnSdio\_\-Close@{GsnSdio\_\-Close}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{GsnSdio\_\-Close}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnSdio\_\-Close (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SDIO\_\-HANDLE\_\-T} $\ast$}]{ptSdioHandle}
+\end{DoxyParamCaption}
+)}}
+\label{a00584_a859eacaf0d357416ac837914d0feea2d}
+\hypertarget{a00584_a773f052f49b9c8ea476fa92003733fb2}{
+\index{gsn\_\-sdio.h@{gsn\_\-sdio.h}!GsnSdio\_\-RingBuffGet@{GsnSdio\_\-RingBuffGet}}
+\index{GsnSdio\_\-RingBuffGet@{GsnSdio\_\-RingBuffGet}!gsn_sdio.h@{gsn\_\-sdio.h}}
+\subsubsection[{GsnSdio\_\-RingBuffGet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} GsnSdio\_\-RingBuffGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-SDIO\_\-T} $\ast$}]{ptGsnSdio, }
+\item[{{\bf UINT8} $\ast$}]{usrBuff, }
+\item[{{\bf UINT32}}]{usrBuffLen}
+\end{DoxyParamCaption}
+)}}
+\label{a00584_a773f052f49b9c8ea476fa92003733fb2}

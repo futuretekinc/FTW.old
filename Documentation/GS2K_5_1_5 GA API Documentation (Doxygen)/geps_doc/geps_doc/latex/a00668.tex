@@ -1,0 +1,742 @@
+\hypertarget{a00668}{
+\section{GSN mDns-\/SD}
+\label{a00668}\index{GSN mDns-\/SD@{GSN mDns-\/SD}}
+}
+
+
+mDns-\/SD.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00013}{DNS\_\-HEADER}
+\begin{DoxyCompactList}\small\item\em various header structures(Packed Structures) \end{DoxyCompactList}\item 
+struct \hyperlink{a00145}{GSN\_\-MDNS\_\-MSG}
+\begin{DoxyCompactList}\small\item\em mDns message queue message structure \end{DoxyCompactList}\item 
+struct \hyperlink{a00146}{GSN\_\-MDNS\_\-SRVC\_\-INFO}
+\begin{DoxyCompactList}\small\item\em Information about a service Discovered. \end{DoxyCompactList}\item 
+struct \hyperlink{a00457}{RESOURCE\_\-RECORD}
+\begin{DoxyCompactList}\small\item\em Resource Record definition. \end{DoxyCompactList}\item 
+struct \hyperlink{a00140}{GSN\_\-MDNS}
+\begin{DoxyCompactList}\small\item\em mDns module context \end{DoxyCompactList}\item 
+struct \hyperlink{a00144}{GSN\_\-MDNS\_\-INIT\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em mDns module init param \end{DoxyCompactList}\item 
+struct \hyperlink{a00143}{GSN\_\-MDNS\_\-HNREG\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em Host name Register param. \end{DoxyCompactList}\item 
+struct \hyperlink{a00149}{GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Service Register param. \end{DoxyCompactList}\item 
+struct \hyperlink{a00142}{GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM}
+\begin{DoxyCompactList}\small\item\em Hostname Deregister param. \end{DoxyCompactList}\item 
+struct \hyperlink{a00147}{GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em Service Deregister param. \end{DoxyCompactList}\item 
+struct \hyperlink{a00141}{GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Announce param. \end{DoxyCompactList}\item 
+struct \hyperlink{a00148}{GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em service Discover param \end{DoxyCompactList}\item 
+struct \hyperlink{a00159}{GSN\_\-NCM\_\-INIT\_\-PARAM}
+\begin{DoxyCompactList}\small\item\em mDns module init param \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00668_gae805e6fbb7579781605600a78cbe0959}{GNS\_\-MDNS\_\-RECV\_\-NW\_\-TYPE\_\-IPV4}~1
+\begin{DoxyCompactList}\small\item\em packet received on IP v4/v6 nw \end{DoxyCompactList}\item 
+\#define \hyperlink{a00668_ga0b9291043d21e03b1202e152d19abcb8}{GSN\_\-MDNS\_\-STATE\_\-NOT\_\-INITIALISED}~0
+\begin{DoxyCompactList}\small\item\em State of the MDNS context structure. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00668_ga56106404858e7c3f99fa52890f684d53}{GSN\_\-MDNS\_\-TASK\_\-CONTEXT\_\-NONE}~0
+\begin{DoxyCompactList}\small\item\em define the type of task context in which the mDns server will run \end{DoxyCompactList}\item 
+\#define \hyperlink{a00668_ga67c2a611f981a7e2e787c479819f28cd}{GSN\_\-MDNS\_\-BLOCKING\_\-OFF}~0
+\begin{DoxyCompactList}\small\item\em flag indicating the mDns servr is run in blocking mode or not \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00013}{DNS\_\-HEADER} \hyperlink{a00668_gaf26129a48ef3757ef5060ba8bb457d9c}{DNS\_\-HEADER\_\-T}
+\begin{DoxyCompactList}\small\item\em various header structures(Packed Structures) \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00145}{GSN\_\-MDNS\_\-MSG} \hyperlink{a00668_ga3216bbc2adc29e835ce14e76c1e80d44}{GSN\_\-MDNS\_\-MSG\_\-T}
+\begin{DoxyCompactList}\small\item\em mDns message queue message structure \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00668_ga4736a957266d4e3ba37c9d5ec86beec8}{GSN\_\-MDNS\_\-REG\_\-CB\_\-STATUS} \hyperlink{a00668_gab2cd71424a7a8f16216fe22eb24e31b3}{GSN\_\-MDNS\_\-MDNS\_\-CB\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em Status code provided with the Hostname/Service Call Back. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00668_gaf68e291caa4e1bdf31169e000c41750b}{GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T} \hyperlink{a00668_ga81d8695cbcffd3e0d102ef17d1981938}{GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T}
+\begin{DoxyCompactList}\small\item\em Status code provided with service discover Call Back. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00146}{GSN\_\-MDNS\_\-SRVC\_\-INFO} \hyperlink{a00668_gaab0d47b6c1928b684129f17c0fbd1292}{GSN\_\-MDNS\_\-SRVC\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em Information about a service Discovered. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00668_gaef8391be45a1399b7895289b3b56d632}{GSN\_\-MDNS\_\-SD\_\-CB\_\-T} )(void $\ast$pData, const \hyperlink{a00146}{GSN\_\-MDNS\_\-SRVC\_\-INFO\_\-T} $\ast$srvinfo, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} status)
+\begin{DoxyCompactList}\small\item\em Service Discover call back function prototype. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00668_ga9c52fae5548745f14ef4e76fb05c2526}{GSN\_\-MDNS\_\-RR\_\-REG\_\-CB\_\-T} )(void $\ast$pData, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$rrName, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} status)
+\begin{DoxyCompactList}\small\item\em Hostname/Service register call back function prototype. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00668_ga9bb465f57992212c58689c8cf593e0e7}{GSN\_\-MDNS\_\-MSG\_\-POST\_\-CB} )(VOID $\ast$cbCtx, VOID $\ast$pMdns)
+\begin{DoxyCompactList}\small\item\em call back to be called for posting message to an application task. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00457}{RESOURCE\_\-RECORD} \hyperlink{a00668_ga049805b69be0964873d9f51f9f783813}{RR\_\-T}
+\begin{DoxyCompactList}\small\item\em Resource Record definition. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00668_gabcc090f962c26d23957861a30b6bf166}{GSN\_\-MDNS\_\-SCOPE} \hyperlink{a00668_ga628a2f0345628c6bb12ee21fee3790db}{GSN\_\-MDNS\_\-SCOPE\_\-T}
+\begin{DoxyCompactList}\small\item\em scope of the RR / probe \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00140}{GSN\_\-MDNS} \hyperlink{a00668_gaaa3d044b4a5b3e8b4817fca5ad460e05}{GSN\_\-MDNS\_\-T}
+\begin{DoxyCompactList}\small\item\em mDns module context \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00144}{GSN\_\-MDNS\_\-INIT\_\-PARAM} \hyperlink{a00668_ga1ef3eac492349f066a53f0d1760152ee}{GSN\_\-MDNS\_\-INIT\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em mDns module init param \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00143}{GSN\_\-MDNS\_\-HNREG\_\-PARAM} \hyperlink{a00668_ga511a566bafeaf7323d968328226d0c4a}{GSN\_\-MDNS\_\-HNREG\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Host name Register param. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00149}{GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T} \hyperlink{a00668_ga20024e1aacee7fa459e6be0aaf450a16}{GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Service Register param. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00142}{GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM} \hyperlink{a00668_gae0bea67d1615b20dc8df1775f73c98ca}{GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Hostname Deregister param. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00147}{GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM} \hyperlink{a00668_ga1ec6492d157706d2baaf53959c6558b8}{GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Service Deregister param. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00141}{GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T} \hyperlink{a00668_ga41a672d3bce37ca4fe0d8b08524334a6}{GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em Announce param. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00148}{GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM} \hyperlink{a00668_gae85953b9de0c8db5521e84d7a91149e1}{GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em service Discover param \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00668_gaf3a0737ada4d7a112e4fff6779bc8162}{GSN\_\-NCM\_\-CTX\_\-EXECUTE\_\-MSG\_\-POST\_\-CB} )(VOID $\ast$cbCtx, VOID $\ast$pNcm)
+\begin{DoxyCompactList}\small\item\em call back to be called for posting message to an application task. This is to indicate \hyperlink{a00688_ga3ed4d28d4f2a8195d6c37f5032ee0bbd}{GsnNcm\_\-Execute()} to be called in an application task context. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00668_ga9fb71d435556873549a9da8758741a14}{GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB} )(VOID $\ast$cbCtx, VOID $\ast$pNcm, \hyperlink{a00688_ga0be96257e7b0db4dd67006357eb5cec6}{GSN\_\-NCM\_\-NOTIF\_\-ID\_\-T} notifId)
+\begin{DoxyCompactList}\small\item\em call back to be called for posting message to an application task. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00159}{GSN\_\-NCM\_\-INIT\_\-PARAM} \hyperlink{a00668_ga82bd88bbe87405a2e10adc0ee4645d7f}{GSN\_\-NCM\_\-INIT\_\-PARAM\_\-T}
+\begin{DoxyCompactList}\small\item\em mDns module init param \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00668_ga4736a957266d4e3ba37c9d5ec86beec8}{GSN\_\-MDNS\_\-REG\_\-CB\_\-STATUS} \{ \par
+\hyperlink{a00668_gga4736a957266d4e3ba37c9d5ec86beec8ae3550fd7b1f603639481cabb668a64a7}{GSN\_\-MDNS\_\-REG\_\-CONFLICT}, 
+\par
+\hyperlink{a00668_gga4736a957266d4e3ba37c9d5ec86beec8a522d97bab05dc2d11054ab2e8403639b}{GSN\_\-MDNS\_\-REG\_\-SUCCESS}
+ \}
+\begin{DoxyCompactList}\small\item\em Status code provided with the Hostname/Service Call Back. \end{DoxyCompactList}\item 
+enum \hyperlink{a00668_gaf68e291caa4e1bdf31169e000c41750b}{GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T} \{ \par
+\hyperlink{a00668_ggaf68e291caa4e1bdf31169e000c41750ba84a90f5cecb68159bb169fe99804e810}{GSN\_\-MDNS\_\-SD\_\-NO\_\-SRVC\_\-INFO}, 
+\par
+\hyperlink{a00668_ggaf68e291caa4e1bdf31169e000c41750bad2c9bab4f8fc05c87a9d9c289cacbf0e}{GSN\_\-MDNS\_\-SD\_\-MORE\_\-SRVC\_\-INFO}, 
+\par
+\hyperlink{a00668_ggaf68e291caa4e1bdf31169e000c41750ba46681d7db333ef079e1d35f82ef33d53}{GSN\_\-MDNS\_\-SD\_\-LAST\_\-SRVC\_\-INFO}
+ \}
+\begin{DoxyCompactList}\small\item\em Status code provided with service discover Call Back. \end{DoxyCompactList}\item 
+enum \hyperlink{a00668_gabcc090f962c26d23957861a30b6bf166}{GSN\_\-MDNS\_\-SCOPE} \{ \par
+\hyperlink{a00668_ggabcc090f962c26d23957861a30b6bf166a211fb8d41e3a558b3db60c797e4e5e62}{GSN\_\-MDNS\_\-SCOPE\_\-IPV4\_\-LOCAL}, 
+\par
+\hyperlink{a00668_ggabcc090f962c26d23957861a30b6bf166ac399ad8c02ad33aafa7677162b7e9540}{GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-LOCAL}, 
+\par
+\hyperlink{a00668_ggabcc090f962c26d23957861a30b6bf166aaf172be006787a87aedd0d8e74c93790}{GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-SITE}
+ \}
+\begin{DoxyCompactList}\small\item\em scope of the RR / probe \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00668_ga31494501067f7d00838a9908c8d4ec21}{GsnMdns\_\-Init} (\hyperlink{a00140}{GSN\_\-MDNS\_\-T} $\ast$pMdns, \hyperlink{a00144}{GSN\_\-MDNS\_\-INIT\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Initialization of mDns-\/SD module This function does the initialization of the mDns-\/SD module. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00668_gaa61a8c72c78e9feca330c3c9116bf1bb}{GsnMdns\_\-Execute} (\hyperlink{a00140}{GSN\_\-MDNS\_\-T} $\ast$pMdns)
+\item 
+PUBLIC VOID \hyperlink{a00668_gab2b14677c4c68b1794decf709cf0c692}{GsnMdns\_\-DeInit} (\hyperlink{a00140}{GSN\_\-MDNS\_\-T} $\ast$pMdns)
+\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00668_gaaaa230657fa2a64f0b6a7d7f3129a2e4}{GsnMdns\_\-HostnameRegister} (\hyperlink{a00140}{GSN\_\-MDNS\_\-T} $\ast$pMdns, \hyperlink{a00143}{GSN\_\-MDNS\_\-HNREG\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Register the host name This function is used for registering the host name of the interface(node). \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00668_ga41a92cf9dd680c45ed3d5d0768e46547}{GsnMdns\_\-ServiceRegister} (\hyperlink{a00140}{GSN\_\-MDNS\_\-T} $\ast$pMdns, \hyperlink{a00149}{GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Register the Service This function is used for registering the a service. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00668_gaf0c7ac79063d0313f00e44b20d62d4af}{GsnMdns\_\-Announce} (\hyperlink{a00140}{GSN\_\-MDNS\_\-T} $\ast$pMdns, \hyperlink{a00141}{GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Announce the Service/s This function is used for announcing the given services. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00668_ga3233ac8be8015cb17ef7a0d539e77ea1}{GsnMdns\_\-HostnameDeregister} (\hyperlink{a00140}{GSN\_\-MDNS\_\-T} $\ast$pMdns, \hyperlink{a00142}{GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em De register host name This function is used for Deregistering the host name of the interface(node). \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00668_ga5153718283ae021aae7c9d7a380005d6}{GsnMdns\_\-ServiceDeRegister} (\hyperlink{a00140}{GSN\_\-MDNS\_\-T} $\ast$pMdns, \hyperlink{a00147}{GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Register the Service This function is used for Deregistering the a service. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00668_gaa95c60f5fe29388290848f6d5037683d}{GsnMdns\_\-ServiceDiscover} (\hyperlink{a00140}{GSN\_\-MDNS\_\-T} $\ast$pMdns, \hyperlink{a00148}{GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM\_\-T} $\ast$pParam)
+\begin{DoxyCompactList}\small\item\em Discover the Service This function is used for discovering services of given type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+mDns-\/SD. This group contains public definitions for the mDns-\/SD based Service Discovery provided by GSN . Functions are provided to initialize mDns-\/SD module, Register host name and Services, announce, deregister and discover the services. 
+
+\subsection{Define Documentation}
+\hypertarget{a00668_gae805e6fbb7579781605600a78cbe0959}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GNS\_\-MDNS\_\-RECV\_\-NW\_\-TYPE\_\-IPV4@{GNS\_\-MDNS\_\-RECV\_\-NW\_\-TYPE\_\-IPV4}}
+\index{GNS\_\-MDNS\_\-RECV\_\-NW\_\-TYPE\_\-IPV4@{GNS\_\-MDNS\_\-RECV\_\-NW\_\-TYPE\_\-IPV4}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GNS\_\-MDNS\_\-RECV\_\-NW\_\-TYPE\_\-IPV4}]{\setlength{\rightskip}{0pt plus 5cm}\#define GNS\_\-MDNS\_\-RECV\_\-NW\_\-TYPE\_\-IPV4~1}}
+\label{a00668_gae805e6fbb7579781605600a78cbe0959}
+
+
+packet received on IP v4/v6 nw 
+
+
+
+Definition at line 310 of file gsn\_\-mdns.h.
+
+\hypertarget{a00668_ga67c2a611f981a7e2e787c479819f28cd}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-BLOCKING\_\-OFF@{GSN\_\-MDNS\_\-BLOCKING\_\-OFF}}
+\index{GSN\_\-MDNS\_\-BLOCKING\_\-OFF@{GSN\_\-MDNS\_\-BLOCKING\_\-OFF}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-BLOCKING\_\-OFF}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MDNS\_\-BLOCKING\_\-OFF~0}}
+\label{a00668_ga67c2a611f981a7e2e787c479819f28cd}
+
+
+flag indicating the mDns servr is run in blocking mode or not 
+
+
+
+Definition at line 382 of file gsn\_\-mdns.h.
+
+\hypertarget{a00668_ga0b9291043d21e03b1202e152d19abcb8}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-STATE\_\-NOT\_\-INITIALISED@{GSN\_\-MDNS\_\-STATE\_\-NOT\_\-INITIALISED}}
+\index{GSN\_\-MDNS\_\-STATE\_\-NOT\_\-INITIALISED@{GSN\_\-MDNS\_\-STATE\_\-NOT\_\-INITIALISED}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-STATE\_\-NOT\_\-INITIALISED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MDNS\_\-STATE\_\-NOT\_\-INITIALISED~0}}
+\label{a00668_ga0b9291043d21e03b1202e152d19abcb8}
+
+
+State of the MDNS context structure. 
+
+
+
+Definition at line 319 of file gsn\_\-mdns.h.
+
+\hypertarget{a00668_ga56106404858e7c3f99fa52890f684d53}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-TASK\_\-CONTEXT\_\-NONE@{GSN\_\-MDNS\_\-TASK\_\-CONTEXT\_\-NONE}}
+\index{GSN\_\-MDNS\_\-TASK\_\-CONTEXT\_\-NONE@{GSN\_\-MDNS\_\-TASK\_\-CONTEXT\_\-NONE}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-TASK\_\-CONTEXT\_\-NONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MDNS\_\-TASK\_\-CONTEXT\_\-NONE~0}}
+\label{a00668_ga56106404858e7c3f99fa52890f684d53}
+
+
+define the type of task context in which the mDns server will run 
+
+
+
+Definition at line 372 of file gsn\_\-mdns.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00668_gaf26129a48ef3757ef5060ba8bb457d9c}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!DNS\_\-HEADER\_\-T@{DNS\_\-HEADER\_\-T}}
+\index{DNS\_\-HEADER\_\-T@{DNS\_\-HEADER\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{DNS\_\-HEADER\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf DNS\_\-HEADER} {\bf DNS\_\-HEADER\_\-T}}}
+\label{a00668_gaf26129a48ef3757ef5060ba8bb457d9c}
+
+
+various header structures(Packed Structures) 
+
+\hypertarget{a00668_ga41a672d3bce37ca4fe0d8b08524334a6}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T}}
+\index{GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T} {\bf GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T}}}
+\label{a00668_ga41a672d3bce37ca4fe0d8b08524334a6}
+
+
+Announce param. 
+
+\hypertarget{a00668_gae0bea67d1615b20dc8df1775f73c98ca}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM\_\-T@{GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM\_\-T}}
+\index{GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM\_\-T@{GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM} {\bf GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM\_\-T}}}
+\label{a00668_gae0bea67d1615b20dc8df1775f73c98ca}
+
+
+Hostname Deregister param. 
+
+\hypertarget{a00668_ga511a566bafeaf7323d968328226d0c4a}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-HNREG\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-HNREG\_\-PARAM\_\-T}}
+\index{GSN\_\-MDNS\_\-HNREG\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-HNREG\_\-PARAM\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-HNREG\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MDNS\_\-HNREG\_\-PARAM} {\bf GSN\_\-MDNS\_\-HNREG\_\-PARAM\_\-T}}}
+\label{a00668_ga511a566bafeaf7323d968328226d0c4a}
+
+
+Host name Register param. 
+
+\hypertarget{a00668_ga1ef3eac492349f066a53f0d1760152ee}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-INIT\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-MDNS\_\-INIT\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-INIT\_\-PARAM\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MDNS\_\-INIT\_\-PARAM} {\bf GSN\_\-MDNS\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00668_ga1ef3eac492349f066a53f0d1760152ee}
+
+
+mDns module init param 
+
+\hypertarget{a00668_gab2cd71424a7a8f16216fe22eb24e31b3}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-MDNS\_\-CB\_\-STATUS\_\-T@{GSN\_\-MDNS\_\-MDNS\_\-CB\_\-STATUS\_\-T}}
+\index{GSN\_\-MDNS\_\-MDNS\_\-CB\_\-STATUS\_\-T@{GSN\_\-MDNS\_\-MDNS\_\-CB\_\-STATUS\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-MDNS\_\-CB\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-MDNS\_\-REG\_\-CB\_\-STATUS} {\bf GSN\_\-MDNS\_\-MDNS\_\-CB\_\-STATUS\_\-T}}}
+\label{a00668_gab2cd71424a7a8f16216fe22eb24e31b3}
+
+
+Status code provided with the Hostname/Service Call Back. 
+
+These define the status provided in the call back for Hostname / Service Registration \hypertarget{a00668_ga9bb465f57992212c58689c8cf593e0e7}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-MSG\_\-POST\_\-CB@{GSN\_\-MDNS\_\-MSG\_\-POST\_\-CB}}
+\index{GSN\_\-MDNS\_\-MSG\_\-POST\_\-CB@{GSN\_\-MDNS\_\-MSG\_\-POST\_\-CB}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-MSG\_\-POST\_\-CB}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-MDNS\_\-MSG\_\-POST\_\-CB})(VOID $\ast$cbCtx, VOID $\ast$pMdns)}}
+\label{a00668_ga9bb465f57992212c58689c8cf593e0e7}
+
+
+call back to be called for posting message to an application task. 
+
+
+
+Definition at line 210 of file gsn\_\-mdns.h.
+
+\hypertarget{a00668_ga3216bbc2adc29e835ce14e76c1e80d44}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-MSG\_\-T@{GSN\_\-MDNS\_\-MSG\_\-T}}
+\index{GSN\_\-MDNS\_\-MSG\_\-T@{GSN\_\-MDNS\_\-MSG\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-MSG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MDNS\_\-MSG} {\bf GSN\_\-MDNS\_\-MSG\_\-T}}}
+\label{a00668_ga3216bbc2adc29e835ce14e76c1e80d44}
+
+
+mDns message queue message structure 
+
+\hypertarget{a00668_ga9c52fae5548745f14ef4e76fb05c2526}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-RR\_\-REG\_\-CB\_\-T@{GSN\_\-MDNS\_\-RR\_\-REG\_\-CB\_\-T}}
+\index{GSN\_\-MDNS\_\-RR\_\-REG\_\-CB\_\-T@{GSN\_\-MDNS\_\-RR\_\-REG\_\-CB\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-RR\_\-REG\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-MDNS\_\-RR\_\-REG\_\-CB\_\-T})(void $\ast$pData, {\bf UINT8} $\ast$rrName, {\bf UINT32} status)}}
+\label{a00668_ga9c52fae5548745f14ef4e76fb05c2526}
+
+
+Hostname/Service register call back function prototype. 
+
+
+
+Definition at line 202 of file gsn\_\-mdns.h.
+
+\hypertarget{a00668_ga628a2f0345628c6bb12ee21fee3790db}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SCOPE\_\-T@{GSN\_\-MDNS\_\-SCOPE\_\-T}}
+\index{GSN\_\-MDNS\_\-SCOPE\_\-T@{GSN\_\-MDNS\_\-SCOPE\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-SCOPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-MDNS\_\-SCOPE} {\bf GSN\_\-MDNS\_\-SCOPE\_\-T}}}
+\label{a00668_ga628a2f0345628c6bb12ee21fee3790db}
+
+
+scope of the RR / probe 
+
+\hypertarget{a00668_ga81d8695cbcffd3e0d102ef17d1981938}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T@{GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T}}
+\index{GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T@{GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T} {\bf GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T}}}
+\label{a00668_ga81d8695cbcffd3e0d102ef17d1981938}
+
+
+Status code provided with service discover Call Back. 
+
+These define the status provided in the call back for discovering service \hypertarget{a00668_gaef8391be45a1399b7895289b3b56d632}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SD\_\-CB\_\-T@{GSN\_\-MDNS\_\-SD\_\-CB\_\-T}}
+\index{GSN\_\-MDNS\_\-SD\_\-CB\_\-T@{GSN\_\-MDNS\_\-SD\_\-CB\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-SD\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-MDNS\_\-SD\_\-CB\_\-T})(void $\ast$pData, const {\bf GSN\_\-MDNS\_\-SRVC\_\-INFO\_\-T} $\ast$srvinfo, {\bf UINT32} status)}}
+\label{a00668_gaef8391be45a1399b7895289b3b56d632}
+
+
+Service Discover call back function prototype. 
+
+
+
+Definition at line 194 of file gsn\_\-mdns.h.
+
+\hypertarget{a00668_gaab0d47b6c1928b684129f17c0fbd1292}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SRVC\_\-INFO\_\-T@{GSN\_\-MDNS\_\-SRVC\_\-INFO\_\-T}}
+\index{GSN\_\-MDNS\_\-SRVC\_\-INFO\_\-T@{GSN\_\-MDNS\_\-SRVC\_\-INFO\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-SRVC\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MDNS\_\-SRVC\_\-INFO} {\bf GSN\_\-MDNS\_\-SRVC\_\-INFO\_\-T}}}
+\label{a00668_gaab0d47b6c1928b684129f17c0fbd1292}
+
+
+Information about a service Discovered. 
+
+These define the data structure having various information about the service discovered \hypertarget{a00668_ga1ec6492d157706d2baaf53959c6558b8}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM\_\-T}}
+\index{GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM} {\bf GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM\_\-T}}}
+\label{a00668_ga1ec6492d157706d2baaf53959c6558b8}
+
+
+Service Deregister param. 
+
+\hypertarget{a00668_gae85953b9de0c8db5521e84d7a91149e1}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM\_\-T}}
+\index{GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM} {\bf GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM\_\-T}}}
+\label{a00668_gae85953b9de0c8db5521e84d7a91149e1}
+
+
+service Discover param 
+
+\hypertarget{a00668_ga20024e1aacee7fa459e6be0aaf450a16}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T}}
+\index{GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T@{GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T} {\bf GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T}}}
+\label{a00668_ga20024e1aacee7fa459e6be0aaf450a16}
+
+
+Service Register param. 
+
+\hypertarget{a00668_gaaa3d044b4a5b3e8b4817fca5ad460e05}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-T@{GSN\_\-MDNS\_\-T}}
+\index{GSN\_\-MDNS\_\-T@{GSN\_\-MDNS\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-MDNS} {\bf GSN\_\-MDNS\_\-T}}}
+\label{a00668_gaaa3d044b4a5b3e8b4817fca5ad460e05}
+
+
+mDns module context 
+
+\hypertarget{a00668_gaf3a0737ada4d7a112e4fff6779bc8162}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-NCM\_\-CTX\_\-EXECUTE\_\-MSG\_\-POST\_\-CB@{GSN\_\-NCM\_\-CTX\_\-EXECUTE\_\-MSG\_\-POST\_\-CB}}
+\index{GSN\_\-NCM\_\-CTX\_\-EXECUTE\_\-MSG\_\-POST\_\-CB@{GSN\_\-NCM\_\-CTX\_\-EXECUTE\_\-MSG\_\-POST\_\-CB}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-NCM\_\-CTX\_\-EXECUTE\_\-MSG\_\-POST\_\-CB}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-NCM\_\-CTX\_\-EXECUTE\_\-MSG\_\-POST\_\-CB})(VOID $\ast$cbCtx, VOID $\ast$pNcm)}}
+\label{a00668_gaf3a0737ada4d7a112e4fff6779bc8162}
+
+
+call back to be called for posting message to an application task. This is to indicate \hyperlink{a00688_ga3ed4d28d4f2a8195d6c37f5032ee0bbd}{GsnNcm\_\-Execute()} to be called in an application task context. 
+
+
+
+Definition at line 332 of file gsn\_\-ncm.h.
+
+\hypertarget{a00668_ga9fb71d435556873549a9da8758741a14}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB@{GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB}}
+\index{GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB@{GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-NCM\_\-CTX\_\-NOTIF\_\-CB})(VOID $\ast$cbCtx, VOID $\ast$pNcm, {\bf GSN\_\-NCM\_\-NOTIF\_\-ID\_\-T} notifId)}}
+\label{a00668_ga9fb71d435556873549a9da8758741a14}
+
+
+call back to be called for posting message to an application task. 
+
+
+
+Definition at line 340 of file gsn\_\-ncm.h.
+
+\hypertarget{a00668_ga82bd88bbe87405a2e10adc0ee4645d7f}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-NCM\_\-INIT\_\-PARAM\_\-T@{GSN\_\-NCM\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-NCM\_\-INIT\_\-PARAM\_\-T@{GSN\_\-NCM\_\-INIT\_\-PARAM\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-NCM\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-NCM\_\-INIT\_\-PARAM} {\bf GSN\_\-NCM\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00668_ga82bd88bbe87405a2e10adc0ee4645d7f}
+
+
+mDns module init param 
+
+\hypertarget{a00668_ga049805b69be0964873d9f51f9f783813}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!RR\_\-T@{RR\_\-T}}
+\index{RR\_\-T@{RR\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{RR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf RESOURCE\_\-RECORD} {\bf RR\_\-T}}}
+\label{a00668_ga049805b69be0964873d9f51f9f783813}
+
+
+Resource Record definition. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00668_ga4736a957266d4e3ba37c9d5ec86beec8}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-REG\_\-CB\_\-STATUS@{GSN\_\-MDNS\_\-REG\_\-CB\_\-STATUS}}
+\index{GSN\_\-MDNS\_\-REG\_\-CB\_\-STATUS@{GSN\_\-MDNS\_\-REG\_\-CB\_\-STATUS}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-REG\_\-CB\_\-STATUS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-MDNS\_\-REG\_\-CB\_\-STATUS}}}
+\label{a00668_ga4736a957266d4e3ba37c9d5ec86beec8}
+
+
+Status code provided with the Hostname/Service Call Back. 
+
+These define the status provided in the call back for Hostname / Service Registration \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-MDNS\_\-REG\_\-CONFLICT@{GSN\_\-MDNS\_\-REG\_\-CONFLICT}!GSN mDns-\/SD@{GSN mDns-\/SD}}\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-REG\_\-CONFLICT@{GSN\_\-MDNS\_\-REG\_\-CONFLICT}}\item[{\em 
+\hypertarget{a00668_gga4736a957266d4e3ba37c9d5ec86beec8ae3550fd7b1f603639481cabb668a64a7}{
+GSN\_\-MDNS\_\-REG\_\-CONFLICT}
+\label{a00668_gga4736a957266d4e3ba37c9d5ec86beec8ae3550fd7b1f603639481cabb668a64a7}
+}]Conflict detected in case of registration of Hostname/Service \index{GSN\_\-MDNS\_\-REG\_\-SUCCESS@{GSN\_\-MDNS\_\-REG\_\-SUCCESS}!GSN mDns-\/SD@{GSN mDns-\/SD}}\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-REG\_\-SUCCESS@{GSN\_\-MDNS\_\-REG\_\-SUCCESS}}\item[{\em 
+\hypertarget{a00668_gga4736a957266d4e3ba37c9d5ec86beec8a522d97bab05dc2d11054ab2e8403639b}{
+GSN\_\-MDNS\_\-REG\_\-SUCCESS}
+\label{a00668_gga4736a957266d4e3ba37c9d5ec86beec8a522d97bab05dc2d11054ab2e8403639b}
+}]Registration of Hostname/Service is successful \end{description}
+\end{Desc}
+
+
+
+Definition at line 141 of file gsn\_\-mdns.h.
+
+\hypertarget{a00668_gabcc090f962c26d23957861a30b6bf166}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SCOPE@{GSN\_\-MDNS\_\-SCOPE}}
+\index{GSN\_\-MDNS\_\-SCOPE@{GSN\_\-MDNS\_\-SCOPE}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-SCOPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-MDNS\_\-SCOPE}}}
+\label{a00668_gabcc090f962c26d23957861a30b6bf166}
+
+
+scope of the RR / probe 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-MDNS\_\-SCOPE\_\-IPV4\_\-LOCAL@{GSN\_\-MDNS\_\-SCOPE\_\-IPV4\_\-LOCAL}!GSN mDns-\/SD@{GSN mDns-\/SD}}\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SCOPE\_\-IPV4\_\-LOCAL@{GSN\_\-MDNS\_\-SCOPE\_\-IPV4\_\-LOCAL}}\item[{\em 
+\hypertarget{a00668_ggabcc090f962c26d23957861a30b6bf166a211fb8d41e3a558b3db60c797e4e5e62}{
+GSN\_\-MDNS\_\-SCOPE\_\-IPV4\_\-LOCAL}
+\label{a00668_ggabcc090f962c26d23957861a30b6bf166a211fb8d41e3a558b3db60c797e4e5e62}
+}]\index{GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-LOCAL@{GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-LOCAL}!GSN mDns-\/SD@{GSN mDns-\/SD}}\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-LOCAL@{GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-LOCAL}}\item[{\em 
+\hypertarget{a00668_ggabcc090f962c26d23957861a30b6bf166ac399ad8c02ad33aafa7677162b7e9540}{
+GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-LOCAL}
+\label{a00668_ggabcc090f962c26d23957861a30b6bf166ac399ad8c02ad33aafa7677162b7e9540}
+}]\index{GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-SITE@{GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-SITE}!GSN mDns-\/SD@{GSN mDns-\/SD}}\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-SITE@{GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-SITE}}\item[{\em 
+\hypertarget{a00668_ggabcc090f962c26d23957861a30b6bf166aaf172be006787a87aedd0d8e74c93790}{
+GSN\_\-MDNS\_\-SCOPE\_\-IPV6\_\-SITE}
+\label{a00668_ggabcc090f962c26d23957861a30b6bf166aaf172be006787a87aedd0d8e74c93790}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 297 of file gsn\_\-mdns.h.
+
+\hypertarget{a00668_gaf68e291caa4e1bdf31169e000c41750b}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T@{GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T}}
+\index{GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T@{GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-MDNS\_\-SD\_\-CB\_\-STATUS\_\-T}}}
+\label{a00668_gaf68e291caa4e1bdf31169e000c41750b}
+
+
+Status code provided with service discover Call Back. 
+
+These define the status provided in the call back for discovering service \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-MDNS\_\-SD\_\-NO\_\-SRVC\_\-INFO@{GSN\_\-MDNS\_\-SD\_\-NO\_\-SRVC\_\-INFO}!GSN mDns-\/SD@{GSN mDns-\/SD}}\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SD\_\-NO\_\-SRVC\_\-INFO@{GSN\_\-MDNS\_\-SD\_\-NO\_\-SRVC\_\-INFO}}\item[{\em 
+\hypertarget{a00668_ggaf68e291caa4e1bdf31169e000c41750ba84a90f5cecb68159bb169fe99804e810}{
+GSN\_\-MDNS\_\-SD\_\-NO\_\-SRVC\_\-INFO}
+\label{a00668_ggaf68e291caa4e1bdf31169e000c41750ba84a90f5cecb68159bb169fe99804e810}
+}]\index{GSN\_\-MDNS\_\-SD\_\-MORE\_\-SRVC\_\-INFO@{GSN\_\-MDNS\_\-SD\_\-MORE\_\-SRVC\_\-INFO}!GSN mDns-\/SD@{GSN mDns-\/SD}}\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SD\_\-MORE\_\-SRVC\_\-INFO@{GSN\_\-MDNS\_\-SD\_\-MORE\_\-SRVC\_\-INFO}}\item[{\em 
+\hypertarget{a00668_ggaf68e291caa4e1bdf31169e000c41750bad2c9bab4f8fc05c87a9d9c289cacbf0e}{
+GSN\_\-MDNS\_\-SD\_\-MORE\_\-SRVC\_\-INFO}
+\label{a00668_ggaf68e291caa4e1bdf31169e000c41750bad2c9bab4f8fc05c87a9d9c289cacbf0e}
+}]\index{GSN\_\-MDNS\_\-SD\_\-LAST\_\-SRVC\_\-INFO@{GSN\_\-MDNS\_\-SD\_\-LAST\_\-SRVC\_\-INFO}!GSN mDns-\/SD@{GSN mDns-\/SD}}\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GSN\_\-MDNS\_\-SD\_\-LAST\_\-SRVC\_\-INFO@{GSN\_\-MDNS\_\-SD\_\-LAST\_\-SRVC\_\-INFO}}\item[{\em 
+\hypertarget{a00668_ggaf68e291caa4e1bdf31169e000c41750ba46681d7db333ef079e1d35f82ef33d53}{
+GSN\_\-MDNS\_\-SD\_\-LAST\_\-SRVC\_\-INFO}
+\label{a00668_ggaf68e291caa4e1bdf31169e000c41750ba46681d7db333ef079e1d35f82ef33d53}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 154 of file gsn\_\-mdns.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00668_gaf0c7ac79063d0313f00e44b20d62d4af}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GsnMdns\_\-Announce@{GsnMdns\_\-Announce}}
+\index{GsnMdns\_\-Announce@{GsnMdns\_\-Announce}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GsnMdns\_\-Announce}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf UINT32} GsnMdns\_\-Announce (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MDNS\_\-T} $\ast$}]{pMdns, }
+\item[{{\bf GSN\_\-MDNS\_\-ANNOUNCE\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00668_gaf0c7ac79063d0313f00e44b20d62d4af}
+
+
+Announce the Service/s This function is used for announcing the given services. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMdns} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-T \\
+\hline
+{\em pParam} & -\/ IN Pointer to MDNS announce parameters \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em UINT32} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00668_gab2b14677c4c68b1794decf709cf0c692}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GsnMdns\_\-DeInit@{GsnMdns\_\-DeInit}}
+\index{GsnMdns\_\-DeInit@{GsnMdns\_\-DeInit}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GsnMdns\_\-DeInit}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnMdns\_\-DeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MDNS\_\-T} $\ast$}]{pMdns}
+\end{DoxyParamCaption}
+)}}
+\label{a00668_gab2b14677c4c68b1794decf709cf0c692}
+
+\begin{DoxyParams}{Parameters}
+{\em pMdns} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-T \\
+\hline
+\end{DoxyParams}
+\hypertarget{a00668_gaa61a8c72c78e9feca330c3c9116bf1bb}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GsnMdns\_\-Execute@{GsnMdns\_\-Execute}}
+\index{GsnMdns\_\-Execute@{GsnMdns\_\-Execute}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GsnMdns\_\-Execute}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnMdns\_\-Execute (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MDNS\_\-T} $\ast$}]{pMdns}
+\end{DoxyParamCaption}
+)}}
+\label{a00668_gaa61a8c72c78e9feca330c3c9116bf1bb}
+
+\begin{DoxyParams}{Parameters}
+{\em pMdns} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-T \\
+\hline
+\end{DoxyParams}
+\hypertarget{a00668_ga3233ac8be8015cb17ef7a0d539e77ea1}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GsnMdns\_\-HostnameDeregister@{GsnMdns\_\-HostnameDeregister}}
+\index{GsnMdns\_\-HostnameDeregister@{GsnMdns\_\-HostnameDeregister}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GsnMdns\_\-HostnameDeregister}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnMdns\_\-HostnameDeregister (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MDNS\_\-T} $\ast$}]{pMdns, }
+\item[{{\bf GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00668_ga3233ac8be8015cb17ef7a0d539e77ea1}
+
+
+De register host name This function is used for Deregistering the host name of the interface(node). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMdns} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-T \\
+\hline
+{\em pParam} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-HNDEREG\_\-PAARAM\_\-T \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful \\
+\hline
+{\em GSN\_\-FAILURE} & Deregistration Failed \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00668_gaaaa230657fa2a64f0b6a7d7f3129a2e4}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GsnMdns\_\-HostnameRegister@{GsnMdns\_\-HostnameRegister}}
+\index{GsnMdns\_\-HostnameRegister@{GsnMdns\_\-HostnameRegister}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GsnMdns\_\-HostnameRegister}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnMdns\_\-HostnameRegister (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MDNS\_\-T} $\ast$}]{pMdns, }
+\item[{{\bf GSN\_\-MDNS\_\-HNREG\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00668_gaaaa230657fa2a64f0b6a7d7f3129a2e4}
+
+
+Register the host name This function is used for registering the host name of the interface(node). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMdns} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-T \\
+\hline
+{\em pParam} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-HNREG\_\-PARAM\_\-T \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em GSN\_\-FAILURE} & Registration failed. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function will return GSN\_\-SUCCESS in case the registration is successfully initiated. However the status of the actual registration process will be known only through the call back. 
+\end{DoxyNote}
+\hypertarget{a00668_ga31494501067f7d00838a9908c8d4ec21}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GsnMdns\_\-Init@{GsnMdns\_\-Init}}
+\index{GsnMdns\_\-Init@{GsnMdns\_\-Init}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GsnMdns\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnMdns\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MDNS\_\-T} $\ast$}]{pMdns, }
+\item[{{\bf GSN\_\-MDNS\_\-INIT\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00668_ga31494501067f7d00838a9908c8d4ec21}
+
+
+Initialization of mDns-\/SD module This function does the initialization of the mDns-\/SD module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMdns} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-T \\
+\hline
+{\em pParam} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-INIT\_\-PARAM\_\-T \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em GSN\_\-FAILURE} & Initialization failed. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function shall be called before any of the mDns-\/SD module call is called. 
+\end{DoxyNote}
+\hypertarget{a00668_ga5153718283ae021aae7c9d7a380005d6}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GsnMdns\_\-ServiceDeRegister@{GsnMdns\_\-ServiceDeRegister}}
+\index{GsnMdns\_\-ServiceDeRegister@{GsnMdns\_\-ServiceDeRegister}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GsnMdns\_\-ServiceDeRegister}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnMdns\_\-ServiceDeRegister (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MDNS\_\-T} $\ast$}]{pMdns, }
+\item[{{\bf GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00668_ga5153718283ae021aae7c9d7a380005d6}
+
+
+Register the Service This function is used for Deregistering the a service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMdns} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-T \\
+\hline
+{\em pParam} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-SRVCDEREG\_\-PARAM\_\-T \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful \\
+\hline
+{\em GSN\_\-FAILURE} & Deregistration Failed \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00668_gaa95c60f5fe29388290848f6d5037683d}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GsnMdns\_\-ServiceDiscover@{GsnMdns\_\-ServiceDiscover}}
+\index{GsnMdns\_\-ServiceDiscover@{GsnMdns\_\-ServiceDiscover}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GsnMdns\_\-ServiceDiscover}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnMdns\_\-ServiceDiscover (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MDNS\_\-T} $\ast$}]{pMdns, }
+\item[{{\bf GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00668_gaa95c60f5fe29388290848f6d5037683d}
+
+
+Discover the Service This function is used for discovering services of given type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMdns} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-T \\
+\hline
+{\em pParam} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-SRVCDISCVR\_\-PARAM\_\-T \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em GSN\_\-FAILURE} & service discover failed. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function will return GSN\_\-SUCCESS in case the service Discovery is successfully initiated.However the status of the actual discovery process will be known only through the call back 
+\end{DoxyNote}
+\hypertarget{a00668_ga41a92cf9dd680c45ed3d5d0768e46547}{
+\index{GSN mDns-\/SD@{GSN mDns-\/SD}!GsnMdns\_\-ServiceRegister@{GsnMdns\_\-ServiceRegister}}
+\index{GsnMdns\_\-ServiceRegister@{GsnMdns\_\-ServiceRegister}!GSN mDns-SD@{GSN mDns-\/SD}}
+\subsubsection[{GsnMdns\_\-ServiceRegister}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-STATUS} GsnMdns\_\-ServiceRegister (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-MDNS\_\-T} $\ast$}]{pMdns, }
+\item[{{\bf GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T} $\ast$}]{pParam}
+\end{DoxyParamCaption}
+)}}
+\label{a00668_ga41a92cf9dd680c45ed3d5d0768e46547}
+
+
+Register the Service This function is used for registering the a service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMdns} & -\/ IN Pointer to object of type GSN\_\-MDNS\_\-T \\
+\hline
+{\em pParam} & -\/ IN Pointer to object of type \hyperlink{a00149}{GSN\_\-MDNS\_\-SRVCREG\_\-PARAM\_\-T} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & Operation successful. \\
+\hline
+{\em GSN\_\-FAILURE} & Registration failed. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function will return GSN\_\-SUCCESS in case the registration is successfully initiated.However the status of the actual registration process will be known only through the call back 
+\end{DoxyNote}

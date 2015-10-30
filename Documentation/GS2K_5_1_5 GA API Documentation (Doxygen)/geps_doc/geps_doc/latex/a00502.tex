@@ -1,0 +1,150 @@
+\hypertarget{a00502}{
+\section{gsn\_\-fwup.h File Reference}
+\label{a00502}\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00027}{GSN\_\-BRFLASHLDR\_\-FWIMAGE\_\-INFO\_\-S}
+\item 
+struct \hyperlink{a00028}{GSN\_\-BRFLASHLDR\_\-FWINFO\_\-S}
+\item 
+struct \hyperlink{a00082}{GSN\_\-FWUP\_\-CTX}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00502_a08715255e49de6b758fc8ff960d04ea9}{GSN\_\-BRFLASHLDR\_\-FWIMAGES\_\-MAX}~3
+\item 
+\#define \hyperlink{a00502_ac37eaa934c8636067a9233db69544c3a}{GSN\_\-FWUP\_\-SUPER\_\-BLOCK\_\-ADDR}~0x1000
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00027}{GSN\_\-BRFLASHLDR\_\-FWIMAGE\_\-INFO\_\-S} \hyperlink{a00502_a0c04110695a757c3845195aba8691580}{GSN\_\-BRFLASHLDR\_\-FWIMAGE\_\-INFO\_\-T}
+\item 
+typedef struct \hyperlink{a00028}{GSN\_\-BRFLASHLDR\_\-FWINFO\_\-S} \hyperlink{a00502_abcfb658142929ca326b2ff69b51d15ce}{GSN\_\-BRFLASHLDR\_\-FWINFO\_\-T}
+\item 
+typedef struct \hyperlink{a00082}{GSN\_\-FWUP\_\-CTX} \hyperlink{a00502_a93955cb93de548cf3b34832dc4c40f6e}{GSN\_\-FWUP\_\-CTX\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00502_ad5b393c828e543e7c8cf471be70bc274}{GsnFwup\_\-Init} (\hyperlink{a00082}{GSN\_\-FWUP\_\-CTX\_\-T} $\ast$pFwupCtx)
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00502_a3e80efcb47f67f2dc9ea1bdfeb2f4faf}{GsnFwup\_\-DownLoad} (\hyperlink{a00082}{GSN\_\-FWUP\_\-CTX\_\-T} $\ast$pFwupCtx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pBuf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} bufSize)
+\item 
+\hyperlink{a00659_gae36517c0f5872426a7034c9551eb96ac}{GSN\_\-STATUS\_\-T} \hyperlink{a00502_a199d3aab2627e5ad172a2d031c803481}{GsnFwup\_\-DownLoadEnd} (\hyperlink{a00082}{GSN\_\-FWUP\_\-CTX\_\-T} $\ast$pFwupCtx)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00502_a6ed82e12e171649fa5bf2a4b3ef19792}{GsnFwup\_\-DeInit} (\hyperlink{a00082}{GSN\_\-FWUP\_\-CTX\_\-T} $\ast$pFwupCtx)
+\item 
+INLINE VOID \hyperlink{a00502_ab2ca73b8026dce0342defbdaeb8bcb27}{GsnFwup\_\-FactImgReqSet} (\hyperlink{a00082}{GSN\_\-FWUP\_\-CTX\_\-T} $\ast$pFwupCtx)
+\item 
+INLINE VOID \hyperlink{a00502_a3ca0bc95d324dd38b3d9d653b4dfc250}{GsnFwup\_\-FactImgReqClear} (\hyperlink{a00082}{GSN\_\-FWUP\_\-CTX\_\-T} $\ast$pFwupCtx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00502_a08715255e49de6b758fc8ff960d04ea9}{
+\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}!GSN\_\-BRFLASHLDR\_\-FWIMAGES\_\-MAX@{GSN\_\-BRFLASHLDR\_\-FWIMAGES\_\-MAX}}
+\index{GSN\_\-BRFLASHLDR\_\-FWIMAGES\_\-MAX@{GSN\_\-BRFLASHLDR\_\-FWIMAGES\_\-MAX}!gsn_fwup.h@{gsn\_\-fwup.h}}
+\subsubsection[{GSN\_\-BRFLASHLDR\_\-FWIMAGES\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-BRFLASHLDR\_\-FWIMAGES\_\-MAX~3}}
+\label{a00502_a08715255e49de6b758fc8ff960d04ea9}
+
+
+Definition at line 4 of file gsn\_\-fwup.h.
+
+\hypertarget{a00502_ac37eaa934c8636067a9233db69544c3a}{
+\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}!GSN\_\-FWUP\_\-SUPER\_\-BLOCK\_\-ADDR@{GSN\_\-FWUP\_\-SUPER\_\-BLOCK\_\-ADDR}}
+\index{GSN\_\-FWUP\_\-SUPER\_\-BLOCK\_\-ADDR@{GSN\_\-FWUP\_\-SUPER\_\-BLOCK\_\-ADDR}!gsn_fwup.h@{gsn\_\-fwup.h}}
+\subsubsection[{GSN\_\-FWUP\_\-SUPER\_\-BLOCK\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-FWUP\_\-SUPER\_\-BLOCK\_\-ADDR~0x1000}}
+\label{a00502_ac37eaa934c8636067a9233db69544c3a}
+
+
+Definition at line 5 of file gsn\_\-fwup.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00502_a0c04110695a757c3845195aba8691580}{
+\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}!GSN\_\-BRFLASHLDR\_\-FWIMAGE\_\-INFO\_\-T@{GSN\_\-BRFLASHLDR\_\-FWIMAGE\_\-INFO\_\-T}}
+\index{GSN\_\-BRFLASHLDR\_\-FWIMAGE\_\-INFO\_\-T@{GSN\_\-BRFLASHLDR\_\-FWIMAGE\_\-INFO\_\-T}!gsn_fwup.h@{gsn\_\-fwup.h}}
+\subsubsection[{GSN\_\-BRFLASHLDR\_\-FWIMAGE\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-BRFLASHLDR\_\-FWIMAGE\_\-INFO\_\-S}  {\bf GSN\_\-BRFLASHLDR\_\-FWIMAGE\_\-INFO\_\-T}}}
+\label{a00502_a0c04110695a757c3845195aba8691580}
+\hypertarget{a00502_abcfb658142929ca326b2ff69b51d15ce}{
+\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}!GSN\_\-BRFLASHLDR\_\-FWINFO\_\-T@{GSN\_\-BRFLASHLDR\_\-FWINFO\_\-T}}
+\index{GSN\_\-BRFLASHLDR\_\-FWINFO\_\-T@{GSN\_\-BRFLASHLDR\_\-FWINFO\_\-T}!gsn_fwup.h@{gsn\_\-fwup.h}}
+\subsubsection[{GSN\_\-BRFLASHLDR\_\-FWINFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-BRFLASHLDR\_\-FWINFO\_\-S}  {\bf GSN\_\-BRFLASHLDR\_\-FWINFO\_\-T}}}
+\label{a00502_abcfb658142929ca326b2ff69b51d15ce}
+\hypertarget{a00502_a93955cb93de548cf3b34832dc4c40f6e}{
+\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}!GSN\_\-FWUP\_\-CTX\_\-T@{GSN\_\-FWUP\_\-CTX\_\-T}}
+\index{GSN\_\-FWUP\_\-CTX\_\-T@{GSN\_\-FWUP\_\-CTX\_\-T}!gsn_fwup.h@{gsn\_\-fwup.h}}
+\subsubsection[{GSN\_\-FWUP\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-FWUP\_\-CTX} {\bf GSN\_\-FWUP\_\-CTX\_\-T}}}
+\label{a00502_a93955cb93de548cf3b34832dc4c40f6e}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00502_a6ed82e12e171649fa5bf2a4b3ef19792}{
+\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}!GsnFwup\_\-DeInit@{GsnFwup\_\-DeInit}}
+\index{GsnFwup\_\-DeInit@{GsnFwup\_\-DeInit}!gsn_fwup.h@{gsn\_\-fwup.h}}
+\subsubsection[{GsnFwup\_\-DeInit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnFwup\_\-DeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-FWUP\_\-CTX\_\-T} $\ast$}]{pFwupCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00502_a6ed82e12e171649fa5bf2a4b3ef19792}
+\hypertarget{a00502_a3e80efcb47f67f2dc9ea1bdfeb2f4faf}{
+\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}!GsnFwup\_\-DownLoad@{GsnFwup\_\-DownLoad}}
+\index{GsnFwup\_\-DownLoad@{GsnFwup\_\-DownLoad}!gsn_fwup.h@{gsn\_\-fwup.h}}
+\subsubsection[{GsnFwup\_\-DownLoad}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnFwup\_\-DownLoad (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-FWUP\_\-CTX\_\-T} $\ast$}]{pFwupCtx, }
+\item[{{\bf UINT8} $\ast$}]{pBuf, }
+\item[{{\bf UINT32}}]{bufSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00502_a3e80efcb47f67f2dc9ea1bdfeb2f4faf}
+\hypertarget{a00502_a199d3aab2627e5ad172a2d031c803481}{
+\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}!GsnFwup\_\-DownLoadEnd@{GsnFwup\_\-DownLoadEnd}}
+\index{GsnFwup\_\-DownLoadEnd@{GsnFwup\_\-DownLoadEnd}!gsn_fwup.h@{gsn\_\-fwup.h}}
+\subsubsection[{GsnFwup\_\-DownLoadEnd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS\_\-T} GsnFwup\_\-DownLoadEnd (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-FWUP\_\-CTX\_\-T} $\ast$}]{pFwupCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00502_a199d3aab2627e5ad172a2d031c803481}
+\hypertarget{a00502_a3ca0bc95d324dd38b3d9d653b4dfc250}{
+\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}!GsnFwup\_\-FactImgReqClear@{GsnFwup\_\-FactImgReqClear}}
+\index{GsnFwup\_\-FactImgReqClear@{GsnFwup\_\-FactImgReqClear}!gsn_fwup.h@{gsn\_\-fwup.h}}
+\subsubsection[{GsnFwup\_\-FactImgReqClear}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnFwup\_\-FactImgReqClear (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-FWUP\_\-CTX\_\-T} $\ast$}]{pFwupCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00502_a3ca0bc95d324dd38b3d9d653b4dfc250}
+
+
+Definition at line 53 of file gsn\_\-fwup.h.
+
+\hypertarget{a00502_ab2ca73b8026dce0342defbdaeb8bcb27}{
+\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}!GsnFwup\_\-FactImgReqSet@{GsnFwup\_\-FactImgReqSet}}
+\index{GsnFwup\_\-FactImgReqSet@{GsnFwup\_\-FactImgReqSet}!gsn_fwup.h@{gsn\_\-fwup.h}}
+\subsubsection[{GsnFwup\_\-FactImgReqSet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnFwup\_\-FactImgReqSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-FWUP\_\-CTX\_\-T} $\ast$}]{pFwupCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00502_ab2ca73b8026dce0342defbdaeb8bcb27}
+
+
+Definition at line 48 of file gsn\_\-fwup.h.
+
+\hypertarget{a00502_ad5b393c828e543e7c8cf471be70bc274}{
+\index{gsn\_\-fwup.h@{gsn\_\-fwup.h}!GsnFwup\_\-Init@{GsnFwup\_\-Init}}
+\index{GsnFwup\_\-Init@{GsnFwup\_\-Init}!gsn_fwup.h@{gsn\_\-fwup.h}}
+\subsubsection[{GsnFwup\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnFwup\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-FWUP\_\-CTX\_\-T} $\ast$}]{pFwupCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00502_ad5b393c828e543e7c8cf471be70bc274}

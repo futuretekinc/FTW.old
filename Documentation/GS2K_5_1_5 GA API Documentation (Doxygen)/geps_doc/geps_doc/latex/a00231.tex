@@ -1,0 +1,247 @@
+\hypertarget{a00231}{
+\section{GSN\_\-SPI\_\-CONFIG Struct Reference}
+\label{a00231}\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+}
+
+
+Gsn SPI configuration structure.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-spi.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00655_ga6621383791d81630bc4c294a7a3d292d}{GSN\_\-SPI\_\-OPERATINGMODE\_\-T} \hyperlink{a00231_ab1f5bd9a03dacfe8a653d9cc61bcf820}{spiMode}
+\item 
+\hyperlink{a00655_gafc404344d5f8c6a8358fa3be07a87444}{GSN\_\-SPI\_\-PROTOCOL\_\-T} \hyperlink{a00231_a2cc829f36d85f4ba9500b54e9a74b0d3}{spiProtocol}
+\item 
+\hyperlink{a00655_ga40c914db809ec79fd3a564dda8364aea}{GSN\_\-SPI\_\-CLOCKPOLARITY\_\-T} \hyperlink{a00231_a2fcdd63ffc7b77384ef779ac2bc097f3}{clockPolarity}
+\item 
+\hyperlink{a00655_ga1399b803d30956e8ed6f4929033329ad}{GSN\_\-SPI\_\-CLOCKPHASE\_\-T} \hyperlink{a00231_a3bf64950c4cb62575d5cc62ca7f0c477}{clockPhase}
+\item 
+\hyperlink{a00655_ga63cbe81427185213bde26b93dde72747}{GSN\_\-SPI\_\-DATAWORDSIZE\_\-T} \hyperlink{a00231_a3998333a3ec939733a315371ea525299}{dataWordSize}
+\item 
+\hyperlink{a00655_ga6f83091cbd86860cdb531eb6c520660e}{GSN\_\-SPI\_\-LoopBack\_\-MODE\_\-T} \hyperlink{a00231_a82d6f7f94ead0563d493532a0fc8082e}{LoopBack}
+\item 
+\hyperlink{a00655_gafff743b26bbfafb380a9797457935a0e}{GSN\_\-SPI\_\-DMA\_\-MODE\_\-T} \hyperlink{a00231_a8745e343cad523631d63304871d0bdf3}{dmaMode}
+\item 
+\hyperlink{a00655_ga5662413f1ff6b81e835e7c5412916d4b}{GSN\_\-SPI\_\-SOD\_\-MODE\_\-T} \hyperlink{a00231_a6988180f451df73a4220e1f4df6c37d9}{sodMode}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00231_aceb3f680c7de4959ad53b0e20baf8a5c}{SerialclockRate}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00231_ae7807face22c73f3541066336176a60d}{clockDivider}
+\item 
+\hyperlink{a00655_gac4a300710a224a1971e5a78eae8eb89e}{GSN\_\-SPI\_\-CLK\_\-SEL\_\-T} \hyperlink{a00231_af879184c3660e99b8402d538c035fbc5}{clockSelect}
+\item 
+\hyperlink{a00039}{GSN\_\-CLK\_\-CTL\_\-CTX\_\-T} $\ast$ \hyperlink{a00231_a87fd9dda5636bd71a412693b96fed177}{pclkCtlCtx}
+\item 
+\hyperlink{a00239}{GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} \hyperlink{a00231_acb4512599754c80bddd73e9a02574f9e}{spiRWArg}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00231_aa07b66f7f4a73b04e5ffaf3f29b4b414}{spiRxBuffer}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00231_a0b720c9f52a6b5aa0634f432850766ec}{spiRxBuffSize}
+\item 
+\hyperlink{a00655_ga4319e7be0e14776c7cd2c7ff7ca8f2c2}{GSN\_\-SPI\_\-INTR\_\-CALLBACK\_\-FUNC\_\-T} \hyperlink{a00231_a4e134bf841774583e84c1b9d14aa928b}{txIntrCB}
+\item 
+\hyperlink{a00655_ga4319e7be0e14776c7cd2c7ff7ca8f2c2}{GSN\_\-SPI\_\-INTR\_\-CALLBACK\_\-FUNC\_\-T} \hyperlink{a00231_a764a17416df305e000c7f2c5d3edf2c2}{rxIntrCB}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00231_abf7d1a3fd39bc4650832af3d1f22a59d}{idleChar}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00231_a7607005ffbebdca79ab3c4d558d0e442}{byteStuff}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gsn SPI configuration structure. 
+
+This structure defines SPI configuration parameters
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00655_ga582e2b85ccb404b546fbe5a27f2113cb}{GSN\_\-SPI\_\-CONFIG\_\-T}. 
+\end{DoxySeeAlso}
+
+
+Definition at line 513 of file gsn\_\-spi.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00231_a7607005ffbebdca79ab3c4d558d0e442}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!byteStuff@{byteStuff}}
+\index{byteStuff@{byteStuff}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{byteStuff}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf byteStuff}}}
+\label{a00231_a7607005ffbebdca79ab3c4d558d0e442}
+
+
+Definition at line 535 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_ae7807face22c73f3541066336176a60d}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!clockDivider@{clockDivider}}
+\index{clockDivider@{clockDivider}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{clockDivider}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf clockDivider}}}
+\label{a00231_ae7807face22c73f3541066336176a60d}
+SPI clock divider 
+
+Definition at line 524 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_a3bf64950c4cb62575d5cc62ca7f0c477}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!clockPhase@{clockPhase}}
+\index{clockPhase@{clockPhase}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{clockPhase}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-CLOCKPHASE\_\-T} {\bf clockPhase}}}
+\label{a00231_a3bf64950c4cb62575d5cc62ca7f0c477}
+SPI clock phase 
+
+Definition at line 518 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_a2fcdd63ffc7b77384ef779ac2bc097f3}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!clockPolarity@{clockPolarity}}
+\index{clockPolarity@{clockPolarity}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{clockPolarity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-CLOCKPOLARITY\_\-T} {\bf clockPolarity}}}
+\label{a00231_a2fcdd63ffc7b77384ef779ac2bc097f3}
+SPI clock polarity 
+
+Definition at line 517 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_af879184c3660e99b8402d538c035fbc5}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!clockSelect@{clockSelect}}
+\index{clockSelect@{clockSelect}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{clockSelect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-CLK\_\-SEL\_\-T} {\bf clockSelect}}}
+\label{a00231_af879184c3660e99b8402d538c035fbc5}
+SPI clock Selction 
+
+Definition at line 525 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_a3998333a3ec939733a315371ea525299}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!dataWordSize@{dataWordSize}}
+\index{dataWordSize@{dataWordSize}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{dataWordSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-DATAWORDSIZE\_\-T} {\bf dataWordSize}}}
+\label{a00231_a3998333a3ec939733a315371ea525299}
+SPI data word size 
+
+Definition at line 519 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_a8745e343cad523631d63304871d0bdf3}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!dmaMode@{dmaMode}}
+\index{dmaMode@{dmaMode}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{dmaMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-DMA\_\-MODE\_\-T} {\bf dmaMode}}}
+\label{a00231_a8745e343cad523631d63304871d0bdf3}
+SPI DMA enable 
+
+Definition at line 521 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_abf7d1a3fd39bc4650832af3d1f22a59d}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!idleChar@{idleChar}}
+\index{idleChar@{idleChar}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{idleChar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf idleChar}}}
+\label{a00231_abf7d1a3fd39bc4650832af3d1f22a59d}
+
+
+Definition at line 534 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_a82d6f7f94ead0563d493532a0fc8082e}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!LoopBack@{LoopBack}}
+\index{LoopBack@{LoopBack}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{LoopBack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-LoopBack\_\-MODE\_\-T} {\bf LoopBack}}}
+\label{a00231_a82d6f7f94ead0563d493532a0fc8082e}
+SPI LoopBack 
+
+Definition at line 520 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_a87fd9dda5636bd71a412693b96fed177}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!pclkCtlCtx@{pclkCtlCtx}}
+\index{pclkCtlCtx@{pclkCtlCtx}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{pclkCtlCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-CLK\_\-CTL\_\-CTX\_\-T}$\ast$ {\bf pclkCtlCtx}}}
+\label{a00231_a87fd9dda5636bd71a412693b96fed177}
+Clock Context 
+
+Definition at line 526 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_a764a17416df305e000c7f2c5d3edf2c2}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!rxIntrCB@{rxIntrCB}}
+\index{rxIntrCB@{rxIntrCB}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{rxIntrCB}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-INTR\_\-CALLBACK\_\-FUNC\_\-T} {\bf rxIntrCB}}}
+\label{a00231_a764a17416df305e000c7f2c5d3edf2c2}
+
+
+Definition at line 533 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_aceb3f680c7de4959ad53b0e20baf8a5c}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!SerialclockRate@{SerialclockRate}}
+\index{SerialclockRate@{SerialclockRate}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{SerialclockRate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf SerialclockRate}}}
+\label{a00231_aceb3f680c7de4959ad53b0e20baf8a5c}
+SPI serial clk rate 
+
+Definition at line 523 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_a6988180f451df73a4220e1f4df6c37d9}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!sodMode@{sodMode}}
+\index{sodMode@{sodMode}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{sodMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-SOD\_\-MODE\_\-T} {\bf sodMode}}}
+\label{a00231_a6988180f451df73a4220e1f4df6c37d9}
+SPI Slave o/p disable mode 
+
+Definition at line 522 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_ab1f5bd9a03dacfe8a653d9cc61bcf820}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!spiMode@{spiMode}}
+\index{spiMode@{spiMode}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{spiMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-OPERATINGMODE\_\-T} {\bf spiMode}}}
+\label{a00231_ab1f5bd9a03dacfe8a653d9cc61bcf820}
+SPI mode status 
+
+Definition at line 515 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_a2cc829f36d85f4ba9500b54e9a74b0d3}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!spiProtocol@{spiProtocol}}
+\index{spiProtocol@{spiProtocol}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{spiProtocol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-PROTOCOL\_\-T} {\bf spiProtocol}}}
+\label{a00231_a2cc829f36d85f4ba9500b54e9a74b0d3}
+SPI protocol type 
+
+Definition at line 516 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_acb4512599754c80bddd73e9a02574f9e}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!spiRWArg@{spiRWArg}}
+\index{spiRWArg@{spiRWArg}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{spiRWArg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-RW\_\-ARGS\_\-T} {\bf spiRWArg}}}
+\label{a00231_acb4512599754c80bddd73e9a02574f9e}
+SPI Tx Rx struct 
+
+Definition at line 527 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_aa07b66f7f4a73b04e5ffaf3f29b4b414}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!spiRxBuffer@{spiRxBuffer}}
+\index{spiRxBuffer@{spiRxBuffer}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{spiRxBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf spiRxBuffer}}}
+\label{a00231_aa07b66f7f4a73b04e5ffaf3f29b4b414}
+Rx buffer pointer for slave 
+
+Definition at line 528 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_a0b720c9f52a6b5aa0634f432850766ec}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!spiRxBuffSize@{spiRxBuffSize}}
+\index{spiRxBuffSize@{spiRxBuffSize}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{spiRxBuffSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf spiRxBuffSize}}}
+\label{a00231_a0b720c9f52a6b5aa0634f432850766ec}
+Rx buffer size 
+
+Definition at line 529 of file gsn\_\-spi.h.
+
+\hypertarget{a00231_a4e134bf841774583e84c1b9d14aa928b}{
+\index{GSN\_\-SPI\_\-CONFIG@{GSN\_\-SPI\_\-CONFIG}!txIntrCB@{txIntrCB}}
+\index{txIntrCB@{txIntrCB}!GSN_SPI_CONFIG@{GSN\_\-SPI\_\-CONFIG}}
+\subsubsection[{txIntrCB}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SPI\_\-INTR\_\-CALLBACK\_\-FUNC\_\-T} {\bf txIntrCB}}}
+\label{a00231_a4e134bf841774583e84c1b9d14aa928b}
+
+
+Definition at line 532 of file gsn\_\-spi.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00587}{gsn\_\-spi.h}\end{DoxyCompactItemize}

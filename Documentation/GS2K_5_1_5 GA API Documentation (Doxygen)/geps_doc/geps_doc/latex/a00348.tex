@@ -1,0 +1,264 @@
+\hypertarget{a00348}{
+\section{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S Struct Reference}
+\label{a00348}\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+}
+
+
+Boot Indication Message.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-wif\_\-sys\_\-defs.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a81df1b1a967faea76636f64e7ebf3f4e}{bootReason}: 4
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a7ca6fad2381173efde7ef12e9c546923}{bootSubreason}: 4
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_ad81cf810d5479c72eb00a2dae02d1bfb}{confLost}: 1
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a325947d5876bcd21082a678746f5810c}{strapVal}: 5
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a186854790696dd9afc23f7648fa363ed}{unused1}: 18
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_ac4320494d78b18891e3da4896e6ab01d}{bootTimeLow}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_ab360fb81514af95b2c567b11bc326d72}{bootTimeHigh}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a227fcb5ac22283fc4d90e07a8363f7a5}{fwFlashAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a2e68778dde03015909b732c4e317c01f}{dTxRdyQDescAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a78d96dc01c76349b87f960ba482cac23}{dTxDoneQDescAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_ab547f820597f1b1f7cbfdd7393569c12}{dRxRdySBufQDescAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a26310480a4f804ddac47c8036ed576a0}{dRxRdyLBufQDescAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_ab8fef41094b77d4a751980b345341c36}{dRxDoneQDescAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a1542d73344b14a84e7f710c4de9bb8a7}{cTxRdyQDescAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a78a51b81650e81f8eadc7c11f49dcf0b}{cTxDoneQDescAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a4c1ebbd82b71958696f47604eb581d7c}{cRxRdySBufQDescAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a8abf8636a4f60a8f51ea8857ade542d5}{cRxRdyLBufQDescAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_aa5ee884cd0421e255598f366d7725088}{cRxDoneQDescAddr}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00348_a5d8ffa77e8421c84687b597a75ed84e7}{numIfs}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00348_a9cbf66db07b0b8d7e92f702d2e6896a8}{ifTypes} \mbox{[}GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM\mbox{]}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00348_a040b2a18b45a5cfec1663e48692e1167}{stdbyCtx} \mbox{[}1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Boot Indication Message. 
+
+APP puts this boot indication into ctl-\/rdy queue and release WLAN CPU reset. The WLAN CPU boots up and reads this message and performs some internal configuration. 
+
+Definition at line 243 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00348_a81df1b1a967faea76636f64e7ebf3f4e}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!bootReason@{bootReason}}
+\index{bootReason@{bootReason}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{bootReason}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf bootReason}}}
+\label{a00348_a81df1b1a967faea76636f64e7ebf3f4e}
+
+
+Definition at line 245 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a7ca6fad2381173efde7ef12e9c546923}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!bootSubreason@{bootSubreason}}
+\index{bootSubreason@{bootSubreason}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{bootSubreason}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf bootSubreason}}}
+\label{a00348_a7ca6fad2381173efde7ef12e9c546923}
+
+
+Definition at line 246 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_ab360fb81514af95b2c567b11bc326d72}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!bootTimeHigh@{bootTimeHigh}}
+\index{bootTimeHigh@{bootTimeHigh}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{bootTimeHigh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf bootTimeHigh}}}
+\label{a00348_ab360fb81514af95b2c567b11bc326d72}
+
+
+Definition at line 252 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_ac4320494d78b18891e3da4896e6ab01d}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!bootTimeLow@{bootTimeLow}}
+\index{bootTimeLow@{bootTimeLow}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{bootTimeLow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf bootTimeLow}}}
+\label{a00348_ac4320494d78b18891e3da4896e6ab01d}
+
+
+Definition at line 251 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_ad81cf810d5479c72eb00a2dae02d1bfb}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!confLost@{confLost}}
+\index{confLost@{confLost}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{confLost}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf confLost}}}
+\label{a00348_ad81cf810d5479c72eb00a2dae02d1bfb}
+
+
+Definition at line 247 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_aa5ee884cd0421e255598f366d7725088}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!cRxDoneQDescAddr@{cRxDoneQDescAddr}}
+\index{cRxDoneQDescAddr@{cRxDoneQDescAddr}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{cRxDoneQDescAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf cRxDoneQDescAddr}}}
+\label{a00348_aa5ee884cd0421e255598f366d7725088}
+Addr of ctl Rx done Q descriptor 
+
+Definition at line 270 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a8abf8636a4f60a8f51ea8857ade542d5}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!cRxRdyLBufQDescAddr@{cRxRdyLBufQDescAddr}}
+\index{cRxRdyLBufQDescAddr@{cRxRdyLBufQDescAddr}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{cRxRdyLBufQDescAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf cRxRdyLBufQDescAddr}}}
+\label{a00348_a8abf8636a4f60a8f51ea8857ade542d5}
+Addr of ctl Rx ready Q descriptor for large buffers 
+
+Definition at line 268 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a4c1ebbd82b71958696f47604eb581d7c}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!cRxRdySBufQDescAddr@{cRxRdySBufQDescAddr}}
+\index{cRxRdySBufQDescAddr@{cRxRdySBufQDescAddr}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{cRxRdySBufQDescAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf cRxRdySBufQDescAddr}}}
+\label{a00348_a4c1ebbd82b71958696f47604eb581d7c}
+Addr of ctl Rx ready Q descriptor for small buffers 
+
+Definition at line 266 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a78a51b81650e81f8eadc7c11f49dcf0b}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!cTxDoneQDescAddr@{cTxDoneQDescAddr}}
+\index{cTxDoneQDescAddr@{cTxDoneQDescAddr}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{cTxDoneQDescAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf cTxDoneQDescAddr}}}
+\label{a00348_a78a51b81650e81f8eadc7c11f49dcf0b}
+Addr of ctl Tx done Q descriptor 
+
+Definition at line 265 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a1542d73344b14a84e7f710c4de9bb8a7}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!cTxRdyQDescAddr@{cTxRdyQDescAddr}}
+\index{cTxRdyQDescAddr@{cTxRdyQDescAddr}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{cTxRdyQDescAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf cTxRdyQDescAddr}}}
+\label{a00348_a1542d73344b14a84e7f710c4de9bb8a7}
+Addr of ctl Tx ready Q descriptor 
+
+Definition at line 264 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_ab8fef41094b77d4a751980b345341c36}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!dRxDoneQDescAddr@{dRxDoneQDescAddr}}
+\index{dRxDoneQDescAddr@{dRxDoneQDescAddr}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{dRxDoneQDescAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf dRxDoneQDescAddr}}}
+\label{a00348_ab8fef41094b77d4a751980b345341c36}
+Addr of data Rx done Q descriptor 
+
+Definition at line 262 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a26310480a4f804ddac47c8036ed576a0}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!dRxRdyLBufQDescAddr@{dRxRdyLBufQDescAddr}}
+\index{dRxRdyLBufQDescAddr@{dRxRdyLBufQDescAddr}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{dRxRdyLBufQDescAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf dRxRdyLBufQDescAddr}}}
+\label{a00348_a26310480a4f804ddac47c8036ed576a0}
+Addr of data Rx ready Q descriptor for large buffers 
+
+Definition at line 260 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_ab547f820597f1b1f7cbfdd7393569c12}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!dRxRdySBufQDescAddr@{dRxRdySBufQDescAddr}}
+\index{dRxRdySBufQDescAddr@{dRxRdySBufQDescAddr}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{dRxRdySBufQDescAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf dRxRdySBufQDescAddr}}}
+\label{a00348_ab547f820597f1b1f7cbfdd7393569c12}
+Addr of data Rx ready Q descriptor for small buffers 
+
+Definition at line 258 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a78d96dc01c76349b87f960ba482cac23}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!dTxDoneQDescAddr@{dTxDoneQDescAddr}}
+\index{dTxDoneQDescAddr@{dTxDoneQDescAddr}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{dTxDoneQDescAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf dTxDoneQDescAddr}}}
+\label{a00348_a78d96dc01c76349b87f960ba482cac23}
+Addr of data Tx done Q descriptor 
+
+Definition at line 257 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a2e68778dde03015909b732c4e317c01f}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!dTxRdyQDescAddr@{dTxRdyQDescAddr}}
+\index{dTxRdyQDescAddr@{dTxRdyQDescAddr}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{dTxRdyQDescAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf dTxRdyQDescAddr}}}
+\label{a00348_a2e68778dde03015909b732c4e317c01f}
+Addr of data Tx ready Q descriptor 
+
+Definition at line 256 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a227fcb5ac22283fc4d90e07a8363f7a5}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!fwFlashAddr@{fwFlashAddr}}
+\index{fwFlashAddr@{fwFlashAddr}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{fwFlashAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf fwFlashAddr}}}
+\label{a00348_a227fcb5ac22283fc4d90e07a8363f7a5}
+address in flash of fw image 
+
+Definition at line 254 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a9cbf66db07b0b8d7e92f702d2e6896a8}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!ifTypes@{ifTypes}}
+\index{ifTypes@{ifTypes}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{ifTypes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf ifTypes}\mbox{[}GSN\_\-WIF\_\-MAX\_\-IF\_\-NUM\mbox{]}}}
+\label{a00348_a9cbf66db07b0b8d7e92f702d2e6896a8}
+
+
+Definition at line 273 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a5d8ffa77e8421c84687b597a75ed84e7}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!numIfs@{numIfs}}
+\index{numIfs@{numIfs}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{numIfs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf numIfs}}}
+\label{a00348_a5d8ffa77e8421c84687b597a75ed84e7}
+Number of interfaces to be supported 
+
+Definition at line 272 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a040b2a18b45a5cfec1663e48692e1167}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!stdbyCtx@{stdbyCtx}}
+\index{stdbyCtx@{stdbyCtx}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{stdbyCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf stdbyCtx}\mbox{[}1\mbox{]}}}
+\label{a00348_a040b2a18b45a5cfec1663e48692e1167}
+
+
+Definition at line 274 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a325947d5876bcd21082a678746f5810c}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!strapVal@{strapVal}}
+\index{strapVal@{strapVal}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{strapVal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf strapVal}}}
+\label{a00348_a325947d5876bcd21082a678746f5810c}
+
+
+Definition at line 248 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+\hypertarget{a00348_a186854790696dd9afc23f7648fa363ed}{
+\index{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}!unused1@{unused1}}
+\index{unused1@{unused1}!GSN_WIF_SYS_BOOT_REQ_S@{GSN\_\-WIF\_\-SYS\_\-BOOT\_\-REQ\_\-S}}
+\subsubsection[{unused1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf unused1}}}
+\label{a00348_a186854790696dd9afc23f7648fa363ed}
+
+
+Definition at line 249 of file gsn\_\-wif\_\-sys\_\-defs.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00612}{gsn\_\-wif\_\-sys\_\-defs.h}\end{DoxyCompactItemize}

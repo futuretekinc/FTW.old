@@ -1,0 +1,423 @@
+\hypertarget{a00618}{
+\section{gsn\_\-zigbee\_\-ip.h File Reference}
+\label{a00618}\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00868}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00441}{GSN\_\-ZIP\_\-NWK\_\-ID}
+\begin{DoxyCompactList}\small\item\em ZigBee-\/IP Network Name. This defines ZigBee-\/IP Network name. \end{DoxyCompactList}\item 
+struct \hyperlink{a00439}{GSN\_\-ZIP\_\-CONST\_\-CFG}
+\begin{DoxyCompactList}\small\item\em Constant configuration. This defines the constant configuration needed by the ZigBee-\/IP. This struct can be defined as a const and passed to the ZigBee-\/IP module. \end{DoxyCompactList}\item 
+struct \hyperlink{a00438}{GSN\_\-ZIP\_\-CFG}
+\begin{DoxyCompactList}\small\item\em ZigBee-\/IP configuration information This defines the ZigBee-\/IP configuration details. \end{DoxyCompactList}\item 
+struct \hyperlink{a00442}{GSN\_\-ZIP\_\-SCAN\_\-INFO}
+\begin{DoxyCompactList}\small\item\em ZigBee-\/IP scan information. This defines the ZigBee-\/IP scan information. \end{DoxyCompactList}\item 
+struct \hyperlink{a00440}{GSN\_\-ZIP\_\-CTX}
+\begin{DoxyCompactList}\small\item\em ZigBee-\/IP context. This defines the ZigBee-\/IP context. User has to provide the context to the init function of ZigBee-\/IP module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00618_afdac0358e850c8cd6ccb8d1849c15c50}{ZIP\_\-DBG}(...)
+\item 
+\#define \hyperlink{a00618_a572e48c3222aa4c37312fab04b7f6417}{GSN\_\-ZIP\_\-COORDINATOR}~0
+\begin{DoxyCompactList}\small\item\em Node type. This defines Node type for ZigBee-\/IP. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00618_ab5f6968db06e6f115ec5c40efa9d0b31}{GSN\_\-ZIP\_\-ROUTER}~1
+\item 
+\#define \hyperlink{a00618_abfbb595e39cdcb88bba4110c405c6c7a}{GSN\_\-ZIP\_\-HOST}~2
+\item 
+\#define \hyperlink{a00618_ac7e2addd2b0f0a0294543f89d88d02b2}{DBG\_\-LOG}(val)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00618_a6118b093f8c8dfb5596d2971c5c2c698}{GSN\_\-ZIP\_\-EVENT} \hyperlink{a00618_ac587cf0eef9961ea24592b3352992346}{GSN\_\-ZIP\_\-EVENT\_\-T}
+\begin{DoxyCompactList}\small\item\em Event type. This defines Event type raised by ZigBee-\/IP module. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00441}{GSN\_\-ZIP\_\-NWK\_\-ID} \hyperlink{a00618_ab9aa63483741b5262a1f9a8381d1117b}{GSN\_\-ZIP\_\-NWK\_\-ID\_\-T}
+\begin{DoxyCompactList}\small\item\em ZigBee-\/IP Network Name. This defines ZigBee-\/IP Network name. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00618_a537c0cfba52f252417cd654bd4cece58}{GSN\_\-ZIP\_\-CB\_\-T} )(VOID $\ast$pAppCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} event, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pData, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} dataLen)
+\begin{DoxyCompactList}\small\item\em User callback for event notification. This defines the user callback for the event notification expected fron ZigBee-\/IP module. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00618_a7f63a0d767866fd213452687d2666c67}{GSN\_\-ZIP\_\-DELAY\_\-PROCESS\_\-T} )(VOID $\ast$pUsrCtx)
+\begin{DoxyCompactList}\small\item\em Delay process API. This defines the the prototype of the delay process API provided by the ZigBee-\/IP user. All the timer expire event used in ZigBee-\/IP calls this API to process the expire in a thread context instead of processing it in timer thread context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00439}{GSN\_\-ZIP\_\-CONST\_\-CFG} \hyperlink{a00618_adb1586a8cb312762accc1ffe2fb65c0e}{GSN\_\-ZIP\_\-CONST\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em Constant configuration. This defines the constant configuration needed by the ZigBee-\/IP. This struct can be defined as a const and passed to the ZigBee-\/IP module. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00438}{GSN\_\-ZIP\_\-CFG} \hyperlink{a00618_a56f802e85cf43a69e675b750a87f9c2c}{GSN\_\-ZIP\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em ZigBee-\/IP configuration information This defines the ZigBee-\/IP configuration details. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00442}{GSN\_\-ZIP\_\-SCAN\_\-INFO} \hyperlink{a00618_adc2498c7409e8d5e710cfc014e9b84cf}{GSN\_\-ZIP\_\-SCAN\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em ZigBee-\/IP scan information. This defines the ZigBee-\/IP scan information. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00440}{GSN\_\-ZIP\_\-CTX} \hyperlink{a00618_aa7ad02729e7d464fd05afdcc923ff390}{GSN\_\-ZIP\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em ZigBee-\/IP context. This defines the ZigBee-\/IP context. User has to provide the context to the init function of ZigBee-\/IP module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00618_a6118b093f8c8dfb5596d2971c5c2c698}{GSN\_\-ZIP\_\-EVENT} \{ \par
+\hyperlink{a00618_a6118b093f8c8dfb5596d2971c5c2c698a97fe499ff475acce0730be30dc0a6ac5}{GSN\_\-ZIP\_\-EVENT\_\-SCAN\_\-CFM}, 
+\par
+\hyperlink{a00618_a6118b093f8c8dfb5596d2971c5c2c698ac049dc27dd7a2c93bf740affc81cc343}{GSN\_\-ZIP\_\-EVENT\_\-START\_\-CFM}, 
+\par
+\hyperlink{a00618_a6118b093f8c8dfb5596d2971c5c2c698acff9840ec9241ed5cbe28abdc1d3e6d3}{GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-SET\_\-CFM}, 
+\par
+\hyperlink{a00618_a6118b093f8c8dfb5596d2971c5c2c698a2308f8259036d89a493adf442f95d2d5}{GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-GET\_\-CFM}
+ \}
+\begin{DoxyCompactList}\small\item\em Event type. This defines Event type raised by ZigBee-\/IP module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00618_a8ac6076b35c3615f6c862c8c2d818143}{S2w\_\-Printf} (const char $\ast$format,...)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00618_a4168ecae5684e5ccdcbcc960b63d5982}{GsnZIP\_\-Init} (\hyperlink{a00440}{GSN\_\-ZIP\_\-CTX\_\-T} $\ast$pZipCtx, const \hyperlink{a00439}{GSN\_\-ZIP\_\-CONST\_\-CFG\_\-T} $\ast$pCstCfg, \hyperlink{a00438}{GSN\_\-ZIP\_\-CFG\_\-T} $\ast$pCfg)
+\begin{DoxyCompactList}\small\item\em Function for initializing ZigBee-\/IP module. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00618_a157c76347af4ae8d2726352426b04ec0}{GsnZIP\_\-DelayHandler} (\hyperlink{a00440}{GSN\_\-ZIP\_\-CTX\_\-T} $\ast$pZipCtx)
+\begin{DoxyCompactList}\small\item\em Function to handle delay processing for ZigBee-\/IP module. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00618_a3196be3a944ca07b6dce20e70d39dbff}{GsnZIP\_\-Scan} (\hyperlink{a00440}{GSN\_\-ZIP\_\-CTX\_\-T} $\ast$pZipCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelMask, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} scanDuration, \hyperlink{a00442}{GSN\_\-ZIP\_\-SCAN\_\-INFO\_\-T} scanBuf\mbox{[}$\,$\mbox{]}, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} numOfScanBuf)
+\begin{DoxyCompactList}\small\item\em Function to handle scan request. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00618_ae3589bc9e7a07d3cee7d9ec0a18fb0fc}{GsnZIP\_\-Start} (\hyperlink{a00440}{GSN\_\-ZIP\_\-CTX\_\-T} $\ast$pZipCtx, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} mode, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelMask, \hyperlink{a00441}{GSN\_\-ZIP\_\-NWK\_\-ID\_\-T} $\ast$pNWKId)
+\begin{DoxyCompactList}\small\item\em Function to handle scan request. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00618_a0d4aec78a8b03ae9ca741c16c414d96c}{GsnZIP\_\-Stop} (\hyperlink{a00440}{GSN\_\-ZIP\_\-CTX\_\-T} $\ast$pZipCtx)
+\begin{DoxyCompactList}\small\item\em Function to handle scan request. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00618_ae89076d538d4fdbc1e054035027f9554}{GsnZip\_\-PhyAddrGet} (\hyperlink{a00440}{GSN\_\-ZIP\_\-CTX\_\-T} $\ast$pZipCtx, \hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} $\ast$pAddr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00618_ac7e2addd2b0f0a0294543f89d88d02b2}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!DBG\_\-LOG@{DBG\_\-LOG}}
+\index{DBG\_\-LOG@{DBG\_\-LOG}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{DBG\_\-LOG}]{\setlength{\rightskip}{0pt plus 5cm}\#define DBG\_\-LOG(
+\begin{DoxyParamCaption}
+\item[{}]{val}
+\end{DoxyParamCaption}
+)}}
+\label{a00618_ac7e2addd2b0f0a0294543f89d88d02b2}
+
+
+Definition at line 321 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00618_a572e48c3222aa4c37312fab04b7f6417}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-COORDINATOR@{GSN\_\-ZIP\_\-COORDINATOR}}
+\index{GSN\_\-ZIP\_\-COORDINATOR@{GSN\_\-ZIP\_\-COORDINATOR}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-COORDINATOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ZIP\_\-COORDINATOR~0}}
+\label{a00618_a572e48c3222aa4c37312fab04b7f6417}
+
+
+Node type. This defines Node type for ZigBee-\/IP. 
+
+
+
+Definition at line 84 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00618_abfbb595e39cdcb88bba4110c405c6c7a}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-HOST@{GSN\_\-ZIP\_\-HOST}}
+\index{GSN\_\-ZIP\_\-HOST@{GSN\_\-ZIP\_\-HOST}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-HOST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ZIP\_\-HOST~2}}
+\label{a00618_abfbb595e39cdcb88bba4110c405c6c7a}
+
+
+Definition at line 86 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00618_ab5f6968db06e6f115ec5c40efa9d0b31}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-ROUTER@{GSN\_\-ZIP\_\-ROUTER}}
+\index{GSN\_\-ZIP\_\-ROUTER@{GSN\_\-ZIP\_\-ROUTER}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-ROUTER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ZIP\_\-ROUTER~1}}
+\label{a00618_ab5f6968db06e6f115ec5c40efa9d0b31}
+
+
+Definition at line 85 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00618_afdac0358e850c8cd6ccb8d1849c15c50}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!ZIP\_\-DBG@{ZIP\_\-DBG}}
+\index{ZIP\_\-DBG@{ZIP\_\-DBG}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{ZIP\_\-DBG}]{\setlength{\rightskip}{0pt plus 5cm}\#define ZIP\_\-DBG(
+\begin{DoxyParamCaption}
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}
+\label{a00618_afdac0358e850c8cd6ccb8d1849c15c50}
+
+
+Definition at line 76 of file gsn\_\-zigbee\_\-ip.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00618_a537c0cfba52f252417cd654bd4cece58}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-CB\_\-T@{GSN\_\-ZIP\_\-CB\_\-T}}
+\index{GSN\_\-ZIP\_\-CB\_\-T@{GSN\_\-ZIP\_\-CB\_\-T}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-ZIP\_\-CB\_\-T})(VOID $\ast$pAppCtx, {\bf UINT32} event, {\bf UINT8} $\ast$pData, {\bf UINT32} dataLen)}}
+\label{a00618_a537c0cfba52f252417cd654bd4cece58}
+
+
+User callback for event notification. This defines the user callback for the event notification expected fron ZigBee-\/IP module. 
+
+
+
+Definition at line 122 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00618_a56f802e85cf43a69e675b750a87f9c2c}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-CFG\_\-T@{GSN\_\-ZIP\_\-CFG\_\-T}}
+\index{GSN\_\-ZIP\_\-CFG\_\-T@{GSN\_\-ZIP\_\-CFG\_\-T}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ZIP\_\-CFG} {\bf GSN\_\-ZIP\_\-CFG\_\-T}}}
+\label{a00618_a56f802e85cf43a69e675b750a87f9c2c}
+
+
+ZigBee-\/IP configuration information This defines the ZigBee-\/IP configuration details. 
+
+\hypertarget{a00618_adb1586a8cb312762accc1ffe2fb65c0e}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-CONST\_\-CFG\_\-T@{GSN\_\-ZIP\_\-CONST\_\-CFG\_\-T}}
+\index{GSN\_\-ZIP\_\-CONST\_\-CFG\_\-T@{GSN\_\-ZIP\_\-CONST\_\-CFG\_\-T}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-CONST\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ZIP\_\-CONST\_\-CFG} {\bf GSN\_\-ZIP\_\-CONST\_\-CFG\_\-T}}}
+\label{a00618_adb1586a8cb312762accc1ffe2fb65c0e}
+
+
+Constant configuration. This defines the constant configuration needed by the ZigBee-\/IP. This struct can be defined as a const and passed to the ZigBee-\/IP module. 
+
+\hypertarget{a00618_aa7ad02729e7d464fd05afdcc923ff390}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-CTX\_\-T@{GSN\_\-ZIP\_\-CTX\_\-T}}
+\index{GSN\_\-ZIP\_\-CTX\_\-T@{GSN\_\-ZIP\_\-CTX\_\-T}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ZIP\_\-CTX} {\bf GSN\_\-ZIP\_\-CTX\_\-T}}}
+\label{a00618_aa7ad02729e7d464fd05afdcc923ff390}
+
+
+ZigBee-\/IP context. This defines the ZigBee-\/IP context. User has to provide the context to the init function of ZigBee-\/IP module. 
+
+\hypertarget{a00618_a7f63a0d767866fd213452687d2666c67}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-DELAY\_\-PROCESS\_\-T@{GSN\_\-ZIP\_\-DELAY\_\-PROCESS\_\-T}}
+\index{GSN\_\-ZIP\_\-DELAY\_\-PROCESS\_\-T@{GSN\_\-ZIP\_\-DELAY\_\-PROCESS\_\-T}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-DELAY\_\-PROCESS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf GSN\_\-ZIP\_\-DELAY\_\-PROCESS\_\-T})(VOID $\ast$pUsrCtx)}}
+\label{a00618_a7f63a0d767866fd213452687d2666c67}
+
+
+Delay process API. This defines the the prototype of the delay process API provided by the ZigBee-\/IP user. All the timer expire event used in ZigBee-\/IP calls this API to process the expire in a thread context instead of processing it in timer thread context. 
+
+
+
+Definition at line 134 of file gsn\_\-zigbee\_\-ip.h.
+
+\hypertarget{a00618_ac587cf0eef9961ea24592b3352992346}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-EVENT\_\-T@{GSN\_\-ZIP\_\-EVENT\_\-T}}
+\index{GSN\_\-ZIP\_\-EVENT\_\-T@{GSN\_\-ZIP\_\-EVENT\_\-T}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-EVENT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-ZIP\_\-EVENT} {\bf GSN\_\-ZIP\_\-EVENT\_\-T}}}
+\label{a00618_ac587cf0eef9961ea24592b3352992346}
+
+
+Event type. This defines Event type raised by ZigBee-\/IP module. 
+
+\hypertarget{a00618_ab9aa63483741b5262a1f9a8381d1117b}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-NWK\_\-ID\_\-T@{GSN\_\-ZIP\_\-NWK\_\-ID\_\-T}}
+\index{GSN\_\-ZIP\_\-NWK\_\-ID\_\-T@{GSN\_\-ZIP\_\-NWK\_\-ID\_\-T}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-NWK\_\-ID\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ZIP\_\-NWK\_\-ID} {\bf GSN\_\-ZIP\_\-NWK\_\-ID\_\-T}}}
+\label{a00618_ab9aa63483741b5262a1f9a8381d1117b}
+
+
+ZigBee-\/IP Network Name. This defines ZigBee-\/IP Network name. 
+
+\hypertarget{a00618_adc2498c7409e8d5e710cfc014e9b84cf}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-SCAN\_\-INFO\_\-T@{GSN\_\-ZIP\_\-SCAN\_\-INFO\_\-T}}
+\index{GSN\_\-ZIP\_\-SCAN\_\-INFO\_\-T@{GSN\_\-ZIP\_\-SCAN\_\-INFO\_\-T}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-SCAN\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ZIP\_\-SCAN\_\-INFO} {\bf GSN\_\-ZIP\_\-SCAN\_\-INFO\_\-T}}}
+\label{a00618_adc2498c7409e8d5e710cfc014e9b84cf}
+
+
+ZigBee-\/IP scan information. This defines the ZigBee-\/IP scan information. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00618_a6118b093f8c8dfb5596d2971c5c2c698}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-EVENT@{GSN\_\-ZIP\_\-EVENT}}
+\index{GSN\_\-ZIP\_\-EVENT@{GSN\_\-ZIP\_\-EVENT}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GSN\_\-ZIP\_\-EVENT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-ZIP\_\-EVENT}}}
+\label{a00618_a6118b093f8c8dfb5596d2971c5c2c698}
+
+
+Event type. This defines Event type raised by ZigBee-\/IP module. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-ZIP\_\-EVENT\_\-SCAN\_\-CFM@{GSN\_\-ZIP\_\-EVENT\_\-SCAN\_\-CFM}!gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}}\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-EVENT\_\-SCAN\_\-CFM@{GSN\_\-ZIP\_\-EVENT\_\-SCAN\_\-CFM}}\item[{\em 
+\hypertarget{a00618_a6118b093f8c8dfb5596d2971c5c2c698a97fe499ff475acce0730be30dc0a6ac5}{
+GSN\_\-ZIP\_\-EVENT\_\-SCAN\_\-CFM}
+\label{a00618_a6118b093f8c8dfb5596d2971c5c2c698a97fe499ff475acce0730be30dc0a6ac5}
+}]\index{GSN\_\-ZIP\_\-EVENT\_\-START\_\-CFM@{GSN\_\-ZIP\_\-EVENT\_\-START\_\-CFM}!gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}}\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-EVENT\_\-START\_\-CFM@{GSN\_\-ZIP\_\-EVENT\_\-START\_\-CFM}}\item[{\em 
+\hypertarget{a00618_a6118b093f8c8dfb5596d2971c5c2c698ac049dc27dd7a2c93bf740affc81cc343}{
+GSN\_\-ZIP\_\-EVENT\_\-START\_\-CFM}
+\label{a00618_a6118b093f8c8dfb5596d2971c5c2c698ac049dc27dd7a2c93bf740affc81cc343}
+}]\index{GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-SET\_\-CFM@{GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-SET\_\-CFM}!gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}}\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-SET\_\-CFM@{GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-SET\_\-CFM}}\item[{\em 
+\hypertarget{a00618_a6118b093f8c8dfb5596d2971c5c2c698acff9840ec9241ed5cbe28abdc1d3e6d3}{
+GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-SET\_\-CFM}
+\label{a00618_a6118b093f8c8dfb5596d2971c5c2c698acff9840ec9241ed5cbe28abdc1d3e6d3}
+}]\index{GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-GET\_\-CFM@{GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-GET\_\-CFM}!gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}}\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-GET\_\-CFM@{GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-GET\_\-CFM}}\item[{\em 
+\hypertarget{a00618_a6118b093f8c8dfb5596d2971c5c2c698a2308f8259036d89a493adf442f95d2d5}{
+GSN\_\-ZIP\_\-EVENT\_\-MAC\_\-ADDR\_\-GET\_\-CFM}
+\label{a00618_a6118b093f8c8dfb5596d2971c5c2c698a2308f8259036d89a493adf442f95d2d5}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 94 of file gsn\_\-zigbee\_\-ip.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00618_a157c76347af4ae8d2726352426b04ec0}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GsnZIP\_\-DelayHandler@{GsnZIP\_\-DelayHandler}}
+\index{GsnZIP\_\-DelayHandler@{GsnZIP\_\-DelayHandler}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GsnZIP\_\-DelayHandler}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnZIP\_\-DelayHandler (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ZIP\_\-CTX\_\-T} $\ast$}]{pZipCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00618_a157c76347af4ae8d2726352426b04ec0}
+
+
+Function to handle delay processing for ZigBee-\/IP module. 
+
+This API is called to in response to GSN\_\-ZIP\_\-DELAY\_\-PROCESS\_\-T API in user thread context. 
+\begin{DoxyParams}{Parameters}
+{\em pZipCtx} & -\/ IN Pointer to ZigBee-\/IP context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00618_a4168ecae5684e5ccdcbcc960b63d5982}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GsnZIP\_\-Init@{GsnZIP\_\-Init}}
+\index{GsnZIP\_\-Init@{GsnZIP\_\-Init}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GsnZIP\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnZIP\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ZIP\_\-CTX\_\-T} $\ast$}]{pZipCtx, }
+\item[{const {\bf GSN\_\-ZIP\_\-CONST\_\-CFG\_\-T} $\ast$}]{pCstCfg, }
+\item[{{\bf GSN\_\-ZIP\_\-CFG\_\-T} $\ast$}]{pCfg}
+\end{DoxyParamCaption}
+)}}
+\label{a00618_a4168ecae5684e5ccdcbcc960b63d5982}
+
+
+Function for initializing ZigBee-\/IP module. 
+
+This API is called to initialize the ZigBee-\/IP module. 
+\begin{DoxyParams}{Parameters}
+{\em pZipCtx} & -\/ IN Pointer to ZigBee-\/IP context. \\
+\hline
+{\em pCstCfg} & -\/ IN Pointer to constant configuration. \\
+\hline
+{\em pCfg} & -\/ IN Pointer to rest of the configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00618_ae89076d538d4fdbc1e054035027f9554}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GsnZip\_\-PhyAddrGet@{GsnZip\_\-PhyAddrGet}}
+\index{GsnZip\_\-PhyAddrGet@{GsnZip\_\-PhyAddrGet}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GsnZip\_\-PhyAddrGet}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnZip\_\-PhyAddrGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ZIP\_\-CTX\_\-T} $\ast$}]{pZipCtx, }
+\item[{{\bf ULONG64} $\ast$}]{pAddr}
+\end{DoxyParamCaption}
+)}}
+\label{a00618_ae89076d538d4fdbc1e054035027f9554}
+\hypertarget{a00618_a3196be3a944ca07b6dce20e70d39dbff}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GsnZIP\_\-Scan@{GsnZIP\_\-Scan}}
+\index{GsnZIP\_\-Scan@{GsnZIP\_\-Scan}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GsnZIP\_\-Scan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnZIP\_\-Scan (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ZIP\_\-CTX\_\-T} $\ast$}]{pZipCtx, }
+\item[{{\bf UINT32}}]{channelMask, }
+\item[{{\bf UINT8}}]{scanDuration, }
+\item[{{\bf GSN\_\-ZIP\_\-SCAN\_\-INFO\_\-T}}]{scanBuf\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf UINT32}}]{numOfScanBuf}
+\end{DoxyParamCaption}
+)}}
+\label{a00618_a3196be3a944ca07b6dce20e70d39dbff}
+
+
+Function to handle scan request. 
+
+This API is called to scan ZigBee-\/IP netwrok. 
+\begin{DoxyParams}{Parameters}
+{\em pZipCtx} & -\/ IN Pointer to ZigBee-\/IP context. \\
+\hline
+{\em channelMask} & -\/ IN List of channel to scan. The list is bitmap as per the standard 802.15.4-\/2006 specification. \\
+\hline
+{\em scanDuration} & -\/ IN scan duration. The scan duration is as per the standard 802.15.4-\/2006 specification. \\
+\hline
+{\em scanBuf} & -\/ IN Pointer to the buffer where the scan result will be stored. \\
+\hline
+{\em numOfScanBuf} & -\/ IN Number of scan result can be stored inteh buffer pointed by scanBuf. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00618_ae3589bc9e7a07d3cee7d9ec0a18fb0fc}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GsnZIP\_\-Start@{GsnZIP\_\-Start}}
+\index{GsnZIP\_\-Start@{GsnZIP\_\-Start}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GsnZIP\_\-Start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnZIP\_\-Start (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ZIP\_\-CTX\_\-T} $\ast$}]{pZipCtx, }
+\item[{{\bf UINT8}}]{mode, }
+\item[{{\bf UINT32}}]{channelMask, }
+\item[{{\bf GSN\_\-ZIP\_\-NWK\_\-ID\_\-T} $\ast$}]{pNWKId}
+\end{DoxyParamCaption}
+)}}
+\label{a00618_ae3589bc9e7a07d3cee7d9ec0a18fb0fc}
+
+
+Function to handle scan request. 
+
+This API is called to start ZigBee-\/IP operation. 
+\begin{DoxyParams}{Parameters}
+{\em pZipCtx} & -\/ IN Pointer to ZigBee-\/IP context. \\
+\hline
+{\em channelMask} & -\/ IN List of channel to scan. The list is bitmap as per the standard 802.15.4-\/2006 specification. \\
+\hline
+{\em mode} & -\/ IN mode of operation i.e. GSN\_\-ZIP\_\-COORDINATOR, GSN\_\-ZIP\_\-ROUTER or GSN\_\-ZIP\_\-HOST. \\
+\hline
+{\em pNWKId} & -\/ IN Network ID to use or to join. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00618_a0d4aec78a8b03ae9ca741c16c414d96c}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!GsnZIP\_\-Stop@{GsnZIP\_\-Stop}}
+\index{GsnZIP\_\-Stop@{GsnZIP\_\-Stop}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{GsnZIP\_\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnZIP\_\-Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-ZIP\_\-CTX\_\-T} $\ast$}]{pZipCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00618_a0d4aec78a8b03ae9ca741c16c414d96c}
+
+
+Function to handle scan request. 
+
+This API is called to stop ZigBee-\/IP operation. 
+\begin{DoxyParams}{Parameters}
+{\em pZipCtx} & -\/ IN Pointer to ZigBee-\/IP context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\hypertarget{a00618_a8ac6076b35c3615f6c862c8c2d818143}{
+\index{gsn\_\-zigbee\_\-ip.h@{gsn\_\-zigbee\_\-ip.h}!S2w\_\-Printf@{S2w\_\-Printf}}
+\index{S2w\_\-Printf@{S2w\_\-Printf}!gsn_zigbee_ip.h@{gsn\_\-zigbee\_\-ip.h}}
+\subsubsection[{S2w\_\-Printf}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf INT32} S2w\_\-Printf (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}
+\label{a00618_a8ac6076b35c3615f6c862c8c2d818143}

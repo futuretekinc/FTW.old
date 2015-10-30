@@ -1,0 +1,485 @@
+\hypertarget{a00473}{
+\section{gsn\_\-6nd.h File Reference}
+\label{a00473}\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}}
+}
+{\ttfamily \#include \char`\"{}gsn\_\-rpl.h\char`\"{}}\par
+Include dependency graph for gsn\_\-6nd.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{a00696}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00193}{GSN\_\-RPL\_\-6ND\_\-CFG}
+\begin{DoxyCompactList}\small\item\em CID context structure The structure defines CID context. \end{DoxyCompactList}\item 
+struct \hyperlink{a00195}{GSN\_\-RPL\_\-6ND\_\-LR\_\-INFO}
+\begin{DoxyCompactList}\small\item\em Structre to define LBR information The structure stores LBR information. \end{DoxyCompactList}\item 
+struct \hyperlink{a00196}{GSN\_\-RPL\_\-6ND\_\-MAC\_\-ADDR}
+\item 
+struct \hyperlink{a00204}{GSN\_\-RPL\_\-MAC\_\-TBL}
+\item 
+struct \hyperlink{a00194}{GSN\_\-RPL\_\-6ND\_\-CTX}
+\begin{DoxyCompactList}\small\item\em Context structure of 6ND The structure defines the context of 6ND. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00473_a189e6e0e1158b69710738801abe2bcbd}{GSN\_\-RPL\_\-6ND\_\-MODE\_\-HOST}~2
+\begin{DoxyCompactList}\small\item\em 6ND device type These macros defines the 6ND device type. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00473_a53a1539675f4ce93068d86f3e7b1ea64}{GSN\_\-RPL\_\-6ND\_\-MODE\_\-LR}~1
+\item 
+\#define \hyperlink{a00473_aa4574cefa86dc0bb763c7a4125767ba1}{GSN\_\-RPL\_\-6ND\_\-MODE\_\-LBR}~0
+\item 
+\#define \hyperlink{a00473_a15bbd2855dec494244c0b4c6155ff66f}{GSN\_\-RPL\_\-6ND\_\-CID\_\-PREFIX\_\-LEN}~16
+\begin{DoxyCompactList}\small\item\em Configurable option for 6ND These macros defines configurable option for 6ND device. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00473_a4b606925279bd0c5fc08e2bcd58c4cb5}{GSN\_\-RPL\_\-6ND\_\-MAX\_\-LBR\_\-SUPPORTED}~2
+\item 
+\#define \hyperlink{a00473_ad10ba50282fc0393644e37c0a600d6a0}{GSN\_\-RPL\_\-6ND\_\-MAX\_\-CID\_\-SUPPORTED}~16
+\item 
+\#define \hyperlink{a00473_a20f756f4d9b91af664bcf8a40cd2dfde}{GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATIONS}~3
+\item 
+\#define \hyperlink{a00473_a7342fab62085d659e89dfd26a75c64a1}{GSN\_\-RPL\_\-6ND\_\-RTR\_\-SOLICITATION\_\-INTERVAL}~10
+\item 
+\#define \hyperlink{a00473_a7560b679f6eb8829592f407a2c0ba612}{GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATION\_\-INTERVAL}~60
+\item 
+\#define \hyperlink{a00473_a35cfb15e0c380537b0fb8fce788a4034}{GSN\_\-RPL\_\-6ND\_\-RETRANS\_\-TIMER}~1
+\item 
+\#define \hyperlink{a00473_a7e40d4d5b5e886c51ae68eb1f2f00203}{GSN\_\-RPL\_\-6ND\_\-MAX\_\-UNICAST\_\-SOLICIT}~3
+\item 
+\#define \hyperlink{a00473_a724fcb51530345d55dcc892795b9727f}{GSN\_\-RPL\_\-6ND\_\-ROUTER\_\-DFLT\_\-LIFE\_\-TIME}~9000
+\item 
+\#define \hyperlink{a00473_a3039f7d9f2d24633734777147ec84fc0}{GSN\_\-RPL\_\-6ND\_\-DFLT\_\-REACHANBLE\_\-TIME}~30000
+\item 
+\#define \hyperlink{a00473_ae631ace4f672c62f6cf26184663a1a64}{GSN\_\-RPL\_\-6ND\_\-DFLT\_\-RETRANS\_\-TIME}~1000
+\item 
+\#define \hyperlink{a00473_acc8cf38bbb334e023603baaf65ffcb2f}{NW\_\-TICKS\_\-PER\_\-SEC}~1
+\item 
+\#define \hyperlink{a00473_a6ebf22e3146df8d19f3a8021227b1ebe}{GSN\_\-RPL\_\-6ND\_\-STATE\_\-NOT\_\-INIT}~0
+\begin{DoxyCompactList}\small\item\em 6ND state These macros defines state of 6ND. These are for internal use. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00473_a3af8b30b7cd03854b8474534842ddc6a}{GSN\_\-RPL\_\-6ND\_\-STATE\_\-INIT\_\-IN\_\-PROG}~1
+\item 
+\#define \hyperlink{a00473_a91a4d2770ff399e288fced8e9ef1091c}{GSN\_\-RPL\_\-6ND\_\-STATE\_\-READY}~2
+\item 
+\#define \hyperlink{a00473_abd25c632d0c01255800d56135f291979}{GSN\_\-RPL\_\-6ND\_\-WRITE\_\-LL64}(addr, macAddr)
+\item 
+\#define \hyperlink{a00473_a8723f37bf7d4719c669b5cdd2d68f748}{GSN\_\-RPL\_\-6ND\_\-SUCCESS}~0
+\item 
+\#define \hyperlink{a00473_af8211abe83615504c44e6799a9b07668}{GSN\_\-RPL\_\-6ND\_\-DUPLICATE\_\-ADDR}~1
+\item 
+\#define \hyperlink{a00473_a7b5b4e73b0e9ff9bc15c9ddef8356b25}{GSN\_\-RPL\_\-6ND\_\-NB\_\-CACHE\_\-FULL}~2
+\item 
+\#define \hyperlink{a00473_a80cfdd07b9d7835c66228c0c5b1a6293}{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-SUCCESS}~0
+\item 
+\#define \hyperlink{a00473_acef4350a88a60e81e1d9daa023ba7708}{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-FAILURE}~1
+\item 
+\#define \hyperlink{a00473_a1e5556bde56a94bac3a24077d63387a9}{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-ADDR\_\-SET}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00473_a746a04234ff43643fc1948ada254379c}{GSN\_\-RPL\_\-6ND\_\-CB\_\-T} )(VOID $\ast$pAppCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} event, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pData, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} len)
+\begin{DoxyCompactList}\small\item\em Callback function of the discovery. Callback function of the discovery. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00193}{GSN\_\-RPL\_\-6ND\_\-CFG} \hyperlink{a00473_ae351fbf6827da8b8fd0868f9d5c54824}{GSN\_\-RPL\_\-6ND\_\-CFG\_\-T}
+\begin{DoxyCompactList}\small\item\em CID context structure The structure defines CID context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00195}{GSN\_\-RPL\_\-6ND\_\-LR\_\-INFO} \hyperlink{a00473_ae43655f56bf62bb2377a1a61dce9aa8d}{GSN\_\-RPL\_\-6ND\_\-LR\_\-INFO\_\-T}
+\begin{DoxyCompactList}\small\item\em Structre to define LBR information The structure stores LBR information. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00196}{GSN\_\-RPL\_\-6ND\_\-MAC\_\-ADDR} \hyperlink{a00473_a6497e887e46b1689bb6fb78c1cb3da52}{GSN\_\-RPL\_\-6ND\_\-MAC\_\-ADDR\_\-T}
+\item 
+typedef struct \hyperlink{a00204}{GSN\_\-RPL\_\-MAC\_\-TBL} \hyperlink{a00473_a6b20f666b7a568c4fdcace0a0020b246}{GSN\_\-RPL\_\-MAC\_\-TBL}
+\item 
+typedef struct \hyperlink{a00194}{GSN\_\-RPL\_\-6ND\_\-CTX} \hyperlink{a00473_a92caa5dd3cd354266378c3d7178a3423}{GSN\_\-RPL\_\-6ND\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em Context structure of 6ND The structure defines the context of 6ND. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00473_a49997069b5ef94b797c3d64a8acba37e}{GsnRpl\_\-6ndInit} (\hyperlink{a00194}{GSN\_\-RPL\_\-6ND\_\-CTX\_\-T} $\ast$pCtx, \hyperlink{a00193}{GSN\_\-RPL\_\-6ND\_\-CFG\_\-T} $\ast$pCfg, VOID $\ast$pRpl, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pMac)
+\begin{DoxyCompactList}\small\item\em Initialization for 6ND module. This function performs initialization of 6ND module. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00473_ae0a3df6fa0aa6761c64ee4a68de6f2ec}{GsnRpl\_\-6ndRASendCheck} (VOID $\ast$pRplCtx)
+\item 
+VOID \hyperlink{a00473_a145f3d0e7c20995ca598d54175647ac9}{GsnRpl\_\-6ndRSSendCheck} (VOID $\ast$pRplCtx)
+\item 
+VOID \hyperlink{a00473_a0073b2bbad3c72a75b7fd82f8b56911d}{GsnRpl\_\-6ndDARSendCheck} (VOID $\ast$pRplCtx)
+\item 
+VOID \hyperlink{a00473_aef0beacba820a0d287ad05f8503fa5e7}{GsnRpl\_\-6ndDeInit} (\hyperlink{a00194}{GSN\_\-RPL\_\-6ND\_\-CTX\_\-T} $\ast$pCtx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00473_a15bbd2855dec494244c0b4c6155ff66f}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-CID\_\-PREFIX\_\-LEN@{GSN\_\-RPL\_\-6ND\_\-CID\_\-PREFIX\_\-LEN}}
+\index{GSN\_\-RPL\_\-6ND\_\-CID\_\-PREFIX\_\-LEN@{GSN\_\-RPL\_\-6ND\_\-CID\_\-PREFIX\_\-LEN}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-CID\_\-PREFIX\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-CID\_\-PREFIX\_\-LEN~16}}
+\label{a00473_a15bbd2855dec494244c0b4c6155ff66f}
+
+
+Configurable option for 6ND These macros defines configurable option for 6ND device. 
+
+
+
+Definition at line 60 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a3039f7d9f2d24633734777147ec84fc0}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-DFLT\_\-REACHANBLE\_\-TIME@{GSN\_\-RPL\_\-6ND\_\-DFLT\_\-REACHANBLE\_\-TIME}}
+\index{GSN\_\-RPL\_\-6ND\_\-DFLT\_\-REACHANBLE\_\-TIME@{GSN\_\-RPL\_\-6ND\_\-DFLT\_\-REACHANBLE\_\-TIME}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-DFLT\_\-REACHANBLE\_\-TIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-DFLT\_\-REACHANBLE\_\-TIME~30000}}
+\label{a00473_a3039f7d9f2d24633734777147ec84fc0}
+Taken from RFC 4861, p.g. 79 
+
+Definition at line 71 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_ae631ace4f672c62f6cf26184663a1a64}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-DFLT\_\-RETRANS\_\-TIME@{GSN\_\-RPL\_\-6ND\_\-DFLT\_\-RETRANS\_\-TIME}}
+\index{GSN\_\-RPL\_\-6ND\_\-DFLT\_\-RETRANS\_\-TIME@{GSN\_\-RPL\_\-6ND\_\-DFLT\_\-RETRANS\_\-TIME}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-DFLT\_\-RETRANS\_\-TIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-DFLT\_\-RETRANS\_\-TIME~1000}}
+\label{a00473_ae631ace4f672c62f6cf26184663a1a64}
+Taken from RFC 4861, p.g. 79 
+
+Definition at line 72 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_af8211abe83615504c44e6799a9b07668}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-DUPLICATE\_\-ADDR@{GSN\_\-RPL\_\-6ND\_\-DUPLICATE\_\-ADDR}}
+\index{GSN\_\-RPL\_\-6ND\_\-DUPLICATE\_\-ADDR@{GSN\_\-RPL\_\-6ND\_\-DUPLICATE\_\-ADDR}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-DUPLICATE\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-DUPLICATE\_\-ADDR~1}}
+\label{a00473_af8211abe83615504c44e6799a9b07668}
+
+
+Definition at line 228 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a1e5556bde56a94bac3a24077d63387a9}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-EVENT\_\-ADDR\_\-SET@{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-ADDR\_\-SET}}
+\index{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-ADDR\_\-SET@{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-ADDR\_\-SET}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-ADDR\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-EVENT\_\-ADDR\_\-SET~2}}
+\label{a00473_a1e5556bde56a94bac3a24077d63387a9}
+
+
+Definition at line 233 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_acef4350a88a60e81e1d9daa023ba7708}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-FAILURE@{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-FAILURE}}
+\index{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-FAILURE@{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-FAILURE}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-FAILURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-FAILURE~1}}
+\label{a00473_acef4350a88a60e81e1d9daa023ba7708}
+
+
+Definition at line 232 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a80cfdd07b9d7835c66228c0c5b1a6293}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-SUCCESS@{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-SUCCESS}}
+\index{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-SUCCESS@{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-SUCCESS}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-EVENT\_\-INIT\_\-SUCCESS~0}}
+\label{a00473_a80cfdd07b9d7835c66228c0c5b1a6293}
+
+
+Definition at line 231 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_ad10ba50282fc0393644e37c0a600d6a0}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-MAX\_\-CID\_\-SUPPORTED@{GSN\_\-RPL\_\-6ND\_\-MAX\_\-CID\_\-SUPPORTED}}
+\index{GSN\_\-RPL\_\-6ND\_\-MAX\_\-CID\_\-SUPPORTED@{GSN\_\-RPL\_\-6ND\_\-MAX\_\-CID\_\-SUPPORTED}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-MAX\_\-CID\_\-SUPPORTED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-MAX\_\-CID\_\-SUPPORTED~16}}
+\label{a00473_ad10ba50282fc0393644e37c0a600d6a0}
+
+
+Definition at line 62 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a4b606925279bd0c5fc08e2bcd58c4cb5}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-MAX\_\-LBR\_\-SUPPORTED@{GSN\_\-RPL\_\-6ND\_\-MAX\_\-LBR\_\-SUPPORTED}}
+\index{GSN\_\-RPL\_\-6ND\_\-MAX\_\-LBR\_\-SUPPORTED@{GSN\_\-RPL\_\-6ND\_\-MAX\_\-LBR\_\-SUPPORTED}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-MAX\_\-LBR\_\-SUPPORTED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-MAX\_\-LBR\_\-SUPPORTED~2}}
+\label{a00473_a4b606925279bd0c5fc08e2bcd58c4cb5}
+
+
+Definition at line 61 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a7560b679f6eb8829592f407a2c0ba612}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATION\_\-INTERVAL@{GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATION\_\-INTERVAL}}
+\index{GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATION\_\-INTERVAL@{GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATION\_\-INTERVAL}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATION\_\-INTERVAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATION\_\-INTERVAL~60}}
+\label{a00473_a7560b679f6eb8829592f407a2c0ba612}
+
+
+Definition at line 66 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a20f756f4d9b91af664bcf8a40cd2dfde}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATIONS@{GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATIONS}}
+\index{GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATIONS@{GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATIONS}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATIONS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-MAX\_\-RTR\_\-SOLICITATIONS~3}}
+\label{a00473_a20f756f4d9b91af664bcf8a40cd2dfde}
+
+
+Definition at line 64 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a7e40d4d5b5e886c51ae68eb1f2f00203}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-MAX\_\-UNICAST\_\-SOLICIT@{GSN\_\-RPL\_\-6ND\_\-MAX\_\-UNICAST\_\-SOLICIT}}
+\index{GSN\_\-RPL\_\-6ND\_\-MAX\_\-UNICAST\_\-SOLICIT@{GSN\_\-RPL\_\-6ND\_\-MAX\_\-UNICAST\_\-SOLICIT}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-MAX\_\-UNICAST\_\-SOLICIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-MAX\_\-UNICAST\_\-SOLICIT~3}}
+\label{a00473_a7e40d4d5b5e886c51ae68eb1f2f00203}
+
+
+Definition at line 68 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a189e6e0e1158b69710738801abe2bcbd}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-MODE\_\-HOST@{GSN\_\-RPL\_\-6ND\_\-MODE\_\-HOST}}
+\index{GSN\_\-RPL\_\-6ND\_\-MODE\_\-HOST@{GSN\_\-RPL\_\-6ND\_\-MODE\_\-HOST}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-MODE\_\-HOST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-MODE\_\-HOST~2}}
+\label{a00473_a189e6e0e1158b69710738801abe2bcbd}
+
+
+6ND device type These macros defines the 6ND device type. 
+
+
+
+Definition at line 50 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_aa4574cefa86dc0bb763c7a4125767ba1}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-MODE\_\-LBR@{GSN\_\-RPL\_\-6ND\_\-MODE\_\-LBR}}
+\index{GSN\_\-RPL\_\-6ND\_\-MODE\_\-LBR@{GSN\_\-RPL\_\-6ND\_\-MODE\_\-LBR}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-MODE\_\-LBR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-MODE\_\-LBR~0}}
+\label{a00473_aa4574cefa86dc0bb763c7a4125767ba1}
+
+
+Definition at line 52 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a53a1539675f4ce93068d86f3e7b1ea64}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-MODE\_\-LR@{GSN\_\-RPL\_\-6ND\_\-MODE\_\-LR}}
+\index{GSN\_\-RPL\_\-6ND\_\-MODE\_\-LR@{GSN\_\-RPL\_\-6ND\_\-MODE\_\-LR}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-MODE\_\-LR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-MODE\_\-LR~1}}
+\label{a00473_a53a1539675f4ce93068d86f3e7b1ea64}
+
+
+Definition at line 51 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a7b5b4e73b0e9ff9bc15c9ddef8356b25}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-NB\_\-CACHE\_\-FULL@{GSN\_\-RPL\_\-6ND\_\-NB\_\-CACHE\_\-FULL}}
+\index{GSN\_\-RPL\_\-6ND\_\-NB\_\-CACHE\_\-FULL@{GSN\_\-RPL\_\-6ND\_\-NB\_\-CACHE\_\-FULL}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-NB\_\-CACHE\_\-FULL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-NB\_\-CACHE\_\-FULL~2}}
+\label{a00473_a7b5b4e73b0e9ff9bc15c9ddef8356b25}
+
+
+Definition at line 229 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a35cfb15e0c380537b0fb8fce788a4034}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-RETRANS\_\-TIMER@{GSN\_\-RPL\_\-6ND\_\-RETRANS\_\-TIMER}}
+\index{GSN\_\-RPL\_\-6ND\_\-RETRANS\_\-TIMER@{GSN\_\-RPL\_\-6ND\_\-RETRANS\_\-TIMER}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-RETRANS\_\-TIMER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-RETRANS\_\-TIMER~1}}
+\label{a00473_a35cfb15e0c380537b0fb8fce788a4034}
+
+
+Definition at line 67 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a724fcb51530345d55dcc892795b9727f}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-ROUTER\_\-DFLT\_\-LIFE\_\-TIME@{GSN\_\-RPL\_\-6ND\_\-ROUTER\_\-DFLT\_\-LIFE\_\-TIME}}
+\index{GSN\_\-RPL\_\-6ND\_\-ROUTER\_\-DFLT\_\-LIFE\_\-TIME@{GSN\_\-RPL\_\-6ND\_\-ROUTER\_\-DFLT\_\-LIFE\_\-TIME}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-ROUTER\_\-DFLT\_\-LIFE\_\-TIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-ROUTER\_\-DFLT\_\-LIFE\_\-TIME~9000}}
+\label{a00473_a724fcb51530345d55dcc892795b9727f}
+Taken from RFC 4861 
+
+Definition at line 70 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a7342fab62085d659e89dfd26a75c64a1}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-RTR\_\-SOLICITATION\_\-INTERVAL@{GSN\_\-RPL\_\-6ND\_\-RTR\_\-SOLICITATION\_\-INTERVAL}}
+\index{GSN\_\-RPL\_\-6ND\_\-RTR\_\-SOLICITATION\_\-INTERVAL@{GSN\_\-RPL\_\-6ND\_\-RTR\_\-SOLICITATION\_\-INTERVAL}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-RTR\_\-SOLICITATION\_\-INTERVAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-RTR\_\-SOLICITATION\_\-INTERVAL~10}}
+\label{a00473_a7342fab62085d659e89dfd26a75c64a1}
+
+
+Definition at line 65 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a3af8b30b7cd03854b8474534842ddc6a}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-STATE\_\-INIT\_\-IN\_\-PROG@{GSN\_\-RPL\_\-6ND\_\-STATE\_\-INIT\_\-IN\_\-PROG}}
+\index{GSN\_\-RPL\_\-6ND\_\-STATE\_\-INIT\_\-IN\_\-PROG@{GSN\_\-RPL\_\-6ND\_\-STATE\_\-INIT\_\-IN\_\-PROG}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-STATE\_\-INIT\_\-IN\_\-PROG}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-STATE\_\-INIT\_\-IN\_\-PROG~1}}
+\label{a00473_a3af8b30b7cd03854b8474534842ddc6a}
+
+
+Definition at line 105 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a6ebf22e3146df8d19f3a8021227b1ebe}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-STATE\_\-NOT\_\-INIT@{GSN\_\-RPL\_\-6ND\_\-STATE\_\-NOT\_\-INIT}}
+\index{GSN\_\-RPL\_\-6ND\_\-STATE\_\-NOT\_\-INIT@{GSN\_\-RPL\_\-6ND\_\-STATE\_\-NOT\_\-INIT}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-STATE\_\-NOT\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-STATE\_\-NOT\_\-INIT~0}}
+\label{a00473_a6ebf22e3146df8d19f3a8021227b1ebe}
+
+
+6ND state These macros defines state of 6ND. These are for internal use. 
+
+
+
+Definition at line 104 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a91a4d2770ff399e288fced8e9ef1091c}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-STATE\_\-READY@{GSN\_\-RPL\_\-6ND\_\-STATE\_\-READY}}
+\index{GSN\_\-RPL\_\-6ND\_\-STATE\_\-READY@{GSN\_\-RPL\_\-6ND\_\-STATE\_\-READY}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-STATE\_\-READY}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-STATE\_\-READY~2}}
+\label{a00473_a91a4d2770ff399e288fced8e9ef1091c}
+
+
+Definition at line 106 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_a8723f37bf7d4719c669b5cdd2d68f748}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-SUCCESS@{GSN\_\-RPL\_\-6ND\_\-SUCCESS}}
+\index{GSN\_\-RPL\_\-6ND\_\-SUCCESS@{GSN\_\-RPL\_\-6ND\_\-SUCCESS}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-SUCCESS~0}}
+\label{a00473_a8723f37bf7d4719c669b5cdd2d68f748}
+
+
+Definition at line 227 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_abd25c632d0c01255800d56135f291979}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-WRITE\_\-LL64@{GSN\_\-RPL\_\-6ND\_\-WRITE\_\-LL64}}
+\index{GSN\_\-RPL\_\-6ND\_\-WRITE\_\-LL64@{GSN\_\-RPL\_\-6ND\_\-WRITE\_\-LL64}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-WRITE\_\-LL64}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-6ND\_\-WRITE\_\-LL64(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{macAddr}
+\end{DoxyParamCaption}
+)}}
+\label{a00473_abd25c632d0c01255800d56135f291979}
+{\bfseries Value:}
+\begin{DoxyCode}
+{                                                                   \
+    ( addr )[0] = 0xfe800000; ( addr )[1] = 0;                      \
+    ( addr )[2] = ( macAddr )[1];                                   \
+    ( addr )[3] = ( macAddr )[0];                                   \
+}
+\end{DoxyCode}
+
+
+Definition at line 154 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_acc8cf38bbb334e023603baaf65ffcb2f}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!NW\_\-TICKS\_\-PER\_\-SEC@{NW\_\-TICKS\_\-PER\_\-SEC}}
+\index{NW\_\-TICKS\_\-PER\_\-SEC@{NW\_\-TICKS\_\-PER\_\-SEC}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{NW\_\-TICKS\_\-PER\_\-SEC}]{\setlength{\rightskip}{0pt plus 5cm}\#define NW\_\-TICKS\_\-PER\_\-SEC~1}}
+\label{a00473_acc8cf38bbb334e023603baaf65ffcb2f}
+
+
+Definition at line 96 of file gsn\_\-6nd.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00473_a746a04234ff43643fc1948ada254379c}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-CB\_\-T@{GSN\_\-RPL\_\-6ND\_\-CB\_\-T}}
+\index{GSN\_\-RPL\_\-6ND\_\-CB\_\-T@{GSN\_\-RPL\_\-6ND\_\-CB\_\-T}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf GSN\_\-RPL\_\-6ND\_\-CB\_\-T})(VOID $\ast$pAppCtx, {\bf UINT32} event, {\bf UINT8} $\ast$pData, {\bf UINT32} len)}}
+\label{a00473_a746a04234ff43643fc1948ada254379c}
+
+
+Callback function of the discovery. Callback function of the discovery. 
+
+
+
+Definition at line 114 of file gsn\_\-6nd.h.
+
+\hypertarget{a00473_ae351fbf6827da8b8fd0868f9d5c54824}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-CFG\_\-T@{GSN\_\-RPL\_\-6ND\_\-CFG\_\-T}}
+\index{GSN\_\-RPL\_\-6ND\_\-CFG\_\-T@{GSN\_\-RPL\_\-6ND\_\-CFG\_\-T}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-6ND\_\-CFG} {\bf GSN\_\-RPL\_\-6ND\_\-CFG\_\-T}}}
+\label{a00473_ae351fbf6827da8b8fd0868f9d5c54824}
+
+
+CID context structure The structure defines CID context. 
+
+\hypertarget{a00473_a92caa5dd3cd354266378c3d7178a3423}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-CTX\_\-T@{GSN\_\-RPL\_\-6ND\_\-CTX\_\-T}}
+\index{GSN\_\-RPL\_\-6ND\_\-CTX\_\-T@{GSN\_\-RPL\_\-6ND\_\-CTX\_\-T}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-6ND\_\-CTX} {\bf GSN\_\-RPL\_\-6ND\_\-CTX\_\-T}}}
+\label{a00473_a92caa5dd3cd354266378c3d7178a3423}
+
+
+Context structure of 6ND The structure defines the context of 6ND. 
+
+\hypertarget{a00473_ae43655f56bf62bb2377a1a61dce9aa8d}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-LR\_\-INFO\_\-T@{GSN\_\-RPL\_\-6ND\_\-LR\_\-INFO\_\-T}}
+\index{GSN\_\-RPL\_\-6ND\_\-LR\_\-INFO\_\-T@{GSN\_\-RPL\_\-6ND\_\-LR\_\-INFO\_\-T}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-LR\_\-INFO\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-6ND\_\-LR\_\-INFO} {\bf GSN\_\-RPL\_\-6ND\_\-LR\_\-INFO\_\-T}}}
+\label{a00473_ae43655f56bf62bb2377a1a61dce9aa8d}
+
+
+Structre to define LBR information The structure stores LBR information. 
+
+addr and macAddr are of type UINT32$\ast$ \hypertarget{a00473_a6497e887e46b1689bb6fb78c1cb3da52}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-6ND\_\-MAC\_\-ADDR\_\-T@{GSN\_\-RPL\_\-6ND\_\-MAC\_\-ADDR\_\-T}}
+\index{GSN\_\-RPL\_\-6ND\_\-MAC\_\-ADDR\_\-T@{GSN\_\-RPL\_\-6ND\_\-MAC\_\-ADDR\_\-T}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-6ND\_\-MAC\_\-ADDR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-6ND\_\-MAC\_\-ADDR} {\bf GSN\_\-RPL\_\-6ND\_\-MAC\_\-ADDR\_\-T}}}
+\label{a00473_a6497e887e46b1689bb6fb78c1cb3da52}
+\hypertarget{a00473_a6b20f666b7a568c4fdcace0a0020b246}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GSN\_\-RPL\_\-MAC\_\-TBL@{GSN\_\-RPL\_\-MAC\_\-TBL}}
+\index{GSN\_\-RPL\_\-MAC\_\-TBL@{GSN\_\-RPL\_\-MAC\_\-TBL}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GSN\_\-RPL\_\-MAC\_\-TBL}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-MAC\_\-TBL} {\bf GSN\_\-RPL\_\-MAC\_\-TBL}}}
+\label{a00473_a6b20f666b7a568c4fdcace0a0020b246}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00473_a0073b2bbad3c72a75b7fd82f8b56911d}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GsnRpl\_\-6ndDARSendCheck@{GsnRpl\_\-6ndDARSendCheck}}
+\index{GsnRpl\_\-6ndDARSendCheck@{GsnRpl\_\-6ndDARSendCheck}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GsnRpl\_\-6ndDARSendCheck}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnRpl\_\-6ndDARSendCheck (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pRplCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00473_a0073b2bbad3c72a75b7fd82f8b56911d}
+\hypertarget{a00473_aef0beacba820a0d287ad05f8503fa5e7}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GsnRpl\_\-6ndDeInit@{GsnRpl\_\-6ndDeInit}}
+\index{GsnRpl\_\-6ndDeInit@{GsnRpl\_\-6ndDeInit}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GsnRpl\_\-6ndDeInit}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnRpl\_\-6ndDeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-6ND\_\-CTX\_\-T} $\ast$}]{pCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00473_aef0beacba820a0d287ad05f8503fa5e7}
+\hypertarget{a00473_a49997069b5ef94b797c3d64a8acba37e}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GsnRpl\_\-6ndInit@{GsnRpl\_\-6ndInit}}
+\index{GsnRpl\_\-6ndInit@{GsnRpl\_\-6ndInit}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GsnRpl\_\-6ndInit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-6ndInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-6ND\_\-CTX\_\-T} $\ast$}]{pCtx, }
+\item[{{\bf GSN\_\-RPL\_\-6ND\_\-CFG\_\-T} $\ast$}]{pCfg, }
+\item[{VOID $\ast$}]{pRpl, }
+\item[{{\bf UINT32} $\ast$}]{pMac}
+\end{DoxyParamCaption}
+)}}
+\label{a00473_a49997069b5ef94b797c3d64a8acba37e}
+
+
+Initialization for 6ND module. This function performs initialization of 6ND module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to store the context. \\
+\hline
+{\em pCfg} & -\/ IN Configuration parameters. \\
+\hline
+{\em pRpl} & -\/ IN Pointer to the RPL context. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Returns} & GSN\_\-SUCCESS or GSN\_\-FAILURE. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function must be called during INIT before calling other 6ND API. 
+\end{DoxyNote}
+\hypertarget{a00473_ae0a3df6fa0aa6761c64ee4a68de6f2ec}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GsnRpl\_\-6ndRASendCheck@{GsnRpl\_\-6ndRASendCheck}}
+\index{GsnRpl\_\-6ndRASendCheck@{GsnRpl\_\-6ndRASendCheck}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GsnRpl\_\-6ndRASendCheck}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnRpl\_\-6ndRASendCheck (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pRplCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00473_ae0a3df6fa0aa6761c64ee4a68de6f2ec}
+\hypertarget{a00473_a145f3d0e7c20995ca598d54175647ac9}{
+\index{gsn\_\-6nd.h@{gsn\_\-6nd.h}!GsnRpl\_\-6ndRSSendCheck@{GsnRpl\_\-6ndRSSendCheck}}
+\index{GsnRpl\_\-6ndRSSendCheck@{GsnRpl\_\-6ndRSSendCheck}!gsn_6nd.h@{gsn\_\-6nd.h}}
+\subsubsection[{GsnRpl\_\-6ndRSSendCheck}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnRpl\_\-6ndRSSendCheck (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pRplCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00473_a145f3d0e7c20995ca598d54175647ac9}

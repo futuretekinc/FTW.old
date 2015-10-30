@@ -1,0 +1,308 @@
+\hypertarget{a00167}{
+\section{GSN\_\-NWIF\_\-CTX Struct Reference}
+\label{a00167}\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}}
+}
+
+
+Network Interface Object.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-nwif.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00670_ga2c209f2b9b6b2b6b0b2e1132acd45891}{GSN\_\-NWIF\_\-FLAGS\_\-T} \hyperlink{a00167_a4767d0f6570f98849cacbfa9a18ab612}{flags}
+\item 
+\hyperlink{a00164}{GSN\_\-NW\_\-CTX\_\-T} $\ast$ \hyperlink{a00167_a4ab8e1b7273bd13fb04f9726ebf1d430}{pNwCtx}
+\item 
+\hyperlink{a00107}{GSN\_\-L2\_\-DEV\_\-T} $\ast$ \hyperlink{a00167_a26c032e68793c08c6f4c3509dee1e4f2}{pL2Dev}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00167_a29e099f0875d30b6a75ee68c747dde11}{mtu}
+\item 
+NX\_\-IP \hyperlink{a00167_a930e1578ead182fd8ff6cd8f8540a54c}{ipHndl}
+\item 
+\hyperlink{a00532_afccc5835aa5e2916600678de68186848}{GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE} $\ast$ \hyperlink{a00167_a4cdcdc7a80f5e9b124e3cdff24cdcaec}{pIpPktPoolHndl}
+\item 
+NX\_\-DHCP \hyperlink{a00167_aa0614deafcee66a6a87c2685279c82dc}{dhcpCliHndl}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00167_add3b061cbe3f42dca486ad19787820da}{dhcpOldState}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00167_a5e26015109e86651492607313559e708}{dhcpStopInprogress}
+\item 
+NX\_\-DHCPV6 \hyperlink{a00167_a82dbaba55c4ecc53e2da16b84515851d}{dhcpV6CliHndl}
+\item 
+\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} \hyperlink{a00167_a0e030509c91ba81863d5adfca4820654}{radioTmr}
+\item 
+\hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} \hyperlink{a00167_af2cb244344f575f7e8a429889b11a496}{radioTmrHndl}
+\item 
+NX\_\-DNS \hyperlink{a00167_abde614bf82e24c537f1b86d562bd9402}{dnsCliHndl}
+\item 
+\hyperlink{a00534_a2ab3fab7c51c5e11d061387dd44a2381}{GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T} \hyperlink{a00167_ab32f7d6fb4fbd0d87bb049ea5f1e07fa}{ipRecvFilter}
+\item 
+\hyperlink{a00670_ga31b009654c9ee4d7037151b19f1f213a}{GSN\_\-NWIF\_\-STATUS\_\-T} \hyperlink{a00167_a88c0ed52892de848067fb8ac7d094883}{status}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00167_a2a6b0e4974e54ca63107a333a43ecf0f}{ipv4CfgStatus}
+\item 
+\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} \hyperlink{a00167_a9b582be9b7498d93b39a9c866d7bc834}{ip6CfgStatus}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00167_a736d67ad1614d227113f632badbe136a}{timeoutCnt}
+\item 
+\hyperlink{a00172}{GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T} \hyperlink{a00167_a1dede6b9b16f28827ae79e82aba27440}{ipConfig}
+\item 
+\hyperlink{a00534_a58445849a3e6cfa33fbc058bafdb717c}{GSN\_\-NWIF\_\-NOTIF\_\-FUNC\_\-T} \hyperlink{a00167_a4ca5a13e12b232c651f00a734c0d327a}{notifyCb}
+\item 
+\hyperlink{a00534_a58445849a3e6cfa33fbc058bafdb717c}{GSN\_\-NWIF\_\-NOTIF\_\-FUNC\_\-T} \hyperlink{a00167_a780cfacd3edf39c4deef8f1ab64e242a}{notifyIpv6Cb}
+\item 
+VOID $\ast$ \hyperlink{a00167_a7b0f7b7dc7eadb023bb4b9615423574b}{notifyCtxt}
+\item 
+\hyperlink{a00176}{GSN\_\-NWIF\_\-STATS\_\-T} $\ast$ \hyperlink{a00167_aec0dbb062c1551edeb82d3a45c451e01}{pStats}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00167_a7e70681c41285d86fbe97d5ca157c9d1}{radioModeSet}
+\item 
+\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} \hyperlink{a00167_afb7d19983a90716b80a2f4dbfbf7b0c8}{protectionLock}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Network Interface Object. 
+
+This type defines the network interface object. The network interface object is used to configure and open a network interface on a given L2 device. There could be multiple network interface objects in the system each providing a network interface. 
+
+Definition at line 313 of file gsn\_\-nwif.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00167_aa0614deafcee66a6a87c2685279c82dc}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!dhcpCliHndl@{dhcpCliHndl}}
+\index{dhcpCliHndl@{dhcpCliHndl}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{dhcpCliHndl}]{\setlength{\rightskip}{0pt plus 5cm}NX\_\-DHCP {\bf dhcpCliHndl}}}
+\label{a00167_aa0614deafcee66a6a87c2685279c82dc}
+DHCP client handle 
+
+Definition at line 322 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_add3b061cbe3f42dca486ad19787820da}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!dhcpOldState@{dhcpOldState}}
+\index{dhcpOldState@{dhcpOldState}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{dhcpOldState}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf dhcpOldState}}}
+\label{a00167_add3b061cbe3f42dca486ad19787820da}
+
+
+Definition at line 323 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a5e26015109e86651492607313559e708}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!dhcpStopInprogress@{dhcpStopInprogress}}
+\index{dhcpStopInprogress@{dhcpStopInprogress}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{dhcpStopInprogress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf dhcpStopInprogress}}}
+\label{a00167_a5e26015109e86651492607313559e708}
+
+
+Definition at line 324 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a82dbaba55c4ecc53e2da16b84515851d}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!dhcpV6CliHndl@{dhcpV6CliHndl}}
+\index{dhcpV6CliHndl@{dhcpV6CliHndl}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{dhcpV6CliHndl}]{\setlength{\rightskip}{0pt plus 5cm}NX\_\-DHCPV6 {\bf dhcpV6CliHndl}}}
+\label{a00167_a82dbaba55c4ecc53e2da16b84515851d}
+IPV6 information 
+
+Definition at line 325 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_abde614bf82e24c537f1b86d562bd9402}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!dnsCliHndl@{dnsCliHndl}}
+\index{dnsCliHndl@{dnsCliHndl}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{dnsCliHndl}]{\setlength{\rightskip}{0pt plus 5cm}NX\_\-DNS {\bf dnsCliHndl}}}
+\label{a00167_abde614bf82e24c537f1b86d562bd9402}
+DNS client handle 
+
+Definition at line 328 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a4767d0f6570f98849cacbfa9a18ab612}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!flags@{flags}}
+\index{flags@{flags}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-FLAGS\_\-T} {\bf flags}}}
+\label{a00167_a4767d0f6570f98849cacbfa9a18ab612}
+
+
+Definition at line 315 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a9b582be9b7498d93b39a9c866d7bc834}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!ip6CfgStatus@{ip6CfgStatus}}
+\index{ip6CfgStatus@{ip6CfgStatus}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{ip6CfgStatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf ip6CfgStatus}}}
+\label{a00167_a9b582be9b7498d93b39a9c866d7bc834}
+
+
+Definition at line 337 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a1dede6b9b16f28827ae79e82aba27440}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!ipConfig@{ipConfig}}
+\index{ipConfig@{ipConfig}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{ipConfig}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-IP\_\-CONFIG\_\-T} {\bf ipConfig}}}
+\label{a00167_a1dede6b9b16f28827ae79e82aba27440}
+IP configuration of the interface 
+
+Definition at line 339 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a930e1578ead182fd8ff6cd8f8540a54c}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!ipHndl@{ipHndl}}
+\index{ipHndl@{ipHndl}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{ipHndl}]{\setlength{\rightskip}{0pt plus 5cm}NX\_\-IP {\bf ipHndl}}}
+\label{a00167_a930e1578ead182fd8ff6cd8f8540a54c}
+IP instance 
+
+Definition at line 320 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_ab32f7d6fb4fbd0d87bb049ea5f1e07fa}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!ipRecvFilter@{ipRecvFilter}}
+\index{ipRecvFilter@{ipRecvFilter}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{ipRecvFilter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-RECV\_\-FILTER\_\-FUNC\_\-T} {\bf ipRecvFilter}}}
+\label{a00167_ab32f7d6fb4fbd0d87bb049ea5f1e07fa}
+Receive Filter Pointer to other objects used 
+
+Definition at line 329 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a2a6b0e4974e54ca63107a333a43ecf0f}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!ipv4CfgStatus@{ipv4CfgStatus}}
+\index{ipv4CfgStatus@{ipv4CfgStatus}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{ipv4CfgStatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT16} {\bf ipv4CfgStatus}}}
+\label{a00167_a2a6b0e4974e54ca63107a333a43ecf0f}
+
+
+Definition at line 336 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a29e099f0875d30b6a75ee68c747dde11}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!mtu@{mtu}}
+\index{mtu@{mtu}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{mtu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf mtu}}}
+\label{a00167_a29e099f0875d30b6a75ee68c747dde11}
+MTU for this interface 
+
+Definition at line 319 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a4ca5a13e12b232c651f00a734c0d327a}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!notifyCb@{notifyCb}}
+\index{notifyCb@{notifyCb}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{notifyCb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-NOTIF\_\-FUNC\_\-T} {\bf notifyCb}}}
+\label{a00167_a4ca5a13e12b232c651f00a734c0d327a}
+Notification call back 
+
+Definition at line 340 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a7b0f7b7dc7eadb023bb4b9615423574b}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!notifyCtxt@{notifyCtxt}}
+\index{notifyCtxt@{notifyCtxt}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{notifyCtxt}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ {\bf notifyCtxt}}}
+\label{a00167_a7b0f7b7dc7eadb023bb4b9615423574b}
+Call back context 
+
+Definition at line 342 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a780cfacd3edf39c4deef8f1ab64e242a}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!notifyIpv6Cb@{notifyIpv6Cb}}
+\index{notifyIpv6Cb@{notifyIpv6Cb}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{notifyIpv6Cb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-NOTIF\_\-FUNC\_\-T} {\bf notifyIpv6Cb}}}
+\label{a00167_a780cfacd3edf39c4deef8f1ab64e242a}
+IPv6 Notification call back 
+
+Definition at line 341 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a4cdcdc7a80f5e9b124e3cdff24cdcaec}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!pIpPktPoolHndl@{pIpPktPoolHndl}}
+\index{pIpPktPoolHndl@{pIpPktPoolHndl}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{pIpPktPoolHndl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NW\_\-PKT\_\-POOL\_\-HANDLE}$\ast$ {\bf pIpPktPoolHndl}}}
+\label{a00167_a4cdcdc7a80f5e9b124e3cdff24cdcaec}
+IP instatnce memory pool handle 
+
+Definition at line 321 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a26c032e68793c08c6f4c3509dee1e4f2}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!pL2Dev@{pL2Dev}}
+\index{pL2Dev@{pL2Dev}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{pL2Dev}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-L2\_\-DEV\_\-T}$\ast$ {\bf pL2Dev}}}
+\label{a00167_a26c032e68793c08c6f4c3509dee1e4f2}
+L2 device object for data transmit and receive 
+
+Definition at line 318 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a4ab8e1b7273bd13fb04f9726ebf1d430}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!pNwCtx@{pNwCtx}}
+\index{pNwCtx@{pNwCtx}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{pNwCtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NW\_\-CTX\_\-T}$\ast$ {\bf pNwCtx}}}
+\label{a00167_a4ab8e1b7273bd13fb04f9726ebf1d430}
+Pointer to the Nw module context L2 and L3 instance handles 
+
+Definition at line 316 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_afb7d19983a90716b80a2f4dbfbf7b0c8}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!protectionLock@{protectionLock}}
+\index{protectionLock@{protectionLock}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{protectionLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} {\bf protectionLock}}}
+\label{a00167_afb7d19983a90716b80a2f4dbfbf7b0c8}
+
+
+Definition at line 345 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_aec0dbb062c1551edeb82d3a45c451e01}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!pStats@{pStats}}
+\index{pStats@{pStats}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{pStats}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-STATS\_\-T}$\ast$ {\bf pStats}}}
+\label{a00167_aec0dbb062c1551edeb82d3a45c451e01}
+
+
+Definition at line 343 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a7e70681c41285d86fbe97d5ca157c9d1}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!radioModeSet@{radioModeSet}}
+\index{radioModeSet@{radioModeSet}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{radioModeSet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf radioModeSet}}}
+\label{a00167_a7e70681c41285d86fbe97d5ca157c9d1}
+
+
+Definition at line 344 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a0e030509c91ba81863d5adfca4820654}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!radioTmr@{radioTmr}}
+\index{radioTmr@{radioTmr}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{radioTmr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SOFT\_\-TMR\_\-T} {\bf radioTmr}}}
+\label{a00167_a0e030509c91ba81863d5adfca4820654}
+
+
+Definition at line 326 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_af2cb244344f575f7e8a429889b11a496}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!radioTmrHndl@{radioTmrHndl}}
+\index{radioTmrHndl@{radioTmrHndl}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{radioTmrHndl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SOFT\_\-TMR\_\-HANDLE\_\-T} {\bf radioTmrHndl}}}
+\label{a00167_af2cb244344f575f7e8a429889b11a496}
+
+
+Definition at line 327 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a88c0ed52892de848067fb8ac7d094883}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!status@{status}}
+\index{status@{status}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-STATUS\_\-T} {\bf status}}}
+\label{a00167_a88c0ed52892de848067fb8ac7d094883}
+$<$ objects used for internal usage status of the Nw Interface 
+
+Definition at line 335 of file gsn\_\-nwif.h.
+
+\hypertarget{a00167_a736d67ad1614d227113f632badbe136a}{
+\index{GSN\_\-NWIF\_\-CTX@{GSN\_\-NWIF\_\-CTX}!timeoutCnt@{timeoutCnt}}
+\index{timeoutCnt@{timeoutCnt}!GSN_NWIF_CTX@{GSN\_\-NWIF\_\-CTX}}
+\subsubsection[{timeoutCnt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf timeoutCnt}}}
+\label{a00167_a736d67ad1614d227113f632badbe136a}
+count of 100 mSec timeout 
+
+Definition at line 338 of file gsn\_\-nwif.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00534}{gsn\_\-nwif.h}\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\hypertarget{a00503}{
+\section{gsn\_\-gpio.h File Reference}
+\label{a00503}\index{gsn\_\-gpio.h@{gsn\_\-gpio.h}}
+}
+
+
+GSN GPIO API. This file contains routines for GPIO use and configuration.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-includes.h\char`\"{}}\par
+Include dependency graph for gsn\_\-gpio.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00733}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00734}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00018}{GPIO\_\-CALLBACK}
+\begin{DoxyCompactList}\small\item\em GPIO callback structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00503_adaab8557299a2f70ac7f00d23f028453}{GPIO\_\-SHIFT\_\-HIGHER}~32
+\item 
+\#define \hyperlink{a00503_a72bfa1f319c6cdd63346a31c1fb3b723}{GPIOBITMAP\_\-32}~0xffffffff
+\item 
+\#define \hyperlink{a00503_a1ea459cccfd26612a14ddeec488a2e92}{TOTAL\_\-GPIO}~38
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00648_gae6698a8151cd85d7dac2358199ed7c6e}{GSN\_\-GPIO\_\-CALLBACK\_\-FUNC\_\-T} )(\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} gpioNum, VOID $\ast$context)
+\begin{DoxyCompactList}\small\item\em The Callback Function Prototype. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00018}{GPIO\_\-CALLBACK} \hyperlink{a00648_ga8646a0bb88c00e7b2463984ae3466ac7}{GPIO\_\-CALLBACK\_\-T}
+\begin{DoxyCompactList}\small\item\em GPIO callback structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00648_gaff716caaf31f66ce12b16f91bb47c06a}{GSN\_\-GPIO\_\-INT\_\-TRIG\_\-T} \{ \par
+\hyperlink{a00648_ggaff716caaf31f66ce12b16f91bb47c06aa52a5bb11ea0fbbaeb8c0328e374c2170}{GSN\_\-GPIO\_\-INT\_\-PE\_\-TRIG}, 
+\par
+\hyperlink{a00648_ggaff716caaf31f66ce12b16f91bb47c06aa82a5e5bf12f8a3a17cd11b729b845b7c}{GSN\_\-GPIO\_\-INT\_\-NE\_\-TRIG}
+ \}
+\begin{DoxyCompactList}\small\item\em GPIO interrupt trigger enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC VOID \hyperlink{a00648_gaa78f67e1c5700e2d46ba586e2f2e2888}{GsnGpio\_\-Init} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap, \hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioDirBitMap)
+\begin{DoxyCompactList}\small\item\em This Function Initializes the GPIO. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga2d626ec26c8ffd4a364baa765eda47bb}{GsnGpio\_\-Read} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} $\ast$gpioBitMapValue, \hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Read Function. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga933dbb1d81c4ad5a793bcde69d62893a}{GsnGpio\_\-DirSet} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap, \hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioDirBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Direction Set. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_gaafee2b2c522249da06678f6f1ee1f965}{GsnGpio\_\-OutSet} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Out Set. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga1a63f62c863b21f969e07aad3b8b6de7}{GsnGpio\_\-OutIndvidualSet} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Out Set. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga39b91b13276fa91305f7fc7374251311}{GsnGpio\_\-OutClear} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Out Clear. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_gaba2b3db43960f2d257bcc9da83e51db4}{GsnGpio\_\-PEIntEnable} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Possitive Edge Interrupt Enable. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga9f8bfa1b71f64bd2dcf06ff51e085d26}{GsnGpio\_\-NEIntEnable} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Interrupt Enable. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga61b46966afa3dafd5fd49035a991aef9}{GsnGpio\_\-PEIntDisable} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Possitive Edge Interrupt Enable. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga170e15d6ae8011c0a008e6309715a23a}{GsnGpio\_\-NEIntDisable} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Interrupt Enable. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga4408d667f2fcbc51c669e8a8b25e2f6c}{GsnGpio\_\-PEIntClear} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Possitive edge Interrupt clear. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00648_ga4b1dc7062930fe980b86818e438c1cb0}{GsnGpio\_\-NEIntClear} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\begin{DoxyCompactList}\small\item\em Gpio Interrupt Disable. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00503_ad646094622e6b22bf1857bea77346999}{GsnGpio\_\-IntCbRegister} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} gpioNum, \hyperlink{a00648_gae6698a8151cd85d7dac2358199ed7c6e}{GSN\_\-GPIO\_\-CALLBACK\_\-FUNC\_\-T} gpioIntCb, VOID $\ast$context)
+\item 
+PUBLIC VOID \hyperlink{a00503_a8ba821cde77b7a9e58ca67bc1fe48723}{GsnGpio\_\-PEIntDisable\_\-Patch} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\item 
+PUBLIC VOID \hyperlink{a00503_a2dfaaeb872b51ede6a1693569ea83e35}{GsnGpio\_\-NEIntDisable\_\-Patch} (\hyperlink{a00660_gae57305825c7d329ad8a3065ae045e875}{LONG64} gpioBitMap)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN GPIO API. This file contains routines for GPIO use and configuration. 
+
+Definition in file \hyperlink{a00503_source}{gsn\_\-gpio.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00503_adaab8557299a2f70ac7f00d23f028453}{
+\index{gsn\_\-gpio.h@{gsn\_\-gpio.h}!GPIO\_\-SHIFT\_\-HIGHER@{GPIO\_\-SHIFT\_\-HIGHER}}
+\index{GPIO\_\-SHIFT\_\-HIGHER@{GPIO\_\-SHIFT\_\-HIGHER}!gsn_gpio.h@{gsn\_\-gpio.h}}
+\subsubsection[{GPIO\_\-SHIFT\_\-HIGHER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-SHIFT\_\-HIGHER~32}}
+\label{a00503_adaab8557299a2f70ac7f00d23f028453}
+
+
+Definition at line 84 of file gsn\_\-gpio.h.
+
+\hypertarget{a00503_a72bfa1f319c6cdd63346a31c1fb3b723}{
+\index{gsn\_\-gpio.h@{gsn\_\-gpio.h}!GPIOBITMAP\_\-32@{GPIOBITMAP\_\-32}}
+\index{GPIOBITMAP\_\-32@{GPIOBITMAP\_\-32}!gsn_gpio.h@{gsn\_\-gpio.h}}
+\subsubsection[{GPIOBITMAP\_\-32}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIOBITMAP\_\-32~0xffffffff}}
+\label{a00503_a72bfa1f319c6cdd63346a31c1fb3b723}
+
+
+Definition at line 85 of file gsn\_\-gpio.h.
+
+\hypertarget{a00503_a1ea459cccfd26612a14ddeec488a2e92}{
+\index{gsn\_\-gpio.h@{gsn\_\-gpio.h}!TOTAL\_\-GPIO@{TOTAL\_\-GPIO}}
+\index{TOTAL\_\-GPIO@{TOTAL\_\-GPIO}!gsn_gpio.h@{gsn\_\-gpio.h}}
+\subsubsection[{TOTAL\_\-GPIO}]{\setlength{\rightskip}{0pt plus 5cm}\#define TOTAL\_\-GPIO~38}}
+\label{a00503_a1ea459cccfd26612a14ddeec488a2e92}
+
+
+Definition at line 86 of file gsn\_\-gpio.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00503_ad646094622e6b22bf1857bea77346999}{
+\index{gsn\_\-gpio.h@{gsn\_\-gpio.h}!GsnGpio\_\-IntCbRegister@{GsnGpio\_\-IntCbRegister}}
+\index{GsnGpio\_\-IntCbRegister@{GsnGpio\_\-IntCbRegister}!gsn_gpio.h@{gsn\_\-gpio.h}}
+\subsubsection[{GsnGpio\_\-IntCbRegister}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-IntCbRegister (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT8}}]{gpioNum, }
+\item[{{\bf GSN\_\-GPIO\_\-CALLBACK\_\-FUNC\_\-T}}]{gpioIntCb, }
+\item[{VOID $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}
+\label{a00503_ad646094622e6b22bf1857bea77346999}
+\hypertarget{a00503_a2dfaaeb872b51ede6a1693569ea83e35}{
+\index{gsn\_\-gpio.h@{gsn\_\-gpio.h}!GsnGpio\_\-NEIntDisable\_\-Patch@{GsnGpio\_\-NEIntDisable\_\-Patch}}
+\index{GsnGpio\_\-NEIntDisable\_\-Patch@{GsnGpio\_\-NEIntDisable\_\-Patch}!gsn_gpio.h@{gsn\_\-gpio.h}}
+\subsubsection[{GsnGpio\_\-NEIntDisable\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-NEIntDisable\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00503_a2dfaaeb872b51ede6a1693569ea83e35}
+\hypertarget{a00503_a8ba821cde77b7a9e58ca67bc1fe48723}{
+\index{gsn\_\-gpio.h@{gsn\_\-gpio.h}!GsnGpio\_\-PEIntDisable\_\-Patch@{GsnGpio\_\-PEIntDisable\_\-Patch}}
+\index{GsnGpio\_\-PEIntDisable\_\-Patch@{GsnGpio\_\-PEIntDisable\_\-Patch}!gsn_gpio.h@{gsn\_\-gpio.h}}
+\subsubsection[{GsnGpio\_\-PEIntDisable\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID GsnGpio\_\-PEIntDisable\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{{\bf LONG64}}]{gpioBitMap}
+\end{DoxyParamCaption}
+)}}
+\label{a00503_a8ba821cde77b7a9e58ca67bc1fe48723}

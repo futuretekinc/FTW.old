@@ -1,0 +1,125 @@
+\hypertarget{a00047}{
+\section{GSN\_\-DHCPv6\_\-SERVER Struct Reference}
+\label{a00047}\index{GSN\_\-DHCPv6\_\-SERVER@{GSN\_\-DHCPv6\_\-SERVER}}
+}
+
+
+{\ttfamily \#include $<$gsn\_\-dhcpv6\_\-server.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00047_a6e9c4cbd32a1178b12f3a61f6855c896}{state}
+\item 
+\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00047_ab14e42f085ec55398e27c831f8f031d2}{sockId}
+\item 
+\hyperlink{a00017}{DUID\_\-STRUCT\_\-T} \hyperlink{a00047_a21dfcbd048f42b506500600ce9be2897}{serverId}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ \hyperlink{a00047_a2c58739c6106df2d2968e4abd908650f}{sendRecBuffer}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00047_a9678a3db2e57b60f576c69bfc2fa949b}{ipv6PoolStart} \mbox{[}4\mbox{]}
+\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00047_a60dd11d89e78ea4add98607f68802a31}{assignedIndex}
+\item 
+\hyperlink{a00011}{CLIENT\_\-RECORD\_\-T} \hyperlink{a00047_a7eb7bb83582baba9ff1dce2ac2a6bb12}{dhcpv6CientRecord} \mbox{[}MAX\_\-CLIENTS\_\-SUPPORTED\mbox{]}
+\item 
+\hyperlink{a00167}{GSN\_\-NWIF\_\-CTX\_\-T} $\ast$ \hyperlink{a00047_a98d510676ecd134a5e9ac61bf222cded}{pNwif}
+\item 
+\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} \hyperlink{a00047_a127f3fd8c83b1bda70dce36aba52681f}{dhcpv6Lock}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 185 of file gsn\_\-dhcpv6\_\-server.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00047_a60dd11d89e78ea4add98607f68802a31}{
+\index{GSN\_\-DHCPv6\_\-SERVER@{GSN\_\-DHCPv6\_\-SERVER}!assignedIndex@{assignedIndex}}
+\index{assignedIndex@{assignedIndex}!GSN_DHCPv6_SERVER@{GSN\_\-DHCPv6\_\-SERVER}}
+\subsubsection[{assignedIndex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf assignedIndex}}}
+\label{a00047_a60dd11d89e78ea4add98607f68802a31}
+
+
+Definition at line 192 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00047_a7eb7bb83582baba9ff1dce2ac2a6bb12}{
+\index{GSN\_\-DHCPv6\_\-SERVER@{GSN\_\-DHCPv6\_\-SERVER}!dhcpv6CientRecord@{dhcpv6CientRecord}}
+\index{dhcpv6CientRecord@{dhcpv6CientRecord}!GSN_DHCPv6_SERVER@{GSN\_\-DHCPv6\_\-SERVER}}
+\subsubsection[{dhcpv6CientRecord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CLIENT\_\-RECORD\_\-T} {\bf dhcpv6CientRecord}\mbox{[}MAX\_\-CLIENTS\_\-SUPPORTED\mbox{]}}}
+\label{a00047_a7eb7bb83582baba9ff1dce2ac2a6bb12}
+
+
+Definition at line 193 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00047_a127f3fd8c83b1bda70dce36aba52681f}{
+\index{GSN\_\-DHCPv6\_\-SERVER@{GSN\_\-DHCPv6\_\-SERVER}!dhcpv6Lock@{dhcpv6Lock}}
+\index{dhcpv6Lock@{dhcpv6Lock}!GSN_DHCPv6_SERVER@{GSN\_\-DHCPv6\_\-SERVER}}
+\subsubsection[{dhcpv6Lock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} {\bf dhcpv6Lock}}}
+\label{a00047_a127f3fd8c83b1bda70dce36aba52681f}
+
+
+Definition at line 195 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00047_a9678a3db2e57b60f576c69bfc2fa949b}{
+\index{GSN\_\-DHCPv6\_\-SERVER@{GSN\_\-DHCPv6\_\-SERVER}!ipv6PoolStart@{ipv6PoolStart}}
+\index{ipv6PoolStart@{ipv6PoolStart}!GSN_DHCPv6_SERVER@{GSN\_\-DHCPv6\_\-SERVER}}
+\subsubsection[{ipv6PoolStart}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT32} {\bf ipv6PoolStart}\mbox{[}4\mbox{]}}}
+\label{a00047_a9678a3db2e57b60f576c69bfc2fa949b}
+
+
+Definition at line 191 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00047_a98d510676ecd134a5e9ac61bf222cded}{
+\index{GSN\_\-DHCPv6\_\-SERVER@{GSN\_\-DHCPv6\_\-SERVER}!pNwif@{pNwif}}
+\index{pNwif@{pNwif}!GSN_DHCPv6_SERVER@{GSN\_\-DHCPv6\_\-SERVER}}
+\subsubsection[{pNwif}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-NWIF\_\-CTX\_\-T}$\ast$ {\bf pNwif}}}
+\label{a00047_a98d510676ecd134a5e9ac61bf222cded}
+
+
+Definition at line 194 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00047_a2c58739c6106df2d2968e4abd908650f}{
+\index{GSN\_\-DHCPv6\_\-SERVER@{GSN\_\-DHCPv6\_\-SERVER}!sendRecBuffer@{sendRecBuffer}}
+\index{sendRecBuffer@{sendRecBuffer}!GSN_DHCPv6_SERVER@{GSN\_\-DHCPv6\_\-SERVER}}
+\subsubsection[{sendRecBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8}$\ast$ {\bf sendRecBuffer}}}
+\label{a00047_a2c58739c6106df2d2968e4abd908650f}
+
+
+Definition at line 190 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00047_a21dfcbd048f42b506500600ce9be2897}{
+\index{GSN\_\-DHCPv6\_\-SERVER@{GSN\_\-DHCPv6\_\-SERVER}!serverId@{serverId}}
+\index{serverId@{serverId}!GSN_DHCPv6_SERVER@{GSN\_\-DHCPv6\_\-SERVER}}
+\subsubsection[{serverId}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DUID\_\-STRUCT\_\-T} {\bf serverId}}}
+\label{a00047_a21dfcbd048f42b506500600ce9be2897}
+
+
+Definition at line 189 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00047_ab14e42f085ec55398e27c831f8f031d2}{
+\index{GSN\_\-DHCPv6\_\-SERVER@{GSN\_\-DHCPv6\_\-SERVER}!sockId@{sockId}}
+\index{sockId@{sockId}!GSN_DHCPv6_SERVER@{GSN\_\-DHCPv6\_\-SERVER}}
+\subsubsection[{sockId}]{\setlength{\rightskip}{0pt plus 5cm}{\bf INT32} {\bf sockId}}}
+\label{a00047_ab14e42f085ec55398e27c831f8f031d2}
+
+
+Definition at line 188 of file gsn\_\-dhcpv6\_\-server.h.
+
+\hypertarget{a00047_a6e9c4cbd32a1178b12f3a61f6855c896}{
+\index{GSN\_\-DHCPv6\_\-SERVER@{GSN\_\-DHCPv6\_\-SERVER}!state@{state}}
+\index{state@{state}!GSN_DHCPv6_SERVER@{GSN\_\-DHCPv6\_\-SERVER}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf state}}}
+\label{a00047_a6e9c4cbd32a1178b12f3a61f6855c896}
+
+
+Definition at line 187 of file gsn\_\-dhcpv6\_\-server.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00483}{gsn\_\-dhcpv6\_\-server.h}\end{DoxyCompactItemize}

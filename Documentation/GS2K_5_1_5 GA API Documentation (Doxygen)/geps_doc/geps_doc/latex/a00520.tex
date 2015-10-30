@@ -1,0 +1,96 @@
+\hypertarget{a00520}{
+\section{gsn\_\-isotx.h File Reference}
+\label{a00520}\index{gsn\_\-isotx.h@{gsn\_\-isotx.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00754}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00101}{GSN\_\-ISOTX\_\-CTL\_\-NOTIF}
+\begin{DoxyCompactList}\small\item\em GSN WDD Notification CB structure. Datastructure having various indication call back and respective context. \end{DoxyCompactList}\item 
+struct \hyperlink{a00103}{GSN\_\-ISOTX\_\-DATA\_\-NOTIF}
+\item 
+struct \hyperlink{a00102}{GSN\_\-ISOTX\_\-CTX}
+\item 
+struct \hyperlink{a00104}{GSN\_\-ISOTX\_\-INIT\_\-PARAM}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00520_a5fb480486e6585bd46bfcb3ad503bdd4}{GSN\_\-ISOTX\_\-CTL\_\-NOTIF\_\-CB\_\-T} )(VOID $\ast$ctx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgId, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\item 
+typedef \hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS}($\ast$ \hyperlink{a00520_ae9071f19d1fb2c67ee3777a8e1306727}{GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} msgLen, VOID $\ast$pMsg)
+\item 
+typedef struct \hyperlink{a00101}{GSN\_\-ISOTX\_\-CTL\_\-NOTIF} \hyperlink{a00677_ga26be8d25f388b7b118a0cd750dbdaeb1}{GSN\_\-ISOTX\_\-CTL\_\-NOTIF\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN WDD Notification CB structure. Datastructure having various indication call back and respective context. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00103}{GSN\_\-ISOTX\_\-DATA\_\-NOTIF} \hyperlink{a00520_a54682365586a2d8a710c34eb46a2cdef}{GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-T}
+\item 
+typedef struct \hyperlink{a00102}{GSN\_\-ISOTX\_\-CTX} \hyperlink{a00520_a7a3f270b271183e40e25c7967da7798a}{GSN\_\-ISOTX\_\-CTX\_\-T}
+\item 
+typedef struct \hyperlink{a00104}{GSN\_\-ISOTX\_\-INIT\_\-PARAM} \hyperlink{a00520_af2ad415cfc6e0a9f2f0011a787436ead}{GSN\_\-ISOTX\_\-INIT\_\-PARAM\_\-T}
+\item 
+typedef \hyperlink{a00383}{GSN\_\-WIF\_\-WLAN\_\-ISOTX\_\-BLINK\_\-T} \hyperlink{a00520_a9ac94969b34cb75f0c095457d6efb945}{GSN\_\-ISOTX\_\-BLINK\_\-REQ\_\-PARAM}
+\item 
+typedef \hyperlink{a00394}{GSN\_\-WIF\_\-WLAN\_\-REG\_\-WRITE\_\-T} \hyperlink{a00520_acc2251c5b5d00db42ec7e821e9707f60}{GSN\_\-ISOTX\_\-REG\_\-WRITE\_\-REQ\_\-PARAM}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00520_a9ac94969b34cb75f0c095457d6efb945}{
+\index{gsn\_\-isotx.h@{gsn\_\-isotx.h}!GSN\_\-ISOTX\_\-BLINK\_\-REQ\_\-PARAM@{GSN\_\-ISOTX\_\-BLINK\_\-REQ\_\-PARAM}}
+\index{GSN\_\-ISOTX\_\-BLINK\_\-REQ\_\-PARAM@{GSN\_\-ISOTX\_\-BLINK\_\-REQ\_\-PARAM}!gsn_isotx.h@{gsn\_\-isotx.h}}
+\subsubsection[{GSN\_\-ISOTX\_\-BLINK\_\-REQ\_\-PARAM}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-ISOTX\_\-BLINK\_\-T} {\bf GSN\_\-ISOTX\_\-BLINK\_\-REQ\_\-PARAM}}}
+\label{a00520_a9ac94969b34cb75f0c095457d6efb945}
+
+
+Definition at line 142 of file gsn\_\-isotx.h.
+
+\hypertarget{a00520_a5fb480486e6585bd46bfcb3ad503bdd4}{
+\index{gsn\_\-isotx.h@{gsn\_\-isotx.h}!GSN\_\-ISOTX\_\-CTL\_\-NOTIF\_\-CB\_\-T@{GSN\_\-ISOTX\_\-CTL\_\-NOTIF\_\-CB\_\-T}}
+\index{GSN\_\-ISOTX\_\-CTL\_\-NOTIF\_\-CB\_\-T@{GSN\_\-ISOTX\_\-CTL\_\-NOTIF\_\-CB\_\-T}!gsn_isotx.h@{gsn\_\-isotx.h}}
+\subsubsection[{GSN\_\-ISOTX\_\-CTL\_\-NOTIF\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-ISOTX\_\-CTL\_\-NOTIF\_\-CB\_\-T})(VOID $\ast$ctx, {\bf UINT16} msgId, {\bf UINT16} msgLen, VOID $\ast$pMsg)}}
+\label{a00520_a5fb480486e6585bd46bfcb3ad503bdd4}
+END of GsnISOTXIF. 
+
+Definition at line 93 of file gsn\_\-isotx.h.
+
+\hypertarget{a00520_a7a3f270b271183e40e25c7967da7798a}{
+\index{gsn\_\-isotx.h@{gsn\_\-isotx.h}!GSN\_\-ISOTX\_\-CTX\_\-T@{GSN\_\-ISOTX\_\-CTX\_\-T}}
+\index{GSN\_\-ISOTX\_\-CTX\_\-T@{GSN\_\-ISOTX\_\-CTX\_\-T}!gsn_isotx.h@{gsn\_\-isotx.h}}
+\subsubsection[{GSN\_\-ISOTX\_\-CTX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ISOTX\_\-CTX}  {\bf GSN\_\-ISOTX\_\-CTX\_\-T}}}
+\label{a00520_a7a3f270b271183e40e25c7967da7798a}
+\hypertarget{a00520_ae9071f19d1fb2c67ee3777a8e1306727}{
+\index{gsn\_\-isotx.h@{gsn\_\-isotx.h}!GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-CB\_\-T@{GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-CB\_\-T}}
+\index{GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-CB\_\-T@{GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-CB\_\-T}!gsn_isotx.h@{gsn\_\-isotx.h}}
+\subsubsection[{GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-STATUS}( $\ast$ {\bf GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT16} msgLen, VOID $\ast$pMsg)}}
+\label{a00520_ae9071f19d1fb2c67ee3777a8e1306727}
+
+
+Definition at line 95 of file gsn\_\-isotx.h.
+
+\hypertarget{a00520_a54682365586a2d8a710c34eb46a2cdef}{
+\index{gsn\_\-isotx.h@{gsn\_\-isotx.h}!GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-T@{GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-T}}
+\index{GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-T@{GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-T}!gsn_isotx.h@{gsn\_\-isotx.h}}
+\subsubsection[{GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ISOTX\_\-DATA\_\-NOTIF} {\bf GSN\_\-ISOTX\_\-DATA\_\-NOTIF\_\-T}}}
+\label{a00520_a54682365586a2d8a710c34eb46a2cdef}
+\hypertarget{a00520_af2ad415cfc6e0a9f2f0011a787436ead}{
+\index{gsn\_\-isotx.h@{gsn\_\-isotx.h}!GSN\_\-ISOTX\_\-INIT\_\-PARAM\_\-T@{GSN\_\-ISOTX\_\-INIT\_\-PARAM\_\-T}}
+\index{GSN\_\-ISOTX\_\-INIT\_\-PARAM\_\-T@{GSN\_\-ISOTX\_\-INIT\_\-PARAM\_\-T}!gsn_isotx.h@{gsn\_\-isotx.h}}
+\subsubsection[{GSN\_\-ISOTX\_\-INIT\_\-PARAM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-ISOTX\_\-INIT\_\-PARAM} {\bf GSN\_\-ISOTX\_\-INIT\_\-PARAM\_\-T}}}
+\label{a00520_af2ad415cfc6e0a9f2f0011a787436ead}
+\hypertarget{a00520_acc2251c5b5d00db42ec7e821e9707f60}{
+\index{gsn\_\-isotx.h@{gsn\_\-isotx.h}!GSN\_\-ISOTX\_\-REG\_\-WRITE\_\-REQ\_\-PARAM@{GSN\_\-ISOTX\_\-REG\_\-WRITE\_\-REQ\_\-PARAM}}
+\index{GSN\_\-ISOTX\_\-REG\_\-WRITE\_\-REQ\_\-PARAM@{GSN\_\-ISOTX\_\-REG\_\-WRITE\_\-REQ\_\-PARAM}!gsn_isotx.h@{gsn\_\-isotx.h}}
+\subsubsection[{GSN\_\-ISOTX\_\-REG\_\-WRITE\_\-REQ\_\-PARAM}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GSN\_\-WIF\_\-WLAN\_\-REG\_\-WRITE\_\-T} {\bf GSN\_\-ISOTX\_\-REG\_\-WRITE\_\-REQ\_\-PARAM}}}
+\label{a00520_acc2251c5b5d00db42ec7e821e9707f60}
+
+
+Definition at line 144 of file gsn\_\-isotx.h.
+

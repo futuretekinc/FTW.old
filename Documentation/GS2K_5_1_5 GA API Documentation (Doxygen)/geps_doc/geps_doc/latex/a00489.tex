@@ -1,0 +1,217 @@
+\hypertarget{a00489}{
+\section{gsn\_\-emu.h File Reference}
+\label{a00489}\index{gsn\_\-emu.h@{gsn\_\-emu.h}}
+}
+
+
+GSN EMU public header. This file contains the public APIs and structures of EMU.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-includes.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}emu$\backslash$gsn\_\-emu\_\-common.h\char`\"{}}\par
+Include dependency graph for gsn\_\-emu.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00718}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00719}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00060}{GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS}
+\begin{DoxyCompactList}\small\item\em Structure maintaining the electric parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{a00058}{GSN\_\-EMU\_\-CONF\_\-VALUE}
+\begin{DoxyCompactList}\small\item\em Structure for EMU Configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00064}{GSN\_\-EMU\_\-MSG\_\-PARAM\_\-CONF}
+\begin{DoxyCompactList}\small\item\em Structure for EMU Message Param Configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00063}{GSN\_\-EMU\_\-MSG\_\-BUF\_\-CONF}
+\begin{DoxyCompactList}\small\item\em Structure for EMU Message Buffer Configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{a00061}{GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR}
+\item 
+struct \hyperlink{a00059}{GSN\_\-EMU\_\-CTX}
+\begin{DoxyCompactList}\small\item\em EMU Context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00663_ga2347334b7caf4141497a9455bf724391}{GSN\_\-EMU\_\-MODULE} \hyperlink{a00663_ga080611b90847f38e9ac1972093fdef77}{GSN\_\-EMU\_\-MODULE\_\-T}
+\begin{DoxyCompactList}\small\item\em List the energy measurment units supported. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00663_ga0643cb0399fc9877fcce3cccd4672fe2}{GSN\_\-EMU\_\-MODE} \hyperlink{a00663_gafbaa4d30aa4b736f3465344d6a5935b0}{GSN\_\-EMU\_\-MODE\_\-T}
+\begin{DoxyCompactList}\small\item\em Mode (Normal mode or calibration) \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00663_gaea130dfd5920349319a192bd421ec2be}{GSN\_\-EMU\_\-STATE} \hyperlink{a00663_gab09444b3018b5461230d789c746b56a0}{GSN\_\-EMU\_\-STATE\_\-T}
+\begin{DoxyCompactList}\small\item\em State of EMU. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00060}{GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS} \hyperlink{a00663_ga0a914f818f80d855cbc6a5ccd57ca239}{GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS\_\-T}
+\begin{DoxyCompactList}\small\item\em Structure maintaining the electric parameters. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00663_gaeae2554ac24a2af2730f23c80adf08bf}{GSN\_\-EMU\_\-ADC\_\-CHANNEL} \hyperlink{a00663_gaa251b8ce4165f71014388dea20af4369}{GSN\_\-EMU\_\-ADC\_\-CHANNEL\_\-T}
+\begin{DoxyCompactList}\small\item\em Enum for ADC Channel. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00663_ga8a2c32cf9a6a1b827e675b91b42eab47}{GSN\_\-EMU\_\-CHANNEL\_\-GAIN} \hyperlink{a00663_ga28c8e45a08f0c7cfb9b129f54d3d3dcc}{GSN\_\-EMU\_\-CHANNEL\_\-GAIN\_\-T}
+\begin{DoxyCompactList}\small\item\em Enum for ADC Channel Gain. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00058}{GSN\_\-EMU\_\-CONF\_\-VALUE} \hyperlink{a00663_ga4d86ed7ecbdc155ecc41c47de7739775}{GSN\_\-EMU\_\-CONF\_\-VALUE\_\-T}
+\begin{DoxyCompactList}\small\item\em Structure for EMU Configuration. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00064}{GSN\_\-EMU\_\-MSG\_\-PARAM\_\-CONF} \hyperlink{a00663_gae3dd9cf1f519ba6879f6f928ac33c1c4}{GSN\_\-EMU\_\-MSG\_\-PARAM\_\-CONF\_\-T}
+\begin{DoxyCompactList}\small\item\em Structure for EMU Message Param Configuration. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00063}{GSN\_\-EMU\_\-MSG\_\-BUF\_\-CONF} \hyperlink{a00663_gacf296ce2d4fd56e05d1ddfc4e41e07ce}{GSN\_\-EMU\_\-MSG\_\-BUF\_\-CONF\_\-T}
+\begin{DoxyCompactList}\small\item\em Structure for EMU Message Buffer Configuration. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00489_ab0fa7e48e947d0a8dd37314d7aee6ba7}{GSN\_\-EMU\_\-APPNOTIFICATION\_\-FUNC\_\-T} )(\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} arg1, VOID $\ast$arg2)
+\item 
+typedef struct \hyperlink{a00061}{GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR} \hyperlink{a00489_a93b7b6a5c3db3b4f85b0825b96f47ab4}{GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR\_\-T}
+\item 
+typedef struct \hyperlink{a00059}{GSN\_\-EMU\_\-CTX} \hyperlink{a00663_gaf9de9f7ae5f3e644a9f1ad8df793ec4f}{GSN\_\-EMU\_\-CTX\_\-T}
+\begin{DoxyCompactList}\small\item\em EMU Context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00663_ga2347334b7caf4141497a9455bf724391}{GSN\_\-EMU\_\-MODULE} \{ \par
+\hyperlink{a00663_gga2347334b7caf4141497a9455bf724391ac84d7d94bd84bd9343797ccfe1c73e2b}{GSN\_\-EMU\_\-MODULE\_\-SIGMADELTA\_\-ADC} =  1, 
+\par
+\hyperlink{a00663_gga2347334b7caf4141497a9455bf724391ae2242b3501ae5696e698110a07406847}{GSN\_\-EMU\_\-MODULE\_\-PL722X} =  2, 
+\par
+\hyperlink{a00663_gga2347334b7caf4141497a9455bf724391a00f3f7032ecf58c26c065ad4a761007d}{GSN\_\-EMU\_\-LIST\_\-MAX}
+ \}
+\begin{DoxyCompactList}\small\item\em List the energy measurment units supported. \end{DoxyCompactList}\item 
+enum \hyperlink{a00663_ga0643cb0399fc9877fcce3cccd4672fe2}{GSN\_\-EMU\_\-MODE} \{ \par
+\hyperlink{a00663_gga0643cb0399fc9877fcce3cccd4672fe2aa348f73bf0620e4a4cebee4a5bec44d6}{GSN\_\-EMU\_\-MODE\_\-NORMAL} =  0, 
+\par
+\hyperlink{a00663_gga0643cb0399fc9877fcce3cccd4672fe2a2fc2b64cf2e083deed68016cda492870}{GSN\_\-EMU\_\-MODE\_\-CALIB}
+ \}
+\begin{DoxyCompactList}\small\item\em Mode (Normal mode or calibration) \end{DoxyCompactList}\item 
+enum \hyperlink{a00663_gaea130dfd5920349319a192bd421ec2be}{GSN\_\-EMU\_\-STATE} \{ \par
+\hyperlink{a00663_ggaea130dfd5920349319a192bd421ec2bea31e04f44859581dbfbbdc3bdf10c0e27}{GSN\_\-EMU\_\-STATE\_\-INITIALIZED}, 
+\par
+\hyperlink{a00663_ggaea130dfd5920349319a192bd421ec2bea12d34a356e47b5755e574741ccc484c0}{GSN\_\-EMU\_\-STATE\_\-RUNNING}, 
+\par
+\hyperlink{a00663_ggaea130dfd5920349319a192bd421ec2beafaa1a97351fadea387f0fee5df9f385a}{GSN\_\-EMU\_\-STATE\_\-PAUSED}, 
+\par
+\hyperlink{a00663_ggaea130dfd5920349319a192bd421ec2bea20017143bae0b73aaaeea8aa57ee6366}{GSN\_\-EMU\_\-STATE\_\-STOPPED}, 
+\par
+\hyperlink{a00663_ggaea130dfd5920349319a192bd421ec2bea3707c1856ea13bb4a71703fa4b726e93}{GSN\_\-EMU\_\-STATE\_\-DEINITINPROGRESS}, 
+\par
+\hyperlink{a00663_ggaea130dfd5920349319a192bd421ec2bea402d61ec6158565c9898b6399aaebc4c}{GSN\_\-EMU\_\-STATE\_\-DEINITIALIZED}
+ \}
+\begin{DoxyCompactList}\small\item\em State of EMU. \end{DoxyCompactList}\item 
+enum \hyperlink{a00663_gaeae2554ac24a2af2730f23c80adf08bf}{GSN\_\-EMU\_\-ADC\_\-CHANNEL} \{ \par
+\hyperlink{a00663_ggaeae2554ac24a2af2730f23c80adf08bfa9fd64b31d0448ee9e519767e53f8c7c6}{GSN\_\-EMU\_\-SDADC\_\-CHANNEL\_\-0} =  GSN\_\-SDADCDAC\_\-ADC0, 
+\par
+\hyperlink{a00663_ggaeae2554ac24a2af2730f23c80adf08bfab71e0aa3ed4a09c31cf26e0685f626fd}{GSN\_\-EMU\_\-SDADC\_\-CHANNEL\_\-1} =  GSN\_\-SDADCDAC\_\-ADC1, 
+\par
+\hyperlink{a00663_ggaeae2554ac24a2af2730f23c80adf08bfad5530cd41b67352aef45b5ed59820577}{GSN\_\-EMU\_\-SDADC\_\-CHANNEL\_\-2} =  GSN\_\-SDADCDAC\_\-ADC2
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for ADC Channel. \end{DoxyCompactList}\item 
+enum \hyperlink{a00663_ga8a2c32cf9a6a1b827e675b91b42eab47}{GSN\_\-EMU\_\-CHANNEL\_\-GAIN} \{ \par
+\hyperlink{a00663_gga8a2c32cf9a6a1b827e675b91b42eab47abbf78640af1f847081a98e70b88d3392}{GSN\_\-EMU\_\-SDADC\_\-GAIN0} =  0, 
+\par
+\hyperlink{a00663_gga8a2c32cf9a6a1b827e675b91b42eab47a0ee07e0c0756ba63ddb81868934b705b}{GSN\_\-EMU\_\-SDADC\_\-GAIN1} =  1, 
+\par
+\hyperlink{a00663_gga8a2c32cf9a6a1b827e675b91b42eab47a1995a0acd43847c762259526025cd7c4}{GSN\_\-EMU\_\-SDADC\_\-GAIN2} =  2, 
+\par
+\hyperlink{a00663_gga8a2c32cf9a6a1b827e675b91b42eab47accd39859c6206fe1fe3fb8cec834ae7c}{GSN\_\-EMU\_\-SDADC\_\-GAIN3} =  3, 
+\par
+\hyperlink{a00663_gga8a2c32cf9a6a1b827e675b91b42eab47a3c0e392688ec441fb391cf6e9c600a43}{GSN\_\-EMU\_\-NO\_\-GAIN}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for ADC Channel Gain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PUBLIC \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00663_ga93436d9f7d75c34e8ed04ecfe64fd85d}{GsnEmu\_\-GetSupportedModules} ()
+\begin{DoxyCompactList}\small\item\em Get Supported Modules. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00663_ga551937ea94e20c352ead797411954bdf}{GsnEmu\_\-GetVersion} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Get EMU Version. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_ga2cffc4817a2de4ab6d96a6f9d6af298c}{GsnEmu\_\-Init} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx, \hyperlink{a00663_gafbaa4d30aa4b736f3465344d6a5935b0}{GSN\_\-EMU\_\-MODE\_\-T} mode, \hyperlink{a00490_a05b3306759ea16994bc2d9055424367e}{GSN\_\-EMU\_\-TASKNOTIFICATION\_\-FUNC\_\-T} taskNotifier, \hyperlink{a00489_ab0fa7e48e947d0a8dd37314d7aee6ba7}{GSN\_\-EMU\_\-APPNOTIFICATION\_\-FUNC\_\-T} appCb, VOID $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em EMU Initialization. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_ga24d2ae83a520429e6c8d5070a84244f7}{GsnEmu\_\-DeInit} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx)
+\begin{DoxyCompactList}\small\item\em EMU De-\/Initialization. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_gaf76a2b11343bf595609446ea8926ba4a}{GsnEmu\_\-GetState} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx, \hyperlink{a00663_gab09444b3018b5461230d789c746b56a0}{GSN\_\-EMU\_\-STATE\_\-T} $\ast$state)
+\begin{DoxyCompactList}\small\item\em EMU Get State. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_ga04eb7d0e39bd40dc1e3b10be77de73ba}{GsnEmu\_\-GetMode} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx, \hyperlink{a00663_gafbaa4d30aa4b736f3465344d6a5935b0}{GSN\_\-EMU\_\-MODE\_\-T} $\ast$mode)
+\begin{DoxyCompactList}\small\item\em EMU Get State. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_ga95c5ac4e1742d243bfa2722e75a01e73}{GsnEmu\_\-GetElectricParams} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx, \hyperlink{a00060}{GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS\_\-T} $\ast$elecParams)
+\begin{DoxyCompactList}\small\item\em EMU Get Electrical Parameters. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00489_a5599d53687aa801e24419e74c6a98f7a}{GsnEmu\_\-GetInstantElectricParams} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx, \hyperlink{a00060}{GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS\_\-T} $\ast$elecParams)
+\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_ga600b62bce05579cdc2fd7d12b20c65df}{GsnEmu\_\-GetLoadStatus} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} $\ast$onOff)
+\begin{DoxyCompactList}\small\item\em EMU Get Load Status. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_gace908fb8fb14ee6186110f2641dbf072}{GsnEmu\_\-Start} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx, \hyperlink{a00058}{GSN\_\-EMU\_\-CONF\_\-VALUE\_\-T} $\ast$confvalue, \hyperlink{a00067}{GSN\_\-EMU\_\-SDADC\_\-PINGPONG\_\-BUFF\_\-T} $\ast$pingBuff)
+\begin{DoxyCompactList}\small\item\em EMU Start. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_ga07157b87c6421781bd45756fd80d6702}{GsnEmu\_\-Stop} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx)
+\begin{DoxyCompactList}\small\item\em EMU Stop. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00489_a76137a0514578f064701a5cb41ab5106}{GsnEmu\_\-Pause} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx, \hyperlink{a00060}{GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS\_\-T} $\ast$elecParams)
+\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00489_a86ec9ec26f54baeb8bea7fa749046dd5}{GsnEmu\_\-Resume} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx, \hyperlink{a00060}{GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS\_\-T} $\ast$elecParams, \hyperlink{a00058}{GSN\_\-EMU\_\-CONF\_\-VALUE\_\-T} $\ast$confvalue)
+\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_gacd69f0f8577c5a31988349642ce6b512}{GsnEmu\_\-LoadControl} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx, \hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} onOff)
+\begin{DoxyCompactList}\small\item\em EMU Load Control. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_ga5b8064675bb056aaa15341a826269048}{GsnEmu\_\-ResetEnergy} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pEmuCtx)
+\begin{DoxyCompactList}\small\item\em EMU Reset Energy. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00663_gafe8f6ed1a40411f25e8564d98435ffa8}{GsnEmu\_\-MsgProcess} (\hyperlink{a00062}{GSN\_\-EMU\_\-MSG\_\-T} $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em EMU Message Process. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_ga3ab0982e59d704aec080c1752221c1ec}{GsnEmu\_\-GetConfPtr} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pCtx, \hyperlink{a00058}{GSN\_\-EMU\_\-CONF\_\-VALUE\_\-T} $\ast$confValue)
+\begin{DoxyCompactList}\small\item\em EMU Get configuration Pointer. \end{DoxyCompactList}\item 
+PUBLIC \hyperlink{a00490_aeda27e2bd7f74b1b9748e313d272033e}{GSN\_\-EMU\_\-STATUS\_\-T} \hyperlink{a00663_ga898954cb12a09a8b232591d909aa3f93}{GsnEmu\_\-PrivateCheckThreshold} (\hyperlink{a00059}{GSN\_\-EMU\_\-CTX\_\-T} $\ast$pCtx)
+\begin{DoxyCompactList}\small\item\em EMU Private Threshold check. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN EMU public header. This file contains the public APIs and structures of EMU. 
+
+Definition in file \hyperlink{a00489_source}{gsn\_\-emu.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00489_ab0fa7e48e947d0a8dd37314d7aee6ba7}{
+\index{gsn\_\-emu.h@{gsn\_\-emu.h}!GSN\_\-EMU\_\-APPNOTIFICATION\_\-FUNC\_\-T@{GSN\_\-EMU\_\-APPNOTIFICATION\_\-FUNC\_\-T}}
+\index{GSN\_\-EMU\_\-APPNOTIFICATION\_\-FUNC\_\-T@{GSN\_\-EMU\_\-APPNOTIFICATION\_\-FUNC\_\-T}!gsn_emu.h@{gsn\_\-emu.h}}
+\subsubsection[{GSN\_\-EMU\_\-APPNOTIFICATION\_\-FUNC\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$  {\bf GSN\_\-EMU\_\-APPNOTIFICATION\_\-FUNC\_\-T})({\bf UINT32} arg1, VOID $\ast$arg2)}}
+\label{a00489_ab0fa7e48e947d0a8dd37314d7aee6ba7}
+
+
+Definition at line 245 of file gsn\_\-emu.h.
+
+\hypertarget{a00489_a93b7b6a5c3db3b4f85b0825b96f47ab4}{
+\index{gsn\_\-emu.h@{gsn\_\-emu.h}!GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR\_\-T@{GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR\_\-T}}
+\index{GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR\_\-T@{GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR\_\-T}!gsn_emu.h@{gsn\_\-emu.h}}
+\subsubsection[{GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR}  {\bf GSN\_\-EMU\_\-MODULE\_\-FN\_\-PTR\_\-T}}}
+\label{a00489_a93b7b6a5c3db3b4f85b0825b96f47ab4}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00489_a5599d53687aa801e24419e74c6a98f7a}{
+\index{gsn\_\-emu.h@{gsn\_\-emu.h}!GsnEmu\_\-GetInstantElectricParams@{GsnEmu\_\-GetInstantElectricParams}}
+\index{GsnEmu\_\-GetInstantElectricParams@{GsnEmu\_\-GetInstantElectricParams}!gsn_emu.h@{gsn\_\-emu.h}}
+\subsubsection[{GsnEmu\_\-GetInstantElectricParams}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-EMU\_\-STATUS\_\-T} GsnEmu\_\-GetInstantElectricParams (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EMU\_\-CTX\_\-T} $\ast$}]{pEmuCtx, }
+\item[{{\bf GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS\_\-T} $\ast$}]{elecParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00489_a5599d53687aa801e24419e74c6a98f7a}
+\hypertarget{a00489_a76137a0514578f064701a5cb41ab5106}{
+\index{gsn\_\-emu.h@{gsn\_\-emu.h}!GsnEmu\_\-Pause@{GsnEmu\_\-Pause}}
+\index{GsnEmu\_\-Pause@{GsnEmu\_\-Pause}!gsn_emu.h@{gsn\_\-emu.h}}
+\subsubsection[{GsnEmu\_\-Pause}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-EMU\_\-STATUS\_\-T} GsnEmu\_\-Pause (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EMU\_\-CTX\_\-T} $\ast$}]{pEmuCtx, }
+\item[{{\bf GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS\_\-T} $\ast$}]{elecParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00489_a76137a0514578f064701a5cb41ab5106}
+\hypertarget{a00489_a86ec9ec26f54baeb8bea7fa749046dd5}{
+\index{gsn\_\-emu.h@{gsn\_\-emu.h}!GsnEmu\_\-Resume@{GsnEmu\_\-Resume}}
+\index{GsnEmu\_\-Resume@{GsnEmu\_\-Resume}!gsn_emu.h@{gsn\_\-emu.h}}
+\subsubsection[{GsnEmu\_\-Resume}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC {\bf GSN\_\-EMU\_\-STATUS\_\-T} GsnEmu\_\-Resume (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-EMU\_\-CTX\_\-T} $\ast$}]{pEmuCtx, }
+\item[{{\bf GSN\_\-EMU\_\-ELECTRIC\_\-PARAMS\_\-T} $\ast$}]{elecParams, }
+\item[{{\bf GSN\_\-EMU\_\-CONF\_\-VALUE\_\-T} $\ast$}]{confvalue}
+\end{DoxyParamCaption}
+)}}
+\label{a00489_a86ec9ec26f54baeb8bea7fa749046dd5}

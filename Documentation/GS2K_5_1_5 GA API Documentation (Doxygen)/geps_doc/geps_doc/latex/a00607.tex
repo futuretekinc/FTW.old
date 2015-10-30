@@ -1,0 +1,311 @@
+\hypertarget{a00607}{
+\section{gsn\_\-wif\_\-cal\_\-defs.h File Reference}
+\label{a00607}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}
+}
+
+
+GSN WIF CAL interface public header.  
+
+
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00854}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00319}{GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-S}
+\begin{DoxyCompactList}\small\item\em WIF CAL API. \end{DoxyCompactList}\item 
+struct \hyperlink{a00320}{GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-S}
+\begin{DoxyCompactList}\small\item\em WIF CAL API response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-E} \hyperlink{a00607_a9dc79fa491ceafce8c7f71c92861bb43}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em WIF CAL API. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00607_af3a815815ae9fc3d8f892d4d89ac90aa}{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-E} \hyperlink{a00607_a6fed31ed15a2c8f32a4bda91ae7c7870}{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em WIF CAL API. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00319}{GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-S} \hyperlink{a00607_a8a9394dbece8b33318df662ac02fcbc5}{GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-T}
+\begin{DoxyCompactList}\small\item\em WIF CAL API. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00607_a838df779eaf2331fe78602a674a579bf}{GSN\_\-WIF\_\-CAL\_\-STATUS\_\-E} \hyperlink{a00607_aa763754f7a0152deadf587aad20f022c}{GSN\_\-WIF\_\-CAL\_\-STATUS\_\-T}
+\item 
+typedef enum \hyperlink{a00607_a26bfefcbc5fe1a4e7be7bf911f5a6487}{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-E} \hyperlink{a00607_a8cef2377b99755a5588d68051d9be59c}{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-T}
+\begin{DoxyCompactList}\small\item\em WIF CAL OTP VERSION. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00320}{GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-S} \hyperlink{a00607_aa8ebea34fbddec643c0faa7d5f58319e}{GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-T}
+\begin{DoxyCompactList}\small\item\em WIF CAL API response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-E} \{ \par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7a85c3615d088fb35493b90ded670d0206}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-CTUNE} =  0, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7a0f8f18d7b83b523b4c480f8257df0349}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-QTUNE} =  1, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7a92273d748b4c8d809e9f0454097d6f74}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-REFTRIM} =  2, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7a98940ee30babdb673342ca1b9159c740}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-RES} =  3, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7aa31797ceb963e27a3c4484100aa646fa}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-BG} =  4, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7adbf708e0b24b3097c826561c1360f592}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-LX\_\-SWCVCO} =  5, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7a5455d7261cba393c4c68aa025034c9dc}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-DCO} =  6, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7a3c2d540ff04a776c4a12af6a05aa111f}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-PHASE\_\-MISMATCH} =  7, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7a53d3b8c8a818c35aa5a2547cea01469b}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-GAIN\_\-MISMATCH} =  8, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7a5556d38db7226d604677fdfc2c4613b4}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-MIX\_\-DCO} =  9, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7a30a8b3fcdc8887bc0b65196049acdba4}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-PHASE\_\-MISMATCH} =  10, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7a03f32476d563c6b2f50c3adeb69e4be5}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-GAIN\_\-MISMATCH} =  11, 
+\par
+\hyperlink{a00607_a8806538ca7eb7172842f91d2d44d38f7a845e00dd4243ccea419422e3bebf38c6}{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-ALL} =  0xff
+ \}
+\begin{DoxyCompactList}\small\item\em WIF CAL API. \end{DoxyCompactList}\item 
+enum \hyperlink{a00607_af3a815815ae9fc3d8f892d4d89ac90aa}{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-E} \{ \par
+\hyperlink{a00607_af3a815815ae9fc3d8f892d4d89ac90aaa7c7d7e1f1e1bff5b192fc2ba49f8e53d}{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211B} =  0, 
+\par
+\hyperlink{a00607_af3a815815ae9fc3d8f892d4d89ac90aaaaac48d34aaa95b83d64f4e241b0b68b3}{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N} =  1, 
+\par
+\hyperlink{a00607_af3a815815ae9fc3d8f892d4d89ac90aaa4bdb5cb22a7b002090afda095c439494}{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N40} =  2, 
+\par
+\hyperlink{a00607_af3a815815ae9fc3d8f892d4d89ac90aaa31a923fb3842a69f280e453e4ef0d26e}{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-802154} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em WIF CAL API. \end{DoxyCompactList}\item 
+enum \hyperlink{a00607_a838df779eaf2331fe78602a674a579bf}{GSN\_\-WIF\_\-CAL\_\-STATUS\_\-E} \{ \par
+\hyperlink{a00607_a838df779eaf2331fe78602a674a579bfa737cc686bf22492e1ac562012fb90ab0}{GSN\_\-WIF\_\-CAL\_\-SUCCESS} =  0, 
+\par
+\hyperlink{a00607_a838df779eaf2331fe78602a674a579bfa754118b743593d671e2b87d8d02ee9d5}{GSN\_\-WIF\_\-CAL\_\-FAILED} =  1
+ \}
+\item 
+enum \hyperlink{a00607_a26bfefcbc5fe1a4e7be7bf911f5a6487}{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-E} \{ \par
+\hyperlink{a00607_a26bfefcbc5fe1a4e7be7bf911f5a6487aa5db29e23c8d9d444f3e0e78d963ebdc}{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-1} =  1, 
+\par
+\hyperlink{a00607_a26bfefcbc5fe1a4e7be7bf911f5a6487ab83ff3c11977c25af63ed7227b325048}{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-2} =  2
+ \}
+\begin{DoxyCompactList}\small\item\em WIF CAL OTP VERSION. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN WIF CAL interface public header. This file contains the public APIs and structures of CAL control interface. 
+
+Definition in file \hyperlink{a00607_source}{gsn\_\-wif\_\-cal\_\-defs.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00607_a8a9394dbece8b33318df662ac02fcbc5}{
+\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-T@{GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-T}}
+\index{GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-T@{GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-T}!gsn_wif_cal_defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-S}  {\bf GSN\_\-WIF\_\-CAL\_\-RUN\_\-REQ\_\-T}}}
+\label{a00607_a8a9394dbece8b33318df662ac02fcbc5}
+
+
+WIF CAL API. 
+
+This structure defines the calibration run request. \hypertarget{a00607_aa8ebea34fbddec643c0faa7d5f58319e}{
+\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-T@{GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-T}}
+\index{GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-T@{GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-T}!gsn_wif_cal_defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-S}  {\bf GSN\_\-WIF\_\-CAL\_\-RUN\_\-RSP\_\-T}}}
+\label{a00607_aa8ebea34fbddec643c0faa7d5f58319e}
+
+
+WIF CAL API response. 
+
+This structure defines the calibration run response. \hypertarget{a00607_aa763754f7a0152deadf587aad20f022c}{
+\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-STATUS\_\-T@{GSN\_\-WIF\_\-CAL\_\-STATUS\_\-T}}
+\index{GSN\_\-WIF\_\-CAL\_\-STATUS\_\-T@{GSN\_\-WIF\_\-CAL\_\-STATUS\_\-T}!gsn_wif_cal_defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-STATUS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-CAL\_\-STATUS\_\-E}  {\bf GSN\_\-WIF\_\-CAL\_\-STATUS\_\-T}}}
+\label{a00607_aa763754f7a0152deadf587aad20f022c}
+\hypertarget{a00607_a6fed31ed15a2c8f32a4bda91ae7c7870}{
+\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-T@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-T}}
+\index{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-T@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-T}!gsn_wif_cal_defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-E}  {\bf GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-T}}}
+\label{a00607_a6fed31ed15a2c8f32a4bda91ae7c7870}
+
+
+WIF CAL API. 
+
+This enum defines the calibration subtypes. \hypertarget{a00607_a9dc79fa491ceafce8c7f71c92861bb43}{
+\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-T@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-T}}
+\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-T@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-T}!gsn_wif_cal_defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-CAL\_\-TYPE\_\-E}  {\bf GSN\_\-WIF\_\-CAL\_\-TYPE\_\-T}}}
+\label{a00607_a9dc79fa491ceafce8c7f71c92861bb43}
+
+
+WIF CAL API. 
+
+This enum defines the calibration types. \hypertarget{a00607_a8cef2377b99755a5588d68051d9be59c}{
+\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-T@{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-T}}
+\index{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-T@{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-T}!gsn_wif_cal_defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-E} {\bf GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-T}}}
+\label{a00607_a8cef2377b99755a5588d68051d9be59c}
+
+
+WIF CAL OTP VERSION. 
+
+This enum defines the CAL OTP VERSION. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00607_a838df779eaf2331fe78602a674a579bf}{
+\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-STATUS\_\-E@{GSN\_\-WIF\_\-CAL\_\-STATUS\_\-E}}
+\index{GSN\_\-WIF\_\-CAL\_\-STATUS\_\-E@{GSN\_\-WIF\_\-CAL\_\-STATUS\_\-E}!gsn_wif_cal_defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-STATUS\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-CAL\_\-STATUS\_\-E}}}
+\label{a00607_a838df779eaf2331fe78602a674a579bf}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-CAL\_\-SUCCESS@{GSN\_\-WIF\_\-CAL\_\-SUCCESS}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-SUCCESS@{GSN\_\-WIF\_\-CAL\_\-SUCCESS}}\item[{\em 
+\hypertarget{a00607_a838df779eaf2331fe78602a674a579bfa737cc686bf22492e1ac562012fb90ab0}{
+GSN\_\-WIF\_\-CAL\_\-SUCCESS}
+\label{a00607_a838df779eaf2331fe78602a674a579bfa737cc686bf22492e1ac562012fb90ab0}
+}]\index{GSN\_\-WIF\_\-CAL\_\-FAILED@{GSN\_\-WIF\_\-CAL\_\-FAILED}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-FAILED@{GSN\_\-WIF\_\-CAL\_\-FAILED}}\item[{\em 
+\hypertarget{a00607_a838df779eaf2331fe78602a674a579bfa754118b743593d671e2b87d8d02ee9d5}{
+GSN\_\-WIF\_\-CAL\_\-FAILED}
+\label{a00607_a838df779eaf2331fe78602a674a579bfa754118b743593d671e2b87d8d02ee9d5}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 112 of file gsn\_\-wif\_\-cal\_\-defs.h.
+
+\hypertarget{a00607_af3a815815ae9fc3d8f892d4d89ac90aa}{
+\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-E@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-E}}
+\index{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-E@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-E}!gsn_wif_cal_defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-E}}}
+\label{a00607_af3a815815ae9fc3d8f892d4d89ac90aa}
+
+
+WIF CAL API. 
+
+This enum defines the calibration subtypes. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211B@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211B}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211B@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211B}}\item[{\em 
+\hypertarget{a00607_af3a815815ae9fc3d8f892d4d89ac90aaa7c7d7e1f1e1bff5b192fc2ba49f8e53d}{
+GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211B}
+\label{a00607_af3a815815ae9fc3d8f892d4d89ac90aaa7c7d7e1f1e1bff5b192fc2ba49f8e53d}
+}]\index{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N}}\item[{\em 
+\hypertarget{a00607_af3a815815ae9fc3d8f892d4d89ac90aaaaac48d34aaa95b83d64f4e241b0b68b3}{
+GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N}
+\label{a00607_af3a815815ae9fc3d8f892d4d89ac90aaaaac48d34aaa95b83d64f4e241b0b68b3}
+}]\index{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N40@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N40}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N40@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N40}}\item[{\em 
+\hypertarget{a00607_af3a815815ae9fc3d8f892d4d89ac90aaa4bdb5cb22a7b002090afda095c439494}{
+GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-80211N40}
+\label{a00607_af3a815815ae9fc3d8f892d4d89ac90aaa4bdb5cb22a7b002090afda095c439494}
+}]\index{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-802154@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-802154}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-802154@{GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-802154}}\item[{\em 
+\hypertarget{a00607_af3a815815ae9fc3d8f892d4d89ac90aaa31a923fb3842a69f280e453e4ef0d26e}{
+GSN\_\-WIF\_\-CAL\_\-SUBTYPE\_\-802154}
+\label{a00607_af3a815815ae9fc3d8f892d4d89ac90aaa31a923fb3842a69f280e453e4ef0d26e}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 88 of file gsn\_\-wif\_\-cal\_\-defs.h.
+
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7}{
+\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-E@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-E}}
+\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-E@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-E}!gsn_wif_cal_defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-CAL\_\-TYPE\_\-E}}}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7}
+
+
+WIF CAL API. 
+
+This enum defines the calibration types. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-CTUNE@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-CTUNE}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-CTUNE@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-CTUNE}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7a85c3615d088fb35493b90ded670d0206}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-CTUNE}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7a85c3615d088fb35493b90ded670d0206}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-QTUNE@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-QTUNE}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-QTUNE@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-QTUNE}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7a0f8f18d7b83b523b4c480f8257df0349}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-QTUNE}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7a0f8f18d7b83b523b4c480f8257df0349}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-REFTRIM@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-REFTRIM}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-REFTRIM@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-REFTRIM}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7a92273d748b4c8d809e9f0454097d6f74}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-REFTRIM}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7a92273d748b4c8d809e9f0454097d6f74}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-RES@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-RES}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-RES@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-RES}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7a98940ee30babdb673342ca1b9159c740}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-RES}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7a98940ee30babdb673342ca1b9159c740}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-BG@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-BG}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-BG@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-BG}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7aa31797ceb963e27a3c4484100aa646fa}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-AX\_\-BG}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7aa31797ceb963e27a3c4484100aa646fa}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-LX\_\-SWCVCO@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-LX\_\-SWCVCO}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-LX\_\-SWCVCO@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-LX\_\-SWCVCO}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7adbf708e0b24b3097c826561c1360f592}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-LX\_\-SWCVCO}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7adbf708e0b24b3097c826561c1360f592}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-DCO@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-DCO}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-DCO@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-DCO}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7a5455d7261cba393c4c68aa025034c9dc}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-DCO}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7a5455d7261cba393c4c68aa025034c9dc}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-PHASE\_\-MISMATCH@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-PHASE\_\-MISMATCH}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-PHASE\_\-MISMATCH@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-PHASE\_\-MISMATCH}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7a3c2d540ff04a776c4a12af6a05aa111f}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-PHASE\_\-MISMATCH}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7a3c2d540ff04a776c4a12af6a05aa111f}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-GAIN\_\-MISMATCH@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-GAIN\_\-MISMATCH}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-GAIN\_\-MISMATCH@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-GAIN\_\-MISMATCH}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7a53d3b8c8a818c35aa5a2547cea01469b}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-RX\_\-IQ\_\-GAIN\_\-MISMATCH}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7a53d3b8c8a818c35aa5a2547cea01469b}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-MIX\_\-DCO@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-MIX\_\-DCO}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-MIX\_\-DCO@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-MIX\_\-DCO}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7a5556d38db7226d604677fdfc2c4613b4}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-MIX\_\-DCO}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7a5556d38db7226d604677fdfc2c4613b4}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-PHASE\_\-MISMATCH@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-PHASE\_\-MISMATCH}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-PHASE\_\-MISMATCH@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-PHASE\_\-MISMATCH}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7a30a8b3fcdc8887bc0b65196049acdba4}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-PHASE\_\-MISMATCH}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7a30a8b3fcdc8887bc0b65196049acdba4}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-GAIN\_\-MISMATCH@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-GAIN\_\-MISMATCH}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-GAIN\_\-MISMATCH@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-GAIN\_\-MISMATCH}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7a03f32476d563c6b2f50c3adeb69e4be5}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-TX\_\-IQ\_\-GAIN\_\-MISMATCH}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7a03f32476d563c6b2f50c3adeb69e4be5}
+}]\index{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-ALL@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-ALL}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-CAL\_\-TYPE\_\-ALL@{GSN\_\-WIF\_\-CAL\_\-TYPE\_\-ALL}}\item[{\em 
+\hypertarget{a00607_a8806538ca7eb7172842f91d2d44d38f7a845e00dd4243ccea419422e3bebf38c6}{
+GSN\_\-WIF\_\-CAL\_\-TYPE\_\-ALL}
+\label{a00607_a8806538ca7eb7172842f91d2d44d38f7a845e00dd4243ccea419422e3bebf38c6}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 60 of file gsn\_\-wif\_\-cal\_\-defs.h.
+
+\hypertarget{a00607_a26bfefcbc5fe1a4e7be7bf911f5a6487}{
+\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-E@{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-E}}
+\index{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-E@{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-E}!gsn_wif_cal_defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}
+\subsubsection[{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-E}}}
+\label{a00607_a26bfefcbc5fe1a4e7be7bf911f5a6487}
+
+
+WIF CAL OTP VERSION. 
+
+This enum defines the CAL OTP VERSION. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-1@{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-1}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-1@{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-1}}\item[{\em 
+\hypertarget{a00607_a26bfefcbc5fe1a4e7be7bf911f5a6487aa5db29e23c8d9d444f3e0e78d963ebdc}{
+GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-1}
+\label{a00607_a26bfefcbc5fe1a4e7be7bf911f5a6487aa5db29e23c8d9d444f3e0e78d963ebdc}
+}]\index{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-2@{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-2}!gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}}\index{gsn\_\-wif\_\-cal\_\-defs.h@{gsn\_\-wif\_\-cal\_\-defs.h}!GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-2@{GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-2}}\item[{\em 
+\hypertarget{a00607_a26bfefcbc5fe1a4e7be7bf911f5a6487ab83ff3c11977c25af63ed7227b325048}{
+GSN\_\-WIF\_\-RF\_\-CAL\_\-OTP\_\-VER\_\-2}
+\label{a00607_a26bfefcbc5fe1a4e7be7bf911f5a6487ab83ff3c11977c25af63ed7227b325048}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 125 of file gsn\_\-wif\_\-cal\_\-defs.h.
+

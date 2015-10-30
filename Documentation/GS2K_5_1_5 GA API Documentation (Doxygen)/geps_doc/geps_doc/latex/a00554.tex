@@ -1,0 +1,1990 @@
+\hypertarget{a00554}{
+\section{gsn\_\-reg\_\-gpio\_\-spec.h File Reference}
+\label{a00554}\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00790}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00554_ab2ef525010bec3855ae5086c921bc1c9}{GPIO\_\-GPIO\_\-IN\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0))
+\item 
+\#define \hyperlink{a00554_a7b1e086dac0b644517863b7c9cc4a283}{GPIO\_\-GPIO\_\-IN\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a49f28ee468d0c7a03e524696173795b3}{GPIO\_\-GPIO\_\-IN\_\-0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0) $|$ (value))
+\item 
+\#define \hyperlink{a00554_aa4d04a6e05db7d40d692a0bd419469e9}{GPIO\_\-GPIO\_\-IN\_\-0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_acc2a30fc37e378397c3080956af55718}{GPIO\_\-IN\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-IN\_\-0)
+\item 
+\#define \hyperlink{a00554_a69e192d16090976e4f51874221bb64ae}{GPIO\_\-GPIO\_\-OUT\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0))
+\item 
+\#define \hyperlink{a00554_a1648f632532f5638f4bd5611cee4396f}{GPIO\_\-GPIO\_\-OUT\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a3f22ab0604b8d2366e684d3c838538e6}{GPIO\_\-GPIO\_\-OUT\_\-0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a5eaa316cd530f51f0bc666255df86588}{GPIO\_\-GPIO\_\-OUT\_\-0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a74697cc41579d2b68d7826c9dc96a189}{GPIO\_\-OUT\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-OUT\_\-0)
+\item 
+\#define \hyperlink{a00554_a2d449976c3c564c4383451c0b66d1bb6}{GPIO\_\-OUT\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-OUT\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a37c7c1162bd0d951cc7e99b9f978ed61}{GPIO\_\-GPIO\_\-CTL\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0))
+\item 
+\#define \hyperlink{a00554_ab71d161dbc146154cce419333e88020d}{GPIO\_\-GPIO\_\-CTL\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a58b6293c4f02c078b050e2fdc94eb6e3}{GPIO\_\-GPIO\_\-CTL\_\-0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a29810b7a694852515f67d912c5c9cf91}{GPIO\_\-GPIO\_\-CTL\_\-0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a4a604ec86aed184ef9fac67a26b90b3a}{GPIO\_\-CTL\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-CTL\_\-0)
+\item 
+\#define \hyperlink{a00554_ab21b11121b218859bbdeceefdd3de987}{GPIO\_\-CTL\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-CTL\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a1ea0ea0beee3d1670d08bf5dd3717cb4}{GPIO\_\-GPIO\_\-IN\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1))
+\item 
+\#define \hyperlink{a00554_a56fa65fcadfeb885242e6e503d8e0e60}{GPIO\_\-GPIO\_\-IN\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a5b38ba353587c720a0c8f285d5efd749}{GPIO\_\-GPIO\_\-IN\_\-1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a172d09d6dbfd99dee72f389a7755d60b}{GPIO\_\-GPIO\_\-IN\_\-1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a931aaeeb4fbfe09f6eb5f0548dcf00fd}{GPIO\_\-IN\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-IN\_\-1)
+\item 
+\#define \hyperlink{a00554_aba15eb73d56286f89dde82a8b9931c09}{GPIO\_\-GPIO\_\-OUT\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1))
+\item 
+\#define \hyperlink{a00554_a8de4d31c9d2174ae330b6734e26c1354}{GPIO\_\-GPIO\_\-OUT\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a747ae26d0c33b7c204e78f0011ae2500}{GPIO\_\-GPIO\_\-OUT\_\-1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a9efe23554bcb3ac60be5cbfd77400f86}{GPIO\_\-GPIO\_\-OUT\_\-1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a081c82ab56265278d655b890985f8bac}{GPIO\_\-OUT\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-OUT\_\-1)
+\item 
+\#define \hyperlink{a00554_aa00a17df46d35ebc62d525b523084831}{GPIO\_\-OUT\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-OUT\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a0b4241efd03ed3d684cb5a8b16af7c81}{GPIO\_\-GPIO\_\-CTL\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1))
+\item 
+\#define \hyperlink{a00554_a8df95853f01368614de94d998633ce5c}{GPIO\_\-GPIO\_\-CTL\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a52a04c8560281d3a0fd407f9b2e42672}{GPIO\_\-GPIO\_\-CTL\_\-1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a97479ca286945ca0751a847c0019c2b6}{GPIO\_\-GPIO\_\-CTL\_\-1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_aa39e941392a0c180ce2dd2dc5ecb1788}{GPIO\_\-CTL\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-CTL\_\-1)
+\item 
+\#define \hyperlink{a00554_a4b2a3b92af9c759067c2bf1b6a718a9c}{GPIO\_\-CTL\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-CTL\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_aa429d693288b0facac3ba7d38cb7e36f}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0))
+\item 
+\#define \hyperlink{a00554_a438c1c55038c22e9c02e5d63867c4007}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_adebe22e510f7d0473f424746dfe40dd0}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0) $|$ (value))
+\item 
+\#define \hyperlink{a00554_afc04800a00e3d34ce27737290326d851}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a6ef5db50370f943cee8f4aef29e40b4b}{GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0)
+\item 
+\#define \hyperlink{a00554_a6229f37913fe5c8bc084337226bc2a26}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0))
+\item 
+\#define \hyperlink{a00554_af1c983e6f3f0fb5a51651b4bddf91670}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_ad2ba5f93ec54cf0dc29f082369f34261}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a1b5830f1db8ba9581699a569dcf4fc9b}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_ac8d577caade6b590b78dc59eba810ed3}{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0)
+\item 
+\#define \hyperlink{a00554_abaf2ab7fd540de1bc3ec9508899bfb90}{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a31ca7da8d159c282b610ca047125a7b9}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0))
+\item 
+\#define \hyperlink{a00554_a28a0a3406221bac0c761ce61b4f7a3e0}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a00917ba606599b07ec2fc127081d6c34}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0) $|$ (value))
+\item 
+\#define \hyperlink{a00554_ac0cb9eaab0b67c4cbd56699fc290ff58}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a753163624f1c875b2020fe2e1dcab43e}{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0)
+\item 
+\#define \hyperlink{a00554_a5efcf436c528ea75fa9606d7f5bf4a1a}{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_ad0d3e2fd0b5aff2462382ae05912a280}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0))
+\item 
+\#define \hyperlink{a00554_ad5f317f469af494b35eb6b4a040c886d}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a2dd3152b24eded90474342fd60381138}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a2d73bccc6866dd99fc279751961522ea}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a176ef07bede179a67bd4f90a92c4a218}{GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-SET\_\-0)
+\item 
+\#define \hyperlink{a00554_ac9a33442d81d56c64677717ca781ec9e}{GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-SET\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a191020a054010c8551c40a992401b49d}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1))
+\item 
+\#define \hyperlink{a00554_aac0ee13d386ec586213fe1fb571efc1a}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_ad465ade5eb334375b28a856ecf57847d}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a7ce217e0d1b0fa5959a79a665d180d7c}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_ad166d1aa8ca45f1383cca6a6b7dbc695}{GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1)
+\item 
+\#define \hyperlink{a00554_ad5e20a9c6436de79abde521a6b378b6d}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1))
+\item 
+\#define \hyperlink{a00554_ae4fca3a4d35c3ac4f61a89ee7ceea713}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_ada9d73a957490811aff5c15dc059309f}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1) $|$ (value))
+\item 
+\#define \hyperlink{a00554_af4f719b60606b1de6773240c65bf1ccb}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a7a31c5c6cd96819994664253b6599977}{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1)
+\item 
+\#define \hyperlink{a00554_a7b350a9ccb95a1a4c5872bcb230c7734}{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a0136aaea8c13c47110278241414423fc}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1))
+\item 
+\#define \hyperlink{a00554_a2f61dccdb148101847f18e2ab0756cfb}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a07e544e3383b5105fc3d1bbdf42d1121}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a61d914a92f02e162207ed91c7445f66f}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a494fac3d7522782aeafba86c4169fc55}{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1)
+\item 
+\#define \hyperlink{a00554_a74ffeba642d107e778e303e3de0c784a}{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_aeae9a88edd44ceab76c4890a3e710844}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1))
+\item 
+\#define \hyperlink{a00554_a8d53e671183a6c3af4e8424a21801fa9}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_ae22f0c931be03f92dd747eec8a1a121d}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a6d4a21e2ed39af21a5308aa37fc52a8e}{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a23a1a3b13f48974f994501cb66c4e2ad}{GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-SET\_\-1)
+\item 
+\#define \hyperlink{a00554_ad076de161adcd8bec4606a2a7cd9b425}{GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-SET\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a78301234abea16f03394b5703833a422}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0))
+\item 
+\#define \hyperlink{a00554_a0092acfb0dd1a4d8ab1650b4b8270014}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a87a4aca2b5a20e6ccb5240957a08d5b1}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a1ef04059b5ab3aed6d825a125b2c7684}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a9be16a83da5cc24b3dfe2db6c094b77b}{GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0)
+\item 
+\#define \hyperlink{a00554_abcd16c68ef762f493a77bc93250d0e23}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0))
+\item 
+\#define \hyperlink{a00554_a572bd5d7f623dcecd3b856aa1d3fa43a}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a79ac071970a8e6566acf3c5dcb3543f8}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0) $|$ (value))
+\item 
+\#define \hyperlink{a00554_ac6f311e036307ae9de0da000fd625453}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a1d189268a1126c6d5425b231bb988fbc}{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0)
+\item 
+\#define \hyperlink{a00554_a6714b4abe91c751740f8adb05e80209e}{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_ad717643b71c5882ae6e1ddb731fa750c}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0))
+\item 
+\#define \hyperlink{a00554_aa5d4ea7d20329dce62a8900a1128f359}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_acde44aa15acd88902da1db14ff7150be}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0) $|$ (value))
+\item 
+\#define \hyperlink{a00554_abef539c26649f9daa38cf35c0f84fdbd}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a7a4110f702b2530edfe72f924f18b856}{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0)
+\item 
+\#define \hyperlink{a00554_a64561d3e7d56b9762ec9570bf16cc22e}{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a99a48d08d23b0112a60b1995862a0548}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0))
+\item 
+\#define \hyperlink{a00554_a3e6318e1fbb68c0f7a2021ccd54ed88a}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a092b91a26f97293bb43486e0973aad25}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a8808d0554a5987c91cf14190dba8a771}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a9a0e7c81930add0e42a6c108c829b5fd}{GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-SET\_\-0)
+\item 
+\#define \hyperlink{a00554_ab31de3bf969488373ac2d7401cbc8e03}{GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-SET\_\-0, (value))
+\item 
+\#define \hyperlink{a00554_a65130908570269a52820a2c4f5020e30}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1))
+\item 
+\#define \hyperlink{a00554_a438b28b2ab7cb6e5cedc20e1c014d613}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a2dcfa1d7721af1fb311639842031caa7}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a9db430f51038f214a96270a7b2a322b9}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a3339c3212f5eaf58c4bdfbffdec854ec}{GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1)
+\item 
+\#define \hyperlink{a00554_ad287dea665ffc8472888dcb8ed19456d}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1))
+\item 
+\#define \hyperlink{a00554_a8a96853c6d61a3ec75f5dfb0b0ed344e}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a5aabba9428d76513d81fd4453c5c84a4}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1) $|$ (value))
+\item 
+\#define \hyperlink{a00554_add07236abcd42b18aa6f5ff710f8bd74}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_ac66ce766622a9d15362afcbe47de1118}{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1)
+\item 
+\#define \hyperlink{a00554_a407f6656db93c80abf397079d0fde9ca}{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a20b51546a14b5dd83909db09d6e615ba}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1))
+\item 
+\#define \hyperlink{a00554_ac72520d5d33881b5943a34777b678082}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a0508163162729b0d576d1939bd72d8c7}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a7d427d88a46c29c00b93a8ad9ae3aee0}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_af09edd1b0a154e3027eef8b58b1b4189}{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1)
+\item 
+\#define \hyperlink{a00554_ab56cc695f474d544ddf4dcd11d612259}{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a5f3b420bee915b94cae2ef93091baca4}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET}(addr)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1))
+\item 
+\#define \hyperlink{a00554_aec09ddab626eccb2b182b23c604592c4}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1, (value))
+\item 
+\#define \hyperlink{a00554_a39e6468fd57d9f3cd3cd0ac547ee71b0}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SETBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1) $|$ (value))
+\item 
+\#define \hyperlink{a00554_a32a8a8127129c542e1f7fbf50fe5f0bb}{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT}(addr, value)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1) \& ($\sim$(value)))
+\item 
+\#define \hyperlink{a00554_a63d9654872d7558dcae5703d5df241b2}{GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET}(addr)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-SET\_\-1)
+\item 
+\#define \hyperlink{a00554_ad15d8432b1e5b00728da261b0af72f11}{GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET}(addr, value)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-SET\_\-1, (value))
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00554_a4a604ec86aed184ef9fac67a26b90b3a}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-CTL\_\-0\_\-GET@{GPIO\_\-CTL\_\-0\_\-GET}}
+\index{GPIO\_\-CTL\_\-0\_\-GET@{GPIO\_\-CTL\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-CTL\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-CTL\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-CTL\_\-0)}}
+\label{a00554_a4a604ec86aed184ef9fac67a26b90b3a}
+
+
+Definition at line 106 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ab21b11121b218859bbdeceefdd3de987}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-CTL\_\-0\_\-SET@{GPIO\_\-CTL\_\-0\_\-SET}}
+\index{GPIO\_\-CTL\_\-0\_\-SET@{GPIO\_\-CTL\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-CTL\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-CTL\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-CTL\_\-0, (value))}}
+\label{a00554_ab21b11121b218859bbdeceefdd3de987}
+
+
+Definition at line 108 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_aa39e941392a0c180ce2dd2dc5ecb1788}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-CTL\_\-1\_\-GET@{GPIO\_\-CTL\_\-1\_\-GET}}
+\index{GPIO\_\-CTL\_\-1\_\-GET@{GPIO\_\-CTL\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-CTL\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-CTL\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-CTL\_\-1)}}
+\label{a00554_aa39e941392a0c180ce2dd2dc5ecb1788}
+
+
+Definition at line 173 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a4b2a3b92af9c759067c2bf1b6a718a9c}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-CTL\_\-1\_\-SET@{GPIO\_\-CTL\_\-1\_\-SET}}
+\index{GPIO\_\-CTL\_\-1\_\-SET@{GPIO\_\-CTL\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-CTL\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-CTL\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-CTL\_\-1, (value))}}
+\label{a00554_a4b2a3b92af9c759067c2bf1b6a718a9c}
+
+
+Definition at line 175 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a29810b7a694852515f67d912c5c9cf91}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-CTL\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-CTL\_\-0\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-CTL\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-CTL\_\-0\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-CTL\_\-0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-CTL\_\-0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0) \& ($\sim$(value)))}}
+\label{a00554_a29810b7a694852515f67d912c5c9cf91}
+
+
+Definition at line 99 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a37c7c1162bd0d951cc7e99b9f978ed61}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-CTL\_\-0\_\-GET@{GPIO\_\-GPIO\_\-CTL\_\-0\_\-GET}}
+\index{GPIO\_\-GPIO\_\-CTL\_\-0\_\-GET@{GPIO\_\-GPIO\_\-CTL\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-CTL\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-CTL\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0))}}
+\label{a00554_a37c7c1162bd0d951cc7e99b9f978ed61}
+
+
+Definition at line 93 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ab71d161dbc146154cce419333e88020d}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-CTL\_\-0\_\-SET@{GPIO\_\-GPIO\_\-CTL\_\-0\_\-SET}}
+\index{GPIO\_\-GPIO\_\-CTL\_\-0\_\-SET@{GPIO\_\-GPIO\_\-CTL\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-CTL\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-CTL\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0, (value))}}
+\label{a00554_ab71d161dbc146154cce419333e88020d}
+
+
+Definition at line 95 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a58b6293c4f02c078b050e2fdc94eb6e3}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-CTL\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-CTL\_\-0\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-CTL\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-CTL\_\-0\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-CTL\_\-0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-CTL\_\-0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-0) $|$ (value))}}
+\label{a00554_a58b6293c4f02c078b050e2fdc94eb6e3}
+
+
+Definition at line 97 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a97479ca286945ca0751a847c0019c2b6}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-CTL\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-CTL\_\-1\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-CTL\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-CTL\_\-1\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-CTL\_\-1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-CTL\_\-1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1) \& ($\sim$(value)))}}
+\label{a00554_a97479ca286945ca0751a847c0019c2b6}
+
+
+Definition at line 166 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a0b4241efd03ed3d684cb5a8b16af7c81}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-CTL\_\-1\_\-GET@{GPIO\_\-GPIO\_\-CTL\_\-1\_\-GET}}
+\index{GPIO\_\-GPIO\_\-CTL\_\-1\_\-GET@{GPIO\_\-GPIO\_\-CTL\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-CTL\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-CTL\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1))}}
+\label{a00554_a0b4241efd03ed3d684cb5a8b16af7c81}
+
+
+Definition at line 160 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a8df95853f01368614de94d998633ce5c}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-CTL\_\-1\_\-SET@{GPIO\_\-GPIO\_\-CTL\_\-1\_\-SET}}
+\index{GPIO\_\-GPIO\_\-CTL\_\-1\_\-SET@{GPIO\_\-GPIO\_\-CTL\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-CTL\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-CTL\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1, (value))}}
+\label{a00554_a8df95853f01368614de94d998633ce5c}
+
+
+Definition at line 162 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a52a04c8560281d3a0fd407f9b2e42672}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-CTL\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-CTL\_\-1\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-CTL\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-CTL\_\-1\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-CTL\_\-1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-CTL\_\-1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-CTL\_\-1) $|$ (value))}}
+\label{a00554_a52a04c8560281d3a0fd407f9b2e42672}
+
+
+Definition at line 164 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_aa4d04a6e05db7d40d692a0bd419469e9}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-IN\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-IN\_\-0\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-IN\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-IN\_\-0\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-IN\_\-0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-IN\_\-0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0) \& ($\sim$(value)))}}
+\label{a00554_aa4d04a6e05db7d40d692a0bd419469e9}
+
+
+Definition at line 55 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ab2ef525010bec3855ae5086c921bc1c9}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-IN\_\-0\_\-GET@{GPIO\_\-GPIO\_\-IN\_\-0\_\-GET}}
+\index{GPIO\_\-GPIO\_\-IN\_\-0\_\-GET@{GPIO\_\-GPIO\_\-IN\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-IN\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-IN\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0))}}
+\label{a00554_ab2ef525010bec3855ae5086c921bc1c9}
+
+
+Definition at line 49 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a7b1e086dac0b644517863b7c9cc4a283}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-IN\_\-0\_\-SET@{GPIO\_\-GPIO\_\-IN\_\-0\_\-SET}}
+\index{GPIO\_\-GPIO\_\-IN\_\-0\_\-SET@{GPIO\_\-GPIO\_\-IN\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-IN\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-IN\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0, (value))}}
+\label{a00554_a7b1e086dac0b644517863b7c9cc4a283}
+
+
+Definition at line 51 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a49f28ee468d0c7a03e524696173795b3}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-IN\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-IN\_\-0\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-IN\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-IN\_\-0\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-IN\_\-0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-IN\_\-0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-0) $|$ (value))}}
+\label{a00554_a49f28ee468d0c7a03e524696173795b3}
+
+
+Definition at line 53 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a172d09d6dbfd99dee72f389a7755d60b}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-IN\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-IN\_\-1\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-IN\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-IN\_\-1\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-IN\_\-1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-IN\_\-1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1) \& ($\sim$(value)))}}
+\label{a00554_a172d09d6dbfd99dee72f389a7755d60b}
+
+
+Definition at line 122 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a1ea0ea0beee3d1670d08bf5dd3717cb4}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-IN\_\-1\_\-GET@{GPIO\_\-GPIO\_\-IN\_\-1\_\-GET}}
+\index{GPIO\_\-GPIO\_\-IN\_\-1\_\-GET@{GPIO\_\-GPIO\_\-IN\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-IN\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-IN\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1))}}
+\label{a00554_a1ea0ea0beee3d1670d08bf5dd3717cb4}
+
+
+Definition at line 116 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a56fa65fcadfeb885242e6e503d8e0e60}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-IN\_\-1\_\-SET@{GPIO\_\-GPIO\_\-IN\_\-1\_\-SET}}
+\index{GPIO\_\-GPIO\_\-IN\_\-1\_\-SET@{GPIO\_\-GPIO\_\-IN\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-IN\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-IN\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1, (value))}}
+\label{a00554_a56fa65fcadfeb885242e6e503d8e0e60}
+
+
+Definition at line 118 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a5b38ba353587c720a0c8f285d5efd749}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-IN\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-IN\_\-1\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-IN\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-IN\_\-1\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-IN\_\-1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-IN\_\-1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-IN\_\-1) $|$ (value))}}
+\label{a00554_a5b38ba353587c720a0c8f285d5efd749}
+
+
+Definition at line 120 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_abef539c26649f9daa38cf35c0f84fdbd}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0) \& ($\sim$(value)))}}
+\label{a00554_abef539c26649f9daa38cf35c0f84fdbd}
+
+
+Definition at line 413 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ad717643b71c5882ae6e1ddb731fa750c}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0))}}
+\label{a00554_ad717643b71c5882ae6e1ddb731fa750c}
+
+
+Definition at line 407 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_aa5d4ea7d20329dce62a8900a1128f359}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0, (value))}}
+\label{a00554_aa5d4ea7d20329dce62a8900a1128f359}
+
+
+Definition at line 409 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_acde44aa15acd88902da1db14ff7150be}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0) $|$ (value))}}
+\label{a00554_acde44aa15acd88902da1db14ff7150be}
+
+
+Definition at line 411 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a7d427d88a46c29c00b93a8ad9ae3aee0}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1) \& ($\sim$(value)))}}
+\label{a00554_a7d427d88a46c29c00b93a8ad9ae3aee0}
+
+
+Definition at line 503 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a20b51546a14b5dd83909db09d6e615ba}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1))}}
+\label{a00554_a20b51546a14b5dd83909db09d6e615ba}
+
+
+Definition at line 497 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ac72520d5d33881b5943a34777b678082}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1, (value))}}
+\label{a00554_ac72520d5d33881b5943a34777b678082}
+
+
+Definition at line 499 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a0508163162729b0d576d1939bd72d8c7}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1) $|$ (value))}}
+\label{a00554_a0508163162729b0d576d1939bd72d8c7}
+
+
+Definition at line 501 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ac6f311e036307ae9de0da000fd625453}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0) \& ($\sim$(value)))}}
+\label{a00554_ac6f311e036307ae9de0da000fd625453}
+
+
+Definition at line 390 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_abcd16c68ef762f493a77bc93250d0e23}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0))}}
+\label{a00554_abcd16c68ef762f493a77bc93250d0e23}
+
+
+Definition at line 384 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a572bd5d7f623dcecd3b856aa1d3fa43a}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0, (value))}}
+\label{a00554_a572bd5d7f623dcecd3b856aa1d3fa43a}
+
+
+Definition at line 386 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a79ac071970a8e6566acf3c5dcb3543f8}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0) $|$ (value))}}
+\label{a00554_a79ac071970a8e6566acf3c5dcb3543f8}
+
+
+Definition at line 388 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_add07236abcd42b18aa6f5ff710f8bd74}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1) \& ($\sim$(value)))}}
+\label{a00554_add07236abcd42b18aa6f5ff710f8bd74}
+
+
+Definition at line 480 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ad287dea665ffc8472888dcb8ed19456d}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1))}}
+\label{a00554_ad287dea665ffc8472888dcb8ed19456d}
+
+
+Definition at line 474 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a8a96853c6d61a3ec75f5dfb0b0ed344e}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1, (value))}}
+\label{a00554_a8a96853c6d61a3ec75f5dfb0b0ed344e}
+
+
+Definition at line 476 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a5aabba9428d76513d81fd4453c5c84a4}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1) $|$ (value))}}
+\label{a00554_a5aabba9428d76513d81fd4453c5c84a4}
+
+
+Definition at line 478 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a8808d0554a5987c91cf14190dba8a771}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0) \& ($\sim$(value)))}}
+\label{a00554_a8808d0554a5987c91cf14190dba8a771}
+
+
+Definition at line 436 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a99a48d08d23b0112a60b1995862a0548}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0))}}
+\label{a00554_a99a48d08d23b0112a60b1995862a0548}
+
+
+Definition at line 430 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a3e6318e1fbb68c0f7a2021ccd54ed88a}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0, (value))}}
+\label{a00554_a3e6318e1fbb68c0f7a2021ccd54ed88a}
+
+
+Definition at line 432 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a092b91a26f97293bb43486e0973aad25}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-0) $|$ (value))}}
+\label{a00554_a092b91a26f97293bb43486e0973aad25}
+
+
+Definition at line 434 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a32a8a8127129c542e1f7fbf50fe5f0bb}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1) \& ($\sim$(value)))}}
+\label{a00554_a32a8a8127129c542e1f7fbf50fe5f0bb}
+
+
+Definition at line 526 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a5f3b420bee915b94cae2ef93091baca4}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1))}}
+\label{a00554_a5f3b420bee915b94cae2ef93091baca4}
+
+
+Definition at line 520 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_aec09ddab626eccb2b182b23c604592c4}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1, (value))}}
+\label{a00554_aec09ddab626eccb2b182b23c604592c4}
+
+
+Definition at line 522 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a39e6468fd57d9f3cd3cd0ac547ee71b0}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-SET\_\-1) $|$ (value))}}
+\label{a00554_a39e6468fd57d9f3cd3cd0ac547ee71b0}
+
+
+Definition at line 524 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a1ef04059b5ab3aed6d825a125b2c7684}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0) \& ($\sim$(value)))}}
+\label{a00554_a1ef04059b5ab3aed6d825a125b2c7684}
+
+
+Definition at line 369 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a78301234abea16f03394b5703833a422}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0))}}
+\label{a00554_a78301234abea16f03394b5703833a422}
+
+
+Definition at line 363 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a0092acfb0dd1a4d8ab1650b4b8270014}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0, (value))}}
+\label{a00554_a0092acfb0dd1a4d8ab1650b4b8270014}
+
+
+Definition at line 365 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a87a4aca2b5a20e6ccb5240957a08d5b1}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0) $|$ (value))}}
+\label{a00554_a87a4aca2b5a20e6ccb5240957a08d5b1}
+
+
+Definition at line 367 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a9db430f51038f214a96270a7b2a322b9}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1) \& ($\sim$(value)))}}
+\label{a00554_a9db430f51038f214a96270a7b2a322b9}
+
+
+Definition at line 459 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a65130908570269a52820a2c4f5020e30}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1))}}
+\label{a00554_a65130908570269a52820a2c4f5020e30}
+
+
+Definition at line 453 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a438b28b2ab7cb6e5cedc20e1c014d613}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SET}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SET@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1, (value))}}
+\label{a00554_a438b28b2ab7cb6e5cedc20e1c014d613}
+
+
+Definition at line 455 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a2dcfa1d7721af1fb311639842031caa7}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1) $|$ (value))}}
+\label{a00554_a2dcfa1d7721af1fb311639842031caa7}
+
+
+Definition at line 457 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a5eaa316cd530f51f0bc666255df86588}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-OUT\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-OUT\_\-0\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-OUT\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-OUT\_\-0\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-OUT\_\-0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-OUT\_\-0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0) \& ($\sim$(value)))}}
+\label{a00554_a5eaa316cd530f51f0bc666255df86588}
+
+
+Definition at line 76 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a69e192d16090976e4f51874221bb64ae}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-OUT\_\-0\_\-GET@{GPIO\_\-GPIO\_\-OUT\_\-0\_\-GET}}
+\index{GPIO\_\-GPIO\_\-OUT\_\-0\_\-GET@{GPIO\_\-GPIO\_\-OUT\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-OUT\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-OUT\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0))}}
+\label{a00554_a69e192d16090976e4f51874221bb64ae}
+
+
+Definition at line 70 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a1648f632532f5638f4bd5611cee4396f}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-OUT\_\-0\_\-SET@{GPIO\_\-GPIO\_\-OUT\_\-0\_\-SET}}
+\index{GPIO\_\-GPIO\_\-OUT\_\-0\_\-SET@{GPIO\_\-GPIO\_\-OUT\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-OUT\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-OUT\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0, (value))}}
+\label{a00554_a1648f632532f5638f4bd5611cee4396f}
+
+
+Definition at line 72 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a3f22ab0604b8d2366e684d3c838538e6}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-OUT\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-OUT\_\-0\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-OUT\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-OUT\_\-0\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-OUT\_\-0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-OUT\_\-0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-0) $|$ (value))}}
+\label{a00554_a3f22ab0604b8d2366e684d3c838538e6}
+
+
+Definition at line 74 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a9efe23554bcb3ac60be5cbfd77400f86}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-OUT\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-OUT\_\-1\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-OUT\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-OUT\_\-1\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-OUT\_\-1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-OUT\_\-1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1) \& ($\sim$(value)))}}
+\label{a00554_a9efe23554bcb3ac60be5cbfd77400f86}
+
+
+Definition at line 143 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_aba15eb73d56286f89dde82a8b9931c09}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-OUT\_\-1\_\-GET@{GPIO\_\-GPIO\_\-OUT\_\-1\_\-GET}}
+\index{GPIO\_\-GPIO\_\-OUT\_\-1\_\-GET@{GPIO\_\-GPIO\_\-OUT\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-OUT\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-OUT\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1))}}
+\label{a00554_aba15eb73d56286f89dde82a8b9931c09}
+
+
+Definition at line 137 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a8de4d31c9d2174ae330b6734e26c1354}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-OUT\_\-1\_\-SET@{GPIO\_\-GPIO\_\-OUT\_\-1\_\-SET}}
+\index{GPIO\_\-GPIO\_\-OUT\_\-1\_\-SET@{GPIO\_\-GPIO\_\-OUT\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-OUT\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-OUT\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1, (value))}}
+\label{a00554_a8de4d31c9d2174ae330b6734e26c1354}
+
+
+Definition at line 139 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a747ae26d0c33b7c204e78f0011ae2500}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-OUT\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-OUT\_\-1\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-OUT\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-OUT\_\-1\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-OUT\_\-1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-OUT\_\-1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-OUT\_\-1) $|$ (value))}}
+\label{a00554_a747ae26d0c33b7c204e78f0011ae2500}
+
+
+Definition at line 141 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ac0cb9eaab0b67c4cbd56699fc290ff58}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0) \& ($\sim$(value)))}}
+\label{a00554_ac0cb9eaab0b67c4cbd56699fc290ff58}
+
+
+Definition at line 233 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a31ca7da8d159c282b610ca047125a7b9}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0))}}
+\label{a00554_a31ca7da8d159c282b610ca047125a7b9}
+
+
+Definition at line 227 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a28a0a3406221bac0c761ce61b4f7a3e0}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0, (value))}}
+\label{a00554_a28a0a3406221bac0c761ce61b4f7a3e0}
+
+
+Definition at line 229 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a00917ba606599b07ec2fc127081d6c34}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0) $|$ (value))}}
+\label{a00554_a00917ba606599b07ec2fc127081d6c34}
+
+
+Definition at line 231 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a61d914a92f02e162207ed91c7445f66f}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1) \& ($\sim$(value)))}}
+\label{a00554_a61d914a92f02e162207ed91c7445f66f}
+
+
+Definition at line 323 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a0136aaea8c13c47110278241414423fc}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1))}}
+\label{a00554_a0136aaea8c13c47110278241414423fc}
+
+
+Definition at line 317 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a2f61dccdb148101847f18e2ab0756cfb}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1, (value))}}
+\label{a00554_a2f61dccdb148101847f18e2ab0756cfb}
+
+
+Definition at line 319 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a07e544e3383b5105fc3d1bbdf42d1121}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1) $|$ (value))}}
+\label{a00554_a07e544e3383b5105fc3d1bbdf42d1121}
+
+
+Definition at line 321 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a1b5830f1db8ba9581699a569dcf4fc9b}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0) \& ($\sim$(value)))}}
+\label{a00554_a1b5830f1db8ba9581699a569dcf4fc9b}
+
+
+Definition at line 210 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a6229f37913fe5c8bc084337226bc2a26}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0))}}
+\label{a00554_a6229f37913fe5c8bc084337226bc2a26}
+
+
+Definition at line 204 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_af1c983e6f3f0fb5a51651b4bddf91670}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0, (value))}}
+\label{a00554_af1c983e6f3f0fb5a51651b4bddf91670}
+
+
+Definition at line 206 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ad2ba5f93ec54cf0dc29f082369f34261}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0) $|$ (value))}}
+\label{a00554_ad2ba5f93ec54cf0dc29f082369f34261}
+
+
+Definition at line 208 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_af4f719b60606b1de6773240c65bf1ccb}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1) \& ($\sim$(value)))}}
+\label{a00554_af4f719b60606b1de6773240c65bf1ccb}
+
+
+Definition at line 300 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ad5e20a9c6436de79abde521a6b378b6d}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1))}}
+\label{a00554_ad5e20a9c6436de79abde521a6b378b6d}
+
+
+Definition at line 294 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ae4fca3a4d35c3ac4f61a89ee7ceea713}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1, (value))}}
+\label{a00554_ae4fca3a4d35c3ac4f61a89ee7ceea713}
+
+
+Definition at line 296 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ada9d73a957490811aff5c15dc059309f}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1) $|$ (value))}}
+\label{a00554_ada9d73a957490811aff5c15dc059309f}
+
+
+Definition at line 298 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a2d73bccc6866dd99fc279751961522ea}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0) \& ($\sim$(value)))}}
+\label{a00554_a2d73bccc6866dd99fc279751961522ea}
+
+
+Definition at line 256 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ad0d3e2fd0b5aff2462382ae05912a280}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0))}}
+\label{a00554_ad0d3e2fd0b5aff2462382ae05912a280}
+
+
+Definition at line 250 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ad5f317f469af494b35eb6b4a040c886d}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0, (value))}}
+\label{a00554_ad5f317f469af494b35eb6b4a040c886d}
+
+
+Definition at line 252 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a2dd3152b24eded90474342fd60381138}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-0) $|$ (value))}}
+\label{a00554_a2dd3152b24eded90474342fd60381138}
+
+
+Definition at line 254 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a6d4a21e2ed39af21a5308aa37fc52a8e}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1) \& ($\sim$(value)))}}
+\label{a00554_a6d4a21e2ed39af21a5308aa37fc52a8e}
+
+
+Definition at line 346 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_aeae9a88edd44ceab76c4890a3e710844}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1))}}
+\label{a00554_aeae9a88edd44ceab76c4890a3e710844}
+
+
+Definition at line 340 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a8d53e671183a6c3af4e8424a21801fa9}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1, (value))}}
+\label{a00554_a8d53e671183a6c3af4e8424a21801fa9}
+
+
+Definition at line 342 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ae22f0c931be03f92dd747eec8a1a121d}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-SET\_\-1) $|$ (value))}}
+\label{a00554_ae22f0c931be03f92dd747eec8a1a121d}
+
+
+Definition at line 344 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_afc04800a00e3d34ce27737290326d851}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0) \& ($\sim$(value)))}}
+\label{a00554_afc04800a00e3d34ce27737290326d851}
+
+
+Definition at line 189 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_aa429d693288b0facac3ba7d38cb7e36f}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0))}}
+\label{a00554_aa429d693288b0facac3ba7d38cb7e36f}
+
+
+Definition at line 183 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a438c1c55038c22e9c02e5d63867c4007}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0, (value))}}
+\label{a00554_a438c1c55038c22e9c02e5d63867c4007}
+
+
+Definition at line 185 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_adebe22e510f7d0473f424746dfe40dd0}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0) $|$ (value))}}
+\label{a00554_adebe22e510f7d0473f424746dfe40dd0}
+
+
+Definition at line 187 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a7ce217e0d1b0fa5959a79a665d180d7c}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-CLEARBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1) \& ($\sim$(value)))}}
+\label{a00554_a7ce217e0d1b0fa5959a79a665d180d7c}
+
+
+Definition at line 279 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a191020a054010c8551c40a992401b49d}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~(GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1))}}
+\label{a00554_a191020a054010c8551c40a992401b49d}
+
+
+Definition at line 273 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_aac0ee13d386ec586213fe1fb571efc1a}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SET}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SET@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1, (value))}}
+\label{a00554_aac0ee13d386ec586213fe1fb571efc1a}
+
+
+Definition at line 275 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ad465ade5eb334375b28a856ecf57847d}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT}}
+\index{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT@{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-SETBIT(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1, GET\_\-WORD\_\-EXCLUSIVE\_\-BITFIELD(addr, GPIO\_\-GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1) $|$ (value))}}
+\label{a00554_ad465ade5eb334375b28a856ecf57847d}
+
+
+Definition at line 277 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_acc2a30fc37e378397c3080956af55718}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-IN\_\-0\_\-GET@{GPIO\_\-IN\_\-0\_\-GET}}
+\index{GPIO\_\-IN\_\-0\_\-GET@{GPIO\_\-IN\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-IN\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-IN\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-IN\_\-0)}}
+\label{a00554_acc2a30fc37e378397c3080956af55718}
+
+
+Definition at line 62 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a931aaeeb4fbfe09f6eb5f0548dcf00fd}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-IN\_\-1\_\-GET@{GPIO\_\-IN\_\-1\_\-GET}}
+\index{GPIO\_\-IN\_\-1\_\-GET@{GPIO\_\-IN\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-IN\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-IN\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-IN\_\-1)}}
+\label{a00554_a931aaeeb4fbfe09f6eb5f0548dcf00fd}
+
+
+Definition at line 129 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a7a4110f702b2530edfe72f924f18b856}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0)}}
+\label{a00554_a7a4110f702b2530edfe72f924f18b856}
+
+
+Definition at line 420 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a64561d3e7d56b9762ec9570bf16cc22e}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-0, (value))}}
+\label{a00554_a64561d3e7d56b9762ec9570bf16cc22e}
+
+
+Definition at line 422 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_af09edd1b0a154e3027eef8b58b1b4189}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1)}}
+\label{a00554_af09edd1b0a154e3027eef8b58b1b4189}
+
+
+Definition at line 510 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ab56cc695f474d544ddf4dcd11d612259}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-CLEAR\_\-1, (value))}}
+\label{a00554_ab56cc695f474d544ddf4dcd11d612259}
+
+
+Definition at line 512 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a1d189268a1126c6d5425b231bb988fbc}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0)}}
+\label{a00554_a1d189268a1126c6d5425b231bb988fbc}
+
+
+Definition at line 397 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a6714b4abe91c751740f8adb05e80209e}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-MASK\_\-0, (value))}}
+\label{a00554_a6714b4abe91c751740f8adb05e80209e}
+
+
+Definition at line 399 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ac66ce766622a9d15362afcbe47de1118}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1)}}
+\label{a00554_ac66ce766622a9d15362afcbe47de1118}
+
+
+Definition at line 487 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a407f6656db93c80abf397079d0fde9ca}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-MASK\_\-1, (value))}}
+\label{a00554_a407f6656db93c80abf397079d0fde9ca}
+
+
+Definition at line 489 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a9a0e7c81930add0e42a6c108c829b5fd}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-SET\_\-0)}}
+\label{a00554_a9a0e7c81930add0e42a6c108c829b5fd}
+
+
+Definition at line 443 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ab31de3bf969488373ac2d7401cbc8e03}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-SET\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-SET\_\-0, (value))}}
+\label{a00554_ab31de3bf969488373ac2d7401cbc8e03}
+
+
+Definition at line 445 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a63d9654872d7558dcae5703d5df241b2}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-SET\_\-1)}}
+\label{a00554_a63d9654872d7558dcae5703d5df241b2}
+
+
+Definition at line 533 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ad15d8432b1e5b00728da261b0af72f11}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET@{GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-SET\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-SET\_\-1, (value))}}
+\label{a00554_ad15d8432b1e5b00728da261b0af72f11}
+
+
+Definition at line 535 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a9be16a83da5cc24b3dfe2db6c094b77b}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-0)}}
+\label{a00554_a9be16a83da5cc24b3dfe2db6c094b77b}
+
+
+Definition at line 376 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a3339c3212f5eaf58c4bdfbffdec854ec}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET}}
+\index{GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET@{GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-NE\_\-IRQ\_\-STATUS\_\-1)}}
+\label{a00554_a3339c3212f5eaf58c4bdfbffdec854ec}
+
+
+Definition at line 466 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a74697cc41579d2b68d7826c9dc96a189}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-OUT\_\-0\_\-GET@{GPIO\_\-OUT\_\-0\_\-GET}}
+\index{GPIO\_\-OUT\_\-0\_\-GET@{GPIO\_\-OUT\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-OUT\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-OUT\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-OUT\_\-0)}}
+\label{a00554_a74697cc41579d2b68d7826c9dc96a189}
+
+
+Definition at line 83 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a2d449976c3c564c4383451c0b66d1bb6}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-OUT\_\-0\_\-SET@{GPIO\_\-OUT\_\-0\_\-SET}}
+\index{GPIO\_\-OUT\_\-0\_\-SET@{GPIO\_\-OUT\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-OUT\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-OUT\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-OUT\_\-0, (value))}}
+\label{a00554_a2d449976c3c564c4383451c0b66d1bb6}
+
+
+Definition at line 85 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a081c82ab56265278d655b890985f8bac}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-OUT\_\-1\_\-GET@{GPIO\_\-OUT\_\-1\_\-GET}}
+\index{GPIO\_\-OUT\_\-1\_\-GET@{GPIO\_\-OUT\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-OUT\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-OUT\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-OUT\_\-1)}}
+\label{a00554_a081c82ab56265278d655b890985f8bac}
+
+
+Definition at line 150 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_aa00a17df46d35ebc62d525b523084831}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-OUT\_\-1\_\-SET@{GPIO\_\-OUT\_\-1\_\-SET}}
+\index{GPIO\_\-OUT\_\-1\_\-SET@{GPIO\_\-OUT\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-OUT\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-OUT\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-OUT\_\-1, (value))}}
+\label{a00554_aa00a17df46d35ebc62d525b523084831}
+
+
+Definition at line 152 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a753163624f1c875b2020fe2e1dcab43e}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0)}}
+\label{a00554_a753163624f1c875b2020fe2e1dcab43e}
+
+
+Definition at line 240 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a5efcf436c528ea75fa9606d7f5bf4a1a}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-0, (value))}}
+\label{a00554_a5efcf436c528ea75fa9606d7f5bf4a1a}
+
+
+Definition at line 242 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a494fac3d7522782aeafba86c4169fc55}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1)}}
+\label{a00554_a494fac3d7522782aeafba86c4169fc55}
+
+
+Definition at line 330 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a74ffeba642d107e778e303e3de0c784a}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-CLEAR\_\-1, (value))}}
+\label{a00554_a74ffeba642d107e778e303e3de0c784a}
+
+
+Definition at line 332 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ac8d577caade6b590b78dc59eba810ed3}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0)}}
+\label{a00554_ac8d577caade6b590b78dc59eba810ed3}
+
+
+Definition at line 217 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_abaf2ab7fd540de1bc3ec9508899bfb90}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-MASK\_\-0, (value))}}
+\label{a00554_abaf2ab7fd540de1bc3ec9508899bfb90}
+
+
+Definition at line 219 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a7a31c5c6cd96819994664253b6599977}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1)}}
+\label{a00554_a7a31c5c6cd96819994664253b6599977}
+
+
+Definition at line 307 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a7b350a9ccb95a1a4c5872bcb230c7734}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-MASK\_\-1, (value))}}
+\label{a00554_a7b350a9ccb95a1a4c5872bcb230c7734}
+
+
+Definition at line 309 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a176ef07bede179a67bd4f90a92c4a218}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-SET\_\-0)}}
+\label{a00554_a176ef07bede179a67bd4f90a92c4a218}
+
+
+Definition at line 263 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ac9a33442d81d56c64677717ca781ec9e}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-SET\_\-0\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-SET\_\-0, (value))}}
+\label{a00554_ac9a33442d81d56c64677717ca781ec9e}
+
+
+Definition at line 265 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a23a1a3b13f48974f994501cb66c4e2ad}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-SET\_\-1)}}
+\label{a00554_a23a1a3b13f48974f994501cb66c4e2ad}
+
+
+Definition at line 353 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ad076de161adcd8bec4606a2a7cd9b425}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET@{GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-SET\_\-1\_\-SET(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~SET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-SET\_\-1, (value))}}
+\label{a00554_ad076de161adcd8bec4606a2a7cd9b425}
+
+
+Definition at line 355 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_a6ef5db50370f943cee8f4aef29e40b4b}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-0)}}
+\label{a00554_a6ef5db50370f943cee8f4aef29e40b4b}
+
+
+Definition at line 196 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+
+\hypertarget{a00554_ad166d1aa8ca45f1383cca6a6b7dbc695}{
+\index{gsn\_\-reg\_\-gpio\_\-spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}!GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET}}
+\index{GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET@{GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET}!gsn_reg_gpio_spec.h@{gsn\_\-reg\_\-gpio\_\-spec.h}}
+\subsubsection[{GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1\_\-GET(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~GET\_\-WORD\_\-BITFIELD\_\-N(addr, GPIO\_\-PE\_\-IRQ\_\-STATUS\_\-1)}}
+\label{a00554_ad166d1aa8ca45f1383cca6a6b7dbc695}
+
+
+Definition at line 286 of file gsn\_\-reg\_\-gpio\_\-spec.h.
+

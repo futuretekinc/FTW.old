@@ -1,0 +1,225 @@
+\hypertarget{a00478}{
+\section{gsn\_\-coap.h File Reference}
+\label{a00478}\index{gsn\_\-coap.h@{gsn\_\-coap.h}}
+}
+{\ttfamily \#include $<$..$\backslash$..$\backslash$..$\backslash$src$\backslash$modules$\backslash$coap$\backslash$libcoap-\/4.0.1$\backslash$net.h$>$}\par
+{\ttfamily \#include \char`\"{}gsn\_\-pdu\_\-impl.h\char`\"{}}\par
+{\ttfamily \#include $<$gsn\_\-includes.h$>$}\par
+{\ttfamily \#include \char`\"{}gsn\_\-coap\_\-impl.h\char`\"{}}\par
+Include dependency graph for gsn\_\-coap.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00703}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00040}{GSN\_\-COAP\_\-CONN\_\-PARAMS}
+\begin{DoxyCompactList}\small\item\em Coap request parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00040}{GSN\_\-COAP\_\-CONN\_\-PARAMS} \hyperlink{a00478_a4a8534a28c65bae68622c74ab743d4cc}{GSN\_\-COAP\_\-CONN\_\-PARAMS\_\-T}
+\begin{DoxyCompactList}\small\item\em Coap request parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$ \hyperlink{a00478_a940ab24193f2092f04089c84e3a93bbb}{GsnCoap\_\-Init} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em GSN Coap Init. \end{DoxyCompactList}\item 
+int \hyperlink{a00478_ae817954f9719fe38e7f16d85984c6667}{GsnCoap\_\-Send\_\-And\_\-Recieve} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$pCoapContext, \hyperlink{a00040}{GSN\_\-COAP\_\-CONN\_\-PARAMS\_\-T} $\ast$pCoapConnParams)
+\begin{DoxyCompactList}\small\item\em GSN Coap Send and receive. \end{DoxyCompactList}\item 
+void \hyperlink{a00478_a36b2055baa9f705151821d5cf4c444f3}{GsnCoap\_\-DeInit} (\hyperlink{a00479_ab529666f5a53e57a0760df584886eb5b}{GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$pCoapContext)
+\begin{DoxyCompactList}\small\item\em GSN Coap DeInit. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00478_ad15202d9d881e4ccb3bbee63ccaf5e57}{GsnCoap\_\-SetOption} (unsigned short pOptionKey, unsigned char $\ast$pOptionValue, unsigned int pOptionLength)
+\begin{DoxyCompactList}\small\item\em GSN Coap SetOptions. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00478_a9ddeeae764c131a2b9193caa33206d34}{GsnCoap\_\-DeleteOption} (unsigned short pOptionKey)
+\begin{DoxyCompactList}\small\item\em GSN Coap DeleteOptions. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00478_a09d54eefadd75ffec2f21a75d7c09e46}{GsnCoap\_\-SetToken} (unsigned int pTokenLength, const unsigned char $\ast$pTokenValue)
+\begin{DoxyCompactList}\small\item\em GSN Coap SetToken. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00478_a31fc74a6754e04f80e088c5c156748f1}{GsnCoap\_\-DeleteToken} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00478_a4a8534a28c65bae68622c74ab743d4cc}{
+\index{gsn\_\-coap.h@{gsn\_\-coap.h}!GSN\_\-COAP\_\-CONN\_\-PARAMS\_\-T@{GSN\_\-COAP\_\-CONN\_\-PARAMS\_\-T}}
+\index{GSN\_\-COAP\_\-CONN\_\-PARAMS\_\-T@{GSN\_\-COAP\_\-CONN\_\-PARAMS\_\-T}!gsn_coap.h@{gsn\_\-coap.h}}
+\subsubsection[{GSN\_\-COAP\_\-CONN\_\-PARAMS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-COAP\_\-CONN\_\-PARAMS}  {\bf GSN\_\-COAP\_\-CONN\_\-PARAMS\_\-T}}}
+\label{a00478_a4a8534a28c65bae68622c74ab743d4cc}
+
+
+Coap request parameters. 
+
+This structure defines some of the parameters used for sending the Coap request to the server. This structure needs to be filled and passed to \hyperlink{a00478_ae817954f9719fe38e7f16d85984c6667}{GsnCoap\_\-Send\_\-And\_\-Recieve()} 
+
+\subsection{Function Documentation}
+\hypertarget{a00478_a36b2055baa9f705151821d5cf4c444f3}{
+\index{gsn\_\-coap.h@{gsn\_\-coap.h}!GsnCoap\_\-DeInit@{GsnCoap\_\-DeInit}}
+\index{GsnCoap\_\-DeInit@{GsnCoap\_\-DeInit}!gsn_coap.h@{gsn\_\-coap.h}}
+\subsubsection[{GsnCoap\_\-DeInit}]{\setlength{\rightskip}{0pt plus 5cm}void GsnCoap\_\-DeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{pCoapContext}
+\end{DoxyParamCaption}
+)}}
+\label{a00478_a36b2055baa9f705151821d5cf4c444f3}
+
+
+GSN Coap DeInit. 
+
+This function de-\/initialises the COAP context. It frees the coap context, deletes the pdu 
+\begin{DoxyParams}{Parameters}
+{\em pCoapContext} & -\/ IN Pointer to coap context already created.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00478_a9ddeeae764c131a2b9193caa33206d34}{
+\index{gsn\_\-coap.h@{gsn\_\-coap.h}!GsnCoap\_\-DeleteOption@{GsnCoap\_\-DeleteOption}}
+\index{GsnCoap\_\-DeleteOption@{GsnCoap\_\-DeleteOption}!gsn_coap.h@{gsn\_\-coap.h}}
+\subsubsection[{GsnCoap\_\-DeleteOption}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnCoap\_\-DeleteOption (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{pOptionKey}
+\end{DoxyParamCaption}
+)}}
+\label{a00478_a9ddeeae764c131a2b9193caa33206d34}
+
+
+GSN Coap DeleteOptions. 
+
+This functions deletes the option key
+
+
+\begin{DoxyParams}{Parameters}
+{\em pOptionKey} & -\/ IN key to the options header.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & on successful adding of the coap header \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00478_a31fc74a6754e04f80e088c5c156748f1}{
+\index{gsn\_\-coap.h@{gsn\_\-coap.h}!GsnCoap\_\-DeleteToken@{GsnCoap\_\-DeleteToken}}
+\index{GsnCoap\_\-DeleteToken@{GsnCoap\_\-DeleteToken}!gsn_coap.h@{gsn\_\-coap.h}}
+\subsubsection[{GsnCoap\_\-DeleteToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnCoap\_\-DeleteToken (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00478_a31fc74a6754e04f80e088c5c156748f1}
+\hypertarget{a00478_a940ab24193f2092f04089c84e3a93bbb}{
+\index{gsn\_\-coap.h@{gsn\_\-coap.h}!GsnCoap\_\-Init@{GsnCoap\_\-Init}}
+\index{GsnCoap\_\-Init@{GsnCoap\_\-Init}!gsn_coap.h@{gsn\_\-coap.h}}
+\subsubsection[{GsnCoap\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-COAP\_\-CONTEXT\_\-T}$\ast$ GsnCoap\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}
+\label{a00478_a940ab24193f2092f04089c84e3a93bbb}
+
+
+GSN Coap Init. 
+
+This function initilises the COAP context.Further this context can be used to read or write CoAP messages to a specified destination. This call supports both Confirmable and Non Confirmable connections 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & -\/ IN Pointer to coap context if already created.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-COAP\_\-CONTEXT\_\-T} & pointer to coap context on creation \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00478_ae817954f9719fe38e7f16d85984c6667}{
+\index{gsn\_\-coap.h@{gsn\_\-coap.h}!GsnCoap\_\-Send\_\-And\_\-Recieve@{GsnCoap\_\-Send\_\-And\_\-Recieve}}
+\index{GsnCoap\_\-Send\_\-And\_\-Recieve@{GsnCoap\_\-Send\_\-And\_\-Recieve}!gsn_coap.h@{gsn\_\-coap.h}}
+\subsubsection[{GsnCoap\_\-Send\_\-And\_\-Recieve}]{\setlength{\rightskip}{0pt plus 5cm}int GsnCoap\_\-Send\_\-And\_\-Recieve (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-COAP\_\-CONTEXT\_\-T} $\ast$}]{pCoapContext, }
+\item[{{\bf GSN\_\-COAP\_\-CONN\_\-PARAMS\_\-T} $\ast$}]{pCoapConnParams}
+\end{DoxyParamCaption}
+)}}
+\label{a00478_ae817954f9719fe38e7f16d85984c6667}
+
+
+GSN Coap Send and receive. 
+
+This function creates a pdu, initialises with the coap options, payload etc the COAP context. Sends the pdu to the final destination, and recieves the response 
+\begin{DoxyParams}{Parameters}
+{\em pCoapContext} & -\/ IN Pointer to coap context already created. \\
+\hline
+{\em pCoapConnParams} & -\/ IN Pointer with the coap request parameters.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em number} & of bytes received in the coap response \\
+\hline
+{\em -\/1,if} & error in read \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00478_ad15202d9d881e4ccb3bbee63ccaf5e57}{
+\index{gsn\_\-coap.h@{gsn\_\-coap.h}!GsnCoap\_\-SetOption@{GsnCoap\_\-SetOption}}
+\index{GsnCoap\_\-SetOption@{GsnCoap\_\-SetOption}!gsn_coap.h@{gsn\_\-coap.h}}
+\subsubsection[{GsnCoap\_\-SetOption}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnCoap\_\-SetOption (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{pOptionKey, }
+\item[{unsigned char $\ast$}]{pOptionValue, }
+\item[{unsigned int}]{pOptionLength}
+\end{DoxyParamCaption}
+)}}
+\label{a00478_ad15202d9d881e4ccb3bbee63ccaf5e57}
+
+
+GSN Coap SetOptions. 
+
+This functions sets the option key with the option value These options are sent with the pdu when GsnCoap\_\-Send\_\-And\_\-Recieve is called
+
+
+\begin{DoxyParams}{Parameters}
+{\em pOptionKey} & -\/ IN key to the options header. \\
+\hline
+{\em pOptionValue} & -\/ IN option header value. \\
+\hline
+{\em pOptionLength} & = IN option length\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & on successful adding of the coap header \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00478_a09d54eefadd75ffec2f21a75d7c09e46}{
+\index{gsn\_\-coap.h@{gsn\_\-coap.h}!GsnCoap\_\-SetToken@{GsnCoap\_\-SetToken}}
+\index{GsnCoap\_\-SetToken@{GsnCoap\_\-SetToken}!gsn_coap.h@{gsn\_\-coap.h}}
+\subsubsection[{GsnCoap\_\-SetToken}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnCoap\_\-SetToken (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pTokenLength, }
+\item[{const unsigned char $\ast$}]{pTokenValue}
+\end{DoxyParamCaption}
+)}}
+\label{a00478_a09d54eefadd75ffec2f21a75d7c09e46}
+
+
+GSN Coap SetToken. 
+
+This functions sets the token header with token value The token are sent with the pdu when GsnCoap\_\-Send\_\-And\_\-Recieve is called
+
+
+\begin{DoxyParams}{Parameters}
+{\em pTokenValue} & -\/ IN Token value. \\
+\hline
+{\em pTokenLength} & = IN Token length\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em GSN\_\-SUCCESS} & on successful adding of the coap header \\
+\hline
+\end{DoxyRetVals}

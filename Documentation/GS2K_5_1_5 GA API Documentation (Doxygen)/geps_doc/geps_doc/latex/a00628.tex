@@ -1,0 +1,1742 @@
+\hypertarget{a00628}{
+\section{GSN OS Abstraction API (threadx)}
+\label{a00628}\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+}
+
+
+This module abstracts Real-\/Time OS functions and structures.  
+
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00628_gae961839651f7d7d0065cca8c4efb88f6}{GSN\_\-OSAL\_\-THREAD\_\-STATE\_\-T} \hyperlink{a00628_gac436a5e128feda97ba01f557f15bcc57}{THREAD\_\-STATE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread state. enum for thread state. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00628_ga0aaa82e357c4ce95100dc1df18ec3363}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T} \hyperlink{a00628_gab9843a3f99a06459775b3380ed83f17d}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread initial state. enum for the initial state of the thread. \end{DoxyCompactList}\item 
+typedef VOID($\ast$ \hyperlink{a00628_ga62a09641cac90719fc0cdb5f204df09b}{GSN\_\-OSAL\_\-THREAD\_\-ENTRY\_\-T} )(\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ctx)
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread entry function prototype. Prototype of the thread entry function. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00628_ga5568febc25b2751efc49a3eddcee65f5}{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T} \hyperlink{a00628_gae40be9afbdb44361f83e67879b2ac566}{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Wait. enum for the Wait. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00628_ga4b070e363e5202d1c7e6ffe017b981b9}{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE} \hyperlink{a00628_gafc2ee1bc516d2ae2d9a29757cbe45469}{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL priority inheritance type. enum for the priority inheritance. \end{DoxyCompactList}\item 
+typedef TX\_\-THREAD \hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread TCB. type definition for thread TCB. \end{DoxyCompactList}\item 
+typedef TX\_\-SEMAPHORE \hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Semaphore type. type definition for semaphore. \end{DoxyCompactList}\item 
+typedef TX\_\-QUEUE \hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Queue type. type definition for Queue. \end{DoxyCompactList}\item 
+typedef TX\_\-MUTEX \hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Mutex type. type definition for Mutex. \end{DoxyCompactList}\item 
+typedef TX\_\-EVENT\_\-FLAGS\_\-GROUP \hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Event flag group type. type definition for Event flag group. \end{DoxyCompactList}\item 
+typedef TX\_\-BYTE\_\-POOL \hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL byte pool. type definition for byte pool. \end{DoxyCompactList}\item 
+typedef TX\_\-BLOCK\_\-POOL \hyperlink{a00628_ga6adbb87a82d8b5936dd6f535024d81b7}{GSN\_\-OSAL\_\-BLOCK\_\-POOL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN OSAL block pool. type definition for block pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00628_gae961839651f7d7d0065cca8c4efb88f6}{GSN\_\-OSAL\_\-THREAD\_\-STATE\_\-T} \{ \par
+\hyperlink{a00628_ggae961839651f7d7d0065cca8c4efb88f6a8c5e43061dfdf8e939c3feaf584c4756}{GSN\_\-OSAL\_\-THREAD\_\-READY} =  TX\_\-READY, 
+\par
+\hyperlink{a00628_ggae961839651f7d7d0065cca8c4efb88f6af4b7e2cc66788d5d82aa0f4e97e32573}{GSN\_\-OSAL\_\-THREAD\_\-SUSPENDED} =  TX\_\-SUSPENDED, 
+\par
+\hyperlink{a00628_ggae961839651f7d7d0065cca8c4efb88f6a8ee2a33c7fe97d7512e9c2c6e3e117ac}{GSN\_\-OSAL\_\-THRAAD\_\-HALTED} =  TX\_\-TERMINATED
+ \}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread state. enum for thread state. \end{DoxyCompactList}\item 
+enum \hyperlink{a00628_ga0aaa82e357c4ce95100dc1df18ec3363}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T} \{ \par
+\hyperlink{a00628_gga0aaa82e357c4ce95100dc1df18ec3363ad09f63f7f5222fec1fffa19c96e195fd}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-READY} =  TX\_\-AUTO\_\-START, 
+\par
+\hyperlink{a00628_gga0aaa82e357c4ce95100dc1df18ec3363a8c847980c5d8cf9772ddb4951ebf58f1}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-SUSPENDED} =  TX\_\-DONT\_\-START
+ \}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Thread initial state. enum for the initial state of the thread. \end{DoxyCompactList}\item 
+enum \hyperlink{a00628_ga5568febc25b2751efc49a3eddcee65f5}{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T} \{ \par
+\hyperlink{a00628_gga5568febc25b2751efc49a3eddcee65f5ab182840f9fc7dc34a9b3156a929d9a2f}{GSN\_\-OSAL\_\-WAIT\_\-FOREVER} =  TX\_\-WAIT\_\-FOREVER, 
+\par
+\hyperlink{a00628_gga5568febc25b2751efc49a3eddcee65f5a406a6391540b62f9dde0aa96311bfb00}{GSN\_\-OSAL\_\-NO\_\-WAIT} =  TX\_\-NO\_\-WAIT
+ \}
+\begin{DoxyCompactList}\small\item\em GSN OSAL Wait. enum for the Wait. \end{DoxyCompactList}\item 
+enum \hyperlink{a00628_ga4b070e363e5202d1c7e6ffe017b981b9}{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE} \{ \par
+\hyperlink{a00628_gga4b070e363e5202d1c7e6ffe017b981b9a9f5a8464df10078a40932796037dbe21}{GSN\_\-OSAL\_\-PRI\_\-INHERIT} =  TX\_\-INHERIT, 
+\par
+\hyperlink{a00628_gga4b070e363e5202d1c7e6ffe017b981b9af4c1fbe390b0fce01a5e223d4f01364c}{GSN\_\-OSAL\_\-PRI\_\-NO\_\-INHERIT} =  TX\_\-NO\_\-INHERIT
+ \}
+\begin{DoxyCompactList}\small\item\em GSN OSAL priority inheritance type. enum for the priority inheritance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+INLINE \hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} \hyperlink{a00628_ga1ed551b8d69faf123769e95f1d1a6a7b}{GsnOsal\_\-IntrDisable} (VOID)
+\begin{DoxyCompactList}\small\item\em Disable interrupts. This function disables interrupts at ARM core level. It returns the interrupt status register value which has to be used to enable the interrupts again. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00628_ga2b636bd2ea78e766272d3b316fc56caf}{GsnOsal\_\-IntrEnable} (\hyperlink{a00660_ga63021d67d54286c2163bcdb43a6f2569}{INT32} intrStatus)
+\begin{DoxyCompactList}\small\item\em Enables interrupts. This function enables interrupts at ARM core level. It takes the interrupt status register value which was returned while disabling the interrupts. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00628_gae0bcbaa3cb7b92d2df26e8894b6b4ee3}{GsnOsal\_\-KernelInit} (VOID)
+\begin{DoxyCompactList}\small\item\em RTOS initialization. This function initializes the RTOS. \end{DoxyCompactList}\item 
+INLINE VOID \hyperlink{a00628_gafe9fabb4c27bd3a4544da84919cd1789}{GsnOsal\_\-KernelStart} (VOID)
+\begin{DoxyCompactList}\small\item\em RTOS Start. This function starts the RTOS. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga1b2c29cb19f0f5a40f765072e570ee83}{GsnOsal\_\-ThreadCreate} (\hyperlink{a00628_ga62a09641cac90719fc0cdb5f204df09b}{GSN\_\-OSAL\_\-THREAD\_\-ENTRY\_\-T} fptr, VOID $\ast$pCtx, \hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$pTcb, const \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pName, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} priority, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pStack, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} stackSize, \hyperlink{a00628_ga0aaa82e357c4ce95100dc1df18ec3363}{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T} defltState)
+\begin{DoxyCompactList}\small\item\em Thread Create. This function creates the thread. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga5a127d54a6f2daed4353bea344e40ee5}{GsnOsal\_\-ThreadDelete} (\hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$pTcb)
+\begin{DoxyCompactList}\small\item\em Thread delete. This function is used to delete the THREAD. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gaa895749a7c406cfe155217c8c1d57328}{GsnOsal\_\-ThreadResume} (\hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$pTcb)
+\begin{DoxyCompactList}\small\item\em Thread Run. This API is used to make the THREAD ready. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gabd439d54a7fcf906224267e15796287c}{GsnOsal\_\-ThreadSuspend} (\hyperlink{a00628_ga43c1eefe78fa26e478301976f96ac31f}{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$pTcb)
+\begin{DoxyCompactList}\small\item\em Thread suspend. This function is used to suspend the THREAD. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga9ef6b89b782f89f0141efac133b6534b}{GsnOsal\_\-SemCreate} (\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} $\ast$pSem, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} InitialCount)
+\begin{DoxyCompactList}\small\item\em Semaphore Create. This function is used to create the semaphore. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga3542986ec14bf1b3377b3908fb661109}{GsnOsal\_\-SemDelete} (\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} $\ast$pSem)
+\begin{DoxyCompactList}\small\item\em Semaphore Delete. This function is used to delete the semaphore. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga35296c135e578c960847feb173d238da}{GsnOsal\_\-SemAcquire} (\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} $\ast$pSem, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Semaphore Acquire. This function is used to acquire the semaphore. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gac2be1dd2c117010d1c3b7b4c0fbc7323}{GsnOsal\_\-SemRelease} (\hyperlink{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{GSN\_\-OSAL\_\-SEM\_\-T} $\ast$pSem)
+\begin{DoxyCompactList}\small\item\em Semaphore Release. This function is used to release the semaphore. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00628_gaa228381daedb3684e9d77e348d45ce15}{GsnOsal\_\-QueueMsgSizeInWords} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msgSizeInBytes)
+\begin{DoxyCompactList}\small\item\em Calculate Queue Message Size in words. The message size provided during the que cerate should in terms of number of words. if the message is a structure, this API helps to calculate the message size in terms of number of words, at run time. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gad7990e4a518c71f9d9a611b9ee379b9a}{GsnOsal\_\-QueueCreate} (\hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$pQueue, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msgSize, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pMsgBuff, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} msgBuffSize)
+\begin{DoxyCompactList}\small\item\em Queue Create. This function is used to create the mailbox. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga52ee4c5716ea5f675b1b11b79dd2c130}{GsnOsal\_\-QueueDelete} (\hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$pQueue)
+\begin{DoxyCompactList}\small\item\em Queue Delete. This function is used to delete the mailbox. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga67adc0a9e709aabc4e9e4c8ff0241e81}{GsnOsal\_\-QueuePut} (\hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$pQueue, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pMsg)
+\begin{DoxyCompactList}\small\item\em Queue Put/Send. This function is used to put/send a message to the mailbox. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga4db12c3f53ae65618056f1ebab33f1b5}{GsnOsal\_\-QueueGet} (\hyperlink{a00628_gaebe1c924d01bf6607bd65961bf134095}{GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$pQueue, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} $\ast$pMsg, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Queue Get/Receive. This function is used to get/receive a message from the mailbox. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gabef97b0a9c9c1d341e950d3b415a347d}{GsnOsal\_\-MutexCreate} (\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$pMutex, \hyperlink{a00628_gafc2ee1bc516d2ae2d9a29757cbe45469}{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE\_\-T} priInheritance)
+\begin{DoxyCompactList}\small\item\em Mutex Create. This function is used to create the mutex. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga2d2347555ec07007912ccd61ea62f16a}{GsnOsal\_\-MutexDelete} (\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$pMutex)
+\begin{DoxyCompactList}\small\item\em Mutex Delete. This function is used to delete the mutex. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga0440cf06602f2a414ea1c20a05f139d0}{GsnOsal\_\-MutexPut} (\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$pMutex)
+\begin{DoxyCompactList}\small\item\em Mutex Put. This function is used to take the mutex. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga0528eb3552c6d3ece518c9662ffb143a}{GsnOsal\_\-MutexGet} (\hyperlink{a00628_gae997291afc7166c897f459023e0154ad}{GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$pMutex, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Mutex Get. This function is used to get the mutex. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga7a19fa807183b26dc8566a06a44acf38}{GsnOsal\_\-BytePoolCreate} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBytePool, VOID $\ast$pPoolStart, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} poolSize)
+\begin{DoxyCompactList}\small\item\em Byte Pool Create. This function is used to create a byte pool -\/ a pool of memory for dynamic allocation, similar to malloc. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga159b4fdceeb3ce96aa80561bb380987e}{GsnOsal\_\-BytePoolDelete} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBytePool)
+\begin{DoxyCompactList}\small\item\em Byte Pool Delete. This function is used to delete an already created byte pool. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga1d70fb063bb88ee4ac9fa2c2260afeb9}{GsnOsal\_\-ByteAllocate} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBytePool, VOID $\ast$$\ast$pMem, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Byte Allocate. This function is used to allocate memory from byte pool. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga278d0c8b448a24f26c2359b7830c0da2}{GsnOsal\_\-ByteRelease} (VOID $\ast$pMem)
+\begin{DoxyCompactList}\small\item\em Byte Release. This function is used to release the allocated memory. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gafa441a8b3321c0f612fbedbe4a897a49}{GsnOsal\_\-BlockPoolCreate} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBlockPool, VOID $\ast$pPoolStart, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} poolSize)
+\begin{DoxyCompactList}\small\item\em Block Pool Create. This function is used to create a block pool -\/ a pool of memory for dynamic allocation of fixed size blocks. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gaf64e15fd3f730913bdc47d6d237a0ef4}{GsnOsal\_\-BlockPoolDelete} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBlockPool)
+\begin{DoxyCompactList}\small\item\em Byte Pool Delete. This function is used to delete an already created block pool. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga6d021ea7fe89c49b1e58da5bf8c095fc}{GsnOsal\_\-BlockAllocate} (\hyperlink{a00628_gaf2af06408f9cf286dc400b5957264f00}{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$pBlockPool, VOID $\ast$$\ast$pMem, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Byte Allocate. This function is used to allocate memory from block pool. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga9130c973fd5ee0e07747cfb48e50a8ae}{GsnOsal\_\-BlockRelease} (VOID $\ast$pMem)
+\begin{DoxyCompactList}\small\item\em Byte Release. This function is used to release the allocated memory. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga7a4f780c8658de6dbb271b4b0cc8fc70}{GsnOsal\_\-EventFlagsCreate} (\hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$pEventFlags)
+\begin{DoxyCompactList}\small\item\em Event flags Create. This function is used to create the event flags. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_ga71ec8f3dba1277958f09da0e1e2a78a9}{GsnOsal\_\-EventFlagsDelete} (\hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$pEventFlags)
+\begin{DoxyCompactList}\small\item\em Event Flags Delete. This function is used to delete the event flags. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gae83b5f6bc69104f8d1a12659820011b1}{GsnOsal\_\-EventFlagsSet} (\hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$pEventFlags, \hyperlink{a00536_afb39f905ce07232becc42deeccb9ad4c}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T} eventFlagsVal, \hyperlink{a00536_a3782687de549490574b44f3374fb5731}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T} eventFlagsOp)
+\begin{DoxyCompactList}\small\item\em Event Flags Put. This function is used to take the event flags. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00628_gaf776c600539bb9e5945b60e17cef7a4f}{GsnOsal\_\-EventFlagsGet} (\hyperlink{a00628_gab93fdfc637101a29260ca105d3eb924e}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$pEventFlags, \hyperlink{a00536_afb39f905ce07232becc42deeccb9ad4c}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T} eventFlagsGet, \hyperlink{a00536_a3782687de549490574b44f3374fb5731}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T} eventFlagsOp, \hyperlink{a00536_afb39f905ce07232becc42deeccb9ad4c}{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T} $\ast$pEventFlagsVal, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} waitTicks)
+\begin{DoxyCompactList}\small\item\em Event Flags Get. This function is used to get the event flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module abstracts Real-\/Time OS functions and structures. The functions and structures in this module provide RTOS services -\/-\/ kernel management, interrupt management, thread management, semaphores, and message queues -\/-\/ in an operating-\/system-\/independent fashion. Note that enumerations contain macro assignments to threadx entities but the application code that calls these enumerations is independent of the underlying RTOS. 
+
+\subsection{Typedef Documentation}
+\hypertarget{a00628_ga6adbb87a82d8b5936dd6f535024d81b7}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-BLOCK\_\-POOL\_\-T@{GSN\_\-OSAL\_\-BLOCK\_\-POOL\_\-T}}
+\index{GSN\_\-OSAL\_\-BLOCK\_\-POOL\_\-T@{GSN\_\-OSAL\_\-BLOCK\_\-POOL\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-BLOCK\_\-POOL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef TX\_\-BLOCK\_\-POOL {\bf GSN\_\-OSAL\_\-BLOCK\_\-POOL\_\-T}}}
+\label{a00628_ga6adbb87a82d8b5936dd6f535024d81b7}
+
+
+GSN OSAL block pool. type definition for block pool. 
+
+
+
+Definition at line 215 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gaf2af06408f9cf286dc400b5957264f00}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T@{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T}}
+\index{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T@{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef TX\_\-BYTE\_\-POOL {\bf GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T}}}
+\label{a00628_gaf2af06408f9cf286dc400b5957264f00}
+
+
+GSN OSAL byte pool. type definition for byte pool. 
+
+
+
+Definition at line 207 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gab93fdfc637101a29260ca105d3eb924e}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T}}
+\index{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T@{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef TX\_\-EVENT\_\-FLAGS\_\-GROUP {\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T}}}
+\label{a00628_gab93fdfc637101a29260ca105d3eb924e}
+
+
+GSN OSAL Event flag group type. type definition for Event flag group. 
+
+
+
+Definition at line 188 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gae997291afc7166c897f459023e0154ad}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-MUTEX\_\-T@{GSN\_\-OSAL\_\-MUTEX\_\-T}}
+\index{GSN\_\-OSAL\_\-MUTEX\_\-T@{GSN\_\-OSAL\_\-MUTEX\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-MUTEX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef TX\_\-MUTEX {\bf GSN\_\-OSAL\_\-MUTEX\_\-T}}}
+\label{a00628_gae997291afc7166c897f459023e0154ad}
+
+
+GSN OSAL Mutex type. type definition for Mutex. 
+
+
+
+Definition at line 180 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gafc2ee1bc516d2ae2d9a29757cbe45469}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE\_\-T@{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE\_\-T}}
+\index{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE\_\-T@{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE}  {\bf GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE\_\-T}}}
+\label{a00628_gafc2ee1bc516d2ae2d9a29757cbe45469}
+
+
+GSN OSAL priority inheritance type. enum for the priority inheritance. 
+
+\hypertarget{a00628_gaebe1c924d01bf6607bd65961bf134095}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-QUEUE\_\-T@{GSN\_\-OSAL\_\-QUEUE\_\-T}}
+\index{GSN\_\-OSAL\_\-QUEUE\_\-T@{GSN\_\-OSAL\_\-QUEUE\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-QUEUE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef TX\_\-QUEUE {\bf GSN\_\-OSAL\_\-QUEUE\_\-T}}}
+\label{a00628_gaebe1c924d01bf6607bd65961bf134095}
+
+
+GSN OSAL Queue type. type definition for Queue. 
+
+
+
+Definition at line 172 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-SEM\_\-T@{GSN\_\-OSAL\_\-SEM\_\-T}}
+\index{GSN\_\-OSAL\_\-SEM\_\-T@{GSN\_\-OSAL\_\-SEM\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-SEM\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef TX\_\-SEMAPHORE {\bf GSN\_\-OSAL\_\-SEM\_\-T}}}
+\label{a00628_gab4b3554407ce22b940e2fcd3faf5fd47}
+
+
+GSN OSAL Semaphore type. type definition for semaphore. 
+
+
+
+Definition at line 164 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga62a09641cac90719fc0cdb5f204df09b}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-THREAD\_\-ENTRY\_\-T@{GSN\_\-OSAL\_\-THREAD\_\-ENTRY\_\-T}}
+\index{GSN\_\-OSAL\_\-THREAD\_\-ENTRY\_\-T@{GSN\_\-OSAL\_\-THREAD\_\-ENTRY\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-THREAD\_\-ENTRY\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID($\ast$ {\bf GSN\_\-OSAL\_\-THREAD\_\-ENTRY\_\-T})({\bf UINT32} ctx)}}
+\label{a00628_ga62a09641cac90719fc0cdb5f204df09b}
+
+
+GSN OSAL Thread entry function prototype. Prototype of the thread entry function. 
+
+
+
+Definition at line 122 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gab9843a3f99a06459775b3380ed83f17d}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T@{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T}}
+\index{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T@{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T} {\bf GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T}}}
+\label{a00628_gab9843a3f99a06459775b3380ed83f17d}
+
+
+GSN OSAL Thread initial state. enum for the initial state of the thread. 
+
+\hypertarget{a00628_ga43c1eefe78fa26e478301976f96ac31f}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T@{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T}}
+\index{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T@{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef TX\_\-THREAD {\bf GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T}}}
+\label{a00628_ga43c1eefe78fa26e478301976f96ac31f}
+
+
+GSN OSAL Thread TCB. type definition for thread TCB. 
+
+
+
+Definition at line 156 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gae40be9afbdb44361f83e67879b2ac566}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T@{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T}}
+\index{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T@{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T} {\bf GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T}}}
+\label{a00628_gae40be9afbdb44361f83e67879b2ac566}
+
+
+GSN OSAL Wait. enum for the Wait. 
+
+\hypertarget{a00628_gac436a5e128feda97ba01f557f15bcc57}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!THREAD\_\-STATE\_\-T@{THREAD\_\-STATE\_\-T}}
+\index{THREAD\_\-STATE\_\-T@{THREAD\_\-STATE\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{THREAD\_\-STATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf GSN\_\-OSAL\_\-THREAD\_\-STATE\_\-T} {\bf THREAD\_\-STATE\_\-T}}}
+\label{a00628_gac436a5e128feda97ba01f557f15bcc57}
+
+
+GSN OSAL Thread state. enum for thread state. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{a00628_ga4b070e363e5202d1c7e6ffe017b981b9}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE@{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE}}
+\index{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE@{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE}}}
+\label{a00628_ga4b070e363e5202d1c7e6ffe017b981b9}
+
+
+GSN OSAL priority inheritance type. enum for the priority inheritance. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-OSAL\_\-PRI\_\-INHERIT@{GSN\_\-OSAL\_\-PRI\_\-INHERIT}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-PRI\_\-INHERIT@{GSN\_\-OSAL\_\-PRI\_\-INHERIT}}\item[{\em 
+\hypertarget{a00628_gga4b070e363e5202d1c7e6ffe017b981b9a9f5a8464df10078a40932796037dbe21}{
+GSN\_\-OSAL\_\-PRI\_\-INHERIT}
+\label{a00628_gga4b070e363e5202d1c7e6ffe017b981b9a9f5a8464df10078a40932796037dbe21}
+}]\index{GSN\_\-OSAL\_\-PRI\_\-NO\_\-INHERIT@{GSN\_\-OSAL\_\-PRI\_\-NO\_\-INHERIT}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-PRI\_\-NO\_\-INHERIT@{GSN\_\-OSAL\_\-PRI\_\-NO\_\-INHERIT}}\item[{\em 
+\hypertarget{a00628_gga4b070e363e5202d1c7e6ffe017b981b9af4c1fbe390b0fce01a5e223d4f01364c}{
+GSN\_\-OSAL\_\-PRI\_\-NO\_\-INHERIT}
+\label{a00628_gga4b070e363e5202d1c7e6ffe017b981b9af4c1fbe390b0fce01a5e223d4f01364c}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 143 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga0aaa82e357c4ce95100dc1df18ec3363}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T@{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T}}
+\index{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T@{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T}}}
+\label{a00628_ga0aaa82e357c4ce95100dc1df18ec3363}
+
+
+GSN OSAL Thread initial state. enum for the initial state of the thread. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-READY@{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-READY}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-READY@{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-READY}}\item[{\em 
+\hypertarget{a00628_gga0aaa82e357c4ce95100dc1df18ec3363ad09f63f7f5222fec1fffa19c96e195fd}{
+GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-READY}
+\label{a00628_gga0aaa82e357c4ce95100dc1df18ec3363ad09f63f7f5222fec1fffa19c96e195fd}
+}]Thread created and put to ready state Thread is created but put into suspended state \index{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-SUSPENDED@{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-SUSPENDED}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-SUSPENDED@{GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-SUSPENDED}}\item[{\em 
+\hypertarget{a00628_gga0aaa82e357c4ce95100dc1df18ec3363a8c847980c5d8cf9772ddb4951ebf58f1}{
+GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-SUSPENDED}
+\label{a00628_gga0aaa82e357c4ce95100dc1df18ec3363a8c847980c5d8cf9772ddb4951ebf58f1}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 108 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gae961839651f7d7d0065cca8c4efb88f6}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-THREAD\_\-STATE\_\-T@{GSN\_\-OSAL\_\-THREAD\_\-STATE\_\-T}}
+\index{GSN\_\-OSAL\_\-THREAD\_\-STATE\_\-T@{GSN\_\-OSAL\_\-THREAD\_\-STATE\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-THREAD\_\-STATE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-OSAL\_\-THREAD\_\-STATE\_\-T}}}
+\label{a00628_gae961839651f7d7d0065cca8c4efb88f6}
+
+
+GSN OSAL Thread state. enum for thread state. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-OSAL\_\-THREAD\_\-READY@{GSN\_\-OSAL\_\-THREAD\_\-READY}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-THREAD\_\-READY@{GSN\_\-OSAL\_\-THREAD\_\-READY}}\item[{\em 
+\hypertarget{a00628_ggae961839651f7d7d0065cca8c4efb88f6a8c5e43061dfdf8e939c3feaf584c4756}{
+GSN\_\-OSAL\_\-THREAD\_\-READY}
+\label{a00628_ggae961839651f7d7d0065cca8c4efb88f6a8c5e43061dfdf8e939c3feaf584c4756}
+}]Thread is ready to run Thread is waiting on any resource \index{GSN\_\-OSAL\_\-THREAD\_\-SUSPENDED@{GSN\_\-OSAL\_\-THREAD\_\-SUSPENDED}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-THREAD\_\-SUSPENDED@{GSN\_\-OSAL\_\-THREAD\_\-SUSPENDED}}\item[{\em 
+\hypertarget{a00628_ggae961839651f7d7d0065cca8c4efb88f6af4b7e2cc66788d5d82aa0f4e97e32573}{
+GSN\_\-OSAL\_\-THREAD\_\-SUSPENDED}
+\label{a00628_ggae961839651f7d7d0065cca8c4efb88f6af4b7e2cc66788d5d82aa0f4e97e32573}
+}]\index{GSN\_\-OSAL\_\-THRAAD\_\-HALTED@{GSN\_\-OSAL\_\-THRAAD\_\-HALTED}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-THRAAD\_\-HALTED@{GSN\_\-OSAL\_\-THRAAD\_\-HALTED}}\item[{\em 
+\hypertarget{a00628_ggae961839651f7d7d0065cca8c4efb88f6a8ee2a33c7fe97d7512e9c2c6e3e117ac}{
+GSN\_\-OSAL\_\-THRAAD\_\-HALTED}
+\label{a00628_ggae961839651f7d7d0065cca8c4efb88f6a8ee2a33c7fe97d7512e9c2c6e3e117ac}
+}]Thread is halted \end{description}
+\end{Desc}
+
+
+
+Definition at line 93 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga5568febc25b2751efc49a3eddcee65f5}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T@{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T}}
+\index{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T@{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T}}}
+\label{a00628_ga5568febc25b2751efc49a3eddcee65f5}
+
+
+GSN OSAL Wait. enum for the Wait. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GSN\_\-OSAL\_\-WAIT\_\-FOREVER@{GSN\_\-OSAL\_\-WAIT\_\-FOREVER}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-WAIT\_\-FOREVER@{GSN\_\-OSAL\_\-WAIT\_\-FOREVER}}\item[{\em 
+\hypertarget{a00628_gga5568febc25b2751efc49a3eddcee65f5ab182840f9fc7dc34a9b3156a929d9a2f}{
+GSN\_\-OSAL\_\-WAIT\_\-FOREVER}
+\label{a00628_gga5568febc25b2751efc49a3eddcee65f5ab182840f9fc7dc34a9b3156a929d9a2f}
+}]\index{GSN\_\-OSAL\_\-NO\_\-WAIT@{GSN\_\-OSAL\_\-NO\_\-WAIT}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GSN\_\-OSAL\_\-NO\_\-WAIT@{GSN\_\-OSAL\_\-NO\_\-WAIT}}\item[{\em 
+\hypertarget{a00628_gga5568febc25b2751efc49a3eddcee65f5a406a6391540b62f9dde0aa96311bfb00}{
+GSN\_\-OSAL\_\-NO\_\-WAIT}
+\label{a00628_gga5568febc25b2751efc49a3eddcee65f5a406a6391540b62f9dde0aa96311bfb00}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 131 of file gsn\_\-osal\_\-threadx.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00628_ga6d021ea7fe89c49b1e58da5bf8c095fc}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-BlockAllocate@{GsnOsal\_\-BlockAllocate}}
+\index{GsnOsal\_\-BlockAllocate@{GsnOsal\_\-BlockAllocate}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-BlockAllocate}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-BlockAllocate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$}]{pBlockPool, }
+\item[{VOID $\ast$$\ast$}]{pMem, }
+\item[{{\bf UINT32}}]{size, }
+\item[{{\bf UINT32}}]{waitTicks}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga6d021ea7fe89c49b1e58da5bf8c095fc}
+
+
+Byte Allocate. This function is used to allocate memory from block pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pBlockPool} & -\/ IN Pointer to the block pool structure. \\
+\hline
+{\em pMem} & -\/ IN Pointer to return the pointer of allocated memory. \\
+\hline
+{\em size} & -\/ IN Size of memory to allocate. \\
+\hline
+{\em waitTicks} & -\/ IN value from GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T or a value in terms of ticks to wait till it gives up. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-BlockPoolCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_gafa441a8b3321c0f612fbedbe4a897a49}{GsnOsal\_\-BlockPoolCreate} 
+
+\hyperlink{a00628_gaf64e15fd3f730913bdc47d6d237a0ef4}{GsnOsal\_\-BlockPoolDelete} 
+
+\hyperlink{a00628_ga9130c973fd5ee0e07747cfb48e50a8ae}{GsnOsal\_\-BlockRelease} 
+\end{DoxySeeAlso}
+
+
+Definition at line 923 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gafa441a8b3321c0f612fbedbe4a897a49}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-BlockPoolCreate@{GsnOsal\_\-BlockPoolCreate}}
+\index{GsnOsal\_\-BlockPoolCreate@{GsnOsal\_\-BlockPoolCreate}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-BlockPoolCreate}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-BlockPoolCreate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$}]{pBlockPool, }
+\item[{VOID $\ast$}]{pPoolStart, }
+\item[{{\bf UINT32}}]{poolSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gafa441a8b3321c0f612fbedbe4a897a49}
+
+
+Block Pool Create. This function is used to create a block pool -\/ a pool of memory for dynamic allocation of fixed size blocks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pBlockPool} & -\/ IN Pointer to the block pool structure. \\
+\hline
+{\em pPoolStart} & -\/ IN Starting pointer to pool memory. \\
+\hline
+{\em poolSize} & -\/ IN pool size in bytes. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_gaf64e15fd3f730913bdc47d6d237a0ef4}{GsnOsal\_\-BlockPoolDelete} 
+
+\hyperlink{a00628_ga6d021ea7fe89c49b1e58da5bf8c095fc}{GsnOsal\_\-BlockAllocate} 
+
+\hyperlink{a00628_ga9130c973fd5ee0e07747cfb48e50a8ae}{GsnOsal\_\-BlockRelease} 
+\end{DoxySeeAlso}
+
+
+Definition at line 867 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gaf64e15fd3f730913bdc47d6d237a0ef4}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-BlockPoolDelete@{GsnOsal\_\-BlockPoolDelete}}
+\index{GsnOsal\_\-BlockPoolDelete@{GsnOsal\_\-BlockPoolDelete}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-BlockPoolDelete}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-BlockPoolDelete (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$}]{pBlockPool}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gaf64e15fd3f730913bdc47d6d237a0ef4}
+
+
+Byte Pool Delete. This function is used to delete an already created block pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pBlockPool} & -\/ IN Pointer to the block pool structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-BlockPoolCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_gafa441a8b3321c0f612fbedbe4a897a49}{GsnOsal\_\-BlockPoolCreate} 
+
+\hyperlink{a00628_ga6d021ea7fe89c49b1e58da5bf8c095fc}{GsnOsal\_\-BlockAllocate} 
+
+\hyperlink{a00628_ga9130c973fd5ee0e07747cfb48e50a8ae}{GsnOsal\_\-BlockRelease} 
+\end{DoxySeeAlso}
+
+
+Definition at line 894 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga9130c973fd5ee0e07747cfb48e50a8ae}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-BlockRelease@{GsnOsal\_\-BlockRelease}}
+\index{GsnOsal\_\-BlockRelease@{GsnOsal\_\-BlockRelease}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-BlockRelease}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-BlockRelease (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pMem}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga9130c973fd5ee0e07747cfb48e50a8ae}
+
+
+Byte Release. This function is used to release the allocated memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMem} & -\/ IN Pointer allocated memory. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-BlockPoolCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_gafa441a8b3321c0f612fbedbe4a897a49}{GsnOsal\_\-BlockPoolCreate} 
+
+\hyperlink{a00628_gaf64e15fd3f730913bdc47d6d237a0ef4}{GsnOsal\_\-BlockPoolDelete} 
+
+\hyperlink{a00628_ga6d021ea7fe89c49b1e58da5bf8c095fc}{GsnOsal\_\-BlockAllocate} 
+\end{DoxySeeAlso}
+
+
+Definition at line 949 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga1d70fb063bb88ee4ac9fa2c2260afeb9}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-ByteAllocate@{GsnOsal\_\-ByteAllocate}}
+\index{GsnOsal\_\-ByteAllocate@{GsnOsal\_\-ByteAllocate}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-ByteAllocate}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-ByteAllocate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$}]{pBytePool, }
+\item[{VOID $\ast$$\ast$}]{pMem, }
+\item[{{\bf UINT32}}]{size, }
+\item[{{\bf UINT32}}]{waitTicks}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga1d70fb063bb88ee4ac9fa2c2260afeb9}
+
+
+Byte Allocate. This function is used to allocate memory from byte pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pBytePool} & -\/ IN Pointer to the byte pool structure. \\
+\hline
+{\em pMem} & -\/ IN Pointer to return the pointer of allocated memory. \\
+\hline
+{\em size} & -\/ IN Size of memory to allocate. \\
+\hline
+{\em waitTicks} & -\/ IN value from GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T or a value in terms of ticks to wait till it gives up. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-BytePoolCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga7a19fa807183b26dc8566a06a44acf38}{GsnOsal\_\-BytePoolCreate} 
+
+\hyperlink{a00628_ga159b4fdceeb3ce96aa80561bb380987e}{GsnOsal\_\-BytePoolDelete} 
+
+\hyperlink{a00628_ga278d0c8b448a24f26c2359b7830c0da2}{GsnOsal\_\-ByteRelease} 
+\end{DoxySeeAlso}
+
+
+Definition at line 814 of file gsn\_\-osal\_\-threadx.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00628_ga1d70fb063bb88ee4ac9fa2c2260afeb9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00628_ga7a19fa807183b26dc8566a06a44acf38}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-BytePoolCreate@{GsnOsal\_\-BytePoolCreate}}
+\index{GsnOsal\_\-BytePoolCreate@{GsnOsal\_\-BytePoolCreate}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-BytePoolCreate}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-BytePoolCreate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$}]{pBytePool, }
+\item[{VOID $\ast$}]{pPoolStart, }
+\item[{{\bf UINT32}}]{poolSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga7a19fa807183b26dc8566a06a44acf38}
+
+
+Byte Pool Create. This function is used to create a byte pool -\/ a pool of memory for dynamic allocation, similar to malloc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pBytePool} & -\/ IN Pointer to the byte pool structure. \\
+\hline
+{\em pPoolStart} & -\/ IN Starting pointer to pool memory. \\
+\hline
+{\em poolSize} & -\/ IN pool size in bytes. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga159b4fdceeb3ce96aa80561bb380987e}{GsnOsal\_\-BytePoolDelete} 
+
+\hyperlink{a00628_ga1d70fb063bb88ee4ac9fa2c2260afeb9}{GsnOsal\_\-ByteAllocate} 
+
+\hyperlink{a00628_ga278d0c8b448a24f26c2359b7830c0da2}{GsnOsal\_\-ByteRelease} 
+\end{DoxySeeAlso}
+
+
+Definition at line 758 of file gsn\_\-osal\_\-threadx.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=388pt]{a00628_ga7a19fa807183b26dc8566a06a44acf38_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00628_ga159b4fdceeb3ce96aa80561bb380987e}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-BytePoolDelete@{GsnOsal\_\-BytePoolDelete}}
+\index{GsnOsal\_\-BytePoolDelete@{GsnOsal\_\-BytePoolDelete}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-BytePoolDelete}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-BytePoolDelete (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-BYTE\_\-POOL\_\-T} $\ast$}]{pBytePool}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga159b4fdceeb3ce96aa80561bb380987e}
+
+
+Byte Pool Delete. This function is used to delete an already created byte pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pBytePool} & -\/ IN Pointer to the byte pool structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-BytePoolCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga7a19fa807183b26dc8566a06a44acf38}{GsnOsal\_\-BytePoolCreate} 
+
+\hyperlink{a00628_ga1d70fb063bb88ee4ac9fa2c2260afeb9}{GsnOsal\_\-ByteAllocate} 
+
+\hyperlink{a00628_ga278d0c8b448a24f26c2359b7830c0da2}{GsnOsal\_\-ByteRelease} 
+\end{DoxySeeAlso}
+
+
+Definition at line 785 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga278d0c8b448a24f26c2359b7830c0da2}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-ByteRelease@{GsnOsal\_\-ByteRelease}}
+\index{GsnOsal\_\-ByteRelease@{GsnOsal\_\-ByteRelease}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-ByteRelease}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-ByteRelease (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pMem}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga278d0c8b448a24f26c2359b7830c0da2}
+
+
+Byte Release. This function is used to release the allocated memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMem} & -\/ IN Pointer allocated memory. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-BytePoolCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga7a19fa807183b26dc8566a06a44acf38}{GsnOsal\_\-BytePoolCreate} 
+
+\hyperlink{a00628_ga159b4fdceeb3ce96aa80561bb380987e}{GsnOsal\_\-BytePoolDelete} 
+
+\hyperlink{a00628_ga1d70fb063bb88ee4ac9fa2c2260afeb9}{GsnOsal\_\-ByteAllocate} 
+\end{DoxySeeAlso}
+
+
+Definition at line 840 of file gsn\_\-osal\_\-threadx.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=394pt]{a00628_ga278d0c8b448a24f26c2359b7830c0da2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00628_ga7a4f780c8658de6dbb271b4b0cc8fc70}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-EventFlagsCreate@{GsnOsal\_\-EventFlagsCreate}}
+\index{GsnOsal\_\-EventFlagsCreate@{GsnOsal\_\-EventFlagsCreate}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-EventFlagsCreate}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-EventFlagsCreate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$}]{pEventFlags}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga7a4f780c8658de6dbb271b4b0cc8fc70}
+
+
+Event flags Create. This function is used to create the event flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pEventFlags} & -\/ IN Pointer to the mutex structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga71ec8f3dba1277958f09da0e1e2a78a9}{GsnOsal\_\-EventFlagsDelete} 
+
+\hyperlink{a00628_gae83b5f6bc69104f8d1a12659820011b1}{GsnOsal\_\-EventFlagsSet} 
+
+\hyperlink{a00628_gaf776c600539bb9e5945b60e17cef7a4f}{GsnOsal\_\-EventFlagsGet} 
+\end{DoxySeeAlso}
+
+
+Definition at line 972 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga71ec8f3dba1277958f09da0e1e2a78a9}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-EventFlagsDelete@{GsnOsal\_\-EventFlagsDelete}}
+\index{GsnOsal\_\-EventFlagsDelete@{GsnOsal\_\-EventFlagsDelete}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-EventFlagsDelete}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-EventFlagsDelete (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$}]{pEventFlags}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga71ec8f3dba1277958f09da0e1e2a78a9}
+
+
+Event Flags Delete. This function is used to delete the event flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pEventFlags} & -\/ IN Pointer to the mutex structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-EventFlagsCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga7a4f780c8658de6dbb271b4b0cc8fc70}{GsnOsal\_\-EventFlagsCreate} 
+
+\hyperlink{a00628_gae83b5f6bc69104f8d1a12659820011b1}{GsnOsal\_\-EventFlagsSet} 
+
+\hyperlink{a00628_gaf776c600539bb9e5945b60e17cef7a4f}{GsnOsal\_\-EventFlagsGet} 
+\end{DoxySeeAlso}
+
+
+Definition at line 997 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gaf776c600539bb9e5945b60e17cef7a4f}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-EventFlagsGet@{GsnOsal\_\-EventFlagsGet}}
+\index{GsnOsal\_\-EventFlagsGet@{GsnOsal\_\-EventFlagsGet}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-EventFlagsGet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-EventFlagsGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$}]{pEventFlags, }
+\item[{{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T}}]{eventFlagsGet, }
+\item[{{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T}}]{eventFlagsOp, }
+\item[{{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T} $\ast$}]{pEventFlagsVal, }
+\item[{{\bf UINT32}}]{waitTicks}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gaf776c600539bb9e5945b60e17cef7a4f}
+
+
+Event Flags Get. This function is used to get the event flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pEventFlags} & -\/ IN Pointer to the event flags structure. \\
+\hline
+{\em eventFlagsGet} & -\/ IN Event Bitmask to get \\
+\hline
+{\em eventFlagsOp} & -\/ IN Event Flag Operation \\
+\hline
+{\em pEventFlagsVal} & -\/ OUT Event Flag Value for the Bitmask requested \\
+\hline
+{\em waitTicks} & -\/ IN value from GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T or a value in terms of ticks to wait till it gives up. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-EventFlagsCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga71ec8f3dba1277958f09da0e1e2a78a9}{GsnOsal\_\-EventFlagsDelete} 
+
+\hyperlink{a00628_ga7a4f780c8658de6dbb271b4b0cc8fc70}{GsnOsal\_\-EventFlagsCreate} 
+
+\hyperlink{a00628_gae83b5f6bc69104f8d1a12659820011b1}{GsnOsal\_\-EventFlagsSet} 
+\end{DoxySeeAlso}
+
+
+Definition at line 1056 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gae83b5f6bc69104f8d1a12659820011b1}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-EventFlagsSet@{GsnOsal\_\-EventFlagsSet}}
+\index{GsnOsal\_\-EventFlagsSet@{GsnOsal\_\-EventFlagsSet}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-EventFlagsSet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-EventFlagsSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-T} $\ast$}]{pEventFlags, }
+\item[{{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-VAL\_\-T}}]{eventFlagsVal, }
+\item[{{\bf GSN\_\-OSAL\_\-EVENT\_\-FLAGS\_\-OP\_\-T}}]{eventFlagsOp}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gae83b5f6bc69104f8d1a12659820011b1}
+
+
+Event Flags Put. This function is used to take the event flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pEventFlags} & -\/ IN Pointer to the mutex structure. \\
+\hline
+{\em eventFlagsVal} & -\/ IN value to set into event flags. \\
+\hline
+{\em eventFlagsOp} & -\/ IN event flags operation, ie., specifies how the new flags should be set. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-EventFlagsCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga71ec8f3dba1277958f09da0e1e2a78a9}{GsnOsal\_\-EventFlagsDelete} 
+
+\hyperlink{a00628_ga7a4f780c8658de6dbb271b4b0cc8fc70}{GsnOsal\_\-EventFlagsCreate} 
+
+\hyperlink{a00628_gaf776c600539bb9e5945b60e17cef7a4f}{GsnOsal\_\-EventFlagsGet} 
+\end{DoxySeeAlso}
+
+
+Definition at line 1025 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga1ed551b8d69faf123769e95f1d1a6a7b}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-IntrDisable@{GsnOsal\_\-IntrDisable}}
+\index{GsnOsal\_\-IntrDisable@{GsnOsal\_\-IntrDisable}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-IntrDisable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf INT32} GsnOsal\_\-IntrDisable (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga1ed551b8d69faf123769e95f1d1a6a7b}
+
+
+Disable interrupts. This function disables interrupts at ARM core level. It returns the interrupt status register value which has to be used to enable the interrupts again. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em intrStatus} & -\/ OUT interrupt status register value. This value has to be used in GsnOsal\_\-IntrEnable to enable the interrupt. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+GSN\_\-OSAL\_\-ENABLE\_\-INTERRUPT 
+\end{DoxySeeAlso}
+
+
+Definition at line 231 of file gsn\_\-osal\_\-threadx.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00628_ga1ed551b8d69faf123769e95f1d1a6a7b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00628_ga2b636bd2ea78e766272d3b316fc56caf}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-IntrEnable@{GsnOsal\_\-IntrEnable}}
+\index{GsnOsal\_\-IntrEnable@{GsnOsal\_\-IntrEnable}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-IntrEnable}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnOsal\_\-IntrEnable (
+\begin{DoxyParamCaption}
+\item[{{\bf INT32}}]{intrStatus}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga2b636bd2ea78e766272d3b316fc56caf}
+
+
+Enables interrupts. This function enables interrupts at ARM core level. It takes the interrupt status register value which was returned while disabling the interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intrStatus} & -\/ IN interrupt status register value. This value has to be the value returned while disabling the interrupt i.e. in GsnOsal\_\-IntrDisable call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+GSN\_\-OSAL\_\-DISABLE\_\-INTERRUPT 
+\end{DoxySeeAlso}
+
+
+Definition at line 250 of file gsn\_\-osal\_\-threadx.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00628_ga2b636bd2ea78e766272d3b316fc56caf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00628_gae0bcbaa3cb7b92d2df26e8894b6b4ee3}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-KernelInit@{GsnOsal\_\-KernelInit}}
+\index{GsnOsal\_\-KernelInit@{GsnOsal\_\-KernelInit}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-KernelInit}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnOsal\_\-KernelInit (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gae0bcbaa3cb7b92d2df26e8894b6b4ee3}
+
+
+RTOS initialization. This function initializes the RTOS. 
+
+\begin{DoxyNote}{Note}
+The API has to be called before calling any of the OSAL API except the interrupt enable/disable APIs. 
+\end{DoxyNote}
+
+
+Definition at line 297 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gafe9fabb4c27bd3a4544da84919cd1789}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-KernelStart@{GsnOsal\_\-KernelStart}}
+\index{GsnOsal\_\-KernelStart@{GsnOsal\_\-KernelStart}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-KernelStart}]{\setlength{\rightskip}{0pt plus 5cm}INLINE VOID GsnOsal\_\-KernelStart (
+\begin{DoxyParamCaption}
+\item[{VOID}]{}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gafe9fabb4c27bd3a4544da84919cd1789}
+
+
+RTOS Start. This function starts the RTOS. 
+
+\begin{DoxyNote}{Note}
+This API is called to start the Kernel. The control doesn't return from this fucntion call. 
+\end{DoxyNote}
+
+
+Definition at line 310 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gabef97b0a9c9c1d341e950d3b415a347d}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-MutexCreate@{GsnOsal\_\-MutexCreate}}
+\index{GsnOsal\_\-MutexCreate@{GsnOsal\_\-MutexCreate}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-MutexCreate}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-MutexCreate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$}]{pMutex, }
+\item[{{\bf GSN\_\-OSAL\_\-PRI\_\-INHERIT\_\-TYPE\_\-T}}]{priInheritance}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gabef97b0a9c9c1d341e950d3b415a347d}
+
+
+Mutex Create. This function is used to create the mutex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMutex} & -\/ IN Pointer to the mutex structure. \\
+\hline
+{\em priInheritance} & -\/ IN priority inheritance type. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga2d2347555ec07007912ccd61ea62f16a}{GsnOsal\_\-MutexDelete} 
+
+\hyperlink{a00628_ga0440cf06602f2a414ea1c20a05f139d0}{GsnOsal\_\-MutexPut} 
+
+\hyperlink{a00628_ga0528eb3552c6d3ece518c9662ffb143a}{GsnOsal\_\-MutexGet} 
+\end{DoxySeeAlso}
+
+
+Definition at line 656 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga2d2347555ec07007912ccd61ea62f16a}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-MutexDelete@{GsnOsal\_\-MutexDelete}}
+\index{GsnOsal\_\-MutexDelete@{GsnOsal\_\-MutexDelete}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-MutexDelete}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-MutexDelete (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$}]{pMutex}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga2d2347555ec07007912ccd61ea62f16a}
+
+
+Mutex Delete. This function is used to delete the mutex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMutex} & -\/ IN Pointer to the mutex structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-MutexCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga2d2347555ec07007912ccd61ea62f16a}{GsnOsal\_\-MutexDelete} 
+
+\hyperlink{a00628_ga0440cf06602f2a414ea1c20a05f139d0}{GsnOsal\_\-MutexPut} 
+
+\hyperlink{a00628_ga0528eb3552c6d3ece518c9662ffb143a}{GsnOsal\_\-MutexGet} 
+\end{DoxySeeAlso}
+
+
+Definition at line 682 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga0528eb3552c6d3ece518c9662ffb143a}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-MutexGet@{GsnOsal\_\-MutexGet}}
+\index{GsnOsal\_\-MutexGet@{GsnOsal\_\-MutexGet}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-MutexGet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-MutexGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$}]{pMutex, }
+\item[{{\bf UINT32}}]{waitTicks}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga0528eb3552c6d3ece518c9662ffb143a}
+
+
+Mutex Get. This function is used to get the mutex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMutex} & -\/ IN Pointer to the mutex structure. \\
+\hline
+{\em waitTicks} & -\/ IN value from GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T or a value in terms of ticks to wait till it gives up. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-MutexCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga2d2347555ec07007912ccd61ea62f16a}{GsnOsal\_\-MutexDelete} 
+
+\hyperlink{a00628_gabef97b0a9c9c1d341e950d3b415a347d}{GsnOsal\_\-MutexCreate} 
+
+\hyperlink{a00628_ga0440cf06602f2a414ea1c20a05f139d0}{GsnOsal\_\-MutexPut} 
+\end{DoxySeeAlso}
+
+
+Definition at line 732 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga0440cf06602f2a414ea1c20a05f139d0}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-MutexPut@{GsnOsal\_\-MutexPut}}
+\index{GsnOsal\_\-MutexPut@{GsnOsal\_\-MutexPut}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-MutexPut}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-MutexPut (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-MUTEX\_\-T} $\ast$}]{pMutex}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga0440cf06602f2a414ea1c20a05f139d0}
+
+
+Mutex Put. This function is used to take the mutex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMutex} & -\/ IN Pointer to the mutex structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-MutexCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga2d2347555ec07007912ccd61ea62f16a}{GsnOsal\_\-MutexDelete} 
+
+\hyperlink{a00628_gabef97b0a9c9c1d341e950d3b415a347d}{GsnOsal\_\-MutexCreate} 
+
+\hyperlink{a00628_ga0528eb3552c6d3ece518c9662ffb143a}{GsnOsal\_\-MutexGet} 
+\end{DoxySeeAlso}
+
+
+Definition at line 706 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gad7990e4a518c71f9d9a611b9ee379b9a}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-QueueCreate@{GsnOsal\_\-QueueCreate}}
+\index{GsnOsal\_\-QueueCreate@{GsnOsal\_\-QueueCreate}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-QueueCreate}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-QueueCreate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$}]{pQueue, }
+\item[{{\bf UINT32}}]{msgSize, }
+\item[{{\bf UINT8} $\ast$}]{pMsgBuff, }
+\item[{{\bf UINT32}}]{msgBuffSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gad7990e4a518c71f9d9a611b9ee379b9a}
+
+
+Queue Create. This function is used to create the mailbox. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pQueue} & -\/ IN Pointer to the mailbox structure. \\
+\hline
+{\em msgSize} & -\/ IN Size of the message stored in mailbox. This should be in terms of number of words (4 bytes), not in terms of number of bytes. \\
+\hline
+{\em pMsgBuff} & -\/ IN Pointer to the message buffer. \\
+\hline
+{\em msgBuffSize} & -\/ IN Size of the message buffer in bytes. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+@ see GsnOsal\_\-QueueMsgSizeInWords 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga52ee4c5716ea5f675b1b11b79dd2c130}{GsnOsal\_\-QueueDelete} 
+
+\hyperlink{a00628_ga67adc0a9e709aabc4e9e4c8ff0241e81}{GsnOsal\_\-QueuePut} 
+
+\hyperlink{a00628_ga4db12c3f53ae65618056f1ebab33f1b5}{GsnOsal\_\-QueueGet} 
+\end{DoxySeeAlso}
+
+
+Definition at line 553 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga52ee4c5716ea5f675b1b11b79dd2c130}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-QueueDelete@{GsnOsal\_\-QueueDelete}}
+\index{GsnOsal\_\-QueueDelete@{GsnOsal\_\-QueueDelete}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-QueueDelete}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-QueueDelete (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$}]{pQueue}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga52ee4c5716ea5f675b1b11b79dd2c130}
+
+
+Queue Delete. This function is used to delete the mailbox. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pQueue} & -\/ IN Pointer to the mailbox structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-QueueCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_gad7990e4a518c71f9d9a611b9ee379b9a}{GsnOsal\_\-QueueCreate} 
+
+\hyperlink{a00628_ga67adc0a9e709aabc4e9e4c8ff0241e81}{GsnOsal\_\-QueuePut} 
+
+\hyperlink{a00628_ga4db12c3f53ae65618056f1ebab33f1b5}{GsnOsal\_\-QueueGet} 
+\end{DoxySeeAlso}
+
+
+Definition at line 579 of file gsn\_\-osal\_\-threadx.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00628_ga52ee4c5716ea5f675b1b11b79dd2c130_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00628_ga4db12c3f53ae65618056f1ebab33f1b5}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-QueueGet@{GsnOsal\_\-QueueGet}}
+\index{GsnOsal\_\-QueueGet@{GsnOsal\_\-QueueGet}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-QueueGet}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-QueueGet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$}]{pQueue, }
+\item[{{\bf UINT8} $\ast$}]{pMsg, }
+\item[{{\bf UINT32}}]{waitTicks}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga4db12c3f53ae65618056f1ebab33f1b5}
+
+
+Queue Get/Receive. This function is used to get/receive a message from the mailbox. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pQueue} & -\/ IN Pointer to the mailbox structure. \\
+\hline
+{\em pMsg} & -\/ IN Pointer to the memory where the message is to be written from the mailbox. \\
+\hline
+{\em waitTicks} & -\/ IN value from GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T or a value in terms of ticks to wait till it gives up. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-QueueCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_gad7990e4a518c71f9d9a611b9ee379b9a}{GsnOsal\_\-QueueCreate} 
+
+\hyperlink{a00628_ga52ee4c5716ea5f675b1b11b79dd2c130}{GsnOsal\_\-QueueDelete} 
+
+\hyperlink{a00628_ga4db12c3f53ae65618056f1ebab33f1b5}{GsnOsal\_\-QueueGet} 
+\end{DoxySeeAlso}
+
+
+Definition at line 633 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gaa228381daedb3684e9d77e348d45ce15}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-QueueMsgSizeInWords@{GsnOsal\_\-QueueMsgSizeInWords}}
+\index{GsnOsal\_\-QueueMsgSizeInWords@{GsnOsal\_\-QueueMsgSizeInWords}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-QueueMsgSizeInWords}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf UINT32} GsnOsal\_\-QueueMsgSizeInWords (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{msgSizeInBytes}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gaa228381daedb3684e9d77e348d45ce15}
+
+
+Calculate Queue Message Size in words. The message size provided during the que cerate should in terms of number of words. if the message is a structure, this API helps to calculate the message size in terms of number of words, at run time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msgSizeInBytes} & -\/ IN message size in bytes @ retval -\/ message size in number of words. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 530 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga67adc0a9e709aabc4e9e4c8ff0241e81}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-QueuePut@{GsnOsal\_\-QueuePut}}
+\index{GsnOsal\_\-QueuePut@{GsnOsal\_\-QueuePut}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-QueuePut}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-QueuePut (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-QUEUE\_\-T} $\ast$}]{pQueue, }
+\item[{{\bf UINT8} $\ast$}]{pMsg}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga67adc0a9e709aabc4e9e4c8ff0241e81}
+
+
+Queue Put/Send. This function is used to put/send a message to the mailbox. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pQueue} & -\/ IN Pointer to the mailbox structure. \\
+\hline
+{\em pMsg} & -\/ IN Message pointer where the message is written. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-QueueCreate. All the parameters should be passed correctly. IF THE MAILBOX IS FULL THEN THE SEND REQUEST WILL FAIL AND THE CALLING TASK DOESN'T GET SUSPENDED. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_gad7990e4a518c71f9d9a611b9ee379b9a}{GsnOsal\_\-QueueCreate} 
+
+\hyperlink{a00628_ga52ee4c5716ea5f675b1b11b79dd2c130}{GsnOsal\_\-QueueDelete} 
+
+\hyperlink{a00628_ga4db12c3f53ae65618056f1ebab33f1b5}{GsnOsal\_\-QueueGet} 
+\end{DoxySeeAlso}
+
+
+Definition at line 605 of file gsn\_\-osal\_\-threadx.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=388pt]{a00628_ga67adc0a9e709aabc4e9e4c8ff0241e81_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00628_ga35296c135e578c960847feb173d238da}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-SemAcquire@{GsnOsal\_\-SemAcquire}}
+\index{GsnOsal\_\-SemAcquire@{GsnOsal\_\-SemAcquire}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-SemAcquire}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-SemAcquire (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-SEM\_\-T} $\ast$}]{pSem, }
+\item[{{\bf UINT32}}]{waitTicks}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga35296c135e578c960847feb173d238da}
+
+
+Semaphore Acquire. This function is used to acquire the semaphore. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSem} & -\/ IN Pointer to the semaphore structure. \\
+\hline
+{\em waitTicks} & -\/ IN value from GSN\_\-OSAL\_\-WAIT\_\-TYPE\_\-T or a value in terms of ticks to wait till it gives up. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GSN\_\-OSAL\_\-SEM\_\-CREATE. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga9ef6b89b782f89f0141efac133b6534b}{GsnOsal\_\-SemCreate} 
+
+\hyperlink{a00628_ga3542986ec14bf1b3377b3908fb661109}{GsnOsal\_\-SemDelete} 
+
+\hyperlink{a00628_gac2be1dd2c117010d1c3b7b4c0fbc7323}{GsnOsal\_\-SemRelease} 
+\end{DoxySeeAlso}
+
+
+Definition at line 488 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga9ef6b89b782f89f0141efac133b6534b}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-SemCreate@{GsnOsal\_\-SemCreate}}
+\index{GsnOsal\_\-SemCreate@{GsnOsal\_\-SemCreate}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-SemCreate}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-SemCreate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-SEM\_\-T} $\ast$}]{pSem, }
+\item[{{\bf UINT32}}]{InitialCount}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga9ef6b89b782f89f0141efac133b6534b}
+
+
+Semaphore Create. This function is used to create the semaphore. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSem} & -\/ IN Pointer to the semaphore structure. \\
+\hline
+{\em InitialCount} & -\/ IN Initial count of the semaphore. If it is 0 then semaphore is not available, meaning acquireing before releasing it makes the thread to suspend. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga3542986ec14bf1b3377b3908fb661109}{GsnOsal\_\-SemDelete} 
+
+\hyperlink{a00628_ga35296c135e578c960847feb173d238da}{GsnOsal\_\-SemAcquire} 
+
+\hyperlink{a00628_gac2be1dd2c117010d1c3b7b4c0fbc7323}{GsnOsal\_\-SemRelease} 
+\end{DoxySeeAlso}
+
+
+Definition at line 438 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga3542986ec14bf1b3377b3908fb661109}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-SemDelete@{GsnOsal\_\-SemDelete}}
+\index{GsnOsal\_\-SemDelete@{GsnOsal\_\-SemDelete}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-SemDelete}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-SemDelete (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-SEM\_\-T} $\ast$}]{pSem}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga3542986ec14bf1b3377b3908fb661109}
+
+
+Semaphore Delete. This function is used to delete the semaphore. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSem} & -\/ IN Pointer to the semaphore structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-SemCreate. All the parameters should be passed correctly. Once this API is called for a semaphore, the semaphore should not be acquired or released before creating it again 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga9ef6b89b782f89f0141efac133b6534b}{GsnOsal\_\-SemCreate} 
+
+\hyperlink{a00628_ga35296c135e578c960847feb173d238da}{GsnOsal\_\-SemAcquire} 
+
+\hyperlink{a00628_gac2be1dd2c117010d1c3b7b4c0fbc7323}{GsnOsal\_\-SemRelease} 
+\end{DoxySeeAlso}
+
+
+Definition at line 463 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gac2be1dd2c117010d1c3b7b4c0fbc7323}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-SemRelease@{GsnOsal\_\-SemRelease}}
+\index{GsnOsal\_\-SemRelease@{GsnOsal\_\-SemRelease}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-SemRelease}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-SemRelease (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-SEM\_\-T} $\ast$}]{pSem}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gac2be1dd2c117010d1c3b7b4c0fbc7323}
+
+
+Semaphore Release. This function is used to release the semaphore. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pSem} & -\/ IN Pointer to the semaphore structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & error value from GSN\_\-OSAL\_\-ERROR\_\-T. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after calling GsnOsal\_\-SemCreate. All the parameters should be passed correctly. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga9ef6b89b782f89f0141efac133b6534b}{GsnOsal\_\-SemCreate} 
+
+\hyperlink{a00628_ga3542986ec14bf1b3377b3908fb661109}{GsnOsal\_\-SemDelete} 
+
+\hyperlink{a00628_ga35296c135e578c960847feb173d238da}{GsnOsal\_\-SemAcquire} 
+\end{DoxySeeAlso}
+
+
+Definition at line 511 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga1b2c29cb19f0f5a40f765072e570ee83}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-ThreadCreate@{GsnOsal\_\-ThreadCreate}}
+\index{GsnOsal\_\-ThreadCreate@{GsnOsal\_\-ThreadCreate}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-ThreadCreate}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-ThreadCreate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-THREAD\_\-ENTRY\_\-T}}]{fptr, }
+\item[{VOID $\ast$}]{pCtx, }
+\item[{{\bf GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$}]{pTcb, }
+\item[{const {\bf UINT8} $\ast$}]{pName, }
+\item[{{\bf UINT8}}]{priority, }
+\item[{{\bf UINT8} $\ast$}]{pStack, }
+\item[{{\bf UINT32}}]{stackSize, }
+\item[{{\bf GSN\_\-OSAL\_\-THREAD\_\-INITIAL\_\-STATE\_\-T}}]{defltState}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga1b2c29cb19f0f5a40f765072e570ee83}
+
+
+Thread Create. This function creates the thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fptr} & -\/ IN Thread entry function pointer \\
+\hline
+{\em pCtx} & -\/ IN Should be of type VOID $\ast$, this is passed when the thread entry function is called. This can be passed as NULL. \\
+\hline
+{\em pTcb} & -\/ IN Pointer to the thread tcb. \\
+\hline
+{\em pName} & -\/ IN Thread name. \\
+\hline
+{\em priority} & -\/ IN Should of type UINT32 and should be within 0 to 31. Higher the value higher the priority of the thread. There cannot be two thread with the same priority. \\
+\hline
+{\em pStack} & -\/ IN Pointer to the thread stack. \\
+\hline
+{\em stackSize} & -\/ IN Size of the thread stack. \\
+\hline
+{\em defltState} & -\/ IN Should be of type STACK\_\-STATE\_\-T. If it is THREAD\_\-READY, then the thread should be ready when it is created. If it is other than that then it should not be put in ready queue. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0,if} & it is success. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+User is expected to pass valid parameter to this API. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_gaa895749a7c406cfe155217c8c1d57328}{GsnOsal\_\-ThreadResume} 
+
+\hyperlink{a00628_gabd439d54a7fcf906224267e15796287c}{GsnOsal\_\-ThreadSuspend} 
+
+\hyperlink{a00628_ga5a127d54a6f2daed4353bea344e40ee5}{GsnOsal\_\-ThreadDelete} 
+\end{DoxySeeAlso}
+
+
+Definition at line 341 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_ga5a127d54a6f2daed4353bea344e40ee5}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-ThreadDelete@{GsnOsal\_\-ThreadDelete}}
+\index{GsnOsal\_\-ThreadDelete@{GsnOsal\_\-ThreadDelete}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-ThreadDelete}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-ThreadDelete (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$}]{pTcb}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_ga5a127d54a6f2daed4353bea344e40ee5}
+
+
+Thread delete. This function is used to delete the THREAD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pTcb} & -\/ IN Pointer to the thread tcb. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0,if} & it is success. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after the call to GsnOsal\_\-ThreadCreate for the pTcb. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_gaa895749a7c406cfe155217c8c1d57328}{GsnOsal\_\-ThreadResume} 
+
+\hyperlink{a00628_gabd439d54a7fcf906224267e15796287c}{GsnOsal\_\-ThreadSuspend} 
+
+\hyperlink{a00628_ga1b2c29cb19f0f5a40f765072e570ee83}{GsnOsal\_\-ThreadCreate} 
+\end{DoxySeeAlso}
+
+
+Definition at line 368 of file gsn\_\-osal\_\-threadx.h.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00628_ga5a127d54a6f2daed4353bea344e40ee5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00628_gaa895749a7c406cfe155217c8c1d57328}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-ThreadResume@{GsnOsal\_\-ThreadResume}}
+\index{GsnOsal\_\-ThreadResume@{GsnOsal\_\-ThreadResume}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-ThreadResume}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-ThreadResume (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$}]{pTcb}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gaa895749a7c406cfe155217c8c1d57328}
+
+
+Thread Run. This API is used to make the THREAD ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pTcb} & -\/ IN Pointer to the thread tcb. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0,if} & it is success. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after the call to GsnOsal\_\-ThreadCreate for the pTcb. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga1b2c29cb19f0f5a40f765072e570ee83}{GsnOsal\_\-ThreadCreate} 
+
+\hyperlink{a00628_gabd439d54a7fcf906224267e15796287c}{GsnOsal\_\-ThreadSuspend} 
+
+GsnOsal\_\-ThreadCre 
+\end{DoxySeeAlso}
+
+
+Definition at line 391 of file gsn\_\-osal\_\-threadx.h.
+
+\hypertarget{a00628_gabd439d54a7fcf906224267e15796287c}{
+\index{GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}!GsnOsal\_\-ThreadSuspend@{GsnOsal\_\-ThreadSuspend}}
+\index{GsnOsal\_\-ThreadSuspend@{GsnOsal\_\-ThreadSuspend}!GSN OS Abstraction API (threadx)@{GSN OS Abstraction API (threadx)}}
+\subsubsection[{GsnOsal\_\-ThreadSuspend}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnOsal\_\-ThreadSuspend (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-OSAL\_\-THREAD\_\-TCB\_\-T} $\ast$}]{pTcb}
+\end{DoxyParamCaption}
+)}}
+\label{a00628_gabd439d54a7fcf906224267e15796287c}
+
+
+Thread suspend. This function is used to suspend the THREAD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pTcb} & -\/ IN Pointer to the thread tcb. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0,if} & it is success. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after the call to GsnOsal\_\-ThreadCreate for the pTcb. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{a00628_ga1b2c29cb19f0f5a40f765072e570ee83}{GsnOsal\_\-ThreadCreate} 
+
+\hyperlink{a00628_gaa895749a7c406cfe155217c8c1d57328}{GsnOsal\_\-ThreadResume} 
+
+GsnOsal\_\-ThreadCre 
+\end{DoxySeeAlso}
+
+
+Definition at line 414 of file gsn\_\-osal\_\-threadx.h.
+

@@ -1,0 +1,97 @@
+\hypertarget{a00229}{
+\section{GSN\_\-SOFT\_\-TMR\_\-T Struct Reference}
+\label{a00229}\index{GSN\_\-SOFT\_\-TMR\_\-T@{GSN\_\-SOFT\_\-TMR\_\-T}}
+}
+
+
+GSN Soft timer structure. Timer structure to store the context of the soft timer.  
+
+
+
+
+{\ttfamily \#include $<$gsn\_\-soft\_\-timer.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00229}{GSN\_\-SOFT\_\-TMR\_\-T} $\ast$ \hyperlink{a00229_a200ef44ce9f15e4c6203125811b9e5de}{next}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00229_a631bceb766461ab7475c7ed56717aac8}{type}
+\item 
+\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} \hyperlink{a00229_ac4f6d5d1544a8d2c1309479ffe1b61ab}{status}
+\item 
+\hyperlink{a00673_gad1e755eb904493a09bf8df25a4519bf0}{GSN\_\-SYSTEM\_\-TIME\_\-T} \hyperlink{a00229_ad9a0a5a2ce626900fa5f3da2650594e3}{expireTime}
+\item 
+\hyperlink{a00660_ga28961430434ccabca6862ea93fe9a15b}{ULONG64} \hyperlink{a00229_a3b84f6ec4bf7d6dca6c041f42394e437}{period}
+\item 
+\hyperlink{a00228}{GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T} \hyperlink{a00229_a35a3c1463439c448c32fb10f044467a7}{callback}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GSN Soft timer structure. Timer structure to store the context of the soft timer. 
+
+Definition at line 320 of file gsn\_\-soft\_\-timer.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{a00229_a35a3c1463439c448c32fb10f044467a7}{
+\index{GSN\_\-SOFT\_\-TMR\_\-T@{GSN\_\-SOFT\_\-TMR\_\-T}!callback@{callback}}
+\index{callback@{callback}!GSN_SOFT_TMR_T@{GSN\_\-SOFT\_\-TMR\_\-T}}
+\subsubsection[{callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SOFT\_\-TMR\_\-CALLBACK\_\-T} {\bf callback}}}
+\label{a00229_a35a3c1463439c448c32fb10f044467a7}
+callback.pCBR(callback.pContext, \&pTimer) is called when timer expires 
+
+Definition at line 331 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00229_ad9a0a5a2ce626900fa5f3da2650594e3}{
+\index{GSN\_\-SOFT\_\-TMR\_\-T@{GSN\_\-SOFT\_\-TMR\_\-T}!expireTime@{expireTime}}
+\index{expireTime@{expireTime}!GSN_SOFT_TMR_T@{GSN\_\-SOFT\_\-TMR\_\-T}}
+\subsubsection[{expireTime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-SYSTEM\_\-TIME\_\-T} {\bf expireTime}}}
+\label{a00229_ad9a0a5a2ce626900fa5f3da2650594e3}
+SYSTEM Time at which the timer will next expire 
+
+Definition at line 325 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00229_a200ef44ce9f15e4c6203125811b9e5de}{
+\index{GSN\_\-SOFT\_\-TMR\_\-T@{GSN\_\-SOFT\_\-TMR\_\-T}!next@{next}}
+\index{next@{next}!GSN_SOFT_TMR_T@{GSN\_\-SOFT\_\-TMR\_\-T}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf GSN\_\-SOFT\_\-TMR\_\-T}$\ast$ {\bf next}}}
+\label{a00229_a200ef44ce9f15e4c6203125811b9e5de}
+Next soft timer in the linked-\/list 
+
+Definition at line 322 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00229_a3b84f6ec4bf7d6dca6c041f42394e437}{
+\index{GSN\_\-SOFT\_\-TMR\_\-T@{GSN\_\-SOFT\_\-TMR\_\-T}!period@{period}}
+\index{period@{period}!GSN_SOFT_TMR_T@{GSN\_\-SOFT\_\-TMR\_\-T}}
+\subsubsection[{period}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ULONG64} {\bf period}}}
+\label{a00229_a3b84f6ec4bf7d6dca6c041f42394e437}
+Timer expiration period:For periodic timers, period is added to expireTime. For one-\/shot timers, period is 0 
+
+Definition at line 328 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00229_ac4f6d5d1544a8d2c1309479ffe1b61ab}{
+\index{GSN\_\-SOFT\_\-TMR\_\-T@{GSN\_\-SOFT\_\-TMR\_\-T}!status@{status}}
+\index{status@{status}!GSN_SOFT_TMR_T@{GSN\_\-SOFT\_\-TMR\_\-T}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf status}}}
+\label{a00229_ac4f6d5d1544a8d2c1309479ffe1b61ab}
+Status of the timer 
+
+Definition at line 324 of file gsn\_\-soft\_\-timer.h.
+
+\hypertarget{a00229_a631bceb766461ab7475c7ed56717aac8}{
+\index{GSN\_\-SOFT\_\-TMR\_\-T@{GSN\_\-SOFT\_\-TMR\_\-T}!type@{type}}
+\index{type@{type}!GSN_SOFT_TMR_T@{GSN\_\-SOFT\_\-TMR\_\-T}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UINT8} {\bf type}}}
+\label{a00229_a631bceb766461ab7475c7ed56717aac8}
+Timer Type 
+
+Definition at line 323 of file gsn\_\-soft\_\-timer.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00586}{gsn\_\-soft\_\-timer.h}\end{DoxyCompactItemize}

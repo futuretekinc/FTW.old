@@ -1,0 +1,576 @@
+\hypertarget{a00579}{
+\section{gsn\_\-rpl.h File Reference}
+\label{a00579}\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00815}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00199}{GSN\_\-RPL\_\-DODAG\_\-CFG}
+\item 
+struct \hyperlink{a00197}{GSN\_\-RPL\_\-CFG}
+\item 
+struct \hyperlink{a00210}{GSN\_\-RPL\_\-SCAN\_\-RESULT}
+\item 
+struct \hyperlink{a00209}{GSN\_\-RPL\_\-SCAN\_\-REQ}
+\item 
+struct \hyperlink{a00200}{GSN\_\-RPL\_\-EVENT}
+\item 
+struct \hyperlink{a00192}{GSN\_\-RPL}
+\item 
+struct \hyperlink{a00203}{GSN\_\-RPL\_\-IP\_\-IF}
+\item 
+struct \hyperlink{a00198}{GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00579_a76520932a9de1d3ad79aa033570ff22d}{DBG\_\-PRINT}(...)
+\item 
+\#define \hyperlink{a00579_a1c880916c8bd4828a6d0bcb453ad12cf}{DBG\_\-TRACE\_\-FUNC}
+\item 
+\#define \hyperlink{a00579_aa2a1d50f3122f531a181d4b8f06f1a94}{GSN\_\-RPL\_\-EVENT\_\-SCAN\_\-CFM}~0
+\item 
+\#define \hyperlink{a00579_abba7caf36f9aea873bd3c05cbfe288ca}{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-SUCCESS}~1
+\item 
+\#define \hyperlink{a00579_a8d304fa5ca5832f6f72a6fdc3801db94}{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-FAILURE}~2
+\item 
+\#define \hyperlink{a00579_a3d38dddaad3b225a7c7c6ba7afec1037}{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-SUCCESS}~3
+\item 
+\#define \hyperlink{a00579_a4e4ef253d76f5a47b1ecc116b1097ef4}{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-FAILURE}~4
+\item 
+\#define \hyperlink{a00579_af5574a96e9702824c5a537085b3c8cce}{GSN\_\-RPL\_\-EVENT\_\-SET\_\-ADDRESS}~5
+\item 
+\#define \hyperlink{a00579_a0911a69569ce8084040d5a7858cf805c}{GSN\_\-RPL\_\-EVENT\_\-SET\_\-CO}~6
+\item 
+\#define \hyperlink{a00579_abbc9f7466e7b1bb3933f985f83527a2a}{GSN\_\-RPL\_\-MODE\_\-HOST}~2
+\item 
+\#define \hyperlink{a00579_a384e139c7ef24432a4d438ba9424379d}{GSN\_\-RPL\_\-MODE\_\-ROUTER}~1
+\item 
+\#define \hyperlink{a00579_a48f959880ea8283379ed591e3599c6bc}{GSN\_\-RPL\_\-MODE\_\-BR}~0
+\item 
+\#define \hyperlink{a00579_aaf2663a2e0bea4d734cc7b884ca2ceca}{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-MULTI\_\-PREFIX\_\-SUPPORT}~( 1 $<$$<$ 0 )
+\item 
+\#define \hyperlink{a00579_aedf2d3bed2620ffc71c969a4170a71a2}{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-SHORT\_\-ADDR\_\-SUPPORT}~( 1 $<$$<$ 1 )
+\item 
+\#define \hyperlink{a00579_a8750ae8a007ad0ca59ed3cceda625bae}{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-STORING\_\-SUPPORTED}~( 1 $<$$<$ 2 )
+\item 
+\#define \hyperlink{a00579_ad496c900f1dd56b8c592f8e0432c2f88}{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-DROUTING\_\-SUPPORTED}~( 1 $<$$<$ 3 )
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00199}{GSN\_\-RPL\_\-DODAG\_\-CFG} \hyperlink{a00579_a64e20c2e6a33dd3586f70b9996040d27}{GSN\_\-RPL\_\-DODAG\_\-CFG\_\-T}
+\item 
+typedef VOID($\ast$ \hyperlink{a00579_aed305ee504daf71b35d8db4dfd6d3de3}{GSN\_\-RPL\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} event, VOID $\ast$pResult)
+\item 
+typedef struct \hyperlink{a00197}{GSN\_\-RPL\_\-CFG} \hyperlink{a00579_a5363c16d8a8bbc0dd0ec573805d09841}{GSN\_\-RPL\_\-CFG\_\-T}
+\item 
+typedef struct \hyperlink{a00210}{GSN\_\-RPL\_\-SCAN\_\-RESULT} \hyperlink{a00579_aabd8c14f063f4c7f36a451081ef059b0}{GSN\_\-RPL\_\-SCAN\_\-RESULT\_\-T}
+\item 
+typedef struct \hyperlink{a00209}{GSN\_\-RPL\_\-SCAN\_\-REQ} \hyperlink{a00579_a95586790f6998cec77fd04b5565c3d21}{GSN\_\-RPL\_\-SCAN\_\-REQ\_\-T}
+\item 
+typedef VOID($\ast$ \hyperlink{a00579_af0ccdfb14b5152fb661e14482e16d4e7}{GSN\_\-RPL\_\-DELAY\_\-PROCESS\_\-T} )(VOID $\ast$pUsrCtx, VOID $\ast$pCtx)
+\item 
+typedef VOID($\ast$ \hyperlink{a00579_ad5cea0d221a0fad0b30b4a9e075a12ed}{GSN\_\-RPL\_\-EVENT\_\-PROC\_\-CB\_\-T} )(VOID $\ast$pCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} event)
+\item 
+typedef struct \hyperlink{a00200}{GSN\_\-RPL\_\-EVENT} \hyperlink{a00579_a3828181222414a7be42c9c7379651d15}{GSN\_\-RPL\_\-EVENT\_\-T}
+\item 
+typedef struct \hyperlink{a00192}{GSN\_\-RPL} \hyperlink{a00579_a220cddfa9f0fb98088268693eccbcb28}{GSN\_\-RPL\_\-T}
+\item 
+typedef struct \hyperlink{a00203}{GSN\_\-RPL\_\-IP\_\-IF} \hyperlink{a00579_abff4d48cd844df33ee6332ef011ac7ae}{GSN\_\-RPL\_\-IP\_\-IF\_\-T}
+\item 
+typedef struct \hyperlink{a00198}{GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG} \hyperlink{a00579_a71848a0de1043102d9f7e8054a42d56b}{GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00579_a253a379d07f6f65294baf40853c9f6a4}{GsnRpl\_\-Init} (\hyperlink{a00192}{GSN\_\-RPL\_\-T} $\ast$pCtx, VOID $\ast$pNWCtx, \hyperlink{a00579_af0ccdfb14b5152fb661e14482e16d4e7}{GSN\_\-RPL\_\-DELAY\_\-PROCESS\_\-T} delayProcess, VOID $\ast$pUsrCtx)
+\begin{DoxyCompactList}\small\item\em Initialize the RPL module. This function initailize the RPL module. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00579_a2e7b3df50960e25ae214ae2b047edac4}{GsnRpl\_\-ConfigSet} (\hyperlink{a00192}{GSN\_\-RPL\_\-T} $\ast$pCtx, \hyperlink{a00197}{GSN\_\-RPL\_\-CFG\_\-T} $\ast$pCfg)
+\begin{DoxyCompactList}\small\item\em Set the RPL configuration. This function sets the RPL configuration. This API should be called after initializing RPL modele. User can scan for DODAG. Based on the decision made user can use this function to configure the RPL module. \end{DoxyCompactList}\item 
+INLINE \hyperlink{a00209}{GSN\_\-RPL\_\-SCAN\_\-REQ\_\-T} $\ast$ \hyperlink{a00579_acc339c3e4c927379c92fc8adb59dab93}{GsnRpl\_\-AllocMemForScanReq} (\hyperlink{a00660_ga09f1a1fb2293e33483cc8d44aefb1eb1}{UINT16} resultSize)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00579_aaaf34f4d9a523ed282b50cf4a24bbfbd}{GsnRpl\_\-DODAGScan} (\hyperlink{a00192}{GSN\_\-RPL\_\-T} $\ast$pCtx, \hyperlink{a00209}{GSN\_\-RPL\_\-SCAN\_\-REQ\_\-T} $\ast$pScanReq, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ifId)
+\begin{DoxyCompactList}\small\item\em Scans for DODAG. This function scans for DODAG. \end{DoxyCompactList}\item 
+VOID $\ast$ \hyperlink{a00579_a73cba07b377ef998cc7057253b3a4683}{GsnRpl\_\-DODAGInit} (\hyperlink{a00192}{GSN\_\-RPL\_\-T} $\ast$pCtx, \hyperlink{a00198}{GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG\_\-T} $\ast$pCfg, \hyperlink{a00579_aed305ee504daf71b35d8db4dfd6d3de3}{GSN\_\-RPL\_\-CB\_\-T} pCb, VOID $\ast$pAppCtx)
+\begin{DoxyCompactList}\small\item\em Initialize the DODAG module. This function initializes the DODAG module. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00579_a29418e6af61ea39a5f66d2a8153dd40c}{GsnRpl\_\-DODAGCreate} (\hyperlink{a00192}{GSN\_\-RPL\_\-T} $\ast$pCtx, VOID $\ast$pDODAGCtx, \hyperlink{a00199}{GSN\_\-RPL\_\-DODAG\_\-CFG\_\-T} $\ast$pDODAGCfg, \hyperlink{a00203}{GSN\_\-RPL\_\-IP\_\-IF\_\-T} $\ast$pIpIf, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pMacAddr)
+\begin{DoxyCompactList}\small\item\em Create DODAG. This function creates DODAG. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00579_a9ceb4263e3256a6d6680835eb1ee7e46}{GsnRpl\_\-DODAGJoin} (VOID $\ast$pDODAGCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} DODAGSelectionTime, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} CO6Enable, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pMacAddr)
+\begin{DoxyCompactList}\small\item\em Join DODAG. This function joins a DODAG. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00579_a997ed264ac34b60c35144441237720c5}{GsnRpl\_\-DODAGStop} (VOID $\ast$pDODAGCtx)
+\begin{DoxyCompactList}\small\item\em Stop DODAG. This function Stop a DODAG. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00579_a2b617f0982bcfda267fb3afb4f3a4edc}{GsnRpl\_\-DelayHandler} (\hyperlink{a00192}{GSN\_\-RPL\_\-T} $\ast$pCtx)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00579_a9cd8938babbce0aec017ed5b3ec33a92}{GsnRpl\_\-DeInit} (\hyperlink{a00192}{GSN\_\-RPL\_\-T} $\ast$pCtx)
+\item 
+\hyperlink{a00660_gada5951904ac6110b1fa95e51a9ddc217}{GSN\_\-STATUS} \hyperlink{a00579_a6073f0f7a6aabf2db1f5c04266bcc82e}{GsnRpl\_\-DODAGGetAddr} (VOID $\ast$pDCtx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pLLAddr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} $\ast$pGAddr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00579_a76520932a9de1d3ad79aa033570ff22d}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!DBG\_\-PRINT@{DBG\_\-PRINT}}
+\index{DBG\_\-PRINT@{DBG\_\-PRINT}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{DBG\_\-PRINT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DBG\_\-PRINT(
+\begin{DoxyParamCaption}
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_a76520932a9de1d3ad79aa033570ff22d}
+
+
+Definition at line 42 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a1c880916c8bd4828a6d0bcb453ad12cf}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!DBG\_\-TRACE\_\-FUNC@{DBG\_\-TRACE\_\-FUNC}}
+\index{DBG\_\-TRACE\_\-FUNC@{DBG\_\-TRACE\_\-FUNC}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{DBG\_\-TRACE\_\-FUNC}]{\setlength{\rightskip}{0pt plus 5cm}\#define DBG\_\-TRACE\_\-FUNC}}
+\label{a00579_a1c880916c8bd4828a6d0bcb453ad12cf}
+
+
+Definition at line 45 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_ad496c900f1dd56b8c592f8e0432c2f88}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-CFG\_\-FLAG\_\-DROUTING\_\-SUPPORTED@{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-DROUTING\_\-SUPPORTED}}
+\index{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-DROUTING\_\-SUPPORTED@{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-DROUTING\_\-SUPPORTED}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-DROUTING\_\-SUPPORTED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-CFG\_\-FLAG\_\-DROUTING\_\-SUPPORTED~( 1 $<$$<$ 3 )}}
+\label{a00579_ad496c900f1dd56b8c592f8e0432c2f88}
+
+
+Definition at line 83 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_aaf2663a2e0bea4d734cc7b884ca2ceca}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-CFG\_\-FLAG\_\-MULTI\_\-PREFIX\_\-SUPPORT@{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-MULTI\_\-PREFIX\_\-SUPPORT}}
+\index{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-MULTI\_\-PREFIX\_\-SUPPORT@{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-MULTI\_\-PREFIX\_\-SUPPORT}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-MULTI\_\-PREFIX\_\-SUPPORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-CFG\_\-FLAG\_\-MULTI\_\-PREFIX\_\-SUPPORT~( 1 $<$$<$ 0 )}}
+\label{a00579_aaf2663a2e0bea4d734cc7b884ca2ceca}
+
+
+Definition at line 80 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_aedf2d3bed2620ffc71c969a4170a71a2}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-CFG\_\-FLAG\_\-SHORT\_\-ADDR\_\-SUPPORT@{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-SHORT\_\-ADDR\_\-SUPPORT}}
+\index{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-SHORT\_\-ADDR\_\-SUPPORT@{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-SHORT\_\-ADDR\_\-SUPPORT}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-SHORT\_\-ADDR\_\-SUPPORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-CFG\_\-FLAG\_\-SHORT\_\-ADDR\_\-SUPPORT~( 1 $<$$<$ 1 )}}
+\label{a00579_aedf2d3bed2620ffc71c969a4170a71a2}
+
+
+Definition at line 81 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a8750ae8a007ad0ca59ed3cceda625bae}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-CFG\_\-FLAG\_\-STORING\_\-SUPPORTED@{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-STORING\_\-SUPPORTED}}
+\index{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-STORING\_\-SUPPORTED@{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-STORING\_\-SUPPORTED}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-CFG\_\-FLAG\_\-STORING\_\-SUPPORTED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-CFG\_\-FLAG\_\-STORING\_\-SUPPORTED~( 1 $<$$<$ 2 )}}
+\label{a00579_a8750ae8a007ad0ca59ed3cceda625bae}
+
+
+Definition at line 82 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a8d304fa5ca5832f6f72a6fdc3801db94}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-FAILURE@{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-FAILURE}}
+\index{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-FAILURE@{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-FAILURE}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-FAILURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-FAILURE~2}}
+\label{a00579_a8d304fa5ca5832f6f72a6fdc3801db94}
+
+
+Definition at line 49 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_abba7caf36f9aea873bd3c05cbfe288ca}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-SUCCESS@{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-SUCCESS}}
+\index{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-SUCCESS@{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-SUCCESS}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-CREATE\_\-SUCCESS~1}}
+\label{a00579_abba7caf36f9aea873bd3c05cbfe288ca}
+
+
+Definition at line 48 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a4e4ef253d76f5a47b1ecc116b1097ef4}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-FAILURE@{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-FAILURE}}
+\index{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-FAILURE@{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-FAILURE}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-FAILURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-FAILURE~4}}
+\label{a00579_a4e4ef253d76f5a47b1ecc116b1097ef4}
+
+
+Definition at line 51 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a3d38dddaad3b225a7c7c6ba7afec1037}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-SUCCESS@{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-SUCCESS}}
+\index{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-SUCCESS@{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-SUCCESS}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-EVENT\_\-DODAG\_\-JOIN\_\-SUCCESS~3}}
+\label{a00579_a3d38dddaad3b225a7c7c6ba7afec1037}
+
+
+Definition at line 50 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_aa2a1d50f3122f531a181d4b8f06f1a94}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-EVENT\_\-SCAN\_\-CFM@{GSN\_\-RPL\_\-EVENT\_\-SCAN\_\-CFM}}
+\index{GSN\_\-RPL\_\-EVENT\_\-SCAN\_\-CFM@{GSN\_\-RPL\_\-EVENT\_\-SCAN\_\-CFM}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-EVENT\_\-SCAN\_\-CFM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-EVENT\_\-SCAN\_\-CFM~0}}
+\label{a00579_aa2a1d50f3122f531a181d4b8f06f1a94}
+
+
+Definition at line 47 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_af5574a96e9702824c5a537085b3c8cce}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-EVENT\_\-SET\_\-ADDRESS@{GSN\_\-RPL\_\-EVENT\_\-SET\_\-ADDRESS}}
+\index{GSN\_\-RPL\_\-EVENT\_\-SET\_\-ADDRESS@{GSN\_\-RPL\_\-EVENT\_\-SET\_\-ADDRESS}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-EVENT\_\-SET\_\-ADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-EVENT\_\-SET\_\-ADDRESS~5}}
+\label{a00579_af5574a96e9702824c5a537085b3c8cce}
+
+
+Definition at line 52 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a0911a69569ce8084040d5a7858cf805c}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-EVENT\_\-SET\_\-CO@{GSN\_\-RPL\_\-EVENT\_\-SET\_\-CO}}
+\index{GSN\_\-RPL\_\-EVENT\_\-SET\_\-CO@{GSN\_\-RPL\_\-EVENT\_\-SET\_\-CO}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-EVENT\_\-SET\_\-CO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-EVENT\_\-SET\_\-CO~6}}
+\label{a00579_a0911a69569ce8084040d5a7858cf805c}
+
+
+Definition at line 53 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a48f959880ea8283379ed591e3599c6bc}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-MODE\_\-BR@{GSN\_\-RPL\_\-MODE\_\-BR}}
+\index{GSN\_\-RPL\_\-MODE\_\-BR@{GSN\_\-RPL\_\-MODE\_\-BR}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-MODE\_\-BR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-MODE\_\-BR~0}}
+\label{a00579_a48f959880ea8283379ed591e3599c6bc}
+Configuration flag 
+
+Definition at line 77 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_abbc9f7466e7b1bb3933f985f83527a2a}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-MODE\_\-HOST@{GSN\_\-RPL\_\-MODE\_\-HOST}}
+\index{GSN\_\-RPL\_\-MODE\_\-HOST@{GSN\_\-RPL\_\-MODE\_\-HOST}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-MODE\_\-HOST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-MODE\_\-HOST~2}}
+\label{a00579_abbc9f7466e7b1bb3933f985f83527a2a}
+
+
+Definition at line 75 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a384e139c7ef24432a4d438ba9424379d}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-MODE\_\-ROUTER@{GSN\_\-RPL\_\-MODE\_\-ROUTER}}
+\index{GSN\_\-RPL\_\-MODE\_\-ROUTER@{GSN\_\-RPL\_\-MODE\_\-ROUTER}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-MODE\_\-ROUTER}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-RPL\_\-MODE\_\-ROUTER~1}}
+\label{a00579_a384e139c7ef24432a4d438ba9424379d}
+
+
+Definition at line 76 of file gsn\_\-rpl.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00579_aed305ee504daf71b35d8db4dfd6d3de3}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-CB\_\-T@{GSN\_\-RPL\_\-CB\_\-T}}
+\index{GSN\_\-RPL\_\-CB\_\-T@{GSN\_\-RPL\_\-CB\_\-T}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf GSN\_\-RPL\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT32} event, VOID $\ast$pResult)}}
+\label{a00579_aed305ee504daf71b35d8db4dfd6d3de3}
+
+
+Definition at line 73 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a5363c16d8a8bbc0dd0ec573805d09841}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-CFG\_\-T@{GSN\_\-RPL\_\-CFG\_\-T}}
+\index{GSN\_\-RPL\_\-CFG\_\-T@{GSN\_\-RPL\_\-CFG\_\-T}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-CFG} {\bf GSN\_\-RPL\_\-CFG\_\-T}}}
+\label{a00579_a5363c16d8a8bbc0dd0ec573805d09841}
+\hypertarget{a00579_af0ccdfb14b5152fb661e14482e16d4e7}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-DELAY\_\-PROCESS\_\-T@{GSN\_\-RPL\_\-DELAY\_\-PROCESS\_\-T}}
+\index{GSN\_\-RPL\_\-DELAY\_\-PROCESS\_\-T@{GSN\_\-RPL\_\-DELAY\_\-PROCESS\_\-T}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-DELAY\_\-PROCESS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf GSN\_\-RPL\_\-DELAY\_\-PROCESS\_\-T})(VOID $\ast$pUsrCtx, VOID $\ast$pCtx)}}
+\label{a00579_af0ccdfb14b5152fb661e14482e16d4e7}
+
+
+Definition at line 121 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a71848a0de1043102d9f7e8054a42d56b}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG\_\-T@{GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG\_\-T}}
+\index{GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG\_\-T@{GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG\_\-T}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG} {\bf GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG\_\-T}}}
+\label{a00579_a71848a0de1043102d9f7e8054a42d56b}
+\hypertarget{a00579_a64e20c2e6a33dd3586f70b9996040d27}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-DODAG\_\-CFG\_\-T@{GSN\_\-RPL\_\-DODAG\_\-CFG\_\-T}}
+\index{GSN\_\-RPL\_\-DODAG\_\-CFG\_\-T@{GSN\_\-RPL\_\-DODAG\_\-CFG\_\-T}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-DODAG\_\-CFG\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-DODAG\_\-CFG} {\bf GSN\_\-RPL\_\-DODAG\_\-CFG\_\-T}}}
+\label{a00579_a64e20c2e6a33dd3586f70b9996040d27}
+\hypertarget{a00579_ad5cea0d221a0fad0b30b4a9e075a12ed}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-EVENT\_\-PROC\_\-CB\_\-T@{GSN\_\-RPL\_\-EVENT\_\-PROC\_\-CB\_\-T}}
+\index{GSN\_\-RPL\_\-EVENT\_\-PROC\_\-CB\_\-T@{GSN\_\-RPL\_\-EVENT\_\-PROC\_\-CB\_\-T}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-EVENT\_\-PROC\_\-CB\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf GSN\_\-RPL\_\-EVENT\_\-PROC\_\-CB\_\-T})(VOID $\ast$pCtx, {\bf UINT32} event)}}
+\label{a00579_ad5cea0d221a0fad0b30b4a9e075a12ed}
+
+
+Definition at line 122 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a3828181222414a7be42c9c7379651d15}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-EVENT\_\-T@{GSN\_\-RPL\_\-EVENT\_\-T}}
+\index{GSN\_\-RPL\_\-EVENT\_\-T@{GSN\_\-RPL\_\-EVENT\_\-T}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-EVENT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-EVENT} {\bf GSN\_\-RPL\_\-EVENT\_\-T}}}
+\label{a00579_a3828181222414a7be42c9c7379651d15}
+\hypertarget{a00579_abff4d48cd844df33ee6332ef011ac7ae}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-IP\_\-IF\_\-T@{GSN\_\-RPL\_\-IP\_\-IF\_\-T}}
+\index{GSN\_\-RPL\_\-IP\_\-IF\_\-T@{GSN\_\-RPL\_\-IP\_\-IF\_\-T}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-IP\_\-IF\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-IP\_\-IF} {\bf GSN\_\-RPL\_\-IP\_\-IF\_\-T}}}
+\label{a00579_abff4d48cd844df33ee6332ef011ac7ae}
+\hypertarget{a00579_a95586790f6998cec77fd04b5565c3d21}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-SCAN\_\-REQ\_\-T@{GSN\_\-RPL\_\-SCAN\_\-REQ\_\-T}}
+\index{GSN\_\-RPL\_\-SCAN\_\-REQ\_\-T@{GSN\_\-RPL\_\-SCAN\_\-REQ\_\-T}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-SCAN\_\-REQ\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-SCAN\_\-REQ} {\bf GSN\_\-RPL\_\-SCAN\_\-REQ\_\-T}}}
+\label{a00579_a95586790f6998cec77fd04b5565c3d21}
+Delay processing callback has to be provided by user. All timer related expires are handled in a delay handler. This ensure that no time taking activities are not done in the timer thread / isr context. User calls the delay handler of RPL from a thread context to process the RPL event. \hypertarget{a00579_aabd8c14f063f4c7f36a451081ef059b0}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-SCAN\_\-RESULT\_\-T@{GSN\_\-RPL\_\-SCAN\_\-RESULT\_\-T}}
+\index{GSN\_\-RPL\_\-SCAN\_\-RESULT\_\-T@{GSN\_\-RPL\_\-SCAN\_\-RESULT\_\-T}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-SCAN\_\-RESULT\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL\_\-SCAN\_\-RESULT} {\bf GSN\_\-RPL\_\-SCAN\_\-RESULT\_\-T}}}
+\label{a00579_aabd8c14f063f4c7f36a451081ef059b0}
+\hypertarget{a00579_a220cddfa9f0fb98088268693eccbcb28}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GSN\_\-RPL\_\-T@{GSN\_\-RPL\_\-T}}
+\index{GSN\_\-RPL\_\-T@{GSN\_\-RPL\_\-T}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GSN\_\-RPL\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-RPL} {\bf GSN\_\-RPL\_\-T}}}
+\label{a00579_a220cddfa9f0fb98088268693eccbcb28}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00579_acc339c3e4c927379c92fc8adb59dab93}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GsnRpl\_\-AllocMemForScanReq@{GsnRpl\_\-AllocMemForScanReq}}
+\index{GsnRpl\_\-AllocMemForScanReq@{GsnRpl\_\-AllocMemForScanReq}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GsnRpl\_\-AllocMemForScanReq}]{\setlength{\rightskip}{0pt plus 5cm}INLINE {\bf GSN\_\-RPL\_\-SCAN\_\-REQ\_\-T}$\ast$ GsnRpl\_\-AllocMemForScanReq (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT16}}]{resultSize}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_acc339c3e4c927379c92fc8adb59dab93}
+
+
+Definition at line 203 of file gsn\_\-rpl.h.
+
+\hypertarget{a00579_a2e7b3df50960e25ae214ae2b047edac4}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GsnRpl\_\-ConfigSet@{GsnRpl\_\-ConfigSet}}
+\index{GsnRpl\_\-ConfigSet@{GsnRpl\_\-ConfigSet}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GsnRpl\_\-ConfigSet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-ConfigSet (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-T} $\ast$}]{pCtx, }
+\item[{{\bf GSN\_\-RPL\_\-CFG\_\-T} $\ast$}]{pCfg}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_a2e7b3df50960e25ae214ae2b047edac4}
+
+
+Set the RPL configuration. This function sets the RPL configuration. This API should be called after initializing RPL modele. User can scan for DODAG. Based on the decision made user can use this function to configure the RPL module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to the RPL context. \\
+\hline
+{\em pCfg} & -\/ IN Pointer to configure RPL module. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em @note} & This API has to be called before calling DODAG Init. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00579_a9cd8938babbce0aec017ed5b3ec33a92}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GsnRpl\_\-DeInit@{GsnRpl\_\-DeInit}}
+\index{GsnRpl\_\-DeInit@{GsnRpl\_\-DeInit}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GsnRpl\_\-DeInit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-DeInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-T} $\ast$}]{pCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_a9cd8938babbce0aec017ed5b3ec33a92}
+\hypertarget{a00579_a2b617f0982bcfda267fb3afb4f3a4edc}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GsnRpl\_\-DelayHandler@{GsnRpl\_\-DelayHandler}}
+\index{GsnRpl\_\-DelayHandler@{GsnRpl\_\-DelayHandler}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GsnRpl\_\-DelayHandler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-DelayHandler (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-T} $\ast$}]{pCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_a2b617f0982bcfda267fb3afb4f3a4edc}
+\hypertarget{a00579_a29418e6af61ea39a5f66d2a8153dd40c}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GsnRpl\_\-DODAGCreate@{GsnRpl\_\-DODAGCreate}}
+\index{GsnRpl\_\-DODAGCreate@{GsnRpl\_\-DODAGCreate}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GsnRpl\_\-DODAGCreate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-DODAGCreate (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-T} $\ast$}]{pCtx, }
+\item[{VOID $\ast$}]{pDODAGCtx, }
+\item[{{\bf GSN\_\-RPL\_\-DODAG\_\-CFG\_\-T} $\ast$}]{pDODAGCfg, }
+\item[{{\bf GSN\_\-RPL\_\-IP\_\-IF\_\-T} $\ast$}]{pIpIf, }
+\item[{{\bf UINT32} $\ast$}]{pMacAddr}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_a29418e6af61ea39a5f66d2a8153dd40c}
+
+
+Create DODAG. This function creates DODAG. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to the RPL context. \\
+\hline
+{\em pDODAGCtx} & -\/ IN Pointer to the DODAG context returned in DODAG Init API. \\
+\hline
+{\em pCtx} & -\/ IN Pointer to the DODAG Configuration. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em @note} & This API should be called after DODAG Init API. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00579_a6073f0f7a6aabf2db1f5c04266bcc82e}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GsnRpl\_\-DODAGGetAddr@{GsnRpl\_\-DODAGGetAddr}}
+\index{GsnRpl\_\-DODAGGetAddr@{GsnRpl\_\-DODAGGetAddr}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GsnRpl\_\-DODAGGetAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-DODAGGetAddr (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pDCtx, }
+\item[{{\bf UINT32} $\ast$}]{pLLAddr, }
+\item[{{\bf UINT32} $\ast$}]{pGAddr}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_a6073f0f7a6aabf2db1f5c04266bcc82e}
+\hypertarget{a00579_a73cba07b377ef998cc7057253b3a4683}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GsnRpl\_\-DODAGInit@{GsnRpl\_\-DODAGInit}}
+\index{GsnRpl\_\-DODAGInit@{GsnRpl\_\-DODAGInit}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GsnRpl\_\-DODAGInit}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ GsnRpl\_\-DODAGInit (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-T} $\ast$}]{pCtx, }
+\item[{{\bf GSN\_\-RPL\_\-DODAG\_\-BASIC\_\-CFG\_\-T} $\ast$}]{pCfg, }
+\item[{{\bf GSN\_\-RPL\_\-CB\_\-T}}]{pCb, }
+\item[{VOID $\ast$}]{pAppCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_a73cba07b377ef998cc7057253b3a4683}
+
+
+Initialize the DODAG module. This function initializes the DODAG module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to the RPL context. \\
+\hline
+{\em pCtx} & -\/ IN Pointer to the RPL Configuration. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Returns} & pointer to the DODAG pointer created by this API. This pointer has to be passed in other APIs related to DODAG. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This API should be called after RPL Init API. This API installs the OF function pointer and the configuration on DODAG mode the node will be operating and the details to allocate memory to create DODAG tables. 
+\end{DoxyNote}
+\hypertarget{a00579_a9ceb4263e3256a6d6680835eb1ee7e46}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GsnRpl\_\-DODAGJoin@{GsnRpl\_\-DODAGJoin}}
+\index{GsnRpl\_\-DODAGJoin@{GsnRpl\_\-DODAGJoin}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GsnRpl\_\-DODAGJoin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-DODAGJoin (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pDODAGCtx, }
+\item[{{\bf UINT32}}]{DODAGSelectionTime, }
+\item[{{\bf UINT8}}]{CO6Enable, }
+\item[{{\bf UINT32} $\ast$}]{pMacAddr}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_a9ceb4263e3256a6d6680835eb1ee7e46}
+
+
+Join DODAG. This function joins a DODAG. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to the RPL context. \\
+\hline
+{\em pDODAGCtx} & -\/ IN Pointer to the DODAG context returned in DODAG Init API. \\
+\hline
+{\em DODAGSelectionTime} & -\/ IN Time spent in selecting DODAG parent. RPL will start receiving for the DIO messages and once the DODAGSelectionTime elapse it start selection pricedure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em @note} & This API should be called after DODAG Init API. Selection of DODAG is based on the parameter given in the DODAG Init. Based on the DODAG mode the module will either act as a router or a host. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00579_aaaf34f4d9a523ed282b50cf4a24bbfbd}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GsnRpl\_\-DODAGScan@{GsnRpl\_\-DODAGScan}}
+\index{GsnRpl\_\-DODAGScan@{GsnRpl\_\-DODAGScan}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GsnRpl\_\-DODAGScan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-DODAGScan (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-T} $\ast$}]{pCtx, }
+\item[{{\bf GSN\_\-RPL\_\-SCAN\_\-REQ\_\-T} $\ast$}]{pScanReq, }
+\item[{{\bf UINT8}}]{ifId}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_aaaf34f4d9a523ed282b50cf4a24bbfbd}
+
+
+Scans for DODAG. This function scans for DODAG. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to the RPL context. \\
+\hline
+{\em pCtx} & -\/ IN Pointer to the Scan Configuration. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em @note} & This API should be called after Init API. This API can be used to find a suitable DODAG and configurare the RPL accordingly. If the user is aware of of the presense of the DODAG or wants to creates a DODAG then directly DODAGInit can be called without doing the scanning. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00579_a997ed264ac34b60c35144441237720c5}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GsnRpl\_\-DODAGStop@{GsnRpl\_\-DODAGStop}}
+\index{GsnRpl\_\-DODAGStop@{GsnRpl\_\-DODAGStop}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GsnRpl\_\-DODAGStop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-DODAGStop (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{pDODAGCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_a997ed264ac34b60c35144441237720c5}
+
+
+Stop DODAG. This function Stop a DODAG. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pDODAGCtx} & -\/ IN Pointer to the DODAG context returned in DODAG Init API. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em @note} & This API should be called after DODAG Init API. By calling this the node disconnets itself from the DIDAG and frees up all the memory allocated to maintain the DODAG. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{a00579_a253a379d07f6f65294baf40853c9f6a4}{
+\index{gsn\_\-rpl.h@{gsn\_\-rpl.h}!GsnRpl\_\-Init@{GsnRpl\_\-Init}}
+\index{GsnRpl\_\-Init@{GsnRpl\_\-Init}!gsn_rpl.h@{gsn\_\-rpl.h}}
+\subsubsection[{GsnRpl\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-STATUS} GsnRpl\_\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-RPL\_\-T} $\ast$}]{pCtx, }
+\item[{VOID $\ast$}]{pNWCtx, }
+\item[{{\bf GSN\_\-RPL\_\-DELAY\_\-PROCESS\_\-T}}]{delayProcess, }
+\item[{VOID $\ast$}]{pUsrCtx}
+\end{DoxyParamCaption}
+)}}
+\label{a00579_a253a379d07f6f65294baf40853c9f6a4}
+
+
+Initialize the RPL module. This function initailize the RPL module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pCtx} & -\/ IN Pointer to the RPL context. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em @note} & \\
+\hline
+\end{DoxyRetVals}

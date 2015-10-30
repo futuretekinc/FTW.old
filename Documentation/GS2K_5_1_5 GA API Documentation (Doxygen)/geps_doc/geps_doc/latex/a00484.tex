@@ -1,0 +1,1408 @@
+\hypertarget{a00484}{
+\section{gsn\_\-dma.h File Reference}
+\label{a00484}\index{gsn\_\-dma.h@{gsn\_\-dma.h}}
+}
+
+
+Public Header Containing DMA Driver Functions.  
+
+
+{\ttfamily \#include \char`\"{}gsn\_\-types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-defines.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gsn\_\-error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}core$\backslash$osal$\backslash$gsn\_\-osal.h\char`\"{}}\par
+Include dependency graph for gsn\_\-dma.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00713}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00051}{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL}
+\begin{DoxyCompactList}\small\item\em GSN DMA ping pong parameters. This enum defines DMA ping pong handling structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00050}{GSN\_\-DMA\_\-CONTROL}
+\begin{DoxyCompactList}\small\item\em GSN DMA control data Structure. This structure defines DMA control data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{a00049}{GSN\_\-DMA}
+\begin{DoxyCompactList}\small\item\em GSN DMA Structure. This structure defines DMA handling parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{a00053}{GSN\_\-DMACONFIG}
+\begin{DoxyCompactList}\small\item\em GSN DMA Structure. This structure defines DMA base register. \end{DoxyCompactList}\item 
+union \hyperlink{a00052}{GSN\_\-DMACHANNEL\_\-CONFIG}
+\begin{DoxyCompactList}\small\item\em GSN DMA Channel Configuration union. This Union defines DMA channel configuration values. \end{DoxyCompactList}\item 
+struct \hyperlink{a00010}{GSN\_\-DMACHANNEL\_\-CONFIG::channelBitField}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00484_ae8e73cb3b2b2a19fc917950debfee711}{NUMB\_\-OF\_\-DMA\_\-PHERI}~6
+\item 
+\#define \hyperlink{a00484_a77c40078080da55358bb95deabdc19d2}{PING\_\-PONG\_\-COMMON}~0x0CFC800B
+\item 
+\#define \hyperlink{a00484_aca65a0bf3bfd12532c02dae5c279e8ea}{PERIPHERAL\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON}~0xAAFC800E
+\item 
+\#define \hyperlink{a00484_acbb264dcf72e5f414bd8ce4b5e993744}{MEMORY\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON}~0xAAFC8004
+\item 
+\#define \hyperlink{a00484_af41f9d4a535f48887520e136af1c4db1}{N\_\-MINUS\_\-ONE\_\-FIELD\_\-BIT\_\-MASK}~0x00003FF0
+\item 
+\#define \hyperlink{a00484_a40e72b47ba3036307ccfb8df8ce6437d}{DMA\_\-CYCLE\_\-TYPE\_\-BIT\_\-MASK}~0x00000007
+\item 
+\#define \hyperlink{a00484_a81e433569c626192ca7b5088235dbda4}{EXPECTED\_\-BASE\_\-ADDRESS\_\-FOR\_\-10\_\-CHANNELS}~0xFFFFFE00
+\item 
+\#define \hyperlink{a00484_ae78fa6fe29ddd383c2c6ca1b9490130d}{SYSTEM\_\-MEMORY\_\-FOR\_\-DATASTRUCTURE}~1024
+\item 
+\#define \hyperlink{a00484_a9cdc76d0ead7d68830bee5508ff4a099}{MAX\_\-BYTES\_\-PER\_\-DMA\_\-TRANSFER}~1024
+\item 
+\#define \hyperlink{a00484_abcdb10dc038da3a0c6aa8af1d933f67b}{UARTDMA\_\-MAX\_\-TRANSMIT\_\-COUNT}~1024
+\item 
+\#define \hyperlink{a00484_ac8c5aeb4ff04ea6017a636ace0320dbb}{PSG\_\-MAX\_\-TRANSFER\_\-COUNT}~1024
+\item 
+\#define \hyperlink{a00484_acb8951c4fdb17d6f194ec2a38cd53199}{MAX\_\-NO\_\-OF\_\-TASKS\_\-IN\_\-PERIPHERAL\_\-SCATTER\_\-GATHER}~10
+\item 
+\#define \hyperlink{a00484_aa2bd44137b5577f645382c31da5cabd2}{GSN\_\-ACM3CH0\_\-CHANNEL\_\-NO}~0
+\item 
+\#define \hyperlink{a00484_a2b2db8ce0a5e10a4826bce61e6b673d5}{GSN\_\-ACM3CH1\_\-CHANNEL\_\-NO}~1
+\item 
+\#define \hyperlink{a00484_a09c49cb5be2c0afcec8a685ed3679134}{GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}~2
+\item 
+\#define \hyperlink{a00484_ad60298b55cb167a7474403a0b2db8987}{GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}~3
+\item 
+\#define \hyperlink{a00484_a36502973cc3d1fdac5fdf844245d5c41}{GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}~4
+\item 
+\#define \hyperlink{a00484_afe69dfdc5c1d8da565f80843224d4400}{GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}~5
+\item 
+\#define \hyperlink{a00484_a549ef3642c7fda450410e62b56c3de9e}{GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}~6
+\item 
+\#define \hyperlink{a00484_ab131954c327881d5fe08be1dd5510f3d}{GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}~7
+\item 
+\#define \hyperlink{a00484_a764876fc0a3f5d8b04993ca6b5ddbf62}{GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}~8
+\item 
+\#define \hyperlink{a00484_a74b550c1871cad275c9f099bf48e3a34}{GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}~9
+\item 
+\#define \hyperlink{a00484_aec38aae3207af38c56c242a61d77860c}{GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}~0x00000004
+\item 
+\#define \hyperlink{a00484_a6d7d2c2490563e135291e01c643cf3a2}{GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}~0x00000008
+\item 
+\#define \hyperlink{a00484_a6ab75e48baf9d4d47f57acb2ad5d5e4e}{GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}~0x00000010
+\item 
+\#define \hyperlink{a00484_a6feeadb8169a6419cac6c600fdb1578a}{GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}~0x00000020
+\item 
+\#define \hyperlink{a00484_ab332814b750e9d06dabe0aa4d0ab3845}{GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}~0x00000040
+\item 
+\#define \hyperlink{a00484_a433e53beca3e8fd24635b491bfa2aa19}{GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}~0x00000080
+\item 
+\#define \hyperlink{a00484_a8b6623ecbbaf5c3c6caa554e28b12def}{GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}~0x00000100
+\item 
+\#define \hyperlink{a00484_ac9aa5902379af876a5371ab24a510bff}{GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}~0x00000200
+\item 
+\#define \hyperlink{a00484_a5b2d635ead74aa250f85b2f594eee918}{GSN\_\-ACM3CH0\_\-CHANNEL}~0X00000001
+\item 
+\#define \hyperlink{a00484_a3202cde71d55159ac4796ff71b45cfc6}{GSN\_\-ACM3CH1\_\-CHANNEL}~0X00000002
+\item 
+\#define \hyperlink{a00484_a518ed5af9857de8db4ce3248328e9c6b}{GSN\_\-SPI0\_\-DMA\_\-CHANNELS}~0x0000000C
+\item 
+\#define \hyperlink{a00484_a145e8d83b4aab58ed8c87c5fba134412}{GSN\_\-SPI1\_\-DMA\_\-CHANNELS}~0x000000C0
+\item 
+\#define \hyperlink{a00484_afcbc9006c931ac89b672bae0b187f309}{GSN\_\-UART0\_\-DMA\_\-CHANNELS}~0x00000030
+\item 
+\#define \hyperlink{a00484_a49bae6c89e0e2813bc051b25e1961d6e}{GSN\_\-UART1\_\-DMA\_\-CHANNELS}~0x00000300
+\item 
+\#define \hyperlink{a00484_a645b22e6469e278bf6deccf1488f6edb}{GSN\_\-ACM3\_\-CH0}~0
+\item 
+\#define \hyperlink{a00484_ad60b99042fe6931090ef916ad0f64e35}{GSN\_\-ACM3\_\-CH1}~1
+\item 
+\#define \hyperlink{a00484_a90eb18824f9b1b14a6e642364c002099}{GSN\_\-SPI0\_\-DMA}~2
+\item 
+\#define \hyperlink{a00484_adb83f42ccdcff7832a0f4717a7b8c0f7}{GSN\_\-SPI1\_\-DMA}~3
+\item 
+\#define \hyperlink{a00484_a0aec9c64944acaf248ad1dd7cee8c937}{GSN\_\-UART0\_\-DMA}~4
+\item 
+\#define \hyperlink{a00484_a94eeeed32bfd2b1263bd50406eaa1b25}{GSN\_\-UART1\_\-DMA}~5
+\item 
+\#define \hyperlink{a00484_a05c6a73586179b2bc758895613204d0c}{GSNDMA\_\-CHANNEL\_\-COUNT}~32
+\item 
+\#define \hyperlink{a00484_acb90501fb017d4fdd51aab3c5591a555}{GSNDMA\_\-FULL\_\-CHANNELS\_\-ENABLE}~0xFFFFFFFF
+\item 
+\#define \hyperlink{a00484_a7294ea06db1a491f659cf220e1b51c0b}{GSNDMA\_\-FULL\_\-CHANNELS\_\-DISABLE}~0x00000000
+\item 
+\#define \hyperlink{a00484_a71f8e6c80cdbf3c086ef3e31be6c9168}{GSNDMA\_\-CHANNEL\_\-0}~0
+\item 
+\#define \hyperlink{a00484_aafc0246b2f3e95feffb5213a48966346}{GSNDMA\_\-CHANNEL\_\-1}~1
+\item 
+\#define \hyperlink{a00484_a5deead63a92314854b45c055598c043c}{GSNDMA\_\-CHANNEL\_\-2}~2
+\item 
+\#define \hyperlink{a00484_a9dfd424f980f9c35bcc55e66916d8605}{GSNDMA\_\-CHANNEL\_\-3}~3
+\item 
+\#define \hyperlink{a00484_a62f3ee88b0075bbb2d86216cf011a601}{GSNDMA\_\-CHANNEL\_\-4}~4
+\item 
+\#define \hyperlink{a00484_a3fdf644bda1e436a4d3278ad1b69efe0}{GSNDMA\_\-CHANNEL\_\-5}~5
+\item 
+\#define \hyperlink{a00484_a60b20ca60701a2e09dbaa2e35205c63d}{GSNDMA\_\-CHANNEL\_\-6}~6
+\item 
+\#define \hyperlink{a00484_a1dc12024a1645e9628a8228eb3d600fc}{GSNDMA\_\-CHANNEL\_\-7}~7
+\item 
+\#define \hyperlink{a00484_a59184a849d87060a1aa4af080be777bc}{GSNDMA\_\-CHANNEL\_\-8}~8
+\item 
+\#define \hyperlink{a00484_a9b9e452e110eedb35f128e734e16ef64}{GSNDMA\_\-CHANNEL\_\-9}~9
+\item 
+\#define \hyperlink{a00484_a6600eb8ee630a08b0d530bb68b12edb7}{GSNDMA\_\-CHANNEL\_\-10}~10
+\item 
+\#define \hyperlink{a00484_a000b4af780c11b29b0010f675e3cbc60}{GSNDMA\_\-CHANNEL\_\-11}~11
+\item 
+\#define \hyperlink{a00484_ad0ad6437e0dd4308a5ca860908308136}{GSNDMA\_\-CHANNEL\_\-12}~12
+\item 
+\#define \hyperlink{a00484_a8a6f986b828460b28e9c9cc6ce0c7885}{GSNDMA\_\-CHANNEL\_\-13}~13
+\item 
+\#define \hyperlink{a00484_adb6390cb7cc7ceb1567ac4caf1260ba9}{GSNDMA\_\-CHANNEL\_\-14}~14
+\item 
+\#define \hyperlink{a00484_a149bbd1fd7faa66916ec0b2a26bdbfc5}{GSNDMA\_\-CHANNEL\_\-15}~15
+\item 
+\#define \hyperlink{a00484_ac41ac8d6de662c1ef0301da9dbcd6bca}{GSNDMA\_\-CHANNEL\_\-16}~16
+\item 
+\#define \hyperlink{a00484_adc1496eca719c822510a6bdee111230c}{GSNDMA\_\-CHANNEL\_\-17}~17
+\item 
+\#define \hyperlink{a00484_a86871f85d077136b43ce24da7401fb46}{GSNDMA\_\-CHANNEL\_\-18}~18
+\item 
+\#define \hyperlink{a00484_aec041d8e41a8b26360fd73662dbdf0ad}{GSNDMA\_\-CHANNEL\_\-19}~19
+\item 
+\#define \hyperlink{a00484_a78570f42d54d0cceddf5ac3e76ef5883}{GSNDMA\_\-CHANNEL\_\-20}~20
+\item 
+\#define \hyperlink{a00484_a3e4b4c6574e761b8a7ca12976be7da2d}{GSNDMA\_\-CHANNEL\_\-21}~21
+\item 
+\#define \hyperlink{a00484_a95f0b82527fdf9419ba78afedde7606f}{GSNDMA\_\-CHANNEL\_\-22}~22
+\item 
+\#define \hyperlink{a00484_abd4020cf11e9fb4f581ae3ed06b26f38}{GSNDMA\_\-CHANNEL\_\-23}~23
+\item 
+\#define \hyperlink{a00484_a2716f45e9773e71249d1da5033e11363}{GSNDMA\_\-CHANNEL\_\-24}~24
+\item 
+\#define \hyperlink{a00484_a3750b075005d49e145662b326d46e114}{GSNDMA\_\-CHANNEL\_\-25}~25
+\item 
+\#define \hyperlink{a00484_aa54c6bfd2061c30275f0e9e55a0fd602}{GSNDMA\_\-CHANNEL\_\-26}~26
+\item 
+\#define \hyperlink{a00484_a8707844494eee5b22880dd4c6a89b4c2}{GSNDMA\_\-CHANNEL\_\-27}~27
+\item 
+\#define \hyperlink{a00484_a76ba60151657aa3b6780b3739640590f}{GSNDMA\_\-CHANNEL\_\-28}~28
+\item 
+\#define \hyperlink{a00484_ab28322a6b190c0b4ba882a2aaf1b9a28}{GSNDMA\_\-CHANNEL\_\-29}~29
+\item 
+\#define \hyperlink{a00484_aa8aa2ddbe72b70f74bcffe9368b7d872}{GSNDMA\_\-CHANNEL\_\-30}~30
+\item 
+\#define \hyperlink{a00484_abb1e8fb25e50fad258a291a11bd80d37}{GSNDMA\_\-CHANNEL\_\-31}~31
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef VOID($\ast$ \hyperlink{a00484_a74d23c3cb3acf00134600795aef55b6e}{DMACALLBACK\_\-FP} )(VOID $\ast$, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32})
+\item 
+typedef enum \hyperlink{a00645_ga6b06d19717ade6dfd815a84e83d2388c}{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT} \hyperlink{a00645_gab17cf1a2935d52f5490128aeddd1eb07}{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA available peripherals. This enum defines DMA available peripherals. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_ga5ae8eaac9f901eb2607d04c46b8141e9}{GSN\_\-DMA\_\-SRC\_\-SIZE} \hyperlink{a00645_ga30dffcfe8e6fc270f93048d90cd440ec}{GSN\_\-DMA\_\-SRC\_\-SIZE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA source data sizes. This enum defines available source data sizes of DMA . \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_ga592093c11bfd36ebbe08e1446e26f37a}{GSN\_\-DMA\_\-SRC\_\-INC} \hyperlink{a00645_gadfad5571e188cca605e051802c24ada0}{GSN\_\-DMA\_\-SRC\_\-INC\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA source data increment. This enum defines available DMA source data increment values . \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_gab66304fcaa89e7d7dd7d514eb086c56c}{GSN\_\-DMA\_\-DEST\_\-SIZE} \hyperlink{a00645_ga911fde9b2a20ed7759a9d2a8849e34f4}{GSN\_\-DMA\_\-DEST\_\-SIZE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA destination data sizes. This enum defines available Destination data sizes of DMA . \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_gaeec51ec6ddb024d9e8bb0c011cb167ef}{GSN\_\-DMA\_\-DEST\_\-INC} \hyperlink{a00645_gad729aa817bfd135b589e7c5d589c6c24}{GSN\_\-DMA\_\-DEST\_\-INC\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA destination data increment. This enum defines available DMA destination data increment values . \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_ga0dab047350d5c343038b0c017077dab7}{GSN\_\-DMA\_\-R\_\-POWER} \hyperlink{a00645_gadf8a8e2066de9043a495c7764612c35f}{GSN\_\-DMA\_\-R\_\-POWER\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA arbitration values. This enum defines Available arbitration values of Dma. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{a00645_ga05b9b2e87ca35c2d0564ceca307d349c}{GSN\_\-DMA\_\-CYCLE\_\-TYPE} \hyperlink{a00645_gab5fced5a7e633077a493c6353edef6de}{GSN\_\-DMA\_\-CYCLE\_\-TYPE\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA cycle Types. This enum defines DMA cycle types. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00051}{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL} \hyperlink{a00645_gae146d7793ab9cfe1a37249ffc98ccf5d}{GSN\_\-DMA\_\-PINGPONG\_\-CONTROL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA ping pong parameters. This enum defines DMA ping pong handling structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00050}{GSN\_\-DMA\_\-CONTROL} \hyperlink{a00645_gad93c4855c9b915891cbdcfcdf2fd0ee5}{GSN\_\-DMA\_\-CONTROL\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA control data Structure. This structure defines DMA control data structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00049}{GSN\_\-DMA} \hyperlink{a00645_ga61edafecbc46e3ba81ec48b9cf3aa1fa}{GSN\_\-DMA\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA Structure. This structure defines DMA handling parameters. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00053}{GSN\_\-DMACONFIG} \hyperlink{a00645_ga64a1083039794c33e6a904f799f730c5}{GSN\_\-DMACONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA Structure. This structure defines DMA base register. \end{DoxyCompactList}\item 
+typedef union \hyperlink{a00052}{GSN\_\-DMACHANNEL\_\-CONFIG} \hyperlink{a00645_ga39663b303d8a6ba93086369a284e1334}{GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T}
+\begin{DoxyCompactList}\small\item\em GSN DMA Channel Configuration union. This Union defines DMA channel configuration values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00645_gae429fb6067bac27636298d334042de5f}{GSN\_\-DMA\_\-CONTROLLER\_\-STATE} \{ \par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa0d1e91ccd13f6bd142fd6eb1385e78bc}{GSN\_\-DMA\_\-NOT\_\-INITIALIZED}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa0433ffe774a15bcfdcd9b21200e85208}{GSN\_\-DMA\_\-INITIALIZED}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa3f84bcdf20eef7fe9e6e90260a20d4d2}{GSN\_\-DMA\_\-READ\_\-PROGRESS}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa76c62ae5f70d75b8c5d13a7aa4cd3b4d}{GSN\_\-DMA\_\-READ\_\-FINISHED}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa177f0d0180ad7c6fec9aa2e0bdbab18a}{GSN\_\-DMA\_\-WRITE\_\-PROGRESS}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa8c4aba63d65be601ef1bd9e3797e9740}{GSN\_\-DMA\_\-WRITE\_\-FINISHED}, 
+\par
+\hyperlink{a00645_ggae429fb6067bac27636298d334042de5fa97fc87797fc55f072f93fcfb08e823d9}{GSN\_\-DMA\_\-CLOSED}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA current state values. This enum defines DMA controller state. \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_ga6b06d19717ade6dfd815a84e83d2388c}{GSN\_\-DMA\_\-PERIPHERAL\_\-SELECT} \{ \par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca8d81a773b5a1dcfdfb741cfbfbf5330d}{GSN\_\-DMA\_\-CH0}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca67e0d61a7ec720eed458dbdf9eeb791a}{GSN\_\-DMA\_\-CH1}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388cac5675c7dde41ebb7a1777403463362ed}{GSN\_\-DMA\_\-SSP0\_\-RX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca55b975756ec5f35fe79579374eacdfd3}{GSN\_\-DMA\_\-SSP0\_\-TX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca468b318f813ebdf54dbdf450f16a5732}{GSN\_\-DMA\_\-UART0\_\-RX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388caa4f202e8206de2d1ebfad1ad912bcd8d}{GSN\_\-DMA\_\-UART0\_\-TX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca328799f2ecf2b7883c1d7e4fce9664b7}{GSN\_\-DMA\_\-SSP1\_\-RX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca4f93148490d2139f20dfd6d88405f15d}{GSN\_\-DMA\_\-SSP1\_\-TX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca3066765ac1cd87c8ef4d029be6e620e6}{GSN\_\-DMA\_\-UART1\_\-RX}, 
+\par
+\hyperlink{a00645_gga6b06d19717ade6dfd815a84e83d2388ca9a3ace920959df147a2c3d35dcaa3013}{GSN\_\-DMA\_\-UART1\_\-TX}
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA available peripherals. This enum defines DMA available peripherals. \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_ga5ae8eaac9f901eb2607d04c46b8141e9}{GSN\_\-DMA\_\-SRC\_\-SIZE} \{ \par
+\hyperlink{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9a2b2932e85c3b4fc18d56c38f39d31dd8}{GSN\_\-DMA\_\-BYTE\_\-SRC\_\-SIZE} =  0, 
+\par
+\hyperlink{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9acb13c0f2739cfa4759bb75be01f0c5d6}{GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-SIZE} =  1, 
+\par
+\hyperlink{a00645_gga5ae8eaac9f901eb2607d04c46b8141e9a881ac284185eaa1f1eb431452ce9bbe5}{GSN\_\-DMA\_\-WORD\_\-SRC\_\-SIZE} =  2
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA source data sizes. This enum defines available source data sizes of DMA . \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_ga592093c11bfd36ebbe08e1446e26f37a}{GSN\_\-DMA\_\-SRC\_\-INC} \{ \par
+\hyperlink{a00645_gga592093c11bfd36ebbe08e1446e26f37aa33e61f45484d1c2ae0d2c8ad6a520b0b}{GSN\_\-DMA\_\-BYTE\_\-SRC\_\-INC} =  0, 
+\par
+\hyperlink{a00645_gga592093c11bfd36ebbe08e1446e26f37aa0fb26d608d6f3abb56aa50dc5e3588ab}{GSN\_\-DMA\_\-HALFWORD\_\-SRC\_\-INC} =  1, 
+\par
+\hyperlink{a00645_gga592093c11bfd36ebbe08e1446e26f37aa5a0832151e665289a8604b6fc1b4c889}{GSN\_\-DMA\_\-WORD\_\-SRC\_\-INC} =  2, 
+\par
+\hyperlink{a00645_gga592093c11bfd36ebbe08e1446e26f37aabfed1c5dc35a6299af6df490ead8fda7}{GSN\_\-DMA\_\-NO\_\-SRC\_\-INC} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA source data increment. This enum defines available DMA source data increment values . \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_gab66304fcaa89e7d7dd7d514eb086c56c}{GSN\_\-DMA\_\-DEST\_\-SIZE} \{ \par
+\hyperlink{a00645_ggab66304fcaa89e7d7dd7d514eb086c56ca7f7232d325387c63bae0b7cdebe3ef3c}{GSN\_\-DMA\_\-BYTE\_\-DEST\_\-SIZE} =  0, 
+\par
+\hyperlink{a00645_ggab66304fcaa89e7d7dd7d514eb086c56ca28318509efbc694dcf60dda8baa5c95b}{GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-SIZE} =  1, 
+\par
+\hyperlink{a00645_ggab66304fcaa89e7d7dd7d514eb086c56cac6e70114b9ef1f20fbc46047d09838c4}{GSN\_\-DMA\_\-WORD\_\-DEST\_\-SIZE} =  2
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA destination data sizes. This enum defines available Destination data sizes of DMA . \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_gaeec51ec6ddb024d9e8bb0c011cb167ef}{GSN\_\-DMA\_\-DEST\_\-INC} \{ \par
+\hyperlink{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efaa6992a725913ef984b166f6a3e589f0d}{GSN\_\-DMA\_\-BYTE\_\-DEST\_\-INC} =  0, 
+\par
+\hyperlink{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa101a527a312a5d717e4f146f4c626967}{GSN\_\-DMA\_\-HALFWORD\_\-DEST\_\-INC} =  1, 
+\par
+\hyperlink{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa409e63c6cd5348719d9dc3a327c9d265}{GSN\_\-DMA\_\-WORD\_\-DEST\_\-INC} =  2, 
+\par
+\hyperlink{a00645_ggaeec51ec6ddb024d9e8bb0c011cb167efa5caac0f560125a4488ba7f550df78add}{GSN\_\-DMA\_\-NO\_\-DEST\_\-INC} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA destination data increment. This enum defines available DMA destination data increment values . \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_ga0dab047350d5c343038b0c017077dab7}{GSN\_\-DMA\_\-R\_\-POWER} \{ \par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7ac74ac5fa1175bc387937b6bc7ba3da77}{GSN\_\-ARBITRATION\_\-1\_\-DMATRANSFER} =  0, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a42ae3fcedf49db936b008bd50ae8072c}{GSN\_\-ARBITRATION\_\-2\_\-DMATRANSFER} =  1, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a2b53a376a12af3ac31c906c74ed1914f}{GSN\_\-ARBITRATION\_\-4\_\-DMATRANSFER} =  2, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a7e995ff22c877407b324332944e778ee}{GSN\_\-ARBITRATION\_\-8\_\-DMATRANSFER} =  3, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a27da9e0084aa1b51b2bb0853ddea9036}{GSN\_\-ARBITRATION\_\-16\_\-DMATRANSFER} =  4, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a4509d1db470e4622ceeb5093bc3ad534}{GSN\_\-ARBITRATION\_\-32\_\-DMATRANSFER} =  5, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a639f508d032a5dbf57d7b91c2da5504f}{GSN\_\-ARBITRATION\_\-64\_\-DMATRANSFER} =  6, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7ae69c39e2419566697087b9bbd6e574e3}{GSN\_\-ARBITRATION\_\-128\_\-DMATRANSFER} =  7, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7ab8d73acb8fe19c193ad43a0ccf3d8849}{GSN\_\-ARBITRATION\_\-256\_\-DMATRANSFER} =  8, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7ae40c66cc1004676d5c628cf479f658c8}{GSN\_\-ARBITRATION\_\-512\_\-DMATRANSFER} =  9, 
+\par
+\hyperlink{a00645_gga0dab047350d5c343038b0c017077dab7a9a6dd4b1c4e3039f312c7e123adee60b}{GSN\_\-ARBITRATION\_\-1024\_\-DMATRANSFER} =  10
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA arbitration values. This enum defines Available arbitration values of Dma. \end{DoxyCompactList}\item 
+enum \hyperlink{a00645_ga05b9b2e87ca35c2d0564ceca307d349c}{GSN\_\-DMA\_\-CYCLE\_\-TYPE} \{ \par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca5eaed8b81e9aea1d36a55808cafc764a}{GSN\_\-DMACYCLE\_\-STOP} =  0, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca21df7e7c776bc4d180db56aa034cebc5}{GSN\_\-DMACYCLE\_\-BASIC} =  1, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca2fe044a6cdf6ea525f1f151576023352}{GSN\_\-DMACYCLE\_\-AUTOREQUEST} =  2, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349cab734d1a5b321ede92d3e1ada87c12348}{GSN\_\-DMACYCLE\_\-PING\_\-PONG} =  3, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349caf430059a345ba3a661d4b005e77563bb}{GSN\_\-DMACYCLE\_\-MSG\_\-PRIMARY} =  4, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349caf5103d4e5d0db5ee3a988ef2225d7208}{GSN\_\-DMACYCLE\_\-MSG\_\-ALTERNATE} =  5, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca67efd25800552979993c637030a04f3c}{GSN\_\-DMACYCLE\_\-PSG\_\-PRIMARY} =  6, 
+\par
+\hyperlink{a00645_gga05b9b2e87ca35c2d0564ceca307d349ca0f46e759cd5e60ea89a85e50352ec8c6}{GSN\_\-DMACYCLE\_\-PSG\_\-ALTERNATE} =  7
+ \}
+\begin{DoxyCompactList}\small\item\em GSN DMA cycle Types. This enum defines DMA cycle types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00660_ga1f04022c0a182c51c059438790ea138c}{BOOL} \hyperlink{a00645_ga5ceeca071a5842ca89987a6409d7622f}{GsnDma\_\-ChannelIDValid} (\hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This function checks the DMA channel ID is valid or not. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga449241f212ec11818862d4b3d09f78e4}{GsnDma\_\-CallBackRegister} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00484_a74d23c3cb3acf00134600795aef55b6e}{DMACALLBACK\_\-FP} ptCallBackFunc, VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\begin{DoxyCompactList}\small\item\em This function registers all the call back functions from the peripheral modules in dma driver. \end{DoxyCompactList}\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00645_ga562863c56fadab4dacb22c1701a44f7b}{GsnDma\_\-IndividualClose} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelsToClose)
+\begin{DoxyCompactList}\small\item\em DMA Driver Individual Channel Close API. This function closes the particular channel. \end{DoxyCompactList}\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00645_ga5aa9630791f923d9584eca792db30693}{GsnDma\_\-Close} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma)
+\begin{DoxyCompactList}\small\item\em DMA Driver Close API. This function closes PL230 DMA. \end{DoxyCompactList}\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00645_gac9b681a85c07c6f76d4a5b5c3578770d}{GsnDma\_\-Open} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00053}{GSN\_\-DMACONFIG\_\-T} $\ast$ptConfig, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelsToConfigure)
+\begin{DoxyCompactList}\small\item\em DMA Driver open API. This function initializes PL230 DMA. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga7c2e3e52f4e9a058280bb12c28bcae98}{GsnDma\_\-Enable} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma)
+\begin{DoxyCompactList}\small\item\em DMA module enable API. This function Enables PL230 DMA. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga70900a6c4c67014eb4ab3b6fb1e07e7b}{GsnDma\_\-ChannelPriAltClear} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelsToConfigure)
+\begin{DoxyCompactList}\small\item\em DMA module Primary-\/Alternate-\/Set API. This function set the alternate data structure of Dma. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga83809527ab278dc141bcbf1aff7d4261}{GsnDma\_\-ChannelPriAltSet} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelsToConfigure)
+\begin{DoxyCompactList}\small\item\em DMA module Primary-\/Alternate-\/Clear API. This function clear the alternate data structure of Dma. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gae768fe52b1ab8f2cf674638e82c4a223}{GsnDma\_\-Disable} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma)
+\begin{DoxyCompactList}\small\item\em DMA module disable API. This function disables PL230 DMA. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga839dcf0e2fc6ddc1fa8fa3895b763da0}{GsnDma\_\-StatusGet} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma)
+\begin{DoxyCompactList}\small\item\em DMA Driver DMA status (enable or disable) get API. This API can use for getting the current status of DMA. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gafe8f53f9d44f015348fa1dc566a535a9}{GsnDma\_\-ChannelEnable} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This function will enable the specified dma channel. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gae368b9082da7ffdcf71880d0ee0d5322}{GsnDma\_\-ChannelDisable} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This function will disable the specified channel. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga4b168b176e39643a79d1e17a35509ddd}{GsnDma\_\-ChannelSoftwareRequest} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This function can use for the software request for a channel. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga508b5fe55e9c637738cf2661a571363c}{GsnDma\_\-CycleControl} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00052}{GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T} $\ast$ptChannelConfig, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} noOfBytesToTransfer, VOID $\ast$pvSrcAddr, VOID $\ast$pvDstAddr)
+\begin{DoxyCompactList}\small\item\em In PL230 DMA ,transfer can done using one of the 5 dma cycle types. 1.)basic 2.)auto request 3.)memory scatter gather 4.)peripheral scatter gather 5.)ping pong. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gac94ecec6e71b0486e190f0416ac0aafe}{GsnDma\_\-ChannelControlSetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ulControl, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em Sets the control parameter for a particular channel in primarary data structure. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_ga20dfa4fbdf89c9623e33349ac917a0f7}{GsnDma\_\-ChannelControlSetAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} ulControl, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em Sets the control parameter for a particular channel in Alternate data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_gae299f12e8d6fe7d3e1aed64ca683e5d4}{GsnDma\_\-ChannelControlGetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the channel configuration of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga3f2ad549f5231785b43dcdafff7dad76}{GsnDma\_\-ChannelControlGetAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the channel configuration of a particular channel in alternate data structure. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gacf14d2b733378887f57720111f5a273c}{GsnDma\_\-ChannelTransferSetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, VOID $\ast$pvSrcAddr, VOID $\ast$pvDstAddr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API sets the source address and destination address of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+VOID \hyperlink{a00645_gafa916751ce4bc1ff2e107afa8e105b23}{GsnDma\_\-ChannelTransferSetAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, VOID $\ast$pvSrcAddr, VOID $\ast$pvDstAddr, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API sets the source address and destination address of a particular channel in Alternate data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga19ae102a0c571013f52c40ca8f7829f4}{GsnDma\_\-CurrentSourceAddrGet} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API Gets the Current Source Address of a particular channel. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_gaf793f914fc28383eb27b9f4697df3627}{GsnDma\_\-CurrentDestAddrGet} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API Gets the Current Destination Address of a particular channel. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga4041bdc9579ac5a6544a433217b33ec2}{GsnDma\_\-CurrentDestAddrGetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API Gets the Current Destination Address of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga471064b999c9fbe35dae71e46ca0d6be}{GsnDma\_\-RemainTransferCountGet} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current N\_\-MINUS\_\-1 value of a particular channel. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga41c22392f7c2bcb6371732f7b4262458}{GsnDma\_\-RemainTransferCountGetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current N\_\-MINUS\_\-1 value of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga77f7365ca642ec971dd49bae1d30b204}{GsnDma\_\-RemainTransferCountGetAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current N\_\-MINUS\_\-1 value of a particular channel in alternate data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_gad08a96af8d3b08b5353491f376838f04}{GsnDma\_\-CycleTypeGetAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current dma cycle type value of a particular channel in alternate data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_gaeec67a57b069b989d58c6ee008406dc2}{GsnDma\_\-CycleTypeGetPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current dma cycle type value of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_gaa773c3c1a9478d26317cc2f8f6221be4}{GsnDma\_\-specificChannelAddressPrimary} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current channel address of a particular channel in primary data structure. \end{DoxyCompactList}\item 
+\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} \hyperlink{a00645_ga9fcb9e0aa7d752da1a090711fbff8a3d}{GsnDma\_\-specificChannelAddressAlternate} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID)
+\begin{DoxyCompactList}\small\item\em This API gets the current channel address of a particular channel in alternate data structure. \end{DoxyCompactList}\item 
+PUBLIC VOID \hyperlink{a00484_a2db75948eb583e75e11f4ac287b2766e}{\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_ae217e6a6691be2dd27086c30d67026de}{\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a8be43228692851af8402e56e581c5e72}{\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_af606698daa414a28662039ea4f85aa60}{\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_aa996fcc9d38535a53101a433127a3960}{\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a80f90818e028689f83ac68475f99260d}{\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a6cd5419759533b469376a5a0981451a8}{\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a665c71acdcac9cc68e7613af8b04688b}{\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a7806ddf28965bbbb91adbd4a168393a8}{\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a355b1c6f973ea9385a5391e6f830e01c}{\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a0f19f6fb93100fbb11c6dc1abc5c88ee}{\_\-\_\-GsnDma\_\-Error\_\-Isr} ()
+\item 
+VOID \hyperlink{a00484_adb0f53073632fcf7c5c096f1d941226e}{GsnDma\_\-CycleControl\_\-Patch} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00052}{GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T} $\ast$ptChannelConfig, \hyperlink{a00660_gab27e9918b538ce9d8ca692479b375b6a}{UINT8} ulChannelID, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} noOfBytesToTransfer, VOID $\ast$pvSrcAddr, VOID $\ast$pvDstAddr)
+\item 
+PUBLIC VOID \hyperlink{a00484_ae4c2a112409c180c12ff5baa9e1998d6}{\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr\_\-Patch} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a88cfbe6f9017bd8dddc8ac101a121f5c}{\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr\_\-Patch} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_ab678611bd82e54daf2d3f68a20e8a3b8}{\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr\_\-Patch} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a038161283be57b45e123d2c3d9ecf4be}{\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr\_\-Patch} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_acace99d835a7aef998e611ad74255cbb}{\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr\_\-Patch} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a30def8295f750bd967af813f5ecc7fc7}{\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr\_\-Patch} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a5950124ebf8cfdb3d07d14ea818e732a}{\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr\_\-Patch} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a23c5bed5fe1e54dc8d9660a584fc806b}{\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr\_\-Patch} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a148c3dbf8d37a1d8c2db90e56af9f4d8}{\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr\_\-Patch} ()
+\item 
+PUBLIC VOID \hyperlink{a00484_a2143cff0f132766e5979a15e701bf1be}{\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr\_\-Patch} ()
+\item 
+VOID \hyperlink{a00484_a60ba6c03d23e0f88788bedba719983b7}{GsnDma\_\-CallBackRegister\_\-Patch} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00484_a74d23c3cb3acf00134600795aef55b6e}{DMACALLBACK\_\-FP} ptCallBackFunc, VOID $\ast$ctx, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelID)
+\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00484_a9fe7978fe38826e94cb78c3e964f04cb}{GsnDma\_\-Open\_\-Patch} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00053}{GSN\_\-DMACONFIG\_\-T} $\ast$ptConfig, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelsToConfigure)
+\item 
+\hyperlink{a00659_ga36216a7aacd1d5024bc7b8bf39c3f46b}{GSN\_\-OSAL\_\-ERROR\_\-T} \hyperlink{a00484_a0bec5573e11fbfdd444b02d1c787dcba}{GsnDma\_\-IndividualClose\_\-Patch} (\hyperlink{a00049}{GSN\_\-DMA\_\-T} $\ast$ptGsnDma, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} channelsToClose)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Public Header Containing DMA Driver Functions. This file contains the public APIs and structures of DMA module. 
+
+Definition in file \hyperlink{a00484_source}{gsn\_\-dma.h}.
+
+
+
+\subsection{Define Documentation}
+\hypertarget{a00484_a40e72b47ba3036307ccfb8df8ce6437d}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!DMA\_\-CYCLE\_\-TYPE\_\-BIT\_\-MASK@{DMA\_\-CYCLE\_\-TYPE\_\-BIT\_\-MASK}}
+\index{DMA\_\-CYCLE\_\-TYPE\_\-BIT\_\-MASK@{DMA\_\-CYCLE\_\-TYPE\_\-BIT\_\-MASK}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{DMA\_\-CYCLE\_\-TYPE\_\-BIT\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-CYCLE\_\-TYPE\_\-BIT\_\-MASK~0x00000007}}
+\label{a00484_a40e72b47ba3036307ccfb8df8ce6437d}
+
+
+Definition at line 96 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a81e433569c626192ca7b5088235dbda4}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!EXPECTED\_\-BASE\_\-ADDRESS\_\-FOR\_\-10\_\-CHANNELS@{EXPECTED\_\-BASE\_\-ADDRESS\_\-FOR\_\-10\_\-CHANNELS}}
+\index{EXPECTED\_\-BASE\_\-ADDRESS\_\-FOR\_\-10\_\-CHANNELS@{EXPECTED\_\-BASE\_\-ADDRESS\_\-FOR\_\-10\_\-CHANNELS}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{EXPECTED\_\-BASE\_\-ADDRESS\_\-FOR\_\-10\_\-CHANNELS}]{\setlength{\rightskip}{0pt plus 5cm}\#define EXPECTED\_\-BASE\_\-ADDRESS\_\-FOR\_\-10\_\-CHANNELS~0xFFFFFE00}}
+\label{a00484_a81e433569c626192ca7b5088235dbda4}
+
+
+Definition at line 97 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a645b22e6469e278bf6deccf1488f6edb}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-ACM3\_\-CH0@{GSN\_\-ACM3\_\-CH0}}
+\index{GSN\_\-ACM3\_\-CH0@{GSN\_\-ACM3\_\-CH0}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-ACM3\_\-CH0}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ACM3\_\-CH0~0}}
+\label{a00484_a645b22e6469e278bf6deccf1488f6edb}
+
+
+Definition at line 132 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_ad60b99042fe6931090ef916ad0f64e35}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-ACM3\_\-CH1@{GSN\_\-ACM3\_\-CH1}}
+\index{GSN\_\-ACM3\_\-CH1@{GSN\_\-ACM3\_\-CH1}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-ACM3\_\-CH1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ACM3\_\-CH1~1}}
+\label{a00484_ad60b99042fe6931090ef916ad0f64e35}
+
+
+Definition at line 133 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a5b2d635ead74aa250f85b2f594eee918}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-ACM3CH0\_\-CHANNEL@{GSN\_\-ACM3CH0\_\-CHANNEL}}
+\index{GSN\_\-ACM3CH0\_\-CHANNEL@{GSN\_\-ACM3CH0\_\-CHANNEL}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-ACM3CH0\_\-CHANNEL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ACM3CH0\_\-CHANNEL~0X00000001}}
+\label{a00484_a5b2d635ead74aa250f85b2f594eee918}
+
+
+Definition at line 125 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_aa2bd44137b5577f645382c31da5cabd2}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-ACM3CH0\_\-CHANNEL\_\-NO@{GSN\_\-ACM3CH0\_\-CHANNEL\_\-NO}}
+\index{GSN\_\-ACM3CH0\_\-CHANNEL\_\-NO@{GSN\_\-ACM3CH0\_\-CHANNEL\_\-NO}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-ACM3CH0\_\-CHANNEL\_\-NO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ACM3CH0\_\-CHANNEL\_\-NO~0}}
+\label{a00484_aa2bd44137b5577f645382c31da5cabd2}
+
+
+Definition at line 105 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a3202cde71d55159ac4796ff71b45cfc6}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-ACM3CH1\_\-CHANNEL@{GSN\_\-ACM3CH1\_\-CHANNEL}}
+\index{GSN\_\-ACM3CH1\_\-CHANNEL@{GSN\_\-ACM3CH1\_\-CHANNEL}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-ACM3CH1\_\-CHANNEL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ACM3CH1\_\-CHANNEL~0X00000002}}
+\label{a00484_a3202cde71d55159ac4796ff71b45cfc6}
+
+
+Definition at line 126 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a2b2db8ce0a5e10a4826bce61e6b673d5}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-ACM3CH1\_\-CHANNEL\_\-NO@{GSN\_\-ACM3CH1\_\-CHANNEL\_\-NO}}
+\index{GSN\_\-ACM3CH1\_\-CHANNEL\_\-NO@{GSN\_\-ACM3CH1\_\-CHANNEL\_\-NO}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-ACM3CH1\_\-CHANNEL\_\-NO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-ACM3CH1\_\-CHANNEL\_\-NO~1}}
+\label{a00484_a2b2db8ce0a5e10a4826bce61e6b673d5}
+
+
+Definition at line 106 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a90eb18824f9b1b14a6e642364c002099}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI0\_\-DMA@{GSN\_\-SPI0\_\-DMA}}
+\index{GSN\_\-SPI0\_\-DMA@{GSN\_\-SPI0\_\-DMA}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI0\_\-DMA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI0\_\-DMA~2}}
+\label{a00484_a90eb18824f9b1b14a6e642364c002099}
+
+
+Definition at line 134 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a518ed5af9857de8db4ce3248328e9c6b}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI0\_\-DMA\_\-CHANNELS@{GSN\_\-SPI0\_\-DMA\_\-CHANNELS}}
+\index{GSN\_\-SPI0\_\-DMA\_\-CHANNELS@{GSN\_\-SPI0\_\-DMA\_\-CHANNELS}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI0\_\-DMA\_\-CHANNELS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI0\_\-DMA\_\-CHANNELS~0x0000000C}}
+\label{a00484_a518ed5af9857de8db4ce3248328e9c6b}
+
+
+Definition at line 127 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a09c49cb5be2c0afcec8a685ed3679134}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}}
+\index{GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO~2}}
+\label{a00484_a09c49cb5be2c0afcec8a685ed3679134}
+
+
+Definition at line 107 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_aec38aae3207af38c56c242a61d77860c}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}}
+\index{GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION~0x00000004}}
+\label{a00484_aec38aae3207af38c56c242a61d77860c}
+
+
+Definition at line 116 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_ad60298b55cb167a7474403a0b2db8987}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}}
+\index{GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO~3}}
+\label{a00484_ad60298b55cb167a7474403a0b2db8987}
+
+
+Definition at line 108 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a6d7d2c2490563e135291e01c643cf3a2}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}}
+\index{GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION~0x00000008}}
+\label{a00484_a6d7d2c2490563e135291e01c643cf3a2}
+
+
+Definition at line 117 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_adb83f42ccdcff7832a0f4717a7b8c0f7}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI1\_\-DMA@{GSN\_\-SPI1\_\-DMA}}
+\index{GSN\_\-SPI1\_\-DMA@{GSN\_\-SPI1\_\-DMA}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI1\_\-DMA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI1\_\-DMA~3}}
+\label{a00484_adb83f42ccdcff7832a0f4717a7b8c0f7}
+
+
+Definition at line 135 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a145e8d83b4aab58ed8c87c5fba134412}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI1\_\-DMA\_\-CHANNELS@{GSN\_\-SPI1\_\-DMA\_\-CHANNELS}}
+\index{GSN\_\-SPI1\_\-DMA\_\-CHANNELS@{GSN\_\-SPI1\_\-DMA\_\-CHANNELS}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI1\_\-DMA\_\-CHANNELS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI1\_\-DMA\_\-CHANNELS~0x000000C0}}
+\label{a00484_a145e8d83b4aab58ed8c87c5fba134412}
+
+
+Definition at line 128 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a549ef3642c7fda450410e62b56c3de9e}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}}
+\index{GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO~6}}
+\label{a00484_a549ef3642c7fda450410e62b56c3de9e}
+
+
+Definition at line 111 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_ab332814b750e9d06dabe0aa4d0ab3845}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}}
+\index{GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION~0x00000040}}
+\label{a00484_ab332814b750e9d06dabe0aa4d0ab3845}
+
+
+Definition at line 120 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_ab131954c327881d5fe08be1dd5510f3d}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}}
+\index{GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO~7}}
+\label{a00484_ab131954c327881d5fe08be1dd5510f3d}
+
+
+Definition at line 112 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a433e53beca3e8fd24635b491bfa2aa19}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}}
+\index{GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-SPI1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION~0x00000080}}
+\label{a00484_a433e53beca3e8fd24635b491bfa2aa19}
+
+
+Definition at line 121 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a0aec9c64944acaf248ad1dd7cee8c937}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART0\_\-DMA@{GSN\_\-UART0\_\-DMA}}
+\index{GSN\_\-UART0\_\-DMA@{GSN\_\-UART0\_\-DMA}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART0\_\-DMA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART0\_\-DMA~4}}
+\label{a00484_a0aec9c64944acaf248ad1dd7cee8c937}
+
+
+Definition at line 136 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_afcbc9006c931ac89b672bae0b187f309}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART0\_\-DMA\_\-CHANNELS@{GSN\_\-UART0\_\-DMA\_\-CHANNELS}}
+\index{GSN\_\-UART0\_\-DMA\_\-CHANNELS@{GSN\_\-UART0\_\-DMA\_\-CHANNELS}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART0\_\-DMA\_\-CHANNELS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART0\_\-DMA\_\-CHANNELS~0x00000030}}
+\label{a00484_afcbc9006c931ac89b672bae0b187f309}
+
+
+Definition at line 129 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a36502973cc3d1fdac5fdf844245d5c41}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}}
+\index{GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-NO~4}}
+\label{a00484_a36502973cc3d1fdac5fdf844245d5c41}
+
+
+Definition at line 109 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a6ab75e48baf9d4d47f57acb2ad5d5e4e}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}}
+\index{GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART0\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION~0x00000010}}
+\label{a00484_a6ab75e48baf9d4d47f57acb2ad5d5e4e}
+
+
+Definition at line 118 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_afe69dfdc5c1d8da565f80843224d4400}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}}
+\index{GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-NO~5}}
+\label{a00484_afe69dfdc5c1d8da565f80843224d4400}
+
+
+Definition at line 110 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a6feeadb8169a6419cac6c600fdb1578a}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}}
+\index{GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART0\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION~0x00000020}}
+\label{a00484_a6feeadb8169a6419cac6c600fdb1578a}
+
+
+Definition at line 119 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a94eeeed32bfd2b1263bd50406eaa1b25}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART1\_\-DMA@{GSN\_\-UART1\_\-DMA}}
+\index{GSN\_\-UART1\_\-DMA@{GSN\_\-UART1\_\-DMA}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART1\_\-DMA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART1\_\-DMA~5}}
+\label{a00484_a94eeeed32bfd2b1263bd50406eaa1b25}
+
+
+Definition at line 137 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a49bae6c89e0e2813bc051b25e1961d6e}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART1\_\-DMA\_\-CHANNELS@{GSN\_\-UART1\_\-DMA\_\-CHANNELS}}
+\index{GSN\_\-UART1\_\-DMA\_\-CHANNELS@{GSN\_\-UART1\_\-DMA\_\-CHANNELS}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART1\_\-DMA\_\-CHANNELS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART1\_\-DMA\_\-CHANNELS~0x00000300}}
+\label{a00484_a49bae6c89e0e2813bc051b25e1961d6e}
+
+
+Definition at line 130 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a764876fc0a3f5d8b04993ca6b5ddbf62}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}}
+\index{GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-NO~8}}
+\label{a00484_a764876fc0a3f5d8b04993ca6b5ddbf62}
+
+
+Definition at line 113 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a8b6623ecbbaf5c3c6caa554e28b12def}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}}
+\index{GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART1\_\-RX\_\-DMA\_\-CHANNEL\_\-POSITION~0x00000100}}
+\label{a00484_a8b6623ecbbaf5c3c6caa554e28b12def}
+
+
+Definition at line 122 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a74b550c1871cad275c9f099bf48e3a34}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}}
+\index{GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO@{GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-NO~9}}
+\label{a00484_a74b550c1871cad275c9f099bf48e3a34}
+
+
+Definition at line 114 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_ac9aa5902379af876a5371ab24a510bff}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}}
+\index{GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION@{GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-UART1\_\-TX\_\-DMA\_\-CHANNEL\_\-POSITION~0x00000200}}
+\label{a00484_ac9aa5902379af876a5371ab24a510bff}
+
+
+Definition at line 123 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a71f8e6c80cdbf3c086ef3e31be6c9168}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-0@{GSNDMA\_\-CHANNEL\_\-0}}
+\index{GSNDMA\_\-CHANNEL\_\-0@{GSNDMA\_\-CHANNEL\_\-0}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-0~0}}
+\label{a00484_a71f8e6c80cdbf3c086ef3e31be6c9168}
+
+
+Definition at line 144 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_aafc0246b2f3e95feffb5213a48966346}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-1@{GSNDMA\_\-CHANNEL\_\-1}}
+\index{GSNDMA\_\-CHANNEL\_\-1@{GSNDMA\_\-CHANNEL\_\-1}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-1~1}}
+\label{a00484_aafc0246b2f3e95feffb5213a48966346}
+
+
+Definition at line 145 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a6600eb8ee630a08b0d530bb68b12edb7}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-10@{GSNDMA\_\-CHANNEL\_\-10}}
+\index{GSNDMA\_\-CHANNEL\_\-10@{GSNDMA\_\-CHANNEL\_\-10}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-10~10}}
+\label{a00484_a6600eb8ee630a08b0d530bb68b12edb7}
+
+
+Definition at line 154 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a000b4af780c11b29b0010f675e3cbc60}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-11@{GSNDMA\_\-CHANNEL\_\-11}}
+\index{GSNDMA\_\-CHANNEL\_\-11@{GSNDMA\_\-CHANNEL\_\-11}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-11}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-11~11}}
+\label{a00484_a000b4af780c11b29b0010f675e3cbc60}
+
+
+Definition at line 155 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_ad0ad6437e0dd4308a5ca860908308136}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-12@{GSNDMA\_\-CHANNEL\_\-12}}
+\index{GSNDMA\_\-CHANNEL\_\-12@{GSNDMA\_\-CHANNEL\_\-12}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-12}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-12~12}}
+\label{a00484_ad0ad6437e0dd4308a5ca860908308136}
+
+
+Definition at line 156 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a8a6f986b828460b28e9c9cc6ce0c7885}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-13@{GSNDMA\_\-CHANNEL\_\-13}}
+\index{GSNDMA\_\-CHANNEL\_\-13@{GSNDMA\_\-CHANNEL\_\-13}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-13}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-13~13}}
+\label{a00484_a8a6f986b828460b28e9c9cc6ce0c7885}
+
+
+Definition at line 157 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_adb6390cb7cc7ceb1567ac4caf1260ba9}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-14@{GSNDMA\_\-CHANNEL\_\-14}}
+\index{GSNDMA\_\-CHANNEL\_\-14@{GSNDMA\_\-CHANNEL\_\-14}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-14}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-14~14}}
+\label{a00484_adb6390cb7cc7ceb1567ac4caf1260ba9}
+
+
+Definition at line 158 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a149bbd1fd7faa66916ec0b2a26bdbfc5}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-15@{GSNDMA\_\-CHANNEL\_\-15}}
+\index{GSNDMA\_\-CHANNEL\_\-15@{GSNDMA\_\-CHANNEL\_\-15}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-15}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-15~15}}
+\label{a00484_a149bbd1fd7faa66916ec0b2a26bdbfc5}
+
+
+Definition at line 159 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_ac41ac8d6de662c1ef0301da9dbcd6bca}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-16@{GSNDMA\_\-CHANNEL\_\-16}}
+\index{GSNDMA\_\-CHANNEL\_\-16@{GSNDMA\_\-CHANNEL\_\-16}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-16~16}}
+\label{a00484_ac41ac8d6de662c1ef0301da9dbcd6bca}
+
+
+Definition at line 160 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_adc1496eca719c822510a6bdee111230c}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-17@{GSNDMA\_\-CHANNEL\_\-17}}
+\index{GSNDMA\_\-CHANNEL\_\-17@{GSNDMA\_\-CHANNEL\_\-17}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-17}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-17~17}}
+\label{a00484_adc1496eca719c822510a6bdee111230c}
+
+
+Definition at line 161 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a86871f85d077136b43ce24da7401fb46}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-18@{GSNDMA\_\-CHANNEL\_\-18}}
+\index{GSNDMA\_\-CHANNEL\_\-18@{GSNDMA\_\-CHANNEL\_\-18}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-18}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-18~18}}
+\label{a00484_a86871f85d077136b43ce24da7401fb46}
+
+
+Definition at line 162 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_aec041d8e41a8b26360fd73662dbdf0ad}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-19@{GSNDMA\_\-CHANNEL\_\-19}}
+\index{GSNDMA\_\-CHANNEL\_\-19@{GSNDMA\_\-CHANNEL\_\-19}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-19}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-19~19}}
+\label{a00484_aec041d8e41a8b26360fd73662dbdf0ad}
+
+
+Definition at line 163 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a5deead63a92314854b45c055598c043c}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-2@{GSNDMA\_\-CHANNEL\_\-2}}
+\index{GSNDMA\_\-CHANNEL\_\-2@{GSNDMA\_\-CHANNEL\_\-2}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-2~2}}
+\label{a00484_a5deead63a92314854b45c055598c043c}
+
+
+Definition at line 146 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a78570f42d54d0cceddf5ac3e76ef5883}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-20@{GSNDMA\_\-CHANNEL\_\-20}}
+\index{GSNDMA\_\-CHANNEL\_\-20@{GSNDMA\_\-CHANNEL\_\-20}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-20}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-20~20}}
+\label{a00484_a78570f42d54d0cceddf5ac3e76ef5883}
+
+
+Definition at line 164 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a3e4b4c6574e761b8a7ca12976be7da2d}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-21@{GSNDMA\_\-CHANNEL\_\-21}}
+\index{GSNDMA\_\-CHANNEL\_\-21@{GSNDMA\_\-CHANNEL\_\-21}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-21}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-21~21}}
+\label{a00484_a3e4b4c6574e761b8a7ca12976be7da2d}
+
+
+Definition at line 165 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a95f0b82527fdf9419ba78afedde7606f}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-22@{GSNDMA\_\-CHANNEL\_\-22}}
+\index{GSNDMA\_\-CHANNEL\_\-22@{GSNDMA\_\-CHANNEL\_\-22}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-22}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-22~22}}
+\label{a00484_a95f0b82527fdf9419ba78afedde7606f}
+
+
+Definition at line 166 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_abd4020cf11e9fb4f581ae3ed06b26f38}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-23@{GSNDMA\_\-CHANNEL\_\-23}}
+\index{GSNDMA\_\-CHANNEL\_\-23@{GSNDMA\_\-CHANNEL\_\-23}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-23}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-23~23}}
+\label{a00484_abd4020cf11e9fb4f581ae3ed06b26f38}
+
+
+Definition at line 167 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a2716f45e9773e71249d1da5033e11363}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-24@{GSNDMA\_\-CHANNEL\_\-24}}
+\index{GSNDMA\_\-CHANNEL\_\-24@{GSNDMA\_\-CHANNEL\_\-24}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-24}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-24~24}}
+\label{a00484_a2716f45e9773e71249d1da5033e11363}
+
+
+Definition at line 168 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a3750b075005d49e145662b326d46e114}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-25@{GSNDMA\_\-CHANNEL\_\-25}}
+\index{GSNDMA\_\-CHANNEL\_\-25@{GSNDMA\_\-CHANNEL\_\-25}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-25}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-25~25}}
+\label{a00484_a3750b075005d49e145662b326d46e114}
+
+
+Definition at line 169 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_aa54c6bfd2061c30275f0e9e55a0fd602}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-26@{GSNDMA\_\-CHANNEL\_\-26}}
+\index{GSNDMA\_\-CHANNEL\_\-26@{GSNDMA\_\-CHANNEL\_\-26}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-26}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-26~26}}
+\label{a00484_aa54c6bfd2061c30275f0e9e55a0fd602}
+
+
+Definition at line 170 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a8707844494eee5b22880dd4c6a89b4c2}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-27@{GSNDMA\_\-CHANNEL\_\-27}}
+\index{GSNDMA\_\-CHANNEL\_\-27@{GSNDMA\_\-CHANNEL\_\-27}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-27}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-27~27}}
+\label{a00484_a8707844494eee5b22880dd4c6a89b4c2}
+
+
+Definition at line 171 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a76ba60151657aa3b6780b3739640590f}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-28@{GSNDMA\_\-CHANNEL\_\-28}}
+\index{GSNDMA\_\-CHANNEL\_\-28@{GSNDMA\_\-CHANNEL\_\-28}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-28}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-28~28}}
+\label{a00484_a76ba60151657aa3b6780b3739640590f}
+
+
+Definition at line 172 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_ab28322a6b190c0b4ba882a2aaf1b9a28}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-29@{GSNDMA\_\-CHANNEL\_\-29}}
+\index{GSNDMA\_\-CHANNEL\_\-29@{GSNDMA\_\-CHANNEL\_\-29}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-29}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-29~29}}
+\label{a00484_ab28322a6b190c0b4ba882a2aaf1b9a28}
+
+
+Definition at line 173 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a9dfd424f980f9c35bcc55e66916d8605}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-3@{GSNDMA\_\-CHANNEL\_\-3}}
+\index{GSNDMA\_\-CHANNEL\_\-3@{GSNDMA\_\-CHANNEL\_\-3}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-3~3}}
+\label{a00484_a9dfd424f980f9c35bcc55e66916d8605}
+
+
+Definition at line 147 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_aa8aa2ddbe72b70f74bcffe9368b7d872}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-30@{GSNDMA\_\-CHANNEL\_\-30}}
+\index{GSNDMA\_\-CHANNEL\_\-30@{GSNDMA\_\-CHANNEL\_\-30}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-30}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-30~30}}
+\label{a00484_aa8aa2ddbe72b70f74bcffe9368b7d872}
+
+
+Definition at line 174 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_abb1e8fb25e50fad258a291a11bd80d37}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-31@{GSNDMA\_\-CHANNEL\_\-31}}
+\index{GSNDMA\_\-CHANNEL\_\-31@{GSNDMA\_\-CHANNEL\_\-31}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-31}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-31~31}}
+\label{a00484_abb1e8fb25e50fad258a291a11bd80d37}
+
+
+Definition at line 175 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a62f3ee88b0075bbb2d86216cf011a601}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-4@{GSNDMA\_\-CHANNEL\_\-4}}
+\index{GSNDMA\_\-CHANNEL\_\-4@{GSNDMA\_\-CHANNEL\_\-4}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-4~4}}
+\label{a00484_a62f3ee88b0075bbb2d86216cf011a601}
+
+
+Definition at line 148 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a3fdf644bda1e436a4d3278ad1b69efe0}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-5@{GSNDMA\_\-CHANNEL\_\-5}}
+\index{GSNDMA\_\-CHANNEL\_\-5@{GSNDMA\_\-CHANNEL\_\-5}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-5~5}}
+\label{a00484_a3fdf644bda1e436a4d3278ad1b69efe0}
+
+
+Definition at line 149 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a60b20ca60701a2e09dbaa2e35205c63d}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-6@{GSNDMA\_\-CHANNEL\_\-6}}
+\index{GSNDMA\_\-CHANNEL\_\-6@{GSNDMA\_\-CHANNEL\_\-6}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-6~6}}
+\label{a00484_a60b20ca60701a2e09dbaa2e35205c63d}
+
+
+Definition at line 150 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a1dc12024a1645e9628a8228eb3d600fc}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-7@{GSNDMA\_\-CHANNEL\_\-7}}
+\index{GSNDMA\_\-CHANNEL\_\-7@{GSNDMA\_\-CHANNEL\_\-7}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-7}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-7~7}}
+\label{a00484_a1dc12024a1645e9628a8228eb3d600fc}
+
+
+Definition at line 151 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a59184a849d87060a1aa4af080be777bc}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-8@{GSNDMA\_\-CHANNEL\_\-8}}
+\index{GSNDMA\_\-CHANNEL\_\-8@{GSNDMA\_\-CHANNEL\_\-8}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-8~8}}
+\label{a00484_a59184a849d87060a1aa4af080be777bc}
+
+
+Definition at line 152 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a9b9e452e110eedb35f128e734e16ef64}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-9@{GSNDMA\_\-CHANNEL\_\-9}}
+\index{GSNDMA\_\-CHANNEL\_\-9@{GSNDMA\_\-CHANNEL\_\-9}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-9}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-9~9}}
+\label{a00484_a9b9e452e110eedb35f128e734e16ef64}
+
+
+Definition at line 153 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a05c6a73586179b2bc758895613204d0c}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-CHANNEL\_\-COUNT@{GSNDMA\_\-CHANNEL\_\-COUNT}}
+\index{GSNDMA\_\-CHANNEL\_\-COUNT@{GSNDMA\_\-CHANNEL\_\-COUNT}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-CHANNEL\_\-COUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-CHANNEL\_\-COUNT~32}}
+\label{a00484_a05c6a73586179b2bc758895613204d0c}
+
+
+Definition at line 140 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a7294ea06db1a491f659cf220e1b51c0b}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-FULL\_\-CHANNELS\_\-DISABLE@{GSNDMA\_\-FULL\_\-CHANNELS\_\-DISABLE}}
+\index{GSNDMA\_\-FULL\_\-CHANNELS\_\-DISABLE@{GSNDMA\_\-FULL\_\-CHANNELS\_\-DISABLE}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-FULL\_\-CHANNELS\_\-DISABLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-FULL\_\-CHANNELS\_\-DISABLE~0x00000000}}
+\label{a00484_a7294ea06db1a491f659cf220e1b51c0b}
+
+
+Definition at line 142 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_acb90501fb017d4fdd51aab3c5591a555}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GSNDMA\_\-FULL\_\-CHANNELS\_\-ENABLE@{GSNDMA\_\-FULL\_\-CHANNELS\_\-ENABLE}}
+\index{GSNDMA\_\-FULL\_\-CHANNELS\_\-ENABLE@{GSNDMA\_\-FULL\_\-CHANNELS\_\-ENABLE}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GSNDMA\_\-FULL\_\-CHANNELS\_\-ENABLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSNDMA\_\-FULL\_\-CHANNELS\_\-ENABLE~0xFFFFFFFF}}
+\label{a00484_acb90501fb017d4fdd51aab3c5591a555}
+
+
+Definition at line 141 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a9cdc76d0ead7d68830bee5508ff4a099}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!MAX\_\-BYTES\_\-PER\_\-DMA\_\-TRANSFER@{MAX\_\-BYTES\_\-PER\_\-DMA\_\-TRANSFER}}
+\index{MAX\_\-BYTES\_\-PER\_\-DMA\_\-TRANSFER@{MAX\_\-BYTES\_\-PER\_\-DMA\_\-TRANSFER}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{MAX\_\-BYTES\_\-PER\_\-DMA\_\-TRANSFER}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-BYTES\_\-PER\_\-DMA\_\-TRANSFER~1024}}
+\label{a00484_a9cdc76d0ead7d68830bee5508ff4a099}
+
+
+Definition at line 99 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_acb8951c4fdb17d6f194ec2a38cd53199}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!MAX\_\-NO\_\-OF\_\-TASKS\_\-IN\_\-PERIPHERAL\_\-SCATTER\_\-GATHER@{MAX\_\-NO\_\-OF\_\-TASKS\_\-IN\_\-PERIPHERAL\_\-SCATTER\_\-GATHER}}
+\index{MAX\_\-NO\_\-OF\_\-TASKS\_\-IN\_\-PERIPHERAL\_\-SCATTER\_\-GATHER@{MAX\_\-NO\_\-OF\_\-TASKS\_\-IN\_\-PERIPHERAL\_\-SCATTER\_\-GATHER}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{MAX\_\-NO\_\-OF\_\-TASKS\_\-IN\_\-PERIPHERAL\_\-SCATTER\_\-GATHER}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-NO\_\-OF\_\-TASKS\_\-IN\_\-PERIPHERAL\_\-SCATTER\_\-GATHER~10}}
+\label{a00484_acb8951c4fdb17d6f194ec2a38cd53199}
+
+
+Definition at line 103 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_acbb264dcf72e5f414bd8ce4b5e993744}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!MEMORY\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON@{MEMORY\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON}}
+\index{MEMORY\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON@{MEMORY\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{MEMORY\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON}]{\setlength{\rightskip}{0pt plus 5cm}\#define MEMORY\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON~0xAAFC8004}}
+\label{a00484_acbb264dcf72e5f414bd8ce4b5e993744}
+
+
+Definition at line 94 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_af41f9d4a535f48887520e136af1c4db1}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!N\_\-MINUS\_\-ONE\_\-FIELD\_\-BIT\_\-MASK@{N\_\-MINUS\_\-ONE\_\-FIELD\_\-BIT\_\-MASK}}
+\index{N\_\-MINUS\_\-ONE\_\-FIELD\_\-BIT\_\-MASK@{N\_\-MINUS\_\-ONE\_\-FIELD\_\-BIT\_\-MASK}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{N\_\-MINUS\_\-ONE\_\-FIELD\_\-BIT\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\_\-MINUS\_\-ONE\_\-FIELD\_\-BIT\_\-MASK~0x00003FF0}}
+\label{a00484_af41f9d4a535f48887520e136af1c4db1}
+
+
+Definition at line 95 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_ae8e73cb3b2b2a19fc917950debfee711}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!NUMB\_\-OF\_\-DMA\_\-PHERI@{NUMB\_\-OF\_\-DMA\_\-PHERI}}
+\index{NUMB\_\-OF\_\-DMA\_\-PHERI@{NUMB\_\-OF\_\-DMA\_\-PHERI}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{NUMB\_\-OF\_\-DMA\_\-PHERI}]{\setlength{\rightskip}{0pt plus 5cm}\#define NUMB\_\-OF\_\-DMA\_\-PHERI~6}}
+\label{a00484_ae8e73cb3b2b2a19fc917950debfee711}
+DMA\_\-Channel\_\-IDs 
+
+Definition at line 91 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_aca65a0bf3bfd12532c02dae5c279e8ea}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!PERIPHERAL\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON@{PERIPHERAL\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON}}
+\index{PERIPHERAL\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON@{PERIPHERAL\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{PERIPHERAL\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON}]{\setlength{\rightskip}{0pt plus 5cm}\#define PERIPHERAL\_\-SCATTER\_\-GATHER\_\-PRIMARY\_\-COMMON~0xAAFC800E}}
+\label{a00484_aca65a0bf3bfd12532c02dae5c279e8ea}
+
+
+Definition at line 93 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_a77c40078080da55358bb95deabdc19d2}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!PING\_\-PONG\_\-COMMON@{PING\_\-PONG\_\-COMMON}}
+\index{PING\_\-PONG\_\-COMMON@{PING\_\-PONG\_\-COMMON}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{PING\_\-PONG\_\-COMMON}]{\setlength{\rightskip}{0pt plus 5cm}\#define PING\_\-PONG\_\-COMMON~0x0CFC800B}}
+\label{a00484_a77c40078080da55358bb95deabdc19d2}
+
+
+Definition at line 92 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_ac8c5aeb4ff04ea6017a636ace0320dbb}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!PSG\_\-MAX\_\-TRANSFER\_\-COUNT@{PSG\_\-MAX\_\-TRANSFER\_\-COUNT}}
+\index{PSG\_\-MAX\_\-TRANSFER\_\-COUNT@{PSG\_\-MAX\_\-TRANSFER\_\-COUNT}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{PSG\_\-MAX\_\-TRANSFER\_\-COUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PSG\_\-MAX\_\-TRANSFER\_\-COUNT~1024}}
+\label{a00484_ac8c5aeb4ff04ea6017a636ace0320dbb}
+
+
+Definition at line 102 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_ae78fa6fe29ddd383c2c6ca1b9490130d}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!SYSTEM\_\-MEMORY\_\-FOR\_\-DATASTRUCTURE@{SYSTEM\_\-MEMORY\_\-FOR\_\-DATASTRUCTURE}}
+\index{SYSTEM\_\-MEMORY\_\-FOR\_\-DATASTRUCTURE@{SYSTEM\_\-MEMORY\_\-FOR\_\-DATASTRUCTURE}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{SYSTEM\_\-MEMORY\_\-FOR\_\-DATASTRUCTURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SYSTEM\_\-MEMORY\_\-FOR\_\-DATASTRUCTURE~1024}}
+\label{a00484_ae78fa6fe29ddd383c2c6ca1b9490130d}
+
+
+Definition at line 98 of file gsn\_\-dma.h.
+
+\hypertarget{a00484_abcdb10dc038da3a0c6aa8af1d933f67b}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!UARTDMA\_\-MAX\_\-TRANSMIT\_\-COUNT@{UARTDMA\_\-MAX\_\-TRANSMIT\_\-COUNT}}
+\index{UARTDMA\_\-MAX\_\-TRANSMIT\_\-COUNT@{UARTDMA\_\-MAX\_\-TRANSMIT\_\-COUNT}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{UARTDMA\_\-MAX\_\-TRANSMIT\_\-COUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UARTDMA\_\-MAX\_\-TRANSMIT\_\-COUNT~1024}}
+\label{a00484_abcdb10dc038da3a0c6aa8af1d933f67b}
+
+
+Definition at line 101 of file gsn\_\-dma.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00484_a74d23c3cb3acf00134600795aef55b6e}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!DMACALLBACK\_\-FP@{DMACALLBACK\_\-FP}}
+\index{DMACALLBACK\_\-FP@{DMACALLBACK\_\-FP}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{DMACALLBACK\_\-FP}]{\setlength{\rightskip}{0pt plus 5cm}typedef VOID( $\ast$ {\bf DMACALLBACK\_\-FP})(VOID $\ast$, {\bf UINT32})}}
+\label{a00484_a74d23c3cb3acf00134600795aef55b6e}
+
+
+Definition at line 182 of file gsn\_\-dma.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{a00484_a2db75948eb583e75e11f4ac287b2766e}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr@{\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr}}
+\index{\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr@{\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ch0Done\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a2db75948eb583e75e11f4ac287b2766e}
+\hypertarget{a00484_ae4c2a112409c180c12ff5baa9e1998d6}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr\_\-Patch}}
+\index{\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ch0Done\_\-Isr\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ch0Done\_\-Isr\_\-Patch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_ae4c2a112409c180c12ff5baa9e1998d6}
+\hypertarget{a00484_ae217e6a6691be2dd27086c30d67026de}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr@{\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr}}
+\index{\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr@{\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ch1Done\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_ae217e6a6691be2dd27086c30d67026de}
+\hypertarget{a00484_a88cfbe6f9017bd8dddc8ac101a121f5c}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr\_\-Patch}}
+\index{\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ch1Done\_\-Isr\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ch1Done\_\-Isr\_\-Patch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a88cfbe6f9017bd8dddc8ac101a121f5c}
+\hypertarget{a00484_a0f19f6fb93100fbb11c6dc1abc5c88ee}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Error\_\-Isr@{\_\-\_\-GsnDma\_\-Error\_\-Isr}}
+\index{\_\-\_\-GsnDma\_\-Error\_\-Isr@{\_\-\_\-GsnDma\_\-Error\_\-Isr}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Error\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Error\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a0f19f6fb93100fbb11c6dc1abc5c88ee}
+\hypertarget{a00484_a7806ddf28965bbbb91adbd4a168393a8}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr}}
+\index{\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a7806ddf28965bbbb91adbd4a168393a8}
+\hypertarget{a00484_a30def8295f750bd967af813f5ecc7fc7}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr\_\-Patch}}
+\index{\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ssp0RxDone\_\-Isr\_\-Patch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a30def8295f750bd967af813f5ecc7fc7}
+\hypertarget{a00484_a355b1c6f973ea9385a5391e6f830e01c}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr}}
+\index{\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a355b1c6f973ea9385a5391e6f830e01c}
+\hypertarget{a00484_acace99d835a7aef998e611ad74255cbb}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr\_\-Patch}}
+\index{\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ssp0TxDone\_\-Isr\_\-Patch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_acace99d835a7aef998e611ad74255cbb}
+\hypertarget{a00484_aa996fcc9d38535a53101a433127a3960}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr}}
+\index{\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_aa996fcc9d38535a53101a433127a3960}
+\hypertarget{a00484_ab678611bd82e54daf2d3f68a20e8a3b8}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr\_\-Patch}}
+\index{\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ssp1RxDone\_\-Isr\_\-Patch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_ab678611bd82e54daf2d3f68a20e8a3b8}
+\hypertarget{a00484_a80f90818e028689f83ac68475f99260d}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr}}
+\index{\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a80f90818e028689f83ac68475f99260d}
+\hypertarget{a00484_a038161283be57b45e123d2c3d9ecf4be}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr\_\-Patch}}
+\index{\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Ssp1TxDone\_\-Isr\_\-Patch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a038161283be57b45e123d2c3d9ecf4be}
+\hypertarget{a00484_a8be43228692851af8402e56e581c5e72}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr}}
+\index{\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a8be43228692851af8402e56e581c5e72}
+\hypertarget{a00484_a2143cff0f132766e5979a15e701bf1be}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr\_\-Patch}}
+\index{\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Uart0RxDone\_\-Isr\_\-Patch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a2143cff0f132766e5979a15e701bf1be}
+\hypertarget{a00484_af606698daa414a28662039ea4f85aa60}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr}}
+\index{\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_af606698daa414a28662039ea4f85aa60}
+\hypertarget{a00484_a148c3dbf8d37a1d8c2db90e56af9f4d8}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr\_\-Patch}}
+\index{\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Uart0TxDone\_\-Isr\_\-Patch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a148c3dbf8d37a1d8c2db90e56af9f4d8}
+\hypertarget{a00484_a6cd5419759533b469376a5a0981451a8}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr}}
+\index{\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a6cd5419759533b469376a5a0981451a8}
+\hypertarget{a00484_a23c5bed5fe1e54dc8d9660a584fc806b}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr\_\-Patch}}
+\index{\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Uart1RxDone\_\-Isr\_\-Patch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a23c5bed5fe1e54dc8d9660a584fc806b}
+\hypertarget{a00484_a665c71acdcac9cc68e7613af8b04688b}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr}}
+\index{\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr@{\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a665c71acdcac9cc68e7613af8b04688b}
+\hypertarget{a00484_a5950124ebf8cfdb3d07d14ea818e732a}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr\_\-Patch}}
+\index{\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr\_\-Patch@{\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{\_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}PUBLIC VOID \_\-\_\-GsnDma\_\-Uart1TxDone\_\-Isr\_\-Patch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a5950124ebf8cfdb3d07d14ea818e732a}
+\hypertarget{a00484_a60ba6c03d23e0f88788bedba719983b7}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GsnDma\_\-CallBackRegister\_\-Patch@{GsnDma\_\-CallBackRegister\_\-Patch}}
+\index{GsnDma\_\-CallBackRegister\_\-Patch@{GsnDma\_\-CallBackRegister\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GsnDma\_\-CallBackRegister\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-CallBackRegister\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf DMACALLBACK\_\-FP}}]{ptCallBackFunc, }
+\item[{VOID $\ast$}]{ctx, }
+\item[{{\bf UINT32}}]{channelID}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a60ba6c03d23e0f88788bedba719983b7}
+\hypertarget{a00484_adb0f53073632fcf7c5c096f1d941226e}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GsnDma\_\-CycleControl\_\-Patch@{GsnDma\_\-CycleControl\_\-Patch}}
+\index{GsnDma\_\-CycleControl\_\-Patch@{GsnDma\_\-CycleControl\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GsnDma\_\-CycleControl\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDma\_\-CycleControl\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf GSN\_\-DMA\_\-CHANNEL\_\-CONFIG\_\-T} $\ast$}]{ptChannelConfig, }
+\item[{{\bf UINT8}}]{ulChannelID, }
+\item[{{\bf UINT32}}]{noOfBytesToTransfer, }
+\item[{VOID $\ast$}]{pvSrcAddr, }
+\item[{VOID $\ast$}]{pvDstAddr}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_adb0f53073632fcf7c5c096f1d941226e}
+\hypertarget{a00484_a0bec5573e11fbfdd444b02d1c787dcba}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GsnDma\_\-IndividualClose\_\-Patch@{GsnDma\_\-IndividualClose\_\-Patch}}
+\index{GsnDma\_\-IndividualClose\_\-Patch@{GsnDma\_\-IndividualClose\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GsnDma\_\-IndividualClose\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnDma\_\-IndividualClose\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf UINT32}}]{channelsToClose}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a0bec5573e11fbfdd444b02d1c787dcba}
+\hypertarget{a00484_a9fe7978fe38826e94cb78c3e964f04cb}{
+\index{gsn\_\-dma.h@{gsn\_\-dma.h}!GsnDma\_\-Open\_\-Patch@{GsnDma\_\-Open\_\-Patch}}
+\index{GsnDma\_\-Open\_\-Patch@{GsnDma\_\-Open\_\-Patch}!gsn_dma.h@{gsn\_\-dma.h}}
+\subsubsection[{GsnDma\_\-Open\_\-Patch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-OSAL\_\-ERROR\_\-T} GsnDma\_\-Open\_\-Patch (
+\begin{DoxyParamCaption}
+\item[{{\bf GSN\_\-DMA\_\-T} $\ast$}]{ptGsnDma, }
+\item[{{\bf GSN\_\-DMACONFIG\_\-T} $\ast$}]{ptConfig, }
+\item[{{\bf UINT32}}]{channelsToConfigure}
+\end{DoxyParamCaption}
+)}}
+\label{a00484_a9fe7978fe38826e94cb78c3e964f04cb}

@@ -1,0 +1,217 @@
+\hypertarget{a00470}{
+\section{dynamic\_\-mem\_\-mgmt.h File Reference}
+\label{a00470}\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00694}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00035}{GSN\_\-BYTE\_\-POOL\_\-LINK}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00470_a57fe2cbc87c8a8968fb5cfd3980e13dd}{GSN\_\-MODULE\_\-ID\_\-GSN}~0
+\item 
+\#define \hyperlink{a00470_a56aaa4e1db3b5248ff786effd8467fc3}{GSN\_\-MODULE\_\-ID\_\-SUPP}~1
+\item 
+\#define \hyperlink{a00470_a9365447f72eb5c602d2df9416aa852ec}{GSN\_\-MODULE\_\-ID\_\-XML}~2
+\item 
+\#define \hyperlink{a00470_af9a1d7cd4969afd142249c59cf597610}{GSN\_\-MODULE\_\-ID\_\-SYS}~3
+\item 
+\#define \hyperlink{a00470_a99a1ae5556d5b2f1372242586773ea51}{gsn\_\-malloc}(size)~GsnDynMemMgmt\_\-Alloc((size), \_\-\_\-LINE\_\-\_\-, GSN\_\-MODULE\_\-ID\_\-GSN )
+\item 
+\#define \hyperlink{a00470_acbbd85dc352dcc61b2e8008043063bda}{gsn\_\-realloc}(ptr, size)~GsnDynMemMgmt\_\-Realloc( (ptr), (size), \_\-\_\-LINE\_\-\_\-, GSN\_\-MODULE\_\-ID\_\-GSN )
+\item 
+\#define \hyperlink{a00470_a46d4cefce1e68b2b2da71a49ed73321f}{gsn\_\-free}(ptr)~GsnDynMemMgmt\_\-Free( (ptr) )
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00035}{GSN\_\-BYTE\_\-POOL\_\-LINK} \hyperlink{a00470_a43b2d3e37533f60e9239424355b31657}{GSN\_\-BYTE\_\-POOL\_\-LINK\_\-T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+VOID $\ast$ \hyperlink{a00470_ab7f4aadf548c474e7be54a6d848f527d}{GsnDynMemMgmt\_\-Alloc} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} line, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} moduleId)
+\item 
+VOID $\ast$ \hyperlink{a00470_a64c59f6321ca5ca6d95b4bd19549be90}{GsnDynMemMgmt\_\-Realloc} (VOID $\ast$ptr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} line, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} moduleId)
+\item 
+VOID \hyperlink{a00470_a00b4ea05aecdc09e911f8f4813fbbf3b}{GsnDynMemMgmt\_\-Free} (VOID $\ast$ptr)
+\item 
+VOID $\ast$ \hyperlink{a00470_a33e51d4c3afec183b9c99627ed611042}{MALLOC} (\hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size)
+\item 
+VOID \hyperlink{a00470_a8817fa41dc629062cdbef1c4c54e94d5}{FREE} (VOID $\ast$ptr)
+\item 
+VOID $\ast$ \hyperlink{a00470_a1a2790c07ecfa45ad9bfc1c0412aad0d}{REALLOC} (VOID $\ast$ptr, \hyperlink{a00660_gae1e6edbbc26d6fbc71a90190d0266018}{UINT32} size)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00035}{GSN\_\-BYTE\_\-POOL\_\-LINK\_\-T} $\ast$ \hyperlink{a00470_a959cb89a34782abb9c1de0f395d34f39}{pGsnBytePoolHead}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{a00470_a46d4cefce1e68b2b2da71a49ed73321f}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!gsn\_\-free@{gsn\_\-free}}
+\index{gsn\_\-free@{gsn\_\-free}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{gsn\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}\#define gsn\_\-free(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~GsnDynMemMgmt\_\-Free( (ptr) )}}
+\label{a00470_a46d4cefce1e68b2b2da71a49ed73321f}
+
+
+Definition at line 26 of file dynamic\_\-mem\_\-mgmt.h.
+
+\hypertarget{a00470_a99a1ae5556d5b2f1372242586773ea51}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!gsn\_\-malloc@{gsn\_\-malloc}}
+\index{gsn\_\-malloc@{gsn\_\-malloc}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{gsn\_\-malloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define gsn\_\-malloc(
+\begin{DoxyParamCaption}
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~GsnDynMemMgmt\_\-Alloc((size), \_\-\_\-LINE\_\-\_\-, GSN\_\-MODULE\_\-ID\_\-GSN )}}
+\label{a00470_a99a1ae5556d5b2f1372242586773ea51}
+
+
+Definition at line 24 of file dynamic\_\-mem\_\-mgmt.h.
+
+\hypertarget{a00470_a57fe2cbc87c8a8968fb5cfd3980e13dd}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!GSN\_\-MODULE\_\-ID\_\-GSN@{GSN\_\-MODULE\_\-ID\_\-GSN}}
+\index{GSN\_\-MODULE\_\-ID\_\-GSN@{GSN\_\-MODULE\_\-ID\_\-GSN}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{GSN\_\-MODULE\_\-ID\_\-GSN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MODULE\_\-ID\_\-GSN~0}}
+\label{a00470_a57fe2cbc87c8a8968fb5cfd3980e13dd}
+
+
+Definition at line 4 of file dynamic\_\-mem\_\-mgmt.h.
+
+\hypertarget{a00470_a56aaa4e1db3b5248ff786effd8467fc3}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!GSN\_\-MODULE\_\-ID\_\-SUPP@{GSN\_\-MODULE\_\-ID\_\-SUPP}}
+\index{GSN\_\-MODULE\_\-ID\_\-SUPP@{GSN\_\-MODULE\_\-ID\_\-SUPP}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{GSN\_\-MODULE\_\-ID\_\-SUPP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MODULE\_\-ID\_\-SUPP~1}}
+\label{a00470_a56aaa4e1db3b5248ff786effd8467fc3}
+
+
+Definition at line 5 of file dynamic\_\-mem\_\-mgmt.h.
+
+\hypertarget{a00470_af9a1d7cd4969afd142249c59cf597610}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!GSN\_\-MODULE\_\-ID\_\-SYS@{GSN\_\-MODULE\_\-ID\_\-SYS}}
+\index{GSN\_\-MODULE\_\-ID\_\-SYS@{GSN\_\-MODULE\_\-ID\_\-SYS}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{GSN\_\-MODULE\_\-ID\_\-SYS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MODULE\_\-ID\_\-SYS~3}}
+\label{a00470_af9a1d7cd4969afd142249c59cf597610}
+
+
+Definition at line 7 of file dynamic\_\-mem\_\-mgmt.h.
+
+\hypertarget{a00470_a9365447f72eb5c602d2df9416aa852ec}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!GSN\_\-MODULE\_\-ID\_\-XML@{GSN\_\-MODULE\_\-ID\_\-XML}}
+\index{GSN\_\-MODULE\_\-ID\_\-XML@{GSN\_\-MODULE\_\-ID\_\-XML}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{GSN\_\-MODULE\_\-ID\_\-XML}]{\setlength{\rightskip}{0pt plus 5cm}\#define GSN\_\-MODULE\_\-ID\_\-XML~2}}
+\label{a00470_a9365447f72eb5c602d2df9416aa852ec}
+
+
+Definition at line 6 of file dynamic\_\-mem\_\-mgmt.h.
+
+\hypertarget{a00470_acbbd85dc352dcc61b2e8008043063bda}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!gsn\_\-realloc@{gsn\_\-realloc}}
+\index{gsn\_\-realloc@{gsn\_\-realloc}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{gsn\_\-realloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define gsn\_\-realloc(
+\begin{DoxyParamCaption}
+\item[{}]{ptr, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~GsnDynMemMgmt\_\-Realloc( (ptr), (size), \_\-\_\-LINE\_\-\_\-, GSN\_\-MODULE\_\-ID\_\-GSN )}}
+\label{a00470_acbbd85dc352dcc61b2e8008043063bda}
+
+
+Definition at line 25 of file dynamic\_\-mem\_\-mgmt.h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00470_a43b2d3e37533f60e9239424355b31657}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!GSN\_\-BYTE\_\-POOL\_\-LINK\_\-T@{GSN\_\-BYTE\_\-POOL\_\-LINK\_\-T}}
+\index{GSN\_\-BYTE\_\-POOL\_\-LINK\_\-T@{GSN\_\-BYTE\_\-POOL\_\-LINK\_\-T}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{GSN\_\-BYTE\_\-POOL\_\-LINK\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GSN\_\-BYTE\_\-POOL\_\-LINK} {\bf GSN\_\-BYTE\_\-POOL\_\-LINK\_\-T}}}
+\label{a00470_a43b2d3e37533f60e9239424355b31657}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00470_a8817fa41dc629062cdbef1c4c54e94d5}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!FREE@{FREE}}
+\index{FREE@{FREE}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{FREE}]{\setlength{\rightskip}{0pt plus 5cm}VOID FREE (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00470_a8817fa41dc629062cdbef1c4c54e94d5}
+\hypertarget{a00470_ab7f4aadf548c474e7be54a6d848f527d}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!GsnDynMemMgmt\_\-Alloc@{GsnDynMemMgmt\_\-Alloc}}
+\index{GsnDynMemMgmt\_\-Alloc@{GsnDynMemMgmt\_\-Alloc}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{GsnDynMemMgmt\_\-Alloc}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ GsnDynMemMgmt\_\-Alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{size, }
+\item[{{\bf UINT32}}]{line, }
+\item[{{\bf UINT32}}]{moduleId}
+\end{DoxyParamCaption}
+)}}
+\label{a00470_ab7f4aadf548c474e7be54a6d848f527d}
+\hypertarget{a00470_a00b4ea05aecdc09e911f8f4813fbbf3b}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!GsnDynMemMgmt\_\-Free@{GsnDynMemMgmt\_\-Free}}
+\index{GsnDynMemMgmt\_\-Free@{GsnDynMemMgmt\_\-Free}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{GsnDynMemMgmt\_\-Free}]{\setlength{\rightskip}{0pt plus 5cm}VOID GsnDynMemMgmt\_\-Free (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}
+\label{a00470_a00b4ea05aecdc09e911f8f4813fbbf3b}
+\hypertarget{a00470_a64c59f6321ca5ca6d95b4bd19549be90}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!GsnDynMemMgmt\_\-Realloc@{GsnDynMemMgmt\_\-Realloc}}
+\index{GsnDynMemMgmt\_\-Realloc@{GsnDynMemMgmt\_\-Realloc}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{GsnDynMemMgmt\_\-Realloc}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ GsnDynMemMgmt\_\-Realloc (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{ptr, }
+\item[{{\bf UINT32}}]{size, }
+\item[{{\bf UINT32}}]{line, }
+\item[{{\bf UINT32}}]{moduleId}
+\end{DoxyParamCaption}
+)}}
+\label{a00470_a64c59f6321ca5ca6d95b4bd19549be90}
+\hypertarget{a00470_a33e51d4c3afec183b9c99627ed611042}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!MALLOC@{MALLOC}}
+\index{MALLOC@{MALLOC}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{MALLOC}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ MALLOC (
+\begin{DoxyParamCaption}
+\item[{{\bf UINT32}}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{a00470_a33e51d4c3afec183b9c99627ed611042}
+\hypertarget{a00470_a1a2790c07ecfa45ad9bfc1c0412aad0d}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!REALLOC@{REALLOC}}
+\index{REALLOC@{REALLOC}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{REALLOC}]{\setlength{\rightskip}{0pt plus 5cm}VOID$\ast$ REALLOC (
+\begin{DoxyParamCaption}
+\item[{VOID $\ast$}]{ptr, }
+\item[{{\bf UINT32}}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{a00470_a1a2790c07ecfa45ad9bfc1c0412aad0d}
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00470_a959cb89a34782abb9c1de0f395d34f39}{
+\index{dynamic\_\-mem\_\-mgmt.h@{dynamic\_\-mem\_\-mgmt.h}!pGsnBytePoolHead@{pGsnBytePoolHead}}
+\index{pGsnBytePoolHead@{pGsnBytePoolHead}!dynamic_mem_mgmt.h@{dynamic\_\-mem\_\-mgmt.h}}
+\subsubsection[{pGsnBytePoolHead}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GSN\_\-BYTE\_\-POOL\_\-LINK\_\-T}$\ast$ {\bf pGsnBytePoolHead}}}
+\label{a00470_a959cb89a34782abb9c1de0f395d34f39}
