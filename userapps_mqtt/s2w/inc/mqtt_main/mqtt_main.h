@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 
-#define GS2011ME_01
-//#define GS2011ME_02
+//#define GS2011ME_01
+#define GS2011ME_02
 //#define SSL_ADD
 #define LOCAL
 //#define THINGPLUS     
