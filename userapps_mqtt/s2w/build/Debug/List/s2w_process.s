@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:13:28 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:23:34 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -2672,8 +2672,8 @@ AppS2wProcess_DhcpFailNotify:
           CFI Block cfiCond18 Using cfiCommon0
           CFI (cfiCond18) Function AppS2w_DataCharProcess
           CFI (cfiCond18) NoCalls AppS2wProcess_DhcpFailNotify
-          CFI (cfiCond18) NoCalls AppS2w_DataCharProcess
           CFI (cfiCond18) NoCalls AppS2w_FailEscParse
+          CFI (cfiCond18) NoCalls AppS2w_DataCharProcess
           CFI (cfiCond18) Conditional ??CrossCallReturnLabel_66
           CFI (cfiCond18) R4 Frame(CFA, -20)
           CFI (cfiCond18) R5 Frame(CFA, -16)
@@ -2684,8 +2684,8 @@ AppS2wProcess_DhcpFailNotify:
           CFI Block cfiCond19 Using cfiCommon0
           CFI (cfiCond19) Function AppS2w_FailEscParse
           CFI (cfiCond19) NoCalls AppS2wProcess_DhcpFailNotify
-          CFI (cfiCond19) NoCalls AppS2w_DataCharProcess
           CFI (cfiCond19) NoCalls AppS2w_FailEscParse
+          CFI (cfiCond19) NoCalls AppS2w_DataCharProcess
           CFI (cfiCond19) Conditional ??CrossCallReturnLabel_65
           CFI (cfiCond19) R4 Frame(CFA, -12)
           CFI (cfiCond19) R5 Frame(CFA, -8)
@@ -2694,8 +2694,8 @@ AppS2wProcess_DhcpFailNotify:
           CFI Block cfiPicker20 Using cfiCommon1
           CFI (cfiPicker20) NoFunction
           CFI (cfiPicker20) NoCalls AppS2wProcess_DhcpFailNotify
-          CFI (cfiPicker20) NoCalls AppS2w_DataCharProcess
           CFI (cfiPicker20) NoCalls AppS2w_FailEscParse
+          CFI (cfiPicker20) NoCalls AppS2w_DataCharProcess
           CFI (cfiPicker20) Picker
         THUMB
 ?Subroutine6:
@@ -2703,8 +2703,8 @@ AppS2wProcess_DhcpFailNotify:
           CFI Block cfiCond21 Using cfiCommon0
           CFI (cfiCond21) Function AppS2w_DataCharProcess
           CFI (cfiCond21) NoCalls AppS2wProcess_DhcpFailNotify
-          CFI (cfiCond21) NoCalls AppS2w_DataCharProcess
           CFI (cfiCond21) NoCalls AppS2w_FailEscParse
+          CFI (cfiCond21) NoCalls AppS2w_DataCharProcess
           CFI (cfiCond21) Conditional ??CrossCallReturnLabel_64
           CFI (cfiCond21) R4 Frame(CFA, -20)
           CFI (cfiCond21) R5 Frame(CFA, -16)
@@ -2715,8 +2715,8 @@ AppS2wProcess_DhcpFailNotify:
           CFI Block cfiCond22 Using cfiCommon0
           CFI (cfiCond22) Function AppS2w_DataCharProcess
           CFI (cfiCond22) NoCalls AppS2wProcess_DhcpFailNotify
-          CFI (cfiCond22) NoCalls AppS2w_DataCharProcess
           CFI (cfiCond22) NoCalls AppS2w_FailEscParse
+          CFI (cfiCond22) NoCalls AppS2w_DataCharProcess
           CFI (cfiCond22) Conditional ??CrossCallReturnLabel_63
           CFI (cfiCond22) R4 Frame(CFA, -20)
           CFI (cfiCond22) R5 Frame(CFA, -16)
@@ -2926,8 +2926,8 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI CFA R13+16
           CFI Block cfiCond32 Using cfiCommon0
           CFI (cfiCond32) Function AppS2wProcess_DhcpFailNotify
-          CFI (cfiCond32) NoCalls AppS2wProcess_EventNotify
           CFI (cfiCond32) NoCalls AppS2wProcess_DhcpFailNotify
+          CFI (cfiCond32) NoCalls AppS2wProcess_EventNotify
           CFI (cfiCond32) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiCond32) NoCalls AppS2wRoam_SatusNotify
           CFI (cfiCond32) Conditional ??CrossCallReturnLabel_55
@@ -2937,8 +2937,8 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI (cfiCond32) CFA R13+16
           CFI Block cfiCond33 Using cfiCommon0
           CFI (cfiCond33) Function AppS2wProcess_DhcpIpChangeNotify
-          CFI (cfiCond33) NoCalls AppS2wProcess_EventNotify
           CFI (cfiCond33) NoCalls AppS2wProcess_DhcpFailNotify
+          CFI (cfiCond33) NoCalls AppS2wProcess_EventNotify
           CFI (cfiCond33) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiCond33) NoCalls AppS2wRoam_SatusNotify
           CFI (cfiCond33) Conditional ??CrossCallReturnLabel_56
@@ -2949,8 +2949,8 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI (cfiCond33) CFA R13+16
           CFI Block cfiCond34 Using cfiCommon0
           CFI (cfiCond34) Function AppS2wRoam_SatusNotify
-          CFI (cfiCond34) NoCalls AppS2wProcess_EventNotify
           CFI (cfiCond34) NoCalls AppS2wProcess_DhcpFailNotify
+          CFI (cfiCond34) NoCalls AppS2wProcess_EventNotify
           CFI (cfiCond34) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiCond34) NoCalls AppS2wRoam_SatusNotify
           CFI (cfiCond34) Conditional ??CrossCallReturnLabel_57
@@ -2961,8 +2961,8 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI (cfiCond34) CFA R13+16
           CFI Block cfiPicker35 Using cfiCommon1
           CFI (cfiPicker35) NoFunction
-          CFI (cfiPicker35) NoCalls AppS2wProcess_EventNotify
           CFI (cfiPicker35) NoCalls AppS2wProcess_DhcpFailNotify
+          CFI (cfiPicker35) NoCalls AppS2wProcess_EventNotify
           CFI (cfiPicker35) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiPicker35) NoCalls AppS2wRoam_SatusNotify
           CFI (cfiPicker35) Picker
@@ -6912,16 +6912,16 @@ AppS2w_DataTransmit:
           CFI CFA R13+16
           CFI Block cfiCond78 Using cfiCommon0
           CFI (cfiCond78) Function AppS2w_DataTransmit
-          CFI (cfiCond78) NoCalls AppS2w_DataBufferTransmit
           CFI (cfiCond78) NoCalls AppS2w_DataTransmit
+          CFI (cfiCond78) NoCalls AppS2w_DataBufferTransmit
           CFI (cfiCond78) Conditional ??CrossCallReturnLabel_38
           CFI (cfiCond78) R4 Frame(CFA, -8)
           CFI (cfiCond78) R14 Frame(CFA, -4)
           CFI (cfiCond78) CFA R13+16
           CFI Block cfiPicker79 Using cfiCommon1
           CFI (cfiPicker79) NoFunction
-          CFI (cfiPicker79) NoCalls AppS2w_DataBufferTransmit
           CFI (cfiPicker79) NoCalls AppS2w_DataTransmit
+          CFI (cfiPicker79) NoCalls AppS2w_DataBufferTransmit
           CFI (cfiPicker79) Picker
         THUMB
 ?Subroutine13:

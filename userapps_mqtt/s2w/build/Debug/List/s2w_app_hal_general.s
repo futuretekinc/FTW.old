@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:13:01 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:23:22 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -3480,8 +3480,8 @@ AppS2wHal_PowerSaveConfig:
           CFI Block cfiCond67 Using cfiCommon0
           CFI (cfiCond67) Function AppS2wHal_RadioModeConfig
           CFI (cfiCond67) NoCalls AppS2wHal_IeeePSConfig
-          CFI (cfiCond67) NoCalls AppS2wHal_PowerSaveConfig
           CFI (cfiCond67) NoCalls AppS2wHal_RadioModeConfig
+          CFI (cfiCond67) NoCalls AppS2wHal_PowerSaveConfig
           CFI (cfiCond67) NoCalls AppS2wHal_McastRecvSet
           CFI (cfiCond67) Conditional ??CrossCallReturnLabel_23
           CFI (cfiCond67) R14 Frame(CFA, -4)
@@ -3489,8 +3489,8 @@ AppS2wHal_PowerSaveConfig:
           CFI Block cfiCond68 Using cfiCommon0
           CFI (cfiCond68) Function AppS2wHal_PowerSaveConfig
           CFI (cfiCond68) NoCalls AppS2wHal_IeeePSConfig
-          CFI (cfiCond68) NoCalls AppS2wHal_PowerSaveConfig
           CFI (cfiCond68) NoCalls AppS2wHal_RadioModeConfig
+          CFI (cfiCond68) NoCalls AppS2wHal_PowerSaveConfig
           CFI (cfiCond68) NoCalls AppS2wHal_McastRecvSet
           CFI (cfiCond68) Conditional ??CrossCallReturnLabel_24
           CFI (cfiCond68) R14 Frame(CFA, -4)
@@ -3498,8 +3498,8 @@ AppS2wHal_PowerSaveConfig:
           CFI Block cfiCond69 Using cfiCommon0
           CFI (cfiCond69) Function AppS2wHal_IeeePSConfig
           CFI (cfiCond69) NoCalls AppS2wHal_IeeePSConfig
-          CFI (cfiCond69) NoCalls AppS2wHal_PowerSaveConfig
           CFI (cfiCond69) NoCalls AppS2wHal_RadioModeConfig
+          CFI (cfiCond69) NoCalls AppS2wHal_PowerSaveConfig
           CFI (cfiCond69) NoCalls AppS2wHal_McastRecvSet
           CFI (cfiCond69) Conditional ??CrossCallReturnLabel_25
           CFI (cfiCond69) R14 Frame(CFA, -4)
@@ -3507,8 +3507,8 @@ AppS2wHal_PowerSaveConfig:
           CFI Block cfiPicker70 Using cfiCommon1
           CFI (cfiPicker70) NoFunction
           CFI (cfiPicker70) NoCalls AppS2wHal_IeeePSConfig
-          CFI (cfiPicker70) NoCalls AppS2wHal_PowerSaveConfig
           CFI (cfiPicker70) NoCalls AppS2wHal_RadioModeConfig
+          CFI (cfiPicker70) NoCalls AppS2wHal_PowerSaveConfig
           CFI (cfiPicker70) NoCalls AppS2wHal_McastRecvSet
           CFI (cfiPicker70) Picker
         THUMB
@@ -7960,9 +7960,9 @@ AppS2wHal_WpsManageCredentials:
           CFI Block cfiCond123 Using cfiCommon0
           CFI (cfiCond123) Function AppS2w_ExitDpSleep
           CFI (cfiCond123) NoCalls AppS2wHal_NwContextRestore
-          CFI (cfiCond123) NoCalls AppS2w_ExitDpSleep
           CFI (cfiCond123) NoCalls AppS2wHal_WpsManageCredentials
           CFI (cfiCond123) NoCalls AppS2wHal_RssiGet
+          CFI (cfiCond123) NoCalls AppS2w_ExitDpSleep
           CFI (cfiCond123) Conditional ??CrossCallReturnLabel_19
           CFI (cfiCond123) R4 Frame(CFA, -12)
           CFI (cfiCond123) R5 Frame(CFA, -8)
@@ -7971,9 +7971,9 @@ AppS2wHal_WpsManageCredentials:
           CFI Block cfiCond124 Using cfiCommon0
           CFI (cfiCond124) Function AppS2wHal_WpsManageCredentials
           CFI (cfiCond124) NoCalls AppS2wHal_NwContextRestore
-          CFI (cfiCond124) NoCalls AppS2w_ExitDpSleep
           CFI (cfiCond124) NoCalls AppS2wHal_WpsManageCredentials
           CFI (cfiCond124) NoCalls AppS2wHal_RssiGet
+          CFI (cfiCond124) NoCalls AppS2w_ExitDpSleep
           CFI (cfiCond124) Conditional ??CrossCallReturnLabel_20
           CFI (cfiCond124) R4 Frame(CFA, -28)
           CFI (cfiCond124) R5 Frame(CFA, -24)
@@ -7986,9 +7986,9 @@ AppS2wHal_WpsManageCredentials:
           CFI Block cfiCond125 Using cfiCommon0
           CFI (cfiCond125) Function AppS2wHal_NwContextRestore
           CFI (cfiCond125) NoCalls AppS2wHal_NwContextRestore
-          CFI (cfiCond125) NoCalls AppS2w_ExitDpSleep
           CFI (cfiCond125) NoCalls AppS2wHal_WpsManageCredentials
           CFI (cfiCond125) NoCalls AppS2wHal_RssiGet
+          CFI (cfiCond125) NoCalls AppS2w_ExitDpSleep
           CFI (cfiCond125) Conditional ??CrossCallReturnLabel_21
           CFI (cfiCond125) R4 Frame(CFA, -28)
           CFI (cfiCond125) R5 Frame(CFA, -24)
@@ -8001,9 +8001,9 @@ AppS2wHal_WpsManageCredentials:
           CFI Block cfiPicker126 Using cfiCommon1
           CFI (cfiPicker126) NoFunction
           CFI (cfiPicker126) NoCalls AppS2wHal_NwContextRestore
-          CFI (cfiPicker126) NoCalls AppS2w_ExitDpSleep
           CFI (cfiPicker126) NoCalls AppS2wHal_WpsManageCredentials
           CFI (cfiPicker126) NoCalls AppS2wHal_RssiGet
+          CFI (cfiPicker126) NoCalls AppS2w_ExitDpSleep
           CFI (cfiPicker126) Picker
         THUMB
 ?Subroutine13:

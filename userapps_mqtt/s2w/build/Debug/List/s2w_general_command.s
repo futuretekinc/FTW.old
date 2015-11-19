@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:13:06 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:23:27 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -14313,7 +14313,7 @@ App2wCmd_Version:
 // 5715                    S2W_BIN_TYPE,S2W_RELEASE_TYPE);
 // 5716 #endif
 // 5717         S2w_Printf("BUILD TIME=%s\r\n",__TIME__);
-        ADR.W    R1,`?<Constant "15:13:02">`
+        ADR.W    R1,`?<Constant "15:23:23">`
         ADR.W    R0,`?<Constant "BUILD TIME=%s\\r\\n">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
@@ -14530,8 +14530,8 @@ App2wCmd_Version:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "15:13:02">`:
-        DC8 "15:13:02"
+`?<Constant "15:23:23">`:
+        DC8 "15:23:23"
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -19248,18 +19248,18 @@ s2wApp_ConnectCb:
           CFI Block cfiCond356 Using cfiCommon0
           CFI (cfiCond356) Function AppS2wCmd_reset
           CFI (cfiCond356) NoCalls AppS2wCmd_PowerSave
-          CFI (cfiCond356) NoCalls AppS2wCmd_reset
           CFI (cfiCond356) NoCalls s2wApp_ConnectCb
           CFI (cfiCond356) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond356) NoCalls AppS2wCmd_reset
           CFI (cfiCond356) Conditional ??CrossCallReturnLabel_599
           CFI (cfiCond356) R14 Frame(CFA, -4)
           CFI (cfiCond356) CFA R13+8
           CFI Block cfiCond357 Using cfiCommon0
           CFI (cfiCond357) Function s2wApp_ConnectCb
           CFI (cfiCond357) NoCalls AppS2wCmd_PowerSave
-          CFI (cfiCond357) NoCalls AppS2wCmd_reset
           CFI (cfiCond357) NoCalls s2wApp_ConnectCb
           CFI (cfiCond357) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond357) NoCalls AppS2wCmd_reset
           CFI (cfiCond357) Conditional ??CrossCallReturnLabel_600
           CFI (cfiCond357) R4 Frame(CFA, -8)
           CFI (cfiCond357) R14 Frame(CFA, -4)
@@ -19267,9 +19267,9 @@ s2wApp_ConnectCb:
           CFI Block cfiCond358 Using cfiCommon0
           CFI (cfiCond358) Function AppS2wCmd_NcmAuto
           CFI (cfiCond358) NoCalls AppS2wCmd_PowerSave
-          CFI (cfiCond358) NoCalls AppS2wCmd_reset
           CFI (cfiCond358) NoCalls s2wApp_ConnectCb
           CFI (cfiCond358) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond358) NoCalls AppS2wCmd_reset
           CFI (cfiCond358) Conditional ??CrossCallReturnLabel_601
           CFI (cfiCond358) R4 Frame(CFA, -36)
           CFI (cfiCond358) R5 Frame(CFA, -32)
@@ -19284,9 +19284,9 @@ s2wApp_ConnectCb:
           CFI Block cfiPicker359 Using cfiCommon1
           CFI (cfiPicker359) NoFunction
           CFI (cfiPicker359) NoCalls AppS2wCmd_PowerSave
-          CFI (cfiPicker359) NoCalls AppS2wCmd_reset
           CFI (cfiPicker359) NoCalls s2wApp_ConnectCb
           CFI (cfiPicker359) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiPicker359) NoCalls AppS2wCmd_reset
           CFI (cfiPicker359) Picker
         THUMB
 ?Subroutine128:
@@ -20432,8 +20432,8 @@ S2wDnsConfigGet:
           CFI CFA R13+64
           CFI Block cfiCond388 Using cfiCommon0
           CFI (cfiCond388) Function S2wDnsConfigGet
-          CFI (cfiCond388) NoCalls S2wDnsConfigGet
           CFI (cfiCond388) NoCalls AppS2wCmd_Nauto
+          CFI (cfiCond388) NoCalls S2wDnsConfigGet
           CFI (cfiCond388) NoCalls AppS2wCmd_HttpClientOpen
           CFI (cfiCond388) Conditional ??CrossCallReturnLabel_442
           CFI (cfiCond388) R4 Frame(CFA, -8)
@@ -20441,8 +20441,8 @@ S2wDnsConfigGet:
           CFI (cfiCond388) CFA R13+168
           CFI Block cfiCond389 Using cfiCommon0
           CFI (cfiCond389) Function AppS2wCmd_Nauto
-          CFI (cfiCond389) NoCalls S2wDnsConfigGet
           CFI (cfiCond389) NoCalls AppS2wCmd_Nauto
+          CFI (cfiCond389) NoCalls S2wDnsConfigGet
           CFI (cfiCond389) NoCalls AppS2wCmd_HttpClientOpen
           CFI (cfiCond389) Conditional ??CrossCallReturnLabel_443
           CFI (cfiCond389) R4 Frame(CFA, -12)
@@ -20451,8 +20451,8 @@ S2wDnsConfigGet:
           CFI (cfiCond389) CFA R13+96
           CFI Block cfiPicker390 Using cfiCommon1
           CFI (cfiPicker390) NoFunction
-          CFI (cfiPicker390) NoCalls S2wDnsConfigGet
           CFI (cfiPicker390) NoCalls AppS2wCmd_Nauto
+          CFI (cfiPicker390) NoCalls S2wDnsConfigGet
           CFI (cfiPicker390) NoCalls AppS2wCmd_HttpClientOpen
           CFI (cfiPicker390) Picker
         THUMB
@@ -21514,8 +21514,8 @@ AppS2wCmd_Weap:
           CFI CFA R13+72
           CFI Block cfiCond407 Using cfiCommon0
           CFI (cfiCond407) Function AppS2wCmd_Weap
-          CFI (cfiCond407) NoCalls AppS2wCmd_SslCertificateAdd
           CFI (cfiCond407) NoCalls AppS2wCmd_Weap
+          CFI (cfiCond407) NoCalls AppS2wCmd_SslCertificateAdd
           CFI (cfiCond407) Conditional ??CrossCallReturnLabel_648
           CFI (cfiCond407) R4 Frame(CFA, -28)
           CFI (cfiCond407) R5 Frame(CFA, -24)
@@ -21527,8 +21527,8 @@ AppS2wCmd_Weap:
           CFI (cfiCond407) CFA R13+80
           CFI Block cfiPicker408 Using cfiCommon1
           CFI (cfiPicker408) NoFunction
-          CFI (cfiPicker408) NoCalls AppS2wCmd_SslCertificateAdd
           CFI (cfiPicker408) NoCalls AppS2wCmd_Weap
+          CFI (cfiPicker408) NoCalls AppS2wCmd_SslCertificateAdd
           CFI (cfiPicker408) Picker
         THUMB
 ?Subroutine38:
@@ -23730,8 +23730,8 @@ AppS2wCmd_Wwep:
           CFI CFA R13+288
           CFI Block cfiCond507 Using cfiCommon0
           CFI (cfiCond507) Function AppS2wCmd_Wwep
-          CFI (cfiCond507) NoCalls AppS2wCmd_Wwep
           CFI (cfiCond507) NoCalls AppS2wCmd_Wwpa
+          CFI (cfiCond507) NoCalls AppS2wCmd_Wwep
           CFI (cfiCond507) Conditional ??CrossCallReturnLabel_451
           CFI (cfiCond507) R4 Frame(CFA, -28)
           CFI (cfiCond507) R5 Frame(CFA, -24)
@@ -23743,8 +23743,8 @@ AppS2wCmd_Wwep:
           CFI (cfiCond507) CFA R13+296
           CFI Block cfiPicker508 Using cfiCommon1
           CFI (cfiPicker508) NoFunction
-          CFI (cfiPicker508) NoCalls AppS2wCmd_Wwep
           CFI (cfiPicker508) NoCalls AppS2wCmd_Wwpa
+          CFI (cfiPicker508) NoCalls AppS2wCmd_Wwep
           CFI (cfiPicker508) Picker
         THUMB
 ?Subroutine79:
@@ -24289,10 +24289,10 @@ AppS2wCmd_Wphymode:
           CFI Block cfiCond521 Using cfiCommon0
           CFI (cfiCond521) Function AppS2wCmd_TkipContrMsrStart
           CFI (cfiCond521) NoCalls AppS2wCmd_TkipContrMsrStart
-          CFI (cfiCond521) NoCalls AppS2wCmd_BaBitMapSet
-          CFI (cfiCond521) NoCalls AppS2wCmd_Wretry
-          CFI (cfiCond521) NoCalls AppS2wCmd_Wphymode
           CFI (cfiCond521) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond521) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiCond521) NoCalls AppS2wCmd_Wphymode
+          CFI (cfiCond521) NoCalls AppS2wCmd_Wretry
           CFI (cfiCond521) Conditional ??CrossCallReturnLabel_437
           CFI (cfiCond521) R4 Frame(CFA, -8)
           CFI (cfiCond521) R14 Frame(CFA, -4)
@@ -24300,20 +24300,20 @@ AppS2wCmd_Wphymode:
           CFI Block cfiCond522 Using cfiCommon0
           CFI (cfiCond522) Function AppS2wCmd_Wphymode
           CFI (cfiCond522) NoCalls AppS2wCmd_TkipContrMsrStart
-          CFI (cfiCond522) NoCalls AppS2wCmd_BaBitMapSet
-          CFI (cfiCond522) NoCalls AppS2wCmd_Wretry
-          CFI (cfiCond522) NoCalls AppS2wCmd_Wphymode
           CFI (cfiCond522) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond522) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiCond522) NoCalls AppS2wCmd_Wphymode
+          CFI (cfiCond522) NoCalls AppS2wCmd_Wretry
           CFI (cfiCond522) Conditional ??CrossCallReturnLabel_438
           CFI (cfiCond522) R14 Frame(CFA, -4)
           CFI (cfiCond522) CFA R13+16
           CFI Block cfiCond523 Using cfiCommon0
           CFI (cfiCond523) Function AppS2wCmd_NcmAuto
           CFI (cfiCond523) NoCalls AppS2wCmd_TkipContrMsrStart
-          CFI (cfiCond523) NoCalls AppS2wCmd_BaBitMapSet
-          CFI (cfiCond523) NoCalls AppS2wCmd_Wretry
-          CFI (cfiCond523) NoCalls AppS2wCmd_Wphymode
           CFI (cfiCond523) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond523) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiCond523) NoCalls AppS2wCmd_Wphymode
+          CFI (cfiCond523) NoCalls AppS2wCmd_Wretry
           CFI (cfiCond523) Conditional ??CrossCallReturnLabel_439
           CFI (cfiCond523) R4 Frame(CFA, -36)
           CFI (cfiCond523) R5 Frame(CFA, -32)
@@ -24328,20 +24328,20 @@ AppS2wCmd_Wphymode:
           CFI Block cfiCond524 Using cfiCommon0
           CFI (cfiCond524) Function AppS2wCmd_BaBitMapSet
           CFI (cfiCond524) NoCalls AppS2wCmd_TkipContrMsrStart
-          CFI (cfiCond524) NoCalls AppS2wCmd_BaBitMapSet
-          CFI (cfiCond524) NoCalls AppS2wCmd_Wretry
-          CFI (cfiCond524) NoCalls AppS2wCmd_Wphymode
           CFI (cfiCond524) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond524) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiCond524) NoCalls AppS2wCmd_Wphymode
+          CFI (cfiCond524) NoCalls AppS2wCmd_Wretry
           CFI (cfiCond524) Conditional ??CrossCallReturnLabel_440
           CFI (cfiCond524) R14 Frame(CFA, -4)
           CFI (cfiCond524) CFA R13+16
           CFI Block cfiPicker525 Using cfiCommon1
           CFI (cfiPicker525) NoFunction
           CFI (cfiPicker525) NoCalls AppS2wCmd_TkipContrMsrStart
-          CFI (cfiPicker525) NoCalls AppS2wCmd_BaBitMapSet
-          CFI (cfiPicker525) NoCalls AppS2wCmd_Wretry
-          CFI (cfiPicker525) NoCalls AppS2wCmd_Wphymode
           CFI (cfiPicker525) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiPicker525) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiPicker525) NoCalls AppS2wCmd_Wphymode
+          CFI (cfiPicker525) NoCalls AppS2wCmd_Wretry
           CFI (cfiPicker525) Picker
         THUMB
 ?Subroutine74:
@@ -29205,9 +29205,9 @@ AppS2wCmd_NcmAuto:
           CFI CFA R13+40
           CFI Block cfiCond667 Using cfiCommon0
           CFI (cfiCond667) Function AppS2wCmd_TkipSeqNumGet
-          CFI (cfiCond667) NoCalls AppS2wCmd_TkipSeqNumGet
-          CFI (cfiCond667) NoCalls AppS2wCommand_Process
           CFI (cfiCond667) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond667) NoCalls AppS2wCommand_Process
+          CFI (cfiCond667) NoCalls AppS2wCmd_TkipSeqNumGet
           CFI (cfiCond667) NoCalls AppS2wExternalFlashData
           CFI (cfiCond667) Conditional ??CrossCallReturnLabel_453
           CFI (cfiCond667) R4 Frame(CFA, -8)
@@ -29215,9 +29215,9 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond667) CFA R13+24
           CFI Block cfiCond668 Using cfiCommon0
           CFI (cfiCond668) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond668) NoCalls AppS2wCmd_TkipSeqNumGet
-          CFI (cfiCond668) NoCalls AppS2wCommand_Process
           CFI (cfiCond668) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond668) NoCalls AppS2wCommand_Process
+          CFI (cfiCond668) NoCalls AppS2wCmd_TkipSeqNumGet
           CFI (cfiCond668) NoCalls AppS2wExternalFlashData
           CFI (cfiCond668) Conditional ??CrossCallReturnLabel_454
           CFI (cfiCond668) R4 Frame(CFA, -36)
@@ -29232,9 +29232,9 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond668) CFA R13+1344
           CFI Block cfiCond669 Using cfiCommon0
           CFI (cfiCond669) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond669) NoCalls AppS2wCmd_TkipSeqNumGet
-          CFI (cfiCond669) NoCalls AppS2wCommand_Process
           CFI (cfiCond669) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond669) NoCalls AppS2wCommand_Process
+          CFI (cfiCond669) NoCalls AppS2wCmd_TkipSeqNumGet
           CFI (cfiCond669) NoCalls AppS2wExternalFlashData
           CFI (cfiCond669) Conditional ??CrossCallReturnLabel_455
           CFI (cfiCond669) R4 Frame(CFA, -36)
@@ -29249,9 +29249,9 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond669) CFA R13+1344
           CFI Block cfiCond670 Using cfiCommon0
           CFI (cfiCond670) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond670) NoCalls AppS2wCmd_TkipSeqNumGet
-          CFI (cfiCond670) NoCalls AppS2wCommand_Process
           CFI (cfiCond670) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond670) NoCalls AppS2wCommand_Process
+          CFI (cfiCond670) NoCalls AppS2wCmd_TkipSeqNumGet
           CFI (cfiCond670) NoCalls AppS2wExternalFlashData
           CFI (cfiCond670) Conditional ??CrossCallReturnLabel_456
           CFI (cfiCond670) R4 Frame(CFA, -36)
@@ -29266,9 +29266,9 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond670) CFA R13+1344
           CFI Block cfiCond671 Using cfiCommon0
           CFI (cfiCond671) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond671) NoCalls AppS2wCmd_TkipSeqNumGet
-          CFI (cfiCond671) NoCalls AppS2wCommand_Process
           CFI (cfiCond671) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond671) NoCalls AppS2wCommand_Process
+          CFI (cfiCond671) NoCalls AppS2wCmd_TkipSeqNumGet
           CFI (cfiCond671) NoCalls AppS2wExternalFlashData
           CFI (cfiCond671) Conditional ??CrossCallReturnLabel_457
           CFI (cfiCond671) R4 Frame(CFA, -36)
@@ -29283,9 +29283,9 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond671) CFA R13+1344
           CFI Block cfiCond672 Using cfiCommon0
           CFI (cfiCond672) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond672) NoCalls AppS2wCmd_TkipSeqNumGet
-          CFI (cfiCond672) NoCalls AppS2wCommand_Process
           CFI (cfiCond672) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond672) NoCalls AppS2wCommand_Process
+          CFI (cfiCond672) NoCalls AppS2wCmd_TkipSeqNumGet
           CFI (cfiCond672) NoCalls AppS2wExternalFlashData
           CFI (cfiCond672) Conditional ??CrossCallReturnLabel_458
           CFI (cfiCond672) R4 Frame(CFA, -36)
@@ -29300,9 +29300,9 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond672) CFA R13+1344
           CFI Block cfiCond673 Using cfiCommon0
           CFI (cfiCond673) Function AppS2wExternalFlashData
-          CFI (cfiCond673) NoCalls AppS2wCmd_TkipSeqNumGet
-          CFI (cfiCond673) NoCalls AppS2wCommand_Process
           CFI (cfiCond673) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond673) NoCalls AppS2wCommand_Process
+          CFI (cfiCond673) NoCalls AppS2wCmd_TkipSeqNumGet
           CFI (cfiCond673) NoCalls AppS2wExternalFlashData
           CFI (cfiCond673) Conditional ??CrossCallReturnLabel_459
           CFI (cfiCond673) R4 Frame(CFA, -12)
@@ -29311,9 +29311,9 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond673) CFA R13+24
           CFI Block cfiPicker674 Using cfiCommon1
           CFI (cfiPicker674) NoFunction
-          CFI (cfiPicker674) NoCalls AppS2wCmd_TkipSeqNumGet
-          CFI (cfiPicker674) NoCalls AppS2wCommand_Process
           CFI (cfiPicker674) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiPicker674) NoCalls AppS2wCommand_Process
+          CFI (cfiPicker674) NoCalls AppS2wCmd_TkipSeqNumGet
           CFI (cfiPicker674) NoCalls AppS2wExternalFlashData
           CFI (cfiPicker674) Picker
         THUMB

@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:13:11 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:23:48 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -11117,8 +11117,8 @@ AppS2w_XmlDataProcess:
           CFI CFA R13+64
           CFI Block cfiCond182 Using cfiCommon0
           CFI (cfiCond182) Function AppS2w_XmlDataProcess
-          CFI (cfiCond182) NoCalls AppS2w_XmlDataProcess
           CFI (cfiCond182) NoCalls AppS2wCmd_XmlSend
+          CFI (cfiCond182) NoCalls AppS2w_XmlDataProcess
           CFI (cfiCond182) Conditional ??CrossCallReturnLabel_341
           CFI (cfiCond182) R4 Frame(CFA, -36)
           CFI (cfiCond182) R5 Frame(CFA, -32)
@@ -11132,8 +11132,8 @@ AppS2w_XmlDataProcess:
           CFI (cfiCond182) CFA R13+72
           CFI Block cfiPicker183 Using cfiCommon1
           CFI (cfiPicker183) NoFunction
-          CFI (cfiPicker183) NoCalls AppS2w_XmlDataProcess
           CFI (cfiPicker183) NoCalls AppS2wCmd_XmlSend
+          CFI (cfiPicker183) NoCalls AppS2w_XmlDataProcess
           CFI (cfiPicker183) Picker
         THUMB
 ?Subroutine53:
@@ -11238,8 +11238,8 @@ AppS2w_XmlDataProcess:
           CFI CFA R13+64
           CFI Block cfiCond190 Using cfiCommon0
           CFI (cfiCond190) Function AppS2w_XmlDataProcess
-          CFI (cfiCond190) NoCalls AppS2w_XmlDataProcess
           CFI (cfiCond190) NoCalls AppS2wCmd_XmlSend
+          CFI (cfiCond190) NoCalls AppS2w_XmlDataProcess
           CFI (cfiCond190) Conditional ??CrossCallReturnLabel_285
           CFI (cfiCond190) R4 Frame(CFA, -36)
           CFI (cfiCond190) R5 Frame(CFA, -32)
@@ -11253,8 +11253,8 @@ AppS2w_XmlDataProcess:
           CFI (cfiCond190) CFA R13+72
           CFI Block cfiPicker191 Using cfiCommon1
           CFI (cfiPicker191) NoFunction
-          CFI (cfiPicker191) NoCalls AppS2w_XmlDataProcess
           CFI (cfiPicker191) NoCalls AppS2wCmd_XmlSend
+          CFI (cfiPicker191) NoCalls AppS2w_XmlDataProcess
           CFI (cfiPicker191) Picker
         THUMB
 ?Subroutine37:
@@ -14668,10 +14668,10 @@ AppArp_Invalidate:
           CFI CFA R13+336
           CFI Block cfiCond357 Using cfiCommon0
           CFI (cfiCond357) Function AppS2wCmd_ApClientInfoGet
-          CFI (cfiCond357) NoCalls AppS2wCmd_ApClientInfoGet
-          CFI (cfiCond357) NoCalls AppS2wCmd_MdnsAnnounceAll
-          CFI (cfiCond357) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond357) NoCalls AppArp_Invalidate
+          CFI (cfiCond357) NoCalls AppS2wCmd_ApClientInfoGet
+          CFI (cfiCond357) NoCalls AppS2wCmd_ArpEntryGet
+          CFI (cfiCond357) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiCond357) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiCond357) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiCond357) Conditional ??CrossCallReturnLabel_333
@@ -14687,10 +14687,10 @@ AppArp_Invalidate:
           CFI (cfiCond357) CFA R13+1456
           CFI Block cfiCond358 Using cfiCommon0
           CFI (cfiCond358) Function AppS2wCmd_ArpEntryGet
-          CFI (cfiCond358) NoCalls AppS2wCmd_ApClientInfoGet
-          CFI (cfiCond358) NoCalls AppS2wCmd_MdnsAnnounceAll
-          CFI (cfiCond358) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond358) NoCalls AppArp_Invalidate
+          CFI (cfiCond358) NoCalls AppS2wCmd_ApClientInfoGet
+          CFI (cfiCond358) NoCalls AppS2wCmd_ArpEntryGet
+          CFI (cfiCond358) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiCond358) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiCond358) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiCond358) Conditional ??CrossCallReturnLabel_334
@@ -14703,10 +14703,10 @@ AppArp_Invalidate:
           CFI (cfiCond358) CFA R13+40
           CFI Block cfiCond359 Using cfiCommon0
           CFI (cfiCond359) Function AppArp_Invalidate
-          CFI (cfiCond359) NoCalls AppS2wCmd_ApClientInfoGet
-          CFI (cfiCond359) NoCalls AppS2wCmd_MdnsAnnounceAll
-          CFI (cfiCond359) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond359) NoCalls AppArp_Invalidate
+          CFI (cfiCond359) NoCalls AppS2wCmd_ApClientInfoGet
+          CFI (cfiCond359) NoCalls AppS2wCmd_ArpEntryGet
+          CFI (cfiCond359) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiCond359) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiCond359) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiCond359) Conditional ??CrossCallReturnLabel_335
@@ -14714,10 +14714,10 @@ AppArp_Invalidate:
           CFI (cfiCond359) CFA R13+8
           CFI Block cfiCond360 Using cfiCommon0
           CFI (cfiCond360) Function AppS2wCmd_WlanOtpRead
-          CFI (cfiCond360) NoCalls AppS2wCmd_ApClientInfoGet
-          CFI (cfiCond360) NoCalls AppS2wCmd_MdnsAnnounceAll
-          CFI (cfiCond360) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond360) NoCalls AppArp_Invalidate
+          CFI (cfiCond360) NoCalls AppS2wCmd_ApClientInfoGet
+          CFI (cfiCond360) NoCalls AppS2wCmd_ArpEntryGet
+          CFI (cfiCond360) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiCond360) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiCond360) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiCond360) Conditional ??CrossCallReturnLabel_336
@@ -14731,10 +14731,10 @@ AppArp_Invalidate:
           CFI (cfiCond360) CFA R13+304
           CFI Block cfiCond361 Using cfiCommon0
           CFI (cfiCond361) Function AppS2wCmd_GratArpSend
-          CFI (cfiCond361) NoCalls AppS2wCmd_ApClientInfoGet
-          CFI (cfiCond361) NoCalls AppS2wCmd_MdnsAnnounceAll
-          CFI (cfiCond361) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond361) NoCalls AppArp_Invalidate
+          CFI (cfiCond361) NoCalls AppS2wCmd_ApClientInfoGet
+          CFI (cfiCond361) NoCalls AppS2wCmd_ArpEntryGet
+          CFI (cfiCond361) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiCond361) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiCond361) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiCond361) Conditional ??CrossCallReturnLabel_337
@@ -14742,10 +14742,10 @@ AppArp_Invalidate:
           CFI (cfiCond361) CFA R13+8
           CFI Block cfiPicker362 Using cfiCommon1
           CFI (cfiPicker362) NoFunction
-          CFI (cfiPicker362) NoCalls AppS2wCmd_ApClientInfoGet
-          CFI (cfiPicker362) NoCalls AppS2wCmd_MdnsAnnounceAll
-          CFI (cfiPicker362) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiPicker362) NoCalls AppArp_Invalidate
+          CFI (cfiPicker362) NoCalls AppS2wCmd_ApClientInfoGet
+          CFI (cfiPicker362) NoCalls AppS2wCmd_ArpEntryGet
+          CFI (cfiPicker362) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiPicker362) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiPicker362) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiPicker362) Picker

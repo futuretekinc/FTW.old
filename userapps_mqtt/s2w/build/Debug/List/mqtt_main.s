@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:13:21 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:23:42 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -1266,8 +1266,8 @@ MQTT_LIST_DESTROY:
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock28 Using cfiCommon0
           CFI NoFunction
-          CFI NoCalls MQTT_LIST_DESTROY
           CFI NoCalls MQTT_LIST_DELECT
+          CFI NoCalls MQTT_LIST_DESTROY
           CFI CFA R13+16
           CFI R4 Frame(CFA, -16)
           CFI R5 Frame(CFA, -12)
@@ -1300,18 +1300,18 @@ MQTT_START:
         LDR.W    R4,??DataTable91_2
 //  363  
 //  364   
-//  365   MQTT_LIST_INIT(&(mqtt_ctx.publish_list), 2);
+//  365   MQTT_LIST_INIT(&(mqtt_ctx.publish_list), 1);
         LDR.W    R5,??DataTable91_3
         MOVS     R0,#+0
         STRB     R0,[R4, #+1]
         SUB      SP,SP,#+20
           CFI CFA R13+32
-        MOVS     R1,#+2
+        MOVS     R1,#+1
         ADD      R0,R5,#+152
           CFI FunCall MQTT_LIST_INIT
         BL       MQTT_LIST_INIT
-//  366   MQTT_LIST_INIT(&(mqtt_ctx.send_list), 2);
-        MOVS     R1,#+2
+//  366   MQTT_LIST_INIT(&(mqtt_ctx.send_list), 1);
+        MOVS     R1,#+1
         ADD      R0,R5,#+88
           CFI FunCall MQTT_LIST_INIT
         BL       MQTT_LIST_INIT
@@ -3123,9 +3123,9 @@ MQTT_PUBLISH_MSG_GEN:
           CFI CFA R13+32
           CFI Block cfiCond75 Using cfiCommon0
           CFI (cfiCond75) Function MQTT_PUBLISH_MSG_GEN
-          CFI (cfiCond75) NoCalls MQTT_PUBLISH_MSG_RETRY
           CFI (cfiCond75) NoCalls MQTT_PUBLISH_MSG_GEN
           CFI (cfiCond75) NoCalls MQTT_MSG_FUNC_PUBLISH
+          CFI (cfiCond75) NoCalls MQTT_PUBLISH_MSG_RETRY
           CFI (cfiCond75) Conditional ??CrossCallReturnLabel_32
           CFI (cfiCond75) R4 Frame(CFA, -16)
           CFI (cfiCond75) R5 Frame(CFA, -12)
@@ -3134,9 +3134,9 @@ MQTT_PUBLISH_MSG_GEN:
           CFI (cfiCond75) CFA R13+152
           CFI Block cfiCond76 Using cfiCommon0
           CFI (cfiCond76) Function MQTT_PUBLISH_MSG_RETRY
-          CFI (cfiCond76) NoCalls MQTT_PUBLISH_MSG_RETRY
           CFI (cfiCond76) NoCalls MQTT_PUBLISH_MSG_GEN
           CFI (cfiCond76) NoCalls MQTT_MSG_FUNC_PUBLISH
+          CFI (cfiCond76) NoCalls MQTT_PUBLISH_MSG_RETRY
           CFI (cfiCond76) Conditional ??CrossCallReturnLabel_33
           CFI (cfiCond76) R4 Frame(CFA, -12)
           CFI (cfiCond76) R6 Frame(CFA, -8)
@@ -3144,9 +3144,9 @@ MQTT_PUBLISH_MSG_GEN:
           CFI (cfiCond76) CFA R13+32
           CFI Block cfiCond77 Using cfiCommon0
           CFI (cfiCond77) Function MQTT_PUBLISH_MSG_RETRY
-          CFI (cfiCond77) NoCalls MQTT_PUBLISH_MSG_RETRY
           CFI (cfiCond77) NoCalls MQTT_PUBLISH_MSG_GEN
           CFI (cfiCond77) NoCalls MQTT_MSG_FUNC_PUBLISH
+          CFI (cfiCond77) NoCalls MQTT_PUBLISH_MSG_RETRY
           CFI (cfiCond77) Conditional ??CrossCallReturnLabel_34
           CFI (cfiCond77) R4 Frame(CFA, -12)
           CFI (cfiCond77) R6 Frame(CFA, -8)
@@ -3154,9 +3154,9 @@ MQTT_PUBLISH_MSG_GEN:
           CFI (cfiCond77) CFA R13+32
           CFI Block cfiPicker78 Using cfiCommon1
           CFI (cfiPicker78) NoFunction
-          CFI (cfiPicker78) NoCalls MQTT_PUBLISH_MSG_RETRY
           CFI (cfiPicker78) NoCalls MQTT_PUBLISH_MSG_GEN
           CFI (cfiPicker78) NoCalls MQTT_MSG_FUNC_PUBLISH
+          CFI (cfiPicker78) NoCalls MQTT_PUBLISH_MSG_RETRY
           CFI (cfiPicker78) Picker
         THUMB
 ??Subroutine14_0:

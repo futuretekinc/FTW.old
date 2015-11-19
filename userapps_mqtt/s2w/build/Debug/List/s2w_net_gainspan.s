@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:13:26 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:23:50 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -2411,8 +2411,8 @@ AppS2wHal_NetTcpClient_test:
           CFI Block cfiCond24 Using cfiCommon0
           CFI (cfiCond24) Function AppS2wHal_NetTcpClient
           CFI (cfiCond24) NoCalls AppS2wHal_NetTcpClient
-          CFI (cfiCond24) NoCalls AppS2wHal_NetTcpClient_test
           CFI (cfiCond24) NoCalls AppS2wHal_NetTcpServer
+          CFI (cfiCond24) NoCalls AppS2wHal_NetTcpClient_test
           CFI (cfiCond24) Conditional ??CrossCallReturnLabel_61
           CFI (cfiCond24) R4 Frame(CFA, -32)
           CFI (cfiCond24) R5 Frame(CFA, -28)
@@ -2426,8 +2426,8 @@ AppS2wHal_NetTcpClient_test:
           CFI Block cfiCond25 Using cfiCommon0
           CFI (cfiCond25) Function AppS2wHal_NetTcpClient_test
           CFI (cfiCond25) NoCalls AppS2wHal_NetTcpClient
-          CFI (cfiCond25) NoCalls AppS2wHal_NetTcpClient_test
           CFI (cfiCond25) NoCalls AppS2wHal_NetTcpServer
+          CFI (cfiCond25) NoCalls AppS2wHal_NetTcpClient_test
           CFI (cfiCond25) Conditional ??CrossCallReturnLabel_62
           CFI (cfiCond25) R4 Frame(CFA, -24)
           CFI (cfiCond25) R5 Frame(CFA, -20)
@@ -2439,8 +2439,8 @@ AppS2wHal_NetTcpClient_test:
           CFI Block cfiCond26 Using cfiCommon0
           CFI (cfiCond26) Function AppS2wHal_NetTcpClient_test
           CFI (cfiCond26) NoCalls AppS2wHal_NetTcpClient
-          CFI (cfiCond26) NoCalls AppS2wHal_NetTcpClient_test
           CFI (cfiCond26) NoCalls AppS2wHal_NetTcpServer
+          CFI (cfiCond26) NoCalls AppS2wHal_NetTcpClient_test
           CFI (cfiCond26) Conditional ??CrossCallReturnLabel_63
           CFI (cfiCond26) R4 Frame(CFA, -24)
           CFI (cfiCond26) R5 Frame(CFA, -20)
@@ -2452,8 +2452,8 @@ AppS2wHal_NetTcpClient_test:
           CFI Block cfiCond27 Using cfiCommon0
           CFI (cfiCond27) Function AppS2wHal_NetTcpServer
           CFI (cfiCond27) NoCalls AppS2wHal_NetTcpClient
-          CFI (cfiCond27) NoCalls AppS2wHal_NetTcpClient_test
           CFI (cfiCond27) NoCalls AppS2wHal_NetTcpServer
+          CFI (cfiCond27) NoCalls AppS2wHal_NetTcpClient_test
           CFI (cfiCond27) Conditional ??CrossCallReturnLabel_64
           CFI (cfiCond27) R4 Frame(CFA, -24)
           CFI (cfiCond27) R5 Frame(CFA, -20)
@@ -2465,8 +2465,8 @@ AppS2wHal_NetTcpClient_test:
           CFI Block cfiPicker28 Using cfiCommon1
           CFI (cfiPicker28) NoFunction
           CFI (cfiPicker28) NoCalls AppS2wHal_NetTcpClient
-          CFI (cfiPicker28) NoCalls AppS2wHal_NetTcpClient_test
           CFI (cfiPicker28) NoCalls AppS2wHal_NetTcpServer
+          CFI (cfiPicker28) NoCalls AppS2wHal_NetTcpClient_test
           CFI (cfiPicker28) Picker
         THUMB
 ?Subroutine25:
@@ -4281,8 +4281,8 @@ AppS2wHal_NetTx:
           CFI CFA R13+56
           CFI Block cfiCond84 Using cfiCommon0
           CFI (cfiCond84) Function AppS2wHal_NetTx
-          CFI (cfiCond84) NoCalls AppS2wHal_NetUdpServer
           CFI (cfiCond84) NoCalls AppS2wHal_NetTx
+          CFI (cfiCond84) NoCalls AppS2wHal_NetUdpServer
           CFI (cfiCond84) Conditional ??CrossCallReturnLabel_39
           CFI (cfiCond84) R4 Frame(CFA, -36)
           CFI (cfiCond84) R5 Frame(CFA, -32)
@@ -4296,8 +4296,8 @@ AppS2wHal_NetTx:
           CFI (cfiCond84) CFA R13+64
           CFI Block cfiPicker85 Using cfiCommon1
           CFI (cfiPicker85) NoFunction
-          CFI (cfiPicker85) NoCalls AppS2wHal_NetUdpServer
           CFI (cfiPicker85) NoCalls AppS2wHal_NetTx
+          CFI (cfiPicker85) NoCalls AppS2wHal_NetUdpServer
           CFI (cfiPicker85) Picker
         THUMB
 ?Subroutine17:
@@ -6583,8 +6583,8 @@ AppS2wHal_NetRecvTask:
           CFI CFA R13+40
           CFI Block cfiCond117 Using cfiCommon0
           CFI (cfiCond117) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond117) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiCond117) NoCalls AppS2wHal_NetClose
+          CFI (cfiCond117) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiCond117) Conditional ??CrossCallReturnLabel_78
           CFI (cfiCond117) R4 Frame(CFA, -36)
           CFI (cfiCond117) R5 Frame(CFA, -32)
@@ -6598,8 +6598,8 @@ AppS2wHal_NetRecvTask:
           CFI (cfiCond117) CFA R13+128
           CFI Block cfiCond118 Using cfiCommon0
           CFI (cfiCond118) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond118) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiCond118) NoCalls AppS2wHal_NetClose
+          CFI (cfiCond118) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiCond118) Conditional ??CrossCallReturnLabel_79
           CFI (cfiCond118) R4 Frame(CFA, -36)
           CFI (cfiCond118) R5 Frame(CFA, -32)
@@ -6613,8 +6613,8 @@ AppS2wHal_NetRecvTask:
           CFI (cfiCond118) CFA R13+128
           CFI Block cfiCond119 Using cfiCommon0
           CFI (cfiCond119) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond119) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiCond119) NoCalls AppS2wHal_NetClose
+          CFI (cfiCond119) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiCond119) Conditional ??CrossCallReturnLabel_80
           CFI (cfiCond119) R4 Frame(CFA, -36)
           CFI (cfiCond119) R5 Frame(CFA, -32)
@@ -6628,8 +6628,8 @@ AppS2wHal_NetRecvTask:
           CFI (cfiCond119) CFA R13+128
           CFI Block cfiPicker120 Using cfiCommon1
           CFI (cfiPicker120) NoFunction
-          CFI (cfiPicker120) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiPicker120) NoCalls AppS2wHal_NetClose
+          CFI (cfiPicker120) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiPicker120) Picker
         THUMB
 ?Subroutine31:
@@ -8642,8 +8642,8 @@ AppS2w_SslClientOpen:
           CFI CFA R13+128
           CFI Block cfiCond170 Using cfiCommon0
           CFI (cfiCond170) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond170) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiCond170) NoCalls AppS2w_SslClientOpen
+          CFI (cfiCond170) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiCond170) Conditional ??CrossCallReturnLabel_34
           CFI (cfiCond170) R4 Frame(CFA, -36)
           CFI (cfiCond170) R5 Frame(CFA, -32)
@@ -8657,8 +8657,8 @@ AppS2w_SslClientOpen:
           CFI (cfiCond170) CFA R13+128
           CFI Block cfiCond171 Using cfiCommon0
           CFI (cfiCond171) Function AppS2w_SslClientOpen
-          CFI (cfiCond171) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiCond171) NoCalls AppS2w_SslClientOpen
+          CFI (cfiCond171) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiCond171) Conditional ??CrossCallReturnLabel_35
           CFI (cfiCond171) R4 Frame(CFA, -36)
           CFI (cfiCond171) R5 Frame(CFA, -32)
@@ -8672,8 +8672,8 @@ AppS2w_SslClientOpen:
           CFI (cfiCond171) CFA R13+80
           CFI Block cfiPicker172 Using cfiCommon1
           CFI (cfiPicker172) NoFunction
-          CFI (cfiPicker172) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiPicker172) NoCalls AppS2w_SslClientOpen
+          CFI (cfiPicker172) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiPicker172) Picker
         THUMB
 ?Subroutine15:
@@ -9181,8 +9181,8 @@ AppS2w_SslLocalClose:
           CFI CFA R13+24
           CFI Block cfiCond181 Using cfiCommon0
           CFI (cfiCond181) Function AppS2w_SslLocalClose
-          CFI (cfiCond181) NoCalls AppS2w_SslLocalClose
           CFI (cfiCond181) NoCalls AppS2w_SslServerOpen
+          CFI (cfiCond181) NoCalls AppS2w_SslLocalClose
           CFI (cfiCond181) Conditional ??CrossCallReturnLabel_94
           CFI (cfiCond181) R4 Frame(CFA, -12)
           CFI (cfiCond181) R5 Frame(CFA, -8)
@@ -9190,8 +9190,8 @@ AppS2w_SslLocalClose:
           CFI (cfiCond181) CFA R13+16
           CFI Block cfiPicker182 Using cfiCommon1
           CFI (cfiPicker182) NoFunction
-          CFI (cfiPicker182) NoCalls AppS2w_SslLocalClose
           CFI (cfiPicker182) NoCalls AppS2w_SslServerOpen
+          CFI (cfiPicker182) NoCalls AppS2w_SslLocalClose
           CFI (cfiPicker182) Picker
         THUMB
 ?Subroutine36:
@@ -10644,8 +10644,8 @@ S2wHttp_Send:
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock221 Using cfiCommon0
           CFI NoFunction
-          CFI NoCalls S2wHttp_Send
           CFI NoCalls AppS2wHal_NetTcpServer
+          CFI NoCalls S2wHttp_Send
           CFI CFA R13+48
           CFI R4 Frame(CFA, -24)
           CFI R5 Frame(CFA, -20)
@@ -11590,8 +11590,8 @@ AppS2wHal_MdnsAnnounce:
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock237 Using cfiCommon0
           CFI NoFunction
-          CFI NoCalls AppS2wHal_MdnsAnnounce
           CFI NoCalls AppS2wHal_MdnsServiceDereg
+          CFI NoCalls AppS2wHal_MdnsAnnounce
           CFI CFA R13+24
           CFI R14 Frame(CFA, -4)
         THUMB

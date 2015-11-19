@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:13:18 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:23:41 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -2594,8 +2594,8 @@ GsnNcm_L3ConnectCb:
           CFI CFA R13+40
           CFI Block cfiCond46 Using cfiCommon0
           CFI (cfiCond46) Function GsnNcm_L3ConnectCb
-          CFI (cfiCond46) NoCalls GsnNcm_Execute
           CFI (cfiCond46) NoCalls GsnNcm_L3ConnectCb
+          CFI (cfiCond46) NoCalls GsnNcm_Execute
           CFI (cfiCond46) Conditional ??CrossCallReturnLabel_25
           CFI (cfiCond46) R4 Frame(CFA, -12)
           CFI (cfiCond46) R5 Frame(CFA, -8)
@@ -2603,8 +2603,8 @@ GsnNcm_L3ConnectCb:
           CFI (cfiCond46) CFA R13+32
           CFI Block cfiPicker47 Using cfiCommon1
           CFI (cfiPicker47) NoFunction
-          CFI (cfiPicker47) NoCalls GsnNcm_Execute
           CFI (cfiPicker47) NoCalls GsnNcm_L3ConnectCb
+          CFI (cfiPicker47) NoCalls GsnNcm_Execute
           CFI (cfiPicker47) Picker
         THUMB
 ?Subroutine12:

@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM      19/Nov/2015  15:13:21 #
+# IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM      19/Nov/2015  15:23:42 #
 # Copyright 1999-2013 IAR Systems AB.                                         #
 #                                                                             #
 #    Cpu mode     =  thumb                                                    #
@@ -908,16 +908,16 @@ E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt\s2w\src\mqtt_main
    \   00000002   0x.... 0x....      LDR.W    R4,??DataTable91_2
     363           
     364            
-    365            MQTT_LIST_INIT(&(mqtt_ctx.publish_list), 2);
+    365            MQTT_LIST_INIT(&(mqtt_ctx.publish_list), 1);
    \   00000006   0x.... 0x....      LDR.W    R5,??DataTable91_3
    \   0000000A   0x2000             MOVS     R0,#+0
    \   0000000C   0x7060             STRB     R0,[R4, #+1]
    \   0000000E   0xB085             SUB      SP,SP,#+20
-   \   00000010   0x2102             MOVS     R1,#+2
+   \   00000010   0x2101             MOVS     R1,#+1
    \   00000012   0xF105 0x0098      ADD      R0,R5,#+152
    \   00000016   0x.... 0x....      BL       MQTT_LIST_INIT
-    366            MQTT_LIST_INIT(&(mqtt_ctx.send_list), 2);
-   \   0000001A   0x2102             MOVS     R1,#+2
+    366            MQTT_LIST_INIT(&(mqtt_ctx.send_list), 1);
+   \   0000001A   0x2101             MOVS     R1,#+1
    \   0000001C   0xF105 0x0058      ADD      R0,R5,#+88
    \   00000020   0x.... 0x....      BL       MQTT_LIST_INIT
     367            //MQTT_LIST_INIT(&(mqtt_ctx.receive_list), RECEIVE_LIST_MUTEX, 1);

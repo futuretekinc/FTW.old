@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:12:59 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:23:23 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -1200,8 +1200,8 @@ VerifyFlash_1:
           CFI CFA R13+24
           CFI Block cfiCond23 Using cfiCommon0
           CFI (cfiCond23) Function VerifyFlash_1
-          CFI (cfiCond23) NoCalls VerifyFlash_1
           CFI (cfiCond23) NoCalls VerifyFlash
+          CFI (cfiCond23) NoCalls VerifyFlash_1
           CFI (cfiCond23) Conditional ??CrossCallReturnLabel_9
           CFI (cfiCond23) R4 Frame(CFA, -24)
           CFI (cfiCond23) R5 Frame(CFA, -20)
@@ -1212,8 +1212,8 @@ VerifyFlash_1:
           CFI (cfiCond23) CFA R13+24
           CFI Block cfiPicker24 Using cfiCommon1
           CFI (cfiPicker24) NoFunction
-          CFI (cfiPicker24) NoCalls VerifyFlash_1
           CFI (cfiPicker24) NoCalls VerifyFlash
+          CFI (cfiPicker24) NoCalls VerifyFlash_1
           CFI (cfiPicker24) Picker
         THUMB
 ?Subroutine7:

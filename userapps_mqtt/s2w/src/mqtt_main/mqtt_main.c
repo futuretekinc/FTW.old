@@ -362,8 +362,8 @@ UINT8 MQTT_START()
   mqtt_Xstate =  MQTT_STATE_UNINITIAL;
  
   
-  MQTT_LIST_INIT(&(mqtt_ctx.publish_list), 2);
-  MQTT_LIST_INIT(&(mqtt_ctx.send_list), 2);
+  MQTT_LIST_INIT(&(mqtt_ctx.publish_list), 1);
+  MQTT_LIST_INIT(&(mqtt_ctx.send_list), 1);
   //MQTT_LIST_INIT(&(mqtt_ctx.receive_list), RECEIVE_LIST_MUTEX, 1);
   //status = tx_semaphore_prioritize(&(mqtt_ctx.send_list.list_semaphore));
   //status = tx_semaphore_prioritize(&(mqtt_ctx.receive_list.list_semaphore));

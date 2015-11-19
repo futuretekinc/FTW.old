@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:13:17 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:23:29 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -3754,8 +3754,8 @@ App_InterfaceStop:
           CFI CFA R13+40
           CFI Block cfiCond52 Using cfiCommon0
           CFI (cfiCond52) Function App_InterfaceStop
-          CFI (cfiCond52) NoCalls App_InterfaceStop
           CFI (cfiCond52) NoCalls App_InterfaceStart
+          CFI (cfiCond52) NoCalls App_InterfaceStop
           CFI (cfiCond52) Conditional ??CrossCallReturnLabel_23
           CFI (cfiCond52) R4 Frame(CFA, -12)
           CFI (cfiCond52) R5 Frame(CFA, -8)
@@ -3763,8 +3763,8 @@ App_InterfaceStop:
           CFI (cfiCond52) CFA R13+24
           CFI Block cfiPicker53 Using cfiCommon1
           CFI (cfiPicker53) NoFunction
-          CFI (cfiPicker53) NoCalls App_InterfaceStop
           CFI (cfiPicker53) NoCalls App_InterfaceStart
+          CFI (cfiPicker53) NoCalls App_InterfaceStop
           CFI (cfiPicker53) Picker
         THUMB
 ?Subroutine9:

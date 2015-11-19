@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:13:22 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:23:36 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -355,8 +355,8 @@ AppS2wHal_BattChkStop:
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock2 Using cfiCommon0
           CFI NoFunction
-          CFI NoCalls AppS2wHal_BattChkStart
           CFI NoCalls AppS2wHal_BattChkStop
+          CFI NoCalls AppS2wHal_BattChkStart
           CFI CFA R13+8
           CFI R14 Frame(CFA, -4)
         THUMB

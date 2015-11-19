@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:13:09 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:23:44 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -7287,8 +7287,8 @@ AppS2w_WLRPANResetCfm:
           CFI Block cfiBlock264 Using cfiCommon0
           CFI NoFunction
           CFI NoCalls AppS2w_WLRPANDisassocCfm
-          CFI NoCalls AppS2w_WLRPANRxEnableCfm
           CFI NoCalls AppS2w_WLRPANResetCfm
+          CFI NoCalls AppS2w_WLRPANRxEnableCfm
           CFI NoCalls AppS2w_WLRPANSetCfm
           CFI NoCalls AppS2w_WLRPANPollCfm
           CFI CFA R13+8
