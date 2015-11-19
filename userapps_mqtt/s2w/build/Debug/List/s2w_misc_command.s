@@ -1,14 +1,14 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  14:31:03 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  15:13:11 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
 //    Endian       =  little                                                  /
 //    Source file  =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\src\parser\s2w_misc_command.c          /
+//                    ps_mqtt\s2w\src\parser\s2w_misc_command.c               /
 //    Command line =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\src\parser\s2w_misc_command.c -D       /
+//                    ps_mqtt\s2w\src\parser\s2w_misc_command.c -D            /
 //                    TX_ENABLE_IAR_LIBRARY_SUPPORT -D IAR -D                 /
 //                    FIXED_ROM_BUILD -D RUN_ALL_FROM_FLASH -D TM_USE_HTTPD   /
 //                    -D S2W_DNS_CLIENT -D NX_INCLUDE_USER_DEFINE_FILE -D     /
@@ -40,87 +40,87 @@
 //                    S2W_SSL_SERVER_SUPPORT -D ADK_PROV_CONFIG_CLIENT -D     /
 //                    S2W_DEFAULT_UART_BITS_PER_CHAR=3 -D S2W_MDNS_ENABLE     /
 //                    -lC E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\us /
-//                    erapps_mqtt_QoS2\s2w\build\Debug\List\ -lA              /
+//                    erapps_mqtt\s2w\build\Debug\List\ -lA                   /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\Debug\List\ --diag_suppress      /
+//                    ps_mqtt\s2w\build\Debug\List\ --diag_suppress           /
 //                    Pa050,Pe231,Pe177 -o E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
-//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\Debug\Obj\  /
+//                    tlslp_5.1.5_GA\userapps_mqtt\s2w\build\Debug\Obj\       /
 //                    --debug --endian=little --cpu=Cortex-M3 -e --fpu=None   /
 //                    --dlib_config "C:\Program Files (x86)\IAR               /
 //                    Systems\Embedded Workbench                              /
 //                    6.5\arm\INC\c\DLib_Config_Full.h" -I                    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\ -I            /
+//                    ps_mqtt\s2w\build\..\..\..\geps\inc\ -I                 /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\core\ -I       /
+//                    ps_mqtt\s2w\build\..\..\..\geps\inc\core\ -I            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\drivers\ -I    /
+//                    ps_mqtt\s2w\build\..\..\..\geps\inc\drivers\ -I         /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\modules\ -I    /
+//                    ps_mqtt\s2w\build\..\..\..\geps\inc\modules\ -I         /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\rtos\ -I       /
+//                    ps_mqtt\s2w\build\..\..\..\geps\inc\rtos\ -I            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\ -I       /
+//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\ -I            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\netx_bsd_ /
-//                    layer\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
-//                    _GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\main /
+//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\netx_bsd_layer /
 //                    \ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\u /
-//                    serapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\ -I    /
+//                    serapps_mqtt\s2w\build\..\..\..\geps\inc\main\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\hcc\src\    /
-//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
-//                    rapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security\sr /
-//                    c\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\ /
-//                    userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security /
-//                    \hw_engine_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tls /
-//                    lp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\ /
-//                    inc\security\wpa_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_t /
-//                    ls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\.. /
-//                    \userlib\ncm\inc\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
-//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\us /
-//                    erlib\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
-//                    _GA\userapps_mqtt_QoS2\s2w\build\..\inc\ctx\ -I         /
+//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\inc\ -I                       /
+//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\hcc\src\ -I      /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\inc\main\ -I                  /
+//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\src\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\inc\hal\ -I                   /
+//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\hw_engine_ /
+//                    if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA /
+//                    \userapps_mqtt\s2w\build\..\..\..\geps\inc\security\wpa /
+//                    _if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_G /
+//                    A\userapps_mqtt\s2w\build\..\..\..\userlib\ncm\inc\ -I  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\inc\parser\ -I                /
+//                    ps_mqtt\s2w\build\..\..\..\userlib\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\inc\config\ -I                /
+//                    ps_mqtt\s2w\build\..\inc\ctx\ -I                        /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\src\ -I                       /
+//                    ps_mqtt\s2w\build\..\inc\ -I                            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\otafu\inc\ -I       /
+//                    ps_mqtt\s2w\build\..\inc\main\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\provisioning\inc\   /
-//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
-//                    rapps_mqtt_QoS2\s2w\build\..\inc\mqtt\ -I               /
+//                    ps_mqtt\s2w\build\..\inc\hal\ -I                        /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt\ -I                  /
+//                    ps_mqtt\s2w\build\..\inc\parser\ -I                     /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\inc\one_wire\ -I              /
+//                    ps_mqtt\s2w\build\..\inc\config\ -I                     /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\src\one_wire\ -I              /
+//                    ps_mqtt\s2w\build\..\src\ -I                            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\inc\linked_list\ -I           /
+//                    ps_mqtt\s2w\build\..\..\..\adk\otafu\inc\ -I            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\src\linked_list\ -I           /
+//                    ps_mqtt\s2w\build\..\..\..\adk\provisioning\inc\ -I     /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_main\ -I             /
+//                    ps_mqtt\s2w\build\..\inc\mqtt\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_main\ -I             /
+//                    ps_mqtt\s2w\build\..\src\mqtt\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_log\ -I              /
+//                    ps_mqtt\s2w\build\..\inc\one_wire\ -I                   /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_log\ -Ohz            /
+//                    ps_mqtt\s2w\build\..\src\one_wire\ -I                   /
+//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
+//                    ps_mqtt\s2w\build\..\inc\linked_list\ -I                /
+//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
+//                    ps_mqtt\s2w\build\..\src\linked_list\ -I                /
+//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
+//                    ps_mqtt\s2w\build\..\inc\mqtt_main\ -I                  /
+//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
+//                    ps_mqtt\s2w\build\..\src\mqtt_main\ -I                  /
+//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
+//                    ps_mqtt\s2w\build\..\inc\mqtt_log\ -I                   /
+//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
+//                    ps_mqtt\s2w\build\..\src\mqtt_log\ -Ohz                 /
 //                    --use_c++_inline -I "C:\Program Files (x86)\IAR         /
 //                    Systems\Embedded Workbench 6.5\arm\CMSIS\Include\"      /
 //    List file    =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt_QoS2\s2w\build\Debug\List\s2w_misc_command.s    /
+//                    ps_mqtt\s2w\build\Debug\List\s2w_misc_command.s         /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -447,7 +447,7 @@
           CFI R14 SameValue
           CFI EndCommon cfiCommon1
         
-// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\src\parser\s2w_misc_command.c
+// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt\s2w\src\parser\s2w_misc_command.c
 //    1 /*****************************************************************
 //    2  *
 //    3 *               COPYRIGHT (c) 2009-2010 GainSpan Corporation
@@ -2736,8 +2736,8 @@ S2wHttp_XmlSend:
           CFI CFA R13+56
           CFI Block cfiCond22 Using cfiCommon0
           CFI (cfiCond22) Function S2wHttp_XmlSend
-          CFI (cfiCond22) NoCalls AppS2w_XmlRxBufferMgmtCb
           CFI (cfiCond22) NoCalls S2wHttp_XmlSend
+          CFI (cfiCond22) NoCalls AppS2w_XmlRxBufferMgmtCb
           CFI (cfiCond22) Conditional ??CrossCallReturnLabel_17
           CFI (cfiCond22) R4 Frame(CFA, -24)
           CFI (cfiCond22) R5 Frame(CFA, -20)
@@ -2748,8 +2748,8 @@ S2wHttp_XmlSend:
           CFI (cfiCond22) CFA R13+56
           CFI Block cfiPicker23 Using cfiCommon1
           CFI (cfiPicker23) NoFunction
-          CFI (cfiPicker23) NoCalls AppS2w_XmlRxBufferMgmtCb
           CFI (cfiPicker23) NoCalls S2wHttp_XmlSend
+          CFI (cfiPicker23) NoCalls AppS2w_XmlRxBufferMgmtCb
           CFI (cfiPicker23) Picker
         THUMB
 ?Subroutine4:
@@ -6688,8 +6688,8 @@ APPS2wCmd_WebProv:
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock76 Using cfiCommon0
           CFI NoFunction
-          CFI NoCalls APPS2wCmd_WebProv
           CFI NoCalls AppS2wCmd_WebServer
+          CFI NoCalls APPS2wCmd_WebProv
           CFI CFA R13+56
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
@@ -11117,8 +11117,8 @@ AppS2w_XmlDataProcess:
           CFI CFA R13+64
           CFI Block cfiCond182 Using cfiCommon0
           CFI (cfiCond182) Function AppS2w_XmlDataProcess
-          CFI (cfiCond182) NoCalls AppS2wCmd_XmlSend
           CFI (cfiCond182) NoCalls AppS2w_XmlDataProcess
+          CFI (cfiCond182) NoCalls AppS2wCmd_XmlSend
           CFI (cfiCond182) Conditional ??CrossCallReturnLabel_341
           CFI (cfiCond182) R4 Frame(CFA, -36)
           CFI (cfiCond182) R5 Frame(CFA, -32)
@@ -11132,8 +11132,8 @@ AppS2w_XmlDataProcess:
           CFI (cfiCond182) CFA R13+72
           CFI Block cfiPicker183 Using cfiCommon1
           CFI (cfiPicker183) NoFunction
-          CFI (cfiPicker183) NoCalls AppS2wCmd_XmlSend
           CFI (cfiPicker183) NoCalls AppS2w_XmlDataProcess
+          CFI (cfiPicker183) NoCalls AppS2wCmd_XmlSend
           CFI (cfiPicker183) Picker
         THUMB
 ?Subroutine53:
@@ -11238,8 +11238,8 @@ AppS2w_XmlDataProcess:
           CFI CFA R13+64
           CFI Block cfiCond190 Using cfiCommon0
           CFI (cfiCond190) Function AppS2w_XmlDataProcess
-          CFI (cfiCond190) NoCalls AppS2wCmd_XmlSend
           CFI (cfiCond190) NoCalls AppS2w_XmlDataProcess
+          CFI (cfiCond190) NoCalls AppS2wCmd_XmlSend
           CFI (cfiCond190) Conditional ??CrossCallReturnLabel_285
           CFI (cfiCond190) R4 Frame(CFA, -36)
           CFI (cfiCond190) R5 Frame(CFA, -32)
@@ -11253,8 +11253,8 @@ AppS2w_XmlDataProcess:
           CFI (cfiCond190) CFA R13+72
           CFI Block cfiPicker191 Using cfiCommon1
           CFI (cfiPicker191) NoFunction
-          CFI (cfiPicker191) NoCalls AppS2wCmd_XmlSend
           CFI (cfiPicker191) NoCalls AppS2w_XmlDataProcess
+          CFI (cfiPicker191) NoCalls AppS2wCmd_XmlSend
           CFI (cfiPicker191) Picker
         THUMB
 ?Subroutine37:
@@ -13635,8 +13635,8 @@ AppS2wCmd_ArpEntryGet:
           CFI CFA R13+1456
           CFI Block cfiCond270 Using cfiCommon0
           CFI (cfiCond270) Function AppS2wCmd_ArpEntryGet
-          CFI (cfiCond270) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond270) NoCalls AppS2wCmd_ApClientInfoGet
+          CFI (cfiCond270) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond270) Conditional ??CrossCallReturnLabel_265
           CFI (cfiCond270) R4 Frame(CFA, -24)
           CFI (cfiCond270) R5 Frame(CFA, -20)
@@ -13647,8 +13647,8 @@ AppS2wCmd_ArpEntryGet:
           CFI (cfiCond270) CFA R13+40
           CFI Block cfiPicker271 Using cfiCommon1
           CFI (cfiPicker271) NoFunction
-          CFI (cfiPicker271) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiPicker271) NoCalls AppS2wCmd_ApClientInfoGet
+          CFI (cfiPicker271) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiPicker271) Picker
         THUMB
 ?Subroutine29:
@@ -14342,15 +14342,15 @@ AppS2wCmd_ArpEntryDelete:
           CFI CFA R13+32
           CFI Block cfiCond332 Using cfiCommon0
           CFI (cfiCond332) Function AppS2wCmd_ArpEntryDelete
-          CFI (cfiCond332) NoCalls AppS2wCmd_ArpEntryDelete
           CFI (cfiCond332) NoCalls AppS2wCmd_ArpEntrySet
+          CFI (cfiCond332) NoCalls AppS2wCmd_ArpEntryDelete
           CFI (cfiCond332) Conditional ??CrossCallReturnLabel_263
           CFI (cfiCond332) R14 Frame(CFA, -4)
           CFI (cfiCond332) CFA R13+32
           CFI Block cfiPicker333 Using cfiCommon1
           CFI (cfiPicker333) NoFunction
-          CFI (cfiPicker333) NoCalls AppS2wCmd_ArpEntryDelete
           CFI (cfiPicker333) NoCalls AppS2wCmd_ArpEntrySet
+          CFI (cfiPicker333) NoCalls AppS2wCmd_ArpEntryDelete
           CFI (cfiPicker333) Picker
         THUMB
 ?Subroutine28:
@@ -14668,10 +14668,10 @@ AppArp_Invalidate:
           CFI CFA R13+336
           CFI Block cfiCond357 Using cfiCommon0
           CFI (cfiCond357) Function AppS2wCmd_ApClientInfoGet
+          CFI (cfiCond357) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiCond357) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiCond357) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond357) NoCalls AppArp_Invalidate
-          CFI (cfiCond357) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiCond357) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiCond357) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiCond357) Conditional ??CrossCallReturnLabel_333
@@ -14687,10 +14687,10 @@ AppArp_Invalidate:
           CFI (cfiCond357) CFA R13+1456
           CFI Block cfiCond358 Using cfiCommon0
           CFI (cfiCond358) Function AppS2wCmd_ArpEntryGet
+          CFI (cfiCond358) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiCond358) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiCond358) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond358) NoCalls AppArp_Invalidate
-          CFI (cfiCond358) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiCond358) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiCond358) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiCond358) Conditional ??CrossCallReturnLabel_334
@@ -14703,10 +14703,10 @@ AppArp_Invalidate:
           CFI (cfiCond358) CFA R13+40
           CFI Block cfiCond359 Using cfiCommon0
           CFI (cfiCond359) Function AppArp_Invalidate
+          CFI (cfiCond359) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiCond359) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiCond359) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond359) NoCalls AppArp_Invalidate
-          CFI (cfiCond359) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiCond359) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiCond359) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiCond359) Conditional ??CrossCallReturnLabel_335
@@ -14714,10 +14714,10 @@ AppArp_Invalidate:
           CFI (cfiCond359) CFA R13+8
           CFI Block cfiCond360 Using cfiCommon0
           CFI (cfiCond360) Function AppS2wCmd_WlanOtpRead
+          CFI (cfiCond360) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiCond360) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiCond360) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond360) NoCalls AppArp_Invalidate
-          CFI (cfiCond360) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiCond360) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiCond360) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiCond360) Conditional ??CrossCallReturnLabel_336
@@ -14731,10 +14731,10 @@ AppArp_Invalidate:
           CFI (cfiCond360) CFA R13+304
           CFI Block cfiCond361 Using cfiCommon0
           CFI (cfiCond361) Function AppS2wCmd_GratArpSend
+          CFI (cfiCond361) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiCond361) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiCond361) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiCond361) NoCalls AppArp_Invalidate
-          CFI (cfiCond361) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiCond361) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiCond361) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiCond361) Conditional ??CrossCallReturnLabel_337
@@ -14742,10 +14742,10 @@ AppArp_Invalidate:
           CFI (cfiCond361) CFA R13+8
           CFI Block cfiPicker362 Using cfiCommon1
           CFI (cfiPicker362) NoFunction
+          CFI (cfiPicker362) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiPicker362) NoCalls AppS2wCmd_MdnsAnnounceAll
           CFI (cfiPicker362) NoCalls AppS2wCmd_ArpEntryGet
           CFI (cfiPicker362) NoCalls AppArp_Invalidate
-          CFI (cfiPicker362) NoCalls AppS2wCmd_ApClientInfoGet
           CFI (cfiPicker362) NoCalls AppS2wCmd_WlanOtpRead
           CFI (cfiPicker362) NoCalls AppS2wCmd_GratArpSend
           CFI (cfiPicker362) Picker
@@ -17087,8 +17087,8 @@ AppS2wCmd_MemWrite:
           CFI CFA R13+176
           CFI Block cfiCond434 Using cfiCommon0
           CFI (cfiCond434) Function AppS2wCmd_MemWrite
-          CFI (cfiCond434) NoCalls AppS2wCmd_MemWrite
           CFI (cfiCond434) NoCalls AppS2wCmd_MemRead
+          CFI (cfiCond434) NoCalls AppS2wCmd_MemWrite
           CFI (cfiCond434) Conditional ??CrossCallReturnLabel_331
           CFI (cfiCond434) R4 Frame(CFA, -12)
           CFI (cfiCond434) R5 Frame(CFA, -8)
@@ -17096,8 +17096,8 @@ AppS2wCmd_MemWrite:
           CFI (cfiCond434) CFA R13+80
           CFI Block cfiPicker435 Using cfiCommon1
           CFI (cfiPicker435) NoFunction
-          CFI (cfiPicker435) NoCalls AppS2wCmd_MemWrite
           CFI (cfiPicker435) NoCalls AppS2wCmd_MemRead
+          CFI (cfiPicker435) NoCalls AppS2wCmd_MemWrite
           CFI (cfiPicker435) Picker
         THUMB
 ?Subroutine50:

@@ -1887,7 +1887,8 @@ AppS2wHal_NetRecvTask(UINT32 ctx)
 							if(s2wRxBuf[0] == 0x20 || s2wRxBuf[0] == 0x40 || s2wRxBuf[0] == 0x50 || s2wRxBuf[0] == 0x70 || s2wRxBuf[0] == 0x90 || s2wRxBuf[0] == 0xB0 || s2wRxBuf[0] == 0xD0)
 							{
                                   S2w_Printf("\r\n Receive Data s2wRxBuf : %x %x %x %x",s2wRxBuf[0],s2wRxBuf[1],s2wRxBuf[2],s2wRxBuf[3]);
-								  status = tx_queue_send(&MQTT_RECEIVE_QUEUE, s2wRxBuf, TX_NO_WAIT);
+								  GsnOsal_QueuePut(&MQTT_RECEIVE_QUEUE, s2wRxBuf);
+								  //status = tx_queue_send(&MQTT_RECEIVE_QUEUE, s2wRxBuf, TX_NO_WAIT);
 							}
 #endif
 #ifdef S2W_THROUGHPUT_TEST                       

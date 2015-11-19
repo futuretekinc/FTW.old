@@ -50,7 +50,6 @@ typedef enum
 typedef struct mqtt_list
 {
   Node* head;
-  //TX_MUTEX list_mutex;
   GSN_OSAL_SEM_T list_semaphore;
 }MQTT_LIST;
 
@@ -58,7 +57,6 @@ typedef struct
 {
   mqtt_broker_handle_t MQTT_CLIENT;
   UINT8 QoS;
-  //UINT8 mqtt_cid;
   MQTT_LIST send_list;
   MQTT_LIST receive_list;
   MQTT_LIST publish_list;
@@ -132,8 +130,7 @@ const MQTT_MESSAGE_CALLBACK MQTT_MSG_CALLBACK[] =
 {
   { .Message_Type = MQTT_MSG_Reserved_0, 	.callback = NULL },
   { .Message_Type = MQTT_MSG_CONNECT, 		.callback = NULL },
-  //{ .Message_Type = MQTT_MSG_CONNACK, 	.callback = MQTT_MSG_FUNC_CONNACK },
-  { .Message_Type = MQTT_MSG_CONNACK, 		.callback = NULL },
+  { .Message_Type = MQTT_MSG_CONNACK, 		.callback = MQTT_MSG_FUNC_CONNACK },
   { .Message_Type = MQTT_MSG_PUBLISH, 		.callback = MQTT_MSG_FUNC_PUBLISH },
   { .Message_Type = MQTT_MSG_PUBACK, 		.callback = MQTT_MSG_FUNC_PUBACK },
   { .Message_Type = MQTT_MSG_PUBREC, 		.callback = MQTT_MSG_FUNC_PUBREC },
@@ -206,22 +203,17 @@ UINT8 STACK_MQTT_RECEIVER_THREAD[STACK_SIZE*2];
 UINT8 STACK_MQTT_PROCESS_THREAD[STACK_SIZE*5];
 UINT8 STACK_MQTT_MESSAGE_QUEUE_THREAD[STACK_SIZE*2];
 
-//TX_TIMER my_timer;
+
 S2W_TIMER_T my_timer;
 UINT8 ping_count = 0;
-//void MQTT_PING_OUT(ULONG);
+
 void MQTT_PING_OUT(VOID *);
 void MQTT_PIGN_MSG();
 
-//TX_TIMER mqtt_retry_timer;
-S2W_TIMER_T mqtt_retry_timer;
-//VOID MQTT_PUBLISH_RETRY(ULONG);
 VOID MQTT_PUBLISH_RETRY(VOID *);
 
-
-TX_MUTEX ping_mutex;
-//TX_SEMAPHORE ping_semaphore;
-TX_MUTEX conStatus_mutex;
+GSN_OSAL_MUTEX_T ping_mutex;
+GSN_OSAL_MUTEX_T conStatus_mutex;
 
 
 UINT8 MQTT_LIST_INIT(MQTT_LIST* LIST,  UINT8 initial)
@@ -230,8 +222,6 @@ UINT8 MQTT_LIST_INIT(MQTT_LIST* LIST,  UINT8 initial)
   
   LIST->head = makeNode(NULL);
   
-  //status = tx_mutex_create(&LIST->list_mutex, MUTEX_NAME, TX_INHERIT);
-  //status = tx_semaphore_create(&(LIST->list_semaphore), MUTEX_NAME,initial);
   status = GsnOsal_SemCreate(&(LIST->list_semaphore), initial);
   return status;
 }
@@ -239,11 +229,8 @@ UINT8 MQTT_LIST_INIT(MQTT_LIST* LIST,  UINT8 initial)
 
 UINT8 MQTT_LIST_PUT(MQTT_LIST* LIST, MSG_TYPE* msg_type)
 {
-  //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
-  //tx_semaphore_get(&(LIST->list_semaphore), 100);
-  GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+  GsnOsal_SemAcquire(&(LIST->list_semaphore), TX_WAIT_FOREVER); 
   
-
   list_put(LIST->head, msg_type);
 
   GsnOsal_SemRelease(&(LIST->list_semaphore));
@@ -252,40 +239,34 @@ UINT8 MQTT_LIST_PUT(MQTT_LIST* LIST, MSG_TYPE* msg_type)
 
 UINT8 MQTT_LIST_GET(MQTT_LIST* LIST, MSG_TYPE** msg_type)
 {
-  //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
-  //tx_semaphore_get(&(LIST->list_semaphore), 100);
-  GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+  GsnOsal_SemAcquire(&(LIST->list_semaphore),TX_WAIT_FOREVER); 
   list_get(LIST->head, msg_type);
   GsnOsal_SemRelease(&(LIST->list_semaphore));
-  //tx_semaphore_put(&(LIST->list_semaphore));
   return 0;
 }
 
 UINT8 MQTT_LIST_COUNT(MQTT_LIST* LIST)
 {
   INT32 count;
-  //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
-  //tx_semaphore_get(&(LIST->list_semaphore), 100);
-  GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+
+  GsnOsal_SemAcquire(&(LIST->list_semaphore), TX_WAIT_FOREVER); 
   count = list_count(LIST->head);
   GsnOsal_SemRelease(&(LIST->list_semaphore));
-  //tx_semaphore_put(&(LIST->list_semaphore));
+
   return count;
 }
 
 UINT8 MQTT_LIST_SEARCH(MQTT_LIST* LIST, UINT16 MSG_ID)
 {
   Node* post ;
-  //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
-  //tx_semaphore_get(&(LIST->list_semaphore), 100);
-  GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+
+  GsnOsal_SemAcquire(&(LIST->list_semaphore), TX_WAIT_FOREVER); 
   post = LIST->head->next;
   while(post != NULL)
   {
 	if(post->msg_pointer->MSG_ID == MSG_ID)
 	{
 	  GsnOsal_SemRelease(&(LIST->list_semaphore));
-	  //tx_semaphore_put(&(LIST->list_semaphore));
 	  return 0;
 	}
 	else
@@ -294,7 +275,6 @@ UINT8 MQTT_LIST_SEARCH(MQTT_LIST* LIST, UINT16 MSG_ID)
 	}
   }
   GsnOsal_SemRelease(&(LIST->list_semaphore));
-  //tx_semaphore_put(&(LIST->list_semaphore));
   return 1;
 }
 
@@ -303,9 +283,8 @@ UINT8 MQTT_LIST_DELECT(MQTT_LIST* LIST, UINT16 MSG_ID)
 {
   Node* pre ;
   Node* post ;
-  //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
-  //tx_semaphore_get(&(LIST->list_semaphore), 100);
-  GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+
+  GsnOsal_SemAcquire(&(LIST->list_semaphore), TX_WAIT_FOREVER); 
   pre = LIST->head;
   post = LIST->head->next;
   while(post != NULL)
@@ -327,7 +306,6 @@ UINT8 MQTT_LIST_DELECT(MQTT_LIST* LIST, UINT16 MSG_ID)
 	  gsn_free(post);
 	  post = NULL;
 	  GsnOsal_SemRelease(&(LIST->list_semaphore));
-	  //tx_semaphore_put(&(LIST->list_semaphore));
 	  return 0;
 	}
 	else
@@ -337,7 +315,6 @@ UINT8 MQTT_LIST_DELECT(MQTT_LIST* LIST, UINT16 MSG_ID)
 	}
   }
   GsnOsal_SemRelease(&(LIST->list_semaphore));
-  //tx_semaphore_put(&(LIST->list_semaphore));
   return 1;
 }
 
@@ -345,9 +322,8 @@ UINT8 MQTT_LIST_DESTROY(MQTT_LIST* LIST)
 {
   Node* pre ;
   Node* post ;
-  //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
-  //tx_semaphore_get(&(LIST->list_semaphore), 100);
-  GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+
+  GsnOsal_SemAcquire(&(LIST->list_semaphore), TX_WAIT_FOREVER); 
   pre = LIST->head;
   while(pre->next != NULL)
   {
@@ -376,7 +352,6 @@ UINT8 MQTT_LIST_DESTROY(MQTT_LIST* LIST)
 	  }
   }
   GsnOsal_SemRelease(&(LIST->list_semaphore));
-  //tx_semaphore_put(&(LIST->list_semaphore));
   return 0;
 }
 
@@ -387,31 +362,26 @@ UINT8 MQTT_START()
   mqtt_Xstate =  MQTT_STATE_UNINITIAL;
  
   
-  MQTT_LIST_INIT(&(mqtt_ctx.publish_list), 1);
-  MQTT_LIST_INIT(&(mqtt_ctx.send_list), 1);
+  MQTT_LIST_INIT(&(mqtt_ctx.publish_list), 2);
+  MQTT_LIST_INIT(&(mqtt_ctx.send_list), 2);
   //MQTT_LIST_INIT(&(mqtt_ctx.receive_list), RECEIVE_LIST_MUTEX, 1);
   //status = tx_semaphore_prioritize(&(mqtt_ctx.send_list.list_semaphore));
   //status = tx_semaphore_prioritize(&(mqtt_ctx.receive_list.list_semaphore));
   //status = tx_semaphore_prioritize(&(mqtt_ctx.publish_list.list_semaphore));
 
-  //status = tx_queue_create(&MQTT_RECEIVE_QUEUE, "MQTT_RECEIVE_QUEUE", TX_1_ULONG, MSG_receive, TOTAL_QUEUE_SIZE);
+
   status = GsnOsal_QueueCreate(&MQTT_RECEIVE_QUEUE, TX_1_ULONG, MSG_receive, TOTAL_QUEUE_SIZE);
-  //status = tx_thread_create(&MQTT_PROCESS_THREAD, "MQTT_PROCESS_THREAD", MQTT_PROCESS_TASK ,0 , STACK_MQTT_PROCESS_THREAD ,STACK_SIZE*5 , 15 , 15 , TX_NO_TIME_SLICE,TX_AUTO_START);
+  
   status = GsnOsal_ThreadCreate(MQTT_PROCESS_TASK, NULL, &MQTT_PROCESS_THREAD,"MQTT_PROCESS_THREAD", 15, STACK_MQTT_PROCESS_THREAD, STACK_SIZE*5, GSN_OSAL_THREAD_INITIAL_READY);
-  //status = tx_thread_create(&MQTT_SENDER_THREAD, "MQTT_SENDER_THREAD", MQTT_SENDER_TASK ,0, STACK_MQTT_SENDER_THREAD, STACK_SIZE*2, 15, 15, TX_NO_TIME_SLICE,TX_AUTO_START);
+  
   status = GsnOsal_ThreadCreate(MQTT_SENDER_TASK, NULL, &MQTT_SENDER_THREAD, "MQTT_SENDER_THREAD", 15, STACK_MQTT_SENDER_THREAD, STACK_SIZE*2, GSN_OSAL_THREAD_INITIAL_READY);
-  //status = tx_thread_create(&MQTT_RECEIVER_THREAD, "MQTT_RECEIVER_THREAD", MQTT_RECEIVER_TASK ,0, STACK_MQTT_RECEIVER_THREAD, STACK_SIZE*2, 23, 23, TX_NO_TIME_SLICE,TX_AUTO_START);
-  //status = tx_thread_create(&MQTT_MESSAGE_QUEUE_THREAD, "MQTT_MESSAGE_QUEUE_THREAD", MQTT_MESSAGE_QUEUE_TASK ,0, STACK_MQTT_MESSAGE_QUEUE_THREAD, STACK_SIZE*2, 15, 15, TX_NO_TIME_SLICE,TX_AUTO_START);
+  
   status = GsnOsal_ThreadCreate(MQTT_MESSAGE_QUEUE_TASK, NULL, &MQTT_MESSAGE_QUEUE_THREAD, "MQTT_MESSAGE_QUEUE_THREAD", 15, STACK_MQTT_MESSAGE_QUEUE_THREAD, STACK_SIZE*2, GSN_OSAL_THREAD_INITIAL_READY);
-  //status = tx_timer_create(&my_timer, "mqtt_ping_timer", MQTT_PING_OUT, 0, 1200, 0, TX_NO_ACTIVATE);
+  
   AppS2wHal_TimerInit(&my_timer, MQTT_PING_OUT, NULL );
 
-  //S2w_Printf("\r\n PING TIMER STATUS : %d", status);
-  //status = tx_timer_create(&mqtt_retry_timer, "mqtt_publish_retry", MQTT_PUBLISH_RETRY, (ULONG)&mqtt_ctx, 100, 300, TX_AUTO_ACTIVATE);
-  AppS2wHal_TimerInit(&mqtt_retry_timer, MQTT_PUBLISH_RETRY, NULL);
   status = tx_mutex_create(&conStatus_mutex, "conStatus_mutex", TX_INHERIT);
   status = tx_mutex_create(&ping_mutex, "ping_mutex", TX_INHERIT);
-  //status = tx_semaphore_create(&ping_semaphore, "ping_semaphore",1);
   
   return status;
 }
@@ -478,12 +448,8 @@ VOID MQTT_RECEIVER_TASK(UINT32 MQTT_INPUT)
 		if(temp != NULL)
 		{
 			MQTT_MSG_CALLBACK[temp->MSG_TYPE].callback(temp);
-  			//free(temp);
-  			if(temp != NULL)
-			{
-  				gsn_free(temp);
-				temp = NULL;
-			}
+			gsn_free(temp);
+			temp = NULL;
 		}
 	}
 	tx_thread_sleep(5);
@@ -502,8 +468,7 @@ VOID MQTT_MESSAGE_QUEUE_TASK(UINT32 MQTT_INPUT)
 	{
 	    	S2w_Printf("\r\n QUEUE_TASK START");
 			S2w_Printf("\r\n QUEUE COUNT 2 : %d",MQTT_RECEIVE_QUEUE.tx_queue_available_storage);
-	    	status = tx_queue_receive(&MQTT_RECEIVE_QUEUE, receive_MSG, TX_WAIT_FOREVER);
-			//status = tx_queue_receive(&MQTT_RECEIVE_QUEUE, receive_MSG, 1);
+	    	status = GsnOsal_QueueGet(&MQTT_RECEIVE_QUEUE, receive_MSG, TX_WAIT_FOREVER);
 			if(status !=0)
 			{
 			  MQTT_MESSAGE_QUEUE_LOG(status);
@@ -511,22 +476,13 @@ VOID MQTT_MESSAGE_QUEUE_TASK(UINT32 MQTT_INPUT)
 			}
 			else
 			{
-				//tx_queue_receive(&MQTT_RECEIVE_QUEUE, receive_MSG, TX_WAIT_FOREVER);
 				S2w_Printf("\r\n rcv_MSG : %x %x %x %x", receive_MSG[0], receive_MSG[1], receive_MSG[2], receive_MSG[3]);
 				temp.MSG_TYPE = receive_MSG[0] >> 4;
 				temp.PAYLOAD = NULL;
 				temp.TIME = 0;
 				temp.TOPIC = NULL;
 				temp.MSG_ID = mqtt_parse_msg_id(receive_MSG);
-				if(temp.MSG_TYPE == MQTT_MSG_TYPE_CONNACK)
-			    	MQTT_MSG_FUNC_CONNACK(&temp);
-				else
-				{
-			    	//S2w_Printf("\r\n re list 3 lock");
-			    	//MQTT_LIST_PUT(&(mqtt_ctx.receive_list),&temp);
-					MQTT_MSG_CALLBACK[temp.MSG_TYPE].callback(&temp);
-					//S2w_Printf("\r\n re list 3 unlock");
-				}
+				MQTT_MSG_CALLBACK[temp.MSG_TYPE].callback(&temp);
 			}
 			S2w_Printf("\r\n QUEUE_TASK END");
 
@@ -537,9 +493,9 @@ UINT32 MQTT_MSG_FUNC_CONNACK(MSG_TYPE* MSG)
 {
   S2w_Printf("\r\n  CONNACK START ");
   MQTT_CONNECT_ACK_LOG(MSG->MSG_ID);
-  tx_mutex_get(&conStatus_mutex, TX_WAIT_FOREVER);
+  GsnOsal_MutexGet(&conStatus_mutex, TX_WAIT_FOREVER);
   MQTT_CONNECT_STATUS = 1;
-  tx_mutex_put(&conStatus_mutex);
+  GsnOsal_MutexPut(&conStatus_mutex);
   //S2w_Printf("\r\n  MQTT_MSG_FUNC_CONNACK END ");
   return 0;	
 }
@@ -570,34 +526,6 @@ UINT32 MQTT_MSG_FUNC_PUBLISH(MSG_TYPE* MSG)
 }
 
 
-VOID MQTT_PUBLISH_RETRY(VOID* TIMER_INPUT)
-{
-  MSG_TYPE* temp;
-  
-  S2w_Printf("\r\n PUBLISH_RETRY START "); 
-  
-  /*MQTT_LIST_GET(&(mqtt_ctx.send_list), &temp);
-  if(temp != NULL)
-  {
-	if(temp->sending_count < 3)
-	{
-	  	temp->TIME = SYSTIME_TO_MSEC(GsnTod_Get());
-		temp->sending_count++;
-		mqtt_publish_retry_dup(&(mqtt_ctx.MQTT_CLIENT), (char const*)temp->TOPIC, (char const*)temp->PAYLOAD, 1, mqtt_ctx.QoS, (temp->MSG_ID));
-		MQTT_LIST_PUT(&(mqtt_ctx.send_list),temp);
-	}
-	else if((temp->sending_count > 3) || ((SYSTIME_TO_MSEC(GsnTod_Get())-(temp->TIME)) > 12000) )
-	{
-	  gsn_free(temp->TOPIC);
-	  gsn_free(temp->PAYLOAD);
-	  gsn_free(temp);
-	}
-  }*/
-  S2w_Printf("\r\n PUBLISH_RETRY END ");
-}
-
-
-
 UINT32 MQTT_MSG_FUNC_PUBACK(MSG_TYPE* MSG)
 {
   UINT8 status;
@@ -616,7 +544,7 @@ UINT32 MQTT_MSG_FUNC_PUBACK(MSG_TYPE* MSG)
 
 UINT32 MQTT_MSG_FUNC_PUBREC(MSG_TYPE* MSG)
 {
-  //MSG_TYPE temp;
+
   UINT8 status;
   S2w_Printf("\r\n PUBREC START ");
   status = MQTT_LIST_SEARCH(&(mqtt_ctx.send_list), MSG->MSG_ID);
@@ -647,11 +575,11 @@ UINT32 MQTT_MSG_FUNC_PUBCOMP(MSG_TYPE* MSG)
 UINT32 MQTT_MSG_FUNC_PINGRESP(MSG_TYPE* MSG)
 {
   S2w_Printf("\r\n PINGRESP START ");
-  //tx_timer_deactivate(&my_timer);
+
   AppS2wHal_TimerStop(&my_timer);
-  tx_mutex_get(&ping_mutex, TX_WAIT_FOREVER);
+  GsnOsal_MutexGet(&ping_mutex, TX_WAIT_FOREVER);
   ping_count = 0;
-  tx_mutex_put(&ping_mutex);
+  GsnOsal_MutexPut(&ping_mutex);
   return 0;
 }
 
@@ -705,14 +633,14 @@ static UINT32  MQTT_STATE_CALLBACK_INITIAL(void* client)
 static UINT32  MQTT_STATE_CALLBACK_CONNECT_READY(void* client)
 {
   S2w_Printf("\r\n MQTT_STATE_CALLBACK_CONNECT_READY START ");
-  tx_mutex_get(&conStatus_mutex, TX_WAIT_FOREVER);
+  GsnOsal_MutexGet(&conStatus_mutex, TX_WAIT_FOREVER);
   if(MQTT_CONNECT_STATUS == 1)
   {
 	mqtt_Xstate = MQTT_STATE_CONNECT;
   }
   else
 	mqtt_Xstate = MQTT_STATE_DISCONNECT;
-  tx_mutex_put(&conStatus_mutex);
+  GsnOsal_MutexPut(&conStatus_mutex);
   S2w_Printf("\r\n MQTT_STATE_CALLBACK_CONNECT_READY END ");
   return 0;
 }
@@ -720,8 +648,7 @@ static UINT32  MQTT_STATE_CALLBACK_CONNECT_READY(void* client)
 static UINT32  MQTT_STATE_CALLBACK_CONNECT(void* client)
 {
   
-  //tx_timer_activate(&mqtt_retry_timer);
-  //AppS2wHal_TimerStart(&mqtt_retry_timer, 30);
+
   while(mqtt_Xstate == MQTT_STATE_CONNECT)
   {
 	//S2w_Printf("\r\n  MQTT_STATE_CALLBACK_CONNECT START ");
@@ -749,11 +676,8 @@ static UINT32  MQTT_STAET_CALLBACK_DISCONNECT(void* client)
 {
   UINT8 status;
   S2w_Printf("\r\n  MQTT_STAET_CALLBACK_DISCONNECT START ");
-  //tx_timer_deactivate(&my_timer);
+
   AppS2wHal_TimerStop(&my_timer);
-  //tx_timer_deactivate(&mqtt_retry_timer);
-  //tx_timer_delete(&mqtt_retry_timer);
-  AppS2wHal_TimerStop(&mqtt_retry_timer);
   
   status = mqtt_disconnect(&(mqtt_ctx.MQTT_CLIENT));
   if(status != 0)
@@ -764,9 +688,9 @@ static UINT32  MQTT_STAET_CALLBACK_DISCONNECT(void* client)
 	S2w_Printf("\r\n NET CLOSE ERROR");
   
   mqtt_ctx.MQTT_CLIENT.seq = 0;
-  tx_mutex_get(&conStatus_mutex, TX_WAIT_FOREVER);
+  GsnOsal_MutexGet(&conStatus_mutex, TX_WAIT_FOREVER);
   MQTT_CONNECT_STATUS = 0;
-  tx_mutex_put(&conStatus_mutex);
+  GsnOsal_MutexPut(&conStatus_mutex);
   
   MQTT_LIST_DESTROY(&mqtt_ctx.publish_list);
   MQTT_LIST_DESTROY(&mqtt_ctx.receive_list);
@@ -845,8 +769,6 @@ UINT8 MQTT_PUBLISH_MSG_GEN(UINT8 select)
 	else if(select == 2)
 	{
 	
-	//GsnTaskSleep(3000);
-  
   		//sensor data message generation.
   		currentTime = GsnTod_Get();
   		mSeconds = SYSTIME_TO_MSEC(currentTime);
@@ -887,18 +809,14 @@ void MQTT_PING_MSG()
 {
   UINT status;
   S2w_Printf("\r\n  PING_MSG START ");
-  tx_mutex_get(&ping_mutex, TX_WAIT_FOREVER);
-  //tx_semaphore_get(&ping_semaphore,TX_WAIT_FOREVER);
+  GsnOsal_MutexGet(&ping_mutex, TX_WAIT_FOREVER);
   ping_count++;
-  tx_mutex_put(&ping_mutex);
-  //tx_semaphore_put(&ping_semaphore);
-  
+  GsnOsal_MutexPut(&ping_mutex);
   
   status = mqtt_ping(&(mqtt_ctx.MQTT_CLIENT));
   if( status == 0 )
   {
   	S2w_Printf("\r\n Ping req Suc");
-	//status = tx_timer_activate(&my_timer);
 	AppS2wHal_TimerStart(&my_timer, 300);
   }
   else
@@ -939,7 +857,6 @@ UINT8 MQTT_CONNECT()
 	goto error;
   }
 
-  //GsnTaskSleep(1000);
   tx_thread_sleep(10);
   if(AppS2wHal_NetIsCidOpen(mqtt_ctx.MQTT_CLIENT.mqtt_cid) == 0)
   {
@@ -950,7 +867,6 @@ UINT8 MQTT_CONNECT()
 	  goto error;
 	}
 
-	//GsnTaskSleep(1000);
 	tx_thread_sleep(10);
 #ifdef SSL_ADD
 	S2w_Printf("\r\n BEFORE SSL CONNECT");
@@ -962,7 +878,6 @@ UINT8 MQTT_CONNECT()
 	  goto error;
 	}
 	S2w_Printf("\r\n ATFER SSL CONNECT");
-	//GsnTaskSleep(1000);
 	tx_thread_sleep(10);
 #endif
   }
@@ -973,7 +888,6 @@ UINT8 MQTT_CONNECT()
 	goto error;
   }
   //S2w_Printf("\r\n MQTT CONNECT success");
-  //GsnTaskSleep(1000);
   tx_thread_sleep(10);
   //S2w_Printf("\r\n  MQTT_CONNECT END ");
   return 0;
