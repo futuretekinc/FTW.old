@@ -1,0 +1,1091 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.50.5.4819/W32 for ARM      02/Apr/2015  04:31:08 #
+# Copyright 1999-2013 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \src\main\app_main.c                                     #
+#    Command line =  F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \src\main\app_main.c -D ADK_PROV_WPS_ENABLE -D           #
+#                    GSN_FILE_UPLOAD_API -D ADK_FILE_UPLOAD_API -D            #
+#                    ADK_OTAFU_ENABLE -D TX_ENABLE_IAR_LIBRARY_SUPPORT -D     #
+#                    IAR -D TM_USE_HTTPD -D GSN_GSLINK -D GSN_WEB_SERVER -D   #
+#                    APP_MDNS -D NX_INCLUDE_USER_DEFINE_FILE -D               #
+#                    NO_ADK_PROV_GROUP_SECURE -lC                             #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\Debug\List\ -lA F:\Development\GS2000\5.1.5\02_Ap #
+#                    r_2015_04_30_38\adk\tls\build\Debug\List\                #
+#                    --diag_suppress Pa050,Go005 -o                           #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\Debug\Obj\ --no_cse --no_unroll --no_inline       #
+#                    --no_code_motion --no_tbaa --no_clustering               #
+#                    --no_scheduling --debug --endian=little --cpu=Cortex-M3  #
+#                    -e --fpu=None --dlib_config "C:\Program Files (x86)\IAR  #
+#                    Systems\Embedded Workbench 6.5\arm\INC\c\DLib_Config_Ful #
+#                    l.h" -I F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38 #
+#                    \adk\tls\build\..\..\..\geps\inc\ -I                     #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\core\ -I                        #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\drivers\ -I                     #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\modules\ -I                     #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\modules\http\ -I                #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\rtos\ -I                        #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\netx\ -I                        #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\netx\netx_bsd_layer\ -I         #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\main\ -I                        #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\fs\ -I                          #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\fs\hcc\src\ -I                  #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\security\src\ -I                #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\security\hw_engine_if\ -I       #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\security\wpa_if\ -I             #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\geps\inc\supplicant\ -I                  #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\userlib\ncm\inc\ -I                      #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\userlib\ -I                              #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\gsn\inc\ -I                       #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\gsn\inc\core\ -I                  #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\gsn\inc\drivers\ -I               #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\gsn\inc\modules\ -I               #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\\rtos\tx\ -I                      #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\nw\ -I                            #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\nw\netx\ -I                       #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\nw\netx\netx_bsd_layer\ -I        #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\main\ -I                          #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\security\src\ -I                  #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\security\\inc\hw_engine_if\ -I    #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\security\src\wpa_supplicant-1.0\s #
+#                    rc\ -I F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\ #
+#                    adk\tls\build\..\..\..\system\fs\hcc\src\ -I             #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\system\ -I F:\Development\GS2000\5.1.5\0 #
+#                    2_Apr_2015_04_30_38\adk\tls\build\..\inc\ -I             #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\inc\ctx\ -I F:\Development\GS2000\5.1.5\02_Apr #
+#                    _2015_04_30_38\adk\tls\build\..\inc\main\ -I             #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\inc\fs_if\ -I F:\Development\GS2000\5.1.5\02_A #
+#                    pr_2015_04_30_38\adk\tls\build\..\inc\config\ -I         #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\inc\sm\ -I F:\Development\GS2000\5.1.5\02_Apr_ #
+#                    2015_04_30_38\adk\tls\build\..\inc\ncm\ -I               #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\inc\debug\ -I F:\Development\GS2000\5.1.5\02_A #
+#                    pr_2015_04_30_38\adk\tls\build\..\inc\tls\ -I            #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\inc\rtc_mem\ -I F:\Development\GS2000\5.1.5\02 #
+#                    _Apr_2015_04_30_38\adk\tls\build\..\inc\ext_app\ -I      #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\inc\wps\ -I F:\Development\GS2000\5.1.5\02_Apr #
+#                    _2015_04_30_38\adk\tls\build\..\..\..\adk\provisioning\i #
+#                    nc\ -I F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\ #
+#                    adk\tls\build\..\..\..\adk\otafu\inc\ -I                 #
+#                    F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\..\..\..\adk\cloud_connect\inc\ -Ol               #
+#                    --use_c++_inline -I "C:\Program Files (x86)\IAR          #
+#                    Systems\Embedded Workbench 6.5\arm\CMSIS\Include\"       #
+#    List file    =  F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\Debug\List\app_main.lst                           #
+#    Object file  =  F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls #
+#                    \build\Debug\Obj\app_main.o                              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\adk\tls\src\main\app_main.c
+      1          /*******************************************************************************
+      2          *
+      3          *               COPYRIGHT (c) 2012-2013 GainSpan Corporation
+      4          *                         All Rights Reserved
+      5          *
+      6          * The source code contained or described herein and all documents
+      7          * related to the source code ("Material") are owned by GainSpan
+      8          * Corporation or its licensors.  Title to the Material remains
+      9          * with GainSpan Corporation or its suppliers and licensors.
+     10          *
+     11          * The Material is protected by worldwide copyright and trade secret
+     12          * laws and treaty provisions. No part of the Material may be used,
+     13          * copied, reproduced, modified, published, uploaded, posted, transmitted,
+     14          * distributed, or disclosed in any way except in accordance with the
+     15          * applicable license agreement.
+     16          *
+     17          * No license under any patent, copyright, trade secret or other
+     18          * intellectual property right is granted to or conferred upon you by
+     19          * disclosure or delivery of the Materials, either expressly, by
+     20          * implication, inducement, estoppel, except in accordance with the
+     21          * applicable license agreement.
+     22          *
+     23          * Unless otherwise agreed by GainSpan in writing, you may not remove or
+     24          * alter this notice or any other notice embedded in Materials by GainSpan
+     25          * or GainSpan's suppliers or licensors in any way.
+     26          *
+     27          * $RCSfile: app_main.c,v $
+     28          *******************************************************************************/
+     29          
+     30          /*****************************************************************************
+     31            * File Inclusions
+     32            ****************************************************************************/
+     33          #include "tx_api.h"
+     34          #include "tx_initialize.h"
+     35          #include "gsn_includes.h"
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GSN_BOOTINFO_SET(UINT32, UINT32)
+   \                     GSN_BOOTINFO_SET:
+   \   00000000   0x4A01             LDR.N    R2,??GSN_BOOTINFO_SET_0  ;; 0x41010000
+   \   00000002   0x6050             STR      R0,[R2, #+4]
+   \   00000004   0x6091             STR      R1,[R2, #+8]
+   \   00000006   0x4770             BX       LR               ;; return
+   \                     ??GSN_BOOTINFO_SET_0:
+   \   00000008   0x41010000         DC32     0x41010000
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GSN_IS_RTC_RSVD_INFO_VALID(void)
+   \                     GSN_IS_RTC_RSVD_INFO_VALID:
+   \   00000000   0x4804             LDR.N    R0,??GSN_IS_RTC_RSVD_INFO_VALID_0  ;; 0x41010000
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF1B0 0x3F95      CMP      R0,#-1785358955
+   \   00000008   0xD101             BNE.N    ??GSN_IS_RTC_RSVD_INFO_VALID_1
+   \   0000000A   0x2001             MOVS     R0,#+1
+   \   0000000C   0xE000             B.N      ??GSN_IS_RTC_RSVD_INFO_VALID_2
+   \                     ??GSN_IS_RTC_RSVD_INFO_VALID_1:
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \                     ??GSN_IS_RTC_RSVD_INFO_VALID_2:
+   \   00000010   0x4770             BX       LR               ;; return
+   \   00000012   0xBF00             Nop      
+   \                     ??GSN_IS_RTC_RSVD_INFO_VALID_0:
+   \   00000014   0x41010000         DC32     0x41010000
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GSN_BOOT_REASON_GET(void)
+   \                     GSN_BOOT_REASON_GET:
+   \   00000000   0x4801             LDR.N    R0,??GSN_BOOT_REASON_GET_0  ;; 0x41010000
+   \   00000002   0x6840             LDR      R0,[R0, #+4]
+   \   00000004   0x4770             BX       LR               ;; return
+   \   00000006   0xBF00             Nop      
+   \                     ??GSN_BOOT_REASON_GET_0:
+   \   00000008   0x41010000         DC32     0x41010000
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GSN_BOOT_INFO_GET(void)
+   \                     GSN_BOOT_INFO_GET:
+   \   00000000   0x4801             LDR.N    R0,??GSN_BOOT_INFO_GET_0  ;; 0x41010000
+   \   00000002   0x6880             LDR      R0,[R0, #+8]
+   \   00000004   0x4770             BX       LR               ;; return
+   \   00000006   0xBF00             Nop      
+   \                     ??GSN_BOOT_INFO_GET_0:
+   \   00000008   0x41010000         DC32     0x41010000
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GSN_APP_REQ_SET(UINT32)
+   \                     GSN_APP_REQ_SET:
+   \   00000000   0x4901             LDR.N    R1,??GSN_APP_REQ_SET_0  ;; 0x41010000
+   \   00000002   0x60C8             STR      R0,[R1, #+12]
+   \   00000004   0x4770             BX       LR               ;; return
+   \   00000006   0xBF00             Nop      
+   \                     ??GSN_APP_REQ_SET_0:
+   \   00000008   0x41010000         DC32     0x41010000
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GSN_APP_REQ_GET(void)
+   \                     GSN_APP_REQ_GET:
+   \   00000000   0x4801             LDR.N    R0,??GSN_APP_REQ_GET_0  ;; 0x41010000
+   \   00000002   0x68C0             LDR      R0,[R0, #+12]
+   \   00000004   0x4770             BX       LR               ;; return
+   \   00000006   0xBF00             Nop      
+   \                     ??GSN_APP_REQ_GET_0:
+   \   00000008   0x41010000         DC32     0x41010000
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_RtcSramBankEn(GSN_RTC_SRAM_BANK_T)
+   \                     GsnRtc_RtcSramBankEn:
+   \   00000000   0x490B             LDR.N    R1,??GsnRtc_RtcSramBankEn_0  ;; 0x41000354
+   \   00000002   0x6809             LDR      R1,[R1, #+0]
+   \   00000004   0x0909             LSRS     R1,R1,#+4
+   \   00000006   0x0109             LSLS     R1,R1,#+4
+   \   00000008   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000000A   0x43C2             MVNS     R2,R0
+   \   0000000C   0xF012 0x020F      ANDS     R2,R2,#0xF
+   \   00000010   0x4311             ORRS     R1,R2,R1
+   \   00000012   0x4A07             LDR.N    R2,??GsnRtc_RtcSramBankEn_0  ;; 0x41000354
+   \   00000014   0x6011             STR      R1,[R2, #+0]
+   \   00000016   0x4907             LDR.N    R1,??GsnRtc_RtcSramBankEn_0+0x4  ;; 0x41000358
+   \   00000018   0x6809             LDR      R1,[R1, #+0]
+   \   0000001A   0x0909             LSRS     R1,R1,#+4
+   \   0000001C   0x0109             LSLS     R1,R1,#+4
+   \   0000001E   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000020   0x43C0             MVNS     R0,R0
+   \   00000022   0xF010 0x000F      ANDS     R0,R0,#0xF
+   \   00000026   0x4308             ORRS     R0,R0,R1
+   \   00000028   0x4902             LDR.N    R1,??GsnRtc_RtcSramBankEn_0+0x4  ;; 0x41000358
+   \   0000002A   0x6008             STR      R0,[R1, #+0]
+   \   0000002C   0x4770             BX       LR               ;; return
+   \   0000002E   0xBF00             Nop      
+   \                     ??GsnRtc_RtcSramBankEn_0:
+   \   00000030   0x41000354         DC32     0x41000354
+   \   00000034   0x41000358         DC32     0x41000358
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GsnRtc_IsTmrWakeUp()
+   \                     GsnRtc_IsTmrWakeUp:
+   \   00000000   0x4806             LDR.N    R0,??GsnRtc_IsTmrWakeUp_0  ;; 0x41000090
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \   00000008   0x2800             CMP      R0,#+0
+   \   0000000A   0xD004             BEQ.N    ??GsnRtc_IsTmrWakeUp_1
+   \   0000000C   0x4804             LDR.N    R0,??GsnRtc_IsTmrWakeUp_0+0x4  ;; 0x41000070
+   \   0000000E   0x6800             LDR      R0,[R0, #+0]
+   \   00000010   0xF010 0x0040      ANDS     R0,R0,#0x40
+   \   00000014   0xE000             B.N      ??GsnRtc_IsTmrWakeUp_2
+   \                     ??GsnRtc_IsTmrWakeUp_1:
+   \   00000016   0x2000             MOVS     R0,#+0
+   \                     ??GsnRtc_IsTmrWakeUp_2:
+   \   00000018   0x4770             BX       LR               ;; return
+   \   0000001A   0xBF00             Nop      
+   \                     ??GsnRtc_IsTmrWakeUp_0:
+   \   0000001C   0x41000090         DC32     0x41000090
+   \   00000020   0x41000070         DC32     0x41000070
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GsnRtc_IsAlarmWakeUp()
+   \                     GsnRtc_IsAlarmWakeUp:
+   \   00000000   0x4805             LDR.N    R0,??GsnRtc_IsAlarmWakeUp_0  ;; 0x41000070
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0x4905             LDR.N    R1,??GsnRtc_IsAlarmWakeUp_0+0x4  ;; 0x410000d0
+   \   00000006   0x6809             LDR      R1,[R1, #+0]
+   \   00000008   0x2900             CMP      R1,#+0
+   \   0000000A   0xD002             BEQ.N    ??GsnRtc_IsAlarmWakeUp_1
+   \   0000000C   0xF010 0x001F      ANDS     R0,R0,#0x1F
+   \   00000010   0xE000             B.N      ??GsnRtc_IsAlarmWakeUp_2
+   \                     ??GsnRtc_IsAlarmWakeUp_1:
+   \   00000012   0x2000             MOVS     R0,#+0
+   \                     ??GsnRtc_IsAlarmWakeUp_2:
+   \   00000014   0x4770             BX       LR               ;; return
+   \   00000016   0xBF00             Nop      
+   \                     ??GsnRtc_IsAlarmWakeUp_0:
+   \   00000018   0x41000070         DC32     0x41000070
+   \   0000001C   0x410000D0         DC32     0x410000d0
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GsnRtc_IsAppWdWakeUp()
+   \                     GsnRtc_IsAppWdWakeUp:
+   \   00000000   0x4802             LDR.N    R0,??GsnRtc_IsAppWdWakeUp_0  ;; 0x410001a0
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \   00000008   0x4770             BX       LR               ;; return
+   \   0000000A   0xBF00             Nop      
+   \                     ??GsnRtc_IsAppWdWakeUp_0:
+   \   0000000C   0x410001A0         DC32     0x410001a0
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_GpioPullDownEn(UINT32)
+   \                     GsnRtc_GpioPullDownEn:
+   \   00000000   0x4902             LDR.N    R1,??GsnRtc_GpioPullDownEn_0  ;; 0x410003b8
+   \   00000002   0x6809             LDR      R1,[R1, #+0]
+   \   00000004   0x4301             ORRS     R1,R0,R1
+   \   00000006   0x4801             LDR.N    R0,??GsnRtc_GpioPullDownEn_0  ;; 0x410003b8
+   \   00000008   0x6001             STR      R1,[R0, #+0]
+   \   0000000A   0x4770             BX       LR               ;; return
+   \                     ??GsnRtc_GpioPullDownEn_0:
+   \   0000000C   0x410003B8         DC32     0x410003b8
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_WDogRstClr()
+   \                     GsnRtc_WDogRstClr:
+   \   00000000   0x4803             LDR.N    R0,??GsnRtc_WDogRstClr_0  ;; 0x410001a0
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \   00000008   0x4901             LDR.N    R1,??GsnRtc_WDogRstClr_0  ;; 0x410001a0
+   \   0000000A   0x6008             STR      R0,[R1, #+0]
+   \   0000000C   0x4770             BX       LR               ;; return
+   \   0000000E   0xBF00             Nop      
+   \                     ??GsnRtc_WDogRstClr_0:
+   \   00000010   0x410001A0         DC32     0x410001a0
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_PorRstClr()
+   \                     GsnRtc_PorRstClr:
+   \   00000000   0x4803             LDR.N    R0,??GsnRtc_PorRstClr_0  ;; 0x41000180
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \   00000008   0x4901             LDR.N    R1,??GsnRtc_PorRstClr_0  ;; 0x41000180
+   \   0000000A   0x6008             STR      R0,[R1, #+0]
+   \   0000000C   0x4770             BX       LR               ;; return
+   \   0000000E   0xBF00             Nop      
+   \                     ??GsnRtc_PorRstClr_0:
+   \   00000010   0x41000180         DC32     0x41000180
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GsnRtc_IsPorRst()
+   \                     GsnRtc_IsPorRst:
+   \   00000000   0x4802             LDR.N    R0,??GsnRtc_IsPorRst_0  ;; 0x41000180
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \   00000008   0x4770             BX       LR               ;; return
+   \   0000000A   0xBF00             Nop      
+   \                     ??GsnRtc_IsPorRst_0:
+   \   0000000C   0x41000180         DC32     0x41000180
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_StbWakeUpTmrClr()
+   \                     GsnRtc_StbWakeUpTmrClr:
+   \   00000000   0x480A             LDR.N    R0,??GsnRtc_StbWakeUpTmrClr_0  ;; 0x41000088
+   \   00000002   0xF05F 0x31FF      MOVS     R1,#-1
+   \   00000006   0x6001             STR      R1,[R0, #+0]
+   \   00000008   0x4809             LDR.N    R0,??GsnRtc_StbWakeUpTmrClr_0+0x4  ;; 0x4100008c
+   \   0000000A   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   0000000E   0x6001             STR      R1,[R0, #+0]
+   \   00000010   0x4808             LDR.N    R0,??GsnRtc_StbWakeUpTmrClr_0+0x8  ;; 0x41000094
+   \   00000012   0x6800             LDR      R0,[R0, #+0]
+   \   00000014   0x0840             LSRS     R0,R0,#+1
+   \   00000016   0x0040             LSLS     R0,R0,#+1
+   \   00000018   0x4906             LDR.N    R1,??GsnRtc_StbWakeUpTmrClr_0+0x8  ;; 0x41000094
+   \   0000001A   0x6008             STR      R0,[R1, #+0]
+   \   0000001C   0x4806             LDR.N    R0,??GsnRtc_StbWakeUpTmrClr_0+0xC  ;; 0x41000098
+   \   0000001E   0x6800             LDR      R0,[R0, #+0]
+   \   00000020   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \   00000024   0x4904             LDR.N    R1,??GsnRtc_StbWakeUpTmrClr_0+0xC  ;; 0x41000098
+   \   00000026   0x6008             STR      R0,[R1, #+0]
+   \   00000028   0x4770             BX       LR               ;; return
+   \   0000002A   0xBF00             Nop      
+   \                     ??GsnRtc_StbWakeUpTmrClr_0:
+   \   0000002C   0x41000088         DC32     0x41000088
+   \   00000030   0x4100008C         DC32     0x4100008c
+   \   00000034   0x41000094         DC32     0x41000094
+   \   00000038   0x41000098         DC32     0x41000098
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_AlarmStatusClr()
+   \                     GsnRtc_AlarmStatusClr:
+   \   00000000   0x4802             LDR.N    R0,??GsnRtc_AlarmStatusClr_0  ;; 0x410000d0
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0x4902             LDR.N    R1,??GsnRtc_AlarmStatusClr_0+0x4  ;; 0x410000d8
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+   \   00000008   0x4770             BX       LR               ;; return
+   \   0000000A   0xBF00             Nop      
+   \                     ??GsnRtc_AlarmStatusClr_0:
+   \   0000000C   0x410000D0         DC32     0x410000d0
+   \   00000010   0x410000D8         DC32     0x410000d8
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GsnRtc_IsPorEvent()
+   \                     GsnRtc_IsPorEvent:
+   \   00000000   0x4802             LDR.N    R0,??GsnRtc_IsPorEvent_0  ;; 0x41000050
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \   00000008   0x4770             BX       LR               ;; return
+   \   0000000A   0xBF00             Nop      
+   \                     ??GsnRtc_IsPorEvent_0:
+   \   0000000C   0x41000050         DC32     0x41000050
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_PorEventClr()
+   \                     GsnRtc_PorEventClr:
+   \   00000000   0x4803             LDR.N    R0,??GsnRtc_PorEventClr_0  ;; 0x41000050
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0x0840             LSRS     R0,R0,#+1
+   \   00000006   0x0040             LSLS     R0,R0,#+1
+   \   00000008   0x4901             LDR.N    R1,??GsnRtc_PorEventClr_0  ;; 0x41000050
+   \   0000000A   0x6008             STR      R0,[R1, #+0]
+   \   0000000C   0x4770             BX       LR               ;; return
+   \   0000000E   0xBF00             Nop      
+   \                     ??GsnRtc_PorEventClr_0:
+   \   00000010   0x41000050         DC32     0x41000050
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_FwAppRstClr()
+   \                     GsnRtc_FwAppRstClr:
+   \   00000000   0x4803             LDR.N    R0,??GsnRtc_FwAppRstClr_0  ;; 0x41000168
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \   00000008   0x4901             LDR.N    R1,??GsnRtc_FwAppRstClr_0  ;; 0x41000168
+   \   0000000A   0x6008             STR      R0,[R1, #+0]
+   \   0000000C   0x4770             BX       LR               ;; return
+   \   0000000E   0xBF00             Nop      
+   \                     ??GsnRtc_FwAppRstClr_0:
+   \   00000010   0x41000168         DC32     0x41000168
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_FwCryptoRstClr()
+   \                     GsnRtc_FwCryptoRstClr:
+   \   00000000   0x4803             LDR.N    R0,??GsnRtc_FwCryptoRstClr_0  ;; 0x41000178
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \   00000008   0x4901             LDR.N    R1,??GsnRtc_FwCryptoRstClr_0  ;; 0x41000178
+   \   0000000A   0x6008             STR      R0,[R1, #+0]
+   \   0000000C   0x4770             BX       LR               ;; return
+   \   0000000E   0xBF00             Nop      
+   \                     ??GsnRtc_FwCryptoRstClr_0:
+   \   00000010   0x41000178         DC32     0x41000178
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GsnRtc_IsFwCyptoRst()
+   \                     GsnRtc_IsFwCyptoRst:
+   \   00000000   0x4802             LDR.N    R0,??GsnRtc_IsFwCyptoRst_0  ;; 0x41000178
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \   00000008   0x4770             BX       LR               ;; return
+   \   0000000A   0xBF00             Nop      
+   \                     ??GsnRtc_IsFwCyptoRst_0:
+   \   0000000C   0x41000178         DC32     0x41000178
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_Acm3AircClr()
+   \                     GsnRtc_Acm3AircClr:
+   \   00000000   0x4803             LDR.N    R0,??GsnRtc_Acm3AircClr_0  ;; 0x41000190
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \   00000008   0x4901             LDR.N    R1,??GsnRtc_Acm3AircClr_0  ;; 0x41000190
+   \   0000000A   0x6008             STR      R0,[R1, #+0]
+   \   0000000C   0x4770             BX       LR               ;; return
+   \   0000000E   0xBF00             Nop      
+   \                     ??GsnRtc_Acm3AircClr_0:
+   \   00000010   0x41000190         DC32     0x41000190
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GsnRtc_IsAcm3Airc()
+   \                     GsnRtc_IsAcm3Airc:
+   \   00000000   0x4801             LDR.N    R0,??GsnRtc_IsAcm3Airc_0  ;; 0x41000190
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0x4770             BX       LR               ;; return
+   \   00000006   0xBF00             Nop      
+   \                     ??GsnRtc_IsAcm3Airc_0:
+   \   00000008   0x41000190         DC32     0x41000190
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_Wcm3AircClr()
+   \                     GsnRtc_Wcm3AircClr:
+   \   00000000   0x4803             LDR.N    R0,??GsnRtc_Wcm3AircClr_0  ;; 0x41000198
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \   00000008   0x4901             LDR.N    R1,??GsnRtc_Wcm3AircClr_0  ;; 0x41000198
+   \   0000000A   0x6008             STR      R0,[R1, #+0]
+   \   0000000C   0x4770             BX       LR               ;; return
+   \   0000000E   0xBF00             Nop      
+   \                     ??GsnRtc_Wcm3AircClr_0:
+   \   00000010   0x41000198         DC32     0x41000198
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GsnRtc_IsWcm3Airc()
+   \                     GsnRtc_IsWcm3Airc:
+   \   00000000   0x4801             LDR.N    R0,??GsnRtc_IsWcm3Airc_0  ;; 0x41000198
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0x4770             BX       LR               ;; return
+   \   00000006   0xBF00             Nop      
+   \                     ??GsnRtc_IsWcm3Airc_0:
+   \   00000008   0x41000198         DC32     0x41000198
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_CboRstClr()
+   \                     GsnRtc_CboRstClr:
+   \   00000000   0x4803             LDR.N    R0,??GsnRtc_CboRstClr_0  ;; 0x410001a8
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \   00000008   0x4901             LDR.N    R1,??GsnRtc_CboRstClr_0  ;; 0x410001a8
+   \   0000000A   0x6008             STR      R0,[R1, #+0]
+   \   0000000C   0x4770             BX       LR               ;; return
+   \   0000000E   0xBF00             Nop      
+   \                     ??GsnRtc_CboRstClr_0:
+   \   00000010   0x410001A8         DC32     0x410001a8
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp UINT32 GsnRtc_IsCboRst()
+   \                     GsnRtc_IsCboRst:
+   \   00000000   0x4802             LDR.N    R0,??GsnRtc_IsCboRst_0  ;; 0x410001a8
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \   00000008   0x4770             BX       LR               ;; return
+   \   0000000A   0xBF00             Nop      
+   \                     ??GsnRtc_IsCboRst_0:
+   \   0000000C   0x410001A8         DC32     0x410001a8
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_DcDcTmrValSet(UINT16)
+   \                     GsnRtc_DcDcTmrValSet:
+   \   00000000   0x4901             LDR.N    R1,??GsnRtc_DcDcTmrValSet_0  ;; 0x41000064
+   \   00000002   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000004   0x6008             STR      R0,[R1, #+0]
+   \   00000006   0x4770             BX       LR               ;; return
+   \                     ??GsnRtc_DcDcTmrValSet_0:
+   \   00000008   0x41000064         DC32     0x41000064
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp void GsnRtc_BrownOutEn(GSN_BROWNOUT_THRESHOLD_T)
+   \                     GsnRtc_BrownOutEn:
+   \   00000000   0x490A             LDR.N    R1,??GsnRtc_BrownOutEn_0  ;; 0x4100036c
+   \   00000002   0x6809             LDR      R1,[R1, #+0]
+   \   00000004   0x4A09             LDR.N    R2,??GsnRtc_BrownOutEn_0  ;; 0x4100036c
+   \   00000006   0x2301             MOVS     R3,#+1
+   \   00000008   0x6013             STR      R3,[R2, #+0]
+   \   0000000A   0x4A09             LDR.N    R2,??GsnRtc_BrownOutEn_0+0x4  ;; 0x41000380
+   \   0000000C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000000E   0x6010             STR      R0,[R2, #+0]
+   \   00000010   0x4808             LDR.N    R0,??GsnRtc_BrownOutEn_0+0x8  ;; 0x410003b0
+   \   00000012   0x6800             LDR      R0,[R0, #+0]
+   \   00000014   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \   00000018   0x4A06             LDR.N    R2,??GsnRtc_BrownOutEn_0+0x8  ;; 0x410003b0
+   \   0000001A   0x6010             STR      R0,[R2, #+0]
+   \   0000001C   0x4805             LDR.N    R0,??GsnRtc_BrownOutEn_0+0x8  ;; 0x410003b0
+   \   0000001E   0x6800             LDR      R0,[R0, #+0]
+   \   00000020   0x0840             LSRS     R0,R0,#+1
+   \   00000022   0x0040             LSLS     R0,R0,#+1
+   \   00000024   0x4A03             LDR.N    R2,??GsnRtc_BrownOutEn_0+0x8  ;; 0x410003b0
+   \   00000026   0x6010             STR      R0,[R2, #+0]
+   \   00000028   0x4770             BX       LR               ;; return
+   \   0000002A   0xBF00             Nop      
+   \                     ??GsnRtc_BrownOutEn_0:
+   \   0000002C   0x4100036C         DC32     0x4100036c
+   \   00000030   0x41000380         DC32     0x41000380
+   \   00000034   0x410003B0         DC32     0x410003b0
+
+  		 void *ctx, struct wpa_sm *sm);
+  		                   ^
+"F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\geps\inc\supplicant\rsn_supp\pmksa_cache.h",52  Warning[Pe231]: 
+          declaration is not visible outside of function
+
+  struct rsn_pmksa_cache_entry * pmksa_cache_get_current(struct wpa_sm *sm);
+                                                                ^
+"F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\geps\inc\supplicant\rsn_supp\pmksa_cache.h",60  Warning[Pe231]: 
+          declaration is not visible outside of function
+
+  void pmksa_cache_clear_current(struct wpa_sm *sm);
+                                        ^
+"F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\geps\inc\supplicant\rsn_supp\pmksa_cache.h",61  Warning[Pe231]: 
+          declaration is not visible outside of function
+
+  int pmksa_cache_set_current(struct wpa_sm *sm, const u8 *pmkid,
+                                     ^
+"F:\Development\GS2000\5.1.5\02_Apr_2015_04_30_38\geps\inc\supplicant\rsn_supp\pmksa_cache.h",62  Warning[Pe231]: 
+          declaration is not visible outside of function
+     36          #include "gsn_includes.h"
+     37          #include "fs_if/app_fsIf.h"
+     38          #include "gsn_ncm.h"
+     39          
+     40          #include "config/app_cfg.h"
+     41          #include "battery/app_batt_chk.h"
+     42          #include "app_main_ctx.h"
+     43          #include "app_sm.h"
+     44          #include "app_ncm.h"
+     45          #include "app_resource_config.h"
+     46          #include "app_events.h"
+     47          #include "app_debug.h"
+     48          #include "app_rtc_mem.h"
+
+   \                                 In section .text, align 4
+   \   __interwork __softfp struct APP_RTC_LATCH_MEM_INFO *App_RtcLatchMemInfoPtrGet()
+   \                     App_RtcLatchMemInfoPtrGet:
+   \   00000000   0x4800             LDR.N    R0,??App_RtcLatchMemInfoPtrGet_0  ;; 0x41010058
+   \   00000002   0x4770             BX       LR               ;; return
+   \                     ??App_RtcLatchMemInfoPtrGet_0:
+   \   00000004   0x41010058         DC32     0x41010058
+     49          
+     50          /* TEMPORARY - This will be removed once API is available in GEPS */
+     51          #ifdef NO_GEPS_BROWNOUT_API
+     52          
+     53          typedef enum GSN_BROWNOUT_THRESHOLD
+     54          {
+     55              GSN_BROWNOUT_THRESHOLD_1_2V,
+     56              GSN_BROWNOUT_THRESHOLD_1_4V,
+     57              GSN_BROWNOUT_THRESHOLD_2_4V,
+     58              GSN_BROWNOUT_THRESHOLD_2_8V
+     59          }GSN_BROWNOUT_THRESHOLD_T;
+     60          
+     61          INLINE VOID GsnRtc_BrownOutEn(GSN_BROWNOUT_THRESHOLD_T thres)
+     62          {
+     63              RTC_SX_SX_EN_BO_SET(RTC);
+     64              RTC_SX_BO_TH_CTRL_SET(RTC, thres);
+     65              RTC_SX_LOAD_F_SET(RTC);
+     66              RTC_SX_LOAD_F_CLEAR(RTC);
+     67          }
+     68          #endif
+     69          
+     70          VOID
+     71          APP_BootProcess();
+     72          
+
+   \                                 In section .bss, align 4
+     73          GSN_SYS_STATS_T *statPtr;/*Used during debugging through debigger*/
+   \                     statPtr:
+   \   00000000                      DS8 4
+     74          
+     75          /* Define main entry point.  */
+     76          
+
+   \                                 In section .text, align 2, keep-with-next
+     77          INT32
+     78          App_Main()
+     79          {
+   \                     App_Main:
+   \   00000000   0xB580             PUSH     {R7,LR}
+     80          	APP_BootProcess();
+   \   00000002   0x.... 0x....      BL       APP_BootProcess
+     81              /* Create APP main task */
+     82              AppMainCtx_Init();
+   \   00000006   0x.... 0x....      BL       AppMainCtx_Init
+     83              return 0;
+   \   0000000A   0x2000             MOVS     R0,#+0
+   \   0000000C   0xBD02             POP      {R1,PC}          ;; return
+     84          }
+     85          
+
+   \                                 In section .text, align 2, keep-with-next
+     86          VOID
+     87          APP_BootProcess()
+     88          {
+   \                     APP_BootProcess:
+   \   00000000   0xB510             PUSH     {R4,LR}
+     89          	UINT32 bootReason, bootInfo;
+     90          	
+     91          	RTC_CX_CLK_DIG4_ENA_CLEAR(RTC);      // PLL stuck issue??
+   \   00000002   0x....             LDR.N    R0,??DataTable0  ;; 0x41000300
+   \   00000004   0x6800             LDR      R0,[R0, #+0]
+   \   00000006   0xF030 0x0008      BICS     R0,R0,#0x8
+   \   0000000A   0x....             LDR.N    R1,??DataTable0  ;; 0x41000300
+   \   0000000C   0x6008             STR      R0,[R1, #+0]
+     92              RTC_CX_CLK_SRC_SEL_SET(RTC, 1);
+   \   0000000E   0x....             LDR.N    R0,??DataTable0_1  ;; 0x41000344
+   \   00000010   0x2101             MOVS     R1,#+1
+   \   00000012   0x6001             STR      R1,[R0, #+0]
+     93              RTC_CX_CLK_SRC_SEL_SET(RTC, 2);
+   \   00000014   0x....             LDR.N    R0,??DataTable0_1  ;; 0x41000344
+   \   00000016   0x2102             MOVS     R1,#+2
+   \   00000018   0x6001             STR      R1,[R0, #+0]
+     94          	if(GsnRtc_IsPorEvent())
+   \   0000001A   0x.... 0x....      BL       GsnRtc_IsPorEvent
+   \   0000001E   0x2800             CMP      R0,#+0
+   \   00000020   0xD01B             BEQ.N    ??APP_BootProcess_0
+     95          	{
+     96          		/* Enable RTC SRAM Bank 0*/
+     97          		GsnRtc_RtcSramBankEn(GSN_RTC_SRAM_BANK0);
+   \   00000022   0x2001             MOVS     R0,#+1
+   \   00000024   0x.... 0x....      BL       GsnRtc_RtcSramBankEn
+     98          
+     99          		/*set time between DCDC assertion and reset release to the core. 1.25ms */
+    100          		GsnRtc_DcDcTmrValSet(APP_CFG_DCDC_TMR_VAL);
+   \   00000028   0x2029             MOVS     R0,#+41
+   \   0000002A   0x.... 0x....      BL       GsnRtc_DcDcTmrValSet
+    101          
+    102          		/* Enable pulldown for rtc gpio */
+    103          		GsnRtc_GpioPullDownEn(0xF); 	
+   \   0000002E   0x200F             MOVS     R0,#+15
+   \   00000030   0x.... 0x....      BL       GsnRtc_GpioPullDownEn
+    104          
+    105          		/* Enable BrownOut circuit*/
+    106          		GsnRtc_BrownOutEn(GSN_BROWNOUT_THRESHOLD_1_4V);
+   \   00000034   0x2001             MOVS     R0,#+1
+   \   00000036   0x.... 0x....      BL       GsnRtc_BrownOutEn
+    107          
+    108          		/* Enable BrownOut reset */
+    109          		RTC_RRH_CBO_CTL_REQ_SET(RTC);
+   \   0000003A   0x....             LDR.N    R0,??DataTable0_2  ;; 0x410001ac
+   \   0000003C   0x6800             LDR      R0,[R0, #+0]
+   \   0000003E   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \   00000042   0x....             LDR.N    R1,??DataTable0_2  ;; 0x410001ac
+   \   00000044   0x6008             STR      R0,[R1, #+0]
+    110          		
+    111          		APP_RtcInit(1);
+   \   00000046   0x2001             MOVS     R0,#+1
+   \   00000048   0x.... 0x....      BL       APP_RtcInit
+    112          
+    113          		/* Initial Boot */
+    114          		GSN_BOOTINFO_SET(GSN_WIF_SYS_BOOT_FIRST_BOOT, 0);
+   \   0000004C   0x2100             MOVS     R1,#+0
+   \   0000004E   0x2000             MOVS     R0,#+0
+   \   00000050   0x.... 0x....      BL       GSN_BOOTINFO_SET
+    115          
+    116          		GsnRtc_PorEventClr();
+   \   00000054   0x.... 0x....      BL       GsnRtc_PorEventClr
+   \   00000058   0xE0A8             B.N      ??APP_BootProcess_1
+    117          	}
+    118          	else
+    119          	{
+    120          		if (GSN_IS_RTC_RSVD_INFO_VALID())
+   \                     ??APP_BootProcess_0:
+   \   0000005A   0x.... 0x....      BL       GSN_IS_RTC_RSVD_INFO_VALID
+   \   0000005E   0x2800             CMP      R0,#+0
+   \   00000060   0xF000 0x808B      BEQ.W    ??APP_BootProcess_2
+    121          		{
+    122          			if((GsnRtc_IsTmrWakeUp()) && (TRUE == GSN_APP_REQ_GET()))
+   \   00000064   0x.... 0x....      BL       GsnRtc_IsTmrWakeUp
+   \   00000068   0x2800             CMP      R0,#+0
+   \   0000006A   0xD00F             BEQ.N    ??APP_BootProcess_3
+   \   0000006C   0x.... 0x....      BL       GSN_APP_REQ_GET
+   \   00000070   0x2801             CMP      R0,#+1
+   \   00000072   0xD10B             BNE.N    ??APP_BootProcess_3
+    123          			{
+    124          				GSN_BOOTINFO_SET(GSN_WIF_SYS_BOOT_NORMAL_BOOT, GSN_WIF_SYS_BOOTINFO_NORMALBOOT_RTC);
+   \   00000074   0x2100             MOVS     R1,#+0
+   \   00000076   0x2001             MOVS     R0,#+1
+   \   00000078   0x.... 0x....      BL       GSN_BOOTINFO_SET
+    125          				GSN_APP_REQ_SET(FALSE);
+   \   0000007C   0x2000             MOVS     R0,#+0
+   \   0000007E   0x.... 0x....      BL       GSN_APP_REQ_SET
+    126          				GsnRtc_StbWakeUpTmrClr();
+   \   00000082   0x.... 0x....      BL       GsnRtc_StbWakeUpTmrClr
+    127          				GsnRtc_CboRstClr();
+   \   00000086   0x.... 0x....      BL       GsnRtc_CboRstClr
+   \   0000008A   0xE08F             B.N      ??APP_BootProcess_1
+    128          			}
+    129          			else if((GsnRtc_IsAlarmWakeUp()) && (TRUE == GSN_APP_REQ_GET()))
+   \                     ??APP_BootProcess_3:
+   \   0000008C   0x.... 0x....      BL       GsnRtc_IsAlarmWakeUp
+   \   00000090   0x2800             CMP      R0,#+0
+   \   00000092   0xD012             BEQ.N    ??APP_BootProcess_4
+   \   00000094   0x.... 0x....      BL       GSN_APP_REQ_GET
+   \   00000098   0x2801             CMP      R0,#+1
+   \   0000009A   0xD10E             BNE.N    ??APP_BootProcess_4
+    130          			{
+    131          				APP_RTC_LATCH_MEM_INFO_T *pAppRtcLtchInfo = App_RtcLatchMemInfoPtrGet();
+   \   0000009C   0x.... 0x....      BL       App_RtcLatchMemInfoPtrGet
+   \   000000A0   0x0004             MOVS     R4,R0
+    132          				
+    133          				{
+    134          					GSN_BOOTINFO_SET(GSN_WIF_SYS_BOOT_NORMAL_BOOT,GSN_WIF_SYS_BOOTINFO_NORMALBOOT_ALARM);
+   \   000000A2   0x2101             MOVS     R1,#+1
+   \   000000A4   0x2001             MOVS     R0,#+1
+   \   000000A6   0x.... 0x....      BL       GSN_BOOTINFO_SET
+    135          				}
+    136          				GSN_APP_REQ_SET(FALSE);
+   \   000000AA   0x2000             MOVS     R0,#+0
+   \   000000AC   0x.... 0x....      BL       GSN_APP_REQ_SET
+    137          				GsnRtc_AlarmStatusClr();
+   \   000000B0   0x.... 0x....      BL       GsnRtc_AlarmStatusClr
+    138          				GsnRtc_CboRstClr();
+   \   000000B4   0x.... 0x....      BL       GsnRtc_CboRstClr
+   \   000000B8   0xE078             B.N      ??APP_BootProcess_1
+    139          			}
+    140          			else 
+    141          			{
+    142          				APP_RtcInit(2);
+   \                     ??APP_BootProcess_4:
+   \   000000BA   0x2002             MOVS     R0,#+2
+   \   000000BC   0x.... 0x....      BL       APP_RtcInit
+    143          				if(GsnRtc_IsAppWdWakeUp())
+   \   000000C0   0x.... 0x....      BL       GsnRtc_IsAppWdWakeUp
+   \   000000C4   0x2800             CMP      R0,#+0
+   \   000000C6   0xD006             BEQ.N    ??APP_BootProcess_5
+    144          				{
+    145          					GSN_BOOTINFO_SET(GSN_WIF_SYS_BOOT_WATCHDOG_BOOT, GSN_WIF_SYS_BOOTINFO_WDOG_RESET_APP);
+   \   000000C8   0x2102             MOVS     R1,#+2
+   \   000000CA   0x2003             MOVS     R0,#+3
+   \   000000CC   0x.... 0x....      BL       GSN_BOOTINFO_SET
+    146          					GsnRtc_WDogRstClr();
+   \   000000D0   0x.... 0x....      BL       GsnRtc_WDogRstClr
+   \   000000D4   0xE06A             B.N      ??APP_BootProcess_1
+    147          				}
+    148          				else if(GsnRtc_IsAcm3Airc())
+   \                     ??APP_BootProcess_5:
+   \   000000D6   0x.... 0x....      BL       GsnRtc_IsAcm3Airc
+   \   000000DA   0x2800             CMP      R0,#+0
+   \   000000DC   0xD006             BEQ.N    ??APP_BootProcess_6
+    149          				{
+    150          					GSN_BOOTINFO_SET(GSN_WIF_SYS_BOOT_DBG_BOOT, 0);
+   \   000000DE   0x2100             MOVS     R1,#+0
+   \   000000E0   0x2007             MOVS     R0,#+7
+   \   000000E2   0x.... 0x....      BL       GSN_BOOTINFO_SET
+    151          					GsnRtc_Acm3AircClr();
+   \   000000E6   0x.... 0x....      BL       GsnRtc_Acm3AircClr
+   \   000000EA   0xE05F             B.N      ??APP_BootProcess_1
+    152          				}
+    153          				else if(GsnRtc_IsFwCyptoRst())
+   \                     ??APP_BootProcess_6:
+   \   000000EC   0x.... 0x....      BL       GsnRtc_IsFwCyptoRst
+   \   000000F0   0x2800             CMP      R0,#+0
+   \   000000F2   0xD006             BEQ.N    ??APP_BootProcess_7
+    154          				{
+    155          					GSN_BOOTINFO_SET(GSN_WIF_SYS_BOOT_CRYPTO_SW_BOOT, 0);
+   \   000000F4   0x2100             MOVS     R1,#+0
+   \   000000F6   0x200B             MOVS     R0,#+11
+   \   000000F8   0x.... 0x....      BL       GSN_BOOTINFO_SET
+    156          					GsnRtc_FwCryptoRstClr();
+   \   000000FC   0x.... 0x....      BL       GsnRtc_FwCryptoRstClr
+   \   00000100   0xE054             B.N      ??APP_BootProcess_1
+    157          				}
+    158          				else if(GsnRtc_IsCboRst())
+   \                     ??APP_BootProcess_7:
+   \   00000102   0x.... 0x....      BL       GsnRtc_IsCboRst
+   \   00000106   0x2800             CMP      R0,#+0
+   \   00000108   0xD006             BEQ.N    ??APP_BootProcess_8
+    159          				{
+    160          					GSN_BOOTINFO_SET(GSN_WIF_SYS_BOOT_CORE_BROWNOUT_BOOT, 0);
+   \   0000010A   0x2100             MOVS     R1,#+0
+   \   0000010C   0x200A             MOVS     R0,#+10
+   \   0000010E   0x.... 0x....      BL       GSN_BOOTINFO_SET
+    161          					GsnRtc_CboRstClr();
+   \   00000112   0x.... 0x....      BL       GsnRtc_CboRstClr
+   \   00000116   0xE049             B.N      ??APP_BootProcess_1
+    162          				}
+    163          				else if(GsnRtc_IsWcm3Airc())
+   \                     ??APP_BootProcess_8:
+   \   00000118   0x.... 0x....      BL       GsnRtc_IsWcm3Airc
+   \   0000011C   0x2800             CMP      R0,#+0
+   \   0000011E   0xD006             BEQ.N    ??APP_BootProcess_9
+    164          				{
+    165          					GSN_BOOTINFO_SET(GSN_WIF_SYS_BOOT_SW_RESET_BOOT, 0);
+   \   00000120   0x2100             MOVS     R1,#+0
+   \   00000122   0x2004             MOVS     R0,#+4
+   \   00000124   0x.... 0x....      BL       GSN_BOOTINFO_SET
+    166          					GsnRtc_Wcm3AircClr();
+   \   00000128   0x.... 0x....      BL       GsnRtc_Wcm3AircClr
+   \   0000012C   0xE03E             B.N      ??APP_BootProcess_1
+    167          				}
+    168          				else if(GsnRtc_IsPorRst())
+   \                     ??APP_BootProcess_9:
+   \   0000012E   0x.... 0x....      BL       GsnRtc_IsPorRst
+   \   00000132   0x2800             CMP      R0,#+0
+   \   00000134   0xD006             BEQ.N    ??APP_BootProcess_10
+    169          				{
+    170          					GSN_BOOTINFO_SET(GSN_WIF_SYS_BOOT_CORE_BROWNOUT_BOOT, 0);
+   \   00000136   0x2100             MOVS     R1,#+0
+   \   00000138   0x200A             MOVS     R0,#+10
+   \   0000013A   0x.... 0x....      BL       GSN_BOOTINFO_SET
+    171          					GsnRtc_PorRstClr();
+   \   0000013E   0x.... 0x....      BL       GsnRtc_PorRstClr
+   \   00000142   0xE033             B.N      ??APP_BootProcess_1
+    172          				}
+    173          				else
+    174          				{
+    175          					/* Reset Boot */
+    176          					if(TRUE == GSN_APP_REQ_GET())
+   \                     ??APP_BootProcess_10:
+   \   00000144   0x.... 0x....      BL       GSN_APP_REQ_GET
+   \   00000148   0x2801             CMP      R0,#+1
+   \   0000014A   0xD10E             BNE.N    ??APP_BootProcess_11
+    177          					{
+    178          						bootReason = GSN_BOOT_REASON_GET();
+   \   0000014C   0x.... 0x....      BL       GSN_BOOT_REASON_GET
+   \   00000150   0x0004             MOVS     R4,R0
+    179          						bootInfo = GSN_BOOT_INFO_GET();
+   \   00000152   0x.... 0x....      BL       GSN_BOOT_INFO_GET
+    180          
+    181          						GSN_BOOTINFO_SET(bootReason, bootInfo);
+   \   00000156   0x0001             MOVS     R1,R0
+   \   00000158   0x0020             MOVS     R0,R4
+   \   0000015A   0x.... 0x....      BL       GSN_BOOTINFO_SET
+    182          						GsnRtc_FwAppRstClr();
+   \   0000015E   0x.... 0x....      BL       GsnRtc_FwAppRstClr
+    183          						GSN_APP_REQ_SET(FALSE);
+   \   00000162   0x2000             MOVS     R0,#+0
+   \   00000164   0x.... 0x....      BL       GSN_APP_REQ_SET
+   \   00000168   0xE020             B.N      ??APP_BootProcess_1
+    184          					}
+    185          					else
+    186          					{
+    187          						APP_RtcInit(1);
+   \                     ??APP_BootProcess_11:
+   \   0000016A   0x2001             MOVS     R0,#+1
+   \   0000016C   0x.... 0x....      BL       APP_RtcInit
+    188          						GSN_BOOTINFO_SET(GSN_WIF_SYS_BOOT_EXT_RESET_BOOT, 0);
+   \   00000170   0x2100             MOVS     R1,#+0
+   \   00000172   0x2006             MOVS     R0,#+6
+   \   00000174   0x.... 0x....      BL       GSN_BOOTINFO_SET
+   \   00000178   0xE018             B.N      ??APP_BootProcess_1
+    189          					}
+    190          				}
+    191          			}
+    192          		}
+    193          		else
+    194          		{
+    195          			/*Enable RTC SRAM Bank 0*/
+    196          			GsnRtc_RtcSramBankEn(GSN_RTC_SRAM_BANK0);
+   \                     ??APP_BootProcess_2:
+   \   0000017A   0x2001             MOVS     R0,#+1
+   \   0000017C   0x.... 0x....      BL       GsnRtc_RtcSramBankEn
+    197          
+    198          			/*set time between DCDC assertion and reset release to the core. 1.25ms */
+    199          			GsnRtc_DcDcTmrValSet(APP_CFG_DCDC_TMR_VAL);
+   \   00000180   0x2029             MOVS     R0,#+41
+   \   00000182   0x.... 0x....      BL       GsnRtc_DcDcTmrValSet
+    200          			GsnRtc_GpioPullDownEn(0xF); 	//Enable pulldown for rtc gpio
+   \   00000186   0x200F             MOVS     R0,#+15
+   \   00000188   0x.... 0x....      BL       GsnRtc_GpioPullDownEn
+    201          
+    202          			/* Enable BrownOut */
+    203          			GsnRtc_BrownOutEn(GSN_BROWNOUT_THRESHOLD_1_4V);
+   \   0000018C   0x2001             MOVS     R0,#+1
+   \   0000018E   0x.... 0x....      BL       GsnRtc_BrownOutEn
+    204          
+    205          			/* Enable BrownOut reset */
+    206          			RTC_RRH_CBO_CTL_REQ_SET(RTC);
+   \   00000192   0x....             LDR.N    R0,??DataTable0_2  ;; 0x410001ac
+   \   00000194   0x6800             LDR      R0,[R0, #+0]
+   \   00000196   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \   0000019A   0x....             LDR.N    R1,??DataTable0_2  ;; 0x410001ac
+   \   0000019C   0x6008             STR      R0,[R1, #+0]
+    207          
+    208          			APP_RtcInit(1);
+   \   0000019E   0x2001             MOVS     R0,#+1
+   \   000001A0   0x.... 0x....      BL       APP_RtcInit
+    209          
+    210          			/* Initial Boot */
+    211          			GSN_BOOTINFO_SET(GSN_WIF_SYS_BOOT_FIRST_BOOT, 0);
+   \   000001A4   0x2100             MOVS     R1,#+0
+   \   000001A6   0x2000             MOVS     R0,#+0
+   \   000001A8   0x.... 0x....      BL       GSN_BOOTINFO_SET
+    212          		}
+    213          	}
+    214          	return;
+   \                     ??APP_BootProcess_1:
+   \   000001AC   0xBD10             POP      {R4,PC}          ;; return
+    215          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable0:
+   \   00000000   0x41000300         DC32     0x41000300
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable0_1:
+   \   00000000   0x41000344         DC32     0x41000344
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable0_2:
+   \   00000000   0x410001AC         DC32     0x410001ac
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   APP_BootProcess
+         8   -> APP_RtcInit
+         8   -> App_RtcLatchMemInfoPtrGet
+         8   -> GSN_APP_REQ_GET
+         8   -> GSN_APP_REQ_SET
+         8   -> GSN_BOOTINFO_SET
+         8   -> GSN_BOOT_INFO_GET
+         8   -> GSN_BOOT_REASON_GET
+         8   -> GSN_IS_RTC_RSVD_INFO_VALID
+         8   -> GsnRtc_Acm3AircClr
+         8   -> GsnRtc_AlarmStatusClr
+         8   -> GsnRtc_BrownOutEn
+         8   -> GsnRtc_CboRstClr
+         8   -> GsnRtc_DcDcTmrValSet
+         8   -> GsnRtc_FwAppRstClr
+         8   -> GsnRtc_FwCryptoRstClr
+         8   -> GsnRtc_GpioPullDownEn
+         8   -> GsnRtc_IsAcm3Airc
+         8   -> GsnRtc_IsAlarmWakeUp
+         8   -> GsnRtc_IsAppWdWakeUp
+         8   -> GsnRtc_IsCboRst
+         8   -> GsnRtc_IsFwCyptoRst
+         8   -> GsnRtc_IsPorEvent
+         8   -> GsnRtc_IsPorRst
+         8   -> GsnRtc_IsTmrWakeUp
+         8   -> GsnRtc_IsWcm3Airc
+         8   -> GsnRtc_PorEventClr
+         8   -> GsnRtc_PorRstClr
+         8   -> GsnRtc_RtcSramBankEn
+         8   -> GsnRtc_StbWakeUpTmrClr
+         8   -> GsnRtc_WDogRstClr
+         8   -> GsnRtc_Wcm3AircClr
+       8   App_Main
+         8   -> APP_BootProcess
+         8   -> AppMainCtx_Init
+       0   App_RtcLatchMemInfoPtrGet
+       0   GSN_APP_REQ_GET
+       0   GSN_APP_REQ_SET
+       0   GSN_BOOTINFO_SET
+       0   GSN_BOOT_INFO_GET
+       0   GSN_BOOT_REASON_GET
+       0   GSN_IS_RTC_RSVD_INFO_VALID
+       0   GsnRtc_Acm3AircClr
+       0   GsnRtc_AlarmStatusClr
+       0   GsnRtc_BrownOutEn
+       0   GsnRtc_CboRstClr
+       0   GsnRtc_DcDcTmrValSet
+       0   GsnRtc_FwAppRstClr
+       0   GsnRtc_FwCryptoRstClr
+       0   GsnRtc_GpioPullDownEn
+       0   GsnRtc_IsAcm3Airc
+       0   GsnRtc_IsAlarmWakeUp
+       0   GsnRtc_IsAppWdWakeUp
+       0   GsnRtc_IsCboRst
+       0   GsnRtc_IsFwCyptoRst
+       0   GsnRtc_IsPorEvent
+       0   GsnRtc_IsPorRst
+       0   GsnRtc_IsTmrWakeUp
+       0   GsnRtc_IsWcm3Airc
+       0   GsnRtc_PorEventClr
+       0   GsnRtc_PorRstClr
+       0   GsnRtc_RtcSramBankEn
+       0   GsnRtc_StbWakeUpTmrClr
+       0   GsnRtc_WDogRstClr
+       0   GsnRtc_Wcm3AircClr
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable0
+       4  ??DataTable0_1
+       4  ??DataTable0_2
+     430  APP_BootProcess
+      14  App_Main
+       8  App_RtcLatchMemInfoPtrGet
+      12  GSN_APP_REQ_GET
+      12  GSN_APP_REQ_SET
+      12  GSN_BOOTINFO_SET
+      12  GSN_BOOT_INFO_GET
+      12  GSN_BOOT_REASON_GET
+      24  GSN_IS_RTC_RSVD_INFO_VALID
+      20  GsnRtc_Acm3AircClr
+      20  GsnRtc_AlarmStatusClr
+      56  GsnRtc_BrownOutEn
+      20  GsnRtc_CboRstClr
+      12  GsnRtc_DcDcTmrValSet
+      20  GsnRtc_FwAppRstClr
+      20  GsnRtc_FwCryptoRstClr
+      16  GsnRtc_GpioPullDownEn
+      12  GsnRtc_IsAcm3Airc
+      32  GsnRtc_IsAlarmWakeUp
+      16  GsnRtc_IsAppWdWakeUp
+      16  GsnRtc_IsCboRst
+      16  GsnRtc_IsFwCyptoRst
+      16  GsnRtc_IsPorEvent
+      16  GsnRtc_IsPorRst
+      36  GsnRtc_IsTmrWakeUp
+      12  GsnRtc_IsWcm3Airc
+      20  GsnRtc_PorEventClr
+      20  GsnRtc_PorRstClr
+      56  GsnRtc_RtcSramBankEn
+      60  GsnRtc_StbWakeUpTmrClr
+      20  GsnRtc_WDogRstClr
+      20  GsnRtc_Wcm3AircClr
+       4  statPtr
+
+ 
+     4 bytes in section .bss
+ 1 100 bytes in section .text
+ 
+ 456 bytes of CODE memory (+ 644 bytes shared)
+   4 bytes of DATA memory
+
+Errors: none
+Warnings: 4
