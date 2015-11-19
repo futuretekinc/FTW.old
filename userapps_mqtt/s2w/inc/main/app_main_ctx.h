@@ -308,4 +308,5 @@ App_IfInit(APP_MAIN_CTX_T *pAppCtx, APP_IF_INFO_T *pIfInfo);
 
 #endif /*_APP_MAIN_CTX_H_*/
 
-
+PUBLIC VOID
+App_RtcDump();

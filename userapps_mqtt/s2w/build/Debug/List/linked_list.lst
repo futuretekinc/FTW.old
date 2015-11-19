@@ -1,14 +1,14 @@
 ###############################################################################
 #                                                                             #
-# IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM      30/Oct/2015  09:58:20 #
+# IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM      19/Nov/2015  14:30:57 #
 # Copyright 1999-2013 IAR Systems AB.                                         #
 #                                                                             #
 #    Cpu mode     =  thumb                                                    #
 #    Endian       =  little                                                   #
 #    Source file  =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\src\linked_list\linked_list.c                 #
+#                    s_mqtt_QoS2\s2w\src\linked_list\linked_list.c            #
 #    Command line =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\src\linked_list\linked_list.c -D              #
+#                    s_mqtt_QoS2\s2w\src\linked_list\linked_list.c -D         #
 #                    TX_ENABLE_IAR_LIBRARY_SUPPORT -D IAR -D FIXED_ROM_BUILD  #
 #                    -D RUN_ALL_FROM_FLASH -D TM_USE_HTTPD -D S2W_DNS_CLIENT  #
 #                    -D NX_INCLUDE_USER_DEFINE_FILE -D S2W_WEB_FS_AVAILABLE   #
@@ -39,92 +39,96 @@
 #                    S2W_SSL_SERVER_SUPPORT -D ADK_PROV_CONFIG_CLIENT -D      #
 #                    S2W_DEFAULT_UART_BITS_PER_CHAR=3 -D S2W_MDNS_ENABLE -lC  #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\Debug\List\ -lA                         #
+#                    s_mqtt_QoS2\s2w\build\Debug\List\ -lA                    #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\Debug\List\ --diag_suppress             #
+#                    s_mqtt_QoS2\s2w\build\Debug\List\ --diag_suppress        #
 #                    Pa050,Pe231,Pe177 -o E:\Gainspan\gs2011mxx_SDK_s2w_tls_t #
-#                    lslp_5.1.5_GA\userapps_mqtt\s2w\build\Debug\Obj\         #
+#                    lslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\Debug\Obj\    #
 #                    --debug --endian=little --cpu=Cortex-M3 -e --fpu=None    #
 #                    --dlib_config "C:\Program Files (x86)\IAR                #
 #                    Systems\Embedded Workbench 6.5\arm\INC\c\DLib_Config_Ful #
 #                    l.h" -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA #
-#                    \userapps_mqtt\s2w\build\..\..\..\geps\inc\ -I           #
+#                    \userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\ -I      #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\geps\inc\core\ -I              #
+#                    s_mqtt_QoS2\s2w\build\..\..\..\geps\inc\core\ -I         #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\geps\inc\drivers\ -I           #
+#                    s_mqtt_QoS2\s2w\build\..\..\..\geps\inc\drivers\ -I      #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\geps\inc\modules\ -I           #
+#                    s_mqtt_QoS2\s2w\build\..\..\..\geps\inc\modules\ -I      #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\geps\inc\rtos\ -I              #
+#                    s_mqtt_QoS2\s2w\build\..\..\..\geps\inc\rtos\ -I         #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\geps\inc\netx\ -I              #
+#                    s_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\ -I         #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\geps\inc\netx\netx_bsd_layer\  #
+#                    s_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\netx_bsd_la #
+#                    yer\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA #
+#                    \userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\main\    #
 #                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\user #
-#                    apps_mqtt\s2w\build\..\..\..\geps\inc\main\ -I           #
+#                    apps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\ -I        #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\geps\inc\fs\ -I                #
+#                    s_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\hcc\src\ -I   #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\geps\inc\fs\hcc\src\ -I        #
+#                    s_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security\src\    #
+#                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\user #
+#                    apps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security\hw_e #
+#                    ngine_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1 #
+#                    .5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\sec #
+#                    urity\wpa_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp #
+#                    _5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\userlib\ #
+#                    ncm\inc\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1. #
+#                    5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\userlib\ -I   #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\geps\inc\security\src\ -I      #
+#                    s_mqtt_QoS2\s2w\build\..\inc\ctx\ -I                     #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\geps\inc\security\hw_engine_if #
-#                    \ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\us #
-#                    erapps_mqtt\s2w\build\..\..\..\geps\inc\security\wpa_if\ #
-#                     -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use #
-#                    rapps_mqtt\s2w\build\..\..\..\userlib\ncm\inc\ -I        #
+#                    s_mqtt_QoS2\s2w\build\..\inc\ -I                         #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\userlib\ -I                    #
+#                    s_mqtt_QoS2\s2w\build\..\inc\main\ -I                    #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\inc\ctx\ -I                          #
+#                    s_mqtt_QoS2\s2w\build\..\inc\hal\ -I                     #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\inc\ -I                              #
+#                    s_mqtt_QoS2\s2w\build\..\inc\parser\ -I                  #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\inc\main\ -I                         #
+#                    s_mqtt_QoS2\s2w\build\..\inc\config\ -I                  #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\inc\hal\ -I                          #
+#                    s_mqtt_QoS2\s2w\build\..\src\ -I                         #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\inc\parser\ -I                       #
+#                    s_mqtt_QoS2\s2w\build\..\..\..\adk\otafu\inc\ -I         #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\inc\config\ -I                       #
+#                    s_mqtt_QoS2\s2w\build\..\..\..\adk\provisioning\inc\ -I  #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\src\ -I                              #
+#                    s_mqtt_QoS2\s2w\build\..\inc\mqtt\ -I                    #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\adk\otafu\inc\ -I              #
+#                    s_mqtt_QoS2\s2w\build\..\src\mqtt\ -I                    #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\..\..\adk\provisioning\inc\ -I       #
+#                    s_mqtt_QoS2\s2w\build\..\inc\one_wire\ -I                #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\inc\mqtt\ -I                         #
+#                    s_mqtt_QoS2\s2w\build\..\src\one_wire\ -I                #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\src\mqtt\ -I                         #
+#                    s_mqtt_QoS2\s2w\build\..\inc\linked_list\ -I             #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\inc\one_wire\ -I                     #
+#                    s_mqtt_QoS2\s2w\build\..\src\linked_list\ -I             #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\src\one_wire\ -I                     #
+#                    s_mqtt_QoS2\s2w\build\..\inc\mqtt_main\ -I               #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\inc\linked_list\ -I                  #
+#                    s_mqtt_QoS2\s2w\build\..\src\mqtt_main\ -I               #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\src\linked_list\ -I                  #
+#                    s_mqtt_QoS2\s2w\build\..\inc\mqtt_log\ -I                #
 #                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\inc\mqtt_main\ -I                    #
-#                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\..\src\mqtt_main\ -Ohz                  #
+#                    s_mqtt_QoS2\s2w\build\..\src\mqtt_log\ -Ohz              #
 #                    --use_c++_inline -I "C:\Program Files (x86)\IAR          #
 #                    Systems\Embedded Workbench 6.5\arm\CMSIS\Include\"       #
 #    List file    =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\Debug\List\linked_list.lst              #
+#                    s_mqtt_QoS2\s2w\build\Debug\List\linked_list.lst         #
 #    Object file  =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapp #
-#                    s_mqtt\s2w\build\Debug\Obj\linked_list.o                 #
+#                    s_mqtt_QoS2\s2w\build\Debug\Obj\linked_list.o            #
 #                                                                             #
 #                                                                             #
 ###############################################################################
 
-E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt\s2w\src\linked_list\linked_list.c
+E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\src\linked_list\linked_list.c
       1          #include "gsn_includes.h"
       2          #include "linked_list/linked_list.h"
-      3          
+      3          #include "mqtt_main/mqtt_main.h"
       4          
       5          
       6          
@@ -135,25 +139,25 @@ E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt\s2w\src\linked_li
    \                     makeNode:
    \   00000000   0xB538             PUSH     {R3-R5,LR}
    \   00000002   0x4604             MOV      R4,R0
-      9            //Node* result = (Node*)malloc(sizeof(Node));
-     10            //result->msg_pointer = malloc(sizeof(MSG_TYPE));
-     11            Node* result = (Node*)gsn_malloc(sizeof(Node));
+      9          
+     10            Node* result = (Node*)gsn_malloc(sizeof(Node));
    \   00000004   0x2200             MOVS     R2,#+0
-   \   00000006   0x210B             MOVS     R1,#+11
+   \   00000006   0x210A             MOVS     R1,#+10
    \   00000008   0x2008             MOVS     R0,#+8
    \   0000000A   0x.... 0x....      BL       GsnDynMemMgmt_Alloc
    \   0000000E   0x4605             MOV      R5,R0
-     12            result->msg_pointer = gsn_malloc(sizeof(MSG_TYPE));
+     11            result->msg_pointer = gsn_malloc(sizeof(MSG_TYPE));
    \   00000010   0x2200             MOVS     R2,#+0
-   \   00000012   0x210C             MOVS     R1,#+12
-   \   00000014   0x2014             MOVS     R0,#+20
+   \   00000012   0x210B             MOVS     R1,#+11
+   \   00000014   0x2018             MOVS     R0,#+24
    \   00000016   0x.... 0x....      BL       GsnDynMemMgmt_Alloc
    \   0000001A   0x6028             STR      R0,[R5, #+0]
+     12          
      13            memcpy(result->msg_pointer, msg_list, sizeof(MSG_TYPE));
-   \   0000001C   0x2214             MOVS     R2,#+20
+   \   0000001C   0x2218             MOVS     R2,#+24
    \   0000001E   0x4621             MOV      R1,R4
    \   00000020   0x.... 0x....      BL       __aeabi_memcpy
-     14            //result->msg_pointer = msg_list;
+     14          
      15            result->next = NULL;
    \   00000024   0x2000             MOVS     R0,#+0
    \   00000026   0x6068             STR      R0,[R5, #+4]
@@ -209,12 +213,12 @@ E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt\s2w\src\linked_li
      38          	head->next = temp->next;
    \   0000000A   0x6851             LDR      R1,[R2, #+4]
    \   0000000C   0x6041             STR      R1,[R0, #+4]
-     39          	//free(temp);
-     40          	if(temp != NULL)
-     41          	{
-     42          		gsn_free(temp);
+     39          	if(temp != NULL)
+     40          	{
+     41          		gsn_free(temp);
    \   0000000E   0x4610             MOV      R0,R2
    \   00000010   0x.... 0x....      BL       GsnDynMemMgmt_Free
+     42          
      43          		temp = NULL;
      44          	}
      45          	return 0;
@@ -227,69 +231,38 @@ E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt\s2w\src\linked_li
    \   0000001A   0xBD02             POP      {R1,PC}          ;; return
      48          }
      49          
-     50          /*void list_Printf(Node* node)
-     51          {
-     52            S2w_Printf("\r\n");
-     53            while(node)
-     54            {
-     55          	S2w_Printf("%d ",node->msg_id);
-     56          	node = node->next;
-     57            }
-     58            S2w_Printf("\r\n");
-     59          }*/
-     60          
-     61          /*UINT8 delectList(Node* head, int msg_id)
-     62          {
-     63            Node* pre = head;
-     64            Node* post = head->next;
-     65            
-     66            while(post != NULL)
-     67            {
-     68          	if(post->msg_pointer->MSG_ID == msg_id)
-     69          	{
-     70          	  pre->next = post->next;
-     71          	  free(post);
-     72          	  return 0;
-     73          	}
-     74          	else
-     75          	{
-     76          	  pre = post;
-     77          	  post = post->next;
-     78          	}
-     79            }
-     80            return 0;
-     81          }*/
-     82          
+     50          
+     51          
 
    \                                 In section .text, align 2, keep-with-next
-     83          UINT8 list_count(Node* head)
-     84          {
-     85            UINT8 node_count = 0;
+     52          UINT8 list_count(Node* head)
+     53          {
+     54            UINT8 node_count = 0;
    \                     list_count:
    \   00000000   0x2100             MOVS     R1,#+0
-     86            Node* temp = head;
+     55            Node* temp = head;
    \   00000002   0xE000             B.N      ??list_count_0
-     87            
-     88            while(1)
-     89            {
-     90          	if(temp->next == NULL)
-     91          	   break;
-     92          	else
-     93          	{
-     94          	  node_count++;
+     56            
+     57            while(1)
+     58            {
+     59          	if(temp->next == NULL)
+     60          	   break;
+     61          	else
+     62          	{
+     63          	  node_count++;
    \                     ??list_count_1:
    \   00000004   0x1C49             ADDS     R1,R1,#+1
-     95          	  temp = temp->next;
-     96          	}
+     64          	  temp = temp->next;
+     65          	}
    \                     ??list_count_0:
    \   00000006   0x6840             LDR      R0,[R0, #+4]
    \   00000008   0x2800             CMP      R0,#+0
    \   0000000A   0xD1FB             BNE.N    ??list_count_1
-     97            }
-     98            return node_count;
+     66            }
+     67            return node_count;
    \   0000000C   0xB2C8             UXTB     R0,R1
    \   0000000E   0x4770             BX       LR               ;; return
-     99          }
+     68          }
 
    Maximum stack usage in bytes:
 

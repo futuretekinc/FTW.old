@@ -1,14 +1,14 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     30/Oct/2015  09:58:24 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  14:31:05 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
 //    Endian       =  little                                                  /
 //    Source file  =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\src\hal\s2w_net_gainspan.c                  /
+//                    ps_mqtt_QoS2\s2w\src\hal\s2w_net_gainspan.c             /
 //    Command line =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\src\hal\s2w_net_gainspan.c -D               /
+//                    ps_mqtt_QoS2\s2w\src\hal\s2w_net_gainspan.c -D          /
 //                    TX_ENABLE_IAR_LIBRARY_SUPPORT -D IAR -D                 /
 //                    FIXED_ROM_BUILD -D RUN_ALL_FROM_FLASH -D TM_USE_HTTPD   /
 //                    -D S2W_DNS_CLIENT -D NX_INCLUDE_USER_DEFINE_FILE -D     /
@@ -40,83 +40,87 @@
 //                    S2W_SSL_SERVER_SUPPORT -D ADK_PROV_CONFIG_CLIENT -D     /
 //                    S2W_DEFAULT_UART_BITS_PER_CHAR=3 -D S2W_MDNS_ENABLE     /
 //                    -lC E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\us /
-//                    erapps_mqtt\s2w\build\Debug\List\ -lA                   /
+//                    erapps_mqtt_QoS2\s2w\build\Debug\List\ -lA              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\ --diag_suppress           /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\ --diag_suppress      /
 //                    Pa050,Pe231,Pe177 -o E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
-//                    tlslp_5.1.5_GA\userapps_mqtt\s2w\build\Debug\Obj\       /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\Debug\Obj\  /
 //                    --debug --endian=little --cpu=Cortex-M3 -e --fpu=None   /
 //                    --dlib_config "C:\Program Files (x86)\IAR               /
 //                    Systems\Embedded Workbench                              /
 //                    6.5\arm\INC\c\DLib_Config_Full.h" -I                    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\ -I                 /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\ -I            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\core\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\core\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\drivers\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\drivers\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\modules\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\modules\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\rtos\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\rtos\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\netx_bsd_layer /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\netx_bsd_ /
+//                    layer\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\main /
 //                    \ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\u /
-//                    serapps_mqtt\s2w\build\..\..\..\geps\inc\main\ -I       /
+//                    serapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\ -I              /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\hcc\src\    /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security\sr /
+//                    c\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\ /
+//                    userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security /
+//                    \hw_engine_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tls /
+//                    lp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\ /
+//                    inc\security\wpa_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_t /
+//                    ls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\.. /
+//                    \userlib\ncm\inc\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\us /
+//                    erlib\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\inc\ctx\ -I         /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\hcc\src\ -I      /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\src\ -I    /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\main\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\hw_engine_ /
-//                    if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA /
-//                    \userapps_mqtt\s2w\build\..\..\..\geps\inc\security\wpa /
-//                    _if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_G /
-//                    A\userapps_mqtt\s2w\build\..\..\..\userlib\ncm\inc\ -I  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\hal\ -I                   /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\userlib\ -I                  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\parser\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ctx\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\config\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\main\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\otafu\inc\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\hal\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\provisioning\inc\   /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\inc\mqtt\ -I               /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\parser\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\config\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\otafu\inc\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\provisioning\inc\ -I     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\one_wire\ -I                   /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_log\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\one_wire\ -I                   /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt_main\ -I                  /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt_main\ -Ohz                /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_log\ -Ohz            /
 //                    --use_c++_inline -I "C:\Program Files (x86)\IAR         /
 //                    Systems\Embedded Workbench 6.5\arm\CMSIS\Include\"      /
 //    List file    =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\s2w_net_gainspan.s         /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\s2w_net_gainspan.s    /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -211,13 +215,11 @@
         EXTERN bind
         EXTERN connect
         EXTERN fcntl
-        EXTERN free
         EXTERN getsockname
         EXTERN headerTypes
         EXTERN headerTypesModified
         EXTERN httpConfInfo
         EXTERN listen
-        EXTERN malloc
         EXTERN memcmp
         EXTERN nx_bsd_callback_register
         EXTERN profile_params
@@ -378,7 +380,7 @@
           CFI R14 SameValue
           CFI EndCommon cfiCommon1
         
-// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt\s2w\src\hal\s2w_net_gainspan.c
+// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\src\hal\s2w_net_gainspan.c
 //    1 /*****************************************************************
 //    2  *
 //    3 *               COPYRIGHT (c) 2009-2010 GainSpan Corporation
@@ -1021,95 +1023,97 @@ sslServerServer:
 //   72 #ifdef S2W_IPv6_SUPPORT
 //   73 #include "Nx_icmp.h"
 //   74 #endif
-//   75 /**
-//   76  ******************************************************************************
-//   77  * @file s2w_net_gainspan.c
-//   78  * @brief S2W Application geps interface routines.
-//   79  *      This file contains the s2w application specific implimentation which
-//   80  *      Interface the s2w command processing network stack.
-//   81 ******************************************************************************/
-//   82 
-//   83 
-//   84 /*****************************************************************************
-//   85   *  Public Variables
-//   86   *****************************************************************************/
-//   87 
-//   88 extern APP_MAIN_CTX_T *s2wappMainTaskCtxt;
-//   89 //extern UINT32 nwConfigSuccess ;
-//   90 extern GSN_NOTIFICATION_FUNC_T s2wappMainTaskNotifier;
-//   91 extern S2W_PROFILE_T s2wCurrent;
-//   92 extern UINT8 s2wAutoConnState ;
-//   93 extern S2W_PROFILE_PARAMS_T profile_params;
-//   94 /*****************************************************************************
-//   95   *  Private Variables
-//   96   *****************************************************************************/
-//   97 
+//   75 
+//   76 #include "mqtt_main/mqtt_main.h"
+//   77 /**
+//   78  ******************************************************************************
+//   79  * @file s2w_net_gainspan.c
+//   80  * @brief S2W Application geps interface routines.
+//   81  *      This file contains the s2w application specific implimentation which
+//   82  *      Interface the s2w command processing network stack.
+//   83 ******************************************************************************/
+//   84 
+//   85 
+//   86 /*****************************************************************************
+//   87   *  Public Variables
+//   88   *****************************************************************************/
+//   89 
+//   90 extern APP_MAIN_CTX_T *s2wappMainTaskCtxt;
+//   91 //extern UINT32 nwConfigSuccess ;
+//   92 extern GSN_NOTIFICATION_FUNC_T s2wappMainTaskNotifier;
+//   93 extern S2W_PROFILE_T s2wCurrent;
+//   94 extern UINT8 s2wAutoConnState ;
+//   95 extern S2W_PROFILE_PARAMS_T profile_params;
+//   96 /*****************************************************************************
+//   97   *  Private Variables
+//   98   *****************************************************************************/
+//   99 
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
-//   98 GSN_OSAL_SEM_T s2wSocketCloseSem;
+//  100 GSN_OSAL_SEM_T s2wSocketCloseSem;
 s2wSocketCloseSem:
         DS8 28
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
-//   99 GSN_OSAL_SEM_T s2wUdpSocketCloseSem;
+//  101 GSN_OSAL_SEM_T s2wUdpSocketCloseSem;
 s2wUdpSocketCloseSem:
         DS8 28
-//  100 
-//  101 #define S2W_TLS_DEFAULT_FRAGMENT_SIZE 1398
-//  102 #define S2W_TLS_HEADER_LENGTH 5
-//  103 #define S2W_TLS_CONN_ALERT_FATAL 2
-//  104 #define S2W_TLS_CONN_STATUS_FAIL 0
-//  105 #define S2W_TLS_CONN_STATUS_SUCCESS 1
-//  106 
-//  107 /* Socket descriptor value to indicate unused S2W_CID_T
-//  108  */
-//  109 
-//  110 /* Definitions for conType of S2W_CID_T
-//  111  */
-//  112 #define UDP 1
-//  113 #define TCP 2
-//  114 
-//  115 /* Timer for TCP connection timeout
-//  116  */
-//  117 //PRIVATE S2W_TIMER_T s2wTcpConnectTimer;
-//  118 
-//  119 /* Timer for UDP connection close
-//  120  */
-//  121 //PRIVATE S2W_TIMER_T s2wUdpCloseTimer;
-//  122 
-//  123 /* Event flags for TCP connection timeout
-//  124  */
-//  125 //PRIVATE GH_EFLAGS s2wTcpConnectEflags;
-//  126 
-//  127 /* Possible values for s2wTcpConnectEflags
-//  128  */
-//  129 #define CONNECT_SUCCESS  0x01
-//  130 #define CONNECT_FAIL     0x02
-//  131 #define CONNECT_TIMEOUT  0x04
-//  132 
-//  133 
-//  134 __no_init S2W_CID_T s2wCidList[MAX_CID_RANGE];
+//  102 
+//  103 #define S2W_TLS_DEFAULT_FRAGMENT_SIZE 1398
+//  104 #define S2W_TLS_HEADER_LENGTH 5
+//  105 #define S2W_TLS_CONN_ALERT_FATAL 2
+//  106 #define S2W_TLS_CONN_STATUS_FAIL 0
+//  107 #define S2W_TLS_CONN_STATUS_SUCCESS 1
+//  108 
+//  109 /* Socket descriptor value to indicate unused S2W_CID_T
+//  110  */
+//  111 
+//  112 /* Definitions for conType of S2W_CID_T
+//  113  */
+//  114 #define UDP 1
+//  115 #define TCP 2
+//  116 
+//  117 /* Timer for TCP connection timeout
+//  118  */
+//  119 //PRIVATE S2W_TIMER_T s2wTcpConnectTimer;
+//  120 
+//  121 /* Timer for UDP connection close
+//  122  */
+//  123 //PRIVATE S2W_TIMER_T s2wUdpCloseTimer;
+//  124 
+//  125 /* Event flags for TCP connection timeout
+//  126  */
+//  127 //PRIVATE GH_EFLAGS s2wTcpConnectEflags;
+//  128 
+//  129 /* Possible values for s2wTcpConnectEflags
+//  130  */
+//  131 #define CONNECT_SUCCESS  0x01
+//  132 #define CONNECT_FAIL     0x02
+//  133 #define CONNECT_TIMEOUT  0x04
+//  134 
 //  135 
-//  136 /**
-//  137  * @brief Buffer to hold the recieved data.
-//  138  */
-//  139 __no_init UINT8 s2wRxBuf[S2W_RX_BUF_SIZE];
-//  140 
-//  141 /* Events to register the socket callback for
-//  142  */
-//  143 #define S2W_RXCALLBACK_FLAGS (NX_BSD_CB_TCP_RECIEVE | NX_BSD_CB_UDP_RECIEVE | NX_BSD_CB_TCP_LISTEN | NX_BSD_CB_TCP_DISCONNECT |	NX_BSD_CB_SOCKET_ERROR)
-//  144 //#define S2W_RXCALLBACK_FLAGS NX_BSD_CB_TCP_LISTEN
-//  145 /* stack for net rx task
-//  146  */
-//  147 __no_init PUBLIC UINT8 s2wNetRecvTaskStack[APP_CFG_NET_RX_STACK_SIZE];
-//  148 
-//  149 extern GSN_OSAL_QUEUE_T appMainThreadMsgQueue;
-//  150 #ifdef S2W_PING_TRACE
-//  151 extern UINT8 s2wPingStarted;
-//  152 #endif
-//  153 /* Queue for the receive task
-//  154  */
-//  155 PUBLIC GSN_OSAL_QUEUE_T s2wNetQueue;
+//  136 __no_init S2W_CID_T s2wCidList[MAX_CID_RANGE];
+//  137 
+//  138 /**
+//  139  * @brief Buffer to hold the recieved data.
+//  140  */
+//  141 __no_init UINT8 s2wRxBuf[S2W_RX_BUF_SIZE];
+//  142 
+//  143 /* Events to register the socket callback for
+//  144  */
+//  145 #define S2W_RXCALLBACK_FLAGS (NX_BSD_CB_TCP_RECIEVE | NX_BSD_CB_UDP_RECIEVE | NX_BSD_CB_TCP_LISTEN | NX_BSD_CB_TCP_DISCONNECT |	NX_BSD_CB_SOCKET_ERROR)
+//  146 //#define S2W_RXCALLBACK_FLAGS NX_BSD_CB_TCP_LISTEN
+//  147 /* stack for net rx task
+//  148  */
+//  149 __no_init PUBLIC UINT8 s2wNetRecvTaskStack[APP_CFG_NET_RX_STACK_SIZE];
+//  150 
+//  151 extern GSN_OSAL_QUEUE_T appMainThreadMsgQueue;
+//  152 #ifdef S2W_PING_TRACE
+//  153 extern UINT8 s2wPingStarted;
+//  154 #endif
+//  155 /* Queue for the receive task
+//  156  */
+//  157 PUBLIC GSN_OSAL_QUEUE_T s2wNetQueue;
 s2wNetQueue:
         DS8 56
 
@@ -1118,124 +1122,124 @@ s2wCidList:
         DS8 4736
 s2wNetRecvTaskStack:
         DS8 4096
-//  156 __no_init UINT32 s2wNetQueueBuffer[ ((APP_CFG_NET_RX_MAX_MSG_IN_MBOX) * sizeof(S2W_MSG_T)) / sizeof(UINT32)];
+//  158 __no_init UINT32 s2wNetQueueBuffer[ ((APP_CFG_NET_RX_MAX_MSG_IN_MBOX) * sizeof(S2W_MSG_T)) / sizeof(UINT32)];
 s2wNetQueueBuffer:
         DS8 512
 
         SECTION `.noinit`:DATA:REORDER:NOROOT(2)
 s2wRxBuf:
         DS8 1500
-//  157 
-//  158 extern S2W_SSL_CERT_SRAM_TABLE_T s2w_ssl_cert_table[];
 //  159 
-//  160 #define GSN_MAX_NUM_CERT        8
-//  161 #define S2W_CERT_NAME_CA        "TLS_CA"
-//  162 #define S2W_CERT_NAME_CLIENT    "TLS_CLIENT"
-//  163 #define S2W_CERT_NAME_KEY       "TLS_KEY"
-//  164 
-//  165 #define S2W_SSL_CERT_NAME_CA        "SSL_CA"
-//  166 #define S2W_SSL_CERT_NAME_SERVER    "SSL_SERVER"
-//  167 #define S2W_SSL_CERT_NAME_KEY       "SSL_KEY"
-//  168 
-//  169 /*****************************************************************************
-//  170   *  Private Functions
-//  171   *****************************************************************************/
-//  172 
-//  173 VOID
-//  174 AppS2wHal_NetRecvTask(UINT32 u32Address);
-//  175 
-//  176 
-//  177 UINT8
-//  178 AppS2wHal_CidGet(VOID);
-//  179 
-//  180 UINT8
-//  181 AppS2wHal_CidFind(INT32 sd);
-//  182 
-//  183 PRIVATE VOID
-//  184 AppS2wHal_RxCallBack(INT32 sock, NX_BSD_CB_EVENT_TYPE_T flags,UINT32 port);
-//  185 
-//  186 
-//  187 PRIVATE UINT8
-//  188 AppS2wHal_NetImmediateClose(UINT8 cid);
-//  189 
-//  190 PUBLIC UINT8
-//  191 AppS2wHal_CidGet(VOID);
-//  192 
-//  193 PRIVATE GSN_STATUS
-//  194 AppS2w_SslLocalClose(UINT8 cid);
-//  195 
-//  196 PRIVATE VOID
-//  197 AppS2wHal_HttpCloseTimeout(VOID *unused);
-//  198 
-//  199 #ifdef S2W_HTTPC_SUPPORT
-//  200 PRIVATE UINT8
-//  201 AppS2wHal_HttpLocalClose(UINT32 cid);
-//  202 #endif
-//  203 PUBLIC GSN_STATUS 
-//  204 AppS2w_SslClose(UINT8 cid);
-//  205 
-//  206 #ifdef S2W_COAP_SUPPORT
-//  207 PUBLIC GSN_COAP_CONTEXT_T*
-//  208 AppS2wHal_CoapHandleGet(UINT8 cid);
-//  209 #endif
-//  210 extern GSN_HTTPC_CONF_INFO_T httpConfInfo;
-//  211 extern GSN_HTTP_USER_HEADER_TYPE_T headerTypes[];
-//  212 extern GSN_HTTP_USER_HEADER_TYPE_T headerTypesModified[];
-//  213 extern int tlsv1_client_established(struct tlsv1_client *conn);
-//  214 
-//  215 
+//  160 extern S2W_SSL_CERT_SRAM_TABLE_T s2w_ssl_cert_table[];
+//  161 
+//  162 #define GSN_MAX_NUM_CERT        8
+//  163 #define S2W_CERT_NAME_CA        "TLS_CA"
+//  164 #define S2W_CERT_NAME_CLIENT    "TLS_CLIENT"
+//  165 #define S2W_CERT_NAME_KEY       "TLS_KEY"
+//  166 
+//  167 #define S2W_SSL_CERT_NAME_CA        "SSL_CA"
+//  168 #define S2W_SSL_CERT_NAME_SERVER    "SSL_SERVER"
+//  169 #define S2W_SSL_CERT_NAME_KEY       "SSL_KEY"
+//  170 
+//  171 /*****************************************************************************
+//  172   *  Private Functions
+//  173   *****************************************************************************/
+//  174 
+//  175 VOID
+//  176 AppS2wHal_NetRecvTask(UINT32 u32Address);
+//  177 
+//  178 
+//  179 UINT8
+//  180 AppS2wHal_CidGet(VOID);
+//  181 
+//  182 UINT8
+//  183 AppS2wHal_CidFind(INT32 sd);
+//  184 
+//  185 PRIVATE VOID
+//  186 AppS2wHal_RxCallBack(INT32 sock, NX_BSD_CB_EVENT_TYPE_T flags,UINT32 port);
+//  187 
+//  188 
+//  189 PRIVATE UINT8
+//  190 AppS2wHal_NetImmediateClose(UINT8 cid);
+//  191 
+//  192 PUBLIC UINT8
+//  193 AppS2wHal_CidGet(VOID);
+//  194 
+//  195 PRIVATE GSN_STATUS
+//  196 AppS2w_SslLocalClose(UINT8 cid);
+//  197 
+//  198 PRIVATE VOID
+//  199 AppS2wHal_HttpCloseTimeout(VOID *unused);
+//  200 
+//  201 #ifdef S2W_HTTPC_SUPPORT
+//  202 PRIVATE UINT8
+//  203 AppS2wHal_HttpLocalClose(UINT32 cid);
+//  204 #endif
+//  205 PUBLIC GSN_STATUS 
+//  206 AppS2w_SslClose(UINT8 cid);
+//  207 
+//  208 #ifdef S2W_COAP_SUPPORT
+//  209 PUBLIC GSN_COAP_CONTEXT_T*
+//  210 AppS2wHal_CoapHandleGet(UINT8 cid);
+//  211 #endif
+//  212 extern GSN_HTTPC_CONF_INFO_T httpConfInfo;
+//  213 extern GSN_HTTP_USER_HEADER_TYPE_T headerTypes[];
+//  214 extern GSN_HTTP_USER_HEADER_TYPE_T headerTypesModified[];
+//  215 extern int tlsv1_client_established(struct tlsv1_client *conn);
 //  216 
-//  217 /*****************************************************************************
-//  218   *  Public Functions
-//  219   *****************************************************************************/
-//  220 /**
-//  221  ******************************************************************
-//  222  * @ingroup S2w-Application
-//  223  * @brief Get the pointer to s2wCidList entry for a given cid.
-//  224  *
-//  225  ******************************************************************/
-//  226 
+//  217 
+//  218 
+//  219 /*****************************************************************************
+//  220   *  Public Functions
+//  221   *****************************************************************************/
+//  222 /**
+//  223  ******************************************************************
+//  224  * @ingroup S2w-Application
+//  225  * @brief Get the pointer to s2wCidList entry for a given cid.
+//  226  *
+//  227  ******************************************************************/
+//  228 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock10 Using cfiCommon0
           CFI Function AppS2wHal_CidListElementGet
           CFI NoCalls
         THUMB
-//  227 PUBLIC S2W_CID_T*
-//  228 AppS2wHal_CidListElementGet(UINT8 cid)
-//  229 {
-//  230 	return (&s2wCidList[cid]);
+//  229 PUBLIC S2W_CID_T*
+//  230 AppS2wHal_CidListElementGet(UINT8 cid)
+//  231 {
+//  232 	return (&s2wCidList[cid]);
 AppS2wHal_CidListElementGet:
         MOV      R1,#+296
-        LDR.W    R2,??DataTable62
+        LDR.W    R2,??DataTable58
         MLA      R0,R1,R0,R2
         BX       LR               ;; return
           CFI EndBlock cfiBlock10
-//  231 }
-//  232 /**
-//  233  ******************************************************************
-//  234  * @ingroup S2w-Application
-//  235  * @brief S2w udp client open function.
-//  236  *    This function opens a new udp client socket and store the socket info
-//  237  *    into the corresponding Cid list and registers any receive events on this
-//  238  *    socket with network stack.
-//  239  * @param peerData - IN the address of the data structure contain the udp server
-//  240  *                      info.
-//  241  *.@param cidNo    - IN the address to which the cid number to be stored.
-//  242  *.@param srcPort  - IN the source port to which the the udp client socket
-//  243  *                     to be bind.
-//  244  * @retval S2W_SUCCESS     - operation successfull.
-//  245  * @retval S2W_SOCKFAILURE - operation failed
-//  246  * @retval S2W_ENCID       - operation failed- no valid cid.
-//  247  ******************************************************************/
+//  233 }
+//  234 /**
+//  235  ******************************************************************
+//  236  * @ingroup S2w-Application
+//  237  * @brief S2w udp client open function.
+//  238  *    This function opens a new udp client socket and store the socket info
+//  239  *    into the corresponding Cid list and registers any receive events on this
+//  240  *    socket with network stack.
+//  241  * @param peerData - IN the address of the data structure contain the udp server
+//  242  *                      info.
+//  243  *.@param cidNo    - IN the address to which the cid number to be stored.
+//  244  *.@param srcPort  - IN the source port to which the the udp client socket
+//  245  *                     to be bind.
+//  246  * @retval S2W_SUCCESS     - operation successfull.
+//  247  * @retval S2W_SOCKFAILURE - operation failed
+//  248  * @retval S2W_ENCID       - operation failed- no valid cid.
+//  249  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock11 Using cfiCommon0
           CFI Function AppS2wHal_NetUdpClient
         THUMB
-//  248 PUBLIC UINT8
-//  249 AppS2wHal_NetUdpClient(S2W_NETDATA_T *peerData, UINT8 *cidNo, UINT16 srcPort)
-//  250 {
+//  250 PUBLIC UINT8
+//  251 AppS2wHal_NetUdpClient(S2W_NETDATA_T *peerData, UINT8 *cidNo, UINT16 srcPort)
+//  252 {
 AppS2wHal_NetUdpClient:
         PUSH     {R4-R9,LR}
           CFI R14 Frame(CFA, -4)
@@ -1251,50 +1255,50 @@ AppS2wHal_NetUdpClient:
         MOV      R4,R0
         MOV      R9,R1
         MOV      R6,R2
-//  251     UINT8 cid;
-//  252     INT32 sd,addressLength, ret;
-//  253 
-//  254     struct sockaddr_in srcAddr;
-//  255     struct sockaddr localAddress;
-//  256     
-//  257     /* Get free connection identifier list entry. */
-//  258     cid = AppS2wHal_CidGet();
+//  253     UINT8 cid;
+//  254     INT32 sd,addressLength, ret;
+//  255 
+//  256     struct sockaddr_in srcAddr;
+//  257     struct sockaddr localAddress;
+//  258     
+//  259     /* Get free connection identifier list entry. */
+//  260     cid = AppS2wHal_CidGet();
           CFI FunCall AppS2wHal_CidGet
         BL       AppS2wHal_CidGet
         MOV      R7,R0
-//  259     if (cid == INVALID_CID)
+//  261     if (cid == INVALID_CID)
         CMP      R7,#+255
         IT       EQ 
         MOVEQ    R0,#+4
-//  260     {
-//  261         return S2W_ENCID;
+//  262     {
+//  263         return S2W_ENCID;
         BEQ.N    ??AppS2wHal_NetUdpClient_0
-//  262     }
-//  263     /* check the node has a valid ip */
-//  264      //if(nwConfigSuccess != TRUE)
-//  265      {
-//  266         // return S2W_SOCKFAILURE;
-//  267      }
-//  268 
-//  269     if ((sd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
+//  264     }
+//  265     /* check the node has a valid ip */
+//  266      //if(nwConfigSuccess != TRUE)
+//  267      {
+//  268         // return S2W_SOCKFAILURE;
+//  269      }
+//  270 
+//  271     if ((sd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
         BL       ?Subroutine5
 ??CrossCallReturnLabel_8:
         MOV      R8,R0
         CMN      R8,#+1
         BEQ.N    ??AppS2wHal_NetUdpClient_1
-//  270     {
-//  271         return S2W_SOCKFAILURE;
-//  272     }
-//  273     /* if a valid src port passed bind with that else leave it */
-//  274     if(srcPort > 0)
+//  272     {
+//  273         return S2W_SOCKFAILURE;
+//  274     }
+//  275     /* if a valid src port passed bind with that else leave it */
+//  276     if(srcPort > 0)
         CBZ.N    R6,??AppS2wHal_NetUdpClient_2
-//  275     {
-//  276         srcAddr.sin_family = AF_INET;
+//  277     {
+//  278         srcAddr.sin_family = AF_INET;
         MOVS     R0,#+2
         STRH     R0,[SP, #+16]
-//  277         srcAddr.sin_port = htons(srcPort);
-//  278         srcAddr.sin_addr.s_addr = 0;//htonl(INADDR_ANY);
-//  279         if (bind(sd, (struct sockaddr *)&srcAddr, sizeof(srcAddr)) == -1)
+//  279         srcAddr.sin_port = htons(srcPort);
+//  280         srcAddr.sin_addr.s_addr = 0;//htonl(INADDR_ANY);
+//  281         if (bind(sd, (struct sockaddr *)&srcAddr, sizeof(srcAddr)) == -1)
         MOVS     R2,#+16
         LSLS     R0,R6,#+8
         ORR      R0,R0,R6, LSR #+8
@@ -1303,52 +1307,52 @@ AppS2wHal_NetUdpClient:
         MOVS     R0,#+0
         STR      R0,[SP, #+20]
         BL       ?Subroutine10
-//  280         {
-//  281             soc_close(sd);
-//  282             return S2W_SOCKFAILURE;
-//  283         }
-//  284     }
+//  282         {
+//  283             soc_close(sd);
+//  284             return S2W_SOCKFAILURE;
+//  285         }
+//  286     }
 ??CrossCallReturnLabel_20:
         CMN      R0,#+1
         BEQ.N    ??AppS2wHal_NetUdpClient_3
-//  285     else
-//  286     {
-//  287       srcAddr.sin_family = AF_INET;
-//  288       srcAddr.sin_port = NX_ANY_PORT;
-//  289       srcAddr.sin_addr.s_addr = 0;//htonl(INADDR_ANY);
-//  290       if (bind(sd, (struct sockaddr *)&srcAddr, sizeof(srcAddr)) == -1)
-//  291       {
-//  292           soc_close(sd);
-//  293           return S2W_SOCKFAILURE;
-//  294       }
-//  295       
-//  296     }
-//  297     
-//  298    
-//  299       
-//  300      
-//  301     /* Update the connection identifier list with the server information. */
-//  302     s2wCidList[cid].sd = sd;
+//  287     else
+//  288     {
+//  289       srcAddr.sin_family = AF_INET;
+//  290       srcAddr.sin_port = NX_ANY_PORT;
+//  291       srcAddr.sin_addr.s_addr = 0;//htonl(INADDR_ANY);
+//  292       if (bind(sd, (struct sockaddr *)&srcAddr, sizeof(srcAddr)) == -1)
+//  293       {
+//  294           soc_close(sd);
+//  295           return S2W_SOCKFAILURE;
+//  296       }
+//  297       
+//  298     }
+//  299     
+//  300    
+//  301       
+//  302      
+//  303     /* Update the connection identifier list with the server information. */
+//  304     s2wCidList[cid].sd = sd;
 ??AppS2wHal_NetUdpClient_4:
         BL       ?Subroutine13
-//  303     s2wCidList[cid].conType = UDP;
+//  305     s2wCidList[cid].conType = UDP;
 ??CrossCallReturnLabel_29:
         MOVS     R2,#+1
         STR      R8,[R5, #+28]
         STRB     R2,[R0, R1]
-//  304     s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT;
+//  306     s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT;
         MOVS     R0,#+0
         STRB     R0,[R5, #+1]
-//  305     s2wCidList[cid].remotePort = (peerData->port);
+//  307     s2wCidList[cid].remotePort = (peerData->port);
         LDRH     R0,[R4, #+2]
         STRH     R0,[R5, #+4]
-//  306     if(srcPort > 0)
+//  308     if(srcPort > 0)
         CBZ.N    R6,??AppS2wHal_NetUdpClient_5
-//  307     {
-//  308         s2wCidList[cid].localPort = srcPort;
+//  309     {
+//  310         s2wCidList[cid].localPort = srcPort;
         STRH     R6,[R5, #+2]
         B.N      ??AppS2wHal_NetUdpClient_6
-//  309     }
+//  311     }
 ??AppS2wHal_NetUdpClient_2:
         MOVS     R0,#+2
         STRH     R0,[SP, #+16]
@@ -1365,14 +1369,14 @@ AppS2wHal_NetUdpClient:
         BL       ?Subroutine11
 ??CrossCallReturnLabel_24:
         B.N      ??AppS2wHal_NetUdpClient_1
-//  310     else
-//  311     {
-//  312        addressLength = sizeof(localAddress);
+//  312     else
+//  313     {
+//  314        addressLength = sizeof(localAddress);
 ??AppS2wHal_NetUdpClient_5:
         MOVS     R0,#+16
         STR      R0,[SP, #+4]
-//  313        ret = getsockname(sd,&localAddress,&addressLength);
-//  314        if(ret < 0)
+//  315        ret = getsockname(sd,&localAddress,&addressLength);
+//  316        if(ret < 0)
         ADD      R2,SP,#+4
         ADD      R1,SP,#+32
         MOV      R0,R8
@@ -1380,392 +1384,392 @@ AppS2wHal_NetUdpClient:
         BL       getsockname
         CMP      R0,#+0
         BMI.N    ??AppS2wHal_NetUdpClient_7
-//  315        {
-//  316            AppS2wHal_NetClose(cid);
-//  317            return S2W_SOCKFAILURE;
-//  318        }
-//  319        s2wCidList[cid].localPort = htons(((struct sockaddr_in*)&localAddress)->sin_port);
+//  317        {
+//  318            AppS2wHal_NetClose(cid);
+//  319            return S2W_SOCKFAILURE;
+//  320        }
+//  321        s2wCidList[cid].localPort = htons(((struct sockaddr_in*)&localAddress)->sin_port);
         LDRH     R0,[SP, #+34]
         LSLS     R1,R0,#+8
         ORR      R0,R1,R0, LSR #+8
         STRH     R0,[R5, #+2]
-//  320     }
-//  321     
-//  322       memcpy(s2wCidList[cid].remoteIp,peerData->ipAddr,4);
+//  322     }
+//  323     
+//  324       memcpy(s2wCidList[cid].remoteIp,peerData->ipAddr,4);
 ??AppS2wHal_NetUdpClient_6:
         MOVS     R2,#+4
         ADDS     R1,R4,#+4
         ADDS     R0,R5,#+6
           CFI FunCall memcpy
         BL       memcpy
-//  323     
-//  324      
-//  325 
-//  326     // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
-//  327     // fcntl(s2wCidList[cid].sd , F_SETFL, O_NONBLOCK);
-//  328     
-//  329     struct timeval TimeOut;
-//  330         TimeOut.tv_sec =  0;
+//  325     
+//  326      
+//  327 
+//  328     // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
+//  329     // fcntl(s2wCidList[cid].sd , F_SETFL, O_NONBLOCK);
+//  330     
+//  331     struct timeval TimeOut;
+//  332         TimeOut.tv_sec =  0;
         MOVS     R0,#+0
         STR      R0,[SP, #+8]
-//  331         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
-//  332        // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&TimeOut,8);
-//  333         ret = setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
-//  334         if(ret < 0)
+//  333         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
+//  334        // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&TimeOut,8);
+//  335         ret = setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
+//  336         if(ret < 0)
         ADD      R3,SP,#+8
-        LDR.W    R0,??DataTable62_1  ;; 0x186a0
+        LDR.W    R0,??DataTable58_1  ;; 0x186a0
         STR      R0,[SP, #+12]
         BL       ?Subroutine18
 ??CrossCallReturnLabel_41:
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_NetUdpClient_8
-//  335         {
-//  336             AppS2wHal_NetClose(cid);
+//  337         {
+//  338             AppS2wHal_NetClose(cid);
 ??AppS2wHal_NetUdpClient_7:
         MOV      R0,R7
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
-//  337             return S2W_SOCKFAILURE;
+//  339             return S2W_SOCKFAILURE;
 ??AppS2wHal_NetUdpClient_1:
         MOVS     R0,#+3
         B.N      ??AppS2wHal_NetUdpClient_0
-//  338         }
-//  339      
-//  340     /* Register the socket callback function to receive the events. */
-//  341     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
+//  340         }
+//  341      
+//  342     /* Register the socket callback function to receive the events. */
+//  343     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
 ??AppS2wHal_NetUdpClient_8:
         BL       ?Subroutine19
-//  342     *cidNo = cid;
+//  344     *cidNo = cid;
 ??CrossCallReturnLabel_43:
         STRB     R7,[R9, #+0]
-//  343     return S2W_SUCCESS;
+//  345     return S2W_SUCCESS;
         MOVS     R0,#+0
 ??AppS2wHal_NetUdpClient_0:
         ADD      SP,SP,#+52
           CFI CFA R13+28
         POP      {R4-R9,PC}       ;; return
           CFI EndBlock cfiBlock11
-//  344 
-//  345 }
 //  346 
-//  347 #ifdef S2W_IPv6_SUPPORT
+//  347 }
 //  348 
-//  349 PUBLIC UINT8
-//  350 AppS2wHal_NetUdpClientv6(S2W_NETDATA_T *remoteServerData, UINT8 *cidNo, UINT16 srcPort)
-//  351 {
-//  352     UINT8 cid;
-//  353     INT status;
-//  354     INT32 sd;
-//  355     GSN_NWIF_IP_CONFIG_T nwParams;
-//  356     struct sockaddr_in6 CliAddr;
-//  357 
-//  358       if ((sd = socket(AF_INET6, SOCK_DGRAM, IPPROTO_UDP)) == -1)
-//  359          {
-//  360           return S2W_SOCKFAILURE;
-//  361          }
-//  362 
-//  363      memset(&CliAddr,0,sizeof(struct sockaddr_in6));
-//  364      
-//  365     if(srcPort > 0)
-//  366     {
-//  367       
-//  368         CliAddr.sin6_family = AF_INET6;
-//  369         CliAddr.sin6_port = srcPort;
-//  370        
-//  371         GsnNwIf_IpConfigGet(&s2wappMainTaskCtxt->if0.nwifCtx,&nwParams);
-//  372         
-//  373         if(nwParams.ipv6.globalAddr)
-//  374           COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.globalAddr), (ULONG *)&(CliAddr.sin6_addr._S6_un._S6_u32));
-//  375         else
-//  376           COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.linkLocalAddr), (ULONG *)&(CliAddr.sin6_addr._S6_un._S6_u32));
-//  377          GSN_IPv6_CHANGE_ENDIAN((UINT32 *)CliAddr.sin6_addr._S6_un._S6_u32);
-//  378         status = bind (sd, (struct sockaddr *) &CliAddr, sizeof(CliAddr));
-//  379           
-//  380         if(status < 0)
-//  381         {
-//  382           soc_close(sd);
-//  383           return S2W_SOCKFAILURE;
-//  384         }
-//  385         
-//  386     }
-//  387     
-//  388     /* Get free connection identifier list entry. */
+//  349 #ifdef S2W_IPv6_SUPPORT
+//  350 
+//  351 PUBLIC UINT8
+//  352 AppS2wHal_NetUdpClientv6(S2W_NETDATA_T *remoteServerData, UINT8 *cidNo, UINT16 srcPort)
+//  353 {
+//  354     UINT8 cid;
+//  355     INT status;
+//  356     INT32 sd;
+//  357     GSN_NWIF_IP_CONFIG_T nwParams;
+//  358     struct sockaddr_in6 CliAddr;
+//  359 
+//  360       if ((sd = socket(AF_INET6, SOCK_DGRAM, IPPROTO_UDP)) == -1)
+//  361          {
+//  362           return S2W_SOCKFAILURE;
+//  363          }
+//  364 
+//  365      memset(&CliAddr,0,sizeof(struct sockaddr_in6));
+//  366      
+//  367     if(srcPort > 0)
+//  368     {
+//  369       
+//  370         CliAddr.sin6_family = AF_INET6;
+//  371         CliAddr.sin6_port = srcPort;
+//  372        
+//  373         GsnNwIf_IpConfigGet(&s2wappMainTaskCtxt->if0.nwifCtx,&nwParams);
+//  374         
+//  375         if(nwParams.ipv6.globalAddr)
+//  376           COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.globalAddr), (ULONG *)&(CliAddr.sin6_addr._S6_un._S6_u32));
+//  377         else
+//  378           COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.linkLocalAddr), (ULONG *)&(CliAddr.sin6_addr._S6_un._S6_u32));
+//  379          GSN_IPv6_CHANGE_ENDIAN((UINT32 *)CliAddr.sin6_addr._S6_un._S6_u32);
+//  380         status = bind (sd, (struct sockaddr *) &CliAddr, sizeof(CliAddr));
+//  381           
+//  382         if(status < 0)
+//  383         {
+//  384           soc_close(sd);
+//  385           return S2W_SOCKFAILURE;
+//  386         }
+//  387         
+//  388     }
 //  389     
-//  390     cid = AppS2wHal_CidGet();
-//  391     if (cid == INVALID_CID)
-//  392     {
-//  393         return S2W_ENCID;
-//  394     }
-//  395   
-//  396      /* Update the connection identifier list with the server information. */
-//  397     
-//  398     s2wCidList[cid].sd = sd;
-//  399     s2wCidList[cid].conType = UDP;
-//  400     s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT;
-//  401     s2wCidList[cid].remotePort = remoteServerData->port;
-//  402     s2wCidList[cid].addrType = ADDR_TYPE_IPv6;
-//  403     if(srcPort > 0)
-//  404     {
-//  405         s2wCidList[cid].localPort = remoteServerData->port;
-//  406     }
-//  407     
-//  408     memcpy(s2wCidList[cid].remoteIpv6,remoteServerData->ipv6Addr,16);
+//  390     /* Get free connection identifier list entry. */
+//  391     
+//  392     cid = AppS2wHal_CidGet();
+//  393     if (cid == INVALID_CID)
+//  394     {
+//  395         return S2W_ENCID;
+//  396     }
+//  397   
+//  398      /* Update the connection identifier list with the server information. */
+//  399     
+//  400     s2wCidList[cid].sd = sd;
+//  401     s2wCidList[cid].conType = UDP;
+//  402     s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT;
+//  403     s2wCidList[cid].remotePort = remoteServerData->port;
+//  404     s2wCidList[cid].addrType = ADDR_TYPE_IPv6;
+//  405     if(srcPort > 0)
+//  406     {
+//  407         s2wCidList[cid].localPort = remoteServerData->port;
+//  408     }
 //  409     
-//  410      
-//  411     // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
+//  410     memcpy(s2wCidList[cid].remoteIpv6,remoteServerData->ipv6Addr,16);
+//  411     
 //  412      
-//  413     // fcntl(s2wCidList[cid].sd , F_SETFL, O_NONBLOCK);
-//  414     struct timeval TimeOut;
-//  415         TimeOut.tv_sec =  0;
-//  416         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
-//  417         //setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&TimeOut,8);
-//  418         setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
-//  419     
-//  420     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
+//  413     // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
+//  414      
+//  415     // fcntl(s2wCidList[cid].sd , F_SETFL, O_NONBLOCK);
+//  416     struct timeval TimeOut;
+//  417         TimeOut.tv_sec =  0;
+//  418         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
+//  419         //setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&TimeOut,8);
+//  420         setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
 //  421     
-//  422     *cidNo = cid;
+//  422     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
 //  423     
-//  424     return S2W_SUCCESS;
-//  425 }
-//  426 
-//  427 PUBLIC UINT8
-//  428 AppS2wHal_NetUdpServerv6(S2W_NETDATA_T *serverData, UINT8 *cidNo)
-//  429 {
-//  430   UINT8 cid;
-//  431   INT32 sd;
-//  432   struct sockaddr_in6 servAddr;
-//  433   GSN_NWIF_IP_CONFIG_T nwParams;
-//  434   
-//  435   cid = AppS2wHal_CidGet();
-//  436     if (cid == INVALID_CID)
-//  437     {
-//  438         return S2W_ENCID;
-//  439     }
-//  440     
-//  441     if ((sd = socket( AF_INET6, SOCK_DGRAM, IPPROTO_UDP)) == -1)
-//  442     {
-//  443         return S2W_SOCKFAILURE;
-//  444     }
-//  445     memset(&servAddr,0,sizeof(struct sockaddr_in6));    
-//  446     servAddr.sin6_family = AF_INET6;
-//  447     servAddr.sin6_port = htons(serverData->port);
-//  448     
-//  449     GsnNwIf_IpConfigGet(&s2wappMainTaskCtxt->if0.nwifCtx,&nwParams);
-//  450         
-//  451     if(nwParams.ipv6.globalAddr)
-//  452       COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.globalAddr), (ULONG *)&(servAddr.sin6_addr._S6_un._S6_u32));
-//  453     else
-//  454       COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.linkLocalAddr), (ULONG *)&(servAddr.sin6_addr._S6_un._S6_u32));
-//  455     GSN_IPv6_CHANGE_ENDIAN((UINT32 *)servAddr.sin6_addr._S6_un._S6_u32);
-//  456      if (bind(sd,  (struct sockaddr *)&servAddr, sizeof(servAddr)) == -1)
-//  457     {
-//  458         soc_close(sd);
-//  459         return S2W_SOCKFAILURE;
-//  460     }
-//  461     
-//  462     s2wCidList[cid].sd = sd;
-//  463     s2wCidList[cid].conType = UDP;
-//  464     s2wCidList[cid].conMode = S2W_NETDATA_MODE_SERVER;
-//  465     s2wCidList[cid].localPort = serverData->port;
-//  466     s2wCidList[cid].remotePort = 0;
-//  467     s2wCidList[cid].addrType = ADDR_TYPE_IPv6;
-//  468     memset(s2wCidList[cid].remoteIpv6,0,16);
-//  469 
-//  470      
-//  471      //setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
+//  424     *cidNo = cid;
+//  425     
+//  426     return S2W_SUCCESS;
+//  427 }
+//  428 
+//  429 PUBLIC UINT8
+//  430 AppS2wHal_NetUdpServerv6(S2W_NETDATA_T *serverData, UINT8 *cidNo)
+//  431 {
+//  432   UINT8 cid;
+//  433   INT32 sd;
+//  434   struct sockaddr_in6 servAddr;
+//  435   GSN_NWIF_IP_CONFIG_T nwParams;
+//  436   
+//  437   cid = AppS2wHal_CidGet();
+//  438     if (cid == INVALID_CID)
+//  439     {
+//  440         return S2W_ENCID;
+//  441     }
+//  442     
+//  443     if ((sd = socket( AF_INET6, SOCK_DGRAM, IPPROTO_UDP)) == -1)
+//  444     {
+//  445         return S2W_SOCKFAILURE;
+//  446     }
+//  447     memset(&servAddr,0,sizeof(struct sockaddr_in6));    
+//  448     servAddr.sin6_family = AF_INET6;
+//  449     servAddr.sin6_port = htons(serverData->port);
+//  450     
+//  451     GsnNwIf_IpConfigGet(&s2wappMainTaskCtxt->if0.nwifCtx,&nwParams);
+//  452         
+//  453     if(nwParams.ipv6.globalAddr)
+//  454       COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.globalAddr), (ULONG *)&(servAddr.sin6_addr._S6_un._S6_u32));
+//  455     else
+//  456       COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.linkLocalAddr), (ULONG *)&(servAddr.sin6_addr._S6_un._S6_u32));
+//  457     GSN_IPv6_CHANGE_ENDIAN((UINT32 *)servAddr.sin6_addr._S6_un._S6_u32);
+//  458      if (bind(sd,  (struct sockaddr *)&servAddr, sizeof(servAddr)) == -1)
+//  459     {
+//  460         soc_close(sd);
+//  461         return S2W_SOCKFAILURE;
+//  462     }
+//  463     
+//  464     s2wCidList[cid].sd = sd;
+//  465     s2wCidList[cid].conType = UDP;
+//  466     s2wCidList[cid].conMode = S2W_NETDATA_MODE_SERVER;
+//  467     s2wCidList[cid].localPort = serverData->port;
+//  468     s2wCidList[cid].remotePort = 0;
+//  469     s2wCidList[cid].addrType = ADDR_TYPE_IPv6;
+//  470     memset(s2wCidList[cid].remoteIpv6,0,16);
+//  471 
 //  472      
-//  473      // fcntl(s2wCidList[cid].sd , F_SETFL, O_NONBLOCK);
-//  474     
-//  475     struct timeval TimeOut;
-//  476         TimeOut.tv_sec =  0;
-//  477         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
-//  478         //setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&TimeOut,8);
-//  479         setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
-//  480     
-//  481     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
-//  482 
-//  483     *cidNo = cid;
-//  484     
-//  485     return S2W_SUCCESS;
-//  486    
-//  487 }
-//  488 
-//  489 
-//  490 PUBLIC UINT8
-//  491 AppS2wHal_NetTcpClientv6(S2W_NETDATA_T *remoteServerData, UINT8 *cidNo)
-//  492 {
-//  493   
-//  494     UINT32 cid;
-//  495     INT32 sd;
-//  496     INT32 status;
-//  497     struct sockaddr_in6 destAddr;
-//  498     
-//  499     cid = AppS2wHal_CidGet();
-//  500     if (cid == INVALID_CID)
-//  501     {
-//  502         return S2W_ENCID;
-//  503     }
-//  504     
-//  505     if ((sd = socket(AF_INET6, SOCK_STREAM, IPPROTO_TCP)) == -1)
-//  506     {
-//  507         return S2W_SOCKFAILURE;
-//  508     }
-//  509     
-//  510     memset(&destAddr, 0, sizeof(destAddr));
+//  473      //setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
+//  474      
+//  475      // fcntl(s2wCidList[cid].sd , F_SETFL, O_NONBLOCK);
+//  476     
+//  477     struct timeval TimeOut;
+//  478         TimeOut.tv_sec =  0;
+//  479         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
+//  480         //setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&TimeOut,8);
+//  481         setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
+//  482     
+//  483     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
+//  484 
+//  485     *cidNo = cid;
+//  486     
+//  487     return S2W_SUCCESS;
+//  488    
+//  489 }
+//  490 
+//  491 
+//  492 PUBLIC UINT8
+//  493 AppS2wHal_NetTcpClientv6(S2W_NETDATA_T *remoteServerData, UINT8 *cidNo)
+//  494 {
+//  495   
+//  496     UINT32 cid;
+//  497     INT32 sd;
+//  498     INT32 status;
+//  499     struct sockaddr_in6 destAddr;
+//  500     
+//  501     cid = AppS2wHal_CidGet();
+//  502     if (cid == INVALID_CID)
+//  503     {
+//  504         return S2W_ENCID;
+//  505     }
+//  506     
+//  507     if ((sd = socket(AF_INET6, SOCK_STREAM, IPPROTO_TCP)) == -1)
+//  508     {
+//  509         return S2W_SOCKFAILURE;
+//  510     }
 //  511     
-//  512     destAddr.sin6_family = AF_INET6;
-//  513     COPY_IPV6_ADDRESS((ULONG*)remoteServerData->ipv6Addr, (ULONG *)&(destAddr.sin6_addr._S6_un._S6_u32));
-//  514     destAddr.sin6_port = htons(remoteServerData->port);
-//  515      GSN_IPv6_CHANGE_ENDIAN((UINT32 *)destAddr.sin6_addr._S6_un._S6_u32);
-//  516     
-//  517     s2wCidList[cid].sd = sd;
-//  518     s2wCidList[cid].conType = TCP;
-//  519     s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT;
-//  520     s2wCidList[cid].remotePort = remoteServerData->port;
-//  521     s2wCidList[cid].addrType = ADDR_TYPE_IPv6;
-//  522     
-//  523     memcpy(s2wCidList[cid].remoteIpv6,remoteServerData->ipv6Addr,16);
+//  512     memset(&destAddr, 0, sizeof(destAddr));
+//  513     
+//  514     destAddr.sin6_family = AF_INET6;
+//  515     COPY_IPV6_ADDRESS((ULONG*)remoteServerData->ipv6Addr, (ULONG *)&(destAddr.sin6_addr._S6_un._S6_u32));
+//  516     destAddr.sin6_port = htons(remoteServerData->port);
+//  517      GSN_IPv6_CHANGE_ENDIAN((UINT32 *)destAddr.sin6_addr._S6_un._S6_u32);
+//  518     
+//  519     s2wCidList[cid].sd = sd;
+//  520     s2wCidList[cid].conType = TCP;
+//  521     s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT;
+//  522     s2wCidList[cid].remotePort = remoteServerData->port;
+//  523     s2wCidList[cid].addrType = ADDR_TYPE_IPv6;
 //  524     
-//  525      
-//  526     // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
+//  525     memcpy(s2wCidList[cid].remoteIpv6,remoteServerData->ipv6Addr,16);
+//  526     
 //  527      
-//  528       
-//  529       
-//  530     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
-//  531     
-//  532     status = connect(sd, (struct sockaddr *)&destAddr, sizeof(destAddr));
+//  528     // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
+//  529      
+//  530       
+//  531       
+//  532     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
 //  533     
-//  534     if (status < 0 )
-//  535     {
-//  536         AppS2wHal_NetClose(cid);
-//  537         return S2W_SOCKFAILURE;
-//  538     }
-//  539 
-//  540     *cidNo = cid;
+//  534     status = connect(sd, (struct sockaddr *)&destAddr, sizeof(destAddr));
+//  535     
+//  536     if (status < 0 )
+//  537     {
+//  538         AppS2wHal_NetClose(cid);
+//  539         return S2W_SOCKFAILURE;
+//  540     }
 //  541 
-//  542     s2wCidList[cid].sslflag = FALSE;
-//  543     
-//  544     //fcntl(s2wCidList[cid].sd , F_SETFL, O_NONBLOCK);
-//  545     struct timeval TimeOut;
-//  546         TimeOut.tv_sec =  0;
-//  547         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
-//  548         //setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&TimeOut,8);
-//  549         setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
-//  550 
-//  551     return S2W_SUCCESS;
-//  552   
-//  553 }
-//  554 
-//  555 
-//  556 PUBLIC UINT8
-//  557 AppS2wHal_NetTcpServerv6(S2W_NETDATA_T *serverData, UINT8 *cidNo)
-//  558 {
-//  559   INT32 sd;
-//  560   UINT8 cid;
-//  561   struct sockaddr_in6 servAddr;
-//  562   GSN_NWIF_IP_CONFIG_T nwParams;
-//  563 
-//  564   cid = AppS2wHal_CidGet();
-//  565   if (cid == INVALID_CID)
-//  566   {
-//  567       return S2W_ENCID;
-//  568   }
-//  569   
-//  570   if ((sd = socket(AF_INET6, SOCK_STREAM, IPPROTO_TCP)) == -1)
-//  571     {
-//  572         return S2W_SOCKFAILURE;
-//  573     }
-//  574   
-//  575   memset(&servAddr, 0, sizeof(servAddr));
+//  542     *cidNo = cid;
+//  543 
+//  544     s2wCidList[cid].sslflag = FALSE;
+//  545     
+//  546     //fcntl(s2wCidList[cid].sd , F_SETFL, O_NONBLOCK);
+//  547     struct timeval TimeOut;
+//  548         TimeOut.tv_sec =  0;
+//  549         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
+//  550         //setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&TimeOut,8);
+//  551         setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
+//  552 
+//  553     return S2W_SUCCESS;
+//  554   
+//  555 }
+//  556 
+//  557 
+//  558 PUBLIC UINT8
+//  559 AppS2wHal_NetTcpServerv6(S2W_NETDATA_T *serverData, UINT8 *cidNo)
+//  560 {
+//  561   INT32 sd;
+//  562   UINT8 cid;
+//  563   struct sockaddr_in6 servAddr;
+//  564   GSN_NWIF_IP_CONFIG_T nwParams;
+//  565 
+//  566   cid = AppS2wHal_CidGet();
+//  567   if (cid == INVALID_CID)
+//  568   {
+//  569       return S2W_ENCID;
+//  570   }
+//  571   
+//  572   if ((sd = socket(AF_INET6, SOCK_STREAM, IPPROTO_TCP)) == -1)
+//  573     {
+//  574         return S2W_SOCKFAILURE;
+//  575     }
 //  576   
-//  577   servAddr.sin6_family = AF_INET6;
-//  578   servAddr.sin6_port = htons(serverData->port);
-//  579   
-//  580   GsnNwIf_IpConfigGet(&s2wappMainTaskCtxt->if0.nwifCtx,&nwParams);
-//  581         
-//  582   if(nwParams.ipv6.globalAddr)
-//  583      COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.globalAddr), (ULONG *)&(servAddr.sin6_addr._S6_un._S6_u32));
-//  584   else
-//  585      COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.linkLocalAddr), (ULONG *)&(servAddr.sin6_addr._S6_un._S6_u32));
-//  586      GSN_IPv6_CHANGE_ENDIAN((UINT32 *)servAddr.sin6_addr._S6_un._S6_u32);
-//  587     if (bind(sd, (struct sockaddr *) &servAddr, sizeof(servAddr)) ==  -1)
-//  588     {
-//  589         soc_close(sd);
-//  590         return S2W_SOCKFAILURE;
-//  591     }
-//  592     
-//  593       if (listen(sd, 5) < 0)
-//  594     {
-//  595         soc_close(sd);
-//  596         return S2W_SOCKFAILURE;
-//  597     }
-//  598 
-//  599     
-//  600     s2wCidList[cid].sd = sd;
-//  601     s2wCidList[cid].conType = TCP;
-//  602     s2wCidList[cid].conMode = S2W_NETDATA_MODE_SERVER;
-//  603     s2wCidList[cid].localPort = serverData->port;
-//  604     s2wCidList[cid].remotePort = 0;
-//  605     memset(s2wCidList[cid].remoteIpv6,0,16);
-//  606     s2wCidList[cid].addrType = ADDR_TYPE_IPv6;
-//  607     
-//  608      
-//  609     // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
-//  610     
-//  611     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
-//  612 
-//  613     *cidNo = cid;
+//  577   memset(&servAddr, 0, sizeof(servAddr));
+//  578   
+//  579   servAddr.sin6_family = AF_INET6;
+//  580   servAddr.sin6_port = htons(serverData->port);
+//  581   
+//  582   GsnNwIf_IpConfigGet(&s2wappMainTaskCtxt->if0.nwifCtx,&nwParams);
+//  583         
+//  584   if(nwParams.ipv6.globalAddr)
+//  585      COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.globalAddr), (ULONG *)&(servAddr.sin6_addr._S6_un._S6_u32));
+//  586   else
+//  587      COPY_IPV6_ADDRESS(((ULONG *)&nwParams.ipv6.linkLocalAddr), (ULONG *)&(servAddr.sin6_addr._S6_un._S6_u32));
+//  588      GSN_IPv6_CHANGE_ENDIAN((UINT32 *)servAddr.sin6_addr._S6_un._S6_u32);
+//  589     if (bind(sd, (struct sockaddr *) &servAddr, sizeof(servAddr)) ==  -1)
+//  590     {
+//  591         soc_close(sd);
+//  592         return S2W_SOCKFAILURE;
+//  593     }
+//  594     
+//  595       if (listen(sd, 5) < 0)
+//  596     {
+//  597         soc_close(sd);
+//  598         return S2W_SOCKFAILURE;
+//  599     }
+//  600 
+//  601     
+//  602     s2wCidList[cid].sd = sd;
+//  603     s2wCidList[cid].conType = TCP;
+//  604     s2wCidList[cid].conMode = S2W_NETDATA_MODE_SERVER;
+//  605     s2wCidList[cid].localPort = serverData->port;
+//  606     s2wCidList[cid].remotePort = 0;
+//  607     memset(s2wCidList[cid].remoteIpv6,0,16);
+//  608     s2wCidList[cid].addrType = ADDR_TYPE_IPv6;
+//  609     
+//  610      
+//  611     // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
+//  612     
+//  613     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
 //  614 
-//  615     return S2W_SUCCESS;
-//  616  
-//  617 }
-//  618 
-//  619 
+//  615     *cidNo = cid;
+//  616 
+//  617     return S2W_SUCCESS;
+//  618  
+//  619 }
 //  620 
-//  621 #endif
+//  621 
 //  622 
+//  623 #endif
+//  624 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock12 Using cfiCommon0
           CFI Function AppS2w_ConnModeGet
           CFI NoCalls
         THUMB
-//  623 PUBLIC UINT8 AppS2w_ConnModeGet(UINT8 cid)
-//  624 {
-//  625     return (s2wCidList[cid].conMode);
+//  625 PUBLIC UINT8 AppS2w_ConnModeGet(UINT8 cid)
+//  626 {
+//  627     return (s2wCidList[cid].conMode);
 AppS2w_ConnModeGet:
         MOV      R1,#+296
-        LDR.W    R2,??DataTable62
+        LDR.W    R2,??DataTable58
         MLA      R0,R1,R0,R2
         LDRB     R0,[R0, #+1]
         BX       LR               ;; return
           CFI EndBlock cfiBlock12
-//  626 }
-//  627 
-//  628 
-//  629 /**
-//  630  ******************************************************************
-//  631  * @ingroup S2w-Application
-//  632  * @brief S2w tcp client open function.
-//  633  *    This function opens a new tcp client socket and store the socket info
-//  634  *    into the corresponding Cid list and registers any receive events on this
-//  635  *    socket with network stack.
-//  636  *    This fuction tries to connect to the remote server.
-//  637  * @param peerData - IN the address of the data structure contain the tcp server
-//  638  *                      info.
-//  639  *.@param cidNo    - IN the address to which the cid number to be stored.
-//  640  * @retval S2W_SUCCESS     - operation successfull.
-//  641  * @retval S2W_SOCKFAILURE - operation failed
-//  642  * @retval S2W_ENCID       - operation failed- no valid cid
-//  643  ******************************************************************/
+//  628 }
+//  629 
+//  630 
+//  631 /**
+//  632  ******************************************************************
+//  633  * @ingroup S2w-Application
+//  634  * @brief S2w tcp client open function.
+//  635  *    This function opens a new tcp client socket and store the socket info
+//  636  *    into the corresponding Cid list and registers any receive events on this
+//  637  *    socket with network stack.
+//  638  *    This fuction tries to connect to the remote server.
+//  639  * @param peerData - IN the address of the data structure contain the tcp server
+//  640  *                      info.
+//  641  *.@param cidNo    - IN the address to which the cid number to be stored.
+//  642  * @retval S2W_SUCCESS     - operation successfull.
+//  643  * @retval S2W_SOCKFAILURE - operation failed
+//  644  * @retval S2W_ENCID       - operation failed- no valid cid
+//  645  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock13 Using cfiCommon0
           CFI Function AppS2wHal_NetTcpClient
         THUMB
-//  644 PUBLIC UINT8
-//  645 AppS2wHal_NetTcpClient(S2W_NETDATA_T *peerData, UINT8 *cidNo)
-//  646 {
+//  646 PUBLIC UINT8
+//  647 AppS2wHal_NetTcpClient(S2W_NETDATA_T *peerData, UINT8 *cidNo)
+//  648 {
 AppS2wHal_NetTcpClient:
         PUSH     {R4-R10,LR}
           CFI R14 Frame(CFA, -4)
@@ -1778,11 +1782,11 @@ AppS2wHal_NetTcpClient:
           CFI R4 Frame(CFA, -32)
           CFI CFA R13+32
         BL       ?Subroutine7
-//  647     struct sockaddr_in destAddr;
-//  648     UINT32 cid;
-//  649     INT32 sd;
-//  650     INT32 ret;
-//  651     ULONG connect_timeout =  (s2wCurrent.registers[S2W_REG_TCP_CONNECT_TIMEOUT]/100);
+//  649     struct sockaddr_in destAddr;
+//  650     UINT32 cid;
+//  651     INT32 sd;
+//  652     INT32 ret;
+//  653     ULONG connect_timeout =  (s2wCurrent.registers[S2W_REG_TCP_CONNECT_TIMEOUT]/100);
 ??CrossCallReturnLabel_11:
         MOV      R10,R1
         SUB      SP,SP,#+40
@@ -1790,37 +1794,32 @@ AppS2wHal_NetTcpClient:
         MOVS     R1,#+100
         SDIV     R0,R0,R1
         STR      R0,[SP, #+4]
-//  652     ULONG rexTimeOut=75,retransRate=1;
+//  654     ULONG rexTimeOut=75,retransRate=1;
         MOVS     R0,#+75
         STR      R0,[SP, #+20]
         MOVS     R0,#+1
         STR      R0,[SP, #+16]
-//  653 
-//  654     /* get  a valid cid */
-//  655     cid = AppS2wHal_CidGet();
+//  655 
+//  656     /* get  a valid cid */
+//  657     cid = AppS2wHal_CidGet();
           CFI FunCall AppS2wHal_CidGet
         BL       AppS2wHal_CidGet
         MOV      R7,R0
-//  656     S2w_Printf("\r\n CID value in NetTcpClient func 1 : %d",cid);
-        MOV      R1,R7
-        ADR.W    R0,`?<Constant "\\r\\n CID value in NetTc...">`
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-//  657     if (cid == INVALID_CID)
+//  658     if (cid == INVALID_CID)
         CMP      R7,#+255
         BNE.N    ??AppS2wHal_NetTcpClient_0
-//  658     {
-//  659 	    S2w_Printf("\r\n error 1");
+//  659     {
+//  660 	    S2w_Printf("\r\n error 1");
         ADR.W    R0,`?<Constant "\\r\\n error 1">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  660         return S2W_ENCID;
+//  661         return S2W_ENCID;
         MOVS     R0,#+4
         B.N      ??AppS2wHal_NetTcpClient_1
-//  661     }
-//  662 
-//  663     /* open a tcp client socket */
-//  664     if ((sd = socket(AF_INET, SOCK_STREAM, 0)) == -1)
+//  662     }
+//  663 
+//  664     /* open a tcp client socket */
+//  665     if ((sd = socket(AF_INET, SOCK_STREAM, 0)) == -1)
 ??AppS2wHal_NetTcpClient_0:
         MOVS     R2,#+0
         MOVS     R1,#+1
@@ -1829,21 +1828,21 @@ AppS2wHal_NetTcpClient:
         MOV      R8,R0
         CMN      R8,#+1
         BNE.N    ??AppS2wHal_NetTcpClient_2
-//  665     {
-//  666 	    S2w_Printf("\r\n error 2");
+//  666     {
+//  667 	    S2w_Printf("\r\n error 2");
         ADR.W    R0,`?<Constant "\\r\\n error 2">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  667         return S2W_SOCKFAILURE;
+//  668         return S2W_SOCKFAILURE;
         MOVS     R0,#+3
         B.N      ??AppS2wHal_NetTcpClient_1
-//  668     }
-//  669 
-//  670     /** Make the socket non blocking. */
-//  671     //tfBlockingState(sd, TM_BLOCKING_OFF);
-//  672 
-//  673     ret = setsockopt(sd,IP_PROTOTCP,TCP_REX_TIMER_RATE,(void*)&retransRate,4);
-//  674     if (ret < 0 )
+//  669     }
+//  670 
+//  671     /** Make the socket non blocking. */
+//  672     //tfBlockingState(sd, TM_BLOCKING_OFF);
+//  673 
+//  674     ret = setsockopt(sd,IP_PROTOTCP,TCP_REX_TIMER_RATE,(void*)&retransRate,4);
+//  675     if (ret < 0 )
 ??AppS2wHal_NetTcpClient_2:
         MOVS     R0,#+4
         STR      R0,[SP, #+0]
@@ -1853,15 +1852,15 @@ AppS2wHal_NetTcpClient:
 ??CrossCallReturnLabel_26:
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_NetTcpClient_3
-//  675     {
-//  676 	    S2w_Printf("\r\n error 3");
+//  676     {
+//  677 	    S2w_Printf("\r\n error 3");
         ADR.W    R0,`?<Constant "\\r\\n error 3">`
         B.N      ??AppS2wHal_NetTcpClient_4
-//  677     	soc_close(sd);
-//  678         return S2W_FAILURE;
-//  679     }
-//  680     ret = setsockopt(sd,IP_PROTOTCP,TCP_MAXRT,(void*)&rexTimeOut,4);
-//  681     if (ret < 0 )
+//  678     	soc_close(sd);
+//  679         return S2W_FAILURE;
+//  680     }
+//  681     ret = setsockopt(sd,IP_PROTOTCP,TCP_MAXRT,(void*)&rexTimeOut,4);
+//  682     if (ret < 0 )
 ??AppS2wHal_NetTcpClient_3:
         MOVS     R0,#+4
         STR      R0,[SP, #+0]
@@ -1870,16 +1869,16 @@ AppS2wHal_NetTcpClient:
 ??CrossCallReturnLabel_28:
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_NetTcpClient_5
-//  682     {
-//  683 	    S2w_Printf("\r\n error 4");
+//  683     {
+//  684 	    S2w_Printf("\r\n error 4");
         ADR.W    R0,`?<Constant "\\r\\n error 4">`
         B.N      ??AppS2wHal_NetTcpClient_4
-//  684     	soc_close(sd);
-//  685         return S2W_FAILURE;
-//  686     }
-//  687 
-//  688     ret = setsockopt(sd,IP_PROTOTCP,CONNECT_TIMEOUT_TM,(void*)&connect_timeout,4);
-//  689     if (ret < 0 )
+//  685     	soc_close(sd);
+//  686         return S2W_FAILURE;
+//  687     }
+//  688 
+//  689     ret = setsockopt(sd,IP_PROTOTCP,CONNECT_TIMEOUT_TM,(void*)&connect_timeout,4);
+//  690     if (ret < 0 )
 ??AppS2wHal_NetTcpClient_5:
         BL       ?Subroutine25
 ??CrossCallReturnLabel_60:
@@ -1888,60 +1887,60 @@ AppS2wHal_NetTcpClient:
 ??CrossCallReturnLabel_25:
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_NetTcpClient_6
-//  690     {
-//  691 	    S2w_Printf("\r\n error 5");
+//  691     {
+//  692 	    S2w_Printf("\r\n error 5");
         ADR.W    R0,`?<Constant "\\r\\n error 5">`
 ??AppS2wHal_NetTcpClient_4:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  692     	soc_close(sd);
+//  693     	soc_close(sd);
         BL       ?Subroutine11
-//  693         return S2W_FAILURE;
+//  694         return S2W_FAILURE;
 ??CrossCallReturnLabel_23:
         B.N      ??AppS2wHal_NetTcpClient_7
-//  694     }
-//  695 
-//  696     /** Connect the socket to the server. */
-//  697     destAddr.sin_family = AF_INET;
+//  695     }
+//  696 
+//  697     /** Connect the socket to the server. */
+//  698     destAddr.sin_family = AF_INET;
 ??AppS2wHal_NetTcpClient_6:
         BL       ?Subroutine3
-//  698     destAddr.sin_port = htons(peerData->port);
-//  699     memcpy(&(destAddr.sin_addr.s_addr),&peerData->ipAddr,sizeof(destAddr.sin_addr.s_addr));
-//  700 
+//  699     destAddr.sin_port = htons(peerData->port);
+//  700     memcpy(&(destAddr.sin_addr.s_addr),&peerData->ipAddr,sizeof(destAddr.sin_addr.s_addr));
 //  701 
-//  702     /* register the callback for any socket events */
-//  703     nx_bsd_callback_register(sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
+//  702 
+//  703     /* register the callback for any socket events */
+//  704     nx_bsd_callback_register(sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
 ??CrossCallReturnLabel_1:
         MOVS     R2,#+61
-        LDR.W    R1,??DataTable62_2
+        LDR.W    R1,??DataTable58_2
         MOV      R0,R8
           CFI FunCall nx_bsd_callback_register
         BL       nx_bsd_callback_register
-//  704 
-//  705     ret = connect(sd, (struct sockaddr *)&destAddr, sizeof(destAddr));
+//  705 
+//  706     ret = connect(sd, (struct sockaddr *)&destAddr, sizeof(destAddr));
         MOVS     R2,#+16
         ADD      R1,SP,#+24
         MOV      R0,R8
           CFI FunCall connect
         BL       connect
         MOV      R9,R0
-//  706      /*
-//  707      * Update the connection identifier list with connection information
-//  708      * except the type.
-//  709      */
-//  710     s2wCidList[cid].sd = sd;
+//  707      /*
+//  708      * Update the connection identifier list with connection information
+//  709      * except the type.
+//  710      */
+//  711     s2wCidList[cid].sd = sd;
         BL       ?Subroutine13
 ??CrossCallReturnLabel_30:
         ADDS     R6,R5,#+4
-//  711     s2wCidList[cid].conType = TCP;
+//  712     s2wCidList[cid].conType = TCP;
         MOVS     R2,#+2
         STR      R8,[R6, #+24]
         STRB     R2,[R0, R1]
-//  712     s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT_TRANSIENT;
+//  713     s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT_TRANSIENT;
         MOVS     R0,#+7
         STRB     R0,[R5, #+1]
-//  713     s2wCidList[cid].remotePort = peerData->port;
-//  714     memcpy(s2wCidList[cid].remoteIp,(UINT8*)peerData->ipAddr,4);
+//  714     s2wCidList[cid].remotePort = peerData->port;
+//  715     memcpy(s2wCidList[cid].remoteIp,(UINT8*)peerData->ipAddr,4);
         MOVS     R2,#+4
         LDRH     R0,[R4, #+2]
         STRH     R0,[R5, #+4]
@@ -1949,52 +1948,42 @@ AppS2wHal_NetTcpClient:
         ADDS     R0,R5,#+6
           CFI FunCall memcpy
         BL       memcpy
-//  715 
-//  716     if (ret < 0 )
+//  716 
+//  717     if (ret < 0 )
         CMP      R9,#+0
         BPL.N    ??AppS2wHal_NetTcpClient_8
-//  717     {
-//  718         //S2w_Debug("connect failed: %d\r\n", tfGetSocketError(sd));
-//  719         S2w_Printf("\r\n error 6");
+//  718     {
+//  719         //S2w_Debug("connect failed: %d\r\n", tfGetSocketError(sd));
+//  720         S2w_Printf("\r\n error 6");
         ADR.W    R0,`?<Constant "\\r\\n error 6">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  720         AppS2wHal_NetClose(cid);
+//  721         AppS2wHal_NetClose(cid);
         MOV      R0,R7
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
-//  721         return S2W_FAILURE;
+//  722         return S2W_FAILURE;
 ??AppS2wHal_NetTcpClient_7:
         MOVS     R0,#+1
         B.N      ??AppS2wHal_NetTcpClient_1
-//  722     }
-//  723     *cidNo = cid;
+//  723     }
+//  724     *cidNo = cid;
 ??AppS2wHal_NetTcpClient_8:
         STRB     R7,[R10, #+0]
-//  724 	S2w_Printf("\r\n CID value in NetTcpClient func 2 : %d",cid);
-        MOV      R1,R7
-        ADR.W    R0,`?<Constant "\\r\\n CID value in NetTc...">_1`
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-//  725 	S2w_Printf("\r\n cidNo value in NetTcpClient func : %d", *cidNo);
-        LDRB     R1,[R10, #+0]
-        ADR.W    R0,`?<Constant "\\r\\n cidNo value in Net...">`
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-//  726 	s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT;
+//  725 	s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT;
         MOVS     R0,#+0
         STRB     R0,[R5, #+1]
-//  727     s2wCidList[cid].sslflag = FALSE;
+//  726     s2wCidList[cid].sslflag = FALSE;
         STRB     R0,[R5, #+44]
-//  728 	 s2wCidList[cid].serverCid = INVALID_CID;
-//  729     /* reconfigure connect timeout, since we are making it non blocking */
-//  730     connect_timeout =5;
-//  731     
-//  732     //fcntl(sd , F_SETFL, O_NONBLOCK);
-//  733     struct timeval TimeOut;
-//  734     TimeOut.tv_sec =  0;
-//  735     TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
-//  736     setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
+//  727 	 s2wCidList[cid].serverCid = INVALID_CID;
+//  728     /* reconfigure connect timeout, since we are making it non blocking */
+//  729     connect_timeout =5;
+//  730     
+//  731     //fcntl(sd , F_SETFL, O_NONBLOCK);
+//  732     struct timeval TimeOut;
+//  733     TimeOut.tv_sec =  0;
+//  734     TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
+//  735     setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
         ADD      R3,SP,#+8
         MOVS     R0,#+255
         STRB     R0,[R5, #+46]
@@ -2003,13 +1992,13 @@ AppS2wHal_NetTcpClient:
         LDR      R0,[R6, #+24]
           CFI FunCall setsockopt
         BL       setsockopt
-//  737     setsockopt(s2wCidList[cid].sd,IP_PROTOTCP,CONNECT_TIMEOUT_TM,(void*)&connect_timeout,4);
+//  736     setsockopt(s2wCidList[cid].sd,IP_PROTOTCP,CONNECT_TIMEOUT_TM,(void*)&connect_timeout,4);
         BL       ?Subroutine25
 ??CrossCallReturnLabel_61:
         LDR      R0,[R6, #+24]
         BL       ?Subroutine22
-//  738 
-//  739     return S2W_SUCCESS;
+//  737 
+//  738     return S2W_SUCCESS;
 ??CrossCallReturnLabel_51:
         MOVS     R0,#+0
 ??AppS2wHal_NetTcpClient_1:
@@ -2017,14 +2006,7 @@ AppS2wHal_NetTcpClient:
           CFI CFA R13+32
         POP      {R4-R10,PC}      ;; return
           CFI EndBlock cfiBlock13
-//  740 }
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n CID value in NetTc...">`:
-        DC8 "\015\012 CID value in NetTcpClient func 1 : %d"
-        DC8 0, 0, 0
+//  739 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -2032,20 +2014,6 @@ AppS2wHal_NetTcpClient:
 `?<Constant "\\r\\n error 1">`:
         DC8 "\015\012 error 1"
         DC8 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n CID value in NetTc...">_1`:
-        DC8 "\015\012 CID value in NetTcpClient func 2 : %d"
-        DC8 0, 0, 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n cidNo value in Net...">`:
-        DC8 "\015\012 cidNo value in NetTcpClient func : %d"
-        DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond14 Using cfiCommon0
@@ -2148,21 +2116,21 @@ AppS2wHal_NetTcpClient:
 ?Subroutine13:
         MOV      R0,#+296
         MULS     R0,R0,R7
-        LDR.W    R1,??DataTable62
+        LDR.W    R1,??DataTable58
         ADDS     R5,R0,R1
         BX       LR
           CFI EndBlock cfiCond19
           CFI EndBlock cfiCond20
           CFI EndBlock cfiPicker21
-//  741 
+//  740 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock22 Using cfiCommon0
           CFI Function AppS2wHal_NetTcpClient_test
         THUMB
-//  742 PUBLIC UINT8
-//  743 AppS2wHal_NetTcpClient_test(S2W_NETDATA_T *peerData, UINT8 *cidNo)
-//  744 {
+//  741 PUBLIC UINT8
+//  742 AppS2wHal_NetTcpClient_test(S2W_NETDATA_T *peerData, UINT8 *cidNo)
+//  743 {
 AppS2wHal_NetTcpClient_test:
         PUSH     {R4-R8,LR}
           CFI R14 Frame(CFA, -4)
@@ -2173,11 +2141,11 @@ AppS2wHal_NetTcpClient_test:
           CFI R4 Frame(CFA, -24)
           CFI CFA R13+24
         BL       ?Subroutine7
-//  745     struct sockaddr_in destAddr;
-//  746     UINT32 cid;
-//  747     INT32 sd;
-//  748     INT32 ret;
-//  749     ULONG connect_timeout =  (s2wCurrent.registers[S2W_REG_TCP_CONNECT_TIMEOUT]/100);
+//  744     struct sockaddr_in destAddr;
+//  745     UINT32 cid;
+//  746     INT32 sd;
+//  747     INT32 ret;
+//  748     ULONG connect_timeout =  (s2wCurrent.registers[S2W_REG_TCP_CONNECT_TIMEOUT]/100);
 ??CrossCallReturnLabel_12:
         MOV      R5,R1
         SUB      SP,SP,#+40
@@ -2185,19 +2153,19 @@ AppS2wHal_NetTcpClient_test:
         MOVS     R1,#+100
         SDIV     R0,R0,R1
         STR      R0,[SP, #+4]
-//  750     ULONG rexTimeOut=75,retransRate=1;
-//  751 
-//  752     /* get  a valid cid */
-//  753     //cid = AppS2wHal_CidGet();
-//  754 	cid = 0;
-//  755     if (cid == INVALID_CID)
-//  756     {
-//  757 	    S2w_Printf("\r\n error 1");
-//  758         return S2W_ENCID;
-//  759     }
-//  760 
-//  761     /* open a tcp client socket */
-//  762     if ((sd = socket(AF_INET, SOCK_STREAM, 0)) == -1)
+//  749     ULONG rexTimeOut=75,retransRate=1;
+//  750 
+//  751     /* get  a valid cid */
+//  752     //cid = AppS2wHal_CidGet();
+//  753 	cid = 0;
+//  754     if (cid == INVALID_CID)
+//  755     {
+//  756 	    S2w_Printf("\r\n error 1");
+//  757         return S2W_ENCID;
+//  758     }
+//  759 
+//  760     /* open a tcp client socket */
+//  761     if ((sd = socket(AF_INET, SOCK_STREAM, 0)) == -1)
         MOVS     R2,#+0
         MOVS     R0,#+75
         STR      R0,[SP, #+20]
@@ -2209,21 +2177,21 @@ AppS2wHal_NetTcpClient_test:
         MOV      R6,R0
         CMN      R6,#+1
         BNE.N    ??AppS2wHal_NetTcpClient_test_0
-//  763     {
-//  764 	    S2w_Printf("\r\n error 2");
+//  762     {
+//  763 	    S2w_Printf("\r\n error 2");
         ADR.W    R0,`?<Constant "\\r\\n error 2">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  765         return S2W_SOCKFAILURE;
+//  764         return S2W_SOCKFAILURE;
         MOVS     R0,#+3
         B.N      ??AppS2wHal_NetTcpClient_test_1
-//  766     }
-//  767 
-//  768     /** Make the socket non blocking. */
-//  769     //tfBlockingState(sd, TM_BLOCKING_OFF);
-//  770 
-//  771     ret = setsockopt(sd,IP_PROTOTCP,TCP_REX_TIMER_RATE,(void*)&retransRate,4);
-//  772     if (ret < 0 )
+//  765     }
+//  766 
+//  767     /** Make the socket non blocking. */
+//  768     //tfBlockingState(sd, TM_BLOCKING_OFF);
+//  769 
+//  770     ret = setsockopt(sd,IP_PROTOTCP,TCP_REX_TIMER_RATE,(void*)&retransRate,4);
+//  771     if (ret < 0 )
 ??AppS2wHal_NetTcpClient_test_0:
         MOVS     R0,#+4
         STR      R0,[SP, #+0]
@@ -2233,15 +2201,15 @@ AppS2wHal_NetTcpClient_test:
 ??CrossCallReturnLabel_55:
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_NetTcpClient_test_2
-//  773     {
-//  774 	    S2w_Printf("\r\n error 3");
+//  772     {
+//  773 	    S2w_Printf("\r\n error 3");
         ADR.W    R0,`?<Constant "\\r\\n error 3">`
         B.N      ??AppS2wHal_NetTcpClient_test_3
-//  775     	soc_close(sd);
-//  776         return S2W_FAILURE;
-//  777     }
-//  778     ret = setsockopt(sd,IP_PROTOTCP,TCP_MAXRT,(void*)&rexTimeOut,4);
-//  779     if (ret < 0 )
+//  774     	soc_close(sd);
+//  775         return S2W_FAILURE;
+//  776     }
+//  777     ret = setsockopt(sd,IP_PROTOTCP,TCP_MAXRT,(void*)&rexTimeOut,4);
+//  778     if (ret < 0 )
 ??AppS2wHal_NetTcpClient_test_2:
         MOVS     R0,#+4
         STR      R0,[SP, #+0]
@@ -2251,16 +2219,16 @@ AppS2wHal_NetTcpClient_test:
 ??CrossCallReturnLabel_54:
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_NetTcpClient_test_4
-//  780     {
-//  781 	    S2w_Printf("\r\n error 4");
+//  779     {
+//  780 	    S2w_Printf("\r\n error 4");
         ADR.W    R0,`?<Constant "\\r\\n error 4">`
         B.N      ??AppS2wHal_NetTcpClient_test_3
-//  782     	soc_close(sd);
-//  783         return S2W_FAILURE;
-//  784     }
-//  785 
-//  786     ret = setsockopt(sd,IP_PROTOTCP,CONNECT_TIMEOUT_TM,(void*)&connect_timeout,4);
-//  787     if (ret < 0 )
+//  781     	soc_close(sd);
+//  782         return S2W_FAILURE;
+//  783     }
+//  784 
+//  785     ret = setsockopt(sd,IP_PROTOTCP,CONNECT_TIMEOUT_TM,(void*)&connect_timeout,4);
+//  786     if (ret < 0 )
 ??AppS2wHal_NetTcpClient_test_4:
         BL       ?Subroutine25
 ??CrossCallReturnLabel_62:
@@ -2269,57 +2237,57 @@ AppS2wHal_NetTcpClient_test:
 ??CrossCallReturnLabel_53:
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_NetTcpClient_test_5
-//  788     {
-//  789 	    S2w_Printf("\r\n error 5");
+//  787     {
+//  788 	    S2w_Printf("\r\n error 5");
         ADR.W    R0,`?<Constant "\\r\\n error 5">`
 ??AppS2wHal_NetTcpClient_test_3:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  790     	soc_close(sd);
+//  789     	soc_close(sd);
         MOV      R0,R6
           CFI FunCall soc_close
         BL       soc_close
-//  791         return S2W_FAILURE;
+//  790         return S2W_FAILURE;
         B.N      ??AppS2wHal_NetTcpClient_test_6
-//  792     }
-//  793 
-//  794     /** Connect the socket to the server. */
-//  795     destAddr.sin_family = AF_INET;
+//  791     }
+//  792 
+//  793     /** Connect the socket to the server. */
+//  794     destAddr.sin_family = AF_INET;
 ??AppS2wHal_NetTcpClient_test_5:
         BL       ?Subroutine3
-//  796     destAddr.sin_port = htons(peerData->port);
-//  797     memcpy(&(destAddr.sin_addr.s_addr),&peerData->ipAddr,sizeof(destAddr.sin_addr.s_addr));
+//  795     destAddr.sin_port = htons(peerData->port);
+//  796     memcpy(&(destAddr.sin_addr.s_addr),&peerData->ipAddr,sizeof(destAddr.sin_addr.s_addr));
+//  797 
 //  798 
-//  799 
-//  800     /* register the callback for any socket events */
-//  801     nx_bsd_callback_register(sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
+//  799     /* register the callback for any socket events */
+//  800     nx_bsd_callback_register(sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
 ??CrossCallReturnLabel_0:
         MOVS     R2,#+61
-        LDR.W    R1,??DataTable62_2
+        LDR.W    R1,??DataTable58_2
         MOV      R0,R6
           CFI FunCall nx_bsd_callback_register
         BL       nx_bsd_callback_register
-//  802 
-//  803     ret = connect(sd, (struct sockaddr *)&destAddr, sizeof(destAddr));
+//  801 
+//  802     ret = connect(sd, (struct sockaddr *)&destAddr, sizeof(destAddr));
         MOVS     R2,#+16
         ADD      R1,SP,#+24
         MOV      R0,R6
           CFI FunCall connect
         BL       connect
         MOV      R8,R0
-//  804      /*
-//  805      * Update the connection identifier list with connection information
-//  806      * except the type.
-//  807      */
-//  808     s2wCidList[cid].sd = sd;
-        LDR.W    R7,??DataTable62
+//  803      /*
+//  804      * Update the connection identifier list with connection information
+//  805      * except the type.
+//  806      */
+//  807     s2wCidList[cid].sd = sd;
+        LDR.W    R7,??DataTable58
         STR      R6,[R7, #+28]
-//  809     s2wCidList[cid].conType = TCP;
+//  808     s2wCidList[cid].conType = TCP;
         MOVS     R0,#+2
         STRB     R0,[R7, #+0]
-//  810     s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT_TRANSIENT;
-//  811     s2wCidList[cid].remotePort = peerData->port;
-//  812     memcpy(s2wCidList[cid].remoteIp,(UINT8*)peerData->ipAddr,4);
+//  809     s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT_TRANSIENT;
+//  810     s2wCidList[cid].remotePort = peerData->port;
+//  811     memcpy(s2wCidList[cid].remoteIp,(UINT8*)peerData->ipAddr,4);
         MOVS     R2,#+4
         MOVS     R0,#+7
         STRB     R0,[R7, #+1]
@@ -2329,42 +2297,42 @@ AppS2wHal_NetTcpClient_test:
         ADDS     R0,R7,#+6
           CFI FunCall memcpy
         BL       memcpy
-//  813 
-//  814     if (ret < 0 )
+//  812 
+//  813     if (ret < 0 )
         CMP      R8,#+0
         BPL.N    ??AppS2wHal_NetTcpClient_test_7
-//  815     {
-//  816         //S2w_Debug("connect failed: %d\r\n", tfGetSocketError(sd));
-//  817         S2w_Printf("\r\n error 6");
+//  814     {
+//  815         //S2w_Debug("connect failed: %d\r\n", tfGetSocketError(sd));
+//  816         S2w_Printf("\r\n error 6");
         ADR.W    R0,`?<Constant "\\r\\n error 6">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  818         AppS2wHal_NetClose(cid);
+//  817         AppS2wHal_NetClose(cid);
         MOVS     R0,#+0
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
-//  819         return S2W_FAILURE;
+//  818         return S2W_FAILURE;
 ??AppS2wHal_NetTcpClient_test_6:
         MOVS     R0,#+1
         B.N      ??AppS2wHal_NetTcpClient_test_1
-//  820     }
-//  821     *cidNo = cid;
+//  819     }
+//  820     *cidNo = cid;
 ??AppS2wHal_NetTcpClient_test_7:
         MOVS     R0,#+0
         STRB     R0,[R5, #+0]
-//  822 	s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT;
+//  821 	s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT;
         STRB     R0,[R7, #+1]
-//  823     s2wCidList[cid].sslflag = FALSE;
+//  822     s2wCidList[cid].sslflag = FALSE;
         STRB     R0,[R7, #+44]
-//  824 	 s2wCidList[cid].serverCid = INVALID_CID;
-//  825     /* reconfigure connect timeout, since we are making it non blocking */
-//  826     connect_timeout =5;
-//  827     
-//  828     //fcntl(sd , F_SETFL, O_NONBLOCK);
-//  829     struct timeval TimeOut;
-//  830     TimeOut.tv_sec =  0;
-//  831     TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
-//  832     setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
+//  823 	 s2wCidList[cid].serverCid = INVALID_CID;
+//  824     /* reconfigure connect timeout, since we are making it non blocking */
+//  825     connect_timeout =5;
+//  826     
+//  827     //fcntl(sd , F_SETFL, O_NONBLOCK);
+//  828     struct timeval TimeOut;
+//  829     TimeOut.tv_sec =  0;
+//  830     TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
+//  831     setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
         ADD      R3,SP,#+8
         MOVS     R0,#+255
         STRB     R0,[R7, #+46]
@@ -2373,13 +2341,13 @@ AppS2wHal_NetTcpClient_test:
         LDR      R0,[R7, #+28]
           CFI FunCall setsockopt
         BL       setsockopt
-//  833     setsockopt(s2wCidList[cid].sd,IP_PROTOTCP,CONNECT_TIMEOUT_TM,(void*)&connect_timeout,4);
+//  832     setsockopt(s2wCidList[cid].sd,IP_PROTOTCP,CONNECT_TIMEOUT_TM,(void*)&connect_timeout,4);
         BL       ?Subroutine25
 ??CrossCallReturnLabel_63:
         LDR      R0,[R7, #+28]
         BL       ?Subroutine22
-//  834 
-//  835     return S2W_SUCCESS;
+//  833 
+//  834     return S2W_SUCCESS;
 ??CrossCallReturnLabel_50:
         MOVS     R0,#+0
 ??AppS2wHal_NetTcpClient_test_1:
@@ -2387,7 +2355,7 @@ AppS2wHal_NetTcpClient_test:
           CFI CFA R13+24
         POP      {R4-R8,PC}       ;; return
           CFI EndBlock cfiBlock22
-//  836 }
+//  835 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -2442,9 +2410,9 @@ AppS2wHal_NetTcpClient_test:
           CFI CFA R13+72
           CFI Block cfiCond24 Using cfiCommon0
           CFI (cfiCond24) Function AppS2wHal_NetTcpClient
-          CFI (cfiCond24) NoCalls AppS2wHal_NetTcpServer
           CFI (cfiCond24) NoCalls AppS2wHal_NetTcpClient
           CFI (cfiCond24) NoCalls AppS2wHal_NetTcpClient_test
+          CFI (cfiCond24) NoCalls AppS2wHal_NetTcpServer
           CFI (cfiCond24) Conditional ??CrossCallReturnLabel_61
           CFI (cfiCond24) R4 Frame(CFA, -32)
           CFI (cfiCond24) R5 Frame(CFA, -28)
@@ -2457,9 +2425,9 @@ AppS2wHal_NetTcpClient_test:
           CFI (cfiCond24) CFA R13+72
           CFI Block cfiCond25 Using cfiCommon0
           CFI (cfiCond25) Function AppS2wHal_NetTcpClient_test
-          CFI (cfiCond25) NoCalls AppS2wHal_NetTcpServer
           CFI (cfiCond25) NoCalls AppS2wHal_NetTcpClient
           CFI (cfiCond25) NoCalls AppS2wHal_NetTcpClient_test
+          CFI (cfiCond25) NoCalls AppS2wHal_NetTcpServer
           CFI (cfiCond25) Conditional ??CrossCallReturnLabel_62
           CFI (cfiCond25) R4 Frame(CFA, -24)
           CFI (cfiCond25) R5 Frame(CFA, -20)
@@ -2470,9 +2438,9 @@ AppS2wHal_NetTcpClient_test:
           CFI (cfiCond25) CFA R13+64
           CFI Block cfiCond26 Using cfiCommon0
           CFI (cfiCond26) Function AppS2wHal_NetTcpClient_test
-          CFI (cfiCond26) NoCalls AppS2wHal_NetTcpServer
           CFI (cfiCond26) NoCalls AppS2wHal_NetTcpClient
           CFI (cfiCond26) NoCalls AppS2wHal_NetTcpClient_test
+          CFI (cfiCond26) NoCalls AppS2wHal_NetTcpServer
           CFI (cfiCond26) Conditional ??CrossCallReturnLabel_63
           CFI (cfiCond26) R4 Frame(CFA, -24)
           CFI (cfiCond26) R5 Frame(CFA, -20)
@@ -2483,9 +2451,9 @@ AppS2wHal_NetTcpClient_test:
           CFI (cfiCond26) CFA R13+64
           CFI Block cfiCond27 Using cfiCommon0
           CFI (cfiCond27) Function AppS2wHal_NetTcpServer
-          CFI (cfiCond27) NoCalls AppS2wHal_NetTcpServer
           CFI (cfiCond27) NoCalls AppS2wHal_NetTcpClient
           CFI (cfiCond27) NoCalls AppS2wHal_NetTcpClient_test
+          CFI (cfiCond27) NoCalls AppS2wHal_NetTcpServer
           CFI (cfiCond27) Conditional ??CrossCallReturnLabel_64
           CFI (cfiCond27) R4 Frame(CFA, -24)
           CFI (cfiCond27) R5 Frame(CFA, -20)
@@ -2496,9 +2464,9 @@ AppS2wHal_NetTcpClient_test:
           CFI (cfiCond27) CFA R13+48
           CFI Block cfiPicker28 Using cfiCommon1
           CFI (cfiPicker28) NoFunction
-          CFI (cfiPicker28) NoCalls AppS2wHal_NetTcpServer
           CFI (cfiPicker28) NoCalls AppS2wHal_NetTcpClient
           CFI (cfiPicker28) NoCalls AppS2wHal_NetTcpClient_test
+          CFI (cfiPicker28) NoCalls AppS2wHal_NetTcpServer
           CFI (cfiPicker28) Picker
         THUMB
 ?Subroutine25:
@@ -2600,7 +2568,7 @@ AppS2wHal_NetTcpClient_test:
         MOVS     R1,#+1
         MOVS     R0,#+0
         STR      R0,[SP, #+8]
-        LDR.W    R0,??DataTable62_1  ;; 0x186a0
+        LDR.W    R0,??DataTable58_1  ;; 0x186a0
         STR      R0,[SP, #+12]
         MOVS     R0,#+8
         STR      R0,[SP, #+0]
@@ -2644,7 +2612,7 @@ AppS2wHal_NetTcpClient_test:
         THUMB
 ?Subroutine7:
         MOV      R4,R0
-        LDR.W    R0,??DataTable69
+        LDR.W    R0,??DataTable65
         LDRH     R0,[R0, #+456]
         BX       LR
           CFI EndBlock cfiCond36
@@ -2694,32 +2662,32 @@ AppS2wHal_NetTcpClient_test:
           CFI EndBlock cfiCond39
           CFI EndBlock cfiCond40
           CFI EndBlock cfiPicker41
+//  836 
 //  837 
 //  838 
 //  839 
-//  840 
-//  841 /**
-//  842  ******************************************************************
-//  843  * @ingroup S2w-Application
-//  844  * @brief S2w udp server open function.
-//  845  *    This function opens a new udp server socket and store the socket info
-//  846  *    into the corresponding Cid list and registers any receive events on this
-//  847  *    socket with network stack.
-//  848  * @param serverData - IN the address of the data structure contain the udp
-//  849  *                     server info.
-//  850  *.@param cidNo      - IN the address to which the cid number to be stored.
-//  851  * @retval S2W_SUCCESS     - operation successfull.
-//  852  * @retval S2W_SOCKFAILURE - operation failed
-//  853  * @retval S2W_ENCID       - operation failed- no valid cid
-//  854  ******************************************************************/
+//  840 /**
+//  841  ******************************************************************
+//  842  * @ingroup S2w-Application
+//  843  * @brief S2w udp server open function.
+//  844  *    This function opens a new udp server socket and store the socket info
+//  845  *    into the corresponding Cid list and registers any receive events on this
+//  846  *    socket with network stack.
+//  847  * @param serverData - IN the address of the data structure contain the udp
+//  848  *                     server info.
+//  849  *.@param cidNo      - IN the address to which the cid number to be stored.
+//  850  * @retval S2W_SUCCESS     - operation successfull.
+//  851  * @retval S2W_SOCKFAILURE - operation failed
+//  852  * @retval S2W_ENCID       - operation failed- no valid cid
+//  853  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock42 Using cfiCommon0
           CFI Function AppS2wHal_NetUdpServer
         THUMB
-//  855 PUBLIC UINT8
-//  856 AppS2wHal_NetUdpServer(S2W_NETDATA_T *serverData, UINT8 *cidNo)
-//  857 {
+//  854 PUBLIC UINT8
+//  855 AppS2wHal_NetUdpServer(S2W_NETDATA_T *serverData, UINT8 *cidNo)
+//  856 {
 AppS2wHal_NetUdpServer:
         PUSH     {R4-R8,LR}
           CFI R14 Frame(CFA, -4)
@@ -2733,50 +2701,50 @@ AppS2wHal_NetUdpServer:
           CFI CFA R13+56
         MOV      R6,R0
         MOV      R4,R1
-//  858     UINT8 cid;
-//  859     INT32 sd, ret;
-//  860     struct sockaddr_in srcAddr;
-//  861 
-//  862     cid = AppS2wHal_CidGet();
+//  857     UINT8 cid;
+//  858     INT32 sd, ret;
+//  859     struct sockaddr_in srcAddr;
+//  860 
+//  861     cid = AppS2wHal_CidGet();
           CFI FunCall AppS2wHal_CidGet
         BL       AppS2wHal_CidGet
         MOV      R5,R0
-//  863     if (cid == INVALID_CID)
+//  862     if (cid == INVALID_CID)
         CMP      R5,#+255
         IT       EQ 
         MOVEQ    R0,#+4
-//  864     {
-//  865         return S2W_ENCID;
+//  863     {
+//  864         return S2W_ENCID;
         BEQ.N    ??AppS2wHal_NetUdpServer_0
-//  866     }
-//  867 
-//  868     /* check the node has a valid ip
-//  869      */
-//  870      //if(nwConfigSuccess != TRUE)
-//  871      {
-//  872          //return S2W_SOCKFAILURE;
-//  873      }
-//  874     /* open the udp server socket
-//  875      */
-//  876     if ((sd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
+//  865     }
+//  866 
+//  867     /* check the node has a valid ip
+//  868      */
+//  869      //if(nwConfigSuccess != TRUE)
+//  870      {
+//  871          //return S2W_SOCKFAILURE;
+//  872      }
+//  873     /* open the udp server socket
+//  874      */
+//  875     if ((sd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
         BL       ?Subroutine5
 ??CrossCallReturnLabel_7:
         MOV      R8,R0
         CMN      R8,#+1
         BEQ.N    ??AppS2wHal_NetUdpServer_1
-//  877     {
-//  878         return S2W_SOCKFAILURE;
-//  879     }
-//  880     srcAddr.sin_family = AF_INET;
+//  876     {
+//  877         return S2W_SOCKFAILURE;
+//  878     }
+//  879     srcAddr.sin_family = AF_INET;
         MOVS     R0,#+2
         STRH     R0,[SP, #+12]
-//  881     srcAddr.sin_port = htons(serverData->port);
-//  882     srcAddr.sin_addr.s_addr = 0;//htonl(INADDR_ANY);
-//  883 
-//  884     /* bind the socket with source addess
-//  885      */
-//  886     if (bind(sd, (struct sockaddr *)&srcAddr,
-//  887           sizeof(srcAddr)) == -1)
+//  880     srcAddr.sin_port = htons(serverData->port);
+//  881     srcAddr.sin_addr.s_addr = 0;//htonl(INADDR_ANY);
+//  882 
+//  883     /* bind the socket with source addess
+//  884      */
+//  885     if (bind(sd, (struct sockaddr *)&srcAddr,
+//  886           sizeof(srcAddr)) == -1)
         MOVS     R2,#+16
         LDRH     R0,[R6, #+2]
         BL       ?Subroutine17
@@ -2788,31 +2756,31 @@ AppS2wHal_NetUdpServer:
 ??CrossCallReturnLabel_18:
         CMN      R0,#+1
         BNE.N    ??AppS2wHal_NetUdpServer_2
-//  888     {
-//  889         soc_close(sd);
+//  887     {
+//  888         soc_close(sd);
         BL       ?Subroutine11
-//  890         return S2W_SOCKFAILURE;
+//  889         return S2W_SOCKFAILURE;
 ??CrossCallReturnLabel_22:
         B.N      ??AppS2wHal_NetUdpServer_1
-//  891     }
-//  892 
-//  893     /* fill the cid list the socket parameters
-//  894      */
-//  895     s2wCidList[cid].sd = sd;
+//  890     }
+//  891 
+//  892     /* fill the cid list the socket parameters
+//  893      */
+//  894     s2wCidList[cid].sd = sd;
 ??AppS2wHal_NetUdpServer_2:
         MOV      R0,#+296
         MULS     R0,R0,R5
-        LDR.W    R1,??DataTable62
+        LDR.W    R1,??DataTable58
         ADDS     R7,R0,R1
-//  896     s2wCidList[cid].conType = UDP;
+//  895     s2wCidList[cid].conType = UDP;
         MOVS     R2,#+1
         STR      R8,[R7, #+28]
         STRB     R2,[R0, R1]
-//  897     s2wCidList[cid].conMode = S2W_NETDATA_MODE_SERVER;
+//  896     s2wCidList[cid].conMode = S2W_NETDATA_MODE_SERVER;
         STRB     R2,[R7, #+1]
-//  898     s2wCidList[cid].localPort = serverData->port;
-//  899     s2wCidList[cid].remotePort = 0;
-//  900     memset(s2wCidList[cid].remoteIp,0,4);
+//  897     s2wCidList[cid].localPort = serverData->port;
+//  898     s2wCidList[cid].remotePort = 0;
+//  899     memset(s2wCidList[cid].remoteIp,0,4);
         MOVS     R2,#+4
         LDRH     R0,[R6, #+2]
         STRH     R0,[R7, #+2]
@@ -2822,22 +2790,22 @@ AppS2wHal_NetUdpServer:
         ADDS     R0,R7,#+6
           CFI FunCall memset
         BL       memset
+//  900     
 //  901     
-//  902     
-//  903      
-//  904     // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
-//  905      
-//  906          //    fcntl(s2wCidList[cid].sd , F_SETFL, O_NONBLOCK);
-//  907     struct timeval TimeOut;
-//  908         TimeOut.tv_sec =  0;
+//  902      
+//  903     // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
+//  904      
+//  905          //    fcntl(s2wCidList[cid].sd , F_SETFL, O_NONBLOCK);
+//  906     struct timeval TimeOut;
+//  907         TimeOut.tv_sec =  0;
         MOVS     R0,#+0
         STR      R0,[SP, #+4]
-//  909         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
-//  910        // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&TimeOut,8);
-//  911         ret = setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
-//  912         if(ret < 0)
+//  908         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;
+//  909        // setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&TimeOut,8);
+//  910         ret = setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
+//  911         if(ret < 0)
         ADD      R3,SP,#+4
-        LDR.W    R0,??DataTable62_1  ;; 0x186a0
+        LDR.W    R0,??DataTable58_1  ;; 0x186a0
         STR      R0,[SP, #+8]
         MOVS     R2,#+20
         MOVS     R0,#+8
@@ -2848,35 +2816,35 @@ AppS2wHal_NetUdpServer:
         BL       setsockopt
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_NetUdpServer_3
-//  913         {
-//  914             AppS2wHal_NetClose(cid);
+//  912         {
+//  913             AppS2wHal_NetClose(cid);
         MOV      R0,R5
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
-//  915             return S2W_SOCKFAILURE;
+//  914             return S2W_SOCKFAILURE;
 ??AppS2wHal_NetUdpServer_1:
         MOVS     R0,#+3
         B.N      ??AppS2wHal_NetUdpServer_0
-//  916         }
-//  917 
-//  918   
-//  919       /* register the callback for any socket events
-//  920      */
-//  921     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
+//  915         }
+//  916 
+//  917   
+//  918       /* register the callback for any socket events
+//  919      */
+//  920     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
 ??AppS2wHal_NetUdpServer_3:
         BL       ?Subroutine20
-//  922 
-//  923     *cidNo = cid;
+//  921 
+//  922     *cidNo = cid;
 ??CrossCallReturnLabel_46:
         STRB     R5,[R4, #+0]
-//  924     return S2W_SUCCESS;
+//  923     return S2W_SUCCESS;
         MOVS     R0,#+0
 ??AppS2wHal_NetUdpServer_0:
         ADD      SP,SP,#+32
           CFI CFA R13+24
         POP      {R4-R8,PC}       ;; return
           CFI EndBlock cfiBlock42
-//  925 }
+//  924 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond43 Using cfiCommon0
@@ -2919,7 +2887,7 @@ AppS2wHal_NetUdpServer:
           CFI (cfiCond46) R14 Frame(CFA, -4)
           CFI (cfiCond46) CFA R13+80
 ??Subroutine20_0:
-        LDR.W    R1,??DataTable64
+        LDR.W    R1,??DataTable63
         MOVS     R2,#+61
           CFI FunCall AppS2wHal_NetUdpServer nx_bsd_callback_register
           CFI FunCall AppS2wHal_NetTcpServer nx_bsd_callback_register
@@ -3050,30 +3018,30 @@ AppS2wHal_NetUdpServer:
           CFI EndBlock cfiCond54
           CFI EndBlock cfiCond55
           CFI EndBlock cfiPicker56
+//  925 
 //  926 
-//  927 
-//  928 /**
-//  929  ******************************************************************
-//  930  * @ingroup S2w-Application
-//  931  * @brief S2w tcp server open function.
-//  932  *    This function opens a new tcp server socket and store the socket info
-//  933  *    into the corresponding Cid list and registers any receive events on this
-//  934  *    socket with network stack.
-//  935  * @param serverData - IN the address of the data structure contain the tcp
-//  936  *                     server info.
-//  937  *.@param cidNo      - IN the address to which the cid number to be stored.
-//  938  * @retval S2W_SUCCESS     - operation successfull.
-//  939  * @retval S2W_SOCKFAILURE - operation failed
-//  940  * @retval S2W_ENCID       - operation failed- no valid cid
-//  941  ******************************************************************/
+//  927 /**
+//  928  ******************************************************************
+//  929  * @ingroup S2w-Application
+//  930  * @brief S2w tcp server open function.
+//  931  *    This function opens a new tcp server socket and store the socket info
+//  932  *    into the corresponding Cid list and registers any receive events on this
+//  933  *    socket with network stack.
+//  934  * @param serverData - IN the address of the data structure contain the tcp
+//  935  *                     server info.
+//  936  *.@param cidNo      - IN the address to which the cid number to be stored.
+//  937  * @retval S2W_SUCCESS     - operation successfull.
+//  938  * @retval S2W_SOCKFAILURE - operation failed
+//  939  * @retval S2W_ENCID       - operation failed- no valid cid
+//  940  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock57 Using cfiCommon0
           CFI Function AppS2wHal_NetTcpServer
         THUMB
-//  942 PUBLIC UINT8
-//  943 AppS2wHal_NetTcpServer(S2W_NETDATA_T *serverData, UINT8 *cidNo)
-//  944 {
+//  941 PUBLIC UINT8
+//  942 AppS2wHal_NetTcpServer(S2W_NETDATA_T *serverData, UINT8 *cidNo)
+//  943 {
 AppS2wHal_NetTcpServer:
         PUSH     {R4-R8,LR}
           CFI R14 Frame(CFA, -4)
@@ -3086,29 +3054,29 @@ AppS2wHal_NetTcpServer:
         SUB      SP,SP,#+24
           CFI CFA R13+48
         MOV      R4,R0
-//  945     INT32 sd, ret;
-//  946     struct sockaddr_in srcAddr;
-//  947     UINT8 cid;
-//  948     ULONG rexTimeOut=25;
+//  944     INT32 sd, ret;
+//  945     struct sockaddr_in srcAddr;
+//  946     UINT8 cid;
+//  947     ULONG rexTimeOut=25;
         MOVS     R0,#+25
         MOV      R5,R1
         STR      R0,[SP, #+4]
-//  949 
-//  950     cid = AppS2wHal_CidGet();
+//  948 
+//  949     cid = AppS2wHal_CidGet();
           CFI FunCall AppS2wHal_CidGet
         BL       AppS2wHal_CidGet
         MOV      R6,R0
-//  951     if (cid == INVALID_CID)
+//  950     if (cid == INVALID_CID)
         CMP      R6,#+255
         IT       EQ 
         MOVEQ    R0,#+4
-//  952     {
-//  953         return S2W_ENCID;
+//  951     {
+//  952         return S2W_ENCID;
         BEQ.N    ??AppS2wHal_NetTcpServer_0
-//  954     }
-//  955 
-//  956     /* open the tcp server socket */
-//  957     if ((sd = socket(AF_INET, SOCK_STREAM, 0)) == -1)
+//  953     }
+//  954 
+//  955     /* open the tcp server socket */
+//  956     if ((sd = socket(AF_INET, SOCK_STREAM, 0)) == -1)
         MOVS     R2,#+0
         MOVS     R1,#+1
         BL       ??Subroutine5_0
@@ -3116,18 +3084,18 @@ AppS2wHal_NetTcpServer:
         MOV      R8,R0
         CMN      R8,#+1
         BEQ.N    ??AppS2wHal_NetTcpServer_1
-//  958     {
-//  959         return S2W_SOCKFAILURE;
-//  960     }
-//  961 
-//  962     srcAddr.sin_family = AF_INET;
+//  957     {
+//  958         return S2W_SOCKFAILURE;
+//  959     }
+//  960 
+//  961     srcAddr.sin_family = AF_INET;
         MOVS     R0,#+2
         STRH     R0,[SP, #+8]
-//  963     srcAddr.sin_port = htons(serverData->port);
-//  964     srcAddr.sin_addr.s_addr = htonl(0);
-//  965 
-//  966     /*  bind the source port  */
-//  967     if (bind(sd, (struct sockaddr *)&srcAddr, sizeof(srcAddr)) == -1)
+//  962     srcAddr.sin_port = htons(serverData->port);
+//  963     srcAddr.sin_addr.s_addr = htonl(0);
+//  964 
+//  965     /*  bind the source port  */
+//  966     if (bind(sd, (struct sockaddr *)&srcAddr, sizeof(srcAddr)) == -1)
         MOVS     R2,#+16
         LDRH     R0,[R4, #+2]
         LSLS     R1,R0,#+8
@@ -3140,44 +3108,44 @@ AppS2wHal_NetTcpServer:
 ??CrossCallReturnLabel_17:
         CMN      R0,#+1
         BEQ.N    ??AppS2wHal_NetTcpServer_2
-//  968     {
-//  969         soc_close(sd);
-//  970         return S2W_SOCKFAILURE;
-//  971     }
-//  972     if (listen(sd, 5) < 0)
+//  967     {
+//  968         soc_close(sd);
+//  969         return S2W_SOCKFAILURE;
+//  970     }
+//  971     if (listen(sd, 5) < 0)
         MOVS     R1,#+5
         MOV      R0,R8
           CFI FunCall listen
         BL       listen
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_NetTcpServer_3
-//  973     {
-//  974         soc_close(sd);
+//  972     {
+//  973         soc_close(sd);
 ??AppS2wHal_NetTcpServer_2:
         BL       ?Subroutine11
-//  975         return S2W_SOCKFAILURE;
+//  974         return S2W_SOCKFAILURE;
 ??CrossCallReturnLabel_21:
         B.N      ??AppS2wHal_NetTcpServer_1
-//  976     }
-//  977 
-//  978     /* fill the cid list */
-//  979     s2wCidList[cid].sd = sd;
+//  975     }
+//  976 
+//  977     /* fill the cid list */
+//  978     s2wCidList[cid].sd = sd;
 ??AppS2wHal_NetTcpServer_3:
         MOV      R0,#+296
         MULS     R0,R0,R6
-        LDR.W    R1,??DataTable62
+        LDR.W    R1,??DataTable58
         ADDS     R7,R0,R1
-//  980     s2wCidList[cid].conType = TCP;
+//  979     s2wCidList[cid].conType = TCP;
         MOVS     R2,#+2
         STR      R8,[R7, #+28]
         STRB     R2,[R0, R1]
-//  981     s2wCidList[cid].conMode = S2W_NETDATA_MODE_SERVER;
+//  980     s2wCidList[cid].conMode = S2W_NETDATA_MODE_SERVER;
         MOVS     R0,#+1
         STRB     R0,[R7, #+1]
-//  982     s2wCidList[cid].localPort = serverData->port;
-//  983     s2wCidList[cid].remotePort = 0;
-//  984     s2wCidList[cid].maxConn = 15;
-//  985     memset(s2wCidList[cid].remoteIp,0,4);
+//  981     s2wCidList[cid].localPort = serverData->port;
+//  982     s2wCidList[cid].remotePort = 0;
+//  983     s2wCidList[cid].maxConn = 15;
+//  984     memset(s2wCidList[cid].remoteIp,0,4);
         MOVS     R2,#+4
         LDRH     R0,[R4, #+2]
         STRH     R0,[R7, #+2]
@@ -3189,48 +3157,48 @@ AppS2wHal_NetTcpServer:
         ADDS     R0,R7,#+6
           CFI FunCall memset
         BL       memset
-//  986     //sockOption = -1;
-//  987     //setsockopt(sd, 0, TCP_MAXRT, (const char*)&sockOption,
-//  988     //           sizeof(sockOption));
-//  989     ret = setsockopt(sd,IP_PROTOTCP,TCP_MAXRT,(void*)&rexTimeOut,4);
-//  990     if(ret < 0)
+//  985     //sockOption = -1;
+//  986     //setsockopt(sd, 0, TCP_MAXRT, (const char*)&sockOption,
+//  987     //           sizeof(sockOption));
+//  988     ret = setsockopt(sd,IP_PROTOTCP,TCP_MAXRT,(void*)&rexTimeOut,4);
+//  989     if(ret < 0)
         BL       ?Subroutine25
 ??CrossCallReturnLabel_64:
         BL       ?Subroutine12
 ??CrossCallReturnLabel_27:
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_NetTcpServer_4
-//  991     {
-//  992         AppS2wHal_NetClose(cid);
+//  990     {
+//  991         AppS2wHal_NetClose(cid);
         MOV      R0,R6
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
-//  993         return S2W_SOCKFAILURE;
+//  992         return S2W_SOCKFAILURE;
 ??AppS2wHal_NetTcpServer_1:
         MOVS     R0,#+3
         B.N      ??AppS2wHal_NetTcpServer_0
-//  994     }
-//  995     //sockOption1 = 2000;
-//  996     //setsockopt(sd, SOL_SOCKET, SO_RCVBUF,(const char*)&sockOption1,
-//  997      //          sizeof(sockOption1));
+//  993     }
+//  994     //sockOption1 = 2000;
+//  995     //setsockopt(sd, SOL_SOCKET, SO_RCVBUF,(const char*)&sockOption1,
+//  996      //          sizeof(sockOption1));
+//  997     
 //  998     
-//  999     
-// 1000      
-// 1001      //setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
-// 1002     /* register the callback for any socket events */
-// 1003  
-// 1004     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
+//  999      
+// 1000      //setsockopt(s2wCidList[cid].sd,SOL_SOCKET,SO_SNDTIMEO,(void*)&RecvTime,8);
+// 1001     /* register the callback for any socket events */
+// 1002  
+// 1003     nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack,S2W_RXCALLBACK_FLAGS);
 ??AppS2wHal_NetTcpServer_4:
         BL       ?Subroutine20
-// 1005     *cidNo = cid;
+// 1004     *cidNo = cid;
 ??CrossCallReturnLabel_45:
         STRB     R6,[R5, #+0]
-// 1006     return S2W_SUCCESS;
+// 1005     return S2W_SUCCESS;
         MOVS     R0,#+0
 ??AppS2wHal_NetTcpServer_0:
         B.W      ?Subroutine0
           CFI EndBlock cfiBlock57
-// 1007 }
+// 1006 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond58 Using cfiCommon0
@@ -3374,59 +3342,59 @@ AppS2wHal_NetTcpServer:
           CFI EndBlock cfiCond66
           CFI EndBlock cfiCond67
           CFI EndBlock cfiCond68
-// 1008 
+// 1007 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock69 Using cfiCommon0
           CFI Function AppS2wHal_TcpSrvMaxConSet
           CFI NoCalls
         THUMB
-// 1009 VOID AppS2wHal_TcpSrvMaxConSet(UINT8 cid,UINT32 maxCon)
-// 1010 {
-// 1011 	s2wCidList[cid].maxConn= maxCon;
+// 1008 VOID AppS2wHal_TcpSrvMaxConSet(UINT8 cid,UINT32 maxCon)
+// 1009 {
+// 1010 	s2wCidList[cid].maxConn= maxCon;
 AppS2wHal_TcpSrvMaxConSet:
         MOV      R2,#+296
-        LDR.W    R3,??DataTable69_1
+        LDR.W    R3,??DataTable66
         MLA      R0,R2,R0,R3
         STRB     R1,[R0, #+32]
-// 1012 }
+// 1011 }
         BX       LR               ;; return
           CFI EndBlock cfiBlock69
-// 1013 
-// 1014 /**
-// 1015  ******************************************************************
-// 1016  * @ingroup S2w-Application
-// 1017  * @brief S2w socket close function.
-// 1018  *    This function close the particular tcp/udp connection specified by cid no.
-// 1019  *.@param cidNo      - IN the cid number corresponding to the socket to be closed.
-// 1020  * @retval S2W_SUCCESS     - operation successfull.
-// 1021  * @retval S2W_FAILURE     - operation failed
-// 1022  * @retval S2W_EBADCID     - operation failed- cid passed is not valid.
-// 1023  ******************************************************************/
-// 1024 
+// 1012 
+// 1013 /**
+// 1014  ******************************************************************
+// 1015  * @ingroup S2w-Application
+// 1016  * @brief S2w socket close function.
+// 1017  *    This function close the particular tcp/udp connection specified by cid no.
+// 1018  *.@param cidNo      - IN the cid number corresponding to the socket to be closed.
+// 1019  * @retval S2W_SUCCESS     - operation successfull.
+// 1020  * @retval S2W_FAILURE     - operation failed
+// 1021  * @retval S2W_EBADCID     - operation failed- cid passed is not valid.
+// 1022  ******************************************************************/
+// 1023 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock70 Using cfiCommon0
           CFI Function GsnSocketCallback
         THUMB
-// 1025 VOID GsnSocketCallback ( INT32 SocketDescriptor, INT32 Flags )
-// 1026 {
-// 1027     GsnOsal_SemRelease(&s2wSocketCloseSem);
+// 1024 VOID GsnSocketCallback ( INT32 SocketDescriptor, INT32 Flags )
+// 1025 {
+// 1026     GsnOsal_SemRelease(&s2wSocketCloseSem);
 GsnSocketCallback:
-        LDR.W    R0,??DataTable69_2
+        LDR.W    R0,??DataTable66_1
           CFI FunCall GsnOsal_SemRelease
         B.W      GsnOsal_SemRelease
           CFI EndBlock cfiBlock70
-// 1028 }
-// 1029 
+// 1027 }
+// 1028 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock71 Using cfiCommon0
           CFI Function AppS2wHal_NetClose
         THUMB
-// 1030 PUBLIC UINT8
-// 1031 AppS2wHal_NetClose(UINT8 cid)
-// 1032 {
+// 1029 PUBLIC UINT8
+// 1030 AppS2wHal_NetClose(UINT8 cid)
+// 1031 {
 AppS2wHal_NetClose:
         PUSH     {R4-R8,LR}
           CFI R14 Frame(CFA, -4)
@@ -3439,111 +3407,111 @@ AppS2wHal_NetClose:
         SUB      SP,SP,#+16
           CFI CFA R13+40
         MOV      R4,R0
-// 1033     S2W_CID_T *p;
-// 1034     UINT32 opt=2;
+// 1032     S2W_CID_T *p;
+// 1033     UINT32 opt=2;
         MOVS     R0,#+2
         STR      R0,[SP, #+4]
-// 1035     /* Validate the connection identifier.
-// 1036      */
-// 1037     if (cid >= MAX_CID_RANGE)
+// 1034     /* Validate the connection identifier.
+// 1035      */
+// 1036     if (cid >= MAX_CID_RANGE)
         CMP      R4,#+16
         BGE.N    ??AppS2wHal_NetClose_0
-// 1038     {
-// 1039         return S2W_EBADCID;
-// 1040     }
-// 1041 
-// 1042     p = &s2wCidList[cid];
+// 1037     {
+// 1038         return S2W_EBADCID;
+// 1039     }
+// 1040 
+// 1041     p = &s2wCidList[cid];
         MOV      R8,#+296
-        LDR.W    R7,??DataTable62
+        LDR.W    R7,??DataTable58
         MLA      R5,R8,R4,R7
-// 1043     if ((p->sd == CID_NOTINUSE) || (p->s2wCidCloseInProgress == TRUE))
+// 1042     if ((p->sd == CID_NOTINUSE) || (p->s2wCidCloseInProgress == TRUE))
         LDR      R0,[R5, #+28]
         CMN      R0,#+1
         ITT      NE 
         LDRBNE   R1,[R5, #+280]
         CMPNE    R1,#+1
         BNE.N    ??AppS2wHal_NetClose_1
-// 1044     {
-// 1045         return S2W_EBADCID;
+// 1043     {
+// 1044         return S2W_EBADCID;
 ??AppS2wHal_NetClose_0:
         MOVS     R0,#+5
         B.N      ??AppS2wHal_NetClose_2
-// 1046     }
-// 1047     p->s2wCidCloseInProgress = TRUE;
+// 1045     }
+// 1046     p->s2wCidCloseInProgress = TRUE;
 ??AppS2wHal_NetClose_1:
         MOVS     R1,#+1
         STRB     R1,[R5, #+280]
-// 1048     /* Close the connection.
-// 1049      */
-// 1050      if(s2wCidList[cid].allocatedTo == 1)
+// 1047     /* Close the connection.
+// 1048      */
+// 1049      if(s2wCidList[cid].allocatedTo == 1)
         LDRB     R1,[R5, #+48]
         CMP      R1,#+1
         IT       EQ 
         MOVEQ    R0,#+1
-// 1051 	 	return S2W_FAILURE;
+// 1050 	 	return S2W_FAILURE;
         BEQ.N    ??AppS2wHal_NetClose_2
-// 1052 
-// 1053     if((p->conType == TCP) && (p->conMode == S2W_NETDATA_MODE_CLIENT))
+// 1051 
+// 1052     if((p->conType == TCP) && (p->conMode == S2W_NETDATA_MODE_CLIENT))
         LDRB     R1,[R5, #+0]
         CMP      R1,#+2
         ITT      EQ 
         LDRBEQ   R1,[R5, #+1]
         CMPEQ    R1,#+0
         BNE.N    ??CrossCallReturnLabel_49
-// 1054     {
-// 1055     	setsockopt(p->sd, IP_PROTOTCP, TCP_MAX_REXMIT, (const char*)&opt,
-// 1056                sizeof(opt));
+// 1053     {
+// 1054     	setsockopt(p->sd, IP_PROTOTCP, TCP_MAX_REXMIT, (const char*)&opt,
+// 1055                sizeof(opt));
         MOVS     R1,#+4
         STR      R1,[SP, #+0]
         ADD      R3,SP,#+4
         MOVS     R2,#+42
         BL       ??Subroutine22_0
-// 1057     }
-// 1058 	nx_bsd_callback_register(p->sd, NULL, 0);
+// 1056     }
+// 1057 	nx_bsd_callback_register(p->sd, NULL, 0);
 ??CrossCallReturnLabel_49:
         LDR      R0,[R5, #+28]
         BL       ?Subroutine24
-// 1059 
-// 1060 #if defined (S2W_HTTPS_SUPPORT) || (S2W_HTTPC_SUPPORT)
-// 1061     /* if an http connection close using http close */
-// 1062     if(p->httpflag == 1 )
+// 1058 
+// 1059 #if defined (S2W_HTTPS_SUPPORT) || (S2W_HTTPC_SUPPORT)
+// 1060     /* if an http connection close using http close */
+// 1061     if(p->httpflag == 1 )
 ??CrossCallReturnLabel_58:
         LDRB     R0,[R5, #+47]
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_NetClose_3
-// 1063     {
-// 1064         AppS2wHal_HttpLocalClose(cid);
+// 1062     {
+// 1063         AppS2wHal_HttpLocalClose(cid);
         MOV      R0,R4
           CFI FunCall AppS2wHal_HttpLocalClose
         BL       AppS2wHal_HttpLocalClose
         B.N      ??AppS2wHal_NetClose_4
-// 1065     }
-// 1066     else
-// 1067 #endif
-// 1068 #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
-// 1069     if(p->sslflag == 1 )
+// 1064     }
+// 1065     else
+// 1066 #endif
+// 1067 #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
+// 1068     if(p->sslflag == 1 )
 ??AppS2wHal_NetClose_3:
-        LDRB     R0,[R5, #+44]
-        CMP      R0,#+1
+        BL       ?Subroutine31
+??CrossCallReturnLabel_77:
         BNE.N    ??AppS2wHal_NetClose_5
-// 1070     {
-// 1071         AppS2w_SslLocalClose(cid);
+// 1069     {
+// 1070         AppS2w_SslLocalClose(cid);
         MOV      R0,R4
           CFI FunCall AppS2w_SslLocalClose
         BL       AppS2w_SslLocalClose
         B.N      ??AppS2wHal_NetClose_4
-// 1072     }
-// 1073     else
-// 1074 #endif
-// 1075 
-// 1076     {
-// 1077         soc_close(p->sd);
+// 1071     }
+// 1072     else
+// 1073 #endif
+// 1074 
+// 1075     {
+// 1076         soc_close(p->sd);
 ??AppS2wHal_NetClose_5:
         LDR      R0,[R5, #+28]
           CFI FunCall soc_close
         BL       soc_close
-// 1078 	}
-// 1079         if((p->conType == TCP) && (p->conMode == S2W_NETDATA_MODE_CLIENT))
+// 1077 	}
+// 1078         if((p->conType == TCP) && (p->conMode == S2W_NETDATA_MODE_CLIENT))
 ??AppS2wHal_NetClose_4:
         LDRB     R0,[R5, #+0]
         CMP      R0,#+2
@@ -3551,21 +3519,21 @@ AppS2wHal_NetClose:
         LDRBEQ   R0,[R5, #+1]
         CMPEQ    R0,#+0
         BNE.N    ??AppS2wHal_NetClose_6
-// 1080         {
-// 1081 		 	if(s2wCidList[cid].serverCid != INVALID_CID)
+// 1079         {
+// 1080 		 	if(s2wCidList[cid].serverCid != INVALID_CID)
         LDRB     R0,[R5, #+46]
         CMP      R0,#+255
         BEQ.N    ??AppS2wHal_NetClose_6
-// 1082 		 	{
-// 1083 		 		GsnOsal_SemAcquire ( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem), GSN_OSAL_WAIT_FOREVER );
-        LDR.W    R6,??DataTable70
+// 1081 		 	{
+// 1082 		 		GsnOsal_SemAcquire ( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem), GSN_OSAL_WAIT_FOREVER );
+        LDR.W    R6,??DataTable69
         LDR      R0,[R6, #+0]
         MOVW     R4,#+33228
         MOV      R1,#-1
         ADDS     R0,R4,R0
           CFI FunCall GsnOsal_SemAcquire
         BL       GsnOsal_SemAcquire
-// 1084 				s2wCidList[s2wCidList[cid].serverCid].clientConCount--;
+// 1083 				s2wCidList[s2wCidList[cid].serverCid].clientConCount--;
         LDRB     R1,[R5, #+46]
         LDRB     R0,[R5, #+46]
         MLA      R1,R8,R1,R7
@@ -3573,61 +3541,61 @@ AppS2wHal_NetClose:
         LDRB     R1,[R1, #+33]
         SUBS     R1,R1,#+1
         STRB     R1,[R0, #+33]
-// 1085 			 	GsnOsal_SemRelease(&s2wappMainTaskCtxt->s2wTcpClientCntSyncSem);
+// 1084 			 	GsnOsal_SemRelease(&s2wappMainTaskCtxt->s2wTcpClientCntSyncSem);
         LDR      R0,[R6, #+0]
         ADDS     R0,R4,R0
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 1086 		 	}
-// 1087         }
-// 1088     
-// 1089 #if 0   
-// 1090      UINT32 i=0;
-// 1091      if((p->conType == TCP) && (p->conMode == S2W_NETDATA_MODE_SERVER))
-// 1092      {
-// 1093        /* Close all the client CIDs connected to server as well */
-// 1094         for (i = 0; i < MAX_CID_RANGE; i++)
-// 1095         {
-// 1096           if(s2wCidList[i].serverCid == cid)
-// 1097           {
-// 1098             soc_close(s2wCidList[i].sd);
-// 1099             nx_bsd_callback_register(p->sd, NULL, 0);
-// 1100             s2wCidList[i].sd = CID_NOTINUSE;
-// 1101             s2wCidList[i].localPort = 0;
-// 1102             s2wCidList[i].remotePort = 0;
-// 1103             s2wCidList[i].addrType = 0;
-// 1104             s2wCidList[i].s2wCidCloseInProgress = FALSE;
-// 1105             
-// 1106           }
-// 1107         }
-// 1108      }
-// 1109 #endif
-// 1110     /* Remove the entry from the connection identifier list.
-// 1111      */
-// 1112 
-// 1113     p->sd = CID_NOTINUSE;
+// 1085 		 	}
+// 1086         }
+// 1087     
+// 1088 #if 0   
+// 1089      UINT32 i=0;
+// 1090      if((p->conType == TCP) && (p->conMode == S2W_NETDATA_MODE_SERVER))
+// 1091      {
+// 1092        /* Close all the client CIDs connected to server as well */
+// 1093         for (i = 0; i < MAX_CID_RANGE; i++)
+// 1094         {
+// 1095           if(s2wCidList[i].serverCid == cid)
+// 1096           {
+// 1097             soc_close(s2wCidList[i].sd);
+// 1098             nx_bsd_callback_register(p->sd, NULL, 0);
+// 1099             s2wCidList[i].sd = CID_NOTINUSE;
+// 1100             s2wCidList[i].localPort = 0;
+// 1101             s2wCidList[i].remotePort = 0;
+// 1102             s2wCidList[i].addrType = 0;
+// 1103             s2wCidList[i].s2wCidCloseInProgress = FALSE;
+// 1104             
+// 1105           }
+// 1106         }
+// 1107      }
+// 1108 #endif
+// 1109     /* Remove the entry from the connection identifier list.
+// 1110      */
+// 1111 
+// 1112     p->sd = CID_NOTINUSE;
 ??AppS2wHal_NetClose_6:
         MOV      R0,#-1
         STR      R0,[R5, #+28]
-// 1114     s2wCidList[cid].localPort = 0;
-// 1115     s2wCidList[cid].remotePort = 0;
+// 1113     s2wCidList[cid].localPort = 0;
+// 1114     s2wCidList[cid].remotePort = 0;
         MOVS     R1,#+0
         MOVS     R0,#+0
         STRH     R0,[R5, #+2]
         ADDS     R0,R5,#+2
         STRH     R1,[R0, #+2]
-// 1116     s2wCidList[cid].addrType = 0;
+// 1115     s2wCidList[cid].addrType = 0;
         STRB     R1,[R0, #+25]
-// 1117     p->s2wCidCloseInProgress = FALSE;
+// 1116     p->s2wCidCloseInProgress = FALSE;
         MOVS     R0,#+0
         STRB     R0,[R5, #+280]
-// 1118     return S2W_SUCCESS;
+// 1117     return S2W_SUCCESS;
 ??AppS2wHal_NetClose_2:
         ADD      SP,SP,#+16
           CFI CFA R13+24
         POP      {R4-R8,PC}       ;; return
           CFI EndBlock cfiBlock71
-// 1119 }
+// 1118 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond72 Using cfiCommon0
@@ -3690,78 +3658,78 @@ AppS2wHal_NetClose:
           CFI EndBlock cfiPicker74
           CFI EndBlock cfiCond75
           CFI EndBlock cfiCond76
+// 1119 
 // 1120 
-// 1121 
-// 1122 PRIVATE UINT8
-// 1123 AppS2wHal_NetImmediateClose(UINT8 cid)
-// 1124 {
-// 1125     S2W_CID_T *p;
-// 1126     UINT32 opt=2;
-// 1127 
-// 1128     /* Validate the connection identifier.
-// 1129      */
-// 1130     if (cid >= MAX_CID_RANGE)
-// 1131     {
-// 1132         return S2W_EBADCID;
-// 1133     }
-// 1134 
-// 1135     p = &s2wCidList[cid];
-// 1136     if ((p->sd == CID_NOTINUSE) || (p->s2wCidCloseInProgress == TRUE))
-// 1137     {
-// 1138         return S2W_EBADCID;
-// 1139     }
-// 1140 
-// 1141     /* Close the connection.*/
-// 1142     p->s2wCidCloseInProgress = TRUE;
-// 1143     setsockopt(p->sd, IP_PROTOTCP, TCP_MAX_REXMIT, (const char*)&opt,
-// 1144                sizeof(opt));
-// 1145  #if defined (S2W_HTTPS_SUPPORT) || (S2W_HTTPC_SUPPORT)
-// 1146      if(p->httpflag == 1 )
-// 1147      {
-// 1148          AppS2wHal_HttpLocalClose(cid);
-// 1149      }
-// 1150      else
-// 1151  #endif
-// 1152  #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
-// 1153      if(p->sslflag == 1 )
-// 1154      {
-// 1155          AppS2w_SslLocalClose(cid);
-// 1156 
-// 1157      }
-// 1158      else
-// 1159  #endif
-// 1160     {
-// 1161   		nx_bsd_callback_register(p->sd, NULL, 0);
-// 1162         soc_close(p->sd);
-// 1163 
-// 1164    }
+// 1121 PRIVATE UINT8
+// 1122 AppS2wHal_NetImmediateClose(UINT8 cid)
+// 1123 {
+// 1124     S2W_CID_T *p;
+// 1125     UINT32 opt=2;
+// 1126 
+// 1127     /* Validate the connection identifier.
+// 1128      */
+// 1129     if (cid >= MAX_CID_RANGE)
+// 1130     {
+// 1131         return S2W_EBADCID;
+// 1132     }
+// 1133 
+// 1134     p = &s2wCidList[cid];
+// 1135     if ((p->sd == CID_NOTINUSE) || (p->s2wCidCloseInProgress == TRUE))
+// 1136     {
+// 1137         return S2W_EBADCID;
+// 1138     }
+// 1139 
+// 1140     /* Close the connection.*/
+// 1141     p->s2wCidCloseInProgress = TRUE;
+// 1142     setsockopt(p->sd, IP_PROTOTCP, TCP_MAX_REXMIT, (const char*)&opt,
+// 1143                sizeof(opt));
+// 1144  #if defined (S2W_HTTPS_SUPPORT) || (S2W_HTTPC_SUPPORT)
+// 1145      if(p->httpflag == 1 )
+// 1146      {
+// 1147          AppS2wHal_HttpLocalClose(cid);
+// 1148      }
+// 1149      else
+// 1150  #endif
+// 1151  #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
+// 1152      if(p->sslflag == 1 )
+// 1153      {
+// 1154          AppS2w_SslLocalClose(cid);
+// 1155 
+// 1156      }
+// 1157      else
+// 1158  #endif
+// 1159     {
+// 1160   		nx_bsd_callback_register(p->sd, NULL, 0);
+// 1161         soc_close(p->sd);
+// 1162 
+// 1163    }
+// 1164 
 // 1165 
-// 1166 
-// 1167     p->sd = CID_NOTINUSE;
-// 1168     s2wCidList[cid].localPort = 0;
-// 1169     s2wCidList[cid].remotePort = 0;
-// 1170     p->s2wCidCloseInProgress = FALSE;
-// 1171     return S2W_SUCCESS;
-// 1172 }
+// 1166     p->sd = CID_NOTINUSE;
+// 1167     s2wCidList[cid].localPort = 0;
+// 1168     s2wCidList[cid].remotePort = 0;
+// 1169     p->s2wCidCloseInProgress = FALSE;
+// 1170     return S2W_SUCCESS;
+// 1171 }
+// 1172 
 // 1173 
 // 1174 
-// 1175 
-// 1176 /**
-// 1177  ******************************************************************
-// 1178  * @ingroup S2w-Application
-// 1179  * @brief S2w all socket close function.
-// 1180  *    This function close all tcp/udp connection established in s2w.
-// 1181  * @retval S2W_SUCCESS     - operation successfull.
-// 1182  * @retval S2W_FAILURE     - operation failed
-// 1183  ******************************************************************/
+// 1175 /**
+// 1176  ******************************************************************
+// 1177  * @ingroup S2w-Application
+// 1178  * @brief S2w all socket close function.
+// 1179  *    This function close all tcp/udp connection established in s2w.
+// 1180  * @retval S2W_SUCCESS     - operation successfull.
+// 1181  * @retval S2W_FAILURE     - operation failed
+// 1182  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock77 Using cfiCommon0
           CFI Function AppS2wHal_NetCloseAll
         THUMB
-// 1184 PUBLIC UINT8
-// 1185 AppS2wHal_NetCloseAll(UINT8 flag)
-// 1186 {
+// 1183 PUBLIC UINT8
+// 1184 AppS2wHal_NetCloseAll(UINT8 flag)
+// 1185 {
 AppS2wHal_NetCloseAll:
         PUSH     {R4-R10,LR}
           CFI R14 Frame(CFA, -4)
@@ -3776,16 +3744,16 @@ AppS2wHal_NetCloseAll:
         MOV      R4,R0
         SUB      SP,SP,#+16
           CFI CFA R13+48
-// 1187     UINT8 status = S2W_SUCCESS;
+// 1186     UINT8 status = S2W_SUCCESS;
         MOVS     R0,#+0
-// 1188     INT32 i;
-// 1189 
-// 1190     for (i = 0; i < MAX_CID_RANGE; i++)
+// 1187     INT32 i;
+// 1188 
+// 1189     for (i = 0; i < MAX_CID_RANGE; i++)
         MOVS     R5,#+0
         MOV      R8,#+296
-        LDR.W    R10,??DataTable69_1
-// 1191     {
-// 1192         if (s2wCidList[i].sd != CID_NOTINUSE && s2wCidList[i].allocatedTo != 1)
+        LDR.W    R10,??DataTable66
+// 1190     {
+// 1191         if (s2wCidList[i].sd != CID_NOTINUSE && s2wCidList[i].allocatedTo != 1)
 ??AppS2wHal_NetCloseAll_0:
         MLA      R6,R8,R5,R10
         LDR      R1,[R6, #+28]
@@ -3794,19 +3762,19 @@ AppS2wHal_NetCloseAll:
         LDRBNE   R1,[R6, #+48]
         CMPNE    R1,#+1
         BEQ.N    ??AppS2wHal_NetCloseAll_1
-// 1193         {
-// 1194 	         if(flag == CID_NCLOSE)
+// 1192         {
+// 1193 	         if(flag == CID_NCLOSE)
         CBNZ.N   R4,??AppS2wHal_NetCloseAll_2
-// 1195 	         {
-// 1196 	            status = AppS2wHal_NetClose(i);
+// 1194 	         {
+// 1195 	            status = AppS2wHal_NetClose(i);
         UXTB     R0,R5
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
         B.N      ??AppS2wHal_NetCloseAll_1
-// 1197 	         }
-// 1198 	         else
-// 1199 	         {
-// 1200 	            status = AppS2wHal_NetImmediateClose(i);
+// 1196 	         }
+// 1197 	         else
+// 1198 	         {
+// 1199 	            status = AppS2wHal_NetImmediateClose(i);
 ??AppS2wHal_NetCloseAll_2:
         MOVS     R0,#+2
         UXTB     R9,R5
@@ -3825,9 +3793,9 @@ AppS2wHal_NetCloseAll:
         STR      R1,[SP, #+0]
         MOVS     R2,#+42
         BL       ??Subroutine22_0
-// 1201 	         }
-// 1202 
-// 1203         }
+// 1200 	         }
+// 1201 
+// 1202         }
 ??CrossCallReturnLabel_52:
         ADD      R0,R7,#+28
         LDRB     R1,[R0, #+19]
@@ -3862,48 +3830,48 @@ AppS2wHal_NetCloseAll:
         B.N      ??AppS2wHal_NetCloseAll_1
 ??AppS2wHal_NetCloseAll_3:
         MOVS     R0,#+5
-// 1204         s2wCidList[i].localPort = 0;
+// 1203         s2wCidList[i].localPort = 0;
 ??AppS2wHal_NetCloseAll_1:
         MOVS     R1,#+0
         STRH     R1,[R6, #+2]
-// 1205         s2wCidList[i].remotePort = 0;
-// 1206     }
+// 1204         s2wCidList[i].remotePort = 0;
+// 1205     }
         ADDS     R5,R5,#+1
         STRH     R1,[R6, #+4]
         CMP      R5,#+16
         BLT.N    ??AppS2wHal_NetCloseAll_0
-// 1207     return status;
+// 1206     return status;
         ADD      SP,SP,#+16
           CFI CFA R13+32
         POP      {R4-R10,PC}      ;; return
           CFI EndBlock cfiBlock77
-// 1208 }
+// 1207 }
+// 1208 
 // 1209 
-// 1210 
-// 1211 /**
-// 1212  ******************************************************************
-// 1213  * @ingroup S2w-Application
-// 1214  * @brief S2w udp/tcp tx function
-// 1215  *    This function send the data to the remote machine specified. This
-// 1216  *    fuction use either tcp or udp as the protocol type.
-// 1217  * @param cid      - IN the cid number corresponding to the socket connection.
-// 1218  * @param destAddr - IN the socket structure for remote machine.
-// 1219  * @param destPort - IN the remote port.
-// 1220  * @param buf      - IN the data pointer.
-// 1221  *.@param len      - IN the length of the buf to send.
-// 1222  * @retval S2W_SUCCESS           - operation successfull.
-// 1223  * @retval S2W_ENCID/S2W_EBADCID - operation failed-no valid cid
-// 1224  * @@retval S2W_FAILURE          - operation failed.
-// 1225  ******************************************************************/
+// 1210 /**
+// 1211  ******************************************************************
+// 1212  * @ingroup S2w-Application
+// 1213  * @brief S2w udp/tcp tx function
+// 1214  *    This function send the data to the remote machine specified. This
+// 1215  *    fuction use either tcp or udp as the protocol type.
+// 1216  * @param cid      - IN the cid number corresponding to the socket connection.
+// 1217  * @param destAddr - IN the socket structure for remote machine.
+// 1218  * @param destPort - IN the remote port.
+// 1219  * @param buf      - IN the data pointer.
+// 1220  *.@param len      - IN the length of the buf to send.
+// 1221  * @retval S2W_SUCCESS           - operation successfull.
+// 1222  * @retval S2W_ENCID/S2W_EBADCID - operation failed-no valid cid
+// 1223  * @@retval S2W_FAILURE          - operation failed.
+// 1224  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock78 Using cfiCommon0
           CFI Function AppS2wHal_NetTx
         THUMB
-// 1226 PUBLIC UINT8
-// 1227 AppS2wHal_NetTx(UINT8 cid, UINT8 *destAddr, UINT16 destPort,
-// 1228                  VOID *buf, UINT32 len)
-// 1229 {
+// 1225 PUBLIC UINT8
+// 1226 AppS2wHal_NetTx(UINT8 cid, UINT8 *destAddr, UINT16 destPort,
+// 1227                  VOID *buf, UINT32 len)
+// 1228 {
 AppS2wHal_NetTx:
         PUSH     {R4-R11,LR}
           CFI R14 Frame(CFA, -4)
@@ -3918,12 +3886,12 @@ AppS2wHal_NetTx:
           CFI CFA R13+36
         MOV      R10,R0
         MOV      R9,R3
-// 1230     UINT32 status = S2W_SUCCESS;
-// 1231     S2W_CID_T *p;
-// 1232 	UINT8 *outDataBuf;
-// 1233     p = &s2wCidList[cid];
+// 1229     UINT32 status = S2W_SUCCESS;
+// 1230     S2W_CID_T *p;
+// 1231 	UINT8 *outDataBuf;
+// 1232     p = &s2wCidList[cid];
         MOV      R0,#+296
-        LDR.N    R3,??DataTable62
+        LDR.N    R3,??DataTable58
         MLA      R4,R0,R10,R3
         SUB      SP,SP,#+28
           CFI CFA R13+64
@@ -3933,121 +3901,121 @@ AppS2wHal_NetTx:
         MOVS     R5,#+0
         CMP      R3,#+1
         BNE.N    ??AppS2wHal_NetTx_0
-// 1234     if (p->conMode == S2W_NETDATA_MODE_SERVER)
-// 1235     {
-// 1236         struct sockaddr_in addr;
-// 1237         if (p->conType == TCP)
+// 1233     if (p->conMode == S2W_NETDATA_MODE_SERVER)
+// 1234     {
+// 1235         struct sockaddr_in addr;
+// 1236         if (p->conType == TCP)
         CMP      R0,#+2
         BEQ.N    ??AppS2wHal_NetTx_1
-// 1238         {
-// 1239             return S2W_FAILURE;
-// 1240         }
-// 1241 #ifdef S2W_IPv6_SUPPORT
-// 1242       
-// 1243         if(p->addrType & ADDR_TYPE_IPv6)
-// 1244         {
-// 1245           struct sockaddr_in6 servAddr;
-// 1246           servAddr.sin6_family = AF_INET6;
-// 1247           servAddr.sin6_port = htons(destPort);
-// 1248           
-// 1249           memcpy(servAddr.sin6_addr._S6_un._S6_u32,destAddr,16);
-// 1250           GSN_IPv6_CHANGE_ENDIAN((UINT32 *)servAddr.sin6_addr._S6_un._S6_u32); 
-// 1251             if (sendto(p->sd, buf, len, 0,(struct sockaddr *)&servAddr, sizeof(servAddr)) < 0)
-// 1252         {
-// 1253             status = S2W_FAILURE;
-// 1254         }
-// 1255           
-// 1256         }
-// 1257       else
-// 1258       
-// 1259 #endif //S2W_IPv6_SUPPORT 
-// 1260       {
-// 1261         addr.sin_family = AF_INET;
+// 1237         {
+// 1238             return S2W_FAILURE;
+// 1239         }
+// 1240 #ifdef S2W_IPv6_SUPPORT
+// 1241       
+// 1242         if(p->addrType & ADDR_TYPE_IPv6)
+// 1243         {
+// 1244           struct sockaddr_in6 servAddr;
+// 1245           servAddr.sin6_family = AF_INET6;
+// 1246           servAddr.sin6_port = htons(destPort);
+// 1247           
+// 1248           memcpy(servAddr.sin6_addr._S6_un._S6_u32,destAddr,16);
+// 1249           GSN_IPv6_CHANGE_ENDIAN((UINT32 *)servAddr.sin6_addr._S6_un._S6_u32); 
+// 1250             if (sendto(p->sd, buf, len, 0,(struct sockaddr *)&servAddr, sizeof(servAddr)) < 0)
+// 1251         {
+// 1252             status = S2W_FAILURE;
+// 1253         }
+// 1254           
+// 1255         }
+// 1256       else
+// 1257       
+// 1258 #endif //S2W_IPv6_SUPPORT 
+// 1259       {
+// 1260         addr.sin_family = AF_INET;
         MOVS     R0,#+2
         STRH     R0,[SP, #+12]
-// 1262         addr.sin_port = htons(destPort);
+// 1261         addr.sin_port = htons(destPort);
         LSLS     R0,R2,#+8
         ORR      R0,R0,R2, LSR #+8
         STRH     R0,[SP, #+14]
-// 1263         //*(ULONG*)destAddr = htonl(*(ULONG*)destAddr);
-// 1264         memcpy(&(addr.sin_addr.s_addr), destAddr, sizeof(addr.sin_addr.s_addr));
+// 1262         //*(ULONG*)destAddr = htonl(*(ULONG*)destAddr);
+// 1263         memcpy(&(addr.sin_addr.s_addr), destAddr, sizeof(addr.sin_addr.s_addr));
         MOVS     R2,#+4
         ADD      R0,SP,#+16
           CFI FunCall memcpy
         BL       memcpy
-// 1265 
-// 1266         GsnSq_TaskMonitorStart(APP_CFG_SQ_SERIAL_INPUT_TASK_ID, (UINT32)cid);
-        BL       ?Subroutine32
-// 1267         if (sendto(p->sd, buf, len, 0,
-// 1268            (struct sockaddr *)&addr, sizeof(addr)) < 0)
-??CrossCallReturnLabel_82:
+// 1264 
+// 1265         GsnSq_TaskMonitorStart(APP_CFG_SQ_SERIAL_INPUT_TASK_ID, (UINT32)cid);
+        BL       ?Subroutine33
+// 1266         if (sendto(p->sd, buf, len, 0,
+// 1267            (struct sockaddr *)&addr, sizeof(addr)) < 0)
+??CrossCallReturnLabel_86:
         BL       ?Subroutine16
-// 1269         {
-// 1270             //S2w_Debug("udp sendto fail: %d\r\n", tfGetSocketError(p->sd));
-// 1271             //S2w_Debug("destaddr = %x\n\r", *(UINT32 *) destAddr);
-// 1272             //S2w_Debug("destport = %x\n\r", destPort);
-// 1273             status = S2W_FAILURE;
-// 1274         }
-// 1275         GsnSq_TaskMonitorStop( APP_CFG_SQ_SERIAL_INPUT_TASK_ID);
-// 1276       }
-// 1277     }
+// 1268         {
+// 1269             //S2w_Debug("udp sendto fail: %d\r\n", tfGetSocketError(p->sd));
+// 1270             //S2w_Debug("destaddr = %x\n\r", *(UINT32 *) destAddr);
+// 1271             //S2w_Debug("destport = %x\n\r", destPort);
+// 1272             status = S2W_FAILURE;
+// 1273         }
+// 1274         GsnSq_TaskMonitorStop( APP_CFG_SQ_SERIAL_INPUT_TASK_ID);
+// 1275       }
+// 1276     }
 ??CrossCallReturnLabel_37:
         B.N      ??AppS2wHal_NetTx_2
-// 1278     else if((p->conType == UDP) && (p->conMode == S2W_NETDATA_MODE_CLIENT))
+// 1277     else if((p->conType == UDP) && (p->conMode == S2W_NETDATA_MODE_CLIENT))
 ??AppS2wHal_NetTx_0:
         CMP      R0,#+1
         IT       EQ 
         CMPEQ    R3,#+0
         BNE.N    ??AppS2wHal_NetTx_3
-// 1279     {
-// 1280 #if defined(S2W_DTLS_CLIENT_SUPPORT)
-// 1281         if ((s2wCidList[cid].sslflag == TRUE))
-// 1282  		{
-// 1283  			/*NOTE: IMP: The ssl can encode a max of 1338 bytes. Its beter to encode 1K at a time
-// 1284  			and send it. So we need a loop mechanism to send the incomming data in 1K encoded
-// 1285  			chunks....*/
-// 1286  			//UINT32 outDataLen;
-// 1287             UINT32 dataSent = 0;
-// 1288  			UINT32 sendLen = 0;
-// 1289  			while(len)
-// 1290  			{
-// 1291  				sendLen = (len > 1024)?1024:len;
-// 1292                 GsnDtls_Send( (GSN_DTLS_CONN_T *)s2wCidList[cid].ssl.sslConn,
-// 1293                 		(UINT8 *)((UINT8*)buf + dataSent), sendLen, 0 );
-// 1294  				dataSent += sendLen;
-// 1295  				len -= sendLen;
-// 1296  			}
-// 1297  		}
-// 1298         else
-// 1299 #endif
-// 1300         {
-// 1301       #ifdef S2W_IPv6_SUPPORT
-// 1302         if(p->addrType & ADDR_TYPE_IPv6)
-// 1303         {
-// 1304           struct sockaddr_in6 servAddr;
-// 1305           servAddr.sin6_family = AF_INET6;
-// 1306           servAddr.sin6_port = htons(s2wCidList[cid].remotePort);
+// 1278     {
+// 1279 #if defined(S2W_DTLS_CLIENT_SUPPORT)
+// 1280         if ((s2wCidList[cid].sslflag == TRUE))
+// 1281  		{
+// 1282  			/*NOTE: IMP: The ssl can encode a max of 1338 bytes. Its beter to encode 1K at a time
+// 1283  			and send it. So we need a loop mechanism to send the incomming data in 1K encoded
+// 1284  			chunks....*/
+// 1285  			//UINT32 outDataLen;
+// 1286             UINT32 dataSent = 0;
+// 1287  			UINT32 sendLen = 0;
+// 1288  			while(len)
+// 1289  			{
+// 1290  				sendLen = (len > 1024)?1024:len;
+// 1291                 GsnDtls_Send( (GSN_DTLS_CONN_T *)s2wCidList[cid].ssl.sslConn,
+// 1292                 		(UINT8 *)((UINT8*)buf + dataSent), sendLen, 0 );
+// 1293  				dataSent += sendLen;
+// 1294  				len -= sendLen;
+// 1295  			}
+// 1296  		}
+// 1297         else
+// 1298 #endif
+// 1299         {
+// 1300       #ifdef S2W_IPv6_SUPPORT
+// 1301         if(p->addrType & ADDR_TYPE_IPv6)
+// 1302         {
+// 1303           struct sockaddr_in6 servAddr;
+// 1304           servAddr.sin6_family = AF_INET6;
+// 1305           servAddr.sin6_port = htons(s2wCidList[cid].remotePort);
+// 1306           
 // 1307           
-// 1308           
-// 1309           memcpy(servAddr.sin6_addr._S6_un._S6_u32,s2wCidList[cid].remoteIpv6,16);
-// 1310           GSN_IPv6_CHANGE_ENDIAN((UINT32 *)servAddr.sin6_addr._S6_un._S6_u32); 
-// 1311             if (sendto(p->sd, buf, len, 0,(struct sockaddr *)&servAddr, sizeof(servAddr)) < 0)
-// 1312         {
-// 1313             status = S2W_FAILURE;
-// 1314         }
-// 1315 
-// 1316         }
-// 1317       else
-// 1318       
-// 1319 #endif //S2W_IPv6_SUPPORT       
-// 1320       {
-// 1321         struct sockaddr_in addr1;
-// 1322         addr1.sin_family = AF_INET;
+// 1308           memcpy(servAddr.sin6_addr._S6_un._S6_u32,s2wCidList[cid].remoteIpv6,16);
+// 1309           GSN_IPv6_CHANGE_ENDIAN((UINT32 *)servAddr.sin6_addr._S6_un._S6_u32); 
+// 1310             if (sendto(p->sd, buf, len, 0,(struct sockaddr *)&servAddr, sizeof(servAddr)) < 0)
+// 1311         {
+// 1312             status = S2W_FAILURE;
+// 1313         }
+// 1314 
+// 1315         }
+// 1316       else
+// 1317       
+// 1318 #endif //S2W_IPv6_SUPPORT       
+// 1319       {
+// 1320         struct sockaddr_in addr1;
+// 1321         addr1.sin_family = AF_INET;
         MOVS     R0,#+2
         STRH     R0,[SP, #+12]
-// 1323         addr1.sin_port = htons(s2wCidList[cid].remotePort);
-// 1324         memcpy(&(addr1.sin_addr.s_addr),s2wCidList[cid].remoteIp ,
-// 1325                   sizeof(addr1.sin_addr.s_addr));
+// 1322         addr1.sin_port = htons(s2wCidList[cid].remotePort);
+// 1323         memcpy(&(addr1.sin_addr.s_addr),s2wCidList[cid].remoteIp ,
+// 1324                   sizeof(addr1.sin_addr.s_addr));
         MOVS     R2,#+4
         LDRH     R0,[R4, #+4]
         BL       ?Subroutine17
@@ -4056,78 +4024,78 @@ AppS2wHal_NetTx:
         ADD      R0,SP,#+16
           CFI FunCall memcpy
         BL       memcpy
-// 1326 
-// 1327         GsnSq_TaskMonitorStart(APP_CFG_SQ_SERIAL_INPUT_TASK_ID, (UINT32)cid);
-        BL       ?Subroutine32
-// 1328         if (sendto(p->sd, buf, len, 0,
-// 1329            (struct sockaddr *)&addr1, sizeof(addr1)) < 0)
-??CrossCallReturnLabel_81:
+// 1325 
+// 1326         GsnSq_TaskMonitorStart(APP_CFG_SQ_SERIAL_INPUT_TASK_ID, (UINT32)cid);
+        BL       ?Subroutine33
+// 1327         if (sendto(p->sd, buf, len, 0,
+// 1328            (struct sockaddr *)&addr1, sizeof(addr1)) < 0)
+??CrossCallReturnLabel_85:
         BL       ?Subroutine16
-// 1330         {
-// 1331             S2w_Debug("udp sendto fail: %d\r\n", 1);
-// 1332         }
-// 1333         GsnSq_TaskMonitorStop( APP_CFG_SQ_SERIAL_INPUT_TASK_ID);
-// 1334       }
+// 1329         {
+// 1330             S2w_Debug("udp sendto fail: %d\r\n", 1);
+// 1331         }
+// 1332         GsnSq_TaskMonitorStop( APP_CFG_SQ_SERIAL_INPUT_TASK_ID);
+// 1333       }
+// 1334     }
 // 1335     }
-// 1336     }
 ??CrossCallReturnLabel_36:
         B.N      ??AppS2wHal_NetTx_4
-// 1337     else
-// 1338     {
-// 1339         /* do a socket send
-// 1340          */
-// 1341 
-// 1342         //S2w_Debug("\r\nData sd %d, %d\r\n",s2wCidList[cid].sd,
-// 1343             //tlsv1_client_established(s2wCidList[cid].ssl.sslConn->tlsv1Conn));
-// 1344 
-// 1345  #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
-// 1346 
-// 1347          if ((s2wCidList[cid].sslflag == TRUE))
+// 1336     else
+// 1337     {
+// 1338         /* do a socket send
+// 1339          */
+// 1340 
+// 1341         //S2w_Debug("\r\nData sd %d, %d\r\n",s2wCidList[cid].sd,
+// 1342             //tlsv1_client_established(s2wCidList[cid].ssl.sslConn->tlsv1Conn));
+// 1343 
+// 1344  #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
+// 1345 
+// 1346          if ((s2wCidList[cid].sslflag == TRUE))
 ??AppS2wHal_NetTx_3:
         LDRB     R0,[R4, #+44]
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_NetTx_5
-// 1348  		{
-// 1349  			/*NOTE: IMP: The ssl can encode a max of 1338 bytes. Its beter to encode 1K at a time
-// 1350  			and send it. So we need a loop mechanism to send the incomming data in 1K encoded
-// 1351  			chunks....*/
-// 1352  			UINT32 outDataLen, u32NoOfBytesSent;
-// 1353  			UINT32 dataSent = 0;
+// 1347  		{
+// 1348  			/*NOTE: IMP: The ssl can encode a max of 1338 bytes. Its beter to encode 1K at a time
+// 1349  			and send it. So we need a loop mechanism to send the incomming data in 1K encoded
+// 1350  			chunks....*/
+// 1351  			UINT32 outDataLen, u32NoOfBytesSent;
+// 1352  			UINT32 dataSent = 0;
         MOV      R11,R5
-// 1354  			UINT32 sendLen = 0;
+// 1353  			UINT32 sendLen = 0;
         B.N      ??AppS2wHal_NetTx_6
-// 1355  			while(len)
-// 1356  			{
-// 1357  				sendLen = (len > 1024)?1024:len;
-// 1358  #ifdef S2W_APP_SSL_PROVISION
-// 1359  				ULONG64 curTime;
-// 1360  				UINT32 diffTime, timeInMsec;
-// 1361 
-// 1362  				encryptStartTime = GsnSoftTmr_CurrentSystemTime();
-// 1363  #endif
-// 1364  				GsnSsl_Encode(s2wCidList[cid].ssl.sslConn, (UINT8 *)((UINT8*)buf + dataSent),
-// 1365  							  sendLen, &outDataBuf,&outDataLen);
-// 1366  #ifdef S2W_APP_SSL_PROVISION
-// 1367  				curTime  = GsnSoftTmr_CurrentSystemTime();
-// 1368  				diffTime = (curTime - encryptStartTime);
-// 1369  				timeInMsec =   diffTime/(TIMER_INTERRUPT_1_MS);
-// 1370  				S2w_Printf("\r\nSSL Tx Encryption Time in ms %d\r\n", timeInMsec);
-// 1371  #endif
-// 1372 
-// 1373  				u32NoOfBytesSent = send(s2wCidList[cid].sd, (const char*)outDataBuf,
-// 1374  										outDataLen, 0);
-// 1375 
-// 1376  				GsnSsl_Free(outDataBuf);
-// 1377 
-// 1378  				if ( outDataLen != u32NoOfBytesSent )
-// 1379  				{
-// 1380  					AppS2w_SslClose(cid);
-// 1381  					return S2W_FAILURE;
-// 1382  				}
-// 1383  				dataSent += sendLen;
+// 1354  			while(len)
+// 1355  			{
+// 1356  				sendLen = (len > 1024)?1024:len;
+// 1357  #ifdef S2W_APP_SSL_PROVISION
+// 1358  				ULONG64 curTime;
+// 1359  				UINT32 diffTime, timeInMsec;
+// 1360 
+// 1361  				encryptStartTime = GsnSoftTmr_CurrentSystemTime();
+// 1362  #endif
+// 1363  				GsnSsl_Encode(s2wCidList[cid].ssl.sslConn, (UINT8 *)((UINT8*)buf + dataSent),
+// 1364  							  sendLen, &outDataBuf,&outDataLen);
+// 1365  #ifdef S2W_APP_SSL_PROVISION
+// 1366  				curTime  = GsnSoftTmr_CurrentSystemTime();
+// 1367  				diffTime = (curTime - encryptStartTime);
+// 1368  				timeInMsec =   diffTime/(TIMER_INTERRUPT_1_MS);
+// 1369  				S2w_Printf("\r\nSSL Tx Encryption Time in ms %d\r\n", timeInMsec);
+// 1370  #endif
+// 1371 
+// 1372  				u32NoOfBytesSent = send(s2wCidList[cid].sd, (const char*)outDataBuf,
+// 1373  										outDataLen, 0);
+// 1374 
+// 1375  				GsnSsl_Free(outDataBuf);
+// 1376 
+// 1377  				if ( outDataLen != u32NoOfBytesSent )
+// 1378  				{
+// 1379  					AppS2w_SslClose(cid);
+// 1380  					return S2W_FAILURE;
+// 1381  				}
+// 1382  				dataSent += sendLen;
 ??AppS2wHal_NetTx_7:
         ADD      R11,R8,R11
-// 1384  				len -= sendLen;
+// 1383  				len -= sendLen;
         SUB      R7,R7,R8
 ??AppS2wHal_NetTx_6:
         CBZ.N    R7,??AppS2wHal_NetTx_4
@@ -4163,38 +4131,38 @@ AppS2wHal_NetTx:
 ??AppS2wHal_NetTx_1:
         MOVS     R0,#+1
         B.N      ??AppS2wHal_NetTx_8
-// 1385  			}
-// 1386  		}
-// 1387          else
-// 1388 #endif
-// 1389         {
-// 1390            GsnSq_TaskMonitorStart(APP_CFG_SQ_SERIAL_INPUT_TASK_ID, (UINT32)cid);
+// 1384  			}
+// 1385  		}
+// 1386          else
+// 1387 #endif
+// 1388         {
+// 1389            GsnSq_TaskMonitorStart(APP_CFG_SQ_SERIAL_INPUT_TASK_ID, (UINT32)cid);
 ??AppS2wHal_NetTx_5:
-        BL       ?Subroutine32
-// 1391           
-// 1392 #ifdef S2W_IPv6_SUPPORT
-// 1393         if(p->addrType & ADDR_TYPE_IPv6)
-// 1394         {
-// 1395           if (send(p->sd, buf, len, 0) < 0)
-// 1396         {
-// 1397 	        /*GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 1398 	        // if the auto connection is enabled do not print this message
-// 1399 	             if((!s2wAutoConnState ) && (!profile_params.autoConnect))
-// 1400        	      {
-// 1401             			//S2w_Printf("send() failed: %d\r\n", 1);
-// 1402 			 }
-// 1403 		         GsnOsal_SemRelease(&s2wSyncSemID);
-// 1404             		*/
-// 1405             status = S2W_FAILURE;
-// 1406         }
+        BL       ?Subroutine33
+// 1390           
+// 1391 #ifdef S2W_IPv6_SUPPORT
+// 1392         if(p->addrType & ADDR_TYPE_IPv6)
+// 1393         {
+// 1394           if (send(p->sd, buf, len, 0) < 0)
+// 1395         {
+// 1396 	        /*GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1397 	        // if the auto connection is enabled do not print this message
+// 1398 	             if((!s2wAutoConnState ) && (!profile_params.autoConnect))
+// 1399        	      {
+// 1400             			//S2w_Printf("send() failed: %d\r\n", 1);
+// 1401 			 }
+// 1402 		         GsnOsal_SemRelease(&s2wSyncSemID);
+// 1403             		*/
+// 1404             status = S2W_FAILURE;
+// 1405         }
+// 1406           
 // 1407           
-// 1408           
-// 1409         }
-// 1410         else
-// 1411 #endif //S2W_IPv6_SUPPORT 
-// 1412         {
-// 1413         if (send(p->sd, buf, len, 0) < 0)
-??CrossCallReturnLabel_80:
+// 1408         }
+// 1409         else
+// 1410 #endif //S2W_IPv6_SUPPORT 
+// 1411         {
+// 1412         if (send(p->sd, buf, len, 0) < 0)
+??CrossCallReturnLabel_84:
         LDR      R0,[R4, #+28]
         MOVS     R3,#+0
         MOV      R2,R7
@@ -4205,26 +4173,26 @@ AppS2wHal_NetTx:
         CMP      R0,#+0
         IT       MI 
         MOVMI    R5,#+1
-// 1414         {
-// 1415             //GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 1416             //if((!s2wAutoConnState ) && (!profile_params.autoConnect))
-// 1417             //{
-// 1418             //S2w_Printf("send() failed: %d\r\n", 1);
-// 1419 			//}
-// 1420             //GsnOsal_SemRelease(&s2wSyncSemID);
-// 1421             status = S2W_FAILURE;
-// 1422         }
-// 1423 	}
-// 1424         }
-// 1425         GsnSq_TaskMonitorStop( APP_CFG_SQ_SERIAL_INPUT_TASK_ID);
+// 1413         {
+// 1414             //GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1415             //if((!s2wAutoConnState ) && (!profile_params.autoConnect))
+// 1416             //{
+// 1417             //S2w_Printf("send() failed: %d\r\n", 1);
+// 1418 			//}
+// 1419             //GsnOsal_SemRelease(&s2wSyncSemID);
+// 1420             status = S2W_FAILURE;
+// 1421         }
+// 1422 	}
+// 1423         }
+// 1424         GsnSq_TaskMonitorStop( APP_CFG_SQ_SERIAL_INPUT_TASK_ID);
 ??AppS2wHal_NetTx_4:
         MOVS     R0,#+10
           CFI FunCall GsnSq_TaskMonitorStop
         BL       GsnSq_TaskMonitorStop
-// 1426 
-// 1427     }
-// 1428     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
-        LDR.W    R1,??DataTable75
+// 1425 
+// 1426     }
+// 1427     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+        LDR.W    R1,??DataTable71
         LDR      R1,[R1, #+0]
         MOVW     R0,#+27384
         LDRB     R0,[R0, R1]
@@ -4232,20 +4200,20 @@ AppS2wHal_NetTx:
         IT       EQ 
           CFI FunCall s2wSpiFs_Flush
         BLEQ     s2wSpiFs_Flush
-// 1429     {
-// 1430          s2wSpiFs_Flush();
-// 1431     }
-// 1432     return status;
+// 1428     {
+// 1429          s2wSpiFs_Flush();
+// 1430     }
+// 1431     return status;
         MOV      R0,R5
 ??AppS2wHal_NetTx_8:
         B.N      ?Subroutine1
           CFI EndBlock cfiBlock78
-// 1433 }
+// 1432 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond79 Using cfiCommon0
           CFI Function AppS2wHal_NetTx
-          CFI Conditional ??CrossCallReturnLabel_82
+          CFI Conditional ??CrossCallReturnLabel_86
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -4258,7 +4226,7 @@ AppS2wHal_NetTx:
           CFI CFA R13+64
           CFI Block cfiCond80 Using cfiCommon0
           CFI (cfiCond80) Function AppS2wHal_NetTx
-          CFI (cfiCond80) Conditional ??CrossCallReturnLabel_81
+          CFI (cfiCond80) Conditional ??CrossCallReturnLabel_85
           CFI (cfiCond80) R4 Frame(CFA, -36)
           CFI (cfiCond80) R5 Frame(CFA, -32)
           CFI (cfiCond80) R6 Frame(CFA, -28)
@@ -4271,7 +4239,7 @@ AppS2wHal_NetTx:
           CFI (cfiCond80) CFA R13+64
           CFI Block cfiCond81 Using cfiCommon0
           CFI (cfiCond81) Function AppS2wHal_NetTx
-          CFI (cfiCond81) Conditional ??CrossCallReturnLabel_80
+          CFI (cfiCond81) Conditional ??CrossCallReturnLabel_84
           CFI (cfiCond81) R4 Frame(CFA, -36)
           CFI (cfiCond81) R5 Frame(CFA, -32)
           CFI (cfiCond81) R6 Frame(CFA, -28)
@@ -4286,7 +4254,7 @@ AppS2wHal_NetTx:
           CFI (cfiPicker82) NoFunction
           CFI (cfiPicker82) Picker
         THUMB
-?Subroutine32:
+?Subroutine33:
         MOV      R1,R10
         MOVS     R0,#+10
           CFI FunCall AppS2wHal_NetTx GsnSq_TaskMonitorStart
@@ -4387,25 +4355,25 @@ AppS2wHal_NetTx:
           CFI EndBlock cfiCond86
           CFI EndBlock cfiCond87
           CFI EndBlock cfiPicker88
+// 1433 
 // 1434 
-// 1435 
-// 1436 /**
-// 1437  ******************************************************************
-// 1438  * @brief S2w cid info get function.
-// 1439  *    This function get all info of the active active cids present.
-// 1440  *.@param cidInfo      - IN the cid info structure pointer.
-// 1441  * @param nos          - IN the address to which the number of active
-// 1442  *                           cids to be stored.
-// 1443  * @retval S2W_SUCCESS     - operation successfull.
-// 1444  ******************************************************************/
+// 1435 /**
+// 1436  ******************************************************************
+// 1437  * @brief S2w cid info get function.
+// 1438  *    This function get all info of the active active cids present.
+// 1439  *.@param cidInfo      - IN the cid info structure pointer.
+// 1440  * @param nos          - IN the address to which the number of active
+// 1441  *                           cids to be stored.
+// 1442  * @retval S2W_SUCCESS     - operation successfull.
+// 1443  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock89 Using cfiCommon0
           CFI Function AppS2wHal_CidInfoGet
         THUMB
-// 1445 PUBLIC UINT8
-// 1446 AppS2wHal_CidInfoGet(S2W_CID_INFO_T cidInfo[],UINT32* nos)
-// 1447 {
+// 1444 PUBLIC UINT8
+// 1445 AppS2wHal_CidInfoGet(S2W_CID_INFO_T cidInfo[],UINT32* nos)
+// 1446 {
 AppS2wHal_CidInfoGet:
         PUSH     {R0,R4-R11,LR}
           CFI R14 Frame(CFA, -4)
@@ -4420,18 +4388,18 @@ AppS2wHal_CidInfoGet:
           CFI CFA R13+40
         SUB      SP,SP,#+24
           CFI CFA R13+64
-// 1448     UINT8 i=0,j=0;
-// 1449     struct sockaddr_in sockAddr;
-// 1450     INT32 len = sizeof(sockAddr), ret;
+// 1447     UINT8 i=0,j=0;
+// 1448     struct sockaddr_in sockAddr;
+// 1449     INT32 len = sizeof(sockAddr), ret;
         MOVS     R0,#+16
         MOV      R9,R1
         MOVS     R5,#+0
         STR      R0,[SP, #+0]
-// 1451     for(i=0;i<MAX_CID_RANGE;i++)
+// 1450     for(i=0;i<MAX_CID_RANGE;i++)
         MOVS     R6,#+0
-        LDR.W    R11,??DataTable62
-// 1452     {
-// 1453         if(s2wCidList[i].sd != CID_NOTINUSE) // valid cid
+        LDR.W    R11,??DataTable58
+// 1451     {
+// 1452         if(s2wCidList[i].sd != CID_NOTINUSE) // valid cid
 ??AppS2wHal_CidInfoGet_0:
         MOV      R0,#+296
         MUL      R8,R0,R6
@@ -4439,8 +4407,8 @@ AppS2wHal_CidInfoGet:
         LDR      R0,[R4, #+28]
         CMN      R0,#+1
         BEQ.N    ??AppS2wHal_CidInfoGet_1
-// 1454         {
-// 1455             cidInfo[j].cid = AppS2wHal_CidFind(s2wCidList[i].sd);
+// 1453         {
+// 1454             cidInfo[j].cid = AppS2wHal_CidFind(s2wCidList[i].sd);
         MOVS     R1,#+12
         MUL      R10,R1,R5
         LDR      R1,[SP, #+24]
@@ -4448,17 +4416,17 @@ AppS2wHal_CidInfoGet:
           CFI FunCall AppS2wHal_CidFind
         BL       AppS2wHal_CidFind
         STRB     R0,[R7, #+10]
-// 1456             if(s2wCidList[i].localPort > 0)
+// 1455             if(s2wCidList[i].localPort > 0)
         LDRH     R0,[R4, #+2]
         CBNZ.N   R0,??AppS2wHal_CidInfoGet_2
-// 1457             {
-// 1458                 cidInfo[j].localPort = s2wCidList[i].localPort;
-// 1459             }
-// 1460             else
-// 1461             {
-// 1462                 ret = getsockname(s2wCidList[i].sd, (struct sockaddr *)&sockAddr,
-// 1463                              &len);
-// 1464                 if(ret < 0)
+// 1456             {
+// 1457                 cidInfo[j].localPort = s2wCidList[i].localPort;
+// 1458             }
+// 1459             else
+// 1460             {
+// 1461                 ret = getsockname(s2wCidList[i].sd, (struct sockaddr *)&sockAddr,
+// 1462                              &len);
+// 1463                 if(ret < 0)
         LDR      R0,[R4, #+28]
         ADD      R2,SP,#+0
         ADD      R1,SP,#+4
@@ -4466,39 +4434,39 @@ AppS2wHal_CidInfoGet:
         BL       getsockname
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_CidInfoGet_3
-// 1465                 {
-// 1466                     //AppS2wHal_NetClose(cid);
-// 1467                     return S2W_SOCKFAILURE;
+// 1464                 {
+// 1465                     //AppS2wHal_NetClose(cid);
+// 1466                     return S2W_SOCKFAILURE;
         MOVS     R0,#+3
         B.N      ??AppS2wHal_CidInfoGet_4
-// 1468                 }
-// 1469                 cidInfo[j].localPort = ntohs(sockAddr.sin_port);
+// 1467                 }
+// 1468                 cidInfo[j].localPort = ntohs(sockAddr.sin_port);
 ??AppS2wHal_CidInfoGet_3:
         LDRH     R0,[SP, #+6]
         LSLS     R1,R0,#+8
         ORR      R0,R1,R0, LSR #+8
 ??AppS2wHal_CidInfoGet_2:
         STRH     R0,[R7, #+2]
-// 1470             }
-// 1471             if (s2wCidList[i].conMode != S2W_NETDATA_MODE_SERVER)
+// 1469             }
+// 1470             if (s2wCidList[i].conMode != S2W_NETDATA_MODE_SERVER)
         LDRB     R0,[R4, #+1]
         CMP      R0,#+1
         BEQ.N    ??AppS2wHal_CidInfoGet_5
-// 1472             {
-// 1473                 memcpy(cidInfo[j].remoteIp, s2wCidList[i].remoteIp,4);
+// 1471             {
+// 1472                 memcpy(cidInfo[j].remoteIp, s2wCidList[i].remoteIp,4);
         MOVS     R2,#+4
         ADDS     R1,R4,#+6
         ADDS     R0,R7,#+6
           CFI FunCall memcpy
         BL       memcpy
-// 1474             }
-// 1475             cidInfo[j].remotePort = s2wCidList[i].remotePort;
+// 1473             }
+// 1474             cidInfo[j].remotePort = s2wCidList[i].remotePort;
 ??AppS2wHal_CidInfoGet_5:
         LDRH     R0,[R4, #+4]
         STRH     R0,[R7, #+4]
-// 1476             cidInfo[j].conType = s2wCidList[i].conType;
-// 1477             cidInfo[j].conMode = s2wCidList[i].conMode;
-// 1478             j = j+1;
+// 1475             cidInfo[j].conType = s2wCidList[i].conType;
+// 1476             cidInfo[j].conMode = s2wCidList[i].conMode;
+// 1477             j = j+1;
         ADDS     R5,R5,#+1
         LDR      R0,[SP, #+24]
         LDRB     R1,[R8, R11]
@@ -4506,29 +4474,29 @@ AppS2wHal_CidInfoGet:
         UXTB     R5,R5
         LDRB     R0,[R4, #+1]
         STRB     R0,[R7, #+1]
-// 1479         }
-// 1480 
-// 1481     }
+// 1478         }
+// 1479 
+// 1480     }
 ??AppS2wHal_CidInfoGet_1:
         ADDS     R6,R6,#+1
         UXTB     R6,R6
         CMP      R6,#+16
         BLT.N    ??AppS2wHal_CidInfoGet_0
-// 1482     *nos = j;
+// 1481     *nos = j;
         STR      R5,[R9, #+0]
-// 1483     return S2W_SUCCESS;
+// 1482     return S2W_SUCCESS;
         MOVS     R0,#+0
           CFI EndBlock cfiBlock89
 ??AppS2wHal_CidInfoGet_4:
         REQUIRE ?Subroutine1
         ;; // Fall through to label ?Subroutine1
-// 1484 }
+// 1483 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock90 Using cfiCommon0
           CFI NoFunction
-          CFI NoCalls AppS2wHal_CidInfoGet
           CFI NoCalls AppS2wHal_NetTx
+          CFI NoCalls AppS2wHal_CidInfoGet
           CFI CFA R13+64
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
@@ -4545,33 +4513,33 @@ AppS2wHal_CidInfoGet:
           CFI CFA R13+36
         POP      {R4-R11,PC}      ;; return
           CFI EndBlock cfiBlock90
+// 1484 
 // 1485 
-// 1486 
-// 1487 /**
-// 1488  ******************************************************************
-// 1489  * @ingroup S2w-Application
-// 1490  * @brief s2w network cid status get function.
-// 1491  *    This function returns the status of the socket corresponding to
-// 1492  *    the cid.
-// 1493  * @param cid - IN the cid number
-// 1494  * @retval TRUE  - the socket opened for that cid.
-// 1495  * @retval FALSE - the socket not open for that cid.
-// 1496  ******************************************************************/
+// 1486 /**
+// 1487  ******************************************************************
+// 1488  * @ingroup S2w-Application
+// 1489  * @brief s2w network cid status get function.
+// 1490  *    This function returns the status of the socket corresponding to
+// 1491  *    the cid.
+// 1492  * @param cid - IN the cid number
+// 1493  * @retval TRUE  - the socket opened for that cid.
+// 1494  * @retval FALSE - the socket not open for that cid.
+// 1495  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock91 Using cfiCommon0
           CFI Function AppS2wHal_NetIsCidOpen
           CFI NoCalls
         THUMB
-// 1497 PUBLIC UINT8
-// 1498 AppS2wHal_NetIsCidOpen(UINT8 cid)
-// 1499 {
-// 1500     return !(cid >= MAX_CID_RANGE || s2wCidList[cid].sd == CID_NOTINUSE);
+// 1496 PUBLIC UINT8
+// 1497 AppS2wHal_NetIsCidOpen(UINT8 cid)
+// 1498 {
+// 1499     return !(cid >= MAX_CID_RANGE || s2wCidList[cid].sd == CID_NOTINUSE);
 AppS2wHal_NetIsCidOpen:
         CMP      R0,#+16
         BGE.N    ??AppS2wHal_NetIsCidOpen_0
         MOV      R1,#+296
-        LDR.W    R2,??DataTable69_1
+        LDR.W    R2,??DataTable66
         MLA      R0,R1,R0,R2
         LDR      R0,[R0, #+28]
         CMN      R0,#+1
@@ -4582,25 +4550,25 @@ AppS2wHal_NetIsCidOpen:
         MOVS     R0,#+0
         BX       LR               ;; return
           CFI EndBlock cfiBlock91
-// 1501 }
+// 1500 }
+// 1501 
 // 1502 
-// 1503 
-// 1504 /**
-// 1505  ******************************************************************
-// 1506  * @ingroup S2w-Application
-// 1507  * @brief s2w Network initialize function
-// 1508  *    This function create the network recv task and create queue for that
-// 1509       task.
-// 1510  * @retval VOID - None.
-// 1511  ******************************************************************/
+// 1503 /**
+// 1504  ******************************************************************
+// 1505  * @ingroup S2w-Application
+// 1506  * @brief s2w Network initialize function
+// 1507  *    This function create the network recv task and create queue for that
+// 1508       task.
+// 1509  * @retval VOID - None.
+// 1510  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock92 Using cfiCommon0
           CFI Function AppS2wHal_NetInit
         THUMB
-// 1512 PUBLIC VOID
-// 1513 AppS2wHal_NetInit(VOID)
-// 1514 {
+// 1511 PUBLIC VOID
+// 1512 AppS2wHal_NetInit(VOID)
+// 1513 {
 AppS2wHal_NetInit:
         PUSH     {R0-R6,LR}
           CFI R14 Frame(CFA, -4)
@@ -4608,37 +4576,37 @@ AppS2wHal_NetInit:
           CFI R5 Frame(CFA, -12)
           CFI R4 Frame(CFA, -16)
           CFI CFA R13+32
-// 1515     UINT32 i;
-// 1516 
-// 1517     /* Mark all socket descriptor as 'not in use'.
-// 1518      */
-// 1519     for (i = 0; i < MAX_CID_RANGE; i++)
+// 1514     UINT32 i;
+// 1515 
+// 1516     /* Mark all socket descriptor as 'not in use'.
+// 1517      */
+// 1518     for (i = 0; i < MAX_CID_RANGE; i++)
         MOVS     R0,#+0
-        LDR.N    R4,??DataTable62
-// 1520     {
-// 1521         s2wCidList[i].sd = CID_NOTINUSE;
+        LDR.N    R4,??DataTable58
+// 1519     {
+// 1520         s2wCidList[i].sd = CID_NOTINUSE;
 ??AppS2wHal_NetInit_0:
         MOV      R1,#+296
         MLA      R1,R1,R0,R4
         MOV      R2,#-1
         STR      R2,[R1, #+28]
-// 1522         s2wCidList[i].httpflag = 0;
-// 1523         s2wCidList[i].localPort = 0;
-// 1524     }
+// 1521         s2wCidList[i].httpflag = 0;
+// 1522         s2wCidList[i].localPort = 0;
+// 1523     }
         ADDS     R0,R0,#+1
         MOVS     R2,#+0
         STRB     R2,[R1, #+47]
         STRH     R2,[R1, #+2]
         CMP      R0,#+16
         BCC.N    ??AppS2wHal_NetInit_0
-// 1525     s2wappMainTaskCtxt->lastCidCreated = MAX_CID_RANGE-1;
-        LDR.W    R5,??DataTable70
-// 1526 
-// 1527     //AppS2wHal_TimerInit(&s2wTcpConnectTimer, AppS2wHal_ConnectTimeout, NULL);
-// 1528     //gh_eflags_create(&s2wTcpConnectEflags);
-// 1529 
-// 1530     GsnOsal_SemCreate  ( &s2wUdpSocketCloseSem, 0 );
-        LDR.W    R6,??DataTable75_1
+// 1524     s2wappMainTaskCtxt->lastCidCreated = MAX_CID_RANGE-1;
+        LDR.W    R5,??DataTable69
+// 1525 
+// 1526     //AppS2wHal_TimerInit(&s2wTcpConnectTimer, AppS2wHal_ConnectTimeout, NULL);
+// 1527     //gh_eflags_create(&s2wTcpConnectEflags);
+// 1528 
+// 1529     GsnOsal_SemCreate  ( &s2wUdpSocketCloseSem, 0 );
+        LDR.W    R6,??DataTable72
         LDR      R1,[R5, #+0]
         MOVW     R0,#+32744
         MOVS     R2,#+15
@@ -4647,13 +4615,13 @@ AppS2wHal_NetInit:
         MOV      R0,R6
           CFI FunCall GsnOsal_SemCreate
         BL       GsnOsal_SemCreate
-// 1531     //AppS2wHal_TimerInit(&s2wUdpCloseTimer, AppS2wHal_CloseTimeout, NULL);
-// 1532 
-// 1533     /* create the queue for the network receive task
-// 1534      */
-// 1535     GsnOsal_QueueCreate(&s2wNetQueue, 2,
-// 1536                           (UINT8*)s2wNetQueueBuffer,
-// 1537                           (sizeof(s2wNetQueueBuffer)));
+// 1530     //AppS2wHal_TimerInit(&s2wUdpCloseTimer, AppS2wHal_CloseTimeout, NULL);
+// 1531 
+// 1532     /* create the queue for the network receive task
+// 1533      */
+// 1534     GsnOsal_QueueCreate(&s2wNetQueue, 2,
+// 1535                           (UINT8*)s2wNetQueueBuffer,
+// 1536                           (sizeof(s2wNetQueueBuffer)));
         MOV      R0,#+512
         STR      R0,[SP, #+0]
         ADD      R3,R4,#+8832
@@ -4662,17 +4630,17 @@ AppS2wHal_NetInit:
         ADD      R0,R6,#+28
           CFI FunCall _tx_queue_create
         BL       _tx_queue_create
-// 1538 
-// 1539     /* create the network  receive task
-// 1540      */
-// 1541 
-// 1542     GsnOsal_ThreadCreate(AppS2wHal_NetRecvTask,s2wappMainTaskCtxt,
-// 1543                                 &s2wappMainTaskCtxt->s2wNetRxTask,
-// 1544                                 "s2wNetRecvtask",
-// 1545                                 APP_CFG_NET_RX_THREAD_PRIORITY,
-// 1546                                 s2wNetRecvTaskStack,
-// 1547                                 sizeof(s2wNetRecvTaskStack),
-// 1548                                 GSN_OSAL_THREAD_INITIAL_READY);
+// 1537 
+// 1538     /* create the network  receive task
+// 1539      */
+// 1540 
+// 1541     GsnOsal_ThreadCreate(AppS2wHal_NetRecvTask,s2wappMainTaskCtxt,
+// 1542                                 &s2wappMainTaskCtxt->s2wNetRxTask,
+// 1543                                 "s2wNetRecvtask",
+// 1544                                 APP_CFG_NET_RX_THREAD_PRIORITY,
+// 1545                                 s2wNetRecvTaskStack,
+// 1546                                 sizeof(s2wNetRecvTaskStack),
+// 1547                                 GSN_OSAL_THREAD_INITIAL_READY);
         MOVS     R0,#+1
         STR      R0,[SP, #+12]
         MOV      R0,#+4096
@@ -4688,27 +4656,27 @@ AppS2wHal_NetInit:
         ADR.W    R0,AppS2wHal_NetRecvTask
           CFI FunCall GsnOsal_ThreadCreate
         BL       GsnOsal_ThreadCreate
-// 1549 
-// 1550 }
+// 1548 
+// 1549 }
         POP      {R0-R6,PC}       ;; return
           CFI EndBlock cfiBlock92
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable62:
+??DataTable58:
         DC32     s2wCidList
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable62_1:
+??DataTable58_1:
         DC32     0x186a0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable62_2:
+??DataTable58_2:
         DC32     AppS2wHal_RxCallBack
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -4717,30 +4685,30 @@ AppS2wHal_NetInit:
 `?<Constant "s2wNetRecvtask">`:
         DC8 "s2wNetRecvtask"
         DC8 0
+// 1550 
 // 1551 
-// 1552 
-// 1553 /**
-// 1554  ******************************************************************
-// 1555  * @ingroup S2w-Application
-// 1556  * @brief s2w Data receive task.
-// 1557  *    This task waits on a message queue.  The network stack callback function
-// 1558  *    will, when the event that data is available on a socket is received, send a
-// 1559  *    message to this message queue containing the socket descriptor.  This task
-// 1560  *    will receive the data from the socket and pass it on to the Serial2WiFi
-// 1561  *    core, which will output the data on the serial port.
-// 1562  *
-// 1563  *   The purpose of this task is to avoid doing too much work in the
-// 1564  *   network stack's callback function.
-// 1565  ******************************************************************/
-// 1566 extern GSN_OSAL_QUEUE_T MQTT_RECEIVE_QUEUE;
+// 1552 /**
+// 1553  ******************************************************************
+// 1554  * @ingroup S2w-Application
+// 1555  * @brief s2w Data receive task.
+// 1556  *    This task waits on a message queue.  The network stack callback function
+// 1557  *    will, when the event that data is available on a socket is received, send a
+// 1558  *    message to this message queue containing the socket descriptor.  This task
+// 1559  *    will receive the data from the socket and pass it on to the Serial2WiFi
+// 1560  *    core, which will output the data on the serial port.
+// 1561  *
+// 1562  *   The purpose of this task is to avoid doing too much work in the
+// 1563  *   network stack's callback function.
+// 1564  ******************************************************************/
+// 1565 extern GSN_OSAL_QUEUE_T MQTT_RECEIVE_QUEUE;
 
         SECTION `.text`:CODE:NOROOT(2)
           CFI Block cfiBlock93 Using cfiCommon0
           CFI Function AppS2wHal_NetRecvTask
         THUMB
-// 1567 VOID
-// 1568 AppS2wHal_NetRecvTask(UINT32 ctx)
-// 1569 {
+// 1566 VOID
+// 1567 AppS2wHal_NetRecvTask(UINT32 ctx)
+// 1568 {
 AppS2wHal_NetRecvTask:
         PUSH     {R4-R11,LR}
           CFI R14 Frame(CFA, -4)
@@ -4755,48 +4723,48 @@ AppS2wHal_NetRecvTask:
           CFI CFA R13+36
         SUB      SP,SP,#+92
           CFI CFA R13+128
-// 1570     INT32 dataLen=0,buffOfset,totalBytesToSnd;
+// 1569     INT32 dataLen=0,buffOfset,totalBytesToSnd;
         MOVS     R0,#+0
         STR      R0,[SP, #+12]
-// 1571     UINT8 cid,newcid,status;
-// 1572     INT32 new_sd;
-// 1573     struct sockaddr_in addr;
-// 1574 #ifdef S2W_IPv6_SUPPORT
-// 1575     struct sockaddr_in6 fromAddr;
-// 1576     INT32 addrlen1 = sizeof(struct sockaddr_in6);
-// 1577     S2W_IPv6ADDR_T ipv6;
-// 1578 
-// 1579 #endif
-// 1580     INT32 addrlen = sizeof(struct sockaddr_in);//, ret;
-// 1581     
-// 1582     UINT16 port;
-// 1583     S2W_IPADDR_T ip;
-// 1584     S2W_MSG_T recvMsg;
-// 1585     UINT8 *rxDataBuf;
-// 1586     INT32 semStat;
-// 1587     UINT32 sentLen=0;
-// 1588 
-// 1589     //UINT8 status, *rcvBuf = NULL;
-// 1590     //UINT32 rcvLen;
-// 1591     INT32 ret;
-// 1592 #ifdef S2W_THROUGHPUT_TEST                       	
-// 1593 	UINT32 *seqNo;	
-// 1594 	GSN_SYSTEM_TIME_T endTime,totalTime;	
-// 1595 #endif	
-// 1596 #ifdef S2W_HTTPC_SUPPORT
-// 1597     ttHttpcConEntryPtr      conEntryPtr;
-// 1598 #ifndef S2W_IP2WIFI_SUPPORT
-// 1599 #ifdef S2W_HTTPS_SUPPORT
-// 1600 
-// 1601     UINT8 *rcvBuf = NULL;
-// 1602     UINT32 rcvLen;
+// 1570     UINT8 cid,newcid,status;
+// 1571     INT32 new_sd;
+// 1572     struct sockaddr_in addr;
+// 1573 #ifdef S2W_IPv6_SUPPORT
+// 1574     struct sockaddr_in6 fromAddr;
+// 1575     INT32 addrlen1 = sizeof(struct sockaddr_in6);
+// 1576     S2W_IPv6ADDR_T ipv6;
+// 1577 
+// 1578 #endif
+// 1579     INT32 addrlen = sizeof(struct sockaddr_in);//, ret;
+// 1580     
+// 1581     UINT16 port;
+// 1582     S2W_IPADDR_T ip;
+// 1583     S2W_MSG_T recvMsg;
+// 1584     UINT8 *rxDataBuf;
+// 1585     INT32 semStat;
+// 1586     UINT32 sentLen=0;
+// 1587 
+// 1588     //UINT8 status, *rcvBuf = NULL;
+// 1589     //UINT32 rcvLen;
+// 1590     INT32 ret;
+// 1591 #ifdef S2W_THROUGHPUT_TEST                       	
+// 1592 	UINT32 *seqNo;	
+// 1593 	GSN_SYSTEM_TIME_T endTime,totalTime;	
+// 1594 #endif	
+// 1595 #ifdef S2W_HTTPC_SUPPORT
+// 1596     ttHttpcConEntryPtr      conEntryPtr;
+// 1597 #ifndef S2W_IP2WIFI_SUPPORT
+// 1598 #ifdef S2W_HTTPS_SUPPORT
+// 1599 
+// 1600     UINT8 *rcvBuf = NULL;
+// 1601     UINT32 rcvLen;
+// 1602 #endif
 // 1603 #endif
 // 1604 #endif
-// 1605 #endif
-// 1606     //INT32 semStat;
-// 1607 	GSN_STATUS sslRet=GSN_FAILURE;
-// 1608 #ifndef S2W_IP2WIFI_SUPPORT
-// 1609     INT32 sslDataRxTimeout=5;
+// 1605     //INT32 semStat;
+// 1606 	GSN_STATUS sslRet=GSN_FAILURE;
+// 1607 #ifndef S2W_IP2WIFI_SUPPORT
+// 1608     INT32 sslDataRxTimeout=5;
         MOV      R9,#+5
         MOVS     R0,#+16
         STR      R0,[SP, #+48]
@@ -4805,303 +4773,301 @@ AppS2wHal_NetRecvTask:
         MOV      R0,#-2147483648
         STR      R0,[SP, #+36]
         B.N      ??AppS2wHal_NetRecvTask_0
-// 1610 #endif
-// 1611     UINT8 socketRecvLoopCount=0;
-// 1612 	
-// 1613 	UINT8* mqtt_temp;
-// 1614     while (1)
-// 1615 
-// 1616     {
-// 1617         /* Task done with job, stop monitoring */
-// 1618         /*GsnSq_TaskMonitorEnd( APP_SQ_NET_RX_TASK_ID);*/
-// 1619 
-// 1620         GsnOsal_QueueGet(&s2wNetQueue, (UINT8 *)&recvMsg, GSN_OSAL_WAIT_FOREVER);
-// 1621         /* Task starting to process a job, start monitoring */
-// 1622         switch (recvMsg.msgType)
-// 1623         {
-// 1624 			case S2W_RECV_TYPE_SOCK_DATA_DISCONNECT:
-// 1625             case S2W_RECV_TYPE_SOCKET:
-// 1626             {
-// 1627                 cid = AppS2wHal_CidFind(recvMsg.rData.dataSock);
-// 1628                 if (cid == INVALID_CID)
-// 1629                 {
-// 1630                 	#ifdef S2W_SEPARATE_NET_RX_TASK
-// 1631                     	continue;
-// 1632 					#else
-// 1633 						break;
-// 1634 					#endif /*S2W_SEPARATE_NET_RX_TASK*/
-// 1635                 }
-// 1636                 S2W_ASSERT(s2wCidList[cid].conType != 0);
+// 1609 #endif
+// 1610     UINT8 socketRecvLoopCount=0;
+// 1611 	
+// 1612     while (1)
+// 1613 
+// 1614     {
+// 1615         /* Task done with job, stop monitoring */
+// 1616         /*GsnSq_TaskMonitorEnd( APP_SQ_NET_RX_TASK_ID);*/
+// 1617 
+// 1618         GsnOsal_QueueGet(&s2wNetQueue, (UINT8 *)&recvMsg, GSN_OSAL_WAIT_FOREVER);
+// 1619         /* Task starting to process a job, start monitoring */
+// 1620         switch (recvMsg.msgType)
+// 1621         {
+// 1622 			case S2W_RECV_TYPE_SOCK_DATA_DISCONNECT:
+// 1623             case S2W_RECV_TYPE_SOCKET:
+// 1624             {
+// 1625                 cid = AppS2wHal_CidFind(recvMsg.rData.dataSock);
+// 1626                 if (cid == INVALID_CID)
+// 1627                 {
+// 1628                 	#ifdef S2W_SEPARATE_NET_RX_TASK
+// 1629                     	continue;
+// 1630 					#else
+// 1631 						break;
+// 1632 					#endif /*S2W_SEPARATE_NET_RX_TASK*/
+// 1633                 }
+// 1634                 S2W_ASSERT(s2wCidList[cid].conType != 0);
+// 1635 
+// 1636 					INT32 intrStatus;
 // 1637 
-// 1638 					INT32 intrStatus;
-// 1639 
-// 1640 					intrStatus = GsnOsal_IntrDisable();
-// 1641 					s2wCidList[cid].s2wSockDataPending = 0;
-// 1642 					/*re-enable all interrupts */
-// 1643                     GsnOsal_IntrEnable(intrStatus );
-// 1644                     socketRecvLoopCount=0;
-// 1645                 do
-// 1646                 {
-// 1647                     socketRecvLoopCount++;
-// 1648                     GsnSq_TaskMonitorStart(APP_CFG_SQ_NETRX_TASK_ID, cid);
-// 1649                     if (s2wCidList[cid].conType == UDP)
-// 1650                     {
-// 1651 #ifdef S2W_IPv6_SUPPORT                              
-// 1652                       if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
-// 1653                         dataLen = recvfrom(recvMsg.rData.dataSock,(char *)s2wRxBuf,sizeof(s2wRxBuf), 0,(struct sockaddr *) &fromAddr, &addrlen1);
-// 1654                       else
-// 1655 #endif //S2W_IPv6_SUPPORT
-// 1656 #if defined(S2W_DTLS_CLIENT_SUPPORT)
-// 1657               			if (s2wCidList[cid].sslflag == TRUE /*&& (dataLen > 0)*/)
-// 1658                         {
-// 1659                             dataLen = sizeof(s2wRxBuf);
-// 1660                             addrlen = sizeof(struct sockaddr_in);
-// 1661               			    GsnDtls_Receive( (GSN_DTLS_CONN_T *)s2wCidList[cid].ssl.sslConn,
-// 1662               				    /*rxDataBuf*/s2wRxBuf, (UINT32*)&dataLen, 0/*MSG_DONTWAIT*/,
-// 1663               				    (struct sockaddr *)&addr, &addrlen );
-// 1664               			}
-// 1665               			else
-// 1666 #endif
-// 1667                         dataLen = recvfrom(recvMsg.rData.dataSock, (char *)s2wRxBuf,
-// 1668                                   sizeof(s2wRxBuf), 0,
-// 1669                                   (struct sockaddr *)&addr, &addrlen);
-// 1670 
-// 1671                         if (dataLen > 0)
-// 1672                         {
-// 1673                             if( s2wCidList[cid].conMode == S2W_NETDATA_MODE_SERVER)
-// 1674                             {
-// 1675 #ifdef S2W_IPv6_SUPPORT                              
-// 1676                               if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
-// 1677                               {
-// 1678                                 //port = ntohs(fromAddr.sin6_port);
-// 1679                                 port = htons(fromAddr.sin6_port);
-// 1680                                 memcpy(ipv6,fromAddr.sin6_addr._S6_un._S6_u32,sizeof(ipv6));
-// 1681                                 GSN_IPv6_CHANGE_ENDIAN((UINT32 *)ipv6);
-// 1682                               }
-// 1683                               else
-// 1684 #endif //S2W_IPv6_SUPPORT                                
-// 1685                               {                                
-// 1686                                 port = htons(addr.sin_port);
-// 1687                                 memcpy(ip, &(addr.sin_addr.s_addr), sizeof(ip));
-// 1688                                 *(ULONG*)ip = htonl(*(ULONG*)ip);
-// 1689                               }
-// 1690                             }
-// 1691                             else  /* Client  */
-// 1692                             {
-// 1693 #ifdef S2W_IPv6_SUPPORT
-// 1694                               if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)  /* IPv6 */
-// 1695                               {
-// 1696                                 //if(!memcmp(s2wCidList[cid].remoteIpv6,fromAddr.sin6_addr._S6_un._S6_u32,sizeof(fromAddr.sin6_addr._S6_un._S6_u32)))
-// 1697                                 {
-// 1698                                   //port = ntohs(fromAddr.sin6_port);
-// 1699                                   port = htons(fromAddr.sin6_port);
-// 1700                                   memcpy(ipv6,fromAddr.sin6_addr._S6_un._S6_u32,sizeof(ipv6));
-// 1701                                   GSN_IPv6_CHANGE_ENDIAN(ipv6);
-// 1702                                 }
-// 1703                                                                 
-// 1704                               }
-// 1705                               else 
-// 1706                               
-// 1707 #endif  //S2W_IPv6_SUPPORT
-// 1708                               {
-// 1709 
-// 1710                                     //port = ntohs(addr.sin_port);
-// 1711                                 port = 0;
+// 1638 					intrStatus = GsnOsal_IntrDisable();
+// 1639 					s2wCidList[cid].s2wSockDataPending = 0;
+// 1640 					/*re-enable all interrupts */
+// 1641                     GsnOsal_IntrEnable(intrStatus );
+// 1642                     socketRecvLoopCount=0;
+// 1643                 do
+// 1644                 {
+// 1645                     socketRecvLoopCount++;
+// 1646                     GsnSq_TaskMonitorStart(APP_CFG_SQ_NETRX_TASK_ID, cid);
+// 1647                     if (s2wCidList[cid].conType == UDP)
+// 1648                     {
+// 1649 #ifdef S2W_IPv6_SUPPORT                              
+// 1650                       if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
+// 1651                         dataLen = recvfrom(recvMsg.rData.dataSock,(char *)s2wRxBuf,sizeof(s2wRxBuf), 0,(struct sockaddr *) &fromAddr, &addrlen1);
+// 1652                       else
+// 1653 #endif //S2W_IPv6_SUPPORT
+// 1654 #if defined(S2W_DTLS_CLIENT_SUPPORT)
+// 1655               			if (s2wCidList[cid].sslflag == TRUE /*&& (dataLen > 0)*/)
+// 1656                         {
+// 1657                             dataLen = sizeof(s2wRxBuf);
+// 1658                             addrlen = sizeof(struct sockaddr_in);
+// 1659               			    GsnDtls_Receive( (GSN_DTLS_CONN_T *)s2wCidList[cid].ssl.sslConn,
+// 1660               				    /*rxDataBuf*/s2wRxBuf, (UINT32*)&dataLen, 0/*MSG_DONTWAIT*/,
+// 1661               				    (struct sockaddr *)&addr, &addrlen );
+// 1662               			}
+// 1663               			else
+// 1664 #endif
+// 1665                         dataLen = recvfrom(recvMsg.rData.dataSock, (char *)s2wRxBuf,
+// 1666                                   sizeof(s2wRxBuf), 0,
+// 1667                                   (struct sockaddr *)&addr, &addrlen);
+// 1668 
+// 1669                         if (dataLen > 0)
+// 1670                         {
+// 1671                             if( s2wCidList[cid].conMode == S2W_NETDATA_MODE_SERVER)
+// 1672                             {
+// 1673 #ifdef S2W_IPv6_SUPPORT                              
+// 1674                               if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
+// 1675                               {
+// 1676                                 //port = ntohs(fromAddr.sin6_port);
+// 1677                                 port = htons(fromAddr.sin6_port);
+// 1678                                 memcpy(ipv6,fromAddr.sin6_addr._S6_un._S6_u32,sizeof(ipv6));
+// 1679                                 GSN_IPv6_CHANGE_ENDIAN((UINT32 *)ipv6);
+// 1680                               }
+// 1681                               else
+// 1682 #endif //S2W_IPv6_SUPPORT                                
+// 1683                               {                                
+// 1684                                 port = htons(addr.sin_port);
+// 1685                                 memcpy(ip, &(addr.sin_addr.s_addr), sizeof(ip));
+// 1686                                 *(ULONG*)ip = htonl(*(ULONG*)ip);
+// 1687                               }
+// 1688                             }
+// 1689                             else  /* Client  */
+// 1690                             {
+// 1691 #ifdef S2W_IPv6_SUPPORT
+// 1692                               if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)  /* IPv6 */
+// 1693                               {
+// 1694                                 //if(!memcmp(s2wCidList[cid].remoteIpv6,fromAddr.sin6_addr._S6_un._S6_u32,sizeof(fromAddr.sin6_addr._S6_un._S6_u32)))
+// 1695                                 {
+// 1696                                   //port = ntohs(fromAddr.sin6_port);
+// 1697                                   port = htons(fromAddr.sin6_port);
+// 1698                                   memcpy(ipv6,fromAddr.sin6_addr._S6_un._S6_u32,sizeof(ipv6));
+// 1699                                   GSN_IPv6_CHANGE_ENDIAN(ipv6);
+// 1700                                 }
+// 1701                                                                 
+// 1702                               }
+// 1703                               else 
+// 1704                               
+// 1705 #endif  //S2W_IPv6_SUPPORT
+// 1706                               {
+// 1707 
+// 1708                                     //port = ntohs(addr.sin_port);
+// 1709                                 port = 0;
 ??AppS2wHal_NetRecvTask_1:
         MOVS     R4,#+0
-// 1712                                     //memcpy(ip, &(addr.sin_addr.s_addr), sizeof(ip));
-// 1713                                     //*(ULONG*)ip = htonl(*(ULONG*)ip);
-// 1714                                 *(ULONG*)ip=0;
+// 1710                                     //memcpy(ip, &(addr.sin_addr.s_addr), sizeof(ip));
+// 1711                                     //*(ULONG*)ip = htonl(*(ULONG*)ip);
+// 1712                                 *(ULONG*)ip=0;
         STR      R4,[SP, #+8]
-// 1715                                 }
-// 1716 
-// 1717                               }
-// 1718                             }
-// 1719                         }
-// 1720                     else
-// 1721                     {
-// 1722 #ifndef S2W_IP2WIFI_SUPPORT
-// 1723                         /*dataLen = recv(recvMsg.rData.dataSock, (char *)s2wRxBuf,
-// 1724                         sizeof(s2wRxBuf), MSG_DONTWAIT);*/
-// 1725                         port = 0;
-// 1726 
-// 1727                         if (s2wCidList[cid].sslflag == TRUE /*&& (dataLen > 0)*/)
-// 1728                         {
-// 1729 #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
-// 1730 //#if 0
-// 1731                             s2wCidList[cid].ssl.sslConn->sslState = GSN_SSL_STATE_INIT;
-// 1732 #ifdef S2W_SSL_SERVER_SUPPORT
-// 1733 							if(TRUE == s2wCidList[cid].sslRemoteCliConctng)
-// 1734 							{
-// 1735 								/* a Remote client is setting up the ssl connection with tcp server.
-// 1736 								  ssl connenction is done in WDD task context*/
-// 1737 								//UINT32 msg;
-// 1738 								GSN_SSL_RECV_PARAMS_T sslRecvParams;
-// 1739 								sslRecvParams.pSslConn = s2wCidList[cid].ssl.sslConn;
-// 1740 								sslRecvParams.sockDes = s2wCidList[cid].sd;
-// 1741 								sslRecvParams.rxDataBuf = &rxDataBuf;
-// 1742 								sslRecvParams.rxDataLen = (UINT32 *)&dataLen;
-// 1743 								sslRecvParams.timeOut = 5;
-// 1744 								//GsnOsal_SemCreate(&s2wCidList[cid].s2wSslRecvInProgress, 0);
-// 1745 								s2wCidList[cid].pSslRecvParams = &sslRecvParams;
-// 1746 								//msg = (S2W_MOD_NOTIF_CONN_START + cid);
-// 1747 								//GsnMsgHandler_Post(s2wappMainTaskCtxt->pMsgHdlrExecInWddTsk, &msg);
-// 1748 								//GsnOsal_SemAcquire(&s2wCidList[cid].s2wSslRecvInProgress,GSN_OSAL_WAIT_FOREVER);
-// 1749 								ret = s2wCidList[cid].recvStatus;
-// 1750 								//GsnOsal_SemDelete(&s2wCidList[cid].s2wSslRecvInProgress);
-// 1751 								port = htons(s2wCidList[cid].remotePort);
-// 1752 								memcpy(ip, &(s2wCidList[cid].remoteIp), sizeof(ip));
-// 1753 								*(UINT32*)ip = htonl(*(UINT32*)ip);
-// 1754 								ret = AppS2wProcess_NetAccept(s2wCidList[cid].serverCid,
-// 1755 															  cid, ip,port);
-// 1756 						        if (ret != S2W_SUCCESS)
-// 1757 						        {
-// 1758 						            soc_close(s2wCidList[cid].sd);
-// 1759 						            return;
-// 1760 						        }
-// 1761 #if 1
-// 1762                             	ret = GsnSsl_DataReceive(s2wCidList[cid].ssl.sslConn,
-// 1763                                                          s2wCidList[cid].sd,
-// 1764                                                          &rxDataBuf,
-// 1765                                                          (UINT32 *)&dataLen,
-// 1766                                                          5);
-// 1767 #endif
-// 1768 								s2wCidList[cid].sslRemoteCliConctng = FALSE;
-// 1769 							}
-// 1770 							else
-// 1771 #endif
-// 1772 							{
-// 1773 								if(0 == sslDataRxTimeout)
-// 1774 								{
-// 1775 									/* if the timeout is zero, make the socket as non blocking*/
-// 1776 									fcntl(s2wCidList[cid].sd, F_SETFL, O_NONBLOCK);
-// 1777 								}
-// 1778                                 
-// 1779                             	sslRet = GsnSsl_DataReceive(s2wCidList[cid].ssl.sslConn,
-// 1780                                                          s2wCidList[cid].sd,
-// 1781                                                          &rxDataBuf,
-// 1782                                                          (UINT32 *)&dataLen,
-// 1783                                                          sslDataRxTimeout);
-// 1784                                                          
-// 1785                                 
-// 1786 								/*if(rxDataBuf[0] == 0x20 || rxDataBuf[0] == 0x40 || rxDataBuf[0] == 0x50 || rxDataBuf[0] == 0x70 || rxDataBuf[0] == 0xC0 || rxDataBuf[0] == 0xE0)						 
-// 1787 								{
-// 1788                                   S2w_Printf("\r\nSSL Data Receive in receive task : %X %X %X %X",rxDataBuf[0],rxDataBuf[1],rxDataBuf[2],rxDataBuf[3]);
-// 1789 								  status = tx_queue_send(&MQTT_RECEIVE_QUEUE,rxDataBuf,TX_NO_WAIT);
-// 1790 								}*/
-// 1791 								if(0 == sslDataRxTimeout)
-// 1792 								{
-// 1793 									/*restore back to blocking*/
-// 1794 									fcntl(s2wCidList[cid].sd, F_SETFL, 0);
-// 1795 								}
-// 1796 							}
-// 1797                             if(sslRet != GSN_SUCCESS)
-// 1798                             {/*Error!*/
-// 1799                             	dataLen = 0;/*Need to set explicitely as DataReceive() does not do so*/
-// 1800                             }
-// 1801 							sslDataRxTimeout=1;
-// 1802 #endif
-// 1803                         }
-// 1804                         else if(s2wCidList[cid].httpflag ==  1)
-// 1805                         { /* This section should be executed when http send not in progress.
-// 1806                              This is ensured by opInProgress semophore */
-// 1807 #ifdef S2W_HTTPS_SUPPORT
-// 1808                             conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
-// 1809                             semStat = GsnOsal_SemAcquire(&s2wCidList[cid].pHttpData->opInProgress, GSN_OSAL_NO_WAIT);
-// 1810                             if((semStat == GSN_OSAL_SUCCESS) && (conEntryPtr->hconHttpType == GSN_HTTPS))
-// 1811                             {
-// 1812                                 /* http send not in progress. Docode the data recieved */
-// 1813                                 ret = GsnHttps_DataReceive(conEntryPtr->hConSsl, s2wCidList[cid].sd, &rcvBuf, &rcvLen, 5);
-// 1814                                 if(rcvBuf != NULL)
-// 1815                                 {
-// 1816                                     GsnSsl_Free(rcvBuf);
-// 1817                                 }
-// 1818                                 if(ret == GSN_SSL_CLOSE_ALERT)
-// 1819                                 {
-// 1820                                     /* Recieved data is a Close alert. Send the alert back to server */
-// 1821                                     GsnHttp_Alert(s2wCidList[cid].pHttpData->pHttpHandle);
-// 1822 
-// 1823                                 }
-// 1824 
-// 1825                             }
-// 1826                             dataLen = 0;
-// 1827                             if(semStat == GSN_OSAL_SUCCESS)
-// 1828                             {
-// 1829                                 GsnOsal_SemRelease(&s2wCidList[cid].pHttpData->opInProgress);
-// 1830                             }
-// 1831 #endif
-// 1832                         }
-// 1833 
-// 1834                         else
-// 1835                         {
-// 1836                           
-// 1837 #ifdef S2W_IPv6_SUPPORT
-// 1838                           if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
-// 1839                             dataLen = recv(recvMsg.rData.dataSock, (char *)s2wRxBuf,sizeof(s2wRxBuf), 0);
-// 1840                           else
-// 1841 #endif //S2W_IPv6_SUPPORT 
-// 1842 						  {
-// 1843                             dataLen = recv(recvMsg.rData.dataSock, (char *)s2wRxBuf,
-// 1844                                       sizeof(s2wRxBuf), 0);
-// 1845 							/*if(s2wRxBuf[0] == 0x20 || s2wRxBuf[0] == 0x40 || s2wRxBuf[0] == 0x50 || s2wRxBuf[0] == 0x70 || s2wRxBuf[0] == 0xC0 || s2wRxBuf[0] == 0xE0)						 
-// 1846 							{
-// 1847                                   S2w_Printf("\r\nData Receive in receive task 1 : %X %X %X %X",s2wRxBuf[0],s2wRxBuf[1],s2wRxBuf[2],s2wRxBuf[3]);
-// 1848 								  status = tx_queue_send(&MQTT_RECEIVE_QUEUE,s2wRxBuf,TX_NO_WAIT);
-// 1849 							}*/
-// 1850 						  }
-// 1851                         }
-// 1852 #endif
-// 1853                     }
-// 1854                     if (dataLen <= 0)
-// 1855                     {
-// 1856                         S2w_Debug("Data len: %d\r\n", dataLen);
-// 1857 						if(s2wCidList[cid].sslflag == TRUE && (sslRet == GSN_SUCCESS))
-// 1858 							dataLen=1;
-// 1859                     }
-// 1860                     else
-// 1861                     {
-// 1862                         if((s2wCidList[cid].sslflag == TRUE) && (s2wCidList[cid].conType == TCP))
+// 1713                                 }
+// 1714 
+// 1715                               }
+// 1716                             }
+// 1717                         }
+// 1718                     else
+// 1719                     {
+// 1720 #ifndef S2W_IP2WIFI_SUPPORT
+// 1721                         /*dataLen = recv(recvMsg.rData.dataSock, (char *)s2wRxBuf,
+// 1722                         sizeof(s2wRxBuf), MSG_DONTWAIT);*/
+// 1723                         port = 0;
+// 1724 
+// 1725                         if (s2wCidList[cid].sslflag == TRUE /*&& (dataLen > 0)*/)
+// 1726                         {
+// 1727 #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
+// 1728 //#if 0
+// 1729                             s2wCidList[cid].ssl.sslConn->sslState = GSN_SSL_STATE_INIT;
+// 1730 #ifdef S2W_SSL_SERVER_SUPPORT
+// 1731 							if(TRUE == s2wCidList[cid].sslRemoteCliConctng)
+// 1732 							{
+// 1733 								/* a Remote client is setting up the ssl connection with tcp server.
+// 1734 								  ssl connenction is done in WDD task context*/
+// 1735 								//UINT32 msg;
+// 1736 								GSN_SSL_RECV_PARAMS_T sslRecvParams;
+// 1737 								sslRecvParams.pSslConn = s2wCidList[cid].ssl.sslConn;
+// 1738 								sslRecvParams.sockDes = s2wCidList[cid].sd;
+// 1739 								sslRecvParams.rxDataBuf = &rxDataBuf;
+// 1740 								sslRecvParams.rxDataLen = (UINT32 *)&dataLen;
+// 1741 								sslRecvParams.timeOut = 5;
+// 1742 								//GsnOsal_SemCreate(&s2wCidList[cid].s2wSslRecvInProgress, 0);
+// 1743 								s2wCidList[cid].pSslRecvParams = &sslRecvParams;
+// 1744 								//msg = (S2W_MOD_NOTIF_CONN_START + cid);
+// 1745 								//GsnMsgHandler_Post(s2wappMainTaskCtxt->pMsgHdlrExecInWddTsk, &msg);
+// 1746 								//GsnOsal_SemAcquire(&s2wCidList[cid].s2wSslRecvInProgress,GSN_OSAL_WAIT_FOREVER);
+// 1747 								ret = s2wCidList[cid].recvStatus;
+// 1748 								//GsnOsal_SemDelete(&s2wCidList[cid].s2wSslRecvInProgress);
+// 1749 								port = htons(s2wCidList[cid].remotePort);
+// 1750 								memcpy(ip, &(s2wCidList[cid].remoteIp), sizeof(ip));
+// 1751 								*(UINT32*)ip = htonl(*(UINT32*)ip);
+// 1752 								ret = AppS2wProcess_NetAccept(s2wCidList[cid].serverCid,
+// 1753 															  cid, ip,port);
+// 1754 						        if (ret != S2W_SUCCESS)
+// 1755 						        {
+// 1756 						            soc_close(s2wCidList[cid].sd);
+// 1757 						            return;
+// 1758 						        }
+// 1759 #if 1
+// 1760                             	ret = GsnSsl_DataReceive(s2wCidList[cid].ssl.sslConn,
+// 1761                                                          s2wCidList[cid].sd,
+// 1762                                                          &rxDataBuf,
+// 1763                                                          (UINT32 *)&dataLen,
+// 1764                                                          5);
+// 1765 #endif
+// 1766 								s2wCidList[cid].sslRemoteCliConctng = FALSE;
+// 1767 							}
+// 1768 							else
+// 1769 #endif
+// 1770 							{
+// 1771 								if(0 == sslDataRxTimeout)
+// 1772 								{
+// 1773 									/* if the timeout is zero, make the socket as non blocking*/
+// 1774 									fcntl(s2wCidList[cid].sd, F_SETFL, O_NONBLOCK);
+// 1775 								}
+// 1776                                 
+// 1777                             	sslRet = GsnSsl_DataReceive(s2wCidList[cid].ssl.sslConn,
+// 1778                                                          s2wCidList[cid].sd,
+// 1779                                                          &rxDataBuf,
+// 1780                                                          (UINT32 *)&dataLen,
+// 1781                                                          sslDataRxTimeout);
+// 1782                                                    
+// 1783 #ifdef THINGPLUS
+// 1784 								if(rxDataBuf[0] == 0x20 || rxDataBuf[0] == 0x40 || rxDataBuf[0] == 0x50 || rxDataBuf[0] == 0x70 || rxDataBuf[0] == 0x90 || rxDataBuf[0] == 0xB0 || rxDataBuf[0] == 0xD0)
+// 1785 								{
+// 1786                                  
+// 1787 		
+// 1788 								  S2w_Printf("\r\n Receive Data rxDataBuf : %x %x %x %x",rxDataBuf[0],rxDataBuf[1],rxDataBuf[2],rxDataBuf[3]);
+// 1789 								  S2w_Printf("\r\n QUEUE COUNT 1 : %d",MQTT_RECEIVE_QUEUE.tx_queue_available_storage);
+// 1790 								  status = tx_queue_send(&MQTT_RECEIVE_QUEUE, rxDataBuf, TX_NO_WAIT);
+// 1791 								  
+// 1792 								}
+// 1793 #endif
+// 1794 								if(0 == sslDataRxTimeout)
+// 1795 								{
+// 1796 									/*restore back to blocking*/
+// 1797 									fcntl(s2wCidList[cid].sd, F_SETFL, 0);
+// 1798 								}
+// 1799 							}
+// 1800                             if(sslRet != GSN_SUCCESS)
+// 1801                             {/*Error!*/
+// 1802                             	dataLen = 0;/*Need to set explicitely as DataReceive() does not do so*/
+// 1803                             }
+// 1804 							sslDataRxTimeout=1;
+// 1805 #endif
+// 1806                         }
+// 1807                         else if(s2wCidList[cid].httpflag ==  1)
+// 1808                         { /* This section should be executed when http send not in progress.
+// 1809                              This is ensured by opInProgress semophore */
+// 1810 #ifdef S2W_HTTPS_SUPPORT
+// 1811                             conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
+// 1812                             semStat = GsnOsal_SemAcquire(&s2wCidList[cid].pHttpData->opInProgress, GSN_OSAL_NO_WAIT);
+// 1813                             if((semStat == GSN_OSAL_SUCCESS) && (conEntryPtr->hconHttpType == GSN_HTTPS))
+// 1814                             {
+// 1815                                 /* http send not in progress. Docode the data recieved */
+// 1816                                 ret = GsnHttps_DataReceive(conEntryPtr->hConSsl, s2wCidList[cid].sd, &rcvBuf, &rcvLen, 5);
+// 1817                                 if(rcvBuf != NULL)
+// 1818                                 {
+// 1819                                     GsnSsl_Free(rcvBuf);
+// 1820                                 }
+// 1821                                 if(ret == GSN_SSL_CLOSE_ALERT)
+// 1822                                 {
+// 1823                                     /* Recieved data is a Close alert. Send the alert back to server */
+// 1824                                     GsnHttp_Alert(s2wCidList[cid].pHttpData->pHttpHandle);
+// 1825 
+// 1826                                 }
+// 1827 
+// 1828                             }
+// 1829                             dataLen = 0;
+// 1830                             if(semStat == GSN_OSAL_SUCCESS)
+// 1831                             {
+// 1832                                 GsnOsal_SemRelease(&s2wCidList[cid].pHttpData->opInProgress);
+// 1833                             }
+// 1834 #endif
+// 1835                         }
+// 1836 
+// 1837                         else
+// 1838                         {
+// 1839                           
+// 1840 #ifdef S2W_IPv6_SUPPORT
+// 1841                           if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
+// 1842                             dataLen = recv(recvMsg.rData.dataSock, (char *)s2wRxBuf,sizeof(s2wRxBuf), 0);
+// 1843                           else
+// 1844 #endif //S2W_IPv6_SUPPORT 
+// 1845 						  {
+// 1846                             dataLen = recv(recvMsg.rData.dataSock, (char *)s2wRxBuf, sizeof(s2wRxBuf), 0);
+// 1847 						  }
+// 1848                         }
+// 1849 #endif
+// 1850                     }
+// 1851                     if (dataLen <= 0)
+// 1852                     {
+// 1853                         S2w_Debug("Data len: %d\r\n", dataLen);
+// 1854 						if(s2wCidList[cid].sslflag == TRUE && (sslRet == GSN_SUCCESS))
+// 1855 							dataLen=1;
+// 1856                     }
+// 1857                     else
+// 1858                     {
+// 1859                         if((s2wCidList[cid].sslflag == TRUE) && (s2wCidList[cid].conType == TCP))
 ??AppS2wHal_NetRecvTask_2:
-        LDRB     R0,[R8, #+44]
-        CMP      R0,#+1
+        BL       ?Subroutine31
+??CrossCallReturnLabel_78:
         ITTTT    EQ 
         LDREQ    R0,[SP, #+32]
-        LDREQ.W  R1,??DataTable69_1
+        LDREQ.W  R1,??DataTable66
         LDRBEQ   R0,[R0, R1]
         CMPEQ    R0,#+2
         BNE.W    ??AppS2wHal_NetRecvTask_3
-// 1863                         {
-// 1864                         	totalBytesToSnd = dataLen;
-        LDR      R6,[SP, #+12]
-// 1865                         	buffOfset=0;
+// 1860                         {
+// 1861                         	totalBytesToSnd = dataLen;
+        LDR      R10,[SP, #+12]
+// 1862                         	buffOfset=0;
         MOV      R11,#+0
-// 1866                        		while(totalBytesToSnd)
-// 1867                        		{
-// 1868                        			GsnSq_TaskMonitorStop( APP_CFG_SQ_NETRX_TASK_ID);
+// 1863                        		while(totalBytesToSnd)
+// 1864                        		{
+// 1865                        			GsnSq_TaskMonitorStop( APP_CFG_SQ_NETRX_TASK_ID);
 ??AppS2wHal_NetRecvTask_4:
         MOVS     R0,#+9
           CFI FunCall GsnSq_TaskMonitorStop
         BL       GsnSq_TaskMonitorStop
-// 1869 								GsnSq_TaskMonitorStart(APP_CFG_SQ_NETRX_TASK_ID, cid);
-        MOV      R1,R10
+// 1866 								GsnSq_TaskMonitorStart(APP_CFG_SQ_NETRX_TASK_ID, cid);
+        MOV      R1,R8
         MOVS     R0,#+9
           CFI FunCall GsnSq_TaskMonitorStart
         BL       GsnSq_TaskMonitorStart
-// 1870 								sentLen =totalBytesToSnd >= S2W_RX_BUF_SIZE? S2W_RX_BUF_SIZE:totalBytesToSnd;
+// 1867 								sentLen =totalBytesToSnd >= S2W_RX_BUF_SIZE? S2W_RX_BUF_SIZE:totalBytesToSnd;
         MOVW     R0,#+1500
-        CMP      R6,R0
+        CMP      R10,R0
         ITE      GE 
         STRGE    R0,[SP, #+4]
-        STRLT    R6,[SP, #+4]
+        STRLT    R10,[SP, #+4]
         B.N      ??AppS2wHal_NetRecvTask_5
 ??AppS2wHal_NetRecvTask_6:
-        LDRB     R0,[R8, #+44]
+        LDRB     R0,[R5, #+44]
         MOVS     R4,#+0
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_NetRecvTask_7
         LDR      R0,[R7, #+36]
         STRH     R4,[R0, #+16]
-        LDRB     R0,[R5, #+1]
+        LDRB     R0,[R6, #+1]
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_NetRecvTask_8
         LDR      R0,[R7, #+36]
@@ -5116,20 +5082,20 @@ AppS2wHal_NetRecvTask:
         MOVS     R0,#+5
         STR      R0,[SP, #+68]
         ADD      R0,SP,#+52
-        STR      R0,[R8, #+272]
-        LDRH     R0,[R8, #+4]
+        STR      R0,[R5, #+272]
+        LDRH     R0,[R5, #+4]
         LSLS     R1,R0,#+8
         ORR      R4,R1,R0, LSR #+8
-        ADD      R1,R8,#+6
+        ADDS     R1,R5,#+6
         ADD      R0,SP,#+8
           CFI FunCall memcpy
         BL       memcpy
-        BL       ?Subroutine31
-??CrossCallReturnLabel_77:
+        BL       ?Subroutine32
+??CrossCallReturnLabel_81:
         UXTH     R3,R4
-        LDRB     R0,[R5, #+2]
+        LDRB     R0,[R6, #+2]
         ADD      R2,SP,#+8
-        MOV      R1,R10
+        MOV      R1,R8
           CFI FunCall AppS2wProcess_NetAccept
         BL       AppS2wProcess_NetAccept
         CBZ.N    R0,??AppS2wHal_NetRecvTask_9
@@ -5150,7 +5116,7 @@ AppS2wHal_NetRecvTask:
           CFI FunCall GsnSsl_DataReceive
         BL       GsnSsl_DataReceive
         MOVS     R0,#+0
-        STRB     R0,[R5, #+1]
+        STRB     R0,[R6, #+1]
         B.N      ??AppS2wHal_NetRecvTask_10
 ??AppS2wHal_NetRecvTask_8:
         CMP      R9,#+0
@@ -5182,56 +5148,56 @@ AppS2wHal_NetRecvTask:
         MOVS     R0,#+0
         STR      R0,[SP, #+12]
         MOV      R9,#+1
-        B.N      ??CrossCallReturnLabel_108
+        B.N      ??CrossCallReturnLabel_112
 ??AppS2wHal_NetRecvTask_12:
         MOV      R9,#+1
         B.N      ??AppS2wHal_NetRecvTask_13
 ??AppS2wHal_NetRecvTask_7:
-        LDRB     R0,[R5, #+3]
+        LDRB     R0,[R6, #+3]
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_NetRecvTask_14
-        LDR      R0,[R5, #+8]
-        LDR      R6,[R0], #+48
+        LDR      R0,[R6, #+8]
+        LDR      R10,[R0], #+48
         MOVS     R1,#+0
           CFI FunCall GsnOsal_SemAcquire
         BL       GsnOsal_SemAcquire
         CBNZ.N   R0,??AppS2wHal_NetRecvTask_15
-        LDR      R0,[R6, #+188]
+        LDR      R0,[R10, #+188]
         CMP      R0,#+1
         BEQ.N    ??AppS2wHal_NetRecvTask_16
 ??AppS2wHal_NetRecvTask_17:
         STR      R4,[SP, #+12]
-        BL       ?Subroutine33
-??CrossCallReturnLabel_86:
+        BL       ?Subroutine34
+??CrossCallReturnLabel_90:
         B.N      ??AppS2wHal_NetRecvTask_13
 ??AppS2wHal_NetRecvTask_16:
         MOVS     R0,#+5
         STR      R0,[SP, #+0]
         ADD      R3,SP,#+44
         LDR      R1,[R7, #+24]
-        LDR      R0,[R6, #+184]
+        LDR      R0,[R10, #+184]
         ADD      R2,SP,#+40
           CFI FunCall GsnHttps_DataReceive
         BL       GsnHttps_DataReceive
-        MOV      R6,R0
+        MOV      R10,R0
         LDR      R0,[SP, #+40]
         CBZ.N    R0,??AppS2wHal_NetRecvTask_18
           CFI FunCall GsnSsl_Free
         BL       GsnSsl_Free
 ??AppS2wHal_NetRecvTask_18:
-        LDR.W    R0,??DataTable77_1  ;; 0xb0000600
-        CMP      R6,R0
+        LDR.W    R0,??DataTable74  ;; 0xb0000600
+        CMP      R10,R0
         BNE.N    ??AppS2wHal_NetRecvTask_17
-        LDR      R0,[R5, #+8]
-        BL       ?Subroutine40
-??CrossCallReturnLabel_107:
+        LDR      R0,[R6, #+8]
+        BL       ??Subroutine41_0
+??CrossCallReturnLabel_109:
         B.N      ??AppS2wHal_NetRecvTask_17
 ??AppS2wHal_NetRecvTask_15:
         STR      R4,[SP, #+12]
         B.N      ??AppS2wHal_NetRecvTask_19
 ??AppS2wHal_NetRecvTask_14:
         LDR      R0,[SP, #+20]
-        LDR.W    R1,??DataTable78
+        LDR.W    R1,??DataTable74_1
         MOVS     R3,#+0
         MOVW     R2,#+1500
           CFI FunCall recv
@@ -5242,458 +5208,428 @@ AppS2wHal_NetRecvTask:
         CMP      R0,#+1
         BGE.W    ??AppS2wHal_NetRecvTask_2
 ??AppS2wHal_NetRecvTask_19:
-        LDRB     R0,[R8, #+44]
-        CMP      R0,#+1
+        BL       ?Subroutine31
+??CrossCallReturnLabel_79:
         ITT      EQ 
         LDREQ    R0,[SP, #+36]
         CMPEQ    R0,#+0
-        BNE.N    ??CrossCallReturnLabel_108
+        BNE.N    ??CrossCallReturnLabel_112
         MOVS     R0,#+1
         STR      R0,[SP, #+12]
-        B.N      ??CrossCallReturnLabel_108
-// 1871                         		AppS2wProcess_NetRx(cid, (rxDataBuf+buffOfset), sentLen, 
-// 1872 														(UINT8*)ip, port);
+        B.N      ??CrossCallReturnLabel_112
+// 1868                         		AppS2wProcess_NetRx(cid, (rxDataBuf+buffOfset), sentLen, 
+// 1869 														(UINT8*)ip, port);
 ??AppS2wHal_NetRecvTask_5:
         LDR      R0,[SP, #+28]
         LDR      R2,[SP, #+4]
         UXTH     R4,R4
         ADD      R1,R11,R0
-        BL       ?Subroutine41
-// 1873   								buffOfset += sentLen;
-??CrossCallReturnLabel_109:
+        BL       ?Subroutine42
+// 1870   								buffOfset += sentLen;
+??CrossCallReturnLabel_113:
         LDR      R0,[SP, #+4]
         ADD      R11,R0,R11
-// 1874 								totalBytesToSnd -= sentLen;                        		
-        SUBS     R6,R6,R0
-// 1875                         	}
+// 1871 								totalBytesToSnd -= sentLen;                        		
+        SUBS     R10,R10,R0
+// 1872                         	}
         BNE.W    ??AppS2wHal_NetRecvTask_4
-// 1876                             GsnSsl_Free(rxDataBuf);
+// 1873                             GsnSsl_Free(rxDataBuf);
         LDR      R0,[SP, #+28]
           CFI FunCall GsnSsl_Free
         BL       GsnSsl_Free
-        B.N      ??CrossCallReturnLabel_108
-// 1877                         }
+        B.N      ??CrossCallReturnLabel_112
+// 1874                         }
 ??AppS2wHal_NetRecvTask_3:
-        LDR.W    R0,??DataTable78
-        LDRB     R0,[R0, #+0]
-        CMP      R0,#+32
+        LDR.W    R0,??DataTable74_1
+        LDRB     R1,[R0, #+0]
+        CMP      R1,#+32
         IT       NE 
-        CMPNE    R0,#+64
+        CMPNE    R1,#+64
         BEQ.N    ??AppS2wHal_NetRecvTask_20
-        CMP      R0,#+80
+        CMP      R1,#+80
         IT       NE 
-        CMPNE    R0,#+112
+        CMPNE    R1,#+112
         BEQ.N    ??AppS2wHal_NetRecvTask_20
-        CMP      R0,#+192
-        IT       NE 
-        CMPNE    R0,#+224
+        CMP      R1,#+144
+        ITT      NE 
+        CMPNE    R1,#+176
+        CMPNE    R1,#+208
         BNE.N    ??AppS2wHal_NetRecvTask_21
-// 1878 #if defined(S2W_DTLS_CLIENT_SUPPORT)
-// 1879                         else if((s2wCidList[cid].sslflag == TRUE) && (s2wCidList[cid].conType == UDP))
-// 1880                         {
-// 1881                             /* For DTLS client*/
-// 1882                             AppS2wProcess_NetRx(cid, s2wRxBuf, dataLen, (UINT8*)ip, port);
-// 1883                             dataLen = 0;
-// 1884 							GsnSsl_Free(rxDataBuf);
-// 1885                         }
-// 1886 #endif
-// 1887                         else
-// 1888                         {
-// 1889 #ifdef S2W_THROUGHPUT_TEST                       
-// 1890                         	if(s2wCidList[cid].tpTestInProgress == 0)	
-// 1891                         	{
-// 1892 #endif                        	
-// 1893 #ifdef S2W_IPv6_SUPPORT
-// 1894                           if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
-// 1895                             AppS2wProcess_NetRx(cid, s2wRxBuf, dataLen, (UINT8*)ipv6, port);
-// 1896                           else
-// 1897 						  
-// 1898 #endif
-// 1899 						  {
-// 1900 							if(s2wRxBuf[0] == 0x20 || s2wRxBuf[0] == 0x40 || s2wRxBuf[0] == 0x50 || s2wRxBuf[0] == 0x70 || s2wRxBuf[0] == 0xC0 || s2wRxBuf[0] == 0xE0)						 
-// 1901 							{
-// 1902                                  
-// 1903 								  mqtt_temp = malloc(4);
+// 1875 #if defined(S2W_DTLS_CLIENT_SUPPORT)
+// 1876                         else if((s2wCidList[cid].sslflag == TRUE) && (s2wCidList[cid].conType == UDP))
+// 1877                         {
+// 1878                             /* For DTLS client*/
+// 1879                             AppS2wProcess_NetRx(cid, s2wRxBuf, dataLen, (UINT8*)ip, port);
+// 1880                             dataLen = 0;
+// 1881 							GsnSsl_Free(rxDataBuf);
+// 1882                         }
+// 1883 #endif
+// 1884                         else
+// 1885                         {
+// 1886 #ifdef LOCAL
+// 1887 							if(s2wRxBuf[0] == 0x20 || s2wRxBuf[0] == 0x40 || s2wRxBuf[0] == 0x50 || s2wRxBuf[0] == 0x70 || s2wRxBuf[0] == 0x90 || s2wRxBuf[0] == 0xB0 || s2wRxBuf[0] == 0xD0)
+// 1888 							{
+// 1889                                   S2w_Printf("\r\n Receive Data s2wRxBuf : %x %x %x %x",s2wRxBuf[0],s2wRxBuf[1],s2wRxBuf[2],s2wRxBuf[3]);
 ??AppS2wHal_NetRecvTask_20:
-        MOVS     R0,#+4
-          CFI FunCall malloc
-        BL       malloc
-        MOV      R6,R0
-// 1904 								  memset(mqtt_temp,0,4);
-        MOVS     R2,#+4
-        MOVS     R1,#+0
-          CFI FunCall memset
-        BL       memset
-// 1905 								  memcpy(mqtt_temp,s2wRxBuf,4);
-        MOVS     R2,#+4
-        LDR.W    R1,??DataTable78
-        MOV      R0,R6
-          CFI FunCall memcpy
-        BL       memcpy
-// 1906 								  //status = tx_queue_send(&MQTT_RECEIVE_QUEUE, s2wRxBuf, TX_NO_WAIT);
-// 1907 								  status = tx_queue_send(&MQTT_RECEIVE_QUEUE, mqtt_temp, TX_NO_WAIT);
-        MOVS     R2,#+0
-        MOV      R1,R6
-        LDR.W    R0,??DataTable78_1
-          CFI FunCall _tx_queue_send
-        BL       _tx_queue_send
-// 1908 								  S2w_Printf("\r\nData Receive in receive task s2wRxBuf : %X %X %X %X",s2wRxBuf[0],s2wRxBuf[1],s2wRxBuf[2],s2wRxBuf[3]);
-        LDR.W    R0,??DataTable78
         LDRB     R0,[R0, #+3]
         STR      R0,[SP, #+0]
-        LDR.W    R0,??DataTable78
+        LDR.W    R0,??DataTable74_1
         LDRB     R3,[R0, #+2]
         LDRB     R2,[R0, #+1]
-        LDRB     R1,[R0, #+0]
-        ADR.W    R0,`?<Constant "\\r\\nData Receive in rec...">`
+        ADR.W    R0,`?<Constant "\\r\\n Receive Data s2wRx...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 1909 								  S2w_Printf("\r\nData Receive in receive task mqtt_temp : %X %X %X %X",mqtt_temp[0],mqtt_temp[1],mqtt_temp[2],mqtt_temp[3]);
-        LDRB     R0,[R6, #+3]
-        STR      R0,[SP, #+0]
-        LDRB     R3,[R6, #+2]
-        LDRB     R2,[R6, #+1]
-        LDRB     R1,[R6, #+0]
-        ADR.W    R0,`?<Constant "\\r\\nData Receive in rec...">_1`
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-// 1910 								  free(mqtt_temp);
-        MOV      R0,R6
-          CFI FunCall free
-        BL       free
-// 1911 							}
-// 1912                             AppS2wProcess_NetRx(cid, s2wRxBuf, dataLen, (UINT8*)ip, port);
+// 1890 								  status = tx_queue_send(&MQTT_RECEIVE_QUEUE, s2wRxBuf, TX_NO_WAIT);
+        LDR.W    R1,??DataTable74_1
+        LDR.W    R0,??DataTable75
+        MOVS     R2,#+0
+          CFI FunCall _tx_queue_send
+        BL       _tx_queue_send
+// 1891 							}
+// 1892 #endif
+// 1893 #ifdef S2W_THROUGHPUT_TEST                       
+// 1894                         	if(s2wCidList[cid].tpTestInProgress == 0)	
+// 1895                         	{
+// 1896 #endif                        	
+// 1897 #ifdef S2W_IPv6_SUPPORT
+// 1898                           if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
+// 1899                             AppS2wProcess_NetRx(cid, s2wRxBuf, dataLen, (UINT8*)ipv6, port);
+// 1900                           else
+// 1901 						  
+// 1902 #endif
+// 1903 						  {
+// 1904                             AppS2wProcess_NetRx(cid, s2wRxBuf, dataLen, (UINT8*)ip, port);
 ??AppS2wHal_NetRecvTask_21:
-        LDR      R2,[SP, #+12]
-        LDR.W    R1,??DataTable78
         UXTH     R4,R4
-        BL       ?Subroutine41
-// 1913 						  }
-// 1914 #ifdef S2W_THROUGHPUT_TEST                       
-// 1915                         	}
-// 1916 							else
-// 1917 							{
-// 1918 								if(s2wCidList[cid].stats.packetsReceived== 0)
-// 1919 								{
-// 1920 									s2wCidList[cid].stats.startTime = GsnSoftTmr_CurrentSystemTime();										
-// 1921 								}
-// 1922 								//dataPattern = (UINT32 *)&s2wRxBuf[8];		
-// 1923 								if(s2wCidList[cid].conType == UDP)
-// 1924 								{
-// 1925 									seqNo= (UINT32 *)&s2wRxBuf[0];																
-// 1926 									if(s2wCidList[cid].stats.udpNxtSeqNo  !=  *seqNo )
-// 1927 										s2wCidList[cid].stats.rxErr += (*seqNo - s2wCidList[cid].stats.udpNxtSeqNo);
-// 1928 									s2wCidList[cid].stats.udpNxtSeqNo =  *seqNo + 1; 
-// 1929 									s2wCidList[cid].stats.packetsReceived++;
-// 1930 									s2wCidList[cid].stats.bytesReceived += dataLen;										
-// 1931 								}
-// 1932 								else
-// 1933 								{
-// 1934 									s2wCidList[cid].stats.packetsReceived++;
-// 1935 									s2wCidList[cid].stats.bytesReceived += dataLen;
-// 1936 								}
-// 1937 								if(s2wCidList[cid].testMode == 4)
-// 1938 								{
-// 1939 									endTime = GsnSoftTmr_CurrentSystemTime();									
-// 1940 									totalTime = SYSTIME_TO_SEC(endTime - s2wCidList[cid].stats.startTime);
-// 1941 									s2wCidList[cid].stats.totalTime=totalTime;
-// 1942 								}
-// 1943 								else if(s2wCidList[cid].bytesToReceive == s2wCidList[cid].stats.bytesReceived)
-// 1944 								{
-// 1945 									endTime = GsnSoftTmr_CurrentSystemTime();									
-// 1946 									totalTime = SYSTIME_TO_SEC(endTime - s2wCidList[cid].stats.startTime);
-// 1947 									if(s2wCidList[cid].conType == UDP)
-// 1948 									{
-// 1949 									    S2w_Printf("\r\n Packet Received  : %d",s2wCidList[cid].stats.packetsReceived);
-// 1950 										S2w_Printf("\r\n Packet Lost      : %d",s2wCidList[cid].stats.rxErr);
-// 1951 									}
-// 1952 									else
-// 1953 									{
-// 1954 										S2w_Printf("\r\n Bytes Received   : %lld",s2wCidList[cid].stats.bytesReceived); 
-// 1955 									}									
-// 1956 									S2w_Printf("\r\n Total Time Taken : %lld sec",totalTime);																		
-// 1957 									S2w_Printf("\r\n Throuhput        : %lld Kbps",((s2wCidList[cid].stats.bytesReceived*8)/(1024*totalTime)));										
-// 1958 									s2wCidList[cid].tpTestInProgress=0;										
-// 1959 									if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
-// 1960 									{
-// 1961 									    s2wSpiFs_Flush();
-// 1962                                     }
-// 1963 								}
-// 1964                         	}
-// 1965 #endif                          						
-// 1966                         }
-// 1967                     }
-// 1968                     GsnSq_TaskMonitorStop( APP_CFG_SQ_NETRX_TASK_ID);
-??CrossCallReturnLabel_108:
+        LDR      R2,[SP, #+12]
+        LDR.W    R1,??DataTable74_1
+        BL       ?Subroutine42
+// 1905 						  }
+// 1906 #ifdef S2W_THROUGHPUT_TEST                       
+// 1907                         	}
+// 1908 							else
+// 1909 							{
+// 1910 								if(s2wCidList[cid].stats.packetsReceived== 0)
+// 1911 								{
+// 1912 									s2wCidList[cid].stats.startTime = GsnSoftTmr_CurrentSystemTime();										
+// 1913 								}
+// 1914 								//dataPattern = (UINT32 *)&s2wRxBuf[8];		
+// 1915 								if(s2wCidList[cid].conType == UDP)
+// 1916 								{
+// 1917 									seqNo= (UINT32 *)&s2wRxBuf[0];																
+// 1918 									if(s2wCidList[cid].stats.udpNxtSeqNo  !=  *seqNo )
+// 1919 										s2wCidList[cid].stats.rxErr += (*seqNo - s2wCidList[cid].stats.udpNxtSeqNo);
+// 1920 									s2wCidList[cid].stats.udpNxtSeqNo =  *seqNo + 1; 
+// 1921 									s2wCidList[cid].stats.packetsReceived++;
+// 1922 									s2wCidList[cid].stats.bytesReceived += dataLen;										
+// 1923 								}
+// 1924 								else
+// 1925 								{
+// 1926 									s2wCidList[cid].stats.packetsReceived++;
+// 1927 									s2wCidList[cid].stats.bytesReceived += dataLen;
+// 1928 								}
+// 1929 								if(s2wCidList[cid].testMode == 4)
+// 1930 								{
+// 1931 									endTime = GsnSoftTmr_CurrentSystemTime();									
+// 1932 									totalTime = SYSTIME_TO_SEC(endTime - s2wCidList[cid].stats.startTime);
+// 1933 									s2wCidList[cid].stats.totalTime=totalTime;
+// 1934 								}
+// 1935 								else if(s2wCidList[cid].bytesToReceive == s2wCidList[cid].stats.bytesReceived)
+// 1936 								{
+// 1937 									endTime = GsnSoftTmr_CurrentSystemTime();									
+// 1938 									totalTime = SYSTIME_TO_SEC(endTime - s2wCidList[cid].stats.startTime);
+// 1939 									if(s2wCidList[cid].conType == UDP)
+// 1940 									{
+// 1941 									    S2w_Printf("\r\n Packet Received  : %d",s2wCidList[cid].stats.packetsReceived);
+// 1942 										S2w_Printf("\r\n Packet Lost      : %d",s2wCidList[cid].stats.rxErr);
+// 1943 									}
+// 1944 									else
+// 1945 									{
+// 1946 										S2w_Printf("\r\n Bytes Received   : %lld",s2wCidList[cid].stats.bytesReceived); 
+// 1947 									}									
+// 1948 									S2w_Printf("\r\n Total Time Taken : %lld sec",totalTime);																		
+// 1949 									S2w_Printf("\r\n Throuhput        : %lld Kbps",((s2wCidList[cid].stats.bytesReceived*8)/(1024*totalTime)));										
+// 1950 									s2wCidList[cid].tpTestInProgress=0;										
+// 1951 									if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 1952 									{
+// 1953 									    s2wSpiFs_Flush();
+// 1954                                     }
+// 1955 								}
+// 1956                         	}
+// 1957 #endif                          						
+// 1958                         }
+// 1959                     }
+// 1960                     GsnSq_TaskMonitorStop( APP_CFG_SQ_NETRX_TASK_ID);
+??CrossCallReturnLabel_112:
         MOVS     R0,#+9
           CFI FunCall GsnSq_TaskMonitorStop
         BL       GsnSq_TaskMonitorStop
-// 1969                 }while((dataLen>0) && (socketRecvLoopCount<s2wCurrent.socRdCnt)); // max three packets read at a time, if data pending schedule the
+// 1961                 }while((dataLen>0) && (socketRecvLoopCount<s2wCurrent.socRdCnt)); // max three packets read at a time, if data pending schedule the
         LDR      R0,[SP, #+12]
         CMP      R0,#+1
         BLT.W    ??AppS2wHal_NetRecvTask_22
-        LDR.W    R1,??DataTable69
+        LDR.W    R1,??DataTable65
         LDRB     R0,[SP, #+16]
         LDRB     R1,[R1, #+960]
         CMP      R0,R1
         BCC.N    ??AppS2wHal_NetRecvTask_23
-        ADD      R0,R8,#+144
+        ADD      R0,R5,#+144
         LDRB     R0,[R0, #+1]
         CMP      R0,#+0
         BNE.N    ??AppS2wHal_NetRecvTask_22
-// 1970                                                                 // task again so that data from other socket not get delayed.
-// 1971 
-// 1972                 // post a msg to its own
-// 1973                 if((dataLen > 0) && (s2wCidList[cid].s2wSockDataPending == 0))
-// 1974                 {
-// 1975 
-// 1976                     intrStatus = GsnOsal_IntrDisable();
+// 1962                                                                 // task again so that data from other socket not get delayed.
+// 1963 
+// 1964                 // post a msg to its own
+// 1965                 if((dataLen > 0) && (s2wCidList[cid].s2wSockDataPending == 0))
+// 1966                 {
+// 1967 
+// 1968                     intrStatus = GsnOsal_IntrDisable();
           CFI FunCall GsnOsal_IntrDisable
         BL       GsnOsal_IntrDisable
-// 1977                     s2wCidList[cid].s2wSockDataPending = 1;
-        ADD      R1,R8,#+144
+// 1969                     s2wCidList[cid].s2wSockDataPending = 1;
+        ADD      R1,R5,#+144
         MOVS     R2,#+1
         STRB     R2,[R1, #+1]
-// 1978                     /*re-enable all interrupts */
-// 1979                     GsnOsal_IntrEnable(intrStatus );
+// 1970                     /*re-enable all interrupts */
+// 1971                     GsnOsal_IntrEnable(intrStatus );
           CFI FunCall GsnOsal_IntrEnable
         BL       GsnOsal_IntrEnable
-// 1980                     GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
-// 1981                     break;
-// 1982 			    }
-// 1983 
-// 1984                 if(S2W_RECV_TYPE_SOCK_DATA_DISCONNECT == recvMsg.msgType)
-// 1985 
-// 1986                 {
-// 1987 #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
-// 1988 //#if 0
-// 1989                     if (s2wCidList[cid].sslflag == TRUE)
-// 1990                     {
-// 1991                         if(s2wCidList[cid].s2wUsrCloseFlag)
-// 1992                         {
-// 1993                             /* stop the http close waiting timer */
-// 1994 							if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
-// 1995 							{
-// 1996 							  	/* release the semaphore so the close can finish */
-// 1997 								GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
-// 1998 							}
-// 1999 
-// 2000 							#ifdef S2W_SEPARATE_NET_RX_TASK
-// 2001                             	continue;/*!! Donot remove this*/
-// 2002 							#else
-// 2003 								break; /*!! Do not remove this*/
-// 2004 							#endif/*S2W_SEPARATE_NET_RX_TASK*/
-// 2005                         }
-// 2006 						/* Close is not initialted by user. s2wCidList[cid].s2wUsrCloseFlag = 0
-// 2007 						That's why we are here*/
-// 2008 					   	GsnSsl_Alert(s2wCidList[cid].ssl.sslConn, s2wCidList[cid].sd);
-// 2009 
-// 2010                     }
-// 2011 #else
-// 2012 					if(0)
-// 2013 					{
-// 2014                     }
-// 2015 #endif      					
-// 2016 #ifdef S2W_HTTPC_SUPPORT
-// 2017 					else if(s2wCidList[cid].httpflag && s2wCidList[cid].pHttpData)
-// 2018 					{
-// 2019 
-// 2020 #ifdef S2W_HTTPS_SUPPORT
-// 2021                         conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
-// 2022 						if(conEntryPtr->hconHttpType == GSN_HTTPS && s2wCidList[cid].s2wUsrCloseFlag)
-// 2023 						{
-// 2024 							/* stop the http close waiting timer */
-// 2025 							if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
-// 2026 							{
-// 2027 								/* release the semaphore so the close can finish */
-// 2028 								GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
-// 2029 							}
-// 2030 
-// 2031 							#ifdef S2W_SEPARATE_NET_RX_TASK
-// 2032                             	continue;
-// 2033 							#else
-// 2034 								break;
-// 2035 							#endif/*S2W_SEPARATE_NET_RX_TASK*/
+// 1972                     GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
+// 1973                     break;
+// 1974 			    }
+// 1975 
+// 1976                 if(S2W_RECV_TYPE_SOCK_DATA_DISCONNECT == recvMsg.msgType)
+// 1977 
+// 1978                 {
+// 1979 #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
+// 1980 //#if 0
+// 1981                     if (s2wCidList[cid].sslflag == TRUE)
+// 1982                     {
+// 1983                         if(s2wCidList[cid].s2wUsrCloseFlag)
+// 1984                         {
+// 1985                             /* stop the http close waiting timer */
+// 1986 							if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
+// 1987 							{
+// 1988 							  	/* release the semaphore so the close can finish */
+// 1989 								GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
+// 1990 							}
+// 1991 
+// 1992 							#ifdef S2W_SEPARATE_NET_RX_TASK
+// 1993                             	continue;/*!! Donot remove this*/
+// 1994 							#else
+// 1995 								break; /*!! Do not remove this*/
+// 1996 							#endif/*S2W_SEPARATE_NET_RX_TASK*/
+// 1997                         }
+// 1998 						/* Close is not initialted by user. s2wCidList[cid].s2wUsrCloseFlag = 0
+// 1999 						That's why we are here*/
+// 2000 					   	GsnSsl_Alert(s2wCidList[cid].ssl.sslConn, s2wCidList[cid].sd);
+// 2001 
+// 2002                     }
+// 2003 #else
+// 2004 					if(0)
+// 2005 					{
+// 2006                     }
+// 2007 #endif      					
+// 2008 #ifdef S2W_HTTPC_SUPPORT
+// 2009 					else if(s2wCidList[cid].httpflag && s2wCidList[cid].pHttpData)
+// 2010 					{
+// 2011 
+// 2012 #ifdef S2W_HTTPS_SUPPORT
+// 2013                         conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
+// 2014 						if(conEntryPtr->hconHttpType == GSN_HTTPS && s2wCidList[cid].s2wUsrCloseFlag)
+// 2015 						{
+// 2016 							/* stop the http close waiting timer */
+// 2017 							if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
+// 2018 							{
+// 2019 								/* release the semaphore so the close can finish */
+// 2020 								GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
+// 2021 							}
+// 2022 
+// 2023 							#ifdef S2W_SEPARATE_NET_RX_TASK
+// 2024                             	continue;
+// 2025 							#else
+// 2026 								break;
+// 2027 							#endif/*S2W_SEPARATE_NET_RX_TASK*/
+// 2028 						}
+// 2029 						/* Close is not initialted by user. s2wCidList[cid].s2wUsrCloseFlag = 0
+// 2030 						That's why we are here*/
+// 2031 						if(conEntryPtr->hconHttpType == GSN_HTTPS)
+// 2032 						{
+// 2033 							GsnOsal_SemAcquire(&s2wCidList[cid].pHttpData->opInProgress, GSN_OSAL_WAIT_FOREVER);
+// 2034 							GsnSsl_Alert(s2wCidList[cid].ssl.sslConn, s2wCidList[cid].sd);
+// 2035 							GsnOsal_SemRelease(&s2wCidList[cid].pHttpData->opInProgress);
 // 2036 						}
-// 2037 						/* Close is not initialted by user. s2wCidList[cid].s2wUsrCloseFlag = 0
-// 2038 						That's why we are here*/
-// 2039 						if(conEntryPtr->hconHttpType == GSN_HTTPS)
-// 2040 						{
-// 2041 							GsnOsal_SemAcquire(&s2wCidList[cid].pHttpData->opInProgress, GSN_OSAL_WAIT_FOREVER);
-// 2042 							GsnSsl_Alert(s2wCidList[cid].ssl.sslConn, s2wCidList[cid].sd);
-// 2043 							GsnOsal_SemRelease(&s2wCidList[cid].pHttpData->opInProgress);
-// 2044 						}
-// 2045 #endif /*S2W_HTTPS_SUPPORT*/
-// 2046 						if(s2wCidList[cid].httpflag && s2wCidList[cid].pHttpData && s2wCidList[cid].pHttpData->httpType == GSN_HTTP)
-// 2047 						{
-// 2048 							GsnOsal_SemAcquire(&s2wCidList[cid].pHttpData->opInProgress, GSN_OSAL_WAIT_FOREVER);
-// 2049 							/* opInProgress semaphore will be deleted in AppS2wHal_NetClose, release it here */
-// 2050 							GsnOsal_SemRelease(&s2wCidList[cid].pHttpData->opInProgress);
-// 2051 						}
-// 2052 					}
-// 2053 
-// 2054 #endif
-// 2055 
-// 2056 					status = AppS2wHal_NetClose(cid);
-// 2057 					if(s2wCidList[cid].s2wUsrCloseFlag == 0 && status == S2W_SUCCESS)
-// 2058 					{
-// 2059 /* Check the L2 connection exists
-// 2060     Bug FIX 5083 - L2 disconnection while getting the data throws ERROR:SOCKET FAILURE and Disassociation Event
-// 2061 */						
-// 2062 						if(TRUE != GsnWdd_AssocStatusGet(&s2wappMainTaskCtxt->if0.wddCtx))
-// 2063 						{
-// 2064 							break;
-// 2065 						}
-// 2066 											
-// 2067     	                GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 2068 #ifdef S2W_ASYNC_MSG
-// 2069 						if(s2wCurrent.asyncMsgFormat)
-// 2070 						{
-// 2071 							AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_ECIDCLOSE, cid);
-// 2072 						}
-// 2073 						else
-// 2074 #endif
-// 2075                    		{
-// 2076                         	AppS2wProcess_StatusNotify(S2W_ECIDCLOSE, cid);
-// 2077                     	}
-// 2078 	                    GsnOsal_SemRelease(&s2wSyncSemID);
-// 2079 					}
-// 2080                     if(((s2wCurrent.ncmAutoLvl != 0)  && (cid == s2wCurrent.ncmAutoCid) && (s2wCurrent.ncmAutoMgr == 1))
-// 2081                        || profile_params.autoConnect )
-// 2082                     {
-// 2083                         UINT32 message = APP_EVENT_NCM_L4CONNECT;
-// 2084                         (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
-// 2085                     }
-// 2086                 }
-// 2087             }
-// 2088             break;
-// 2089 
-// 2090 #ifndef S2W_IP2WIFI_SUPPORT
-// 2091             case S2W_RECV_TYPE_SOCK_ERROR:
-// 2092 
-// 2093                 cid = AppS2wHal_CidFind(recvMsg.rData.dataSock);
-// 2094                 if (cid == INVALID_CID)
-// 2095                 {
-// 2096                 	#ifdef S2W_SEPARATE_NET_RX_TASK
-// 2097                     	continue;
-// 2098 					#else
-// 2099 						break;
-// 2100 					#endif /*S2W_SEPARATE_NET_RX_TASK*/
-// 2101                 }
-// 2102                 // if data is pending on that socket defer the socket close
-// 2103                 if(s2wCidList[cid].s2wSockDataPending)
-// 2104                 {
-// 2105 					GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
-// 2106 					break;
-// 2107 				}
-// 2108 #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
-// 2109 //#if 0
-// 2110 				if (s2wCidList[cid].sslflag == TRUE)
-// 2111                 {
-// 2112                      if(s2wCidList[cid].s2wUsrCloseFlag)
-// 2113                      {
-// 2114                         /* stop the http close waiting timer */
-// 2115 						if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
-// 2116 						{
-// 2117 						  	/* release the semaphore so the close can finish */
-// 2118 							GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
-// 2119 						}
-// 2120                           #ifdef S2W_SEPARATE_NET_RX_TASK
-// 2121                           	continue;
-// 2122 						  #else
-// 2123 						  	break;
-// 2124 						  #endif /*S2W_SEPARATE_NET_RX_TASK*/
-// 2125                      }
-// 2126                 }
-// 2127 #ifdef S2W_HTTPS_SUPPORT
-// 2128 				else if(s2wCidList[cid].httpflag ==  1 && s2wCidList[cid].pHttpData)
-// 2129                 {
-// 2130 					conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
-// 2131 
-// 2132 					if(conEntryPtr->hconHttpType == GSN_HTTPS && s2wCidList[cid].s2wUsrCloseFlag)
-// 2133 					{
-// 2134 						/* stop the http close waiting timer */
-// 2135 						if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
-// 2136 						{
-// 2137 						  	/* release the semaphore so the close can finish */
-// 2138 							GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
-// 2139 						}
-// 2140 						#ifdef S2W_SEPARATE_NET_RX_TASK
-// 2141 							continue; /*!! Donot remove this*/
-// 2142 						#else
-// 2143 							break; /*!! Donot remove this*/
-// 2144 						#endif /*S2W_SEPARATE_NET_RX_TASK*/
-// 2145 					}
-// 2146                 }
-// 2147 #endif /*GSN_HTTPS_SUPPORT*/
-// 2148 #endif
-// 2149     			AppS2wHal_NetClose(cid);
-// 2150 				/* Check the L2 connection exists
-// 2151 					Bug FIX 5083 - L2 disconnection while getting the data throws ERROR:SOCKET FAILURE and Disassociation Event
-// 2152 				*/						
-// 2153 				if(TRUE != GsnWdd_AssocStatusGet(&s2wappMainTaskCtxt->if0.wddCtx))
-// 2154 				{
-// 2155 					break;
-// 2156 				}
-// 2157 
-// 2158 
-// 2159                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 2160 #ifdef S2W_UART_ENABLE
-// 2161                 //while(0 == S2wUart_TxStatusGet());
-// 2162 #endif
-// 2163                 if((!s2wAutoConnState ) ||(( s2wState == S2W_STATE_CMD) && (s2wIsAutoconnected)))
-// 2164                 {
-// 2165 #ifdef S2W_ASYNC_MSG                
-// 2166 					if(s2wCurrent.asyncMsgFormat)
-// 2167 					{
-// 2168 						AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_SOCKFAILURE, cid);
-// 2169 					}
-// 2170 					else
-// 2171 #endif
-// 2172 	                {
-// 2173 	                    AppS2wProcess_StatusNotify(S2W_SOCKFAILURE, cid);
-// 2174 	                }
-// 2175 			    }
-// 2176 #ifdef S2W_UART_ENABLE
-// 2177                 // while(0 == S2wUart_TxStatusGet());
-// 2178 #endif
-// 2179                  GsnOsal_SemRelease(&s2wSyncSemID);
-// 2180              
-// 2181                 if(((s2wCurrent.ncmAutoLvl != 0)  && (cid == s2wCurrent.ncmAutoCid) && (s2wCurrent.ncmAutoMgr == 1))
-// 2182                    || profile_params.autoConnect )
-// 2183                 {
-// 2184                     UINT32 message = APP_EVENT_NCM_L4CONNECT;
-// 2185                     //S2w_Printf("\r\n Rclose-connect back\r\n");
-// 2186                     (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
-// 2187                 }
-// 2188             break;
-// 2189 
-// 2190             case S2W_RECV_TYPE_SOCK_DISCONNECT:
-// 2191 
-// 2192                 cid = AppS2wHal_CidFind(recvMsg.rData.dataSock);
-// 2193                 if (cid == INVALID_CID)
-// 2194                 {
-// 2195                 	#ifdef S2W_SEPARATE_NET_RX_TASK
-// 2196                     	continue;
-// 2197 					#else
-// 2198 						break;
-// 2199 					#endif /*S2W_SEPARATE_NET_RX_TASK*/
-// 2200                 }
-// 2201                 // if data is pending on that socket defer the socket close
-// 2202                 if(s2wCidList[cid].s2wSockDataPending)
-// 2203                 {
-// 2204 					GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
+// 2037 #endif /*S2W_HTTPS_SUPPORT*/
+// 2038 						if(s2wCidList[cid].httpflag && s2wCidList[cid].pHttpData && s2wCidList[cid].pHttpData->httpType == GSN_HTTP)
+// 2039 						{
+// 2040 							GsnOsal_SemAcquire(&s2wCidList[cid].pHttpData->opInProgress, GSN_OSAL_WAIT_FOREVER);
+// 2041 							/* opInProgress semaphore will be deleted in AppS2wHal_NetClose, release it here */
+// 2042 							GsnOsal_SemRelease(&s2wCidList[cid].pHttpData->opInProgress);
+// 2043 						}
+// 2044 					}
+// 2045 
+// 2046 #endif
+// 2047 
+// 2048 					status = AppS2wHal_NetClose(cid);
+// 2049 					if(s2wCidList[cid].s2wUsrCloseFlag == 0 && status == S2W_SUCCESS)
+// 2050 					{
+// 2051 /* Check the L2 connection exists
+// 2052     Bug FIX 5083 - L2 disconnection while getting the data throws ERROR:SOCKET FAILURE and Disassociation Event
+// 2053 */						
+// 2054 						if(TRUE != GsnWdd_AssocStatusGet(&s2wappMainTaskCtxt->if0.wddCtx))
+// 2055 						{
+// 2056 							break;
+// 2057 						}
+// 2058 											
+// 2059     	                GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 2060 #ifdef S2W_ASYNC_MSG
+// 2061 						if(s2wCurrent.asyncMsgFormat)
+// 2062 						{
+// 2063 							AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_ECIDCLOSE, cid);
+// 2064 						}
+// 2065 						else
+// 2066 #endif
+// 2067                    		{
+// 2068                         	AppS2wProcess_StatusNotify(S2W_ECIDCLOSE, cid);
+// 2069                     	}
+// 2070 	                    GsnOsal_SemRelease(&s2wSyncSemID);
+// 2071 					}
+// 2072                     if(((s2wCurrent.ncmAutoLvl != 0)  && (cid == s2wCurrent.ncmAutoCid) && (s2wCurrent.ncmAutoMgr == 1))
+// 2073                        || profile_params.autoConnect )
+// 2074                     {
+// 2075                         UINT32 message = APP_EVENT_NCM_L4CONNECT;
+// 2076                         (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
+// 2077                     }
+// 2078                 }
+// 2079             }
+// 2080             break;
+// 2081 
+// 2082 #ifndef S2W_IP2WIFI_SUPPORT
+// 2083             case S2W_RECV_TYPE_SOCK_ERROR:
+// 2084 
+// 2085                 cid = AppS2wHal_CidFind(recvMsg.rData.dataSock);
+// 2086                 if (cid == INVALID_CID)
+// 2087                 {
+// 2088                 	#ifdef S2W_SEPARATE_NET_RX_TASK
+// 2089                     	continue;
+// 2090 					#else
+// 2091 						break;
+// 2092 					#endif /*S2W_SEPARATE_NET_RX_TASK*/
+// 2093                 }
+// 2094                 // if data is pending on that socket defer the socket close
+// 2095                 if(s2wCidList[cid].s2wSockDataPending)
+// 2096                 {
+// 2097 					GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
+// 2098 					break;
+// 2099 				}
+// 2100 #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
+// 2101 //#if 0
+// 2102 				if (s2wCidList[cid].sslflag == TRUE)
+// 2103                 {
+// 2104                      if(s2wCidList[cid].s2wUsrCloseFlag)
+// 2105                      {
+// 2106                         /* stop the http close waiting timer */
+// 2107 						if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
+// 2108 						{
+// 2109 						  	/* release the semaphore so the close can finish */
+// 2110 							GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
+// 2111 						}
+// 2112                           #ifdef S2W_SEPARATE_NET_RX_TASK
+// 2113                           	continue;
+// 2114 						  #else
+// 2115 						  	break;
+// 2116 						  #endif /*S2W_SEPARATE_NET_RX_TASK*/
+// 2117                      }
+// 2118                 }
+// 2119 #ifdef S2W_HTTPS_SUPPORT
+// 2120 				else if(s2wCidList[cid].httpflag ==  1 && s2wCidList[cid].pHttpData)
+// 2121                 {
+// 2122 					conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
+// 2123 
+// 2124 					if(conEntryPtr->hconHttpType == GSN_HTTPS && s2wCidList[cid].s2wUsrCloseFlag)
+// 2125 					{
+// 2126 						/* stop the http close waiting timer */
+// 2127 						if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
+// 2128 						{
+// 2129 						  	/* release the semaphore so the close can finish */
+// 2130 							GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
+// 2131 						}
+// 2132 						#ifdef S2W_SEPARATE_NET_RX_TASK
+// 2133 							continue; /*!! Donot remove this*/
+// 2134 						#else
+// 2135 							break; /*!! Donot remove this*/
+// 2136 						#endif /*S2W_SEPARATE_NET_RX_TASK*/
+// 2137 					}
+// 2138                 }
+// 2139 #endif /*GSN_HTTPS_SUPPORT*/
+// 2140 #endif
+// 2141     			AppS2wHal_NetClose(cid);
+// 2142 				/* Check the L2 connection exists
+// 2143 					Bug FIX 5083 - L2 disconnection while getting the data throws ERROR:SOCKET FAILURE and Disassociation Event
+// 2144 				*/						
+// 2145 				if(TRUE != GsnWdd_AssocStatusGet(&s2wappMainTaskCtxt->if0.wddCtx))
+// 2146 				{
+// 2147 					break;
+// 2148 				}
+// 2149 
+// 2150 
+// 2151                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 2152 #ifdef S2W_UART_ENABLE
+// 2153                 //while(0 == S2wUart_TxStatusGet());
+// 2154 #endif
+// 2155                 if((!s2wAutoConnState ) ||(( s2wState == S2W_STATE_CMD) && (s2wIsAutoconnected)))
+// 2156                 {
+// 2157 #ifdef S2W_ASYNC_MSG                
+// 2158 					if(s2wCurrent.asyncMsgFormat)
+// 2159 					{
+// 2160 						AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_SOCKFAILURE, cid);
+// 2161 					}
+// 2162 					else
+// 2163 #endif
+// 2164 	                {
+// 2165 	                    AppS2wProcess_StatusNotify(S2W_SOCKFAILURE, cid);
+// 2166 	                }
+// 2167 			    }
+// 2168 #ifdef S2W_UART_ENABLE
+// 2169                 // while(0 == S2wUart_TxStatusGet());
+// 2170 #endif
+// 2171                  GsnOsal_SemRelease(&s2wSyncSemID);
+// 2172              
+// 2173                 if(((s2wCurrent.ncmAutoLvl != 0)  && (cid == s2wCurrent.ncmAutoCid) && (s2wCurrent.ncmAutoMgr == 1))
+// 2174                    || profile_params.autoConnect )
+// 2175                 {
+// 2176                     UINT32 message = APP_EVENT_NCM_L4CONNECT;
+// 2177                     //S2w_Printf("\r\n Rclose-connect back\r\n");
+// 2178                     (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
+// 2179                 }
+// 2180             break;
+// 2181 
+// 2182             case S2W_RECV_TYPE_SOCK_DISCONNECT:
+// 2183 
+// 2184                 cid = AppS2wHal_CidFind(recvMsg.rData.dataSock);
+// 2185                 if (cid == INVALID_CID)
+// 2186                 {
+// 2187                 	#ifdef S2W_SEPARATE_NET_RX_TASK
+// 2188                     	continue;
+// 2189 					#else
+// 2190 						break;
+// 2191 					#endif /*S2W_SEPARATE_NET_RX_TASK*/
+// 2192                 }
+// 2193                 // if data is pending on that socket defer the socket close
+// 2194                 if(s2wCidList[cid].s2wSockDataPending)
+// 2195                 {
+// 2196 					GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
 ??AppS2wHal_NetRecvTask_24:
         ADD      R1,SP,#+20
-        LDR.W    R0,??DataTable80
+        LDR.W    R0,??DataTable77
           CFI FunCall GsnOsal_QueuePut
         BL       GsnOsal_QueuePut
-// 2205 					break;
+// 2197 					break;
 ??AppS2wHal_NetRecvTask_0:
-        LDR.W    R0,??DataTable80
+        LDR.W    R0,??DataTable77
         MOV      R2,#-1
         ADD      R1,SP,#+20
-// 2206 				}
+// 2198 				}
           CFI FunCall _tx_queue_receive
         BL       _tx_queue_receive
         LDRSH    R0,[SP, #+26]
@@ -5713,37 +5649,37 @@ AppS2wHal_NetRecvTask:
         BEQ.W    ??AppS2wHal_NetRecvTask_30
         B.N      ??AppS2wHal_NetRecvTask_0
 ??AppS2wHal_NetRecvTask_25:
-        BL       ?Subroutine36
-??CrossCallReturnLabel_95:
-        MOV      R10,R0
-        CMP      R10,#+255
+        BL       ?Subroutine37
+??CrossCallReturnLabel_99:
+        MOV      R8,R0
+        CMP      R8,#+255
         BEQ.N    ??AppS2wHal_NetRecvTask_0
           CFI FunCall GsnOsal_IntrDisable
         BL       GsnOsal_IntrDisable
         MOV      R1,#+296
-        MUL      R1,R1,R10
+        MUL      R1,R1,R8
         STR      R1,[SP, #+32]
-        LDR.W    R2,??DataTable69_1
-        ADD      R8,R1,R2
-        ADD      R1,R8,#+144
+        LDR.W    R2,??DataTable66
+        ADDS     R5,R1,R2
+        ADD      R1,R5,#+144
         MOVS     R2,#+0
         STRB     R2,[R1, #+1]
           CFI FunCall GsnOsal_IntrEnable
         BL       GsnOsal_IntrEnable
         MOVS     R0,#+0
         STRB     R0,[SP, #+16]
-        ADD      R7,R8,#+4
-        ADD      R5,R8,#+44
+        ADDS     R7,R5,#+4
+        ADD      R6,R5,#+44
 ??AppS2wHal_NetRecvTask_23:
         LDRB     R0,[SP, #+16]
         ADDS     R0,R0,#+1
         STRB     R0,[SP, #+16]
-        MOV      R1,R10
+        MOV      R1,R8
         MOVS     R0,#+9
           CFI FunCall GsnSq_TaskMonitorStart
         BL       GsnSq_TaskMonitorStart
         LDR      R0,[SP, #+32]
-        LDR.W    R1,??DataTable69_1
+        LDR.W    R1,??DataTable66
         LDRB     R0,[R0, R1]
         CMP      R0,#+1
         BNE.W    ??AppS2wHal_NetRecvTask_6
@@ -5754,13 +5690,13 @@ AppS2wHal_NetRecvTask:
         STR      R0,[SP, #+0]
         MOVW     R2,#+1500
         LDR      R0,[SP, #+20]
-        LDR.W    R1,??DataTable78
+        LDR.W    R1,??DataTable74_1
           CFI FunCall recvfrom
         BL       recvfrom
         STR      R0,[SP, #+12]
         CMP      R0,#+1
-        BLT.N    ??CrossCallReturnLabel_78
-        LDRB     R0,[R8, #+1]
+        BLT.N    ??CrossCallReturnLabel_82
+        LDRB     R0,[R5, #+1]
         CMP      R0,#+1
         BNE.W    ??AppS2wHal_NetRecvTask_1
         LDRH     R0,[SP, #+74]
@@ -5771,79 +5707,79 @@ AppS2wHal_NetRecvTask:
         ADD      R0,SP,#+8
           CFI FunCall memcpy
         BL       memcpy
-        BL       ?Subroutine31
-??CrossCallReturnLabel_78:
+        BL       ?Subroutine32
+??CrossCallReturnLabel_82:
         B.N      ??AppS2wHal_NetRecvTask_13
 ??AppS2wHal_NetRecvTask_22:
         LDRSH    R0,[SP, #+26]
         CMP      R0,#+53
 ??AppS2wHal_NetRecvTask_31:
         BNE.N    ??AppS2wHal_NetRecvTask_0
-        LDRB     R0,[R8, #+44]
-        CMP      R0,#+1
+        BL       ?Subroutine31
+??CrossCallReturnLabel_80:
         BNE.N    ??AppS2wHal_NetRecvTask_32
-        LDRB     R0,[R8, #+144]
+        LDRB     R0,[R5, #+144]
         CMP      R0,#+0
         BNE.N    ??AppS2wHal_NetRecvTask_33
         LDR      R1,[R7, #+24]
         LDR      R0,[R7, #+36]
           CFI FunCall GsnSsl_Alert
         BL       GsnSsl_Alert
-        B.N      ??CrossCallReturnLabel_84
+        B.N      ??CrossCallReturnLabel_88
 ??AppS2wHal_NetRecvTask_32:
-        LDRB     R0,[R5, #+3]
+        LDRB     R0,[R6, #+3]
         CMP      R0,#+0
         ITT      NE 
-        LDRNE    R0,[R5, #+8]
+        LDRNE    R0,[R6, #+8]
         CMPNE    R0,#+0
-        BEQ.N    ??CrossCallReturnLabel_84
-        BL       ?Subroutine39
-??CrossCallReturnLabel_101:
-        BNE.N    ??CrossCallReturnLabel_85
-        LDRB     R0,[R8, #+144]
+        BEQ.N    ??CrossCallReturnLabel_88
+        BL       ?Subroutine40
+??CrossCallReturnLabel_105:
+        BNE.N    ??CrossCallReturnLabel_89
+        LDRB     R0,[R5, #+144]
         CMP      R0,#+0
 ??AppS2wHal_NetRecvTask_33:
         BNE.W    ??AppS2wHal_NetRecvTask_34
-        LDR      R0,[R5, #+8]
+        LDR      R0,[R6, #+8]
         BL       ?Subroutine28
 ??CrossCallReturnLabel_72:
         LDR      R1,[R7, #+24]
         LDR      R0,[R7, #+36]
           CFI FunCall GsnSsl_Alert
         BL       GsnSsl_Alert
-        BL       ?Subroutine33
-??CrossCallReturnLabel_85:
-        LDRB     R0,[R5, #+3]
+        BL       ?Subroutine34
+??CrossCallReturnLabel_89:
+        LDRB     R0,[R6, #+3]
         CMP      R0,#+0
         ITT      NE 
-        LDRNE    R0,[R5, #+8]
+        LDRNE    R0,[R6, #+8]
         CMPNE    R0,#+0
-        BEQ.N    ??CrossCallReturnLabel_84
+        BEQ.N    ??CrossCallReturnLabel_88
         LDRB     R1,[R0, #+12]
-        CBNZ.N   R1,??CrossCallReturnLabel_84
+        CBNZ.N   R1,??CrossCallReturnLabel_88
         BL       ?Subroutine28
 ??CrossCallReturnLabel_71:
-        BL       ?Subroutine33
-??CrossCallReturnLabel_84:
-        MOV      R0,R10
+        BL       ?Subroutine34
+??CrossCallReturnLabel_88:
+        MOV      R0,R8
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
         MOV      R7,R0
-        LDRB     R0,[R8, #+144]
+        LDRB     R0,[R5, #+144]
         ORRS     R0,R7,R0
         BNE.W    ??AppS2wHal_NetRecvTask_35
-        BL       ?Subroutine38
-??CrossCallReturnLabel_100:
+        BL       ?Subroutine39
+??CrossCallReturnLabel_104:
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_NetRecvTask_31
         BL       ?Subroutine27
 ??CrossCallReturnLabel_69:
         B.N      ??AppS2wHal_NetRecvTask_36
 ??AppS2wHal_NetRecvTask_26:
-        BL       ?Subroutine36
-??CrossCallReturnLabel_94:
-        MOV      R10,R0
-        CMP      R10,#+255
+        BL       ?Subroutine37
+??CrossCallReturnLabel_98:
+        MOV      R8,R0
+        CMP      R8,#+255
         BEQ.N    ??AppS2wHal_NetRecvTask_37
         BL       ?Subroutine14
 ??CrossCallReturnLabel_31:
@@ -5869,23 +5805,23 @@ AppS2wHal_NetRecvTask:
         ADDS     R0,R0,#+88
         B.N      ??AppS2wHal_NetRecvTask_41
 ??AppS2wHal_NetRecvTask_40:
-        MOV      R0,R10
+        MOV      R0,R8
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
-        BL       ?Subroutine38
-??CrossCallReturnLabel_99:
+        BL       ?Subroutine39
+??CrossCallReturnLabel_103:
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_NetRecvTask_37
         BL       ?Subroutine27
 ??CrossCallReturnLabel_68:
-        LDR.W    R0,??DataTable82
+        LDR.W    R0,??DataTable78
         LDRB     R0,[R0, #+0]
         CBZ.N    R0,??AppS2wHal_NetRecvTask_42
-        LDR.W    R0,??DataTable82_1
+        LDR.W    R0,??DataTable78_1
         LDRB     R0,[R0, #+0]
         CMP      R0,#+0
         BNE.N    ??AppS2wHal_NetRecvTask_43
-        LDR.W    R0,??DataTable82_2
+        LDR.W    R0,??DataTable78_2
         LDRB     R0,[R0, #+0]
         CMP      R0,#+0
         BEQ.N    ??AppS2wHal_NetRecvTask_43
@@ -5898,109 +5834,109 @@ AppS2wHal_NetRecvTask:
         MOVS     R0,#+3
         B.N      ??AppS2wHal_NetRecvTask_45
 ??AppS2wHal_NetRecvTask_27:
-        BL       ?Subroutine36
-??CrossCallReturnLabel_93:
-        MOV      R10,R0
-        CMP      R10,#+255
+        BL       ?Subroutine37
+??CrossCallReturnLabel_97:
+        MOV      R8,R0
+        CMP      R8,#+255
         BEQ.N    ??AppS2wHal_NetRecvTask_37
         BL       ?Subroutine15
 ??CrossCallReturnLabel_33:
-        MLA      R8,R0,R10,R1
-        LDRB     R0,[R8, #+145]
+        MLA      R5,R0,R8,R1
+        LDRB     R0,[R5, #+145]
         CMP      R0,#+0
 ??AppS2wHal_NetRecvTask_38:
         BNE.W    ??AppS2wHal_NetRecvTask_24
-// 2207 
-// 2208 #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
-// 2209 //#if 0                
-// 2210 				if (s2wCidList[cid].sslflag == TRUE)
-        ADD      R7,R8,#+28
+// 2199 
+// 2200 #if defined(S2W_SSL_CLIENT_SUPPORT) || defined(S2W_SSL_SERVER_SUPPORT)
+// 2201 //#if 0                
+// 2202 				if (s2wCidList[cid].sslflag == TRUE)
+        ADD      R7,R5,#+28
         LDRB     R0,[R7, #+16]
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_NetRecvTask_46
-// 2211                 {
-// 2212                      if(s2wCidList[cid].s2wUsrCloseFlag)
-        LDRB     R0,[R8, #+144]
+// 2203                 {
+// 2204                      if(s2wCidList[cid].s2wUsrCloseFlag)
+        LDRB     R0,[R5, #+144]
         CBZ.N    R0,??AppS2wHal_NetRecvTask_47
-// 2213                      {
-// 2214 						  if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
+// 2205                      {
+// 2206 						  if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
 ??AppS2wHal_NetRecvTask_34:
-        ADD      R0,R8,#+88
+        ADD      R0,R5,#+88
 ??AppS2wHal_NetRecvTask_41:
           CFI FunCall AppS2wHal_TimerStop
         BL       AppS2wHal_TimerStop
         CMP      R0,#+0
         BNE.N    ??AppS2wHal_NetRecvTask_37
         B.N      ??AppS2wHal_NetRecvTask_48
-// 2215 						  {
-// 2216 							GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
-// 2217 						  }
-// 2218                           #ifdef S2W_SEPARATE_NET_RX_TASK
-// 2219                           	continue;
-// 2220 						  #else
-// 2221 							break;
-// 2222 						  #endif /*S2W_SEPARATE_NET_RX_TASK*/
-// 2223                      }
-// 2224  					/* Send Alert*/
-// 2225         			GsnSsl_Alert(s2wCidList[cid].ssl.sslConn, s2wCidList[cid].sd);
+// 2207 						  {
+// 2208 							GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
+// 2209 						  }
+// 2210                           #ifdef S2W_SEPARATE_NET_RX_TASK
+// 2211                           	continue;
+// 2212 						  #else
+// 2213 							break;
+// 2214 						  #endif /*S2W_SEPARATE_NET_RX_TASK*/
+// 2215                      }
+// 2216  					/* Send Alert*/
+// 2217         			GsnSsl_Alert(s2wCidList[cid].ssl.sslConn, s2wCidList[cid].sd);
 ??AppS2wHal_NetRecvTask_47:
-        LDR      R1,[R8, #+28]
+        LDR      R1,[R5, #+28]
         LDR      R0,[R7, #+12]
           CFI FunCall GsnSsl_Alert
         BL       GsnSsl_Alert
-        B.N      ??CrossCallReturnLabel_83
-// 2226                 }
-// 2227 #else
-// 2228 				if(0)
-// 2229 				{
-// 2230 				}
-// 2231 #endif    
-// 2232 #ifdef S2W_HTTPC_SUPPORT	
-// 2233 				else if(s2wCidList[cid].httpflag ==  1 && s2wCidList[cid].pHttpData)
+        B.N      ??CrossCallReturnLabel_87
+// 2218                 }
+// 2219 #else
+// 2220 				if(0)
+// 2221 				{
+// 2222 				}
+// 2223 #endif    
+// 2224 #ifdef S2W_HTTPC_SUPPORT	
+// 2225 				else if(s2wCidList[cid].httpflag ==  1 && s2wCidList[cid].pHttpData)
 ??AppS2wHal_NetRecvTask_46:
         LDRB     R0,[R7, #+19]
         CMP      R0,#+1
-        BNE.N    ??CrossCallReturnLabel_83
+        BNE.N    ??CrossCallReturnLabel_87
         LDR      R0,[R7, #+24]
-        CBZ.N    R0,??CrossCallReturnLabel_83
-// 2234                 {
-// 2235 
-// 2236 					semStat =GsnOsal_SemAcquire(&s2wCidList[cid].pHttpData->opInProgress, GSN_OSAL_WAIT_FOREVER);
+        CBZ.N    R0,??CrossCallReturnLabel_87
+// 2226                 {
+// 2227 
+// 2228 					semStat =GsnOsal_SemAcquire(&s2wCidList[cid].pHttpData->opInProgress, GSN_OSAL_WAIT_FOREVER);
         BL       ?Subroutine28
-// 2237 #ifdef S2W_HTTPS_SUPPORT                
-// 2238 					conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
-// 2239 					/* The remote close can along with the data so if the send acquired the semaphore then need to
-// 2240 					wait here so that the close operation can be performed.
-// 2241 					*/
-// 2242 					if(conEntryPtr->hconHttpType == GSN_HTTPS && s2wCidList[cid].s2wUsrCloseFlag)
+// 2229 #ifdef S2W_HTTPS_SUPPORT                
+// 2230 					conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
+// 2231 					/* The remote close can along with the data so if the send acquired the semaphore then need to
+// 2232 					wait here so that the close operation can be performed.
+// 2233 					*/
+// 2234 					if(conEntryPtr->hconHttpType == GSN_HTTPS && s2wCidList[cid].s2wUsrCloseFlag)
 ??CrossCallReturnLabel_70:
         LDR      R0,[R7, #+24]
-        BL       ?Subroutine39
-??CrossCallReturnLabel_102:
+        BL       ?Subroutine40
+??CrossCallReturnLabel_106:
         BNE.N    ??AppS2wHal_NetRecvTask_49
-        LDRB     R0,[R8, #+144]
+        LDRB     R0,[R5, #+144]
         CBZ.N    R0,??AppS2wHal_NetRecvTask_49
-// 2243 					{
-// 2244 						/* stop the http close waiting timer */
-// 2245 						if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
-        ADD      R0,R8,#+88
+// 2235 					{
+// 2236 						/* stop the http close waiting timer */
+// 2237 						if(GSN_SUCCESS == AppS2wHal_TimerStop(&s2wCidList[cid].s2wUserCloseTimer))
+        ADD      R0,R5,#+88
           CFI FunCall AppS2wHal_TimerStop
         BL       AppS2wHal_TimerStop
         CMP      R0,#+0
         BNE.N    ??AppS2wHal_NetRecvTask_37
-// 2246 						{
-// 2247 						  	/* release the semaphore so the close can finish */
-// 2248 							GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
+// 2238 						{
+// 2239 						  	/* release the semaphore so the close can finish */
+// 2240 							GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
 ??AppS2wHal_NetRecvTask_48:
         BL       ?Subroutine14
-// 2249 						}
-// 2250 
-// 2251 						#ifdef S2W_SEPARATE_NET_RX_TASK
-// 2252 							continue; /*!! Donot remove this*/
-// 2253 						#else
-// 2254 							break; /*!! Donot remove this*/
-// 2255 						#endif /*S2W_SEPARATE_NET_RX_TASK*/
-// 2256 					}
+// 2241 						}
+// 2242 
+// 2243 						#ifdef S2W_SEPARATE_NET_RX_TASK
+// 2244 							continue; /*!! Donot remove this*/
+// 2245 						#else
+// 2246 							break; /*!! Donot remove this*/
+// 2247 						#endif /*S2W_SEPARATE_NET_RX_TASK*/
+// 2248 					}
 ??CrossCallReturnLabel_32:
         ADDS     R0,R0,#+56
 ??AppS2wHal_NetRecvTask_50:
@@ -6008,119 +5944,119 @@ AppS2wHal_NetRecvTask:
         BL       GsnOsal_SemRelease
 ??AppS2wHal_NetRecvTask_37:
         B.N      ??AppS2wHal_NetRecvTask_0
-// 2257 					/* The close is from remote and no alert gone out. Send an alert */
-// 2258 					GsnHttp_Alert(s2wCidList[cid].pHttpData->pHttpHandle);
+// 2249 					/* The close is from remote and no alert gone out. Send an alert */
+// 2250 					GsnHttp_Alert(s2wCidList[cid].pHttpData->pHttpHandle);
 ??AppS2wHal_NetRecvTask_49:
         LDR      R0,[R7, #+24]
-        BL       ?Subroutine40
-// 2259 #endif
-// 2260 					//if(s2wCidList[cid].pHttpData->httpType == GSN_HTTP)
-// 2261 						//GsnOsal_SemAcquire(&s2wCidList[cid].pHttpData->opInProgress, GSN_OSAL_WAIT_FOREVER);
-// 2262 					GsnOsal_SemRelease(&s2wCidList[cid].pHttpData->opInProgress);
-??CrossCallReturnLabel_106:
+        BL       ??Subroutine41_0
+// 2251 #endif
+// 2252 					//if(s2wCidList[cid].pHttpData->httpType == GSN_HTTP)
+// 2253 						//GsnOsal_SemAcquire(&s2wCidList[cid].pHttpData->opInProgress, GSN_OSAL_WAIT_FOREVER);
+// 2254 					GsnOsal_SemRelease(&s2wCidList[cid].pHttpData->opInProgress);
+??CrossCallReturnLabel_108:
         LDR      R0,[R7, #+24]
-        BL       ??Subroutine33_0
-// 2263 				}
-// 2264 
-// 2265 #endif
-// 2266 				status = AppS2wHal_NetClose(cid);
-??CrossCallReturnLabel_83:
-        MOV      R0,R10
+        BL       ??Subroutine34_0
+// 2255 				}
+// 2256 
+// 2257 #endif
+// 2258 				status = AppS2wHal_NetClose(cid);
+??CrossCallReturnLabel_87:
+        MOV      R0,R8
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
         MOV      R7,R0
-// 2267 				/* Check the L2 connection exists
-// 2268 					Bug FIX 5083 - L2 disconnection while getting the data throws ERROR:SOCKET FAILURE and Disassociation Event
-// 2269 				*/						
-// 2270 				if(TRUE != GsnWdd_AssocStatusGet(&s2wappMainTaskCtxt->if0.wddCtx))
-        BL       ?Subroutine38
-??CrossCallReturnLabel_98:
+// 2259 				/* Check the L2 connection exists
+// 2260 					Bug FIX 5083 - L2 disconnection while getting the data throws ERROR:SOCKET FAILURE and Disassociation Event
+// 2261 				*/						
+// 2262 				if(TRUE != GsnWdd_AssocStatusGet(&s2wappMainTaskCtxt->if0.wddCtx))
+        BL       ?Subroutine39
+??CrossCallReturnLabel_102:
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_NetRecvTask_37
-// 2271 				{
-// 2272 					break;
-// 2273 				}
-// 2274 
-// 2275                 
-// 2276 				
-// 2277 				if(s2wCidList[cid].s2wUsrCloseFlag == 0 && status == S2W_SUCCESS)
-        LDRB     R0,[R8, #+144]
+// 2263 				{
+// 2264 					break;
+// 2265 				}
+// 2266 
+// 2267                 
+// 2268 				
+// 2269 				if(s2wCidList[cid].s2wUsrCloseFlag == 0 && status == S2W_SUCCESS)
+        LDRB     R0,[R5, #+144]
         ORRS     R0,R7,R0
         BNE.N    ??AppS2wHal_NetRecvTask_35
-// 2278 				{
-// 2279 					GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 2270 				{
+// 2271 					GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
         BL       ?Subroutine27
-// 2280 					if((!s2wAutoConnState ) ||(( s2wState == S2W_STATE_CMD) && (s2wIsAutoconnected)))
+// 2272 					if((!s2wAutoConnState ) ||(( s2wState == S2W_STATE_CMD) && (s2wIsAutoconnected)))
 ??CrossCallReturnLabel_67:
-        LDR.W    R0,??DataTable82
+        LDR.W    R0,??DataTable78
         LDRB     R0,[R0, #+0]
         CBZ.N    R0,??AppS2wHal_NetRecvTask_36
-        LDR.W    R0,??DataTable82_1
+        LDR.W    R0,??DataTable78_1
         LDRB     R0,[R0, #+0]
         CBNZ.N   R0,??AppS2wHal_NetRecvTask_43
-        LDR.W    R0,??DataTable82_2
+        LDR.W    R0,??DataTable78_2
         LDRB     R0,[R0, #+0]
         CBZ.N    R0,??AppS2wHal_NetRecvTask_43
-// 2281 				 	{
-// 2282 #ifdef S2W_ASYNC_MSG
-// 2283 						if(s2wCurrent.asyncMsgFormat)
+// 2273 				 	{
+// 2274 #ifdef S2W_ASYNC_MSG
+// 2275 						if(s2wCurrent.asyncMsgFormat)
 ??AppS2wHal_NetRecvTask_36:
         BL       ?Subroutine21
 ??CrossCallReturnLabel_48:
         BEQ.N    ??AppS2wHal_NetRecvTask_51
-// 2284 				   		{
-// 2285 					   		AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_ECIDCLOSE, cid);
+// 2276 				   		{
+// 2277 					   		AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_ECIDCLOSE, cid);
         MOVS     R0,#+2
 ??AppS2wHal_NetRecvTask_44:
           CFI FunCall AppS2wProcess_AsyncStatusNotify
         BL       AppS2wProcess_AsyncStatusNotify
         B.N      ??AppS2wHal_NetRecvTask_43
-// 2286 				   		}
-// 2287 				   		else
-// 2288 #endif
-// 2289                 		{
-// 2290 		                    AppS2wProcess_StatusNotify(S2W_ECIDCLOSE, cid);
+// 2278 				   		}
+// 2279 				   		else
+// 2280 #endif
+// 2281                 		{
+// 2282 		                    AppS2wProcess_StatusNotify(S2W_ECIDCLOSE, cid);
 ??AppS2wHal_NetRecvTask_51:
         MOVS     R0,#+8
 ??AppS2wHal_NetRecvTask_45:
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 2291         		        }
-// 2292 			       }                
-// 2293 					GsnOsal_SemRelease(&s2wSyncSemID);
+// 2283         		        }
+// 2284 			       }                
+// 2285 					GsnOsal_SemRelease(&s2wSyncSemID);
 ??AppS2wHal_NetRecvTask_43:
-        LDR.W    R0,??DataTable87
+        LDR.W    R0,??DataTable86
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 2294 				}
-// 2295                 
-// 2296                 
-// 2297                 if(((s2wCurrent.ncmAutoLvl != 0)  && (cid == s2wCurrent.ncmAutoCid) && (s2wCurrent.ncmAutoMgr == 1))
-// 2298                    || profile_params.autoConnect )
+// 2286 				}
+// 2287                 
+// 2288                 
+// 2289                 if(((s2wCurrent.ncmAutoLvl != 0)  && (cid == s2wCurrent.ncmAutoCid) && (s2wCurrent.ncmAutoMgr == 1))
+// 2290                    || profile_params.autoConnect )
 ??AppS2wHal_NetRecvTask_35:
-        LDR.N    R0,??DataTable69
+        LDR.N    R0,??DataTable65
         LDRB     R0,[R0, #+811]
         CBZ.N    R0,??AppS2wHal_NetRecvTask_52
-        LDR.N    R0,??DataTable69
+        LDR.N    R0,??DataTable65
         LDRB     R0,[R0, #+916]
-        CMP      R10,R0
+        CMP      R8,R0
         ITTT     EQ 
-        LDREQ.N  R0,??DataTable69
+        LDREQ.N  R0,??DataTable65
         LDRBEQ   R0,[R0, #+810]
         CMPEQ    R0,#+1
         BEQ.N    ??AppS2wHal_NetRecvTask_53
 ??AppS2wHal_NetRecvTask_52:
-        LDR.W    R0,??DataTable87_1
+        LDR.W    R0,??DataTable85
         LDRB     R0,[R0, #+4]
         CMP      R0,#+0
         BEQ.N    ??AppS2wHal_NetRecvTask_54
-// 2299                 {
-// 2300 
-// 2301                     UINT32 message = APP_EVENT_NCM_L4CONNECT;
-// 2302                     (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
+// 2291                 {
+// 2292 
+// 2293                     UINT32 message = APP_EVENT_NCM_L4CONNECT;
+// 2294                     (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
 ??AppS2wHal_NetRecvTask_53:
-        LDR.W    R0,??DataTable75
-        LDR.W    R2,??DataTable87_2
+        LDR.W    R0,??DataTable71
+        LDR.W    R2,??DataTable86_1
         LDR      R1,[R0, #+0]
         LDR      R2,[R2, #+0]
         MOVS     R0,#+24
@@ -6128,157 +6064,156 @@ AppS2wHal_NetRecvTask:
         BLX      R2
 ??AppS2wHal_NetRecvTask_54:
         B.N      ??AppS2wHal_NetRecvTask_0
-// 2303                 }
-// 2304             break;
-// 2305 
-// 2306 #endif
-// 2307 #ifdef S2W_HTTPC_SUPPORT
-// 2308             case S2W_RECV_TYPE_HTTPS_CLOSE:
-// 2309 				/*Control is here, becase an Alert has been received*/
-// 2310                 cid = AppS2wHal_CidFind(recvMsg.rData.dataSock);
+// 2295                 }
+// 2296             break;
+// 2297 
+// 2298 #endif
+// 2299 #ifdef S2W_HTTPC_SUPPORT
+// 2300             case S2W_RECV_TYPE_HTTPS_CLOSE:
+// 2301 				/*Control is here, becase an Alert has been received*/
+// 2302                 cid = AppS2wHal_CidFind(recvMsg.rData.dataSock);
 ??AppS2wHal_NetRecvTask_29:
-        BL       ?Subroutine36
-??CrossCallReturnLabel_92:
+        BL       ?Subroutine37
+??CrossCallReturnLabel_96:
         MOV      R7,R0
-// 2311                 if (cid == INVALID_CID)
+// 2303                 if (cid == INVALID_CID)
         CMP      R7,#+255
         BEQ.N    ??AppS2wHal_NetRecvTask_54
-// 2312                 {
-// 2313                     #ifdef S2W_SEPARATE_NET_RX_TASK
-// 2314                     	continue;
-// 2315 					#else
-// 2316 						break;
-// 2317 					#endif /*S2W_SEPARATE_NET_RX_TASK*/
-// 2318                 }
-// 2319                 // if data is pending on that socket defer the socket close
-// 2320                 if(s2wCidList[cid].s2wSockDataPending)
+// 2304                 {
+// 2305                     #ifdef S2W_SEPARATE_NET_RX_TASK
+// 2306                     	continue;
+// 2307 					#else
+// 2308 						break;
+// 2309 					#endif /*S2W_SEPARATE_NET_RX_TASK*/
+// 2310                 }
+// 2311                 // if data is pending on that socket defer the socket close
+// 2312                 if(s2wCidList[cid].s2wSockDataPending)
         BL       ?Subroutine15
 ??CrossCallReturnLabel_34:
-        MLA      R8,R0,R7,R1
-        LDRB     R0,[R8, #+145]
+        MLA      R5,R0,R7,R1
+        LDRB     R0,[R5, #+145]
         CBZ.N    R0,??AppS2wHal_NetRecvTask_55
-// 2321                 {
-// 2322 					GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
-        LDR.W    R0,??DataTable80
+// 2313                 {
+// 2314 					GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
+        LDR.W    R0,??DataTable77
         ADD      R1,SP,#+20
           CFI FunCall GsnOsal_QueuePut
         BL       GsnOsal_QueuePut
-// 2323 				}
-// 2324 				/*Send Alert back*/
-// 2325                 GsnHttp_Alert(s2wCidList[cid].pHttpData->pHttpHandle);
+// 2315 				}
+// 2316 				/*Send Alert back*/
+// 2317                 GsnHttp_Alert(s2wCidList[cid].pHttpData->pHttpHandle);
 ??AppS2wHal_NetRecvTask_55:
-        LDR      R0,[R8, #+52]
-        BL       ?Subroutine40
-// 2326 
-// 2327 				/* Close HTTP connection*/
-// 2328 				AppS2wHal_HttpLocalClose(cid);
-??CrossCallReturnLabel_105:
+        BL       ?Subroutine41
+// 2318 
+// 2319 				/* Close HTTP connection*/
+// 2320 				AppS2wHal_HttpLocalClose(cid);
+??CrossCallReturnLabel_111:
         MOV      R0,R7
           CFI FunCall AppS2wHal_HttpLocalClose
         BL       AppS2wHal_HttpLocalClose
-// 2329 
-// 2330                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-        LDR.W    R0,??DataTable87
+// 2321 
+// 2322                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+        LDR.W    R0,??DataTable86
         MOV      R1,#-1
           CFI FunCall GsnOsal_SemAcquire
         BL       GsnOsal_SemAcquire
-// 2331 #ifdef S2W_UART_ENABLE
-// 2332                 //while(0 == S2wUart_TxStatusGet());
-// 2333 #endif
-// 2334 #ifdef S2W_ASYNC_MSG
-// 2335                 if(s2wCurrent.asyncMsgFormat)
-        LDR.N    R0,??DataTable69
+// 2323 #ifdef S2W_UART_ENABLE
+// 2324                 //while(0 == S2wUart_TxStatusGet());
+// 2325 #endif
+// 2326 #ifdef S2W_ASYNC_MSG
+// 2327                 if(s2wCurrent.asyncMsgFormat)
+        LDR.N    R0,??DataTable65
         LDRB     R0,[R0, #+472]
         CMP      R0,#+0
         MOV      R1,R7
         BEQ.N    ??AppS2wHal_NetRecvTask_56
-// 2336                 {
-// 2337                     AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_ECIDCLOSE, cid);
+// 2328                 {
+// 2329                     AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_ECIDCLOSE, cid);
         MOVS     R0,#+2
           CFI FunCall AppS2wProcess_AsyncStatusNotify
         BL       AppS2wProcess_AsyncStatusNotify
         B.N      ??AppS2wHal_NetRecvTask_57
-// 2338                 }
-// 2339                 else
-// 2340 #endif
-// 2341                 {
-// 2342                     AppS2wProcess_StatusNotify(S2W_ECIDCLOSE, cid);
+// 2330                 }
+// 2331                 else
+// 2332 #endif
+// 2333                 {
+// 2334                     AppS2wProcess_StatusNotify(S2W_ECIDCLOSE, cid);
 ??AppS2wHal_NetRecvTask_56:
         MOVS     R0,#+8
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 2343                 }
-// 2344 #ifdef S2W_UART_ENABLE
-// 2345                // while(0 == S2wUart_TxStatusGet());
-// 2346 #endif
-// 2347                 GsnOsal_SemRelease(&s2wSyncSemID);
+// 2335                 }
+// 2336 #ifdef S2W_UART_ENABLE
+// 2337                // while(0 == S2wUart_TxStatusGet());
+// 2338 #endif
+// 2339                 GsnOsal_SemRelease(&s2wSyncSemID);
 ??AppS2wHal_NetRecvTask_57:
-        LDR.W    R0,??DataTable87
+        LDR.W    R0,??DataTable86
         B.N      ??AppS2wHal_NetRecvTask_50
+// 2340 
+// 2341                 break;
+// 2342 #endif
+// 2343 #ifdef S2W_IP2WIFI_SUPPORT
+// 2344                 case S2W_RECV_TYPE_RAWDATA:
+// 2345                 {
+// 2346 
+// 2347                     S2w_RawNetRx (recvMsg.rData.dataPtr, recvMsg.msgLen);
 // 2348 
-// 2349                 break;
-// 2350 #endif
-// 2351 #ifdef S2W_IP2WIFI_SUPPORT
-// 2352                 case S2W_RECV_TYPE_RAWDATA:
-// 2353                 {
-// 2354 
-// 2355                     S2w_RawNetRx (recvMsg.rData.dataPtr, recvMsg.msgLen);
+// 2349                 }
+// 2350                 break;
+// 2351 #endif
+// 2352 
+// 2353 #ifdef S2W_UNASSOC_TXRX_SUPPORT
+// 2354                 case S2W_RECV_TYPE_UAMDATA:
+// 2355                 {
 // 2356 
-// 2357                 }
-// 2358                 break;
-// 2359 #endif
-// 2360 
-// 2361 #ifdef S2W_UNASSOC_TXRX_SUPPORT
-// 2362                 case S2W_RECV_TYPE_UAMDATA:
-// 2363                 {
-// 2364 
-// 2365                     S2w_UamRx (recvMsg.rData.dataPtr, recvMsg.msgLen);
+// 2357                     S2w_UamRx (recvMsg.rData.dataPtr, recvMsg.msgLen);
 ??AppS2wHal_NetRecvTask_30:
         LDRSH    R1,[SP, #+24]
         LDR      R0,[SP, #+20]
           CFI FunCall S2w_UamRx
         BL       S2w_UamRx
-// 2366 
-// 2367                 }
-// 2368                 break;
+// 2358 
+// 2359                 }
+// 2360                 break;
         B.N      ??AppS2wHal_NetRecvTask_0
-// 2369 #endif
-// 2370 
-// 2371 			    case S2W_RECV_TYPE_SOCK_ACCEPT:
-// 2372 			        newcid = AppS2wHal_CidFind(recvMsg.rData.dataSock);
+// 2361 #endif
+// 2362 
+// 2363 			    case S2W_RECV_TYPE_SOCK_ACCEPT:
+// 2364 			        newcid = AppS2wHal_CidFind(recvMsg.rData.dataSock);
 ??AppS2wHal_NetRecvTask_28:
-        BL       ?Subroutine36
-// 2373 			        cid = s2wCidList[newcid].serverCid;
-??CrossCallReturnLabel_91:
-        LDR.N    R1,??DataTable69_1
+        BL       ?Subroutine37
+// 2365 			        cid = s2wCidList[newcid].serverCid;
+??CrossCallReturnLabel_95:
+        LDR.N    R1,??DataTable66
         MOV      R5,R0
         MOV      R0,#+296
         MLA      R0,R0,R5,R1
         LDRB     R6,[R0, #+46]
-// 2374 			        new_sd =   s2wCidList[newcid].sd;
+// 2366 			        new_sd =   s2wCidList[newcid].sd;
         LDR      R7,[R0, #+28]
-// 2375 			        port = s2wCidList[newcid].remotePort;
+// 2367 			        port = s2wCidList[newcid].remotePort;
         LDRH     R4,[R0, #+4]
-// 2376 #ifdef S2W_IPv6_SUPPORT
-// 2377                     if(s2wCidList[newcid].addrType & ADDR_TYPE_IPv6)
-// 2378                     {
-// 2379                         ret = AppS2wProcess_NetAccept(cid, newcid, (UINT8*)s2wCidList[newcid].remoteIpv6, port);
-// 2380 				    }
-// 2381 				    else
-// 2382 #endif
-// 2383                     {
-// 2384 		                memcpy((UINT8*)ip,s2wCidList[newcid].remoteIp,4);
+// 2368 #ifdef S2W_IPv6_SUPPORT
+// 2369                     if(s2wCidList[newcid].addrType & ADDR_TYPE_IPv6)
+// 2370                     {
+// 2371                         ret = AppS2wProcess_NetAccept(cid, newcid, (UINT8*)s2wCidList[newcid].remoteIpv6, port);
+// 2372 				    }
+// 2373 				    else
+// 2374 #endif
+// 2375                     {
+// 2376 		                memcpy((UINT8*)ip,s2wCidList[newcid].remoteIp,4);
         ADDS     R1,R0,#+6
         MOVS     R2,#+4
         ADD      R0,SP,#+8
           CFI FunCall memcpy
         BL       memcpy
-// 2385 		                *(UINT32*)ip = htonl(*(UINT32*)ip);
-        BL       ?Subroutine31
-// 2386 				        ret = AppS2wProcess_NetAccept(cid, newcid, (UINT8*)ip, port);
-// 2387 				    }
-// 2388 				    if (ret != S2W_SUCCESS)
-??CrossCallReturnLabel_79:
+// 2377 		                *(UINT32*)ip = htonl(*(UINT32*)ip);
+        BL       ?Subroutine32
+// 2378 				        ret = AppS2wProcess_NetAccept(cid, newcid, (UINT8*)ip, port);
+// 2379 				    }
+// 2380 				    if (ret != S2W_SUCCESS)
+??CrossCallReturnLabel_83:
         MOV      R3,R4
         ADD      R2,SP,#+8
         MOV      R1,R5
@@ -6287,54 +6222,35 @@ AppS2wHal_NetRecvTask:
         BL       AppS2wProcess_NetAccept
         CMP      R0,#+0
         BEQ.N    ??AppS2wHal_NetRecvTask_58
-// 2389 				    {
-// 2390 					    soc_close(new_sd);
+// 2381 				    {
+// 2382 					    soc_close(new_sd);
         MOV      R0,R7
           CFI FunCall soc_close
         BL       soc_close
 ??AppS2wHal_NetRecvTask_58:
         B.N      ??AppS2wHal_NetRecvTask_0
           CFI EndBlock cfiBlock93
-// 2391 					    //return;
-// 2392 	                }
-// 2393 				break;
-// 2394             default :
-// 2395                 break;
-// 2396 }
-// 2397 
-// 2398     }
-// 2399 }
+// 2383 					    //return;
+// 2384 	                }
+// 2385 				break;
+// 2386             default :
+// 2387                 break;
+// 2388 }
+// 2389 
+// 2390     }
+// 2391 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\nData Receive in rec...">`:
-        DC8 0DH, 0AH, 44H, 61H, 74H, 61H, 20H, 52H
-        DC8 65H, 63H, 65H, 69H, 76H, 65H, 20H, 69H
-        DC8 6EH, 20H, 72H, 65H, 63H, 65H, 69H, 76H
-        DC8 65H, 20H, 74H, 61H, 73H, 6BH, 20H, 73H
-        DC8 32H, 77H, 52H, 78H, 42H, 75H, 66H, 20H
-        DC8 3AH, 20H, 25H, 58H, 20H, 25H, 58H, 20H
-        DC8 25H, 58H, 20H, 25H, 58H, 0
-        DC8 0, 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\nData Receive in rec...">_1`:
-        DC8 0DH, 0AH, 44H, 61H, 74H, 61H, 20H, 52H
-        DC8 65H, 63H, 65H, 69H, 76H, 65H, 20H, 69H
-        DC8 6EH, 20H, 72H, 65H, 63H, 65H, 69H, 76H
-        DC8 65H, 20H, 74H, 61H, 73H, 6BH, 20H, 6DH
-        DC8 71H, 74H, 74H, 5FH, 74H, 65H, 6DH, 70H
-        DC8 20H, 3AH, 20H, 25H, 58H, 20H, 25H, 58H
-        DC8 20H, 25H, 58H, 20H, 25H, 58H, 0
+`?<Constant "\\r\\n Receive Data s2wRx...">`:
+        DC8 "\015\012 Receive Data s2wRxBuf : %x %x %x %x"
         DC8 0
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond94 Using cfiCommon0
           CFI Function AppS2wHal_NetRecvTask
-          CFI Conditional ??CrossCallReturnLabel_109
+          CFI Conditional ??CrossCallReturnLabel_113
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -6347,7 +6263,7 @@ AppS2wHal_NetRecvTask:
           CFI CFA R13+128
           CFI Block cfiCond95 Using cfiCommon0
           CFI (cfiCond95) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond95) Conditional ??CrossCallReturnLabel_108
+          CFI (cfiCond95) Conditional ??CrossCallReturnLabel_112
           CFI (cfiCond95) R4 Frame(CFA, -36)
           CFI (cfiCond95) R5 Frame(CFA, -32)
           CFI (cfiCond95) R6 Frame(CFA, -28)
@@ -6362,10 +6278,10 @@ AppS2wHal_NetRecvTask:
           CFI (cfiPicker96) NoFunction
           CFI (cfiPicker96) Picker
         THUMB
-?Subroutine41:
+?Subroutine42:
         STR      R4,[SP, #+0]
         ADD      R3,SP,#+8
-        MOV      R0,R10
+        MOV      R0,R8
           CFI FunCall AppS2wHal_NetRecvTask AppS2wProcess_NetRx
           CFI FunCall AppS2wHal_NetRecvTask AppS2wProcess_NetRx
         B.W      AppS2wProcess_NetRx
@@ -6376,7 +6292,7 @@ AppS2wHal_NetRecvTask:
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond97 Using cfiCommon0
           CFI Function AppS2wHal_NetRecvTask
-          CFI Conditional ??CrossCallReturnLabel_100
+          CFI Conditional ??CrossCallReturnLabel_104
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -6389,7 +6305,7 @@ AppS2wHal_NetRecvTask:
           CFI CFA R13+128
           CFI Block cfiCond98 Using cfiCommon0
           CFI (cfiCond98) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond98) Conditional ??CrossCallReturnLabel_99
+          CFI (cfiCond98) Conditional ??CrossCallReturnLabel_103
           CFI (cfiCond98) R4 Frame(CFA, -36)
           CFI (cfiCond98) R5 Frame(CFA, -32)
           CFI (cfiCond98) R6 Frame(CFA, -28)
@@ -6402,7 +6318,7 @@ AppS2wHal_NetRecvTask:
           CFI (cfiCond98) CFA R13+128
           CFI Block cfiCond99 Using cfiCommon0
           CFI (cfiCond99) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond99) Conditional ??CrossCallReturnLabel_98
+          CFI (cfiCond99) Conditional ??CrossCallReturnLabel_102
           CFI (cfiCond99) R4 Frame(CFA, -36)
           CFI (cfiCond99) R5 Frame(CFA, -32)
           CFI (cfiCond99) R6 Frame(CFA, -28)
@@ -6417,8 +6333,8 @@ AppS2wHal_NetRecvTask:
           CFI (cfiPicker100) NoFunction
           CFI (cfiPicker100) Picker
         THUMB
-?Subroutine38:
-        LDR.W    R0,??DataTable75
+?Subroutine39:
+        LDR.W    R0,??DataTable71
         LDR      R0,[R0, #+0]
         ADD      R0,R0,#+3808
           CFI FunCall AppS2wHal_NetRecvTask GsnWdd_AssocStatusGet
@@ -6430,16 +6346,10 @@ AppS2wHal_NetRecvTask:
           CFI EndBlock cfiCond99
           CFI EndBlock cfiPicker100
 
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable64:
-        DC32     AppS2wHal_RxCallBack
-
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond101 Using cfiCommon0
           CFI Function AppS2wHal_NetRecvTask
-          CFI Conditional ??CrossCallReturnLabel_95
+          CFI Conditional ??CrossCallReturnLabel_99
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -6452,7 +6362,7 @@ AppS2wHal_NetRecvTask:
           CFI CFA R13+128
           CFI Block cfiCond102 Using cfiCommon0
           CFI (cfiCond102) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond102) Conditional ??CrossCallReturnLabel_94
+          CFI (cfiCond102) Conditional ??CrossCallReturnLabel_98
           CFI (cfiCond102) R4 Frame(CFA, -36)
           CFI (cfiCond102) R5 Frame(CFA, -32)
           CFI (cfiCond102) R6 Frame(CFA, -28)
@@ -6465,7 +6375,7 @@ AppS2wHal_NetRecvTask:
           CFI (cfiCond102) CFA R13+128
           CFI Block cfiCond103 Using cfiCommon0
           CFI (cfiCond103) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond103) Conditional ??CrossCallReturnLabel_93
+          CFI (cfiCond103) Conditional ??CrossCallReturnLabel_97
           CFI (cfiCond103) R4 Frame(CFA, -36)
           CFI (cfiCond103) R5 Frame(CFA, -32)
           CFI (cfiCond103) R6 Frame(CFA, -28)
@@ -6478,7 +6388,7 @@ AppS2wHal_NetRecvTask:
           CFI (cfiCond103) CFA R13+128
           CFI Block cfiCond104 Using cfiCommon0
           CFI (cfiCond104) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond104) Conditional ??CrossCallReturnLabel_92
+          CFI (cfiCond104) Conditional ??CrossCallReturnLabel_96
           CFI (cfiCond104) R4 Frame(CFA, -36)
           CFI (cfiCond104) R5 Frame(CFA, -32)
           CFI (cfiCond104) R6 Frame(CFA, -28)
@@ -6491,7 +6401,7 @@ AppS2wHal_NetRecvTask:
           CFI (cfiCond104) CFA R13+128
           CFI Block cfiCond105 Using cfiCommon0
           CFI (cfiCond105) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond105) Conditional ??CrossCallReturnLabel_91
+          CFI (cfiCond105) Conditional ??CrossCallReturnLabel_95
           CFI (cfiCond105) R4 Frame(CFA, -36)
           CFI (cfiCond105) R5 Frame(CFA, -32)
           CFI (cfiCond105) R6 Frame(CFA, -28)
@@ -6506,7 +6416,7 @@ AppS2wHal_NetRecvTask:
           CFI (cfiPicker106) NoFunction
           CFI (cfiPicker106) Picker
         THUMB
-?Subroutine36:
+?Subroutine37:
         LDR      R0,[SP, #+20]
           CFI FunCall AppS2wHal_NetRecvTask AppS2wHal_CidFind
           CFI FunCall AppS2wHal_NetRecvTask AppS2wHal_CidFind
@@ -6524,7 +6434,7 @@ AppS2wHal_NetRecvTask:
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond107 Using cfiCommon0
           CFI Function AppS2wHal_NetRecvTask
-          CFI Conditional ??CrossCallReturnLabel_86
+          CFI Conditional ??CrossCallReturnLabel_90
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -6537,7 +6447,7 @@ AppS2wHal_NetRecvTask:
           CFI CFA R13+128
           CFI Block cfiCond108 Using cfiCommon0
           CFI (cfiCond108) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond108) Conditional ??CrossCallReturnLabel_85
+          CFI (cfiCond108) Conditional ??CrossCallReturnLabel_89
           CFI (cfiCond108) R4 Frame(CFA, -36)
           CFI (cfiCond108) R5 Frame(CFA, -32)
           CFI (cfiCond108) R6 Frame(CFA, -28)
@@ -6550,7 +6460,7 @@ AppS2wHal_NetRecvTask:
           CFI (cfiCond108) CFA R13+128
           CFI Block cfiCond109 Using cfiCommon0
           CFI (cfiCond109) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond109) Conditional ??CrossCallReturnLabel_84
+          CFI (cfiCond109) Conditional ??CrossCallReturnLabel_88
           CFI (cfiCond109) R4 Frame(CFA, -36)
           CFI (cfiCond109) R5 Frame(CFA, -32)
           CFI (cfiCond109) R6 Frame(CFA, -28)
@@ -6565,11 +6475,11 @@ AppS2wHal_NetRecvTask:
           CFI (cfiPicker110) NoFunction
           CFI (cfiPicker110) Picker
         THUMB
-?Subroutine33:
-        LDR      R0,[R5, #+8]
+?Subroutine34:
+        LDR      R0,[R6, #+8]
           CFI Block cfiCond111 Using cfiCommon0
           CFI (cfiCond111) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond111) Conditional ??CrossCallReturnLabel_83
+          CFI (cfiCond111) Conditional ??CrossCallReturnLabel_87
           CFI (cfiCond111) R4 Frame(CFA, -36)
           CFI (cfiCond111) R5 Frame(CFA, -32)
           CFI (cfiCond111) R6 Frame(CFA, -28)
@@ -6580,7 +6490,7 @@ AppS2wHal_NetRecvTask:
           CFI (cfiCond111) R11 Frame(CFA, -8)
           CFI (cfiCond111) R14 Frame(CFA, -4)
           CFI (cfiCond111) CFA R13+128
-??Subroutine33_0:
+??Subroutine34_0:
         ADDS     R0,R0,#+48
           CFI FunCall AppS2wHal_NetRecvTask GsnOsal_SemRelease
           CFI FunCall AppS2wHal_NetRecvTask GsnOsal_SemRelease
@@ -6597,7 +6507,7 @@ AppS2wHal_NetRecvTask:
           CFI Block cfiCond112 Using cfiCommon0
           CFI Function AppS2wHal_NetRecvTask
           CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_77
+          CFI Conditional ??CrossCallReturnLabel_81
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -6611,7 +6521,7 @@ AppS2wHal_NetRecvTask:
           CFI Block cfiCond113 Using cfiCommon0
           CFI (cfiCond113) Function AppS2wHal_NetRecvTask
           CFI (cfiCond113) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiCond113) Conditional ??CrossCallReturnLabel_78
+          CFI (cfiCond113) Conditional ??CrossCallReturnLabel_82
           CFI (cfiCond113) R4 Frame(CFA, -36)
           CFI (cfiCond113) R5 Frame(CFA, -32)
           CFI (cfiCond113) R6 Frame(CFA, -28)
@@ -6625,7 +6535,7 @@ AppS2wHal_NetRecvTask:
           CFI Block cfiCond114 Using cfiCommon0
           CFI (cfiCond114) Function AppS2wHal_NetRecvTask
           CFI (cfiCond114) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiCond114) Conditional ??CrossCallReturnLabel_79
+          CFI (cfiCond114) Conditional ??CrossCallReturnLabel_83
           CFI (cfiCond114) R4 Frame(CFA, -36)
           CFI (cfiCond114) R5 Frame(CFA, -32)
           CFI (cfiCond114) R6 Frame(CFA, -28)
@@ -6641,7 +6551,7 @@ AppS2wHal_NetRecvTask:
           CFI (cfiPicker115) NoCalls AppS2wHal_NetRecvTask
           CFI (cfiPicker115) Picker
         THUMB
-?Subroutine31:
+?Subroutine32:
         LDR      R0,[SP, #+8]
         LSRS     R1,R0,#+8
         AND      R1,R1,#0xFF00
@@ -6660,21 +6570,22 @@ AppS2wHal_NetRecvTask:
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond116 Using cfiCommon0
-          CFI Function AppS2wHal_NetRecvTask
-          CFI Conditional ??CrossCallReturnLabel_72
-          CFI R4 Frame(CFA, -36)
-          CFI R5 Frame(CFA, -32)
-          CFI R6 Frame(CFA, -28)
-          CFI R7 Frame(CFA, -24)
-          CFI R8 Frame(CFA, -20)
-          CFI R9 Frame(CFA, -16)
-          CFI R10 Frame(CFA, -12)
-          CFI R11 Frame(CFA, -8)
+          CFI Function AppS2wHal_NetClose
+          CFI NoCalls
+          CFI NoCalls
+          CFI Conditional ??CrossCallReturnLabel_77
+          CFI R4 Frame(CFA, -24)
+          CFI R5 Frame(CFA, -20)
+          CFI R6 Frame(CFA, -16)
+          CFI R7 Frame(CFA, -12)
+          CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
-          CFI CFA R13+128
+          CFI CFA R13+40
           CFI Block cfiCond117 Using cfiCommon0
           CFI (cfiCond117) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond117) Conditional ??CrossCallReturnLabel_71
+          CFI (cfiCond117) NoCalls AppS2wHal_NetClose
+          CFI (cfiCond117) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiCond117) Conditional ??CrossCallReturnLabel_78
           CFI (cfiCond117) R4 Frame(CFA, -36)
           CFI (cfiCond117) R5 Frame(CFA, -32)
           CFI (cfiCond117) R6 Frame(CFA, -28)
@@ -6687,7 +6598,9 @@ AppS2wHal_NetRecvTask:
           CFI (cfiCond117) CFA R13+128
           CFI Block cfiCond118 Using cfiCommon0
           CFI (cfiCond118) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond118) Conditional ??CrossCallReturnLabel_70
+          CFI (cfiCond118) NoCalls AppS2wHal_NetClose
+          CFI (cfiCond118) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiCond118) Conditional ??CrossCallReturnLabel_79
           CFI (cfiCond118) R4 Frame(CFA, -36)
           CFI (cfiCond118) R5 Frame(CFA, -32)
           CFI (cfiCond118) R6 Frame(CFA, -28)
@@ -6698,9 +6611,80 @@ AppS2wHal_NetRecvTask:
           CFI (cfiCond118) R11 Frame(CFA, -8)
           CFI (cfiCond118) R14 Frame(CFA, -4)
           CFI (cfiCond118) CFA R13+128
-          CFI Block cfiPicker119 Using cfiCommon1
-          CFI (cfiPicker119) NoFunction
-          CFI (cfiPicker119) Picker
+          CFI Block cfiCond119 Using cfiCommon0
+          CFI (cfiCond119) Function AppS2wHal_NetRecvTask
+          CFI (cfiCond119) NoCalls AppS2wHal_NetClose
+          CFI (cfiCond119) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiCond119) Conditional ??CrossCallReturnLabel_80
+          CFI (cfiCond119) R4 Frame(CFA, -36)
+          CFI (cfiCond119) R5 Frame(CFA, -32)
+          CFI (cfiCond119) R6 Frame(CFA, -28)
+          CFI (cfiCond119) R7 Frame(CFA, -24)
+          CFI (cfiCond119) R8 Frame(CFA, -20)
+          CFI (cfiCond119) R9 Frame(CFA, -16)
+          CFI (cfiCond119) R10 Frame(CFA, -12)
+          CFI (cfiCond119) R11 Frame(CFA, -8)
+          CFI (cfiCond119) R14 Frame(CFA, -4)
+          CFI (cfiCond119) CFA R13+128
+          CFI Block cfiPicker120 Using cfiCommon1
+          CFI (cfiPicker120) NoFunction
+          CFI (cfiPicker120) NoCalls AppS2wHal_NetClose
+          CFI (cfiPicker120) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiPicker120) Picker
+        THUMB
+?Subroutine31:
+        LDRB     R0,[R5, #+44]
+        CMP      R0,#+1
+        BX       LR
+          CFI EndBlock cfiCond116
+          CFI EndBlock cfiCond117
+          CFI EndBlock cfiCond118
+          CFI EndBlock cfiCond119
+          CFI EndBlock cfiPicker120
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiCond121 Using cfiCommon0
+          CFI Function AppS2wHal_NetRecvTask
+          CFI Conditional ??CrossCallReturnLabel_72
+          CFI R4 Frame(CFA, -36)
+          CFI R5 Frame(CFA, -32)
+          CFI R6 Frame(CFA, -28)
+          CFI R7 Frame(CFA, -24)
+          CFI R8 Frame(CFA, -20)
+          CFI R9 Frame(CFA, -16)
+          CFI R10 Frame(CFA, -12)
+          CFI R11 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+128
+          CFI Block cfiCond122 Using cfiCommon0
+          CFI (cfiCond122) Function AppS2wHal_NetRecvTask
+          CFI (cfiCond122) Conditional ??CrossCallReturnLabel_71
+          CFI (cfiCond122) R4 Frame(CFA, -36)
+          CFI (cfiCond122) R5 Frame(CFA, -32)
+          CFI (cfiCond122) R6 Frame(CFA, -28)
+          CFI (cfiCond122) R7 Frame(CFA, -24)
+          CFI (cfiCond122) R8 Frame(CFA, -20)
+          CFI (cfiCond122) R9 Frame(CFA, -16)
+          CFI (cfiCond122) R10 Frame(CFA, -12)
+          CFI (cfiCond122) R11 Frame(CFA, -8)
+          CFI (cfiCond122) R14 Frame(CFA, -4)
+          CFI (cfiCond122) CFA R13+128
+          CFI Block cfiCond123 Using cfiCommon0
+          CFI (cfiCond123) Function AppS2wHal_NetRecvTask
+          CFI (cfiCond123) Conditional ??CrossCallReturnLabel_70
+          CFI (cfiCond123) R4 Frame(CFA, -36)
+          CFI (cfiCond123) R5 Frame(CFA, -32)
+          CFI (cfiCond123) R6 Frame(CFA, -28)
+          CFI (cfiCond123) R7 Frame(CFA, -24)
+          CFI (cfiCond123) R8 Frame(CFA, -20)
+          CFI (cfiCond123) R9 Frame(CFA, -16)
+          CFI (cfiCond123) R10 Frame(CFA, -12)
+          CFI (cfiCond123) R11 Frame(CFA, -8)
+          CFI (cfiCond123) R14 Frame(CFA, -4)
+          CFI (cfiCond123) CFA R13+128
+          CFI Block cfiPicker124 Using cfiCommon1
+          CFI (cfiPicker124) NoFunction
+          CFI (cfiPicker124) Picker
         THUMB
 ?Subroutine28:
         MOV      R1,#-1
@@ -6709,13 +6693,13 @@ AppS2wHal_NetRecvTask:
           CFI FunCall AppS2wHal_NetRecvTask GsnOsal_SemAcquire
           CFI FunCall AppS2wHal_NetRecvTask GsnOsal_SemAcquire
         B.W      GsnOsal_SemAcquire
-          CFI EndBlock cfiCond116
-          CFI EndBlock cfiCond117
-          CFI EndBlock cfiCond118
-          CFI EndBlock cfiPicker119
+          CFI EndBlock cfiCond121
+          CFI EndBlock cfiCond122
+          CFI EndBlock cfiCond123
+          CFI EndBlock cfiPicker124
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond120 Using cfiCommon0
+          CFI Block cfiCond125 Using cfiCommon0
           CFI Function AppS2wHal_NetRecvTask
           CFI Conditional ??CrossCallReturnLabel_69
           CFI R4 Frame(CFA, -36)
@@ -6728,50 +6712,50 @@ AppS2wHal_NetRecvTask:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+128
-          CFI Block cfiCond121 Using cfiCommon0
-          CFI (cfiCond121) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond121) Conditional ??CrossCallReturnLabel_68
-          CFI (cfiCond121) R4 Frame(CFA, -36)
-          CFI (cfiCond121) R5 Frame(CFA, -32)
-          CFI (cfiCond121) R6 Frame(CFA, -28)
-          CFI (cfiCond121) R7 Frame(CFA, -24)
-          CFI (cfiCond121) R8 Frame(CFA, -20)
-          CFI (cfiCond121) R9 Frame(CFA, -16)
-          CFI (cfiCond121) R10 Frame(CFA, -12)
-          CFI (cfiCond121) R11 Frame(CFA, -8)
-          CFI (cfiCond121) R14 Frame(CFA, -4)
-          CFI (cfiCond121) CFA R13+128
-          CFI Block cfiCond122 Using cfiCommon0
-          CFI (cfiCond122) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond122) Conditional ??CrossCallReturnLabel_67
-          CFI (cfiCond122) R4 Frame(CFA, -36)
-          CFI (cfiCond122) R5 Frame(CFA, -32)
-          CFI (cfiCond122) R6 Frame(CFA, -28)
-          CFI (cfiCond122) R7 Frame(CFA, -24)
-          CFI (cfiCond122) R8 Frame(CFA, -20)
-          CFI (cfiCond122) R9 Frame(CFA, -16)
-          CFI (cfiCond122) R10 Frame(CFA, -12)
-          CFI (cfiCond122) R11 Frame(CFA, -8)
-          CFI (cfiCond122) R14 Frame(CFA, -4)
-          CFI (cfiCond122) CFA R13+128
-          CFI Block cfiPicker123 Using cfiCommon1
-          CFI (cfiPicker123) NoFunction
-          CFI (cfiPicker123) Picker
+          CFI Block cfiCond126 Using cfiCommon0
+          CFI (cfiCond126) Function AppS2wHal_NetRecvTask
+          CFI (cfiCond126) Conditional ??CrossCallReturnLabel_68
+          CFI (cfiCond126) R4 Frame(CFA, -36)
+          CFI (cfiCond126) R5 Frame(CFA, -32)
+          CFI (cfiCond126) R6 Frame(CFA, -28)
+          CFI (cfiCond126) R7 Frame(CFA, -24)
+          CFI (cfiCond126) R8 Frame(CFA, -20)
+          CFI (cfiCond126) R9 Frame(CFA, -16)
+          CFI (cfiCond126) R10 Frame(CFA, -12)
+          CFI (cfiCond126) R11 Frame(CFA, -8)
+          CFI (cfiCond126) R14 Frame(CFA, -4)
+          CFI (cfiCond126) CFA R13+128
+          CFI Block cfiCond127 Using cfiCommon0
+          CFI (cfiCond127) Function AppS2wHal_NetRecvTask
+          CFI (cfiCond127) Conditional ??CrossCallReturnLabel_67
+          CFI (cfiCond127) R4 Frame(CFA, -36)
+          CFI (cfiCond127) R5 Frame(CFA, -32)
+          CFI (cfiCond127) R6 Frame(CFA, -28)
+          CFI (cfiCond127) R7 Frame(CFA, -24)
+          CFI (cfiCond127) R8 Frame(CFA, -20)
+          CFI (cfiCond127) R9 Frame(CFA, -16)
+          CFI (cfiCond127) R10 Frame(CFA, -12)
+          CFI (cfiCond127) R11 Frame(CFA, -8)
+          CFI (cfiCond127) R14 Frame(CFA, -4)
+          CFI (cfiCond127) CFA R13+128
+          CFI Block cfiPicker128 Using cfiCommon1
+          CFI (cfiPicker128) NoFunction
+          CFI (cfiPicker128) Picker
         THUMB
 ?Subroutine27:
         MOV      R1,#-1
-        LDR.W    R0,??DataTable87
+        LDR.W    R0,??DataTable86
           CFI FunCall AppS2wHal_NetRecvTask GsnOsal_SemAcquire
           CFI FunCall AppS2wHal_NetRecvTask GsnOsal_SemAcquire
           CFI FunCall AppS2wHal_NetRecvTask GsnOsal_SemAcquire
         B.W      GsnOsal_SemAcquire
-          CFI EndBlock cfiCond120
-          CFI EndBlock cfiCond121
-          CFI EndBlock cfiCond122
-          CFI EndBlock cfiPicker123
+          CFI EndBlock cfiCond125
+          CFI EndBlock cfiCond126
+          CFI EndBlock cfiCond127
+          CFI EndBlock cfiPicker128
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond124 Using cfiCommon0
+          CFI Block cfiCond129 Using cfiCommon0
           CFI Function AppS2wHal_NetRecvTask
           CFI NoCalls
           CFI Conditional ??CrossCallReturnLabel_47
@@ -6785,37 +6769,37 @@ AppS2wHal_NetRecvTask:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+128
-          CFI Block cfiCond125 Using cfiCommon0
-          CFI (cfiCond125) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond125) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiCond125) Conditional ??CrossCallReturnLabel_48
-          CFI (cfiCond125) R4 Frame(CFA, -36)
-          CFI (cfiCond125) R5 Frame(CFA, -32)
-          CFI (cfiCond125) R6 Frame(CFA, -28)
-          CFI (cfiCond125) R7 Frame(CFA, -24)
-          CFI (cfiCond125) R8 Frame(CFA, -20)
-          CFI (cfiCond125) R9 Frame(CFA, -16)
-          CFI (cfiCond125) R10 Frame(CFA, -12)
-          CFI (cfiCond125) R11 Frame(CFA, -8)
-          CFI (cfiCond125) R14 Frame(CFA, -4)
-          CFI (cfiCond125) CFA R13+128
-          CFI Block cfiPicker126 Using cfiCommon1
-          CFI (cfiPicker126) NoFunction
-          CFI (cfiPicker126) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiPicker126) Picker
+          CFI Block cfiCond130 Using cfiCommon0
+          CFI (cfiCond130) Function AppS2wHal_NetRecvTask
+          CFI (cfiCond130) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiCond130) Conditional ??CrossCallReturnLabel_48
+          CFI (cfiCond130) R4 Frame(CFA, -36)
+          CFI (cfiCond130) R5 Frame(CFA, -32)
+          CFI (cfiCond130) R6 Frame(CFA, -28)
+          CFI (cfiCond130) R7 Frame(CFA, -24)
+          CFI (cfiCond130) R8 Frame(CFA, -20)
+          CFI (cfiCond130) R9 Frame(CFA, -16)
+          CFI (cfiCond130) R10 Frame(CFA, -12)
+          CFI (cfiCond130) R11 Frame(CFA, -8)
+          CFI (cfiCond130) R14 Frame(CFA, -4)
+          CFI (cfiCond130) CFA R13+128
+          CFI Block cfiPicker131 Using cfiCommon1
+          CFI (cfiPicker131) NoFunction
+          CFI (cfiPicker131) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiPicker131) Picker
         THUMB
 ?Subroutine21:
-        LDR.N    R0,??DataTable69
+        LDR.N    R0,??DataTable65
         LDRB     R0,[R0, #+472]
         CMP      R0,#+0
-        MOV      R1,R10
+        MOV      R1,R8
         BX       LR
-          CFI EndBlock cfiCond124
-          CFI EndBlock cfiCond125
-          CFI EndBlock cfiPicker126
+          CFI EndBlock cfiCond129
+          CFI EndBlock cfiCond130
+          CFI EndBlock cfiPicker131
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond127 Using cfiCommon0
+          CFI Block cfiCond132 Using cfiCommon0
           CFI Function AppS2wHal_NetRecvTask
           CFI NoCalls
           CFI Conditional ??CrossCallReturnLabel_31
@@ -6829,51 +6813,57 @@ AppS2wHal_NetRecvTask:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+128
-          CFI Block cfiCond128 Using cfiCommon0
-          CFI (cfiCond128) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond128) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiCond128) Conditional ??CrossCallReturnLabel_32
-          CFI (cfiCond128) R4 Frame(CFA, -36)
-          CFI (cfiCond128) R5 Frame(CFA, -32)
-          CFI (cfiCond128) R6 Frame(CFA, -28)
-          CFI (cfiCond128) R7 Frame(CFA, -24)
-          CFI (cfiCond128) R8 Frame(CFA, -20)
-          CFI (cfiCond128) R9 Frame(CFA, -16)
-          CFI (cfiCond128) R10 Frame(CFA, -12)
-          CFI (cfiCond128) R11 Frame(CFA, -8)
-          CFI (cfiCond128) R14 Frame(CFA, -4)
-          CFI (cfiCond128) CFA R13+128
-          CFI Block cfiPicker129 Using cfiCommon1
-          CFI (cfiPicker129) NoFunction
-          CFI (cfiPicker129) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiPicker129) Picker
+          CFI Block cfiCond133 Using cfiCommon0
+          CFI (cfiCond133) Function AppS2wHal_NetRecvTask
+          CFI (cfiCond133) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiCond133) Conditional ??CrossCallReturnLabel_32
+          CFI (cfiCond133) R4 Frame(CFA, -36)
+          CFI (cfiCond133) R5 Frame(CFA, -32)
+          CFI (cfiCond133) R6 Frame(CFA, -28)
+          CFI (cfiCond133) R7 Frame(CFA, -24)
+          CFI (cfiCond133) R8 Frame(CFA, -20)
+          CFI (cfiCond133) R9 Frame(CFA, -16)
+          CFI (cfiCond133) R10 Frame(CFA, -12)
+          CFI (cfiCond133) R11 Frame(CFA, -8)
+          CFI (cfiCond133) R14 Frame(CFA, -4)
+          CFI (cfiCond133) CFA R13+128
+          CFI Block cfiPicker134 Using cfiCommon1
+          CFI (cfiPicker134) NoFunction
+          CFI (cfiPicker134) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiPicker134) Picker
         THUMB
 ?Subroutine14:
         MOV      R0,#+296
-        LDR.N    R1,??DataTable69_1
-        MLA      R0,R0,R10,R1
+        LDR.N    R1,??DataTable66
+        MLA      R0,R0,R8,R1
         BX       LR
-          CFI EndBlock cfiCond127
-          CFI EndBlock cfiCond128
-          CFI EndBlock cfiPicker129
-// 2400 
-// 2401 
-// 2402 /**
-// 2403  ******************************************************************
-// 2404  * @ingroup S2w-Application
-// 2405 <<<<<<< s2w_net_gainspan.c
-// 2406  * @brief Get the free connection identifier.
-// 2407  * @retval Connection Identifier on success
-// 2408  *         Error on failure
-// 2409  ******************************************************************/
+          CFI EndBlock cfiCond132
+          CFI EndBlock cfiCond133
+          CFI EndBlock cfiPicker134
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable63:
+        DC32     AppS2wHal_RxCallBack
+// 2392 
+// 2393 
+// 2394 /**
+// 2395  ******************************************************************
+// 2396  * @ingroup S2w-Application
+// 2397 <<<<<<< s2w_net_gainspan.c
+// 2398  * @brief Get the free connection identifier.
+// 2399  * @retval Connection Identifier on success
+// 2400  *         Error on failure
+// 2401  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock130 Using cfiCommon0
+          CFI Block cfiBlock135 Using cfiCommon0
           CFI Function AppS2wHal_CidGet
         THUMB
-// 2410 UINT8
-// 2411 AppS2wHal_CidGet(VOID)
-// 2412 {
+// 2402 UINT8
+// 2403 AppS2wHal_CidGet(VOID)
+// 2404 {
 AppS2wHal_CidGet:
         PUSH     {R3-R7,LR}
           CFI R14 Frame(CFA, -4)
@@ -6882,136 +6872,124 @@ AppS2wHal_CidGet:
           CFI R5 Frame(CFA, -16)
           CFI R4 Frame(CFA, -20)
           CFI CFA R13+24
-// 2413     INT32 i,j,k;
-// 2414     j= ((s2wappMainTaskCtxt->lastCidCreated+1)&(MAX_CID_RANGE-1));
-// 2415     for (i = j,k=0; k < MAX_CID_RANGE ;(i=((i+1)&(MAX_CID_RANGE-1))),k++)
-        LDR.N    R5,??DataTable70
-        LDR.N    R2,??DataTable69_1
+// 2405     INT32 i,j,k;
+// 2406     j= ((s2wappMainTaskCtxt->lastCidCreated+1)&(MAX_CID_RANGE-1));
+// 2407     for (i = j,k=0; k < MAX_CID_RANGE ;(i=((i+1)&(MAX_CID_RANGE-1))),k++)
+        LDR.N    R5,??DataTable69
+        LDR.N    R2,??DataTable66
         LDR      R0,[R5, #+0]
         MOVW     R4,#+32744
         LDRB     R0,[R4, R0]
         ADDS     R0,R0,#+1
         AND      R6,R0,#0xF
         MOVS     R0,#+16
-// 2416     {
-// 2417         if (s2wCidList[i].sd == CID_NOTINUSE)
+// 2408     {
+// 2409         if (s2wCidList[i].sd == CID_NOTINUSE)
 ??AppS2wHal_CidGet_0:
         MOV      R1,#+296
         MLA      R7,R1,R6,R2
         LDR      R1,[R7, #+28]
         CMN      R1,#+1
         BNE.N    ??AppS2wHal_CidGet_1
-// 2418         {
-// 2419         	memset((INT8 *)&s2wCidList[i], 0, sizeof(S2W_CID_T));
+// 2410         {
+// 2411         	memset((INT8 *)&s2wCidList[i], 0, sizeof(S2W_CID_T));
         MOV      R2,#+296
         MOVS     R1,#+0
         MOV      R0,R7
           CFI FunCall memset
         BL       memset
-// 2420 			s2wCidList[i].sd = CID_NOTINUSE;
+// 2412 			s2wCidList[i].sd = CID_NOTINUSE;
         MOV      R0,#-1
         STR      R0,[R7, #+28]
-// 2421 			s2wappMainTaskCtxt->lastCidCreated = i;
+// 2413 			s2wappMainTaskCtxt->lastCidCreated = i;
         LDR      R0,[R5, #+0]
         STRB     R6,[R4, R0]
-// 2422             return i;
+// 2414             return i;
         MOV      R0,R6
         POP      {R1,R4-R7,PC}
-// 2423         }
-// 2424     }
+// 2415         }
+// 2416     }
 ??AppS2wHal_CidGet_1:
         ADDS     R1,R6,#+1
         AND      R6,R1,#0xF
         SUBS     R0,R0,#+1
         BNE.N    ??AppS2wHal_CidGet_0
-// 2425     return INVALID_CID;
+// 2417     return INVALID_CID;
         MOVS     R0,#+255
         POP      {R1,R4-R7,PC}    ;; return
-          CFI EndBlock cfiBlock130
-// 2426 }
-// 2427 
-// 2428 
-// 2429 /**
-// 2430  ******************************************************************
-// 2431  * @ingroup S2w-Application
-// 2432 =======
-// 2433 >>>>>>> 1.48.2.11
-// 2434  * @brief Searches for the connection identifier
-// 2435  *         corresponding to specified socket descriptor.
-// 2436  * @param  sd the socket descriptor to be searched in the list.
-// 2437  * @retval Connection identifier on success (value 0 - F).
-// 2438  *          Error on failure (value 0xFF).
-// 2439  ******************************************************************/
+          CFI EndBlock cfiBlock135
+// 2418 }
+// 2419 
+// 2420 
+// 2421 /**
+// 2422  ******************************************************************
+// 2423  * @ingroup S2w-Application
+// 2424 =======
+// 2425 >>>>>>> 1.48.2.11
+// 2426  * @brief Searches for the connection identifier
+// 2427  *         corresponding to specified socket descriptor.
+// 2428  * @param  sd the socket descriptor to be searched in the list.
+// 2429  * @retval Connection identifier on success (value 0 - F).
+// 2430  *          Error on failure (value 0xFF).
+// 2431  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock131 Using cfiCommon0
+          CFI Block cfiBlock136 Using cfiCommon0
           CFI Function AppS2wHal_CidFind
           CFI NoCalls
         THUMB
-// 2440 UINT8
-// 2441 AppS2wHal_CidFind(INT32 sd)
-// 2442 {
-// 2443     UINT32 i;
-// 2444     for (i = 0; i < MAX_CID_RANGE; i++)
+// 2432 UINT8
+// 2433 AppS2wHal_CidFind(INT32 sd)
+// 2434 {
+// 2435     UINT32 i;
+// 2436     for (i = 0; i < MAX_CID_RANGE; i++)
 AppS2wHal_CidFind:
         MOVS     R1,#+0
-        LDR.N    R2,??DataTable69_1
-// 2445     {
-// 2446         if (sd == s2wCidList[i].sd)
+        LDR.N    R2,??DataTable66
+// 2437     {
+// 2438         if (sd == s2wCidList[i].sd)
 ??AppS2wHal_CidFind_0:
         MOV      R3,#+296
         MLA      R3,R3,R1,R2
         LDR      R3,[R3, #+28]
         CMP      R0,R3
         BNE.N    ??AppS2wHal_CidFind_1
-// 2447        {
-// 2448            return i;
+// 2439        {
+// 2440            return i;
         UXTB     R0,R1
         BX       LR
-// 2449        }
-// 2450     }
+// 2441        }
+// 2442     }
 ??AppS2wHal_CidFind_1:
         ADDS     R1,R1,#+1
         CMP      R1,#+16
         BCC.N    ??AppS2wHal_CidFind_0
-// 2451     return INVALID_CID;
+// 2443     return INVALID_CID;
         MOVS     R0,#+255
         BX       LR               ;; return
-          CFI EndBlock cfiBlock131
-// 2452 }
+          CFI EndBlock cfiBlock136
+// 2444 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable69:
+??DataTable65:
         DC32     s2wCurrent
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable69_1:
-        DC32     s2wCidList
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable69_2:
-        DC32     s2wSocketCloseSem
-// 2453 /**
-// 2454  ******************************************************************
-// 2455  * @ingroup S2w-Application
-// 2456  * @brief Callback registerd to the network stack to recieve the socket events.
-// 2457  * @param sock - IN the Socket descriptor on which event occurred.
-// 2458  * @param flags- IN bit mask for events.
-// 2459  ******************************************************************/
+// 2445 /**
+// 2446  ******************************************************************
+// 2447  * @ingroup S2w-Application
+// 2448  * @brief Callback registerd to the network stack to recieve the socket events.
+// 2449  * @param sock - IN the Socket descriptor on which event occurred.
+// 2450  * @param flags- IN bit mask for events.
+// 2451  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock132 Using cfiCommon0
+          CFI Block cfiBlock137 Using cfiCommon0
           CFI Function AppS2wHal_RxCallBack
         THUMB
-// 2460 PRIVATE VOID
-// 2461 AppS2wHal_RxCallBack(INT32 sock, NX_BSD_CB_EVENT_TYPE_T flags, UINT port)
-// 2462 {
+// 2452 PRIVATE VOID
+// 2453 AppS2wHal_RxCallBack(INT32 sock, NX_BSD_CB_EVENT_TYPE_T flags, UINT port)
+// 2454 {
 AppS2wHal_RxCallBack:
         PUSH     {R4-R11,LR}
           CFI R14 Frame(CFA, -4)
@@ -7028,39 +7006,39 @@ AppS2wHal_RxCallBack:
           CFI CFA R13+96
         MOV      R7,R0
         MOV      R6,R1
-// 2463     struct sockaddr_in srcAddr;
-// 2464     UINT8 cid;
-// 2465     INT32 dataLen;
-// 2466     S2W_MSG_T recvMsg;
-// 2467     //GSN_OSAL_ERROR_T err;
-// 2468     cid = AppS2wHal_CidFind(sock);
+// 2455     struct sockaddr_in srcAddr;
+// 2456     UINT8 cid;
+// 2457     INT32 dataLen;
+// 2458     S2W_MSG_T recvMsg;
+// 2459     //GSN_OSAL_ERROR_T err;
+// 2460     cid = AppS2wHal_CidFind(sock);
           CFI FunCall AppS2wHal_CidFind
         BL       AppS2wHal_CidFind
         STR      R0,[SP, #+20]
-// 2469     if (cid == INVALID_CID)
+// 2461     if (cid == INVALID_CID)
         CMP      R0,#+255
         BEQ.W    ??AppS2wHal_RxCallBack_0
-// 2470     {
-// 2471         S2W_ASSERT(0);
-// 2472         return;
-// 2473     }
-// 2474     if(s2wappMainTaskCtxt->dpSleep )
-        LDR.N    R4,??DataTable70
+// 2462     {
+// 2463         S2W_ASSERT(0);
+// 2464         return;
+// 2465     }
+// 2466     if(s2wappMainTaskCtxt->dpSleep )
+        LDR.N    R4,??DataTable69
         LDR      R1,[R4, #+0]
         MOVW     R0,#+27388
         LDR      R0,[R0, R1]
         CBZ.N    R0,??AppS2wHal_RxCallBack_1
-// 2475 
-// 2476     {
-// 2477         AppS2w_GpioWkUpDisable();
+// 2467 
+// 2468     {
+// 2469         AppS2w_GpioWkUpDisable();
           CFI FunCall AppS2w_GpioWkUpDisable
         BL       AppS2w_GpioWkUpDisable
-// 2478 		AppS2w_ExitDpSleep();
+// 2470 		AppS2w_ExitDpSleep();
           CFI FunCall AppS2w_ExitDpSleep
         BL       AppS2w_ExitDpSleep
 ??AppS2wHal_RxCallBack_1:
         LDR      R0,[SP, #+20]
-        LDR.W    R10,??DataTable94
+        LDR.W    R10,??DataTable66
         MOV      R1,#+296
         MUL      R9,R1,R0
         MOVS     R1,#+5
@@ -7068,121 +7046,121 @@ AppS2wHal_RxCallBack:
         AND      R5,R6,#0x8
         TST      R6,R1
         BEQ.N    ??CrossCallReturnLabel_66
-// 2479     }
-// 2480     /* Data is available     */
-// 2481     if ((NX_BSD_CB_TCP_RECIEVE & flags) || (NX_BSD_CB_UDP_RECIEVE & flags))
-// 2482     {
-// 2483 
-// 2484         recvMsg.rData.dataSock = sock;
-// 2485         recvMsg.msgLen = 0;
+// 2471     }
+// 2472     /* Data is available     */
+// 2473     if ((NX_BSD_CB_TCP_RECIEVE & flags) || (NX_BSD_CB_UDP_RECIEVE & flags))
+// 2474     {
+// 2475 
+// 2476         recvMsg.rData.dataSock = sock;
+// 2477         recvMsg.msgLen = 0;
         MOVS     R0,#+0
         STR      R7,[SP, #+8]
         STRH     R0,[SP, #+12]
-// 2486 		if (NX_BSD_CB_TCP_DISCONNECT & flags)
+// 2478 		if (NX_BSD_CB_TCP_DISCONNECT & flags)
         CBZ.N    R5,??AppS2wHal_RxCallBack_2
-// 2487 		{
-// 2488 		    S2w_Printf("\r\n TCP DISCONNECT 1");
+// 2479 		{
+// 2480 		    S2w_Printf("\r\n TCP DISCONNECT 1");
         ADR.W    R0,`?<Constant "\\r\\n TCP DISCONNECT 1">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 2489 	        recvMsg.msgType = S2W_RECV_TYPE_SOCK_DATA_DISCONNECT;
+// 2481 	        recvMsg.msgType = S2W_RECV_TYPE_SOCK_DATA_DISCONNECT;
         MOVS     R0,#+53
         STRH     R0,[SP, #+14]
         B.N      ??AppS2wHal_RxCallBack_3
-// 2490 		}
-// 2491 		else
-// 2492 		{
-// 2493 		    S2w_Printf("\r\n TCP RECIEVE");
+// 2482 		}
+// 2483 		else
+// 2484 		{
+// 2485 		    S2w_Printf("\r\n TCP RECIEVE");
 ??AppS2wHal_RxCallBack_2:
         ADR.W    R0,`?<Constant "\\r\\n TCP RECIEVE">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 2494 			recvMsg.msgType = S2W_RECV_TYPE_SOCKET;
+// 2486 			recvMsg.msgType = S2W_RECV_TYPE_SOCKET;
         MOVS     R0,#+47
         STRH     R0,[SP, #+14]
-// 2495                 }
-// 2496 		if((s2wCidList[cid].s2wSockDataPending !=1) ||
-// 2497 		   (recvMsg.msgType == S2W_RECV_TYPE_SOCK_DATA_DISCONNECT))
+// 2487                 }
+// 2488 		if((s2wCidList[cid].s2wSockDataPending !=1) ||
+// 2489 		   (recvMsg.msgType == S2W_RECV_TYPE_SOCK_DATA_DISCONNECT))
         LDRB     R0,[R11, #+145]
         CMP      R0,#+1
         BEQ.N    ??CrossCallReturnLabel_66
-// 2498 		{
-// 2499 			INT32 intrStatus;
-// 2500             intrStatus = GsnOsal_IntrDisable();
+// 2490 		{
+// 2491 			INT32 intrStatus;
+// 2492             intrStatus = GsnOsal_IntrDisable();
 ??AppS2wHal_RxCallBack_3:
           CFI FunCall GsnOsal_IntrDisable
         BL       GsnOsal_IntrDisable
-// 2501             s2wCidList[cid].s2wSockDataPending = 1;
+// 2493             s2wCidList[cid].s2wSockDataPending = 1;
         MOVS     R1,#+1
         STRB     R1,[R11, #+145]
-// 2502             /*re-enable all interrupts */
-// 2503             GsnOsal_IntrEnable(intrStatus );
+// 2494             /*re-enable all interrupts */
+// 2495             GsnOsal_IntrEnable(intrStatus );
           CFI FunCall GsnOsal_IntrEnable
         BL       GsnOsal_IntrEnable
-// 2504 			GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
+// 2496 			GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
         BL       ?Subroutine26
-// 2505             //err = AppS2wHal_NetRxMsgPost(&recvMsg);
-// 2506 
-// 2507 		}
-// 2508 
-// 2509     }
-// 2510 
-// 2511     /* Incoming connection (TCP servers only) */
-// 2512     if (NX_BSD_CB_TCP_LISTEN & flags)
+// 2497             //err = AppS2wHal_NetRxMsgPost(&recvMsg);
+// 2498 
+// 2499 		}
+// 2500 
+// 2501     }
+// 2502 
+// 2503     /* Incoming connection (TCP servers only) */
+// 2504     if (NX_BSD_CB_TCP_LISTEN & flags)
 ??CrossCallReturnLabel_66:
         LSLS     R0,R6,#+27
         BPL.W    ??AppS2wHal_RxCallBack_4
-// 2513     {
-// 2514         UINT8 newcid;
-// 2515         INT32 new_sd;
-// 2516         S2W_IPADDR_T ip;
-// 2517 #ifdef S2W_IPv6_SUPPORT
-// 2518         S2W_IPv6ADDR_T ipv6;
-// 2519         struct sockaddr_in6 ClientAddr;
-// 2520         INT32 Clientlen;
-// 2521 #endif
-// 2522         UINT16 localport;
-// 2523         INT32 ret;
-// 2524         struct timeval TimeOut;
-// 2525         dataLen = sizeof(srcAddr);
+// 2505     {
+// 2506         UINT8 newcid;
+// 2507         INT32 new_sd;
+// 2508         S2W_IPADDR_T ip;
+// 2509 #ifdef S2W_IPv6_SUPPORT
+// 2510         S2W_IPv6ADDR_T ipv6;
+// 2511         struct sockaddr_in6 ClientAddr;
+// 2512         INT32 Clientlen;
+// 2513 #endif
+// 2514         UINT16 localport;
+// 2515         INT32 ret;
+// 2516         struct timeval TimeOut;
+// 2517         dataLen = sizeof(srcAddr);
         MOVS     R0,#+16
         STR      R0,[SP, #+28]
-// 2526 
-// 2527 #ifdef S2W_IPv6_SUPPORT
-// 2528       
-// 2529         if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
-// 2530         {
-// 2531           Clientlen = sizeof(struct sockaddr_in6); 
-// 2532         new_sd = accept(sock, (struct sockaddr*)&ClientAddr, &Clientlen);
-// 2533         }
-// 2534         else
-// 2535 #endif
-// 2536         {
-// 2537         new_sd = accept(sock, (struct sockaddr *)&srcAddr, &dataLen);
+// 2518 
+// 2519 #ifdef S2W_IPv6_SUPPORT
+// 2520       
+// 2521         if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
+// 2522         {
+// 2523           Clientlen = sizeof(struct sockaddr_in6); 
+// 2524         new_sd = accept(sock, (struct sockaddr*)&ClientAddr, &Clientlen);
+// 2525         }
+// 2526         else
+// 2527 #endif
+// 2528         {
+// 2529         new_sd = accept(sock, (struct sockaddr *)&srcAddr, &dataLen);
         ADD      R2,SP,#+28
         ADD      R1,SP,#+44
         MOV      R0,R7
           CFI FunCall accept
         BL       accept
         MOVS     R7,R0
-// 2538 	    }
-// 2539         if (new_sd < 0)
+// 2530 	    }
+// 2531         if (new_sd < 0)
         BMI.N    ??AppS2wHal_RxCallBack_5
-// 2540         {
-// 2541             return;
-// 2542         }
-// 2543 
-// 2544         if ((newcid = AppS2wHal_CidGet()) == INVALID_CID)
+// 2532         {
+// 2533             return;
+// 2534         }
+// 2535 
+// 2536         if ((newcid = AppS2wHal_CidGet()) == INVALID_CID)
           CFI FunCall AppS2wHal_CidGet
         BL       AppS2wHal_CidGet
         STR      R0,[SP, #+24]
         CMP      R0,#+255
         BEQ.N    ??AppS2wHal_RxCallBack_6
-// 2545         {
-// 2546             soc_close(new_sd);
-// 2547             return;
-// 2548         }
-// 2549 		GsnOsal_SemAcquire ( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem), GSN_OSAL_WAIT_FOREVER);
+// 2537         {
+// 2538             soc_close(new_sd);
+// 2539             return;
+// 2540         }
+// 2541 		GsnOsal_SemAcquire ( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem), GSN_OSAL_WAIT_FOREVER);
         LDR      R0,[R4, #+0]
         MOVW     R8,#+33228
         BL       ?Subroutine30
@@ -7192,28 +7170,28 @@ AppS2wHal_RxCallBack:
         LDRB     R0,[R0, #+1]
         CMP      R0,R1
         BCC.N    ??AppS2wHal_RxCallBack_7
-// 2550 		if(s2wCidList[cid].maxConn <= s2wCidList[cid].clientConCount)
-// 2551 		{
-// 2552 			tfResetConnection(new_sd);
+// 2542 		if(s2wCidList[cid].maxConn <= s2wCidList[cid].clientConCount)
+// 2543 		{
+// 2544 			tfResetConnection(new_sd);
         MOV      R0,R7
           CFI FunCall tfResetConnection
         BL       tfResetConnection
-// 2553 			tfClose(new_sd);
+// 2545 			tfClose(new_sd);
         MOV      R0,R7
           CFI FunCall tfClose
         BL       tfClose
-// 2554 			GsnOsal_SemRelease( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem));
+// 2546 			GsnOsal_SemRelease( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem));
         B.N      ??AppS2wHal_RxCallBack_8
-// 2555             return;
-// 2556         }
-// 2557 		GsnOsal_SemRelease( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem));
+// 2547             return;
+// 2548         }
+// 2549 		GsnOsal_SemRelease( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem));
 ??AppS2wHal_RxCallBack_7:
         LDR      R0,[R4, #+0]
         ADD      R0,R8,R0
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 2558         
-// 2559         if (s2wCidList[cid].sslflag != TRUE)
+// 2550         
+// 2551         if (s2wCidList[cid].sslflag != TRUE)
         LDR      R0,[SP, #+24]
         MOV      R1,#+296
         MUL      R9,R1,R0
@@ -7223,41 +7201,41 @@ AppS2wHal_RxCallBack:
         ADD      R6,R5,#+28
         CMP      R0,#+1
         BEQ.N    ??AppS2wHal_RxCallBack_9
-// 2560         {
-// 2561 #ifdef S2W_IPv6_SUPPORT
-// 2562             if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
-// 2563             {
-// 2564                 localport = htons(ClientAddr.sin6_port);
-// 2565                 memcpy(ipv6,ClientAddr.sin6_addr._S6_un._S6_u32,sizeof(ipv6));
-// 2566                         GSN_IPv6_CHANGE_ENDIAN(ipv6);
-// 2567         
-// 2568                 s2wCidList[newcid].addrType |= ADDR_TYPE_IPv6;
-// 2569                 memcpy(s2wCidList[newcid].remoteIpv6,(UINT8*)ipv6,16);
-// 2570             }
-// 2571             else
-// 2572 #endif //S2W_IPv6_SUPPORT
-// 2573             {
-// 2574                 localport = htons(srcAddr.sin_port);
+// 2552         {
+// 2553 #ifdef S2W_IPv6_SUPPORT
+// 2554             if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
+// 2555             {
+// 2556                 localport = htons(ClientAddr.sin6_port);
+// 2557                 memcpy(ipv6,ClientAddr.sin6_addr._S6_un._S6_u32,sizeof(ipv6));
+// 2558                         GSN_IPv6_CHANGE_ENDIAN(ipv6);
+// 2559         
+// 2560                 s2wCidList[newcid].addrType |= ADDR_TYPE_IPv6;
+// 2561                 memcpy(s2wCidList[newcid].remoteIpv6,(UINT8*)ipv6,16);
+// 2562             }
+// 2563             else
+// 2564 #endif //S2W_IPv6_SUPPORT
+// 2565             {
+// 2566                 localport = htons(srcAddr.sin_port);
         BL       ?Subroutine4
-// 2575                 memcpy(ip, &(srcAddr.sin_addr.s_addr), sizeof(ip));
-// 2576                 *(UINT32*)ip = htonl(*(UINT32*)ip);
+// 2567                 memcpy(ip, &(srcAddr.sin_addr.s_addr), sizeof(ip));
+// 2568                 *(UINT32*)ip = htonl(*(UINT32*)ip);
 ??CrossCallReturnLabel_3:
-        BL       ?Subroutine34
-// 2577 
-// 2578 
-// 2579                 memcpy(s2wCidList[newcid].remoteIp,(UINT8*)ip,4);
-??CrossCallReturnLabel_87:
+        BL       ?Subroutine35
+// 2569 
+// 2570 
+// 2571                 memcpy(s2wCidList[newcid].remoteIp,(UINT8*)ip,4);
+??CrossCallReturnLabel_91:
         MOVS     R2,#+4
         ADD      R1,SP,#+4
         ADDS     R0,R5,#+6
           CFI FunCall memcpy
         BL       memcpy
-// 2580 	            *((ULONG*)s2wCidList[newcid].remoteIp) = htonl(*(ULONG*)s2wCidList[newcid].remoteIp);
-        BL       ?Subroutine37
-// 2581 	        }
-// 2582 	        ULONG rexTimeOut=75;
-// 2583 	        setsockopt(new_sd,IP_PROTOTCP,TCP_MAXRT,(void*)&rexTimeOut,4);
-??CrossCallReturnLabel_96:
+// 2572 	            *((ULONG*)s2wCidList[newcid].remoteIp) = htonl(*(ULONG*)s2wCidList[newcid].remoteIp);
+        BL       ?Subroutine38
+// 2573 	        }
+// 2574 	        ULONG rexTimeOut=75;
+// 2575 	        setsockopt(new_sd,IP_PROTOTCP,TCP_MAXRT,(void*)&rexTimeOut,4);
+??CrossCallReturnLabel_100:
         ADD      R3,SP,#+32
         MOVS     R0,#+75
         STR      R0,[SP, #+32]
@@ -7268,20 +7246,20 @@ AppS2wHal_RxCallBack:
         MOV      R0,R7
           CFI FunCall setsockopt
         BL       setsockopt
-// 2584 			// update the new cid table
-// 2585             s2wCidList[newcid].conType = TCP;
+// 2576 			// update the new cid table
+// 2577             s2wCidList[newcid].conType = TCP;
         MOVS     R0,#+2
         STRB     R0,[R9, R10]
-// 2586             s2wCidList[newcid].conMode = S2W_NETDATA_MODE_CLIENT;
-// 2587             s2wCidList[newcid].sd = new_sd;
-// 2588             s2wCidList[newcid].remotePort = localport;
-// 2589 	        s2wCidList[newcid].serverCid = cid;
-// 2590             // fill the msg que structure
-// 2591 		    recvMsg.msgType = S2W_RECV_TYPE_SOCK_ACCEPT;
-// 2592 		    recvMsg.rData.dataSock = new_sd;
-// 2593 		    recvMsg.msgLen = 0;
-// 2594 		    // post a msg to netRx task
-// 2595 			GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
+// 2578             s2wCidList[newcid].conMode = S2W_NETDATA_MODE_CLIENT;
+// 2579             s2wCidList[newcid].sd = new_sd;
+// 2580             s2wCidList[newcid].remotePort = localport;
+// 2581 	        s2wCidList[newcid].serverCid = cid;
+// 2582             // fill the msg que structure
+// 2583 		    recvMsg.msgType = S2W_RECV_TYPE_SOCK_ACCEPT;
+// 2584 		    recvMsg.rData.dataSock = new_sd;
+// 2585 		    recvMsg.msgLen = 0;
+// 2586 		    // post a msg to netRx task
+// 2587 			GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
         ADD      R1,SP,#+8
         MOVS     R0,#+0
         STRB     R0,[R5, #+1]
@@ -7294,59 +7272,59 @@ AppS2wHal_RxCallBack:
         MOVS     R0,#+51
         STRH     R0,[SP, #+14]
         BL       ?Subroutine8
-// 2596         }
-// 2597         
-// 2598 #ifdef S2W_SSL_SERVER_SUPPORT
-// 2599         if (s2wCidList[cid].sslflag == TRUE)
+// 2588         }
+// 2589         
+// 2590 #ifdef S2W_SSL_SERVER_SUPPORT
+// 2591         if (s2wCidList[cid].sslflag == TRUE)
 ??CrossCallReturnLabel_14:
         ADD      R0,R11,#+32
         LDRB     R0,[R0, #+12]
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_RxCallBack_10
-// 2600         {
-// 2601 
-// 2602 
-// 2603 
-// 2604         localport = htons(srcAddr.sin_port);
+// 2592         {
+// 2593 
+// 2594 
+// 2595 
+// 2596         localport = htons(srcAddr.sin_port);
 ??AppS2wHal_RxCallBack_9:
         BL       ?Subroutine4
-// 2605         memcpy(ip, &(srcAddr.sin_addr.s_addr), sizeof(ip));
-// 2606         *(UINT32*)ip = htonl(*(UINT32*)ip);
+// 2597         memcpy(ip, &(srcAddr.sin_addr.s_addr), sizeof(ip));
+// 2598         *(UINT32*)ip = htonl(*(UINT32*)ip);
 ??CrossCallReturnLabel_2:
-        BL       ?Subroutine34
-// 2607 
-// 2608 
-// 2609 
-// 2610 
-// 2611             s2wCidList[newcid].ssl.sslServer =
-// 2612                 GsnSsl_Accept( s2wCidList[cid].ssl.sslServer );
-??CrossCallReturnLabel_88:
+        BL       ?Subroutine35
+// 2599 
+// 2600 
+// 2601 
+// 2602 
+// 2603             s2wCidList[newcid].ssl.sslServer =
+// 2604                 GsnSsl_Accept( s2wCidList[cid].ssl.sslServer );
+??CrossCallReturnLabel_92:
         ADD      R0,R11,#+32
         LDR      R0,[R0, #+8]
           CFI FunCall GsnSsl_Accept
         BL       GsnSsl_Accept
         STR      R0,[R6, #+12]
-// 2613             if( NULL == s2wCidList[newcid].ssl.sslServer )
+// 2605             if( NULL == s2wCidList[newcid].ssl.sslServer )
         CBNZ.N   R0,??AppS2wHal_RxCallBack_11
-// 2614             {
-// 2615                 soc_close(new_sd);
+// 2606             {
+// 2607                 soc_close(new_sd);
 ??AppS2wHal_RxCallBack_6:
         MOV      R0,R7
           CFI FunCall soc_close
         BL       soc_close
-// 2616                 return;
+// 2608                 return;
 ??AppS2wHal_RxCallBack_5:
         B.N      ??AppS2wHal_RxCallBack_0
-// 2617             }
-// 2618 
-// 2619         s2wCidList[newcid].conType = TCP;
+// 2609             }
+// 2610 
+// 2611         s2wCidList[newcid].conType = TCP;
 ??AppS2wHal_RxCallBack_11:
         MOVS     R0,#+2
         STRB     R0,[R9, R10]
-// 2620         s2wCidList[newcid].conMode = S2W_NETDATA_MODE_CLIENT;
-// 2621         s2wCidList[newcid].sd = new_sd;
-// 2622         s2wCidList[newcid].remotePort = localport;
-// 2623         memcpy(s2wCidList[newcid].remoteIp,(UINT8*)ip,4);
+// 2612         s2wCidList[newcid].conMode = S2W_NETDATA_MODE_CLIENT;
+// 2613         s2wCidList[newcid].sd = new_sd;
+// 2614         s2wCidList[newcid].remotePort = localport;
+// 2615         memcpy(s2wCidList[newcid].remoteIp,(UINT8*)ip,4);
         MOVS     R2,#+4
         MOVS     R0,#+0
         STRB     R0,[R5, #+1]
@@ -7357,17 +7335,17 @@ AppS2wHal_RxCallBack:
         ADDS     R0,R5,#+6
           CFI FunCall memcpy
         BL       memcpy
-// 2624 		s2wCidList[newcid].serverCid = cid;
+// 2616 		s2wCidList[newcid].serverCid = cid;
         LDR      R0,[SP, #+20]
         STRB     R0,[R6, #+18]
-// 2625         *((ULONG*)s2wCidList[newcid].remoteIp) = htonl(*(ULONG*)s2wCidList[newcid].remoteIp);
-        BL       ?Subroutine37
-// 2626 
-// 2627 
-// 2628             s2wCidList[newcid].sslflag = TRUE;
-// 2629 	        s2wCidList[newcid].sslRemoteCliConctng = TRUE;
-// 2630 			GsnOsal_SemCreate(&s2wCidList[newcid].s2wUserCloseInProgress, 0);			
-??CrossCallReturnLabel_97:
+// 2617         *((ULONG*)s2wCidList[newcid].remoteIp) = htonl(*(ULONG*)s2wCidList[newcid].remoteIp);
+        BL       ?Subroutine38
+// 2618 
+// 2619 
+// 2620             s2wCidList[newcid].sslflag = TRUE;
+// 2621 	        s2wCidList[newcid].sslRemoteCliConctng = TRUE;
+// 2622 			GsnOsal_SemCreate(&s2wCidList[newcid].s2wUserCloseInProgress, 0);			
+??CrossCallReturnLabel_101:
         MOVS     R1,#+0
         MOVS     R0,#+1
         STRB     R0,[R6, #+16]
@@ -7375,147 +7353,153 @@ AppS2wHal_RxCallBack:
         ADD      R0,R5,#+56
           CFI FunCall GsnOsal_SemCreate
         BL       GsnOsal_SemCreate
-// 2631 			AppS2wHal_TimerInit(&s2wCidList[newcid].s2wUserCloseTimer, AppS2wHal_HttpCloseTimeout, (VOID*)newcid);
+// 2623 			AppS2wHal_TimerInit(&s2wCidList[newcid].s2wUserCloseTimer, AppS2wHal_HttpCloseTimeout, (VOID*)newcid);
         ADD      R0,SP,#+24
         ADR.W    R1,AppS2wHal_HttpCloseTimeout
         LDRB     R2,[R0, #+0]
         ADD      R0,R5,#+88
           CFI FunCall AppS2wHal_TimerInit
         BL       AppS2wHal_TimerInit
-// 2632         }
-// 2633 #endif
-// 2634 
-// 2635         TimeOut.tv_sec =  0;
+// 2624         }
+// 2625 #endif
+// 2626 
+// 2627         TimeOut.tv_sec =  0;
 ??AppS2wHal_RxCallBack_10:
         MOVS     R0,#+0
         STR      R0,[SP, #+36]
-// 2636         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;/* 1 tick*/
-// 2637         ret = setsockopt(s2wCidList[newcid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
+// 2628         TimeOut.tv_usec = 1 * NX_MICROSECOND_PER_CPU_TICK;/* 1 tick*/
+// 2629         ret = setsockopt(s2wCidList[newcid].sd,SOL_SOCKET,SO_RCVTIMEO,(void*)&TimeOut,8);
         ADD      R3,SP,#+36
-        LDR.W    R0,??DataTable100  ;; 0x186a0
+        LDR.W    R0,??DataTable96  ;; 0x186a0
         STR      R0,[SP, #+40]
         BL       ?Subroutine18
-// 2638         if(ret < 0)
-// 2639         {
-// 2640             //AppS2wHal_NetClose(cid);
-// 2641             //return;
-// 2642         }
-// 2643         nx_bsd_callback_register(s2wCidList[newcid].sd,AppS2wHal_RxCallBack, S2W_RXCALLBACK_FLAGS);
+// 2630         if(ret < 0)
+// 2631         {
+// 2632             //AppS2wHal_NetClose(cid);
+// 2633             //return;
+// 2634         }
+// 2635         nx_bsd_callback_register(s2wCidList[newcid].sd,AppS2wHal_RxCallBack, S2W_RXCALLBACK_FLAGS);
 ??CrossCallReturnLabel_40:
         BL       ?Subroutine19
-// 2644 		GsnOsal_SemAcquire ( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem), GSN_OSAL_WAIT_FOREVER);
+// 2636 		GsnOsal_SemAcquire ( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem), GSN_OSAL_WAIT_FOREVER);
 ??CrossCallReturnLabel_42:
         LDR      R0,[R4, #+0]
         BL       ?Subroutine30
-// 2645 		s2wCidList[cid].clientConCount++;
+// 2637 		s2wCidList[cid].clientConCount++;
 ??CrossCallReturnLabel_75:
         ADD      R0,R11,#+32
         ADD      R1,R11,#+32
         LDRB     R0,[R0, #+1]
         ADDS     R0,R0,#+1
         STRB     R0,[R1, #+1]
-// 2646 		GsnOsal_SemRelease( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem));
+// 2638 		GsnOsal_SemRelease( &(s2wappMainTaskCtxt->s2wTcpClientCntSyncSem));
 ??AppS2wHal_RxCallBack_8:
         LDR      R0,[R4, #+0]
         ADD      R0,R8,R0
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 2647 
-// 2648         return;
+// 2639 
+// 2640         return;
         B.N      ??AppS2wHal_RxCallBack_0
-// 2649     }
-// 2650 
-// 2651     /* Socket error */
-// 2652     if (NX_BSD_CB_SOCKET_ERROR & flags)
+// 2641     }
+// 2642 
+// 2643     /* Socket error */
+// 2644     if (NX_BSD_CB_SOCKET_ERROR & flags)
 ??AppS2wHal_RxCallBack_4:
-        LDR.W    R4,??DataTable82_2
+        LDR.W    R4,??DataTable78_2
         LSLS     R0,R6,#+26
         BPL.N    ??AppS2wHal_RxCallBack_12
-// 2653     {
-// 2654         if (s2wCidList[cid].conType != 0)
+// 2645     {
+// 2646         if (s2wCidList[cid].conType != 0)
         LDRB     R0,[R9, R10]
         CBZ.N    R0,??AppS2wHal_RxCallBack_12
-// 2655         {
-// 2656 			/* for auto connection (data pipe make the async gpio low-so that host will not send data)
-// 2657 			 */
-// 2658 		    if(s2wIsAutoconnected)
+// 2647         {
+// 2648 			/* for auto connection (data pipe make the async gpio low-so that host will not send data)
+// 2649 			 */
+// 2650 		    if(s2wIsAutoconnected)
         LDRB     R0,[R4, #+0]
         CBZ.N    R0,??AppS2wHal_RxCallBack_13
-// 2659 		    {
-// 2660 			   S2w_AsyncMsgGpioOp(0);
+// 2651 		    {
+// 2652 			   S2w_AsyncMsgGpioOp(0);
         MOVS     R0,#+0
           CFI FunCall S2w_AsyncMsgGpioOp
         BL       S2w_AsyncMsgGpioOp
-// 2661             }
-// 2662            recvMsg.msgType = S2W_RECV_TYPE_SOCK_ERROR;
+// 2653             }
+// 2654            recvMsg.msgType = S2W_RECV_TYPE_SOCK_ERROR;
 ??AppS2wHal_RxCallBack_13:
         MOVS     R0,#+49
         STRH     R0,[SP, #+14]
-// 2663            recvMsg.rData.dataSock = sock;
+// 2655            recvMsg.rData.dataSock = sock;
         STR      R7,[SP, #+8]
-// 2664            recvMsg.msgLen = 0;
+// 2656            recvMsg.msgLen = 0;
         MOVS     R0,#+0
         STRH     R0,[SP, #+12]
-// 2665            GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
+// 2657            GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
         BL       ?Subroutine26
-// 2666 		   S2w_Printf("\r\n SOCKET ERROR");
+// 2658 		   S2w_Printf("\r\n SOCKET ERROR");
 ??CrossCallReturnLabel_65:
         ADR.W    R0,`?<Constant "\\r\\n SOCKET ERROR">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 2667         }
-// 2668 
-// 2669     }
-// 2670 
-// 2671     /* Remote close (for TCP sockets)
-// 2672      */
-// 2673     if (NX_BSD_CB_TCP_DISCONNECT & flags)
+// 2659         }
+// 2660 
+// 2661     }
+// 2662 
+// 2663     /* Remote close (for TCP sockets)
+// 2664      */
+// 2665     if (NX_BSD_CB_TCP_DISCONNECT & flags)
 ??AppS2wHal_RxCallBack_12:
         CBZ.N    R5,??AppS2wHal_RxCallBack_0
-// 2674     {
-// 2675 
-// 2676         {
-// 2677 	        /* for auto connection (data pipe make the async gpio low-so that host will not send data)
-// 2678 			 */
-// 2679 		    if(s2wIsAutoconnected)
+// 2666     {
+// 2667 
+// 2668         {
+// 2669 	        /* for auto connection (data pipe make the async gpio low-so that host will not send data)
+// 2670 			 */
+// 2671 		    if(s2wIsAutoconnected)
         LDRB     R0,[R4, #+0]
         CBZ.N    R0,??AppS2wHal_RxCallBack_14
-// 2680 		    {
-// 2681 			   S2w_AsyncMsgGpioOp(0);
+// 2672 		    {
+// 2673 			   S2w_AsyncMsgGpioOp(0);
         MOVS     R0,#+0
           CFI FunCall S2w_AsyncMsgGpioOp
         BL       S2w_AsyncMsgGpioOp
-// 2682             }
-// 2683            recvMsg.msgType = S2W_RECV_TYPE_SOCK_DISCONNECT;
-// 2684            recvMsg.rData.dataSock = sock;
+// 2674             }
+// 2675            recvMsg.msgType = S2W_RECV_TYPE_SOCK_DISCONNECT;
+// 2676            recvMsg.rData.dataSock = sock;
 ??AppS2wHal_RxCallBack_14:
         STR      R7,[SP, #+8]
         MOVS     R0,#+50
         STRH     R0,[SP, #+14]
-// 2685            recvMsg.msgLen = 0;
-// 2686 
-// 2687            GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
+// 2677            recvMsg.msgLen = 0;
+// 2678 
+// 2679            GsnOsal_QueuePut(&s2wNetQueue,(UINT8*)&recvMsg);
         ADD      R1,SP,#+8
         BL       ?Subroutine8
-// 2688 		   S2w_Printf("\r\n TCP DISCONNECT 2");
+// 2680 		   S2w_Printf("\r\n TCP DISCONNECT 2");
 ??CrossCallReturnLabel_13:
         ADR.W    R0,`?<Constant "\\r\\n TCP DISCONNECT 2">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 2689         }
-// 2690     }
-// 2691 }
+// 2681         }
+// 2682     }
+// 2683 }
 ??AppS2wHal_RxCallBack_0:
         ADD      SP,SP,#+60
           CFI CFA R13+36
         POP      {R4-R11,PC}      ;; return
-          CFI EndBlock cfiBlock132
+          CFI EndBlock cfiBlock137
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable70:
-        DC32     s2wappMainTaskCtxt
+??DataTable66:
+        DC32     s2wCidList
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable66_1:
+        DC32     s2wSocketCloseSem
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -7543,10 +7527,10 @@ AppS2wHal_RxCallBack:
         DC8 "\015\012 TCP DISCONNECT 2"
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond133 Using cfiCommon0
+          CFI Block cfiCond138 Using cfiCommon0
           CFI Function AppS2wHal_RxCallBack
           CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_96
+          CFI Conditional ??CrossCallReturnLabel_100
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -7557,26 +7541,26 @@ AppS2wHal_RxCallBack:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+96
-          CFI Block cfiCond134 Using cfiCommon0
-          CFI (cfiCond134) Function AppS2wHal_RxCallBack
-          CFI (cfiCond134) NoCalls AppS2wHal_RxCallBack
-          CFI (cfiCond134) Conditional ??CrossCallReturnLabel_97
-          CFI (cfiCond134) R4 Frame(CFA, -36)
-          CFI (cfiCond134) R5 Frame(CFA, -32)
-          CFI (cfiCond134) R6 Frame(CFA, -28)
-          CFI (cfiCond134) R7 Frame(CFA, -24)
-          CFI (cfiCond134) R8 Frame(CFA, -20)
-          CFI (cfiCond134) R9 Frame(CFA, -16)
-          CFI (cfiCond134) R10 Frame(CFA, -12)
-          CFI (cfiCond134) R11 Frame(CFA, -8)
-          CFI (cfiCond134) R14 Frame(CFA, -4)
-          CFI (cfiCond134) CFA R13+96
-          CFI Block cfiPicker135 Using cfiCommon1
-          CFI (cfiPicker135) NoFunction
-          CFI (cfiPicker135) NoCalls AppS2wHal_RxCallBack
-          CFI (cfiPicker135) Picker
+          CFI Block cfiCond139 Using cfiCommon0
+          CFI (cfiCond139) Function AppS2wHal_RxCallBack
+          CFI (cfiCond139) NoCalls AppS2wHal_RxCallBack
+          CFI (cfiCond139) Conditional ??CrossCallReturnLabel_101
+          CFI (cfiCond139) R4 Frame(CFA, -36)
+          CFI (cfiCond139) R5 Frame(CFA, -32)
+          CFI (cfiCond139) R6 Frame(CFA, -28)
+          CFI (cfiCond139) R7 Frame(CFA, -24)
+          CFI (cfiCond139) R8 Frame(CFA, -20)
+          CFI (cfiCond139) R9 Frame(CFA, -16)
+          CFI (cfiCond139) R10 Frame(CFA, -12)
+          CFI (cfiCond139) R11 Frame(CFA, -8)
+          CFI (cfiCond139) R14 Frame(CFA, -4)
+          CFI (cfiCond139) CFA R13+96
+          CFI Block cfiPicker140 Using cfiCommon1
+          CFI (cfiPicker140) NoFunction
+          CFI (cfiPicker140) NoCalls AppS2wHal_RxCallBack
+          CFI (cfiPicker140) Picker
         THUMB
-?Subroutine37:
+?Subroutine38:
         LDR      R0,[R5, #+6]
         LSRS     R1,R0,#+8
         AND      R1,R1,#0xFF00
@@ -7586,15 +7570,15 @@ AppS2wHal_RxCallBack:
         ORR      R0,R1,R0, LSL #+24
         STR      R0,[R5, #+6]
         BX       LR
-          CFI EndBlock cfiCond133
-          CFI EndBlock cfiCond134
-          CFI EndBlock cfiPicker135
+          CFI EndBlock cfiCond138
+          CFI EndBlock cfiCond139
+          CFI EndBlock cfiPicker140
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond136 Using cfiCommon0
+          CFI Block cfiCond141 Using cfiCommon0
           CFI Function AppS2wHal_RxCallBack
           CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_87
+          CFI Conditional ??CrossCallReturnLabel_91
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -7605,26 +7589,26 @@ AppS2wHal_RxCallBack:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+96
-          CFI Block cfiCond137 Using cfiCommon0
-          CFI (cfiCond137) Function AppS2wHal_RxCallBack
-          CFI (cfiCond137) NoCalls AppS2wHal_RxCallBack
-          CFI (cfiCond137) Conditional ??CrossCallReturnLabel_88
-          CFI (cfiCond137) R4 Frame(CFA, -36)
-          CFI (cfiCond137) R5 Frame(CFA, -32)
-          CFI (cfiCond137) R6 Frame(CFA, -28)
-          CFI (cfiCond137) R7 Frame(CFA, -24)
-          CFI (cfiCond137) R8 Frame(CFA, -20)
-          CFI (cfiCond137) R9 Frame(CFA, -16)
-          CFI (cfiCond137) R10 Frame(CFA, -12)
-          CFI (cfiCond137) R11 Frame(CFA, -8)
-          CFI (cfiCond137) R14 Frame(CFA, -4)
-          CFI (cfiCond137) CFA R13+96
-          CFI Block cfiPicker138 Using cfiCommon1
-          CFI (cfiPicker138) NoFunction
-          CFI (cfiPicker138) NoCalls AppS2wHal_RxCallBack
-          CFI (cfiPicker138) Picker
+          CFI Block cfiCond142 Using cfiCommon0
+          CFI (cfiCond142) Function AppS2wHal_RxCallBack
+          CFI (cfiCond142) NoCalls AppS2wHal_RxCallBack
+          CFI (cfiCond142) Conditional ??CrossCallReturnLabel_92
+          CFI (cfiCond142) R4 Frame(CFA, -36)
+          CFI (cfiCond142) R5 Frame(CFA, -32)
+          CFI (cfiCond142) R6 Frame(CFA, -28)
+          CFI (cfiCond142) R7 Frame(CFA, -24)
+          CFI (cfiCond142) R8 Frame(CFA, -20)
+          CFI (cfiCond142) R9 Frame(CFA, -16)
+          CFI (cfiCond142) R10 Frame(CFA, -12)
+          CFI (cfiCond142) R11 Frame(CFA, -8)
+          CFI (cfiCond142) R14 Frame(CFA, -4)
+          CFI (cfiCond142) CFA R13+96
+          CFI Block cfiPicker143 Using cfiCommon1
+          CFI (cfiPicker143) NoFunction
+          CFI (cfiPicker143) NoCalls AppS2wHal_RxCallBack
+          CFI (cfiPicker143) Picker
         THUMB
-?Subroutine34:
+?Subroutine35:
         LDR      R0,[SP, #+4]
         LSRS     R1,R0,#+8
         AND      R1,R1,#0xFF00
@@ -7636,12 +7620,12 @@ AppS2wHal_RxCallBack:
         ORR      R0,R0,R1, LSL #+24
         STR      R0,[SP, #+4]
         BX       LR
-          CFI EndBlock cfiCond136
-          CFI EndBlock cfiCond137
-          CFI EndBlock cfiPicker138
+          CFI EndBlock cfiCond141
+          CFI EndBlock cfiCond142
+          CFI EndBlock cfiPicker143
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond139 Using cfiCommon0
+          CFI Block cfiCond144 Using cfiCommon0
           CFI Function AppS2wHal_RxCallBack
           CFI Conditional ??CrossCallReturnLabel_76
           CFI R4 Frame(CFA, -36)
@@ -7654,22 +7638,22 @@ AppS2wHal_RxCallBack:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+96
-          CFI Block cfiCond140 Using cfiCommon0
-          CFI (cfiCond140) Function AppS2wHal_RxCallBack
-          CFI (cfiCond140) Conditional ??CrossCallReturnLabel_75
-          CFI (cfiCond140) R4 Frame(CFA, -36)
-          CFI (cfiCond140) R5 Frame(CFA, -32)
-          CFI (cfiCond140) R6 Frame(CFA, -28)
-          CFI (cfiCond140) R7 Frame(CFA, -24)
-          CFI (cfiCond140) R8 Frame(CFA, -20)
-          CFI (cfiCond140) R9 Frame(CFA, -16)
-          CFI (cfiCond140) R10 Frame(CFA, -12)
-          CFI (cfiCond140) R11 Frame(CFA, -8)
-          CFI (cfiCond140) R14 Frame(CFA, -4)
-          CFI (cfiCond140) CFA R13+96
-          CFI Block cfiPicker141 Using cfiCommon1
-          CFI (cfiPicker141) NoFunction
-          CFI (cfiPicker141) Picker
+          CFI Block cfiCond145 Using cfiCommon0
+          CFI (cfiCond145) Function AppS2wHal_RxCallBack
+          CFI (cfiCond145) Conditional ??CrossCallReturnLabel_75
+          CFI (cfiCond145) R4 Frame(CFA, -36)
+          CFI (cfiCond145) R5 Frame(CFA, -32)
+          CFI (cfiCond145) R6 Frame(CFA, -28)
+          CFI (cfiCond145) R7 Frame(CFA, -24)
+          CFI (cfiCond145) R8 Frame(CFA, -20)
+          CFI (cfiCond145) R9 Frame(CFA, -16)
+          CFI (cfiCond145) R10 Frame(CFA, -12)
+          CFI (cfiCond145) R11 Frame(CFA, -8)
+          CFI (cfiCond145) R14 Frame(CFA, -4)
+          CFI (cfiCond145) CFA R13+96
+          CFI Block cfiPicker146 Using cfiCommon1
+          CFI (cfiPicker146) NoFunction
+          CFI (cfiPicker146) Picker
         THUMB
 ?Subroutine30:
         MOV      R1,#-1
@@ -7677,12 +7661,12 @@ AppS2wHal_RxCallBack:
           CFI FunCall AppS2wHal_RxCallBack GsnOsal_SemAcquire
           CFI FunCall AppS2wHal_RxCallBack GsnOsal_SemAcquire
         B.W      GsnOsal_SemAcquire
-          CFI EndBlock cfiCond139
-          CFI EndBlock cfiCond140
-          CFI EndBlock cfiPicker141
+          CFI EndBlock cfiCond144
+          CFI EndBlock cfiCond145
+          CFI EndBlock cfiPicker146
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond142 Using cfiCommon0
+          CFI Block cfiCond147 Using cfiCommon0
           CFI Function AppS2wHal_RxCallBack
           CFI Conditional ??CrossCallReturnLabel_66
           CFI R4 Frame(CFA, -36)
@@ -7695,35 +7679,35 @@ AppS2wHal_RxCallBack:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+96
-          CFI Block cfiCond143 Using cfiCommon0
-          CFI (cfiCond143) Function AppS2wHal_RxCallBack
-          CFI (cfiCond143) Conditional ??CrossCallReturnLabel_65
-          CFI (cfiCond143) R4 Frame(CFA, -36)
-          CFI (cfiCond143) R5 Frame(CFA, -32)
-          CFI (cfiCond143) R6 Frame(CFA, -28)
-          CFI (cfiCond143) R7 Frame(CFA, -24)
-          CFI (cfiCond143) R8 Frame(CFA, -20)
-          CFI (cfiCond143) R9 Frame(CFA, -16)
-          CFI (cfiCond143) R10 Frame(CFA, -12)
-          CFI (cfiCond143) R11 Frame(CFA, -8)
-          CFI (cfiCond143) R14 Frame(CFA, -4)
-          CFI (cfiCond143) CFA R13+96
-          CFI Block cfiPicker144 Using cfiCommon1
-          CFI (cfiPicker144) NoFunction
-          CFI (cfiPicker144) Picker
+          CFI Block cfiCond148 Using cfiCommon0
+          CFI (cfiCond148) Function AppS2wHal_RxCallBack
+          CFI (cfiCond148) Conditional ??CrossCallReturnLabel_65
+          CFI (cfiCond148) R4 Frame(CFA, -36)
+          CFI (cfiCond148) R5 Frame(CFA, -32)
+          CFI (cfiCond148) R6 Frame(CFA, -28)
+          CFI (cfiCond148) R7 Frame(CFA, -24)
+          CFI (cfiCond148) R8 Frame(CFA, -20)
+          CFI (cfiCond148) R9 Frame(CFA, -16)
+          CFI (cfiCond148) R10 Frame(CFA, -12)
+          CFI (cfiCond148) R11 Frame(CFA, -8)
+          CFI (cfiCond148) R14 Frame(CFA, -4)
+          CFI (cfiCond148) CFA R13+96
+          CFI Block cfiPicker149 Using cfiCommon1
+          CFI (cfiPicker149) NoFunction
+          CFI (cfiPicker149) Picker
         THUMB
 ?Subroutine26:
         ADD      R1,SP,#+8
-        LDR.W    R0,??DataTable80
+        LDR.W    R0,??DataTable77
           CFI FunCall AppS2wHal_RxCallBack GsnOsal_QueuePut
           CFI FunCall AppS2wHal_RxCallBack GsnOsal_QueuePut
         B.W      GsnOsal_QueuePut
-          CFI EndBlock cfiCond142
-          CFI EndBlock cfiCond143
-          CFI EndBlock cfiPicker144
+          CFI EndBlock cfiCond147
+          CFI EndBlock cfiCond148
+          CFI EndBlock cfiPicker149
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond145 Using cfiCommon0
+          CFI Block cfiCond150 Using cfiCommon0
           CFI Function AppS2wHal_NetUdpClient
           CFI Conditional ??CrossCallReturnLabel_43
           CFI R4 Frame(CFA, -28)
@@ -7734,36 +7718,36 @@ AppS2wHal_RxCallBack:
           CFI R9 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+80
-          CFI Block cfiCond146 Using cfiCommon0
-          CFI (cfiCond146) Function AppS2wHal_RxCallBack
-          CFI (cfiCond146) Conditional ??CrossCallReturnLabel_42
-          CFI (cfiCond146) R4 Frame(CFA, -36)
-          CFI (cfiCond146) R5 Frame(CFA, -32)
-          CFI (cfiCond146) R6 Frame(CFA, -28)
-          CFI (cfiCond146) R7 Frame(CFA, -24)
-          CFI (cfiCond146) R8 Frame(CFA, -20)
-          CFI (cfiCond146) R9 Frame(CFA, -16)
-          CFI (cfiCond146) R10 Frame(CFA, -12)
-          CFI (cfiCond146) R11 Frame(CFA, -8)
-          CFI (cfiCond146) R14 Frame(CFA, -4)
-          CFI (cfiCond146) CFA R13+96
-          CFI Block cfiPicker147 Using cfiCommon1
-          CFI (cfiPicker147) NoFunction
-          CFI (cfiPicker147) Picker
+          CFI Block cfiCond151 Using cfiCommon0
+          CFI (cfiCond151) Function AppS2wHal_RxCallBack
+          CFI (cfiCond151) Conditional ??CrossCallReturnLabel_42
+          CFI (cfiCond151) R4 Frame(CFA, -36)
+          CFI (cfiCond151) R5 Frame(CFA, -32)
+          CFI (cfiCond151) R6 Frame(CFA, -28)
+          CFI (cfiCond151) R7 Frame(CFA, -24)
+          CFI (cfiCond151) R8 Frame(CFA, -20)
+          CFI (cfiCond151) R9 Frame(CFA, -16)
+          CFI (cfiCond151) R10 Frame(CFA, -12)
+          CFI (cfiCond151) R11 Frame(CFA, -8)
+          CFI (cfiCond151) R14 Frame(CFA, -4)
+          CFI (cfiCond151) CFA R13+96
+          CFI Block cfiPicker152 Using cfiCommon1
+          CFI (cfiPicker152) NoFunction
+          CFI (cfiPicker152) Picker
         THUMB
 ?Subroutine19:
         LDR      R0,[R5, #+28]
-        LDR.W    R1,??DataTable102
+        LDR.W    R1,??DataTable98
         MOVS     R2,#+61
           CFI FunCall AppS2wHal_NetUdpClient nx_bsd_callback_register
           CFI FunCall AppS2wHal_RxCallBack nx_bsd_callback_register
         B.W      nx_bsd_callback_register
-          CFI EndBlock cfiCond145
-          CFI EndBlock cfiCond146
-          CFI EndBlock cfiPicker147
+          CFI EndBlock cfiCond150
+          CFI EndBlock cfiCond151
+          CFI EndBlock cfiPicker152
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond148 Using cfiCommon0
+          CFI Block cfiCond153 Using cfiCommon0
           CFI Function AppS2wHal_NetUdpClient
           CFI Conditional ??CrossCallReturnLabel_41
           CFI R4 Frame(CFA, -28)
@@ -7774,22 +7758,22 @@ AppS2wHal_RxCallBack:
           CFI R9 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+80
-          CFI Block cfiCond149 Using cfiCommon0
-          CFI (cfiCond149) Function AppS2wHal_RxCallBack
-          CFI (cfiCond149) Conditional ??CrossCallReturnLabel_40
-          CFI (cfiCond149) R4 Frame(CFA, -36)
-          CFI (cfiCond149) R5 Frame(CFA, -32)
-          CFI (cfiCond149) R6 Frame(CFA, -28)
-          CFI (cfiCond149) R7 Frame(CFA, -24)
-          CFI (cfiCond149) R8 Frame(CFA, -20)
-          CFI (cfiCond149) R9 Frame(CFA, -16)
-          CFI (cfiCond149) R10 Frame(CFA, -12)
-          CFI (cfiCond149) R11 Frame(CFA, -8)
-          CFI (cfiCond149) R14 Frame(CFA, -4)
-          CFI (cfiCond149) CFA R13+96
-          CFI Block cfiPicker150 Using cfiCommon1
-          CFI (cfiPicker150) NoFunction
-          CFI (cfiPicker150) Picker
+          CFI Block cfiCond154 Using cfiCommon0
+          CFI (cfiCond154) Function AppS2wHal_RxCallBack
+          CFI (cfiCond154) Conditional ??CrossCallReturnLabel_40
+          CFI (cfiCond154) R4 Frame(CFA, -36)
+          CFI (cfiCond154) R5 Frame(CFA, -32)
+          CFI (cfiCond154) R6 Frame(CFA, -28)
+          CFI (cfiCond154) R7 Frame(CFA, -24)
+          CFI (cfiCond154) R8 Frame(CFA, -20)
+          CFI (cfiCond154) R9 Frame(CFA, -16)
+          CFI (cfiCond154) R10 Frame(CFA, -12)
+          CFI (cfiCond154) R11 Frame(CFA, -8)
+          CFI (cfiCond154) R14 Frame(CFA, -4)
+          CFI (cfiCond154) CFA R13+96
+          CFI Block cfiPicker155 Using cfiCommon1
+          CFI (cfiPicker155) NoFunction
+          CFI (cfiPicker155) Picker
         THUMB
 ?Subroutine18:
         MOVS     R2,#+20
@@ -7800,12 +7784,12 @@ AppS2wHal_RxCallBack:
           CFI FunCall AppS2wHal_NetUdpClient setsockopt
           CFI FunCall AppS2wHal_RxCallBack setsockopt
         B.W      setsockopt
-          CFI EndBlock cfiCond148
-          CFI EndBlock cfiCond149
-          CFI EndBlock cfiPicker150
+          CFI EndBlock cfiCond153
+          CFI EndBlock cfiCond154
+          CFI EndBlock cfiPicker155
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond151 Using cfiCommon0
+          CFI Block cfiCond156 Using cfiCommon0
           CFI Function AppS2wHal_RxCallBack
           CFI Conditional ??CrossCallReturnLabel_14
           CFI R4 Frame(CFA, -36)
@@ -7818,36 +7802,42 @@ AppS2wHal_RxCallBack:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+96
-          CFI Block cfiCond152 Using cfiCommon0
-          CFI (cfiCond152) Function AppS2wHal_RxCallBack
-          CFI (cfiCond152) Conditional ??CrossCallReturnLabel_13
-          CFI (cfiCond152) R4 Frame(CFA, -36)
-          CFI (cfiCond152) R5 Frame(CFA, -32)
-          CFI (cfiCond152) R6 Frame(CFA, -28)
-          CFI (cfiCond152) R7 Frame(CFA, -24)
-          CFI (cfiCond152) R8 Frame(CFA, -20)
-          CFI (cfiCond152) R9 Frame(CFA, -16)
-          CFI (cfiCond152) R10 Frame(CFA, -12)
-          CFI (cfiCond152) R11 Frame(CFA, -8)
-          CFI (cfiCond152) R14 Frame(CFA, -4)
-          CFI (cfiCond152) CFA R13+96
-          CFI Block cfiPicker153 Using cfiCommon1
-          CFI (cfiPicker153) NoFunction
-          CFI (cfiPicker153) Picker
+          CFI Block cfiCond157 Using cfiCommon0
+          CFI (cfiCond157) Function AppS2wHal_RxCallBack
+          CFI (cfiCond157) Conditional ??CrossCallReturnLabel_13
+          CFI (cfiCond157) R4 Frame(CFA, -36)
+          CFI (cfiCond157) R5 Frame(CFA, -32)
+          CFI (cfiCond157) R6 Frame(CFA, -28)
+          CFI (cfiCond157) R7 Frame(CFA, -24)
+          CFI (cfiCond157) R8 Frame(CFA, -20)
+          CFI (cfiCond157) R9 Frame(CFA, -16)
+          CFI (cfiCond157) R10 Frame(CFA, -12)
+          CFI (cfiCond157) R11 Frame(CFA, -8)
+          CFI (cfiCond157) R14 Frame(CFA, -4)
+          CFI (cfiCond157) CFA R13+96
+          CFI Block cfiPicker158 Using cfiCommon1
+          CFI (cfiPicker158) NoFunction
+          CFI (cfiPicker158) Picker
         THUMB
 ?Subroutine8:
         MOVS     R0,#+0
         STRH     R0,[SP, #+12]
-        LDR.W    R0,??DataTable80
+        LDR.W    R0,??DataTable77
           CFI FunCall AppS2wHal_RxCallBack GsnOsal_QueuePut
           CFI FunCall AppS2wHal_RxCallBack GsnOsal_QueuePut
         B.W      GsnOsal_QueuePut
-          CFI EndBlock cfiCond151
-          CFI EndBlock cfiCond152
-          CFI EndBlock cfiPicker153
+          CFI EndBlock cfiCond156
+          CFI EndBlock cfiCond157
+          CFI EndBlock cfiPicker158
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable69:
+        DC32     s2wappMainTaskCtxt
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond154 Using cfiCommon0
+          CFI Block cfiCond159 Using cfiCommon0
           CFI Function AppS2wHal_RxCallBack
           CFI Conditional ??CrossCallReturnLabel_3
           CFI R4 Frame(CFA, -36)
@@ -7860,22 +7850,22 @@ AppS2wHal_RxCallBack:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+96
-          CFI Block cfiCond155 Using cfiCommon0
-          CFI (cfiCond155) Function AppS2wHal_RxCallBack
-          CFI (cfiCond155) Conditional ??CrossCallReturnLabel_2
-          CFI (cfiCond155) R4 Frame(CFA, -36)
-          CFI (cfiCond155) R5 Frame(CFA, -32)
-          CFI (cfiCond155) R6 Frame(CFA, -28)
-          CFI (cfiCond155) R7 Frame(CFA, -24)
-          CFI (cfiCond155) R8 Frame(CFA, -20)
-          CFI (cfiCond155) R9 Frame(CFA, -16)
-          CFI (cfiCond155) R10 Frame(CFA, -12)
-          CFI (cfiCond155) R11 Frame(CFA, -8)
-          CFI (cfiCond155) R14 Frame(CFA, -4)
-          CFI (cfiCond155) CFA R13+96
-          CFI Block cfiPicker156 Using cfiCommon1
-          CFI (cfiPicker156) NoFunction
-          CFI (cfiPicker156) Picker
+          CFI Block cfiCond160 Using cfiCommon0
+          CFI (cfiCond160) Function AppS2wHal_RxCallBack
+          CFI (cfiCond160) Conditional ??CrossCallReturnLabel_2
+          CFI (cfiCond160) R4 Frame(CFA, -36)
+          CFI (cfiCond160) R5 Frame(CFA, -32)
+          CFI (cfiCond160) R6 Frame(CFA, -28)
+          CFI (cfiCond160) R7 Frame(CFA, -24)
+          CFI (cfiCond160) R8 Frame(CFA, -20)
+          CFI (cfiCond160) R9 Frame(CFA, -16)
+          CFI (cfiCond160) R10 Frame(CFA, -12)
+          CFI (cfiCond160) R11 Frame(CFA, -8)
+          CFI (cfiCond160) R14 Frame(CFA, -4)
+          CFI (cfiCond160) CFA R13+96
+          CFI Block cfiPicker161 Using cfiCommon1
+          CFI (cfiPicker161) NoFunction
+          CFI (cfiPicker161) Picker
         THUMB
 ?Subroutine4:
         LDRH     R0,[SP, #+46]
@@ -7888,53 +7878,53 @@ AppS2wHal_RxCallBack:
           CFI FunCall AppS2wHal_RxCallBack memcpy
           CFI FunCall AppS2wHal_RxCallBack memcpy
         B.W      memcpy
-          CFI EndBlock cfiCond154
-          CFI EndBlock cfiCond155
-          CFI EndBlock cfiPicker156
-// 2692 
+          CFI EndBlock cfiCond159
+          CFI EndBlock cfiCond160
+          CFI EndBlock cfiPicker161
+// 2684 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock157 Using cfiCommon0
+          CFI Block cfiBlock162 Using cfiCommon0
           CFI Function AppS2wHal_SockOpSet
         THUMB
-// 2693 UINT8
-// 2694 AppS2wHal_SockOpSet(S2W_SOCK_OP_T* params)
-// 2695 {
+// 2685 UINT8
+// 2686 AppS2wHal_SockOpSet(S2W_SOCK_OP_T* params)
+// 2687 {
 AppS2wHal_SockOpSet:
         PUSH     {R0-R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+24
-// 2696      //UINT8 status;
-// 2697      VOID *optValue;
-// 2698      S2W_CID_T *p;
-// 2699      struct sock_linger linger;
-// 2700      INT32 ret;
-// 2701      
-// 2702     if (params->cid >= MAX_CID_RANGE)
+// 2688      //UINT8 status;
+// 2689      VOID *optValue;
+// 2690      S2W_CID_T *p;
+// 2691      struct sock_linger linger;
+// 2692      INT32 ret;
+// 2693      
+// 2694     if (params->cid >= MAX_CID_RANGE)
         LDR      R1,[R0, #+0]
         CMP      R1,#+16
         BCS.N    ??AppS2wHal_SockOpSet_0
-// 2703     {
-// 2704         return S2W_EBADCID;
-// 2705     }
-// 2706 
-// 2707     p = &s2wCidList[params->cid];
+// 2695     {
+// 2696         return S2W_EBADCID;
+// 2697     }
+// 2698 
+// 2699     p = &s2wCidList[params->cid];
         MOV      R2,#+296
-        LDR.W    R3,??DataTable94
+        LDR.W    R3,??DataTable98_1
         MLA      R4,R2,R1,R3
-// 2708     if (p->sd == CID_NOTINUSE)
+// 2700     if (p->sd == CID_NOTINUSE)
         LDR      R1,[R4, #+28]
         CMN      R1,#+1
         BNE.N    ??AppS2wHal_SockOpSet_1
-// 2709     {
-// 2710         return S2W_EBADCID;
+// 2701     {
+// 2702         return S2W_EBADCID;
 ??AppS2wHal_SockOpSet_0:
         MOVS     R0,#+5
         B.N      ??AppS2wHal_SockOpSet_2
-// 2711     }
-// 2712 
-// 2713     switch(params->param)
+// 2703     }
+// 2704 
+// 2705     switch(params->param)
 ??AppS2wHal_SockOpSet_1:
         LDR      R1,[R0, #+8]
         CMP      R1,#+13
@@ -7944,57 +7934,57 @@ AppS2wHal_SockOpSet:
         CMPNE    R1,#+21
         BEQ.N    ??AppS2wHal_SockOpSet_4
         B.N      ??AppS2wHal_SockOpSet_5
-// 2714     {
-// 2715         case SO_LINGER:
-// 2716         {
-// 2717             linger.l_onoff = TRUE;
+// 2706     {
+// 2707         case SO_LINGER:
+// 2708         {
+// 2709             linger.l_onoff = TRUE;
 ??AppS2wHal_SockOpSet_3:
         MOVS     R1,#+1
         STR      R1,[SP, #+8]
-// 2718             linger.l_linger = params->paramValue;
-// 2719             optValue = (void*)&linger;
+// 2710             linger.l_linger = params->paramValue;
+// 2711             optValue = (void*)&linger;
         ADD      R3,SP,#+8
         LDR      R1,[R0, #+12]
         STR      R1,[SP, #+12]
-// 2720         }
-// 2721         break;
+// 2712         }
+// 2713         break;
         B.N      ??AppS2wHal_SockOpSet_6
-// 2722 
-// 2723         case SO_RCVTIMEO:
-// 2724         {
-// 2725             struct timeval RecvTime;
-// 2726             RecvTime.tv_sec =  params->paramValue;
-// 2727             RecvTime.tv_usec = 0;
-// 2728             optValue = (void*)&RecvTime;
-// 2729         }
-// 2730         break;
-// 2731 
-// 2732         case SO_SNDTIMEO:
-// 2733         {
-// 2734             struct timeval SendTime;
-// 2735             SendTime.tv_sec =  params->paramValue;
-// 2736             SendTime.tv_usec = 0;
-// 2737             optValue = (void*)&SendTime;
+// 2714 
+// 2715         case SO_RCVTIMEO:
+// 2716         {
+// 2717             struct timeval RecvTime;
+// 2718             RecvTime.tv_sec =  params->paramValue;
+// 2719             RecvTime.tv_usec = 0;
+// 2720             optValue = (void*)&RecvTime;
+// 2721         }
+// 2722         break;
+// 2723 
+// 2724         case SO_SNDTIMEO:
+// 2725         {
+// 2726             struct timeval SendTime;
+// 2727             SendTime.tv_sec =  params->paramValue;
+// 2728             SendTime.tv_usec = 0;
+// 2729             optValue = (void*)&SendTime;
 ??AppS2wHal_SockOpSet_4:
         ADD      R3,SP,#+0
         LDR      R1,[R0, #+12]
         STR      R1,[SP, #+0]
         MOVS     R1,#+0
         STR      R1,[SP, #+4]
-// 2738         }
-// 2739         break;
+// 2730         }
+// 2731         break;
         B.N      ??AppS2wHal_SockOpSet_6
-// 2740         default:
-// 2741         {
-// 2742             optValue = (void*)&params->paramValue;
+// 2732         default:
+// 2733         {
+// 2734             optValue = (void*)&params->paramValue;
 ??AppS2wHal_SockOpSet_5:
         ADD      R3,R0,#+12
-// 2743         }
-// 2744         break;
-// 2745     }
-// 2746     
-// 2747     ret = setsockopt(p->sd,params->type,params->param,optValue,params->paramSize);
-// 2748     if(ret < 0)
+// 2735         }
+// 2736         break;
+// 2737     }
+// 2738     
+// 2739     ret = setsockopt(p->sd,params->type,params->param,optValue,params->paramSize);
+// 2740     if(ret < 0)
 ??AppS2wHal_SockOpSet_6:
         LDR      R1,[R0, #+16]
         STR      R1,[SP, #+0]
@@ -8007,30 +7997,30 @@ AppS2wHal_SockOpSet:
         ITE      MI 
         MOVMI    R0,#+3
         MOVPL    R0,#+0
-// 2749     {
-// 2750         return S2W_SOCKFAILURE;
-// 2751     }
-// 2752   
-// 2753 	return S2W_SUCCESS;
+// 2741     {
+// 2742         return S2W_SOCKFAILURE;
+// 2743     }
+// 2744   
+// 2745 	return S2W_SUCCESS;
 ??AppS2wHal_SockOpSet_2:
         ADD      SP,SP,#+16
           CFI CFA R13+8
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock157
-// 2754 }
-// 2755 
-// 2756 
-// 2757 #if defined(S2W_SSL_CLIENT_SUPPORT)
-// 2758 
-// 2759 extern S2W_SSL_CONF_T s2wSslConf;
+          CFI EndBlock cfiBlock162
+// 2746 }
+// 2747 
+// 2748 
+// 2749 #if defined(S2W_SSL_CLIENT_SUPPORT)
+// 2750 
+// 2751 extern S2W_SSL_CONF_T s2wSslConf;
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock158 Using cfiCommon0
+          CFI Block cfiBlock163 Using cfiCommon0
           CFI Function AppS2wHal_HttpCheckDns
         THUMB
-// 2760 UINT8
-// 2761 AppS2wHal_HttpCheckDns(UINT8 *reqPath)
-// 2762 {
+// 2752 UINT8
+// 2753 AppS2wHal_HttpCheckDns(UINT8 *reqPath)
+// 2754 {
 AppS2wHal_HttpCheckDns:
         PUSH     {R3-R9,LR}
           CFI R14 Frame(CFA, -4)
@@ -8041,45 +8031,45 @@ AppS2wHal_HttpCheckDns:
           CFI R5 Frame(CFA, -24)
           CFI R4 Frame(CFA, -28)
           CFI CFA R13+32
-// 2763     unsigned char *name = s2wSslConf.dnsNameBuf, *tmp = NULL;
-        LDR.W    R4,??DataTable102_1
+// 2755     unsigned char *name = s2wSslConf.dnsNameBuf, *tmp = NULL;
+        LDR.W    R4,??DataTable98_2
         LDR      R5,[R4, #+4]
         MOV      R8,R0
-// 2764     int i = 0;
+// 2756     int i = 0;
         MOVS     R6,#+0
-        ADR.N    R7,??DataTable77  ;; "."
+        ADR.N    R7,??DataTable73  ;; "."
         B.N      ??AppS2wHal_HttpCheckDns_0
-// 2765     while((name[i]) && (i < s2wSslConf.dnsBufferLen))
-// 2766     {
-// 2767     	if(!strncmp((const char*)name+i, (const char*)reqPath, strlen((const char*)name+i)))
-// 2768     	{
-// 2769     		return S2W_SUCCESS;
-// 2770     	}
-// 2771         else if(('*' == *(name+i)) && ('.' == *(name+i+1)))
-// 2772         {
-// 2773             /* for removing 'www.' */
-// 2774             tmp = (unsigned char*)strstr((const char*)reqPath, ".");
-// 2775             tmp++;
-// 2776             if(!strncmp((const char*)name+i+2, (const char*)reqPath, strlen((const char*)name+i+2)))
-// 2777             {
-// 2778                 return S2W_SUCCESS;
-// 2779             }
-// 2780 
-// 2781             else if(!strncmp((const char*)name+i+2, (const char*)tmp, strlen((const char*)name+i+2)))
-// 2782             {
-// 2783                 return S2W_SUCCESS;
-// 2784             }
-// 2785             else
-// 2786             {
-// 2787                 i += strlen((const char*)name+i);
-// 2788                 i++;
+// 2757     while((name[i]) && (i < s2wSslConf.dnsBufferLen))
+// 2758     {
+// 2759     	if(!strncmp((const char*)name+i, (const char*)reqPath, strlen((const char*)name+i)))
+// 2760     	{
+// 2761     		return S2W_SUCCESS;
+// 2762     	}
+// 2763         else if(('*' == *(name+i)) && ('.' == *(name+i+1)))
+// 2764         {
+// 2765             /* for removing 'www.' */
+// 2766             tmp = (unsigned char*)strstr((const char*)reqPath, ".");
+// 2767             tmp++;
+// 2768             if(!strncmp((const char*)name+i+2, (const char*)reqPath, strlen((const char*)name+i+2)))
+// 2769             {
+// 2770                 return S2W_SUCCESS;
+// 2771             }
+// 2772 
+// 2773             else if(!strncmp((const char*)name+i+2, (const char*)tmp, strlen((const char*)name+i+2)))
+// 2774             {
+// 2775                 return S2W_SUCCESS;
+// 2776             }
+// 2777             else
+// 2778             {
+// 2779                 i += strlen((const char*)name+i);
+// 2780                 i++;
 ??AppS2wHal_HttpCheckDns_1:
         ADDS     R0,R6,R5
           CFI FunCall strlen
         BL       strlen
         ADDS     R0,R0,#+1
         ADDS     R6,R0,R6
-// 2789             }
+// 2781             }
 ??AppS2wHal_HttpCheckDns_0:
         LDRB     R0,[R6, R5]
         CBZ.N    R0,??AppS2wHal_HttpCheckDns_2
@@ -8133,56 +8123,56 @@ AppS2wHal_HttpCheckDns:
 ??AppS2wHal_HttpCheckDns_3:
         MOVS     R0,#+0
         B.N      ??AppS2wHal_HttpCheckDns_4
-// 2790         }
-// 2791     	else
-// 2792     	{
-// 2793     		i += strlen((const char*)name+i);
-// 2794     		i++;
-// 2795     	}
-// 2796     }
+// 2782         }
+// 2783     	else
+// 2784     	{
+// 2785     		i += strlen((const char*)name+i);
+// 2786     		i++;
+// 2787     	}
+// 2788     }
 ??AppS2wHal_HttpCheckDns_2:
-        LDR.W    R0,??DataTable102_2
+        LDR.W    R0,??DataTable98_3
         LDRB     R0,[R0, #+936]
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_HttpCheckDns_5
-// 2797     if(1 == s2wCurrent.logLevel)
-// 2798     {
-// 2799     	S2w_Printf("\r\n warning: certificate mismatch");
+// 2789     if(1 == s2wCurrent.logLevel)
+// 2790     {
+// 2791     	S2w_Printf("\r\n warning: certificate mismatch");
         ADR.W    R0,`?<Constant "\\r\\n warning: certifica...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
         B.N      ??AppS2wHal_HttpCheckDns_6
-// 2800     }
-// 2801     else if(2 == s2wCurrent.logLevel)
+// 2792     }
+// 2793     else if(2 == s2wCurrent.logLevel)
 ??AppS2wHal_HttpCheckDns_5:
         CMP      R0,#+2
         BNE.N    ??AppS2wHal_HttpCheckDns_6
-// 2802     {
-// 2803     	S2w_Printf("\r\n warning: certificate mismatch:");
+// 2794     {
+// 2795     	S2w_Printf("\r\n warning: certificate mismatch:");
         ADR.W    R0,`?<Constant "\\r\\n warning: certifica...">_1`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 2804     	name = s2wSslConf.dnsNameBuf;
+// 2796     	name = s2wSslConf.dnsNameBuf;
         LDR      R5,[R4, #+4]
-// 2805         i = 0;
+// 2797         i = 0;
         ADR.W    R6,`?<Constant "\\r\\n %s">`
         B.N      ??AppS2wHal_HttpCheckDns_7
-// 2806 		while(*name && (i < s2wSslConf.dnsBufferLen))
-// 2807 		{
-// 2808 			S2w_Printf("\r\n %s", name);
+// 2798 		while(*name && (i < s2wSslConf.dnsBufferLen))
+// 2799 		{
+// 2800 			S2w_Printf("\r\n %s", name);
 ??AppS2wHal_HttpCheckDns_8:
         MOV      R1,R5
         MOV      R0,R6
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 2809     		name += strlen((const char*)name);
-// 2810     		name++;
+// 2801     		name += strlen((const char*)name);
+// 2802     		name++;
         MOV      R0,R5
           CFI FunCall strlen
         BL       strlen
         ADDS     R0,R0,R5
         ADDS     R5,R0,#+1
-// 2811 		}
+// 2803 		}
 ??AppS2wHal_HttpCheckDns_7:
         LDRB     R0,[R5, #+0]
         CMP      R0,#+0
@@ -8190,26 +8180,20 @@ AppS2wHal_HttpCheckDns:
         LDRNE    R0,[R4, #+0]
         CMPNE    R0,#+0
         BNE.N    ??AppS2wHal_HttpCheckDns_8
-// 2812     }
-// 2813     return S2W_FAILURE;
+// 2804     }
+// 2805     return S2W_FAILURE;
 ??AppS2wHal_HttpCheckDns_6:
         MOVS     R0,#+1
 ??AppS2wHal_HttpCheckDns_4:
         POP      {R1,R4-R9,PC}    ;; return
-          CFI EndBlock cfiBlock158
-// 2814 }
+          CFI EndBlock cfiBlock163
+// 2806 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable75:
+??DataTable71:
         DC32     s2wappMainTaskCtxt
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable75_1:
-        DC32     s2wUdpSocketCloseSem
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -8233,12 +8217,12 @@ AppS2wHal_HttpCheckDns:
         DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock159 Using cfiCommon0
+          CFI Block cfiBlock164 Using cfiCommon0
           CFI Function AppS2w_SslClientOpen
         THUMB
-// 2815 UINT8 AppS2w_SslClientOpen(UINT8 cliCid, char* caCertName,
-// 2816                            UINT8 *clientCertName, UINT8 *clientKeyName)
-// 2817 {
+// 2807 UINT8 AppS2w_SslClientOpen(UINT8 cliCid, char* caCertName,
+// 2808                            UINT8 *clientCertName, UINT8 *clientKeyName)
+// 2809 {
 AppS2w_SslClientOpen:
         PUSH     {R4-R11,LR}
           CFI R14 Frame(CFA, -4)
@@ -8257,29 +8241,29 @@ AppS2w_SslClientOpen:
         MOV      R11,R1
         MOV      R4,R2
         MOV      R5,R3
-// 2818     //INT32 u32NoOfBytesSent;
-// 2819     UINT32 status;
-// 2820     UINT8 *certBuf = NULL;
-// 2821     UINT16 caCertsize = 0;
-// 2822     INT32  index=0;
-// 2823     //void *pSslConn;
-// 2824     GSN_SSL_CONN_PARAMS_T sslConnParams;
-// 2825 	UINT32 cid = cliCid;
-// 2826 
-// 2827 #ifdef S2W_APP_SSL_PROVISION
-// 2828     initStartTime = GsnSoftTmr_CurrentSystemTime();
-// 2829 #endif
-// 2830 
-// 2831     /* Avoid warning*/
-// 2832     (void)certBuf ;
-// 2833     (void)caCertsize ;
-// 2834     memset((INT8 *)&sslConnParams, 0, sizeof(sslConnParams));
+// 2810     //INT32 u32NoOfBytesSent;
+// 2811     UINT32 status;
+// 2812     UINT8 *certBuf = NULL;
+// 2813     UINT16 caCertsize = 0;
+// 2814     INT32  index=0;
+// 2815     //void *pSslConn;
+// 2816     GSN_SSL_CONN_PARAMS_T sslConnParams;
+// 2817 	UINT32 cid = cliCid;
+// 2818 
+// 2819 #ifdef S2W_APP_SSL_PROVISION
+// 2820     initStartTime = GsnSoftTmr_CurrentSystemTime();
+// 2821 #endif
+// 2822 
+// 2823     /* Avoid warning*/
+// 2824     (void)certBuf ;
+// 2825     (void)caCertsize ;
+// 2826     memset((INT8 *)&sslConnParams, 0, sizeof(sslConnParams));
         MOVS     R2,#+40
         MOVS     R1,#+0
         ADD      R0,SP,#+0
           CFI FunCall memset
         BL       memset
-// 2835     if (s2wCidList[cid].sslflag == TRUE)
+// 2827     if (s2wCidList[cid].sslflag == TRUE)
         BL       ?Subroutine15
 ??CrossCallReturnLabel_35:
         MLA      R6,R0,R10,R1
@@ -8287,197 +8271,197 @@ AppS2w_SslClientOpen:
         LDRB     R0,[R7, #+16]
         CMP      R0,#+1
         BNE.N    ??AppS2w_SslClientOpen_0
-// 2836     {
-// 2837         S2w_Printf("\r\nSocket is already SSL Enabled");
+// 2828     {
+// 2829         S2w_Printf("\r\nSocket is already SSL Enabled");
         ADR.W    R0,`?<Constant "\\r\\nSocket is already S...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 2838         return S2W_FAILURE;
+// 2830         return S2W_FAILURE;
         B.N      ??AppS2w_SslClientOpen_1
-// 2839     }
-// 2840 
-// 2841     if(caCertName != NULL)
+// 2831     }
+// 2832 
+// 2833     if(caCertName != NULL)
 ??AppS2w_SslClientOpen_0:
         MOV      R8,#+12
-        LDR.W    R9,??DataTable103_1
+        LDR.W    R9,??DataTable99_1
         CMP      R11,#+0
         BEQ.N    ??AppS2w_SslClientOpen_2
-// 2842     {
-// 2843         index = S2wCert_SearchRamTable(caCertName);
+// 2834     {
+// 2835         index = S2wCert_SearchRamTable(caCertName);
         MOV      R0,R11
           CFI FunCall S2wCert_SearchRamTable
         BL       S2wCert_SearchRamTable
-// 2844         if(index == -1)
+// 2836         if(index == -1)
         CMN      R0,#+1
         ITT      EQ 
         MOVEQ    R0,R11
           CFI FunCall S2wCert_FlashFileLoad
         BLEQ     S2wCert_FlashFileLoad
-// 2845         {
-// 2846         	index = S2wCert_FlashFileLoad(caCertName);
-// 2847         }
-// 2848         if(index == -1)
+// 2837         {
+// 2838         	index = S2wCert_FlashFileLoad(caCertName);
+// 2839         }
+// 2840         if(index == -1)
         CMN      R0,#+1
         BNE.N    ??AppS2w_SslClientOpen_3
-// 2849         {
-// 2850             S2w_Printf("\n\rca Certificate %s Not Found", caCertName);
+// 2841         {
+// 2842             S2w_Printf("\n\rca Certificate %s Not Found", caCertName);
         MOV      R1,R11
         ADR.W    R0,`?<Constant "\\n\\rca Certificate %s N...">`
         B.N      ??AppS2w_SslClientOpen_4
-// 2851             return S2W_FAILURE;
-// 2852         }
+// 2843             return S2W_FAILURE;
+// 2844         }
 ??AppS2w_SslClientOpen_3:
-        BL       ?Subroutine43
-??CrossCallReturnLabel_119:
+        BL       ?Subroutine44
+??CrossCallReturnLabel_123:
         STR      R1,[SP, #+8]
-// 2853 
-// 2854         // currently use the hardcoded certificate
-// 2855         sslConnParams.caCertLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
-// 2856         sslConnParams.caCert = s2w_ssl_cert_table[index].certAddress + 2;
+// 2845 
+// 2846         // currently use the hardcoded certificate
+// 2847         sslConnParams.caCertLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
+// 2848         sslConnParams.caCert = s2w_ssl_cert_table[index].certAddress + 2;
         STR      R0,[SP, #+4]
-// 2857         sslConnParams.caCertName = (char const*)caCertName;
+// 2849         sslConnParams.caCertName = (char const*)caCertName;
         STR      R11,[SP, #+0]
-// 2858     }
-// 2859 
-// 2860 
-// 2861     if(clientCertName != NULL)
+// 2850     }
+// 2851 
+// 2852 
+// 2853     if(clientCertName != NULL)
 ??AppS2w_SslClientOpen_2:
         CBZ.N    R4,??AppS2w_SslClientOpen_5
-// 2862     {
-// 2863         index = S2wCert_SearchRamTable((char*)clientCertName);
+// 2854     {
+// 2855         index = S2wCert_SearchRamTable((char*)clientCertName);
         MOV      R0,R4
           CFI FunCall S2wCert_SearchRamTable
         BL       S2wCert_SearchRamTable
-// 2864         if(index == -1)
+// 2856         if(index == -1)
         CMN      R0,#+1
         ITT      EQ 
         MOVEQ    R0,R4
           CFI FunCall S2wCert_FlashFileLoad
         BLEQ     S2wCert_FlashFileLoad
-// 2865         {
-// 2866         	index = S2wCert_FlashFileLoad((char*)clientCertName);
-// 2867         }
-// 2868         if(index == -1)
+// 2857         {
+// 2858         	index = S2wCert_FlashFileLoad((char*)clientCertName);
+// 2859         }
+// 2860         if(index == -1)
         CMN      R0,#+1
         BNE.N    ??AppS2w_SslClientOpen_6
-// 2869         {
-// 2870             S2w_Printf("\n\rclient Certificate %s Not Found", clientCertName);
+// 2861         {
+// 2862             S2w_Printf("\n\rclient Certificate %s Not Found", clientCertName);
         MOV      R1,R4
         ADR.W    R0,`?<Constant "\\n\\rclient Certificate ...">`
         B.N      ??AppS2w_SslClientOpen_4
-// 2871             return S2W_FAILURE;
-// 2872         }
+// 2863             return S2W_FAILURE;
+// 2864         }
 ??AppS2w_SslClientOpen_6:
-        BL       ?Subroutine43
-??CrossCallReturnLabel_120:
+        BL       ?Subroutine44
+??CrossCallReturnLabel_124:
         STR      R1,[SP, #+20]
-// 2873         sslConnParams.clientCertLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
-// 2874         sslConnParams.clientCert =  s2w_ssl_cert_table[index].certAddress + 2;
+// 2865         sslConnParams.clientCertLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
+// 2866         sslConnParams.clientCert =  s2w_ssl_cert_table[index].certAddress + 2;
         STR      R0,[SP, #+16]
-// 2875         sslConnParams.clientCertName = (char const*)clientCertName;
+// 2867         sslConnParams.clientCertName = (char const*)clientCertName;
         STR      R4,[SP, #+12]
-// 2876 
-// 2877     }
-// 2878 
-// 2879 
-// 2880     if(clientKeyName != NULL)
+// 2868 
+// 2869     }
+// 2870 
+// 2871 
+// 2872     if(clientKeyName != NULL)
 ??AppS2w_SslClientOpen_5:
         CBZ.N    R5,??AppS2w_SslClientOpen_7
-// 2881     {
-// 2882         index = S2wCert_SearchRamTable((char*)clientKeyName);
+// 2873     {
+// 2874         index = S2wCert_SearchRamTable((char*)clientKeyName);
         MOV      R0,R5
           CFI FunCall S2wCert_SearchRamTable
         BL       S2wCert_SearchRamTable
-// 2883         if(index == -1)
+// 2875         if(index == -1)
         CMN      R0,#+1
         ITT      EQ 
         MOVEQ    R0,R5
           CFI FunCall S2wCert_FlashFileLoad
         BLEQ     S2wCert_FlashFileLoad
-// 2884         {
-// 2885         	index = S2wCert_FlashFileLoad((char*)clientKeyName);
-// 2886         }
-// 2887         if(index == -1)
+// 2876         {
+// 2877         	index = S2wCert_FlashFileLoad((char*)clientKeyName);
+// 2878         }
+// 2879         if(index == -1)
         CMN      R0,#+1
         BNE.N    ??AppS2w_SslClientOpen_8
-// 2888         {
-// 2889             S2w_Printf("\n\rclient key Certificate %s Not Found", clientKeyName);
+// 2880         {
+// 2881             S2w_Printf("\n\rclient key Certificate %s Not Found", clientKeyName);
         MOV      R1,R5
         ADR.W    R0,`?<Constant "\\n\\rclient key Certific...">`
 ??AppS2w_SslClientOpen_4:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 2890             return S2W_FAILURE;
+// 2882             return S2W_FAILURE;
         B.N      ??AppS2w_SslClientOpen_1
-// 2891         }
+// 2883         }
 ??AppS2w_SslClientOpen_8:
-        BL       ?Subroutine43
-??CrossCallReturnLabel_121:
+        BL       ?Subroutine44
+??CrossCallReturnLabel_125:
         STR      R1,[SP, #+32]
-// 2892         sslConnParams.clientKeyLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
-// 2893         sslConnParams.clientKey =  s2w_ssl_cert_table[index].certAddress + 2;
+// 2884         sslConnParams.clientKeyLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
+// 2885         sslConnParams.clientKey =  s2w_ssl_cert_table[index].certAddress + 2;
         STR      R0,[SP, #+28]
-// 2894         sslConnParams.clientKeyName = (char const*)clientKeyName;
+// 2886         sslConnParams.clientKeyName = (char const*)clientKeyName;
         STR      R5,[SP, #+24]
-// 2895 
-// 2896     }
-// 2897 
-// 2898     nx_bsd_callback_register(s2wCidList[cid].sd, NULL, 0);    //deregister callback
+// 2887 
+// 2888     }
+// 2889 
+// 2890     nx_bsd_callback_register(s2wCidList[cid].sd, NULL, 0);    //deregister callback
 ??AppS2w_SslClientOpen_7:
         MOVS     R2,#+0
         LDR      R0,[R6, #+28]
         BL       ??Subroutine24_0
-// 2899 
-// 2900     s2wCidList[cid].ssl.sslConn = (GSN_SSL_CONN_T*)MALLOC(sizeof(GSN_SSL_CONN_T));
+// 2891 
+// 2892     s2wCidList[cid].ssl.sslConn = (GSN_SSL_CONN_T*)MALLOC(sizeof(GSN_SSL_CONN_T));
 ??CrossCallReturnLabel_57:
         MOVS     R0,#+52
           CFI FunCall MALLOC
         BL       MALLOC
         STR      R0,[R7, #+12]
-// 2901 
-// 2902     if(NULL == s2wCidList[cid].ssl.sslConn)
+// 2893 
+// 2894     if(NULL == s2wCidList[cid].ssl.sslConn)
         CMP      R0,#+0
         BEQ.N    ??AppS2w_SslClientOpen_1
-// 2903     {
-// 2904         return S2W_FAILURE;
-// 2905     }
-// 2906 	memset((INT8 *)s2wCidList[cid].ssl.sslConn, 0, sizeof(GSN_SSL_CONN_T));
+// 2895     {
+// 2896         return S2W_FAILURE;
+// 2897     }
+// 2898 	memset((INT8 *)s2wCidList[cid].ssl.sslConn, 0, sizeof(GSN_SSL_CONN_T));
         MOVS     R2,#+52
         MOVS     R1,#+0
           CFI FunCall memset
         BL       memset
-// 2907        s2wCidList[cid].ssl.sslConn->sslState = GSN_SSL_STATE_INIT;
+// 2899        s2wCidList[cid].ssl.sslConn->sslState = GSN_SSL_STATE_INIT;
         LDR      R0,[R7, #+12]
         MOVS     R1,#+0
         STRH     R1,[R0, #+16]
-// 2908 	s2wCidList[cid].ssl.sslConn->connMode = GSN_SSL_CONN_MODE_CLIENT;
-// 2909 	s2wCidList[cid].sslflag = TRUE;
-// 2910 
-// 2911 #ifdef S2W_SSL_EXT_MAX_FRAG_LEN
-// 2912     s2wCidList[cid].ssl.sslConn->maxFragLen = S2W_SSL_EXT_MAX_FRAG_LEN;
-// 2913 #else
-// 2914     s2wCidList[cid].ssl.sslConn->maxFragLen = 0;
-// 2915 #endif
-// 2916 
-// 2917 #if 1 /*SSl open is now done in Wdd task context*/
-// 2918     status = GsnSsl_Open(s2wCidList[cid].ssl.sslConn, s2wCidList[cid].sd,
-// 2919                          &sslConnParams);
-// 2920 #else
-// 2921 	{
-// 2922 		UINT32 msg;
-// 2923 		/*create open sem*/
-// 2924 		GsnOsal_SemCreate(&s2wCidList[cid].s2wUserOpenInProgress, 0);
-// 2925 		s2wCidList[cid].pConnOpenParams = &sslConnParams;
-// 2926 		/*post message */
-// 2927 		msg = (S2W_MOD_NOTIF_CONN_START + cid);
-// 2928 		GsnMsgHandler_Post(s2wappMainTaskCtxt->pMsgHdlrExecInWddTsk, &msg);
-// 2929 		GsnOsal_SemAcquire(&s2wCidList[cid].s2wUserOpenInProgress,GSN_OSAL_WAIT_FOREVER);
-// 2930 		status = s2wCidList[cid].openStatus;
-// 2931 		/*Delete the semaphore*/
-// 2932 		GsnOsal_SemDelete(&s2wCidList[cid].s2wUserOpenInProgress);
-// 2933 	}
-// 2934 #endif
-// 2935     if(status == GSN_SUCCESS)
+// 2900 	s2wCidList[cid].ssl.sslConn->connMode = GSN_SSL_CONN_MODE_CLIENT;
+// 2901 	s2wCidList[cid].sslflag = TRUE;
+// 2902 
+// 2903 #ifdef S2W_SSL_EXT_MAX_FRAG_LEN
+// 2904     s2wCidList[cid].ssl.sslConn->maxFragLen = S2W_SSL_EXT_MAX_FRAG_LEN;
+// 2905 #else
+// 2906     s2wCidList[cid].ssl.sslConn->maxFragLen = 0;
+// 2907 #endif
+// 2908 
+// 2909 #if 1 /*SSl open is now done in Wdd task context*/
+// 2910     status = GsnSsl_Open(s2wCidList[cid].ssl.sslConn, s2wCidList[cid].sd,
+// 2911                          &sslConnParams);
+// 2912 #else
+// 2913 	{
+// 2914 		UINT32 msg;
+// 2915 		/*create open sem*/
+// 2916 		GsnOsal_SemCreate(&s2wCidList[cid].s2wUserOpenInProgress, 0);
+// 2917 		s2wCidList[cid].pConnOpenParams = &sslConnParams;
+// 2918 		/*post message */
+// 2919 		msg = (S2W_MOD_NOTIF_CONN_START + cid);
+// 2920 		GsnMsgHandler_Post(s2wappMainTaskCtxt->pMsgHdlrExecInWddTsk, &msg);
+// 2921 		GsnOsal_SemAcquire(&s2wCidList[cid].s2wUserOpenInProgress,GSN_OSAL_WAIT_FOREVER);
+// 2922 		status = s2wCidList[cid].openStatus;
+// 2923 		/*Delete the semaphore*/
+// 2924 		GsnOsal_SemDelete(&s2wCidList[cid].s2wUserOpenInProgress);
+// 2925 	}
+// 2926 #endif
+// 2927     if(status == GSN_SUCCESS)
         ADD      R2,SP,#+0
         LDR      R0,[R7, #+12]
         STR      R1,[R0, #+0]
@@ -8490,70 +8474,76 @@ AppS2w_SslClientOpen:
           CFI FunCall GsnSsl_Open
         BL       GsnSsl_Open
         CBNZ.N   R0,??AppS2w_SslClientOpen_9
-// 2936     {
-// 2937         nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack, S2W_RXCALLBACK_FLAGS);
+// 2928     {
+// 2929         nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack, S2W_RXCALLBACK_FLAGS);
         LDR      R0,[R6, #+28]
         BL       ??Subroutine20_0
-// 2938 		s2wCidList[cid].sslflag = TRUE;
+// 2930 		s2wCidList[cid].sslflag = TRUE;
 ??CrossCallReturnLabel_44:
         MOVS     R0,#+1
         STRB     R0,[R7, #+16]
-// 2939 
-// 2940         GsnOsal_SemCreate(&s2wCidList[cid].s2wUserCloseInProgress, 0);
+// 2931 
+// 2932         GsnOsal_SemCreate(&s2wCidList[cid].s2wUserCloseInProgress, 0);
         MOVS     R1,#+0
         ADD      R0,R6,#+56
           CFI FunCall GsnOsal_SemCreate
         BL       GsnOsal_SemCreate
-// 2941         AppS2wHal_TimerInit(&s2wCidList[cid].s2wUserCloseTimer, AppS2wHal_HttpCloseTimeout, (VOID*)cid);
+// 2933         AppS2wHal_TimerInit(&s2wCidList[cid].s2wUserCloseTimer, AppS2wHal_HttpCloseTimeout, (VOID*)cid);
         MOV      R2,R10
         ADR.W    R1,AppS2wHal_HttpCloseTimeout
         ADD      R0,R6,#+88
           CFI FunCall AppS2wHal_TimerInit
         BL       AppS2wHal_TimerInit
-// 2942         s2wCidList[cid].s2wUsrCloseFlag = 0;
+// 2934         s2wCidList[cid].s2wUsrCloseFlag = 0;
         MOVS     R0,#+0
         STRB     R0,[R6, #+144]
-// 2943         return S2W_SUCCESS;
+// 2935         return S2W_SUCCESS;
         B.N      ??AppS2w_SslClientOpen_10
-// 2944     }
-// 2945     else
-// 2946     {
-// 2947         s2wCidList[cid].sslflag = 0;
+// 2936     }
+// 2937     else
+// 2938     {
+// 2939         s2wCidList[cid].sslflag = 0;
 ??AppS2w_SslClientOpen_9:
         MOVS     R0,#+0
         STRB     R0,[R7, #+16]
-// 2948         if(s2wCidList[cid].ssl.sslConn != NULL)
+// 2940         if(s2wCidList[cid].ssl.sslConn != NULL)
         LDR      R0,[R7, #+12]
         CBZ.N    R0,??AppS2w_SslClientOpen_11
-// 2949         {
-// 2950             gsn_free(s2wCidList[cid].ssl.sslConn);
+// 2941         {
+// 2942             gsn_free(s2wCidList[cid].ssl.sslConn);
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-// 2951         }
-// 2952 
-// 2953            soc_close(s2wCidList[cid].sd);
+// 2943         }
+// 2944 
+// 2945            soc_close(s2wCidList[cid].sd);
 ??AppS2w_SslClientOpen_11:
         LDR      R0,[R6, #+28]
           CFI FunCall soc_close
         BL       soc_close
-// 2954            s2wCidList[cid].sd = CID_NOTINUSE;
+// 2946            s2wCidList[cid].sd = CID_NOTINUSE;
         MOV      R0,#-1
         STR      R0,[R6, #+28]
-// 2955            s2wCidList[cid].localPort = 0;
+// 2947            s2wCidList[cid].localPort = 0;
         MOVS     R0,#+0
         STRH     R0,[R6, #+2]
-// 2956            s2wCidList[cid].remotePort = 0;
+// 2948            s2wCidList[cid].remotePort = 0;
         STRH     R0,[R6, #+4]
-// 2957         return S2W_FAILURE;
+// 2949         return S2W_FAILURE;
 ??AppS2w_SslClientOpen_1:
         MOVS     R0,#+1
 ??AppS2w_SslClientOpen_10:
         ADD      SP,SP,#+44
           CFI CFA R13+36
         POP      {R4-R11,PC}      ;; return
-          CFI EndBlock cfiBlock159
-// 2958     }
-// 2959 }
+          CFI EndBlock cfiBlock164
+// 2950     }
+// 2951 }
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable72:
+        DC32     s2wUdpSocketCloseSem
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -8577,10 +8567,10 @@ AppS2w_SslClientOpen:
         DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond160 Using cfiCommon0
+          CFI Block cfiCond165 Using cfiCommon0
           CFI Function AppS2w_SslClientOpen
           CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_119
+          CFI Conditional ??CrossCallReturnLabel_123
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -8591,51 +8581,51 @@ AppS2w_SslClientOpen:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+80
-          CFI Block cfiCond161 Using cfiCommon0
-          CFI (cfiCond161) Function AppS2w_SslClientOpen
-          CFI (cfiCond161) NoCalls AppS2w_SslClientOpen
-          CFI (cfiCond161) Conditional ??CrossCallReturnLabel_120
-          CFI (cfiCond161) R4 Frame(CFA, -36)
-          CFI (cfiCond161) R5 Frame(CFA, -32)
-          CFI (cfiCond161) R6 Frame(CFA, -28)
-          CFI (cfiCond161) R7 Frame(CFA, -24)
-          CFI (cfiCond161) R8 Frame(CFA, -20)
-          CFI (cfiCond161) R9 Frame(CFA, -16)
-          CFI (cfiCond161) R10 Frame(CFA, -12)
-          CFI (cfiCond161) R11 Frame(CFA, -8)
-          CFI (cfiCond161) R14 Frame(CFA, -4)
-          CFI (cfiCond161) CFA R13+80
-          CFI Block cfiCond162 Using cfiCommon0
-          CFI (cfiCond162) Function AppS2w_SslClientOpen
-          CFI (cfiCond162) NoCalls AppS2w_SslClientOpen
-          CFI (cfiCond162) Conditional ??CrossCallReturnLabel_121
-          CFI (cfiCond162) R4 Frame(CFA, -36)
-          CFI (cfiCond162) R5 Frame(CFA, -32)
-          CFI (cfiCond162) R6 Frame(CFA, -28)
-          CFI (cfiCond162) R7 Frame(CFA, -24)
-          CFI (cfiCond162) R8 Frame(CFA, -20)
-          CFI (cfiCond162) R9 Frame(CFA, -16)
-          CFI (cfiCond162) R10 Frame(CFA, -12)
-          CFI (cfiCond162) R11 Frame(CFA, -8)
-          CFI (cfiCond162) R14 Frame(CFA, -4)
-          CFI (cfiCond162) CFA R13+80
-          CFI Block cfiPicker163 Using cfiCommon1
-          CFI (cfiPicker163) NoFunction
-          CFI (cfiPicker163) NoCalls AppS2w_SslClientOpen
-          CFI (cfiPicker163) Picker
+          CFI Block cfiCond166 Using cfiCommon0
+          CFI (cfiCond166) Function AppS2w_SslClientOpen
+          CFI (cfiCond166) NoCalls AppS2w_SslClientOpen
+          CFI (cfiCond166) Conditional ??CrossCallReturnLabel_124
+          CFI (cfiCond166) R4 Frame(CFA, -36)
+          CFI (cfiCond166) R5 Frame(CFA, -32)
+          CFI (cfiCond166) R6 Frame(CFA, -28)
+          CFI (cfiCond166) R7 Frame(CFA, -24)
+          CFI (cfiCond166) R8 Frame(CFA, -20)
+          CFI (cfiCond166) R9 Frame(CFA, -16)
+          CFI (cfiCond166) R10 Frame(CFA, -12)
+          CFI (cfiCond166) R11 Frame(CFA, -8)
+          CFI (cfiCond166) R14 Frame(CFA, -4)
+          CFI (cfiCond166) CFA R13+80
+          CFI Block cfiCond167 Using cfiCommon0
+          CFI (cfiCond167) Function AppS2w_SslClientOpen
+          CFI (cfiCond167) NoCalls AppS2w_SslClientOpen
+          CFI (cfiCond167) Conditional ??CrossCallReturnLabel_125
+          CFI (cfiCond167) R4 Frame(CFA, -36)
+          CFI (cfiCond167) R5 Frame(CFA, -32)
+          CFI (cfiCond167) R6 Frame(CFA, -28)
+          CFI (cfiCond167) R7 Frame(CFA, -24)
+          CFI (cfiCond167) R8 Frame(CFA, -20)
+          CFI (cfiCond167) R9 Frame(CFA, -16)
+          CFI (cfiCond167) R10 Frame(CFA, -12)
+          CFI (cfiCond167) R11 Frame(CFA, -8)
+          CFI (cfiCond167) R14 Frame(CFA, -4)
+          CFI (cfiCond167) CFA R13+80
+          CFI Block cfiPicker168 Using cfiCommon1
+          CFI (cfiPicker168) NoFunction
+          CFI (cfiPicker168) NoCalls AppS2w_SslClientOpen
+          CFI (cfiPicker168) Picker
         THUMB
-?Subroutine43:
+?Subroutine44:
         MLA      R0,R8,R0,R9
         LDR      R0,[R0, #+0]
         LDRH     R1,[R0], #+2
         BX       LR
-          CFI EndBlock cfiCond160
-          CFI EndBlock cfiCond161
-          CFI EndBlock cfiCond162
-          CFI EndBlock cfiPicker163
+          CFI EndBlock cfiCond165
+          CFI EndBlock cfiCond166
+          CFI EndBlock cfiCond167
+          CFI EndBlock cfiPicker168
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond164 Using cfiCommon0
+          CFI Block cfiCond169 Using cfiCommon0
           CFI Function AppS2wHal_NetRecvTask
           CFI NoCalls
           CFI NoCalls
@@ -8650,73 +8640,67 @@ AppS2w_SslClientOpen:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+128
-          CFI Block cfiCond165 Using cfiCommon0
-          CFI (cfiCond165) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond165) NoCalls AppS2w_SslClientOpen
-          CFI (cfiCond165) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiCond165) Conditional ??CrossCallReturnLabel_34
-          CFI (cfiCond165) R4 Frame(CFA, -36)
-          CFI (cfiCond165) R5 Frame(CFA, -32)
-          CFI (cfiCond165) R6 Frame(CFA, -28)
-          CFI (cfiCond165) R7 Frame(CFA, -24)
-          CFI (cfiCond165) R8 Frame(CFA, -20)
-          CFI (cfiCond165) R9 Frame(CFA, -16)
-          CFI (cfiCond165) R10 Frame(CFA, -12)
-          CFI (cfiCond165) R11 Frame(CFA, -8)
-          CFI (cfiCond165) R14 Frame(CFA, -4)
-          CFI (cfiCond165) CFA R13+128
-          CFI Block cfiCond166 Using cfiCommon0
-          CFI (cfiCond166) Function AppS2w_SslClientOpen
-          CFI (cfiCond166) NoCalls AppS2w_SslClientOpen
-          CFI (cfiCond166) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiCond166) Conditional ??CrossCallReturnLabel_35
-          CFI (cfiCond166) R4 Frame(CFA, -36)
-          CFI (cfiCond166) R5 Frame(CFA, -32)
-          CFI (cfiCond166) R6 Frame(CFA, -28)
-          CFI (cfiCond166) R7 Frame(CFA, -24)
-          CFI (cfiCond166) R8 Frame(CFA, -20)
-          CFI (cfiCond166) R9 Frame(CFA, -16)
-          CFI (cfiCond166) R10 Frame(CFA, -12)
-          CFI (cfiCond166) R11 Frame(CFA, -8)
-          CFI (cfiCond166) R14 Frame(CFA, -4)
-          CFI (cfiCond166) CFA R13+80
-          CFI Block cfiPicker167 Using cfiCommon1
-          CFI (cfiPicker167) NoFunction
-          CFI (cfiPicker167) NoCalls AppS2w_SslClientOpen
-          CFI (cfiPicker167) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiPicker167) Picker
+          CFI Block cfiCond170 Using cfiCommon0
+          CFI (cfiCond170) Function AppS2wHal_NetRecvTask
+          CFI (cfiCond170) NoCalls AppS2w_SslClientOpen
+          CFI (cfiCond170) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiCond170) Conditional ??CrossCallReturnLabel_34
+          CFI (cfiCond170) R4 Frame(CFA, -36)
+          CFI (cfiCond170) R5 Frame(CFA, -32)
+          CFI (cfiCond170) R6 Frame(CFA, -28)
+          CFI (cfiCond170) R7 Frame(CFA, -24)
+          CFI (cfiCond170) R8 Frame(CFA, -20)
+          CFI (cfiCond170) R9 Frame(CFA, -16)
+          CFI (cfiCond170) R10 Frame(CFA, -12)
+          CFI (cfiCond170) R11 Frame(CFA, -8)
+          CFI (cfiCond170) R14 Frame(CFA, -4)
+          CFI (cfiCond170) CFA R13+128
+          CFI Block cfiCond171 Using cfiCommon0
+          CFI (cfiCond171) Function AppS2w_SslClientOpen
+          CFI (cfiCond171) NoCalls AppS2w_SslClientOpen
+          CFI (cfiCond171) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiCond171) Conditional ??CrossCallReturnLabel_35
+          CFI (cfiCond171) R4 Frame(CFA, -36)
+          CFI (cfiCond171) R5 Frame(CFA, -32)
+          CFI (cfiCond171) R6 Frame(CFA, -28)
+          CFI (cfiCond171) R7 Frame(CFA, -24)
+          CFI (cfiCond171) R8 Frame(CFA, -20)
+          CFI (cfiCond171) R9 Frame(CFA, -16)
+          CFI (cfiCond171) R10 Frame(CFA, -12)
+          CFI (cfiCond171) R11 Frame(CFA, -8)
+          CFI (cfiCond171) R14 Frame(CFA, -4)
+          CFI (cfiCond171) CFA R13+80
+          CFI Block cfiPicker172 Using cfiCommon1
+          CFI (cfiPicker172) NoFunction
+          CFI (cfiPicker172) NoCalls AppS2w_SslClientOpen
+          CFI (cfiPicker172) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiPicker172) Picker
         THUMB
 ?Subroutine15:
         MOV      R0,#+296
-        LDR.W    R1,??DataTable94
+        LDR.W    R1,??DataTable98_1
         BX       LR
-          CFI EndBlock cfiCond164
-          CFI EndBlock cfiCond165
-          CFI EndBlock cfiCond166
-          CFI EndBlock cfiPicker167
+          CFI EndBlock cfiCond169
+          CFI EndBlock cfiCond170
+          CFI EndBlock cfiCond171
+          CFI EndBlock cfiPicker172
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable77:
+??DataTable73:
         DC8      ".",0x0,0x0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable77_1:
-        DC32     0xb0000600
-// 2960 #endif
-// 2961 
-// 2962 
-// 2963 #ifdef S2W_SSL_SERVER_SUPPORT
+// 2952 #endif
+// 2953 
+// 2954 
+// 2955 #ifdef S2W_SSL_SERVER_SUPPORT
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock168 Using cfiCommon0
+          CFI Block cfiBlock173 Using cfiCommon0
           CFI Function AppS2w_SslServerOpen
         THUMB
-// 2964 GSN_STATUS AppS2w_SslServerOpen(UINT8 cid, char* sslCACertName)
-// 2965 {
+// 2956 GSN_STATUS AppS2w_SslServerOpen(UINT8 cid, char* sslCACertName)
+// 2957 {
 AppS2w_SslServerOpen:
         PUSH     {R4-R8,LR}
           CFI R14 Frame(CFA, -4)
@@ -8726,84 +8710,84 @@ AppS2w_SslServerOpen:
           CFI R5 Frame(CFA, -20)
           CFI R4 Frame(CFA, -24)
           CFI CFA R13+24
-// 2966     //UINT8 retVal = S2W_FAILURE;
-// 2967     //INT32 u32NoOfBytesSent;
-// 2968     UINT32 /*status,*/ certLength ;
-// 2969     INT32  index=0;
-// 2970     SERVER_CERT_DETAIL_T certDetail;
-// 2971 #ifdef S2W_APP_SSL_PROVISION
-// 2972     initStartTime = GsnSoftTmr_CurrentSystemTime();
-// 2973 #endif
-// 2974 
-// 2975     if (s2wCidList[cid].sslflag == TRUE)
-        BL       ?Subroutine35
-??CrossCallReturnLabel_89:
+// 2958     //UINT8 retVal = S2W_FAILURE;
+// 2959     //INT32 u32NoOfBytesSent;
+// 2960     UINT32 /*status,*/ certLength ;
+// 2961     INT32  index=0;
+// 2962     SERVER_CERT_DETAIL_T certDetail;
+// 2963 #ifdef S2W_APP_SSL_PROVISION
+// 2964     initStartTime = GsnSoftTmr_CurrentSystemTime();
+// 2965 #endif
+// 2966 
+// 2967     if (s2wCidList[cid].sslflag == TRUE)
+        BL       ?Subroutine36
+??CrossCallReturnLabel_93:
         ADD      R0,R4,#+40
         SUB      SP,SP,#+56
           CFI CFA R13+80
         LDRB     R1,[R0, #+4]
         CMP      R1,#+1
         BNE.N    ??AppS2w_SslServerOpen_0
-// 2976     {
-// 2977         S2w_Printf("\r\nSocket is already SSL Enabled");
+// 2968     {
+// 2969         S2w_Printf("\r\nSocket is already SSL Enabled");
         ADR.W    R0,`?<Constant "\\r\\nSocket is already S...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 2978         return S2W_FAILURE;
+// 2970         return S2W_FAILURE;
         B.N      ??AppS2w_SslServerOpen_1
-// 2979     }
-// 2980 
-// 2981 
-// 2982     s2wCidList[cid].sslflag = TRUE;
+// 2971     }
+// 2972 
+// 2973 
+// 2974     s2wCidList[cid].sslflag = TRUE;
 ??AppS2w_SslServerOpen_0:
         MOVS     R1,#+1
         STRB     R1,[R0, #+4]
-// 2983     /* Fill the certificate details here. For testing it takes the below
-// 2984        certificates */
-// 2985  #ifndef S2W_SSL_SERVER_TEST
-// 2986  	memset((INT8 *)&certDetail, 0, sizeof(certDetail));
+// 2975     /* Fill the certificate details here. For testing it takes the below
+// 2976        certificates */
+// 2977  #ifndef S2W_SSL_SERVER_TEST
+// 2978  	memset((INT8 *)&certDetail, 0, sizeof(certDetail));
         MOVS     R2,#+52
         MOVS     R1,#+0
         ADD      R0,SP,#+0
           CFI FunCall memset
         BL       memset
-// 2987 
-// 2988     index = S2wCert_SearchRamTable(S2W_SSL_CERT_NAME_CA);
+// 2979 
+// 2980     index = S2wCert_SearchRamTable(S2W_SSL_CERT_NAME_CA);
         ADR.W    R6,`?<Constant "SSL_CA">`
         MOV      R0,R6
           CFI FunCall S2wCert_SearchRamTable
         BL       S2wCert_SearchRamTable
-// 2989     if(index == -1)
+// 2981     if(index == -1)
         CMN      R0,#+1
         ITT      EQ 
         MOVEQ    R0,R6
           CFI FunCall S2wCert_FlashFileLoad
         BLEQ     S2wCert_FlashFileLoad
-// 2990     {
-// 2991     	index = S2wCert_FlashFileLoad(S2W_SSL_CERT_NAME_CA);
-// 2992     }
-// 2993     if(index == -1)
+// 2982     {
+// 2983     	index = S2wCert_FlashFileLoad(S2W_SSL_CERT_NAME_CA);
+// 2984     }
+// 2985     if(index == -1)
         ADR.W    R5,`?<Constant "\\n\\rCertificate %s Not ...">`
         CMN      R0,#+1
         IT       EQ 
         MOVEQ    R1,R6
-// 2994     {
-// 2995         S2w_Printf("\n\rCertificate %s Not Found", S2W_SSL_CERT_NAME_CA);
+// 2986     {
+// 2987         S2w_Printf("\n\rCertificate %s Not Found", S2W_SSL_CERT_NAME_CA);
         BEQ.N    ??AppS2w_SslServerOpen_2
-// 2996         return S2W_FAILURE;
-// 2997     }
-// 2998 
-// 2999     certDetail.CaCertName = (char const *)s2w_ssl_cert_table[index].name;
+// 2988         return S2W_FAILURE;
+// 2989     }
+// 2990 
+// 2991     certDetail.CaCertName = (char const *)s2w_ssl_cert_table[index].name;
         MOVS     R6,#+12
         MULS     R0,R6,R0
-        LDR.W    R7,??DataTable103_1
-// 3000     certDetail.CaCertLocation = s2w_ssl_cert_table[index].certAddress + 2;
-// 3001     certLength = *(s2w_ssl_cert_table[index].certAddress + 1);
-// 3002     certLength <<= 8;
-// 3003     certLength = certLength | (*(s2w_ssl_cert_table[index].certAddress));
-// 3004     certDetail.CaCertLen = certLength;
-// 3005 
-// 3006 	index = S2wCert_SearchRamTable(S2W_SSL_CERT_NAME_SERVER);
+        LDR.W    R7,??DataTable99_1
+// 2992     certDetail.CaCertLocation = s2w_ssl_cert_table[index].certAddress + 2;
+// 2993     certLength = *(s2w_ssl_cert_table[index].certAddress + 1);
+// 2994     certLength <<= 8;
+// 2995     certLength = certLength | (*(s2w_ssl_cert_table[index].certAddress));
+// 2996     certDetail.CaCertLen = certLength;
+// 2997 
+// 2998 	index = S2wCert_SearchRamTable(S2W_SSL_CERT_NAME_SERVER);
         ADR.W    R8,`?<Constant "SSL_SERVER">`
         ADDS     R1,R0,R7
         LDR      R1,[R1, #+4]
@@ -8811,140 +8795,140 @@ AppS2w_SslServerOpen:
         LDR      R0,[R0, R7]
         ADDS     R1,R0,#+2
         STR      R1,[SP, #+4]
-        BL       ?Subroutine45
-??CrossCallReturnLabel_124:
+        BL       ?Subroutine46
+??CrossCallReturnLabel_128:
         STR      R0,[SP, #+8]
         MOV      R0,R8
           CFI FunCall S2wCert_SearchRamTable
         BL       S2wCert_SearchRamTable
-// 3007     if(index == -1)
+// 2999     if(index == -1)
         CMN      R0,#+1
         ITT      EQ 
         MOVEQ    R0,R8
           CFI FunCall S2wCert_FlashFileLoad
         BLEQ     S2wCert_FlashFileLoad
-// 3008     {
-// 3009     	index = S2wCert_FlashFileLoad(S2W_SSL_CERT_NAME_SERVER);
-// 3010     }
-// 3011     if(index == -1)
+// 3000     {
+// 3001     	index = S2wCert_FlashFileLoad(S2W_SSL_CERT_NAME_SERVER);
+// 3002     }
+// 3003     if(index == -1)
         CMN      R0,#+1
         BEQ.N    ??AppS2w_SslServerOpen_3
-// 3012     {
-// 3013         S2w_Printf("\n\rCertificate %s Not Found", S2W_SSL_CERT_NAME_SERVER);
-// 3014         return S2W_FAILURE;
-// 3015     }
-// 3016 
-// 3017     certDetail.ClientCertName = (char const *)s2w_ssl_cert_table[index].name;
+// 3004     {
+// 3005         S2w_Printf("\n\rCertificate %s Not Found", S2W_SSL_CERT_NAME_SERVER);
+// 3006         return S2W_FAILURE;
+// 3007     }
+// 3008 
+// 3009     certDetail.ClientCertName = (char const *)s2w_ssl_cert_table[index].name;
         MULS     R0,R6,R0
         ADDS     R1,R0,R7
-// 3018     certDetail.ClientCertLocation = s2w_ssl_cert_table[index].certAddress + 2;
-// 3019     certLength = *(s2w_ssl_cert_table[index].certAddress + 1);
-// 3020     certLength <<= 8;
-// 3021     certLength = certLength | (*(s2w_ssl_cert_table[index].certAddress));
-// 3022     certDetail.ClientCertLen = certLength;
-// 3023 
-// 3024 	index = S2wCert_SearchRamTable(S2W_SSL_CERT_NAME_KEY);
+// 3010     certDetail.ClientCertLocation = s2w_ssl_cert_table[index].certAddress + 2;
+// 3011     certLength = *(s2w_ssl_cert_table[index].certAddress + 1);
+// 3012     certLength <<= 8;
+// 3013     certLength = certLength | (*(s2w_ssl_cert_table[index].certAddress));
+// 3014     certDetail.ClientCertLen = certLength;
+// 3015 
+// 3016 	index = S2wCert_SearchRamTable(S2W_SSL_CERT_NAME_KEY);
         ADR.W    R8,`?<Constant "SSL_KEY">`
         LDR      R1,[R1, #+4]
         STR      R1,[SP, #+12]
         LDR      R0,[R0, R7]
         ADDS     R1,R0,#+2
         STR      R1,[SP, #+16]
-        BL       ?Subroutine45
-??CrossCallReturnLabel_125:
+        BL       ?Subroutine46
+??CrossCallReturnLabel_129:
         STR      R0,[SP, #+20]
         MOV      R0,R8
           CFI FunCall S2wCert_SearchRamTable
         BL       S2wCert_SearchRamTable
-// 3025     if(index == -1)
+// 3017     if(index == -1)
         CMN      R0,#+1
         ITT      EQ 
         MOVEQ    R0,R8
           CFI FunCall S2wCert_FlashFileLoad
         BLEQ     S2wCert_FlashFileLoad
-// 3026     {
-// 3027     	index = S2wCert_FlashFileLoad(S2W_SSL_CERT_NAME_KEY);
-// 3028     }
-// 3029     if(index == -1)
+// 3018     {
+// 3019     	index = S2wCert_FlashFileLoad(S2W_SSL_CERT_NAME_KEY);
+// 3020     }
+// 3021     if(index == -1)
         CMN      R0,#+1
         BNE.N    ??AppS2w_SslServerOpen_4
-// 3030     {
-// 3031         S2w_Printf("\n\rCertificate %s Not Found", S2W_SSL_CERT_NAME_KEY);
+// 3022     {
+// 3023         S2w_Printf("\n\rCertificate %s Not Found", S2W_SSL_CERT_NAME_KEY);
 ??AppS2w_SslServerOpen_3:
         MOV      R1,R8
 ??AppS2w_SslServerOpen_2:
         MOV      R0,R5
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3032         return S2W_FAILURE;
+// 3024         return S2W_FAILURE;
 ??AppS2w_SslServerOpen_1:
         MOVS     R0,#+1
         B.N      ??AppS2w_SslServerOpen_5
-// 3033     }
-// 3034     
-// 3035     certDetail.PrivateKeyName = (char const *)s2w_ssl_cert_table[index].name;
+// 3025     }
+// 3026     
+// 3027     certDetail.PrivateKeyName = (char const *)s2w_ssl_cert_table[index].name;
 ??AppS2w_SslServerOpen_4:
         MULS     R0,R6,R0
         ADDS     R1,R0,R7
         LDR      R1,[R1, #+4]
         STR      R1,[SP, #+24]
-// 3036     certDetail.PrivateKeyLocation = s2w_ssl_cert_table[index].certAddress + 2;
+// 3028     certDetail.PrivateKeyLocation = s2w_ssl_cert_table[index].certAddress + 2;
         LDR      R0,[R0, R7]
         ADDS     R1,R0,#+2
         STR      R1,[SP, #+28]
-// 3037     certLength = *(s2w_ssl_cert_table[index].certAddress + 1);
-// 3038     certLength <<= 8;
-// 3039     certLength = certLength | (*(s2w_ssl_cert_table[index].certAddress));
-// 3040     certDetail.PrivateKeyLen = certLength;
-        BL       ?Subroutine45
-??CrossCallReturnLabel_126:
+// 3029     certLength = *(s2w_ssl_cert_table[index].certAddress + 1);
+// 3030     certLength <<= 8;
+// 3031     certLength = certLength | (*(s2w_ssl_cert_table[index].certAddress));
+// 3032     certDetail.PrivateKeyLen = certLength;
+        BL       ?Subroutine46
+??CrossCallReturnLabel_130:
         STR      R0,[SP, #+32]
-// 3041 
-// 3042 #else
-// 3043 
-// 3044     certDetail.CaCertName = "ca_cert.crt";
-// 3045     certDetail.CaCertLocation = ca_cert;
-// 3046     certDetail.CaCertLen = sizeof(ca_cert);
-// 3047     certDetail.ClientCertName = "server_cert.crt";
-// 3048     certDetail.ClientCertLocation = server_cert;
-// 3049     certDetail.ClientCertLen = sizeof(server_cert);
-// 3050     certDetail.PrivateKeyName = "server_key.key";
-// 3051     certDetail.PrivateKeyLocation = server_key;
-// 3052     certDetail.PrivateKeyLen = sizeof(server_key);
-// 3053 #endif
-// 3054     s2wCidList[cid].ssl.pServerCred =
-// 3055         GsnSsl_ServerInit( &certDetail );
+// 3033 
+// 3034 #else
+// 3035 
+// 3036     certDetail.CaCertName = "ca_cert.crt";
+// 3037     certDetail.CaCertLocation = ca_cert;
+// 3038     certDetail.CaCertLen = sizeof(ca_cert);
+// 3039     certDetail.ClientCertName = "server_cert.crt";
+// 3040     certDetail.ClientCertLocation = server_cert;
+// 3041     certDetail.ClientCertLen = sizeof(server_cert);
+// 3042     certDetail.PrivateKeyName = "server_key.key";
+// 3043     certDetail.PrivateKeyLocation = server_key;
+// 3044     certDetail.PrivateKeyLen = sizeof(server_key);
+// 3045 #endif
+// 3046     s2wCidList[cid].ssl.pServerCred =
+// 3047         GsnSsl_ServerInit( &certDetail );
         ADD      R0,SP,#+0
           CFI FunCall GsnSsl_ServerInit
         BL       GsnSsl_ServerInit
         STR      R0,[R4, #+40]
-// 3056 
-// 3057     if(s2wCidList[cid].ssl.pServerCred == NULL )
+// 3048 
+// 3049     if(s2wCidList[cid].ssl.pServerCred == NULL )
         CMP      R0,#+0
         ITE      EQ 
         MOVEQ    R0,#-2147483648
         MOVNE    R0,#+0
-// 3058         return GSN_FAILURE;
-// 3059     return S2W_SUCCESS;
+// 3050         return GSN_FAILURE;
+// 3051     return S2W_SUCCESS;
 ??AppS2w_SslServerOpen_5:
         ADD      SP,SP,#+56
           CFI CFA R13+24
         POP      {R4-R8,PC}       ;; return
-          CFI EndBlock cfiBlock168
-// 3060 
-// 3061 }
+          CFI EndBlock cfiBlock173
+// 3052 
+// 3053 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable78:
+??DataTable74:
+        DC32     0xb0000600
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable74_1:
         DC32     s2wRxBuf
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable78_1:
-        DC32     MQTT_RECEIVE_QUEUE
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -8980,10 +8964,10 @@ AppS2w_SslServerOpen:
         DC8 "SSL_KEY"
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond169 Using cfiCommon0
+          CFI Block cfiCond174 Using cfiCommon0
           CFI Function AppS2w_SslServerOpen
           CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_124
+          CFI Conditional ??CrossCallReturnLabel_128
           CFI R4 Frame(CFA, -24)
           CFI R5 Frame(CFA, -20)
           CFI R6 Frame(CFA, -16)
@@ -8991,53 +8975,53 @@ AppS2w_SslServerOpen:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+80
-          CFI Block cfiCond170 Using cfiCommon0
-          CFI (cfiCond170) Function AppS2w_SslServerOpen
-          CFI (cfiCond170) NoCalls AppS2w_SslServerOpen
-          CFI (cfiCond170) Conditional ??CrossCallReturnLabel_125
-          CFI (cfiCond170) R4 Frame(CFA, -24)
-          CFI (cfiCond170) R5 Frame(CFA, -20)
-          CFI (cfiCond170) R6 Frame(CFA, -16)
-          CFI (cfiCond170) R7 Frame(CFA, -12)
-          CFI (cfiCond170) R8 Frame(CFA, -8)
-          CFI (cfiCond170) R14 Frame(CFA, -4)
-          CFI (cfiCond170) CFA R13+80
-          CFI Block cfiCond171 Using cfiCommon0
-          CFI (cfiCond171) Function AppS2w_SslServerOpen
-          CFI (cfiCond171) NoCalls AppS2w_SslServerOpen
-          CFI (cfiCond171) Conditional ??CrossCallReturnLabel_126
-          CFI (cfiCond171) R4 Frame(CFA, -24)
-          CFI (cfiCond171) R5 Frame(CFA, -20)
-          CFI (cfiCond171) R6 Frame(CFA, -16)
-          CFI (cfiCond171) R7 Frame(CFA, -12)
-          CFI (cfiCond171) R8 Frame(CFA, -8)
-          CFI (cfiCond171) R14 Frame(CFA, -4)
-          CFI (cfiCond171) CFA R13+80
-          CFI Block cfiPicker172 Using cfiCommon1
-          CFI (cfiPicker172) NoFunction
-          CFI (cfiPicker172) NoCalls AppS2w_SslServerOpen
-          CFI (cfiPicker172) Picker
+          CFI Block cfiCond175 Using cfiCommon0
+          CFI (cfiCond175) Function AppS2w_SslServerOpen
+          CFI (cfiCond175) NoCalls AppS2w_SslServerOpen
+          CFI (cfiCond175) Conditional ??CrossCallReturnLabel_129
+          CFI (cfiCond175) R4 Frame(CFA, -24)
+          CFI (cfiCond175) R5 Frame(CFA, -20)
+          CFI (cfiCond175) R6 Frame(CFA, -16)
+          CFI (cfiCond175) R7 Frame(CFA, -12)
+          CFI (cfiCond175) R8 Frame(CFA, -8)
+          CFI (cfiCond175) R14 Frame(CFA, -4)
+          CFI (cfiCond175) CFA R13+80
+          CFI Block cfiCond176 Using cfiCommon0
+          CFI (cfiCond176) Function AppS2w_SslServerOpen
+          CFI (cfiCond176) NoCalls AppS2w_SslServerOpen
+          CFI (cfiCond176) Conditional ??CrossCallReturnLabel_130
+          CFI (cfiCond176) R4 Frame(CFA, -24)
+          CFI (cfiCond176) R5 Frame(CFA, -20)
+          CFI (cfiCond176) R6 Frame(CFA, -16)
+          CFI (cfiCond176) R7 Frame(CFA, -12)
+          CFI (cfiCond176) R8 Frame(CFA, -8)
+          CFI (cfiCond176) R14 Frame(CFA, -4)
+          CFI (cfiCond176) CFA R13+80
+          CFI Block cfiPicker177 Using cfiCommon1
+          CFI (cfiPicker177) NoFunction
+          CFI (cfiPicker177) NoCalls AppS2w_SslServerOpen
+          CFI (cfiPicker177) Picker
         THUMB
-?Subroutine45:
+?Subroutine46:
         LDRB     R1,[R0, #+1]
         LDRB     R0,[R0, #+0]
         ORR      R0,R0,R1, LSL #+8
         BX       LR
-          CFI EndBlock cfiCond169
-          CFI EndBlock cfiCond170
-          CFI EndBlock cfiCond171
-          CFI EndBlock cfiPicker172
-// 3062 #endif
-// 3063 
-// 3064 
+          CFI EndBlock cfiCond174
+          CFI EndBlock cfiCond175
+          CFI EndBlock cfiCond176
+          CFI EndBlock cfiPicker177
+// 3054 #endif
+// 3055 
+// 3056 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock173 Using cfiCommon0
+          CFI Block cfiBlock178 Using cfiCommon0
           CFI Function AppS2w_SslClose
         THUMB
-// 3065 PUBLIC GSN_STATUS
-// 3066 AppS2w_SslClose(UINT8 cid)
-// 3067 {
+// 3057 PUBLIC GSN_STATUS
+// 3058 AppS2w_SslClose(UINT8 cid)
+// 3059 {
 AppS2w_SslClose:
         PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
@@ -9046,142 +9030,148 @@ AppS2w_SslClose:
           CFI R4 Frame(CFA, -16)
           CFI CFA R13+16
         MOV      R4,R0
-// 3068     if (s2wCidList[cid].sslflag == TRUE)
+// 3060     if (s2wCidList[cid].sslflag == TRUE)
         MOV      R0,#+296
-        LDR.W    R1,??DataTable94
+        LDR.W    R1,??DataTable98_1
         MLA      R5,R0,R4,R1
         ADD      R6,R5,#+28
         LDRB     R0,[R6, #+16]
         CMP      R0,#+1
         BNE.N    ??AppS2w_SslClose_0
-// 3069     {
-// 3070     	if(s2wCidList[cid].conMode == S2W_NETDATA_MODE_CLIENT)
+// 3061     {
+// 3062     	if(s2wCidList[cid].conMode == S2W_NETDATA_MODE_CLIENT)
         LDRB     R0,[R5, #+1]
         CBNZ.N   R0,??CrossCallReturnLabel_74
-// 3071     	{
-// 3072 	        s2wCidList[cid].s2wUsrCloseFlag = 1;
+// 3063     	{
+// 3064 	        s2wCidList[cid].s2wUsrCloseFlag = 1;
         MOVS     R0,#+1
         STRB     R0,[R5, #+144]
-// 3073 			/* start a timer for 10 seconds, to come ou if the sever does not respond
-// 3074 			*/
-// 3075 	        AppS2wHal_TimerStart(&s2wCidList[cid].s2wUserCloseTimer, 1000);
-        BL       ?Subroutine44
-// 3076 			/* Send Alert*/
-// 3077 	        GsnSsl_Alert(s2wCidList[cid].ssl.sslConn, s2wCidList[cid].sd);
-??CrossCallReturnLabel_123:
+// 3065 			/* start a timer for 10 seconds, to come ou if the sever does not respond
+// 3066 			*/
+// 3067 	        AppS2wHal_TimerStart(&s2wCidList[cid].s2wUserCloseTimer, 1000);
+        BL       ?Subroutine45
+// 3068 			/* Send Alert*/
+// 3069 	        GsnSsl_Alert(s2wCidList[cid].ssl.sslConn, s2wCidList[cid].sd);
+??CrossCallReturnLabel_127:
         LDR      R1,[R5, #+28]
         LDR      R0,[R6, #+12]
           CFI FunCall GsnSsl_Alert
         BL       GsnSsl_Alert
-// 3078 			/* wait on the semaphore to recv the remote close. This semaphore will be relesed in case of
-// 3079 			1. Socket error OR
-// 3080 			2. Remote socket close OR
-// 3081 			3. Socket Disconnect OR
-// 3082 			4. Time out
-// 3083 			*/
-// 3084 	        GsnOsal_SemAcquire(&s2wCidList[cid].s2wUserCloseInProgress, GSN_OSAL_WAIT_FOREVER);
+// 3070 			/* wait on the semaphore to recv the remote close. This semaphore will be relesed in case of
+// 3071 			1. Socket error OR
+// 3072 			2. Remote socket close OR
+// 3073 			3. Socket Disconnect OR
+// 3074 			4. Time out
+// 3075 			*/
+// 3076 	        GsnOsal_SemAcquire(&s2wCidList[cid].s2wUserCloseInProgress, GSN_OSAL_WAIT_FOREVER);
         BL       ?Subroutine29
-// 3085     	}
-// 3086 		/*Either close or Timeout happened*/
-// 3087 		AppS2w_SslLocalClose(cid);
+// 3077     	}
+// 3078 		/*Either close or Timeout happened*/
+// 3079 		AppS2w_SslLocalClose(cid);
 ??CrossCallReturnLabel_74:
         MOV      R0,R4
           CFI FunCall AppS2w_SslLocalClose
         BL       AppS2w_SslLocalClose
-// 3088         return S2W_SUCCESS;
+// 3080         return S2W_SUCCESS;
         MOVS     R0,#+0
         POP      {R4-R6,PC}
-// 3089     }
-// 3090     else
-// 3091     {
-// 3092         return S2W_EBADCID;
+// 3081     }
+// 3082     else
+// 3083     {
+// 3084         return S2W_EBADCID;
 ??AppS2w_SslClose_0:
         MOVS     R0,#+5
         POP      {R4-R6,PC}       ;; return
-          CFI EndBlock cfiBlock173
-// 3093     }
-// 3094 }
-// 3095 
+          CFI EndBlock cfiBlock178
+// 3085     }
+// 3086 }
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable75:
+        DC32     MQTT_RECEIVE_QUEUE
+// 3087 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock174 Using cfiCommon0
+          CFI Block cfiBlock179 Using cfiCommon0
           CFI Function AppS2w_SslLocalClose
         THUMB
-// 3096 PRIVATE GSN_STATUS
-// 3097 AppS2w_SslLocalClose(UINT8 cid)
-// 3098 {
+// 3088 PRIVATE GSN_STATUS
+// 3089 AppS2w_SslLocalClose(UINT8 cid)
+// 3090 {
 AppS2w_SslLocalClose:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-// 3099     nx_bsd_callback_register(s2wCidList[cid].sd, NULL, 0);
-        BL       ?Subroutine35
-??CrossCallReturnLabel_90:
+// 3091     nx_bsd_callback_register(s2wCidList[cid].sd, NULL, 0);
+        BL       ?Subroutine36
+??CrossCallReturnLabel_94:
         MOVS     R2,#+0
         LDR      R0,[R4, #+28]
         BL       ??Subroutine24_0
-// 3100 	if(s2wCidList[cid].conMode == S2W_NETDATA_MODE_CLIENT)
+// 3092 	if(s2wCidList[cid].conMode == S2W_NETDATA_MODE_CLIENT)
 ??CrossCallReturnLabel_56:
         LDRB     R0,[R4, #+1]
         ADD      R5,R4,#+28
         CBNZ.N   R0,??AppS2w_SslLocalClose_0
-// 3101     {
-// 3102         GsnSsl_Close(s2wCidList[cid].ssl.sslConn);
+// 3093     {
+// 3094         GsnSsl_Close(s2wCidList[cid].ssl.sslConn);
         LDR      R0,[R5, #+12]
           CFI FunCall GsnSsl_Close
         BL       GsnSsl_Close
         B.N      ??AppS2w_SslLocalClose_1
-// 3103 	}
-// 3104 	else if(s2wCidList[cid].conMode == S2W_NETDATA_MODE_SERVER)
+// 3095 	}
+// 3096 	else if(s2wCidList[cid].conMode == S2W_NETDATA_MODE_SERVER)
 ??AppS2w_SslLocalClose_0:
         CMP      R0,#+1
         ITT      EQ 
         LDREQ    R0,[R5, #+12]
           CFI FunCall GsnSsl_ServerDeInit
         BLEQ     GsnSsl_ServerDeInit
-// 3105 	{
-// 3106 #ifdef S2W_SSL_SERVER_SUPPORT
-// 3107 		GsnSsl_ServerDeInit(s2wCidList[cid].ssl.pServerCred);
-// 3108 #endif
-// 3109 	}
-// 3110     s2wCidList[cid].ssl.sslConn = NULL;
+// 3097 	{
+// 3098 #ifdef S2W_SSL_SERVER_SUPPORT
+// 3099 		GsnSsl_ServerDeInit(s2wCidList[cid].ssl.pServerCred);
+// 3100 #endif
+// 3101 	}
+// 3102     s2wCidList[cid].ssl.sslConn = NULL;
 ??AppS2w_SslLocalClose_1:
         MOVS     R0,#+0
         STR      R0,[R5, #+12]
-// 3111     s2wCidList[cid].sslflag = FALSE;
+// 3103     s2wCidList[cid].sslflag = FALSE;
         STRB     R0,[R5, #+16]
-// 3112     soc_close(s2wCidList[cid].sd);
+// 3104     soc_close(s2wCidList[cid].sd);
         LDR      R0,[R4, #+28]
           CFI FunCall soc_close
         BL       soc_close
-// 3113     s2wCidList[cid].localPort = 0;
+// 3105     s2wCidList[cid].localPort = 0;
         MOVS     R0,#+0
         STRH     R0,[R4, #+2]
-// 3114     s2wCidList[cid].remotePort = 0;
+// 3106     s2wCidList[cid].remotePort = 0;
         STRH     R0,[R4, #+4]
-// 3115 
-// 3116 	/* Delete Close In progress semaphore*/
-// 3117 	GsnOsal_SemDelete(&s2wCidList[cid].s2wUserCloseInProgress);
+// 3107 
+// 3108 	/* Delete Close In progress semaphore*/
+// 3109 	GsnOsal_SemDelete(&s2wCidList[cid].s2wUserCloseInProgress);
         ADD      R0,R4,#+56
           CFI FunCall GsnOsal_SemDelete
         BL       GsnOsal_SemDelete
-// 3118 	s2wCidList[cid].sd = CID_NOTINUSE;
+// 3110 	s2wCidList[cid].sd = CID_NOTINUSE;
         MOV      R0,#-1
         STR      R0,[R4, #+28]
-// 3119     return S2W_SUCCESS;
+// 3111     return S2W_SUCCESS;
         MOVS     R0,#+0
         POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock174
-// 3120 }
+          CFI EndBlock cfiBlock179
+// 3112 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond175 Using cfiCommon0
+          CFI Block cfiCond180 Using cfiCommon0
           CFI Function AppS2w_SslServerOpen
           CFI NoCalls
           CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_89
+          CFI Conditional ??CrossCallReturnLabel_93
           CFI R4 Frame(CFA, -24)
           CFI R5 Frame(CFA, -20)
           CFI R6 Frame(CFA, -16)
@@ -9189,65 +9179,65 @@ AppS2w_SslLocalClose:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
-          CFI Block cfiCond176 Using cfiCommon0
-          CFI (cfiCond176) Function AppS2w_SslLocalClose
-          CFI (cfiCond176) NoCalls AppS2w_SslLocalClose
-          CFI (cfiCond176) NoCalls AppS2w_SslServerOpen
-          CFI (cfiCond176) Conditional ??CrossCallReturnLabel_90
-          CFI (cfiCond176) R4 Frame(CFA, -12)
-          CFI (cfiCond176) R5 Frame(CFA, -8)
-          CFI (cfiCond176) R14 Frame(CFA, -4)
-          CFI (cfiCond176) CFA R13+16
-          CFI Block cfiPicker177 Using cfiCommon1
-          CFI (cfiPicker177) NoFunction
-          CFI (cfiPicker177) NoCalls AppS2w_SslLocalClose
-          CFI (cfiPicker177) NoCalls AppS2w_SslServerOpen
-          CFI (cfiPicker177) Picker
+          CFI Block cfiCond181 Using cfiCommon0
+          CFI (cfiCond181) Function AppS2w_SslLocalClose
+          CFI (cfiCond181) NoCalls AppS2w_SslServerOpen
+          CFI (cfiCond181) NoCalls AppS2w_SslLocalClose
+          CFI (cfiCond181) Conditional ??CrossCallReturnLabel_94
+          CFI (cfiCond181) R4 Frame(CFA, -12)
+          CFI (cfiCond181) R5 Frame(CFA, -8)
+          CFI (cfiCond181) R14 Frame(CFA, -4)
+          CFI (cfiCond181) CFA R13+16
+          CFI Block cfiPicker182 Using cfiCommon1
+          CFI (cfiPicker182) NoFunction
+          CFI (cfiPicker182) NoCalls AppS2w_SslServerOpen
+          CFI (cfiPicker182) NoCalls AppS2w_SslLocalClose
+          CFI (cfiPicker182) Picker
         THUMB
-?Subroutine35:
+?Subroutine36:
         MOV      R1,#+296
-        LDR.W    R2,??DataTable94
+        LDR.W    R2,??DataTable98_1
         MLA      R4,R1,R0,R2
         BX       LR
-          CFI EndBlock cfiCond175
-          CFI EndBlock cfiCond176
-          CFI EndBlock cfiPicker177
+          CFI EndBlock cfiCond180
+          CFI EndBlock cfiCond181
+          CFI EndBlock cfiPicker182
+// 3113 
 
         SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable80:
-        DC32     s2wUdpSocketCloseSem+0x1C
-// 3121 
-
-        SECTION `.text`:CODE:NOROOT(2)
-          CFI Block cfiBlock178 Using cfiCommon0
+          CFI Block cfiBlock183 Using cfiCommon0
           CFI Function AppS2wHal_HttpCloseTimeout
         THUMB
-// 3122 PRIVATE VOID
-// 3123 AppS2wHal_HttpCloseTimeout(VOID *data)
-// 3124 {
-// 3125     UINT32 cid = (UINT32)data;
-// 3126     GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
+// 3114 PRIVATE VOID
+// 3115 AppS2wHal_HttpCloseTimeout(VOID *data)
+// 3116 {
+// 3117     UINT32 cid = (UINT32)data;
+// 3118     GsnOsal_SemRelease(&s2wCidList[cid].s2wUserCloseInProgress);
 AppS2wHal_HttpCloseTimeout:
         MOV      R1,#+296
-        LDR.W    R2,??DataTable94
+        LDR.W    R2,??DataTable98_1
         MLA      R0,R1,R0,R2
         ADDS     R0,R0,#+56
           CFI FunCall GsnOsal_SemRelease
         B.W      GsnOsal_SemRelease
-          CFI EndBlock cfiBlock178
-// 3127 }
-// 3128 
-// 3129 #ifdef S2W_HTTPC_SUPPORT
+          CFI EndBlock cfiBlock183
+// 3119 }
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable77:
+        DC32     s2wUdpSocketCloseSem+0x1C
+// 3120 
+// 3121 #ifdef S2W_HTTPC_SUPPORT
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock179 Using cfiCommon0
+          CFI Block cfiBlock184 Using cfiCommon0
           CFI Function AppS2wHal_HttpClose
         THUMB
-// 3130 UINT8
-// 3131 AppS2wHal_HttpClose(UINT32 cid)
-// 3132 {
+// 3122 UINT8
+// 3123 AppS2wHal_HttpClose(UINT32 cid)
+// 3124 {
 AppS2wHal_HttpClose:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
@@ -9255,152 +9245,90 @@ AppS2wHal_HttpClose:
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
         MOV      R4,R0
-// 3133 #ifdef S2W_HTTPS_SUPPORT
-// 3134 		ttHttpcConEntryPtr		conEntryPtr;
-// 3135 #endif
-// 3136 	s2wCidList[cid].s2wUsrCloseFlag = 1;
+// 3125 #ifdef S2W_HTTPS_SUPPORT
+// 3126 		ttHttpcConEntryPtr		conEntryPtr;
+// 3127 #endif
+// 3128 	s2wCidList[cid].s2wUsrCloseFlag = 1;
         MOV      R0,#+296
-        LDR.W    R1,??DataTable94
+        LDR.W    R1,??DataTable98_1
         MLA      R5,R0,R4,R1
         MOVS     R0,#+1
         STRB     R0,[R5, #+144]
-// 3137          if(s2wCidList[cid].pHttpData)
+// 3129          if(s2wCidList[cid].pHttpData)
         LDR      R0,[R5, #+52]
         CBZ.N    R0,??AppS2wHal_HttpClose_0
-// 3138          {
-// 3139 #ifdef S2W_HTTPS_SUPPORT
-// 3140 		conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
-// 3141 		if(conEntryPtr->hconHttpType == GSN_HTTPS)
-        BL       ?Subroutine39
-??CrossCallReturnLabel_103:
-        BNE.N    ??CrossCallReturnLabel_73
-// 3142             {
-// 3143 
-// 3144 			AppS2wHal_TimerStart(&s2wCidList[cid].s2wUserCloseTimer, 1000);
-        BL       ?Subroutine44
-// 3145 			GsnHttp_Alert(s2wCidList[cid].pHttpData->pHttpHandle);
-??CrossCallReturnLabel_122:
-        LDR      R0,[R5, #+52]
+// 3130          {
+// 3131 #ifdef S2W_HTTPS_SUPPORT
+// 3132 		conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
+// 3133 		if(conEntryPtr->hconHttpType == GSN_HTTPS)
         BL       ?Subroutine40
-// 3146 			GsnOsal_SemAcquire(&s2wCidList[cid].s2wUserCloseInProgress, GSN_OSAL_WAIT_FOREVER);
-??CrossCallReturnLabel_104:
+??CrossCallReturnLabel_107:
+        BNE.N    ??CrossCallReturnLabel_73
+// 3134             {
+// 3135 
+// 3136 			AppS2wHal_TimerStart(&s2wCidList[cid].s2wUserCloseTimer, 1000);
+        BL       ?Subroutine45
+// 3137 			GsnHttp_Alert(s2wCidList[cid].pHttpData->pHttpHandle);
+??CrossCallReturnLabel_126:
+        BL       ?Subroutine41
+// 3138 			GsnOsal_SemAcquire(&s2wCidList[cid].s2wUserCloseInProgress, GSN_OSAL_WAIT_FOREVER);
+??CrossCallReturnLabel_110:
         BL       ?Subroutine29
-// 3147 			AppS2wHal_HttpLocalClose(cid);
-// 3148             }
-// 3149 		else /* normal http directly close the connection */
-// 3150 #endif    
-// 3151 		{
-// 3152 			AppS2wHal_HttpLocalClose(cid);
+// 3139 			AppS2wHal_HttpLocalClose(cid);
+// 3140             }
+// 3141 		else /* normal http directly close the connection */
+// 3142 #endif    
+// 3143 		{
+// 3144 			AppS2wHal_HttpLocalClose(cid);
 ??CrossCallReturnLabel_73:
         MOV      R0,R4
           CFI FunCall AppS2wHal_HttpLocalClose
         BL       AppS2wHal_HttpLocalClose
-// 3153         }
-// 3154 	}
-// 3155         else
-// 3156         {
-// 3157             return S2W_EBADCID;
-// 3158     }
-// 3159     return S2W_SUCCESS;
+// 3145         }
+// 3146 	}
+// 3147         else
+// 3148         {
+// 3149             return S2W_EBADCID;
+// 3150     }
+// 3151     return S2W_SUCCESS;
         MOVS     R0,#+0
         POP      {R1,R4,R5,PC}
 ??AppS2wHal_HttpClose_0:
         MOVS     R0,#+5
         POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock179
-// 3160 }
+          CFI EndBlock cfiBlock184
+// 3152 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable82:
+??DataTable78:
         DC32     s2wAutoConnState
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable82_1:
+??DataTable78_1:
         DC32     s2wState
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable82_2:
+??DataTable78_2:
         DC32     s2wIsAutoconnected
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond180 Using cfiCommon0
+          CFI Block cfiCond185 Using cfiCommon0
           CFI Function AppS2w_SslClose
-          CFI Conditional ??CrossCallReturnLabel_123
+          CFI Conditional ??CrossCallReturnLabel_127
           CFI R4 Frame(CFA, -16)
           CFI R5 Frame(CFA, -12)
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
-          CFI Block cfiCond181 Using cfiCommon0
-          CFI (cfiCond181) Function AppS2wHal_HttpClose
-          CFI (cfiCond181) Conditional ??CrossCallReturnLabel_122
-          CFI (cfiCond181) R4 Frame(CFA, -12)
-          CFI (cfiCond181) R5 Frame(CFA, -8)
-          CFI (cfiCond181) R14 Frame(CFA, -4)
-          CFI (cfiCond181) CFA R13+16
-          CFI Block cfiPicker182 Using cfiCommon1
-          CFI (cfiPicker182) NoFunction
-          CFI (cfiPicker182) Picker
-        THUMB
-?Subroutine44:
-        MOV      R1,#+1000
-        ADD      R0,R5,#+88
-          CFI FunCall AppS2w_SslClose AppS2wHal_TimerStart
-          CFI FunCall AppS2wHal_HttpClose AppS2wHal_TimerStart
-        B.W      AppS2wHal_TimerStart
-          CFI EndBlock cfiCond180
-          CFI EndBlock cfiCond181
-          CFI EndBlock cfiPicker182
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond183 Using cfiCommon0
-          CFI Function AppS2wHal_NetRecvTask
-          CFI Conditional ??CrossCallReturnLabel_107
-          CFI R4 Frame(CFA, -36)
-          CFI R5 Frame(CFA, -32)
-          CFI R6 Frame(CFA, -28)
-          CFI R7 Frame(CFA, -24)
-          CFI R8 Frame(CFA, -20)
-          CFI R9 Frame(CFA, -16)
-          CFI R10 Frame(CFA, -12)
-          CFI R11 Frame(CFA, -8)
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+128
-          CFI Block cfiCond184 Using cfiCommon0
-          CFI (cfiCond184) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond184) Conditional ??CrossCallReturnLabel_106
-          CFI (cfiCond184) R4 Frame(CFA, -36)
-          CFI (cfiCond184) R5 Frame(CFA, -32)
-          CFI (cfiCond184) R6 Frame(CFA, -28)
-          CFI (cfiCond184) R7 Frame(CFA, -24)
-          CFI (cfiCond184) R8 Frame(CFA, -20)
-          CFI (cfiCond184) R9 Frame(CFA, -16)
-          CFI (cfiCond184) R10 Frame(CFA, -12)
-          CFI (cfiCond184) R11 Frame(CFA, -8)
-          CFI (cfiCond184) R14 Frame(CFA, -4)
-          CFI (cfiCond184) CFA R13+128
-          CFI Block cfiCond185 Using cfiCommon0
-          CFI (cfiCond185) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond185) Conditional ??CrossCallReturnLabel_105
-          CFI (cfiCond185) R4 Frame(CFA, -36)
-          CFI (cfiCond185) R5 Frame(CFA, -32)
-          CFI (cfiCond185) R6 Frame(CFA, -28)
-          CFI (cfiCond185) R7 Frame(CFA, -24)
-          CFI (cfiCond185) R8 Frame(CFA, -20)
-          CFI (cfiCond185) R9 Frame(CFA, -16)
-          CFI (cfiCond185) R10 Frame(CFA, -12)
-          CFI (cfiCond185) R11 Frame(CFA, -8)
-          CFI (cfiCond185) R14 Frame(CFA, -4)
-          CFI (cfiCond185) CFA R13+128
           CFI Block cfiCond186 Using cfiCommon0
           CFI (cfiCond186) Function AppS2wHal_HttpClose
-          CFI (cfiCond186) Conditional ??CrossCallReturnLabel_104
+          CFI (cfiCond186) Conditional ??CrossCallReturnLabel_126
           CFI (cfiCond186) R4 Frame(CFA, -12)
           CFI (cfiCond186) R5 Frame(CFA, -8)
           CFI (cfiCond186) R14 Frame(CFA, -4)
@@ -9409,15 +9337,12 @@ AppS2wHal_HttpClose:
           CFI (cfiPicker187) NoFunction
           CFI (cfiPicker187) Picker
         THUMB
-?Subroutine40:
-        LDR      R0,[R0, #+0]
-          CFI FunCall AppS2wHal_NetRecvTask GsnHttp_Alert
-          CFI FunCall AppS2wHal_NetRecvTask GsnHttp_Alert
-          CFI FunCall AppS2wHal_NetRecvTask GsnHttp_Alert
-          CFI FunCall AppS2wHal_HttpClose GsnHttp_Alert
-        B.W      GsnHttp_Alert
-          CFI EndBlock cfiCond183
-          CFI EndBlock cfiCond184
+?Subroutine45:
+        MOV      R1,#+1000
+        ADD      R0,R5,#+88
+          CFI FunCall AppS2w_SslClose AppS2wHal_TimerStart
+          CFI FunCall AppS2wHal_HttpClose AppS2wHal_TimerStart
+        B.W      AppS2wHal_TimerStart
           CFI EndBlock cfiCond185
           CFI EndBlock cfiCond186
           CFI EndBlock cfiPicker187
@@ -9425,9 +9350,7 @@ AppS2wHal_HttpClose:
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond188 Using cfiCommon0
           CFI Function AppS2wHal_NetRecvTask
-          CFI NoCalls
-          CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_101
+          CFI Conditional ??CrossCallReturnLabel_111
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -9439,47 +9362,115 @@ AppS2wHal_HttpClose:
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+128
           CFI Block cfiCond189 Using cfiCommon0
-          CFI (cfiCond189) Function AppS2wHal_NetRecvTask
-          CFI (cfiCond189) NoCalls AppS2wHal_HttpClose
-          CFI (cfiCond189) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiCond189) Conditional ??CrossCallReturnLabel_102
-          CFI (cfiCond189) R4 Frame(CFA, -36)
-          CFI (cfiCond189) R5 Frame(CFA, -32)
-          CFI (cfiCond189) R6 Frame(CFA, -28)
-          CFI (cfiCond189) R7 Frame(CFA, -24)
-          CFI (cfiCond189) R8 Frame(CFA, -20)
-          CFI (cfiCond189) R9 Frame(CFA, -16)
-          CFI (cfiCond189) R10 Frame(CFA, -12)
-          CFI (cfiCond189) R11 Frame(CFA, -8)
+          CFI (cfiCond189) Function AppS2wHal_HttpClose
+          CFI (cfiCond189) Conditional ??CrossCallReturnLabel_110
+          CFI (cfiCond189) R4 Frame(CFA, -12)
+          CFI (cfiCond189) R5 Frame(CFA, -8)
           CFI (cfiCond189) R14 Frame(CFA, -4)
-          CFI (cfiCond189) CFA R13+128
-          CFI Block cfiCond190 Using cfiCommon0
-          CFI (cfiCond190) Function AppS2wHal_HttpClose
-          CFI (cfiCond190) NoCalls AppS2wHal_HttpClose
-          CFI (cfiCond190) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiCond190) Conditional ??CrossCallReturnLabel_103
-          CFI (cfiCond190) R4 Frame(CFA, -12)
-          CFI (cfiCond190) R5 Frame(CFA, -8)
-          CFI (cfiCond190) R14 Frame(CFA, -4)
-          CFI (cfiCond190) CFA R13+16
-          CFI Block cfiPicker191 Using cfiCommon1
-          CFI (cfiPicker191) NoFunction
-          CFI (cfiPicker191) NoCalls AppS2wHal_HttpClose
-          CFI (cfiPicker191) NoCalls AppS2wHal_NetRecvTask
-          CFI (cfiPicker191) Picker
+          CFI (cfiCond189) CFA R13+16
+          CFI Block cfiPicker190 Using cfiCommon1
+          CFI (cfiPicker190) NoFunction
+          CFI (cfiPicker190) Picker
         THUMB
-?Subroutine39:
+?Subroutine41:
+        LDR      R0,[R5, #+52]
+          CFI Block cfiCond191 Using cfiCommon0
+          CFI (cfiCond191) Function AppS2wHal_NetRecvTask
+          CFI (cfiCond191) Conditional ??CrossCallReturnLabel_109
+          CFI (cfiCond191) R4 Frame(CFA, -36)
+          CFI (cfiCond191) R5 Frame(CFA, -32)
+          CFI (cfiCond191) R6 Frame(CFA, -28)
+          CFI (cfiCond191) R7 Frame(CFA, -24)
+          CFI (cfiCond191) R8 Frame(CFA, -20)
+          CFI (cfiCond191) R9 Frame(CFA, -16)
+          CFI (cfiCond191) R10 Frame(CFA, -12)
+          CFI (cfiCond191) R11 Frame(CFA, -8)
+          CFI (cfiCond191) R14 Frame(CFA, -4)
+          CFI (cfiCond191) CFA R13+128
+          CFI Block cfiCond192 Using cfiCommon0
+          CFI (cfiCond192) Function AppS2wHal_NetRecvTask
+          CFI (cfiCond192) Conditional ??CrossCallReturnLabel_108
+          CFI (cfiCond192) R4 Frame(CFA, -36)
+          CFI (cfiCond192) R5 Frame(CFA, -32)
+          CFI (cfiCond192) R6 Frame(CFA, -28)
+          CFI (cfiCond192) R7 Frame(CFA, -24)
+          CFI (cfiCond192) R8 Frame(CFA, -20)
+          CFI (cfiCond192) R9 Frame(CFA, -16)
+          CFI (cfiCond192) R10 Frame(CFA, -12)
+          CFI (cfiCond192) R11 Frame(CFA, -8)
+          CFI (cfiCond192) R14 Frame(CFA, -4)
+          CFI (cfiCond192) CFA R13+128
+??Subroutine41_0:
+        LDR      R0,[R0, #+0]
+          CFI FunCall AppS2wHal_NetRecvTask GsnHttp_Alert
+          CFI FunCall AppS2wHal_HttpClose GsnHttp_Alert
+          CFI FunCall AppS2wHal_NetRecvTask GsnHttp_Alert
+          CFI FunCall AppS2wHal_NetRecvTask GsnHttp_Alert
+        B.W      GsnHttp_Alert
+          CFI EndBlock cfiCond188
+          CFI EndBlock cfiCond189
+          CFI EndBlock cfiPicker190
+          CFI EndBlock cfiCond191
+          CFI EndBlock cfiCond192
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiCond193 Using cfiCommon0
+          CFI Function AppS2wHal_NetRecvTask
+          CFI NoCalls
+          CFI NoCalls
+          CFI Conditional ??CrossCallReturnLabel_105
+          CFI R4 Frame(CFA, -36)
+          CFI R5 Frame(CFA, -32)
+          CFI R6 Frame(CFA, -28)
+          CFI R7 Frame(CFA, -24)
+          CFI R8 Frame(CFA, -20)
+          CFI R9 Frame(CFA, -16)
+          CFI R10 Frame(CFA, -12)
+          CFI R11 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+128
+          CFI Block cfiCond194 Using cfiCommon0
+          CFI (cfiCond194) Function AppS2wHal_NetRecvTask
+          CFI (cfiCond194) NoCalls AppS2wHal_HttpClose
+          CFI (cfiCond194) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiCond194) Conditional ??CrossCallReturnLabel_106
+          CFI (cfiCond194) R4 Frame(CFA, -36)
+          CFI (cfiCond194) R5 Frame(CFA, -32)
+          CFI (cfiCond194) R6 Frame(CFA, -28)
+          CFI (cfiCond194) R7 Frame(CFA, -24)
+          CFI (cfiCond194) R8 Frame(CFA, -20)
+          CFI (cfiCond194) R9 Frame(CFA, -16)
+          CFI (cfiCond194) R10 Frame(CFA, -12)
+          CFI (cfiCond194) R11 Frame(CFA, -8)
+          CFI (cfiCond194) R14 Frame(CFA, -4)
+          CFI (cfiCond194) CFA R13+128
+          CFI Block cfiCond195 Using cfiCommon0
+          CFI (cfiCond195) Function AppS2wHal_HttpClose
+          CFI (cfiCond195) NoCalls AppS2wHal_HttpClose
+          CFI (cfiCond195) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiCond195) Conditional ??CrossCallReturnLabel_107
+          CFI (cfiCond195) R4 Frame(CFA, -12)
+          CFI (cfiCond195) R5 Frame(CFA, -8)
+          CFI (cfiCond195) R14 Frame(CFA, -4)
+          CFI (cfiCond195) CFA R13+16
+          CFI Block cfiPicker196 Using cfiCommon1
+          CFI (cfiPicker196) NoFunction
+          CFI (cfiPicker196) NoCalls AppS2wHal_HttpClose
+          CFI (cfiPicker196) NoCalls AppS2wHal_NetRecvTask
+          CFI (cfiPicker196) Picker
+        THUMB
+?Subroutine40:
         LDR      R0,[R0, #+0]
         LDR      R0,[R0, #+188]
         CMP      R0,#+1
         BX       LR
-          CFI EndBlock cfiCond188
-          CFI EndBlock cfiCond189
-          CFI EndBlock cfiCond190
-          CFI EndBlock cfiPicker191
+          CFI EndBlock cfiCond193
+          CFI EndBlock cfiCond194
+          CFI EndBlock cfiCond195
+          CFI EndBlock cfiPicker196
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond192 Using cfiCommon0
+          CFI Block cfiCond197 Using cfiCommon0
           CFI Function AppS2w_SslClose
           CFI Conditional ??CrossCallReturnLabel_74
           CFI R4 Frame(CFA, -16)
@@ -9487,16 +9478,16 @@ AppS2wHal_HttpClose:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
-          CFI Block cfiCond193 Using cfiCommon0
-          CFI (cfiCond193) Function AppS2wHal_HttpClose
-          CFI (cfiCond193) Conditional ??CrossCallReturnLabel_73
-          CFI (cfiCond193) R4 Frame(CFA, -12)
-          CFI (cfiCond193) R5 Frame(CFA, -8)
-          CFI (cfiCond193) R14 Frame(CFA, -4)
-          CFI (cfiCond193) CFA R13+16
-          CFI Block cfiPicker194 Using cfiCommon1
-          CFI (cfiPicker194) NoFunction
-          CFI (cfiPicker194) Picker
+          CFI Block cfiCond198 Using cfiCommon0
+          CFI (cfiCond198) Function AppS2wHal_HttpClose
+          CFI (cfiCond198) Conditional ??CrossCallReturnLabel_73
+          CFI (cfiCond198) R4 Frame(CFA, -12)
+          CFI (cfiCond198) R5 Frame(CFA, -8)
+          CFI (cfiCond198) R14 Frame(CFA, -4)
+          CFI (cfiCond198) CFA R13+16
+          CFI Block cfiPicker199 Using cfiCommon1
+          CFI (cfiPicker199) NoFunction
+          CFI (cfiPicker199) Picker
         THUMB
 ?Subroutine29:
         MOV      R1,#-1
@@ -9504,18 +9495,18 @@ AppS2wHal_HttpClose:
           CFI FunCall AppS2w_SslClose GsnOsal_SemAcquire
           CFI FunCall AppS2wHal_HttpClose GsnOsal_SemAcquire
         B.W      GsnOsal_SemAcquire
-          CFI EndBlock cfiCond192
-          CFI EndBlock cfiCond193
-          CFI EndBlock cfiPicker194
-// 3161 
+          CFI EndBlock cfiCond197
+          CFI EndBlock cfiCond198
+          CFI EndBlock cfiPicker199
+// 3153 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock195 Using cfiCommon0
+          CFI Block cfiBlock200 Using cfiCommon0
           CFI Function AppS2wHal_HttpOpen
         THUMB
-// 3162 UINT8
-// 3163 AppS2wHal_HttpOpen(S2W_HTTP_DATA_T *pHttpData, UINT32 *cid)
-// 3164 {
+// 3154 UINT8
+// 3155 AppS2wHal_HttpOpen(S2W_HTTP_DATA_T *pHttpData, UINT32 *cid)
+// 3156 {
 AppS2wHal_HttpOpen:
         PUSH     {R4-R8,LR}
           CFI R14 Frame(CFA, -4)
@@ -9528,47 +9519,47 @@ AppS2wHal_HttpOpen:
         SUB      SP,SP,#+88
           CFI CFA R13+112
         MOV      R4,R0
-// 3165     GSN_STATUS status;
-// 3166     //UINT32 ip;
-// 3167     GSN_HTTPC_CONN_PARAMS_T connParams;
-// 3168 	struct sockaddr_in sockAddr;
-// 3169 	INT32 len = sizeof(sockAddr), ret;
+// 3157     GSN_STATUS status;
+// 3158     //UINT32 ip;
+// 3159     GSN_HTTPC_CONN_PARAMS_T connParams;
+// 3160 	struct sockaddr_in sockAddr;
+// 3161 	INT32 len = sizeof(sockAddr), ret;
         MOVS     R0,#+16
         MOV      R5,R1
         STR      R0,[SP, #+0]
-// 3170 
-// 3171     *cid = AppS2wHal_CidGet();
+// 3162 
+// 3163     *cid = AppS2wHal_CidGet();
           CFI FunCall AppS2wHal_CidGet
         BL       AppS2wHal_CidGet
         STR      R0,[R5, #+0]
-// 3172     if (*cid == INVALID_CID)
+// 3164     if (*cid == INVALID_CID)
         CMP      R0,#+255
         IT       EQ 
         MOVEQ    R0,#+4
-// 3173     {
-// 3174             return S2W_ENCID;
+// 3165     {
+// 3166             return S2W_ENCID;
         BEQ.N    ??AppS2wHal_HttpOpen_0
-// 3175     }
-// 3176 
-// 3177     connParams.ConTimeout = pHttpData->connTimeOut;
+// 3167     }
+// 3168 
+// 3169     connParams.ConTimeout = pHttpData->connTimeOut;
         LDR      R0,[R4, #+76]
-// 3178     connParams.proxyPresent = pHttpData->proxyServer;
-// 3179     connParams.type = pHttpData->httpType;
-// 3180 #if defined(S2W_SSL_CLIENT_SUPPORT)
-// 3181     connParams.sslParams.caCert = pHttpData->pCaCert;
-// 3182     connParams.sslParams.caCertLen = pHttpData->caCertLen;
-// 3183     connParams.sslParams.caCertName = NULL;
-// 3184 
-// 3185     connParams.sslParams.clientCert= pHttpData->pClientCert;
-// 3186     connParams.sslParams.clientCertLen = pHttpData->clientCertLen;
-// 3187     connParams.sslParams.clientCertName = NULL;
-// 3188 
-// 3189     connParams.sslParams.clientKey = pHttpData->pClientKey;
-// 3190     connParams.sslParams.clientKeyLen = pHttpData->clientKeyLen;
-// 3191     connParams.sslParams.clientKeyName = NULL;
-// 3192 #endif    
-// 3193 	s2wCidList[*cid].httpflag = 1;
-        LDR.W    R8,??DataTable94
+// 3170     connParams.proxyPresent = pHttpData->proxyServer;
+// 3171     connParams.type = pHttpData->httpType;
+// 3172 #if defined(S2W_SSL_CLIENT_SUPPORT)
+// 3173     connParams.sslParams.caCert = pHttpData->pCaCert;
+// 3174     connParams.sslParams.caCertLen = pHttpData->caCertLen;
+// 3175     connParams.sslParams.caCertName = NULL;
+// 3176 
+// 3177     connParams.sslParams.clientCert= pHttpData->pClientCert;
+// 3178     connParams.sslParams.clientCertLen = pHttpData->clientCertLen;
+// 3179     connParams.sslParams.clientCertName = NULL;
+// 3180 
+// 3181     connParams.sslParams.clientKey = pHttpData->pClientKey;
+// 3182     connParams.sslParams.clientKeyLen = pHttpData->clientKeyLen;
+// 3183     connParams.sslParams.clientKeyName = NULL;
+// 3184 #endif    
+// 3185 	s2wCidList[*cid].httpflag = 1;
+        LDR.W    R8,??DataTable98_1
         STR      R0,[SP, #+8]
         MOV      R6,#+296
         LDRB     R0,[R4, #+44]
@@ -9594,123 +9585,123 @@ AppS2wHal_HttpOpen:
         STR      R0,[SP, #+44]
         MOVS     R0,#+0
         STR      R0,[SP, #+36]
-        BL       ?Subroutine42
-??CrossCallReturnLabel_110:
+        BL       ?Subroutine43
+??CrossCallReturnLabel_114:
         STRB     R1,[R0, #+47]
-// 3194     s2wCidList[*cid].conMode = S2W_NETDATA_MODE_CLIENT_TRANSIENT;
+// 3186     s2wCidList[*cid].conMode = S2W_NETDATA_MODE_CLIENT_TRANSIENT;
         MOVS     R1,#+7
-        BL       ?Subroutine42
-??CrossCallReturnLabel_111:
+        BL       ?Subroutine43
+??CrossCallReturnLabel_115:
         STRB     R1,[R0, #+1]
-// 3195 
-// 3196 #ifdef S2W_SSL_EXT_MAX_FRAG_LEN
-// 3197     connParams.sslExtnMaxFragLen = S2W_SSL_EXT_MAX_FRAG_LEN;
-// 3198 #else
-// 3199     connParams.sslExtnMaxFragLen = 0;
+// 3187 
+// 3188 #ifdef S2W_SSL_EXT_MAX_FRAG_LEN
+// 3189     connParams.sslExtnMaxFragLen = S2W_SSL_EXT_MAX_FRAG_LEN;
+// 3190 #else
+// 3191     connParams.sslExtnMaxFragLen = 0;
         MOVS     R0,#+0
         STR      R0,[SP, #+56]
-// 3200 #endif
-// 3201 
-// 3202 	//if(pHttpData->httpType == GSN_HTTP)
-// 3203 	{
-// 3204 		//httpConfInfo.pktPoolHndl = GsnNw_PktPoolHndlGet(&appCtx.nwCtx, GSN_NW_LBUF_PKT_POOL);
-// 3205 #if defined(S2W_SSL_CLIENT_SUPPORT)
-// 3206     	if((pHttpData->httpType == GSN_HTTPS) && (0 != s2wSslConf.dnsBufferLen))
+// 3192 #endif
+// 3193 
+// 3194 	//if(pHttpData->httpType == GSN_HTTP)
+// 3195 	{
+// 3196 		//httpConfInfo.pktPoolHndl = GsnNw_PktPoolHndlGet(&appCtx.nwCtx, GSN_NW_LBUF_PKT_POOL);
+// 3197 #if defined(S2W_SSL_CLIENT_SUPPORT)
+// 3198     	if((pHttpData->httpType == GSN_HTTPS) && (0 != s2wSslConf.dnsBufferLen))
         LDRB     R0,[R4, #+12]
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_HttpOpen_1
-        LDR.W    R7,??DataTable102_1
+        LDR.W    R7,??DataTable98_2
         LDR      R0,[R7, #+0]
         CBZ.N    R0,??AppS2wHal_HttpOpen_1
-// 3207     	{
-// 3208 			connParams.dnsBuf = gsn_malloc(sizeof(GSN_SSL_DNS_BUF_INFO_T));
+// 3199     	{
+// 3200 			connParams.dnsBuf = gsn_malloc(sizeof(GSN_SSL_DNS_BUF_INFO_T));
         MOVS     R2,#+0
-        MOVW     R1,#+3208
+        MOV      R1,#+3200
         MOVS     R0,#+12
           CFI FunCall GsnDynMemMgmt_Alloc
         BL       GsnDynMemMgmt_Alloc
         STR      R0,[SP, #+64]
-// 3209 			s2wSslConf.dnsNameBuf = gsn_malloc(s2wSslConf.dnsBufferLen);
+// 3201 			s2wSslConf.dnsNameBuf = gsn_malloc(s2wSslConf.dnsBufferLen);
         MOVS     R2,#+0
         LDR      R0,[R7, #+0]
-        MOVW     R1,#+3209
+        MOVW     R1,#+3201
           CFI FunCall GsnDynMemMgmt_Alloc
         BL       GsnDynMemMgmt_Alloc
         STR      R0,[R7, #+4]
-// 3210 			memset(s2wSslConf.dnsNameBuf, 0, s2wSslConf.dnsBufferLen);
+// 3202 			memset(s2wSslConf.dnsNameBuf, 0, s2wSslConf.dnsBufferLen);
         MOVS     R1,#+0
         LDR      R2,[R7, #+0]
           CFI FunCall memset
         BL       memset
-// 3211 			connParams.dnsBuf->bufStart = connParams.dnsBuf->bufCurrent =  s2wSslConf.dnsNameBuf;
+// 3203 			connParams.dnsBuf->bufStart = connParams.dnsBuf->bufCurrent =  s2wSslConf.dnsNameBuf;
         LDR      R1,[SP, #+64]
         LDR      R0,[R7, #+4]
         STR      R0,[R1, #+8]
         STR      R0,[R1, #+0]
-// 3212 			connParams.dnsBuf->bufLen = s2wSslConf.dnsBufferLen;
+// 3204 			connParams.dnsBuf->bufLen = s2wSslConf.dnsBufferLen;
         LDR      R0,[R7, #+0]
         STR      R0,[R1, #+4]
         B.N      ??AppS2wHal_HttpOpen_2
-// 3213     	}
-// 3214     	else
-// 3215     	{
-// 3216     		connParams.dnsBuf = NULL;
+// 3205     	}
+// 3206     	else
+// 3207     	{
+// 3208     		connParams.dnsBuf = NULL;
 ??AppS2wHal_HttpOpen_1:
         MOVS     R0,#+0
         STR      R0,[SP, #+64]
-// 3217     	}
-// 3218 #endif		
-// 3219         status = GsnHttp_Start(&pHttpData->pHttpHandle, &pHttpData->sockAddr,
-// 3220             &connParams, &httpConfInfo);
+// 3209     	}
+// 3210 #endif		
+// 3211         status = GsnHttp_Start(&pHttpData->pHttpHandle, &pHttpData->sockAddr,
+// 3212             &connParams, &httpConfInfo);
 ??AppS2wHal_HttpOpen_2:
         ADD      R2,SP,#+4
-        LDR.W    R3,??DataTable109
+        LDR.W    R3,??DataTable105
         ADD      R1,R4,#+16
         MOV      R0,R4
           CFI FunCall GsnHttp_Start
         BL       GsnHttp_Start
         MOV      R7,R0
-// 3221         if(NULL != connParams.dnsBuf)
+// 3213         if(NULL != connParams.dnsBuf)
         LDR      R0,[SP, #+64]
         CBZ.N    R0,??AppS2wHal_HttpOpen_3
-// 3222         	gsn_free(connParams.dnsBuf);
+// 3214         	gsn_free(connParams.dnsBuf);
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-// 3223         connParams.dnsBuf = NULL;
+// 3215         connParams.dnsBuf = NULL;
 ??AppS2wHal_HttpOpen_3:
         MOVS     R0,#+0
         STR      R0,[SP, #+64]
         LDR      R0,[R5, #+0]
         MLA      R0,R6,R0,R8
         CBZ.N    R7,??AppS2wHal_HttpOpen_4
-// 3224 	}
-// 3225 	
-// 3226 
-// 3227     if(status != GSN_SUCCESS)
-// 3228     {
-// 3229 		s2wCidList[*cid].httpflag = 0;
+// 3216 	}
+// 3217 	
+// 3218 
+// 3219     if(status != GSN_SUCCESS)
+// 3220     {
+// 3221 		s2wCidList[*cid].httpflag = 0;
         MOVS     R1,#+0
         STRB     R1,[R0, #+47]
-// 3230         return S2W_FAILURE;
+// 3222         return S2W_FAILURE;
         MOVS     R0,#+1
 ??AppS2wHal_HttpOpen_0:
         B.N      ??AppS2wHal_HttpOpen_5
-// 3231     }
-// 3232 
-// 3233     s2wCidList[*cid].sd = ((ttHttpcConEntryPtr)pHttpData->pHttpHandle)->hconSd;
+// 3223     }
+// 3224 
+// 3225     s2wCidList[*cid].sd = ((ttHttpcConEntryPtr)pHttpData->pHttpHandle)->hconSd;
 ??AppS2wHal_HttpOpen_4:
         LDR      R1,[R4, #+0]
         LDR      R1,[R1, #+168]
         STR      R1,[R0, #+28]
-// 3234     s2wCidList[*cid].conType = TCP;
+// 3226     s2wCidList[*cid].conType = TCP;
         MOVS     R1,#+2
-        BL       ?Subroutine42
-??CrossCallReturnLabel_112:
+        BL       ?Subroutine43
+??CrossCallReturnLabel_116:
         STRB     R1,[R0, #+0]
-// 3235     s2wCidList[*cid].conMode = S2W_NETDATA_MODE_CLIENT;
+// 3227     s2wCidList[*cid].conMode = S2W_NETDATA_MODE_CLIENT;
         MOVS     R1,#+0
-        BL       ?Subroutine42
-??CrossCallReturnLabel_113:
+        BL       ?Subroutine43
+??CrossCallReturnLabel_117:
         STRB     R1,[R0, #+1]
         LDR      R0,[R5, #+0]
         LDRH     R1,[R4, #+18]
@@ -9718,39 +9709,39 @@ AppS2wHal_HttpOpen:
         LSLS     R2,R1,#+8
         ORR      R1,R2,R1, LSR #+8
         STRH     R1,[R0, #+4]
-// 3236     s2wCidList[*cid].remotePort = ntohs(pHttpData->sockAddr.ss_port);
-// 3237     s2wCidList[*cid].pHttpData = pHttpData;
+// 3228     s2wCidList[*cid].remotePort = ntohs(pHttpData->sockAddr.ss_port);
+// 3229     s2wCidList[*cid].pHttpData = pHttpData;
         STR      R4,[R0, #+52]
-// 3238     s2wCidList[*cid].httpflag = 1;
+// 3230     s2wCidList[*cid].httpflag = 1;
         MOVS     R1,#+1
         STRB     R1,[R0, #+47]
-// 3239 	s2wCidList[*cid].serverCid = INVALID_CID;
+// 3231 	s2wCidList[*cid].serverCid = INVALID_CID;
         MOVS     R1,#+255
-        BL       ?Subroutine42
-// 3240 	ret = getsockname(s2wCidList[*cid].sd, (struct sockaddr *)&sockAddr,&len);
-// 3241     if(ret < 0)
-??CrossCallReturnLabel_114:
+        BL       ?Subroutine43
+// 3232 	ret = getsockname(s2wCidList[*cid].sd, (struct sockaddr *)&sockAddr,&len);
+// 3233     if(ret < 0)
+??CrossCallReturnLabel_118:
         ADD      R2,SP,#+0
         STRB     R1,[R0, #+46]
         ADD      R1,SP,#+68
-        BL       ?Subroutine42
-??CrossCallReturnLabel_115:
+        BL       ?Subroutine43
+??CrossCallReturnLabel_119:
         LDR      R0,[R0, #+28]
           CFI FunCall getsockname
         BL       getsockname
         CMP      R0,#+0
         BPL.N    ??AppS2wHal_HttpOpen_6
-// 3242     {
-// 3243         AppS2wHal_NetClose(*cid);
+// 3234     {
+// 3235         AppS2wHal_NetClose(*cid);
         LDR      R0,[R5, #+0]
         UXTB     R0,R0
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
-// 3244         return S2W_SOCKFAILURE;
+// 3236         return S2W_SOCKFAILURE;
         MOVS     R0,#+3
         B.N      ??AppS2wHal_HttpOpen_5
-// 3245     }
-// 3246 	s2wCidList[*cid].localPort  = ntohs(sockAddr.sin_port);
+// 3237     }
+// 3238 	s2wCidList[*cid].localPort  = ntohs(sockAddr.sin_port);
 ??AppS2wHal_HttpOpen_6:
         LDRH     R0,[SP, #+70]
         LDR      R1,[R5, #+0]
@@ -9758,66 +9749,66 @@ AppS2wHal_HttpOpen:
         LSLS     R2,R0,#+8
         ORR      R0,R2,R0, LSR #+8
         STRH     R0,[R1, #+2]
-// 3247     GsnOsal_SemCreate(&pHttpData->opInProgress, 1);
+// 3239     GsnOsal_SemCreate(&pHttpData->opInProgress, 1);
         MOVS     R1,#+1
         ADD      R0,R4,#+48
           CFI FunCall GsnOsal_SemCreate
         BL       GsnOsal_SemCreate
-// 3248     /* create the samaphore for close */
-// 3249     GsnOsal_SemCreate(&s2wCidList[*cid].s2wUserCloseInProgress, 0);
-        BL       ?Subroutine42
-??CrossCallReturnLabel_116:
+// 3240     /* create the samaphore for close */
+// 3241     GsnOsal_SemCreate(&s2wCidList[*cid].s2wUserCloseInProgress, 0);
+        BL       ?Subroutine43
+??CrossCallReturnLabel_120:
         MOVS     R1,#+0
         ADDS     R0,R0,#+56
           CFI FunCall GsnOsal_SemCreate
         BL       GsnOsal_SemCreate
-// 3250 	s2wCidList[*cid].s2wUsrCloseFlag = 0;
-        BL       ?Subroutine42
-??CrossCallReturnLabel_117:
+// 3242 	s2wCidList[*cid].s2wUsrCloseFlag = 0;
+        BL       ?Subroutine43
+??CrossCallReturnLabel_121:
         MOVS     R1,#+0
         STRB     R1,[R0, #+144]
-// 3251 
-// 3252     AppS2wHal_TimerInit(&s2wCidList[*cid].s2wUserCloseTimer, AppS2wHal_HttpCloseTimeout, (VOID*)*cid);
+// 3243 
+// 3244     AppS2wHal_TimerInit(&s2wCidList[*cid].s2wUserCloseTimer, AppS2wHal_HttpCloseTimeout, (VOID*)*cid);
         LDR      R2,[R5, #+0]
-        LDR.W    R1,??DataTable109_1
+        LDR.W    R1,??DataTable105_1
         MLA      R0,R6,R2,R8
         ADDS     R0,R0,#+88
           CFI FunCall AppS2wHal_TimerInit
         BL       AppS2wHal_TimerInit
-// 3253 
-// 3254     memcpy(s2wCidList[*cid].remoteIp,(UINT8*)&(pHttpData->sockAddr.addr.ipv4.sin_addr.s_addr),4);
-        BL       ?Subroutine42
-??CrossCallReturnLabel_118:
+// 3245 
+// 3246     memcpy(s2wCidList[*cid].remoteIp,(UINT8*)&(pHttpData->sockAddr.addr.ipv4.sin_addr.s_addr),4);
+        BL       ?Subroutine43
+??CrossCallReturnLabel_122:
         MOVS     R2,#+4
         ADD      R1,R4,#+20
         ADDS     R0,R0,#+6
           CFI FunCall memcpy
         BL       memcpy
-// 3255 
-// 3256     /* register the callback for any socket events
-// 3257      */
-// 3258     nx_bsd_callback_register(s2wCidList[*cid].sd, AppS2wHal_RxCallBack, NX_BSD_CB_TCP_DISCONNECT |	NX_BSD_CB_SOCKET_ERROR);
+// 3247 
+// 3248     /* register the callback for any socket events
+// 3249      */
+// 3250     nx_bsd_callback_register(s2wCidList[*cid].sd, AppS2wHal_RxCallBack, NX_BSD_CB_TCP_DISCONNECT |	NX_BSD_CB_SOCKET_ERROR);
         LDR      R0,[R5, #+0]
-        LDR.W    R1,??DataTable102
+        LDR.W    R1,??DataTable98
         MLA      R0,R6,R0,R8
         MOVS     R2,#+40
         LDR      R0,[R0, #+28]
           CFI FunCall nx_bsd_callback_register
         BL       nx_bsd_callback_register
-// 3259     return S2W_SUCCESS;
+// 3251     return S2W_SUCCESS;
         MOVS     R0,#+0
 ??AppS2wHal_HttpOpen_5:
         ADD      SP,SP,#+88
           CFI CFA R13+24
         POP      {R4-R8,PC}       ;; return
-          CFI EndBlock cfiBlock195
-// 3260 }
+          CFI EndBlock cfiBlock200
+// 3252 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond196 Using cfiCommon0
+          CFI Block cfiCond201 Using cfiCommon0
           CFI Function AppS2wHal_HttpOpen
           CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_110
+          CFI Conditional ??CrossCallReturnLabel_114
           CFI R4 Frame(CFA, -24)
           CFI R5 Frame(CFA, -20)
           CFI R6 Frame(CFA, -16)
@@ -9825,65 +9816,10 @@ AppS2wHal_HttpOpen:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+112
-          CFI Block cfiCond197 Using cfiCommon0
-          CFI (cfiCond197) Function AppS2wHal_HttpOpen
-          CFI (cfiCond197) NoCalls AppS2wHal_HttpOpen
-          CFI (cfiCond197) Conditional ??CrossCallReturnLabel_111
-          CFI (cfiCond197) R4 Frame(CFA, -24)
-          CFI (cfiCond197) R5 Frame(CFA, -20)
-          CFI (cfiCond197) R6 Frame(CFA, -16)
-          CFI (cfiCond197) R7 Frame(CFA, -12)
-          CFI (cfiCond197) R8 Frame(CFA, -8)
-          CFI (cfiCond197) R14 Frame(CFA, -4)
-          CFI (cfiCond197) CFA R13+112
-          CFI Block cfiCond198 Using cfiCommon0
-          CFI (cfiCond198) Function AppS2wHal_HttpOpen
-          CFI (cfiCond198) NoCalls AppS2wHal_HttpOpen
-          CFI (cfiCond198) Conditional ??CrossCallReturnLabel_112
-          CFI (cfiCond198) R4 Frame(CFA, -24)
-          CFI (cfiCond198) R5 Frame(CFA, -20)
-          CFI (cfiCond198) R6 Frame(CFA, -16)
-          CFI (cfiCond198) R7 Frame(CFA, -12)
-          CFI (cfiCond198) R8 Frame(CFA, -8)
-          CFI (cfiCond198) R14 Frame(CFA, -4)
-          CFI (cfiCond198) CFA R13+112
-          CFI Block cfiCond199 Using cfiCommon0
-          CFI (cfiCond199) Function AppS2wHal_HttpOpen
-          CFI (cfiCond199) NoCalls AppS2wHal_HttpOpen
-          CFI (cfiCond199) Conditional ??CrossCallReturnLabel_113
-          CFI (cfiCond199) R4 Frame(CFA, -24)
-          CFI (cfiCond199) R5 Frame(CFA, -20)
-          CFI (cfiCond199) R6 Frame(CFA, -16)
-          CFI (cfiCond199) R7 Frame(CFA, -12)
-          CFI (cfiCond199) R8 Frame(CFA, -8)
-          CFI (cfiCond199) R14 Frame(CFA, -4)
-          CFI (cfiCond199) CFA R13+112
-          CFI Block cfiCond200 Using cfiCommon0
-          CFI (cfiCond200) Function AppS2wHal_HttpOpen
-          CFI (cfiCond200) NoCalls AppS2wHal_HttpOpen
-          CFI (cfiCond200) Conditional ??CrossCallReturnLabel_114
-          CFI (cfiCond200) R4 Frame(CFA, -24)
-          CFI (cfiCond200) R5 Frame(CFA, -20)
-          CFI (cfiCond200) R6 Frame(CFA, -16)
-          CFI (cfiCond200) R7 Frame(CFA, -12)
-          CFI (cfiCond200) R8 Frame(CFA, -8)
-          CFI (cfiCond200) R14 Frame(CFA, -4)
-          CFI (cfiCond200) CFA R13+112
-          CFI Block cfiCond201 Using cfiCommon0
-          CFI (cfiCond201) Function AppS2wHal_HttpOpen
-          CFI (cfiCond201) NoCalls AppS2wHal_HttpOpen
-          CFI (cfiCond201) Conditional ??CrossCallReturnLabel_115
-          CFI (cfiCond201) R4 Frame(CFA, -24)
-          CFI (cfiCond201) R5 Frame(CFA, -20)
-          CFI (cfiCond201) R6 Frame(CFA, -16)
-          CFI (cfiCond201) R7 Frame(CFA, -12)
-          CFI (cfiCond201) R8 Frame(CFA, -8)
-          CFI (cfiCond201) R14 Frame(CFA, -4)
-          CFI (cfiCond201) CFA R13+112
           CFI Block cfiCond202 Using cfiCommon0
           CFI (cfiCond202) Function AppS2wHal_HttpOpen
           CFI (cfiCond202) NoCalls AppS2wHal_HttpOpen
-          CFI (cfiCond202) Conditional ??CrossCallReturnLabel_116
+          CFI (cfiCond202) Conditional ??CrossCallReturnLabel_115
           CFI (cfiCond202) R4 Frame(CFA, -24)
           CFI (cfiCond202) R5 Frame(CFA, -20)
           CFI (cfiCond202) R6 Frame(CFA, -16)
@@ -9894,7 +9830,7 @@ AppS2wHal_HttpOpen:
           CFI Block cfiCond203 Using cfiCommon0
           CFI (cfiCond203) Function AppS2wHal_HttpOpen
           CFI (cfiCond203) NoCalls AppS2wHal_HttpOpen
-          CFI (cfiCond203) Conditional ??CrossCallReturnLabel_117
+          CFI (cfiCond203) Conditional ??CrossCallReturnLabel_116
           CFI (cfiCond203) R4 Frame(CFA, -24)
           CFI (cfiCond203) R5 Frame(CFA, -20)
           CFI (cfiCond203) R6 Frame(CFA, -16)
@@ -9905,7 +9841,7 @@ AppS2wHal_HttpOpen:
           CFI Block cfiCond204 Using cfiCommon0
           CFI (cfiCond204) Function AppS2wHal_HttpOpen
           CFI (cfiCond204) NoCalls AppS2wHal_HttpOpen
-          CFI (cfiCond204) Conditional ??CrossCallReturnLabel_118
+          CFI (cfiCond204) Conditional ??CrossCallReturnLabel_117
           CFI (cfiCond204) R4 Frame(CFA, -24)
           CFI (cfiCond204) R5 Frame(CFA, -20)
           CFI (cfiCond204) R6 Frame(CFA, -16)
@@ -9913,34 +9849,89 @@ AppS2wHal_HttpOpen:
           CFI (cfiCond204) R8 Frame(CFA, -8)
           CFI (cfiCond204) R14 Frame(CFA, -4)
           CFI (cfiCond204) CFA R13+112
-          CFI Block cfiPicker205 Using cfiCommon1
-          CFI (cfiPicker205) NoFunction
-          CFI (cfiPicker205) NoCalls AppS2wHal_HttpOpen
-          CFI (cfiPicker205) Picker
+          CFI Block cfiCond205 Using cfiCommon0
+          CFI (cfiCond205) Function AppS2wHal_HttpOpen
+          CFI (cfiCond205) NoCalls AppS2wHal_HttpOpen
+          CFI (cfiCond205) Conditional ??CrossCallReturnLabel_118
+          CFI (cfiCond205) R4 Frame(CFA, -24)
+          CFI (cfiCond205) R5 Frame(CFA, -20)
+          CFI (cfiCond205) R6 Frame(CFA, -16)
+          CFI (cfiCond205) R7 Frame(CFA, -12)
+          CFI (cfiCond205) R8 Frame(CFA, -8)
+          CFI (cfiCond205) R14 Frame(CFA, -4)
+          CFI (cfiCond205) CFA R13+112
+          CFI Block cfiCond206 Using cfiCommon0
+          CFI (cfiCond206) Function AppS2wHal_HttpOpen
+          CFI (cfiCond206) NoCalls AppS2wHal_HttpOpen
+          CFI (cfiCond206) Conditional ??CrossCallReturnLabel_119
+          CFI (cfiCond206) R4 Frame(CFA, -24)
+          CFI (cfiCond206) R5 Frame(CFA, -20)
+          CFI (cfiCond206) R6 Frame(CFA, -16)
+          CFI (cfiCond206) R7 Frame(CFA, -12)
+          CFI (cfiCond206) R8 Frame(CFA, -8)
+          CFI (cfiCond206) R14 Frame(CFA, -4)
+          CFI (cfiCond206) CFA R13+112
+          CFI Block cfiCond207 Using cfiCommon0
+          CFI (cfiCond207) Function AppS2wHal_HttpOpen
+          CFI (cfiCond207) NoCalls AppS2wHal_HttpOpen
+          CFI (cfiCond207) Conditional ??CrossCallReturnLabel_120
+          CFI (cfiCond207) R4 Frame(CFA, -24)
+          CFI (cfiCond207) R5 Frame(CFA, -20)
+          CFI (cfiCond207) R6 Frame(CFA, -16)
+          CFI (cfiCond207) R7 Frame(CFA, -12)
+          CFI (cfiCond207) R8 Frame(CFA, -8)
+          CFI (cfiCond207) R14 Frame(CFA, -4)
+          CFI (cfiCond207) CFA R13+112
+          CFI Block cfiCond208 Using cfiCommon0
+          CFI (cfiCond208) Function AppS2wHal_HttpOpen
+          CFI (cfiCond208) NoCalls AppS2wHal_HttpOpen
+          CFI (cfiCond208) Conditional ??CrossCallReturnLabel_121
+          CFI (cfiCond208) R4 Frame(CFA, -24)
+          CFI (cfiCond208) R5 Frame(CFA, -20)
+          CFI (cfiCond208) R6 Frame(CFA, -16)
+          CFI (cfiCond208) R7 Frame(CFA, -12)
+          CFI (cfiCond208) R8 Frame(CFA, -8)
+          CFI (cfiCond208) R14 Frame(CFA, -4)
+          CFI (cfiCond208) CFA R13+112
+          CFI Block cfiCond209 Using cfiCommon0
+          CFI (cfiCond209) Function AppS2wHal_HttpOpen
+          CFI (cfiCond209) NoCalls AppS2wHal_HttpOpen
+          CFI (cfiCond209) Conditional ??CrossCallReturnLabel_122
+          CFI (cfiCond209) R4 Frame(CFA, -24)
+          CFI (cfiCond209) R5 Frame(CFA, -20)
+          CFI (cfiCond209) R6 Frame(CFA, -16)
+          CFI (cfiCond209) R7 Frame(CFA, -12)
+          CFI (cfiCond209) R8 Frame(CFA, -8)
+          CFI (cfiCond209) R14 Frame(CFA, -4)
+          CFI (cfiCond209) CFA R13+112
+          CFI Block cfiPicker210 Using cfiCommon1
+          CFI (cfiPicker210) NoFunction
+          CFI (cfiPicker210) NoCalls AppS2wHal_HttpOpen
+          CFI (cfiPicker210) Picker
         THUMB
-?Subroutine42:
+?Subroutine43:
         LDR      R0,[R5, #+0]
         MLA      R0,R6,R0,R8
         BX       LR
-          CFI EndBlock cfiCond196
-          CFI EndBlock cfiCond197
-          CFI EndBlock cfiCond198
-          CFI EndBlock cfiCond199
-          CFI EndBlock cfiCond200
           CFI EndBlock cfiCond201
           CFI EndBlock cfiCond202
           CFI EndBlock cfiCond203
           CFI EndBlock cfiCond204
-          CFI EndBlock cfiPicker205
-// 3261 
+          CFI EndBlock cfiCond205
+          CFI EndBlock cfiCond206
+          CFI EndBlock cfiCond207
+          CFI EndBlock cfiCond208
+          CFI EndBlock cfiCond209
+          CFI EndBlock cfiPicker210
+// 3253 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock206 Using cfiCommon0
+          CFI Block cfiBlock211 Using cfiCommon0
           CFI Function AppS2wHal_HttpLocalClose
         THUMB
-// 3262 PRIVATE UINT8
-// 3263 AppS2wHal_HttpLocalClose(UINT32 cid)
-// 3264 {
+// 3254 PRIVATE UINT8
+// 3255 AppS2wHal_HttpLocalClose(UINT32 cid)
+// 3256 {
 AppS2wHal_HttpLocalClose:
         PUSH     {R4-R8,LR}
           CFI R14 Frame(CFA, -4)
@@ -9950,211 +9941,211 @@ AppS2wHal_HttpLocalClose:
           CFI R5 Frame(CFA, -20)
           CFI R4 Frame(CFA, -24)
           CFI CFA R13+24
-// 3265     UINT8 status = GSN_SUCCESS;
-// 3266     if(!s2wCidList[cid].httpflag)
+// 3257     UINT8 status = GSN_SUCCESS;
+// 3258     if(!s2wCidList[cid].httpflag)
         MOV      R1,#+296
         MUL      R6,R1,R0
-        LDR.N    R7,??DataTable94
+        LDR.W    R7,??DataTable98_1
         ADDS     R4,R6,R7
         ADD      R5,R4,#+28
         LDRB     R0,[R5, #+19]
         CBZ.N    R0,??AppS2wHal_HttpLocalClose_0
-// 3267     {
-// 3268         return GSN_SUCCESS;
-// 3269     }
-// 3270     s2wCidList[cid].httpflag = 0;
+// 3259     {
+// 3260         return GSN_SUCCESS;
+// 3261     }
+// 3262     s2wCidList[cid].httpflag = 0;
         MOVS     R0,#+0
         STRB     R0,[R5, #+19]
-// 3271     /* close the connection and release the resources..*/
-// 3272     status = GsnHttp_Close(s2wCidList[cid].pHttpData->pHttpHandle);
+// 3263     /* close the connection and release the resources..*/
+// 3264     status = GsnHttp_Close(s2wCidList[cid].pHttpData->pHttpHandle);
         LDR      R0,[R5, #+24]
         LDR      R0,[R0, #+0]
           CFI FunCall GsnHttp_Close
         BL       GsnHttp_Close
-// 3273     if( status == GSN_SUCCESS )
+// 3265     if( status == GSN_SUCCESS )
         UXTB     R8,R0
         CMP      R8,#+0
         BNE.N    ??AppS2wHal_HttpLocalClose_1
-// 3274     {
-// 3275         s2wCidList[cid].httpflag = 0;
+// 3266     {
+// 3267         s2wCidList[cid].httpflag = 0;
         MOVS     R0,#+0
         STRB     R0,[R5, #+19]
-// 3276         s2wCidList[cid].conMode= 0;
+// 3268         s2wCidList[cid].conMode= 0;
         STRB     R0,[R4, #+1]
-// 3277     	s2wCidList[cid].conType = 0;
+// 3269     	s2wCidList[cid].conType = 0;
         STRB     R0,[R6, R7]
-// 3278         if(s2wCidList[cid].pHttpData != NULL)
+// 3270         if(s2wCidList[cid].pHttpData != NULL)
         LDR      R0,[R5, #+24]
         CBZ.N    R0,??AppS2wHal_HttpLocalClose_1
-// 3279         {
-// 3280             GsnOsal_SemDelete(&s2wCidList[cid].pHttpData->opInProgress);
+// 3271         {
+// 3272             GsnOsal_SemDelete(&s2wCidList[cid].pHttpData->opInProgress);
         ADDS     R0,R0,#+48
           CFI FunCall GsnOsal_SemDelete
         BL       GsnOsal_SemDelete
-// 3281             gsn_free(s2wCidList[cid].pHttpData);
+// 3273             gsn_free(s2wCidList[cid].pHttpData);
         LDR      R0,[R5, #+24]
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-// 3282             s2wCidList[cid].pHttpData = NULL;
+// 3274             s2wCidList[cid].pHttpData = NULL;
         MOVS     R0,#+0
         STR      R0,[R5, #+24]
-// 3283         }
-// 3284 
-// 3285     }
-// 3286     
-// 3287     /* Delete Close In progress semaphore*/ 
-// 3288     GsnOsal_SemDelete(&s2wCidList[cid].s2wUserCloseInProgress);
+// 3275         }
+// 3276 
+// 3277     }
+// 3278     
+// 3279     /* Delete Close In progress semaphore*/ 
+// 3280     GsnOsal_SemDelete(&s2wCidList[cid].s2wUserCloseInProgress);
 ??AppS2wHal_HttpLocalClose_1:
         ADD      R0,R4,#+56
           CFI FunCall GsnOsal_SemDelete
         BL       GsnOsal_SemDelete
-// 3289         s2wCidList[cid].sd = CID_NOTINUSE;
+// 3281         s2wCidList[cid].sd = CID_NOTINUSE;
         MOV      R0,#-1
         STR      R0,[R4, #+28]
-// 3290     return status;
+// 3282     return status;
         MOV      R0,R8
 ??AppS2wHal_HttpLocalClose_0:
         POP      {R4-R8,PC}       ;; return
-          CFI EndBlock cfiBlock206
-// 3291 }
-// 3292 
+          CFI EndBlock cfiBlock211
+// 3283 }
+// 3284 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock207 Using cfiCommon0
+          CFI Block cfiBlock212 Using cfiCommon0
           CFI Function AppS2wHal_HttpHandleGet
           CFI NoCalls
         THUMB
-// 3293 PUBLIC S2W_HTTP_DATA_T *
-// 3294 AppS2wHal_HttpHandleGet(UINT8 cid)
-// 3295 {
-// 3296     return s2wCidList[cid].pHttpData;
+// 3285 PUBLIC S2W_HTTP_DATA_T *
+// 3286 AppS2wHal_HttpHandleGet(UINT8 cid)
+// 3287 {
+// 3288     return s2wCidList[cid].pHttpData;
 AppS2wHal_HttpHandleGet:
         MOV      R1,#+296
-        LDR.N    R2,??DataTable94
+        LDR.W    R2,??DataTable98_1
         MLA      R0,R1,R0,R2
         LDR      R0,[R0, #+52]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock207
-// 3297 }
-// 3298 
-// 3299 #ifdef S2W_HTTP_CUSTOM_SUPPORT
-// 3300 PUBLIC void
-// 3301 AppS2w_HttpRxHdrsCb (GSN_HTTPC_CONN_HANDLE conHandle,
-// 3302                      INT32              statusCode,
-// 3303                      INT8              *reasonPhrase,
-// 3304                      INT8             **resHeadersPtr,
-// 3305                      ttHttpcCustomHdr  *customHdrPtr)
-// 3306 {
-// 3307     UINT8 cid;
-// 3308     UINT32 i;
-// 3309     UINT32 bitmap;
-// 3310     UINT32 count;
-// 3311     UINT32 len;
-// 3312 	UINT8 delim = ':';
-// 3313     ttHttpcConEntryPtr conEntryPtr = (ttHttpcConEntryPtr)conHandle;
-// 3314     INT8 header[15],headerLen;
-// 3315 
-// 3316     if((NULL == conEntryPtr) || (1 == httpConfInfo.hconHttpcHdrSent))
-// 3317     {
-// 3318         return;
-// 3319     }
-// 3320     cid = AppS2wHal_CidFind(conEntryPtr->hconSd);
-// 3321 
-// 3322     if((1 == httpConfInfo.sendStatus) && (NULL != reasonPhrase))
-// 3323     {
-// 3324         /* arg_len should be request uri length + 3 char of status code + 1 char of delim ':' */
-// 3325         len = strlen(reasonPhrase) + 3 + 1;
-// 3326         headerLen = sprintf((char *)header,"%cG%x%d%04d%03d%c", S2W_ESC, cid, S2W_HTTP_RESPONSE_LINE, len, statusCode, S2W_COLON);
-// 3327 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 3328         AppS2wHal_CharNPut(header, headerLen);
-// 3329         AppS2wHal_CharNPut(reasonPhrase, (len - 4));
-// 3330 #else
-// 3331         AppS2wHal_CharNPut1(header, headerLen);
-// 3332         AppS2wHal_CharNPut1(reasonPhrase, (len - 4));
-// 3333 #endif
-// 3334     }
-// 3335     /* If http header bitmap is not registered */
-// 3336     if(0 == httpConfInfo.httpcHdrBmap)
-// 3337     {
-// 3338         goto AppS2w_HttpRxHdrsCbExit;
-// 3339     }
-// 3340     bitmap = httpConfInfo.httpcHdrBmap;
-// 3341     count = 1;
-// 3342     /* Parse all the headers given by Http server */
-// 3343     for(i = 1; i < TM_HTTP_HEADER_COUNT ; i++)
-// 3344     {
-// 3345          if((NULL != resHeadersPtr[i]) && (bitmap & count))
-// 3346          {
-// 3347              /* hdr_len should be 2 chars of hdr_type number + hdr_val + 1 char of delim ':' */
-// 3348              len = strlen(tvHttpHeaderNames[i]) + strlen(resHeadersPtr[i]) + 1;
-// 3349              headerLen = sprintf((char *)header,"%cG%x%d%04d", S2W_ESC, cid, S2W_HTTP_HEADER, len);
-// 3350 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 3351              AppS2wHal_CharNPut(header, headerLen);
-// 3352              AppS2wHal_CharNPut(tvHttpHeaderNames[i], strlen(tvHttpHeaderNames[i]));
-// 3353              AppS2wHal_CharNPut(&delim,1);
-// 3354              AppS2wHal_CharNPut(resHeadersPtr[i], strlen(resHeadersPtr[i]));
-// 3355 #else
-// 3356              AppS2wHal_CharNPut1(header, headerLen);
-// 3357              AppS2wHal_CharNPut1(tvHttpHeaderNames[i], strlen(tvHttpHeaderNames[i]));
-// 3358              AppS2wHal_CharNPut1(&delim,1);
-// 3359              AppS2wHal_CharNPut1(resHeadersPtr[i], strlen(resHeadersPtr[i]));
-// 3360 #endif
-// 3361          }
-// 3362          count = (count << 1);
-// 3363     }
-// 3364     /* If user has registered for custom headers and custom headers are present, pass it */
-// 3365     bitmap = bitmap >> 31;
-// 3366     if((NULL != customHdrPtr) && (0 != customHdrPtr->hconCustomHdrcount) && (bitmap))
-// 3367     {
-// 3368         for(i = 0; i < customHdrPtr->hconCustomHdrcount ; i++)
-// 3369         {
-// 3370             len = strlen(customHdrPtr->hconCustomHeaderstype[i]) + strlen(customHdrPtr->hconCustomHeadersval[i] + 1);
-// 3371             headerLen = sprintf((char *)header,"%cG%x%d%04d", S2W_ESC, cid, S2W_HTTP_HEADER, len);
-// 3372 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 3373             AppS2wHal_CharNPut(header, headerLen);
-// 3374             AppS2wHal_CharNPut(customHdrPtr->hconCustomHeaderstype[i], strlen(customHdrPtr->hconCustomHeaderstype[i]));
-// 3375             AppS2wHal_CharNPut(&delim,1);
-// 3376             AppS2wHal_CharNPut(customHdrPtr->hconCustomHeadersval[i], strlen(customHdrPtr->hconCustomHeadersval[i]));
-// 3377 #else
-// 3378             AppS2wHal_CharNPut1(header, headerLen);
-// 3379             AppS2wHal_CharNPut1(customHdrPtr->hconCustomHeaderstype[i], strlen(customHdrPtr->hconCustomHeaderstype[i]));
-// 3380             AppS2wHal_CharNPut1(&delim,1);
-// 3381             AppS2wHal_CharNPut1(customHdrPtr->hconCustomHeadersval[i], strlen(customHdrPtr->hconCustomHeadersval[i]));
-// 3382 #endif
-// 3383         }
-// 3384     }
-// 3385 AppS2w_HttpRxHdrsCbExit:
-// 3386     httpConfInfo.hconHttpcHdrSent = 1;
-// 3387 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 3388     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
-// 3389     {
-// 3390         s2wSpiFs_Flush();
-// 3391     }
-// 3392 #else
-// 3393     if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
-// 3394     {
-// 3395         s2wSpiFs_Flush1();
-// 3396     }
-// 3397 #endif
-// 3398     return;
-// 3399 }
-// 3400 #endif
-// 3401 
-// 3402 #endif
-// 3403 
-// 3404 
+          CFI EndBlock cfiBlock212
+// 3289 }
+// 3290 
+// 3291 #ifdef S2W_HTTP_CUSTOM_SUPPORT
+// 3292 PUBLIC void
+// 3293 AppS2w_HttpRxHdrsCb (GSN_HTTPC_CONN_HANDLE conHandle,
+// 3294                      INT32              statusCode,
+// 3295                      INT8              *reasonPhrase,
+// 3296                      INT8             **resHeadersPtr,
+// 3297                      ttHttpcCustomHdr  *customHdrPtr)
+// 3298 {
+// 3299     UINT8 cid;
+// 3300     UINT32 i;
+// 3301     UINT32 bitmap;
+// 3302     UINT32 count;
+// 3303     UINT32 len;
+// 3304 	UINT8 delim = ':';
+// 3305     ttHttpcConEntryPtr conEntryPtr = (ttHttpcConEntryPtr)conHandle;
+// 3306     INT8 header[15],headerLen;
+// 3307 
+// 3308     if((NULL == conEntryPtr) || (1 == httpConfInfo.hconHttpcHdrSent))
+// 3309     {
+// 3310         return;
+// 3311     }
+// 3312     cid = AppS2wHal_CidFind(conEntryPtr->hconSd);
+// 3313 
+// 3314     if((1 == httpConfInfo.sendStatus) && (NULL != reasonPhrase))
+// 3315     {
+// 3316         /* arg_len should be request uri length + 3 char of status code + 1 char of delim ':' */
+// 3317         len = strlen(reasonPhrase) + 3 + 1;
+// 3318         headerLen = sprintf((char *)header,"%cG%x%d%04d%03d%c", S2W_ESC, cid, S2W_HTTP_RESPONSE_LINE, len, statusCode, S2W_COLON);
+// 3319 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 3320         AppS2wHal_CharNPut(header, headerLen);
+// 3321         AppS2wHal_CharNPut(reasonPhrase, (len - 4));
+// 3322 #else
+// 3323         AppS2wHal_CharNPut1(header, headerLen);
+// 3324         AppS2wHal_CharNPut1(reasonPhrase, (len - 4));
+// 3325 #endif
+// 3326     }
+// 3327     /* If http header bitmap is not registered */
+// 3328     if(0 == httpConfInfo.httpcHdrBmap)
+// 3329     {
+// 3330         goto AppS2w_HttpRxHdrsCbExit;
+// 3331     }
+// 3332     bitmap = httpConfInfo.httpcHdrBmap;
+// 3333     count = 1;
+// 3334     /* Parse all the headers given by Http server */
+// 3335     for(i = 1; i < TM_HTTP_HEADER_COUNT ; i++)
+// 3336     {
+// 3337          if((NULL != resHeadersPtr[i]) && (bitmap & count))
+// 3338          {
+// 3339              /* hdr_len should be 2 chars of hdr_type number + hdr_val + 1 char of delim ':' */
+// 3340              len = strlen(tvHttpHeaderNames[i]) + strlen(resHeadersPtr[i]) + 1;
+// 3341              headerLen = sprintf((char *)header,"%cG%x%d%04d", S2W_ESC, cid, S2W_HTTP_HEADER, len);
+// 3342 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 3343              AppS2wHal_CharNPut(header, headerLen);
+// 3344              AppS2wHal_CharNPut(tvHttpHeaderNames[i], strlen(tvHttpHeaderNames[i]));
+// 3345              AppS2wHal_CharNPut(&delim,1);
+// 3346              AppS2wHal_CharNPut(resHeadersPtr[i], strlen(resHeadersPtr[i]));
+// 3347 #else
+// 3348              AppS2wHal_CharNPut1(header, headerLen);
+// 3349              AppS2wHal_CharNPut1(tvHttpHeaderNames[i], strlen(tvHttpHeaderNames[i]));
+// 3350              AppS2wHal_CharNPut1(&delim,1);
+// 3351              AppS2wHal_CharNPut1(resHeadersPtr[i], strlen(resHeadersPtr[i]));
+// 3352 #endif
+// 3353          }
+// 3354          count = (count << 1);
+// 3355     }
+// 3356     /* If user has registered for custom headers and custom headers are present, pass it */
+// 3357     bitmap = bitmap >> 31;
+// 3358     if((NULL != customHdrPtr) && (0 != customHdrPtr->hconCustomHdrcount) && (bitmap))
+// 3359     {
+// 3360         for(i = 0; i < customHdrPtr->hconCustomHdrcount ; i++)
+// 3361         {
+// 3362             len = strlen(customHdrPtr->hconCustomHeaderstype[i]) + strlen(customHdrPtr->hconCustomHeadersval[i] + 1);
+// 3363             headerLen = sprintf((char *)header,"%cG%x%d%04d", S2W_ESC, cid, S2W_HTTP_HEADER, len);
+// 3364 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 3365             AppS2wHal_CharNPut(header, headerLen);
+// 3366             AppS2wHal_CharNPut(customHdrPtr->hconCustomHeaderstype[i], strlen(customHdrPtr->hconCustomHeaderstype[i]));
+// 3367             AppS2wHal_CharNPut(&delim,1);
+// 3368             AppS2wHal_CharNPut(customHdrPtr->hconCustomHeadersval[i], strlen(customHdrPtr->hconCustomHeadersval[i]));
+// 3369 #else
+// 3370             AppS2wHal_CharNPut1(header, headerLen);
+// 3371             AppS2wHal_CharNPut1(customHdrPtr->hconCustomHeaderstype[i], strlen(customHdrPtr->hconCustomHeaderstype[i]));
+// 3372             AppS2wHal_CharNPut1(&delim,1);
+// 3373             AppS2wHal_CharNPut1(customHdrPtr->hconCustomHeadersval[i], strlen(customHdrPtr->hconCustomHeadersval[i]));
+// 3374 #endif
+// 3375         }
+// 3376     }
+// 3377 AppS2w_HttpRxHdrsCbExit:
+// 3378     httpConfInfo.hconHttpcHdrSent = 1;
+// 3379 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 3380     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 3381     {
+// 3382         s2wSpiFs_Flush();
+// 3383     }
+// 3384 #else
+// 3385     if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
+// 3386     {
+// 3387         s2wSpiFs_Flush1();
+// 3388     }
+// 3389 #endif
+// 3390     return;
+// 3391 }
+// 3392 #endif
+// 3393 
+// 3394 #endif
+// 3395 
+// 3396 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock208 Using cfiCommon0
+          CFI Block cfiBlock213 Using cfiCommon0
           CFI Function AppS2w_HttpRxBufferMgmtCb
         THUMB
-// 3405 PUBLIC void
-// 3406 AppS2w_HttpRxBufferMgmtCb(VOID *context,
-// 3407 	             	 GSN_HTTPC_CONN_HANDLE conHandle,
-// 3408                      INT8 *httpRxDataBuf,
-// 3409                      INT32 httpRxDataLen,
-// 3410                      INT32* rxBufferOffset)
-// 3411 {
+// 3397 PUBLIC void
+// 3398 AppS2w_HttpRxBufferMgmtCb(VOID *context,
+// 3399 	             	 GSN_HTTPC_CONN_HANDLE conHandle,
+// 3400                      INT8 *httpRxDataBuf,
+// 3401                      INT32 httpRxDataLen,
+// 3402                      INT32* rxBufferOffset)
+// 3403 {
 AppS2w_HttpRxBufferMgmtCb:
         PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
@@ -10164,26 +10155,26 @@ AppS2w_HttpRxBufferMgmtCb:
           CFI CFA R13+16
         SUB      SP,SP,#+24
           CFI CFA R13+40
-// 3412     UINT8 cid;
-// 3413     INT8 startMark[10];
-// 3414     ttHttpcConEntryPtr conEntryPtr = (ttHttpcConEntryPtr)conHandle;
-// 3415 
-// 3416     cid = AppS2wHal_CidFind(conEntryPtr->hconSd);
+// 3404     UINT8 cid;
+// 3405     INT8 startMark[10];
+// 3406     ttHttpcConEntryPtr conEntryPtr = (ttHttpcConEntryPtr)conHandle;
+// 3407 
+// 3408     cid = AppS2wHal_CidFind(conEntryPtr->hconSd);
         LDR      R0,[R1, #+168]
         LDR      R6,[SP, #+40]
         MOV      R4,R2
         MOV      R5,R3
           CFI FunCall AppS2wHal_CidFind
         BL       AppS2wHal_CidFind
-// 3417 #ifdef S2W_THROUGHPUT_TEST                       
-// 3418 	if( s2wCidList[cid].tpTestInProgress == 1)
-// 3419 	{
-// 3420 		s2wCidList[cid].stats.bytesReceived += httpRxDataLen;
-// 3421 	}
-// 3422 	else
-// 3423 #endif				
-// 3424 	{
-// 3425     sprintf(startMark,"%c%c%x%04d", S2W_ESC, 'H', cid,httpRxDataLen);
+// 3409 #ifdef S2W_THROUGHPUT_TEST                       
+// 3410 	if( s2wCidList[cid].tpTestInProgress == 1)
+// 3411 	{
+// 3412 		s2wCidList[cid].stats.bytesReceived += httpRxDataLen;
+// 3413 	}
+// 3414 	else
+// 3415 #endif				
+// 3416 	{
+// 3417     sprintf(startMark,"%c%c%x%04d", S2W_ESC, 'H', cid,httpRxDataLen);
         STR      R0,[SP, #+0]
         STR      R5,[SP, #+4]
         MOVS     R3,#+72
@@ -10192,8 +10183,8 @@ AppS2w_HttpRxBufferMgmtCb:
         ADD      R0,SP,#+8
           CFI FunCall sprintf
         BL       sprintf
-// 3426 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 3427     AppS2wHal_CharNPut(startMark, strlen(startMark));
+// 3418 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 3419     AppS2wHal_CharNPut(startMark, strlen(startMark));
         ADD      R0,SP,#+8
           CFI FunCall strlen
         BL       strlen
@@ -10201,22 +10192,22 @@ AppS2w_HttpRxBufferMgmtCb:
         ADD      R0,SP,#+8
           CFI FunCall AppS2wHal_CharNPut
         BL       AppS2wHal_CharNPut
-// 3428 
-// 3429     AppS2wHal_CharNPut(httpRxDataBuf, httpRxDataLen);
+// 3420 
+// 3421     AppS2wHal_CharNPut(httpRxDataBuf, httpRxDataLen);
         MOV      R1,R5
         MOV      R0,R4
           CFI FunCall AppS2wHal_CharNPut
         BL       AppS2wHal_CharNPut
-// 3430 #else
-// 3431     AppS2wHal_CharNPut1(startMark, strlen(startMark));
-// 3432     AppS2wHal_CharNPut1(httpRxDataBuf, httpRxDataLen);
-// 3433 #endif
-// 3434 
-// 3435     *rxBufferOffset = 0;
+// 3422 #else
+// 3423     AppS2wHal_CharNPut1(startMark, strlen(startMark));
+// 3424     AppS2wHal_CharNPut1(httpRxDataBuf, httpRxDataLen);
+// 3425 #endif
+// 3426 
+// 3427     *rxBufferOffset = 0;
         MOVS     R0,#+0
-// 3436 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 3437         if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
-        LDR.W    R1,??DataTable109_2
+// 3428 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 3429         if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+        LDR.W    R1,??DataTable105_2
         STR      R0,[R6, #+0]
         MOVW     R0,#+27384
         LDR      R1,[R1, #+0]
@@ -10225,134 +10216,134 @@ AppS2w_HttpRxBufferMgmtCb:
         IT       EQ 
           CFI FunCall s2wSpiFs_Flush
         BLEQ     s2wSpiFs_Flush
-// 3438         {
-// 3439              s2wSpiFs_Flush();
-// 3440         }
-// 3441 #else
-// 3442         if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
-// 3443         {
-// 3444             s2wSpiFs_Flush1();
-// 3445         }
-// 3446 #endif
-// 3447 	}
-// 3448     return;
+// 3430         {
+// 3431              s2wSpiFs_Flush();
+// 3432         }
+// 3433 #else
+// 3434         if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
+// 3435         {
+// 3436             s2wSpiFs_Flush1();
+// 3437         }
+// 3438 #endif
+// 3439 	}
+// 3440     return;
         ADD      SP,SP,#+24
           CFI CFA R13+16
         POP      {R4-R6,PC}       ;; return
-          CFI EndBlock cfiBlock208
-// 3449 
-// 3450 }
-// 3451 #ifdef S2W_GSLINK
+          CFI EndBlock cfiBlock213
+// 3441 
+// 3442 }
+// 3443 #ifdef S2W_GSLINK
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock209 Using cfiCommon0
+          CFI Block cfiBlock214 Using cfiCommon0
           CFI Function AppS2w_HttpdSemCreate
         THUMB
-// 3452 PUBLIC VOID AppS2w_HttpdSemCreate(UINT8 cid)
-// 3453 {
-// 3454 	GsnOsal_SemCreate  ( &s2wCidList[cid].httpdCtx.s2wGsLinkemID, 0 );
+// 3444 PUBLIC VOID AppS2w_HttpdSemCreate(UINT8 cid)
+// 3445 {
+// 3446 	GsnOsal_SemCreate  ( &s2wCidList[cid].httpdCtx.s2wGsLinkemID, 0 );
 AppS2w_HttpdSemCreate:
         MOV      R2,#+296
-        LDR.N    R3,??DataTable94
+        LDR.W    R3,??DataTable98_1
         MLA      R0,R2,R0,R3
         MOVS     R1,#+0
         ADDS     R0,R0,#+164
           CFI FunCall GsnOsal_SemCreate
         B.W      GsnOsal_SemCreate
-          CFI EndBlock cfiBlock209
-// 3455 }
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable87:
-        DC32     s2wSyncSemID
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable87_1:
-        DC32     profile_params
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable87_2:
-        DC32     s2wappMainTaskNotifier
+          CFI EndBlock cfiBlock214
+// 3447 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock210 Using cfiCommon0
+          CFI Block cfiBlock215 Using cfiCommon0
           CFI Function AppS2w_HttpSemAquire
         THUMB
-// 3456 PUBLIC VOID AppS2w_HttpSemAquire(UINT8 cid)
-// 3457 {
-// 3458 	GsnOsal_SemAcquire(&s2wCidList[cid].httpdCtx.s2wGsLinkemID,GSN_OSAL_WAIT_FOREVER);
+// 3448 PUBLIC VOID AppS2w_HttpSemAquire(UINT8 cid)
+// 3449 {
+// 3450 	GsnOsal_SemAcquire(&s2wCidList[cid].httpdCtx.s2wGsLinkemID,GSN_OSAL_WAIT_FOREVER);
 AppS2w_HttpSemAquire:
         MOV      R2,#+296
-        LDR.N    R3,??DataTable94
+        LDR.W    R3,??DataTable98_1
         MLA      R0,R2,R0,R3
         MOV      R1,#-1
         ADDS     R0,R0,#+164
           CFI FunCall GsnOsal_SemAcquire
         B.W      GsnOsal_SemAcquire
-          CFI EndBlock cfiBlock210
-// 3459 
-// 3460 }
+          CFI EndBlock cfiBlock215
+// 3451 
+// 3452 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock211 Using cfiCommon0
+          CFI Block cfiBlock216 Using cfiCommon0
           CFI Function AppS2w_HttpSemRelease
         THUMB
-// 3461 PUBLIC VOID AppS2w_HttpSemRelease(UINT8 cid)
-// 3462 {
-// 3463 	GsnOsal_SemRelease(&s2wCidList[cid].httpdCtx.s2wGsLinkemID);
+// 3453 PUBLIC VOID AppS2w_HttpSemRelease(UINT8 cid)
+// 3454 {
+// 3455 	GsnOsal_SemRelease(&s2wCidList[cid].httpdCtx.s2wGsLinkemID);
 AppS2w_HttpSemRelease:
         MOV      R1,#+296
-        LDR.N    R2,??DataTable94
+        LDR.W    R2,??DataTable98_1
         MLA      R0,R1,R0,R2
         ADDS     R0,R0,#+164
           CFI FunCall GsnOsal_SemRelease
         B.W      GsnOsal_SemRelease
-          CFI EndBlock cfiBlock211
-// 3464 #if 0
-// 3465 	GsnOsal_SemRelease(&s2wappMainTaskCtxt->gslinkSync);
-// 3466 #endif
-// 3467 
-// 3468 }
+          CFI EndBlock cfiBlock216
+// 3456 #if 0
+// 3457 	GsnOsal_SemRelease(&s2wappMainTaskCtxt->gslinkSync);
+// 3458 #endif
+// 3459 
+// 3460 }
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable85:
+        DC32     profile_params
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock212 Using cfiCommon0
+          CFI Block cfiBlock217 Using cfiCommon0
           CFI Function AppS2w_HttpdSemDelete
         THUMB
-// 3469 PUBLIC VOID AppS2w_HttpdSemDelete(UINT8 cid)
-// 3470 {
-// 3471 	GsnOsal_SemDelete(&s2wCidList[cid].httpdCtx.s2wGsLinkemID);
+// 3461 PUBLIC VOID AppS2w_HttpdSemDelete(UINT8 cid)
+// 3462 {
+// 3463 	GsnOsal_SemDelete(&s2wCidList[cid].httpdCtx.s2wGsLinkemID);
 AppS2w_HttpdSemDelete:
         MOV      R1,#+296
-        LDR.N    R2,??DataTable94
+        LDR.W    R2,??DataTable98_1
         MLA      R0,R1,R0,R2
         ADDS     R0,R0,#+164
           CFI FunCall GsnOsal_SemDelete
         B.W      GsnOsal_SemDelete
-          CFI EndBlock cfiBlock212
-// 3472 }
-// 3473 
-// 3474 
-// 3475 #endif
+          CFI EndBlock cfiBlock217
+// 3464 }
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable86:
+        DC32     s2wSyncSemID
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable86_1:
+        DC32     s2wappMainTaskNotifier
+// 3465 
+// 3466 
+// 3467 #endif
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock213 Using cfiCommon0
+          CFI Block cfiBlock218 Using cfiCommon0
           CFI Function AppS2w_ConnStateGet
         THUMB
-// 3476 PUBLIC UINT8 AppS2w_ConnStateGet(UINT8 cid)
-// 3477 {
+// 3468 PUBLIC UINT8 AppS2w_ConnStateGet(UINT8 cid)
+// 3469 {
 AppS2w_ConnStateGet:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-// 3478     return tlsv1_client_established(s2wCidList[cid].ssl.sslConn->tlsv1Conn);
+// 3470     return tlsv1_client_established(s2wCidList[cid].ssl.sslConn->tlsv1Conn);
         MOV      R1,#+296
-        LDR.N    R2,??DataTable94
+        LDR.W    R2,??DataTable98_1
         MLA      R0,R1,R0,R2
         LDR      R0,[R0, #+40]
         LDR      R0,[R0, #+4]
@@ -10360,44 +10351,44 @@ AppS2w_ConnStateGet:
         BL       tlsv1_client_established
         UXTB     R0,R0
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock213
-// 3479 }
+          CFI EndBlock cfiBlock218
+// 3471 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock214 Using cfiCommon0
+          CFI Block cfiBlock219 Using cfiCommon0
           CFI Function AppS2w_ConnHttpStateGet
           CFI NoCalls
         THUMB
-// 3480 PUBLIC UINT8 AppS2w_ConnHttpStateGet(UINT8 cid)
-// 3481 {
-// 3482     return (s2wCidList[cid].httpflag);
+// 3472 PUBLIC UINT8 AppS2w_ConnHttpStateGet(UINT8 cid)
+// 3473 {
+// 3474     return (s2wCidList[cid].httpflag);
 AppS2w_ConnHttpStateGet:
         MOV      R1,#+296
-        LDR.N    R2,??DataTable94
+        LDR.W    R2,??DataTable98_1
         MLA      R0,R1,R0,R2
         LDRB     R0,[R0, #+47]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock214
-// 3483 }
-// 3484 #ifdef S2W_HTTPC_SUPPORT
-// 3485 
-// 3486 /**
-// 3487  ******************************************************************
-// 3488  * @ingroup S2w-Application
-// 3489  * @brief Http client send function.
-// 3490  * @param cid                - IN the cid needs to be closed
-// 3491  * @retval S2W_SUCCESS     - operation successfull.
-// 3492  * @retval S2W_EBADCID     - cid is not valid.
-// 3493  * @retval S2W_FAILURE     - operation failed.
-// 3494  ******************************************************************/
+          CFI EndBlock cfiBlock219
+// 3475 }
+// 3476 #ifdef S2W_HTTPC_SUPPORT
+// 3477 
+// 3478 /**
+// 3479  ******************************************************************
+// 3480  * @ingroup S2w-Application
+// 3481  * @brief Http client send function.
+// 3482  * @param cid                - IN the cid needs to be closed
+// 3483  * @retval S2W_SUCCESS     - operation successfull.
+// 3484  * @retval S2W_EBADCID     - cid is not valid.
+// 3485  * @retval S2W_FAILURE     - operation failed.
+// 3486  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock215 Using cfiCommon0
+          CFI Block cfiBlock220 Using cfiCommon0
           CFI Function S2wHttp_Send
         THUMB
-// 3495 PUBLIC GSN_STATUS 
-// 3496 S2wHttp_Send(UINT8 cid)
-// 3497 {
+// 3487 PUBLIC GSN_STATUS 
+// 3488 S2wHttp_Send(UINT8 cid)
+// 3489 {
 S2wHttp_Send:
         PUSH     {R4-R8,LR}
           CFI R14 Frame(CFA, -4)
@@ -10409,97 +10400,97 @@ S2wHttp_Send:
           CFI CFA R13+24
         SUB      SP,SP,#+24
           CFI CFA R13+48
-// 3498     UINT8 *httpRxDataBuf = NULL;
+// 3490     UINT8 *httpRxDataBuf = NULL;
         MOVS     R6,#+0
         MOV      R5,R0
-// 3499     UINT32 httpRxDataLen = 0;
+// 3491     UINT32 httpRxDataLen = 0;
         STR      R6,[SP, #+8]
-// 3500     UINT32 ret = S2W_SUCCESS;//et1= S2W_SUCCESS, bytesLeft = 0;
-// 3501     S2W_HTTP_DATA_T *pHttpData;
-// 3502     INT8 startMark[10];
-// 3503     //UINT8 *rcvBuf = NULL;
-// 3504     //UINT32 rcvLen;
-// 3505 #ifdef S2W_HTTPS_SUPPORT
-// 3506     //ttHttpcConEntryPtr      conEntryPtr;
-// 3507 #endif
-// 3508     //S2W_MSG_T recvMsg;
-// 3509 
-// 3510     pHttpData = (S2W_HTTP_DATA_T *)AppS2wHal_HttpHandleGet(cid);
+// 3492     UINT32 ret = S2W_SUCCESS;//et1= S2W_SUCCESS, bytesLeft = 0;
+// 3493     S2W_HTTP_DATA_T *pHttpData;
+// 3494     INT8 startMark[10];
+// 3495     //UINT8 *rcvBuf = NULL;
+// 3496     //UINT32 rcvLen;
+// 3497 #ifdef S2W_HTTPS_SUPPORT
+// 3498     //ttHttpcConEntryPtr      conEntryPtr;
+// 3499 #endif
+// 3500     //S2W_MSG_T recvMsg;
+// 3501 
+// 3502     pHttpData = (S2W_HTTP_DATA_T *)AppS2wHal_HttpHandleGet(cid);
           CFI FunCall AppS2wHal_HttpHandleGet
         BL       AppS2wHal_HttpHandleGet
         MOVS     R8,R0
-// 3511 
-// 3512     if(pHttpData == NULL)
+// 3503 
+// 3504     if(pHttpData == NULL)
         IT       EQ 
         MOVEQ    R0,#+1
-// 3513     {
-// 3514          return S2W_FAILURE;
+// 3505     {
+// 3506          return S2W_FAILURE;
         BEQ.N    ??S2wHttp_Send_0
-// 3515     }
-// 3516 
-// 3517     if(0 == httpConfInfo.moredata)
-        LDR.W    R4,??DataTable109
+// 3507     }
+// 3508 
+// 3509     if(0 == httpConfInfo.moredata)
+        LDR.W    R4,??DataTable105
         LDRB     R0,[R4, #+72]
         ADDS     R7,R4,#+4
         CBNZ.N   R0,??S2wHttp_Send_1
-// 3518     {/* prepare to receive response */
-// 3519         httpRxDataLen = 2048 ;
+// 3510     {/* prepare to receive response */
+// 3511         httpRxDataLen = 2048 ;
         MOV      R0,#+2048
         STR      R0,[SP, #+8]
-// 3520         httpRxDataBuf = gsn_malloc(2048);
+// 3512         httpRxDataBuf = gsn_malloc(2048);
         MOVS     R2,#+0
-        MOV      R1,#+3520
+        MOVW     R1,#+3512
           CFI FunCall GsnDynMemMgmt_Alloc
         BL       GsnDynMemMgmt_Alloc
         MOV      R6,R0
-// 3521         if(NULL == httpRxDataBuf)
-// 3522         {
-// 3523             ret = S2W_FAILURE;
-// 3524         }
-// 3525         httpConfInfo.rxBufferMgmtCb = AppS2w_HttpRxBufferMgmtCb;
-        LDR.W    R0,??DataTable109_3
+// 3513         if(NULL == httpRxDataBuf)
+// 3514         {
+// 3515             ret = S2W_FAILURE;
+// 3516         }
+// 3517         httpConfInfo.rxBufferMgmtCb = AppS2w_HttpRxBufferMgmtCb;
+        LDR.W    R0,??DataTable105_3
         STR      R0,[R7, #+56]
-// 3526 		httpConfInfo.rxBufferMgmtCbCtx = NULL;
+// 3518 		httpConfInfo.rxBufferMgmtCbCtx = NULL;
         MOVS     R0,#+0
         STR      R0,[R7, #+60]
-// 3527 #ifdef S2W_HTTP_CUSTOM_SUPPORT
-// 3528         httpConfInfo.rxHdrsCb = AppS2w_HttpRxHdrsCb;
-// 3529 		httpConfInfo.hconHttpcHdrSent = 0;
-// 3530 #endif
-// 3531     }
-// 3532 	/*Make all the custom headers types as 255 - This is done to coply withi the ROM code which is
-// 3533 	compiled with header type array being defined as array of UINT8 */
-// 3534 	{
-// 3535 		UINT8 i;
-// 3536 		for( i = 0; i < S2W_HTTPC_MAX_HDR_SUPPORTED; i++)
+// 3519 #ifdef S2W_HTTP_CUSTOM_SUPPORT
+// 3520         httpConfInfo.rxHdrsCb = AppS2w_HttpRxHdrsCb;
+// 3521 		httpConfInfo.hconHttpcHdrSent = 0;
+// 3522 #endif
+// 3523     }
+// 3524 	/*Make all the custom headers types as 255 - This is done to coply withi the ROM code which is
+// 3525 	compiled with header type array being defined as array of UINT8 */
+// 3526 	{
+// 3527 		UINT8 i;
+// 3528 		for( i = 0; i < S2W_HTTPC_MAX_HDR_SUPPORTED; i++)
 ??S2wHttp_Send_1:
         MOVS     R0,#+0
-        LDR.W    R1,??DataTable109_4
-        LDR.W    R2,??DataTable109_5
-// 3537         {
-// 3538         	if(headerTypes[i] >= (GSN_HTTP_USER_HEADER_TYPE_T)TM_HTTP_HEADER_CUSTOM)
+        LDR.W    R1,??DataTable105_4
+        LDR.W    R2,??DataTable105_5
+// 3529         {
+// 3530         	if(headerTypes[i] >= (GSN_HTTP_USER_HEADER_TYPE_T)TM_HTTP_HEADER_CUSTOM)
 ??S2wHttp_Send_2:
         LDR      R3,[R2, R0, LSL #+2]
         CMP      R3,#+255
         IT       CS 
         MOVCS    R3,#+255
-// 3539 			{
-// 3540 				headerTypesModified[i] = (GSN_HTTP_USER_HEADER_TYPE_T)TM_HTTP_HEADER_CUSTOM;
-// 3541 			}
-// 3542 			else
-// 3543 			{
-// 3544         		headerTypesModified[i] = headerTypes[i];
+// 3531 			{
+// 3532 				headerTypesModified[i] = (GSN_HTTP_USER_HEADER_TYPE_T)TM_HTTP_HEADER_CUSTOM;
+// 3533 			}
+// 3534 			else
+// 3535 			{
+// 3536         		headerTypesModified[i] = headerTypes[i];
         STR      R3,[R1, R0, LSL #+2]
-// 3545 			}
-// 3546         }
+// 3537 			}
+// 3538         }
         ADDS     R0,R0,#+1
         CMP      R0,#+25
         BCC.N    ??S2wHttp_Send_2
-// 3547 	}
-// 3548     ret = GsnHttp_Send(pHttpData->pHttpHandle, (INT8 *)httpRxDataBuf,
-// 3549                        &httpRxDataLen, httpConfInfo.httpTimeOut, &httpConfInfo);
-// 3550 
-// 3551     if(GSN_SUCCESS == ret)
+// 3539 	}
+// 3540     ret = GsnHttp_Send(pHttpData->pHttpHandle, (INT8 *)httpRxDataBuf,
+// 3541                        &httpRxDataLen, httpConfInfo.httpTimeOut, &httpConfInfo);
+// 3542 
+// 3543     if(GSN_SUCCESS == ret)
         STR      R4,[SP, #+0]
         LDR      R3,[R7, #+64]
         LDR      R0,[R8, #+0]
@@ -10508,25 +10499,25 @@ S2wHttp_Send:
           CFI FunCall GsnHttp_Send
         BL       GsnHttp_Send
         CBNZ.N   R0,??S2wHttp_Send_3
-// 3552     {
-// 3553         if(0 == httpConfInfo.moredata)
+// 3544     {
+// 3545         if(0 == httpConfInfo.moredata)
         LDRB     R0,[R4, #+72]
         CBNZ.N   R0,??S2wHttp_Send_4
-// 3554         {
-// 3555 #ifdef S2W_THROUGHPUT_TEST                       
-// 3556         	if( s2wCidList[cid].tpTestInProgress == 1)
-// 3557 			{
-// 3558 				s2wCidList[cid].stats.bytesReceived += httpRxDataLen;
-// 3559         	}
-// 3560 			else
-// 3561 #endif				
-// 3562 			{
-// 3563                 if(GSN_HTTP_METHOD_HEAD != httpConfInfo.reqMethod)
+// 3546         {
+// 3547 #ifdef S2W_THROUGHPUT_TEST                       
+// 3548         	if( s2wCidList[cid].tpTestInProgress == 1)
+// 3549 			{
+// 3550 				s2wCidList[cid].stats.bytesReceived += httpRxDataLen;
+// 3551         	}
+// 3552 			else
+// 3553 #endif				
+// 3554 			{
+// 3555                 if(GSN_HTTP_METHOD_HEAD != httpConfInfo.reqMethod)
         LDRB     R0,[R4, #+1]
         CMP      R0,#+2
         BEQ.N    ??S2wHttp_Send_4
-// 3564                 {
-// 3565                     sprintf(startMark,"%c%c%x%04d", S2W_ESC, 'H', cid,httpRxDataLen);
+// 3556                 {
+// 3557                     sprintf(startMark,"%c%c%x%04d", S2W_ESC, 'H', cid,httpRxDataLen);
         LDR      R0,[SP, #+8]
         ADR.W    R1,`?<Constant "%c%c%x%04d">`
         STR      R0,[SP, #+4]
@@ -10536,8 +10527,8 @@ S2wHttp_Send:
         ADD      R0,SP,#+12
           CFI FunCall sprintf
         BL       sprintf
-// 3566 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 3567                     AppS2wHal_CharNPut(startMark, strlen(startMark));
+// 3558 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 3559                     AppS2wHal_CharNPut(startMark, strlen(startMark));
         ADD      R0,SP,#+12
           CFI FunCall strlen
         BL       strlen
@@ -10545,113 +10536,113 @@ S2wHttp_Send:
         ADD      R0,SP,#+12
           CFI FunCall AppS2wHal_CharNPut
         BL       AppS2wHal_CharNPut
-// 3568                     AppS2wHal_CharNPut(httpRxDataBuf, httpRxDataLen);
+// 3560                     AppS2wHal_CharNPut(httpRxDataBuf, httpRxDataLen);
         LDR      R1,[SP, #+8]
         MOV      R0,R6
           CFI FunCall AppS2wHal_CharNPut
         BL       AppS2wHal_CharNPut
-// 3569 #else
-// 3570                     AppS2wHal_CharNPut1(startMark, strlen(startMark));
-// 3571                     AppS2wHal_CharNPut1(httpRxDataBuf, httpRxDataLen);
-// 3572 #endif
-// 3573                 }
-// 3574 			}
-// 3575         }
-// 3576         ret = S2W_SUCCESS;
+// 3561 #else
+// 3562                     AppS2wHal_CharNPut1(startMark, strlen(startMark));
+// 3563                     AppS2wHal_CharNPut1(httpRxDataBuf, httpRxDataLen);
+// 3564 #endif
+// 3565                 }
+// 3566 			}
+// 3567         }
+// 3568         ret = S2W_SUCCESS;
 ??S2wHttp_Send_4:
         MOVS     R5,#+0
         B.N      ??S2wHttp_Send_5
-// 3577     }
-// 3578     else /* ERROR or TimeOut */
-// 3579     {
-// 3580         ret = S2W_FAILURE;
+// 3569     }
+// 3570     else /* ERROR or TimeOut */
+// 3571     {
+// 3572         ret = S2W_FAILURE;
 ??S2wHttp_Send_3:
         MOVS     R5,#+1
-// 3581     }
-// 3582 
-// 3583     if(NULL != httpRxDataBuf)
+// 3573     }
+// 3574 
+// 3575     if(NULL != httpRxDataBuf)
 ??S2wHttp_Send_5:
         CBZ.N    R6,??S2wHttp_Send_6
-// 3584     {
-// 3585         gsn_free(httpRxDataBuf);
+// 3576     {
+// 3577         gsn_free(httpRxDataBuf);
         MOV      R0,R6
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-// 3586         httpRxDataBuf = NULL;
-// 3587     }
-// 3588     if(NULL != httpConfInfo.reqPathPtr 
-// 3589 #ifdef S2W_THROUGHPUT_TEST
-// 3590 		&& ( s2wCidList[cid].tpTestInProgress == 0)
-// 3591 #endif		
-// 3592 	   )
+// 3578         httpRxDataBuf = NULL;
+// 3579     }
+// 3580     if(NULL != httpConfInfo.reqPathPtr 
+// 3581 #ifdef S2W_THROUGHPUT_TEST
+// 3582 		&& ( s2wCidList[cid].tpTestInProgress == 0)
+// 3583 #endif		
+// 3584 	   )
 ??S2wHttp_Send_6:
         LDR      R0,[R4, #+4]
         CBZ.N    R0,??S2wHttp_Send_7
-// 3593     {
-// 3594         gsn_free(httpConfInfo.reqPathPtr);
+// 3585     {
+// 3586         gsn_free(httpConfInfo.reqPathPtr);
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-// 3595         httpConfInfo.reqPathPtr = NULL;
+// 3587         httpConfInfo.reqPathPtr = NULL;
         MOVS     R0,#+0
         STR      R0,[R4, #+4]
-// 3596     }
-// 3597 #if 0//def GSN_HTTPS_SUPPORT
-// 3598     conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
-// 3599     if(0 == httpConfInfo.moredata)
-// 3600     {
-// 3601         /* check whether some data still remaining in nw buffer or not */
-// 3602         bytesLeft = tfGetWaitingBytes(s2wCidList[cid].sd);
-// 3603     }
-// 3604     if((bytesLeft > 0) && (conEntryPtr->hconHttpType == GSN_HTTPS))
-// 3605     {
-// 3606         /* Still data remaining in NW buffer. Decode that data */
-// 3607         ret1 = GsnSsl_DataReceive(conEntryPtr->hConSsl, s2wCidList[cid].sd, &rcvBuf, &rcvLen, 5);
-// 3608         if(rcvBuf != NULL)
-// 3609         {
-// 3610             GsnSsl_Free(rcvBuf);
+// 3588     }
+// 3589 #if 0//def GSN_HTTPS_SUPPORT
+// 3590     conEntryPtr = (ttHttpcConEntryPtr)s2wCidList[cid].pHttpData->pHttpHandle;
+// 3591     if(0 == httpConfInfo.moredata)
+// 3592     {
+// 3593         /* check whether some data still remaining in nw buffer or not */
+// 3594         bytesLeft = tfGetWaitingBytes(s2wCidList[cid].sd);
+// 3595     }
+// 3596     if((bytesLeft > 0) && (conEntryPtr->hconHttpType == GSN_HTTPS))
+// 3597     {
+// 3598         /* Still data remaining in NW buffer. Decode that data */
+// 3599         ret1 = GsnSsl_DataReceive(conEntryPtr->hConSsl, s2wCidList[cid].sd, &rcvBuf, &rcvLen, 5);
+// 3600         if(rcvBuf != NULL)
+// 3601         {
+// 3602             GsnSsl_Free(rcvBuf);
+// 3603         }
+// 3604         if(ret1 == GSN_SSL_CLOSE_ALERT)
+// 3605         {
+// 3606             /* Data is a Close alert from server. Post message to rcv task */
+// 3607             recvMsg.msgType = S2W_RECV_TYPE_HTTPS_CLOSE;
+// 3608             recvMsg.rData.dataSock = s2wCidList[cid].sd;
+// 3609             recvMsg.msgLen = 0;
+// 3610             AppS2wHal_NetRxMsgPost(&recvMsg);
 // 3611         }
-// 3612         if(ret1 == GSN_SSL_CLOSE_ALERT)
-// 3613         {
-// 3614             /* Data is a Close alert from server. Post message to rcv task */
-// 3615             recvMsg.msgType = S2W_RECV_TYPE_HTTPS_CLOSE;
-// 3616             recvMsg.rData.dataSock = s2wCidList[cid].sd;
-// 3617             recvMsg.msgLen = 0;
-// 3618             AppS2wHal_NetRxMsgPost(&recvMsg);
-// 3619         }
-// 3620 
-// 3621     }
-// 3622 #endif
-// 3623 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 3624     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 3612 
+// 3613     }
+// 3614 #endif
+// 3615 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 3616     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
 ??S2wHttp_Send_7:
         MOVW     R0,#+27384
-        LDR.W    R1,??DataTable109_2
+        LDR.W    R1,??DataTable105_2
         LDR      R1,[R1, #+0]
         LDRB     R0,[R0, R1]
         CMP      R0,#+2
         IT       EQ 
           CFI FunCall s2wSpiFs_Flush
         BLEQ     s2wSpiFs_Flush
-// 3625     {
-// 3626         s2wSpiFs_Flush();
-// 3627     }
-// 3628 #else
-// 3629     if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
-// 3630     {
-// 3631         s2wSpiFs_Flush1();
-// 3632     }
-// 3633 #endif
-// 3634     return ret;
+// 3617     {
+// 3618         s2wSpiFs_Flush();
+// 3619     }
+// 3620 #else
+// 3621     if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
+// 3622     {
+// 3623         s2wSpiFs_Flush1();
+// 3624     }
+// 3625 #endif
+// 3626     return ret;
         MOV      R0,R5
-          CFI EndBlock cfiBlock215
+          CFI EndBlock cfiBlock220
 ??S2wHttp_Send_0:
         REQUIRE ?Subroutine0
         ;; // Fall through to label ?Subroutine0
-// 3635 
-// 3636 }
+// 3627 
+// 3628 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock216 Using cfiCommon0
+          CFI Block cfiBlock221 Using cfiCommon0
           CFI NoFunction
           CFI NoCalls AppS2wHal_NetTcpServer
           CFI NoCalls S2wHttp_Send
@@ -10667,43 +10658,43 @@ S2wHttp_Send:
         ADD      SP,SP,#+24
           CFI CFA R13+24
         POP      {R4-R8,PC}       ;; return
-          CFI EndBlock cfiBlock216
-// 3637 #endif
-// 3638 
+          CFI EndBlock cfiBlock221
+// 3629 #endif
+// 3630 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock217 Using cfiCommon0
+          CFI Block cfiBlock222 Using cfiCommon0
           CFI Function AppS2wHal_HttpdClose
         THUMB
-// 3639 PUBLIC VOID
-// 3640 AppS2wHal_HttpdClose(UINT8 parentTask)
-// 3641 {
+// 3631 PUBLIC VOID
+// 3632 AppS2wHal_HttpdClose(UINT8 parentTask)
+// 3633 {
 AppS2wHal_HttpdClose:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-// 3642     UINT32 message;
-// 3643 #if defined(S2W_WEB_SERVER) || defined(S2W_WEB_PROV)
-// 3644     if(!parentTask)
-        LDR.W    R4,??DataTable109_2
+// 3634     UINT32 message;
+// 3635 #if defined(S2W_WEB_SERVER) || defined(S2W_WEB_PROV)
+// 3636     if(!parentTask)
+        LDR.W    R4,??DataTable105_2
         CBNZ.N   R0,??AppS2wHal_HttpdClose_0
-// 3645     {
-// 3646         if( TRUE == GsnHttpd_IsRunning())
+// 3637     {
+// 3638         if( TRUE == GsnHttpd_IsRunning())
           CFI FunCall GsnHttpd_IsRunning
         BL       GsnHttpd_IsRunning
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_HttpdClose_1
-// 3647         {
-// 3648             message = APP_NOTIFICATION_SRVR_STOP;
-// 3649             (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
-        LDR.W    R2,??DataTable109_6
+// 3639         {
+// 3640             message = APP_NOTIFICATION_SRVR_STOP;
+// 3641             (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
+        LDR.W    R2,??DataTable105_6
         LDR      R1,[R4, #+0]
         LDR      R2,[R2, #+0]
         MOVS     R0,#+26
           CFI FunCall
         BLX      R2
-// 3650             GsnOsal_SemAcquire(&s2wappMainTaskCtxt->webServerSync,GSN_OSAL_WAIT_FOREVER);
+// 3642             GsnOsal_SemAcquire(&s2wappMainTaskCtxt->webServerSync,GSN_OSAL_WAIT_FOREVER);
         LDR      R0,[R4, #+0]
         POP      {R4,LR}
           CFI R4 SameValue
@@ -10716,19 +10707,19 @@ AppS2wHal_HttpdClose:
           CFI R4 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-// 3651         }
-// 3652     }
-// 3653     else
-// 3654     {
-// 3655         if( TRUE == GsnHttpd_IsRunning() )
+// 3643         }
+// 3644     }
+// 3645     else
+// 3646     {
+// 3647         if( TRUE == GsnHttpd_IsRunning() )
 ??AppS2wHal_HttpdClose_0:
           CFI FunCall GsnHttpd_IsRunning
         BL       GsnHttpd_IsRunning
         CMP      R0,#+1
         BNE.N    ??AppS2wHal_HttpdClose_1
-// 3656         {
-// 3657 #ifdef S2W_WEB_PROV
-// 3658             if((TRUE == GsnHttpd_IsRunning() )&& s2wappMainTaskCtxt->webProvStatus== RUNNING)
+// 3648         {
+// 3649 #ifdef S2W_WEB_PROV
+// 3650             if((TRUE == GsnHttpd_IsRunning() )&& s2wappMainTaskCtxt->webProvStatus== RUNNING)
           CFI FunCall GsnHttpd_IsRunning
         BL       GsnHttpd_IsRunning
         CMP      R0,#+1
@@ -10740,10 +10731,10 @@ AppS2wHal_HttpdClose:
         ITT      EQ 
         MOVEQ    R2,#+3
         STRBEQ   R2,[R1, R0]
-// 3659                 s2wappMainTaskCtxt->webProvStatus=STOP;
-// 3660 #endif
-// 3661 #ifdef S2W_WEB_SERVER
-// 3662             if((TRUE == GsnHttpd_IsRunning() )&& s2wappMainTaskCtxt->webServerStatus == RUNNING)
+// 3651                 s2wappMainTaskCtxt->webProvStatus=STOP;
+// 3652 #endif
+// 3653 #ifdef S2W_WEB_SERVER
+// 3654             if((TRUE == GsnHttpd_IsRunning() )&& s2wappMainTaskCtxt->webServerStatus == RUNNING)
           CFI FunCall GsnHttpd_IsRunning
         BL       GsnHttpd_IsRunning
         CMP      R0,#+1
@@ -10755,9 +10746,9 @@ AppS2wHal_HttpdClose:
         ITT      EQ 
         MOVEQ    R2,#+3
         STRBEQ   R2,[R1, R0]
-// 3663                 s2wappMainTaskCtxt->webServerStatus=STOP;
-// 3664 #endif
-// 3665             AppS2wHttpd_Stop();
+// 3655                 s2wappMainTaskCtxt->webServerStatus=STOP;
+// 3656 #endif
+// 3657             AppS2wHttpd_Stop();
         POP      {R4,LR}
           CFI R4 SameValue
           CFI R14 SameValue
@@ -10767,26 +10758,26 @@ AppS2wHal_HttpdClose:
           CFI R4 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-// 3666         }
-// 3667     }
-// 3668 #endif
-// 3669 }
+// 3658         }
+// 3659     }
+// 3660 #endif
+// 3661 }
 ??AppS2wHal_HttpdClose_1:
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock217
-// 3670 
-// 3671 
-// 3672 #ifdef S2W_MDNS_ENABLE
+          CFI EndBlock cfiBlock222
+// 3662 
+// 3663 
+// 3664 #ifdef S2W_MDNS_ENABLE
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock218 Using cfiCommon0
+          CFI Block cfiBlock223 Using cfiCommon0
           CFI Function AppS2wHal_MdnsRegCb
         THUMB
-// 3673 PUBLIC VOID
-// 3674 AppS2wHal_MdnsRegCb(void *pCtx, UINT8 *rrName, UINT32 status)
-// 3675 {
-// 3676 	UINT8 syncId,asyncId;
-// 3677     if(GSN_MDNS_REG_CONFLICT == status)
+// 3665 PUBLIC VOID
+// 3666 AppS2wHal_MdnsRegCb(void *pCtx, UINT8 *rrName, UINT32 status)
+// 3667 {
+// 3668 	UINT8 syncId,asyncId;
+// 3669     if(GSN_MDNS_REG_CONFLICT == status)
 AppS2wHal_MdnsRegCb:
         CMP      R2,#+0
         ITTEE    EQ 
@@ -10794,186 +10785,180 @@ AppS2wHal_MdnsRegCb:
         MOVEQ    R0,#+26
         MOVNE    R2,#+33
         MOVNE    R0,#+27
-// 3678     {
-// 3679 	    syncId =  S2W_MDNS_REG_FAILED_ID;
-// 3680 		asyncId = S2W_ASYNC_MDNS_REG_FAILED_ID;
-// 3681     }
-// 3682     else
-// 3683     {
-// 3684 	    syncId =  S2W_MDNS_REG_SUCESS_ID;
-// 3685 		asyncId = S2W_ASYNC_MDNS_REG_SUCESS_ID;
-// 3686     }
-// 3687 	if(s2wCurrent.asyncMsgFormat == 1)
-        LDR.N    R3,??DataTable102_2
+// 3670     {
+// 3671 	    syncId =  S2W_MDNS_REG_FAILED_ID;
+// 3672 		asyncId = S2W_ASYNC_MDNS_REG_FAILED_ID;
+// 3673     }
+// 3674     else
+// 3675     {
+// 3676 	    syncId =  S2W_MDNS_REG_SUCESS_ID;
+// 3677 		asyncId = S2W_ASYNC_MDNS_REG_SUCESS_ID;
+// 3678     }
+// 3679 	if(s2wCurrent.asyncMsgFormat == 1)
+        LDR.N    R3,??DataTable98_3
         LDRB     R3,[R3, #+472]
         CMP      R3,#+1
         IT       EQ 
           CFI FunCall AppS2wProcess_AsyncStatusNotify
         BEQ.W    AppS2wProcess_AsyncStatusNotify
-// 3688 	{
-// 3689 		AppS2wProcess_AsyncStatusNotify(asyncId,(UINT32)rrName);
-// 3690 	}
-// 3691 	else
-// 3692 	{
-// 3693 		AppS2wProcess_StatusNotify(syncId,(UINT32)rrName);
+// 3680 	{
+// 3681 		AppS2wProcess_AsyncStatusNotify(asyncId,(UINT32)rrName);
+// 3682 	}
+// 3683 	else
+// 3684 	{
+// 3685 		AppS2wProcess_StatusNotify(syncId,(UINT32)rrName);
         MOV      R0,R2
           CFI FunCall AppS2wProcess_StatusNotify
         B.W      AppS2wProcess_StatusNotify
-          CFI EndBlock cfiBlock218
-// 3694 	}
-// 3695 }
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable94:
-        DC32     s2wCidList
-// 3696 
-// 3697 //GSN_MDNS_T mdns;
+          CFI EndBlock cfiBlock223
+// 3686 	}
+// 3687 }
+// 3688 
+// 3689 //GSN_MDNS_T mdns;
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
-// 3698 S2W_MDNS_HN_PARAM_T mdnsHnParam;
+// 3690 S2W_MDNS_HN_PARAM_T mdnsHnParam;
 mdnsHnParam:
         DS8 24
-// 3699 
-// 3700 //#define APP_MDNS_STACK_SIZE     4*1024
-// 3701 //#define APP_MDNS_MSG_Q_BUFF_SIZE        256
-// 3702 
-// 3703 
-// 3704 //UINT8  mdnsMsgBuff[APP_MDNS_MSG_Q_BUFF_SIZE];
-// 3705 
+// 3691 
+// 3692 //#define APP_MDNS_STACK_SIZE     4*1024
+// 3693 //#define APP_MDNS_MSG_Q_BUFF_SIZE        256
+// 3694 
+// 3695 
+// 3696 //UINT8  mdnsMsgBuff[APP_MDNS_MSG_Q_BUFF_SIZE];
+// 3697 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock219 Using cfiCommon0
+          CFI Block cfiBlock224 Using cfiCommon0
           CFI Function s2w_mdnsCb
         THUMB
-// 3706 VOID s2w_mdnsCb(VOID *cbCtx, VOID *pMdns)
-// 3707 {
-// 3708   AppMainCtx_TaskNotify(APP_EVENT_MDNS_EXECUTE);
+// 3698 VOID s2w_mdnsCb(VOID *cbCtx, VOID *pMdns)
+// 3699 {
+// 3700   AppMainCtx_TaskNotify(APP_EVENT_MDNS_EXECUTE);
 s2w_mdnsCb:
         MOVS     R0,#+37
           CFI FunCall AppMainCtx_TaskNotify
         B.W      AppMainCtx_TaskNotify
-          CFI EndBlock cfiBlock219
-// 3709   
-// 3710 }
-// 3711 
-// 3712 #if 0
-// 3713 
-// 3714 PRIVATE VOID   
-// 3715 App_MdnsThreadEntry(UINT32 ctx)
-// 3716 {
-// 3717 
-// 3718     /*UINT status;*/
-// 3719     //UINT32 msg = 0;
-// 3720 
-// 3721    /* Start debug UART before starting the idle handler because the 
-// 3722        debug UART flushing is done in idle handler context */
-// 3723 
-// 3724     /**< Initialize debug module */
-// 3725    APP_MAIN_CTX_T *pAppCtx;
-// 3726    pAppCtx = (APP_MAIN_CTX_T *)ctx;
-// 3727    
-// 3728    
-// 3729     GsnMdns_Execute(&pAppCtx->mdns);/* This will not exit*/
-// 3730 }
-// 3731 #endif
-// 3732 
-// 3733 
+          CFI EndBlock cfiBlock224
+// 3701   
+// 3702 }
+// 3703 
+// 3704 #if 0
+// 3705 
+// 3706 PRIVATE VOID   
+// 3707 App_MdnsThreadEntry(UINT32 ctx)
+// 3708 {
+// 3709 
+// 3710     /*UINT status;*/
+// 3711     //UINT32 msg = 0;
+// 3712 
+// 3713    /* Start debug UART before starting the idle handler because the 
+// 3714        debug UART flushing is done in idle handler context */
+// 3715 
+// 3716     /**< Initialize debug module */
+// 3717    APP_MAIN_CTX_T *pAppCtx;
+// 3718    pAppCtx = (APP_MAIN_CTX_T *)ctx;
+// 3719    
+// 3720    
+// 3721     GsnMdns_Execute(&pAppCtx->mdns);/* This will not exit*/
+// 3722 }
+// 3723 #endif
+// 3724 
+// 3725 
 
         SECTION `.bss`:DATA:REORDER:NOROOT(0)
-// 3734 UINT8 mdnsFlag=0;
+// 3726 UINT8 mdnsFlag=0;
 mdnsFlag:
         DS8 1
 
         SECTION `.noinit`:DATA:REORDER:NOROOT(2)
-// 3735 __no_init UINT8 mdnsMsgQueueBuf[512];
+// 3727 __no_init UINT8 mdnsMsgQueueBuf[512];
 mdnsMsgQueueBuf:
         DS8 512
-// 3736 
+// 3728 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock220 Using cfiCommon0
+          CFI Block cfiBlock225 Using cfiCommon0
           CFI Function AppS2wHal_MdnsInit
         THUMB
-// 3737 VOID
-// 3738 AppS2wHal_MdnsInit(UINT8 *ptr)
-// 3739 {
+// 3729 VOID
+// 3730 AppS2wHal_MdnsInit(UINT8 *ptr)
+// 3731 {
 AppS2wHal_MdnsInit:
         PUSH     {R0,R4,R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-// 3740     GSN_MDNS_INIT_PARAM_T initParam;
-// 3741     UINT32 param;
-// 3742     UINT8 *p;
-// 3743     if(mdnsFlag)
-        LDR.W    R4,??DataTable109_7
+// 3732     GSN_MDNS_INIT_PARAM_T initParam;
+// 3733     UINT32 param;
+// 3734     UINT8 *p;
+// 3735     if(mdnsFlag)
+        LDR.W    R4,??DataTable105_7
         LDRB     R0,[R4, #+0]
         SUB      SP,SP,#+56
           CFI CFA R13+72
         CBNZ.N   R0,??AppS2wHal_MdnsInit_0
-// 3744     return ;
-// 3745     memset((INT8*)&initParam, 0, sizeof(initParam));
+// 3736     return ;
+// 3737     memset((INT8*)&initParam, 0, sizeof(initParam));
         MOVS     R2,#+48
         MOVS     R1,#+0
         ADD      R0,SP,#+4
           CFI FunCall memset
         BL       memset
-// 3746 
-// 3747     if((p=(UINT8*)AppS2wParse_NextParamGet(&ptr)) != NULL)
+// 3738 
+// 3739     if((p=(UINT8*)AppS2wParse_NextParamGet(&ptr)) != NULL)
         ADD      R0,SP,#+56
           CFI FunCall AppS2wParse_NextParamGet
         BL       AppS2wParse_NextParamGet
-        LDR.W    R5,??DataTable109_8
+        LDR.W    R5,??DataTable105_8
         CBZ.N    R0,??AppS2wHal_MdnsInit_1
-// 3748     {    
-// 3749     AppS2wParse_Int(p, &param);
+// 3740     {    
+// 3741     AppS2wParse_Int(p, &param);
         ADD      R1,SP,#+0
           CFI FunCall AppS2wParse_Int
         BL       AppS2wParse_Int
-// 3750     if(param == 6)
+// 3742     if(param == 6)
         LDR      R0,[SP, #+0]
         CMP      R0,#+6
         BNE.N    ??AppS2wHal_MdnsInit_2
-// 3751     memcpy(initParam.ipV6Addr,appCtx.if0.nwifCtx.ipConfig.ipv6.globalAddr,16);
+// 3743     memcpy(initParam.ipV6Addr,appCtx.if0.nwifCtx.ipConfig.ipv6.globalAddr,16);
         BL       ?Subroutine6
-// 3752     }
+// 3744     }
 ??CrossCallReturnLabel_10:
         B.N      ??AppS2wHal_MdnsInit_2
-// 3753     else
-// 3754     initParam.ipV4Addr = appCtx.if0.nwifCtx.ipConfig.ipv4.ipAddr;
+// 3745     else
+// 3746     initParam.ipV4Addr = appCtx.if0.nwifCtx.ipConfig.ipv4.ipAddr;
 ??AppS2wHal_MdnsInit_1:
         MOVW     R0,#+26180
         LDR      R0,[R0, R5]
         STR      R0,[SP, #+8]
-// 3755     
-// 3756     initParam.pNwif = &appCtx.if0.nwifCtx;
+// 3747     
+// 3748     initParam.pNwif = &appCtx.if0.nwifCtx;
 ??AppS2wHal_MdnsInit_2:
         ADD      R0,R5,#+5120
         ADDS     R0,R0,#+80
         STR      R0,[SP, #+4]
-// 3757 
-// 3758               
-// 3759     initParam.msgQueueBuff = mdnsMsgQueueBuf;                           /**< pointer to message queue buffer*/
-// 3760     initParam.msgQueueBuffSize = 512;       /**< messsage queue buffer size*/                                      
-// 3761     initParam.noSeparatetsk = 0;
-// 3762     initParam.blockingOn = 0;
-// 3763     //initParam.msgPostCb = NULL;
-// 3764     initParam.msgPostCb = s2w_mdnsCb;
-// 3765     initParam.msgPostCbCtx = NULL;
-// 3766 
-// 3767     GsnMdns_Init(&appCtx.mdns, &initParam);
+// 3749 
+// 3750               
+// 3751     initParam.msgQueueBuff = mdnsMsgQueueBuf;                           /**< pointer to message queue buffer*/
+// 3752     initParam.msgQueueBuffSize = 512;       /**< messsage queue buffer size*/                                      
+// 3753     initParam.noSeparatetsk = 0;
+// 3754     initParam.blockingOn = 0;
+// 3755     //initParam.msgPostCb = NULL;
+// 3756     initParam.msgPostCb = s2w_mdnsCb;
+// 3757     initParam.msgPostCbCtx = NULL;
+// 3758 
+// 3759     GsnMdns_Init(&appCtx.mdns, &initParam);
         ADD      R1,SP,#+4
-        LDR.W    R0,??DataTable109_9
+        LDR.W    R0,??DataTable105_9
         STR      R0,[SP, #+32]
         MOV      R0,#+512
         STR      R0,[SP, #+36]
         MOVS     R0,#+0
         STR      R0,[SP, #+40]
         STRB     R0,[SP, #+28]
-        LDR.W    R0,??DataTable109_10
+        LDR.W    R0,??DataTable105_10
         STR      R0,[SP, #+44]
         MOVS     R0,#+0
         STR      R0,[SP, #+48]
@@ -10981,55 +10966,55 @@ AppS2wHal_MdnsInit:
         ADDS     R0,R0,#+48
           CFI FunCall GsnMdns_Init
         BL       GsnMdns_Init
-// 3768     mdnsFlag=1;
+// 3760     mdnsFlag=1;
         MOVS     R0,#+1
         STRB     R0,[R4, #+0]
-// 3769     /* create a mdns task*/
-// 3770    //GsnOsal_ThreadCreate(App_MdnsThreadEntry, &appCtx, &appMdnsThread,
-// 3771    //     "App Mdns Ctx", APP_MDNS_THREAD_PRI, (UINT8 *)appMdnsThreadStack,
-// 3772    //     sizeof(appMdnsThreadStack), GSN_OSAL_THREAD_INITIAL_READY);
-// 3773 }
+// 3761     /* create a mdns task*/
+// 3762    //GsnOsal_ThreadCreate(App_MdnsThreadEntry, &appCtx, &appMdnsThread,
+// 3763    //     "App Mdns Ctx", APP_MDNS_THREAD_PRI, (UINT8 *)appMdnsThreadStack,
+// 3764    //     sizeof(appMdnsThreadStack), GSN_OSAL_THREAD_INITIAL_READY);
+// 3765 }
 ??AppS2wHal_MdnsInit_0:
         ADD      SP,SP,#+60
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
-          CFI EndBlock cfiBlock220
-// 3774 
+          CFI EndBlock cfiBlock225
+// 3766 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock221 Using cfiCommon0
+          CFI Block cfiBlock226 Using cfiCommon0
           CFI Function AppS2wHal_MdnsDeInit
         THUMB
-// 3775 VOID
-// 3776 AppS2wHal_MdnsDeInit()
-// 3777 {
+// 3767 VOID
+// 3768 AppS2wHal_MdnsDeInit()
+// 3769 {
 AppS2wHal_MdnsDeInit:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-// 3778         
-// 3779 	GsnMdns_DeInit(&appCtx.mdns);
-        LDR.W    R0,??DataTable109_11
+// 3770         
+// 3771 	GsnMdns_DeInit(&appCtx.mdns);
+        LDR.W    R0,??DataTable105_11
           CFI FunCall GsnMdns_DeInit
         BL       GsnMdns_DeInit
-// 3780         mdnsFlag=0;
-        LDR.W    R0,??DataTable109_7
+// 3772         mdnsFlag=0;
+        LDR.W    R0,??DataTable105_7
         MOVS     R1,#+0
         STRB     R1,[R0, #+0]
-// 3781 }
+// 3773 }
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock221
-// 3782 
-// 3783 
-// 3784 
+          CFI EndBlock cfiBlock226
+// 3774 
+// 3775 
+// 3776 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock222 Using cfiCommon0
+          CFI Block cfiBlock227 Using cfiCommon0
           CFI Function AppS2wHal_MdnsHostNameReg
         THUMB
-// 3785 PUBLIC UINT8
-// 3786 AppS2wHal_MdnsHostNameReg(S2W_MDNS_HN_PARAM_T *pHNparam)
-// 3787 {
+// 3777 PUBLIC UINT8
+// 3778 AppS2wHal_MdnsHostNameReg(S2W_MDNS_HN_PARAM_T *pHNparam)
+// 3779 {
 AppS2wHal_MdnsHostNameReg:
         PUSH     {R4,R5,LR}
           CFI R14 Frame(CFA, -4)
@@ -11038,22 +11023,22 @@ AppS2wHal_MdnsHostNameReg:
           CFI CFA R13+12
         SUB      SP,SP,#+44
           CFI CFA R13+56
-// 3788     GSN_STATUS retVal;
-// 3789     GSN_MDNS_HNREG_PARAM_T pParam;
-// 3790     //UINT32 arr[4];
-// 3791     //UINT8 i;
-// 3792     
-// 3793     pParam.hostname = pHNparam ->hostname;
+// 3780     GSN_STATUS retVal;
+// 3781     GSN_MDNS_HNREG_PARAM_T pParam;
+// 3782     //UINT32 arr[4];
+// 3783     //UINT8 i;
+// 3784     
+// 3785     pParam.hostname = pHNparam ->hostname;
         LDR      R1,[R0, #+0]
-// 3794     pParam.domain   = pHNparam -> domain;
-// 3795     pParam.ttl   = pHNparam ->ttl;
-// 3796     pParam.scope = pHNparam->scope;
-// 3797      
-// 3798     pParam.autoCorrect  = pHNparam ->autoCorrect;
-// 3799     pParam.conflctDetect = pHNparam ->conflctDetect;
-// 3800 
-// 3801     if(pHNparam->IpVersion & ADDR_TYPE_IPv6)
-        LDR.W    R5,??DataTable109_8
+// 3786     pParam.domain   = pHNparam -> domain;
+// 3787     pParam.ttl   = pHNparam ->ttl;
+// 3788     pParam.scope = pHNparam->scope;
+// 3789      
+// 3790     pParam.autoCorrect  = pHNparam ->autoCorrect;
+// 3791     pParam.conflctDetect = pHNparam ->conflctDetect;
+// 3792 
+// 3793     if(pHNparam->IpVersion & ADDR_TYPE_IPv6)
+        LDR.W    R5,??DataTable105_8
         STR      R1,[SP, #+0]
         ADD      R4,SP,#+4
         LDR      R1,[R0, #+4]
@@ -11069,31 +11054,31 @@ AppS2wHal_MdnsHostNameReg:
         LDRB     R0,[R0, #+20]
         LSLS     R0,R0,#+31
         BPL.N    ??AppS2wHal_MdnsHostNameReg_0
-// 3802     {
-// 3803         memcpy(pParam.ipAddr.addr.v6,appCtx.if0.nwifCtx.ipConfig.ipv6.globalAddr,16);
+// 3794     {
+// 3795         memcpy(pParam.ipAddr.addr.v6,appCtx.if0.nwifCtx.ipConfig.ipv6.globalAddr,16);
         BL       ?Subroutine6
-// 3804         pParam.ipAddr.ipVer = GSN_NWIF_IP_VERSION_V6;
+// 3796         pParam.ipAddr.ipVer = GSN_NWIF_IP_VERSION_V6;
 ??CrossCallReturnLabel_9:
         MOVS     R0,#+6
         STR      R0,[R4, #+4]
         B.N      ??AppS2wHal_MdnsHostNameReg_1
-// 3805     }
-// 3806     else
-// 3807         pParam.ipAddr.addr.v4 = appCtx.if0.nwifCtx.ipConfig.ipv4.ipAddr;
+// 3797     }
+// 3798     else
+// 3799         pParam.ipAddr.addr.v4 = appCtx.if0.nwifCtx.ipConfig.ipv4.ipAddr;
 ??AppS2wHal_MdnsHostNameReg_0:
         MOVW     R0,#+26180
         LDR      R0,[R0, R5]
         STR      R0,[R4, #+8]
-// 3808 
-// 3809     pParam.cb           = AppS2wHal_MdnsRegCb;
-// 3810     pParam.cbCtx        = NULL;
-// 3811     
-// 3812     retVal = GsnMdns_HostnameRegister(&appCtx.mdns, &pParam);
-// 3813 
-// 3814     if(GSN_SUCCESS != retVal)
+// 3800 
+// 3801     pParam.cb           = AppS2wHal_MdnsRegCb;
+// 3802     pParam.cbCtx        = NULL;
+// 3803     
+// 3804     retVal = GsnMdns_HostnameRegister(&appCtx.mdns, &pParam);
+// 3805 
+// 3806     if(GSN_SUCCESS != retVal)
 ??AppS2wHal_MdnsHostNameReg_1:
         ADD      R1,SP,#+0
-        LDR.W    R0,??DataTable109_12
+        LDR.W    R0,??DataTable105_12
         STR      R0,[R4, #+32]
         MOVS     R0,#+0
         STR      R0,[R4, #+36]
@@ -11102,34 +11087,34 @@ AppS2wHal_MdnsHostNameReg:
           CFI FunCall GsnMdns_HostnameRegister
         BL       GsnMdns_HostnameRegister
         CBZ.N    R0,??AppS2wHal_MdnsHostNameReg_2
-// 3815         return S2W_FAILURE;
+// 3807         return S2W_FAILURE;
         MOVS     R0,#+1
-// 3816     return S2W_SUCCESS;
+// 3808     return S2W_SUCCESS;
 ??AppS2wHal_MdnsHostNameReg_2:
         ADD      SP,SP,#+44
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
-          CFI EndBlock cfiBlock222
-// 3817 }
+          CFI EndBlock cfiBlock227
+// 3809 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond223 Using cfiCommon0
+          CFI Block cfiCond228 Using cfiCommon0
           CFI Function AppS2wHal_MdnsInit
           CFI Conditional ??CrossCallReturnLabel_10
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+72
-          CFI Block cfiCond224 Using cfiCommon0
-          CFI (cfiCond224) Function AppS2wHal_MdnsHostNameReg
-          CFI (cfiCond224) Conditional ??CrossCallReturnLabel_9
-          CFI (cfiCond224) R4 Frame(CFA, -12)
-          CFI (cfiCond224) R5 Frame(CFA, -8)
-          CFI (cfiCond224) R14 Frame(CFA, -4)
-          CFI (cfiCond224) CFA R13+56
-          CFI Block cfiPicker225 Using cfiCommon1
-          CFI (cfiPicker225) NoFunction
-          CFI (cfiPicker225) Picker
+          CFI Block cfiCond229 Using cfiCommon0
+          CFI (cfiCond229) Function AppS2wHal_MdnsHostNameReg
+          CFI (cfiCond229) Conditional ??CrossCallReturnLabel_9
+          CFI (cfiCond229) R4 Frame(CFA, -12)
+          CFI (cfiCond229) R5 Frame(CFA, -8)
+          CFI (cfiCond229) R14 Frame(CFA, -4)
+          CFI (cfiCond229) CFA R13+56
+          CFI Block cfiPicker230 Using cfiCommon1
+          CFI (cfiPicker230) NoFunction
+          CFI (cfiPicker230) Picker
         THUMB
 ?Subroutine6:
         ADD      R1,R5,#+26112
@@ -11139,181 +11124,181 @@ AppS2wHal_MdnsHostNameReg:
           CFI FunCall AppS2wHal_MdnsInit memcpy
           CFI FunCall AppS2wHal_MdnsHostNameReg memcpy
         B.W      memcpy
-          CFI EndBlock cfiCond223
-          CFI EndBlock cfiCond224
-          CFI EndBlock cfiPicker225
-// 3818 
-// 3819 
+          CFI EndBlock cfiCond228
+          CFI EndBlock cfiCond229
+          CFI EndBlock cfiPicker230
+// 3810 
+// 3811 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock226 Using cfiCommon0
+          CFI Block cfiBlock231 Using cfiCommon0
           CFI Function AppS2wHal_MdnsServiceReg
         THUMB
-// 3820 PUBLIC UINT8
-// 3821 AppS2wHal_MdnsServiceReg(S2W_MDNS_SRV_PARAM_T *pSrvParam)
-// 3822 {
+// 3812 PUBLIC UINT8
+// 3813 AppS2wHal_MdnsServiceReg(S2W_MDNS_SRV_PARAM_T *pSrvParam)
+// 3814 {
 AppS2wHal_MdnsServiceReg:
         PUSH     {LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+4
         SUB      SP,SP,#+44
           CFI CFA R13+48
-// 3823     GSN_STATUS retVal;
-// 3824     GSN_MDNS_SRVCREG_PARAM_T pParam;
-// 3825     
-// 3826     pParam.srvceName     = pSrvParam ->srvcInstance;
+// 3815     GSN_STATUS retVal;
+// 3816     GSN_MDNS_SRVCREG_PARAM_T pParam;
+// 3817     
+// 3818     pParam.srvceName     = pSrvParam ->srvcInstance;
         LDR      R1,[R0, #+0]
         STR      R1,[SP, #+0]
-// 3827     pParam.srvceSubType  = pSrvParam ->subType;
+// 3819     pParam.srvceSubType  = pSrvParam ->subType;
         LDR      R1,[R0, #+8]
         STR      R1,[SP, #+4]
-// 3828     pParam.srvceType     = pSrvParam ->srvcType;
+// 3820     pParam.srvceType     = pSrvParam ->srvcType;
         ADD      R1,SP,#+4
         LDR      R2,[R0, #+12]
         STR      R2,[R1, #+4]
-// 3829     pParam.srvceProto    = pSrvParam ->proto;
+// 3821     pParam.srvceProto    = pSrvParam ->proto;
         LDR      R2,[R0, #+16]
         STR      R2,[R1, #+8]
-// 3830     pParam.domain        = pSrvParam ->domain;
+// 3822     pParam.domain        = pSrvParam ->domain;
         LDR      R2,[R0, #+20]
         STR      R2,[R1, #+12]
-// 3831     pParam.port          = pSrvParam ->port;
+// 3823     pParam.port          = pSrvParam ->port;
         LDRH     R2,[R0, #+24]
         STRH     R2,[R1, #+20]
-// 3832     pParam.ttl           = pSrvParam ->ttl;
+// 3824     pParam.ttl           = pSrvParam ->ttl;
         LDR      R2,[R0, #+52]
         STR      R2,[R1, #+24]
-// 3833     pParam.keyVal        = pSrvParam ->keyVal;
+// 3825     pParam.keyVal        = pSrvParam ->keyVal;
         ADD      R2,R0,#+28
         STR      R2,[R1, #+16]
-// 3834     pParam.autoCorrect   = pSrvParam ->autoCorrect;
+// 3826     pParam.autoCorrect   = pSrvParam ->autoCorrect;
         LDRB     R2,[R0, #+48]
         STRB     R2,[R1, #+28]
-// 3835     pParam.scope         = pSrvParam ->scope;
+// 3827     pParam.scope         = pSrvParam ->scope;
         LDRB     R2,[R0, #+26]
         STRB     R2,[R1, #+29]
-// 3836     pParam.conflctDetect = pSrvParam ->conflctDetect;
+// 3828     pParam.conflctDetect = pSrvParam ->conflctDetect;
         LDRB     R0,[R0, #+49]
         STRB     R0,[R1, #+30]
-// 3837       
-// 3838     pParam.cb           =   AppS2wHal_MdnsRegCb;
-        LDR.W    R0,??DataTable109_12
+// 3829       
+// 3830     pParam.cb           =   AppS2wHal_MdnsRegCb;
+        LDR.W    R0,??DataTable105_12
         STR      R0,[R1, #+32]
-// 3839     pParam.cbCtx        =   NULL;
+// 3831     pParam.cbCtx        =   NULL;
         MOVS     R0,#+0
         STR      R0,[R1, #+36]
-// 3840     
-// 3841      retVal = GsnMdns_ServiceRegister(&appCtx.mdns,&pParam);
-// 3842 
-// 3843 
-// 3844       if(GSN_SUCCESS != retVal)
+// 3832     
+// 3833      retVal = GsnMdns_ServiceRegister(&appCtx.mdns,&pParam);
+// 3834 
+// 3835 
+// 3836       if(GSN_SUCCESS != retVal)
         ADD      R1,SP,#+0
-        LDR.W    R0,??DataTable109_11
+        LDR.W    R0,??DataTable105_11
           CFI FunCall GsnMdns_ServiceRegister
         BL       GsnMdns_ServiceRegister
         CBZ.N    R0,??AppS2wHal_MdnsServiceReg_0
-// 3845         return S2W_FAILURE;
+// 3837         return S2W_FAILURE;
         MOVS     R0,#+1
-// 3846     return S2W_SUCCESS;
+// 3838     return S2W_SUCCESS;
 ??AppS2wHal_MdnsServiceReg_0:
         ADD      SP,SP,#+44
           CFI CFA R13+4
         POP      {PC}             ;; return
-          CFI EndBlock cfiBlock226
-// 3847 }
-// 3848 
-// 3849 
+          CFI EndBlock cfiBlock231
+// 3839 }
+// 3840 
+// 3841 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock227 Using cfiCommon0
+          CFI Block cfiBlock232 Using cfiCommon0
           CFI Function AppS2wHal_MdnsHostNameDereg
         THUMB
-// 3850 PUBLIC UINT8
-// 3851 AppS2wHal_MdnsHostNameDereg(S2W_MDNS_HN_PARAM_T *pHNparam)
-// 3852 {
+// 3842 PUBLIC UINT8
+// 3843 AppS2wHal_MdnsHostNameDereg(S2W_MDNS_HN_PARAM_T *pHNparam)
+// 3844 {
 AppS2wHal_MdnsHostNameDereg:
         PUSH     {LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+4
         SUB      SP,SP,#+12
           CFI CFA R13+16
-// 3853     GSN_MDNS_HNDEREG_PAARAM_T pParam;
-// 3854     
-// 3855     pParam.hostname = pHNparam->hostname;
+// 3845     GSN_MDNS_HNDEREG_PAARAM_T pParam;
+// 3846     
+// 3847     pParam.hostname = pHNparam->hostname;
         LDR      R1,[R0, #+0]
         STR      R1,[SP, #+0]
-// 3856     pParam.domain   = pHNparam -> domain;
-// 3857 
-// 3858    GsnMdns_HostnameDeregister(&appCtx.mdns, &pParam);
+// 3848     pParam.domain   = pHNparam -> domain;
+// 3849 
+// 3850    GsnMdns_HostnameDeregister(&appCtx.mdns, &pParam);
         ADD      R1,SP,#+0
         LDR      R0,[R0, #+4]
         STR      R0,[SP, #+4]
-        LDR.W    R0,??DataTable109_11
+        LDR.W    R0,??DataTable105_11
           CFI FunCall GsnMdns_HostnameDeregister
         BL       GsnMdns_HostnameDeregister
-// 3859 
-// 3860     return S2W_SUCCESS;
+// 3851 
+// 3852     return S2W_SUCCESS;
         MOVS     R0,#+0
         POP      {R1-R3,PC}       ;; return
-          CFI EndBlock cfiBlock227
-// 3861 }
-// 3862 
+          CFI EndBlock cfiBlock232
+// 3853 }
+// 3854 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock228 Using cfiCommon0
+          CFI Block cfiBlock233 Using cfiCommon0
           CFI Function AppS2wHal_MdnsServiceDereg
         THUMB
-// 3863 PUBLIC UINT8
-// 3864 AppS2wHal_MdnsServiceDereg(S2W_MDNS_SRV_PARAM_T *pSrvParam)
-// 3865 {
+// 3855 PUBLIC UINT8
+// 3856 AppS2wHal_MdnsServiceDereg(S2W_MDNS_SRV_PARAM_T *pSrvParam)
+// 3857 {
 AppS2wHal_MdnsServiceDereg:
         PUSH     {LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+4
         SUB      SP,SP,#+20
           CFI CFA R13+24
-// 3866      GSN_MDNS_SRVCDEREG_PARAM_T pParam;
-// 3867      
-// 3868      pParam.srvceName = pSrvParam->srvcInstance;
+// 3858      GSN_MDNS_SRVCDEREG_PARAM_T pParam;
+// 3859      
+// 3860      pParam.srvceName = pSrvParam->srvcInstance;
         LDR      R1,[R0, #+0]
         STR      R1,[SP, #+0]
-// 3869      pParam.srvceSubType = pSrvParam->subType;
+// 3861      pParam.srvceSubType = pSrvParam->subType;
         LDR      R1,[R0, #+8]
         STR      R1,[SP, #+4]
-// 3870      pParam.srvceType = pSrvParam -> srvcType;
+// 3862      pParam.srvceType = pSrvParam -> srvcType;
         LDR      R1,[R0, #+12]
         STR      R1,[SP, #+8]
-// 3871      pParam.srvceProto = pSrvParam -> proto;
+// 3863      pParam.srvceProto = pSrvParam -> proto;
         LDR      R1,[R0, #+16]
         STR      R1,[SP, #+12]
-// 3872      pParam.domain = pSrvParam -> domain;
-// 3873        
-// 3874     GsnMdns_ServiceDeRegister(&appCtx.mdns, &pParam);
+// 3864      pParam.domain = pSrvParam -> domain;
+// 3865        
+// 3866     GsnMdns_ServiceDeRegister(&appCtx.mdns, &pParam);
         ADD      R1,SP,#+0
         LDR      R0,[R0, #+20]
         STR      R0,[SP, #+16]
-        LDR.W    R0,??DataTable109_11
+        LDR.W    R0,??DataTable105_11
           CFI FunCall GsnMdns_ServiceDeRegister
         BL       GsnMdns_ServiceDeRegister
-// 3875     return S2W_SUCCESS;
+// 3867     return S2W_SUCCESS;
         B.N      ?Subroutine2
-          CFI EndBlock cfiBlock228
-// 3876 }
+          CFI EndBlock cfiBlock233
+// 3868 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable100:
+??DataTable96:
         DC32     0x186a0
-// 3877 
+// 3869 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock229 Using cfiCommon0
+          CFI Block cfiBlock234 Using cfiCommon0
           CFI Function AppS2wHal_MdnsSdCb
         THUMB
-// 3878 PUBLIC VOID
-// 3879 AppS2wHal_MdnsSdCb(void *pCtx, const GSN_MDNS_SRVC_INFO_T *srvinfo, UINT32 status)
-// 3880 {
+// 3870 PUBLIC VOID
+// 3871 AppS2wHal_MdnsSdCb(void *pCtx, const GSN_MDNS_SRVC_INFO_T *srvinfo, UINT32 status)
+// 3872 {
 AppS2wHal_MdnsSdCb:
         PUSH     {R2-R8,LR}
           CFI R14 Frame(CFA, -4)
@@ -11324,64 +11309,64 @@ AppS2wHal_MdnsSdCb:
           CFI R4 Frame(CFA, -24)
           CFI CFA R13+32
         MOV      R5,R1
-// 3881     UINT8 *addr = (UINT8 *)&srvinfo->ipAddr;
-// 3882 	GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-        LDR.W    R8,??DataTable109_13
+// 3873     UINT8 *addr = (UINT8 *)&srvinfo->ipAddr;
+// 3874 	GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+        LDR.W    R8,??DataTable105_13
         MOV      R6,R2
         ADD      R7,R5,#+192
         MOV      R1,#-1
         MOV      R0,R8
           CFI FunCall GsnOsal_SemAcquire
         BL       GsnOsal_SemAcquire
-// 3883     if(GSN_MDNS_SD_NO_SRVC_INFO == status)
+// 3875     if(GSN_MDNS_SD_NO_SRVC_INFO == status)
         CBNZ.N   R6,??AppS2wHal_MdnsSdCb_0
-// 3884     {
-// 3885         S2w_Printf("Service Discovery Failed\r\n");
+// 3876     {
+// 3877         S2w_Printf("Service Discovery Failed\r\n");
         ADR.W    R0,`?<Constant "Service Discovery Fai...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
         B.N      ??AppS2wHal_MdnsSdCb_1
-// 3886     }
-// 3887     else
-// 3888     {
-// 3889         S2w_Printf("\nA Service Discovered: %d\r\n", status);
+// 3878     }
+// 3879     else
+// 3880     {
+// 3881         S2w_Printf("\nA Service Discovered: %d\r\n", status);
 ??AppS2wHal_MdnsSdCb_0:
         MOV      R1,R6
         ADR.W    R0,`?<Constant "\\nA Service Discovered...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3890         S2w_Printf("\r\n");
-        ADR.N    R0,??DataTable103  ;; 0x0D, 0x0A, 0x00, 0x00
+// 3882         S2w_Printf("\r\n");
+        ADR.N    R0,??DataTable99  ;; 0x0D, 0x0A, 0x00, 0x00
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3891         S2w_Printf("Service Instance name     = %s\r\n", srvinfo->instance);
+// 3883         S2w_Printf("Service Instance name     = %s\r\n", srvinfo->instance);
         ADR.W    R0,`?<Constant "Service Instance name...">`
         ADDS     R1,R5,#+4
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3892         S2w_Printf("Service Sub type          = %s\r\r", srvinfo->subType);
+// 3884         S2w_Printf("Service Sub type          = %s\r\r", srvinfo->subType);
         ADD      R1,R5,#+68
         ADR.W    R0,`?<Constant "Service Sub type     ...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3893         S2w_Printf("Service app protocol      = %s\r\n", srvinfo->srvcType);
+// 3885         S2w_Printf("Service app protocol      = %s\r\n", srvinfo->srvcType);
         ADR.W    R0,`?<Constant "Service app protocol ...">`
         ADD      R1,R5,#+132
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3894         S2w_Printf("Service protocol          = %s\r\n", srvinfo->protocol);
+// 3886         S2w_Printf("Service protocol          = %s\r\n", srvinfo->protocol);
         ADD      R1,R5,#+156
         ADR.W    R0,`?<Constant "Service protocol     ...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3895         S2w_Printf("Service domain            = %s\r\n", srvinfo->domain);         
+// 3887         S2w_Printf("Service domain            = %s\r\n", srvinfo->domain);         
         ADR.W    R0,`?<Constant "Service domain       ...">`
         ADD      R1,R5,#+172
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3896         
-// 3897         S2w_Printf("Service IP address        = %d.%d.%d.%d  Port = %d\r\n",
-// 3898             addr[0], addr[1], addr[2], addr[3], srvinfo->port);
+// 3888         
+// 3889         S2w_Printf("Service IP address        = %d.%d.%d.%d  Port = %d\r\n",
+// 3890             addr[0], addr[1], addr[2], addr[3], srvinfo->port);
         LDRH     R0,[R5, #+188]
         STR      R0,[SP, #+4]
         LDRB     R0,[R7, #+3]
@@ -11392,47 +11377,47 @@ AppS2wHal_MdnsSdCb:
         ADR.W    R0,`?<Constant "Service IP address   ...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3899         if(NULL != srvinfo->txtInfo)
+// 3891         if(NULL != srvinfo->txtInfo)
         LDR      R0,[R5, #+184]
         CBZ.N    R0,??AppS2wHal_MdnsSdCb_1
-// 3900         {
-// 3901             UINT8 txtStrLen = *(srvinfo->txtInfo);
+// 3892         {
+// 3893             UINT8 txtStrLen = *(srvinfo->txtInfo);
         LDRB     R5,[R0, #+0]
-// 3902             UINT8 txtNxtStrLen ;
-// 3903             UINT8 *txtInfo = srvinfo->txtInfo ;
-// 3904 
-// 3905 			txtInfo ++;
+// 3894             UINT8 txtNxtStrLen ;
+// 3895             UINT8 *txtInfo = srvinfo->txtInfo ;
+// 3896 
+// 3897 			txtInfo ++;
         ADR.W    R7,`?<Constant "\\nService Text Info   ...">`
         ADDS     R6,R0,#+1
         B.N      ??AppS2wHal_MdnsSdCb_2
-// 3906             while(txtStrLen)
-// 3907             {
-// 3908                 txtNxtStrLen = *(txtInfo + txtStrLen);
+// 3898             while(txtStrLen)
+// 3899             {
+// 3900                 txtNxtStrLen = *(txtInfo + txtStrLen);
 ??AppS2wHal_MdnsSdCb_3:
         LDRB     R4,[R5, R6]
-// 3909 				*(txtInfo + txtStrLen)  = 0;
+// 3901 				*(txtInfo + txtStrLen)  = 0;
         MOVS     R0,#+0
         STRB     R0,[R5, R6]
-// 3910 
-// 3911 				S2w_Printf("\nService Text Info          = %s\r\n", txtInfo);
+// 3902 
+// 3903 				S2w_Printf("\nService Text Info          = %s\r\n", txtInfo);
         MOV      R1,R6
         MOV      R0,R7
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3912                 txtInfo += (txtStrLen + 1);
+// 3904                 txtInfo += (txtStrLen + 1);
         ADDS     R0,R5,R6
         ADDS     R6,R0,#+1
-// 3913                 txtStrLen = txtNxtStrLen;
+// 3905                 txtStrLen = txtNxtStrLen;
         MOV      R5,R4
-// 3914             }
+// 3906             }
 ??AppS2wHal_MdnsSdCb_2:
         CMP      R5,#+0
         BNE.N    ??AppS2wHal_MdnsSdCb_3
-// 3915         }
-// 3916     }
-// 3917     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 3907         }
+// 3908     }
+// 3909     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
 ??AppS2wHal_MdnsSdCb_1:
-        LDR.W    R1,??DataTable109_2
+        LDR.W    R1,??DataTable105_2
         LDR      R1,[R1, #+0]
         MOVW     R0,#+27384
         LDRB     R0,[R0, R1]
@@ -11440,10 +11425,10 @@ AppS2wHal_MdnsSdCb:
         IT       EQ 
           CFI FunCall s2wSpiFs_Flush
         BLEQ     s2wSpiFs_Flush
-// 3918     {
-// 3919         s2wSpiFs_Flush();
-// 3920     }
-// 3921 	GsnOsal_SemRelease(&s2wSyncSemID);
+// 3910     {
+// 3911         s2wSpiFs_Flush();
+// 3912     }
+// 3913 	GsnOsal_SemRelease(&s2wSyncSemID);
         MOV      R0,R8
         POP      {R1,R2,R4-R8,LR}
           CFI R4 SameValue
@@ -11455,149 +11440,155 @@ AppS2wHal_MdnsSdCb:
           CFI CFA R13+0
           CFI FunCall GsnOsal_SemRelease
         B.W      GsnOsal_SemRelease
-          CFI EndBlock cfiBlock229
-// 3922 }
+          CFI EndBlock cfiBlock234
+// 3914 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock230 Using cfiCommon0
+          CFI Block cfiBlock235 Using cfiCommon0
           CFI Function AppS2wHal_MdnsSrvcDiscover
         THUMB
-// 3923 PUBLIC UINT8
-// 3924 AppS2wHal_MdnsSrvcDiscover(S2W_MDNS_SRVCDISCVR_PARAM_T *mdnsSrvDscr)
-// 3925 {
+// 3915 PUBLIC UINT8
+// 3916 AppS2wHal_MdnsSrvcDiscover(S2W_MDNS_SRVCDISCVR_PARAM_T *mdnsSrvDscr)
+// 3917 {
 AppS2wHal_MdnsSrvcDiscover:
         PUSH     {LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+4
         SUB      SP,SP,#+28
           CFI CFA R13+32
-// 3926     GSN_STATUS retVal;
-// 3927     GSN_MDNS_SRVCDISCVR_PARAM_T pParam;
-// 3928     
-// 3929     
-// 3930     pParam.srvcSubType = mdnsSrvDscr ->srvcSubType;
+// 3918     GSN_STATUS retVal;
+// 3919     GSN_MDNS_SRVCDISCVR_PARAM_T pParam;
+// 3920     
+// 3921     
+// 3922     pParam.srvcSubType = mdnsSrvDscr ->srvcSubType;
         LDR      R1,[R0, #+0]
         STR      R1,[SP, #+0]
-// 3931     pParam.srvcType    = mdnsSrvDscr ->srvcType;
+// 3923     pParam.srvcType    = mdnsSrvDscr ->srvcType;
         LDR      R1,[R0, #+4]
         STR      R1,[SP, #+4]
-// 3932     pParam.srvcProto   = mdnsSrvDscr ->srvcProto;
+// 3924     pParam.srvcProto   = mdnsSrvDscr ->srvcProto;
         LDR      R1,[R0, #+8]
         STR      R1,[SP, #+8]
-// 3933     pParam.domain      = mdnsSrvDscr ->domain;
+// 3925     pParam.domain      = mdnsSrvDscr ->domain;
         LDR      R1,[R0, #+12]
         STR      R1,[SP, #+12]
-// 3934    
-// 3935     pParam.scope       = mdnsSrvDscr ->scope;
-// 3936     pParam.cb          =  AppS2wHal_MdnsSdCb;
-// 3937     pParam.cbCtx       =  NULL;
-// 3938     
-// 3939 
-// 3940     retVal = GsnMdns_ServiceDiscover(&appCtx.mdns, &pParam);
-// 3941      if(GSN_SUCCESS != retVal)
+// 3926    
+// 3927     pParam.scope       = mdnsSrvDscr ->scope;
+// 3928     pParam.cb          =  AppS2wHal_MdnsSdCb;
+// 3929     pParam.cbCtx       =  NULL;
+// 3930     
+// 3931 
+// 3932     retVal = GsnMdns_ServiceDiscover(&appCtx.mdns, &pParam);
+// 3933      if(GSN_SUCCESS != retVal)
         ADD      R1,SP,#+0
         LDRB     R0,[R0, #+16]
         STRB     R0,[SP, #+16]
-        LDR.W    R0,??DataTable109_14
+        LDR.W    R0,??DataTable105_14
         STR      R0,[SP, #+20]
         MOVS     R0,#+0
         STR      R0,[SP, #+24]
-        LDR.W    R0,??DataTable109_11
+        LDR.W    R0,??DataTable105_11
           CFI FunCall GsnMdns_ServiceDiscover
         BL       GsnMdns_ServiceDiscover
         CBZ.N    R0,??AppS2wHal_MdnsSrvcDiscover_0
-// 3942         return S2W_FAILURE;
+// 3934         return S2W_FAILURE;
         MOVS     R0,#+1
-// 3943     return S2W_SUCCESS;
+// 3935     return S2W_SUCCESS;
 ??AppS2wHal_MdnsSrvcDiscover_0:
         ADD      SP,SP,#+28
           CFI CFA R13+4
         POP      {PC}             ;; return
-          CFI EndBlock cfiBlock230
-// 3944 }
+          CFI EndBlock cfiBlock235
+// 3936 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable102:
+??DataTable98:
         DC32     AppS2wHal_RxCallBack
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable102_1:
+??DataTable98_1:
+        DC32     s2wCidList
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable98_2:
         DC32     s2wSslConf
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable102_2:
+??DataTable98_3:
         DC32     s2wCurrent
-// 3945 
+// 3937 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock231 Using cfiCommon0
+          CFI Block cfiBlock236 Using cfiCommon0
           CFI Function AppS2wHal_MdnsAnnounce
         THUMB
-// 3946 PUBLIC UINT8
-// 3947 AppS2wHal_MdnsAnnounce(S2W_MDNS_ANNOUNCE_PARAM_T *mdnsAnnceParam)
-// 3948 {
+// 3938 PUBLIC UINT8
+// 3939 AppS2wHal_MdnsAnnounce(S2W_MDNS_ANNOUNCE_PARAM_T *mdnsAnnceParam)
+// 3940 {
 AppS2wHal_MdnsAnnounce:
         PUSH     {LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+4
         SUB      SP,SP,#+20
           CFI CFA R13+24
-// 3949     GSN_MDNS_ANNOUNCE_PARAM_T pParam;
-// 3950     
-// 3951     pParam.srvceName = mdnsAnnceParam->srvceName;
+// 3941     GSN_MDNS_ANNOUNCE_PARAM_T pParam;
+// 3942     
+// 3943     pParam.srvceName = mdnsAnnceParam->srvceName;
         LDR      R1,[R0, #+4]
         STR      R1,[SP, #+0]
-// 3952     pParam.domain = mdnsAnnceParam->domain;
+// 3944     pParam.domain = mdnsAnnceParam->domain;
         LDR      R1,[R0, #+8]
         STR      R1,[SP, #+16]
-// 3953     
-// 3954     if(mdnsAnnceParam->type == 2)
+// 3945     
+// 3946     if(mdnsAnnceParam->type == 2)
         LDRB     R1,[R0, #+0]
         CMP      R1,#+2
         BNE.N    ??AppS2wHal_MdnsAnnounce_0
-// 3955     {
-// 3956         pParam.srvceSubType = mdnsAnnceParam ->srvceSubType;
+// 3947     {
+// 3948         pParam.srvceSubType = mdnsAnnceParam ->srvceSubType;
         LDR      R1,[R0, #+12]
         STR      R1,[SP, #+4]
-// 3957         pParam.srvceType = mdnsAnnceParam->srvceType;
+// 3949         pParam.srvceType = mdnsAnnceParam->srvceType;
         LDR      R1,[R0, #+16]
         STR      R1,[SP, #+8]
-// 3958         pParam.srvceProto = mdnsAnnceParam ->srvceProto;
+// 3950         pParam.srvceProto = mdnsAnnceParam ->srvceProto;
         LDR      R0,[R0, #+20]
         B.N      ??AppS2wHal_MdnsAnnounce_1
-// 3959     } 
-// 3960     else
-// 3961     {
-// 3962          pParam.srvceSubType = NULL;
+// 3951     } 
+// 3952     else
+// 3953     {
+// 3954          pParam.srvceSubType = NULL;
 ??AppS2wHal_MdnsAnnounce_0:
         MOVS     R0,#+0
         STR      R0,[SP, #+4]
-// 3963          pParam.srvceType = NULL;
+// 3955          pParam.srvceType = NULL;
         STR      R0,[SP, #+8]
-// 3964          pParam.srvceProto = NULL;
+// 3956          pParam.srvceProto = NULL;
 ??AppS2wHal_MdnsAnnounce_1:
         STR      R0,[SP, #+12]
-// 3965     }
-// 3966     GsnMdns_Announce(&appCtx.mdns, &pParam);
+// 3957     }
+// 3958     GsnMdns_Announce(&appCtx.mdns, &pParam);
         ADD      R1,SP,#+0
-        LDR.W    R0,??DataTable109_11
+        LDR.W    R0,??DataTable105_11
           CFI FunCall GsnMdns_Announce
         BL       GsnMdns_Announce
-          CFI EndBlock cfiBlock231
-// 3967 
-// 3968     return S2W_SUCCESS;
+          CFI EndBlock cfiBlock236
+// 3959 
+// 3960     return S2W_SUCCESS;
         REQUIRE ?Subroutine2
         ;; // Fall through to label ?Subroutine2
-// 3969 }
+// 3961 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock232 Using cfiCommon0
+          CFI Block cfiBlock237 Using cfiCommon0
           CFI NoFunction
           CFI NoCalls AppS2wHal_MdnsServiceDereg
           CFI NoCalls AppS2wHal_MdnsAnnounce
@@ -11609,24 +11600,24 @@ AppS2wHal_MdnsAnnounce:
         ADD      SP,SP,#+20
           CFI CFA R13+4
         POP      {PC}             ;; return
-          CFI EndBlock cfiBlock232
-// 3970 
-// 3971 #endif
-// 3972 #define S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND   0.030517578125
-// 3973 #ifdef S2W_PING_TRACE
+          CFI EndBlock cfiBlock237
+// 3962 
+// 3963 #endif
+// 3964 #define S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND   0.030517578125
+// 3965 #ifdef S2W_PING_TRACE
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
-// 3974 S2W_PING_STATS_T s2wPingStats;
+// 3966 S2W_PING_STATS_T s2wPingStats;
 s2wPingStats:
         DS8 20
-// 3975 
+// 3967 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock233 Using cfiCommon0
+          CFI Block cfiBlock238 Using cfiCommon0
           CFI Function s2wPingStart
         THUMB
-// 3976 VOID s2wPingStart()
-// 3977 {
+// 3968 VOID s2wPingStart()
+// 3969 {
 s2wPingStart:
         PUSH     {R4-R11,LR}
           CFI R14 Frame(CFA, -4)
@@ -11639,14 +11630,14 @@ s2wPingStart:
           CFI R5 Frame(CFA, -32)
           CFI R4 Frame(CFA, -36)
           CFI CFA R13+36
-// 3978     NX_PACKET *response_ptr;
-// 3979     ULONG rtt0,rtt1,ttl=64;
-// 3980     UINT32 interval;
-// 3981     UINT8 *pingBuf;
-// 3982   	INT32 icmpRetVal;
-// 3983 	UINT32 milliSecPerTick = (1000/NX_CPU_TICKS_PER_SECOND); 
-// 3984     interval = (s2wappMainTaskCtxt->pingParams.interval != 0) ? (s2wappMainTaskCtxt->pingParams.interval) : 3000;
-        LDR.W    R6,??DataTable109_2
+// 3970     NX_PACKET *response_ptr;
+// 3971     ULONG rtt0,rtt1,ttl=64;
+// 3972     UINT32 interval;
+// 3973     UINT8 *pingBuf;
+// 3974   	INT32 icmpRetVal;
+// 3975 	UINT32 milliSecPerTick = (1000/NX_CPU_TICKS_PER_SECOND); 
+// 3976     interval = (s2wappMainTaskCtxt->pingParams.interval != 0) ? (s2wappMainTaskCtxt->pingParams.interval) : 3000;
+        LDR.W    R6,??DataTable105_2
         LDR      R0,[R6, #+0]
         MOVW     R1,#+30000
         SUB      SP,SP,#+20
@@ -11654,28 +11645,28 @@ s2wPingStart:
         LDR      R2,[R1, R0]
         CBNZ.N   R2,??s2wPingStart_0
         MOVW     R2,#+3000
-// 3985 	/* Convert from milli sec to ticks*/
-// 3986 	interval  = (interval / milliSecPerTick);
-// 3987 #ifdef S2W_IPv6_SUPPORT
-// 3988     INT8 ipv6str[INET6_ADDRSTRLEN];
-// 3989     S2w_ntop(s2wappMainTaskCtxt->pingParams.ip_address.nxd_ip_address.v6,ipv6str);
-// 3990 #endif
-// 3991  
-// 3992     if(s2wPingStarted == TRUE)
+// 3977 	/* Convert from milli sec to ticks*/
+// 3978 	interval  = (interval / milliSecPerTick);
+// 3979 #ifdef S2W_IPv6_SUPPORT
+// 3980     INT8 ipv6str[INET6_ADDRSTRLEN];
+// 3981     S2w_ntop(s2wappMainTaskCtxt->pingParams.ip_address.nxd_ip_address.v6,ipv6str);
+// 3982 #endif
+// 3983  
+// 3984     if(s2wPingStarted == TRUE)
 ??s2wPingStart_0:
-        LDR.W    R10,??DataTable109_15
+        LDR.W    R10,??DataTable105_15
         MOVS     R3,#+100
         UDIV     R7,R2,R3
         LDRB     R2,[R10, #+0]
         CMP      R2,#+1
         BNE.W    ??s2wPingStart_1
-// 3993     {
-// 3994         if(s2wappMainTaskCtxt->pingParams.payload[0])
+// 3985     {
+// 3986         if(s2wappMainTaskCtxt->pingParams.payload[0])
         ADDS     R1,R1,R0
         LDRB     R2,[R1, #+20]
         CBZ.N    R2,??s2wPingStart_2
-// 3995         {
-// 3996             pingBuf = (UINT8 *)MALLOC(strlen(s2wappMainTaskCtxt->pingParams.payload) + 1);
+// 3987         {
+// 3988             pingBuf = (UINT8 *)MALLOC(strlen(s2wappMainTaskCtxt->pingParams.payload) + 1);
         MOVW     R4,#+30020
         ADDS     R0,R4,R0
           CFI FunCall strlen
@@ -11684,12 +11675,12 @@ s2wPingStart:
           CFI FunCall MALLOC
         BL       MALLOC
         MOVS     R8,R0
-// 3997             if(NULL == pingBuf)
+// 3989             if(NULL == pingBuf)
         BEQ.N    ??s2wPingStart_3
-// 3998             {
-// 3999                 return;
-// 4000             }
-// 4001             memcpy(pingBuf,s2wappMainTaskCtxt->pingParams.payload,strlen(s2wappMainTaskCtxt->pingParams.payload));
+// 3990             {
+// 3991                 return;
+// 3992             }
+// 3993             memcpy(pingBuf,s2wappMainTaskCtxt->pingParams.payload,strlen(s2wappMainTaskCtxt->pingParams.payload));
         LDR      R0,[R6, #+0]
         ADDS     R5,R4,R0
         MOV      R0,R5
@@ -11700,35 +11691,35 @@ s2wPingStart:
         MOV      R0,R8
           CFI FunCall memcpy
         BL       memcpy
-// 4002             pingBuf[strlen(s2wappMainTaskCtxt->pingParams.payload)] = '\0';
+// 3994             pingBuf[strlen(s2wappMainTaskCtxt->pingParams.payload)] = '\0';
         LDR      R0,[R6, #+0]
         ADDS     R0,R4,R0
           CFI FunCall strlen
         BL       strlen
         B.N      ??s2wPingStart_4
-// 4003         }
-// 4004         else if(s2wappMainTaskCtxt->pingParams.dataLen)
+// 3995         }
+// 3996         else if(s2wappMainTaskCtxt->pingParams.dataLen)
 ??s2wPingStart_2:
         LDR      R0,[R1, #+4]
         CBZ.N    R0,??s2wPingStart_5
-// 4005         {
-// 4006             if(s2wappMainTaskCtxt->pingParams.dataLen >= 1024)
+// 3997         {
+// 3998             if(s2wappMainTaskCtxt->pingParams.dataLen >= 1024)
         CMP      R0,#+1024
         BCS.W    ??s2wPingStart_1
-// 4007             {
-// 4008                 return;
-// 4009             }
-// 4010             pingBuf = (UINT8 *)MALLOC(s2wappMainTaskCtxt->pingParams.dataLen + 1);
+// 3999             {
+// 4000                 return;
+// 4001             }
+// 4002             pingBuf = (UINT8 *)MALLOC(s2wappMainTaskCtxt->pingParams.dataLen + 1);
         ADDS     R0,R0,#+1
           CFI FunCall MALLOC
         BL       MALLOC
         MOVS     R8,R0
-// 4011             if(NULL == pingBuf)
+// 4003             if(NULL == pingBuf)
         BEQ.N    ??s2wPingStart_3
-// 4012             {
-// 4013                 return;
-// 4014             }
-// 4015             memset(pingBuf,'G',s2wappMainTaskCtxt->pingParams.dataLen);
+// 4004             {
+// 4005                 return;
+// 4006             }
+// 4007             memset(pingBuf,'G',s2wappMainTaskCtxt->pingParams.dataLen);
         LDR      R0,[R6, #+0]
         MOVW     R4,#+30004
         MOVS     R1,#+71
@@ -11736,53 +11727,53 @@ s2wPingStart:
         MOV      R0,R8
           CFI FunCall memset
         BL       memset
-// 4016             pingBuf[s2wappMainTaskCtxt->pingParams.dataLen]='\0';
+// 4008             pingBuf[s2wappMainTaskCtxt->pingParams.dataLen]='\0';
         LDR      R0,[R6, #+0]
         LDR      R0,[R4, R0]
 ??s2wPingStart_4:
         MOVS     R1,#+0
         STRB     R1,[R0, R8]
         B.N      ??s2wPingStart_6
-// 4017         }
-// 4018         else
-// 4019         {
-// 4020             pingBuf = (UINT8 *)MALLOC(56 + 1);
+// 4009         }
+// 4010         else
+// 4011         {
+// 4012             pingBuf = (UINT8 *)MALLOC(56 + 1);
 ??s2wPingStart_5:
         MOVS     R0,#+57
           CFI FunCall MALLOC
         BL       MALLOC
         MOVS     R8,R0
-// 4021             if(NULL == pingBuf)
+// 4013             if(NULL == pingBuf)
 ??s2wPingStart_3:
         BEQ.W    ??s2wPingStart_1
-// 4022             {
-// 4023                 return;
-// 4024             }
-// 4025             memset(pingBuf,'G',56);
+// 4014             {
+// 4015                 return;
+// 4016             }
+// 4017             memset(pingBuf,'G',56);
         MOVS     R2,#+56
         MOVS     R1,#+71
           CFI FunCall memset
         BL       memset
-// 4026             pingBuf[56]='\0';
+// 4018             pingBuf[56]='\0';
         MOVS     R0,#+0
         STRB     R0,[R8, #+56]
-// 4027         }
-// 4028 
-// 4029 #ifdef S2W_IPv6_SUPPORT
-// 4030         if(s2wappMainTaskCtxt->pingParams.IpVersion & ADDR_TYPE_IPv6)
-// 4031         {
-// 4032             rtt0 = GsnTod_Get();
-// 4033      icmpRetVal =  _nxd_icmp_ping(&s2wappMainTaskCtxt->if0.nwifCtx.ipHndl,&s2wappMainTaskCtxt->pingParams.ip_address, (INT8*)pingBuf,strlen((const char*)pingBuf),&response_ptr, interval);
-// 4034         }
-// 4035         else
-// 4036 #endif   
-// 4037         {
-// 4038             rtt0 = GsnTod_Get();
+// 4019         }
+// 4020 
+// 4021 #ifdef S2W_IPv6_SUPPORT
+// 4022         if(s2wappMainTaskCtxt->pingParams.IpVersion & ADDR_TYPE_IPv6)
+// 4023         {
+// 4024             rtt0 = GsnTod_Get();
+// 4025      icmpRetVal =  _nxd_icmp_ping(&s2wappMainTaskCtxt->if0.nwifCtx.ipHndl,&s2wappMainTaskCtxt->pingParams.ip_address, (INT8*)pingBuf,strlen((const char*)pingBuf),&response_ptr, interval);
+// 4026         }
+// 4027         else
+// 4028 #endif   
+// 4029         {
+// 4030             rtt0 = GsnTod_Get();
 ??s2wPingStart_6:
           CFI FunCall GsnTod_Get
         BL       GsnTod_Get
         MOV      R4,R0
-// 4039       icmpRetVal = nx_icmp_ping(&s2wappMainTaskCtxt->if0.nwifCtx.ipHndl,(s2wappMainTaskCtxt->pingParams.Ipv4Addr),(INT8*)pingBuf,strlen((const char*)pingBuf)/*strlen((const char*)s2wappMainTaskCtxt->pingParams.payload)*/,&response_ptr,interval);
+// 4031       icmpRetVal = nx_icmp_ping(&s2wappMainTaskCtxt->if0.nwifCtx.ipHndl,(s2wappMainTaskCtxt->pingParams.Ipv4Addr),(INT8*)pingBuf,strlen((const char*)pingBuf)/*strlen((const char*)s2wappMainTaskCtxt->pingParams.payload)*/,&response_ptr,interval);
         MOV      R0,R8
           CFI FunCall strlen
         BL       strlen
@@ -11797,11 +11788,11 @@ s2wPingStart:
         ADD      R0,R0,#+5216
           CFI FunCall _nxe_icmp_ping
         BL       _nxe_icmp_ping
-// 4040         }
-// 4041         s2wPingStats.pingSentCnt++;
-        LDR.W    R7,??DataTable109_16
-// 4042         GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-        LDR.W    R11,??DataTable109_13
+// 4032         }
+// 4033         s2wPingStats.pingSentCnt++;
+        LDR.W    R7,??DataTable105_16
+// 4034         GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+        LDR.W    R11,??DataTable105_13
         MOV      R5,R0
         LDR      R0,[R7, #+12]
         ADDS     R0,R0,#+1
@@ -11810,34 +11801,34 @@ s2wPingStart:
         MOV      R0,R11
           CFI FunCall GsnOsal_SemAcquire
         BL       GsnOsal_SemAcquire
-// 4043         FREE(pingBuf);
+// 4035         FREE(pingBuf);
         MOV      R0,R8
           CFI FunCall FREE
         BL       FREE
-// 4044       if(icmpRetVal == S2W_SUCCESS && response_ptr != NULL )
+// 4036       if(icmpRetVal == S2W_SUCCESS && response_ptr != NULL )
         CMP      R5,#+0
         BNE.N    ??s2wPingStart_7
         LDR      R0,[SP, #+16]
         CMP      R0,#+0
         BEQ.N    ??s2wPingStart_7
-// 4045         {
-// 4046             rtt1 = GsnTod_Get();
+// 4037         {
+// 4038             rtt1 = GsnTod_Get();
           CFI FunCall GsnTod_Get
         BL       GsnTod_Get
-// 4047 #ifdef S2W_IPv6_SUPPORT    
-// 4048             if(s2wappMainTaskCtxt->pingParams.IpVersion & ADDR_TYPE_IPv6)
-// 4049             {
-// 4050                 S2w_Printf("\r\nReply from %s bytes=%d time=%d ms TTL %d",ipv6str,response_ptr->nx_packet_length,(ULONG)((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND),ttl );
-// 4051             }
-// 4052             else
-// 4053 #endif     
-// 4054             {
-// 4055                 S2w_Printf("\r\nReply from %d.%d.%d.%d: bytes=%d time=%d ms TTL %d",(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0xff000000)>>24,(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0x00ff0000)>>16,(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0x0000ff00)>>8,(s2wappMainTaskCtxt->pingParams.Ipv4Addr & 0x000000ff),response_ptr->nx_packet_length,(ULONG)((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND),ttl );
+// 4039 #ifdef S2W_IPv6_SUPPORT    
+// 4040             if(s2wappMainTaskCtxt->pingParams.IpVersion & ADDR_TYPE_IPv6)
+// 4041             {
+// 4042                 S2w_Printf("\r\nReply from %s bytes=%d time=%d ms TTL %d",ipv6str,response_ptr->nx_packet_length,(ULONG)((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND),ttl );
+// 4043             }
+// 4044             else
+// 4045 #endif     
+// 4046             {
+// 4047                 S2w_Printf("\r\nReply from %d.%d.%d.%d: bytes=%d time=%d ms TTL %d",(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0xff000000)>>24,(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0x00ff0000)>>16,(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0x0000ff00)>>8,(s2wappMainTaskCtxt->pingParams.Ipv4Addr & 0x000000ff),response_ptr->nx_packet_length,(ULONG)((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND),ttl );
         SUBS     R0,R0,R4
           CFI FunCall __aeabi_ui2d
         BL       __aeabi_ui2d
         MOVS     R2,#+0
-        LDR.W    R3,??DataTable109_17  ;; 0x3f9f4000
+        LDR.W    R3,??DataTable105_17  ;; 0x3f9f4000
           CFI FunCall __aeabi_dmul
         BL       __aeabi_dmul
         MOV      R4,R0
@@ -11861,12 +11852,12 @@ s2wPingStart:
         ADR.W    R0,`?<Constant "\\r\\nReply from %d.%d.%d...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 4056             }
-// 4057             s2wPingStats.pingRecvCnt++;
+// 4048             }
+// 4049             s2wPingStats.pingRecvCnt++;
         LDR      R0,[R7, #+16]
         ADDS     R0,R0,#+1
         STR      R0,[R7, #+16]
-// 4058             if(((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND)>s2wPingStats.rttMax)
+// 4050             if(((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND)>s2wPingStats.rttMax)
         LDR      R0,[R7, #+0]
           CFI FunCall __aeabi_ui2d
         BL       __aeabi_ui2d
@@ -11876,18 +11867,18 @@ s2wPingStart:
         BL       __aeabi_cdcmple
         IT       CC 
         STRCC    R5,[R7, #+0]
-// 4059             {
-// 4060                 s2wPingStats.rttMax=(ULONG)((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND);
-// 4061             }
-// 4062             if(!s2wPingStats.rttMin)
+// 4051             {
+// 4052                 s2wPingStats.rttMax=(ULONG)((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND);
+// 4053             }
+// 4054             if(!s2wPingStats.rttMin)
         LDR      R0,[R7, #+4]
         CBNZ.N   R0,??s2wPingStart_8
-// 4063             {
-// 4064                 s2wPingStats.rttMin=s2wPingStats.rttMax;
+// 4055             {
+// 4056                 s2wPingStats.rttMin=s2wPingStats.rttMax;
         LDR      R0,[R7, #+0]
         STR      R0,[R7, #+4]
-// 4065             }
-// 4066             if(((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND) < s2wPingStats.rttMin)
+// 4057             }
+// 4058             if(((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND) < s2wPingStats.rttMin)
 ??s2wPingStart_8:
         LDR      R0,[R7, #+4]
           CFI FunCall __aeabi_ui2d
@@ -11900,10 +11891,10 @@ s2wPingStart:
         BL       __aeabi_cdcmple
         IT       CC 
         STRCC    R5,[R7, #+4]
-// 4067             {
-// 4068                 s2wPingStats.rttMin=(ULONG)((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND);
-// 4069             }
-// 4070             s2wPingStats.rttAvg +=((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND);
+// 4059             {
+// 4060                 s2wPingStats.rttMin=(ULONG)((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND);
+// 4061             }
+// 4062             s2wPingStats.rttAvg +=((rtt1-rtt0)*S2W_GS2000_TIMER_TICK_IN_MILLI_SECOND);
         LDR      R0,[R7, #+8]
           CFI FunCall __aeabi_ui2d
         BL       __aeabi_ui2d
@@ -11914,54 +11905,54 @@ s2wPingStart:
           CFI FunCall __aeabi_d2uiz
         BL       __aeabi_d2uiz
         STR      R0,[R7, #+8]
-// 4071 			nx_packet_release(response_ptr);
+// 4063 			nx_packet_release(response_ptr);
         ADD      R0,SP,#+16
           CFI FunCall _nxe_packet_release
         BL       _nxe_packet_release
-// 4072             GsnTaskSleep(100);
+// 4064             GsnTaskSleep(100);
         MOVS     R0,#+100
           CFI FunCall GsnTaskSleep
         BL       GsnTaskSleep
         B.N      ??s2wPingStart_9
-// 4073         }
-// 4074         else
-// 4075         {
-// 4076            S2w_Printf("\r\nRequest timed out" );
+// 4065         }
+// 4066         else
+// 4067         {
+// 4068            S2w_Printf("\r\nRequest timed out" );
 ??s2wPingStart_7:
         ADR.W    R0,`?<Constant "\\r\\nRequest timed out">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 4077         }     
-// 4078 
-// 4079         if(s2wappMainTaskCtxt->pingParams.trails)
+// 4069         }     
+// 4070 
+// 4071         if(s2wappMainTaskCtxt->pingParams.trails)
 ??s2wPingStart_9:
         LDR      R0,[R6, #+0]
         MOVW     R1,#+30016
         LDR      R2,[R1, R0]
         CBZ.N    R2,??s2wPingStart_10
-// 4080         {
-// 4081             s2wappMainTaskCtxt->pingParams.trails--;
+// 4072         {
+// 4073             s2wappMainTaskCtxt->pingParams.trails--;
         SUBS     R2,R2,#+1
         STR      R2,[R1, R0]
-// 4082             if(!s2wappMainTaskCtxt->pingParams.trails)
+// 4074             if(!s2wappMainTaskCtxt->pingParams.trails)
         BNE.N    ??s2wPingStart_10
-// 4083             {
-// 4084                  s2wPingStarted = FALSE;
+// 4075             {
+// 4076                  s2wPingStarted = FALSE;
         MOVS     R0,#+0
         STRB     R0,[R10, #+0]
-// 4085 				AppS2w_PingTaskNotify(APP_EVENT_PING_STOP);
+// 4077 				AppS2w_PingTaskNotify(APP_EVENT_PING_STOP);
         MOVS     R0,#+35
           CFI FunCall AppS2w_PingTaskNotify
         BL       AppS2w_PingTaskNotify
-// 4086             }
-// 4087         }
-// 4088           
-// 4089 		  AppS2w_PingTaskNotify(APP_EVENT_PING_REQUEST);
+// 4078             }
+// 4079         }
+// 4080           
+// 4081 		  AppS2w_PingTaskNotify(APP_EVENT_PING_REQUEST);
 ??s2wPingStart_10:
         MOVS     R0,#+34
           CFI FunCall AppS2w_PingTaskNotify
         BL       AppS2w_PingTaskNotify
-// 4090 		  if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 4082 		  if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
         LDR      R1,[R6, #+0]
         MOVW     R0,#+27384
         LDRB     R0,[R0, R1]
@@ -11969,60 +11960,60 @@ s2wPingStart:
         IT       EQ 
           CFI FunCall s2wSpiFs_Flush
         BLEQ     s2wSpiFs_Flush
-// 4091 		  {
-// 4092 		      s2wSpiFs_Flush();
-// 4093           }
-// 4094           GsnOsal_SemRelease(&s2wSyncSemID);
+// 4083 		  {
+// 4084 		      s2wSpiFs_Flush();
+// 4085           }
+// 4086           GsnOsal_SemRelease(&s2wSyncSemID);
         MOV      R0,R11
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 4095     }
-// 4096 
-// 4097 }
+// 4087     }
+// 4088 
+// 4089 }
 ??s2wPingStart_1:
         ADD      SP,SP,#+20
           CFI CFA R13+36
         POP      {R4-R11,PC}      ;; return
-          CFI EndBlock cfiBlock233
+          CFI EndBlock cfiBlock238
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable103:
+??DataTable99:
         DC8      0x0D, 0x0A, 0x00, 0x00
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable103_1:
+??DataTable99_1:
         DC32     s2w_ssl_cert_table
-// 4098                         
+// 4090                         
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock234 Using cfiCommon0
+          CFI Block cfiBlock239 Using cfiCommon0
           CFI Function s2wPingStop
         THUMB
-// 4099 VOID s2wPingStop()
-// 4100 {
+// 4091 VOID s2wPingStop()
+// 4092 {
 s2wPingStop:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-// 4101   if( s2wPingStarted == FALSE)
-        LDR.N    R0,??DataTable109_15
+// 4093   if( s2wPingStarted == FALSE)
+        LDR.N    R0,??DataTable105_15
         LDRB     R0,[R0, #+0]
         CMP      R0,#+0
         BNE.N    ??s2wPingStop_0
-// 4102   {
-// 4103       GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-        LDR.N    R4,??DataTable109_13
+// 4094   {
+// 4095       GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+        LDR.N    R4,??DataTable105_13
         MOV      R1,#-1
         MOV      R0,R4
           CFI FunCall GsnOsal_SemAcquire
         BL       GsnOsal_SemAcquire
-        LDR.N    R1,??DataTable109_2
+        LDR.N    R1,??DataTable105_2
         LDR      R1,[R1, #+0]
         MOVW     R0,#+29996
         LDR      R0,[R0, R1]
@@ -12032,21 +12023,21 @@ s2wPingStop:
         UBFX     R2,R0,#+16,#+8
         LSRS     R1,R0,#+24
         ADR.W    R0,`?<Constant "\\r\\nPing Statistics for...">`
-// 4104 
-// 4105 #ifdef S2W_IPv6_SUPPORT    
-// 4106          if(s2wappMainTaskCtxt->pingParams.IpVersion & ADDR_TYPE_IPv6)
-// 4107          {
-// 4108            INT8 ipv6str[INET6_ADDRSTRLEN];
-// 4109            S2w_ntop(s2wappMainTaskCtxt->pingParams.ip_address.nxd_ip_address.v6,ipv6str);
-// 4110            S2w_Printf("\r\nPing Statistics for %s \r\n",ipv6str);
-// 4111          }
-// 4112          else
-// 4113 #endif     
-// 4114         S2w_Printf("\r\nPing Statistics for %d.%d.%d.%d:\r\n",(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0xff000000)>>24,(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0x00ff0000)>>16,(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0x0000ff00)>>8,(s2wappMainTaskCtxt->pingParams.Ipv4Addr & 0x000000ff));
+// 4096 
+// 4097 #ifdef S2W_IPv6_SUPPORT    
+// 4098          if(s2wappMainTaskCtxt->pingParams.IpVersion & ADDR_TYPE_IPv6)
+// 4099          {
+// 4100            INT8 ipv6str[INET6_ADDRSTRLEN];
+// 4101            S2w_ntop(s2wappMainTaskCtxt->pingParams.ip_address.nxd_ip_address.v6,ipv6str);
+// 4102            S2w_Printf("\r\nPing Statistics for %s \r\n",ipv6str);
+// 4103          }
+// 4104          else
+// 4105 #endif     
+// 4106         S2w_Printf("\r\nPing Statistics for %d.%d.%d.%d:\r\n",(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0xff000000)>>24,(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0x00ff0000)>>16,(s2wappMainTaskCtxt->pingParams.Ipv4Addr& 0x0000ff00)>>8,(s2wappMainTaskCtxt->pingParams.Ipv4Addr & 0x000000ff));
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 4115         S2w_Printf("\r\tPackets: Sent = %d, Received = %d, Lost = %d percent\r\n",s2wPingStats.pingSentCnt,s2wPingStats.pingRecvCnt,((s2wPingStats.pingSentCnt-s2wPingStats.pingRecvCnt)*100)/s2wPingStats.pingSentCnt);
-        LDR.N    R5,??DataTable109_16
+// 4107         S2w_Printf("\r\tPackets: Sent = %d, Received = %d, Lost = %d percent\r\n",s2wPingStats.pingSentCnt,s2wPingStats.pingRecvCnt,((s2wPingStats.pingSentCnt-s2wPingStats.pingRecvCnt)*100)/s2wPingStats.pingSentCnt);
+        LDR.N    R5,??DataTable105_16
         LDR      R2,[R5, #+16]
         LDR      R1,[R5, #+12]
         SUBS     R0,R1,R2
@@ -12056,11 +12047,11 @@ s2wPingStop:
         ADR.W    R0,`?<Constant "\\r\\tPackets: Sent = %d,...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 4116         S2w_Printf("\rApproximate round trip times in milliseconds\r\n");
+// 4108         S2w_Printf("\rApproximate round trip times in milliseconds\r\n");
         ADR.W    R0,`?<Constant "\\rApproximate round tr...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 4117         S2w_Printf("\r\tMinimum = %dms, Maximum = %dms, Average = %dms\r\n",s2wPingStats.rttMin,s2wPingStats.rttMax,s2wPingStats.rttAvg/s2wPingStats.pingRecvCnt);
+// 4109         S2w_Printf("\r\tMinimum = %dms, Maximum = %dms, Average = %dms\r\n",s2wPingStats.rttMin,s2wPingStats.rttMax,s2wPingStats.rttAvg/s2wPingStats.pingRecvCnt);
         LDR      R0,[R5, #+8]
         LDR      R1,[R5, #+16]
         LDR      R2,[R5, #+0]
@@ -12069,11 +12060,11 @@ s2wPingStop:
         ADR.W    R0,`?<Constant "\\r\\tMinimum = %dms, Max...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 4118         GsnOsal_SemRelease(&s2wSyncSemID);
+// 4110         GsnOsal_SemRelease(&s2wSyncSemID);
         MOV      R0,R4
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 4119         memset(&s2wPingStats,0,sizeof(S2W_PING_STATS_T));
+// 4111         memset(&s2wPingStats,0,sizeof(S2W_PING_STATS_T));
         MOV      R0,R5
         POP      {R3-R5,LR}
           CFI R4 SameValue
@@ -12088,42 +12079,42 @@ s2wPingStop:
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
-// 4120   }
-// 4121 
-// 4122 }
+// 4112   }
+// 4113 
+// 4114 }
 ??s2wPingStop_0:
         POP      {R0,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock234
+          CFI EndBlock cfiBlock239
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock235 Using cfiCommon0
+          CFI Block cfiBlock240 Using cfiCommon0
           CFI Function AppS2wHal_PingClose
         THUMB
-// 4123 VOID AppS2wHal_PingClose()
-// 4124 {
-// 4125       s2wPingStarted = FALSE;
+// 4115 VOID AppS2wHal_PingClose()
+// 4116 {
+// 4117       s2wPingStarted = FALSE;
 AppS2wHal_PingClose:
-        LDR.N    R0,??DataTable109_15
+        LDR.N    R0,??DataTable105_15
         MOVS     R1,#+0
         STRB     R1,[R0, #+0]
-// 4126 	  AppS2w_PingTaskNotify(APP_EVENT_PING_STOP);
+// 4118 	  AppS2w_PingTaskNotify(APP_EVENT_PING_STOP);
         MOVS     R0,#+35
           CFI FunCall AppS2w_PingTaskNotify
         B.W      AppS2w_PingTaskNotify
-          CFI EndBlock cfiBlock235
-// 4127 }
-// 4128 
-// 4129 #endif
-// 4130 
+          CFI EndBlock cfiBlock240
+// 4119 }
+// 4120 
+// 4121 #endif
+// 4122 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock236 Using cfiCommon0
+          CFI Block cfiBlock241 Using cfiCommon0
           CFI Function App_IsArpReqstPkt
         THUMB
-// 4131 BOOL 
-// 4132 App_IsArpReqstPkt(GSN_NWIF_CTX_T *pNwIf, GSN_ETHERNET_FRAME_T *pEthFrame, 
-// 4133 								UINT32 protocol)
-// 4134 {
+// 4123 BOOL 
+// 4124 App_IsArpReqstPkt(GSN_NWIF_CTX_T *pNwIf, GSN_ETHERNET_FRAME_T *pEthFrame, 
+// 4125 								UINT32 protocol)
+// 4126 {
 App_IsArpReqstPkt:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
@@ -12140,20 +12131,20 @@ App_IsArpReqstPkt:
         ORR      R1,R1,R3, LSL #+8
         ORR      R0,R1,R0, LSL #+24
         STR      R0,[SP, #+0]
-// 4135 	UINT32 ipAddr;
-// 4136 	ipAddr = htonl(GsnNwIf_IpV4AddrGet(pNwIf));
-// 4137 	/* An ARP Request Pkt with  Destination address being  the node address */
-// 4138 	return ((GSN_ETH_PROTO_TYPE_ARP == protocol) &&
-// 4139 		  	(GSN_NW_ARP_REQUEST ==
-// 4140 					  htons((GsnNwIf_U16FieldGet)(pEthFrame->Data + GSN_NW_ARP_OP_OFFSET))) &&
-// 4141 			(0 == memcmp(&ipAddr, (pEthFrame->Data + GSN_NW_ARP_TAGET_IP_OFFSET), 4)));
+// 4127 	UINT32 ipAddr;
+// 4128 	ipAddr = htonl(GsnNwIf_IpV4AddrGet(pNwIf));
+// 4129 	/* An ARP Request Pkt with  Destination address being  the node address */
+// 4130 	return ((GSN_ETH_PROTO_TYPE_ARP == protocol) &&
+// 4131 		  	(GSN_NW_ARP_REQUEST ==
+// 4132 					  htons((GsnNwIf_U16FieldGet)(pEthFrame->Data + GSN_NW_ARP_OP_OFFSET))) &&
+// 4133 			(0 == memcmp(&ipAddr, (pEthFrame->Data + GSN_NW_ARP_TAGET_IP_OFFSET), 4)));
         MOVW     R0,#+2054
         CMP      R2,R0
         BNE.N    ??App_IsArpReqstPkt_0
-        BL       ??Subroutine46_0
-??CrossCallReturnLabel_128:
-        BL       ?Subroutine46
-??CrossCallReturnLabel_130:
+        BL       ??Subroutine47_0
+??CrossCallReturnLabel_132:
+        BL       ?Subroutine47
+??CrossCallReturnLabel_134:
         UXTB     R0,R0
         ORR      R0,R5,R0, LSL #+8
         CMP      R0,#+1
@@ -12170,39 +12161,39 @@ App_IsArpReqstPkt:
 ??App_IsArpReqstPkt_0:
         MOVS     R0,#+0
         POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock236
-// 4142 }
-// 4143 
+          CFI EndBlock cfiBlock241
+// 4134 }
+// 4135 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock237 Using cfiCommon0
+          CFI Block cfiBlock242 Using cfiCommon0
           CFI Function App_IsArpReplyPkt
           CFI NoCalls
         THUMB
-// 4144 BOOL 
-// 4145 App_IsArpReplyPkt(GSN_NWIF_CTX_T *pNwIf, GSN_ETHERNET_FRAME_T *pEthFrame, 
-// 4146 								UINT32 protocol)
-// 4147 {
+// 4136 BOOL 
+// 4137 App_IsArpReplyPkt(GSN_NWIF_CTX_T *pNwIf, GSN_ETHERNET_FRAME_T *pEthFrame, 
+// 4138 								UINT32 protocol)
+// 4139 {
 App_IsArpReplyPkt:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-// 4148 	//UINT32 ipAddr;
-// 4149 	//ipAddr = htonl(GsnNwIf_IpV4AddrGet(pNwIf));
-// 4150 	/* An ARP Request Pkt with  Destination address being  the node address */
-// 4151 	return ((GSN_ETH_PROTO_TYPE_ARP == protocol) &&
-// 4152 		  	(GSN_NW_ARP_RESPONSE ==
-// 4153 					  htons((GsnNwIf_U16FieldGet)(pEthFrame->Data + GSN_NW_ARP_OP_OFFSET))));
+// 4140 	//UINT32 ipAddr;
+// 4141 	//ipAddr = htonl(GsnNwIf_IpV4AddrGet(pNwIf));
+// 4142 	/* An ARP Request Pkt with  Destination address being  the node address */
+// 4143 	return ((GSN_ETH_PROTO_TYPE_ARP == protocol) &&
+// 4144 		  	(GSN_NW_ARP_RESPONSE ==
+// 4145 					  htons((GsnNwIf_U16FieldGet)(pEthFrame->Data + GSN_NW_ARP_OP_OFFSET))));
         MOVW     R0,#+2054
         MOV      R4,R1
         CMP      R2,R0
         BNE.N    ??App_IsArpReplyPkt_0
-        BL       ??Subroutine46_0
-??CrossCallReturnLabel_127:
-        BL       ?Subroutine46
-??CrossCallReturnLabel_129:
+        BL       ??Subroutine47_0
+??CrossCallReturnLabel_131:
+        BL       ?Subroutine47
+??CrossCallReturnLabel_133:
         UXTB     R0,R0
         ORR      R0,R5,R0, LSL #+8
         CMP      R0,#+2
@@ -12212,91 +12203,91 @@ App_IsArpReplyPkt:
 ??App_IsArpReplyPkt_0:
         MOVS     R0,#+0
         POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock237
-// 4154 }
+          CFI EndBlock cfiBlock242
+// 4146 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond238 Using cfiCommon0
+          CFI Block cfiCond243 Using cfiCommon0
           CFI Function App_IsArpReqstPkt
-          CFI Conditional ??CrossCallReturnLabel_130
+          CFI Conditional ??CrossCallReturnLabel_134
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
-          CFI Block cfiCond239 Using cfiCommon0
-          CFI (cfiCond239) Function App_IsArpReplyPkt
-          CFI (cfiCond239) Conditional ??CrossCallReturnLabel_129
-          CFI (cfiCond239) R4 Frame(CFA, -12)
-          CFI (cfiCond239) R5 Frame(CFA, -8)
-          CFI (cfiCond239) R14 Frame(CFA, -4)
-          CFI (cfiCond239) CFA R13+16
-          CFI Block cfiPicker240 Using cfiCommon1
-          CFI (cfiPicker240) NoFunction
-          CFI (cfiPicker240) Picker
+          CFI Block cfiCond244 Using cfiCommon0
+          CFI (cfiCond244) Function App_IsArpReplyPkt
+          CFI (cfiCond244) Conditional ??CrossCallReturnLabel_133
+          CFI (cfiCond244) R4 Frame(CFA, -12)
+          CFI (cfiCond244) R5 Frame(CFA, -8)
+          CFI (cfiCond244) R14 Frame(CFA, -4)
+          CFI (cfiCond244) CFA R13+16
+          CFI Block cfiPicker245 Using cfiCommon1
+          CFI (cfiPicker245) NoFunction
+          CFI (cfiPicker245) Picker
         THUMB
-?Subroutine46:
+?Subroutine47:
         LSRS     R5,R0,#+8
-          CFI Block cfiCond241 Using cfiCommon0
-          CFI (cfiCond241) Function App_IsArpReqstPkt
-          CFI (cfiCond241) Conditional ??CrossCallReturnLabel_128
-          CFI (cfiCond241) R4 Frame(CFA, -12)
-          CFI (cfiCond241) R5 Frame(CFA, -8)
-          CFI (cfiCond241) R14 Frame(CFA, -4)
-          CFI (cfiCond241) CFA R13+16
-          CFI Block cfiCond242 Using cfiCommon0
-          CFI (cfiCond242) Function App_IsArpReplyPkt
-          CFI (cfiCond242) Conditional ??CrossCallReturnLabel_127
-          CFI (cfiCond242) R4 Frame(CFA, -12)
-          CFI (cfiCond242) R5 Frame(CFA, -8)
-          CFI (cfiCond242) R14 Frame(CFA, -4)
-          CFI (cfiCond242) CFA R13+16
-??Subroutine46_0:
+          CFI Block cfiCond246 Using cfiCommon0
+          CFI (cfiCond246) Function App_IsArpReqstPkt
+          CFI (cfiCond246) Conditional ??CrossCallReturnLabel_132
+          CFI (cfiCond246) R4 Frame(CFA, -12)
+          CFI (cfiCond246) R5 Frame(CFA, -8)
+          CFI (cfiCond246) R14 Frame(CFA, -4)
+          CFI (cfiCond246) CFA R13+16
+          CFI Block cfiCond247 Using cfiCommon0
+          CFI (cfiCond247) Function App_IsArpReplyPkt
+          CFI (cfiCond247) Conditional ??CrossCallReturnLabel_131
+          CFI (cfiCond247) R4 Frame(CFA, -12)
+          CFI (cfiCond247) R5 Frame(CFA, -8)
+          CFI (cfiCond247) R14 Frame(CFA, -4)
+          CFI (cfiCond247) CFA R13+16
+??Subroutine47_0:
         ADD      R0,R4,#+20
           CFI FunCall App_IsArpReqstPkt GsnNwIf_U16FieldGet
           CFI FunCall App_IsArpReplyPkt GsnNwIf_U16FieldGet
           CFI FunCall App_IsArpReqstPkt GsnNwIf_U16FieldGet
           CFI FunCall App_IsArpReplyPkt GsnNwIf_U16FieldGet
         B.W      GsnNwIf_U16FieldGet
-          CFI EndBlock cfiCond238
-          CFI EndBlock cfiCond239
-          CFI EndBlock cfiPicker240
-          CFI EndBlock cfiCond241
-          CFI EndBlock cfiCond242
-// 4155 
+          CFI EndBlock cfiCond243
+          CFI EndBlock cfiCond244
+          CFI EndBlock cfiPicker245
+          CFI EndBlock cfiCond246
+          CFI EndBlock cfiCond247
+// 4147 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock243 Using cfiCommon0
+          CFI Block cfiBlock248 Using cfiCommon0
           CFI Function AppS2w_NwIfU16FieldGet
         THUMB
-// 4156 PRIVATE INLINE UINT16
-// 4157 AppS2w_NwIfU16FieldGet(UINT8 *pPkt)
-// 4158 {
+// 4148 PRIVATE INLINE UINT16
+// 4149 AppS2w_NwIfU16FieldGet(UINT8 *pPkt)
+// 4150 {
 AppS2w_NwIfU16FieldGet:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-// 4159     UINT16 val = 0;
+// 4151     UINT16 val = 0;
         MOVS     R1,#+0
         STRH     R1,[SP, #+0]
-// 4160     memcpy(&val, pPkt, sizeof(UINT16));
+// 4152     memcpy(&val, pPkt, sizeof(UINT16));
         MOVS     R2,#+2
         MOV      R1,R0
         ADD      R0,SP,#+0
           CFI FunCall memcpy
         BL       memcpy
-// 4161     return val;
+// 4153     return val;
         LDRH     R0,[SP, #+0]
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock243
-// 4162 }
+          CFI EndBlock cfiBlock248
+// 4154 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock244 Using cfiCommon0
+          CFI Block cfiBlock249 Using cfiCommon0
           CFI Function AppS2w_isForValidCid
           CFI NoCalls
         THUMB
-// 4163 UINT32 AppS2w_isForValidCid(UINT16 dst_port , UINT16 src_port)
-// 4164 {
+// 4155 UINT32 AppS2w_isForValidCid(UINT16 dst_port , UINT16 src_port)
+// 4156 {
 AppS2w_isForValidCid:
         PUSH     {R4-R7,LR}
           CFI R14 Frame(CFA, -4)
@@ -12306,18 +12297,18 @@ AppS2w_isForValidCid:
           CFI R4 Frame(CFA, -20)
           CFI CFA R13+20
         MOV      R2,R1
-// 4165     BOOL filterPass = FALSE;
+// 4157     BOOL filterPass = FALSE;
         MOVS     R1,#+0
-// 4166     UINT32 i;
-// 4167     for (i = 0; i < MAX_CID_RANGE; i++)
+// 4158     UINT32 i;
+// 4159     for (i = 0; i < MAX_CID_RANGE; i++)
         MOVS     R5,#+0
         MOV      R3,#+296
-        LDR.N    R4,??DataTable109_18
-// 4168     {
-// 4169         if (((s2wCidList[i].sd != CID_NOTINUSE) &&((dst_port == s2wCidList[i].localPort ) ||
-// 4170             (s2wCidList[i].conMode == S2W_NETDATA_MODE_CLIENT_TRANSIENT)))||
-// 4171             ((s2wCidList[i].conMode == S2W_NETDATA_MODE_CLIENT_TRANSIENT) && 
-// 4172             (s2wCidList[i].httpflag == 1) &&  ((src_port == S2W_HTTPS_PORT ) || (src_port == S2W_HTTP_PORT ))))
+        LDR.N    R4,??DataTable105_18
+// 4160     {
+// 4161         if (((s2wCidList[i].sd != CID_NOTINUSE) &&((dst_port == s2wCidList[i].localPort ) ||
+// 4162             (s2wCidList[i].conMode == S2W_NETDATA_MODE_CLIENT_TRANSIENT)))||
+// 4163             ((s2wCidList[i].conMode == S2W_NETDATA_MODE_CLIENT_TRANSIENT) && 
+// 4164             (s2wCidList[i].httpflag == 1) &&  ((src_port == S2W_HTTPS_PORT ) || (src_port == S2W_HTTP_PORT ))))
 ??AppS2w_isForValidCid_0:
         MLA      R6,R3,R5,R4
         LDR      R7,[R6, #+28]
@@ -12341,26 +12332,26 @@ AppS2w_isForValidCid:
         IT       NE 
         CMPNE    R2,#+80
         BNE.N    ??AppS2w_isForValidCid_3
-// 4173            {
-// 4174                filterPass = TRUE;
+// 4165            {
+// 4166                filterPass = TRUE;
 ??AppS2w_isForValidCid_2:
         MOVS     R1,#+1
-// 4175                break;
+// 4167                break;
         B.N      ??AppS2w_isForValidCid_4
-// 4176            }
-// 4177     }
+// 4168            }
+// 4169     }
 ??AppS2w_isForValidCid_3:
         ADDS     R5,R5,#+1
         CMP      R5,#+16
         BCC.N    ??AppS2w_isForValidCid_0
-// 4178 #ifdef S2W_COAP_SUPPORT
-// 4179     for (i = 0; i < MAX_CID_RANGE; i++)
+// 4170 #ifdef S2W_COAP_SUPPORT
+// 4171     for (i = 0; i < MAX_CID_RANGE; i++)
 ??AppS2w_isForValidCid_4:
         MOVS     R0,#+0
-// 4180     {
-// 4181         if ((s2wCidList[i].sd != CID_NOTINUSE) &&
-// 4182             (s2wCidList[i].conType == UDP) &&
-// 4183             (src_port == S2W_COAP_PORT ) && (s2wCidList[i].coapContext != NULL))
+// 4172     {
+// 4173         if ((s2wCidList[i].sd != CID_NOTINUSE) &&
+// 4174             (s2wCidList[i].conType == UDP) &&
+// 4175             (src_port == S2W_COAP_PORT ) && (s2wCidList[i].coapContext != NULL))
 ??AppS2w_isForValidCid_5:
         MUL      R5,R3,R0
         ADDS     R6,R5,R4
@@ -12375,34 +12366,34 @@ AppS2w_isForValidCid:
         BNE.N    ??AppS2w_isForValidCid_6
         LDR      R5,[R6, #+284]
         CBZ.N    R5,??AppS2w_isForValidCid_6
-// 4184            {
-// 4185                filterPass = TRUE;
+// 4176            {
+// 4177                filterPass = TRUE;
         MOVS     R1,#+1
-// 4186                break;
+// 4178                break;
         B.N      ??AppS2w_isForValidCid_7
-// 4187            }
-// 4188     }
+// 4179            }
+// 4180     }
 ??AppS2w_isForValidCid_6:
         ADDS     R0,R0,#+1
         CMP      R0,#+16
         BCC.N    ??AppS2w_isForValidCid_5
-// 4189 #endif
-// 4190     return filterPass;
+// 4181 #endif
+// 4182     return filterPass;
 ??AppS2w_isForValidCid_7:
         MOV      R0,R1
         POP      {R4-R7,PC}       ;; return
-          CFI EndBlock cfiBlock244
-// 4191 }
+          CFI EndBlock cfiBlock249
+// 4183 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock245 Using cfiCommon0
+          CFI Block cfiBlock250 Using cfiCommon0
           CFI Function AppS2wRecv_Filter
         THUMB
-// 4192 BOOL
-// 4193 AppS2wRecv_Filter(GSN_NWIF_CTX_T *pNwIf, UINT32 pktLen,
-// 4194                     GSN_ETHERNET_FRAME_T *pEthFrame
-// 4195                     )
-// 4196 {
+// 4184 BOOL
+// 4185 AppS2wRecv_Filter(GSN_NWIF_CTX_T *pNwIf, UINT32 pktLen,
+// 4186                     GSN_ETHERNET_FRAME_T *pEthFrame
+// 4187                     )
+// 4188 {
 AppS2wRecv_Filter:
         PUSH     {R3-R11,LR}
           CFI R14 Frame(CFA, -4)
@@ -12417,47 +12408,47 @@ AppS2wRecv_Filter:
           CFI CFA R13+40
         MOV      R10,R0
         MOV      R4,R2
-// 4197 	BOOL filterPass = TRUE;
+// 4189 	BOOL filterPass = TRUE;
         MOVS     R5,#+1
-// 4198 	UINT16 protocol;
-// 4199 	UINT8 getOutOfDpSleep = 0;
+// 4190 	UINT16 protocol;
+// 4191 	UINT8 getOutOfDpSleep = 0;
         MOV      R8,#+0
-// 4200 	
-// 4201 	UINT16 dst_port= htons(AppS2w_NwIfU16FieldGet(pEthFrame->Data
-// 4202 				                                                    + GSN_NW_IP_HEADER_LEN
-// 4203                                                     + GSN_NW_UDP_DST_PORT_OFFSET));
-        BL       ?Subroutine47
-??CrossCallReturnLabel_134:
-        MOV      R7,R0
-        BL       ?Subroutine47
-??CrossCallReturnLabel_133:
-        LSLS     R0,R0,#+8
-        ORR      R7,R0,R7, LSR #+8
-        UXTH     R7,R7
-// 4204 	UINT16 src_port =htons(AppS2w_NwIfU16FieldGet(pEthFrame->Data+ GSN_NW_IP_HEADER_LEN
-// 4205 																	+ GSN_NW_UDP_SRC_PORT_OFFSET));	 
+// 4192 	
+// 4193 	UINT16 dst_port= htons(AppS2w_NwIfU16FieldGet(pEthFrame->Data
+// 4194 				                                                    + GSN_NW_IP_HEADER_LEN
+// 4195                                                     + GSN_NW_UDP_DST_PORT_OFFSET));
         BL       ?Subroutine48
 ??CrossCallReturnLabel_138:
-        MOV      R6,R0
+        MOV      R7,R0
         BL       ?Subroutine48
 ??CrossCallReturnLabel_137:
         LSLS     R0,R0,#+8
+        ORR      R7,R0,R7, LSR #+8
+        UXTH     R7,R7
+// 4196 	UINT16 src_port =htons(AppS2w_NwIfU16FieldGet(pEthFrame->Data+ GSN_NW_IP_HEADER_LEN
+// 4197 																	+ GSN_NW_UDP_SRC_PORT_OFFSET));	 
+        BL       ?Subroutine49
+??CrossCallReturnLabel_142:
+        MOV      R6,R0
+        BL       ?Subroutine49
+??CrossCallReturnLabel_141:
+        LSLS     R0,R0,#+8
         ORR      R6,R0,R6, LSR #+8
-// 4206 																	
-// 4207 	protocol = swap_16(pEthFrame->UpperProtocolType);
+// 4198 																	
+// 4199 	protocol = swap_16(pEthFrame->UpperProtocolType);
         LDRH     R0,[R4, #+12]
         LSLS     R1,R0,#+8
         ORR      R0,R1,R0, LSR #+8
         UXTH     R9,R0
-// 4208     if(GSN_ETH_PROTO_TYPE_ARP == protocol)
+// 4200     if(GSN_ETH_PROTO_TYPE_ARP == protocol)
         MOVW     R0,#+2054
         CMP      R9,R0
         BNE.N    ??AppS2wRecv_Filter_0
-// 4209     {
-// 4210 		filterPass = FALSE;
+// 4201     {
+// 4202 		filterPass = FALSE;
         MOVS     R5,#+0
-// 4211 		if(TRUE == App_IsArpReqstPkt(pNwIf, pEthFrame, protocol) || 
-// 4212 			TRUE == App_IsArpReplyPkt(pNwIf, pEthFrame, protocol))
+// 4203 		if(TRUE == App_IsArpReqstPkt(pNwIf, pEthFrame, protocol) || 
+// 4204 			TRUE == App_IsArpReplyPkt(pNwIf, pEthFrame, protocol))
         MOV      R2,R9
         MOV      R1,R4
         MOV      R0,R10
@@ -12472,45 +12463,45 @@ AppS2wRecv_Filter:
         BL       App_IsArpReplyPkt
         CMP      R0,#+1
         BNE.N    ??AppS2wRecv_Filter_0
-// 4213 		{
-// 4214 			filterPass = TRUE;
+// 4205 		{
+// 4206 			filterPass = TRUE;
 ??AppS2wRecv_Filter_1:
         MOVS     R5,#+1
-// 4215 		}
-// 4216 	}
-// 4217 
-// 4218     /* Get protocol type if the l2 is configured to disable any protocol*/
-// 4219     if(s2wappMainTaskCtxt->l2ConfigBitField)
+// 4207 		}
+// 4208 	}
+// 4209 
+// 4210     /* Get protocol type if the l2 is configured to disable any protocol*/
+// 4211     if(s2wappMainTaskCtxt->l2ConfigBitField)
 ??AppS2wRecv_Filter_0:
-        LDR.W    R10,??DataTable109_2
+        LDR.W    R10,??DataTable105_2
         LDR      R1,[R10, #+0]
         MOVW     R0,#+32753
         MOVW     R11,#+443
         LDRB     R0,[R0, R1]
         CBZ.N    R0,??AppS2wRecv_Filter_2
-// 4220     {
-// 4221 	    if (GSN_ETH_PROTO_TYPE_IP == protocol)
+// 4212     {
+// 4213 	    if (GSN_ETH_PROTO_TYPE_IP == protocol)
         CMP      R9,#+2048
         BNE.N    ??AppS2wRecv_Filter_3
-// 4222 	    {
-// 4223 			/* If it is an ICMP and disable flag enabled by the at command, then return false */
-// 4224 		    if((GSN_NW_ICMP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)) &&
-// 4225 		       (s2wappMainTaskCtxt->l2ConfigBitField & S2W_ICMP_MASK))
+// 4214 	    {
+// 4215 			/* If it is an ICMP and disable flag enabled by the at command, then return false */
+// 4216 		    if((GSN_NW_ICMP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)) &&
+// 4217 		       (s2wappMainTaskCtxt->l2ConfigBitField & S2W_ICMP_MASK))
         LDRB     R1,[R4, #+23]
         CMP      R1,#+1
         BNE.N    ??AppS2wRecv_Filter_4
         LSLS     R2,R0,#+31
         IT       MI 
         MOVMI    R5,#+0
-// 4226 		    {
-// 4227 				filterPass = FALSE;
+// 4218 		    {
+// 4219 				filterPass = FALSE;
         BMI.N    ??AppS2wRecv_Filter_3
-// 4228 			}
-// 4229 
-// 4230 		    /* If it is an UDP/TCP and disable flag enabled by the at command, then return false */
-// 4231 		    else if(((GSN_NW_UDP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)) ||
-// 4232 		    (GSN_NW_TCP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)))&&
-// 4233 			    (s2wappMainTaskCtxt->l2ConfigBitField & S2W_UDP_TCP_MASK))
+// 4220 			}
+// 4221 
+// 4222 		    /* If it is an UDP/TCP and disable flag enabled by the at command, then return false */
+// 4223 		    else if(((GSN_NW_UDP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)) ||
+// 4224 		    (GSN_NW_TCP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)))&&
+// 4225 			    (s2wappMainTaskCtxt->l2ConfigBitField & S2W_UDP_TCP_MASK))
 ??AppS2wRecv_Filter_4:
         CMP      R1,#+17
         IT       NE 
@@ -12518,32 +12509,32 @@ AppS2wRecv_Filter:
         BNE.N    ??AppS2wRecv_Filter_3
         LSLS     R0,R0,#+30
         BPL.N    ??AppS2wRecv_Filter_3
-// 4234 		    {
-// 4235 				filterPass = FALSE;
+// 4226 		    {
+// 4227 				filterPass = FALSE;
         MOVS     R5,#+0
-// 4236                 /* It has to be packet for an existing socket */
-// 4237 				if((GSN_NW_UDP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)))
+// 4228                 /* It has to be packet for an existing socket */
+// 4229 				if((GSN_NW_UDP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)))
         CMP      R1,#+17
         BNE.N    ??AppS2wRecv_Filter_5
-// 4238 				{
-// 4239 					if((S2W_DNS_PORT == src_port)|| (S2W_SNTP_PORT == src_port))
+// 4230 				{
+// 4231 					if((S2W_DNS_PORT == src_port)|| (S2W_SNTP_PORT == src_port))
         UXTH     R6,R6
         CMP      R6,#+53
         IT       NE 
         CMPNE    R6,#+123
         BEQ.N    ??AppS2wRecv_Filter_6
-// 4240 					{
-// 4241 						filterPass = TRUE;
-// 4242                     	goto AppS2wRecv_Filter_1;
-// 4243 					}
-// 4244 				}	
-// 4245                 // check first the pkt is dhcp/dns/mdns/http
-// 4246                 if( (S2W_MDNS_PORT == dst_port) || (GSN_NW_BOOTPS_PORT == dst_port)
-// 4247                     ||  (GSN_NW_BOOTP_PORT == dst_port)|| (S2W_DNS_PORT == dst_port)                   
-// 4248 #ifdef S2W_WEB_SERVER                   
-// 4249                      ||  (((S2W_HTTPS_PORT == dst_port) || (S2W_HTTP_PORT == dst_port)) && (GsnHttpd_IsRunning()))
-// 4250 #endif                    
-// 4251                     )
+// 4232 					{
+// 4233 						filterPass = TRUE;
+// 4234                     	goto AppS2wRecv_Filter_1;
+// 4235 					}
+// 4236 				}	
+// 4237                 // check first the pkt is dhcp/dns/mdns/http
+// 4238                 if( (S2W_MDNS_PORT == dst_port) || (GSN_NW_BOOTPS_PORT == dst_port)
+// 4239                     ||  (GSN_NW_BOOTP_PORT == dst_port)|| (S2W_DNS_PORT == dst_port)                   
+// 4240 #ifdef S2W_WEB_SERVER                   
+// 4241                      ||  (((S2W_HTTPS_PORT == dst_port) || (S2W_HTTP_PORT == dst_port)) && (GsnHttpd_IsRunning()))
+// 4242 #endif                    
+// 4243                     )
 ??AppS2wRecv_Filter_5:
         MOVW     R0,#+5353
         CMP      R7,R0
@@ -12561,15 +12552,15 @@ AppS2wRecv_Filter:
           CFI FunCall GsnHttpd_IsRunning
         BL       GsnHttpd_IsRunning
         CBZ.N    R0,??AppS2wRecv_Filter_7
-// 4252                 {
-// 4253                     filterPass = TRUE;
+// 4244                 {
+// 4245                     filterPass = TRUE;
 ??AppS2wRecv_Filter_6:
         MOVS     R5,#+1
-// 4254                     goto AppS2wRecv_Filter_1;
+// 4246                     goto AppS2wRecv_Filter_1;
         B.N      ??AppS2wRecv_Filter_3
-// 4255 				}
-// 4256                 // check the port exists in the cid list, if not drop the pkt
-// 4257                 if(AppS2w_isForValidCid(dst_port, src_port) == TRUE)
+// 4247 				}
+// 4248                 // check the port exists in the cid list, if not drop the pkt
+// 4249                 if(AppS2w_isForValidCid(dst_port, src_port) == TRUE)
 ??AppS2wRecv_Filter_7:
         UXTH     R1,R6
         MOV      R0,R7
@@ -12578,79 +12569,79 @@ AppS2wRecv_Filter:
         CMP      R0,#+1
         BNE.N    ??AppS2wRecv_Filter_3
         B.N      ??AppS2wRecv_Filter_8
-// 4258                 {
-// 4259                     filterPass = TRUE;
-// 4260                     getOutOfDpSleep = 1;
-// 4261                 }
-// 4262                 
-// 4263   		    }
-// 4264 	    }
-// 4265 	}
-// 4266 	else if((GSN_NW_UDP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)) ||
-// 4267 	    			(GSN_NW_TCP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)))
+// 4250                 {
+// 4251                     filterPass = TRUE;
+// 4252                     getOutOfDpSleep = 1;
+// 4253                 }
+// 4254                 
+// 4255   		    }
+// 4256 	    }
+// 4257 	}
+// 4258 	else if((GSN_NW_UDP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)) ||
+// 4259 	    			(GSN_NW_TCP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)))
 ??AppS2wRecv_Filter_2:
         LDRB     R0,[R4, #+23]
         CMP      R0,#+17
         IT       NE 
         CMPNE    R0,#+6
         BNE.N    ??AppS2wRecv_Filter_3
-// 4268     {
-// 4269         if(AppS2w_isForValidCid(dst_port, src_port) == TRUE)
+// 4260     {
+// 4261         if(AppS2w_isForValidCid(dst_port, src_port) == TRUE)
         UXTH     R1,R6
         MOV      R0,R7
           CFI FunCall AppS2w_isForValidCid
         BL       AppS2w_isForValidCid
         CMP      R0,#+1
         BNE.N    ??AppS2wRecv_Filter_3
-// 4270         {
-// 4271             filterPass = TRUE;
+// 4262         {
+// 4263             filterPass = TRUE;
 ??AppS2wRecv_Filter_8:
         MOVS     R5,#+1
-// 4272             getOutOfDpSleep = 1;
+// 4264             getOutOfDpSleep = 1;
         MOV      R8,R5
-// 4273         }
-// 4274     }
-// 4275 	
-// 4276 
-// 4277 AppS2wRecv_Filter_1:
-// 4278 
-// 4279 	if(s2wappMainTaskCtxt->dpSleep)
+// 4265         }
+// 4266     }
+// 4267 	
+// 4268 
+// 4269 AppS2wRecv_Filter_1:
+// 4270 
+// 4271 	if(s2wappMainTaskCtxt->dpSleep)
 ??AppS2wRecv_Filter_3:
         LDR      R0,[R10, #+0]
         MOVW     R7,#+27388
         LDR      R0,[R7, R0]
         CBZ.N    R0,??AppS2wRecv_Filter_9
-// 4280 	{
-// 4281 	    /* If it is an UDP/TCP and disable flag enabled by the at command, then return false */
-// 4282 	    if((GSN_NW_UDP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)) ||
-// 4283 	    			(GSN_NW_TCP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)))
+// 4272 	{
+// 4273 	    /* If it is an UDP/TCP and disable flag enabled by the at command, then return false */
+// 4274 	    if((GSN_NW_UDP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)) ||
+// 4275 	    			(GSN_NW_TCP_PROTO == *(pEthFrame->Data + GSN_NW_IP_PROTO_OFFSET)))
         LDRB     R0,[R4, #+23]
         CMP      R0,#+17
         IT       NE 
         CMPNE    R0,#+6
         BNE.N    ??AppS2wRecv_Filter_10
-// 4284 	    {
-// 4285 			//filterPass = FALSE;
-// 4286 	        /* It has to be packet for an existing socket */
-// 4287 	        UINT16 dst_port= htons(AppS2w_NwIfU16FieldGet(pEthFrame->Data
-// 4288 			                                                    + GSN_NW_IP_HEADER_LEN
-// 4289 	                                            + GSN_NW_UDP_DST_PORT_OFFSET));
-        BL       ?Subroutine47
-??CrossCallReturnLabel_132:
+// 4276 	    {
+// 4277 			//filterPass = FALSE;
+// 4278 	        /* It has to be packet for an existing socket */
+// 4279 	        UINT16 dst_port= htons(AppS2w_NwIfU16FieldGet(pEthFrame->Data
+// 4280 			                                                    + GSN_NW_IP_HEADER_LEN
+// 4281 	                                            + GSN_NW_UDP_DST_PORT_OFFSET));
+        BL       ?Subroutine48
+??CrossCallReturnLabel_136:
         MOV      R6,R0
-        BL       ?Subroutine47
-??CrossCallReturnLabel_131:
+        BL       ?Subroutine48
+??CrossCallReturnLabel_135:
         LSLS     R0,R0,#+8
         ORR      R0,R0,R6, LSR #+8
         UXTH     R6,R0
-// 4290 			UINT16 src_port =htons(AppS2w_NwIfU16FieldGet(pEthFrame->Data+ GSN_NW_IP_HEADER_LEN
-// 4291 																+ GSN_NW_UDP_SRC_PORT_OFFSET));				
-        BL       ?Subroutine48
-??CrossCallReturnLabel_136:
-        BL       ?Subroutine48
-// 4292 #ifdef S2W_WEB_SERVER
-// 4293 	        if(((S2W_HTTPS_PORT == dst_port) || (S2W_HTTP_PORT == dst_port)) && (GsnHttpd_IsRunning()))
-??CrossCallReturnLabel_135:
+// 4282 			UINT16 src_port =htons(AppS2w_NwIfU16FieldGet(pEthFrame->Data+ GSN_NW_IP_HEADER_LEN
+// 4283 																+ GSN_NW_UDP_SRC_PORT_OFFSET));				
+        BL       ?Subroutine49
+??CrossCallReturnLabel_140:
+        BL       ?Subroutine49
+// 4284 #ifdef S2W_WEB_SERVER
+// 4285 	        if(((S2W_HTTPS_PORT == dst_port) || (S2W_HTTP_PORT == dst_port)) && (GsnHttpd_IsRunning()))
+??CrossCallReturnLabel_139:
         CMP      R6,R11
         IT       NE 
         CMPNE    R6,#+80
@@ -12658,14 +12649,14 @@ AppS2wRecv_Filter:
           CFI FunCall GsnHttpd_IsRunning
         BL       GsnHttpd_IsRunning
         CBZ.N    R0,??AppS2wRecv_Filter_10
-// 4294 	        {
-// 4295 	            getOutOfDpSleep = 1;
+// 4286 	        {
+// 4287 	            getOutOfDpSleep = 1;
         MOV      R8,#+1
-// 4296 			}
-// 4297 #endif          			
-// 4298 	        
-// 4299 		}
-// 4300 		if(s2wappMainTaskCtxt->dpSleep && (1 == getOutOfDpSleep))
+// 4288 			}
+// 4289 #endif          			
+// 4290 	        
+// 4291 		}
+// 4292 		if(s2wappMainTaskCtxt->dpSleep && (1 == getOutOfDpSleep))
 ??AppS2wRecv_Filter_10:
         LDR      R0,[R10, #+0]
         LDR      R0,[R7, R0]
@@ -12674,92 +12665,22 @@ AppS2wRecv_Filter:
         CMPNE    R8,#+0
           CFI FunCall AppS2w_ExitDpSleep
         BLNE     AppS2w_ExitDpSleep
-// 4301 		{
-// 4302 			AppS2w_ExitDpSleep();
-// 4303 		}
-// 4304 	}
-// 4305     return filterPass;
+// 4293 		{
+// 4294 			AppS2w_ExitDpSleep();
+// 4295 		}
+// 4296 	}
+// 4297     return filterPass;
 ??AppS2wRecv_Filter_9:
         MOV      R0,R5
         POP      {R1,R4-R11,PC}   ;; return
-          CFI EndBlock cfiBlock245
-// 4306 
-// 4307 }
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond246 Using cfiCommon0
-          CFI Function AppS2wRecv_Filter
-          CFI Conditional ??CrossCallReturnLabel_138
-          CFI R4 Frame(CFA, -36)
-          CFI R5 Frame(CFA, -32)
-          CFI R6 Frame(CFA, -28)
-          CFI R7 Frame(CFA, -24)
-          CFI R8 Frame(CFA, -20)
-          CFI R9 Frame(CFA, -16)
-          CFI R10 Frame(CFA, -12)
-          CFI R11 Frame(CFA, -8)
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+40
-          CFI Block cfiCond247 Using cfiCommon0
-          CFI (cfiCond247) Function AppS2wRecv_Filter
-          CFI (cfiCond247) Conditional ??CrossCallReturnLabel_137
-          CFI (cfiCond247) R4 Frame(CFA, -36)
-          CFI (cfiCond247) R5 Frame(CFA, -32)
-          CFI (cfiCond247) R6 Frame(CFA, -28)
-          CFI (cfiCond247) R7 Frame(CFA, -24)
-          CFI (cfiCond247) R8 Frame(CFA, -20)
-          CFI (cfiCond247) R9 Frame(CFA, -16)
-          CFI (cfiCond247) R10 Frame(CFA, -12)
-          CFI (cfiCond247) R11 Frame(CFA, -8)
-          CFI (cfiCond247) R14 Frame(CFA, -4)
-          CFI (cfiCond247) CFA R13+40
-          CFI Block cfiCond248 Using cfiCommon0
-          CFI (cfiCond248) Function AppS2wRecv_Filter
-          CFI (cfiCond248) Conditional ??CrossCallReturnLabel_136
-          CFI (cfiCond248) R4 Frame(CFA, -36)
-          CFI (cfiCond248) R5 Frame(CFA, -32)
-          CFI (cfiCond248) R6 Frame(CFA, -28)
-          CFI (cfiCond248) R7 Frame(CFA, -24)
-          CFI (cfiCond248) R8 Frame(CFA, -20)
-          CFI (cfiCond248) R9 Frame(CFA, -16)
-          CFI (cfiCond248) R10 Frame(CFA, -12)
-          CFI (cfiCond248) R11 Frame(CFA, -8)
-          CFI (cfiCond248) R14 Frame(CFA, -4)
-          CFI (cfiCond248) CFA R13+40
-          CFI Block cfiCond249 Using cfiCommon0
-          CFI (cfiCond249) Function AppS2wRecv_Filter
-          CFI (cfiCond249) Conditional ??CrossCallReturnLabel_135
-          CFI (cfiCond249) R4 Frame(CFA, -36)
-          CFI (cfiCond249) R5 Frame(CFA, -32)
-          CFI (cfiCond249) R6 Frame(CFA, -28)
-          CFI (cfiCond249) R7 Frame(CFA, -24)
-          CFI (cfiCond249) R8 Frame(CFA, -20)
-          CFI (cfiCond249) R9 Frame(CFA, -16)
-          CFI (cfiCond249) R10 Frame(CFA, -12)
-          CFI (cfiCond249) R11 Frame(CFA, -8)
-          CFI (cfiCond249) R14 Frame(CFA, -4)
-          CFI (cfiCond249) CFA R13+40
-          CFI Block cfiPicker250 Using cfiCommon1
-          CFI (cfiPicker250) NoFunction
-          CFI (cfiPicker250) Picker
-        THUMB
-?Subroutine48:
-        ADD      R0,R4,#+34
-          CFI FunCall AppS2wRecv_Filter AppS2w_NwIfU16FieldGet
-          CFI FunCall AppS2wRecv_Filter AppS2w_NwIfU16FieldGet
-          CFI FunCall AppS2wRecv_Filter AppS2w_NwIfU16FieldGet
-          CFI FunCall AppS2wRecv_Filter AppS2w_NwIfU16FieldGet
-        B.N      AppS2w_NwIfU16FieldGet
-          CFI EndBlock cfiCond246
-          CFI EndBlock cfiCond247
-          CFI EndBlock cfiCond248
-          CFI EndBlock cfiCond249
-          CFI EndBlock cfiPicker250
+          CFI EndBlock cfiBlock250
+// 4298 
+// 4299 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond251 Using cfiCommon0
           CFI Function AppS2wRecv_Filter
-          CFI Conditional ??CrossCallReturnLabel_134
+          CFI Conditional ??CrossCallReturnLabel_142
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -12772,7 +12693,7 @@ AppS2wRecv_Filter:
           CFI CFA R13+40
           CFI Block cfiCond252 Using cfiCommon0
           CFI (cfiCond252) Function AppS2wRecv_Filter
-          CFI (cfiCond252) Conditional ??CrossCallReturnLabel_133
+          CFI (cfiCond252) Conditional ??CrossCallReturnLabel_141
           CFI (cfiCond252) R4 Frame(CFA, -36)
           CFI (cfiCond252) R5 Frame(CFA, -32)
           CFI (cfiCond252) R6 Frame(CFA, -28)
@@ -12785,7 +12706,7 @@ AppS2wRecv_Filter:
           CFI (cfiCond252) CFA R13+40
           CFI Block cfiCond253 Using cfiCommon0
           CFI (cfiCond253) Function AppS2wRecv_Filter
-          CFI (cfiCond253) Conditional ??CrossCallReturnLabel_132
+          CFI (cfiCond253) Conditional ??CrossCallReturnLabel_140
           CFI (cfiCond253) R4 Frame(CFA, -36)
           CFI (cfiCond253) R5 Frame(CFA, -32)
           CFI (cfiCond253) R6 Frame(CFA, -28)
@@ -12798,7 +12719,7 @@ AppS2wRecv_Filter:
           CFI (cfiCond253) CFA R13+40
           CFI Block cfiCond254 Using cfiCommon0
           CFI (cfiCond254) Function AppS2wRecv_Filter
-          CFI (cfiCond254) Conditional ??CrossCallReturnLabel_131
+          CFI (cfiCond254) Conditional ??CrossCallReturnLabel_139
           CFI (cfiCond254) R4 Frame(CFA, -36)
           CFI (cfiCond254) R5 Frame(CFA, -32)
           CFI (cfiCond254) R6 Frame(CFA, -28)
@@ -12813,8 +12734,8 @@ AppS2wRecv_Filter:
           CFI (cfiPicker255) NoFunction
           CFI (cfiPicker255) Picker
         THUMB
-?Subroutine47:
-        ADD      R0,R4,#+36
+?Subroutine49:
+        ADD      R0,R4,#+34
           CFI FunCall AppS2wRecv_Filter AppS2w_NwIfU16FieldGet
           CFI FunCall AppS2wRecv_Filter AppS2w_NwIfU16FieldGet
           CFI FunCall AppS2wRecv_Filter AppS2w_NwIfU16FieldGet
@@ -12825,364 +12746,434 @@ AppS2wRecv_Filter:
           CFI EndBlock cfiCond253
           CFI EndBlock cfiCond254
           CFI EndBlock cfiPicker255
-// 4308 
-// 4309 #if defined(S2W_DTLS_CLIENT_SUPPORT)
-// 4310 extern const unsigned char dtlsClientCA[895];
-// 4311 extern const unsigned char dtlsClientClient[641];
-// 4312 extern const unsigned char dtlsClentKey[608];
-// 4313 
-// 4314 VOID  AppS2w_DtslClientCb( VOID * pCtx, UINT8 event )
-// 4315 {
-// 4316 	int i;
-// 4317 	for(i = 0; i< MAX_CID_RANGE; i++)
-// 4318 	{
-// 4319 		if(pCtx == (void*)s2wCidList[i].ssl.sslConn)
-// 4320 		{
-// 4321 			break;
-// 4322 		}
-// 4323 	}
-// 4324 	if((i < MAX_CID_RANGE) && (GSN_DTLS_HANDSHAKE_DONE == event))
-// 4325 	{
-// 4326 		GsnOsal_SemRelease(&s2wCidList[i].s2wUserOpenInProgress);
-// 4327 	}
-// 4328 }
-// 4329 
-// 4330 UINT8 AppS2w_DtslClientOpen(UINT8 cliCid, char* caCertName,
-// 4331                            UINT8 *clientCertName, UINT8 *clientKeyName)
-// 4332 {
-// 4333     //INT32 u32NoOfBytesSent;
-// 4334     UINT32 status;
-// 4335     UINT8 *certBuf = NULL;
-// 4336     UINT16 caCertsize = 0;
-// 4337     INT32  index=0;
-// 4338     //void *pSslConn;
-// 4339     GSN_SSL_CONN_PARAMS_T sslConnParams;
-// 4340 	UINT32 cid = cliCid;
-// 4341 #if 1
-// 4342 #ifdef S2W_APP_SSL_PROVISION
-// 4343     initStartTime = GsnSoftTmr_CurrentSystemTime();
-// 4344 #endif
-// 4345 
-// 4346     /* Avoid warning*/
-// 4347     (void)certBuf ;
-// 4348     (void)caCertsize ;
-// 4349     memset((INT8 *)&sslConnParams, 0, sizeof(sslConnParams));
-// 4350     if (s2wCidList[cid].sslflag == TRUE)
-// 4351     {
-// 4352         S2w_Printf("\r\nSocket is already SSL Enabled");
-// 4353         return S2W_FAILURE;
-// 4354     }
-// 4355 
-// 4356     if(caCertName != NULL)
-// 4357     {
-// 4358         index = S2wCert_SearchRamTable(caCertName);
-// 4359         if(index == -1)
-// 4360         {
-// 4361         	index = S2wCert_FlashFileLoad(caCertName);
-// 4362         }
-// 4363         if(index == -1)
-// 4364         {
-// 4365             S2w_Printf("\n\rca Certificate %s Not Found", caCertName);
-// 4366             return S2W_FAILURE;
-// 4367         }
-// 4368 
-// 4369         // currently use the hardcoded certificate
-// 4370         sslConnParams.caCertLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
-// 4371         sslConnParams.caCert = s2w_ssl_cert_table[index].certAddress + 2;
-// 4372         sslConnParams.caCertName = (char const*)caCertName;
-// 4373     }
-// 4374 
-// 4375 
-// 4376     if(clientCertName != NULL)
-// 4377     {
-// 4378         index = S2wCert_SearchRamTable((char*)clientCertName);
-// 4379         if(index == -1)
-// 4380         {
-// 4381         	index = S2wCert_FlashFileLoad((char*)clientCertName);
-// 4382         }
-// 4383         if(index == -1)
-// 4384         {
-// 4385             S2w_Printf("\n\rclient Certificate %s Not Found", clientCertName);
-// 4386             return S2W_FAILURE;
-// 4387         }
-// 4388         sslConnParams.clientCertLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
-// 4389         sslConnParams.clientCert =  s2w_ssl_cert_table[index].certAddress + 2;
-// 4390         sslConnParams.clientCertName = (char const*)clientCertName;
-// 4391 
-// 4392     }
-// 4393 
-// 4394 
-// 4395     if(clientKeyName != NULL)
-// 4396     {
-// 4397         index = S2wCert_SearchRamTable((char*)clientKeyName);
-// 4398         if(index == -1)
-// 4399         {
-// 4400         	index = S2wCert_FlashFileLoad((char*)clientKeyName);
-// 4401         }
-// 4402         if(index == -1)
-// 4403         {
-// 4404             S2w_Printf("\n\rclient key Certificate %s Not Found", clientKeyName);
-// 4405             return S2W_FAILURE;
-// 4406         }
-// 4407         sslConnParams.clientKeyLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
-// 4408         sslConnParams.clientKey =  s2w_ssl_cert_table[index].certAddress + 2;
-// 4409         sslConnParams.clientKeyName = (char const*)clientKeyName;
-// 4410 
-// 4411     }
-// 4412 
-// 4413 #if 0
-// 4414     //if(caCertName != NULL)
-// 4415     {
-// 4416 
-// 4417         sslConnParams.caCertLen = sizeof(dtlsClientCA);//*(UINT16 *)s2w_ssl_cert_table[index].certAddress;
-// 4418         sslConnParams.caCert =  (UINT8*)dtlsClientCA;//s2w_ssl_cert_table[index].certAddress + 2;
-// 4419         sslConnParams.caCertName = NULL;
-// 4420     }
-// 4421 
-// 4422 
-// 4423     //if(clientCertName != NULL)
-// 4424     {
-// 4425         sslConnParams.clientCertLen = sizeof(dtlsClientClient);//*(UINT16 *)s2w_ssl_cert_table[index].certAddress;
-// 4426         sslConnParams.clientCert =  (UINT8*)dtlsClientClient;//s2w_ssl_cert_table[index].certAddress + 2;
-// 4427         sslConnParams.clientCertName = NULL;
-// 4428 
-// 4429     }
-// 4430 
-// 4431 
-// 4432     //(clientKeyName != NULL)
-// 4433     {
-// 4434 
-// 4435         sslConnParams.clientKeyLen = sizeof(dtlsClentKey);//*(UINT16 *)s2w_ssl_cert_table[index].certAddress;
-// 4436         sslConnParams.clientKey =  (UINT8*)dtlsClentKey;//s2w_ssl_cert_table[index].certAddress + 2;
-// 4437         sslConnParams.clientKeyName = NULL;
-// 4438 
-// 4439     }
-// 4440 #endif
-// 4441     nx_bsd_callback_register(s2wCidList[cid].sd, NULL, 0);    //deregister callback
-// 4442 
-// 4443     s2wCidList[cid].ssl.sslConn = (GSN_SSL_CONN_T*)gsn_malloc(sizeof(GSN_DTLS_CONN_T));
-// 4444 
-// 4445     if(NULL == s2wCidList[cid].ssl.sslConn)
-// 4446     {
-// 4447         return S2W_FAILURE;
-// 4448     }
-// 4449 	memset((INT8 *)s2wCidList[cid].ssl.sslConn, 0, sizeof(GSN_DTLS_CONN_T));
-// 4450     s2wCidList[cid].ssl.sslConn->sslState = GSN_SSL_STATE_INIT;
-// 4451 	s2wCidList[cid].ssl.sslConn->connMode = GSN_SSL_CONN_MODE_CLIENT;
-// 4452 	s2wCidList[cid].sslflag = TRUE;
-// 4453 	((GSN_DTLS_CONN_T *)(s2wCidList[cid].ssl.sslConn))->cb = AppS2w_DtslClientCb;
-// 4454 	GsnOsal_SemCreate(&s2wCidList[cid].s2wUserOpenInProgress, 0);
-// 4455 #endif
-// 4456 #if 1 /*SSl open is now done in Wdd task context*/
-// 4457 //S2w_Printf("Calling DTLS OPEN\r\n");
-// 4458 {
-// 4459     //UINT8 *pOutData, outDataLen = 0;
-// 4460     struct sockaddr_in *srvaddr = gsn_malloc(sizeof(struct sockaddr_in));
-// 4461     SOCKET_INFO_T sockInfo;
-// 4462     srvaddr->sin_family = AF_INET;
-// 4463     srvaddr->sin_port = htons(s2wCidList[cid].remotePort);
-// 4464     memcpy(&srvaddr->sin_addr.s_addr,s2wCidList[cid].remoteIp, 4);//inet_addr((char *)"192.168.1.146");
-// 4465 
-// 4466     sockInfo.sd = s2wCidList[cid].sd;
-// 4467     sockInfo.dstAddrLen = sizeof(struct sockaddr_in);
-// 4468     sockInfo.dstAddr = (char*)srvaddr;
-// 4469 
-// 4470     status = GsnDtls_Open((GSN_DTLS_CONN_T *)s2wCidList[cid].ssl.sslConn, &sockInfo,
-// 4471         &sslConnParams );
-// 4472     //S2w_Printf("Status = %d\r\n", status);
-// 4473 }
-// 4474 #else
-// 4475 	{
-// 4476 		UINT32 msg;
-// 4477 		/*create open sem*/
-// 4478 		GsnOsal_SemCreate(&s2wCidList[cid].s2wUserOpenInProgress, 0);
-// 4479 		s2wCidList[cid].pConnOpenParams = &sslConnParams;
-// 4480 		/*post message */
-// 4481 		msg = (S2W_MOD_NOTIF_CONN_START + cid);
-// 4482 		GsnMsgHandler_Post(s2wappMainTaskCtxt->pMsgHdlrExecInWddTsk, &msg);
-// 4483 		GsnOsal_SemAcquire(&s2wCidList[cid].s2wUserOpenInProgress,GSN_OSAL_WAIT_FOREVER);
-// 4484 		status = s2wCidList[cid].openStatus;
-// 4485 		/*Delete the semaphore*/
-// 4486 		GsnOsal_SemDelete(&s2wCidList[cid].s2wUserOpenInProgress);
-// 4487 	}
-// 4488 #endif
-// 4489     if(status == GSN_SUCCESS)
-// 4490     {
-// 4491         nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack, S2W_RXCALLBACK_FLAGS);
-// 4492 		s2wCidList[cid].sslflag = TRUE;
-// 4493 	    if(GSN_OSAL_RESOURCE_NOT_AVAILABLE == GsnOsal_SemAcquire(&s2wCidList[cid].s2wUserOpenInProgress, 2000))
-// 4494             return S2W_FAILURE;
-// 4495         else
-// 4496             return S2W_SUCCESS;
-// 4497     }
-// 4498     else
-// 4499     {
-// 4500         s2wCidList[cid].sslflag = 0;
-// 4501         if(s2wCidList[cid].ssl.sslConn != NULL)
-// 4502         {
-// 4503             gsn_free(s2wCidList[cid].ssl.sslConn);
-// 4504         }
-// 4505 
-// 4506            soc_close(s2wCidList[cid].sd);
-// 4507            s2wCidList[cid].sd = CID_NOTINUSE;
-// 4508            s2wCidList[cid].localPort = 0;
-// 4509            s2wCidList[cid].remotePort = 0;
-// 4510         return S2W_FAILURE;
-// 4511     }
-// 4512 
-// 4513 }
-// 4514 #endif
-// 4515 #ifdef S2W_COAP_SUPPORT
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock256 Using cfiCommon0
+          CFI Block cfiCond256 Using cfiCommon0
+          CFI Function AppS2wRecv_Filter
+          CFI Conditional ??CrossCallReturnLabel_138
+          CFI R4 Frame(CFA, -36)
+          CFI R5 Frame(CFA, -32)
+          CFI R6 Frame(CFA, -28)
+          CFI R7 Frame(CFA, -24)
+          CFI R8 Frame(CFA, -20)
+          CFI R9 Frame(CFA, -16)
+          CFI R10 Frame(CFA, -12)
+          CFI R11 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+40
+          CFI Block cfiCond257 Using cfiCommon0
+          CFI (cfiCond257) Function AppS2wRecv_Filter
+          CFI (cfiCond257) Conditional ??CrossCallReturnLabel_137
+          CFI (cfiCond257) R4 Frame(CFA, -36)
+          CFI (cfiCond257) R5 Frame(CFA, -32)
+          CFI (cfiCond257) R6 Frame(CFA, -28)
+          CFI (cfiCond257) R7 Frame(CFA, -24)
+          CFI (cfiCond257) R8 Frame(CFA, -20)
+          CFI (cfiCond257) R9 Frame(CFA, -16)
+          CFI (cfiCond257) R10 Frame(CFA, -12)
+          CFI (cfiCond257) R11 Frame(CFA, -8)
+          CFI (cfiCond257) R14 Frame(CFA, -4)
+          CFI (cfiCond257) CFA R13+40
+          CFI Block cfiCond258 Using cfiCommon0
+          CFI (cfiCond258) Function AppS2wRecv_Filter
+          CFI (cfiCond258) Conditional ??CrossCallReturnLabel_136
+          CFI (cfiCond258) R4 Frame(CFA, -36)
+          CFI (cfiCond258) R5 Frame(CFA, -32)
+          CFI (cfiCond258) R6 Frame(CFA, -28)
+          CFI (cfiCond258) R7 Frame(CFA, -24)
+          CFI (cfiCond258) R8 Frame(CFA, -20)
+          CFI (cfiCond258) R9 Frame(CFA, -16)
+          CFI (cfiCond258) R10 Frame(CFA, -12)
+          CFI (cfiCond258) R11 Frame(CFA, -8)
+          CFI (cfiCond258) R14 Frame(CFA, -4)
+          CFI (cfiCond258) CFA R13+40
+          CFI Block cfiCond259 Using cfiCommon0
+          CFI (cfiCond259) Function AppS2wRecv_Filter
+          CFI (cfiCond259) Conditional ??CrossCallReturnLabel_135
+          CFI (cfiCond259) R4 Frame(CFA, -36)
+          CFI (cfiCond259) R5 Frame(CFA, -32)
+          CFI (cfiCond259) R6 Frame(CFA, -28)
+          CFI (cfiCond259) R7 Frame(CFA, -24)
+          CFI (cfiCond259) R8 Frame(CFA, -20)
+          CFI (cfiCond259) R9 Frame(CFA, -16)
+          CFI (cfiCond259) R10 Frame(CFA, -12)
+          CFI (cfiCond259) R11 Frame(CFA, -8)
+          CFI (cfiCond259) R14 Frame(CFA, -4)
+          CFI (cfiCond259) CFA R13+40
+          CFI Block cfiPicker260 Using cfiCommon1
+          CFI (cfiPicker260) NoFunction
+          CFI (cfiPicker260) Picker
+        THUMB
+?Subroutine48:
+        ADD      R0,R4,#+36
+          CFI FunCall AppS2wRecv_Filter AppS2w_NwIfU16FieldGet
+          CFI FunCall AppS2wRecv_Filter AppS2w_NwIfU16FieldGet
+          CFI FunCall AppS2wRecv_Filter AppS2w_NwIfU16FieldGet
+          CFI FunCall AppS2wRecv_Filter AppS2w_NwIfU16FieldGet
+        B.N      AppS2w_NwIfU16FieldGet
+          CFI EndBlock cfiCond256
+          CFI EndBlock cfiCond257
+          CFI EndBlock cfiCond258
+          CFI EndBlock cfiCond259
+          CFI EndBlock cfiPicker260
+// 4300 
+// 4301 #if defined(S2W_DTLS_CLIENT_SUPPORT)
+// 4302 extern const unsigned char dtlsClientCA[895];
+// 4303 extern const unsigned char dtlsClientClient[641];
+// 4304 extern const unsigned char dtlsClentKey[608];
+// 4305 
+// 4306 VOID  AppS2w_DtslClientCb( VOID * pCtx, UINT8 event )
+// 4307 {
+// 4308 	int i;
+// 4309 	for(i = 0; i< MAX_CID_RANGE; i++)
+// 4310 	{
+// 4311 		if(pCtx == (void*)s2wCidList[i].ssl.sslConn)
+// 4312 		{
+// 4313 			break;
+// 4314 		}
+// 4315 	}
+// 4316 	if((i < MAX_CID_RANGE) && (GSN_DTLS_HANDSHAKE_DONE == event))
+// 4317 	{
+// 4318 		GsnOsal_SemRelease(&s2wCidList[i].s2wUserOpenInProgress);
+// 4319 	}
+// 4320 }
+// 4321 
+// 4322 UINT8 AppS2w_DtslClientOpen(UINT8 cliCid, char* caCertName,
+// 4323                            UINT8 *clientCertName, UINT8 *clientKeyName)
+// 4324 {
+// 4325     //INT32 u32NoOfBytesSent;
+// 4326     UINT32 status;
+// 4327     UINT8 *certBuf = NULL;
+// 4328     UINT16 caCertsize = 0;
+// 4329     INT32  index=0;
+// 4330     //void *pSslConn;
+// 4331     GSN_SSL_CONN_PARAMS_T sslConnParams;
+// 4332 	UINT32 cid = cliCid;
+// 4333 #if 1
+// 4334 #ifdef S2W_APP_SSL_PROVISION
+// 4335     initStartTime = GsnSoftTmr_CurrentSystemTime();
+// 4336 #endif
+// 4337 
+// 4338     /* Avoid warning*/
+// 4339     (void)certBuf ;
+// 4340     (void)caCertsize ;
+// 4341     memset((INT8 *)&sslConnParams, 0, sizeof(sslConnParams));
+// 4342     if (s2wCidList[cid].sslflag == TRUE)
+// 4343     {
+// 4344         S2w_Printf("\r\nSocket is already SSL Enabled");
+// 4345         return S2W_FAILURE;
+// 4346     }
+// 4347 
+// 4348     if(caCertName != NULL)
+// 4349     {
+// 4350         index = S2wCert_SearchRamTable(caCertName);
+// 4351         if(index == -1)
+// 4352         {
+// 4353         	index = S2wCert_FlashFileLoad(caCertName);
+// 4354         }
+// 4355         if(index == -1)
+// 4356         {
+// 4357             S2w_Printf("\n\rca Certificate %s Not Found", caCertName);
+// 4358             return S2W_FAILURE;
+// 4359         }
+// 4360 
+// 4361         // currently use the hardcoded certificate
+// 4362         sslConnParams.caCertLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
+// 4363         sslConnParams.caCert = s2w_ssl_cert_table[index].certAddress + 2;
+// 4364         sslConnParams.caCertName = (char const*)caCertName;
+// 4365     }
+// 4366 
+// 4367 
+// 4368     if(clientCertName != NULL)
+// 4369     {
+// 4370         index = S2wCert_SearchRamTable((char*)clientCertName);
+// 4371         if(index == -1)
+// 4372         {
+// 4373         	index = S2wCert_FlashFileLoad((char*)clientCertName);
+// 4374         }
+// 4375         if(index == -1)
+// 4376         {
+// 4377             S2w_Printf("\n\rclient Certificate %s Not Found", clientCertName);
+// 4378             return S2W_FAILURE;
+// 4379         }
+// 4380         sslConnParams.clientCertLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
+// 4381         sslConnParams.clientCert =  s2w_ssl_cert_table[index].certAddress + 2;
+// 4382         sslConnParams.clientCertName = (char const*)clientCertName;
+// 4383 
+// 4384     }
+// 4385 
+// 4386 
+// 4387     if(clientKeyName != NULL)
+// 4388     {
+// 4389         index = S2wCert_SearchRamTable((char*)clientKeyName);
+// 4390         if(index == -1)
+// 4391         {
+// 4392         	index = S2wCert_FlashFileLoad((char*)clientKeyName);
+// 4393         }
+// 4394         if(index == -1)
+// 4395         {
+// 4396             S2w_Printf("\n\rclient key Certificate %s Not Found", clientKeyName);
+// 4397             return S2W_FAILURE;
+// 4398         }
+// 4399         sslConnParams.clientKeyLen = *(UINT16 *)s2w_ssl_cert_table[index].certAddress;
+// 4400         sslConnParams.clientKey =  s2w_ssl_cert_table[index].certAddress + 2;
+// 4401         sslConnParams.clientKeyName = (char const*)clientKeyName;
+// 4402 
+// 4403     }
+// 4404 
+// 4405 #if 0
+// 4406     //if(caCertName != NULL)
+// 4407     {
+// 4408 
+// 4409         sslConnParams.caCertLen = sizeof(dtlsClientCA);//*(UINT16 *)s2w_ssl_cert_table[index].certAddress;
+// 4410         sslConnParams.caCert =  (UINT8*)dtlsClientCA;//s2w_ssl_cert_table[index].certAddress + 2;
+// 4411         sslConnParams.caCertName = NULL;
+// 4412     }
+// 4413 
+// 4414 
+// 4415     //if(clientCertName != NULL)
+// 4416     {
+// 4417         sslConnParams.clientCertLen = sizeof(dtlsClientClient);//*(UINT16 *)s2w_ssl_cert_table[index].certAddress;
+// 4418         sslConnParams.clientCert =  (UINT8*)dtlsClientClient;//s2w_ssl_cert_table[index].certAddress + 2;
+// 4419         sslConnParams.clientCertName = NULL;
+// 4420 
+// 4421     }
+// 4422 
+// 4423 
+// 4424     //(clientKeyName != NULL)
+// 4425     {
+// 4426 
+// 4427         sslConnParams.clientKeyLen = sizeof(dtlsClentKey);//*(UINT16 *)s2w_ssl_cert_table[index].certAddress;
+// 4428         sslConnParams.clientKey =  (UINT8*)dtlsClentKey;//s2w_ssl_cert_table[index].certAddress + 2;
+// 4429         sslConnParams.clientKeyName = NULL;
+// 4430 
+// 4431     }
+// 4432 #endif
+// 4433     nx_bsd_callback_register(s2wCidList[cid].sd, NULL, 0);    //deregister callback
+// 4434 
+// 4435     s2wCidList[cid].ssl.sslConn = (GSN_SSL_CONN_T*)gsn_malloc(sizeof(GSN_DTLS_CONN_T));
+// 4436 
+// 4437     if(NULL == s2wCidList[cid].ssl.sslConn)
+// 4438     {
+// 4439         return S2W_FAILURE;
+// 4440     }
+// 4441 	memset((INT8 *)s2wCidList[cid].ssl.sslConn, 0, sizeof(GSN_DTLS_CONN_T));
+// 4442     s2wCidList[cid].ssl.sslConn->sslState = GSN_SSL_STATE_INIT;
+// 4443 	s2wCidList[cid].ssl.sslConn->connMode = GSN_SSL_CONN_MODE_CLIENT;
+// 4444 	s2wCidList[cid].sslflag = TRUE;
+// 4445 	((GSN_DTLS_CONN_T *)(s2wCidList[cid].ssl.sslConn))->cb = AppS2w_DtslClientCb;
+// 4446 	GsnOsal_SemCreate(&s2wCidList[cid].s2wUserOpenInProgress, 0);
+// 4447 #endif
+// 4448 #if 1 /*SSl open is now done in Wdd task context*/
+// 4449 //S2w_Printf("Calling DTLS OPEN\r\n");
+// 4450 {
+// 4451     //UINT8 *pOutData, outDataLen = 0;
+// 4452     struct sockaddr_in *srvaddr = gsn_malloc(sizeof(struct sockaddr_in));
+// 4453     SOCKET_INFO_T sockInfo;
+// 4454     srvaddr->sin_family = AF_INET;
+// 4455     srvaddr->sin_port = htons(s2wCidList[cid].remotePort);
+// 4456     memcpy(&srvaddr->sin_addr.s_addr,s2wCidList[cid].remoteIp, 4);//inet_addr((char *)"192.168.1.146");
+// 4457 
+// 4458     sockInfo.sd = s2wCidList[cid].sd;
+// 4459     sockInfo.dstAddrLen = sizeof(struct sockaddr_in);
+// 4460     sockInfo.dstAddr = (char*)srvaddr;
+// 4461 
+// 4462     status = GsnDtls_Open((GSN_DTLS_CONN_T *)s2wCidList[cid].ssl.sslConn, &sockInfo,
+// 4463         &sslConnParams );
+// 4464     //S2w_Printf("Status = %d\r\n", status);
+// 4465 }
+// 4466 #else
+// 4467 	{
+// 4468 		UINT32 msg;
+// 4469 		/*create open sem*/
+// 4470 		GsnOsal_SemCreate(&s2wCidList[cid].s2wUserOpenInProgress, 0);
+// 4471 		s2wCidList[cid].pConnOpenParams = &sslConnParams;
+// 4472 		/*post message */
+// 4473 		msg = (S2W_MOD_NOTIF_CONN_START + cid);
+// 4474 		GsnMsgHandler_Post(s2wappMainTaskCtxt->pMsgHdlrExecInWddTsk, &msg);
+// 4475 		GsnOsal_SemAcquire(&s2wCidList[cid].s2wUserOpenInProgress,GSN_OSAL_WAIT_FOREVER);
+// 4476 		status = s2wCidList[cid].openStatus;
+// 4477 		/*Delete the semaphore*/
+// 4478 		GsnOsal_SemDelete(&s2wCidList[cid].s2wUserOpenInProgress);
+// 4479 	}
+// 4480 #endif
+// 4481     if(status == GSN_SUCCESS)
+// 4482     {
+// 4483         nx_bsd_callback_register(s2wCidList[cid].sd, AppS2wHal_RxCallBack, S2W_RXCALLBACK_FLAGS);
+// 4484 		s2wCidList[cid].sslflag = TRUE;
+// 4485 	    if(GSN_OSAL_RESOURCE_NOT_AVAILABLE == GsnOsal_SemAcquire(&s2wCidList[cid].s2wUserOpenInProgress, 2000))
+// 4486             return S2W_FAILURE;
+// 4487         else
+// 4488             return S2W_SUCCESS;
+// 4489     }
+// 4490     else
+// 4491     {
+// 4492         s2wCidList[cid].sslflag = 0;
+// 4493         if(s2wCidList[cid].ssl.sslConn != NULL)
+// 4494         {
+// 4495             gsn_free(s2wCidList[cid].ssl.sslConn);
+// 4496         }
+// 4497 
+// 4498            soc_close(s2wCidList[cid].sd);
+// 4499            s2wCidList[cid].sd = CID_NOTINUSE;
+// 4500            s2wCidList[cid].localPort = 0;
+// 4501            s2wCidList[cid].remotePort = 0;
+// 4502         return S2W_FAILURE;
+// 4503     }
+// 4504 
+// 4505 }
+// 4506 #endif
+// 4507 #ifdef S2W_COAP_SUPPORT
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock261 Using cfiCommon0
           CFI Function AppS2wHal_CoapHandleGet
           CFI NoCalls
         THUMB
-// 4516 PUBLIC GSN_COAP_CONTEXT_T*
-// 4517 AppS2wHal_CoapHandleGet(UINT8 cid)
-// 4518 {
-// 4519 	return s2wCidList[cid].coapContext;
+// 4508 PUBLIC GSN_COAP_CONTEXT_T*
+// 4509 AppS2wHal_CoapHandleGet(UINT8 cid)
+// 4510 {
+// 4511 	return s2wCidList[cid].coapContext;
 AppS2wHal_CoapHandleGet:
         MOV      R1,#+296
-        LDR.N    R2,??DataTable109_18
+        LDR.N    R2,??DataTable105_18
         MLA      R0,R1,R0,R2
         LDR      R0,[R0, #+284]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock256
-// 4520 }
-// 4521 
+          CFI EndBlock cfiBlock261
+// 4512 }
+// 4513 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock257 Using cfiCommon0
+          CFI Block cfiBlock262 Using cfiCommon0
           CFI Function AppS2wHal_CoapParamsGet
           CFI NoCalls
         THUMB
-// 4522 PUBLIC GSN_COAP_CONN_PARAMS_T*
-// 4523 AppS2wHal_CoapParamsGet(UINT8 cid)
-// 4524 {
-// 4525 	return s2wCidList[cid].coapConnParams;
+// 4514 PUBLIC GSN_COAP_CONN_PARAMS_T*
+// 4515 AppS2wHal_CoapParamsGet(UINT8 cid)
+// 4516 {
+// 4517 	return s2wCidList[cid].coapConnParams;
 AppS2wHal_CoapParamsGet:
         MOV      R1,#+296
-        LDR.N    R2,??DataTable109_18
+        LDR.N    R2,??DataTable105_18
         MLA      R0,R1,R0,R2
         LDR      R0,[R0, #+288]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock257
-// 4526 }
+          CFI EndBlock cfiBlock262
+// 4518 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109:
+??DataTable105:
         DC32     httpConfInfo
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_1:
+??DataTable105_1:
         DC32     AppS2wHal_HttpCloseTimeout
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_2:
+??DataTable105_2:
         DC32     s2wappMainTaskCtxt
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_3:
+??DataTable105_3:
         DC32     AppS2w_HttpRxBufferMgmtCb
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_4:
+??DataTable105_4:
         DC32     headerTypesModified
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_5:
+??DataTable105_5:
         DC32     headerTypes
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_6:
+??DataTable105_6:
         DC32     s2wappMainTaskNotifier
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_7:
+??DataTable105_7:
         DC32     mdnsFlag
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_8:
+??DataTable105_8:
         DC32     appCtx
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_9:
+??DataTable105_9:
         DC32     mdnsMsgQueueBuf
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_10:
+??DataTable105_10:
         DC32     s2w_mdnsCb
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_11:
+??DataTable105_11:
         DC32     appCtx+0x6C30
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_12:
+??DataTable105_12:
         DC32     AppS2wHal_MdnsRegCb
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_13:
+??DataTable105_13:
         DC32     s2wSyncSemID
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_14:
+??DataTable105_14:
         DC32     AppS2wHal_MdnsSdCb
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_15:
+??DataTable105_15:
         DC32     s2wPingStarted
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_16:
+??DataTable105_16:
         DC32     s2wPingStats
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_17:
+??DataTable105_17:
         DC32     0x3f9f4000
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable109_18:
+??DataTable105_18:
         DC32     s2wCidList
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -13342,15 +13333,15 @@ AppS2wHal_CoapParamsGet:
         DC8 0
 
         END
-// 4527 #endif
+// 4519 #endif
 // 
 //    157 bytes in section .bss
 //  5 164 bytes in section .data
 // 11 356 bytes in section .noinit
 //      6 bytes in section .rodata
-// 10 836 bytes in section .text
+// 10 552 bytes in section .text
 // 
-// 10 642 bytes of CODE  memory (+ 194 bytes shared)
+// 10 358 bytes of CODE  memory (+ 194 bytes shared)
 //      6 bytes of CONST memory
 // 16 677 bytes of DATA  memory
 //

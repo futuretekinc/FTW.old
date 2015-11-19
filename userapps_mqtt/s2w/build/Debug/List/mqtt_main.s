@@ -1,14 +1,14 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     30/Oct/2015  09:58:21 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  14:30:57 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
 //    Endian       =  little                                                  /
 //    Source file  =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\src\mqtt_main\mqtt_main.c                   /
+//                    ps_mqtt_QoS2\s2w\src\mqtt_main\mqtt_main.c              /
 //    Command line =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\src\mqtt_main\mqtt_main.c -D                /
+//                    ps_mqtt_QoS2\s2w\src\mqtt_main\mqtt_main.c -D           /
 //                    TX_ENABLE_IAR_LIBRARY_SUPPORT -D IAR -D                 /
 //                    FIXED_ROM_BUILD -D RUN_ALL_FROM_FLASH -D TM_USE_HTTPD   /
 //                    -D S2W_DNS_CLIENT -D NX_INCLUDE_USER_DEFINE_FILE -D     /
@@ -40,83 +40,87 @@
 //                    S2W_SSL_SERVER_SUPPORT -D ADK_PROV_CONFIG_CLIENT -D     /
 //                    S2W_DEFAULT_UART_BITS_PER_CHAR=3 -D S2W_MDNS_ENABLE     /
 //                    -lC E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\us /
-//                    erapps_mqtt\s2w\build\Debug\List\ -lA                   /
+//                    erapps_mqtt_QoS2\s2w\build\Debug\List\ -lA              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\ --diag_suppress           /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\ --diag_suppress      /
 //                    Pa050,Pe231,Pe177 -o E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
-//                    tlslp_5.1.5_GA\userapps_mqtt\s2w\build\Debug\Obj\       /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\Debug\Obj\  /
 //                    --debug --endian=little --cpu=Cortex-M3 -e --fpu=None   /
 //                    --dlib_config "C:\Program Files (x86)\IAR               /
 //                    Systems\Embedded Workbench                              /
 //                    6.5\arm\INC\c\DLib_Config_Full.h" -I                    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\ -I                 /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\ -I            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\core\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\core\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\drivers\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\drivers\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\modules\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\modules\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\rtos\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\rtos\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\netx_bsd_layer /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\netx_bsd_ /
+//                    layer\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\main /
 //                    \ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\u /
-//                    serapps_mqtt\s2w\build\..\..\..\geps\inc\main\ -I       /
+//                    serapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\ -I              /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\hcc\src\    /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security\sr /
+//                    c\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\ /
+//                    userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security /
+//                    \hw_engine_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tls /
+//                    lp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\ /
+//                    inc\security\wpa_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_t /
+//                    ls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\.. /
+//                    \userlib\ncm\inc\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\us /
+//                    erlib\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\inc\ctx\ -I         /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\hcc\src\ -I      /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\src\ -I    /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\main\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\hw_engine_ /
-//                    if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA /
-//                    \userapps_mqtt\s2w\build\..\..\..\geps\inc\security\wpa /
-//                    _if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_G /
-//                    A\userapps_mqtt\s2w\build\..\..\..\userlib\ncm\inc\ -I  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\hal\ -I                   /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\userlib\ -I                  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\parser\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ctx\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\config\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\main\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\otafu\inc\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\hal\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\provisioning\inc\   /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\inc\mqtt\ -I               /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\parser\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\config\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\otafu\inc\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\provisioning\inc\ -I     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\one_wire\ -I                   /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_log\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\one_wire\ -I                   /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt_main\ -I                  /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt_main\ -Ohz                /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_log\ -Ohz            /
 //                    --use_c++_inline -I "C:\Program Files (x86)\IAR         /
 //                    Systems\Embedded Workbench 6.5\arm\CMSIS\Include\"      /
 //    List file    =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\mqtt_main.s                /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\mqtt_main.s           /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -126,35 +130,44 @@
         RTMODEL "__SystemLibrary", "DLib"
         RTMODEL "__dlib_file_descriptor", "1"
         RTMODEL "__dlib_full_locale_support", "1"
-        RTMODEL "__iar_require _Printf", "floats,int_specials,long_longs,qualifiers,widths"
+        RTMODEL "__iar_require _Printf", "int_specials,long_longs,qualifiers"
         AAPCS BASE,INTERWORK
         PRESERVE8
         REQUIRE8
 
         #define SHT_PROGBITS 0x1
 
-        EXTERN AppS2wCmd_SSLOpen_test
+        EXTERN AppS2wCmd_SSLOpen
         EXTERN AppS2wCmd_Wassoc_test
         EXTERN AppS2wCmd_Wwpa
         EXTERN AppS2wHal_NetClose
         EXTERN AppS2wHal_NetIsCidOpen
-        EXTERN AppS2wHal_NetTcpClient_test
+        EXTERN AppS2wHal_NetTcpClient
         EXTERN AppS2wHal_RssiGet
-        EXTERN GetTemperature
+        EXTERN AppS2wHal_TimerInit
+        EXTERN AppS2wHal_TimerStart
+        EXTERN AppS2wHal_TimerStop
+        EXTERN App_TemperatureGet
         EXTERN GsnDynMemMgmt_Alloc
         EXTERN GsnDynMemMgmt_Free
         EXTERN GsnTaskSleep
         EXTERN GsnTod_Get
+        EXTERN MQTT_CONNECT_ACK_LOG
+        EXTERN MQTT_MESSAGE_QUEUE_LOG
         EXTERN S2w_Printf
-        EXTERN __aeabi_f2d
         EXTERN __aeabi_memcpy
         EXTERN __aeabi_memset
         EXTERN _tx_mutex_create
         EXTERN _tx_mutex_get
         EXTERN _tx_mutex_put
         EXTERN _tx_queue_create
+        EXTERN _tx_queue_flush
         EXTERN _tx_queue_receive
+        EXTERN _tx_semaphore_create
+        EXTERN _tx_semaphore_get
+        EXTERN _tx_semaphore_put
         EXTERN _tx_thread_create
+        EXTERN _tx_thread_sleep
         EXTERN list_count
         EXTERN list_get
         EXTERN list_put
@@ -163,16 +176,23 @@
         EXTERN mqtt_disconnect
         EXTERN mqtt_init
         EXTERN mqtt_init_auth
+        EXTERN mqtt_parse_msg_id
+        EXTERN mqtt_ping
+        EXTERN mqtt_publish_retry_dup
         EXTERN mqtt_publish_with_qos
+        EXTERN mqtt_pubrel
         EXTERN sprintf
         EXTERN strlen
-        EXTERN temp_sensor_search
 
+        PUBLIC GsnOsal_SemAcquire
+        PUBLIC GsnOsal_SemRelease
+        PUBLIC GsnOsal_ThreadCreate
         PUBLIC MQTT_AP_CONNECT
         PUBLIC MQTT_CALLBACK
         PUBLIC MQTT_CONNECT
         PUBLIC MQTT_CONNECT_STATUS
         PUBLIC MQTT_LIST_COUNT
+        PUBLIC MQTT_LIST_DELECT
         PUBLIC MQTT_LIST_DESTROY
         PUBLIC MQTT_LIST_GET
         PUBLIC MQTT_LIST_INIT
@@ -184,16 +204,21 @@
         PUBLIC MQTT_MSG_FUNC_CONNACK
         PUBLIC MQTT_MSG_FUNC_PINGRESP
         PUBLIC MQTT_MSG_FUNC_PUBACK
+        PUBLIC MQTT_MSG_FUNC_PUBCOMP
         PUBLIC MQTT_MSG_FUNC_PUBLISH
+        PUBLIC MQTT_MSG_FUNC_PUBREC
+        PUBLIC MQTT_PING_MSG
+        PUBLIC MQTT_PING_OUT
         PUBLIC MQTT_PROCESS_TASK
         PUBLIC MQTT_PROCESS_THREAD
         PUBLIC MQTT_PUBLISH_MSG_GEN
+        PUBLIC MQTT_PUBLISH_MSG_RETRY
+        PUBLIC MQTT_PUBLISH_RETRY
         PUBLIC MQTT_RECEIVER_TASK
         PUBLIC MQTT_RECEIVER_THREAD
         PUBLIC MQTT_RECEIVE_QUEUE
         PUBLIC MQTT_SENDER_TASK
         PUBLIC MQTT_SENDER_THREAD
-        PUBLIC MQTT_SEND_FUNCTION
         PUBLIC MQTT_SSL_CONNECT
         PUBLIC MQTT_START
         PUBLIC MQTT_TCP_CONNECT
@@ -204,13 +229,19 @@
         PUBLIC STACK_MQTT_SENDER_THREAD
         PUBLIC StateCount
         PUBLIC TEST_START
+        PUBLIC conStatus_mutex
         PUBLIC memcpy
         PUBLIC memset
         PUBLIC mqtt_Xstate
         PUBLIC mqtt_ctx
+        PUBLIC mqtt_retry_timer
+        PUBLIC my_timer
         PUBLIC nSensors
         PUBLIC peerData
+        PUBLIC ping_count
+        PUBLIC ping_mutex
         PUBLIC temperature_sensor
+        PUBLIC total_malloc_size
         
           CFI Names cfiNames0
           CFI StackFrame CFA R13 DATA
@@ -261,7 +292,7 @@
           CFI R14 SameValue
           CFI EndCommon cfiCommon1
         
-// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt\s2w\src\mqtt_main\mqtt_main.c
+// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\src\mqtt_main\mqtt_main.c
 //    1 #include "time.h"
 //    2 #include <ctype.h>
 //    3 #include <string.h>
@@ -306,296 +337,396 @@ memset:
         POP      {R4,PC}          ;; return
           CFI EndBlock cfiBlock1
 //    4 #include "gsn_includes.h"
-//    5 #include "gsn_version.h"
-//    6 #include "hal/s2w.h"
-//    7 #include "hal/s2w_types.h"
-//    8 #include "hal/s2w_hal.h"
-//    9 #include "hal/s2w_timer.h"
-//   10 #include "parser/s2w_parse.h"
-//   11 #include "parser/s2w_process.h"
-//   12 #include "parser/s2w_command.h"
-//   13 #include "hal/s2w_net.h"
-//   14 #include "main/app_main_ctx.h"
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP GsnOsal_ThreadCreate
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function GsnOsal_ThreadCreate
+        THUMB
+// __interwork __softfp GSN_STATUS_T GsnOsal_ThreadCreate(void (*)(UINT32), void *, TX_THREAD *, unsigned char const *, UINT8, unsigned char *, UINT32, GSN_OSAL_THREAD_INITIAL_STATE_T)
+GsnOsal_ThreadCreate:
+        PUSH     {R4-R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R7 Frame(CFA, -8)
+          CFI R6 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -16)
+          CFI R4 Frame(CFA, -20)
+          CFI CFA R13+20
+        SUB      SP,SP,#+28
+          CFI CFA R13+48
+        MOV      R4,R0
+        MOV      R0,R2
+        LDR      R2,[SP, #+60]
+        LDR      R6,[SP, #+52]
+        LDR      R7,[SP, #+56]
+        STR      R2,[SP, #+20]
+        MOV      R5,R3
+        LDR      R3,[SP, #+48]
+        STR      R3,[SP, #+12]
+        MOVS     R2,#+0
+        STR      R3,[SP, #+8]
+        STR      R2,[SP, #+16]
+        MOV      R3,R1
+        STR      R7,[SP, #+4]
+        STR      R6,[SP, #+0]
+        MOV      R2,R4
+        MOV      R1,R5
+          CFI FunCall _tx_thread_create
+        BL       _tx_thread_create
+        CBZ.N    R0,??GsnOsal_ThreadCreate_0
+        ADD      R0,R0,#-1879048192
+        ADD      R0,R0,#+256
+??GsnOsal_ThreadCreate_0:
+        ADD      SP,SP,#+28
+          CFI CFA R13+20
+        POP      {R4-R7,PC}       ;; return
+          CFI EndBlock cfiBlock2
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP GsnOsal_SemAcquire
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function GsnOsal_SemAcquire
+        THUMB
+// __interwork __softfp GSN_STATUS_T GsnOsal_SemAcquire(TX_SEMAPHORE *, UINT32)
+GsnOsal_SemAcquire:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _tx_semaphore_get
+        BL       _tx_semaphore_get
+        CBZ.N    R0,??GsnOsal_SemAcquire_0
+        ADD      R0,R0,#-1879048192
+        ADD      R0,R0,#+256
+??GsnOsal_SemAcquire_0:
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock3
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP GsnOsal_SemRelease
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function GsnOsal_SemRelease
+        THUMB
+// __interwork __softfp GSN_STATUS_T GsnOsal_SemRelease(TX_SEMAPHORE *)
+GsnOsal_SemRelease:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _tx_semaphore_put
+        BL       _tx_semaphore_put
+        CBZ.N    R0,??GsnOsal_SemRelease_0
+        ADD      R0,R0,#-1879048192
+        ADD      R0,R0,#+256
+??GsnOsal_SemRelease_0:
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock4
+//    5 #include "hal/s2w_types.h"
+//    6 #include "hal/s2w_hal.h"
+//    7 #include "hal/s2w_timer.h"
+//    8 #include "clk_tune/app_clk_tune.h"
+//    9 
+//   10 #include "mqtt_main/mqtt_main.h"
+//   11 #include "mqtt/libmqtt.h"
+//   12 #include "one_wire/one_wire.h"
+//   13 #include "linked_list/linked_list.h"
+//   14 #include "mqtt_log/mqtt_log.h"
 //   15 
-//   16 #include "config/app_ncm_config.h"
-//   17 #include "config/app_resource_config.h"
-//   18 #include "main/app_main_ctx.h"
-//   19 #include "hal/s2w_cert_mgmt.h"
-//   20 #include "modules/http/gsn_httpc.h"
-//   21 
-//   22 #include "config/app_stat_config.h"
-//   23 #include "app_rtc_mem.h"
-//   24 #include "app_events.h"
-//   25 #include "app_defines_builder.h"
-//   26 #include "fs/api/api_safe.h"
-//   27 
-//   28 #include "hal/s2w_config.h"
-//   29 
-//   30 #include "fs/api/api_safe.h"
-//   31 #include "fs/safe-flash/nor/flashdrv.h"
-//   32 
-//   33 #include "gslink\app_mcu_def.h"
+//   16 #define AP_SSID "FTR-01"
+//   17 #define AP_WWPA "4rnekd9wkd"
+//   18 #define HOST_ADDRESS "mqtt.thingplus.net"
+//   19 #define HOST_PORT "8883"
+//   20 //#define STACK_SIZE 20
+//   21 #define QUEUE_SIZE 15
+//   22 #define RECEIVE_MSG_SIZE 1
+//   23 #define TOTAL_QUEUE_SIZE QUEUE_SIZE * RECEIVE_MSG_SIZE * sizeof(ULONG)
+//   24 #define SEND_LIST_MUTEX "send_list_mutex"
+//   25 #define RECEIVE_LIST_MUTEX "receive_list_mutex"
+//   26 #define PUBLISH_LIST_MUTEX "publish_list_mutex"
+//   27 //UINT32 xState;
+//   28 
+//   29 #define MQTT_MSG_Reserved_0 0
+//   30 #define MQTT_MSG_Reserved_15 15
+//   31 
+//   32 #define MQTT_SENSOR_STATUS 1
+//   33 #define MQTT_SENSOR_DATA 2
 //   34 
-//   35 #include "app_rtc_mem.h"
-//   36 #include "emu/app_emu.h"
-//   37 
-//   38 #include "gsn_ncm.h"
-//   39 #include "gsn_ncm_roam.h"
-//   40 #include "modules/pwr_mgmt/gsn_pwr_mgmt.h"
-//   41 
-//   42 #include "modules/coap/gsn_coap.h"
-//   43 #include "modules/coap/gsn_coap_impl.h"
-//   44 
-//   45 #include "clk_tune/app_clk_tune.h"
-//   46 #ifdef S2W_IPv6_SUPPORT
-//   47 #include "modules/dhcpv6_server/gsn_dhcpv6_server.h"
-//   48 #endif
-//   49 #include "ext_app/app_ext_flash.h"
-//   50 #include "main/gsn_br_flashldr.h"
-//   51 #include "modules/fwup/gsn_fwup.h"
-//   52 
-//   53 #include "mqtt_main/mqtt_main.h"
-//   54 #include "mqtt/libmqtt.h"
-//   55 #include "one_wire/one_wire.h"
-//   56 #include "linked_list/linked_list.h"
-//   57 
-//   58 #define AP_SSID "FTR-01"
-//   59 #define AP_WWPA "4rnekd9wkd"
-//   60 #define HOST_ADDRESS "mqtt.thingplus.net"
-//   61 #define HOST_PORT "8883"
-//   62 //#define STACK_SIZE 20
-//   63 #define QUEUE_SIZE 50
-//   64 #define RECEIVE_MSG_SIZE 4
-//   65 #define TOTAL_QUEUE_SIZE QUEUE_SIZE * RECEIVE_MSG_SIZE
-//   66 #define SEND_LIST_MUTEX "send_list_mutex"
-//   67 #define RECEIVE_LIST_MUTEX "receive_list_mutex"
-//   68 #define PUBLISH_LIST_MUTEX "publish_list_mutex"
-//   69 //UINT32 xState;
-//   70 
-//   71 #define MQTT_MSG_Reserved_0 0
-//   72 #define MQTT_MSG_Reserved_15 15
-//   73 
-//   74 
-//   75 
-//   76 
+//   35 
+//   36 
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
-//   77 DS18B20_Sensor_t temperature_sensor[16];
+//   37 DS18B20_Sensor_t temperature_sensor[16];
 temperature_sensor:
         DS8 192
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//   38 UINT8 nSensors;
+nSensors:
+        DS8 1
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+//   39 int total_malloc_size = 0;
+total_malloc_size:
+        DS8 4
 
         SECTION `.rodata`:CONST:NOROOT(2)
         DATA
 `?<Constant "%s">`:
         DC8 "%s"
         DC8 0
-//   78 UINT8 nSensors;
-//   79 
-//   80 
-//   81 typedef enum
-//   82 {
-//   83 	MQTT_STATE_UNINITIAL = 0,
-//   84 	MQTT_STATE_INITIAL,
-//   85 	MQTT_STATE_CONNECT_READY,
-//   86     MQTT_STATE_CONNECT,
-//   87 	MQTT_STATE_DISCONNECT
-//   88 } MQTT_STATE;
-//   89 
-//   90 typedef struct mqtt_list
-//   91 {
-//   92   Node* head;
-//   93   TX_MUTEX list_mutex;
-//   94 }MQTT_LIST;
-//   95 
-//   96 typedef struct
-//   97 {
-//   98   mqtt_broker_handle_t MQTT_CLIENT;
-//   99   //UINT8 mqtt_cid;
-//  100   MQTT_LIST* send_list;
-//  101   MQTT_LIST* receive_list;
-//  102   MQTT_LIST* publish_list;
-//  103 }MQTT_CTX;
-//  104 
-//  105 
-//  106   
-//  107 
-//  108 int MQTT_SEND_FUNCTION(void* socket_info, UINT8* buf, unsigned int count);
-//  109 
-//  110 UINT8 MQTT_LIST_INIT(MQTT_LIST** LIST, char* MUTEX_NAME);
-//  111 
-//  112 UINT8 MQTT_LIST_PUT(MQTT_LIST* LIST, MSG_TYPE* msg_type);
-//  113 
-//  114 UINT8 MQTT_LIST_GET(MQTT_LIST* LIST, MSG_TYPE** msg_type);
-//  115 
-//  116 UINT8 MQTT_LIST_COUNT(MQTT_LIST* LIST);
-//  117 
-//  118 UINT8 MQTT_START();
-//  119 
-//  120 VOID MQTT_PROCESS_TASK(ULONG MQTT_INPUT);
-//  121 
-//  122 VOID MQTT_SENDER_TASK(ULONG MQTT_INPUT);
-//  123 
-//  124 VOID MQTT_RECEIVER_TASK(ULONG MQTT_INPUT);
-//  125 
-//  126 VOID MQTT_MESSAGE_QUEUE_TASK(ULONG MQTT_INPUT);
-//  127 
-//  128 UINT8 MQTT_PUBLISH_MSG_GEN();
-//  129 
-//  130 UINT8 MQTT_CONNECT();
-//  131 
-//  132 UINT8 MQTT_AP_CONNECT();
-//  133 
-//  134 UINT8 MQTT_TCP_CONNECT(UINT8* CID);
-//  135 
-//  136 UINT8 MQTT_SSL_CONNECT(UINT8 CID);
-//  137 
-//  138 void TEST_START();
-//  139 
-//  140 
-//  141 typedef struct
-//  142 {
-//  143     UINT8  Message_Type;
-//  144     UINT32          (*callback)(MSG_TYPE*);
-//  145 }   MQTT_MESSAGE_CALLBACK;
-//  146 
-//  147 UINT32 MQTT_MSG_FUNC_CONNACK(MSG_TYPE* MSG);
-//  148 //UINT32 MQTT_MSG_FUNC_CONNACK(UINT16 Connect_Return_Code);
-//  149 UINT32 MQTT_MSG_FUNC_PUBLISH(MSG_TYPE* MSG);
-//  150 UINT32 MQTT_MSG_FUNC_PUBACK(MSG_TYPE* MSG);
-//  151 UINT32 MQTT_MSG_FUNC_PINGRESP(MSG_TYPE* MSG);
-//  152 
-//  153 UINT8 MQTT_CONNECT_STATUS = 0;
-//  154 
-//  155 
-//  156 const MQTT_MESSAGE_CALLBACK MQTT_MSG_CALLBACK[] =
-//  157 {
-//  158   { .Message_Type = MQTT_MSG_Reserved_0, 		.callback = NULL },
-//  159   { .Message_Type = MQTT_MSG_CONNECT, 		.callback = NULL },
-//  160   //{ .Message_Type = MQTT_MSG_CONNACK, 		.callback = MQTT_MSG_FUNC_CONNACK },
-//  161   { .Message_Type = MQTT_MSG_CONNACK, 		.callback = NULL },
-//  162   { .Message_Type = MQTT_MSG_PUBLISH, 		.callback = MQTT_MSG_FUNC_PUBLISH },
-//  163   { .Message_Type = MQTT_MSG_PUBACK, 		.callback = MQTT_MSG_FUNC_PUBACK },
-//  164   { .Message_Type = MQTT_MSG_PUBREC, 		.callback = NULL },
-//  165   { .Message_Type = MQTT_MSG_PUBREL, 	  	.callback = NULL },
-//  166   { .Message_Type = MQTT_MSG_PUBCOMP, 	  	.callback = NULL },
-//  167   { .Message_Type = MQTT_MSG_SUBSCRIBE,   	.callback = NULL },
-//  168   { .Message_Type = MQTT_MSG_SUBACK, 	  	.callback = NULL },
-//  169   { .Message_Type = MQTT_MSG_UNSUBSCRIBE, 	.callback = NULL },
-//  170   { .Message_Type = MQTT_MSG_UNSUBACK, 		.callback = NULL },
-//  171   { .Message_Type = MQTT_MSG_PINGREQ, 		.callback = NULL },
-//  172   { .Message_Type = MQTT_MSG_PINGRESP, 		.callback = MQTT_MSG_FUNC_PINGRESP },
-//  173   { .Message_Type = MQTT_MSG_DISCONNECT, 	.callback = NULL },
-//  174   { .Message_Type = MQTT_MSG_Reserved_15, 		.callback = NULL },
-//  175 };
-//  176 
-//  177 typedef struct
-//  178 {
-//  179     UINT8  xState;
-//  180     UINT32          (*callback)(void*);
-//  181 }   MQTT_STATE_CALLBACK;
-//  182 
-//  183 
-//  184 static UINT32  MQTT_STATE_CALLBACK_UNINITIAL(void* client );
-//  185 static UINT32  MQTT_STATE_CALLBACK_INITIAL(void* client);
-//  186 static UINT32  MQTT_STATE_CALLBACK_CONNECT_READY(void* client);
-//  187 static UINT32  MQTT_STATE_CALLBACK_CONNECT(void* client);
-//  188 static UINT32  MQTT_STAET_CALLBACK_DISCONNECT(void* client);
-//  189 
-//  190 const MQTT_STATE_CALLBACK MQTT_CALLBACK[] =
-//  191 {
-//  192     {   
-//  193         .xState     = MQTT_STATE_UNINITIAL,
-//  194         .callback   = MQTT_STATE_CALLBACK_UNINITIAL
-//  195     },
-//  196     {   
-//  197         .xState     = MQTT_STATE_INITIAL,
-//  198         .callback   = MQTT_STATE_CALLBACK_INITIAL
-//  199     },
-//  200 	{   
-//  201         .xState     = MQTT_STATE_CONNECT_READY,
-//  202         .callback   = MQTT_STATE_CALLBACK_CONNECT_READY
-//  203     },
-//  204     {   
-//  205         .xState     = MQTT_STATE_CONNECT,
-//  206         .callback   = MQTT_STATE_CALLBACK_CONNECT
-//  207     },
-//  208     {   
-//  209         .xState     = MQTT_STATE_DISCONNECT,
-//  210         .callback   = MQTT_STAET_CALLBACK_DISCONNECT
-//  211     },
-//  212     
-//  213 };
-//  214 
 
         SECTION `.rodata`:CONST:NOROOT(2)
         DATA
-//  215 const UINT32   StateCount = sizeof(MQTT_CALLBACK) / sizeof(MQTT_STATE_CALLBACK);
+`?<Constant "%u">`:
+        DC8 "%u"
+        DC8 0
+//   40 
+//   41 typedef enum
+//   42 {
+//   43 	MQTT_STATE_UNINITIAL = 0,
+//   44 	MQTT_STATE_INITIAL,
+//   45 	MQTT_STATE_CONNECT_READY,
+//   46     MQTT_STATE_CONNECT,
+//   47 	MQTT_STATE_DISCONNECT
+//   48 } MQTT_STATE;
+//   49 
+//   50 typedef struct mqtt_list
+//   51 {
+//   52   Node* head;
+//   53   //TX_MUTEX list_mutex;
+//   54   GSN_OSAL_SEM_T list_semaphore;
+//   55 }MQTT_LIST;
+//   56 
+//   57 typedef struct
+//   58 {
+//   59   mqtt_broker_handle_t MQTT_CLIENT;
+//   60   UINT8 QoS;
+//   61   //UINT8 mqtt_cid;
+//   62   MQTT_LIST send_list;
+//   63   MQTT_LIST receive_list;
+//   64   MQTT_LIST publish_list;
+//   65 }MQTT_CTX;
+//   66 
+//   67   
+//   68 
+//   69 //////////LIST FUNCTION/////////
+//   70 
+//   71 UINT8 MQTT_LIST_INIT(MQTT_LIST* LIST,  UINT8 initial);
+//   72 
+//   73 UINT8 MQTT_LIST_PUT(MQTT_LIST* LIST, MSG_TYPE* msg_type);
+//   74 
+//   75 UINT8 MQTT_LIST_GET(MQTT_LIST* LIST, MSG_TYPE** msg_type);
+//   76 
+//   77 UINT8 MQTT_LIST_COUNT(MQTT_LIST* LIST);
+//   78 
+//   79 UINT8 MQTT_LIST_SEARCH(MQTT_LIST* LIST, UINT16 MSG_ID);
+//   80 
+//   81 UINT8 MQTT_LIST_DELECT(MQTT_LIST* LIST, UINT16 MSG_ID);
+//   82 
+//   83 /////////////////////////////////
+//   84 
+//   85 UINT8 MQTT_START();
+//   86 
+//   87 
+//   88 //////////LIST FUNCTION/////////
+//   89 VOID MQTT_PROCESS_TASK(UINT32 MQTT_INPUT);
+//   90 
+//   91 VOID MQTT_SENDER_TASK(UINT32 MQTT_INPUT);
+//   92 
+//   93 VOID MQTT_RECEIVER_TASK(UINT32 MQTT_INPUT);
+//   94 
+//   95 VOID MQTT_MESSAGE_QUEUE_TASK(UINT32 MQTT_INPUT);
+//   96 /////////////////////////////////
+//   97 
+//   98 UINT8 MQTT_PUBLISH_MSG_GEN(UINT8 select);
+//   99 
+//  100 UINT8 MQTT_PUBLISH_MSG_RETRY();
+//  101 
+//  102 void MQTT_PING_MSG();
+//  103 
+//  104 
+//  105 
+//  106 UINT8 MQTT_CONNECT();
+//  107 
+//  108 UINT8 MQTT_AP_CONNECT();
+//  109 
+//  110 UINT8 MQTT_TCP_CONNECT();
+//  111 
+//  112 UINT8 MQTT_SSL_CONNECT(UINT8 CID);
+//  113 
+//  114 typedef struct
+//  115 {
+//  116     UINT8  Message_Type;
+//  117     UINT32          (*callback)(MSG_TYPE*);
+//  118 }   MQTT_MESSAGE_CALLBACK;
+//  119 
+//  120 UINT32 MQTT_MSG_FUNC_CONNACK(MSG_TYPE* MSG);
+//  121 UINT32 MQTT_MSG_FUNC_PUBLISH(MSG_TYPE* MSG);
+//  122 UINT32 MQTT_MSG_FUNC_PUBACK(MSG_TYPE* MSG);
+//  123 UINT32 MQTT_MSG_FUNC_PUBREC(MSG_TYPE* MSG);
+//  124 UINT32 MQTT_MSG_FUNC_PUBCOMP(MSG_TYPE* MSG);
+//  125 UINT32 MQTT_MSG_FUNC_PINGRESP(MSG_TYPE* MSG);
+//  126 
+//  127 
+//  128 UINT8 MQTT_CONNECT_STATUS = 0;
+//  129 
+//  130 
+//  131 const MQTT_MESSAGE_CALLBACK MQTT_MSG_CALLBACK[] =
+//  132 {
+//  133   { .Message_Type = MQTT_MSG_Reserved_0, 	.callback = NULL },
+//  134   { .Message_Type = MQTT_MSG_CONNECT, 		.callback = NULL },
+//  135   //{ .Message_Type = MQTT_MSG_CONNACK, 	.callback = MQTT_MSG_FUNC_CONNACK },
+//  136   { .Message_Type = MQTT_MSG_CONNACK, 		.callback = NULL },
+//  137   { .Message_Type = MQTT_MSG_PUBLISH, 		.callback = MQTT_MSG_FUNC_PUBLISH },
+//  138   { .Message_Type = MQTT_MSG_PUBACK, 		.callback = MQTT_MSG_FUNC_PUBACK },
+//  139   { .Message_Type = MQTT_MSG_PUBREC, 		.callback = MQTT_MSG_FUNC_PUBREC },
+//  140   { .Message_Type = MQTT_MSG_PUBREL, 	  	.callback = NULL },
+//  141   { .Message_Type = MQTT_MSG_PUBCOMP, 	  	.callback = MQTT_MSG_FUNC_PUBCOMP },
+//  142   { .Message_Type = MQTT_MSG_SUBSCRIBE,   	.callback = NULL },
+//  143   { .Message_Type = MQTT_MSG_SUBACK, 	  	.callback = NULL },
+//  144   { .Message_Type = MQTT_MSG_UNSUBSCRIBE, 	.callback = NULL },
+//  145   { .Message_Type = MQTT_MSG_UNSUBACK, 		.callback = NULL },
+//  146   { .Message_Type = MQTT_MSG_PINGREQ, 		.callback = NULL },
+//  147   { .Message_Type = MQTT_MSG_PINGRESP, 		.callback = MQTT_MSG_FUNC_PINGRESP },
+//  148   { .Message_Type = MQTT_MSG_DISCONNECT, 	.callback = NULL },
+//  149   { .Message_Type = MQTT_MSG_Reserved_15, 		.callback = NULL },
+//  150 };
+//  151 
+//  152 typedef struct
+//  153 {
+//  154     UINT8  xState;
+//  155     UINT32          (*callback)(void*);
+//  156 }   MQTT_STATE_CALLBACK;
+//  157 
+//  158 
+//  159 static UINT32  MQTT_STATE_CALLBACK_UNINITIAL(void* client );
+//  160 static UINT32  MQTT_STATE_CALLBACK_INITIAL(void* client);
+//  161 static UINT32  MQTT_STATE_CALLBACK_CONNECT_READY(void* client);
+//  162 static UINT32  MQTT_STATE_CALLBACK_CONNECT(void* client);
+//  163 static UINT32  MQTT_STAET_CALLBACK_DISCONNECT(void* client);
+//  164 
+//  165 const MQTT_STATE_CALLBACK MQTT_CALLBACK[] =
+//  166 {
+//  167     {   
+//  168         .xState     = MQTT_STATE_UNINITIAL,
+//  169         .callback   = MQTT_STATE_CALLBACK_UNINITIAL
+//  170     },
+//  171     {   
+//  172         .xState     = MQTT_STATE_INITIAL,
+//  173         .callback   = MQTT_STATE_CALLBACK_INITIAL
+//  174     },
+//  175 	{   
+//  176         .xState     = MQTT_STATE_CONNECT_READY,
+//  177         .callback   = MQTT_STATE_CALLBACK_CONNECT_READY
+//  178     },
+//  179     {   
+//  180         .xState     = MQTT_STATE_CONNECT,
+//  181         .callback   = MQTT_STATE_CALLBACK_CONNECT
+//  182     },
+//  183     {   
+//  184         .xState     = MQTT_STATE_DISCONNECT,
+//  185         .callback   = MQTT_STAET_CALLBACK_DISCONNECT
+//  186     },
+//  187     
+//  188 };
+//  189 
+
+        SECTION `.rodata`:CONST:NOROOT(2)
+        DATA
+//  190 const UINT32   StateCount = sizeof(MQTT_CALLBACK) / sizeof(MQTT_STATE_CALLBACK);
 StateCount:
         DC32 5
 
-        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+        SECTION `.bss`:DATA:REORDER:NOROOT(3)
 MQTT_CONNECT_STATUS:
         DS8 1
-//  216 
-//  217 
-//  218 
-//  219 S2W_NETDATA_T peerData;
-//  220 UINT8 mqtt_Xstate;
+//  191 
+//  192 
+//  193 S2W_NETDATA_T peerData;
+//  194 UINT8 mqtt_Xstate;
 mqtt_Xstate:
         DS8 1
-        DS8 2
-//  221 PUBLIC GSN_OSAL_QUEUE_T MQTT_RECEIVE_QUEUE;
-//  222 MQTT_CTX* mqtt_ctx;
-mqtt_ctx:
-        DS8 4
-nSensors:
+//  195 PUBLIC GSN_OSAL_QUEUE_T MQTT_RECEIVE_QUEUE;
+//  196 MQTT_CTX mqtt_ctx;
+//  197 UINT8 MSG_receive[TOTAL_QUEUE_SIZE];
+//  198 
+//  199 GSN_OSAL_THREAD_TCB_T MQTT_PROCESS_THREAD;
+//  200 GSN_OSAL_THREAD_TCB_T MQTT_SENDER_THREAD;
+//  201 GSN_OSAL_THREAD_TCB_T MQTT_RECEIVER_THREAD;
+//  202 GSN_OSAL_THREAD_TCB_T MQTT_MESSAGE_QUEUE_THREAD;
+//  203 
+//  204 UINT8 STACK_MQTT_SENDER_THREAD[STACK_SIZE*2];
+//  205 UINT8 STACK_MQTT_RECEIVER_THREAD[STACK_SIZE*2];
+//  206 UINT8 STACK_MQTT_PROCESS_THREAD[STACK_SIZE*5];
+//  207 UINT8 STACK_MQTT_MESSAGE_QUEUE_THREAD[STACK_SIZE*2];
+//  208 
+//  209 //TX_TIMER my_timer;
+//  210 S2W_TIMER_T my_timer;
+//  211 UINT8 ping_count = 0;
+ping_count:
         DS8 1
-        DS8 3
+        DS8 1
 MQTT_RECEIVE_QUEUE:
         DS8 56
-//  223 UINT8 MSG_receive[RECEIVE_MSG_SIZE];
 MSG_receive:
-        DS8 4
-//  224 
-//  225 TX_THREAD MQTT_PROCESS_THREAD;
+        DS8 60
 MQTT_PROCESS_THREAD:
         DS8 180
-//  226 TX_THREAD MQTT_SENDER_THREAD;
 MQTT_SENDER_THREAD:
         DS8 180
-//  227 TX_THREAD MQTT_RECEIVER_THREAD;
-MQTT_RECEIVER_THREAD:
-        DS8 180
-//  228 TX_THREAD MQTT_MESSAGE_QUEUE_THREAD;
 MQTT_MESSAGE_QUEUE_THREAD:
         DS8 180
-//  229 
-//  230 char STACK_MQTT_SENDER_THREAD[STACK_SIZE];
 STACK_MQTT_SENDER_THREAD:
-        DS8 5120
-//  231 char STACK_MQTT_RECEIVER_THREAD[STACK_SIZE];
-STACK_MQTT_RECEIVER_THREAD:
-        DS8 5120
-//  232 char STACK_MQTT_PROCESS_THREAD[STACK_SIZE];
+        DS8 2048
 STACK_MQTT_PROCESS_THREAD:
         DS8 5120
-//  233 char STACK_MQTT_MESSAGE_QUEUE_THREAD[STACK_SIZE];
 STACK_MQTT_MESSAGE_QUEUE_THREAD:
-        DS8 5120
+        DS8 2048
+//  212 //void MQTT_PING_OUT(ULONG);
+//  213 void MQTT_PING_OUT(VOID *);
+//  214 void MQTT_PIGN_MSG();
+//  215 
+//  216 //TX_TIMER mqtt_retry_timer;
+//  217 S2W_TIMER_T mqtt_retry_timer;
+//  218 //VOID MQTT_PUBLISH_RETRY(ULONG);
+//  219 VOID MQTT_PUBLISH_RETRY(VOID *);
+//  220 
+//  221 
+//  222 TX_MUTEX ping_mutex;
+ping_mutex:
+        DS8 52
+//  223 //TX_SEMAPHORE ping_semaphore;
+//  224 TX_MUTEX conStatus_mutex;
+conStatus_mutex:
+        DS8 52
+        DS8 4
+my_timer:
+        DS8 56
+mqtt_retry_timer:
+        DS8 56
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
 peerData:
         DS8 60
-//  234 
-//  235 
-//  236 
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+mqtt_ctx:
+        DS8 184
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+MQTT_RECEIVER_THREAD:
+        DS8 180
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+STACK_MQTT_RECEIVER_THREAD:
+        DS8 2048
+//  225 
+//  226 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Block cfiBlock5 Using cfiCommon0
           CFI Function MQTT_LIST_INIT
         THUMB
-//  237 UINT8 MQTT_LIST_INIT(MQTT_LIST** LIST, char* MUTEX_NAME)
-//  238 {
+//  227 UINT8 MQTT_LIST_INIT(MQTT_LIST* LIST,  UINT8 initial)
+//  228 {
 MQTT_LIST_INIT:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
@@ -604,119 +735,191 @@ MQTT_LIST_INIT:
           CFI CFA R13+16
         MOV      R4,R0
         MOV      R5,R1
-//  239   UINT8 status;
-//  240   //*LIST = (MQTT_LIST*)malloc(sizeof(MQTT_LIST));
-//  241   *LIST = (MQTT_LIST*)gsn_malloc(sizeof(MQTT_LIST));
-        MOVS     R2,#+0
-        MOVS     R1,#+241
-        MOVS     R0,#+56
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
-        STR      R0,[R4, #+0]
-//  242   memset(*LIST,0,sizeof(MQTT_LIST));
-        MOVS     R2,#+56
-        BL       ??Subroutine7_0
-//  243   
-//  244   (*LIST)->head = makeNode(NULL);
-??CrossCallReturnLabel_18:
+//  229   UINT8 status;
+//  230   
+//  231   LIST->head = makeNode(NULL);
         MOVS     R0,#+0
           CFI FunCall makeNode
         BL       makeNode
-        LDR      R3,[R4, #+0]
-        STR      R0,[R3, #+0]
-//  245   
-//  246   status = tx_mutex_create(&(*LIST)->list_mutex, MUTEX_NAME, TX_INHERIT);
-//  247   return status;
-        MOVS     R2,#+1
-        MOV      R1,R5
-        ADDS     R0,R3,#+4
-          CFI FunCall _tx_mutex_create
-        BL       _tx_mutex_create
+        STR      R0,[R4, #+0]
+//  232   
+//  233   //status = tx_mutex_create(&LIST->list_mutex, MUTEX_NAME, TX_INHERIT);
+//  234   //status = tx_semaphore_create(&(LIST->list_semaphore), MUTEX_NAME,initial);
+//  235   status = GsnOsal_SemCreate(&(LIST->list_semaphore), initial);
+        MOV      R2,R5
+        MOVS     R1,#+0
+        ADDS     R0,R4,#+4
+          CFI FunCall _tx_semaphore_create
+        BL       _tx_semaphore_create
+        CBZ.N    R0,??MQTT_LIST_INIT_0
+        ADD      R0,R0,#-1879048192
+        ADD      R0,R0,#+256
+//  236   return status;
+??MQTT_LIST_INIT_0:
         UXTB     R0,R0
         POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock2
-//  248 }
-//  249 
-//  250 
+          CFI EndBlock cfiBlock5
+//  237 }
+//  238 
+//  239 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Block cfiBlock6 Using cfiCommon0
           CFI Function MQTT_LIST_PUT
         THUMB
-//  251 UINT8 MQTT_LIST_PUT(MQTT_LIST* LIST, MSG_TYPE* msg_type)
-//  252 {
+//  240 UINT8 MQTT_LIST_PUT(MQTT_LIST* LIST, MSG_TYPE* msg_type)
+//  241 {
 MQTT_LIST_PUT:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-        BL       ?Subroutine5
-//  253   tx_mutex_get(&LIST->list_mutex, TX_WAIT_FOREVER);
-//  254   list_put(LIST->head, msg_type);
-??CrossCallReturnLabel_8:
+        BL       ?Subroutine3
+//  242   //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
+//  243   //tx_semaphore_get(&(LIST->list_semaphore), 100);
+//  244   GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+//  245   
+//  246 
+//  247   list_put(LIST->head, msg_type);
+??CrossCallReturnLabel_5:
         LDR      R0,[R4, #+0]
         MOV      R1,R5
           CFI FunCall list_put
         BL       list_put
-//  255   tx_mutex_put(&LIST->list_mutex);
+//  248 
+//  249   GsnOsal_SemRelease(&(LIST->list_semaphore));
         B.N      ?Subroutine0
-          CFI EndBlock cfiBlock3
-//  256   return 0;
-//  257 }
-//  258 
+          CFI EndBlock cfiBlock6
+//  250   return 0;
+//  251 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Block cfiCond7 Using cfiCommon0
+          CFI Function MQTT_LIST_PUT
+          CFI Conditional ??CrossCallReturnLabel_5
+          CFI R4 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+16
+          CFI Block cfiCond8 Using cfiCommon0
+          CFI (cfiCond8) Function MQTT_LIST_GET
+          CFI (cfiCond8) Conditional ??CrossCallReturnLabel_4
+          CFI (cfiCond8) R4 Frame(CFA, -12)
+          CFI (cfiCond8) R5 Frame(CFA, -8)
+          CFI (cfiCond8) R14 Frame(CFA, -4)
+          CFI (cfiCond8) CFA R13+16
+          CFI Block cfiCond9 Using cfiCommon0
+          CFI (cfiCond9) Function MQTT_LIST_SEARCH
+          CFI (cfiCond9) Conditional ??CrossCallReturnLabel_3
+          CFI (cfiCond9) R4 Frame(CFA, -12)
+          CFI (cfiCond9) R5 Frame(CFA, -8)
+          CFI (cfiCond9) R14 Frame(CFA, -4)
+          CFI (cfiCond9) CFA R13+16
+          CFI Block cfiPicker10 Using cfiCommon1
+          CFI (cfiPicker10) NoFunction
+          CFI (cfiPicker10) Picker
+        THUMB
+?Subroutine3:
+        MOV      R4,R0
+        MOV      R5,R1
+          CFI Block cfiCond11 Using cfiCommon0
+          CFI (cfiCond11) Function MQTT_LIST_COUNT
+          CFI (cfiCond11) Conditional ??CrossCallReturnLabel_2
+          CFI (cfiCond11) R4 Frame(CFA, -12)
+          CFI (cfiCond11) R5 Frame(CFA, -8)
+          CFI (cfiCond11) R14 Frame(CFA, -4)
+          CFI (cfiCond11) CFA R13+16
+          CFI Block cfiCond12 Using cfiCommon0
+          CFI (cfiCond12) Function MQTT_LIST_DELECT
+          CFI (cfiCond12) Conditional ??CrossCallReturnLabel_1
+          CFI (cfiCond12) R4 Frame(CFA, -16)
+          CFI (cfiCond12) R5 Frame(CFA, -12)
+          CFI (cfiCond12) R6 Frame(CFA, -8)
+          CFI (cfiCond12) R14 Frame(CFA, -4)
+          CFI (cfiCond12) CFA R13+16
+          CFI Block cfiCond13 Using cfiCommon0
+          CFI (cfiCond13) Function MQTT_LIST_DESTROY
+          CFI (cfiCond13) Conditional ??CrossCallReturnLabel_0
+          CFI (cfiCond13) R4 Frame(CFA, -16)
+          CFI (cfiCond13) R5 Frame(CFA, -12)
+          CFI (cfiCond13) R6 Frame(CFA, -8)
+          CFI (cfiCond13) R14 Frame(CFA, -4)
+          CFI (cfiCond13) CFA R13+16
+??Subroutine3_0:
+        MOVS     R1,#+100
+        ADDS     R0,R4,#+4
+          CFI FunCall MQTT_LIST_PUT GsnOsal_SemAcquire
+          CFI FunCall MQTT_LIST_GET GsnOsal_SemAcquire
+          CFI FunCall MQTT_LIST_SEARCH GsnOsal_SemAcquire
+          CFI FunCall MQTT_LIST_COUNT GsnOsal_SemAcquire
+          CFI FunCall MQTT_LIST_DELECT GsnOsal_SemAcquire
+          CFI FunCall MQTT_LIST_DESTROY GsnOsal_SemAcquire
+        B.W      GsnOsal_SemAcquire
+          CFI EndBlock cfiCond7
+          CFI EndBlock cfiCond8
+          CFI EndBlock cfiCond9
+          CFI EndBlock cfiPicker10
+          CFI EndBlock cfiCond11
+          CFI EndBlock cfiCond12
+          CFI EndBlock cfiCond13
+//  252 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock14 Using cfiCommon0
           CFI Function MQTT_LIST_GET
         THUMB
-//  259 UINT8 MQTT_LIST_GET(MQTT_LIST* LIST, MSG_TYPE** msg_type)
-//  260 {
+//  253 UINT8 MQTT_LIST_GET(MQTT_LIST* LIST, MSG_TYPE** msg_type)
+//  254 {
 MQTT_LIST_GET:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-        BL       ?Subroutine5
-//  261   tx_mutex_get(&LIST->list_mutex, TX_WAIT_FOREVER);
-//  262   list_get(LIST->head, msg_type);
-??CrossCallReturnLabel_7:
+        BL       ?Subroutine3
+//  255   //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
+//  256   //tx_semaphore_get(&(LIST->list_semaphore), 100);
+//  257   GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+//  258   list_get(LIST->head, msg_type);
+??CrossCallReturnLabel_4:
         LDR      R0,[R4, #+0]
         MOV      R1,R5
           CFI FunCall list_get
         BL       list_get
-          CFI EndBlock cfiBlock4
-//  263   tx_mutex_put(&LIST->list_mutex);
+          CFI EndBlock cfiBlock14
+//  259   GsnOsal_SemRelease(&(LIST->list_semaphore));
         REQUIRE ?Subroutine0
         ;; // Fall through to label ?Subroutine0
-//  264   return 0;
-//  265 }
+//  260   //tx_semaphore_put(&(LIST->list_semaphore));
+//  261   return 0;
+//  262 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Block cfiBlock15 Using cfiCommon0
           CFI NoFunction
-          CFI NoCalls MQTT_LIST_PUT
-          CFI NoCalls MQTT_LIST_GET
           CFI CFA R13+16
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
         THUMB
 ?Subroutine0:
-        BL       ?Subroutine8
-??CrossCallReturnLabel_24:
+        ADDS     R0,R4,#+4
+          CFI FunCall MQTT_LIST_PUT GsnOsal_SemRelease
+          CFI FunCall MQTT_LIST_GET GsnOsal_SemRelease
+          CFI FunCall MQTT_LIST_SEARCH GsnOsal_SemRelease
+        BL       GsnOsal_SemRelease
         MOVS     R0,#+0
         POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock5
-//  266 
+          CFI EndBlock cfiBlock15
+//  263 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Block cfiBlock16 Using cfiCommon0
           CFI Function MQTT_LIST_COUNT
         THUMB
-//  267 UINT8 MQTT_LIST_COUNT(MQTT_LIST* LIST)
-//  268 {
+//  264 UINT8 MQTT_LIST_COUNT(MQTT_LIST* LIST)
+//  265 {
 MQTT_LIST_COUNT:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
@@ -724,33 +927,90 @@ MQTT_LIST_COUNT:
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
         MOV      R4,R0
-//  269   INT32 count;
-//  270   tx_mutex_get(&LIST->list_mutex, TX_WAIT_FOREVER);
-        BL       ??Subroutine5_0
-//  271   count = list_count(LIST->head);
-??CrossCallReturnLabel_6:
+//  266   INT32 count;
+//  267   //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
+//  268   //tx_semaphore_get(&(LIST->list_semaphore), 100);
+//  269   GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+        BL       ??Subroutine3_0
+//  270   count = list_count(LIST->head);
+??CrossCallReturnLabel_2:
         LDR      R0,[R4, #+0]
           CFI FunCall list_count
         BL       list_count
         MOV      R5,R0
-//  272   tx_mutex_put(&LIST->list_mutex);
-        BL       ?Subroutine8
-//  273   
-//  274   return count;
-??CrossCallReturnLabel_23:
+//  271   GsnOsal_SemRelease(&(LIST->list_semaphore));
+        BL       ?Subroutine5
+//  272   //tx_semaphore_put(&(LIST->list_semaphore));
+//  273   return count;
+??CrossCallReturnLabel_16:
         MOV      R0,R5
         POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock6
-//  275 }
-//  276 
+          CFI EndBlock cfiBlock16
+//  274 }
+//  275 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Block cfiBlock17 Using cfiCommon0
           CFI Function MQTT_LIST_SEARCH
+          CFI NoCalls
         THUMB
-//  277 UINT8 MQTT_LIST_SEARCH(MQTT_LIST* LIST, UINT16 MSG_ID)
-//  278 {
+//  276 UINT8 MQTT_LIST_SEARCH(MQTT_LIST* LIST, UINT16 MSG_ID)
+//  277 {
 MQTT_LIST_SEARCH:
+        PUSH     {R3-R5,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+        BL       ?Subroutine3
+//  278   Node* post ;
+//  279   //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
+//  280   //tx_semaphore_get(&(LIST->list_semaphore), 100);
+//  281   GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+//  282   post = LIST->head->next;
+??CrossCallReturnLabel_3:
+        LDR      R0,[R4, #+0]
+//  283   while(post != NULL)
+//  284   {
+//  285 	if(post->msg_pointer->MSG_ID == MSG_ID)
+//  286 	{
+//  287 	  GsnOsal_SemRelease(&(LIST->list_semaphore));
+//  288 	  //tx_semaphore_put(&(LIST->list_semaphore));
+//  289 	  return 0;
+//  290 	}
+//  291 	else
+//  292 	{
+//  293 	  post = post->next;
+??MQTT_LIST_SEARCH_0:
+        LDR      R0,[R0, #+4]
+//  294 	}
+        CBZ.N    R0,??MQTT_LIST_SEARCH_1
+        LDR      R1,[R0, #+0]
+        LDRH     R1,[R1, #+12]
+        CMP      R1,R5
+        BNE.N    ??MQTT_LIST_SEARCH_0
+        B.N      ?Subroutine0
+//  295   }
+//  296   GsnOsal_SemRelease(&(LIST->list_semaphore));
+??MQTT_LIST_SEARCH_1:
+        BL       ?Subroutine5
+//  297   //tx_semaphore_put(&(LIST->list_semaphore));
+//  298   return 1;
+??CrossCallReturnLabel_15:
+        MOVS     R0,#+1
+        POP      {R1,R4,R5,PC}    ;; return
+          CFI EndBlock cfiBlock17
+//  299 }
+//  300 
+//  301 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function MQTT_LIST_DELECT
+        THUMB
+//  302 UINT8 MQTT_LIST_DELECT(MQTT_LIST* LIST, UINT16 MSG_ID)
+//  303 {
+MQTT_LIST_DELECT:
         PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
           CFI R6 Frame(CFA, -8)
@@ -759,165 +1019,154 @@ MQTT_LIST_SEARCH:
           CFI CFA R13+16
         MOV      R4,R0
         MOV      R6,R1
-//  279   Node* pre ;
-//  280   Node* post ;
-//  281   tx_mutex_get(&LIST->list_mutex, TX_WAIT_FOREVER);
-        BL       ??Subroutine5_0
-//  282   pre = LIST->head;
-??CrossCallReturnLabel_5:
+//  304   Node* pre ;
+//  305   Node* post ;
+//  306   //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
+//  307   //tx_semaphore_get(&(LIST->list_semaphore), 100);
+//  308   GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+        BL       ??Subroutine3_0
+//  309   pre = LIST->head;
+??CrossCallReturnLabel_1:
         LDR      R0,[R4, #+0]
-//  283   post = LIST->head->next;
+//  310   post = LIST->head->next;
         LDR      R5,[R0, #+4]
-        B.N      ??MQTT_LIST_SEARCH_0
-//  284   while(post != NULL)
-//  285   {
-//  286 	if(post->msg_pointer->MSG_ID == MSG_ID)
-//  287 	{
-//  288 	  pre->next = post->next;
-//  289 	  //free(post->msg_pointer->TOPIC);
-//  290 	  //free(post->msg_pointer->PAYLOAD);
-//  291 	  //free(post);
-//  292 	  if(post->msg_pointer->TOPIC != NULL)
-//  293 	  {
-//  294 	  	gsn_free(post->msg_pointer->TOPIC);
-//  295 	  	post->msg_pointer->TOPIC = NULL;
-//  296 	  }
-//  297 	  if(post->msg_pointer->PAYLOAD != NULL)
-//  298 	  {
-//  299 	  	gsn_free(post->msg_pointer->PAYLOAD);
-//  300 	  	post->msg_pointer->PAYLOAD = NULL;
-//  301 	  }
-//  302 	  if(post != NULL)
-//  303 	  {
-//  304 		gsn_free(post);
-//  305 	  	post = NULL;
-//  306 	  }
-//  307 	  tx_mutex_put(&LIST->list_mutex);
-//  308 	  return 0;
-//  309 	}
-//  310 	else
-//  311 	{
-//  312 	  pre = post;
-??MQTT_LIST_SEARCH_1:
+        B.N      ??MQTT_LIST_DELECT_0
+//  311   while(post != NULL)
+//  312   {
+//  313 	if(post->msg_pointer->MSG_ID == MSG_ID)
+//  314 	{
+//  315 	  
+//  316 	  pre->next = post->next;
+//  317 
+//  318 	  gsn_free(post->msg_pointer->TOPIC);
+//  319 	  post->msg_pointer->TOPIC = NULL;
+//  320 	  
+//  321 	  gsn_free(post->msg_pointer->PAYLOAD);
+//  322 	  post->msg_pointer->PAYLOAD = NULL;
+//  323 	  
+//  324 	  gsn_free(post->msg_pointer);
+//  325 	  post->msg_pointer = NULL;
+//  326 
+//  327 	  gsn_free(post);
+//  328 	  post = NULL;
+//  329 	  GsnOsal_SemRelease(&(LIST->list_semaphore));
+//  330 	  //tx_semaphore_put(&(LIST->list_semaphore));
+//  331 	  return 0;
+//  332 	}
+//  333 	else
+//  334 	{
+//  335 	  pre = post;
+??MQTT_LIST_DELECT_1:
         MOV      R0,R5
-//  313 	  post = post->next;
+//  336 	  post = post->next;
         LDR      R5,[R5, #+4]
-//  314 	}
-??MQTT_LIST_SEARCH_0:
-        CBZ.N    R5,??MQTT_LIST_SEARCH_2
+//  337 	}
+??MQTT_LIST_DELECT_0:
+        CBZ.N    R5,??MQTT_LIST_DELECT_2
         LDR      R1,[R5, #+0]
         LDRH     R1,[R1, #+12]
         CMP      R1,R6
-        BNE.N    ??MQTT_LIST_SEARCH_1
+        BNE.N    ??MQTT_LIST_DELECT_1
         LDR      R1,[R5, #+4]
         STR      R1,[R0, #+4]
         LDR      R0,[R5, #+0]
         LDR      R0,[R0, #+4]
-        CBZ.N    R0,??MQTT_LIST_SEARCH_3
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
         LDR      R0,[R5, #+0]
         MOVS     R1,#+0
         STR      R1,[R0, #+4]
-??MQTT_LIST_SEARCH_3:
-        LDR      R0,[R5, #+0]
         LDR      R0,[R0, #+8]
-        CBZ.N    R0,??MQTT_LIST_SEARCH_4
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
         LDR      R0,[R5, #+0]
         MOVS     R1,#+0
         STR      R1,[R0, #+8]
-??MQTT_LIST_SEARCH_4:
+          CFI FunCall GsnDynMemMgmt_Free
+        BL       GsnDynMemMgmt_Free
+        MOVS     R0,#+0
+        STR      R0,[R5, #+0]
         MOV      R0,R5
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-        B.N      ?Subroutine1
-//  315   }
-//  316   tx_mutex_put(&LIST->list_mutex);
-??MQTT_LIST_SEARCH_2:
-        BL       ?Subroutine8
-//  317   return 1;
-??CrossCallReturnLabel_22:
+        B.N      ?Subroutine2
+//  338   }
+//  339   GsnOsal_SemRelease(&(LIST->list_semaphore));
+??MQTT_LIST_DELECT_2:
+        BL       ?Subroutine5
+//  340   //tx_semaphore_put(&(LIST->list_semaphore));
+//  341   return 1;
+??CrossCallReturnLabel_14:
         MOVS     R0,#+1
         POP      {R4-R6,PC}       ;; return
-          CFI EndBlock cfiBlock7
-//  318 }
+          CFI EndBlock cfiBlock18
+//  342 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond8 Using cfiCommon0
-          CFI Function MQTT_LIST_PUT
-          CFI Conditional ??CrossCallReturnLabel_24
+          CFI Block cfiCond19 Using cfiCommon0
+          CFI Function MQTT_LIST_COUNT
+          CFI Conditional ??CrossCallReturnLabel_16
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
-          CFI Block cfiCond9 Using cfiCommon0
-          CFI (cfiCond9) Function MQTT_LIST_GET
-          CFI (cfiCond9) Conditional ??CrossCallReturnLabel_24
-          CFI (cfiCond9) R4 Frame(CFA, -12)
-          CFI (cfiCond9) R5 Frame(CFA, -8)
-          CFI (cfiCond9) R14 Frame(CFA, -4)
-          CFI (cfiCond9) CFA R13+16
-          CFI Block cfiCond10 Using cfiCommon0
-          CFI (cfiCond10) Function MQTT_LIST_COUNT
-          CFI (cfiCond10) Conditional ??CrossCallReturnLabel_23
-          CFI (cfiCond10) R4 Frame(CFA, -12)
-          CFI (cfiCond10) R5 Frame(CFA, -8)
-          CFI (cfiCond10) R14 Frame(CFA, -4)
-          CFI (cfiCond10) CFA R13+16
-          CFI Block cfiCond11 Using cfiCommon0
-          CFI (cfiCond11) Function MQTT_LIST_SEARCH
-          CFI (cfiCond11) Conditional ??CrossCallReturnLabel_22
-          CFI (cfiCond11) R4 Frame(CFA, -16)
-          CFI (cfiCond11) R5 Frame(CFA, -12)
-          CFI (cfiCond11) R6 Frame(CFA, -8)
-          CFI (cfiCond11) R14 Frame(CFA, -4)
-          CFI (cfiCond11) CFA R13+16
-          CFI Block cfiCond12 Using cfiCommon0
-          CFI (cfiCond12) Function MQTT_LIST_SEARCH
-          CFI (cfiCond12) Conditional ??CrossCallReturnLabel_21
-          CFI (cfiCond12) R4 Frame(CFA, -16)
-          CFI (cfiCond12) R5 Frame(CFA, -12)
-          CFI (cfiCond12) R6 Frame(CFA, -8)
-          CFI (cfiCond12) R14 Frame(CFA, -4)
-          CFI (cfiCond12) CFA R13+16
-          CFI Block cfiCond13 Using cfiCommon0
-          CFI (cfiCond13) Function MQTT_LIST_DESTROY
-          CFI (cfiCond13) Conditional ??CrossCallReturnLabel_21
-          CFI (cfiCond13) R4 Frame(CFA, -16)
-          CFI (cfiCond13) R5 Frame(CFA, -12)
-          CFI (cfiCond13) R6 Frame(CFA, -8)
-          CFI (cfiCond13) R14 Frame(CFA, -4)
-          CFI (cfiCond13) CFA R13+16
-          CFI Block cfiPicker14 Using cfiCommon1
-          CFI (cfiPicker14) NoFunction
-          CFI (cfiPicker14) Picker
+          CFI Block cfiCond20 Using cfiCommon0
+          CFI (cfiCond20) Function MQTT_LIST_SEARCH
+          CFI (cfiCond20) Conditional ??CrossCallReturnLabel_15
+          CFI (cfiCond20) R4 Frame(CFA, -12)
+          CFI (cfiCond20) R5 Frame(CFA, -8)
+          CFI (cfiCond20) R14 Frame(CFA, -4)
+          CFI (cfiCond20) CFA R13+16
+          CFI Block cfiCond21 Using cfiCommon0
+          CFI (cfiCond21) Function MQTT_LIST_DELECT
+          CFI (cfiCond21) Conditional ??CrossCallReturnLabel_14
+          CFI (cfiCond21) R4 Frame(CFA, -16)
+          CFI (cfiCond21) R5 Frame(CFA, -12)
+          CFI (cfiCond21) R6 Frame(CFA, -8)
+          CFI (cfiCond21) R14 Frame(CFA, -4)
+          CFI (cfiCond21) CFA R13+16
+          CFI Block cfiCond22 Using cfiCommon0
+          CFI (cfiCond22) Function MQTT_LIST_DELECT
+          CFI (cfiCond22) Conditional ??CrossCallReturnLabel_13
+          CFI (cfiCond22) R4 Frame(CFA, -16)
+          CFI (cfiCond22) R5 Frame(CFA, -12)
+          CFI (cfiCond22) R6 Frame(CFA, -8)
+          CFI (cfiCond22) R14 Frame(CFA, -4)
+          CFI (cfiCond22) CFA R13+16
+          CFI Block cfiCond23 Using cfiCommon0
+          CFI (cfiCond23) Function MQTT_LIST_DESTROY
+          CFI (cfiCond23) Conditional ??CrossCallReturnLabel_13
+          CFI (cfiCond23) R4 Frame(CFA, -16)
+          CFI (cfiCond23) R5 Frame(CFA, -12)
+          CFI (cfiCond23) R6 Frame(CFA, -8)
+          CFI (cfiCond23) R14 Frame(CFA, -4)
+          CFI (cfiCond23) CFA R13+16
+          CFI Block cfiPicker24 Using cfiCommon1
+          CFI (cfiPicker24) NoFunction
+          CFI (cfiPicker24) Picker
         THUMB
-?Subroutine8:
+?Subroutine5:
         ADDS     R0,R4,#+4
-          CFI FunCall MQTT_LIST_PUT _tx_mutex_put
-          CFI FunCall MQTT_LIST_GET _tx_mutex_put
-          CFI FunCall MQTT_LIST_COUNT _tx_mutex_put
-          CFI FunCall MQTT_LIST_SEARCH _tx_mutex_put
-          CFI FunCall MQTT_LIST_SEARCH _tx_mutex_put
-          CFI FunCall MQTT_LIST_DESTROY _tx_mutex_put
-        B.W      _tx_mutex_put
-          CFI EndBlock cfiCond8
-          CFI EndBlock cfiCond9
-          CFI EndBlock cfiCond10
-          CFI EndBlock cfiCond11
-          CFI EndBlock cfiCond12
-          CFI EndBlock cfiCond13
-          CFI EndBlock cfiPicker14
-//  319 
+          CFI FunCall MQTT_LIST_COUNT GsnOsal_SemRelease
+          CFI FunCall MQTT_LIST_SEARCH GsnOsal_SemRelease
+          CFI FunCall MQTT_LIST_DELECT GsnOsal_SemRelease
+          CFI FunCall MQTT_LIST_DELECT GsnOsal_SemRelease
+          CFI FunCall MQTT_LIST_DESTROY GsnOsal_SemRelease
+        B.W      GsnOsal_SemRelease
+          CFI EndBlock cfiCond19
+          CFI EndBlock cfiCond20
+          CFI EndBlock cfiCond21
+          CFI EndBlock cfiCond22
+          CFI EndBlock cfiCond23
+          CFI EndBlock cfiPicker24
+//  343 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Block cfiBlock25 Using cfiCommon0
           CFI Function MQTT_LIST_DESTROY
         THUMB
-//  320 UINT8 MQTT_LIST_DESTROY(MQTT_LIST* LIST)
-//  321 {
+//  344 UINT8 MQTT_LIST_DESTROY(MQTT_LIST* LIST)
+//  345 {
 MQTT_LIST_DESTROY:
         PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
@@ -926,33 +1175,33 @@ MQTT_LIST_DESTROY:
           CFI R4 Frame(CFA, -16)
           CFI CFA R13+16
         MOV      R4,R0
-//  322   Node* pre ;
-//  323   Node* post ;
-//  324   tx_mutex_get(&LIST->list_mutex, TX_WAIT_FOREVER);
-        BL       ??Subroutine5_0
-//  325   pre = LIST->head;
-??CrossCallReturnLabel_4:
+//  346   Node* pre ;
+//  347   Node* post ;
+//  348   //tx_semaphore_get(&(LIST->list_semaphore), TX_WAIT_FOREVER);
+//  349   //tx_semaphore_get(&(LIST->list_semaphore), 100);
+//  350   GsnOsal_SemAcquire(&(LIST->list_semaphore), 100); 
+        BL       ??Subroutine3_0
+//  351   pre = LIST->head;
+??CrossCallReturnLabel_0:
         LDR      R5,[R4, #+0]
         B.N      ??MQTT_LIST_DESTROY_0
-//  326   while(pre->next != NULL)
-//  327   {
-//  328 	  post = pre->next;
-//  329 	  pre->next = post->next;
+//  352   while(pre->next != NULL)
+//  353   {
+//  354 	  post = pre->next;
+//  355 	  pre->next = post->next;
 ??MQTT_LIST_DESTROY_1:
         LDR      R0,[R6, #+4]
         STR      R0,[R5, #+4]
         LDR      R0,[R6, #+0]
         LDR      R0,[R0, #+4]
         CBZ.N    R0,??MQTT_LIST_DESTROY_2
-//  330 	  //free(post->msg_pointer->TOPIC);
-//  331 	  //free(post->msg_pointer->PAYLOAD);
-//  332 	  //free(post->msg_pointer);
-//  333 	  if(post->msg_pointer->TOPIC != NULL)
-//  334 	  {
-//  335 	  	gsn_free(post->msg_pointer->TOPIC);
+//  356 
+//  357 	  if(post->msg_pointer->TOPIC != NULL)
+//  358 	  {
+//  359 	  	gsn_free(post->msg_pointer->TOPIC);
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-//  336 	  	post->msg_pointer->TOPIC = NULL;
+//  360 		post->msg_pointer->TOPIC = NULL;
         LDR      R0,[R6, #+0]
         MOVS     R1,#+0
         STR      R1,[R0, #+4]
@@ -960,624 +1209,499 @@ MQTT_LIST_DESTROY:
         LDR      R0,[R6, #+0]
         LDR      R0,[R0, #+8]
         CBZ.N    R0,??MQTT_LIST_DESTROY_3
-//  337 	  }
-//  338 	  if(post->msg_pointer->PAYLOAD != NULL)
-//  339 	  {
-//  340 	  	gsn_free(post->msg_pointer->PAYLOAD);
+//  361 	  }
+//  362 	  if(post->msg_pointer->PAYLOAD != NULL)
+//  363 	  {
+//  364 	  	gsn_free(post->msg_pointer->PAYLOAD);
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-//  341 	  	post->msg_pointer->PAYLOAD = NULL;
+//  365 	  	post->msg_pointer->PAYLOAD = NULL;
         LDR      R0,[R6, #+0]
         MOVS     R1,#+0
         STR      R1,[R0, #+8]
-//  342 	  }
-//  343 	  if(post != NULL)
-//  344 	  {
-//  345 		gsn_free(post);
+//  366 	  }
+//  367 	  if(post->msg_pointer!= NULL)
 ??MQTT_LIST_DESTROY_3:
+        LDR      R0,[R6, #+0]
+        CBZ.N    R0,??MQTT_LIST_DESTROY_4
+//  368 	  {
+//  369 	  	gsn_free(post->msg_pointer);
+          CFI FunCall GsnDynMemMgmt_Free
+        BL       GsnDynMemMgmt_Free
+//  370 		post->msg_pointer = NULL;
+        MOVS     R0,#+0
+        STR      R0,[R6, #+0]
+//  371 	  }
+//  372 	  if(post != NULL)
+//  373 	  {
+//  374 		gsn_free(post);
+??MQTT_LIST_DESTROY_4:
         MOV      R0,R6
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-//  346 	  	post = NULL;
-//  347 	  }
-//  348   }
+//  375 		post = NULL;
+//  376 	  }
+//  377   }
 ??MQTT_LIST_DESTROY_0:
         LDR      R6,[R5, #+4]
         CMP      R6,#+0
         BNE.N    ??MQTT_LIST_DESTROY_1
-          CFI EndBlock cfiBlock15
-//  349   tx_mutex_put(&LIST->list_mutex);
-        REQUIRE ?Subroutine1
-        ;; // Fall through to label ?Subroutine1
-//  350   return 0;
-//  351 }
+          CFI EndBlock cfiBlock25
+//  378   GsnOsal_SemRelease(&(LIST->list_semaphore));
+        REQUIRE ?Subroutine2
+        ;; // Fall through to label ?Subroutine2
+//  379   //tx_semaphore_put(&(LIST->list_semaphore));
+//  380   return 0;
+//  381 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Block cfiBlock26 Using cfiCommon0
           CFI NoFunction
+          CFI NoCalls MQTT_LIST_DELECT
           CFI NoCalls MQTT_LIST_DESTROY
-          CFI NoCalls MQTT_LIST_SEARCH
           CFI CFA R13+16
           CFI R4 Frame(CFA, -16)
           CFI R5 Frame(CFA, -12)
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
         THUMB
-?Subroutine1:
-        BL       ?Subroutine8
-??CrossCallReturnLabel_21:
+?Subroutine2:
+        BL       ?Subroutine5
+??CrossCallReturnLabel_13:
         MOVS     R0,#+0
         POP      {R4-R6,PC}
-          CFI EndBlock cfiBlock16
+          CFI EndBlock cfiBlock26
+//  382 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond17 Using cfiCommon0
-          CFI Function MQTT_LIST_PUT
-          CFI Conditional ??CrossCallReturnLabel_8
-          CFI R4 Frame(CFA, -12)
-          CFI R5 Frame(CFA, -8)
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+16
-          CFI Block cfiCond18 Using cfiCommon0
-          CFI (cfiCond18) Function MQTT_LIST_GET
-          CFI (cfiCond18) Conditional ??CrossCallReturnLabel_7
-          CFI (cfiCond18) R4 Frame(CFA, -12)
-          CFI (cfiCond18) R5 Frame(CFA, -8)
-          CFI (cfiCond18) R14 Frame(CFA, -4)
-          CFI (cfiCond18) CFA R13+16
-          CFI Block cfiPicker19 Using cfiCommon1
-          CFI (cfiPicker19) NoFunction
-          CFI (cfiPicker19) Picker
-        THUMB
-?Subroutine5:
-        MOV      R4,R0
-        MOV      R5,R1
-          CFI Block cfiCond20 Using cfiCommon0
-          CFI (cfiCond20) Function MQTT_LIST_COUNT
-          CFI (cfiCond20) Conditional ??CrossCallReturnLabel_6
-          CFI (cfiCond20) R4 Frame(CFA, -12)
-          CFI (cfiCond20) R5 Frame(CFA, -8)
-          CFI (cfiCond20) R14 Frame(CFA, -4)
-          CFI (cfiCond20) CFA R13+16
-          CFI Block cfiCond21 Using cfiCommon0
-          CFI (cfiCond21) Function MQTT_LIST_SEARCH
-          CFI (cfiCond21) Conditional ??CrossCallReturnLabel_5
-          CFI (cfiCond21) R4 Frame(CFA, -16)
-          CFI (cfiCond21) R5 Frame(CFA, -12)
-          CFI (cfiCond21) R6 Frame(CFA, -8)
-          CFI (cfiCond21) R14 Frame(CFA, -4)
-          CFI (cfiCond21) CFA R13+16
-          CFI Block cfiCond22 Using cfiCommon0
-          CFI (cfiCond22) Function MQTT_LIST_DESTROY
-          CFI (cfiCond22) Conditional ??CrossCallReturnLabel_4
-          CFI (cfiCond22) R4 Frame(CFA, -16)
-          CFI (cfiCond22) R5 Frame(CFA, -12)
-          CFI (cfiCond22) R6 Frame(CFA, -8)
-          CFI (cfiCond22) R14 Frame(CFA, -4)
-          CFI (cfiCond22) CFA R13+16
-??Subroutine5_0:
-        MOV      R1,#-1
-        ADDS     R0,R4,#+4
-          CFI FunCall MQTT_LIST_PUT _tx_mutex_get
-          CFI FunCall MQTT_LIST_GET _tx_mutex_get
-          CFI FunCall MQTT_LIST_COUNT _tx_mutex_get
-          CFI FunCall MQTT_LIST_SEARCH _tx_mutex_get
-          CFI FunCall MQTT_LIST_DESTROY _tx_mutex_get
-        B.W      _tx_mutex_get
-          CFI EndBlock cfiCond17
-          CFI EndBlock cfiCond18
-          CFI EndBlock cfiPicker19
-          CFI EndBlock cfiCond20
-          CFI EndBlock cfiCond21
-          CFI EndBlock cfiCond22
-//  352 
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock23 Using cfiCommon0
+          CFI Block cfiBlock27 Using cfiCommon0
           CFI Function MQTT_START
         THUMB
-//  353 UINT8 MQTT_START()
-//  354 {
+//  383 UINT8 MQTT_START()
+//  384 {
 MQTT_START:
         PUSH     {R4,R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+12
-//  355   UINT8 status;
-//  356   
-//  357   mqtt_Xstate =  MQTT_STATE_UNINITIAL;
-        LDR.W    R4,??DataTable70_1
+//  385   UINT8 status;
+//  386   
+//  387   mqtt_Xstate =  MQTT_STATE_UNINITIAL;
+        LDR.W    R4,??DataTable93_2
+//  388  
+//  389   
+//  390   MQTT_LIST_INIT(&(mqtt_ctx.publish_list), 1);
+        LDR.W    R5,??DataTable93_3
         MOVS     R0,#+0
         STRB     R0,[R4, #+1]
-        SUB      SP,SP,#+28
-          CFI CFA R13+40
-//  358   //mqtt_ctx = (MQTT_CTX*)malloc(sizeof(MQTT_CTX));
-//  359   mqtt_ctx = (MQTT_CTX*)gsn_malloc(sizeof(MQTT_CTX));
-        MOVS     R2,#+0
-        MOVW     R1,#+359
-        MOVS     R0,#+96
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
-        STR      R0,[R4, #+4]
-//  360   memset(mqtt_ctx,0,sizeof(MQTT_CTX));
-        MOVS     R2,#+96
-        BL       ??Subroutine7_0
-//  361   
-//  362   //mqtt_ctx->MQTT_CLIENT.clientid = (char*)malloc(strlen(ClientID)+1);
-//  363   //mqtt_ctx->MQTT_CLIENT.username = (char*)malloc(strlen(ClientID)+1);
-//  364   //mqtt_ctx->MQTT_CLIENT.password = (char*)malloc(strlen(PASSWORD)+1);
-//  365   
-//  366   mqtt_ctx->MQTT_CLIENT.clientid = (char*)gsn_malloc(strlen(ClientID)+1);
-??CrossCallReturnLabel_17:
-        MOVS     R2,#+0
-        MOV      R1,#+366
-        MOVS     R0,#+13
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
-        LDR      R1,[R4, #+4]
-        STR      R0,[R1, #+64]
-//  367   mqtt_ctx->MQTT_CLIENT.username = (char*)gsn_malloc(strlen(ClientID)+1);
-        MOVS     R2,#+0
-        MOVW     R1,#+367
-        MOVS     R0,#+13
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
-        LDR      R1,[R4, #+4]
-        STR      R0,[R1, #+68]
-//  368   mqtt_ctx->MQTT_CLIENT.password = (char*)gsn_malloc(strlen(PASSWORD)+1);
-        MOVS     R2,#+0
-        MOV      R1,#+368
-        MOVS     R0,#+29
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
-        LDR      R3,[R4, #+4]
-        STR      R0,[R3, #+72]
-//  369   
-//  370   memset(mqtt_ctx->MQTT_CLIENT.clientid,0,strlen(ClientID)+1);
-        MOVS     R2,#+13
-        LDR      R0,[R3, #+64]
-        BL       ??Subroutine7_0
-//  371   memset(mqtt_ctx->MQTT_CLIENT.username,0,strlen(ClientID)+1);
-??CrossCallReturnLabel_16:
-        LDR      R0,[R4, #+4]
-        LDR      R0,[R0, #+68]
-        MOVS     R2,#+13
-        BL       ??Subroutine7_0
-//  372   memset(mqtt_ctx->MQTT_CLIENT.password,0,strlen(PASSWORD)+1);
-??CrossCallReturnLabel_15:
-        LDR      R0,[R4, #+4]
-        LDR      R0,[R0, #+72]
-        MOVS     R2,#+29
-        BL       ??Subroutine7_0
-//  373   mqtt_init(&mqtt_ctx->MQTT_CLIENT, ClientID);
-??CrossCallReturnLabel_14:
-        ADR.W    R5,`?<Constant "001dc9151e55">`
-        LDR      R0,[R4, #+4]
-        MOV      R1,R5
-          CFI FunCall mqtt_init
-        BL       mqtt_init
-//  374   mqtt_init_auth(&mqtt_ctx->MQTT_CLIENT, ClientID, PASSWORD);
-        LDR      R0,[R4, #+4]
-        ADR.W    R2,`?<Constant "y3FPxdiSAJjV2LkmHF-DO...">`
-        MOV      R1,R5
-          CFI FunCall mqtt_init_auth
-        BL       mqtt_init_auth
-//  375   
-//  376   MQTT_LIST_INIT(&mqtt_ctx->publish_list, PUBLISH_LIST_MUTEX);
-        LDR      R0,[R4, #+4]
-        ADR.W    R1,`?<Constant "publish_list_mutex">`
-        ADDS     R0,R0,#+92
+        SUB      SP,SP,#+20
+          CFI CFA R13+32
+        MOVS     R1,#+1
+        ADD      R0,R5,#+152
           CFI FunCall MQTT_LIST_INIT
         BL       MQTT_LIST_INIT
-//  377   MQTT_LIST_INIT(&mqtt_ctx->send_list, SEND_LIST_MUTEX);
-        LDR      R0,[R4, #+4]
-        ADR.W    R1,`?<Constant "send_list_mutex">`
-        ADDS     R0,R0,#+84
+//  391   MQTT_LIST_INIT(&(mqtt_ctx.send_list), 1);
+        MOVS     R1,#+1
+        ADD      R0,R5,#+88
           CFI FunCall MQTT_LIST_INIT
         BL       MQTT_LIST_INIT
-//  378   MQTT_LIST_INIT(&mqtt_ctx->receive_list, RECEIVE_LIST_MUTEX);
-        LDR      R0,[R4, #+4]
-        ADR.W    R1,`?<Constant "receive_list_mutex">`
-        ADDS     R0,R0,#+88
-          CFI FunCall MQTT_LIST_INIT
-        BL       MQTT_LIST_INIT
-//  379   
-//  380   status = tx_queue_create(&MQTT_RECEIVE_QUEUE, "MQTT_RECEIVE_QUEUE", RECEIVE_MSG_SIZE, MSG_receive, TOTAL_QUEUE_SIZE);
-        MOVS     R0,#+200
+//  392   //MQTT_LIST_INIT(&(mqtt_ctx.receive_list), RECEIVE_LIST_MUTEX, 1);
+//  393   //status = tx_semaphore_prioritize(&(mqtt_ctx.send_list.list_semaphore));
+//  394   //status = tx_semaphore_prioritize(&(mqtt_ctx.receive_list.list_semaphore));
+//  395   //status = tx_semaphore_prioritize(&(mqtt_ctx.publish_list.list_semaphore));
+//  396 
+//  397   //status = tx_queue_create(&MQTT_RECEIVE_QUEUE, "MQTT_RECEIVE_QUEUE", TX_1_ULONG, MSG_receive, TOTAL_QUEUE_SIZE);
+//  398   status = GsnOsal_QueueCreate(&MQTT_RECEIVE_QUEUE, TX_1_ULONG, MSG_receive, TOTAL_QUEUE_SIZE);
+        MOVS     R0,#+60
         STR      R0,[SP, #+0]
-        ADD      R3,R4,#+68
-        MOVS     R2,#+4
-        ADR.W    R1,`?<Constant "MQTT_RECEIVE_QUEUE">`
-        ADD      R0,R4,#+12
+        ADD      R3,R4,#+60
+        MOVS     R2,#+1
+        MOVS     R1,#+0
+        ADDS     R0,R4,#+4
           CFI FunCall _tx_queue_create
         BL       _tx_queue_create
-//  381   
-//  382   status = tx_thread_create(&MQTT_PROCESS_THREAD, "MQTT_PROCESS_THREAD", MQTT_PROCESS_TASK ,0 , STACK_MQTT_PROCESS_THREAD ,STACK_SIZE , 1 , 1 , TX_NO_TIME_SLICE,TX_AUTO_START);
-        BL       ?Subroutine4
-??CrossCallReturnLabel_0:
-        ADD      R0,R4,#+11008
-        ADDS     R0,R0,#+24
+//  399   //status = tx_thread_create(&MQTT_PROCESS_THREAD, "MQTT_PROCESS_THREAD", MQTT_PROCESS_TASK ,0 , STACK_MQTT_PROCESS_THREAD ,STACK_SIZE*5 , 15 , 15 , TX_NO_TIME_SLICE,TX_AUTO_START);
+//  400   status = GsnOsal_ThreadCreate(MQTT_PROCESS_TASK, NULL, &MQTT_PROCESS_THREAD,"MQTT_PROCESS_THREAD", 15, STACK_MQTT_PROCESS_THREAD, STACK_SIZE*5, GSN_OSAL_THREAD_INITIAL_READY);
+        MOVS     R0,#+1
+        STR      R0,[SP, #+12]
+        MOV      R0,#+5120
+        STR      R0,[SP, #+8]
+        ADDW     R0,R4,#+2708
+        STR      R0,[SP, #+4]
+        MOVS     R0,#+15
         STR      R0,[SP, #+0]
-        ADR.W    R2,MQTT_PROCESS_TASK
-        ADR.W    R1,`?<Constant "MQTT_PROCESS_THREAD">`
-        ADD      R0,R4,#+72
-          CFI FunCall _tx_thread_create
-        BL       _tx_thread_create
-//  383   status = tx_thread_create(&MQTT_SENDER_THREAD, "MQTT_SENDER_THREAD", MQTT_SENDER_TASK ,0, STACK_MQTT_SENDER_THREAD, STACK_SIZE, 1, 1, TX_NO_TIME_SLICE,TX_AUTO_START);
-        BL       ?Subroutine4
-??CrossCallReturnLabel_1:
-        ADD      R0,R4,#+792
+        ADD      R2,R4,#+120
+        ADR.W    R3,`?<Constant "MQTT_PROCESS_THREAD">`
+        ADR.W    R0,MQTT_PROCESS_TASK
+        MOVS     R1,#+0
+          CFI FunCall GsnOsal_ThreadCreate
+        BL       GsnOsal_ThreadCreate
+//  401   //status = tx_thread_create(&MQTT_SENDER_THREAD, "MQTT_SENDER_THREAD", MQTT_SENDER_TASK ,0, STACK_MQTT_SENDER_THREAD, STACK_SIZE*2, 15, 15, TX_NO_TIME_SLICE,TX_AUTO_START);
+//  402   status = GsnOsal_ThreadCreate(MQTT_SENDER_TASK, NULL, &MQTT_SENDER_THREAD, "MQTT_SENDER_THREAD", 15, STACK_MQTT_SENDER_THREAD, STACK_SIZE*2, GSN_OSAL_THREAD_INITIAL_READY);
+        BL       ?Subroutine9
+??CrossCallReturnLabel_21:
+        ADD      R0,R4,#+660
+        STR      R0,[SP, #+4]
+        MOVS     R0,#+15
         STR      R0,[SP, #+0]
-        ADR.W    R2,MQTT_SENDER_TASK
-        ADR.W    R1,`?<Constant "MQTT_SENDER_THREAD">`
-        ADD      R0,R4,#+252
-          CFI FunCall _tx_thread_create
-        BL       _tx_thread_create
-//  384   status = tx_thread_create(&MQTT_RECEIVER_THREAD, "MQTT_RECEIVER_THREAD", MQTT_RECEIVER_TASK ,0, STACK_MQTT_RECEIVER_THREAD, STACK_SIZE, 1, 1, TX_NO_TIME_SLICE,TX_AUTO_START);
-        BL       ?Subroutine4
-??CrossCallReturnLabel_2:
-        ADD      R0,R4,#+5888
-        ADDS     R0,R0,#+24
+        ADD      R2,R4,#+300
+        ADR.W    R3,`?<Constant "MQTT_SENDER_THREAD">`
+        ADR.W    R0,MQTT_SENDER_TASK
+        MOVS     R1,#+0
+          CFI FunCall GsnOsal_ThreadCreate
+        BL       GsnOsal_ThreadCreate
+//  403   //status = tx_thread_create(&MQTT_RECEIVER_THREAD, "MQTT_RECEIVER_THREAD", MQTT_RECEIVER_TASK ,0, STACK_MQTT_RECEIVER_THREAD, STACK_SIZE*2, 23, 23, TX_NO_TIME_SLICE,TX_AUTO_START);
+//  404   //status = tx_thread_create(&MQTT_MESSAGE_QUEUE_THREAD, "MQTT_MESSAGE_QUEUE_THREAD", MQTT_MESSAGE_QUEUE_TASK ,0, STACK_MQTT_MESSAGE_QUEUE_THREAD, STACK_SIZE*2, 15, 15, TX_NO_TIME_SLICE,TX_AUTO_START);
+//  405   status = GsnOsal_ThreadCreate(MQTT_MESSAGE_QUEUE_TASK, NULL, &MQTT_MESSAGE_QUEUE_THREAD, "MQTT_MESSAGE_QUEUE_THREAD", 15, STACK_MQTT_MESSAGE_QUEUE_THREAD, STACK_SIZE*2, GSN_OSAL_THREAD_INITIAL_READY);
+        BL       ?Subroutine9
+??CrossCallReturnLabel_22:
+        ADD      R0,R4,#+7680
+        ADDS     R0,R0,#+148
+        STR      R0,[SP, #+4]
+        MOVS     R0,#+15
         STR      R0,[SP, #+0]
-        ADR.W    R2,MQTT_RECEIVER_TASK
-        ADR.W    R1,`?<Constant "MQTT_RECEIVER_THREAD">`
-        ADD      R0,R4,#+432
-          CFI FunCall _tx_thread_create
-        BL       _tx_thread_create
-//  385   status = tx_thread_create(&MQTT_MESSAGE_QUEUE_THREAD, "MQTT_MESSAGE_QUEUE_THREAD", MQTT_MESSAGE_QUEUE_TASK ,0, STACK_MQTT_MESSAGE_QUEUE_THREAD, STACK_SIZE, 1, 1, TX_NO_TIME_SLICE,TX_AUTO_START);
-//  386   
-//  387   return status;
-        BL       ?Subroutine4
-??CrossCallReturnLabel_3:
-        ADD      R0,R4,#+16128
-        ADDS     R0,R0,#+24
-        STR      R0,[SP, #+0]
-        ADR.W    R2,MQTT_MESSAGE_QUEUE_TASK
-        ADR.W    R1,`?<Constant "MQTT_MESSAGE_QUEUE_TH...">`
-        ADD      R0,R4,#+612
-          CFI FunCall _tx_thread_create
-        BL       _tx_thread_create
+        ADD      R2,R4,#+480
+        ADR.W    R3,`?<Constant "MQTT_MESSAGE_QUEUE_TH...">`
+        ADR.W    R0,MQTT_MESSAGE_QUEUE_TASK
+        MOVS     R1,#+0
+          CFI FunCall GsnOsal_ThreadCreate
+        BL       GsnOsal_ThreadCreate
+//  406   //status = tx_timer_create(&my_timer, "mqtt_ping_timer", MQTT_PING_OUT, 0, 1200, 0, TX_NO_ACTIVATE);
+//  407   AppS2wHal_TimerInit(&my_timer, MQTT_PING_OUT, NULL );
+        MOVS     R2,#+0
+        ADR.W    R1,MQTT_PING_OUT
+        ADD      R0,R4,#+9984
+          CFI FunCall AppS2wHal_TimerInit
+        BL       AppS2wHal_TimerInit
+//  408 
+//  409   //S2w_Printf("\r\n PING TIMER STATUS : %d", status);
+//  410   //status = tx_timer_create(&mqtt_retry_timer, "mqtt_publish_retry", MQTT_PUBLISH_RETRY, (ULONG)&mqtt_ctx, 100, 300, TX_AUTO_ACTIVATE);
+//  411   AppS2wHal_TimerInit(&mqtt_retry_timer, MQTT_PUBLISH_RETRY, NULL);
+        ADD      R0,R4,#+9984
+        MOVS     R2,#+0
+        ADR.W    R1,MQTT_PUBLISH_RETRY
+        ADDS     R0,R0,#+56
+          CFI FunCall AppS2wHal_TimerInit
+        BL       AppS2wHal_TimerInit
+//  412   status = tx_mutex_create(&conStatus_mutex, "conStatus_mutex", TX_INHERIT);
+        ADD      R0,R4,#+9728
+        MOVS     R2,#+1
+        ADR.W    R1,`?<Constant "conStatus_mutex">`
+        ADDS     R0,R0,#+200
+          CFI FunCall _tx_mutex_create
+        BL       _tx_mutex_create
+//  413   status = tx_mutex_create(&ping_mutex, "ping_mutex", TX_INHERIT);
+//  414   //status = tx_semaphore_create(&ping_semaphore, "ping_semaphore",1);
+//  415   
+//  416   return status;
+        ADD      R0,R4,#+9728
+        MOVS     R2,#+1
+        ADR.W    R1,`?<Constant "ping_mutex">`
+        ADDS     R0,R0,#+148
+          CFI FunCall _tx_mutex_create
+        BL       _tx_mutex_create
         UXTB     R0,R0
-        ADD      SP,SP,#+28
+        ADD      SP,SP,#+20
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
-          CFI EndBlock cfiBlock23
-//  388 }
+          CFI EndBlock cfiBlock27
+//  417 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond24 Using cfiCommon0
+          CFI Block cfiCond28 Using cfiCommon0
           CFI Function MQTT_START
           CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_0
+          CFI Conditional ??CrossCallReturnLabel_21
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
-          CFI CFA R13+40
-          CFI Block cfiCond25 Using cfiCommon0
-          CFI (cfiCond25) Function MQTT_START
-          CFI (cfiCond25) NoCalls MQTT_START
-          CFI (cfiCond25) Conditional ??CrossCallReturnLabel_1
-          CFI (cfiCond25) R4 Frame(CFA, -12)
-          CFI (cfiCond25) R5 Frame(CFA, -8)
-          CFI (cfiCond25) R14 Frame(CFA, -4)
-          CFI (cfiCond25) CFA R13+40
-          CFI Block cfiCond26 Using cfiCommon0
-          CFI (cfiCond26) Function MQTT_START
-          CFI (cfiCond26) NoCalls MQTT_START
-          CFI (cfiCond26) Conditional ??CrossCallReturnLabel_2
-          CFI (cfiCond26) R4 Frame(CFA, -12)
-          CFI (cfiCond26) R5 Frame(CFA, -8)
-          CFI (cfiCond26) R14 Frame(CFA, -4)
-          CFI (cfiCond26) CFA R13+40
-          CFI Block cfiCond27 Using cfiCommon0
-          CFI (cfiCond27) Function MQTT_START
-          CFI (cfiCond27) NoCalls MQTT_START
-          CFI (cfiCond27) Conditional ??CrossCallReturnLabel_3
-          CFI (cfiCond27) R4 Frame(CFA, -12)
-          CFI (cfiCond27) R5 Frame(CFA, -8)
-          CFI (cfiCond27) R14 Frame(CFA, -4)
-          CFI (cfiCond27) CFA R13+40
-          CFI Block cfiPicker28 Using cfiCommon1
-          CFI (cfiPicker28) NoFunction
-          CFI (cfiPicker28) NoCalls MQTT_START
-          CFI (cfiPicker28) Picker
+          CFI CFA R13+32
+          CFI Block cfiCond29 Using cfiCommon0
+          CFI (cfiCond29) Function MQTT_START
+          CFI (cfiCond29) NoCalls MQTT_START
+          CFI (cfiCond29) Conditional ??CrossCallReturnLabel_22
+          CFI (cfiCond29) R4 Frame(CFA, -12)
+          CFI (cfiCond29) R5 Frame(CFA, -8)
+          CFI (cfiCond29) R14 Frame(CFA, -4)
+          CFI (cfiCond29) CFA R13+32
+          CFI Block cfiPicker30 Using cfiCommon1
+          CFI (cfiPicker30) NoFunction
+          CFI (cfiPicker30) NoCalls MQTT_START
+          CFI (cfiPicker30) Picker
         THUMB
-?Subroutine4:
-        MOVS     R0,#+1
-        STR      R0,[SP, #+20]
-        MOVS     R3,#+0
-        MOVS     R0,#+0
-        STR      R0,[SP, #+16]
+?Subroutine9:
         MOVS     R0,#+1
         STR      R0,[SP, #+12]
+        MOV      R0,#+2048
         STR      R0,[SP, #+8]
-        MOV      R0,#+5120
-        STR      R0,[SP, #+4]
         BX       LR
-          CFI EndBlock cfiCond24
-          CFI EndBlock cfiCond25
-          CFI EndBlock cfiCond26
-          CFI EndBlock cfiCond27
-          CFI EndBlock cfiPicker28
-//  389 
+          CFI EndBlock cfiCond28
+          CFI EndBlock cfiCond29
+          CFI EndBlock cfiPicker30
+//  418 
 
         SECTION `.text`:CODE:NOROOT(2)
-          CFI Block cfiBlock29 Using cfiCommon0
+          CFI Block cfiBlock31 Using cfiCommon0
           CFI Function MQTT_PROCESS_TASK
         THUMB
-//  390 VOID MQTT_PROCESS_TASK(ULONG MQTT_INPUT)
-//  391 {
+//  419 VOID MQTT_PROCESS_TASK(UINT32 MQTT_INPUT)
+//  420 {
 MQTT_PROCESS_TASK:
-        PUSH     {R4-R8,LR}
+        PUSH     {R3-R9,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R8 Frame(CFA, -8)
-          CFI R7 Frame(CFA, -12)
-          CFI R6 Frame(CFA, -16)
-          CFI R5 Frame(CFA, -20)
-          CFI R4 Frame(CFA, -24)
-          CFI CFA R13+24
-//  392   UINT32 oldState;
-//  393   oldState = mqtt_Xstate;
-        LDR.W    R4,??DataTable70_1
+          CFI R9 Frame(CFA, -8)
+          CFI R8 Frame(CFA, -12)
+          CFI R7 Frame(CFA, -16)
+          CFI R6 Frame(CFA, -20)
+          CFI R5 Frame(CFA, -24)
+          CFI R4 Frame(CFA, -28)
+          CFI CFA R13+32
+//  421   UINT32 oldState;
+//  422   oldState = mqtt_Xstate;
+        LDR.W    R4,??DataTable93_2
         ADR.W    R6,`?<Constant "\\r\\n STATE CHANGED : %d...">`
         LDRB     R5,[R4, #+1]
         ADR.W    R7,MQTT_CALLBACK
-        ADR.W    R8,`?<Constant "\\r\\n ulStateCBCount : %...">`
-//  394   while(1)
-//  395   {
-//  396 	S2w_Printf("\r\n ulStateCBCount : %d , xState : %d", StateCount, mqtt_Xstate); 
-??MQTT_PROCESS_TASK_0:
-        LDRB     R2,[R4, #+1]
-        MOVS     R1,#+5
-        MOV      R0,R8
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-//  397 	if (mqtt_Xstate < StateCount)
-        LDRB     R1,[R4, #+1]
-        CMP      R1,#+5
-        BCS.N    ??MQTT_PROCESS_TASK_1
-//  398     {   
-//  399         MQTT_CALLBACK[mqtt_Xstate].callback(mqtt_ctx);
+        LDR.W    R8,??DataTable93_3
+        ADR.W    R9,`?<Constant "\\r\\n  PROCESS_TASK START ">`
+        B.N      ??MQTT_PROCESS_TASK_0
+//  423   while(1)
+//  424   {
+//  425 	S2w_Printf("\r\n  PROCESS_TASK START ");
+//  426 	if (mqtt_Xstate < StateCount)
+//  427     {   
+//  428         MQTT_CALLBACK[mqtt_Xstate].callback(&mqtt_ctx);
+??MQTT_PROCESS_TASK_1:
         ADD      R1,R7,R1, LSL #+3
-        LDR      R0,[R4, #+4]
+        MOV      R0,R8
         LDR      R1,[R1, #+4]
           CFI FunCall
         BLX      R1
-//  400         if (mqtt_Xstate != oldState)
+//  429         if (mqtt_Xstate != oldState)
         LDRB     R2,[R4, #+1]
         CMP      R2,R5
-        BEQ.N    ??MQTT_PROCESS_TASK_1
-//  401         {
-//  402             S2w_Printf("\r\n STATE CHANGED : %d -> %d\n", oldState, mqtt_Xstate);
+        BEQ.N    ??MQTT_PROCESS_TASK_2
+//  430         {
+//  431             S2w_Printf("\r\n STATE CHANGED : %d -> %d\n", oldState, mqtt_Xstate);
         MOV      R1,R5
         MOV      R0,R6
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  403             oldState = mqtt_Xstate;
+//  432             oldState = mqtt_Xstate;
         LDRB     R5,[R4, #+1]
-//  404         }
-//  405     }
-//  406 	GsnTaskSleep(5000);
-??MQTT_PROCESS_TASK_1:
-        MOVW     R0,#+5000
-          CFI FunCall GsnTaskSleep
-        BL       GsnTaskSleep
-        B.N      ??MQTT_PROCESS_TASK_0
-          CFI EndBlock cfiBlock29
-//  407   }
-//  408 }
-//  409 
+//  433         }
+//  434     }
+//  435 	else
+//  436 	{
+//  437 	  break;
+//  438 	}
+//  439 	tx_thread_sleep(100);
+??MQTT_PROCESS_TASK_2:
+        MOVS     R0,#+100
+          CFI FunCall _tx_thread_sleep
+        BL       _tx_thread_sleep
+??MQTT_PROCESS_TASK_0:
+        MOV      R0,R9
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+        LDRB     R1,[R4, #+1]
+        CMP      R1,#+5
+        BCC.N    ??MQTT_PROCESS_TASK_1
+//  440   }
+//  441 }
+        POP      {R0,R4-R9,PC}    ;; return
+          CFI EndBlock cfiBlock31
 
         SECTION `.text`:CODE:NOROOT(2)
-          CFI Block cfiBlock30 Using cfiCommon0
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+MQTT_CALLBACK:
+        DC8 0, 0, 0, 0
+        DC32 MQTT_STATE_CALLBACK_UNINITIAL
+        DC8 1, 0, 0, 0
+        DC32 MQTT_STATE_CALLBACK_INITIAL
+        DC8 2, 0, 0, 0
+        DC32 MQTT_STATE_CALLBACK_CONNECT_READY
+        DC8 3, 0, 0, 0
+        DC32 MQTT_STATE_CALLBACK_CONNECT
+        DC8 4, 0, 0, 0
+        DC32 MQTT_STAET_CALLBACK_DISCONNECT
+//  442 
+
+        SECTION `.text`:CODE:NOROOT(2)
+          CFI Block cfiBlock32 Using cfiCommon0
           CFI Function MQTT_SENDER_TASK
         THUMB
-//  410 VOID MQTT_SENDER_TASK(ULONG MQTT_INPUT)
-//  411 {
+//  443 VOID MQTT_SENDER_TASK(UINT32 MQTT_INPUT)
+//  444 {
 MQTT_SENDER_TASK:
-        PUSH     {R3-R5,LR}
+        PUSH     {R3-R7,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R5 Frame(CFA, -8)
-          CFI R4 Frame(CFA, -12)
-          CFI CFA R13+16
-//  412     MSG_TYPE* temp;
-//  413 	UINT8 status = 0;
+          CFI R7 Frame(CFA, -8)
+          CFI R6 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -16)
+          CFI R4 Frame(CFA, -20)
+          CFI CFA R13+24
         ADR.W    R4,MQTT_MSG_CALLBACK
-        LDR.W    R5,??DataTable70_1
-//  414 	while(1)
-//  415 	{
-//  416 	  if(mqtt_Xstate == MQTT_STATE_CONNECT)
+        ADR.W    R5,`?<Constant "\\r\\n pub list 2 unlock">`
+        ADR.W    R6,`?<Constant "\\r\\n pub list 2 lock">`
+        ADR.W    R7,`?<Constant "\\r\\n  SEND_TASK START ">`
+//  445     MSG_TYPE* temp;
+//  446 	while(1)
+//  447 	{
+//  448 	  if(mqtt_Xstate == MQTT_STATE_CONNECT)
 ??MQTT_SENDER_TASK_0:
-        LDRB     R0,[R5, #+1]
+        LDR.W    R0,??DataTable93_2
+        LDRB     R0,[R0, #+1]
         CMP      R0,#+3
         BNE.N    ??MQTT_SENDER_TASK_1
-//  417 	  {
-//  418 		if(MQTT_LIST_COUNT(mqtt_ctx->publish_list) != 0)
-        LDR      R0,[R5, #+4]
-        LDR      R0,[R0, #+92]
-          CFI FunCall MQTT_LIST_COUNT
-        BL       MQTT_LIST_COUNT
-        CBZ.N    R0,??MQTT_SENDER_TASK_1
-//  419 	  	{
-//  420 			status = MQTT_LIST_GET(mqtt_ctx->publish_list,&temp);
-        LDR      R0,[R5, #+4]
-        LDR      R0,[R0, #+92]
+//  449 	  {
+//  450 		    S2w_Printf("\r\n  SEND_TASK START ");
+        MOV      R0,R7
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  451 			S2w_Printf("\r\n pub list 2 lock");
+        MOV      R0,R6
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  452 			MQTT_LIST_GET(&(mqtt_ctx.publish_list),&temp);
         ADD      R1,SP,#+0
+        LDR.W    R0,??DataTable93_4
           CFI FunCall MQTT_LIST_GET
         BL       MQTT_LIST_GET
-//  421 			status = MQTT_MSG_CALLBACK[temp->MSG_TYPE].callback(temp);
-        BL       ?Subroutine10
-//  422 			/*if( status == 1)
-//  423 		  		mqtt_Xstate = MQTT_STATE_DISCONNECT;*/
-//  424   			//free(temp);
-//  425 			if(temp != NULL)
-??CrossCallReturnLabel_31:
+//  453 			S2w_Printf("\r\n pub list 2 unlock");
+        MOV      R0,R5
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  454 			if(temp != NULL)
         LDR      R0,[SP, #+0]
         CBZ.N    R0,??MQTT_SENDER_TASK_1
-//  426 			{
-//  427   				gsn_free(temp);
+//  455 			{
+//  456 				MQTT_MSG_CALLBACK[temp->MSG_TYPE].callback(temp);
+        BL       ?Subroutine10
+//  457 				if(temp != NULL)
+??CrossCallReturnLabel_24:
+        LDR      R0,[SP, #+0]
+        CBZ.N    R0,??MQTT_SENDER_TASK_1
+//  458 				{
+//  459   					gsn_free(temp);
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-//  428 				temp = NULL;
+//  460 					temp = NULL;
         MOVS     R0,#+0
         STR      R0,[SP, #+0]
-//  429 			}
-//  430 	  	}
-//  431 		else
-//  432 		{
-//  433 		  //S2w_Printf("\r\n PUBLISH LIST empty");
-//  434 		}
-//  435 	  }
-//  436 	  GsnTaskSleep(1000);
+//  461 				}
+//  462 			}
+//  463 	  }
+//  464 	  tx_thread_sleep(5);
 ??MQTT_SENDER_TASK_1:
-        BL       ?Subroutine11
-//  437 	}
-??CrossCallReturnLabel_36:
+        MOVS     R0,#+5
+          CFI FunCall _tx_thread_sleep
+        BL       _tx_thread_sleep
         B.N      ??MQTT_SENDER_TASK_0
-          CFI EndBlock cfiBlock30
-//  438 }
-//  439 
+          CFI EndBlock cfiBlock32
+//  465 	}
+//  466 }
+//  467 
 
-        SECTION `.text`:CODE:NOROOT(2)
-          CFI Block cfiBlock31 Using cfiCommon0
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock33 Using cfiCommon0
           CFI Function MQTT_RECEIVER_TASK
         THUMB
-//  440 VOID MQTT_RECEIVER_TASK(ULONG MQTT_INPUT)
-//  441 {
+//  468 VOID MQTT_RECEIVER_TASK(UINT32 MQTT_INPUT)
+//  469 {
 MQTT_RECEIVER_TASK:
-        PUSH     {R3-R5,LR}
+        PUSH     {R3-R7,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R5 Frame(CFA, -8)
-          CFI R4 Frame(CFA, -12)
-          CFI CFA R13+16
+          CFI R7 Frame(CFA, -8)
+          CFI R6 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -16)
+          CFI R4 Frame(CFA, -20)
+          CFI CFA R13+24
         ADR.W    R4,MQTT_MSG_CALLBACK
-        LDR.W    R5,??DataTable70_1
-//  442   MSG_TYPE* temp;
-//  443   while(1)
-//  444   {
-//  445 	if(mqtt_Xstate == MQTT_STATE_CONNECT)
+        ADR.W    R5,`?<Constant "\\r\\n re list 2 unlock">`
+        LDR.W    R6,??DataTable93_3
+        ADR.W    R7,`?<Constant "\\r\\n re list 2 lock">`
+//  470   MSG_TYPE* temp;
+//  471   while(1)
+//  472   {
+//  473 	if(mqtt_Xstate == MQTT_STATE_CONNECT)
 ??MQTT_RECEIVER_TASK_0:
-        LDRB     R0,[R5, #+1]
+        LDR.W    R0,??DataTable93_2
+        LDRB     R0,[R0, #+1]
         CMP      R0,#+3
         BNE.N    ??MQTT_RECEIVER_TASK_1
-//  446 	{
-//  447 		if(MQTT_LIST_COUNT(mqtt_ctx->receive_list) != 0)
-        LDR      R0,[R5, #+4]
-        LDR      R0,[R0, #+88]
-          CFI FunCall MQTT_LIST_COUNT
-        BL       MQTT_LIST_COUNT
-        CBZ.N    R0,??MQTT_RECEIVER_TASK_1
-//  448 		{	
-//  449 	  		MQTT_LIST_GET(mqtt_ctx->receive_list,&temp);
-        LDR      R0,[R5, #+4]
-        LDR      R0,[R0, #+88]
+//  474 	{
+//  475 		S2w_Printf("\r\n re list 2 lock");
+        MOV      R0,R7
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  476 		MQTT_LIST_GET(&(mqtt_ctx.receive_list),&temp);
         ADD      R1,SP,#+0
+        ADD      R0,R6,#+120
           CFI FunCall MQTT_LIST_GET
         BL       MQTT_LIST_GET
-//  450 			MQTT_MSG_CALLBACK[temp->MSG_TYPE].callback(temp);
-        BL       ?Subroutine10
-//  451   			//free(temp);
-//  452   			if(temp != NULL)
-??CrossCallReturnLabel_30:
+//  477 		S2w_Printf("\r\n re list 2 unlock");
+        MOV      R0,R5
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  478 		if(temp != NULL)
         LDR      R0,[SP, #+0]
         CBZ.N    R0,??MQTT_RECEIVER_TASK_1
-//  453 			{
-//  454   				gsn_free(temp);
+//  479 		{
+//  480 			MQTT_MSG_CALLBACK[temp->MSG_TYPE].callback(temp);
+        BL       ?Subroutine10
+//  481   			//free(temp);
+//  482   			if(temp != NULL)
+??CrossCallReturnLabel_23:
+        LDR      R0,[SP, #+0]
+        CBZ.N    R0,??MQTT_RECEIVER_TASK_1
+//  483 			{
+//  484   				gsn_free(temp);
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-//  455 				temp = NULL;
+//  485 				temp = NULL;
         MOVS     R0,#+0
         STR      R0,[SP, #+0]
-//  456 			}
-//  457 		}
-//  458 		else
-//  459 		{
-//  460 		  //S2w_Printf("\r\n RECEIVE LIST empty");
-//  461 		}
-//  462 	}
-//  463 	GsnTaskSleep(1000);
+//  486 			}
+//  487 		}
+//  488 	}
+//  489 	tx_thread_sleep(5);
 ??MQTT_RECEIVER_TASK_1:
-        BL       ?Subroutine11
-//  464   }
-??CrossCallReturnLabel_35:
+        MOVS     R0,#+5
+          CFI FunCall _tx_thread_sleep
+        BL       _tx_thread_sleep
         B.N      ??MQTT_RECEIVER_TASK_0
-          CFI EndBlock cfiBlock31
-//  465 }
+          CFI EndBlock cfiBlock33
+//  490 	////S2w_Printf("\r\n  MQTT_RECEIVER_TASK START ");
+//  491   }
+//  492 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond32 Using cfiCommon0
-          CFI Function MQTT_SENDER_TASK
-          CFI Conditional ??CrossCallReturnLabel_36
-          CFI R4 Frame(CFA, -12)
-          CFI R5 Frame(CFA, -8)
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+16
-          CFI Block cfiCond33 Using cfiCommon0
-          CFI (cfiCond33) Function MQTT_RECEIVER_TASK
-          CFI (cfiCond33) Conditional ??CrossCallReturnLabel_35
-          CFI (cfiCond33) R4 Frame(CFA, -12)
-          CFI (cfiCond33) R5 Frame(CFA, -8)
-          CFI (cfiCond33) R14 Frame(CFA, -4)
-          CFI (cfiCond33) CFA R13+16
           CFI Block cfiCond34 Using cfiCommon0
-          CFI (cfiCond34) Function MQTT_CONNECT
-          CFI (cfiCond34) Conditional ??CrossCallReturnLabel_34
-          CFI (cfiCond34) R4 Frame(CFA, -8)
-          CFI (cfiCond34) R14 Frame(CFA, -4)
-          CFI (cfiCond34) CFA R13+8
-          CFI Block cfiCond35 Using cfiCommon0
-          CFI (cfiCond35) Function MQTT_CONNECT
-          CFI (cfiCond35) Conditional ??CrossCallReturnLabel_33
-          CFI (cfiCond35) R4 Frame(CFA, -8)
-          CFI (cfiCond35) R14 Frame(CFA, -4)
-          CFI (cfiCond35) CFA R13+8
-          CFI Block cfiCond36 Using cfiCommon0
-          CFI (cfiCond36) Function MQTT_CONNECT
-          CFI (cfiCond36) Conditional ??CrossCallReturnLabel_32
-          CFI (cfiCond36) R4 Frame(CFA, -8)
-          CFI (cfiCond36) R14 Frame(CFA, -4)
-          CFI (cfiCond36) CFA R13+8
-          CFI Block cfiPicker37 Using cfiCommon1
-          CFI (cfiPicker37) NoFunction
-          CFI (cfiPicker37) Picker
-        THUMB
-?Subroutine11:
-        MOV      R0,#+1000
-          CFI FunCall MQTT_SENDER_TASK GsnTaskSleep
-          CFI FunCall MQTT_RECEIVER_TASK GsnTaskSleep
-          CFI FunCall MQTT_CONNECT GsnTaskSleep
-          CFI FunCall MQTT_CONNECT GsnTaskSleep
-          CFI FunCall MQTT_CONNECT GsnTaskSleep
-        B.W      GsnTaskSleep
-          CFI EndBlock cfiCond32
-          CFI EndBlock cfiCond33
-          CFI EndBlock cfiCond34
-          CFI EndBlock cfiCond35
-          CFI EndBlock cfiCond36
-          CFI EndBlock cfiPicker37
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond38 Using cfiCommon0
           CFI Function MQTT_SENDER_TASK
-          CFI Conditional ??CrossCallReturnLabel_31
-          CFI R4 Frame(CFA, -12)
-          CFI R5 Frame(CFA, -8)
+          CFI Conditional ??CrossCallReturnLabel_24
+          CFI R4 Frame(CFA, -20)
+          CFI R5 Frame(CFA, -16)
+          CFI R6 Frame(CFA, -12)
+          CFI R7 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
-          CFI CFA R13+16
-          CFI Block cfiCond39 Using cfiCommon0
-          CFI (cfiCond39) Function MQTT_RECEIVER_TASK
-          CFI (cfiCond39) Conditional ??CrossCallReturnLabel_30
-          CFI (cfiCond39) R4 Frame(CFA, -12)
-          CFI (cfiCond39) R5 Frame(CFA, -8)
-          CFI (cfiCond39) R14 Frame(CFA, -4)
-          CFI (cfiCond39) CFA R13+16
-          CFI Block cfiPicker40 Using cfiCommon1
-          CFI (cfiPicker40) NoFunction
-          CFI (cfiPicker40) Picker
+          CFI CFA R13+24
+          CFI Block cfiCond35 Using cfiCommon0
+          CFI (cfiCond35) Function MQTT_RECEIVER_TASK
+          CFI (cfiCond35) Conditional ??CrossCallReturnLabel_23
+          CFI (cfiCond35) R4 Frame(CFA, -20)
+          CFI (cfiCond35) R5 Frame(CFA, -16)
+          CFI (cfiCond35) R6 Frame(CFA, -12)
+          CFI (cfiCond35) R7 Frame(CFA, -8)
+          CFI (cfiCond35) R14 Frame(CFA, -4)
+          CFI (cfiCond35) CFA R13+24
+          CFI Block cfiPicker36 Using cfiCommon1
+          CFI (cfiPicker36) NoFunction
+          CFI (cfiPicker36) Picker
         THUMB
 ?Subroutine10:
-        LDR      R0,[SP, #+0]
         LDRB     R1,[R0, #+0]
         ADD      R1,R4,R1, LSL #+3
         LDR      R1,[R1, #+4]
@@ -1585,281 +1709,297 @@ MQTT_RECEIVER_TASK:
           CFI FunCall MQTT_RECEIVER_TASK
         ANOTE "tailcall"
         BX       R1
-          CFI EndBlock cfiCond38
-          CFI EndBlock cfiCond39
-          CFI EndBlock cfiPicker40
-//  466 
+          CFI EndBlock cfiCond34
+          CFI EndBlock cfiCond35
+          CFI EndBlock cfiPicker36
+//  493 
+//  494 
+//  495 
 
         SECTION `.text`:CODE:NOROOT(2)
-          CFI Block cfiBlock41 Using cfiCommon0
+          CFI Block cfiBlock37 Using cfiCommon0
           CFI Function MQTT_MESSAGE_QUEUE_TASK
         THUMB
-//  467 VOID MQTT_MESSAGE_QUEUE_TASK(ULONG MQTT_INPUT)
-//  468 {
+//  496 VOID MQTT_MESSAGE_QUEUE_TASK(UINT32 MQTT_INPUT)
+//  497 {
 MQTT_MESSAGE_QUEUE_TASK:
+        PUSH     {R4-R10,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R10 Frame(CFA, -8)
+          CFI R9 Frame(CFA, -12)
+          CFI R8 Frame(CFA, -16)
+          CFI R7 Frame(CFA, -20)
+          CFI R6 Frame(CFA, -24)
+          CFI R5 Frame(CFA, -28)
+          CFI R4 Frame(CFA, -32)
+          CFI CFA R13+32
+        SUB      SP,SP,#+32
+          CFI CFA R13+64
+        ADR.W    R4,`?<Constant "\\r\\n QUEUE_TASK END">`
+        ADR.W    R5,MQTT_MSG_CALLBACK
+        ADR.W    R9,`?<Constant "\\r\\n rcv_MSG : %x %x %x %x">`
+        ADR.W    R10,`?<Constant "\\r\\n QUEUE COUNT 2 : %d">`
+        ADR.W    R8,`?<Constant "\\r\\n QUEUE_TASK START">`
+        LDR.W    R7,??DataTable93_2
+        ADD      R6,SP,#+4
+        B.N      ??MQTT_MESSAGE_QUEUE_TASK_0
+//  498 	UINT8 receive_MSG[4];
+//  499 	MSG_TYPE temp;
+//  500 	UINT8 status;
+//  501 	while(1)
+//  502 	{
+//  503 	    	S2w_Printf("\r\n QUEUE_TASK START");
+//  504 			S2w_Printf("\r\n QUEUE COUNT 2 : %d",MQTT_RECEIVE_QUEUE.tx_queue_available_storage);
+//  505 	    	status = tx_queue_receive(&MQTT_RECEIVE_QUEUE, receive_MSG, TX_WAIT_FOREVER);
+//  506 			//status = tx_queue_receive(&MQTT_RECEIVE_QUEUE, receive_MSG, 1);
+//  507 			if(status !=0)
+//  508 			{
+//  509 			  MQTT_MESSAGE_QUEUE_LOG(status);
+??MQTT_MESSAGE_QUEUE_TASK_1:
+          CFI FunCall MQTT_MESSAGE_QUEUE_LOG
+        BL       MQTT_MESSAGE_QUEUE_LOG
+//  510 			  continue;
+//  511 			}
+??MQTT_MESSAGE_QUEUE_TASK_0:
+        MOV      R0,R8
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+        LDR      R1,[R7, #+24]
+        MOV      R0,R10
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+        MOV      R2,#-1
+        ADD      R1,SP,#+4
+        ADDS     R0,R7,#+4
+          CFI FunCall _tx_queue_receive
+        BL       _tx_queue_receive
+        UXTB     R0,R0
+        CMP      R0,#+0
+        BNE.N    ??MQTT_MESSAGE_QUEUE_TASK_1
+//  512 			else
+//  513 			{
+//  514 				//tx_queue_receive(&MQTT_RECEIVE_QUEUE, receive_MSG, TX_WAIT_FOREVER);
+//  515 				S2w_Printf("\r\n rcv_MSG : %x %x %x %x", receive_MSG[0], receive_MSG[1], receive_MSG[2], receive_MSG[3]);
+        LDRB     R0,[R6, #+3]
+        LDRB     R1,[SP, #+4]
+        STR      R0,[SP, #+0]
+        LDRB     R3,[R6, #+2]
+        LDRB     R2,[R6, #+1]
+        MOV      R0,R9
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  516 				temp.MSG_TYPE = receive_MSG[0] >> 4;
+        LDRB     R0,[SP, #+4]
+        LSRS     R0,R0,#+4
+        STRB     R0,[SP, #+8]
+//  517 				temp.PAYLOAD = NULL;
+        MOVS     R0,#+0
+        STR      R0,[SP, #+16]
+//  518 				temp.TIME = 0;
+        STR      R0,[SP, #+24]
+//  519 				temp.TOPIC = NULL;
+        STR      R0,[SP, #+12]
+//  520 				temp.MSG_ID = mqtt_parse_msg_id(receive_MSG);
+        ADD      R0,SP,#+4
+          CFI FunCall mqtt_parse_msg_id
+        BL       mqtt_parse_msg_id
+        STRH     R0,[SP, #+20]
+//  521 				if(temp.MSG_TYPE == MQTT_MSG_TYPE_CONNACK)
+        ADD      R0,SP,#+8
+        LDRB     R1,[SP, #+8]
+        CMP      R1,#+2
+        BNE.N    ??MQTT_MESSAGE_QUEUE_TASK_2
+//  522 			    	MQTT_MSG_FUNC_CONNACK(&temp);
+          CFI FunCall MQTT_MSG_FUNC_CONNACK
+        BL       MQTT_MSG_FUNC_CONNACK
+        B.N      ??MQTT_MESSAGE_QUEUE_TASK_3
+//  523 				else
+//  524 				{
+//  525 			    	//S2w_Printf("\r\n re list 3 lock");
+//  526 			    	//MQTT_LIST_PUT(&(mqtt_ctx.receive_list),&temp);
+//  527 					MQTT_MSG_CALLBACK[temp.MSG_TYPE].callback(&temp);
+??MQTT_MESSAGE_QUEUE_TASK_2:
+        ADD      R1,R5,R1, LSL #+3
+        LDR      R1,[R1, #+4]
+          CFI FunCall
+        BLX      R1
+//  528 					//S2w_Printf("\r\n re list 3 unlock");
+//  529 				}
+//  530 			}
+//  531 			S2w_Printf("\r\n QUEUE_TASK END");
+??MQTT_MESSAGE_QUEUE_TASK_3:
+        MOV      R0,R4
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+        B.N      ??MQTT_MESSAGE_QUEUE_TASK_0
+          CFI EndBlock cfiBlock37
+//  532 
+//  533 	}
+//  534 }
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+MQTT_MSG_CALLBACK:
+        DC8 0, 0, 0, 0
+        DC32 0H
+        DC8 16, 0, 0, 0
+        DC32 0H
+        DC8 32, 0, 0, 0
+        DC32 0H
+        DC8 48, 0, 0, 0
+        DC32 MQTT_MSG_FUNC_PUBLISH
+        DC8 64, 0, 0, 0
+        DC32 MQTT_MSG_FUNC_PUBACK
+        DC8 80, 0, 0, 0
+        DC32 MQTT_MSG_FUNC_PUBREC
+        DC8 96, 0, 0, 0
+        DC32 0H
+        DC8 112, 0, 0, 0
+        DC32 MQTT_MSG_FUNC_PUBCOMP
+        DC8 128, 0, 0, 0
+        DC32 0H
+        DC8 144, 0, 0, 0
+        DC32 0H
+        DC8 160, 0, 0, 0
+        DC32 0H
+        DC8 176, 0, 0, 0
+        DC32 0H
+        DC8 192, 0, 0, 0
+        DC32 0H
+        DC8 208, 0, 0, 0
+        DC32 MQTT_MSG_FUNC_PINGRESP
+        DC8 224, 0, 0, 0
+        DC32 0H
+        DC8 15, 0, 0, 0
+        DC32 0H
+//  535 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock38 Using cfiCommon0
+          CFI Function MQTT_MSG_FUNC_CONNACK
+        THUMB
+//  536 UINT32 MQTT_MSG_FUNC_CONNACK(MSG_TYPE* MSG)
+//  537 {
+MQTT_MSG_FUNC_CONNACK:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-        LDR.W    R5,??DataTable70_1
-        B.N      ??CrossCallReturnLabel_29
-//  469     UINT8 status;
-//  470 	UINT8 receive_MSG[4];
-//  471 	MSG_TYPE* temp;
-//  472 	while(1)
-//  473 	{
-//  474 	    status = tx_queue_receive(&MQTT_RECEIVE_QUEUE, receive_MSG, TX_WAIT_FOREVER);
-//  475 		//temp = (MSG_TYPE*)malloc(sizeof(MSG_TYPE));
-//  476 		temp = (MSG_TYPE*)gsn_malloc(sizeof(MSG_TYPE));
-//  477 		memset(temp,0,sizeof(MSG_TYPE));
-//  478 		temp->MSG_TYPE = receive_MSG[0] >> 4;
-//  479 		temp->MSG_ID = receive_MSG[3];
-//  480 		if(temp->MSG_TYPE == MQTT_MSG_TYPE_CONNACK)
-//  481 		  MQTT_MSG_FUNC_CONNACK(temp);
-//  482 		else
-//  483 		  MQTT_LIST_PUT(mqtt_ctx->receive_list, temp);
-??MQTT_MESSAGE_QUEUE_TASK_0:
-        LDR      R0,[R5, #+4]
-        LDR      R0,[R0, #+88]
-        MOV      R1,R4
-          CFI FunCall MQTT_LIST_PUT
-        BL       MQTT_LIST_PUT
-//  484 
-//  485   		//free(temp);
-//  486 		if(temp != NULL)
-??MQTT_MESSAGE_QUEUE_TASK_1:
-        CBZ.N    R4,??CrossCallReturnLabel_29
-//  487 		{
-//  488   			gsn_free(temp);
-        BL       ?Subroutine9
-//  489 			temp = NULL;
-//  490 		}
-??CrossCallReturnLabel_29:
-        MOV      R2,#-1
-        ADD      R1,SP,#+0
-        ADD      R0,R5,#+12
-          CFI FunCall _tx_queue_receive
-        BL       _tx_queue_receive
-        MOVS     R2,#+0
-        MOV      R1,#+476
-        MOVS     R0,#+20
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
         MOV      R4,R0
-        MOVS     R2,#+20
-        BL       ??Subroutine7_0
-??CrossCallReturnLabel_13:
-        LDRB     R0,[SP, #+0]
-        LSRS     R0,R0,#+4
+//  538   S2w_Printf("\r\n  CONNACK START ");
+        ADR.W    R0,`?<Constant "\\r\\n  CONNACK START ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  539   MQTT_CONNECT_ACK_LOG(MSG->MSG_ID);
+        LDRH     R0,[R4, #+12]
+        UXTB     R0,R0
+          CFI FunCall MQTT_CONNECT_ACK_LOG
+        BL       MQTT_CONNECT_ACK_LOG
+//  540   tx_mutex_get(&conStatus_mutex, TX_WAIT_FOREVER);
+        BL       ?Subroutine7
+//  541   MQTT_CONNECT_STATUS = 1;
+??CrossCallReturnLabel_30:
+        MOVS     R0,#+1
         STRB     R0,[R4, #+0]
-        LDRB     R0,[SP, #+3]
-        STRH     R0,[R4, #+12]
-        LDRB     R0,[R4, #+0]
-        CMP      R0,#+2
-        BNE.N    ??MQTT_MESSAGE_QUEUE_TASK_0
-        MOV      R0,R4
-          CFI FunCall MQTT_MSG_FUNC_CONNACK
-        BL       MQTT_MSG_FUNC_CONNACK
-        B.N      ??MQTT_MESSAGE_QUEUE_TASK_1
-          CFI EndBlock cfiBlock41
-//  491 	}
-//  492 }
+//  542   tx_mutex_put(&conStatus_mutex);
+        B.N      ?Subroutine1
+          CFI EndBlock cfiBlock38
+//  543   //S2w_Printf("\r\n  MQTT_MSG_FUNC_CONNACK END ");
+//  544   return 0;	
+//  545 }
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiCond39 Using cfiCommon0
+          CFI Function MQTT_MSG_FUNC_CONNACK
+          CFI NoCalls
+          CFI NoCalls
+          CFI Conditional ??CrossCallReturnLabel_30
+          CFI R4 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+16
+          CFI Block cfiCond40 Using cfiCommon0
+          CFI (cfiCond40) Function MQTT_STATE_CALLBACK_CONNECT_READY
+          CFI (cfiCond40) NoCalls MQTT_STATE_CALLBACK_CONNECT_READY
+          CFI (cfiCond40) NoCalls MQTT_MSG_FUNC_CONNACK
+          CFI (cfiCond40) Conditional ??CrossCallReturnLabel_29
+          CFI (cfiCond40) R4 Frame(CFA, -12)
+          CFI (cfiCond40) R5 Frame(CFA, -8)
+          CFI (cfiCond40) R14 Frame(CFA, -4)
+          CFI (cfiCond40) CFA R13+16
+          CFI Block cfiPicker41 Using cfiCommon1
+          CFI (cfiPicker41) NoFunction
+          CFI (cfiPicker41) NoCalls MQTT_STATE_CALLBACK_CONNECT_READY
+          CFI (cfiPicker41) NoCalls MQTT_MSG_FUNC_CONNACK
+          CFI (cfiPicker41) Picker
+        THUMB
+?Subroutine7:
+        LDR.W    R4,??DataTable93_2
+        ADD      R5,R4,#+9728
+        ADDS     R5,R5,#+200
+          CFI EndBlock cfiCond39
+          CFI EndBlock cfiCond40
+          CFI EndBlock cfiPicker41
+        REQUIRE ??Subroutine13_0
+        ;; // Fall through to label ??Subroutine13_0
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond42 Using cfiCommon0
-          CFI Function MQTT_PUBLISH_MSG_GEN
-          CFI Conditional ??CrossCallReturnLabel_20
-          CFI R4 Frame(CFA, -32)
-          CFI R5 Frame(CFA, -28)
-          CFI R6 Frame(CFA, -24)
-          CFI R7 Frame(CFA, -20)
-          CFI R8 Frame(CFA, -16)
-          CFI R10 Frame(CFA, -12)
-          CFI R11 Frame(CFA, -8)
+          CFI Function MQTT_MSG_FUNC_PINGRESP
+          CFI Conditional ??CrossCallReturnLabel_28
+          CFI R4 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
-          CFI CFA R13+152
+          CFI CFA R13+16
           CFI Block cfiCond43 Using cfiCommon0
-          CFI (cfiCond43) Function MQTT_PUBLISH_MSG_GEN
-          CFI (cfiCond43) Conditional ??CrossCallReturnLabel_19
-          CFI (cfiCond43) R4 Frame(CFA, -32)
-          CFI (cfiCond43) R5 Frame(CFA, -28)
-          CFI (cfiCond43) R6 Frame(CFA, -24)
-          CFI (cfiCond43) R7 Frame(CFA, -20)
-          CFI (cfiCond43) R8 Frame(CFA, -16)
-          CFI (cfiCond43) R10 Frame(CFA, -12)
-          CFI (cfiCond43) R11 Frame(CFA, -8)
+          CFI (cfiCond43) Function MQTT_PING_MSG
+          CFI (cfiCond43) Conditional ??CrossCallReturnLabel_27
+          CFI (cfiCond43) R4 Frame(CFA, -12)
+          CFI (cfiCond43) R5 Frame(CFA, -8)
           CFI (cfiCond43) R14 Frame(CFA, -4)
-          CFI (cfiCond43) CFA R13+152
-          CFI Block cfiPicker44 Using cfiCommon1
-          CFI (cfiPicker44) NoFunction
-          CFI (cfiPicker44) Picker
-        THUMB
-?Subroutine7:
-        LDR      R0,[R4, #+4]
+          CFI (cfiCond43) CFA R13+16
+          CFI Block cfiCond44 Using cfiCommon0
+          CFI (cfiCond44) Function MQTT_MSG_FUNC_CONNACK
+          CFI (cfiCond44) Conditional ??CrossCallReturnLabel_30
+          CFI (cfiCond44) R4 Frame(CFA, -12)
+          CFI (cfiCond44) R5 Frame(CFA, -8)
+          CFI (cfiCond44) R14 Frame(CFA, -4)
+          CFI (cfiCond44) CFA R13+16
           CFI Block cfiCond45 Using cfiCommon0
-          CFI (cfiCond45) Function MQTT_LIST_INIT
-          CFI (cfiCond45) Conditional ??CrossCallReturnLabel_18
+          CFI (cfiCond45) Function MQTT_STATE_CALLBACK_CONNECT_READY
+          CFI (cfiCond45) Conditional ??CrossCallReturnLabel_29
           CFI (cfiCond45) R4 Frame(CFA, -12)
           CFI (cfiCond45) R5 Frame(CFA, -8)
           CFI (cfiCond45) R14 Frame(CFA, -4)
           CFI (cfiCond45) CFA R13+16
-          CFI Block cfiCond46 Using cfiCommon0
-          CFI (cfiCond46) Function MQTT_START
-          CFI (cfiCond46) Conditional ??CrossCallReturnLabel_17
-          CFI (cfiCond46) R4 Frame(CFA, -12)
-          CFI (cfiCond46) R5 Frame(CFA, -8)
-          CFI (cfiCond46) R14 Frame(CFA, -4)
-          CFI (cfiCond46) CFA R13+40
-          CFI Block cfiCond47 Using cfiCommon0
-          CFI (cfiCond47) Function MQTT_START
-          CFI (cfiCond47) Conditional ??CrossCallReturnLabel_16
-          CFI (cfiCond47) R4 Frame(CFA, -12)
-          CFI (cfiCond47) R5 Frame(CFA, -8)
-          CFI (cfiCond47) R14 Frame(CFA, -4)
-          CFI (cfiCond47) CFA R13+40
-          CFI Block cfiCond48 Using cfiCommon0
-          CFI (cfiCond48) Function MQTT_START
-          CFI (cfiCond48) Conditional ??CrossCallReturnLabel_15
-          CFI (cfiCond48) R4 Frame(CFA, -12)
-          CFI (cfiCond48) R5 Frame(CFA, -8)
-          CFI (cfiCond48) R14 Frame(CFA, -4)
-          CFI (cfiCond48) CFA R13+40
-          CFI Block cfiCond49 Using cfiCommon0
-          CFI (cfiCond49) Function MQTT_START
-          CFI (cfiCond49) Conditional ??CrossCallReturnLabel_14
-          CFI (cfiCond49) R4 Frame(CFA, -12)
-          CFI (cfiCond49) R5 Frame(CFA, -8)
-          CFI (cfiCond49) R14 Frame(CFA, -4)
-          CFI (cfiCond49) CFA R13+40
-          CFI Block cfiCond50 Using cfiCommon0
-          CFI (cfiCond50) Function MQTT_MESSAGE_QUEUE_TASK
-          CFI (cfiCond50) Conditional ??CrossCallReturnLabel_13
-          CFI (cfiCond50) R4 Frame(CFA, -12)
-          CFI (cfiCond50) R5 Frame(CFA, -8)
-          CFI (cfiCond50) R14 Frame(CFA, -4)
-          CFI (cfiCond50) CFA R13+16
-          CFI Block cfiCond51 Using cfiCommon0
-          CFI (cfiCond51) Function MQTT_PUBLISH_MSG_GEN
-          CFI (cfiCond51) Conditional ??CrossCallReturnLabel_12
-          CFI (cfiCond51) R4 Frame(CFA, -32)
-          CFI (cfiCond51) R5 Frame(CFA, -28)
-          CFI (cfiCond51) R6 Frame(CFA, -24)
-          CFI (cfiCond51) R7 Frame(CFA, -20)
-          CFI (cfiCond51) R8 Frame(CFA, -16)
-          CFI (cfiCond51) R10 Frame(CFA, -12)
-          CFI (cfiCond51) R11 Frame(CFA, -8)
-          CFI (cfiCond51) R14 Frame(CFA, -4)
-          CFI (cfiCond51) CFA R13+152
-          CFI Block cfiCond52 Using cfiCommon0
-          CFI (cfiCond52) Function MQTT_PUBLISH_MSG_GEN
-          CFI (cfiCond52) Conditional ??CrossCallReturnLabel_11
-          CFI (cfiCond52) R4 Frame(CFA, -32)
-          CFI (cfiCond52) R5 Frame(CFA, -28)
-          CFI (cfiCond52) R6 Frame(CFA, -24)
-          CFI (cfiCond52) R7 Frame(CFA, -20)
-          CFI (cfiCond52) R8 Frame(CFA, -16)
-          CFI (cfiCond52) R10 Frame(CFA, -12)
-          CFI (cfiCond52) R11 Frame(CFA, -8)
-          CFI (cfiCond52) R14 Frame(CFA, -4)
-          CFI (cfiCond52) CFA R13+152
-??Subroutine7_0:
-        MOVS     R1,#+0
-          CFI FunCall MQTT_PUBLISH_MSG_GEN memset
-          CFI FunCall MQTT_PUBLISH_MSG_GEN memset
-          CFI FunCall MQTT_LIST_INIT memset
-          CFI FunCall MQTT_START memset
-          CFI FunCall MQTT_START memset
-          CFI FunCall MQTT_START memset
-          CFI FunCall MQTT_START memset
-          CFI FunCall MQTT_MESSAGE_QUEUE_TASK memset
-          CFI FunCall MQTT_PUBLISH_MSG_GEN memset
-          CFI FunCall MQTT_PUBLISH_MSG_GEN memset
-        B.W      memset
+          CFI Block cfiPicker46 Using cfiCommon1
+          CFI (cfiPicker46) NoFunction
+          CFI (cfiPicker46) Picker
+        THUMB
+??Subroutine13_0:
+        MOV      R1,#-1
+        MOV      R0,R5
+          CFI FunCall MQTT_MSG_FUNC_PINGRESP _tx_mutex_get
+          CFI FunCall MQTT_PING_MSG _tx_mutex_get
+          CFI FunCall MQTT_MSG_FUNC_CONNACK _tx_mutex_get
+          CFI FunCall MQTT_STATE_CALLBACK_CONNECT_READY _tx_mutex_get
+        B.W      _tx_mutex_get
           CFI EndBlock cfiCond42
           CFI EndBlock cfiCond43
-          CFI EndBlock cfiPicker44
+          CFI EndBlock cfiCond44
           CFI EndBlock cfiCond45
-          CFI EndBlock cfiCond46
-          CFI EndBlock cfiCond47
-          CFI EndBlock cfiCond48
-          CFI EndBlock cfiCond49
-          CFI EndBlock cfiCond50
-          CFI EndBlock cfiCond51
-          CFI EndBlock cfiCond52
-//  493 
+          CFI EndBlock cfiPicker46
+//  546 
+//  547 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock53 Using cfiCommon0
-          CFI Function MQTT_MSG_FUNC_CONNACK
-        THUMB
-//  494 UINT32 MQTT_MSG_FUNC_CONNACK(MSG_TYPE* MSG)
-//  495 {
-MQTT_MSG_FUNC_CONNACK:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-//  496   UINT16 Connect_Return_Code = MSG->MSG_ID;
-        LDRH     R0,[R0, #+12]
-//  497 
-//  498   if(Connect_Return_Code == 0)
-        CBNZ.N   R0,??MQTT_MSG_FUNC_CONNACK_0
-//  499 	S2w_Printf("\r\n MQTT Connection Accepted");
-        ADR.W    R0,`?<Constant "\\r\\n MQTT Connection Ac...">`
-        B.N      ??MQTT_MSG_FUNC_CONNACK_1
-//  500   else if(Connect_Return_Code == 1)
-??MQTT_MSG_FUNC_CONNACK_0:
-        CMP      R0,#+1
-        IT       EQ 
-        ADREQ.W  R0,`?<Constant "\\r\\n MQTT Connection Re...">`
-//  501 	S2w_Printf("\r\n MQTT Connection Refused, reason = unacceptable protocol version");
-        BEQ.N    ??MQTT_MSG_FUNC_CONNACK_1
-//  502   else if(Connect_Return_Code == 2)
-        CMP      R0,#+2
-        IT       EQ 
-        ADREQ.W  R0,`?<Constant "\\r\\n MQTT Connection Re...">_1`
-//  503 	S2w_Printf("\r\n MQTT Connection Refused, reason = identifier rejected");
-        BEQ.N    ??MQTT_MSG_FUNC_CONNACK_1
-//  504   else if(Connect_Return_Code == 3)
-        CMP      R0,#+3
-        IT       EQ 
-        ADREQ.W  R0,`?<Constant "\\r\\n MQTT Connection Re...">_2`
-//  505 	S2w_Printf("\r\n MQTT Connection Refused, reason = server unavailable");
-        BEQ.N    ??MQTT_MSG_FUNC_CONNACK_1
-//  506   else if(Connect_Return_Code == 4)
-        CMP      R0,#+4
-        IT       EQ 
-        ADREQ.W  R0,`?<Constant "\\r\\n MQTT Connection Re...">_3`
-//  507 	S2w_Printf("\r\n MQTT Connection Refused, reason = bad user name or password");
-        BEQ.N    ??MQTT_MSG_FUNC_CONNACK_1
-//  508   else if(Connect_Return_Code == 5)
-        CMP      R0,#+5
-        BNE.N    ??MQTT_MSG_FUNC_CONNACK_2
-//  509     S2w_Printf("\r\n MQTT Connection Refused, reason = not authorized");
-        ADR.W    R0,`?<Constant "\\r\\n MQTT Connection Re...">_4`
-??MQTT_MSG_FUNC_CONNACK_1:
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-//  510   
-//  511   MQTT_CONNECT_STATUS = 1;
-??MQTT_MSG_FUNC_CONNACK_2:
-        LDR.W    R0,??DataTable70_1
-        MOVS     R1,#+1
-        STRB     R1,[R0, #+0]
-//  512   return 0;	
-        MOVS     R0,#+0
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock53
-//  513 }
-//  514 
-//  515 
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock54 Using cfiCommon0
+          CFI Block cfiBlock47 Using cfiCommon0
           CFI Function MQTT_MSG_FUNC_PUBLISH
         THUMB
-//  516 UINT32 MQTT_MSG_FUNC_PUBLISH(MSG_TYPE* MSG)
-//  517 {
+//  548 UINT32 MQTT_MSG_FUNC_PUBLISH(MSG_TYPE* MSG)
+//  549 {
 MQTT_MSG_FUNC_PUBLISH:
         PUSH     {R4-R6,R8,LR}
           CFI R14 Frame(CFA, -4)
@@ -1871,79 +2011,140 @@ MQTT_MSG_FUNC_PUBLISH:
         MOV      R4,R0
         SUB      SP,SP,#+12
           CFI CFA R13+32
-//  518   MSG_TYPE* temp = (MSG_TYPE*)MSG;
-//  519   UINT8 status;
-//  520 		 
-//  521   if(temp->QoS == 1)
-        LDRB     R0,[R4, #+14]
-        LDR.W    R5,??DataTable70_1
+//  550   UINT8 status;
+//  551   S2w_Printf("\r\n  PUBLISH START "); 
+        ADR.W    R0,`?<Constant "\\r\\n  PUBLISH START ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  552   if(mqtt_ctx.QoS == 1 || mqtt_ctx.QoS == 2)
+        LDR.W    R5,??DataTable93_3
+        LDRB     R0,[R5, #+84]
         CMP      R0,#+1
+        IT       NE 
+        CMPNE    R0,#+2
         BNE.N    ??MQTT_MSG_FUNC_PUBLISH_0
-//  522   	status = mqtt_publish_with_qos(&(mqtt_ctx->MQTT_CLIENT), (char const*)temp->TOPIC, (char const*)temp->PAYLOAD, 0, temp->QoS, &(temp->MSG_ID));
+//  553   	status = mqtt_publish_with_qos(&(mqtt_ctx.MQTT_CLIENT), (char const*)MSG->TOPIC, (char const*)MSG->PAYLOAD, 0, mqtt_ctx.QoS, &(MSG->MSG_ID));
         ADD      R1,R4,#+12
         STR      R1,[SP, #+4]
         STR      R0,[SP, #+0]
         LDR      R2,[R4, #+8]
         LDR      R1,[R4, #+4]
-        LDR      R0,[R5, #+4]
         MOVS     R3,#+0
+        MOV      R0,R5
           CFI FunCall mqtt_publish_with_qos
         BL       mqtt_publish_with_qos
         MOV      R6,R0
-//  523 
-//  524   if(status == 0)
+//  554 
+//  555   if(status == 0)
 ??MQTT_MSG_FUNC_PUBLISH_0:
         UXTB     R6,R6
         CBNZ.N   R6,??MQTT_MSG_FUNC_PUBLISH_1
-//  525   {
-//  526 	temp->TIME = SYSTIME_TO_MSEC(GsnTod_Get());
+//  556   {
+//  557 	MSG->TIME = SYSTIME_TO_MSEC(GsnTod_Get());
           CFI FunCall GsnTod_Get
         BL       GsnTod_Get
         MOV      R8,#+1000
         UMULL    R2,R3,R8,R0
         MLA      R3,R8,R1,R3
-        LSRS     R2,R2,#+15
-        ORR      R2,R2,R3, LSL #+17
+        BL       ??Subroutine14_0
+??CrossCallReturnLabel_31:
         STR      R2,[R4, #+16]
-//  527 	MQTT_LIST_PUT(mqtt_ctx->send_list,temp);
+//  558 	S2w_Printf("\r\n PUBLISH : ID %d SEND Suc",MSG->MSG_ID);
+        LDRH     R1,[R4, #+12]
+        ADR.W    R0,`?<Constant "\\r\\n PUBLISH : ID %d SE...">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  559 	S2w_Printf("\r\n se list 3 lock");
+        ADR.W    R0,`?<Constant "\\r\\n se list 3 lock">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  560 	MQTT_LIST_PUT(&(mqtt_ctx.send_list),MSG);
         MOV      R1,R4
-        LDR      R0,[R5, #+4]
-        LDR      R0,[R0, #+84]
+        ADD      R0,R5,#+88
           CFI FunCall MQTT_LIST_PUT
         BL       MQTT_LIST_PUT
-//  528 	S2w_Printf("\r\n PUBLISH Success : %d", temp->MSG_ID);
-        LDRH     R1,[R4, #+12]
-        ADR.W    R0,`?<Constant "\\r\\n PUBLISH Success : %d">`
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
+//  561 	S2w_Printf("\r\n se list 3 unlock");
+        ADR.W    R0,`?<Constant "\\r\\n se list 3 unlock">`
         B.N      ??MQTT_MSG_FUNC_PUBLISH_2
-//  529   }
-//  530   else
-//  531   {
-//  532 	mqtt_Xstate = MQTT_STATE_DISCONNECT;
+//  562   }
+//  563   else
+//  564   {
+//  565 	mqtt_Xstate = MQTT_STATE_DISCONNECT;
 ??MQTT_MSG_FUNC_PUBLISH_1:
-        MOVS     R0,#+4
-        STRB     R0,[R5, #+1]
-//  533 	S2w_Printf("\r\n PUBLISH Fail");
-        ADR.W    R0,`?<Constant "\\r\\n PUBLISH Fail">`
+        LDR.W    R0,??DataTable93_2
+        MOVS     R1,#+4
+        STRB     R1,[R0, #+1]
+//  566 	S2w_Printf("\r\n PUBLISH : SEND Fail");
+        ADR.W    R0,`?<Constant "\\r\\n PUBLISH : SEND Fail">`
+??MQTT_MSG_FUNC_PUBLISH_2:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  534   }
-//  535 
-//  536   return status;
-??MQTT_MSG_FUNC_PUBLISH_2:
+//  567   }
+//  568   S2w_Printf("\r\n  PUBLISH END ");
+        ADR.W    R0,`?<Constant "\\r\\n  PUBLISH END ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  569   return status;
         MOV      R0,R6
         POP      {R1-R6,R8,PC}    ;; return
-          CFI EndBlock cfiBlock54
-//  537 }
-//  538 
+          CFI EndBlock cfiBlock47
+//  570 }
+//  571 
+//  572 
+
+        SECTION `.text`:CODE:NOROOT(2)
+          CFI Block cfiBlock48 Using cfiCommon0
+          CFI Function MQTT_PUBLISH_RETRY
+        THUMB
+//  573 VOID MQTT_PUBLISH_RETRY(VOID* TIMER_INPUT)
+//  574 {
+MQTT_PUBLISH_RETRY:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+//  575   MSG_TYPE* temp;
+//  576   
+//  577   S2w_Printf("\r\n PUBLISH_RETRY START "); 
+        ADR.W    R0,`?<Constant "\\r\\n PUBLISH_RETRY START ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  578   
+//  579   /*MQTT_LIST_GET(&(mqtt_ctx.send_list), &temp);
+//  580   if(temp != NULL)
+//  581   {
+//  582 	if(temp->sending_count < 3)
+//  583 	{
+//  584 	  	temp->TIME = SYSTIME_TO_MSEC(GsnTod_Get());
+//  585 		temp->sending_count++;
+//  586 		mqtt_publish_retry_dup(&(mqtt_ctx.MQTT_CLIENT), (char const*)temp->TOPIC, (char const*)temp->PAYLOAD, 1, mqtt_ctx.QoS, (temp->MSG_ID));
+//  587 		MQTT_LIST_PUT(&(mqtt_ctx.send_list),temp);
+//  588 	}
+//  589 	else if((temp->sending_count > 3) || ((SYSTIME_TO_MSEC(GsnTod_Get())-(temp->TIME)) > 12000) )
+//  590 	{
+//  591 	  gsn_free(temp->TOPIC);
+//  592 	  gsn_free(temp->PAYLOAD);
+//  593 	  gsn_free(temp);
+//  594 	}
+//  595   }*/
+//  596   S2w_Printf("\r\n PUBLISH_RETRY END ");
+        ADR.W    R0,`?<Constant "\\r\\n PUBLISH_RETRY END ">`
+        POP      {R1,LR}
+          CFI R14 SameValue
+          CFI CFA R13+0
+          CFI FunCall S2w_Printf
+        B.W      S2w_Printf
+          CFI EndBlock cfiBlock48
+//  597 }
+//  598 
+//  599 
+//  600 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock55 Using cfiCommon0
+          CFI Block cfiBlock49 Using cfiCommon0
           CFI Function MQTT_MSG_FUNC_PUBACK
         THUMB
-//  539 UINT32 MQTT_MSG_FUNC_PUBACK(MSG_TYPE* MSG)
-//  540 {
+//  601 UINT32 MQTT_MSG_FUNC_PUBACK(MSG_TYPE* MSG)
+//  602 {
 MQTT_MSG_FUNC_PUBACK:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
@@ -1951,923 +2152,1401 @@ MQTT_MSG_FUNC_PUBACK:
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
         MOV      R4,R0
-//  541   UINT8 status;
-//  542 
-//  543   status = MQTT_LIST_SEARCH(mqtt_ctx->send_list, MSG->MSG_ID);
-        LDR.W    R0,??DataTable70_1
-        LDRH     R1,[R4, #+12]
-        LDR      R0,[R0, #+4]
-        LDR      R0,[R0, #+84]
-          CFI FunCall MQTT_LIST_SEARCH
-        BL       MQTT_LIST_SEARCH
-//  544   if(status == 0)
-        LDRH     R1,[R4, #+12]
-        MOVS     R5,R0
-        ITE      EQ 
-        ADREQ.W  R0,`?<Constant "\\r\\n PUBLISH_ACK : %d M...">`
-        ADRNE.W  R0,`?<Constant "\\r\\n PUBLISH_ACK : %d M...">_1`
-//  545 	S2w_Printf("\r\n PUBLISH_ACK : %d MSG ID delete",MSG->MSG_ID);
-//  546   else
-//  547 	S2w_Printf("\r\n PUBLISH_ACK : %d MSG ID is not found",MSG->MSG_ID);
+//  603   UINT8 status;
+//  604   S2w_Printf("\r\n PUBACK START ");
+        ADR.W    R0,`?<Constant "\\r\\n PUBACK START ">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  548 
-//  549   return status;
+//  605   S2w_Printf("\r\n se list 4 lock");
+        ADR.W    R0,`?<Constant "\\r\\n se list 4 lock">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  606   status = MQTT_LIST_DELECT(&(mqtt_ctx.send_list), MSG->MSG_ID);
+        BL       ?Subroutine11
+??CrossCallReturnLabel_26:
+        BL       ?Subroutine6
+//  607   S2w_Printf("\r\n se list 4 unlock");
+//  608   if(status == 0)
+??CrossCallReturnLabel_18:
+        LDRH     R1,[R4, #+12]
+        CMP      R5,#+0
+        ITE      EQ 
+        ADREQ.W  R0,`?<Constant "\\r\\n PUBACK : %d del">`
+        ADRNE.W  R0,`?<Constant "\\r\\n PUBACK : %d is not...">`
+//  609 	S2w_Printf("\r\n PUBACK : %d del",MSG->MSG_ID);
+//  610   else
+//  611 	S2w_Printf("\r\n PUBACK : %d is not found",MSG->MSG_ID);
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  612   S2w_Printf("\r\n PUBACK END ");
+        ADR.W    R0,`?<Constant "\\r\\n PUBACK END ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  613   return status;
         MOV      R0,R5
         POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock55
-//  550   
-//  551 }
-//  552 
+          CFI EndBlock cfiBlock49
+//  614   
+//  615 }
+//  616 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock56 Using cfiCommon0
-          CFI Function MQTT_MSG_FUNC_PINGRESP
-          CFI NoCalls
+          CFI Block cfiBlock50 Using cfiCommon0
+          CFI Function MQTT_MSG_FUNC_PUBREC
         THUMB
-//  553 UINT32 MQTT_MSG_FUNC_PINGRESP(MSG_TYPE* MSG)
-//  554 {
-//  555   return 0;
-MQTT_MSG_FUNC_PINGRESP:
-        MOVS     R0,#+0
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock56
-//  556 }
-//  557 
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock57 Using cfiCommon0
-          CFI Function MQTT_STATE_CALLBACK_UNINITIAL
-        THUMB
-//  558 static UINT32  MQTT_STATE_CALLBACK_UNINITIAL(void* client )
-//  559 {
-MQTT_STATE_CALLBACK_UNINITIAL:
-        PUSH     {R7,LR}
+//  617 UINT32 MQTT_MSG_FUNC_PUBREC(MSG_TYPE* MSG)
+//  618 {
+MQTT_MSG_FUNC_PUBREC:
+        PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-//  560   mqtt_Xstate = MQTT_STATE_INITIAL;
-        LDR.W    R0,??DataTable70_1
-        MOVS     R1,#+1
-        STRB     R1,[R0, #+1]
-//  561   temp_sensor_search(&nSensors,temperature_sensor);
-        ADDS     R0,R0,#+8
-        LDR.W    R1,??DataTable70_2
-          CFI FunCall temp_sensor_search
-        BL       temp_sensor_search
-//  562   S2w_Printf("\r\n MQTT_STATE_CB_uninitialized");
-        ADR.W    R0,`?<Constant "\\r\\n MQTT_STATE_CB_unin...">`
-        B.N      ?Subroutine2
-          CFI EndBlock cfiBlock57
-//  563   return 0;
-//  564 }
-//  565 
+          CFI R6 Frame(CFA, -8)
+          CFI R5 Frame(CFA, -12)
+          CFI R4 Frame(CFA, -16)
+          CFI CFA R13+16
+        MOV      R4,R0
+//  619   //MSG_TYPE temp;
+//  620   UINT8 status;
+//  621   S2w_Printf("\r\n PUBREC START ");
+        ADR.W    R0,`?<Constant "\\r\\n PUBREC START ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  622   status = MQTT_LIST_SEARCH(&(mqtt_ctx.send_list), MSG->MSG_ID);
+        LDR.W    R5,??DataTable93_3
+        LDRH     R1,[R4, #+12]
+        ADD      R0,R5,#+88
+          CFI FunCall MQTT_LIST_SEARCH
+        BL       MQTT_LIST_SEARCH
+//  623   if(status != 0)
+        LDRH     R1,[R4, #+12]
+        MOVS     R6,R0
+        BEQ.N    ??MQTT_MSG_FUNC_PUBREC_0
+//  624   {
+//  625 	S2w_Printf("\r\n PUBREC : %d is not exist",MSG->MSG_ID); 
+        ADR.W    R0,`?<Constant "\\r\\n PUBREC : %d is not...">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  626 	return status;
+        MOV      R0,R6
+        POP      {R4-R6,PC}
+//  627   }
+//  628   mqtt_pubrel(&(mqtt_ctx.MQTT_CLIENT), MSG->MSG_ID);
+??MQTT_MSG_FUNC_PUBREC_0:
+        MOV      R0,R5
+          CFI FunCall mqtt_pubrel
+        BL       mqtt_pubrel
+//  629   S2w_Printf("\r\n PUBREC : %d PUBREL SUCCESS",MSG->MSG_ID); 
+        LDRH     R1,[R4, #+12]
+        ADR.W    R0,`?<Constant "\\r\\n PUBREC : %d PUBREL...">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  630   return status;  
+        MOVS     R0,#+0
+        POP      {R4-R6,PC}       ;; return
+          CFI EndBlock cfiBlock50
+//  631 }
+//  632 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock51 Using cfiCommon0
+          CFI Function MQTT_MSG_FUNC_PUBCOMP
+        THUMB
+//  633 UINT32 MQTT_MSG_FUNC_PUBCOMP(MSG_TYPE* MSG)
+//  634 {
+MQTT_MSG_FUNC_PUBCOMP:
+        PUSH     {R3-R5,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+        MOV      R4,R0
+//  635   UINT8 status;
+//  636   S2w_Printf("\r\n PUBCOMP START ");
+        ADR.W    R0,`?<Constant "\\r\\n PUBCOMP START ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  637   S2w_Printf("\r\n se list 4 lock");
+        ADR.W    R0,`?<Constant "\\r\\n se list 4 lock">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  638   status = MQTT_LIST_DELECT(&(mqtt_ctx.send_list), MSG->MSG_ID);
+        BL       ?Subroutine11
+??CrossCallReturnLabel_25:
+        BL       ?Subroutine6
+//  639   S2w_Printf("\r\n se list 4 unlock");
+//  640   if(status == 0)
+??CrossCallReturnLabel_17:
+        LDRH     R1,[R4, #+12]
+        CMP      R5,#+0
+        ITE      EQ 
+        ADREQ.W  R0,`?<Constant "\\r\\n PUBCOMP : %d del">`
+        ADRNE.W  R0,`?<Constant "\\r\\n PUBCOMP : %d is no...">`
+//  641 	S2w_Printf("\r\n PUBCOMP : %d del",MSG->MSG_ID);
+//  642   else
+//  643 	S2w_Printf("\r\n PUBCOMP : %d is not exist",MSG->MSG_ID);
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  644   return status;
+        MOV      R0,R5
+        POP      {R1,R4,R5,PC}    ;; return
+          CFI EndBlock cfiBlock51
+//  645 }
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiCond52 Using cfiCommon0
+          CFI Function MQTT_MSG_FUNC_PUBACK
+          CFI Conditional ??CrossCallReturnLabel_26
+          CFI R4 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+16
+          CFI Block cfiCond53 Using cfiCommon0
+          CFI (cfiCond53) Function MQTT_MSG_FUNC_PUBCOMP
+          CFI (cfiCond53) Conditional ??CrossCallReturnLabel_25
+          CFI (cfiCond53) R4 Frame(CFA, -12)
+          CFI (cfiCond53) R5 Frame(CFA, -8)
+          CFI (cfiCond53) R14 Frame(CFA, -4)
+          CFI (cfiCond53) CFA R13+16
+          CFI Block cfiPicker54 Using cfiCommon1
+          CFI (cfiPicker54) NoFunction
+          CFI (cfiPicker54) Picker
+        THUMB
+?Subroutine11:
+        LDRH     R1,[R4, #+12]
+        LDR.W    R0,??DataTable93_5
+          CFI FunCall MQTT_MSG_FUNC_PUBACK MQTT_LIST_DELECT
+          CFI FunCall MQTT_MSG_FUNC_PUBCOMP MQTT_LIST_DELECT
+        B.N      MQTT_LIST_DELECT
+          CFI EndBlock cfiCond52
+          CFI EndBlock cfiCond53
+          CFI EndBlock cfiPicker54
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiCond55 Using cfiCommon0
+          CFI Function MQTT_MSG_FUNC_PUBACK
+          CFI Conditional ??CrossCallReturnLabel_18
+          CFI R4 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+16
+          CFI Block cfiCond56 Using cfiCommon0
+          CFI (cfiCond56) Function MQTT_MSG_FUNC_PUBCOMP
+          CFI (cfiCond56) Conditional ??CrossCallReturnLabel_17
+          CFI (cfiCond56) R4 Frame(CFA, -12)
+          CFI (cfiCond56) R5 Frame(CFA, -8)
+          CFI (cfiCond56) R14 Frame(CFA, -4)
+          CFI (cfiCond56) CFA R13+16
+          CFI Block cfiPicker57 Using cfiCommon1
+          CFI (cfiPicker57) NoFunction
+          CFI (cfiPicker57) Picker
+        THUMB
+?Subroutine6:
+        MOV      R5,R0
+        ADR.W    R0,`?<Constant "\\r\\n se list 4 unlock">`
+          CFI FunCall MQTT_MSG_FUNC_PUBACK S2w_Printf
+          CFI FunCall MQTT_MSG_FUNC_PUBCOMP S2w_Printf
+        B.W      S2w_Printf
+          CFI EndBlock cfiCond55
+          CFI EndBlock cfiCond56
+          CFI EndBlock cfiPicker57
+//  646 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock58 Using cfiCommon0
+          CFI Function MQTT_MSG_FUNC_PINGRESP
+        THUMB
+//  647 UINT32 MQTT_MSG_FUNC_PINGRESP(MSG_TYPE* MSG)
+//  648 {
+MQTT_MSG_FUNC_PINGRESP:
+        PUSH     {R3-R5,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+//  649   S2w_Printf("\r\n PINGRESP START ");
+        ADR.W    R0,`?<Constant "\\r\\n PINGRESP START ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  650   //tx_timer_deactivate(&my_timer);
+//  651   AppS2wHal_TimerStop(&my_timer);
+        BL       ?Subroutine8
+//  652   tx_mutex_get(&ping_mutex, TX_WAIT_FOREVER);
+??CrossCallReturnLabel_20:
+        ADD      R5,R4,#+9728
+        ADDS     R5,R5,#+148
+        BL       ??Subroutine13_0
+//  653   ping_count = 0;
+??CrossCallReturnLabel_28:
+        MOVS     R0,#+0
+        STRB     R0,[R4, #+2]
+          CFI EndBlock cfiBlock58
+//  654   tx_mutex_put(&ping_mutex);
+        REQUIRE ?Subroutine1
+        ;; // Fall through to label ?Subroutine1
+//  655   return 0;
+//  656 }
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock59 Using cfiCommon0
+          CFI NoFunction
+          CFI CFA R13+16
+          CFI R4 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+        THUMB
+?Subroutine1:
+        MOV      R0,R5
+          CFI FunCall MQTT_MSG_FUNC_CONNACK _tx_mutex_put
+          CFI FunCall MQTT_MSG_FUNC_PINGRESP _tx_mutex_put
+        BL       _tx_mutex_put
+        MOVS     R0,#+0
+        POP      {R1,R4,R5,PC}    ;; return
+          CFI EndBlock cfiBlock59
+//  657 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock60 Using cfiCommon0
+          CFI Function MQTT_STATE_CALLBACK_UNINITIAL
+        THUMB
+//  658 static UINT32  MQTT_STATE_CALLBACK_UNINITIAL(void* client )
+//  659 {
+MQTT_STATE_CALLBACK_UNINITIAL:
+        PUSH     {R3-R5,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+//  660   S2w_Printf("\r\n  MQTT_STATE_CALLBACK_UNINITIAL START ");
+        ADR.W    R0,`?<Constant "\\r\\n  MQTT_STATE_CALLBA...">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  661   mqtt_Xstate = MQTT_STATE_INITIAL;
+        LDR.W    R0,??DataTable93_2
+//  662 
+//  663   
+//  664   mqtt_ctx.MQTT_CLIENT.clientid = (char*)gsn_malloc(strlen(ClientID)+1);
+        LDR.W    R4,??DataTable93_3
+        MOVS     R1,#+1
+        STRB     R1,[R0, #+1]
+        MOVS     R2,#+0
+        MOV      R1,#+664
+        MOVS     R0,#+13
+          CFI FunCall GsnDynMemMgmt_Alloc
+        BL       GsnDynMemMgmt_Alloc
+        STR      R0,[R4, #+64]
+//  665   mqtt_ctx.MQTT_CLIENT.username = (char*)gsn_malloc(strlen(ClientID)+1);
+        ADD      R5,R4,#+64
+        MOVS     R2,#+0
+        MOVW     R1,#+665
+        MOVS     R0,#+13
+          CFI FunCall GsnDynMemMgmt_Alloc
+        BL       GsnDynMemMgmt_Alloc
+        STR      R0,[R5, #+4]
+//  666   mqtt_ctx.MQTT_CLIENT.password = (char*)gsn_malloc(strlen(PASSWORD)+1);
+        MOVS     R2,#+0
+        MOVW     R1,#+666
+        MOVS     R0,#+29
+          CFI FunCall GsnDynMemMgmt_Alloc
+        BL       GsnDynMemMgmt_Alloc
+        STR      R0,[R5, #+8]
+//  667   
+//  668   
+//  669   memset(mqtt_ctx.MQTT_CLIENT.clientid,0,strlen(ClientID)+1);
+        MOVS     R2,#+13
+        LDR      R0,[R4, #+64]
+        BL       ??Subroutine4_0
+//  670   memset(mqtt_ctx.MQTT_CLIENT.username,0,strlen(ClientID)+1);
+??CrossCallReturnLabel_10:
+        LDR      R0,[R5, #+4]
+        MOVS     R2,#+13
+        BL       ??Subroutine4_0
+//  671   memset(mqtt_ctx.MQTT_CLIENT.password,0,strlen(PASSWORD)+1);
+??CrossCallReturnLabel_9:
+        LDR      R0,[R5, #+8]
+        MOVS     R2,#+29
+        BL       ??Subroutine4_0
+//  672   mqtt_ctx.QoS = MQTT_QoS;
+??CrossCallReturnLabel_8:
+        MOVS     R0,#+1
+        STRB     R0,[R5, #+20]
+//  673   mqtt_init(&(mqtt_ctx.MQTT_CLIENT), ClientID);
+        MOV      R0,R4
+        ADR.W    R5,`?<Constant "001dc914feae">`
+        MOV      R1,R5
+          CFI FunCall mqtt_init
+        BL       mqtt_init
+//  674   mqtt_init_auth(&(mqtt_ctx.MQTT_CLIENT), ClientID, PASSWORD);
+        ADR.W    R2,`?<Constant "Sm4ytjGsPEfGvDhSDJ_ZP...">`
+        MOV      R1,R5
+        MOV      R0,R4
+          CFI FunCall mqtt_init_auth
+        BL       mqtt_init_auth
+//  675 #ifdef GS2011ME_01
+//  676   temp_sensor_search(&nSensors,temperature_sensor);
+//  677 #endif
+//  678   
+//  679   //S2w_Printf("\r\n MQTT_STATE_CB_uninitialized");
+//  680   //S2w_Printf("\r\n  MQTT_STATE_CALLBACK_UNINITIAL END ");
+//  681   return 0;
+        MOVS     R0,#+0
+        POP      {R1,R4,R5,PC}    ;; return
+          CFI EndBlock cfiBlock60
+//  682 }
+//  683 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock61 Using cfiCommon0
           CFI Function MQTT_STATE_CALLBACK_INITIAL
         THUMB
-//  566 static UINT32  MQTT_STATE_CALLBACK_INITIAL(void* client)
-//  567 {
+//  684 static UINT32  MQTT_STATE_CALLBACK_INITIAL(void* client)
+//  685 {
 MQTT_STATE_CALLBACK_INITIAL:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-//  568   UINT8 status;
-//  569   status = MQTT_CONNECT();
-//  570   if(status == 0)
-        LDR.W    R4,??DataTable70_1
-          CFI FunCall MQTT_CONNECT
-        BL       MQTT_CONNECT
-        CBNZ.N   R0,??MQTT_STATE_CALLBACK_INITIAL_0
-//  571   {
-//  572 	mqtt_Xstate = MQTT_STATE_CONNECT_READY;
-        MOVS     R0,#+2
-        STRB     R0,[R4, #+1]
-//  573     S2w_Printf("\r\n MQTT_STATE_CB_initialized");
-        ADR.W    R0,`?<Constant "\\r\\n MQTT_STATE_CB_init...">`
+//  686   UINT8 status;
+//  687   S2w_Printf("\r\n MQTT_STATE_CALLBACK_INITIAL START ");
+        ADR.W    R0,`?<Constant "\\r\\n MQTT_STATE_CALLBAC...">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-        B.N      ??MQTT_STATE_CALLBACK_INITIAL_1
-//  574   }
-//  575   else
-//  576   {
-//  577   	mqtt_Xstate = MQTT_STATE_INITIAL;
-??MQTT_STATE_CALLBACK_INITIAL_0:
-        MOVS     R0,#+1
-        STRB     R0,[R4, #+1]
-//  578   }
-//  579   
-//  580   return 0;
-??MQTT_STATE_CALLBACK_INITIAL_1:
+//  688   status = MQTT_CONNECT();
+//  689   if(status == 0)
+          CFI FunCall MQTT_CONNECT
+        BL       MQTT_CONNECT
+        CMP      R0,#+0
+        ITE      EQ 
+        MOVEQ    R0,#+2
+        MOVNE    R0,#+1
+//  690   {
+//  691 	mqtt_Xstate = MQTT_STATE_CONNECT_READY;
+//  692     //S2w_Printf("\r\n MQTT_STATE_CB_initialized");
+//  693   }
+//  694   else
+//  695   {
+//  696   	mqtt_Xstate = MQTT_STATE_INITIAL;
+        LDR.W    R1,??DataTable93_2
+//  697   }
+//  698   gsn_free(mqtt_ctx.MQTT_CLIENT.clientid);
+        LDR.W    R4,??DataTable93_3
+        STRB     R0,[R1, #+1]
+        LDR      R0,[R4, #+64]
+          CFI FunCall GsnDynMemMgmt_Free
+        BL       GsnDynMemMgmt_Free
+//  699   gsn_free(mqtt_ctx.MQTT_CLIENT.username);
+        LDR      R0,[R4, #+68]
+          CFI FunCall GsnDynMemMgmt_Free
+        BL       GsnDynMemMgmt_Free
+//  700   gsn_free(mqtt_ctx.MQTT_CLIENT.password);
+        LDR      R0,[R4, #+72]
+          CFI FunCall GsnDynMemMgmt_Free
+        BL       GsnDynMemMgmt_Free
+//  701   //S2w_Printf("\r\n  MQTT_STATE_CALLBACK_INITIAL END ");
+//  702   return 0;
         MOVS     R0,#+0
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock58
-//  581 }
-//  582 
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock59 Using cfiCommon0
-          CFI Function MQTT_STATE_CALLBACK_CONNECT_READY
-          CFI NoCalls
-        THUMB
-//  583 static UINT32  MQTT_STATE_CALLBACK_CONNECT_READY(void* client)
-//  584 {
-//  585   if(MQTT_CONNECT_STATUS == 1)
-MQTT_STATE_CALLBACK_CONNECT_READY:
-        LDR.W    R0,??DataTable70_1
-        LDRB     R1,[R0, #+0]
-        CMP      R1,#+1
-        ITE      EQ 
-        MOVEQ    R1,#+3
-        MOVNE    R1,#+2
-//  586 	mqtt_Xstate = MQTT_STATE_CONNECT;
-//  587   else
-//  588 	mqtt_Xstate = MQTT_STATE_CONNECT_READY;
-        STRB     R1,[R0, #+1]
-//  589   return 0;
-        MOVS     R0,#+0
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock59
-//  590 }
-//  591 
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock60 Using cfiCommon0
-          CFI Function MQTT_STATE_CALLBACK_CONNECT
-        THUMB
-//  592 static UINT32  MQTT_STATE_CALLBACK_CONNECT(void* client)
-//  593 {
-MQTT_STATE_CALLBACK_CONNECT:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-//  594   MQTT_PUBLISH_MSG_GEN();
-          CFI FunCall MQTT_PUBLISH_MSG_GEN
-        BL       MQTT_PUBLISH_MSG_GEN
-//  595   S2w_Printf("\r\n MQTT_STATE_CB_connected");
-        ADR.W    R0,`?<Constant "\\r\\n MQTT_STATE_CB_conn...">`
-          CFI EndBlock cfiBlock60
-        REQUIRE ?Subroutine2
-        ;; // Fall through to label ?Subroutine2
-//  596   return 0;
-//  597 }
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock61 Using cfiCommon0
-          CFI NoFunction
-          CFI CFA R13+8
-          CFI R14 Frame(CFA, -4)
-          CFI FunCall MQTT_STATE_CALLBACK_UNINITIAL S2w_Printf
-          CFI FunCall MQTT_STATE_CALLBACK_CONNECT S2w_Printf
-          CFI FunCall MQTT_TCP_CONNECT S2w_Printf
-        THUMB
-?Subroutine2:
-        BL       S2w_Printf
-        MOVS     R0,#+0
-        POP      {R1,PC}          ;; return
           CFI EndBlock cfiBlock61
-//  598 
-//  599 
+//  703 }
+//  704 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock62 Using cfiCommon0
+          CFI Function MQTT_STATE_CALLBACK_CONNECT_READY
+        THUMB
+//  705 static UINT32  MQTT_STATE_CALLBACK_CONNECT_READY(void* client)
+//  706 {
+MQTT_STATE_CALLBACK_CONNECT_READY:
+        PUSH     {R3-R5,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+//  707   S2w_Printf("\r\n MQTT_STATE_CALLBACK_CONNECT_READY START ");
+        ADR.W    R0,`?<Constant "\\r\\n MQTT_STATE_CALLBAC...">_1`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  708   tx_mutex_get(&conStatus_mutex, TX_WAIT_FOREVER);
+        BL       ?Subroutine7
+//  709   if(MQTT_CONNECT_STATUS == 1)
+??CrossCallReturnLabel_29:
+        LDRB     R0,[R4, #+0]
+        CMP      R0,#+1
+        ITE      EQ 
+        MOVEQ    R0,#+3
+        MOVNE    R0,#+4
+//  710   {
+//  711 	mqtt_Xstate = MQTT_STATE_CONNECT;
+//  712   }
+//  713   else
+//  714 	mqtt_Xstate = MQTT_STATE_DISCONNECT;
+        STRB     R0,[R4, #+1]
+//  715   tx_mutex_put(&conStatus_mutex);
+        MOV      R0,R5
+          CFI FunCall _tx_mutex_put
+        BL       _tx_mutex_put
+//  716   S2w_Printf("\r\n MQTT_STATE_CALLBACK_CONNECT_READY END ");
+        ADR.W    R0,`?<Constant "\\r\\n MQTT_STATE_CALLBAC...">_2`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  717   return 0;
+        MOVS     R0,#+0
+        POP      {R1,R4,R5,PC}    ;; return
+          CFI EndBlock cfiBlock62
+//  718 }
+//  719 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock63 Using cfiCommon0
+          CFI Function MQTT_STATE_CALLBACK_CONNECT
+        THUMB
+//  720 static UINT32  MQTT_STATE_CALLBACK_CONNECT(void* client)
+//  721 {
+MQTT_STATE_CALLBACK_CONNECT:
+        PUSH     {R4-R8,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R8 Frame(CFA, -8)
+          CFI R7 Frame(CFA, -12)
+          CFI R6 Frame(CFA, -16)
+          CFI R5 Frame(CFA, -20)
+          CFI R4 Frame(CFA, -24)
+          CFI CFA R13+24
+        ADR.W    R4,`?<Constant "\\r\\n pub list 4 unlock">`
+        ADR.W    R5,`?<Constant "\\r\\n pub list 4 lock">`
+        ADR.W    R6,`?<Constant "\\r\\n pub list 3 unlock">`
+        ADR.W    R8,`?<Constant "\\r\\n pub list 3 lock">`
+        LDR.W    R7,??DataTable93_2
+        B.N      ??MQTT_STATE_CALLBACK_CONNECT_0
+//  722   
+//  723   //tx_timer_activate(&mqtt_retry_timer);
+//  724   //AppS2wHal_TimerStart(&mqtt_retry_timer, 30);
+//  725   while(mqtt_Xstate == MQTT_STATE_CONNECT)
+//  726   {
+//  727 	//S2w_Printf("\r\n  MQTT_STATE_CALLBACK_CONNECT START ");
+//  728 	//MQTT_PUBLISH_MSG_RETRY();
+//  729 	//tx_thread_sleep(30);
+//  730 	S2w_Printf("\r\n pub list 3 lock");
+??MQTT_STATE_CALLBACK_CONNECT_1:
+        MOV      R0,R8
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  731 	MQTT_PUBLISH_MSG_GEN(MQTT_SENSOR_STATUS);
+        MOVS     R0,#+1
+          CFI FunCall MQTT_PUBLISH_MSG_GEN
+        BL       MQTT_PUBLISH_MSG_GEN
+//  732 	S2w_Printf("\r\n pub list 3 unlock");
+        MOV      R0,R6
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  733 	tx_thread_sleep(30);
+        MOVS     R0,#+30
+          CFI FunCall _tx_thread_sleep
+        BL       _tx_thread_sleep
+//  734 	S2w_Printf("\r\n pub list 4 lock");
+        MOV      R0,R5
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  735 	MQTT_PUBLISH_MSG_GEN(MQTT_SENSOR_DATA);
+        MOVS     R0,#+2
+          CFI FunCall MQTT_PUBLISH_MSG_GEN
+        BL       MQTT_PUBLISH_MSG_GEN
+//  736 	S2w_Printf("\r\n pub list 4 unlock");
+        MOV      R0,R4
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  737 	tx_thread_sleep(30);
+        MOVS     R0,#+30
+          CFI FunCall _tx_thread_sleep
+        BL       _tx_thread_sleep
+//  738 	if( ping_count == 0 )
+        LDRB     R0,[R7, #+2]
+        CBNZ.N   R0,??MQTT_STATE_CALLBACK_CONNECT_2
+//  739 	{
+//  740 		MQTT_PING_MSG();
+          CFI FunCall MQTT_PING_MSG
+        BL       MQTT_PING_MSG
+//  741 	}
+//  742 	tx_thread_sleep(50);
+??MQTT_STATE_CALLBACK_CONNECT_2:
+        MOVS     R0,#+50
+          CFI FunCall _tx_thread_sleep
+        BL       _tx_thread_sleep
+//  743   }
+??MQTT_STATE_CALLBACK_CONNECT_0:
+        LDRB     R0,[R7, #+1]
+        CMP      R0,#+3
+        BEQ.N    ??MQTT_STATE_CALLBACK_CONNECT_1
+//  744   return 0;
+        MOVS     R0,#+0
+        POP      {R4-R8,PC}       ;; return
+          CFI EndBlock cfiBlock63
+//  745 }
+//  746 
+//  747 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock64 Using cfiCommon0
           CFI Function MQTT_STAET_CALLBACK_DISCONNECT
         THUMB
-//  600 static UINT32  MQTT_STAET_CALLBACK_DISCONNECT(void* client)
-//  601 {
+//  748 static UINT32  MQTT_STAET_CALLBACK_DISCONNECT(void* client)
+//  749 {
 MQTT_STAET_CALLBACK_DISCONNECT:
-        PUSH     {R4,LR}
+        PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-//  602   UINT8 status;
-//  603   status = mqtt_disconnect(&(mqtt_ctx->MQTT_CLIENT));
-//  604   if(status != 0)
-        LDR.N    R4,??DataTable70_1
-        LDR      R0,[R4, #+4]
+          CFI R6 Frame(CFA, -8)
+          CFI R5 Frame(CFA, -12)
+          CFI R4 Frame(CFA, -16)
+          CFI CFA R13+16
+//  750   UINT8 status;
+//  751   S2w_Printf("\r\n  MQTT_STAET_CALLBACK_DISCONNECT START ");
+        ADR.W    R0,`?<Constant "\\r\\n  MQTT_STAET_CALLBA...">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  752   //tx_timer_deactivate(&my_timer);
+//  753   AppS2wHal_TimerStop(&my_timer);
+        BL       ?Subroutine8
+//  754   //tx_timer_deactivate(&mqtt_retry_timer);
+//  755   //tx_timer_delete(&mqtt_retry_timer);
+//  756   AppS2wHal_TimerStop(&mqtt_retry_timer);
+??CrossCallReturnLabel_19:
+        ADD      R0,R4,#+9984
+        ADDS     R0,R0,#+56
+          CFI FunCall AppS2wHal_TimerStop
+        BL       AppS2wHal_TimerStop
+//  757   
+//  758   status = mqtt_disconnect(&(mqtt_ctx.MQTT_CLIENT));
+//  759   if(status != 0)
+        LDR.W    R5,??DataTable93_3
+        MOV      R0,R5
           CFI FunCall mqtt_disconnect
         BL       mqtt_disconnect
         UXTB     R0,R0
         CBZ.N    R0,??MQTT_STAET_CALLBACK_DISCONNECT_0
-//  605 	S2w_Printf("\r\n MQTT DISCONNECT ERROR");
+//  760 	S2w_Printf("\r\n MQTT DISCONNECT ERROR");
         ADR.W    R0,`?<Constant "\\r\\n MQTT DISCONNECT ERROR">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  606   
-//  607   status = AppS2wHal_NetClose(mqtt_ctx->MQTT_CLIENT.mqtt_cid);
-//  608   if(status != 0)
+//  761   
+//  762   status = AppS2wHal_NetClose(mqtt_ctx.MQTT_CLIENT.mqtt_cid);
+//  763   if(status != 0)
 ??MQTT_STAET_CALLBACK_DISCONNECT_0:
-        LDR      R0,[R4, #+4]
-        LDRB     R0,[R0, #+60]
+        LDRB     R0,[R5, #+60]
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
         CBZ.N    R0,??MQTT_STAET_CALLBACK_DISCONNECT_1
-//  609 	S2w_Printf("\r\n NET CLOSE ERROR");
+//  764 	S2w_Printf("\r\n NET CLOSE ERROR");
         ADR.W    R0,`?<Constant "\\r\\n NET CLOSE ERROR">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  610   
-//  611   mqtt_ctx->MQTT_CLIENT.seq = 0;
+//  765   
+//  766   mqtt_ctx.MQTT_CLIENT.seq = 0;
 ??MQTT_STAET_CALLBACK_DISCONNECT_1:
-        LDR      R0,[R4, #+4]
-        MOVS     R1,#+0
-        STRH     R1,[R0, #+80]
-//  612   MQTT_LIST_DESTROY(mqtt_ctx->publish_list);
-        LDR      R0,[R0, #+92]
-          CFI FunCall MQTT_LIST_DESTROY
-        BL       MQTT_LIST_DESTROY
-//  613   MQTT_LIST_DESTROY(mqtt_ctx->receive_list);
-        LDR      R0,[R4, #+4]
-        LDR      R0,[R0, #+88]
-          CFI FunCall MQTT_LIST_DESTROY
-        BL       MQTT_LIST_DESTROY
-//  614   MQTT_LIST_DESTROY(mqtt_ctx->send_list);
-        LDR      R0,[R4, #+4]
-        LDR      R0,[R0, #+84]
-          CFI FunCall MQTT_LIST_DESTROY
-        BL       MQTT_LIST_DESTROY
-//  615   mqtt_Xstate = MQTT_STATE_UNINITIAL;
         MOVS     R0,#+0
+        STRH     R0,[R5, #+80]
+//  767   tx_mutex_get(&conStatus_mutex, TX_WAIT_FOREVER);
+        ADD      R6,R4,#+9728
+        ADDS     R6,R6,#+200
+        MOV      R1,#-1
+        MOV      R0,R6
+          CFI FunCall _tx_mutex_get
+        BL       _tx_mutex_get
+//  768   MQTT_CONNECT_STATUS = 0;
+        MOVS     R0,#+0
+        STRB     R0,[R4, #+0]
+//  769   tx_mutex_put(&conStatus_mutex);
+        MOV      R0,R6
+          CFI FunCall _tx_mutex_put
+        BL       _tx_mutex_put
+//  770   
+//  771   MQTT_LIST_DESTROY(&mqtt_ctx.publish_list);
+        ADD      R0,R5,#+152
+          CFI FunCall MQTT_LIST_DESTROY
+        BL       MQTT_LIST_DESTROY
+//  772   MQTT_LIST_DESTROY(&mqtt_ctx.receive_list);
+        ADD      R0,R5,#+120
+          CFI FunCall MQTT_LIST_DESTROY
+        BL       MQTT_LIST_DESTROY
+//  773   MQTT_LIST_DESTROY(&mqtt_ctx.send_list);
+        ADD      R0,R5,#+88
+          CFI FunCall MQTT_LIST_DESTROY
+        BL       MQTT_LIST_DESTROY
+//  774 
+//  775 
+//  776   tx_queue_flush(&MQTT_RECEIVE_QUEUE);
+        ADDS     R0,R4,#+4
+          CFI FunCall _tx_queue_flush
+        BL       _tx_queue_flush
+//  777   ping_count = 0;
+        MOVS     R0,#+0
+        STRB     R0,[R4, #+2]
+//  778   mqtt_Xstate = MQTT_STATE_UNINITIAL;
         STRB     R0,[R4, #+1]
-//  616   S2w_Printf("\r\n MQTT_STATE_CB_disconnected");
-        ADR.W    R0,`?<Constant "\\r\\n MQTT_STATE_CB_disc...">`
-        B.N      ?Subroutine3
-          CFI EndBlock cfiBlock62
-//  617   return 0;
-//  618 }
-//  619 
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock63 Using cfiCommon0
-          CFI Function MQTT_SEND_FUNCTION
-          CFI NoCalls
-        THUMB
-//  620 int MQTT_SEND_FUNCTION(void* socket_info, UINT8* buf, unsigned int count)
-//  621 {
-//  622   S2W_NETDATA_T* temp = (S2W_NETDATA_T*)socket_info;
-//  623   
-//  624   //AppS2wHal_NetTx(mqtt_ctx->mqtt_cid, temp->ipAddr, temp->port, buf, count);
-//  625   //AppS2wHal_NetTx(mqtt_ctx->mqtt_cid, peerData.ipAddr, peerData.port, buf, count);
-//  626   return 0;
-MQTT_SEND_FUNCTION:
-        MOVS     R0,#+0
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock63
-//  627 }
-//  628 
-//  629 
-//  630 
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock64 Using cfiCommon0
-          CFI Function MQTT_PUBLISH_MSG_GEN
-        THUMB
-//  631 UINT8 MQTT_PUBLISH_MSG_GEN()
-//  632 {
-MQTT_PUBLISH_MSG_GEN:
-        PUSH     {R4-R8,R10,R11,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R11 Frame(CFA, -8)
-          CFI R10 Frame(CFA, -12)
-          CFI R8 Frame(CFA, -16)
-          CFI R7 Frame(CFA, -20)
-          CFI R6 Frame(CFA, -24)
-          CFI R5 Frame(CFA, -28)
-          CFI R4 Frame(CFA, -32)
-          CFI CFA R13+32
-        SUB      SP,SP,#+120
-          CFI CFA R13+152
-//  633   GSN_SYSTEM_TIME_T currentTime, mSeconds = 0;
-//  634   //sensor node status message generation
-//  635   UINT32 temperature_int;
-//  636   MSG_TYPE* get_pointer = NULL;
-        MOVS     R0,#+0
-        STR      R0,[SP, #+8]
-        MOV      R8,#+1000
-        LDR.N    R7,??DataTable70_2
-        ADR.W    R11,`?<Constant "\\r\\n MSG ID %d is time ...">`
-        ADR.W    R10,`?<Constant "\\r\\nSEND LIST empty">`
-        LDR.N    R6,??DataTable70_1
-        B.N      ??MQTT_PUBLISH_MSG_GEN_0
-//  637   MSG_TYPE* mqtt_publish_msg;
-//  638   char PAYLOAD[100];
-//  639   UINT32 TOPIC_LEN;
-//  640   UINT32 PAYLOAD_LEN;
-//  641   while(mqtt_Xstate == MQTT_STATE_CONNECT)
-//  642   {
-//  643   	if(MQTT_LIST_COUNT(mqtt_ctx->send_list) == 0)
-//  644   	{
-//  645 		S2w_Printf("\r\nSEND LIST empty");
-//  646   	}
-//  647   	else
-//  648   	{
-//  649 		if(MQTT_LIST_COUNT(mqtt_ctx->send_list)!=0)
-//  650 		{
-//  651     		mSeconds = SYSTIME_TO_MSEC(GsnTod_Get());
-//  652 			MQTT_LIST_GET(mqtt_ctx->send_list, &get_pointer);
-//  653 			if( (mSeconds - (get_pointer->TIME))  > 300000)
-//  654 			{
-//  655 			    S2w_Printf("\r\n MSG ID %d is time over",get_pointer->MSG_ID);
-//  656 				//free(get_pointer->TOPIC);
-//  657 				//free(get_pointer->PAYLOAD);
-//  658 	  			//free(get_pointer);
-//  659 				if(get_pointer->TOPIC != NULL)
-//  660 				{
-//  661 					gsn_free(get_pointer->TOPIC);
-//  662 					get_pointer->TOPIC = NULL;
-//  663 				}
-//  664 				if(get_pointer->PAYLOAD != NULL)
-//  665 				{
-//  666 				    gsn_free(get_pointer->PAYLOAD);
-//  667 	  				get_pointer->PAYLOAD = NULL;
-//  668 			    }
-//  669 				if(get_pointer != NULL)
-//  670 				{
-//  671 					gsn_free(get_pointer);
-//  672 					get_pointer = NULL;
-//  673 				}
-//  674 				S2w_Printf("\r\n PUBLISH_MSG_GEN -  get_pointer address 1= %d", get_pointer);
-//  675 			}
-//  676 			else
-//  677 			{
-//  678 			  	S2w_Printf("\r\n Insert publish list MSG ID : %d",get_pointer->MSG_ID);
-??MQTT_PUBLISH_MSG_GEN_1:
-        ADR.W    R0,`?<Constant "\\r\\n Insert publish lis...">`
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-//  679 	  			MQTT_LIST_PUT(mqtt_ctx->publish_list, get_pointer);
-        LDR      R0,[R6, #+4]
-        LDR      R1,[SP, #+8]
-        LDR      R0,[R0, #+92]
-          CFI FunCall MQTT_LIST_PUT
-        BL       MQTT_LIST_PUT
-//  680 				//free(get_pointer);
-//  681 				if(get_pointer != NULL)
-        LDR      R0,[SP, #+8]
-        CBZ.N    R0,??MQTT_PUBLISH_MSG_GEN_2
-//  682 				{
-//  683 					gsn_free(get_pointer);
-          CFI FunCall GsnDynMemMgmt_Free
-        BL       GsnDynMemMgmt_Free
-//  684 					get_pointer = NULL;
-        MOVS     R0,#+0
-        STR      R0,[SP, #+8]
-//  685 				}
-//  686 				S2w_Printf("\r\n PUBLISH_MSG_GEN -  get_pointer address 2= %d", get_pointer);
-??MQTT_PUBLISH_MSG_GEN_2:
-        LDR      R1,[SP, #+8]
-        ADR.W    R0,`?<Constant "\\r\\n PUBLISH_MSG_GEN - ...">_1`
-??MQTT_PUBLISH_MSG_GEN_3:
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-//  687 			}
-//  688 			
-//  689 		}
-//  690   	}
-//  691 	TOPIC_LEN = strlen((const char*)TOPIC_STATUS)+1;
-//  692 	PAYLOAD_LEN = strlen((const char*)PAYLOAD_STATUS)+1;
-//  693   	//mqtt_publish_msg = (MSG_TYPE*)malloc(sizeof(MSG_TYPE));
-//  694   	//mqtt_publish_msg->TOPIC = (UINT8*)malloc(TOPIC_LEN);
-//  695   	//mqtt_publish_msg->PAYLOAD = (UINT8*)malloc(PAYLOAD_LEN);
-//  696 	
-//  697 	mqtt_publish_msg = (MSG_TYPE*)gsn_malloc(sizeof(MSG_TYPE));
-??MQTT_PUBLISH_MSG_GEN_4:
-        MOVS     R2,#+0
-        MOVW     R1,#+697
-        MOVS     R0,#+20
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
-        MOV      R4,R0
-//  698   	mqtt_publish_msg->TOPIC = (UINT8*)gsn_malloc(TOPIC_LEN);
-        MOVS     R2,#+0
-        MOVW     R1,#+698
-        MOVS     R0,#+26
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
-        STR      R0,[R4, #+4]
-//  699   	mqtt_publish_msg->PAYLOAD = (UINT8*)gsn_malloc(PAYLOAD_LEN);
-        MOVS     R2,#+0
-        MOVW     R1,#+699
-        MOVS     R0,#+39
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
-        STR      R0,[R4, #+8]
-//  700   
-//  701   	memset(mqtt_publish_msg->TOPIC, 0, TOPIC_LEN);
-        MOVS     R2,#+26
-        BL       ?Subroutine7
-//  702   	memset(mqtt_publish_msg->PAYLOAD, 0, PAYLOAD_LEN);
-??CrossCallReturnLabel_20:
-        LDR      R0,[R4, #+8]
-        MOVS     R2,#+39
-        BL       ??Subroutine7_0
-//  703   
-//  704   	memcpy(mqtt_publish_msg->TOPIC, TOPIC_STATUS, strlen((const char*)TOPIC_STATUS));
-??CrossCallReturnLabel_12:
-        LDR      R0,[R4, #+4]
-        ADR.W    R1,`?<Constant "v/a/g/001dc9151e55/st...">`
-        MOVS     R2,#+25
-          CFI FunCall memcpy
-        BL       memcpy
-//  705   	memcpy(mqtt_publish_msg->PAYLOAD, PAYLOAD_STATUS, strlen((const char*)PAYLOAD_STATUS));
-        LDR      R0,[R4, #+8]
-        ADR.W    R1,`?<Constant "on,90,temperature-001...">`
-        MOVS     R2,#+38
-          CFI FunCall memcpy
-        BL       memcpy
-//  706   
-//  707   	mqtt_publish_msg->MSG_ID = 0;
-        BL       ?Subroutine6
-//  708   	mqtt_publish_msg->TIME = 0;
-//  709   	mqtt_publish_msg->MSG_TYPE = MQTT_MSG_TYPE_PUBLISH;
-//  710   	mqtt_publish_msg->QoS = 1;
-//  711   	MQTT_LIST_PUT(mqtt_ctx->publish_list, mqtt_publish_msg);
-//  712 
-//  713   	//free(mqtt_publish_msg);
-//  714 	if(mqtt_publish_msg != NULL)
-??CrossCallReturnLabel_10:
-        CBZ.N    R4,??CrossCallReturnLabel_28
-//  715 	{
-//  716 		gsn_free(mqtt_publish_msg);
-        BL       ?Subroutine9
-//  717 		mqtt_publish_msg = NULL;
-//  718 	}
-//  719 
-//  720   
-//  721   	//sensor data message generation.
-//  722   	currentTime = GsnTod_Get();
-??CrossCallReturnLabel_28:
-          CFI FunCall GsnTod_Get
-        BL       GsnTod_Get
-        MOV      R4,R0
-        MOV      R5,R1
-//  723   	mSeconds = SYSTIME_TO_MSEC(currentTime);
-//  724   	//temperature_int = App_TemperatureGet();
-//  725 	//sprintf((char*)PAYLOAD,"%llu,%d", mSeconds,temperature_int);
-//  726 	GetTemperature(&temperature_sensor[0]);
-        MOV      R0,R7
-          CFI FunCall GetTemperature
-        BL       GetTemperature
-//  727 	sprintf((char*)PAYLOAD,"%llu,%.2f", mSeconds,temperature_sensor[0].Temperature);
-        LDR      R0,[R7, #+8]
-          CFI FunCall __aeabi_f2d
-        BL       __aeabi_f2d
-        STRD     R0,R1,[SP, #+0]
-        BL       ?Subroutine12
-??CrossCallReturnLabel_37:
-        LSRS     R3,R3,#+15
-        ADR.W    R1,`?<Constant "%llu,%.2f">`
-        ADD      R0,SP,#+12
-          CFI FunCall sprintf
-        BL       sprintf
-//  728   	
-//  729     TOPIC_LEN = strlen((const char*)TOPIC_SENSOR)+1;
-//  730 	PAYLOAD_LEN = strlen((const char*)PAYLOAD)+1;
-        ADD      R0,SP,#+12
-          CFI FunCall strlen
-        BL       strlen
-        ADDS     R5,R0,#+1
-//  731 	
-//  732   	//mqtt_publish_msg = (MSG_TYPE*)malloc(sizeof(MSG_TYPE));
-//  733   	//mqtt_publish_msg->TOPIC = (UINT8*)malloc(TOPIC_LEN);
-//  734   	//mqtt_publish_msg->PAYLOAD = (UINT8*)malloc(PAYLOAD_LEN);
-//  735 	
-//  736 	mqtt_publish_msg = (MSG_TYPE*)gsn_malloc(sizeof(MSG_TYPE));
-        MOVS     R2,#+0
-        MOV      R1,#+736
-        MOVS     R0,#+20
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
-        MOV      R4,R0
-//  737   	mqtt_publish_msg->TOPIC = (UINT8*)gsn_malloc(TOPIC_LEN);
-        MOVS     R2,#+0
-        MOVW     R1,#+737
-        MOVS     R0,#+48
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
-        STR      R0,[R4, #+4]
-//  738   	mqtt_publish_msg->PAYLOAD = (UINT8*)gsn_malloc(PAYLOAD_LEN);
-        MOVS     R2,#+0
-        MOVW     R1,#+738
-        MOV      R0,R5
-          CFI FunCall GsnDynMemMgmt_Alloc
-        BL       GsnDynMemMgmt_Alloc
-        STR      R0,[R4, #+8]
-//  739   
-//  740   	memset(mqtt_publish_msg->TOPIC, 0, TOPIC_LEN);
-        MOVS     R2,#+48
-        BL       ?Subroutine7
-//  741   	memset(mqtt_publish_msg->PAYLOAD, 0, PAYLOAD_LEN);
-??CrossCallReturnLabel_19:
-        LDR      R0,[R4, #+8]
-        MOV      R2,R5
-        BL       ??Subroutine7_0
-//  742   
-//  743   	memcpy(mqtt_publish_msg->TOPIC, TOPIC_SENSOR, strlen((const char*)TOPIC_SENSOR));
-??CrossCallReturnLabel_11:
-        LDR      R0,[R4, #+4]
-        ADR.W    R1,`?<Constant "v/a/g/001dc9151e55/s/...">`
-        MOVS     R2,#+47
-          CFI FunCall memcpy
-        BL       memcpy
-//  744   	memcpy(mqtt_publish_msg->PAYLOAD, PAYLOAD, strlen((const char*)PAYLOAD));
-        ADD      R0,SP,#+12
-          CFI FunCall strlen
-        BL       strlen
-        MOV      R2,R0
-        LDR      R0,[R4, #+8]
-        ADD      R1,SP,#+12
-          CFI FunCall memcpy
-        BL       memcpy
-//  745   
-//  746   	mqtt_publish_msg->MSG_ID = 0;
-        BL       ?Subroutine6
-//  747   	mqtt_publish_msg->TIME = 0;
-//  748   	mqtt_publish_msg->MSG_TYPE = MQTT_MSG_TYPE_PUBLISH;
-//  749   	mqtt_publish_msg->QoS = 1;
-//  750   	MQTT_LIST_PUT(mqtt_ctx->publish_list, mqtt_publish_msg);  
-//  751 
-//  752   	//free(mqtt_publish_msg);
-//  753 	if(mqtt_publish_msg != NULL)
-??CrossCallReturnLabel_9:
-        CBZ.N    R4,??CrossCallReturnLabel_27
-//  754 	{
-//  755 		gsn_free(mqtt_publish_msg);
-        BL       ?Subroutine9
-//  756 		mqtt_publish_msg = NULL;
-//  757 	}
-//  758 
-//  759 	GsnTaskSleep(5000);
-??CrossCallReturnLabel_27:
-        MOVW     R0,#+5000
-          CFI FunCall GsnTaskSleep
-        BL       GsnTaskSleep
-??MQTT_PUBLISH_MSG_GEN_0:
-        LDRB     R0,[R6, #+1]
-        CMP      R0,#+3
-        BNE.N    ??MQTT_PUBLISH_MSG_GEN_5
-        LDR      R0,[R6, #+4]
-        LDR      R0,[R0, #+84]
-          CFI FunCall MQTT_LIST_COUNT
-        BL       MQTT_LIST_COUNT
-        CBNZ.N   R0,??MQTT_PUBLISH_MSG_GEN_6
-        MOV      R0,R10
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-??MQTT_PUBLISH_MSG_GEN_7:
-        B.N      ??MQTT_PUBLISH_MSG_GEN_4
-??MQTT_PUBLISH_MSG_GEN_6:
-        LDR      R0,[R6, #+4]
-        LDR      R0,[R0, #+84]
-          CFI FunCall MQTT_LIST_COUNT
-        BL       MQTT_LIST_COUNT
-        CMP      R0,#+0
-        BEQ.N    ??MQTT_PUBLISH_MSG_GEN_7
-          CFI FunCall GsnTod_Get
-        BL       GsnTod_Get
-        MOV      R4,R0
-        LDR      R0,[R6, #+4]
-        LDR      R0,[R0, #+84]
-        MOV      R5,R1
-        ADD      R1,SP,#+8
-          CFI FunCall MQTT_LIST_GET
-        BL       MQTT_LIST_GET
-        LDR      R0,[SP, #+8]
-        LDRH     R1,[R0, #+12]
-        BL       ?Subroutine12
-??CrossCallReturnLabel_38:
-        LDR      R4,[R0, #+16]
-        LSRS     R3,R3,#+15
-        MOVS     R5,#+0
-        SUBS     R4,R2,R4
-        SBC      R5,R3,R5
-        MOVS     R3,#+0
-        LDR.N    R2,??DataTable70_3  ;; 0x493e1
-        CMP      R5,R3
-        BHI.N    ??MQTT_PUBLISH_MSG_GEN_8
-        CMP      R4,R2
-        BCC.W    ??MQTT_PUBLISH_MSG_GEN_1
-??MQTT_PUBLISH_MSG_GEN_8:
-        MOV      R0,R11
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-        LDR      R0,[SP, #+8]
-        LDR      R0,[R0, #+4]
-        CBZ.N    R0,??MQTT_PUBLISH_MSG_GEN_9
-          CFI FunCall GsnDynMemMgmt_Free
-        BL       GsnDynMemMgmt_Free
-        LDR      R0,[SP, #+8]
-        MOVS     R1,#+0
-        STR      R1,[R0, #+4]
-??MQTT_PUBLISH_MSG_GEN_9:
-        LDR      R0,[SP, #+8]
-        LDR      R0,[R0, #+8]
-        CBZ.N    R0,??MQTT_PUBLISH_MSG_GEN_10
-          CFI FunCall GsnDynMemMgmt_Free
-        BL       GsnDynMemMgmt_Free
-        LDR      R0,[SP, #+8]
-        MOVS     R1,#+0
-        STR      R1,[R0, #+8]
-??MQTT_PUBLISH_MSG_GEN_10:
-        LDR      R0,[SP, #+8]
-        CBZ.N    R0,??MQTT_PUBLISH_MSG_GEN_11
-          CFI FunCall GsnDynMemMgmt_Free
-        BL       GsnDynMemMgmt_Free
-        MOVS     R0,#+0
-        STR      R0,[SP, #+8]
-??MQTT_PUBLISH_MSG_GEN_11:
-        LDR      R1,[SP, #+8]
-        ADR.W    R0,`?<Constant "\\r\\n PUBLISH_MSG_GEN - ...">`
-        B.N      ??MQTT_PUBLISH_MSG_GEN_3
-//  760   }
-//  761   return 0;
-??MQTT_PUBLISH_MSG_GEN_5:
-        MOVS     R0,#+0
-        ADD      SP,SP,#+120
-          CFI CFA R13+32
-        POP      {R4-R8,R10,R11,PC}  ;; return
+//  779 
+//  780   return 0;
+        POP      {R4-R6,PC}       ;; return
           CFI EndBlock cfiBlock64
-//  762   
-//  763 }
+//  781 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond65 Using cfiCommon0
-          CFI Function MQTT_PUBLISH_MSG_GEN
-          CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_37
-          CFI R4 Frame(CFA, -32)
-          CFI R5 Frame(CFA, -28)
-          CFI R6 Frame(CFA, -24)
-          CFI R7 Frame(CFA, -20)
-          CFI R8 Frame(CFA, -16)
-          CFI R10 Frame(CFA, -12)
-          CFI R11 Frame(CFA, -8)
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+152
-          CFI Block cfiCond66 Using cfiCommon0
-          CFI (cfiCond66) Function MQTT_PUBLISH_MSG_GEN
-          CFI (cfiCond66) NoCalls MQTT_PUBLISH_MSG_GEN
-          CFI (cfiCond66) Conditional ??CrossCallReturnLabel_38
-          CFI (cfiCond66) R4 Frame(CFA, -32)
-          CFI (cfiCond66) R5 Frame(CFA, -28)
-          CFI (cfiCond66) R6 Frame(CFA, -24)
-          CFI (cfiCond66) R7 Frame(CFA, -20)
-          CFI (cfiCond66) R8 Frame(CFA, -16)
-          CFI (cfiCond66) R10 Frame(CFA, -12)
-          CFI (cfiCond66) R11 Frame(CFA, -8)
-          CFI (cfiCond66) R14 Frame(CFA, -4)
-          CFI (cfiCond66) CFA R13+152
-          CFI Block cfiPicker67 Using cfiCommon1
-          CFI (cfiPicker67) NoFunction
-          CFI (cfiPicker67) NoCalls MQTT_PUBLISH_MSG_GEN
-          CFI (cfiPicker67) Picker
-        THUMB
-?Subroutine12:
-        UMULL    R2,R3,R8,R4
-        MLA      R3,R8,R5,R3
-        LSRS     R2,R2,#+15
-        ORR      R2,R2,R3, LSL #+17
-        BX       LR
-          CFI EndBlock cfiCond65
-          CFI EndBlock cfiCond66
-          CFI EndBlock cfiPicker67
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond68 Using cfiCommon0
-          CFI Function MQTT_MESSAGE_QUEUE_TASK
-          CFI Conditional ??CrossCallReturnLabel_29
+          CFI Function MQTT_MSG_FUNC_PINGRESP
+          CFI Conditional ??CrossCallReturnLabel_20
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
-          CFI Block cfiCond69 Using cfiCommon0
-          CFI (cfiCond69) Function MQTT_PUBLISH_MSG_GEN
-          CFI (cfiCond69) Conditional ??CrossCallReturnLabel_28
-          CFI (cfiCond69) R4 Frame(CFA, -32)
-          CFI (cfiCond69) R5 Frame(CFA, -28)
-          CFI (cfiCond69) R6 Frame(CFA, -24)
-          CFI (cfiCond69) R7 Frame(CFA, -20)
-          CFI (cfiCond69) R8 Frame(CFA, -16)
-          CFI (cfiCond69) R10 Frame(CFA, -12)
-          CFI (cfiCond69) R11 Frame(CFA, -8)
-          CFI (cfiCond69) R14 Frame(CFA, -4)
-          CFI (cfiCond69) CFA R13+152
+          CFI Block cfiCond66 Using cfiCommon0
+          CFI (cfiCond66) Function MQTT_STAET_CALLBACK_DISCONNECT
+          CFI (cfiCond66) Conditional ??CrossCallReturnLabel_19
+          CFI (cfiCond66) R4 Frame(CFA, -16)
+          CFI (cfiCond66) R5 Frame(CFA, -12)
+          CFI (cfiCond66) R6 Frame(CFA, -8)
+          CFI (cfiCond66) R14 Frame(CFA, -4)
+          CFI (cfiCond66) CFA R13+16
+          CFI Block cfiPicker67 Using cfiCommon1
+          CFI (cfiPicker67) NoFunction
+          CFI (cfiPicker67) Picker
+        THUMB
+?Subroutine8:
+        LDR.N    R4,??DataTable93_2
+        ADD      R0,R4,#+9984
+          CFI FunCall MQTT_MSG_FUNC_PINGRESP AppS2wHal_TimerStop
+          CFI FunCall MQTT_STAET_CALLBACK_DISCONNECT AppS2wHal_TimerStop
+        B.W      AppS2wHal_TimerStop
+          CFI EndBlock cfiCond65
+          CFI EndBlock cfiCond66
+          CFI EndBlock cfiPicker67
+//  782 
+//  783 
+//  784 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock68 Using cfiCommon0
+          CFI Function MQTT_PUBLISH_MSG_RETRY
+        THUMB
+//  785 UINT8 MQTT_PUBLISH_MSG_RETRY()
+//  786 {
+MQTT_PUBLISH_MSG_RETRY:
+        PUSH     {R4,R6,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R6 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+12
+        SUB      SP,SP,#+20
+          CFI CFA R13+32
+//  787   GSN_SYSTEM_TIME_T mSeconds = 0;
+//  788   MSG_TYPE* temp = NULL;
+        MOVS     R0,#+0
+        STR      R0,[SP, #+8]
+//  789   S2w_Printf("\r\n PUB_MSG_RETRY START ");
+        ADR.W    R0,`?<Constant "\\r\\n PUB_MSG_RETRY START ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  790   S2w_Printf("\r\n se list 1 lock");
+        ADR.W    R0,`?<Constant "\\r\\n se list 1 lock">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  791   if(MQTT_LIST_COUNT(&(mqtt_ctx.send_list)) >= 5)
+        LDR.N    R6,??DataTable93_3
+        ADD      R0,R6,#+88
+          CFI FunCall MQTT_LIST_COUNT
+        BL       MQTT_LIST_COUNT
+        CMP      R0,#+5
+        BLT.N    ??MQTT_PUBLISH_MSG_RETRY_0
+//  792   {
+//  793 	MQTT_LIST_GET(&(mqtt_ctx.send_list), &temp);
+        ADD      R1,SP,#+8
+        ADD      R0,R6,#+88
+          CFI FunCall MQTT_LIST_GET
+        BL       MQTT_LIST_GET
+//  794   	if(temp != NULL)
+        LDR      R0,[SP, #+8]
+        CMP      R0,#+0
+        BEQ.N    ??MQTT_PUBLISH_MSG_RETRY_0
+//  795   	{
+//  796 		if(temp->sending_count < 3)
+        LDRB     R0,[R0, #+20]
+        MOV      R4,#+1000
+        CMP      R0,#+3
+        BGE.N    ??MQTT_PUBLISH_MSG_RETRY_1
+//  797 		{
+//  798 	  		temp->TIME = SYSTIME_TO_MSEC(GsnTod_Get());
+          CFI FunCall GsnTod_Get
+        BL       GsnTod_Get
+        BL       ?Subroutine12
+??CrossCallReturnLabel_33:
+        STR      R2,[R0, #+16]
+//  799 			temp->sending_count++;
+//  800 			mqtt_publish_retry_dup(&(mqtt_ctx.MQTT_CLIENT), (char const*)temp->TOPIC, (char const*)temp->PAYLOAD, 1, mqtt_ctx.QoS, (temp->MSG_ID));
+        MOVS     R3,#+1
+        LDR      R0,[SP, #+8]
+        LDR      R1,[SP, #+8]
+        LDRB     R0,[R0, #+20]
+        ADDS     R0,R0,#+1
+        STRB     R0,[R1, #+20]
+        LDR      R0,[SP, #+8]
+        LDRH     R0,[R0, #+12]
+        STR      R0,[SP, #+4]
+        LDRB     R0,[R6, #+84]
+        STR      R0,[SP, #+0]
+        LDR      R0,[SP, #+8]
+        LDR      R2,[R0, #+8]
+        LDR      R1,[R0, #+4]
+        MOV      R0,R6
+          CFI FunCall mqtt_publish_retry_dup
+        BL       mqtt_publish_retry_dup
+//  801 			MQTT_LIST_PUT(&(mqtt_ctx.send_list), temp);
+        LDR      R1,[SP, #+8]
+        ADD      R0,R6,#+88
+          CFI FunCall MQTT_LIST_PUT
+        BL       MQTT_LIST_PUT
+        B.N      ??MQTT_PUBLISH_MSG_RETRY_0
+//  802 		}
+//  803 		else if((temp->sending_count > 3) || ((SYSTIME_TO_MSEC(GsnTod_Get())-(temp->TIME)) > 12000) )
+??MQTT_PUBLISH_MSG_RETRY_1:
+        CMP      R0,#+4
+        BGE.N    ??MQTT_PUBLISH_MSG_RETRY_2
+          CFI FunCall GsnTod_Get
+        BL       GsnTod_Get
+        BL       ?Subroutine12
+??CrossCallReturnLabel_34:
+        LDR      R0,[R0, #+16]
+        LSRS     R3,R3,#+15
+        MOVS     R1,#+0
+        SUBS     R0,R2,R0
+        SBC      R1,R3,R1
+        MOVS     R3,#+0
+        MOVW     R2,#+12001
+        CMP      R1,R3
+        BHI.N    ??MQTT_PUBLISH_MSG_RETRY_2
+        CMP      R0,R2
+        BCC.N    ??MQTT_PUBLISH_MSG_RETRY_0
+//  804 		{
+//  805 	  		gsn_free(temp->TOPIC);
+??MQTT_PUBLISH_MSG_RETRY_2:
+        LDR      R0,[SP, #+8]
+        LDR      R0,[R0, #+4]
+          CFI FunCall GsnDynMemMgmt_Free
+        BL       GsnDynMemMgmt_Free
+//  806 	  		gsn_free(temp->PAYLOAD);
+        LDR      R0,[SP, #+8]
+        LDR      R0,[R0, #+8]
+          CFI FunCall GsnDynMemMgmt_Free
+        BL       GsnDynMemMgmt_Free
+//  807 	  		gsn_free(temp);
+        LDR      R0,[SP, #+8]
+          CFI FunCall GsnDynMemMgmt_Free
+        BL       GsnDynMemMgmt_Free
+//  808 		}
+//  809   	}
+//  810   }
+//  811   S2w_Printf("\r\n PUB_MSG_RETRY END ");
+??MQTT_PUBLISH_MSG_RETRY_0:
+        ADR.W    R0,`?<Constant "\\r\\n PUB_MSG_RETRY END ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  812   return 0;
+        MOVS     R0,#+0
+        ADD      SP,SP,#+20
+          CFI CFA R13+12
+        POP      {R4,R6,PC}       ;; return
+          CFI EndBlock cfiBlock68
+//  813 }
+//  814 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock69 Using cfiCommon0
+          CFI Function MQTT_PUBLISH_MSG_GEN
+        THUMB
+//  815 UINT8 MQTT_PUBLISH_MSG_GEN(UINT8 select)
+//  816 {
+MQTT_PUBLISH_MSG_GEN:
+        PUSH     {R4,R5,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+12
+        MOV      R4,R0
+        SUB      SP,SP,#+132
+          CFI CFA R13+144
+//  817   GSN_SYSTEM_TIME_T currentTime, mSeconds = 0;
+//  818   //sensor node status message generation
+//  819   UINT32 temperature_int;
+//  820   MSG_TYPE mqtt_publish_msg;
+//  821   char PAYLOAD[100];
+//  822   UINT32 TOPIC_LEN;
+//  823   UINT32 PAYLOAD_LEN;
+//  824   S2w_Printf("\r\n  PUB_MSG_GEN START ");
+        ADR.W    R0,`?<Constant "\\r\\n  PUB_MSG_GEN START ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  825   	if(select == 1)
+        CMP      R4,#+1
+        BNE.N    ??MQTT_PUBLISH_MSG_GEN_0
+//  826 	{
+//  827 		TOPIC_LEN = strlen((const char*)TOPIC_STATUS);
+//  828 		PAYLOAD_LEN = strlen((const char*)PAYLOAD_STATUS);
+//  829 	
+//  830   		mqtt_publish_msg.TOPIC = (UINT8*)gsn_malloc(TOPIC_LEN+1);
+        MOVS     R2,#+0
+        MOVW     R1,#+830
+        MOVS     R0,#+26
+          CFI FunCall GsnDynMemMgmt_Alloc
+        BL       GsnDynMemMgmt_Alloc
+        STR      R0,[SP, #+8]
+//  831   		mqtt_publish_msg.PAYLOAD = (UINT8*)gsn_malloc(PAYLOAD_LEN+1);
+        MOVS     R2,#+0
+        MOVW     R1,#+831
+        MOVS     R0,#+39
+          CFI FunCall GsnDynMemMgmt_Alloc
+        BL       GsnDynMemMgmt_Alloc
+        STR      R0,[SP, #+12]
+//  832 	
+//  833 
+//  834   		memset(mqtt_publish_msg.TOPIC, 0, TOPIC_LEN+1);
+        MOVS     R2,#+26
+        BL       ?Subroutine4
+//  835   		memset(mqtt_publish_msg.PAYLOAD, 0, PAYLOAD_LEN+1);
+??CrossCallReturnLabel_12:
+        LDR      R0,[SP, #+12]
+        MOVS     R2,#+39
+        BL       ??Subroutine4_0
+//  836   
+//  837   		memcpy(mqtt_publish_msg.TOPIC, TOPIC_STATUS, TOPIC_LEN);
+??CrossCallReturnLabel_7:
+        LDR      R0,[SP, #+8]
+        ADR.W    R1,`?<Constant "v/a/g/001dc914feae/st...">`
+        MOVS     R2,#+25
+          CFI FunCall memcpy
+        BL       memcpy
+//  838   		memcpy(mqtt_publish_msg.PAYLOAD, PAYLOAD_STATUS, PAYLOAD_LEN);
+        LDR      R0,[SP, #+12]
+        ADR.W    R1,`?<Constant "on,90,temperature-001...">`
+        MOVS     R2,#+38
+          CFI FunCall memcpy
+        BL       memcpy
+//  839   
+//  840   		mqtt_publish_msg.MSG_ID = 0;
+        B.N      ??MQTT_PUBLISH_MSG_GEN_1
+//  841   		mqtt_publish_msg.TIME = 0;
+//  842 		mqtt_publish_msg.sending_count = 0;
+//  843   		mqtt_publish_msg.MSG_TYPE = MQTT_MSG_TYPE_PUBLISH;
+//  844 	}
+//  845 	else if(select == 2)
+??MQTT_PUBLISH_MSG_GEN_0:
+        CMP      R4,#+2
+        BNE.N    ??MQTT_PUBLISH_MSG_GEN_2
+//  846 	{
+//  847 	
+//  848 	//GsnTaskSleep(3000);
+//  849   
+//  850   		//sensor data message generation.
+//  851   		currentTime = GsnTod_Get();
+          CFI FunCall GsnTod_Get
+        BL       GsnTod_Get
+        MOV      R4,R0
+        MOV      R5,R1
+//  852   		mSeconds = SYSTIME_TO_MSEC(currentTime);
+//  853 #ifdef GS2011ME_02
+//  854   		temperature_int = App_TemperatureGet();
+          CFI FunCall App_TemperatureGet
+        BL       App_TemperatureGet
+//  855 		sprintf((char*)PAYLOAD,"%llu,%d", mSeconds,temperature_int);
+        STR      R0,[SP, #+0]
+        MOV      R0,#+1000
+        UMULL    R2,R3,R0,R4
+        MLA      R3,R0,R5,R3
+        BL       ??Subroutine14_0
+??CrossCallReturnLabel_32:
+        LSRS     R3,R3,#+15
+        ADR.W    R1,`?<Constant "%llu,%d">`
+        ADD      R0,SP,#+28
+          CFI FunCall sprintf
+        BL       sprintf
+//  856 #endif
+//  857 #ifdef GS2011ME_01
+//  858 		GetTemperature(&temperature_sensor[0]);
+//  859 		sprintf((char*)PAYLOAD,"%llu,%.2f", mSeconds,temperature_sensor[0].Temperature);
+//  860 #endif
+//  861     	TOPIC_LEN = strlen((const char*)TOPIC_SENSOR);
+//  862 		PAYLOAD_LEN = strlen((const char*)PAYLOAD);
+        ADD      R0,SP,#+28
+          CFI FunCall strlen
+        BL       strlen
+        MOV      R4,R0
+//  863 	
+//  864 
+//  865   		mqtt_publish_msg.TOPIC = (UINT8*)gsn_malloc(TOPIC_LEN+1);
+        MOVS     R2,#+0
+        MOVW     R1,#+865
+        MOVS     R0,#+48
+          CFI FunCall GsnDynMemMgmt_Alloc
+        BL       GsnDynMemMgmt_Alloc
+        STR      R0,[SP, #+8]
+//  866   		mqtt_publish_msg.PAYLOAD = (UINT8*)gsn_malloc(PAYLOAD_LEN+1);
+        ADDS     R5,R4,#+1
+        MOVS     R2,#+0
+        MOVW     R1,#+866
+        MOV      R0,R5
+          CFI FunCall GsnDynMemMgmt_Alloc
+        BL       GsnDynMemMgmt_Alloc
+        STR      R0,[SP, #+12]
+//  867     
+//  868 
+//  869   		memset(mqtt_publish_msg.TOPIC, 0, TOPIC_LEN+1);
+        MOVS     R2,#+48
+        BL       ?Subroutine4
+//  870   		memset(mqtt_publish_msg.PAYLOAD, 0, PAYLOAD_LEN+1);
+??CrossCallReturnLabel_11:
+        LDR      R0,[SP, #+12]
+        MOV      R2,R5
+        BL       ??Subroutine4_0
+//  871   
+//  872   		memcpy(mqtt_publish_msg.TOPIC, TOPIC_SENSOR, TOPIC_LEN);
+??CrossCallReturnLabel_6:
+        LDR      R0,[SP, #+8]
+        ADR.W    R1,`?<Constant "v/a/g/001dc914feae/s/...">`
+        MOVS     R2,#+47
+          CFI FunCall memcpy
+        BL       memcpy
+//  873   		memcpy(mqtt_publish_msg.PAYLOAD, PAYLOAD, PAYLOAD_LEN);
+        LDR      R0,[SP, #+12]
+        MOV      R2,R4
+        ADD      R1,SP,#+28
+          CFI FunCall memcpy
+        BL       memcpy
+//  874   
+//  875   		mqtt_publish_msg.MSG_ID = 0;
+??MQTT_PUBLISH_MSG_GEN_1:
+        MOVS     R0,#+0
+        STRH     R0,[SP, #+16]
+//  876   		mqtt_publish_msg.TIME = 0;
+        STR      R0,[SP, #+20]
+//  877 		mqtt_publish_msg.sending_count = 0;
+        STRB     R0,[SP, #+24]
+//  878   		mqtt_publish_msg.MSG_TYPE = MQTT_MSG_TYPE_PUBLISH;
+        MOVS     R0,#+3
+        STRB     R0,[SP, #+4]
+//  879 	}
+//  880 	MQTT_LIST_PUT(&(mqtt_ctx.publish_list), &mqtt_publish_msg);
+??MQTT_PUBLISH_MSG_GEN_2:
+        ADD      R1,SP,#+4
+        LDR.N    R0,??DataTable93_4
+          CFI FunCall MQTT_LIST_PUT
+        BL       MQTT_LIST_PUT
+//  881 	//S2w_Printf("\r\n  MQTT_PUBLISH_MSG_GEN END ");
+//  882   return 0;
+        MOVS     R0,#+0
+        ADD      SP,SP,#+132
+          CFI CFA R13+12
+        POP      {R4,R5,PC}       ;; return
+          CFI EndBlock cfiBlock69
+//  883   
+//  884 }
+
+        SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond70 Using cfiCommon0
-          CFI (cfiCond70) Function MQTT_PUBLISH_MSG_GEN
-          CFI (cfiCond70) Conditional ??CrossCallReturnLabel_27
-          CFI (cfiCond70) R4 Frame(CFA, -32)
-          CFI (cfiCond70) R5 Frame(CFA, -28)
-          CFI (cfiCond70) R6 Frame(CFA, -24)
-          CFI (cfiCond70) R7 Frame(CFA, -20)
-          CFI (cfiCond70) R8 Frame(CFA, -16)
-          CFI (cfiCond70) R10 Frame(CFA, -12)
-          CFI (cfiCond70) R11 Frame(CFA, -8)
-          CFI (cfiCond70) R14 Frame(CFA, -4)
-          CFI (cfiCond70) CFA R13+152
+          CFI Function MQTT_PUBLISH_MSG_RETRY
+          CFI NoCalls
+          CFI Conditional ??CrossCallReturnLabel_33
+          CFI R4 Frame(CFA, -12)
+          CFI R6 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+32
           CFI Block cfiCond71 Using cfiCommon0
-          CFI (cfiCond71) Function MQTT_AP_CONNECT
-          CFI (cfiCond71) Conditional ??CrossCallReturnLabel_26
-          CFI (cfiCond71) R4 Frame(CFA, -16)
-          CFI (cfiCond71) R5 Frame(CFA, -12)
+          CFI (cfiCond71) Function MQTT_PUBLISH_MSG_RETRY
+          CFI (cfiCond71) NoCalls MQTT_PUBLISH_MSG_RETRY
+          CFI (cfiCond71) Conditional ??CrossCallReturnLabel_34
+          CFI (cfiCond71) R4 Frame(CFA, -12)
           CFI (cfiCond71) R6 Frame(CFA, -8)
           CFI (cfiCond71) R14 Frame(CFA, -4)
-          CFI (cfiCond71) CFA R13+16
-          CFI Block cfiCond72 Using cfiCommon0
-          CFI (cfiCond72) Function MQTT_AP_CONNECT
-          CFI (cfiCond72) Conditional ??CrossCallReturnLabel_25
-          CFI (cfiCond72) R4 Frame(CFA, -16)
-          CFI (cfiCond72) R5 Frame(CFA, -12)
-          CFI (cfiCond72) R6 Frame(CFA, -8)
-          CFI (cfiCond72) R14 Frame(CFA, -4)
-          CFI (cfiCond72) CFA R13+16
-          CFI Block cfiPicker73 Using cfiCommon1
-          CFI (cfiPicker73) NoFunction
-          CFI (cfiPicker73) Picker
+          CFI (cfiCond71) CFA R13+32
+          CFI Block cfiPicker72 Using cfiCommon1
+          CFI (cfiPicker72) NoFunction
+          CFI (cfiPicker72) NoCalls MQTT_PUBLISH_MSG_RETRY
+          CFI (cfiPicker72) Picker
         THUMB
-?Subroutine9:
-        MOV      R0,R4
-          CFI FunCall MQTT_MESSAGE_QUEUE_TASK GsnDynMemMgmt_Free
-          CFI FunCall MQTT_PUBLISH_MSG_GEN GsnDynMemMgmt_Free
-          CFI FunCall MQTT_PUBLISH_MSG_GEN GsnDynMemMgmt_Free
-          CFI FunCall MQTT_AP_CONNECT GsnDynMemMgmt_Free
-          CFI FunCall MQTT_AP_CONNECT GsnDynMemMgmt_Free
-        B.W      GsnDynMemMgmt_Free
-          CFI EndBlock cfiCond68
-          CFI EndBlock cfiCond69
+?Subroutine12:
+        UMULL    R2,R3,R4,R0
+        LDR      R0,[SP, #+8]
+        MLA      R3,R4,R1,R3
           CFI EndBlock cfiCond70
           CFI EndBlock cfiCond71
-          CFI EndBlock cfiCond72
-          CFI EndBlock cfiPicker73
+          CFI EndBlock cfiPicker72
+        REQUIRE ??Subroutine14_0
+        ;; // Fall through to label ??Subroutine14_0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond74 Using cfiCommon0
-          CFI Function MQTT_PUBLISH_MSG_GEN
-          CFI Conditional ??CrossCallReturnLabel_10
-          CFI R4 Frame(CFA, -32)
-          CFI R5 Frame(CFA, -28)
-          CFI R6 Frame(CFA, -24)
-          CFI R7 Frame(CFA, -20)
-          CFI R8 Frame(CFA, -16)
-          CFI R10 Frame(CFA, -12)
-          CFI R11 Frame(CFA, -8)
+          CFI Block cfiCond73 Using cfiCommon0
+          CFI Function MQTT_MSG_FUNC_PUBLISH
+          CFI NoCalls
+          CFI NoCalls
+          CFI NoCalls
+          CFI Conditional ??CrossCallReturnLabel_31
+          CFI R4 Frame(CFA, -20)
+          CFI R5 Frame(CFA, -16)
+          CFI R6 Frame(CFA, -12)
+          CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
-          CFI CFA R13+152
+          CFI CFA R13+32
+          CFI Block cfiCond74 Using cfiCommon0
+          CFI (cfiCond74) Function MQTT_PUBLISH_MSG_GEN
+          CFI (cfiCond74) NoCalls MQTT_PUBLISH_MSG_RETRY
+          CFI (cfiCond74) NoCalls MQTT_PUBLISH_MSG_GEN
+          CFI (cfiCond74) NoCalls MQTT_MSG_FUNC_PUBLISH
+          CFI (cfiCond74) Conditional ??CrossCallReturnLabel_32
+          CFI (cfiCond74) R4 Frame(CFA, -12)
+          CFI (cfiCond74) R5 Frame(CFA, -8)
+          CFI (cfiCond74) R14 Frame(CFA, -4)
+          CFI (cfiCond74) CFA R13+144
           CFI Block cfiCond75 Using cfiCommon0
-          CFI (cfiCond75) Function MQTT_PUBLISH_MSG_GEN
-          CFI (cfiCond75) Conditional ??CrossCallReturnLabel_9
-          CFI (cfiCond75) R4 Frame(CFA, -32)
-          CFI (cfiCond75) R5 Frame(CFA, -28)
-          CFI (cfiCond75) R6 Frame(CFA, -24)
-          CFI (cfiCond75) R7 Frame(CFA, -20)
-          CFI (cfiCond75) R8 Frame(CFA, -16)
-          CFI (cfiCond75) R10 Frame(CFA, -12)
-          CFI (cfiCond75) R11 Frame(CFA, -8)
+          CFI (cfiCond75) Function MQTT_PUBLISH_MSG_RETRY
+          CFI (cfiCond75) NoCalls MQTT_PUBLISH_MSG_RETRY
+          CFI (cfiCond75) NoCalls MQTT_PUBLISH_MSG_GEN
+          CFI (cfiCond75) NoCalls MQTT_MSG_FUNC_PUBLISH
+          CFI (cfiCond75) Conditional ??CrossCallReturnLabel_33
+          CFI (cfiCond75) R4 Frame(CFA, -12)
+          CFI (cfiCond75) R6 Frame(CFA, -8)
           CFI (cfiCond75) R14 Frame(CFA, -4)
-          CFI (cfiCond75) CFA R13+152
-          CFI Block cfiPicker76 Using cfiCommon1
-          CFI (cfiPicker76) NoFunction
-          CFI (cfiPicker76) Picker
+          CFI (cfiCond75) CFA R13+32
+          CFI Block cfiCond76 Using cfiCommon0
+          CFI (cfiCond76) Function MQTT_PUBLISH_MSG_RETRY
+          CFI (cfiCond76) NoCalls MQTT_PUBLISH_MSG_RETRY
+          CFI (cfiCond76) NoCalls MQTT_PUBLISH_MSG_GEN
+          CFI (cfiCond76) NoCalls MQTT_MSG_FUNC_PUBLISH
+          CFI (cfiCond76) Conditional ??CrossCallReturnLabel_34
+          CFI (cfiCond76) R4 Frame(CFA, -12)
+          CFI (cfiCond76) R6 Frame(CFA, -8)
+          CFI (cfiCond76) R14 Frame(CFA, -4)
+          CFI (cfiCond76) CFA R13+32
+          CFI Block cfiPicker77 Using cfiCommon1
+          CFI (cfiPicker77) NoFunction
+          CFI (cfiPicker77) NoCalls MQTT_PUBLISH_MSG_RETRY
+          CFI (cfiPicker77) NoCalls MQTT_PUBLISH_MSG_GEN
+          CFI (cfiPicker77) NoCalls MQTT_MSG_FUNC_PUBLISH
+          CFI (cfiPicker77) Picker
         THUMB
-?Subroutine6:
-        MOVS     R0,#+0
-        STRH     R0,[R4, #+12]
-        STR      R0,[R4, #+16]
-        MOV      R1,R4
-        MOVS     R0,#+3
-        STRB     R0,[R4, #+0]
-        MOVS     R0,#+1
-        STRB     R0,[R4, #+14]
-        LDR      R0,[R6, #+4]
-        LDR      R0,[R0, #+92]
-          CFI FunCall MQTT_PUBLISH_MSG_GEN MQTT_LIST_PUT
-          CFI FunCall MQTT_PUBLISH_MSG_GEN MQTT_LIST_PUT
-        B.N      MQTT_LIST_PUT
+??Subroutine14_0:
+        LSRS     R2,R2,#+15
+        ORR      R2,R2,R3, LSL #+17
+        BX       LR
+          CFI EndBlock cfiCond73
           CFI EndBlock cfiCond74
           CFI EndBlock cfiCond75
-          CFI EndBlock cfiPicker76
-//  764 
-//  765 
-//  766 
+          CFI EndBlock cfiCond76
+          CFI EndBlock cfiPicker77
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock77 Using cfiCommon0
+          CFI Block cfiCond78 Using cfiCommon0
+          CFI Function MQTT_PUBLISH_MSG_GEN
+          CFI Conditional ??CrossCallReturnLabel_12
+          CFI R4 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+144
+          CFI Block cfiCond79 Using cfiCommon0
+          CFI (cfiCond79) Function MQTT_PUBLISH_MSG_GEN
+          CFI (cfiCond79) Conditional ??CrossCallReturnLabel_11
+          CFI (cfiCond79) R4 Frame(CFA, -12)
+          CFI (cfiCond79) R5 Frame(CFA, -8)
+          CFI (cfiCond79) R14 Frame(CFA, -4)
+          CFI (cfiCond79) CFA R13+144
+          CFI Block cfiPicker80 Using cfiCommon1
+          CFI (cfiPicker80) NoFunction
+          CFI (cfiPicker80) Picker
+        THUMB
+?Subroutine4:
+        LDR      R0,[SP, #+8]
+          CFI Block cfiCond81 Using cfiCommon0
+          CFI (cfiCond81) Function MQTT_STATE_CALLBACK_UNINITIAL
+          CFI (cfiCond81) Conditional ??CrossCallReturnLabel_10
+          CFI (cfiCond81) R4 Frame(CFA, -12)
+          CFI (cfiCond81) R5 Frame(CFA, -8)
+          CFI (cfiCond81) R14 Frame(CFA, -4)
+          CFI (cfiCond81) CFA R13+16
+          CFI Block cfiCond82 Using cfiCommon0
+          CFI (cfiCond82) Function MQTT_STATE_CALLBACK_UNINITIAL
+          CFI (cfiCond82) Conditional ??CrossCallReturnLabel_9
+          CFI (cfiCond82) R4 Frame(CFA, -12)
+          CFI (cfiCond82) R5 Frame(CFA, -8)
+          CFI (cfiCond82) R14 Frame(CFA, -4)
+          CFI (cfiCond82) CFA R13+16
+          CFI Block cfiCond83 Using cfiCommon0
+          CFI (cfiCond83) Function MQTT_STATE_CALLBACK_UNINITIAL
+          CFI (cfiCond83) Conditional ??CrossCallReturnLabel_8
+          CFI (cfiCond83) R4 Frame(CFA, -12)
+          CFI (cfiCond83) R5 Frame(CFA, -8)
+          CFI (cfiCond83) R14 Frame(CFA, -4)
+          CFI (cfiCond83) CFA R13+16
+          CFI Block cfiCond84 Using cfiCommon0
+          CFI (cfiCond84) Function MQTT_PUBLISH_MSG_GEN
+          CFI (cfiCond84) Conditional ??CrossCallReturnLabel_7
+          CFI (cfiCond84) R4 Frame(CFA, -12)
+          CFI (cfiCond84) R5 Frame(CFA, -8)
+          CFI (cfiCond84) R14 Frame(CFA, -4)
+          CFI (cfiCond84) CFA R13+144
+          CFI Block cfiCond85 Using cfiCommon0
+          CFI (cfiCond85) Function MQTT_PUBLISH_MSG_GEN
+          CFI (cfiCond85) Conditional ??CrossCallReturnLabel_6
+          CFI (cfiCond85) R4 Frame(CFA, -12)
+          CFI (cfiCond85) R5 Frame(CFA, -8)
+          CFI (cfiCond85) R14 Frame(CFA, -4)
+          CFI (cfiCond85) CFA R13+144
+??Subroutine4_0:
+        MOVS     R1,#+0
+          CFI FunCall MQTT_PUBLISH_MSG_GEN memset
+          CFI FunCall MQTT_PUBLISH_MSG_GEN memset
+          CFI FunCall MQTT_STATE_CALLBACK_UNINITIAL memset
+          CFI FunCall MQTT_STATE_CALLBACK_UNINITIAL memset
+          CFI FunCall MQTT_STATE_CALLBACK_UNINITIAL memset
+          CFI FunCall MQTT_PUBLISH_MSG_GEN memset
+          CFI FunCall MQTT_PUBLISH_MSG_GEN memset
+        B.W      memset
+          CFI EndBlock cfiCond78
+          CFI EndBlock cfiCond79
+          CFI EndBlock cfiPicker80
+          CFI EndBlock cfiCond81
+          CFI EndBlock cfiCond82
+          CFI EndBlock cfiCond83
+          CFI EndBlock cfiCond84
+          CFI EndBlock cfiCond85
+//  885 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock86 Using cfiCommon0
+          CFI Function MQTT_PING_MSG
+        THUMB
+//  886 void MQTT_PING_MSG()
+//  887 {
+MQTT_PING_MSG:
+        PUSH     {R3-R5,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+//  888   UINT status;
+//  889   S2w_Printf("\r\n  PING_MSG START ");
+        ADR.W    R0,`?<Constant "\\r\\n  PING_MSG START ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  890   tx_mutex_get(&ping_mutex, TX_WAIT_FOREVER);
+        LDR.N    R4,??DataTable93_2
+        ADD      R5,R4,#+9728
+        ADDS     R5,R5,#+148
+        BL       ??Subroutine13_0
+//  891   //tx_semaphore_get(&ping_semaphore,TX_WAIT_FOREVER);
+//  892   ping_count++;
+??CrossCallReturnLabel_27:
+        LDRB     R0,[R4, #+2]
+        ADDS     R0,R0,#+1
+        STRB     R0,[R4, #+2]
+//  893   tx_mutex_put(&ping_mutex);
+        MOV      R0,R5
+          CFI FunCall _tx_mutex_put
+        BL       _tx_mutex_put
+//  894   //tx_semaphore_put(&ping_semaphore);
+//  895   
+//  896   
+//  897   status = mqtt_ping(&(mqtt_ctx.MQTT_CLIENT));
+//  898   if( status == 0 )
+        LDR.N    R0,??DataTable93_3
+          CFI FunCall mqtt_ping
+        BL       mqtt_ping
+        CBNZ.N   R0,??MQTT_PING_MSG_0
+//  899   {
+//  900   	S2w_Printf("\r\n Ping req Suc");
+        ADR.W    R0,`?<Constant "\\r\\n Ping req Suc">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  901 	//status = tx_timer_activate(&my_timer);
+//  902 	AppS2wHal_TimerStart(&my_timer, 300);
+        ADD      R0,R4,#+9984
+        POP      {R2,R4,R5,LR}
+          CFI R4 SameValue
+          CFI R5 SameValue
+          CFI R14 SameValue
+          CFI CFA R13+0
+        MOV      R1,#+300
+          CFI FunCall AppS2wHal_TimerStart
+        B.W      AppS2wHal_TimerStart
+          CFI R4 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+16
+//  903   }
+//  904   else
+//  905   {
+//  906 	mqtt_Xstate = MQTT_STATE_DISCONNECT;
+??MQTT_PING_MSG_0:
+        MOVS     R0,#+4
+        STRB     R0,[R4, #+1]
+//  907 	S2w_Printf("\r\n Ping request Fail");
+        POP      {R1,R4,R5,LR}
+          CFI R4 SameValue
+          CFI R5 SameValue
+          CFI R14 SameValue
+          CFI CFA R13+0
+        ADR.W    R0,`?<Constant "\\r\\n Ping request Fail">`
+          CFI FunCall S2w_Printf
+        B.W      S2w_Printf
+          CFI EndBlock cfiBlock86
+//  908   }
+//  909   //S2w_Printf("\r\n  MQTT_PING_MSG END ");
+//  910 }
+//  911 
+
+        SECTION `.text`:CODE:NOROOT(2)
+          CFI Block cfiBlock87 Using cfiCommon0
+          CFI Function MQTT_PING_OUT
+        THUMB
+//  912 void MQTT_PING_OUT(VOID* input)
+//  913 {
+MQTT_PING_OUT:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+//  914   S2w_Printf("\r\n  MQTT_PING_OUT START ");
+        ADR.W    R0,`?<Constant "\\r\\n  MQTT_PING_OUT START ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  915   if(ping_count < 3)
+        LDR.N    R0,??DataTable93_2
+        LDRB     R1,[R0, #+2]
+        CMP      R1,#+3
+        ITT      LT 
+        POPLT    {R0,LR}
+          CFI FunCall MQTT_PING_MSG
+        BLT.W    MQTT_PING_MSG
+//  916 	MQTT_PING_MSG();
+//  917   else
+//  918   {
+//  919 	mqtt_Xstate = MQTT_STATE_DISCONNECT;
+        MOVS     R1,#+4
+        STRB     R1,[R0, #+1]
+//  920   }
+//  921   //S2w_Printf("\r\n  MQTT_PING_OUT END ");
+//  922 }
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock87
+//  923 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock88 Using cfiCommon0
           CFI Function MQTT_CONNECT
         THUMB
-//  767 UINT8 MQTT_CONNECT()
-//  768 {
+//  924 UINT8 MQTT_CONNECT()
+//  925 {
 MQTT_CONNECT:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-//  769   int RSSI = 0;
-//  770   UINT8 status = 0;
-//  771   
-//  772   RSSI = AppS2wHal_RssiGet();
-//  773 
-//  774   if(RSSI == 0)
-        LDR.N    R4,??DataTable70_1
+//  926   int RSSI = 0;
+//  927   UINT8 status = 0;
+//  928   S2w_Printf("\r\n  MQTT_CONNECT START ");
+        ADR.W    R0,`?<Constant "\\r\\n  MQTT_CONNECT START ">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  929   RSSI = AppS2wHal_RssiGet();
+//  930 
+//  931   if(RSSI == 0)
           CFI FunCall AppS2wHal_RssiGet
         BL       AppS2wHal_RssiGet
         CBNZ.N   R0,??MQTT_CONNECT_0
-//  775   {
-//  776 	status = MQTT_AP_CONNECT();
-//  777   }
-//  778   
-//  779   if(status != 0)
+//  932   {
+//  933 	status = MQTT_AP_CONNECT();
+//  934   }
+//  935   
+//  936   if(status != 0)
           CFI FunCall MQTT_AP_CONNECT
         BL       MQTT_AP_CONNECT
-        CBZ.N    R0,??MQTT_CONNECT_0
-//  780   {
-//  781 	S2w_Printf("\r\n AP CONNECT Error");
-        ADR.W    R0,`?<Constant "\\r\\n AP CONNECT Error">`
-??MQTT_CONNECT_1:
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-//  782 	goto error;
-//  783   }
-//  784 
-//  785   GsnTaskSleep(1000);
-//  786   if(AppS2wHal_NetIsCidOpen(mqtt_ctx->MQTT_CLIENT.mqtt_cid) == 0)
-//  787   {
-//  788 	status = MQTT_TCP_CONNECT(&(mqtt_ctx->MQTT_CLIENT.mqtt_cid));
-//  789 	if(status != 0)
-//  790 	{
-//  791 	  S2w_Printf("\r\n TCP CONNECT Error");
-//  792 	  goto error;
-//  793 	}
-//  794 
-//  795 	GsnTaskSleep(1000);
-//  796 	/*S2w_Printf("\r\n BEFORE SSL CONNECT");
-//  797 	S2w_Printf("\r\n CID : %d", mqtt_ctx->MQTT_CLIENT.mqtt_cid);
-//  798 	status = MQTT_SSL_CONNECT(mqtt_ctx->MQTT_CLIENT.mqtt_cid);
-//  799 	if(status != 0)
-//  800 	{
-//  801 	  S2w_Printf("\r\n SSL CONNECT Error");
-//  802 	  goto error;
-//  803 	}
-//  804 	S2w_Printf("\r\n ATFER SSL CONNECT");
-//  805 	GsnTaskSleep(1000);*/
-//  806   }
-//  807   
-//  808   if(mqtt_connect(&(mqtt_ctx->MQTT_CLIENT)) != 0)
-//  809   {
-//  810 	S2w_Printf("\r\n MQTT CONNECT Error");
-//  811 	goto error;
-//  812   }
-//  813   S2w_Printf("\r\n MQTT CONNECT success");
-//  814   GsnTaskSleep(1000);
-//  815   return 0;
-//  816  
-//  817 error:
-//  818   mqtt_Xstate = MQTT_STATE_INITIAL;
-        MOVS     R0,#+1
-        STRB     R0,[R4, #+1]
-//  819   return 1;
-        POP      {R4,PC}          ;; return
+        CBNZ.N   R0,??MQTT_CONNECT_1
+//  937   {
+//  938 	//S2w_Printf("\r\n AP CONNECT Error");
+//  939 	goto error;
+//  940   }
+//  941 
+//  942   //GsnTaskSleep(1000);
+//  943   tx_thread_sleep(10);
 ??MQTT_CONNECT_0:
-        BL       ?Subroutine11
-??CrossCallReturnLabel_34:
-        LDR      R0,[R4, #+4]
-        LDRB     R0,[R0, #+60]
+        MOVS     R0,#+10
+          CFI FunCall _tx_thread_sleep
+        BL       _tx_thread_sleep
+//  944   if(AppS2wHal_NetIsCidOpen(mqtt_ctx.MQTT_CLIENT.mqtt_cid) == 0)
+        LDR.N    R4,??DataTable93_3
+        LDRB     R0,[R4, #+60]
           CFI FunCall AppS2wHal_NetIsCidOpen
         BL       AppS2wHal_NetIsCidOpen
-        CBNZ.N   R0,??CrossCallReturnLabel_33
-        LDR      R0,[R4, #+4]
-        ADDS     R0,R0,#+60
+        CBNZ.N   R0,??MQTT_CONNECT_2
+//  945   {
+//  946 	status = MQTT_TCP_CONNECT();
+//  947 	if(status != 0)
           CFI FunCall MQTT_TCP_CONNECT
         BL       MQTT_TCP_CONNECT
-        CBZ.N    R0,??MQTT_CONNECT_2
-        ADR.W    R0,`?<Constant "\\r\\n TCP CONNECT Error">`
-        B.N      ??MQTT_CONNECT_1
+        CBNZ.N   R0,??MQTT_CONNECT_1
+//  948 	{
+//  949 	  //S2w_Printf("\r\n TCP CONNECT Error");
+//  950 	  goto error;
+//  951 	}
+//  952 
+//  953 	//GsnTaskSleep(1000);
+//  954 	tx_thread_sleep(10);
+        MOVS     R0,#+10
+          CFI FunCall _tx_thread_sleep
+        BL       _tx_thread_sleep
+//  955 #ifdef SSL_ADD
+//  956 	S2w_Printf("\r\n BEFORE SSL CONNECT");
+//  957 	S2w_Printf("\r\n CID : %d", mqtt_ctx.MQTT_CLIENT.mqtt_cid);
+//  958 	status = MQTT_SSL_CONNECT(mqtt_ctx.MQTT_CLIENT.mqtt_cid);
+//  959 	if(status != 0)
+//  960 	{
+//  961 	  S2w_Printf("\r\n SSL CONNECT Error");
+//  962 	  goto error;
+//  963 	}
+//  964 	S2w_Printf("\r\n ATFER SSL CONNECT");
+//  965 	//GsnTaskSleep(1000);
+//  966 	tx_thread_sleep(10);
+//  967 #endif
+//  968   }
+//  969   
+//  970   if(mqtt_connect(&(mqtt_ctx.MQTT_CLIENT)) != 0)
 ??MQTT_CONNECT_2:
-        BL       ?Subroutine11
-??CrossCallReturnLabel_33:
-        LDR      R0,[R4, #+4]
+        MOV      R0,R4
           CFI FunCall mqtt_connect
         BL       mqtt_connect
-        CBZ.N    R0,??MQTT_CONNECT_3
-        ADR.W    R0,`?<Constant "\\r\\n MQTT CONNECT Error">`
-        B.N      ??MQTT_CONNECT_1
-??MQTT_CONNECT_3:
-        ADR.W    R0,`?<Constant "\\r\\n MQTT CONNECT success">`
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-        BL       ?Subroutine11
-??CrossCallReturnLabel_32:
+        CBNZ.N   R0,??MQTT_CONNECT_1
+//  971   {
+//  972 	//S2w_Printf("\r\n MQTT CONNECT Error");
+//  973 	goto error;
+//  974   }
+//  975   //S2w_Printf("\r\n MQTT CONNECT success");
+//  976   //GsnTaskSleep(1000);
+//  977   tx_thread_sleep(10);
+        MOVS     R0,#+10
+          CFI FunCall _tx_thread_sleep
+        BL       _tx_thread_sleep
+//  978   //S2w_Printf("\r\n  MQTT_CONNECT END ");
+//  979   return 0;
         MOVS     R0,#+0
         POP      {R4,PC}
-          CFI EndBlock cfiBlock77
-//  820 }
-//  821 
+//  980  
+//  981 error:
+//  982   mqtt_Xstate = MQTT_STATE_INITIAL;
+??MQTT_CONNECT_1:
+        LDR.N    R0,??DataTable93_2
+        MOVS     R1,#+1
+        STRB     R1,[R0, #+1]
+//  983   return 1;
+        MOVS     R0,#+1
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock88
+//  984 }
+//  985 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock78 Using cfiCommon0
+          CFI Block cfiBlock89 Using cfiCommon0
           CFI Function MQTT_AP_CONNECT
         THUMB
-//  822 UINT8 MQTT_AP_CONNECT()
-//  823 {
+//  986 UINT8 MQTT_AP_CONNECT()
+//  987 {
 MQTT_AP_CONNECT:
         PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
@@ -2875,337 +3554,268 @@ MQTT_AP_CONNECT:
           CFI R5 Frame(CFA, -12)
           CFI R4 Frame(CFA, -16)
           CFI CFA R13+16
-//  824 	UINT8* SSID;
-//  825 	UINT8* WWPA;
-//  826     UINT8 status;
-//  827 
-//  828 	//SSID = (UINT8 *)malloc(strlen(AP_SSID)+1);
-//  829 	//WWPA = (UINT8 *)malloc(strlen(AP_WWPA)+1);
-//  830 	
-//  831 	SSID = (UINT8 *)gsn_malloc(strlen(AP_SSID)+1);
+//  988 	UINT8* SSID;
+//  989 	UINT8* WWPA;
+//  990     UINT8 status;
+//  991 
+//  992 	
+//  993 	SSID = (UINT8 *)gsn_malloc(strlen(AP_SSID)+1);
         MOVS     R2,#+0
-        MOVW     R1,#+831
+        MOVW     R1,#+993
         MOVS     R0,#+7
           CFI FunCall GsnDynMemMgmt_Alloc
         BL       GsnDynMemMgmt_Alloc
         MOV      R4,R0
-//  832 	WWPA = (UINT8 *)gsn_malloc(strlen(AP_WWPA)+1);
+//  994 	WWPA = (UINT8 *)gsn_malloc(strlen(AP_WWPA)+1);
         MOVS     R2,#+0
-        MOV      R1,#+832
+        MOVW     R1,#+994
         MOVS     R0,#+11
           CFI FunCall GsnDynMemMgmt_Alloc
         BL       GsnDynMemMgmt_Alloc
-//  833 	
-//  834 	sprintf((char*)WWPA,"%s",AP_WWPA);
-        ADR.N    R6,??DataTable70  ;; 0x25, 0x73, 0x00, 0x00
+//  995 	
+//  996 	sprintf((char*)WWPA,"%s",AP_WWPA);
+        ADR.N    R6,??DataTable93  ;; 0x25, 0x73, 0x00, 0x00
         MOV      R5,R0
         ADR.W    R2,`?<Constant "4rnekd9wkd">`
         MOV      R1,R6
           CFI FunCall sprintf
         BL       sprintf
-//  835 	status = AppS2wCmd_Wwpa(WWPA);
-//  836 	if(status != 0)
+//  997 	status = AppS2wCmd_Wwpa(WWPA);
+//  998 	if(status != 0)
         MOV      R0,R5
           CFI FunCall AppS2wCmd_Wwpa
         BL       AppS2wCmd_Wwpa
-        CBZ.N    R0,??MQTT_AP_CONNECT_0
-//  837 	{
-//  838 		S2w_Printf("\r\n wrong WWPA");
-        ADR.W    R0,`?<Constant "\\r\\n wrong WWPA">`
-??MQTT_AP_CONNECT_1:
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-//  839 		goto error;
-//  840 	}
-//  841     sprintf((char*)SSID,"%s",AP_SSID);
-//  842 	status = AppS2wCmd_Wassoc_test(SSID);
-//  843 	if(status != 0)
-//  844 	{
-//  845 		S2w_Printf("\r\n AP connect error");
-//  846 		goto error;
-//  847 	}
-//  848 	//free(SSID);
-//  849 	//free(WWPA);
-//  850 	gsn_free(SSID);
-//  851 	SSID = NULL;
-//  852 	gsn_free(WWPA);
-//  853 	WWPA = NULL;
-//  854 	S2w_Printf("\r\n AP connect success");
-//  855 	return status;
-//  856 error : 
-//  857 	//free(SSID);
-//  858 	//free(WWPA);
-//  859 	gsn_free(SSID);
-        BL       ?Subroutine9
-//  860 	SSID = NULL;
-//  861 	gsn_free(WWPA);
-??CrossCallReturnLabel_26:
-        MOV      R0,R5
-          CFI FunCall GsnDynMemMgmt_Free
-        BL       GsnDynMemMgmt_Free
-//  862 	WWPA = NULL;
-//  863 	return 1;
-        MOVS     R0,#+1
-        POP      {R4-R6,PC}       ;; return
-??MQTT_AP_CONNECT_0:
+        CBNZ.N   R0,??MQTT_AP_CONNECT_0
+//  999 	{
+// 1000 		//S2w_Printf("\r\n wrong WWPA");
+// 1001 		goto error;
+// 1002 	}
+// 1003     sprintf((char*)SSID,"%s",AP_SSID);
         ADR.W    R2,`?<Constant "FTR-01">`
         MOV      R1,R6
         MOV      R0,R4
           CFI FunCall sprintf
         BL       sprintf
+// 1004 	status = AppS2wCmd_Wassoc_test(SSID);
+// 1005 	if(status != 0)
         MOV      R0,R4
           CFI FunCall AppS2wCmd_Wassoc_test
         BL       AppS2wCmd_Wassoc_test
-        CBZ.N    R0,??MQTT_AP_CONNECT_2
-        ADR.W    R0,`?<Constant "\\r\\n AP connect error">`
-        B.N      ??MQTT_AP_CONNECT_1
-??MQTT_AP_CONNECT_2:
-        BL       ?Subroutine9
-??CrossCallReturnLabel_25:
+        CBNZ.N   R0,??MQTT_AP_CONNECT_0
+// 1006 	{
+// 1007 		//S2w_Printf("\r\n AP connect error");
+// 1008 		goto error;
+// 1009 	}
+// 1010 
+// 1011 	gsn_free(SSID);
+        MOV      R0,R4
+          CFI FunCall GsnDynMemMgmt_Free
+        BL       GsnDynMemMgmt_Free
+// 1012 
+// 1013 	SSID = NULL;
+// 1014 	gsn_free(WWPA);
         MOV      R0,R5
           CFI FunCall GsnDynMemMgmt_Free
         BL       GsnDynMemMgmt_Free
-        ADR.W    R0,`?<Constant "\\r\\n AP connect success">`
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
+// 1015 	WWPA = NULL;
+// 1016 
+// 1017 	return status;
         MOVS     R0,#+0
         POP      {R4-R6,PC}
-          CFI EndBlock cfiBlock78
-//  864 }
-//  865 
+// 1018 error : 
+// 1019 
+// 1020 	gsn_free(SSID);
+??MQTT_AP_CONNECT_0:
+        MOV      R0,R4
+          CFI FunCall GsnDynMemMgmt_Free
+        BL       GsnDynMemMgmt_Free
+// 1021 	SSID = NULL;
+// 1022 	gsn_free(WWPA);
+        MOV      R0,R5
+          CFI FunCall GsnDynMemMgmt_Free
+        BL       GsnDynMemMgmt_Free
+// 1023 	WWPA = NULL;
+// 1024 	return 1;
+        MOVS     R0,#+1
+        POP      {R4-R6,PC}       ;; return
+          CFI EndBlock cfiBlock89
+// 1025 }
+// 1026 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock79 Using cfiCommon0
+          CFI Block cfiBlock90 Using cfiCommon0
           CFI Function MQTT_TCP_CONNECT
         THUMB
-//  866 UINT8 MQTT_TCP_CONNECT(UINT8* CID)
-//  867 {	
+// 1027 UINT8 MQTT_TCP_CONNECT()
+// 1028 {	
 MQTT_TCP_CONNECT:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-        MOV      R1,R0
-//  868 	UINT8 status = 0;
-//  869     
-//  870  	/*mqtt_ctx->MQTT_CLIENT.mqtt_peerData.ipAddr[0] = 54;
-//  871   	mqtt_ctx->MQTT_CLIENT.mqtt_peerData.ipAddr[1] = 178;
-//  872   	mqtt_ctx->MQTT_CLIENT.mqtt_peerData.ipAddr[2] = 154;
-//  873   	mqtt_ctx->MQTT_CLIENT.mqtt_peerData.ipAddr[3] = 197;
-//  874 	mqtt_ctx->MQTT_CLIENT.mqtt_peerData.port = 8883;*/
-//  875 	
-//  876 	mqtt_ctx->MQTT_CLIENT.mqtt_peerData.ipAddr[0] = 10;
-        LDR.N    R0,??DataTable70_1
-        LDR      R2,[R0, #+4]
-        MOVS     R3,#+10
-        STRB     R3,[R2, #+4]
-//  877   	mqtt_ctx->MQTT_CLIENT.mqtt_peerData.ipAddr[1] = 0;
-        MOVS     R3,#+0
-        LDR      R2,[R0, #+4]
-        STRB     R3,[R2, #+5]
-//  878   	mqtt_ctx->MQTT_CLIENT.mqtt_peerData.ipAddr[2] = 1;
-        MOVS     R3,#+1
-        LDR      R2,[R0, #+4]
-        STRB     R3,[R2, #+6]
-//  879   	mqtt_ctx->MQTT_CLIENT.mqtt_peerData.ipAddr[3] = 69;
-        MOVS     R3,#+69
-        LDR      R2,[R0, #+4]
-        STRB     R3,[R2, #+7]
-//  880 	
-//  881   	mqtt_ctx->MQTT_CLIENT.mqtt_peerData.port = 1883;  
-        MOVW     R3,#+1883
-        LDR      R2,[R0, #+4]
-        STRH     R3,[R2, #+2]
-//  882   	mqtt_ctx->MQTT_CLIENT.mqtt_peerData.proto = S2W_NETDATA_PROTO_TCP;
-        MOVS     R3,#+1
-        STRB     R3,[R2, #+1]
-//  883   	mqtt_ctx->MQTT_CLIENT.mqtt_peerData.mode = S2W_NETDATA_MODE_CLIENT;
-        MOVS     R3,#+0
-        LDR      R2,[R0, #+4]
-        STRB     R3,[R2, #+0]
-//  884   	status = AppS2wHal_NetTcpClient_test(&(mqtt_ctx->MQTT_CLIENT.mqtt_peerData), CID);
-//  885 	//status = AppS2wHal_NetTcpClient(&(mqtt_ctx->MQTT_CLIENT.mqtt_peerData), CID);
-//  886 	if (status != 0)
-        LDR      R0,[R0, #+4]
-          CFI FunCall AppS2wHal_NetTcpClient_test
-        BL       AppS2wHal_NetTcpClient_test
+// 1029 	UINT8 status = 0;
+// 1030 /*#ifdef THINGPLUS
+// 1031  	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[0] = 54;
+// 1032   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[1] = 178;
+// 1033   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[2] = 154;
+// 1034   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[3] = 197;
+// 1035 	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.port = 8883;
+// 1036 #endif*/
+// 1037 	#ifdef THINGPLUS
+// 1038  	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[0] = 10;
+// 1039   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[1] = 0;
+// 1040   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[2] = 1;
+// 1041   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[3] = 69;
+// 1042 	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.port = 8883;
+// 1043 #endif
+// 1044 #ifdef LOCAL
+// 1045 	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[0] = 10;
+        LDR.N    R0,??DataTable93_3
+        MOVS     R1,#+10
+        STRB     R1,[R0, #+4]
+// 1046   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[1] = 0;
+        MOVS     R1,#+0
+        STRB     R1,[R0, #+5]
+// 1047   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[2] = 1;
+        MOVS     R1,#+1
+        STRB     R1,[R0, #+6]
+// 1048   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.ipAddr[3] = 69;
+        MOVS     R1,#+69
+        STRB     R1,[R0, #+7]
+// 1049   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.port = 1883; 
+        MOVW     R1,#+1883
+        STRH     R1,[R0, #+2]
+// 1050 #endif
+// 1051   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.proto = S2W_NETDATA_PROTO_TCP;
+        MOVS     R1,#+1
+        STRB     R1,[R0, #+1]
+// 1052   	mqtt_ctx.MQTT_CLIENT.mqtt_peerData.mode = S2W_NETDATA_MODE_CLIENT;
+        MOVS     R1,#+0
+        STRB     R1,[R0, #+0]
+// 1053   	//status = AppS2wHal_NetTcpClient_test(&(mqtt_ctx.MQTT_CLIENT.mqtt_peerData), &(mqtt_ctx.MQTT_CLIENT.mqtt_cid));
+// 1054 	status = AppS2wHal_NetTcpClient(&(mqtt_ctx.MQTT_CLIENT.mqtt_peerData), &(mqtt_ctx.MQTT_CLIENT.mqtt_cid));
+// 1055 	if (status != 0)
+        ADD      R1,R0,#+60
+          CFI FunCall AppS2wHal_NetTcpClient
+        BL       AppS2wHal_NetTcpClient
         CBZ.N    R0,??MQTT_TCP_CONNECT_0
-//  887     {
-//  888 	    S2w_Printf("\r\n TcpClient error");
-        ADR.W    R0,`?<Constant "\\r\\n TcpClient error">`
+// 1056     {
+// 1057 	    //S2w_Printf("\r\n TcpClient error");
+// 1058 		return 1;
+        MOVS     R0,#+1
+// 1059     }
+// 1060 	//S2w_Printf("\r\n TcpClient success");
+// 1061 	return 0;
+??MQTT_TCP_CONNECT_0:
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock90
+// 1062 }
+// 1063 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock91 Using cfiCommon0
+          CFI Function MQTT_SSL_CONNECT
+        THUMB
+// 1064 UINT8 MQTT_SSL_CONNECT(UINT8 CID)
+// 1065 {
+MQTT_SSL_CONNECT:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+// 1066 	UINT8 status = 1;
+// 1067 	UINT8 CID_STRING[3];
+// 1068 	sprintf((char*)CID_STRING,"%u", CID);
+        MOV      R2,R0
+        ADR.N    R1,??DataTable93_1  ;; 0x25, 0x75, 0x00, 0x00
+        ADD      R0,SP,#+0
+          CFI FunCall sprintf
+        BL       sprintf
+// 1069 	status = AppS2wCmd_SSLOpen(CID_STRING);
+// 1070 	if(status != 0)
+        ADD      R0,SP,#+0
+          CFI FunCall AppS2wCmd_SSLOpen
+        BL       AppS2wCmd_SSLOpen
+        CBZ.N    R0,??MQTT_SSL_CONNECT_0
+// 1071 	{
+// 1072 		S2w_Printf("\r\n SSL open error");
+        ADR.W    R0,`?<Constant "\\r\\n SSL open error">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  889 		return 1;
+// 1073 		return 1;
         MOVS     R0,#+1
         POP      {R1,PC}
-//  890     }
-//  891 	S2w_Printf("\r\n TcpClient success");
-??MQTT_TCP_CONNECT_0:
-        ADR.W    R0,`?<Constant "\\r\\n TcpClient success">`
-        B.N      ?Subroutine2
-          CFI EndBlock cfiBlock79
-//  892 	return 0;
-//  893 }
+// 1074 	}
+// 1075     S2w_Printf("\r\n SSL open success");
+??MQTT_SSL_CONNECT_0:
+        ADR.W    R0,`?<Constant "\\r\\n SSL open success">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+// 1076 	return status;
+        MOVS     R0,#+0
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock91
+// 1077 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable70:
+??DataTable93:
         DC8      0x25, 0x73, 0x00, 0x00
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable70_1:
+??DataTable93_1:
+        DC8      0x25, 0x75, 0x00, 0x00
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable93_2:
         DC32     MQTT_CONNECT_STATUS
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable70_2:
-        DC32     temperature_sensor
+??DataTable93_3:
+        DC32     mqtt_ctx
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable70_3:
-        DC32     0x493e1
-//  894 
+??DataTable93_4:
+        DC32     mqtt_ctx+0x98
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable93_5:
+        DC32     mqtt_ctx+0x58
+// 1078 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock80 Using cfiCommon0
-          CFI Function MQTT_SSL_CONNECT
-        THUMB
-//  895 UINT8 MQTT_SSL_CONNECT(UINT8 CID)
-//  896 {
-MQTT_SSL_CONNECT:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOV      R4,R0
-//  897 	UINT8 status = 1;
-//  898 	S2w_Printf("\r\n CID : %d", CID);
-        MOV      R1,R4
-        ADR.W    R0,`?<Constant "\\r\\n CID : %d">`
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-//  899 	//status = AppS2w_SslClientOpen(CID, NULL, NULL, NULL);
-//  900 	status = AppS2wCmd_SSLOpen_test(CID);
-//  901 	if(status != 0)
-        MOV      R0,R4
-          CFI FunCall AppS2wCmd_SSLOpen_test
-        BL       AppS2wCmd_SSLOpen_test
-        CBZ.N    R0,??MQTT_SSL_CONNECT_0
-//  902 	{
-//  903 		S2w_Printf("\r\n SSL open error");
-        ADR.W    R0,`?<Constant "\\r\\n SSL open error">`
-          CFI FunCall S2w_Printf
-        BL       S2w_Printf
-//  904 		return 1;
-        MOVS     R0,#+1
-        POP      {R4,PC}
-//  905 	}
-//  906     S2w_Printf("\r\n SSL open success");
-??MQTT_SSL_CONNECT_0:
-        ADR.W    R0,`?<Constant "\\r\\n SSL open success">`
-          CFI EndBlock cfiBlock80
-        REQUIRE ?Subroutine3
-        ;; // Fall through to label ?Subroutine3
-//  907 	return status;
-//  908 }
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock81 Using cfiCommon0
-          CFI NoFunction
-          CFI CFA R13+8
-          CFI R4 Frame(CFA, -8)
-          CFI R14 Frame(CFA, -4)
-          CFI FunCall MQTT_STAET_CALLBACK_DISCONNECT S2w_Printf
-          CFI FunCall MQTT_SSL_CONNECT S2w_Printf
-        THUMB
-?Subroutine3:
-        BL       S2w_Printf
-        MOVS     R0,#+0
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock81
-//  909 
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock82 Using cfiCommon0
+          CFI Block cfiBlock92 Using cfiCommon0
           CFI Function TEST_START
         THUMB
-//  910 void TEST_START()
-//  911 {
+// 1079 void TEST_START()
+// 1080 {
 TEST_START:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-//  912   MQTT_START();
+// 1081   MQTT_START();
           CFI FunCall MQTT_START
         BL       MQTT_START
-//  913   /*UINT8* test;
-//  914   while(1)
-//  915   {
-//  916   test = (UINT8 *)gsn_malloc(strlen(AP_SSID)+1);
-//  917   memset(test,0,strlen(AP_SSID)+1);
-//  918   memcpy(test,AP_SSID,strlen(AP_SSID));
-//  919   
-//  920   S2w_Printf("\r\n test value : %s",test);
-//  921   S2w_Printf("\r\n test address1 : %d",test);
-//  922   S2w_Printf("\r\n test address2 : %d",&test);
-//  923   free(test);
-//  924   
-//  925   }*/
-//  926   GsnTaskSleep(1000);
+// 1082 
+// 1083   GsnTaskSleep(1000);
         POP      {R1,LR}
           CFI R14 SameValue
           CFI CFA R13+0
         MOV      R0,#+1000
           CFI FunCall GsnTaskSleep
         B.W      GsnTaskSleep
-          CFI EndBlock cfiBlock82
-//  927 }
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "001dc9151e55">`:
-        DC8 "001dc9151e55"
-        DC8 0, 0, 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "y3FPxdiSAJjV2LkmHF-DO...">`:
-        DC8 "y3FPxdiSAJjV2LkmHF-DO7u0PSk="
-        DC8 0, 0, 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "publish_list_mutex">`:
-        DC8 "publish_list_mutex"
-        DC8 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "send_list_mutex">`:
-        DC8 "send_list_mutex"
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "receive_list_mutex">`:
-        DC8 "receive_list_mutex"
-        DC8 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "MQTT_RECEIVE_QUEUE">`:
-        DC8 "MQTT_RECEIVE_QUEUE"
-        DC8 0
+          CFI EndBlock cfiBlock92
+// 1084 
+// 1085 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -3223,13 +3833,6 @@ TEST_START:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "MQTT_RECEIVER_THREAD">`:
-        DC8 "MQTT_RECEIVER_THREAD"
-        DC8 0, 0, 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
 `?<Constant "MQTT_MESSAGE_QUEUE_TH...">`:
         DC8 "MQTT_MESSAGE_QUEUE_THREAD"
         DC8 0, 0
@@ -3237,9 +3840,21 @@ TEST_START:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n ulStateCBCount : %...">`:
-        DC8 "\015\012 ulStateCBCount : %d , xState : %d"
-        DC8 0, 0, 0
+`?<Constant "conStatus_mutex">`:
+        DC8 "conStatus_mutex"
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "ping_mutex">`:
+        DC8 "ping_mutex"
+        DC8 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n  PROCESS_TASK START ">`:
+        DC8 "\015\012  PROCESS_TASK START "
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -3251,121 +3866,286 @@ TEST_START:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n MQTT Connection Ac...">`:
-        DC8 "\015\012 MQTT Connection Accepted"
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n MQTT Connection Re...">`:
-        DC8 0DH, 0AH, 20H, 4DH, 51H, 54H, 54H, 20H
-        DC8 43H, 6FH, 6EH, 6EH, 65H, 63H, 74H, 69H
-        DC8 6FH, 6EH, 20H, 52H, 65H, 66H, 75H, 73H
-        DC8 65H, 64H, 2CH, 20H, 72H, 65H, 61H, 73H
-        DC8 6FH, 6EH, 20H, 3DH, 20H, 75H, 6EH, 61H
-        DC8 63H, 63H, 65H, 70H, 74H, 61H, 62H, 6CH
-        DC8 65H, 20H, 70H, 72H, 6FH, 74H, 6FH, 63H
-        DC8 6FH, 6CH, 20H, 76H, 65H, 72H, 73H, 69H
-        DC8 6FH, 6EH, 0
-        DC8 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n MQTT Connection Re...">_1`:
-        DC8 0DH, 0AH, 20H, 4DH, 51H, 54H, 54H, 20H
-        DC8 43H, 6FH, 6EH, 6EH, 65H, 63H, 74H, 69H
-        DC8 6FH, 6EH, 20H, 52H, 65H, 66H, 75H, 73H
-        DC8 65H, 64H, 2CH, 20H, 72H, 65H, 61H, 73H
-        DC8 6FH, 6EH, 20H, 3DH, 20H, 69H, 64H, 65H
-        DC8 6EH, 74H, 69H, 66H, 69H, 65H, 72H, 20H
-        DC8 72H, 65H, 6AH, 65H, 63H, 74H, 65H, 64H
-        DC8 0
+`?<Constant "\\r\\n  SEND_TASK START ">`:
+        DC8 "\015\012  SEND_TASK START "
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n MQTT Connection Re...">_2`:
-        DC8 0DH, 0AH, 20H, 4DH, 51H, 54H, 54H, 20H
-        DC8 43H, 6FH, 6EH, 6EH, 65H, 63H, 74H, 69H
-        DC8 6FH, 6EH, 20H, 52H, 65H, 66H, 75H, 73H
-        DC8 65H, 64H, 2CH, 20H, 72H, 65H, 61H, 73H
-        DC8 6FH, 6EH, 20H, 3DH, 20H, 73H, 65H, 72H
-        DC8 76H, 65H, 72H, 20H, 75H, 6EH, 61H, 76H
-        DC8 61H, 69H, 6CH, 61H, 62H, 6CH, 65H, 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n MQTT Connection Re...">_3`:
-        DC8 0DH, 0AH, 20H, 4DH, 51H, 54H, 54H, 20H
-        DC8 43H, 6FH, 6EH, 6EH, 65H, 63H, 74H, 69H
-        DC8 6FH, 6EH, 20H, 52H, 65H, 66H, 75H, 73H
-        DC8 65H, 64H, 2CH, 20H, 72H, 65H, 61H, 73H
-        DC8 6FH, 6EH, 20H, 3DH, 20H, 62H, 61H, 64H
-        DC8 20H, 75H, 73H, 65H, 72H, 20H, 6EH, 61H
-        DC8 6DH, 65H, 20H, 6FH, 72H, 20H, 70H, 61H
-        DC8 73H, 73H, 77H, 6FH, 72H, 64H, 0
+`?<Constant "\\r\\n pub list 2 lock">`:
+        DC8 "\015\012 pub list 2 lock"
         DC8 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n MQTT Connection Re...">_4`:
-        DC8 0DH, 0AH, 20H, 4DH, 51H, 54H, 54H, 20H
-        DC8 43H, 6FH, 6EH, 6EH, 65H, 63H, 74H, 69H
-        DC8 6FH, 6EH, 20H, 52H, 65H, 66H, 75H, 73H
-        DC8 65H, 64H, 2CH, 20H, 72H, 65H, 61H, 73H
-        DC8 6FH, 6EH, 20H, 3DH, 20H, 6EH, 6FH, 74H
-        DC8 20H, 61H, 75H, 74H, 68H, 6FH, 72H, 69H
-        DC8 7AH, 65H, 64H, 0
+`?<Constant "\\r\\n pub list 2 unlock">`:
+        DC8 "\015\012 pub list 2 unlock"
+        DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n PUBLISH Success : %d">`:
-        DC8 "\015\012 PUBLISH Success : %d"
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n PUBLISH Fail">`:
-        DC8 "\015\012 PUBLISH Fail"
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n PUBLISH_ACK : %d M...">`:
-        DC8 "\015\012 PUBLISH_ACK : %d MSG ID delete"
+`?<Constant "\\r\\n re list 2 lock">`:
+        DC8 "\015\012 re list 2 lock"
         DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n PUBLISH_ACK : %d M...">_1`:
-        DC8 "\015\012 PUBLISH_ACK : %d MSG ID is not found"
+`?<Constant "\\r\\n re list 2 unlock">`:
+        DC8 "\015\012 re list 2 unlock"
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n MQTT_STATE_CB_unin...">`:
-        DC8 "\015\012 MQTT_STATE_CB_uninitialized"
-        DC8 0
+`?<Constant "\\r\\n QUEUE_TASK START">`:
+        DC8 "\015\012 QUEUE_TASK START"
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n MQTT_STATE_CB_init...">`:
-        DC8 "\015\012 MQTT_STATE_CB_initialized"
+`?<Constant "\\r\\n QUEUE COUNT 2 : %d">`:
+        DC8 "\015\012 QUEUE COUNT 2 : %d"
+        DC8 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n rcv_MSG : %x %x %x %x">`:
+        DC8 "\015\012 rcv_MSG : %x %x %x %x"
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n MQTT_STATE_CB_conn...">`:
-        DC8 "\015\012 MQTT_STATE_CB_connected"
+`?<Constant "\\r\\n QUEUE_TASK END">`:
+        DC8 "\015\012 QUEUE_TASK END"
+        DC8 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n  CONNACK START ">`:
+        DC8 "\015\012  CONNACK START "
         DC8 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n  PUBLISH START ">`:
+        DC8 "\015\012  PUBLISH START "
+        DC8 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBLISH : ID %d SE...">`:
+        DC8 "\015\012 PUBLISH : ID %d SEND Suc"
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n se list 3 lock">`:
+        DC8 "\015\012 se list 3 lock"
+        DC8 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n se list 3 unlock">`:
+        DC8 "\015\012 se list 3 unlock"
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBLISH : SEND Fail">`:
+        DC8 "\015\012 PUBLISH : SEND Fail"
+        DC8 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n  PUBLISH END ">`:
+        DC8 "\015\012  PUBLISH END "
+        DC8 0, 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBLISH_RETRY START ">`:
+        DC8 "\015\012 PUBLISH_RETRY START "
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBLISH_RETRY END ">`:
+        DC8 "\015\012 PUBLISH_RETRY END "
+        DC8 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBACK START ">`:
+        DC8 "\015\012 PUBACK START "
+        DC8 0, 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n se list 4 lock">`:
+        DC8 "\015\012 se list 4 lock"
+        DC8 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n se list 4 unlock">`:
+        DC8 "\015\012 se list 4 unlock"
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBACK : %d del">`:
+        DC8 "\015\012 PUBACK : %d del"
+        DC8 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBACK : %d is not...">`:
+        DC8 "\015\012 PUBACK : %d is not found"
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBACK END ">`:
+        DC8 "\015\012 PUBACK END "
+        DC8 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBREC START ">`:
+        DC8 "\015\012 PUBREC START "
+        DC8 0, 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBREC : %d is not...">`:
+        DC8 "\015\012 PUBREC : %d is not exist"
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBREC : %d PUBREL...">`:
+        DC8 "\015\012 PUBREC : %d PUBREL SUCCESS"
+        DC8 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBCOMP START ">`:
+        DC8 "\015\012 PUBCOMP START "
+        DC8 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBCOMP : %d del">`:
+        DC8 "\015\012 PUBCOMP : %d del"
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PUBCOMP : %d is no...">`:
+        DC8 "\015\012 PUBCOMP : %d is not exist"
+        DC8 0, 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n PINGRESP START ">`:
+        DC8 "\015\012 PINGRESP START "
+        DC8 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n  MQTT_STATE_CALLBA...">`:
+        DC8 "\015\012  MQTT_STATE_CALLBACK_UNINITIAL START "
+        DC8 0, 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "001dc914feae">`:
+        DC8 "001dc914feae"
+        DC8 0, 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "Sm4ytjGsPEfGvDhSDJ_ZP...">`:
+        DC8 "Sm4ytjGsPEfGvDhSDJ_ZPiBUXyo="
+        DC8 0, 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n MQTT_STATE_CALLBAC...">`:
+        DC8 "\015\012 MQTT_STATE_CALLBACK_INITIAL START "
+        DC8 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n MQTT_STATE_CALLBAC...">_1`:
+        DC8 "\015\012 MQTT_STATE_CALLBACK_CONNECT_READY START "
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n MQTT_STATE_CALLBAC...">_2`:
+        DC8 "\015\012 MQTT_STATE_CALLBACK_CONNECT_READY END "
+        DC8 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n pub list 3 lock">`:
+        DC8 "\015\012 pub list 3 lock"
+        DC8 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n pub list 3 unlock">`:
+        DC8 "\015\012 pub list 3 unlock"
+        DC8 0, 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n pub list 4 lock">`:
+        DC8 "\015\012 pub list 4 lock"
+        DC8 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n pub list 4 unlock">`:
+        DC8 "\015\012 pub list 4 unlock"
+        DC8 0, 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n  MQTT_STAET_CALLBA...">`:
+        DC8 "\015\012  MQTT_STAET_CALLBACK_DISCONNECT START "
+        DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -3384,95 +4164,87 @@ TEST_START:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n MQTT_STATE_CB_disc...">`:
-        DC8 "\015\012 MQTT_STATE_CB_disconnected"
+`?<Constant "\\r\\n PUB_MSG_RETRY START ">`:
+        DC8 "\015\012 PUB_MSG_RETRY START "
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n se list 1 lock">`:
+        DC8 "\015\012 se list 1 lock"
         DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\nSEND LIST empty">`:
-        DC8 "\015\012SEND LIST empty"
+`?<Constant "\\r\\n PUB_MSG_RETRY END ">`:
+        DC8 "\015\012 PUB_MSG_RETRY END "
         DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n MSG ID %d is time ...">`:
-        DC8 "\015\012 MSG ID %d is time over"
-        DC8 0, 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n PUBLISH_MSG_GEN - ...">`:
-        DC8 "\015\012 PUBLISH_MSG_GEN -  get_pointer address 1= %d"
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n Insert publish lis...">`:
-        DC8 "\015\012 Insert publish list MSG ID : %d"
+`?<Constant "\\r\\n  PUB_MSG_GEN START ">`:
+        DC8 "\015\012  PUB_MSG_GEN START "
         DC8 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n PUBLISH_MSG_GEN - ...">_1`:
-        DC8 "\015\012 PUBLISH_MSG_GEN -  get_pointer address 2= %d"
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "v/a/g/001dc9151e55/st...">`:
-        DC8 "v/a/g/001dc9151e55/status"
+`?<Constant "v/a/g/001dc914feae/st...">`:
+        DC8 "v/a/g/001dc914feae/status"
         DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 `?<Constant "on,90,temperature-001...">`:
-        DC8 "on,90,temperature-001dc9151e55-1,on,90"
+        DC8 "on,90,temperature-001dc914feae-1,on,90"
         DC8 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "%llu,%.2f">`:
-        DC8 "%llu,%.2f"
-        DC8 0, 0
+`?<Constant "%llu,%d">`:
+        DC8 "%llu,%d"
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "v/a/g/001dc9151e55/s/...">`:
-        DC8 "v/a/g/001dc9151e55/s/temperature-001dc9151e55-1"
+`?<Constant "v/a/g/001dc914feae/s/...">`:
+        DC8 "v/a/g/001dc914feae/s/temperature-001dc914feae-1"
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n AP CONNECT Error">`:
-        DC8 "\015\012 AP CONNECT Error"
+`?<Constant "\\r\\n  PING_MSG START ">`:
+        DC8 "\015\012  PING_MSG START "
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n TCP CONNECT Error">`:
-        DC8 "\015\012 TCP CONNECT Error"
+`?<Constant "\\r\\n Ping req Suc">`:
+        DC8 "\015\012 Ping req Suc"
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n Ping request Fail">`:
+        DC8 "\015\012 Ping request Fail"
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n MQTT CONNECT Error">`:
-        DC8 "\015\012 MQTT CONNECT Error"
-        DC8 0, 0
+`?<Constant "\\r\\n  MQTT_PING_OUT START ">`:
+        DC8 "\015\012  MQTT_PING_OUT START "
+        DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n MQTT CONNECT success">`:
-        DC8 "\015\012 MQTT CONNECT success"
+`?<Constant "\\r\\n  MQTT_CONNECT START ">`:
+        DC8 "\015\012  MQTT_CONNECT START "
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -3491,46 +4263,6 @@ TEST_START:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "\\r\\n wrong WWPA">`:
-        DC8 "\015\012 wrong WWPA"
-        DC8 0, 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n AP connect error">`:
-        DC8 "\015\012 AP connect error"
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n AP connect success">`:
-        DC8 "\015\012 AP connect success"
-        DC8 0, 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n TcpClient error">`:
-        DC8 "\015\012 TcpClient error"
-        DC8 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n TcpClient success">`:
-        DC8 "\015\012 TcpClient success"
-        DC8 0, 0, 0
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-`?<Constant "\\r\\n CID : %d">`:
-        DC8 "\015\012 CID : %d"
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
 `?<Constant "\\r\\n SSL open error">`:
         DC8 "\015\012 SSL open error"
         DC8 0, 0
@@ -3540,58 +4272,6 @@ TEST_START:
         DATA
 `?<Constant "\\r\\n SSL open success">`:
         DC8 "\015\012 SSL open success"
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-MQTT_MSG_CALLBACK:
-        DC8 0, 0, 0, 0
-        DC32 0H
-        DC8 16, 0, 0, 0
-        DC32 0H
-        DC8 32, 0, 0, 0
-        DC32 0H
-        DC8 48, 0, 0, 0
-        DC32 MQTT_MSG_FUNC_PUBLISH
-        DC8 64, 0, 0, 0
-        DC32 MQTT_MSG_FUNC_PUBACK
-        DC8 80, 0, 0, 0
-        DC32 0H
-        DC8 96, 0, 0, 0
-        DC32 0H
-        DC8 112, 0, 0, 0
-        DC32 0H
-        DC8 128, 0, 0, 0
-        DC32 0H
-        DC8 144, 0, 0, 0
-        DC32 0H
-        DC8 160, 0, 0, 0
-        DC32 0H
-        DC8 176, 0, 0, 0
-        DC32 0H
-        DC8 192, 0, 0, 0
-        DC32 0H
-        DC8 208, 0, 0, 0
-        DC32 MQTT_MSG_FUNC_PINGRESP
-        DC8 224, 0, 0, 0
-        DC32 0H
-        DC8 15, 0, 0, 0
-        DC32 0H
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-MQTT_CALLBACK:
-        DC8 0, 0, 0, 0
-        DC32 MQTT_STATE_CALLBACK_UNINITIAL
-        DC8 1, 0, 0, 0
-        DC32 MQTT_STATE_CALLBACK_INITIAL
-        DC8 2, 0, 0, 0
-        DC32 MQTT_STATE_CALLBACK_CONNECT_READY
-        DC8 3, 0, 0, 0
-        DC32 MQTT_STATE_CALLBACK_CONNECT
-        DC8 4, 0, 0, 0
-        DC32 MQTT_STAET_CALLBACK_DISCONNECT
 
         SECTION `.iar_vfe_header`:DATA:REORDER:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -3606,13 +4286,13 @@ MQTT_CALLBACK:
 
         END
 // 
-// 21 524 bytes in section .bss
-//      8 bytes in section .rodata
-//  3 882 bytes in section .text
+// 12 765 bytes in section .bss
+//     12 bytes in section .rodata
+//  4 676 bytes in section .text
 // 
-//  3 850 bytes of CODE  memory (+ 32 bytes shared)
-//      8 bytes of CONST memory
-// 21 524 bytes of DATA  memory
+//  4 552 bytes of CODE  memory (+ 124 bytes shared)
+//     12 bytes of CONST memory
+// 12 765 bytes of DATA  memory
 //
 //Errors: none
-//Warnings: 2
+//Warnings: none

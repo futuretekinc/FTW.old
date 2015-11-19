@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     30/Oct/2015  09:58:02 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  14:30:56 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
@@ -39,83 +39,87 @@
 //                    S2W_SSL_SERVER_SUPPORT -D ADK_PROV_CONFIG_CLIENT -D     /
 //                    S2W_DEFAULT_UART_BITS_PER_CHAR=3 -D S2W_MDNS_ENABLE     /
 //                    -lC E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\us /
-//                    erapps_mqtt\s2w\build\Debug\List\ -lA                   /
+//                    erapps_mqtt_QoS2\s2w\build\Debug\List\ -lA              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\ --diag_suppress           /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\ --diag_suppress      /
 //                    Pa050,Pe231,Pe177 -o E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
-//                    tlslp_5.1.5_GA\userapps_mqtt\s2w\build\Debug\Obj\       /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\Debug\Obj\  /
 //                    --debug --endian=little --cpu=Cortex-M3 -e --fpu=None   /
 //                    --dlib_config "C:\Program Files (x86)\IAR               /
 //                    Systems\Embedded Workbench                              /
 //                    6.5\arm\INC\c\DLib_Config_Full.h" -I                    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\ -I                 /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\ -I            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\core\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\core\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\drivers\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\drivers\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\modules\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\modules\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\rtos\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\rtos\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\netx_bsd_layer /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\netx_bsd_ /
+//                    layer\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\main /
 //                    \ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\u /
-//                    serapps_mqtt\s2w\build\..\..\..\geps\inc\main\ -I       /
+//                    serapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\ -I              /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\hcc\src\    /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security\sr /
+//                    c\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\ /
+//                    userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security /
+//                    \hw_engine_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tls /
+//                    lp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\ /
+//                    inc\security\wpa_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_t /
+//                    ls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\.. /
+//                    \userlib\ncm\inc\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\us /
+//                    erlib\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\inc\ctx\ -I         /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\hcc\src\ -I      /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\src\ -I    /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\main\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\hw_engine_ /
-//                    if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA /
-//                    \userapps_mqtt\s2w\build\..\..\..\geps\inc\security\wpa /
-//                    _if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_G /
-//                    A\userapps_mqtt\s2w\build\..\..\..\userlib\ncm\inc\ -I  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\hal\ -I                   /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\userlib\ -I                  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\parser\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ctx\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\config\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\main\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\otafu\inc\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\hal\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\provisioning\inc\   /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\inc\mqtt\ -I               /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\parser\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\config\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\otafu\inc\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\provisioning\inc\ -I     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\one_wire\ -I                   /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_log\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\one_wire\ -I                   /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt_main\ -I                  /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt_main\ -Ohz                /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_log\ -Ohz            /
 //                    --use_c++_inline -I "C:\Program Files (x86)\IAR         /
 //                    Systems\Embedded Workbench 6.5\arm\CMSIS\Include\"      /
 //    List file    =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\gsn_ncm.s                  /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\gsn_ncm.s             /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -2590,8 +2594,8 @@ GsnNcm_L3ConnectCb:
           CFI CFA R13+40
           CFI Block cfiCond46 Using cfiCommon0
           CFI (cfiCond46) Function GsnNcm_L3ConnectCb
-          CFI (cfiCond46) NoCalls GsnNcm_L3ConnectCb
           CFI (cfiCond46) NoCalls GsnNcm_Execute
+          CFI (cfiCond46) NoCalls GsnNcm_L3ConnectCb
           CFI (cfiCond46) Conditional ??CrossCallReturnLabel_25
           CFI (cfiCond46) R4 Frame(CFA, -12)
           CFI (cfiCond46) R5 Frame(CFA, -8)
@@ -2599,8 +2603,8 @@ GsnNcm_L3ConnectCb:
           CFI (cfiCond46) CFA R13+32
           CFI Block cfiPicker47 Using cfiCommon1
           CFI (cfiPicker47) NoFunction
-          CFI (cfiPicker47) NoCalls GsnNcm_L3ConnectCb
           CFI (cfiPicker47) NoCalls GsnNcm_Execute
+          CFI (cfiPicker47) NoCalls GsnNcm_L3ConnectCb
           CFI (cfiPicker47) Picker
         THUMB
 ?Subroutine12:
@@ -3203,9 +3207,9 @@ GsnNcm_L2DisconnectProcess:
           CFI CFA R13+40
           CFI Block cfiCond58 Using cfiCommon0
           CFI (cfiCond58) Function GsnNcm_L2ConnectProcess
+          CFI (cfiCond58) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiCond58) NoCalls GsnNcm_L2ConnectProcess
           CFI (cfiCond58) NoCalls GsnNcm_Execute
-          CFI (cfiCond58) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiCond58) Conditional ??CrossCallReturnLabel_17
           CFI (cfiCond58) R4 Frame(CFA, -16)
           CFI (cfiCond58) R5 Frame(CFA, -12)
@@ -3214,18 +3218,18 @@ GsnNcm_L2DisconnectProcess:
           CFI (cfiCond58) CFA R13+16
           CFI Block cfiPicker59 Using cfiCommon1
           CFI (cfiPicker59) NoFunction
+          CFI (cfiPicker59) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiPicker59) NoCalls GsnNcm_L2ConnectProcess
           CFI (cfiPicker59) NoCalls GsnNcm_Execute
-          CFI (cfiPicker59) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiPicker59) Picker
         THUMB
 ?Subroutine10:
         STRB     R0,[R4, #+0]
           CFI Block cfiCond60 Using cfiCommon0
           CFI (cfiCond60) Function GsnNcm_Execute
+          CFI (cfiCond60) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiCond60) NoCalls GsnNcm_L2ConnectProcess
           CFI (cfiCond60) NoCalls GsnNcm_Execute
-          CFI (cfiCond60) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiCond60) Conditional ??CrossCallReturnLabel_18
           CFI (cfiCond60) R4 Frame(CFA, -16)
           CFI (cfiCond60) R5 Frame(CFA, -12)
@@ -3234,9 +3238,9 @@ GsnNcm_L2DisconnectProcess:
           CFI (cfiCond60) CFA R13+40
           CFI Block cfiCond61 Using cfiCommon0
           CFI (cfiCond61) Function GsnNcm_Execute
+          CFI (cfiCond61) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiCond61) NoCalls GsnNcm_L2ConnectProcess
           CFI (cfiCond61) NoCalls GsnNcm_Execute
-          CFI (cfiCond61) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiCond61) Conditional ??CrossCallReturnLabel_19
           CFI (cfiCond61) R4 Frame(CFA, -16)
           CFI (cfiCond61) R5 Frame(CFA, -12)
@@ -3245,9 +3249,9 @@ GsnNcm_L2DisconnectProcess:
           CFI (cfiCond61) CFA R13+40
           CFI Block cfiCond62 Using cfiCommon0
           CFI (cfiCond62) Function GsnNcm_Execute
+          CFI (cfiCond62) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiCond62) NoCalls GsnNcm_L2ConnectProcess
           CFI (cfiCond62) NoCalls GsnNcm_Execute
-          CFI (cfiCond62) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiCond62) Conditional ??CrossCallReturnLabel_20
           CFI (cfiCond62) R4 Frame(CFA, -16)
           CFI (cfiCond62) R5 Frame(CFA, -12)
@@ -3256,9 +3260,9 @@ GsnNcm_L2DisconnectProcess:
           CFI (cfiCond62) CFA R13+40
           CFI Block cfiCond63 Using cfiCommon0
           CFI (cfiCond63) Function GsnNcm_L2DisconnectProcess
+          CFI (cfiCond63) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiCond63) NoCalls GsnNcm_L2ConnectProcess
           CFI (cfiCond63) NoCalls GsnNcm_Execute
-          CFI (cfiCond63) NoCalls GsnNcm_L2DisconnectProcess
           CFI (cfiCond63) Conditional ??CrossCallReturnLabel_21
           CFI (cfiCond63) R4 Frame(CFA, -8)
           CFI (cfiCond63) R14 Frame(CFA, -4)
@@ -3288,16 +3292,16 @@ GsnNcm_L2DisconnectProcess:
           CFI CFA R13+24
           CFI Block cfiCond65 Using cfiCommon0
           CFI (cfiCond65) Function GsnNcm_L2DisconnectProcess
-          CFI (cfiCond65) NoCalls GsnNcm_ProcessStop
           CFI (cfiCond65) NoCalls GsnNcm_L2DisconnectProcess
+          CFI (cfiCond65) NoCalls GsnNcm_ProcessStop
           CFI (cfiCond65) Conditional ??CrossCallReturnLabel_15
           CFI (cfiCond65) R4 Frame(CFA, -8)
           CFI (cfiCond65) R14 Frame(CFA, -4)
           CFI (cfiCond65) CFA R13+8
           CFI Block cfiPicker66 Using cfiCommon1
           CFI (cfiPicker66) NoFunction
-          CFI (cfiPicker66) NoCalls GsnNcm_ProcessStop
           CFI (cfiPicker66) NoCalls GsnNcm_L2DisconnectProcess
+          CFI (cfiPicker66) NoCalls GsnNcm_ProcessStop
           CFI (cfiPicker66) Picker
         THUMB
 ?Subroutine9:
@@ -3323,16 +3327,16 @@ GsnNcm_L2DisconnectProcess:
           CFI CFA R13+40
           CFI Block cfiCond68 Using cfiCommon0
           CFI (cfiCond68) Function GsnNcm_L2DisconnectProcess
-          CFI (cfiCond68) NoCalls GsnNcm_Execute
           CFI (cfiCond68) NoCalls GsnNcm_L2DisconnectProcess
+          CFI (cfiCond68) NoCalls GsnNcm_Execute
           CFI (cfiCond68) Conditional ??CrossCallReturnLabel_13
           CFI (cfiCond68) R4 Frame(CFA, -8)
           CFI (cfiCond68) R14 Frame(CFA, -4)
           CFI (cfiCond68) CFA R13+8
           CFI Block cfiPicker69 Using cfiCommon1
           CFI (cfiPicker69) NoFunction
-          CFI (cfiPicker69) NoCalls GsnNcm_Execute
           CFI (cfiPicker69) NoCalls GsnNcm_L2DisconnectProcess
+          CFI (cfiPicker69) NoCalls GsnNcm_Execute
           CFI (cfiPicker69) Picker
         THUMB
 ?Subroutine8:

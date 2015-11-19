@@ -195,7 +195,7 @@ S2wWebProv_WebProvStart();
 #endif
 PUBLIC VOID
 AppS2w_RtcCfg();
-VOID
+PUBLIC VOID
 App_RtcDump(VOID);
 
 #ifdef  S2W_NCM_SUPPORT_ENABLE

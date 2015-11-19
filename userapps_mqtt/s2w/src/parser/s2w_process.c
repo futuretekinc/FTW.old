@@ -967,7 +967,11 @@ AppS2wProcess_StatusNotify(UINT8 status, UINT32 arg)
                 S2w_Printf(msg, arg);
             }
             else if(status == S2W_BOOT_RST_APP_SW)
+			{
+			    S2w_Printf("\r\n RESET PRINT 01");
+				App_RtcDump();
                 S2w_Printf("\n\r%s\r\n", msg);				
+			}
             else if((status == S2W_SOCKFAILURE) &&(s2wIsAutoconnected))
             {
                 S2w_Printf("\r\nERROR: SOCKET FAILURE %x\r\n",arg);
@@ -3167,6 +3171,8 @@ AppS2wProcess_AsyncStatusNotify(UINT8 status, UINT32 arg)
     if (s2wCurrent.serialPortConf.commonConf.verbose)
     {
         msg = S2W_AsyncStatusList[status];
+		S2w_Printf("\r\n RESET PRINT 02");
+		App_RtcDump();
         if (!msg)
         {
             return;

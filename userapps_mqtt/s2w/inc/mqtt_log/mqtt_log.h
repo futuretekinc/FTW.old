@@ -1,0 +1,7 @@
+#include "gsn_includes.h"
+
+
+VOID MQTT_MESSAGE_QUEUE_LOG(UINT8 status);
+VOID MQTT_SEMAPHORE_LOG(UINT8 status);
+VOID MQTT_THREAD_LOG(UINT8 status);
+VOID MQTT_CONNECT_ACK_LOG(UINT8 status);

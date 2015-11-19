@@ -1,14 +1,14 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     30/Oct/2015  09:57:57 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  14:30:44 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
 //    Endian       =  little                                                  /
 //    Source file  =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\src\main\app_main_thread.c                  /
+//                    ps_mqtt_QoS2\s2w\src\main\app_main_thread.c             /
 //    Command line =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\src\main\app_main_thread.c -D               /
+//                    ps_mqtt_QoS2\s2w\src\main\app_main_thread.c -D          /
 //                    TX_ENABLE_IAR_LIBRARY_SUPPORT -D IAR -D                 /
 //                    FIXED_ROM_BUILD -D RUN_ALL_FROM_FLASH -D TM_USE_HTTPD   /
 //                    -D S2W_DNS_CLIENT -D NX_INCLUDE_USER_DEFINE_FILE -D     /
@@ -40,83 +40,87 @@
 //                    S2W_SSL_SERVER_SUPPORT -D ADK_PROV_CONFIG_CLIENT -D     /
 //                    S2W_DEFAULT_UART_BITS_PER_CHAR=3 -D S2W_MDNS_ENABLE     /
 //                    -lC E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\us /
-//                    erapps_mqtt\s2w\build\Debug\List\ -lA                   /
+//                    erapps_mqtt_QoS2\s2w\build\Debug\List\ -lA              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\ --diag_suppress           /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\ --diag_suppress      /
 //                    Pa050,Pe231,Pe177 -o E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
-//                    tlslp_5.1.5_GA\userapps_mqtt\s2w\build\Debug\Obj\       /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\Debug\Obj\  /
 //                    --debug --endian=little --cpu=Cortex-M3 -e --fpu=None   /
 //                    --dlib_config "C:\Program Files (x86)\IAR               /
 //                    Systems\Embedded Workbench                              /
 //                    6.5\arm\INC\c\DLib_Config_Full.h" -I                    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\ -I                 /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\ -I            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\core\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\core\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\drivers\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\drivers\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\modules\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\modules\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\rtos\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\rtos\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\netx_bsd_layer /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\netx_bsd_ /
+//                    layer\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\main /
 //                    \ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\u /
-//                    serapps_mqtt\s2w\build\..\..\..\geps\inc\main\ -I       /
+//                    serapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\ -I              /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\hcc\src\    /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security\sr /
+//                    c\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\ /
+//                    userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security /
+//                    \hw_engine_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tls /
+//                    lp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\ /
+//                    inc\security\wpa_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_t /
+//                    ls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\.. /
+//                    \userlib\ncm\inc\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\us /
+//                    erlib\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\inc\ctx\ -I         /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\hcc\src\ -I      /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\src\ -I    /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\main\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\hw_engine_ /
-//                    if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA /
-//                    \userapps_mqtt\s2w\build\..\..\..\geps\inc\security\wpa /
-//                    _if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_G /
-//                    A\userapps_mqtt\s2w\build\..\..\..\userlib\ncm\inc\ -I  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\hal\ -I                   /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\userlib\ -I                  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\parser\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ctx\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\config\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\main\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\otafu\inc\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\hal\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\provisioning\inc\   /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\inc\mqtt\ -I               /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\parser\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\config\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\otafu\inc\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\provisioning\inc\ -I     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\one_wire\ -I                   /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_log\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\one_wire\ -I                   /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt_main\ -I                  /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt_main\ -Ohz                /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_log\ -Ohz            /
 //                    --use_c++_inline -I "C:\Program Files (x86)\IAR         /
 //                    Systems\Embedded Workbench 6.5\arm\CMSIS\Include\"      /
 //    List file    =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\app_main_thread.s          /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\app_main_thread.s     /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -373,7 +377,7 @@
           CFI R14 SameValue
           CFI EndCommon cfiCommon1
         
-// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt\s2w\src\main\app_main_thread.c
+// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\src\main\app_main_thread.c
 //    1 /*******************************************************************************
 //    2 *
 //    3 *               COPYRIGHT (c) 2012-2013 GainSpan Corporation
@@ -820,7 +824,7 @@ gsnNwifStats:
 //  195 #endif
 //  196 PUBLIC VOID
 //  197 AppS2w_RtcCfg();
-//  198 VOID
+//  198 PUBLIC VOID
 //  199 App_RtcDump(VOID);
 //  200 
 //  201 #ifdef  S2W_NCM_SUPPORT_ENABLE
@@ -3901,7 +3905,7 @@ App_WlanRespTimeoutTmrCb:
           CFI CFA R13+8
 // 1431 	GSN_ASSERT(FALSE);
         LDR.W    R0,??DataTable55_35  ;; 0x41010010
-        ADR.W    R1,`?<Constant "E:\\\\Gainspan\\\\gs2011mxx...">`+0x3D
+        ADR.W    R1,`?<Constant "E:\\\\Gainspan\\\\gs2011mxx...">`+0x42
         LDR      R4,[R0, #+0]
         MOVS     R2,#+32
         ADDS     R0,R4,#+4
@@ -5157,12 +5161,13 @@ s2w_StartDhcpDnsServer:
         DC8 73H, 5FH, 74H, 6CH, 73H, 6CH, 70H, 5FH
         DC8 35H, 2EH, 31H, 2EH, 35H, 5FH, 47H, 41H
         DC8 5CH, 75H, 73H, 65H, 72H, 61H, 70H, 70H
-        DC8 73H, 5FH, 6DH, 71H, 74H, 74H, 5CH, 73H
-        DC8 32H, 77H, 5CH, 73H, 72H, 63H, 5CH, 6DH
-        DC8 61H, 69H, 6EH, 5CH, 61H, 70H, 70H, 5FH
-        DC8 6DH, 61H, 69H, 6EH, 5FH, 74H, 68H, 72H
-        DC8 65H, 61H, 64H, 2EH, 63H, 0
-        DC8 0, 0
+        DC8 73H, 5FH, 6DH, 71H, 74H, 74H, 5FH, 51H
+        DC8 6FH, 53H, 32H, 5CH, 73H, 32H, 77H, 5CH
+        DC8 73H, 72H, 63H, 5CH, 6DH, 61H, 69H, 6EH
+        DC8 5CH, 61H, 70H, 70H, 5FH, 6DH, 61H, 69H
+        DC8 6EH, 5FH, 74H, 68H, 72H, 65H, 61H, 64H
+        DC8 2EH, 63H, 0
+        DC8 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -5337,9 +5342,9 @@ s2w_StartDhcpDnsServer:
 //     88 bytes in section .data
 // 67 528 bytes in section .noinit
 //    230 bytes in section .rodata
-//  4 596 bytes in section .text
+//  4 600 bytes in section .text
 // 
-//   4 396 bytes of CODE  memory (+ 200 bytes shared)
+//   4 400 bytes of CODE  memory (+ 200 bytes shared)
 //     230 bytes of CONST memory
 // 106 348 bytes of DATA  memory
 //

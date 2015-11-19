@@ -28,6 +28,7 @@
  //#include <mqx.h> 
  #include <string.h> 
  #include "mqtt/libmqtt.h" 
+#include "mqtt_main/mqtt_main.h"
 
  
  #define MQTT_DUP_FLAG     1<<3 
@@ -311,24 +312,14 @@
 
      offset = 0; 
      packetSize = fixedHeaderSize+sizeof(var_header)+payload_len; 
-     //packet = (UINT8*)_mem_alloc_zero(packetSize);
-     //packet = (UINT8 *)malloc(packetSize);
-	 while(1)
-	 {
-	 	packet = (UINT8 *)gsn_malloc(packetSize);
-     	if(packet == NULL)
-		  continue;
-		else
-		{
-			memset(packet, 0, packetSize);
-			break;
-		}
-	 }
+
+	 packet = (UINT8 *)gsn_malloc(packetSize);
      if (packet == NULL) 
      {
 	     S2w_Printf("\r\n CONNECT PACKET is NULL");
          goto error; 
-     } 
+     }
+	 memset(packet, 0, packetSize);
  	memcpy(packet, fixed_header, fixedHeaderSize); 
  	offset += fixedHeaderSize; 
  	memcpy(packet+offset, var_header, sizeof(var_header)); 
@@ -364,11 +355,8 @@
         {
           goto error; 
  	} 
-	//broker->send(broker->socket_info, packet, packetSize);
-	//free(packet);
 	if (packet != NULL) 
      { 
-       //free(packet);
 	   gsn_free(packet);
 	   packet=NULL;
      } 
@@ -377,7 +365,6 @@
      S2w_Printf("\r\n connect Error");
      if (packet != NULL) 
      { 
-       //free(packet);
 	   gsn_free(packet);
 	   packet=NULL;
      } 
@@ -421,7 +408,10 @@
      { 
  		return -1; 
  	} */
- 
+ 	if( AppS2wHal_NetTx(broker->mqtt_cid, broker->mqtt_peerData.ipAddr, broker->mqtt_peerData.port, packet, sizeof(packet)) != 0 )
+    {
+          return -1; 
+ 	}
 
  	return 0; 
  } 
@@ -463,26 +453,15 @@
 
  	// Variable header 
      var_header_len = topiclen+2+qos_size; // Topic size (2 bytes), utf-encoded topic 
-     //var_header =(UINT8*)_mem_alloc(var_header_len);
-     //var_header = (UINT8*)malloc(var_header_len);
-	while(1)
-	{
-		var_header = (UINT8*)gsn_malloc(var_header_len);
-		if(var_header == NULL)
-		  continue;
-		else
-		{
-		  memset(var_header,0,var_header_len);
-		  
-		  break;
-		}
-	}
-       
+
+     var_header = (UINT8*)gsn_malloc(var_header_len);
+	 
      if (var_header == NULL) 
      { 
 	     S2w_Printf("\r\n PUBLISH VAILD HEADER is NULL");
          goto error; 
      } 
+	 memset(var_header,0,var_header_len);
  	var_header[0] = topiclen>>8; 
  	var_header[1] = topiclen&0xFF; 
  	memcpy(var_header+2, topic, topiclen); 
@@ -494,9 +473,9 @@
          {  
  			*message_id = broker->seq; 
  		} 
- 		broker->seq ++;
+ 		broker->seq++;
  	} 
-        broker->seq = broker->seq % 128;
+        //broker->seq = broker->seq % 128;
 
  	// Fixed header 
  	// the remaining length is one byte for messages up to 127 bytes, then two bytes after that 
@@ -529,24 +508,14 @@
  
 
      packetLen = fixedHeaderSize+var_header_len+msglen; 
-     //packet = (UINT8*)_mem_alloc(packetLen);
-     //packet = (UINT8*)malloc(packetLen);
-	 while(1)
-	 {
-     	packet = (UINT8*)gsn_malloc(packetLen);
-	 	if(packet == NULL)
-		  continue;
-		else
-		{
-			memset(packet,0,packetLen);
-			break;
-		}
-     }
+
+	 packet = (UINT8*)gsn_malloc(packetLen);
 	  if (packet == NULL) 
      { 
 		 S2w_Printf("\r\n PUBLISH PACKET is NULL");
          goto error; 
      } 
+	 memset(packet,0,packetLen);
  	memcpy(packet, fixed_header, fixedHeaderSize); 
  	memcpy(packet+fixedHeaderSize, var_header, var_header_len); 
  	memcpy(packet+fixedHeaderSize+var_header_len, msg, msglen); 
@@ -557,19 +526,19 @@
     { 
          goto error; 
  	} 
-	//broker->send(broker->socket_info,packet,packetLen);
-    //free(var_header);
+
 	if (var_header != NULL) 
      { 
-       //free(var_header);
+
 	   gsn_free(var_header);
+
 	   var_header = NULL;
      } 
-	//free(packet);
+
 	if (packet != NULL) 
      { 
-       //free(packet);
 	   gsn_free(packet);
+
 	   packet = NULL;
      } 
 	
@@ -578,22 +547,24 @@
    S2w_Printf("\r\n publish Error");    
      if (var_header != NULL) 
      { 
-       //free(var_header);
+
 	   gsn_free(var_header);
+
 	   var_header = NULL;
      } 
       
      if (packet != NULL) 
      { 
-       //free(packet);
+
 	   gsn_free(packet);
+
 	   packet = NULL;
      } 
       
      return  1; 
  } 
  
-
+ 
  int mqtt_pubrel(mqtt_broker_handle_t* broker, UINT16 message_id)  
  { 
  	UINT8 packet[] =  
@@ -610,9 +581,12 @@
      { 
  		return -1; 
  	} */
- 
+    if( AppS2wHal_NetTx(broker->mqtt_cid, broker->mqtt_peerData.ipAddr, broker->mqtt_peerData.port, packet, sizeof(packet)) != 0 )
+    { 
+         return 1; 
+ 	} 
 
- 	return 1; 
+ 	return 0; 
  } 
  
 
@@ -783,4 +757,133 @@
      return  -1; 
  } 
 
+UINT8 mqtt_publish_retry_dup(mqtt_broker_handle_t* broker, const char* topic, const char* msg, UINT8 DUP, UINT8 qos, UINT16 message_id)  
+ { 
+ 	UINT8 fixedHeaderSize = 0; 
+ 	UINT16 remainLen = 0; 
+    UINT16 packetLen = 0; 
+ 	UINT8 *packet = NULL; 
+ 	UINT16 topiclen = strlen(topic); 
+ 	UINT16 msglen = strlen(msg); 
+    UINT16 var_header_len = 0;  
+ 	UINT8 *var_header = NULL; 
+ 	UINT8 fixed_header[3]; 
 
+
+ 	UINT8 qos_flag = MQTT_QOS0_FLAG; 
+ 	UINT8 qos_size = 0; // No QoS included 
+      
+ 	if(qos == 1)  
+     { 
+ 		qos_size = 2; // 2 bytes for QoS 
+ 		qos_flag = MQTT_QOS1_FLAG; 
+ 	} 
+ 	else if(qos == 2)  
+     { 
+ 		qos_size = 2; // 2 bytes for QoS 
+ 		qos_flag = MQTT_QOS2_FLAG; 
+ 	} 
+ 
+
+ 	// Variable header 
+     var_header_len = topiclen+2+qos_size; // Topic size (2 bytes), utf-encoded topic 
+
+     var_header = (UINT8*)gsn_malloc(var_header_len);
+	 
+     if (var_header == NULL) 
+     { 
+	     S2w_Printf("\r\n PUBLISH VAILD HEADER is NULL");
+         goto error; 
+     } 
+	memset(var_header,0,var_header_len);
+ 	var_header[0] = topiclen>>8; 
+ 	var_header[1] = topiclen&0xFF; 
+ 	memcpy(var_header+2, topic, topiclen); 
+ 	if(qos_size)  
+    { 
+ 		var_header[topiclen+2] = message_id>>8; 
+ 		var_header[topiclen+3] = message_id&0xFF; 
+ 	} 
+
+ 	// Fixed header 
+ 	// the remaining length is one byte for messages up to 127 bytes, then two bytes after that 
+ 	// actually, it can be up to 4 bytes but I'm making the assumption the embedded device will only 
+ 	// need up to two bytes of length (handles up to 16,383 (almost 16k) sized message) 
+ 	fixedHeaderSize = 2;    // Default size = one byte Message Type + one byte Remaining Length 
+     // Message Type, DUP flag, QoS level, Retain 
+     fixed_header[0] = MQTT_MSG_PUBLISH | qos_flag | MQTT_DUP_FLAG; 
+      
+ 	remainLen = var_header_len+msglen; 
+     // Remaining Length 
+     if (remainLen <= 127)  
+     { 
+         fixed_header[1] = remainLen; 
+     }  
+     else  
+    { 
+         fixedHeaderSize++;          // add an additional byte for Remaining Length 
+      
+         // first byte is remainder (mod) of 128, then set the MSB to indicate more bytes 
+         fixed_header[1] = remainLen % 128; 
+         fixed_header[1] = fixed_header[1] | 0x80; 
+         // second byte is number of 128s 
+         fixed_header[2] = remainLen / 128; 
+     } 
+ 
+
+     packetLen = fixedHeaderSize+var_header_len+msglen; 
+
+	 packet = (UINT8*)gsn_malloc(packetLen);
+	  if (packet == NULL) 
+     { 
+		 S2w_Printf("\r\n PUBLISH PACKET is NULL");
+         goto error; 
+     } 
+	 memset(packet,0,packetLen);
+ 	memcpy(packet, fixed_header, fixedHeaderSize); 
+ 	memcpy(packet+fixedHeaderSize, var_header, var_header_len); 
+ 	memcpy(packet+fixedHeaderSize+var_header_len, msg, msglen); 
+ 
+
+ 	// Send the packet 
+	if( AppS2wHal_NetTx(broker->mqtt_cid, broker->mqtt_peerData.ipAddr, broker->mqtt_peerData.port, packet, packetLen) != 0 )
+    { 
+         goto error; 
+ 	} 
+
+	if (var_header != NULL) 
+     { 
+
+	   gsn_free(var_header);
+
+	   var_header = NULL;
+     } 
+
+	if (packet != NULL) 
+     { 
+	   gsn_free(packet);
+
+	   packet = NULL;
+     } 
+	
+ 	return 0; 
+ error: 
+   S2w_Printf("\r\n publish retry Error");    
+     if (var_header != NULL) 
+     { 
+
+	   gsn_free(var_header);
+
+	   var_header = NULL;
+     } 
+      
+     if (packet != NULL) 
+     { 
+
+	   gsn_free(packet);
+
+	   packet = NULL;
+     } 
+      
+     return  1; 
+ } 

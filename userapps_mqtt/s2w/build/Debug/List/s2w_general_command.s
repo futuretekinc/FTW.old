@@ -1,14 +1,14 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     30/Oct/2015  09:58:11 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  14:30:43 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
 //    Endian       =  little                                                  /
 //    Source file  =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\src\parser\s2w_general_command.c            /
+//                    ps_mqtt_QoS2\s2w\src\parser\s2w_general_command.c       /
 //    Command line =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\src\parser\s2w_general_command.c -D         /
+//                    ps_mqtt_QoS2\s2w\src\parser\s2w_general_command.c -D    /
 //                    TX_ENABLE_IAR_LIBRARY_SUPPORT -D IAR -D                 /
 //                    FIXED_ROM_BUILD -D RUN_ALL_FROM_FLASH -D TM_USE_HTTPD   /
 //                    -D S2W_DNS_CLIENT -D NX_INCLUDE_USER_DEFINE_FILE -D     /
@@ -40,83 +40,87 @@
 //                    S2W_SSL_SERVER_SUPPORT -D ADK_PROV_CONFIG_CLIENT -D     /
 //                    S2W_DEFAULT_UART_BITS_PER_CHAR=3 -D S2W_MDNS_ENABLE     /
 //                    -lC E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\us /
-//                    erapps_mqtt\s2w\build\Debug\List\ -lA                   /
+//                    erapps_mqtt_QoS2\s2w\build\Debug\List\ -lA              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\ --diag_suppress           /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\ --diag_suppress      /
 //                    Pa050,Pe231,Pe177 -o E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
-//                    tlslp_5.1.5_GA\userapps_mqtt\s2w\build\Debug\Obj\       /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\Debug\Obj\  /
 //                    --debug --endian=little --cpu=Cortex-M3 -e --fpu=None   /
 //                    --dlib_config "C:\Program Files (x86)\IAR               /
 //                    Systems\Embedded Workbench                              /
 //                    6.5\arm\INC\c\DLib_Config_Full.h" -I                    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\ -I                 /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\ -I            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\core\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\core\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\drivers\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\drivers\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\modules\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\modules\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\rtos\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\rtos\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\netx_bsd_layer /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\netx_bsd_ /
+//                    layer\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\main /
 //                    \ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\u /
-//                    serapps_mqtt\s2w\build\..\..\..\geps\inc\main\ -I       /
+//                    serapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\ -I              /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\hcc\src\    /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security\sr /
+//                    c\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\ /
+//                    userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security /
+//                    \hw_engine_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tls /
+//                    lp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\ /
+//                    inc\security\wpa_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_t /
+//                    ls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\.. /
+//                    \userlib\ncm\inc\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\us /
+//                    erlib\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\inc\ctx\ -I         /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\hcc\src\ -I      /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\src\ -I    /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\main\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\hw_engine_ /
-//                    if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA /
-//                    \userapps_mqtt\s2w\build\..\..\..\geps\inc\security\wpa /
-//                    _if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_G /
-//                    A\userapps_mqtt\s2w\build\..\..\..\userlib\ncm\inc\ -I  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\hal\ -I                   /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\userlib\ -I                  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\parser\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ctx\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\config\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\main\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\otafu\inc\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\hal\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\provisioning\inc\   /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\inc\mqtt\ -I               /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\parser\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\config\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\otafu\inc\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\provisioning\inc\ -I     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\one_wire\ -I                   /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_log\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\one_wire\ -I                   /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt_main\ -I                  /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt_main\ -Ohz                /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_log\ -Ohz            /
 //                    --use_c++_inline -I "C:\Program Files (x86)\IAR         /
 //                    Systems\Embedded Workbench 6.5\arm\CMSIS\Include\"      /
 //    List file    =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\s2w_general_command.s      /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\s2w_general_command.s /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -512,7 +516,6 @@
         PUBLIC AppS2wCmd_RtsEnable
         PUBLIC AppS2wCmd_SSLClose
         PUBLIC AppS2wCmd_SSLOpen
-        PUBLIC AppS2wCmd_SSLOpen_test
         PUBLIC AppS2wCmd_SecuritySet
         PUBLIC AppS2wCmd_SetSockOp
         PUBLIC AppS2wCmd_Settings
@@ -680,7 +683,7 @@
           CFI R14 SameValue
           CFI EndCommon cfiCommon1
         
-// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt\s2w\src\parser\s2w_general_command.c
+// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\src\parser\s2w_general_command.c
 //    1 /*****************************************************************
 //    2  *
 //    3 *               COPYRIGHT (c) 20012-2013 GainSpan Corporation
@@ -10016,8 +10019,8 @@ AppS2wCmd_Wassoc:
           CFI CFA R13+360
           CFI Block cfiCond78 Using cfiCommon0
           CFI (cfiCond78) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond78) NoCalls AppS2wCmd_Wassoc_test
           CFI (cfiCond78) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiCond78) NoCalls AppS2wCmd_Wassoc_test
           CFI (cfiCond78) Conditional ??CrossCallReturnLabel_635
           CFI (cfiCond78) R4 Frame(CFA, -36)
           CFI (cfiCond78) R5 Frame(CFA, -32)
@@ -10031,8 +10034,8 @@ AppS2wCmd_Wassoc:
           CFI (cfiCond78) CFA R13+360
           CFI Block cfiPicker79 Using cfiCommon1
           CFI (cfiPicker79) NoFunction
-          CFI (cfiPicker79) NoCalls AppS2wCmd_Wassoc_test
           CFI (cfiPicker79) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiPicker79) NoCalls AppS2wCmd_Wassoc_test
           CFI (cfiPicker79) Picker
         THUMB
 ?Subroutine82:
@@ -10140,8 +10143,8 @@ AppS2wCmd_Wassoc:
           CFI CFA R13+360
           CFI Block cfiCond86 Using cfiCommon0
           CFI (cfiCond86) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond86) NoCalls AppS2wCmd_Wassoc_test
           CFI (cfiCond86) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiCond86) NoCalls AppS2wCmd_Wassoc_test
           CFI (cfiCond86) Conditional ??CrossCallReturnLabel_640
           CFI (cfiCond86) R4 Frame(CFA, -36)
           CFI (cfiCond86) R5 Frame(CFA, -32)
@@ -10155,8 +10158,8 @@ AppS2wCmd_Wassoc:
           CFI (cfiCond86) CFA R13+360
           CFI Block cfiPicker87 Using cfiCommon1
           CFI (cfiPicker87) NoFunction
-          CFI (cfiPicker87) NoCalls AppS2wCmd_Wassoc_test
           CFI (cfiPicker87) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiPicker87) NoCalls AppS2wCmd_Wassoc_test
           CFI (cfiPicker87) Picker
         THUMB
 ?Subroutine17:
@@ -14310,12 +14313,12 @@ App2wCmd_Version:
 // 5715                    S2W_BIN_TYPE,S2W_RELEASE_TYPE);
 // 5716 #endif
 // 5717         S2w_Printf("BUILD TIME=%s\r\n",__TIME__);
-        ADR.W    R1,`?<Constant "09:58:07">`
+        ADR.W    R1,`?<Constant "14:30:39">`
         ADR.W    R0,`?<Constant "BUILD TIME=%s\\r\\n">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
 // 5718         S2w_Printf("BUILD DATE=%s\r\n",__DATE__);
-        ADR.W    R1,`?<Constant "Oct 30 2015">`
+        ADR.W    R1,`?<Constant "Nov 19 2015">`
         ADR.W    R0,`?<Constant "BUILD DATE=%s\\r\\n">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
@@ -14527,8 +14530,8 @@ App2wCmd_Version:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "09:58:07">`:
-        DC8 "09:58:07"
+`?<Constant "14:30:39">`:
+        DC8 "14:30:39"
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -14540,8 +14543,8 @@ App2wCmd_Version:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-`?<Constant "Oct 30 2015">`:
-        DC8 "Oct 30 2015"
+`?<Constant "Nov 19 2015">`:
+        DC8 "Nov 19 2015"
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -15918,8 +15921,8 @@ AppS2wNcmProfile_Display:
           CFI CFA R13+32
           CFI Block cfiCond230 Using cfiCommon0
           CFI (cfiCond230) Function AppS2wNcmProfile_Display
-          CFI (cfiCond230) NoCalls AppS2wNcmProfile_Display
           CFI (cfiCond230) NoCalls AppS2wProfile_Display
+          CFI (cfiCond230) NoCalls AppS2wNcmProfile_Display
           CFI (cfiCond230) Conditional ??CrossCallReturnLabel_619
           CFI (cfiCond230) R4 Frame(CFA, -24)
           CFI (cfiCond230) R5 Frame(CFA, -20)
@@ -15930,8 +15933,8 @@ AppS2wNcmProfile_Display:
           CFI (cfiCond230) CFA R13+40
           CFI Block cfiPicker231 Using cfiCommon1
           CFI (cfiPicker231) NoFunction
-          CFI (cfiPicker231) NoCalls AppS2wNcmProfile_Display
           CFI (cfiPicker231) NoCalls AppS2wProfile_Display
+          CFI (cfiPicker231) NoCalls AppS2wNcmProfile_Display
           CFI (cfiPicker231) Picker
         THUMB
 ?Subroutine134:
@@ -16311,7 +16314,7 @@ AppS2wCmd_ConfigOutput:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
 // 6242     AppS2wProfile_Display(&s2wFlashParams->profile[0]);
-        LDR.W    R4,??DataTable439
+        LDR.W    R4,??DataTable440
         LDR      R0,[R4, #+0]
           CFI FunCall AppS2wProfile_Display
         BL       AppS2wProfile_Display
@@ -17306,14 +17309,14 @@ AppS2wCmd_Ncudp:
 // 6850     UINT8 *p;
 // 6851 
 // 6852     if (s2wIsAutoconnected)
-        LDR.W    R0,??DataTable440
+        LDR.W    R0,??DataTable440_1
         LDRB     R0,[R0, #+0]
         CBNZ.N   R0,??AppS2wCmd_Ncudp_0
 // 6853     {
 // 6854         return S2W_EINVAL;
 // 6855     }
 // 6856     if(s2wLinkState == S2W_LINK_STATE_DISCONNECTED)
-        LDR.W    R0,??DataTable441
+        LDR.W    R0,??DataTable442
         LDRB     R0,[R0, #+0]
         CBNZ.N   R0,??AppS2wCmd_Ncudp_1
 // 6857     {
@@ -18693,31 +18696,16 @@ AppS2wCmd_SSLOpen:
           CFI EndBlock cfiBlock337
 // 7233 }
 // 7234 
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock338 Using cfiCommon0
-          CFI Function AppS2wCmd_SSLOpen_test
-        THUMB
-// 7235 UINT8
+// 7235 /*UINT8
 // 7236 AppS2wCmd_SSLOpen_test(UINT8 CID)
 // 7237 {
-AppS2wCmd_SSLOpen_test:
-        PUSH     {R3-R5,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R5 Frame(CFA, -8)
-          CFI R4 Frame(CFA, -12)
-          CFI CFA R13+16
-        MOV      R4,R0
 // 7238     UINT8 status = S2W_EINVAL;
-        MOVS     R5,#+2
 // 7239     UINT8 valCid;
 // 7240     UINT8 endParam = 1;
 // 7241 
 // 7242     valCid = CID;
 // 7243 
 // 7244     if (valCid != INVALID_CID)
-        CMP      R4,#+255
-        BEQ.N    ??AppS2wCmd_SSLOpen_test_0
 // 7245     {
 // 7246         UINT8 *pCertName = NULL;
 // 7247         UINT8 *pClientCertName = NULL;
@@ -18728,50 +18716,22 @@ AppS2wCmd_SSLOpen_test:
 // 7252 
 // 7253 #ifdef S2W_SSL_CLIENT_SUPPORT
 // 7254         if( S2W_NETDATA_MODE_CLIENT == AppS2w_ConnModeGet(valCid))
-          CFI FunCall AppS2w_ConnModeGet
-        BL       AppS2w_ConnModeGet
-        CBNZ.N   R0,??AppS2wCmd_SSLOpen_test_1
 // 7255         {
 // 7256             status = AppS2w_SslClientOpen(valCid, (INT8*)pCertName, pClientCertName,
 // 7257                                           pClientKeyName);
-        MOVS     R2,#+0
-        MOVS     R3,#+0
-        MOV      R1,R2
-        MOV      R0,R4
-          CFI FunCall AppS2w_SslClientOpen
-        BL       AppS2w_SslClientOpen
-        MOV      R5,R0
 // 7258         }
 // 7259 #endif
 // 7260 #ifdef S2W_SSL_SERVER_SUPPORT
 // 7261         if( S2W_NETDATA_MODE_SERVER == AppS2w_ConnModeGet(valCid))
-??AppS2wCmd_SSLOpen_test_1:
-        MOV      R0,R4
-          CFI FunCall AppS2w_ConnModeGet
-        BL       AppS2w_ConnModeGet
-        CMP      R0,#+1
-        BNE.N    ??AppS2wCmd_SSLOpen_test_2
 // 7262         {
 // 7263             status = AppS2w_SslServerOpen(valCid, (char*)pCertName);
-        MOVS     R1,#+0
-        MOV      R0,R4
-          CFI FunCall AppS2w_SslServerOpen
-        BL       AppS2w_SslServerOpen
-        MOV      R5,R0
 // 7264         }
 // 7265 #endif
 // 7266         return status;
-??AppS2wCmd_SSLOpen_test_2:
-        UXTB     R0,R5
-        POP      {R1,R4,R5,PC}
 // 7267     }
 // 7268     else
 // 7269         return S2W_EBADCID;
-??AppS2wCmd_SSLOpen_test_0:
-        MOVS     R0,#+5
-        POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock338
-// 7270 }
+// 7270 }*/
 // 7271 
 // 7272 
 // 7273 
@@ -18786,7 +18746,7 @@ AppS2wCmd_SSLOpen_test:
 // 7282  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock339 Using cfiCommon0
+          CFI Block cfiBlock338 Using cfiCommon0
           CFI Function AppS2wCmd_SSLClose
         THUMB
 // 7283 UINT8
@@ -18818,12 +18778,12 @@ AppS2wCmd_SSLClose:
 ??AppS2wCmd_SSLClose_0:
         MOVS     R0,#+5
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock339
+          CFI EndBlock cfiBlock338
 // 7297 	}
 // 7298 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond340 Using cfiCommon0
+          CFI Block cfiCond339 Using cfiCommon0
           CFI Function AppS2wCmd_HttpClientSend
           CFI Conditional ??CrossCallReturnLabel_519
           CFI R4 Frame(CFA, -28)
@@ -18834,42 +18794,42 @@ AppS2wCmd_SSLClose:
           CFI R9 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+64
+          CFI Block cfiCond340 Using cfiCommon0
+          CFI (cfiCond340) Function AppS2wCmd_SSLOpen
+          CFI (cfiCond340) Conditional ??CrossCallReturnLabel_518
+          CFI (cfiCond340) R4 Frame(CFA, -24)
+          CFI (cfiCond340) R5 Frame(CFA, -20)
+          CFI (cfiCond340) R6 Frame(CFA, -16)
+          CFI (cfiCond340) R7 Frame(CFA, -12)
+          CFI (cfiCond340) R8 Frame(CFA, -8)
+          CFI (cfiCond340) R14 Frame(CFA, -4)
+          CFI (cfiCond340) CFA R13+32
           CFI Block cfiCond341 Using cfiCommon0
-          CFI (cfiCond341) Function AppS2wCmd_SSLOpen
-          CFI (cfiCond341) Conditional ??CrossCallReturnLabel_518
-          CFI (cfiCond341) R4 Frame(CFA, -24)
-          CFI (cfiCond341) R5 Frame(CFA, -20)
-          CFI (cfiCond341) R6 Frame(CFA, -16)
-          CFI (cfiCond341) R7 Frame(CFA, -12)
-          CFI (cfiCond341) R8 Frame(CFA, -8)
+          CFI (cfiCond341) Function AppS2wCmd_SSLClose
+          CFI (cfiCond341) Conditional ??CrossCallReturnLabel_517
           CFI (cfiCond341) R14 Frame(CFA, -4)
-          CFI (cfiCond341) CFA R13+32
+          CFI (cfiCond341) CFA R13+8
           CFI Block cfiCond342 Using cfiCommon0
-          CFI (cfiCond342) Function AppS2wCmd_SSLClose
-          CFI (cfiCond342) Conditional ??CrossCallReturnLabel_517
+          CFI (cfiCond342) Function AppS2wCmd_CoapClose
+          CFI (cfiCond342) Conditional ??CrossCallReturnLabel_516
+          CFI (cfiCond342) R4 Frame(CFA, -16)
+          CFI (cfiCond342) R5 Frame(CFA, -12)
+          CFI (cfiCond342) R6 Frame(CFA, -8)
           CFI (cfiCond342) R14 Frame(CFA, -4)
-          CFI (cfiCond342) CFA R13+8
+          CFI (cfiCond342) CFA R13+24
           CFI Block cfiCond343 Using cfiCommon0
-          CFI (cfiCond343) Function AppS2wCmd_CoapClose
-          CFI (cfiCond343) Conditional ??CrossCallReturnLabel_516
-          CFI (cfiCond343) R4 Frame(CFA, -16)
-          CFI (cfiCond343) R5 Frame(CFA, -12)
-          CFI (cfiCond343) R6 Frame(CFA, -8)
+          CFI (cfiCond343) Function AppS2wCmd_CoapSend
+          CFI (cfiCond343) Conditional ??CrossCallReturnLabel_515
+          CFI (cfiCond343) R4 Frame(CFA, -24)
+          CFI (cfiCond343) R5 Frame(CFA, -20)
+          CFI (cfiCond343) R6 Frame(CFA, -16)
+          CFI (cfiCond343) R7 Frame(CFA, -12)
+          CFI (cfiCond343) R8 Frame(CFA, -8)
           CFI (cfiCond343) R14 Frame(CFA, -4)
-          CFI (cfiCond343) CFA R13+24
-          CFI Block cfiCond344 Using cfiCommon0
-          CFI (cfiCond344) Function AppS2wCmd_CoapSend
-          CFI (cfiCond344) Conditional ??CrossCallReturnLabel_515
-          CFI (cfiCond344) R4 Frame(CFA, -24)
-          CFI (cfiCond344) R5 Frame(CFA, -20)
-          CFI (cfiCond344) R6 Frame(CFA, -16)
-          CFI (cfiCond344) R7 Frame(CFA, -12)
-          CFI (cfiCond344) R8 Frame(CFA, -8)
-          CFI (cfiCond344) R14 Frame(CFA, -4)
-          CFI (cfiCond344) CFA R13+1440
-          CFI Block cfiPicker345 Using cfiCommon1
-          CFI (cfiPicker345) NoFunction
-          CFI (cfiPicker345) Picker
+          CFI (cfiCond343) CFA R13+1440
+          CFI Block cfiPicker344 Using cfiCommon1
+          CFI (cfiPicker344) NoFunction
+          CFI (cfiPicker344) Picker
         THUMB
 ?Subroutine101:
         LDRB     R0,[R0, #+0]
@@ -18879,12 +18839,12 @@ AppS2wCmd_SSLClose:
           CFI FunCall AppS2wCmd_CoapClose AppS2w_CidValidate
           CFI FunCall AppS2wCmd_CoapSend AppS2w_CidValidate
         B.W      AppS2w_CidValidate
+          CFI EndBlock cfiCond339
           CFI EndBlock cfiCond340
           CFI EndBlock cfiCond341
           CFI EndBlock cfiCond342
           CFI EndBlock cfiCond343
-          CFI EndBlock cfiCond344
-          CFI EndBlock cfiPicker345
+          CFI EndBlock cfiPicker344
 // 7299 
 // 7300 #endif
 // 7301 
@@ -18900,7 +18860,7 @@ AppS2wCmd_SSLClose:
 // 7311  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock346 Using cfiCommon0
+          CFI Block cfiBlock345 Using cfiCommon0
           CFI Function AppS2wRegisters_Display
         THUMB
 // 7312 VOID
@@ -18957,7 +18917,7 @@ AppS2wRegisters_Display:
         BLT.N    ??AppS2wRegisters_Display_4
 // 7322 }
         POP      {R4-R8,PC}       ;; return
-          CFI EndBlock cfiBlock346
+          CFI EndBlock cfiBlock345
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -18967,7 +18927,7 @@ AppS2wRegisters_Display:
         DC8 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond347 Using cfiCommon0
+          CFI Block cfiCond346 Using cfiCommon0
           CFI Function AppS2wRegisters_Display
           CFI NoCalls
           CFI Conditional ??CrossCallReturnLabel_620
@@ -18978,34 +18938,34 @@ AppS2wRegisters_Display:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
-          CFI Block cfiCond348 Using cfiCommon0
-          CFI (cfiCond348) Function AppS2wRegisters_Display
-          CFI (cfiCond348) NoCalls AppS2wRegisters_Display
-          CFI (cfiCond348) Conditional ??CrossCallReturnLabel_621
-          CFI (cfiCond348) R4 Frame(CFA, -24)
-          CFI (cfiCond348) R5 Frame(CFA, -20)
-          CFI (cfiCond348) R6 Frame(CFA, -16)
-          CFI (cfiCond348) R7 Frame(CFA, -12)
-          CFI (cfiCond348) R8 Frame(CFA, -8)
-          CFI (cfiCond348) R14 Frame(CFA, -4)
-          CFI (cfiCond348) CFA R13+24
-          CFI Block cfiPicker349 Using cfiCommon1
-          CFI (cfiPicker349) NoFunction
-          CFI (cfiPicker349) NoCalls AppS2wRegisters_Display
-          CFI (cfiPicker349) Picker
+          CFI Block cfiCond347 Using cfiCommon0
+          CFI (cfiCond347) Function AppS2wRegisters_Display
+          CFI (cfiCond347) NoCalls AppS2wRegisters_Display
+          CFI (cfiCond347) Conditional ??CrossCallReturnLabel_621
+          CFI (cfiCond347) R4 Frame(CFA, -24)
+          CFI (cfiCond347) R5 Frame(CFA, -20)
+          CFI (cfiCond347) R6 Frame(CFA, -16)
+          CFI (cfiCond347) R7 Frame(CFA, -12)
+          CFI (cfiCond347) R8 Frame(CFA, -8)
+          CFI (cfiCond347) R14 Frame(CFA, -4)
+          CFI (cfiCond347) CFA R13+24
+          CFI Block cfiPicker348 Using cfiCommon1
+          CFI (cfiPicker348) NoFunction
+          CFI (cfiPicker348) NoCalls AppS2wRegisters_Display
+          CFI (cfiPicker348) Picker
         THUMB
 ?Subroutine135:
         ADD      R0,R4,R5, LSL #+1
         MOV      R2,R5
         LDRH     R3,[R0, #+452]
         BX       LR
+          CFI EndBlock cfiCond346
           CFI EndBlock cfiCond347
-          CFI EndBlock cfiCond348
-          CFI EndBlock cfiPicker349
+          CFI EndBlock cfiPicker348
 // 7323 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock350 Using cfiCommon0
+          CFI Block cfiBlock349 Using cfiCommon0
           CFI Function AppS2w_ConctCbProcess
         THUMB
 // 7324 VOID AppS2w_ConctCbProcess(VOID* ctext,INT32 status)
@@ -19048,7 +19008,7 @@ AppS2w_ConctCbProcess:
 // 7340         {
 // 7341             s2wLinkState = S2W_LINK_STATE_DISCONNECTED;
 ??AppS2w_ConctCbProcess_1:
-        LDR.W    R1,??DataTable441
+        LDR.W    R1,??DataTable442
         STRB     R0,[R1, #+0]
 // 7342         }
 // 7343 
@@ -19150,10 +19110,10 @@ AppS2w_ConctCbProcess:
 // 7385 }
 ??AppS2w_ConctCbProcess_2:
         POP      {R0,R4-R7,PC}    ;; return
-          CFI EndBlock cfiBlock350
+          CFI EndBlock cfiBlock349
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond351 Using cfiCommon0
+          CFI Block cfiCond350 Using cfiCommon0
           CFI Function S2w_getSecurityConfig
           CFI Conditional ??CrossCallReturnLabel_406
           CFI R4 Frame(CFA, -20)
@@ -19162,18 +19122,18 @@ AppS2w_ConctCbProcess:
           CFI R7 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
-          CFI Block cfiCond352 Using cfiCommon0
-          CFI (cfiCond352) Function AppS2w_ConctCbProcess
-          CFI (cfiCond352) Conditional ??CrossCallReturnLabel_405
-          CFI (cfiCond352) R4 Frame(CFA, -20)
-          CFI (cfiCond352) R5 Frame(CFA, -16)
-          CFI (cfiCond352) R6 Frame(CFA, -12)
-          CFI (cfiCond352) R7 Frame(CFA, -8)
-          CFI (cfiCond352) R14 Frame(CFA, -4)
-          CFI (cfiCond352) CFA R13+24
-          CFI Block cfiPicker353 Using cfiCommon1
-          CFI (cfiPicker353) NoFunction
-          CFI (cfiPicker353) Picker
+          CFI Block cfiCond351 Using cfiCommon0
+          CFI (cfiCond351) Function AppS2w_ConctCbProcess
+          CFI (cfiCond351) Conditional ??CrossCallReturnLabel_405
+          CFI (cfiCond351) R4 Frame(CFA, -20)
+          CFI (cfiCond351) R5 Frame(CFA, -16)
+          CFI (cfiCond351) R6 Frame(CFA, -12)
+          CFI (cfiCond351) R7 Frame(CFA, -8)
+          CFI (cfiCond351) R14 Frame(CFA, -4)
+          CFI (cfiCond351) CFA R13+24
+          CFI Block cfiPicker352 Using cfiCommon1
+          CFI (cfiPicker352) NoFunction
+          CFI (cfiPicker352) Picker
         THUMB
 ?Subroutine67:
         MOVS     R2,#+32
@@ -19182,13 +19142,13 @@ AppS2w_ConctCbProcess:
           CFI FunCall S2w_getSecurityConfig memset
           CFI FunCall AppS2w_ConctCbProcess memset
         B.W      memset
+          CFI EndBlock cfiCond350
           CFI EndBlock cfiCond351
-          CFI EndBlock cfiCond352
-          CFI EndBlock cfiPicker353
+          CFI EndBlock cfiPicker352
 // 7386 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock354 Using cfiCommon0
+          CFI Block cfiBlock353 Using cfiCommon0
           CFI Function AppS2w_WlanRespTmrCb
         THUMB
 // 7387 VOID
@@ -19201,7 +19161,7 @@ AppS2w_WlanRespTmrCb:
           CFI CFA R13+8
 // 7390 	GSN_ASSERT(FALSE);
         LDR.W    R0,??DataTable449  ;; 0x41010010
-        ADR.W    R1,`?<Constant "E:\\\\Gainspan\\\\gs2011mxx...">`+0x43
+        ADR.W    R1,`?<Constant "E:\\\\Gainspan\\\\gs2011mxx...">`+0x48
         LDR      R4,[R0, #+0]
         MOVS     R2,#+32
         ADDS     R0,R4,#+4
@@ -19221,7 +19181,7 @@ AppS2w_WlanRespTmrCb:
           CFI CFA R13+0
           CFI FunCall GsnSys_Reset
         B.W      GsnSys_Reset
-          CFI EndBlock cfiBlock354
+          CFI EndBlock cfiBlock353
 // 7391 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -19235,15 +19195,17 @@ AppS2w_WlanRespTmrCb:
         DC8 73H, 5FH, 74H, 6CH, 73H, 6CH, 70H, 5FH
         DC8 35H, 2EH, 31H, 2EH, 35H, 5FH, 47H, 41H
         DC8 5CH, 75H, 73H, 65H, 72H, 61H, 70H, 70H
-        DC8 73H, 5FH, 6DH, 71H, 74H, 74H, 5CH, 73H
-        DC8 32H, 77H, 5CH, 73H, 72H, 63H, 5CH, 70H
-        DC8 61H, 72H, 73H, 65H, 72H, 5CH, 73H, 32H
-        DC8 77H, 5FH, 67H, 65H, 6EH, 65H, 72H, 61H
-        DC8 6CH, 5FH, 63H, 6FH, 6DH, 6DH, 61H, 6EH
-        DC8 64H, 2EH, 63H, 0
+        DC8 73H, 5FH, 6DH, 71H, 74H, 74H, 5FH, 51H
+        DC8 6FH, 53H, 32H, 5CH, 73H, 32H, 77H, 5CH
+        DC8 73H, 72H, 63H, 5CH, 70H, 61H, 72H, 73H
+        DC8 65H, 72H, 5CH, 73H, 32H, 77H, 5FH, 67H
+        DC8 65H, 6EH, 65H, 72H, 61H, 6CH, 5FH, 63H
+        DC8 6FH, 6DH, 6DH, 61H, 6EH, 64H, 2EH, 63H
+        DC8 0
+        DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock355 Using cfiCommon0
+          CFI Block cfiBlock354 Using cfiCommon0
           CFI Function s2wApp_ConnectCb
         THUMB
 // 7392 VOID
@@ -19272,11 +19234,11 @@ s2wApp_ConnectCb:
           CFI CFA R13+0
           CFI FunCall GsnOsal_SemRelease
         B.W      GsnOsal_SemRelease
-          CFI EndBlock cfiBlock355
+          CFI EndBlock cfiBlock354
 // 7399 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond356 Using cfiCommon0
+          CFI Block cfiCond355 Using cfiCommon0
           CFI Function AppS2wCmd_PowerSave
           CFI NoCalls
           CFI NoCalls
@@ -19285,59 +19247,59 @@ s2wApp_ConnectCb:
           CFI Conditional ??CrossCallReturnLabel_598
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
+          CFI Block cfiCond356 Using cfiCommon0
+          CFI (cfiCond356) Function AppS2wCmd_reset
+          CFI (cfiCond356) NoCalls AppS2wCmd_PowerSave
+          CFI (cfiCond356) NoCalls s2wApp_ConnectCb
+          CFI (cfiCond356) NoCalls AppS2wCmd_reset
+          CFI (cfiCond356) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond356) Conditional ??CrossCallReturnLabel_599
+          CFI (cfiCond356) R14 Frame(CFA, -4)
+          CFI (cfiCond356) CFA R13+8
           CFI Block cfiCond357 Using cfiCommon0
-          CFI (cfiCond357) Function AppS2wCmd_reset
+          CFI (cfiCond357) Function s2wApp_ConnectCb
           CFI (cfiCond357) NoCalls AppS2wCmd_PowerSave
+          CFI (cfiCond357) NoCalls s2wApp_ConnectCb
           CFI (cfiCond357) NoCalls AppS2wCmd_reset
           CFI (cfiCond357) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond357) NoCalls s2wApp_ConnectCb
-          CFI (cfiCond357) Conditional ??CrossCallReturnLabel_599
+          CFI (cfiCond357) Conditional ??CrossCallReturnLabel_600
+          CFI (cfiCond357) R4 Frame(CFA, -8)
           CFI (cfiCond357) R14 Frame(CFA, -4)
           CFI (cfiCond357) CFA R13+8
           CFI Block cfiCond358 Using cfiCommon0
-          CFI (cfiCond358) Function s2wApp_ConnectCb
+          CFI (cfiCond358) Function AppS2wCmd_NcmAuto
           CFI (cfiCond358) NoCalls AppS2wCmd_PowerSave
+          CFI (cfiCond358) NoCalls s2wApp_ConnectCb
           CFI (cfiCond358) NoCalls AppS2wCmd_reset
           CFI (cfiCond358) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond358) NoCalls s2wApp_ConnectCb
-          CFI (cfiCond358) Conditional ??CrossCallReturnLabel_600
-          CFI (cfiCond358) R4 Frame(CFA, -8)
+          CFI (cfiCond358) Conditional ??CrossCallReturnLabel_601
+          CFI (cfiCond358) R4 Frame(CFA, -36)
+          CFI (cfiCond358) R5 Frame(CFA, -32)
+          CFI (cfiCond358) R6 Frame(CFA, -28)
+          CFI (cfiCond358) R7 Frame(CFA, -24)
+          CFI (cfiCond358) R8 Frame(CFA, -20)
+          CFI (cfiCond358) R9 Frame(CFA, -16)
+          CFI (cfiCond358) R10 Frame(CFA, -12)
+          CFI (cfiCond358) R11 Frame(CFA, -8)
           CFI (cfiCond358) R14 Frame(CFA, -4)
-          CFI (cfiCond358) CFA R13+8
-          CFI Block cfiCond359 Using cfiCommon0
-          CFI (cfiCond359) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond359) NoCalls AppS2wCmd_PowerSave
-          CFI (cfiCond359) NoCalls AppS2wCmd_reset
-          CFI (cfiCond359) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond359) NoCalls s2wApp_ConnectCb
-          CFI (cfiCond359) Conditional ??CrossCallReturnLabel_601
-          CFI (cfiCond359) R4 Frame(CFA, -36)
-          CFI (cfiCond359) R5 Frame(CFA, -32)
-          CFI (cfiCond359) R6 Frame(CFA, -28)
-          CFI (cfiCond359) R7 Frame(CFA, -24)
-          CFI (cfiCond359) R8 Frame(CFA, -20)
-          CFI (cfiCond359) R9 Frame(CFA, -16)
-          CFI (cfiCond359) R10 Frame(CFA, -12)
-          CFI (cfiCond359) R11 Frame(CFA, -8)
-          CFI (cfiCond359) R14 Frame(CFA, -4)
-          CFI (cfiCond359) CFA R13+1344
-          CFI Block cfiPicker360 Using cfiCommon1
-          CFI (cfiPicker360) NoFunction
-          CFI (cfiPicker360) NoCalls AppS2wCmd_PowerSave
-          CFI (cfiPicker360) NoCalls AppS2wCmd_reset
-          CFI (cfiPicker360) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiPicker360) NoCalls s2wApp_ConnectCb
-          CFI (cfiPicker360) Picker
+          CFI (cfiCond358) CFA R13+1344
+          CFI Block cfiPicker359 Using cfiCommon1
+          CFI (cfiPicker359) NoFunction
+          CFI (cfiPicker359) NoCalls AppS2wCmd_PowerSave
+          CFI (cfiPicker359) NoCalls s2wApp_ConnectCb
+          CFI (cfiPicker359) NoCalls AppS2wCmd_reset
+          CFI (cfiPicker359) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiPicker359) Picker
         THUMB
 ?Subroutine128:
         LDR.W    R1,??DataTable448
         LDR      R1,[R1, #+0]
         BX       LR
+          CFI EndBlock cfiCond355
           CFI EndBlock cfiCond356
           CFI EndBlock cfiCond357
           CFI EndBlock cfiCond358
-          CFI EndBlock cfiCond359
-          CFI EndBlock cfiPicker360
+          CFI EndBlock cfiPicker359
 // 7400 
 // 7401 #ifdef S2W_SNTP
 // 7402 
@@ -19345,7 +19307,7 @@ s2wApp_ConnectCb:
 // 7404 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock361 Using cfiCommon0
+          CFI Block cfiBlock360 Using cfiCommon0
           CFI Function AppS2wProcess_SntpTimerNotify
         THUMB
 // 7405 PUBLIC VOID AppS2wProcess_SntpTimerNotify()
@@ -19374,7 +19336,7 @@ AppS2wProcess_SntpTimerNotify:
         BL       GsnSntp_TimeSync
 // 7410 }
         POP      {R0,R1,R4,PC}    ;; return
-          CFI EndBlock cfiBlock361
+          CFI EndBlock cfiBlock360
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -19391,7 +19353,7 @@ AppS2wProcess_SntpTimerNotify:
 // 7412 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock362 Using cfiCommon0
+          CFI Block cfiBlock361 Using cfiCommon0
           CFI Function AppS2wCmd_ntpTimeSet
         THUMB
 // 7413 UINT8
@@ -19542,7 +19504,7 @@ AppS2wCmd_ntpTimeSet:
 // 7479             {
 // 7480                 if(s2wLinkState != S2W_LINK_STATE_CONNECTED)
 ??AppS2wCmd_ntpTimeSet_5:
-        LDR.W    R0,??DataTable441
+        LDR.W    R0,??DataTable442
         LDRB     R0,[R0, #+0]
         CMP      R0,#+1
         BNE.N    ??AppS2wCmd_ntpTimeSet_7
@@ -19668,7 +19630,7 @@ AppS2wCmd_ntpTimeSet:
         ADD      SP,SP,#+28
           CFI CFA R13+20
         POP      {R4-R7,PC}       ;; return
-          CFI EndBlock cfiBlock362
+          CFI EndBlock cfiBlock361
 // 7527 
 // 7528 }
 
@@ -19680,7 +19642,7 @@ AppS2wCmd_ntpTimeSet:
 // 7529 
 
         SECTION `.text`:CODE:NOROOT(2)
-          CFI Block cfiBlock363 Using cfiCommon0
+          CFI Block cfiBlock362 Using cfiCommon0
           CFI Function S2wApp_TimeSyncDoneCb
         THUMB
 // 7530 PRIVATE VOID
@@ -19700,12 +19662,12 @@ S2wApp_TimeSyncDoneCb:
 // 7538 }
 ??S2wApp_TimeSyncDoneCb_0:
         BX       LR               ;; return
-          CFI EndBlock cfiBlock363
+          CFI EndBlock cfiBlock362
 // 7539 
 // 7540 
 
         SECTION `.text`:CODE:NOROOT(2)
-          CFI Block cfiBlock364 Using cfiCommon0
+          CFI Block cfiBlock363 Using cfiCommon0
           CFI Function AppS2w_sntpTimerCb
         THUMB
 // 7541 PRIVATE VOID
@@ -19723,7 +19685,7 @@ AppS2w_sntpTimerCb:
           CFI FunCall
         ANOTE "tailcall"
         BX       R2
-          CFI EndBlock cfiBlock364
+          CFI EndBlock cfiBlock363
 // 7547 
 // 7548 }
 
@@ -19738,7 +19700,7 @@ AppS2w_sntpTimerCb:
 // 7552 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock365 Using cfiCommon0
+          CFI Block cfiBlock364 Using cfiCommon0
           CFI Function AppS2wCmd_DhcpSrvrConfig
         THUMB
 // 7553 PUBLIC UINT8
@@ -19853,19 +19815,31 @@ AppS2wCmd_DhcpSrvrConfig:
         MOVS     R0,#+0
 ??AppS2wCmd_DhcpSrvrConfig_1:
         POP      {R1,R2,R4-R6,PC}  ;; return
-          CFI EndBlock cfiBlock365
+          CFI EndBlock cfiBlock364
 // 7600 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond366 Using cfiCommon0
+          CFI Block cfiCond365 Using cfiCommon0
           CFI Function AppS2wCmd_HttpClientClose
           CFI Conditional ??CrossCallReturnLabel_177
           CFI R4 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
+          CFI Block cfiCond366 Using cfiCommon0
+          CFI (cfiCond366) Function AppS2wCmd_HttpClientConfig
+          CFI (cfiCond366) Conditional ??CrossCallReturnLabel_176
+          CFI (cfiCond366) R4 Frame(CFA, -32)
+          CFI (cfiCond366) R5 Frame(CFA, -28)
+          CFI (cfiCond366) R6 Frame(CFA, -24)
+          CFI (cfiCond366) R7 Frame(CFA, -20)
+          CFI (cfiCond366) R8 Frame(CFA, -16)
+          CFI (cfiCond366) R9 Frame(CFA, -12)
+          CFI (cfiCond366) R10 Frame(CFA, -8)
+          CFI (cfiCond366) R14 Frame(CFA, -4)
+          CFI (cfiCond366) CFA R13+40
           CFI Block cfiCond367 Using cfiCommon0
           CFI (cfiCond367) Function AppS2wCmd_HttpClientConfig
-          CFI (cfiCond367) Conditional ??CrossCallReturnLabel_176
+          CFI (cfiCond367) Conditional ??CrossCallReturnLabel_175
           CFI (cfiCond367) R4 Frame(CFA, -32)
           CFI (cfiCond367) R5 Frame(CFA, -28)
           CFI (cfiCond367) R6 Frame(CFA, -24)
@@ -19876,30 +19850,28 @@ AppS2wCmd_DhcpSrvrConfig:
           CFI (cfiCond367) R14 Frame(CFA, -4)
           CFI (cfiCond367) CFA R13+40
           CFI Block cfiCond368 Using cfiCommon0
-          CFI (cfiCond368) Function AppS2wCmd_HttpClientConfig
-          CFI (cfiCond368) Conditional ??CrossCallReturnLabel_175
-          CFI (cfiCond368) R4 Frame(CFA, -32)
-          CFI (cfiCond368) R5 Frame(CFA, -28)
-          CFI (cfiCond368) R6 Frame(CFA, -24)
-          CFI (cfiCond368) R7 Frame(CFA, -20)
-          CFI (cfiCond368) R8 Frame(CFA, -16)
-          CFI (cfiCond368) R9 Frame(CFA, -12)
-          CFI (cfiCond368) R10 Frame(CFA, -8)
+          CFI (cfiCond368) Function AppS2wCmd_Ncudp
+          CFI (cfiCond368) Conditional ??CrossCallReturnLabel_174
           CFI (cfiCond368) R14 Frame(CFA, -4)
-          CFI (cfiCond368) CFA R13+40
+          CFI (cfiCond368) CFA R13+80
           CFI Block cfiCond369 Using cfiCommon0
           CFI (cfiCond369) Function AppS2wCmd_Ncudp
-          CFI (cfiCond369) Conditional ??CrossCallReturnLabel_174
+          CFI (cfiCond369) Conditional ??CrossCallReturnLabel_173
           CFI (cfiCond369) R14 Frame(CFA, -4)
           CFI (cfiCond369) CFA R13+80
           CFI Block cfiCond370 Using cfiCommon0
-          CFI (cfiCond370) Function AppS2wCmd_Ncudp
-          CFI (cfiCond370) Conditional ??CrossCallReturnLabel_173
+          CFI (cfiCond370) Function AppS2wCmd_SSLOpen
+          CFI (cfiCond370) Conditional ??CrossCallReturnLabel_172
+          CFI (cfiCond370) R4 Frame(CFA, -24)
+          CFI (cfiCond370) R5 Frame(CFA, -20)
+          CFI (cfiCond370) R6 Frame(CFA, -16)
+          CFI (cfiCond370) R7 Frame(CFA, -12)
+          CFI (cfiCond370) R8 Frame(CFA, -8)
           CFI (cfiCond370) R14 Frame(CFA, -4)
-          CFI (cfiCond370) CFA R13+80
+          CFI (cfiCond370) CFA R13+32
           CFI Block cfiCond371 Using cfiCommon0
           CFI (cfiCond371) Function AppS2wCmd_SSLOpen
-          CFI (cfiCond371) Conditional ??CrossCallReturnLabel_172
+          CFI (cfiCond371) Conditional ??CrossCallReturnLabel_171
           CFI (cfiCond371) R4 Frame(CFA, -24)
           CFI (cfiCond371) R5 Frame(CFA, -20)
           CFI (cfiCond371) R6 Frame(CFA, -16)
@@ -19909,7 +19881,7 @@ AppS2wCmd_DhcpSrvrConfig:
           CFI (cfiCond371) CFA R13+32
           CFI Block cfiCond372 Using cfiCommon0
           CFI (cfiCond372) Function AppS2wCmd_SSLOpen
-          CFI (cfiCond372) Conditional ??CrossCallReturnLabel_171
+          CFI (cfiCond372) Conditional ??CrossCallReturnLabel_170
           CFI (cfiCond372) R4 Frame(CFA, -24)
           CFI (cfiCond372) R5 Frame(CFA, -20)
           CFI (cfiCond372) R6 Frame(CFA, -16)
@@ -19919,7 +19891,7 @@ AppS2wCmd_DhcpSrvrConfig:
           CFI (cfiCond372) CFA R13+32
           CFI Block cfiCond373 Using cfiCommon0
           CFI (cfiCond373) Function AppS2wCmd_SSLOpen
-          CFI (cfiCond373) Conditional ??CrossCallReturnLabel_170
+          CFI (cfiCond373) Conditional ??CrossCallReturnLabel_169
           CFI (cfiCond373) R4 Frame(CFA, -24)
           CFI (cfiCond373) R5 Frame(CFA, -20)
           CFI (cfiCond373) R6 Frame(CFA, -16)
@@ -19928,40 +19900,40 @@ AppS2wCmd_DhcpSrvrConfig:
           CFI (cfiCond373) R14 Frame(CFA, -4)
           CFI (cfiCond373) CFA R13+32
           CFI Block cfiCond374 Using cfiCommon0
-          CFI (cfiCond374) Function AppS2wCmd_SSLOpen
-          CFI (cfiCond374) Conditional ??CrossCallReturnLabel_169
-          CFI (cfiCond374) R4 Frame(CFA, -24)
-          CFI (cfiCond374) R5 Frame(CFA, -20)
-          CFI (cfiCond374) R6 Frame(CFA, -16)
-          CFI (cfiCond374) R7 Frame(CFA, -12)
-          CFI (cfiCond374) R8 Frame(CFA, -8)
+          CFI (cfiCond374) Function AppS2wCmd_DhcpSrvrConfig
+          CFI (cfiCond374) Conditional ??CrossCallReturnLabel_168
+          CFI (cfiCond374) R4 Frame(CFA, -16)
+          CFI (cfiCond374) R5 Frame(CFA, -12)
+          CFI (cfiCond374) R6 Frame(CFA, -8)
           CFI (cfiCond374) R14 Frame(CFA, -4)
-          CFI (cfiCond374) CFA R13+32
+          CFI (cfiCond374) CFA R13+24
           CFI Block cfiCond375 Using cfiCommon0
           CFI (cfiCond375) Function AppS2wCmd_DhcpSrvrConfig
-          CFI (cfiCond375) Conditional ??CrossCallReturnLabel_168
+          CFI (cfiCond375) Conditional ??CrossCallReturnLabel_167
           CFI (cfiCond375) R4 Frame(CFA, -16)
           CFI (cfiCond375) R5 Frame(CFA, -12)
           CFI (cfiCond375) R6 Frame(CFA, -8)
           CFI (cfiCond375) R14 Frame(CFA, -4)
           CFI (cfiCond375) CFA R13+24
           CFI Block cfiCond376 Using cfiCommon0
-          CFI (cfiCond376) Function AppS2wCmd_DhcpSrvrConfig
-          CFI (cfiCond376) Conditional ??CrossCallReturnLabel_167
-          CFI (cfiCond376) R4 Frame(CFA, -16)
-          CFI (cfiCond376) R5 Frame(CFA, -12)
-          CFI (cfiCond376) R6 Frame(CFA, -8)
+          CFI (cfiCond376) Function AppS2wCmd_TkipContrMsrStart
+          CFI (cfiCond376) Conditional ??CrossCallReturnLabel_166
+          CFI (cfiCond376) R4 Frame(CFA, -8)
           CFI (cfiCond376) R14 Frame(CFA, -4)
-          CFI (cfiCond376) CFA R13+24
+          CFI (cfiCond376) CFA R13+16
           CFI Block cfiCond377 Using cfiCommon0
-          CFI (cfiCond377) Function AppS2wCmd_TkipContrMsrStart
-          CFI (cfiCond377) Conditional ??CrossCallReturnLabel_166
-          CFI (cfiCond377) R4 Frame(CFA, -8)
+          CFI (cfiCond377) Function AppS2wCmd_WeapConf
+          CFI (cfiCond377) Conditional ??CrossCallReturnLabel_165
+          CFI (cfiCond377) R4 Frame(CFA, -24)
+          CFI (cfiCond377) R5 Frame(CFA, -20)
+          CFI (cfiCond377) R6 Frame(CFA, -16)
+          CFI (cfiCond377) R7 Frame(CFA, -12)
+          CFI (cfiCond377) R8 Frame(CFA, -8)
           CFI (cfiCond377) R14 Frame(CFA, -4)
-          CFI (cfiCond377) CFA R13+16
+          CFI (cfiCond377) CFA R13+32
           CFI Block cfiCond378 Using cfiCommon0
           CFI (cfiCond378) Function AppS2wCmd_WeapConf
-          CFI (cfiCond378) Conditional ??CrossCallReturnLabel_165
+          CFI (cfiCond378) Conditional ??CrossCallReturnLabel_164
           CFI (cfiCond378) R4 Frame(CFA, -24)
           CFI (cfiCond378) R5 Frame(CFA, -20)
           CFI (cfiCond378) R6 Frame(CFA, -16)
@@ -19971,7 +19943,7 @@ AppS2wCmd_DhcpSrvrConfig:
           CFI (cfiCond378) CFA R13+32
           CFI Block cfiCond379 Using cfiCommon0
           CFI (cfiCond379) Function AppS2wCmd_WeapConf
-          CFI (cfiCond379) Conditional ??CrossCallReturnLabel_164
+          CFI (cfiCond379) Conditional ??CrossCallReturnLabel_163
           CFI (cfiCond379) R4 Frame(CFA, -24)
           CFI (cfiCond379) R5 Frame(CFA, -20)
           CFI (cfiCond379) R6 Frame(CFA, -16)
@@ -19981,7 +19953,7 @@ AppS2wCmd_DhcpSrvrConfig:
           CFI (cfiCond379) CFA R13+32
           CFI Block cfiCond380 Using cfiCommon0
           CFI (cfiCond380) Function AppS2wCmd_WeapConf
-          CFI (cfiCond380) Conditional ??CrossCallReturnLabel_163
+          CFI (cfiCond380) Conditional ??CrossCallReturnLabel_162
           CFI (cfiCond380) R4 Frame(CFA, -24)
           CFI (cfiCond380) R5 Frame(CFA, -20)
           CFI (cfiCond380) R6 Frame(CFA, -16)
@@ -19991,7 +19963,7 @@ AppS2wCmd_DhcpSrvrConfig:
           CFI (cfiCond380) CFA R13+32
           CFI Block cfiCond381 Using cfiCommon0
           CFI (cfiCond381) Function AppS2wCmd_WeapConf
-          CFI (cfiCond381) Conditional ??CrossCallReturnLabel_162
+          CFI (cfiCond381) Conditional ??CrossCallReturnLabel_161
           CFI (cfiCond381) R4 Frame(CFA, -24)
           CFI (cfiCond381) R5 Frame(CFA, -20)
           CFI (cfiCond381) R6 Frame(CFA, -16)
@@ -20000,34 +19972,24 @@ AppS2wCmd_DhcpSrvrConfig:
           CFI (cfiCond381) R14 Frame(CFA, -4)
           CFI (cfiCond381) CFA R13+32
           CFI Block cfiCond382 Using cfiCommon0
-          CFI (cfiCond382) Function AppS2wCmd_WeapConf
-          CFI (cfiCond382) Conditional ??CrossCallReturnLabel_161
-          CFI (cfiCond382) R4 Frame(CFA, -24)
-          CFI (cfiCond382) R5 Frame(CFA, -20)
-          CFI (cfiCond382) R6 Frame(CFA, -16)
-          CFI (cfiCond382) R7 Frame(CFA, -12)
-          CFI (cfiCond382) R8 Frame(CFA, -8)
+          CFI (cfiCond382) Function AppS2wCmd_CoapClose
+          CFI (cfiCond382) Conditional ??CrossCallReturnLabel_160
+          CFI (cfiCond382) R4 Frame(CFA, -16)
+          CFI (cfiCond382) R5 Frame(CFA, -12)
+          CFI (cfiCond382) R6 Frame(CFA, -8)
           CFI (cfiCond382) R14 Frame(CFA, -4)
-          CFI (cfiCond382) CFA R13+32
+          CFI (cfiCond382) CFA R13+24
           CFI Block cfiCond383 Using cfiCommon0
-          CFI (cfiCond383) Function AppS2wCmd_CoapClose
-          CFI (cfiCond383) Conditional ??CrossCallReturnLabel_160
+          CFI (cfiCond383) Function AppS2wCmd_CoapOpen
+          CFI (cfiCond383) Conditional ??CrossCallReturnLabel_159
           CFI (cfiCond383) R4 Frame(CFA, -16)
           CFI (cfiCond383) R5 Frame(CFA, -12)
           CFI (cfiCond383) R6 Frame(CFA, -8)
           CFI (cfiCond383) R14 Frame(CFA, -4)
           CFI (cfiCond383) CFA R13+24
-          CFI Block cfiCond384 Using cfiCommon0
-          CFI (cfiCond384) Function AppS2wCmd_CoapOpen
-          CFI (cfiCond384) Conditional ??CrossCallReturnLabel_159
-          CFI (cfiCond384) R4 Frame(CFA, -16)
-          CFI (cfiCond384) R5 Frame(CFA, -12)
-          CFI (cfiCond384) R6 Frame(CFA, -8)
-          CFI (cfiCond384) R14 Frame(CFA, -4)
-          CFI (cfiCond384) CFA R13+24
-          CFI Block cfiPicker385 Using cfiCommon1
-          CFI (cfiPicker385) NoFunction
-          CFI (cfiPicker385) Picker
+          CFI Block cfiPicker384 Using cfiCommon1
+          CFI (cfiPicker384) NoFunction
+          CFI (cfiPicker384) Picker
         THUMB
 ?Subroutine35:
         ADD      R0,SP,#+4
@@ -20051,6 +20013,7 @@ AppS2wCmd_DhcpSrvrConfig:
           CFI FunCall AppS2wCmd_CoapClose AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_CoapOpen AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond365
           CFI EndBlock cfiCond366
           CFI EndBlock cfiCond367
           CFI EndBlock cfiCond368
@@ -20069,12 +20032,11 @@ AppS2wCmd_DhcpSrvrConfig:
           CFI EndBlock cfiCond381
           CFI EndBlock cfiCond382
           CFI EndBlock cfiCond383
-          CFI EndBlock cfiCond384
-          CFI EndBlock cfiPicker385
+          CFI EndBlock cfiPicker384
 // 7601 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock386 Using cfiCommon0
+          CFI Block cfiBlock385 Using cfiCommon0
           CFI Function AppS2wCmd_DhcpSrvr
         THUMB
 // 7602 PUBLIC UINT8
@@ -20381,7 +20343,7 @@ AppS2wCmd_DhcpSrvr:
         ADD      SP,SP,#+168
           CFI CFA R13+24
         POP      {R4-R8,PC}       ;; return
-          CFI EndBlock cfiBlock386
+          CFI EndBlock cfiBlock385
 // 7737     }
 // 7738 }
 // 7739 
@@ -20391,7 +20353,7 @@ AppS2wCmd_DhcpSrvr:
 // 7743 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock387 Using cfiCommon0
+          CFI Block cfiBlock386 Using cfiCommon0
           CFI Function S2wDnsConfigGet
         THUMB
 // 7744 VOID S2wDnsConfigGet(GSN_DNS_INIT_PARAM_T *gsnDnsInitParams)
@@ -20451,10 +20413,10 @@ S2wDnsConfigGet:
         ADD      SP,SP,#+160
           CFI CFA R13+8
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock387
+          CFI EndBlock cfiBlock386
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond388 Using cfiCommon0
+          CFI Block cfiCond387 Using cfiCommon0
           CFI Function AppS2wCmd_HttpClientOpen
           CFI NoCalls
           CFI NoCalls
@@ -20470,44 +20432,44 @@ S2wDnsConfigGet:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+64
+          CFI Block cfiCond388 Using cfiCommon0
+          CFI (cfiCond388) Function S2wDnsConfigGet
+          CFI (cfiCond388) NoCalls AppS2wCmd_Nauto
+          CFI (cfiCond388) NoCalls S2wDnsConfigGet
+          CFI (cfiCond388) NoCalls AppS2wCmd_HttpClientOpen
+          CFI (cfiCond388) Conditional ??CrossCallReturnLabel_442
+          CFI (cfiCond388) R4 Frame(CFA, -8)
+          CFI (cfiCond388) R14 Frame(CFA, -4)
+          CFI (cfiCond388) CFA R13+168
           CFI Block cfiCond389 Using cfiCommon0
-          CFI (cfiCond389) Function S2wDnsConfigGet
-          CFI (cfiCond389) NoCalls S2wDnsConfigGet
+          CFI (cfiCond389) Function AppS2wCmd_Nauto
           CFI (cfiCond389) NoCalls AppS2wCmd_Nauto
+          CFI (cfiCond389) NoCalls S2wDnsConfigGet
           CFI (cfiCond389) NoCalls AppS2wCmd_HttpClientOpen
-          CFI (cfiCond389) Conditional ??CrossCallReturnLabel_442
-          CFI (cfiCond389) R4 Frame(CFA, -8)
+          CFI (cfiCond389) Conditional ??CrossCallReturnLabel_443
+          CFI (cfiCond389) R4 Frame(CFA, -12)
+          CFI (cfiCond389) R5 Frame(CFA, -8)
           CFI (cfiCond389) R14 Frame(CFA, -4)
-          CFI (cfiCond389) CFA R13+168
-          CFI Block cfiCond390 Using cfiCommon0
-          CFI (cfiCond390) Function AppS2wCmd_Nauto
-          CFI (cfiCond390) NoCalls S2wDnsConfigGet
-          CFI (cfiCond390) NoCalls AppS2wCmd_Nauto
-          CFI (cfiCond390) NoCalls AppS2wCmd_HttpClientOpen
-          CFI (cfiCond390) Conditional ??CrossCallReturnLabel_443
-          CFI (cfiCond390) R4 Frame(CFA, -12)
-          CFI (cfiCond390) R5 Frame(CFA, -8)
-          CFI (cfiCond390) R14 Frame(CFA, -4)
-          CFI (cfiCond390) CFA R13+96
-          CFI Block cfiPicker391 Using cfiCommon1
-          CFI (cfiPicker391) NoFunction
-          CFI (cfiPicker391) NoCalls S2wDnsConfigGet
-          CFI (cfiPicker391) NoCalls AppS2wCmd_Nauto
-          CFI (cfiPicker391) NoCalls AppS2wCmd_HttpClientOpen
-          CFI (cfiPicker391) Picker
+          CFI (cfiCond389) CFA R13+96
+          CFI Block cfiPicker390 Using cfiCommon1
+          CFI (cfiPicker390) NoFunction
+          CFI (cfiPicker390) NoCalls AppS2wCmd_Nauto
+          CFI (cfiPicker390) NoCalls S2wDnsConfigGet
+          CFI (cfiPicker390) NoCalls AppS2wCmd_HttpClientOpen
+          CFI (cfiPicker390) Picker
         THUMB
 ?Subroutine75:
         LDR.W    R0,??DataTable448
         LDR      R0,[R0, #+0]
         ADD      R0,R0,#+5120
         BX       LR
+          CFI EndBlock cfiCond387
           CFI EndBlock cfiCond388
           CFI EndBlock cfiCond389
-          CFI EndBlock cfiCond390
-          CFI EndBlock cfiPicker391
+          CFI EndBlock cfiPicker390
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond392 Using cfiCommon0
+          CFI Block cfiCond391 Using cfiCommon0
           CFI Function AppS2wCmd_Wscan
           CFI Conditional ??CrossCallReturnLabel_32
           CFI R4 Frame(CFA, -36)
@@ -20520,48 +20482,48 @@ S2wDnsConfigGet:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+152
+          CFI Block cfiCond392 Using cfiCommon0
+          CFI (cfiCond392) Function AppS2wCmd_Nset
+          CFI (cfiCond392) Conditional ??CrossCallReturnLabel_31
+          CFI (cfiCond392) R4 Frame(CFA, -16)
+          CFI (cfiCond392) R5 Frame(CFA, -12)
+          CFI (cfiCond392) R6 Frame(CFA, -8)
+          CFI (cfiCond392) R14 Frame(CFA, -4)
+          CFI (cfiCond392) CFA R13+232
           CFI Block cfiCond393 Using cfiCommon0
-          CFI (cfiCond393) Function AppS2wCmd_Nset
-          CFI (cfiCond393) Conditional ??CrossCallReturnLabel_31
-          CFI (cfiCond393) R4 Frame(CFA, -16)
-          CFI (cfiCond393) R5 Frame(CFA, -12)
-          CFI (cfiCond393) R6 Frame(CFA, -8)
+          CFI (cfiCond393) Function AppS2wCmd_ieeePsPollSet
+          CFI (cfiCond393) Conditional ??CrossCallReturnLabel_30
+          CFI (cfiCond393) R4 Frame(CFA, -12)
+          CFI (cfiCond393) R5 Frame(CFA, -8)
           CFI (cfiCond393) R14 Frame(CFA, -4)
-          CFI (cfiCond393) CFA R13+232
+          CFI (cfiCond393) CFA R13+40
           CFI Block cfiCond394 Using cfiCommon0
-          CFI (cfiCond394) Function AppS2wCmd_ieeePsPollSet
-          CFI (cfiCond394) Conditional ??CrossCallReturnLabel_30
-          CFI (cfiCond394) R4 Frame(CFA, -12)
-          CFI (cfiCond394) R5 Frame(CFA, -8)
+          CFI (cfiCond394) Function S2wDnsConfigGet
+          CFI (cfiCond394) Conditional ??CrossCallReturnLabel_29
+          CFI (cfiCond394) R4 Frame(CFA, -8)
           CFI (cfiCond394) R14 Frame(CFA, -4)
-          CFI (cfiCond394) CFA R13+40
+          CFI (cfiCond394) CFA R13+168
           CFI Block cfiCond395 Using cfiCommon0
-          CFI (cfiCond395) Function S2wDnsConfigGet
-          CFI (cfiCond395) Conditional ??CrossCallReturnLabel_29
-          CFI (cfiCond395) R4 Frame(CFA, -8)
+          CFI (cfiCond395) Function AppS2wCmd_Ping
+          CFI (cfiCond395) Conditional ??CrossCallReturnLabel_28
+          CFI (cfiCond395) R4 Frame(CFA, -16)
+          CFI (cfiCond395) R5 Frame(CFA, -12)
+          CFI (cfiCond395) R6 Frame(CFA, -8)
           CFI (cfiCond395) R14 Frame(CFA, -4)
-          CFI (cfiCond395) CFA R13+168
+          CFI (cfiCond395) CFA R13+72
           CFI Block cfiCond396 Using cfiCommon0
-          CFI (cfiCond396) Function AppS2wCmd_Ping
-          CFI (cfiCond396) Conditional ??CrossCallReturnLabel_28
-          CFI (cfiCond396) R4 Frame(CFA, -16)
-          CFI (cfiCond396) R5 Frame(CFA, -12)
-          CFI (cfiCond396) R6 Frame(CFA, -8)
+          CFI (cfiCond396) Function AppS2wCmd_CoapSend
+          CFI (cfiCond396) Conditional ??CrossCallReturnLabel_27
+          CFI (cfiCond396) R4 Frame(CFA, -24)
+          CFI (cfiCond396) R5 Frame(CFA, -20)
+          CFI (cfiCond396) R6 Frame(CFA, -16)
+          CFI (cfiCond396) R7 Frame(CFA, -12)
+          CFI (cfiCond396) R8 Frame(CFA, -8)
           CFI (cfiCond396) R14 Frame(CFA, -4)
-          CFI (cfiCond396) CFA R13+72
-          CFI Block cfiCond397 Using cfiCommon0
-          CFI (cfiCond397) Function AppS2wCmd_CoapSend
-          CFI (cfiCond397) Conditional ??CrossCallReturnLabel_27
-          CFI (cfiCond397) R4 Frame(CFA, -24)
-          CFI (cfiCond397) R5 Frame(CFA, -20)
-          CFI (cfiCond397) R6 Frame(CFA, -16)
-          CFI (cfiCond397) R7 Frame(CFA, -12)
-          CFI (cfiCond397) R8 Frame(CFA, -8)
-          CFI (cfiCond397) R14 Frame(CFA, -4)
-          CFI (cfiCond397) CFA R13+1440
-          CFI Block cfiPicker398 Using cfiCommon1
-          CFI (cfiPicker398) NoFunction
-          CFI (cfiPicker398) Picker
+          CFI (cfiCond396) CFA R13+1440
+          CFI Block cfiPicker397 Using cfiCommon1
+          CFI (cfiPicker397) NoFunction
+          CFI (cfiPicker397) Picker
         THUMB
 ?Subroutine16:
         MOVS     R1,#+0
@@ -20573,18 +20535,18 @@ S2wDnsConfigGet:
           CFI FunCall AppS2wCmd_Ping memset
           CFI FunCall AppS2wCmd_CoapSend memset
         B.W      memset
+          CFI EndBlock cfiCond391
           CFI EndBlock cfiCond392
           CFI EndBlock cfiCond393
           CFI EndBlock cfiCond394
           CFI EndBlock cfiCond395
           CFI EndBlock cfiCond396
-          CFI EndBlock cfiCond397
-          CFI EndBlock cfiPicker398
+          CFI EndBlock cfiPicker397
 // 7769 
 // 7770 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock399 Using cfiCommon0
+          CFI Block cfiBlock398 Using cfiCommon0
           CFI Function AppS2wCmd_Dns
         THUMB
 // 7771 PUBLIC UINT8
@@ -20709,14 +20671,14 @@ AppS2wCmd_Dns:
         BPL.N    ??CrossCallReturnLabel_501
         MOVS     R0,#+1
         B.N      ??AppS2wCmd_Dns_0
-          CFI EndBlock cfiBlock399
+          CFI EndBlock cfiBlock398
 // 7824 }
 // 7825 
 // 7826 #endif //S2W_DNS_SERVER_ENABLE
 // 7827 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock400 Using cfiCommon0
+          CFI Block cfiBlock399 Using cfiCommon0
           CFI Function AppS2wCmd_SslCertificateAdd
         THUMB
 // 7828 UINT8
@@ -20767,9 +20729,9 @@ AppS2wCmd_SslCertificateAdd:
 // 7847         return S2W_EINVAL;
 // 7848     }
 // 7849     AppS2wParse_Int(p, &certFormat);
-        BL       ?Subroutine137
+        BL       ?Subroutine136
 // 7850     if(certFormat > 1)
-??CrossCallReturnLabel_626:
+??CrossCallReturnLabel_623:
         LDR      R0,[R4, #+4]
         CMP      R0,#+2
         BCS.N    ??AppS2wCmd_SslCertificateAdd_0
@@ -20920,7 +20882,7 @@ AppS2wCmd_SslCertificateAdd:
         ADD      SP,SP,#+52
           CFI CFA R13+20
         POP      {R4-R7,PC}       ;; return
-          CFI EndBlock cfiBlock400
+          CFI EndBlock cfiBlock399
 // 7912 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -20931,7 +20893,7 @@ AppS2wCmd_SslCertificateAdd:
 // 7913 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock401 Using cfiCommon0
+          CFI Block cfiBlock400 Using cfiCommon0
           CFI Function AppS2wCertificateData
         THUMB
 // 7914 PUBLIC UINT32
@@ -21133,14 +21095,8 @@ AppS2wCertificateData:
         MOVS     R0,#+0
 ??AppS2wCertificateData_4:
         POP      {R1,R4-R11,PC}   ;; return
-          CFI EndBlock cfiBlock401
+          CFI EndBlock cfiBlock400
 // 7983 }
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable439:
-        DC32     s2wFlashParams
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -21151,7 +21107,7 @@ AppS2wCertificateData:
 // 7984 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock402 Using cfiCommon0
+          CFI Block cfiBlock401 Using cfiCommon0
           CFI Function AppS2wCmd_SslCertificateDelete
         THUMB
 // 7985 UINT8
@@ -21246,18 +21202,24 @@ AppS2wCmd_SslCertificateDelete:
 ??AppS2wCmd_SslCertificateDelete_3:
         MOVS     R0,#+1
         POP      {R1,R4-R7,PC}    ;; return
-          CFI EndBlock cfiBlock402
+          CFI EndBlock cfiBlock401
 // 8023 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
 ??DataTable440:
+        DC32     s2wFlashParams
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable440_1:
         DC32     s2wIsAutoconnected
 // 8024 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock403 Using cfiCommon0
+          CFI Block cfiBlock402 Using cfiCommon0
           CFI Function AppS2wCmd_Weap
         THUMB
 // 8025 PRIVATE UINT8
@@ -21314,10 +21276,10 @@ AppS2wCmd_Weap:
 // 8049     }
 // 8050 
 // 8051     AppS2wParse_Int(p, &certFormat);
-        BL       ?Subroutine137
+        BL       ?Subroutine136
 // 8052 
 // 8053     if(certFormat > 1)
-??CrossCallReturnLabel_625:
+??CrossCallReturnLabel_622:
         LDR      R0,[R4, #+4]
         CMP      R0,#+2
         BCS.N    ??AppS2wCmd_Weap_0
@@ -21482,14 +21444,8 @@ AppS2wCmd_Weap:
         ADD      SP,SP,#+52
           CFI CFA R13+28
         POP      {R4-R9,PC}       ;; return
-          CFI EndBlock cfiBlock403
+          CFI EndBlock cfiBlock402
 // 8114 }
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable441:
-        DC32     s2wLinkState
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -21506,42 +21462,48 @@ AppS2wCmd_Weap:
         DC8 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond404 Using cfiCommon0
+          CFI Block cfiCond403 Using cfiCommon0
           CFI Function AppS2wCmd_SslCertificateAdd
-          CFI Conditional ??CrossCallReturnLabel_626
+          CFI Conditional ??CrossCallReturnLabel_623
           CFI R4 Frame(CFA, -20)
           CFI R5 Frame(CFA, -16)
           CFI R6 Frame(CFA, -12)
           CFI R7 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+72
-          CFI Block cfiCond405 Using cfiCommon0
-          CFI (cfiCond405) Function AppS2wCmd_Weap
-          CFI (cfiCond405) Conditional ??CrossCallReturnLabel_625
-          CFI (cfiCond405) R4 Frame(CFA, -28)
-          CFI (cfiCond405) R5 Frame(CFA, -24)
-          CFI (cfiCond405) R6 Frame(CFA, -20)
-          CFI (cfiCond405) R7 Frame(CFA, -16)
-          CFI (cfiCond405) R8 Frame(CFA, -12)
-          CFI (cfiCond405) R9 Frame(CFA, -8)
-          CFI (cfiCond405) R14 Frame(CFA, -4)
-          CFI (cfiCond405) CFA R13+80
-          CFI Block cfiPicker406 Using cfiCommon1
-          CFI (cfiPicker406) NoFunction
-          CFI (cfiPicker406) Picker
+          CFI Block cfiCond404 Using cfiCommon0
+          CFI (cfiCond404) Function AppS2wCmd_Weap
+          CFI (cfiCond404) Conditional ??CrossCallReturnLabel_622
+          CFI (cfiCond404) R4 Frame(CFA, -28)
+          CFI (cfiCond404) R5 Frame(CFA, -24)
+          CFI (cfiCond404) R6 Frame(CFA, -20)
+          CFI (cfiCond404) R7 Frame(CFA, -16)
+          CFI (cfiCond404) R8 Frame(CFA, -12)
+          CFI (cfiCond404) R9 Frame(CFA, -8)
+          CFI (cfiCond404) R14 Frame(CFA, -4)
+          CFI (cfiCond404) CFA R13+80
+          CFI Block cfiPicker405 Using cfiCommon1
+          CFI (cfiPicker405) NoFunction
+          CFI (cfiPicker405) Picker
         THUMB
-?Subroutine137:
+?Subroutine136:
         LDR.W    R4,??DataTable457
         ADDS     R1,R4,#+4
           CFI FunCall AppS2wCmd_SslCertificateAdd AppS2wParse_Int
           CFI FunCall AppS2wCmd_Weap AppS2wParse_Int
         B.W      AppS2wParse_Int
+          CFI EndBlock cfiCond403
           CFI EndBlock cfiCond404
-          CFI EndBlock cfiCond405
-          CFI EndBlock cfiPicker406
+          CFI EndBlock cfiPicker405
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable442:
+        DC32     s2wLinkState
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond407 Using cfiCommon0
+          CFI Block cfiCond406 Using cfiCommon0
           CFI Function AppS2wCmd_SslCertificateAdd
           CFI NoCalls
           CFI NoCalls
@@ -21552,38 +21514,38 @@ AppS2wCmd_Weap:
           CFI R7 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+72
-          CFI Block cfiCond408 Using cfiCommon0
-          CFI (cfiCond408) Function AppS2wCmd_Weap
-          CFI (cfiCond408) NoCalls AppS2wCmd_SslCertificateAdd
-          CFI (cfiCond408) NoCalls AppS2wCmd_Weap
-          CFI (cfiCond408) Conditional ??CrossCallReturnLabel_648
-          CFI (cfiCond408) R4 Frame(CFA, -28)
-          CFI (cfiCond408) R5 Frame(CFA, -24)
-          CFI (cfiCond408) R6 Frame(CFA, -20)
-          CFI (cfiCond408) R7 Frame(CFA, -16)
-          CFI (cfiCond408) R8 Frame(CFA, -12)
-          CFI (cfiCond408) R9 Frame(CFA, -8)
-          CFI (cfiCond408) R14 Frame(CFA, -4)
-          CFI (cfiCond408) CFA R13+80
-          CFI Block cfiPicker409 Using cfiCommon1
-          CFI (cfiPicker409) NoFunction
-          CFI (cfiPicker409) NoCalls AppS2wCmd_SslCertificateAdd
-          CFI (cfiPicker409) NoCalls AppS2wCmd_Weap
-          CFI (cfiPicker409) Picker
+          CFI Block cfiCond407 Using cfiCommon0
+          CFI (cfiCond407) Function AppS2wCmd_Weap
+          CFI (cfiCond407) NoCalls AppS2wCmd_Weap
+          CFI (cfiCond407) NoCalls AppS2wCmd_SslCertificateAdd
+          CFI (cfiCond407) Conditional ??CrossCallReturnLabel_648
+          CFI (cfiCond407) R4 Frame(CFA, -28)
+          CFI (cfiCond407) R5 Frame(CFA, -24)
+          CFI (cfiCond407) R6 Frame(CFA, -20)
+          CFI (cfiCond407) R7 Frame(CFA, -16)
+          CFI (cfiCond407) R8 Frame(CFA, -12)
+          CFI (cfiCond407) R9 Frame(CFA, -8)
+          CFI (cfiCond407) R14 Frame(CFA, -4)
+          CFI (cfiCond407) CFA R13+80
+          CFI Block cfiPicker408 Using cfiCommon1
+          CFI (cfiPicker408) NoFunction
+          CFI (cfiPicker408) NoCalls AppS2wCmd_Weap
+          CFI (cfiPicker408) NoCalls AppS2wCmd_SslCertificateAdd
+          CFI (cfiPicker408) Picker
         THUMB
 ?Subroutine38:
         LDR      R0,[R4, #+8]
         LDR      R1,[R4, #+4]
         LSRS     R0,R0,R1
         STR      R0,[R4, #+8]
+          CFI EndBlock cfiCond406
           CFI EndBlock cfiCond407
-          CFI EndBlock cfiCond408
-          CFI EndBlock cfiPicker409
+          CFI EndBlock cfiPicker408
         REQUIRE ??Subroutine142_0
         ;; // Fall through to label ??Subroutine142_0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond410 Using cfiCommon0
+          CFI Block cfiCond409 Using cfiCommon0
           CFI Function AppS2wCmd_SslCertificateAdd
           CFI Conditional ??CrossCallReturnLabel_647
           CFI R4 Frame(CFA, -20)
@@ -21592,9 +21554,18 @@ AppS2wCmd_Weap:
           CFI R7 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+72
+          CFI Block cfiCond410 Using cfiCommon0
+          CFI (cfiCond410) Function AppS2wCmd_SslCertificateAdd
+          CFI (cfiCond410) Conditional ??CrossCallReturnLabel_646
+          CFI (cfiCond410) R4 Frame(CFA, -20)
+          CFI (cfiCond410) R5 Frame(CFA, -16)
+          CFI (cfiCond410) R6 Frame(CFA, -12)
+          CFI (cfiCond410) R7 Frame(CFA, -8)
+          CFI (cfiCond410) R14 Frame(CFA, -4)
+          CFI (cfiCond410) CFA R13+72
           CFI Block cfiCond411 Using cfiCommon0
           CFI (cfiCond411) Function AppS2wCmd_SslCertificateAdd
-          CFI (cfiCond411) Conditional ??CrossCallReturnLabel_646
+          CFI (cfiCond411) Conditional ??CrossCallReturnLabel_645
           CFI (cfiCond411) R4 Frame(CFA, -20)
           CFI (cfiCond411) R5 Frame(CFA, -16)
           CFI (cfiCond411) R6 Frame(CFA, -12)
@@ -21602,17 +21573,19 @@ AppS2wCmd_Weap:
           CFI (cfiCond411) R14 Frame(CFA, -4)
           CFI (cfiCond411) CFA R13+72
           CFI Block cfiCond412 Using cfiCommon0
-          CFI (cfiCond412) Function AppS2wCmd_SslCertificateAdd
-          CFI (cfiCond412) Conditional ??CrossCallReturnLabel_645
-          CFI (cfiCond412) R4 Frame(CFA, -20)
-          CFI (cfiCond412) R5 Frame(CFA, -16)
-          CFI (cfiCond412) R6 Frame(CFA, -12)
-          CFI (cfiCond412) R7 Frame(CFA, -8)
+          CFI (cfiCond412) Function AppS2wCmd_Weap
+          CFI (cfiCond412) Conditional ??CrossCallReturnLabel_644
+          CFI (cfiCond412) R4 Frame(CFA, -28)
+          CFI (cfiCond412) R5 Frame(CFA, -24)
+          CFI (cfiCond412) R6 Frame(CFA, -20)
+          CFI (cfiCond412) R7 Frame(CFA, -16)
+          CFI (cfiCond412) R8 Frame(CFA, -12)
+          CFI (cfiCond412) R9 Frame(CFA, -8)
           CFI (cfiCond412) R14 Frame(CFA, -4)
-          CFI (cfiCond412) CFA R13+72
+          CFI (cfiCond412) CFA R13+80
           CFI Block cfiCond413 Using cfiCommon0
           CFI (cfiCond413) Function AppS2wCmd_Weap
-          CFI (cfiCond413) Conditional ??CrossCallReturnLabel_644
+          CFI (cfiCond413) Conditional ??CrossCallReturnLabel_643
           CFI (cfiCond413) R4 Frame(CFA, -28)
           CFI (cfiCond413) R5 Frame(CFA, -24)
           CFI (cfiCond413) R6 Frame(CFA, -20)
@@ -21623,7 +21596,7 @@ AppS2wCmd_Weap:
           CFI (cfiCond413) CFA R13+80
           CFI Block cfiCond414 Using cfiCommon0
           CFI (cfiCond414) Function AppS2wCmd_Weap
-          CFI (cfiCond414) Conditional ??CrossCallReturnLabel_643
+          CFI (cfiCond414) Conditional ??CrossCallReturnLabel_642
           CFI (cfiCond414) R4 Frame(CFA, -28)
           CFI (cfiCond414) R5 Frame(CFA, -24)
           CFI (cfiCond414) R6 Frame(CFA, -20)
@@ -21633,39 +21606,28 @@ AppS2wCmd_Weap:
           CFI (cfiCond414) R14 Frame(CFA, -4)
           CFI (cfiCond414) CFA R13+80
           CFI Block cfiCond415 Using cfiCommon0
-          CFI (cfiCond415) Function AppS2wCmd_Weap
-          CFI (cfiCond415) Conditional ??CrossCallReturnLabel_642
-          CFI (cfiCond415) R4 Frame(CFA, -28)
-          CFI (cfiCond415) R5 Frame(CFA, -24)
-          CFI (cfiCond415) R6 Frame(CFA, -20)
-          CFI (cfiCond415) R7 Frame(CFA, -16)
-          CFI (cfiCond415) R8 Frame(CFA, -12)
-          CFI (cfiCond415) R9 Frame(CFA, -8)
+          CFI (cfiCond415) Function AppS2wCmd_SslCertificateAdd
+          CFI (cfiCond415) Conditional ??CrossCallReturnLabel_649
+          CFI (cfiCond415) R4 Frame(CFA, -20)
+          CFI (cfiCond415) R5 Frame(CFA, -16)
+          CFI (cfiCond415) R6 Frame(CFA, -12)
+          CFI (cfiCond415) R7 Frame(CFA, -8)
           CFI (cfiCond415) R14 Frame(CFA, -4)
-          CFI (cfiCond415) CFA R13+80
+          CFI (cfiCond415) CFA R13+72
           CFI Block cfiCond416 Using cfiCommon0
-          CFI (cfiCond416) Function AppS2wCmd_SslCertificateAdd
-          CFI (cfiCond416) Conditional ??CrossCallReturnLabel_649
-          CFI (cfiCond416) R4 Frame(CFA, -20)
-          CFI (cfiCond416) R5 Frame(CFA, -16)
-          CFI (cfiCond416) R6 Frame(CFA, -12)
-          CFI (cfiCond416) R7 Frame(CFA, -8)
+          CFI (cfiCond416) Function AppS2wCmd_Weap
+          CFI (cfiCond416) Conditional ??CrossCallReturnLabel_648
+          CFI (cfiCond416) R4 Frame(CFA, -28)
+          CFI (cfiCond416) R5 Frame(CFA, -24)
+          CFI (cfiCond416) R6 Frame(CFA, -20)
+          CFI (cfiCond416) R7 Frame(CFA, -16)
+          CFI (cfiCond416) R8 Frame(CFA, -12)
+          CFI (cfiCond416) R9 Frame(CFA, -8)
           CFI (cfiCond416) R14 Frame(CFA, -4)
-          CFI (cfiCond416) CFA R13+72
-          CFI Block cfiCond417 Using cfiCommon0
-          CFI (cfiCond417) Function AppS2wCmd_Weap
-          CFI (cfiCond417) Conditional ??CrossCallReturnLabel_648
-          CFI (cfiCond417) R4 Frame(CFA, -28)
-          CFI (cfiCond417) R5 Frame(CFA, -24)
-          CFI (cfiCond417) R6 Frame(CFA, -20)
-          CFI (cfiCond417) R7 Frame(CFA, -16)
-          CFI (cfiCond417) R8 Frame(CFA, -12)
-          CFI (cfiCond417) R9 Frame(CFA, -8)
-          CFI (cfiCond417) R14 Frame(CFA, -4)
-          CFI (cfiCond417) CFA R13+80
-          CFI Block cfiPicker418 Using cfiCommon1
-          CFI (cfiPicker418) NoFunction
-          CFI (cfiPicker418) Picker
+          CFI (cfiCond416) CFA R13+80
+          CFI Block cfiPicker417 Using cfiCommon1
+          CFI (cfiPicker417) NoFunction
+          CFI (cfiPicker417) Picker
         THUMB
 ??Subroutine142_0:
         ADD      R0,SP,#+48
@@ -21678,6 +21640,7 @@ AppS2wCmd_Weap:
           CFI FunCall AppS2wCmd_SslCertificateAdd AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_Weap AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond409
           CFI EndBlock cfiCond410
           CFI EndBlock cfiCond411
           CFI EndBlock cfiCond412
@@ -21685,14 +21648,13 @@ AppS2wCmd_Weap:
           CFI EndBlock cfiCond414
           CFI EndBlock cfiCond415
           CFI EndBlock cfiCond416
-          CFI EndBlock cfiCond417
-          CFI EndBlock cfiPicker418
+          CFI EndBlock cfiPicker417
 // 8115 
 // 8116 #endif /* IOT_APP_ENABLE */
 // 8117 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock419 Using cfiCommon0
+          CFI Block cfiBlock418 Using cfiCommon0
           CFI Function AppS2wCmd_BeaconMissThresholdSet
         THUMB
 // 8118 UINT8 AppS2wCmd_BeaconMissThresholdSet(UINT8 *ptr)
@@ -21753,7 +21715,7 @@ AppS2wCmd_BeaconMissThresholdSet:
         UXTB     R0,R0
 ??AppS2wCmd_BeaconMissThresholdSet_1:
         POP      {R1-R3,PC}       ;; return
-          CFI EndBlock cfiBlock419
+          CFI EndBlock cfiBlock418
 // 8146 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -21763,145 +21725,145 @@ AppS2wCmd_BeaconMissThresholdSet:
         DC8      "w",0x0,0x0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond420 Using cfiCommon0
+          CFI Block cfiCond419 Using cfiCommon0
           CFI Function AppS2wCmd_scanTimeSet
           CFI Conditional ??CrossCallReturnLabel_332
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+32
+          CFI Block cfiCond420 Using cfiCommon0
+          CFI (cfiCond420) Function AppS2wCmd_Nstcp
+          CFI (cfiCond420) Conditional ??CrossCallReturnLabel_331
+          CFI (cfiCond420) R14 Frame(CFA, -4)
+          CFI (cfiCond420) CFA R13+80
           CFI Block cfiCond421 Using cfiCommon0
-          CFI (cfiCond421) Function AppS2wCmd_Nstcp
-          CFI (cfiCond421) Conditional ??CrossCallReturnLabel_331
+          CFI (cfiCond421) Function AppS2wCmd_SetSockOp
+          CFI (cfiCond421) Conditional ??CrossCallReturnLabel_330
           CFI (cfiCond421) R14 Frame(CFA, -4)
-          CFI (cfiCond421) CFA R13+80
+          CFI (cfiCond421) CFA R13+32
           CFI Block cfiCond422 Using cfiCommon0
-          CFI (cfiCond422) Function AppS2wCmd_SetSockOp
-          CFI (cfiCond422) Conditional ??CrossCallReturnLabel_330
+          CFI (cfiCond422) Function AppS2wCmd_Wmode
+          CFI (cfiCond422) Conditional ??CrossCallReturnLabel_329
+          CFI (cfiCond422) R4 Frame(CFA, -36)
+          CFI (cfiCond422) R5 Frame(CFA, -32)
+          CFI (cfiCond422) R6 Frame(CFA, -28)
+          CFI (cfiCond422) R7 Frame(CFA, -24)
+          CFI (cfiCond422) R8 Frame(CFA, -20)
+          CFI (cfiCond422) R9 Frame(CFA, -16)
+          CFI (cfiCond422) R10 Frame(CFA, -12)
+          CFI (cfiCond422) R11 Frame(CFA, -8)
           CFI (cfiCond422) R14 Frame(CFA, -4)
-          CFI (cfiCond422) CFA R13+32
+          CFI (cfiCond422) CFA R13+72
           CFI Block cfiCond423 Using cfiCommon0
-          CFI (cfiCond423) Function AppS2wCmd_Wmode
-          CFI (cfiCond423) Conditional ??CrossCallReturnLabel_329
-          CFI (cfiCond423) R4 Frame(CFA, -36)
-          CFI (cfiCond423) R5 Frame(CFA, -32)
-          CFI (cfiCond423) R6 Frame(CFA, -28)
-          CFI (cfiCond423) R7 Frame(CFA, -24)
-          CFI (cfiCond423) R8 Frame(CFA, -20)
-          CFI (cfiCond423) R9 Frame(CFA, -16)
-          CFI (cfiCond423) R10 Frame(CFA, -12)
-          CFI (cfiCond423) R11 Frame(CFA, -8)
+          CFI (cfiCond423) Function AppS2wCmd_PowerSave
+          CFI (cfiCond423) Conditional ??CrossCallReturnLabel_328
           CFI (cfiCond423) R14 Frame(CFA, -4)
-          CFI (cfiCond423) CFA R13+72
+          CFI (cfiCond423) CFA R13+16
           CFI Block cfiCond424 Using cfiCommon0
-          CFI (cfiCond424) Function AppS2wCmd_PowerSave
-          CFI (cfiCond424) Conditional ??CrossCallReturnLabel_328
+          CFI (cfiCond424) Function AppS2wCmd_UartFifoLevel
+          CFI (cfiCond424) Conditional ??CrossCallReturnLabel_327
+          CFI (cfiCond424) R4 Frame(CFA, -12)
+          CFI (cfiCond424) R5 Frame(CFA, -8)
           CFI (cfiCond424) R14 Frame(CFA, -4)
-          CFI (cfiCond424) CFA R13+16
+          CFI (cfiCond424) CFA R13+24
           CFI Block cfiCond425 Using cfiCommon0
-          CFI (cfiCond425) Function AppS2wCmd_UartFifoLevel
-          CFI (cfiCond425) Conditional ??CrossCallReturnLabel_327
+          CFI (cfiCond425) Function AppS2wCmd_ieeePsPollSet
+          CFI (cfiCond425) Conditional ??CrossCallReturnLabel_326
           CFI (cfiCond425) R4 Frame(CFA, -12)
           CFI (cfiCond425) R5 Frame(CFA, -8)
           CFI (cfiCond425) R14 Frame(CFA, -4)
-          CFI (cfiCond425) CFA R13+24
+          CFI (cfiCond425) CFA R13+40
           CFI Block cfiCond426 Using cfiCommon0
-          CFI (cfiCond426) Function AppS2wCmd_ieeePsPollSet
-          CFI (cfiCond426) Conditional ??CrossCallReturnLabel_326
-          CFI (cfiCond426) R4 Frame(CFA, -12)
-          CFI (cfiCond426) R5 Frame(CFA, -8)
+          CFI (cfiCond426) Function AppS2wCmd_DhcpSrvr
+          CFI (cfiCond426) Conditional ??CrossCallReturnLabel_325
+          CFI (cfiCond426) R4 Frame(CFA, -24)
+          CFI (cfiCond426) R5 Frame(CFA, -20)
+          CFI (cfiCond426) R6 Frame(CFA, -16)
+          CFI (cfiCond426) R7 Frame(CFA, -12)
+          CFI (cfiCond426) R8 Frame(CFA, -8)
           CFI (cfiCond426) R14 Frame(CFA, -4)
-          CFI (cfiCond426) CFA R13+40
+          CFI (cfiCond426) CFA R13+192
           CFI Block cfiCond427 Using cfiCommon0
-          CFI (cfiCond427) Function AppS2wCmd_DhcpSrvr
-          CFI (cfiCond427) Conditional ??CrossCallReturnLabel_325
-          CFI (cfiCond427) R4 Frame(CFA, -24)
-          CFI (cfiCond427) R5 Frame(CFA, -20)
-          CFI (cfiCond427) R6 Frame(CFA, -16)
-          CFI (cfiCond427) R7 Frame(CFA, -12)
-          CFI (cfiCond427) R8 Frame(CFA, -8)
+          CFI (cfiCond427) Function AppS2wCmd_Weap
+          CFI (cfiCond427) Conditional ??CrossCallReturnLabel_324
+          CFI (cfiCond427) R4 Frame(CFA, -28)
+          CFI (cfiCond427) R5 Frame(CFA, -24)
+          CFI (cfiCond427) R6 Frame(CFA, -20)
+          CFI (cfiCond427) R7 Frame(CFA, -16)
+          CFI (cfiCond427) R8 Frame(CFA, -12)
+          CFI (cfiCond427) R9 Frame(CFA, -8)
           CFI (cfiCond427) R14 Frame(CFA, -4)
-          CFI (cfiCond427) CFA R13+192
+          CFI (cfiCond427) CFA R13+80
           CFI Block cfiCond428 Using cfiCommon0
-          CFI (cfiCond428) Function AppS2wCmd_Weap
-          CFI (cfiCond428) Conditional ??CrossCallReturnLabel_324
-          CFI (cfiCond428) R4 Frame(CFA, -28)
-          CFI (cfiCond428) R5 Frame(CFA, -24)
-          CFI (cfiCond428) R6 Frame(CFA, -20)
-          CFI (cfiCond428) R7 Frame(CFA, -16)
-          CFI (cfiCond428) R8 Frame(CFA, -12)
-          CFI (cfiCond428) R9 Frame(CFA, -8)
+          CFI (cfiCond428) Function AppS2wCmd_BeaconMissThresholdSet
+          CFI (cfiCond428) Conditional ??CrossCallReturnLabel_323
           CFI (cfiCond428) R14 Frame(CFA, -4)
-          CFI (cfiCond428) CFA R13+80
+          CFI (cfiCond428) CFA R13+16
           CFI Block cfiCond429 Using cfiCommon0
-          CFI (cfiCond429) Function AppS2wCmd_BeaconMissThresholdSet
-          CFI (cfiCond429) Conditional ??CrossCallReturnLabel_323
+          CFI (cfiCond429) Function AppS2wCmd_RtsEnable
+          CFI (cfiCond429) Conditional ??CrossCallReturnLabel_322
           CFI (cfiCond429) R14 Frame(CFA, -4)
           CFI (cfiCond429) CFA R13+16
           CFI Block cfiCond430 Using cfiCommon0
-          CFI (cfiCond430) Function AppS2wCmd_RtsEnable
-          CFI (cfiCond430) Conditional ??CrossCallReturnLabel_322
+          CFI (cfiCond430) Function AppS2wCmd_FrameTxFailCntLmitSet
+          CFI (cfiCond430) Conditional ??CrossCallReturnLabel_321
           CFI (cfiCond430) R14 Frame(CFA, -4)
           CFI (cfiCond430) CFA R13+16
           CFI Block cfiCond431 Using cfiCommon0
-          CFI (cfiCond431) Function AppS2wCmd_FrameTxFailCntLmitSet
-          CFI (cfiCond431) Conditional ??CrossCallReturnLabel_321
+          CFI (cfiCond431) Function AppS2wCmd_PowerSaveStby
+          CFI (cfiCond431) Conditional ??CrossCallReturnLabel_320
           CFI (cfiCond431) R14 Frame(CFA, -4)
-          CFI (cfiCond431) CFA R13+16
+          CFI (cfiCond431) CFA R13+24
           CFI Block cfiCond432 Using cfiCommon0
-          CFI (cfiCond432) Function AppS2wCmd_PowerSaveStby
-          CFI (cfiCond432) Conditional ??CrossCallReturnLabel_320
+          CFI (cfiCond432) Function AppS2wCmd_NcmAutoConf
+          CFI (cfiCond432) Conditional ??CrossCallReturnLabel_319
+          CFI (cfiCond432) R4 Frame(CFA, -8)
           CFI (cfiCond432) R14 Frame(CFA, -4)
           CFI (cfiCond432) CFA R13+24
           CFI Block cfiCond433 Using cfiCommon0
-          CFI (cfiCond433) Function AppS2wCmd_NcmAutoConf
-          CFI (cfiCond433) Conditional ??CrossCallReturnLabel_319
+          CFI (cfiCond433) Function AppS2wCmd_Dgpio
+          CFI (cfiCond433) Conditional ??CrossCallReturnLabel_318
           CFI (cfiCond433) R4 Frame(CFA, -8)
           CFI (cfiCond433) R14 Frame(CFA, -4)
           CFI (cfiCond433) CFA R13+24
           CFI Block cfiCond434 Using cfiCommon0
-          CFI (cfiCond434) Function AppS2wCmd_Dgpio
-          CFI (cfiCond434) Conditional ??CrossCallReturnLabel_318
-          CFI (cfiCond434) R4 Frame(CFA, -8)
+          CFI (cfiCond434) Function AppS2wCmd_AdcConf
+          CFI (cfiCond434) Conditional ??CrossCallReturnLabel_317
+          CFI (cfiCond434) R4 Frame(CFA, -12)
+          CFI (cfiCond434) R5 Frame(CFA, -8)
           CFI (cfiCond434) R14 Frame(CFA, -4)
           CFI (cfiCond434) CFA R13+24
           CFI Block cfiCond435 Using cfiCommon0
-          CFI (cfiCond435) Function AppS2wCmd_AdcConf
-          CFI (cfiCond435) Conditional ??CrossCallReturnLabel_317
-          CFI (cfiCond435) R4 Frame(CFA, -12)
-          CFI (cfiCond435) R5 Frame(CFA, -8)
+          CFI (cfiCond435) Function AppS2wCmd_AdcRead
+          CFI (cfiCond435) Conditional ??CrossCallReturnLabel_316
+          CFI (cfiCond435) R4 Frame(CFA, -20)
+          CFI (cfiCond435) R5 Frame(CFA, -16)
+          CFI (cfiCond435) R6 Frame(CFA, -12)
+          CFI (cfiCond435) R7 Frame(CFA, -8)
           CFI (cfiCond435) R14 Frame(CFA, -4)
-          CFI (cfiCond435) CFA R13+24
+          CFI (cfiCond435) CFA R13+40
           CFI Block cfiCond436 Using cfiCommon0
-          CFI (cfiCond436) Function AppS2wCmd_AdcRead
-          CFI (cfiCond436) Conditional ??CrossCallReturnLabel_316
-          CFI (cfiCond436) R4 Frame(CFA, -20)
-          CFI (cfiCond436) R5 Frame(CFA, -16)
-          CFI (cfiCond436) R6 Frame(CFA, -12)
-          CFI (cfiCond436) R7 Frame(CFA, -8)
+          CFI (cfiCond436) Function AppS2wCmd_ExtFlashSpiConf
+          CFI (cfiCond436) Conditional ??CrossCallReturnLabel_315
+          CFI (cfiCond436) R4 Frame(CFA, -16)
+          CFI (cfiCond436) R5 Frame(CFA, -12)
+          CFI (cfiCond436) R6 Frame(CFA, -8)
           CFI (cfiCond436) R14 Frame(CFA, -4)
           CFI (cfiCond436) CFA R13+40
           CFI Block cfiCond437 Using cfiCommon0
-          CFI (cfiCond437) Function AppS2wCmd_ExtFlashSpiConf
-          CFI (cfiCond437) Conditional ??CrossCallReturnLabel_315
-          CFI (cfiCond437) R4 Frame(CFA, -16)
-          CFI (cfiCond437) R5 Frame(CFA, -12)
-          CFI (cfiCond437) R6 Frame(CFA, -8)
+          CFI (cfiCond437) Function AppS2wCmd_CoapSend
+          CFI (cfiCond437) Conditional ??CrossCallReturnLabel_314
+          CFI (cfiCond437) R4 Frame(CFA, -24)
+          CFI (cfiCond437) R5 Frame(CFA, -20)
+          CFI (cfiCond437) R6 Frame(CFA, -16)
+          CFI (cfiCond437) R7 Frame(CFA, -12)
+          CFI (cfiCond437) R8 Frame(CFA, -8)
           CFI (cfiCond437) R14 Frame(CFA, -4)
-          CFI (cfiCond437) CFA R13+40
-          CFI Block cfiCond438 Using cfiCommon0
-          CFI (cfiCond438) Function AppS2wCmd_CoapSend
-          CFI (cfiCond438) Conditional ??CrossCallReturnLabel_314
-          CFI (cfiCond438) R4 Frame(CFA, -24)
-          CFI (cfiCond438) R5 Frame(CFA, -20)
-          CFI (cfiCond438) R6 Frame(CFA, -16)
-          CFI (cfiCond438) R7 Frame(CFA, -12)
-          CFI (cfiCond438) R8 Frame(CFA, -8)
-          CFI (cfiCond438) R14 Frame(CFA, -4)
-          CFI (cfiCond438) CFA R13+1440
-          CFI Block cfiPicker439 Using cfiCommon1
-          CFI (cfiPicker439) NoFunction
-          CFI (cfiPicker439) Picker
+          CFI (cfiCond437) CFA R13+1440
+          CFI Block cfiPicker438 Using cfiCommon1
+          CFI (cfiPicker438) NoFunction
+          CFI (cfiPicker438) Picker
         THUMB
 ?Subroutine52:
         ADD      R1,SP,#+4
@@ -21925,6 +21887,7 @@ AppS2wCmd_BeaconMissThresholdSet:
           CFI FunCall AppS2wCmd_ExtFlashSpiConf AppS2wParse_Int
           CFI FunCall AppS2wCmd_CoapSend AppS2wParse_Int
         B.W      AppS2wParse_Int
+          CFI EndBlock cfiCond419
           CFI EndBlock cfiCond420
           CFI EndBlock cfiCond421
           CFI EndBlock cfiCond422
@@ -21943,14 +21906,13 @@ AppS2wCmd_BeaconMissThresholdSet:
           CFI EndBlock cfiCond435
           CFI EndBlock cfiCond436
           CFI EndBlock cfiCond437
-          CFI EndBlock cfiCond438
-          CFI EndBlock cfiPicker439
+          CFI EndBlock cfiPicker438
 // 8147 
 // 8148 
 // 8149 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock440 Using cfiCommon0
+          CFI Block cfiBlock439 Using cfiCommon0
           CFI Function AppS2wCmd_TkipContrMsrStart
         THUMB
 // 8150 UINT8 AppS2wCmd_TkipContrMsrStart(UINT8 *ptr)
@@ -21999,14 +21961,14 @@ AppS2wCmd_TkipContrMsrStart:
 ??AppS2wCmd_TkipContrMsrStart_1:
         UXTB     R0,R4
         POP      {R1,R2,R4,PC}    ;; return
-          CFI EndBlock cfiBlock440
+          CFI EndBlock cfiBlock439
 // 8168 
 // 8169 }
 // 8170 
 // 8171 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock441 Using cfiCommon0
+          CFI Block cfiBlock440 Using cfiCommon0
           CFI Function AppS2wCmd_TkipSeqNumGet
         THUMB
 // 8172 UINT8 AppS2wCmd_TkipSeqNumGet(UINT8 *ptr)
@@ -22071,7 +22033,7 @@ AppS2wCmd_TkipSeqNumGet:
         ADD      SP,SP,#+16
           CFI CFA R13+8
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock441
+          CFI EndBlock cfiBlock440
 // 8194 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -22085,7 +22047,7 @@ AppS2wCmd_TkipSeqNumGet:
 // 8197 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock442 Using cfiCommon0
+          CFI Block cfiBlock441 Using cfiCommon0
           CFI Function AppS2wCmd_WlanRecvFiltrSet
         THUMB
 // 8198 UINT8 AppS2wCmd_WlanRecvFiltrSet(UINT8 *ptr)
@@ -22126,12 +22088,12 @@ AppS2wCmd_WlanRecvFiltrSet:
         UXTB     R0,R0
 ??AppS2wCmd_WlanRecvFiltrSet_1:
         POP      {R1-R3,PC}       ;; return
-          CFI EndBlock cfiBlock442
+          CFI EndBlock cfiBlock441
 // 8216 
 // 8217 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond443 Using cfiCommon0
+          CFI Block cfiCond442 Using cfiCommon0
           CFI Function AppS2wCmd_Wpower
           CFI NoCalls
           CFI NoCalls
@@ -22140,18 +22102,18 @@ AppS2wCmd_WlanRecvFiltrSet:
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+48
-          CFI Block cfiCond444 Using cfiCommon0
-          CFI (cfiCond444) Function AppS2wCmd_WlanRecvFiltrSet
-          CFI (cfiCond444) NoCalls AppS2wCmd_Wpower
-          CFI (cfiCond444) NoCalls AppS2wCmd_WlanRecvFiltrSet
-          CFI (cfiCond444) Conditional ??CrossCallReturnLabel_449
-          CFI (cfiCond444) R14 Frame(CFA, -4)
-          CFI (cfiCond444) CFA R13+16
-          CFI Block cfiPicker445 Using cfiCommon1
-          CFI (cfiPicker445) NoFunction
-          CFI (cfiPicker445) NoCalls AppS2wCmd_Wpower
-          CFI (cfiPicker445) NoCalls AppS2wCmd_WlanRecvFiltrSet
-          CFI (cfiPicker445) Picker
+          CFI Block cfiCond443 Using cfiCommon0
+          CFI (cfiCond443) Function AppS2wCmd_WlanRecvFiltrSet
+          CFI (cfiCond443) NoCalls AppS2wCmd_WlanRecvFiltrSet
+          CFI (cfiCond443) NoCalls AppS2wCmd_Wpower
+          CFI (cfiCond443) Conditional ??CrossCallReturnLabel_449
+          CFI (cfiCond443) R14 Frame(CFA, -4)
+          CFI (cfiCond443) CFA R13+16
+          CFI Block cfiPicker444 Using cfiCommon1
+          CFI (cfiPicker444) NoFunction
+          CFI (cfiPicker444) NoCalls AppS2wCmd_WlanRecvFiltrSet
+          CFI (cfiPicker444) NoCalls AppS2wCmd_Wpower
+          CFI (cfiPicker444) Picker
         THUMB
 ?Subroutine78:
         LDR.N    R0,??DataTable448
@@ -22159,9 +22121,9 @@ AppS2wCmd_WlanRecvFiltrSet:
         ADD      R1,SP,#+0
         ADD      R0,R0,#+3808
         BX       LR
+          CFI EndBlock cfiCond442
           CFI EndBlock cfiCond443
-          CFI EndBlock cfiCond444
-          CFI EndBlock cfiPicker445
+          CFI EndBlock cfiPicker444
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -22172,7 +22134,7 @@ AppS2wCmd_WlanRecvFiltrSet:
 // 8219 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock446 Using cfiCommon0
+          CFI Block cfiBlock445 Using cfiCommon0
           CFI Function AppS2wCmd_RtsEnable
         THUMB
 // 8220 UINT8 AppS2wCmd_RtsEnable(UINT8 *ptr)
@@ -22234,12 +22196,12 @@ AppS2wCmd_RtsEnable:
         UXTB     R0,R0
 ??AppS2wCmd_RtsEnable_1:
         POP      {R1-R3,PC}       ;; return
-          CFI EndBlock cfiBlock446
+          CFI EndBlock cfiBlock445
 // 8250 }
 // 8251 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock447 Using cfiCommon0
+          CFI Block cfiBlock446 Using cfiCommon0
           CFI Function AppS2wCmd_BlockAckReq
         THUMB
 // 8252 UINT8 AppS2wCmd_BlockAckReq(UINT8 *ptr)
@@ -22324,13 +22286,13 @@ AppS2wCmd_BlockAckReq:
         ADD      SP,SP,#+20
           CFI CFA R13+4
         POP      {PC}             ;; return
-          CFI EndBlock cfiBlock447
+          CFI EndBlock cfiBlock446
 // 8294 
 // 8295 }
 // 8296 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock448 Using cfiCommon0
+          CFI Block cfiBlock447 Using cfiCommon0
           CFI Function AppS2wCmd_AmsduReqt
         THUMB
 // 8297 UINT8 AppS2wCmd_AmsduReqt(UINT8 *ptr)
@@ -22414,11 +22376,11 @@ AppS2wCmd_AmsduReqt:
         ADD      SP,SP,#+20
           CFI CFA R13+4
         POP      {PC}             ;; return
-          CFI EndBlock cfiBlock448
+          CFI EndBlock cfiBlock447
 // 8338 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond449 Using cfiCommon0
+          CFI Block cfiCond448 Using cfiCommon0
           CFI Function AppS2wCmd_BlockAckReq
           CFI NoCalls
           CFI NoCalls
@@ -22426,68 +22388,68 @@ AppS2wCmd_AmsduReqt:
           CFI Conditional ??CrossCallReturnLabel_627
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
+          CFI Block cfiCond449 Using cfiCommon0
+          CFI (cfiCond449) Function AppS2wCmd_AmsduReqt
+          CFI (cfiCond449) NoCalls AppS2wCmd_BlockAckReq
+          CFI (cfiCond449) NoCalls AppS2wCmd_AmsduReqt
+          CFI (cfiCond449) NoCalls AppS2wCmd_AmpduReq
+          CFI (cfiCond449) Conditional ??CrossCallReturnLabel_628
+          CFI (cfiCond449) R14 Frame(CFA, -4)
+          CFI (cfiCond449) CFA R13+24
           CFI Block cfiCond450 Using cfiCommon0
-          CFI (cfiCond450) Function AppS2wCmd_AmsduReqt
-          CFI (cfiCond450) NoCalls AppS2wCmd_AmsduReqt
+          CFI (cfiCond450) Function AppS2wCmd_AmpduReq
           CFI (cfiCond450) NoCalls AppS2wCmd_BlockAckReq
+          CFI (cfiCond450) NoCalls AppS2wCmd_AmsduReqt
           CFI (cfiCond450) NoCalls AppS2wCmd_AmpduReq
-          CFI (cfiCond450) Conditional ??CrossCallReturnLabel_628
+          CFI (cfiCond450) Conditional ??CrossCallReturnLabel_629
           CFI (cfiCond450) R14 Frame(CFA, -4)
           CFI (cfiCond450) CFA R13+24
-          CFI Block cfiCond451 Using cfiCommon0
-          CFI (cfiCond451) Function AppS2wCmd_AmpduReq
-          CFI (cfiCond451) NoCalls AppS2wCmd_AmsduReqt
-          CFI (cfiCond451) NoCalls AppS2wCmd_BlockAckReq
-          CFI (cfiCond451) NoCalls AppS2wCmd_AmpduReq
-          CFI (cfiCond451) Conditional ??CrossCallReturnLabel_629
-          CFI (cfiCond451) R14 Frame(CFA, -4)
-          CFI (cfiCond451) CFA R13+24
-          CFI Block cfiPicker452 Using cfiCommon1
-          CFI (cfiPicker452) NoFunction
-          CFI (cfiPicker452) NoCalls AppS2wCmd_AmsduReqt
-          CFI (cfiPicker452) NoCalls AppS2wCmd_BlockAckReq
-          CFI (cfiPicker452) NoCalls AppS2wCmd_AmpduReq
-          CFI (cfiPicker452) Picker
+          CFI Block cfiPicker451 Using cfiCommon1
+          CFI (cfiPicker451) NoFunction
+          CFI (cfiPicker451) NoCalls AppS2wCmd_BlockAckReq
+          CFI (cfiPicker451) NoCalls AppS2wCmd_AmsduReqt
+          CFI (cfiPicker451) NoCalls AppS2wCmd_AmpduReq
+          CFI (cfiPicker451) Picker
         THUMB
 ?Subroutine138:
         LDRB     R0,[SP, #+4]
         STRB     R0,[SP, #+15]
         BX       LR
+          CFI EndBlock cfiCond448
           CFI EndBlock cfiCond449
           CFI EndBlock cfiCond450
-          CFI EndBlock cfiCond451
-          CFI EndBlock cfiPicker452
+          CFI EndBlock cfiPicker451
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond453 Using cfiCommon0
+          CFI Block cfiCond452 Using cfiCommon0
           CFI Function AppS2wCmd_PowerSaveDpsleep
           CFI Conditional ??CrossCallReturnLabel_393
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
+          CFI Block cfiCond453 Using cfiCommon0
+          CFI (cfiCond453) Function AppS2wCmd_BlockAckReq
+          CFI (cfiCond453) Conditional ??CrossCallReturnLabel_392
+          CFI (cfiCond453) R14 Frame(CFA, -4)
+          CFI (cfiCond453) CFA R13+24
           CFI Block cfiCond454 Using cfiCommon0
-          CFI (cfiCond454) Function AppS2wCmd_BlockAckReq
-          CFI (cfiCond454) Conditional ??CrossCallReturnLabel_392
+          CFI (cfiCond454) Function AppS2wCmd_AmsduReqt
+          CFI (cfiCond454) Conditional ??CrossCallReturnLabel_391
           CFI (cfiCond454) R14 Frame(CFA, -4)
           CFI (cfiCond454) CFA R13+24
           CFI Block cfiCond455 Using cfiCommon0
-          CFI (cfiCond455) Function AppS2wCmd_AmsduReqt
-          CFI (cfiCond455) Conditional ??CrossCallReturnLabel_391
+          CFI (cfiCond455) Function AppS2wCmd_AmpduReq
+          CFI (cfiCond455) Conditional ??CrossCallReturnLabel_390
           CFI (cfiCond455) R14 Frame(CFA, -4)
           CFI (cfiCond455) CFA R13+24
           CFI Block cfiCond456 Using cfiCommon0
-          CFI (cfiCond456) Function AppS2wCmd_AmpduReq
-          CFI (cfiCond456) Conditional ??CrossCallReturnLabel_390
+          CFI (cfiCond456) Function AppS2wCmd_TempReadStart
+          CFI (cfiCond456) Conditional ??CrossCallReturnLabel_389
+          CFI (cfiCond456) R4 Frame(CFA, -8)
           CFI (cfiCond456) R14 Frame(CFA, -4)
           CFI (cfiCond456) CFA R13+24
-          CFI Block cfiCond457 Using cfiCommon0
-          CFI (cfiCond457) Function AppS2wCmd_TempReadStart
-          CFI (cfiCond457) Conditional ??CrossCallReturnLabel_389
-          CFI (cfiCond457) R4 Frame(CFA, -8)
-          CFI (cfiCond457) R14 Frame(CFA, -4)
-          CFI (cfiCond457) CFA R13+24
-          CFI Block cfiPicker458 Using cfiCommon1
-          CFI (cfiPicker458) NoFunction
-          CFI (cfiPicker458) Picker
+          CFI Block cfiPicker457 Using cfiCommon1
+          CFI (cfiPicker457) NoFunction
+          CFI (cfiPicker457) Picker
         THUMB
 ?Subroutine62:
         ADD      R1,SP,#+4
@@ -22497,15 +22459,15 @@ AppS2wCmd_AmsduReqt:
           CFI FunCall AppS2wCmd_AmpduReq AppS2wParse_Boolean
           CFI FunCall AppS2wCmd_TempReadStart AppS2wParse_Boolean
         B.W      AppS2wParse_Boolean
+          CFI EndBlock cfiCond452
           CFI EndBlock cfiCond453
           CFI EndBlock cfiCond454
           CFI EndBlock cfiCond455
           CFI EndBlock cfiCond456
-          CFI EndBlock cfiCond457
-          CFI EndBlock cfiPicker458
+          CFI EndBlock cfiPicker457
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond459 Using cfiCommon0
+          CFI Block cfiCond458 Using cfiCommon0
           CFI Function AppS2wCmd_BlockAckReq
           CFI NoCalls
           CFI NoCalls
@@ -22513,28 +22475,28 @@ AppS2wCmd_AmsduReqt:
           CFI Conditional ??CrossCallReturnLabel_253
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
+          CFI Block cfiCond459 Using cfiCommon0
+          CFI (cfiCond459) Function AppS2wCmd_AmsduReqt
+          CFI (cfiCond459) NoCalls AppS2wCmd_BlockAckReq
+          CFI (cfiCond459) NoCalls AppS2wCmd_AmsduReqt
+          CFI (cfiCond459) NoCalls AppS2wCmd_AmpduReq
+          CFI (cfiCond459) Conditional ??CrossCallReturnLabel_254
+          CFI (cfiCond459) R14 Frame(CFA, -4)
+          CFI (cfiCond459) CFA R13+24
           CFI Block cfiCond460 Using cfiCommon0
-          CFI (cfiCond460) Function AppS2wCmd_AmsduReqt
-          CFI (cfiCond460) NoCalls AppS2wCmd_AmsduReqt
+          CFI (cfiCond460) Function AppS2wCmd_AmpduReq
           CFI (cfiCond460) NoCalls AppS2wCmd_BlockAckReq
+          CFI (cfiCond460) NoCalls AppS2wCmd_AmsduReqt
           CFI (cfiCond460) NoCalls AppS2wCmd_AmpduReq
-          CFI (cfiCond460) Conditional ??CrossCallReturnLabel_254
+          CFI (cfiCond460) Conditional ??CrossCallReturnLabel_255
           CFI (cfiCond460) R14 Frame(CFA, -4)
           CFI (cfiCond460) CFA R13+24
-          CFI Block cfiCond461 Using cfiCommon0
-          CFI (cfiCond461) Function AppS2wCmd_AmpduReq
-          CFI (cfiCond461) NoCalls AppS2wCmd_AmsduReqt
-          CFI (cfiCond461) NoCalls AppS2wCmd_BlockAckReq
-          CFI (cfiCond461) NoCalls AppS2wCmd_AmpduReq
-          CFI (cfiCond461) Conditional ??CrossCallReturnLabel_255
-          CFI (cfiCond461) R14 Frame(CFA, -4)
-          CFI (cfiCond461) CFA R13+24
-          CFI Block cfiPicker462 Using cfiCommon1
-          CFI (cfiPicker462) NoFunction
-          CFI (cfiPicker462) NoCalls AppS2wCmd_AmsduReqt
-          CFI (cfiPicker462) NoCalls AppS2wCmd_BlockAckReq
-          CFI (cfiPicker462) NoCalls AppS2wCmd_AmpduReq
-          CFI (cfiPicker462) Picker
+          CFI Block cfiPicker461 Using cfiCommon1
+          CFI (cfiPicker461) NoFunction
+          CFI (cfiPicker461) NoCalls AppS2wCmd_BlockAckReq
+          CFI (cfiPicker461) NoCalls AppS2wCmd_AmsduReqt
+          CFI (cfiPicker461) NoCalls AppS2wCmd_AmpduReq
+          CFI (cfiPicker461) Picker
         THUMB
 ?Subroutine49:
         ADD      R1,SP,#+8
@@ -22542,139 +22504,139 @@ AppS2wCmd_AmsduReqt:
         LDR      R0,[R0, #+0]
         ADD      R0,R0,#+3808
         BX       LR
+          CFI EndBlock cfiCond458
           CFI EndBlock cfiCond459
           CFI EndBlock cfiCond460
-          CFI EndBlock cfiCond461
-          CFI EndBlock cfiPicker462
+          CFI EndBlock cfiPicker461
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond463 Using cfiCommon0
+          CFI Block cfiCond462 Using cfiCommon0
           CFI Function AppS2wCmd_PowerSaveDpsleep
           CFI Conditional ??CrossCallReturnLabel_99
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
+          CFI Block cfiCond463 Using cfiCommon0
+          CFI (cfiCond463) Function AppS2wCmd_PowerSaveDpsleep
+          CFI (cfiCond463) Conditional ??CrossCallReturnLabel_98
+          CFI (cfiCond463) R14 Frame(CFA, -4)
+          CFI (cfiCond463) CFA R13+24
           CFI Block cfiCond464 Using cfiCommon0
           CFI (cfiCond464) Function AppS2wCmd_PowerSaveDpsleep
-          CFI (cfiCond464) Conditional ??CrossCallReturnLabel_98
+          CFI (cfiCond464) Conditional ??CrossCallReturnLabel_97
           CFI (cfiCond464) R14 Frame(CFA, -4)
           CFI (cfiCond464) CFA R13+24
           CFI Block cfiCond465 Using cfiCommon0
           CFI (cfiCond465) Function AppS2wCmd_PowerSaveDpsleep
-          CFI (cfiCond465) Conditional ??CrossCallReturnLabel_97
+          CFI (cfiCond465) Conditional ??CrossCallReturnLabel_96
           CFI (cfiCond465) R14 Frame(CFA, -4)
           CFI (cfiCond465) CFA R13+24
           CFI Block cfiCond466 Using cfiCommon0
-          CFI (cfiCond466) Function AppS2wCmd_PowerSaveDpsleep
-          CFI (cfiCond466) Conditional ??CrossCallReturnLabel_96
+          CFI (cfiCond466) Function AppS2wCmd_scanTimeSet
+          CFI (cfiCond466) Conditional ??CrossCallReturnLabel_95
+          CFI (cfiCond466) R4 Frame(CFA, -12)
+          CFI (cfiCond466) R5 Frame(CFA, -8)
           CFI (cfiCond466) R14 Frame(CFA, -4)
-          CFI (cfiCond466) CFA R13+24
+          CFI (cfiCond466) CFA R13+32
           CFI Block cfiCond467 Using cfiCommon0
           CFI (cfiCond467) Function AppS2wCmd_scanTimeSet
-          CFI (cfiCond467) Conditional ??CrossCallReturnLabel_95
+          CFI (cfiCond467) Conditional ??CrossCallReturnLabel_94
           CFI (cfiCond467) R4 Frame(CFA, -12)
           CFI (cfiCond467) R5 Frame(CFA, -8)
           CFI (cfiCond467) R14 Frame(CFA, -4)
           CFI (cfiCond467) CFA R13+32
           CFI Block cfiCond468 Using cfiCommon0
           CFI (cfiCond468) Function AppS2wCmd_scanTimeSet
-          CFI (cfiCond468) Conditional ??CrossCallReturnLabel_94
+          CFI (cfiCond468) Conditional ??CrossCallReturnLabel_93
           CFI (cfiCond468) R4 Frame(CFA, -12)
           CFI (cfiCond468) R5 Frame(CFA, -8)
           CFI (cfiCond468) R14 Frame(CFA, -4)
           CFI (cfiCond468) CFA R13+32
           CFI Block cfiCond469 Using cfiCommon0
-          CFI (cfiCond469) Function AppS2wCmd_scanTimeSet
-          CFI (cfiCond469) Conditional ??CrossCallReturnLabel_93
-          CFI (cfiCond469) R4 Frame(CFA, -12)
-          CFI (cfiCond469) R5 Frame(CFA, -8)
+          CFI (cfiCond469) Function AppS2wCmd_BlockAckReq
+          CFI (cfiCond469) Conditional ??CrossCallReturnLabel_92
           CFI (cfiCond469) R14 Frame(CFA, -4)
-          CFI (cfiCond469) CFA R13+32
+          CFI (cfiCond469) CFA R13+24
           CFI Block cfiCond470 Using cfiCommon0
           CFI (cfiCond470) Function AppS2wCmd_BlockAckReq
-          CFI (cfiCond470) Conditional ??CrossCallReturnLabel_92
+          CFI (cfiCond470) Conditional ??CrossCallReturnLabel_91
           CFI (cfiCond470) R14 Frame(CFA, -4)
           CFI (cfiCond470) CFA R13+24
           CFI Block cfiCond471 Using cfiCommon0
           CFI (cfiCond471) Function AppS2wCmd_BlockAckReq
-          CFI (cfiCond471) Conditional ??CrossCallReturnLabel_91
+          CFI (cfiCond471) Conditional ??CrossCallReturnLabel_90
           CFI (cfiCond471) R14 Frame(CFA, -4)
           CFI (cfiCond471) CFA R13+24
           CFI Block cfiCond472 Using cfiCommon0
-          CFI (cfiCond472) Function AppS2wCmd_BlockAckReq
-          CFI (cfiCond472) Conditional ??CrossCallReturnLabel_90
+          CFI (cfiCond472) Function AppS2wCmd_AmsduReqt
+          CFI (cfiCond472) Conditional ??CrossCallReturnLabel_89
           CFI (cfiCond472) R14 Frame(CFA, -4)
           CFI (cfiCond472) CFA R13+24
           CFI Block cfiCond473 Using cfiCommon0
           CFI (cfiCond473) Function AppS2wCmd_AmsduReqt
-          CFI (cfiCond473) Conditional ??CrossCallReturnLabel_89
+          CFI (cfiCond473) Conditional ??CrossCallReturnLabel_88
           CFI (cfiCond473) R14 Frame(CFA, -4)
           CFI (cfiCond473) CFA R13+24
           CFI Block cfiCond474 Using cfiCommon0
           CFI (cfiCond474) Function AppS2wCmd_AmsduReqt
-          CFI (cfiCond474) Conditional ??CrossCallReturnLabel_88
+          CFI (cfiCond474) Conditional ??CrossCallReturnLabel_87
           CFI (cfiCond474) R14 Frame(CFA, -4)
           CFI (cfiCond474) CFA R13+24
           CFI Block cfiCond475 Using cfiCommon0
-          CFI (cfiCond475) Function AppS2wCmd_AmsduReqt
-          CFI (cfiCond475) Conditional ??CrossCallReturnLabel_87
+          CFI (cfiCond475) Function AppS2wCmd_AmpduReq
+          CFI (cfiCond475) Conditional ??CrossCallReturnLabel_86
           CFI (cfiCond475) R14 Frame(CFA, -4)
           CFI (cfiCond475) CFA R13+24
           CFI Block cfiCond476 Using cfiCommon0
           CFI (cfiCond476) Function AppS2wCmd_AmpduReq
-          CFI (cfiCond476) Conditional ??CrossCallReturnLabel_86
+          CFI (cfiCond476) Conditional ??CrossCallReturnLabel_85
           CFI (cfiCond476) R14 Frame(CFA, -4)
           CFI (cfiCond476) CFA R13+24
           CFI Block cfiCond477 Using cfiCommon0
           CFI (cfiCond477) Function AppS2wCmd_AmpduReq
-          CFI (cfiCond477) Conditional ??CrossCallReturnLabel_85
+          CFI (cfiCond477) Conditional ??CrossCallReturnLabel_84
           CFI (cfiCond477) R14 Frame(CFA, -4)
           CFI (cfiCond477) CFA R13+24
           CFI Block cfiCond478 Using cfiCommon0
-          CFI (cfiCond478) Function AppS2wCmd_AmpduReq
-          CFI (cfiCond478) Conditional ??CrossCallReturnLabel_84
+          CFI (cfiCond478) Function AppS2wCmd_PowerSaveStby
+          CFI (cfiCond478) Conditional ??CrossCallReturnLabel_83
           CFI (cfiCond478) R14 Frame(CFA, -4)
           CFI (cfiCond478) CFA R13+24
           CFI Block cfiCond479 Using cfiCommon0
           CFI (cfiCond479) Function AppS2wCmd_PowerSaveStby
-          CFI (cfiCond479) Conditional ??CrossCallReturnLabel_83
+          CFI (cfiCond479) Conditional ??CrossCallReturnLabel_82
           CFI (cfiCond479) R14 Frame(CFA, -4)
           CFI (cfiCond479) CFA R13+24
           CFI Block cfiCond480 Using cfiCommon0
           CFI (cfiCond480) Function AppS2wCmd_PowerSaveStby
-          CFI (cfiCond480) Conditional ??CrossCallReturnLabel_82
+          CFI (cfiCond480) Conditional ??CrossCallReturnLabel_81
           CFI (cfiCond480) R14 Frame(CFA, -4)
           CFI (cfiCond480) CFA R13+24
           CFI Block cfiCond481 Using cfiCommon0
           CFI (cfiCond481) Function AppS2wCmd_PowerSaveStby
-          CFI (cfiCond481) Conditional ??CrossCallReturnLabel_81
+          CFI (cfiCond481) Conditional ??CrossCallReturnLabel_80
           CFI (cfiCond481) R14 Frame(CFA, -4)
           CFI (cfiCond481) CFA R13+24
           CFI Block cfiCond482 Using cfiCommon0
-          CFI (cfiCond482) Function AppS2wCmd_PowerSaveStby
-          CFI (cfiCond482) Conditional ??CrossCallReturnLabel_80
+          CFI (cfiCond482) Function AppS2wCmd_AdcRead
+          CFI (cfiCond482) Conditional ??CrossCallReturnLabel_79
+          CFI (cfiCond482) R4 Frame(CFA, -20)
+          CFI (cfiCond482) R5 Frame(CFA, -16)
+          CFI (cfiCond482) R6 Frame(CFA, -12)
+          CFI (cfiCond482) R7 Frame(CFA, -8)
           CFI (cfiCond482) R14 Frame(CFA, -4)
-          CFI (cfiCond482) CFA R13+24
+          CFI (cfiCond482) CFA R13+40
           CFI Block cfiCond483 Using cfiCommon0
           CFI (cfiCond483) Function AppS2wCmd_AdcRead
-          CFI (cfiCond483) Conditional ??CrossCallReturnLabel_79
+          CFI (cfiCond483) Conditional ??CrossCallReturnLabel_78
           CFI (cfiCond483) R4 Frame(CFA, -20)
           CFI (cfiCond483) R5 Frame(CFA, -16)
           CFI (cfiCond483) R6 Frame(CFA, -12)
           CFI (cfiCond483) R7 Frame(CFA, -8)
           CFI (cfiCond483) R14 Frame(CFA, -4)
           CFI (cfiCond483) CFA R13+40
-          CFI Block cfiCond484 Using cfiCommon0
-          CFI (cfiCond484) Function AppS2wCmd_AdcRead
-          CFI (cfiCond484) Conditional ??CrossCallReturnLabel_78
-          CFI (cfiCond484) R4 Frame(CFA, -20)
-          CFI (cfiCond484) R5 Frame(CFA, -16)
-          CFI (cfiCond484) R6 Frame(CFA, -12)
-          CFI (cfiCond484) R7 Frame(CFA, -8)
-          CFI (cfiCond484) R14 Frame(CFA, -4)
-          CFI (cfiCond484) CFA R13+40
-          CFI Block cfiPicker485 Using cfiCommon1
-          CFI (cfiPicker485) NoFunction
-          CFI (cfiPicker485) Picker
+          CFI Block cfiPicker484 Using cfiCommon1
+          CFI (cfiPicker484) NoFunction
+          CFI (cfiPicker484) Picker
         THUMB
 ?Subroutine30:
         ADD      R0,SP,#+16
@@ -22701,6 +22663,7 @@ AppS2wCmd_AmsduReqt:
           CFI FunCall AppS2wCmd_AdcRead AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_AdcRead AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond462
           CFI EndBlock cfiCond463
           CFI EndBlock cfiCond464
           CFI EndBlock cfiCond465
@@ -22722,13 +22685,12 @@ AppS2wCmd_AmsduReqt:
           CFI EndBlock cfiCond481
           CFI EndBlock cfiCond482
           CFI EndBlock cfiCond483
-          CFI EndBlock cfiCond484
-          CFI EndBlock cfiPicker485
+          CFI EndBlock cfiPicker484
 // 8339 
 // 8340 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock486 Using cfiCommon0
+          CFI Block cfiBlock485 Using cfiCommon0
           CFI Function AppS2wCmd_AmpduReq
         THUMB
 // 8341 UINT8 AppS2wCmd_AmpduReq(UINT8 *ptr)
@@ -22812,7 +22774,7 @@ AppS2wCmd_AmpduReq:
         ADD      SP,SP,#+20
           CFI CFA R13+4
         POP      {PC}             ;; return
-          CFI EndBlock cfiBlock486
+          CFI EndBlock cfiBlock485
 // 8382 
 // 8383 }
 // 8384 
@@ -22820,7 +22782,7 @@ AppS2wCmd_AmpduReq:
 // 8386 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock487 Using cfiCommon0
+          CFI Block cfiBlock486 Using cfiCommon0
           CFI Function AppS2wCmd_FrameTxFailCntLmitSet
         THUMB
 // 8387 UINT8 AppS2wCmd_FrameTxFailCntLmitSet(UINT8 *ptr)
@@ -22865,30 +22827,30 @@ AppS2wCmd_FrameTxFailCntLmitSet:
         UXTB     R0,R0
 ??AppS2wCmd_FrameTxFailCntLmitSet_1:
         POP      {R1-R3,PC}       ;; return
-          CFI EndBlock cfiBlock487
+          CFI EndBlock cfiBlock486
 // 8407 
 // 8408 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond488 Using cfiCommon0
+          CFI Block cfiCond487 Using cfiCommon0
           CFI Function AppS2wCmd_RtsEnable
           CFI NoCalls
           CFI NoCalls
           CFI Conditional ??CrossCallReturnLabel_401
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
-          CFI Block cfiCond489 Using cfiCommon0
-          CFI (cfiCond489) Function AppS2wCmd_FrameTxFailCntLmitSet
-          CFI (cfiCond489) NoCalls AppS2wCmd_RtsEnable
-          CFI (cfiCond489) NoCalls AppS2wCmd_FrameTxFailCntLmitSet
-          CFI (cfiCond489) Conditional ??CrossCallReturnLabel_402
-          CFI (cfiCond489) R14 Frame(CFA, -4)
-          CFI (cfiCond489) CFA R13+16
-          CFI Block cfiPicker490 Using cfiCommon1
-          CFI (cfiPicker490) NoFunction
-          CFI (cfiPicker490) NoCalls AppS2wCmd_RtsEnable
-          CFI (cfiPicker490) NoCalls AppS2wCmd_FrameTxFailCntLmitSet
-          CFI (cfiPicker490) Picker
+          CFI Block cfiCond488 Using cfiCommon0
+          CFI (cfiCond488) Function AppS2wCmd_FrameTxFailCntLmitSet
+          CFI (cfiCond488) NoCalls AppS2wCmd_RtsEnable
+          CFI (cfiCond488) NoCalls AppS2wCmd_FrameTxFailCntLmitSet
+          CFI (cfiCond488) Conditional ??CrossCallReturnLabel_402
+          CFI (cfiCond488) R14 Frame(CFA, -4)
+          CFI (cfiCond488) CFA R13+16
+          CFI Block cfiPicker489 Using cfiCommon1
+          CFI (cfiPicker489) NoFunction
+          CFI (cfiPicker489) NoCalls AppS2wCmd_RtsEnable
+          CFI (cfiPicker489) NoCalls AppS2wCmd_FrameTxFailCntLmitSet
+          CFI (cfiPicker489) Picker
         THUMB
 ?Subroutine65:
         ADD      R1,SP,#+0
@@ -22896,9 +22858,9 @@ AppS2wCmd_FrameTxFailCntLmitSet:
         LDR      R0,[R0, #+0]
         ADD      R0,R0,#+3808
         BX       LR
+          CFI EndBlock cfiCond487
           CFI EndBlock cfiCond488
-          CFI EndBlock cfiCond489
-          CFI EndBlock cfiPicker490
+          CFI EndBlock cfiPicker489
 // 8409 
 // 8410 /**
 // 8411  ******************************************************************
@@ -22911,7 +22873,7 @@ AppS2wCmd_FrameTxFailCntLmitSet:
 // 8418  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock491 Using cfiCommon0
+          CFI Block cfiBlock490 Using cfiCommon0
           CFI Function AppS2wCmd_SecuritySet
           CFI NoCalls
         THUMB
@@ -22996,7 +22958,7 @@ AppS2wCmd_SecuritySet:
 // 8459     return S2W_SUCCESS;
         MOVS     R0,#+0
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock491
+          CFI EndBlock cfiBlock490
 // 8460 }
 // 8461 
 // 8462 /**
@@ -23012,7 +22974,7 @@ AppS2wCmd_SecuritySet:
 // 8472  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock492 Using cfiCommon0
+          CFI Block cfiBlock491 Using cfiCommon0
           CFI Function AppS2wCmd_Wauth
           CFI NoCalls
         THUMB
@@ -23084,7 +23046,7 @@ AppS2wCmd_Wauth:
 // 8506     return status;
 ??AppS2wCmd_Wauth_0:
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock492
+          CFI EndBlock cfiBlock491
 // 8507 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -23106,7 +23068,7 @@ AppS2wCmd_Wauth:
 // 8519  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock493 Using cfiCommon0
+          CFI Block cfiBlock492 Using cfiCommon0
           CFI Function AppS2wCmd_Wwpa
         THUMB
 // 8520 UINT8
@@ -23217,7 +23179,7 @@ AppS2wCmd_Wwpa:
         ADD      SP,SP,#+272
           CFI CFA R13+16
         POP      {R4-R6,PC}       ;; return
-          CFI EndBlock cfiBlock493
+          CFI EndBlock cfiBlock492
 // 8561 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -23247,7 +23209,7 @@ AppS2wCmd_Wwpa:
 // 8575  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock494 Using cfiCommon0
+          CFI Block cfiBlock493 Using cfiCommon0
           CFI Function AppS2wCmd_WpaPsk
         THUMB
 // 8576 UINT8
@@ -23408,7 +23370,7 @@ AppS2wCmd_WpaPsk:
         ADD      SP,SP,#+140
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
-          CFI EndBlock cfiBlock494
+          CFI EndBlock cfiBlock493
 // 8649 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -23419,41 +23381,41 @@ AppS2wCmd_WpaPsk:
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond495 Using cfiCommon0
+          CFI Block cfiCond494 Using cfiCommon0
           CFI Function S2wDnsConfigGet
           CFI Conditional ??CrossCallReturnLabel_73
           CFI R4 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+168
+          CFI Block cfiCond495 Using cfiCommon0
+          CFI (cfiCond495) Function AppS2wCmd_Wwpa
+          CFI (cfiCond495) Conditional ??CrossCallReturnLabel_72
+          CFI (cfiCond495) R4 Frame(CFA, -16)
+          CFI (cfiCond495) R5 Frame(CFA, -12)
+          CFI (cfiCond495) R6 Frame(CFA, -8)
+          CFI (cfiCond495) R14 Frame(CFA, -4)
+          CFI (cfiCond495) CFA R13+288
           CFI Block cfiCond496 Using cfiCommon0
-          CFI (cfiCond496) Function AppS2wCmd_Wwpa
-          CFI (cfiCond496) Conditional ??CrossCallReturnLabel_72
-          CFI (cfiCond496) R4 Frame(CFA, -16)
-          CFI (cfiCond496) R5 Frame(CFA, -12)
-          CFI (cfiCond496) R6 Frame(CFA, -8)
+          CFI (cfiCond496) Function AppS2wCmd_WpaPsk
+          CFI (cfiCond496) Conditional ??CrossCallReturnLabel_71
+          CFI (cfiCond496) R4 Frame(CFA, -12)
+          CFI (cfiCond496) R5 Frame(CFA, -8)
           CFI (cfiCond496) R14 Frame(CFA, -4)
-          CFI (cfiCond496) CFA R13+288
+          CFI (cfiCond496) CFA R13+152
           CFI Block cfiCond497 Using cfiCommon0
-          CFI (cfiCond497) Function AppS2wCmd_WpaPsk
-          CFI (cfiCond497) Conditional ??CrossCallReturnLabel_71
-          CFI (cfiCond497) R4 Frame(CFA, -12)
-          CFI (cfiCond497) R5 Frame(CFA, -8)
+          CFI (cfiCond497) Function AppS2wCmd_Wwep
+          CFI (cfiCond497) Conditional ??CrossCallReturnLabel_70
+          CFI (cfiCond497) R4 Frame(CFA, -28)
+          CFI (cfiCond497) R5 Frame(CFA, -24)
+          CFI (cfiCond497) R6 Frame(CFA, -20)
+          CFI (cfiCond497) R7 Frame(CFA, -16)
+          CFI (cfiCond497) R8 Frame(CFA, -12)
+          CFI (cfiCond497) R9 Frame(CFA, -8)
           CFI (cfiCond497) R14 Frame(CFA, -4)
-          CFI (cfiCond497) CFA R13+152
-          CFI Block cfiCond498 Using cfiCommon0
-          CFI (cfiCond498) Function AppS2wCmd_Wwep
-          CFI (cfiCond498) Conditional ??CrossCallReturnLabel_70
-          CFI (cfiCond498) R4 Frame(CFA, -28)
-          CFI (cfiCond498) R5 Frame(CFA, -24)
-          CFI (cfiCond498) R6 Frame(CFA, -20)
-          CFI (cfiCond498) R7 Frame(CFA, -16)
-          CFI (cfiCond498) R8 Frame(CFA, -12)
-          CFI (cfiCond498) R9 Frame(CFA, -8)
-          CFI (cfiCond498) R14 Frame(CFA, -4)
-          CFI (cfiCond498) CFA R13+296
-          CFI Block cfiPicker499 Using cfiCommon1
-          CFI (cfiPicker499) NoFunction
-          CFI (cfiPicker499) Picker
+          CFI (cfiCond497) CFA R13+296
+          CFI Block cfiPicker498 Using cfiCommon1
+          CFI (cfiPicker498) NoFunction
+          CFI (cfiPicker498) Picker
         THUMB
 ?Subroutine27:
         ADD      R0,SP,#+0
@@ -23462,36 +23424,36 @@ AppS2wCmd_WpaPsk:
           CFI FunCall AppS2wCmd_WpaPsk memcpy
           CFI FunCall AppS2wCmd_Wwep memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond494
           CFI EndBlock cfiCond495
           CFI EndBlock cfiCond496
           CFI EndBlock cfiCond497
-          CFI EndBlock cfiCond498
-          CFI EndBlock cfiPicker499
+          CFI EndBlock cfiPicker498
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond500 Using cfiCommon0
+          CFI Block cfiCond499 Using cfiCommon0
           CFI Function AppS2wCmd_Wpower
           CFI Conditional ??CrossCallReturnLabel_50
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+48
+          CFI Block cfiCond500 Using cfiCommon0
+          CFI (cfiCond500) Function AppS2wCmd_WpaPsk
+          CFI (cfiCond500) Conditional ??CrossCallReturnLabel_49
+          CFI (cfiCond500) R4 Frame(CFA, -12)
+          CFI (cfiCond500) R5 Frame(CFA, -8)
+          CFI (cfiCond500) R14 Frame(CFA, -4)
+          CFI (cfiCond500) CFA R13+152
           CFI Block cfiCond501 Using cfiCommon0
-          CFI (cfiCond501) Function AppS2wCmd_WpaPsk
-          CFI (cfiCond501) Conditional ??CrossCallReturnLabel_49
-          CFI (cfiCond501) R4 Frame(CFA, -12)
-          CFI (cfiCond501) R5 Frame(CFA, -8)
+          CFI (cfiCond501) Function AppS2wCmd_Wauto
+          CFI (cfiCond501) Conditional ??CrossCallReturnLabel_48
+          CFI (cfiCond501) R4 Frame(CFA, -8)
           CFI (cfiCond501) R14 Frame(CFA, -4)
-          CFI (cfiCond501) CFA R13+152
-          CFI Block cfiCond502 Using cfiCommon0
-          CFI (cfiCond502) Function AppS2wCmd_Wauto
-          CFI (cfiCond502) Conditional ??CrossCallReturnLabel_48
-          CFI (cfiCond502) R4 Frame(CFA, -8)
-          CFI (cfiCond502) R14 Frame(CFA, -4)
-          CFI (cfiCond502) CFA R13+56
-          CFI Block cfiPicker503 Using cfiCommon1
-          CFI (cfiPicker503) NoFunction
-          CFI (cfiPicker503) Picker
+          CFI (cfiCond501) CFA R13+56
+          CFI Block cfiPicker502 Using cfiCommon1
+          CFI (cfiPicker502) NoFunction
+          CFI (cfiPicker502) Picker
         THUMB
 ?Subroutine22:
         MOVS     R1,#+0
@@ -23500,10 +23462,10 @@ AppS2wCmd_WpaPsk:
           CFI FunCall AppS2wCmd_WpaPsk memset
           CFI FunCall AppS2wCmd_Wauto memset
         B.W      memset
+          CFI EndBlock cfiCond499
           CFI EndBlock cfiCond500
           CFI EndBlock cfiCond501
-          CFI EndBlock cfiCond502
-          CFI EndBlock cfiPicker503
+          CFI EndBlock cfiPicker502
 // 8650 
 // 8651 
 // 8652 
@@ -23516,7 +23478,7 @@ AppS2wCmd_WpaPsk:
 // 8659  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock504 Using cfiCommon0
+          CFI Block cfiBlock503 Using cfiCommon0
           CFI Function AppS2wCmd_Psk
         THUMB
 // 8660 UINT8
@@ -23567,7 +23529,7 @@ AppS2wCmd_Psk:
         ADD      SP,SP,#+36
           CFI CFA R13+4
         POP      {PC}             ;; return
-          CFI EndBlock cfiBlock504
+          CFI EndBlock cfiBlock503
 // 8683 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -23590,7 +23552,7 @@ AppS2wCmd_Psk:
 // 8696  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock505 Using cfiCommon0
+          CFI Block cfiBlock504 Using cfiCommon0
           CFI Function AppS2wCmd_Wwep
         THUMB
 // 8697 PRIVATE UINT8
@@ -23731,17 +23693,17 @@ AppS2wCmd_Wwep:
 // 8749     return S2W_SUCCESS;
 ??AppS2wCmd_Wwep_6:
         MOVS     R0,#+0
-          CFI EndBlock cfiBlock505
+          CFI EndBlock cfiBlock504
 ??AppS2wCmd_Wwep_3:
         REQUIRE ?Subroutine1
         ;; // Fall through to label ?Subroutine1
 // 8750 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock506 Using cfiCommon0
+          CFI Block cfiBlock505 Using cfiCommon0
           CFI NoFunction
-          CFI NoCalls AppS2wCmd_Wwep
           CFI NoCalls AppS2wCmd_Nstat
+          CFI NoCalls AppS2wCmd_Wwep
           CFI CFA R13+296
           CFI R4 Frame(CFA, -28)
           CFI R5 Frame(CFA, -24)
@@ -23755,10 +23717,10 @@ AppS2wCmd_Wwep:
         ADD      SP,SP,#+268
           CFI CFA R13+28
         POP      {R4-R9,PC}       ;; return
-          CFI EndBlock cfiBlock506
+          CFI EndBlock cfiBlock505
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond507 Using cfiCommon0
+          CFI Block cfiCond506 Using cfiCommon0
           CFI Function AppS2wCmd_Wwpa
           CFI NoCalls
           CFI NoCalls
@@ -23768,24 +23730,24 @@ AppS2wCmd_Wwep:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+288
-          CFI Block cfiCond508 Using cfiCommon0
-          CFI (cfiCond508) Function AppS2wCmd_Wwep
-          CFI (cfiCond508) NoCalls AppS2wCmd_Wwep
-          CFI (cfiCond508) NoCalls AppS2wCmd_Wwpa
-          CFI (cfiCond508) Conditional ??CrossCallReturnLabel_451
-          CFI (cfiCond508) R4 Frame(CFA, -28)
-          CFI (cfiCond508) R5 Frame(CFA, -24)
-          CFI (cfiCond508) R6 Frame(CFA, -20)
-          CFI (cfiCond508) R7 Frame(CFA, -16)
-          CFI (cfiCond508) R8 Frame(CFA, -12)
-          CFI (cfiCond508) R9 Frame(CFA, -8)
-          CFI (cfiCond508) R14 Frame(CFA, -4)
-          CFI (cfiCond508) CFA R13+296
-          CFI Block cfiPicker509 Using cfiCommon1
-          CFI (cfiPicker509) NoFunction
-          CFI (cfiPicker509) NoCalls AppS2wCmd_Wwep
-          CFI (cfiPicker509) NoCalls AppS2wCmd_Wwpa
-          CFI (cfiPicker509) Picker
+          CFI Block cfiCond507 Using cfiCommon0
+          CFI (cfiCond507) Function AppS2wCmd_Wwep
+          CFI (cfiCond507) NoCalls AppS2wCmd_Wwep
+          CFI (cfiCond507) NoCalls AppS2wCmd_Wwpa
+          CFI (cfiCond507) Conditional ??CrossCallReturnLabel_451
+          CFI (cfiCond507) R4 Frame(CFA, -28)
+          CFI (cfiCond507) R5 Frame(CFA, -24)
+          CFI (cfiCond507) R6 Frame(CFA, -20)
+          CFI (cfiCond507) R7 Frame(CFA, -16)
+          CFI (cfiCond507) R8 Frame(CFA, -12)
+          CFI (cfiCond507) R9 Frame(CFA, -8)
+          CFI (cfiCond507) R14 Frame(CFA, -4)
+          CFI (cfiCond507) CFA R13+296
+          CFI Block cfiPicker508 Using cfiCommon1
+          CFI (cfiPicker508) NoFunction
+          CFI (cfiPicker508) NoCalls AppS2wCmd_Wwep
+          CFI (cfiPicker508) NoCalls AppS2wCmd_Wwpa
+          CFI (cfiPicker508) Picker
         THUMB
 ?Subroutine79:
         STRB     R0,[SP, #+1]
@@ -23794,9 +23756,9 @@ AppS2wCmd_Wwep:
         ADD      R0,R0,#+30336
         LDRB     R0,[R0, #+0]
         BX       LR
+          CFI EndBlock cfiCond506
           CFI EndBlock cfiCond507
-          CFI EndBlock cfiCond508
-          CFI EndBlock cfiPicker509
+          CFI EndBlock cfiPicker508
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -23806,7 +23768,7 @@ AppS2wCmd_Wwep:
 // 8751 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock510 Using cfiCommon0
+          CFI Block cfiBlock509 Using cfiCommon0
           CFI Function AppS2wCmad_WsrvrValidationEn
         THUMB
 // 8752 UINT8
@@ -23843,13 +23805,13 @@ AppS2wCmad_WsrvrValidationEn:
         MOVS     R0,#+0
 ??AppS2wCmad_WsrvrValidationEn_0:
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock510
+          CFI EndBlock cfiBlock509
 // 8770 }
 // 8771 
 // 8772     
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock511 Using cfiCommon0
+          CFI Block cfiBlock510 Using cfiCommon0
           CFI Function AppS2wCmad_WeapTimeChk
           CFI NoCalls
         THUMB
@@ -23885,7 +23847,7 @@ AppS2wCmad_WeapTimeChk:
         MOVS     R0,#+0
 ??AppS2wCmad_WeapTimeChk_0:
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock511
+          CFI EndBlock cfiBlock510
 // 8789 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -23896,7 +23858,7 @@ AppS2wCmad_WeapTimeChk:
 // 8790 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock512 Using cfiCommon0
+          CFI Block cfiBlock511 Using cfiCommon0
           CFI Function AppS2wCmd_WwepConf
           CFI NoCalls
         THUMB
@@ -23934,7 +23896,7 @@ AppS2wCmd_WwepConf:
 ??AppS2wCmd_WwepConf_1:
         MOVS     R0,#+2
         BX       LR               ;; return
-          CFI EndBlock cfiBlock512
+          CFI EndBlock cfiBlock511
 // 8808 
 // 8809 
 // 8810 }
@@ -23968,7 +23930,7 @@ AppS2wCmd_WwepConf:
 // 8820  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock513 Using cfiCommon0
+          CFI Block cfiBlock512 Using cfiCommon0
           CFI Function AppS2wCmd_RegDomainSet
         THUMB
 // 8821 PUBLIC UINT8
@@ -24136,7 +24098,7 @@ AppS2wCmd_RegDomainSet:
         ADDW     SP,SP,#+2044
           CFI CFA R13+20
         POP      {R4-R7,PC}       ;; return
-          CFI EndBlock cfiBlock513
+          CFI EndBlock cfiBlock512
 // 8901 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -24167,7 +24129,7 @@ AppS2wCmd_RegDomainSet:
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond514 Using cfiCommon0
+          CFI Block cfiCond513 Using cfiCommon0
           CFI Function AppS2wCmd_Nmac
           CFI Conditional ??CrossCallReturnLabel_538
           CFI R4 Frame(CFA, -20)
@@ -24176,9 +24138,18 @@ AppS2wCmd_RegDomainSet:
           CFI R7 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+40
+          CFI Block cfiCond514 Using cfiCommon0
+          CFI (cfiCond514) Function AppS2wCmd_RegDomainSet
+          CFI (cfiCond514) Conditional ??CrossCallReturnLabel_537
+          CFI (cfiCond514) R4 Frame(CFA, -20)
+          CFI (cfiCond514) R5 Frame(CFA, -16)
+          CFI (cfiCond514) R6 Frame(CFA, -12)
+          CFI (cfiCond514) R7 Frame(CFA, -8)
+          CFI (cfiCond514) R14 Frame(CFA, -4)
+          CFI (cfiCond514) CFA R13+2064
           CFI Block cfiCond515 Using cfiCommon0
           CFI (cfiCond515) Function AppS2wCmd_RegDomainSet
-          CFI (cfiCond515) Conditional ??CrossCallReturnLabel_537
+          CFI (cfiCond515) Conditional ??CrossCallReturnLabel_536
           CFI (cfiCond515) R4 Frame(CFA, -20)
           CFI (cfiCond515) R5 Frame(CFA, -16)
           CFI (cfiCond515) R6 Frame(CFA, -12)
@@ -24186,37 +24157,28 @@ AppS2wCmd_RegDomainSet:
           CFI (cfiCond515) R14 Frame(CFA, -4)
           CFI (cfiCond515) CFA R13+2064
           CFI Block cfiCond516 Using cfiCommon0
-          CFI (cfiCond516) Function AppS2wCmd_RegDomainSet
-          CFI (cfiCond516) Conditional ??CrossCallReturnLabel_536
+          CFI (cfiCond516) Function AppS2wCmd_Acmode
+          CFI (cfiCond516) Conditional ??CrossCallReturnLabel_535
           CFI (cfiCond516) R4 Frame(CFA, -20)
           CFI (cfiCond516) R5 Frame(CFA, -16)
           CFI (cfiCond516) R6 Frame(CFA, -12)
           CFI (cfiCond516) R7 Frame(CFA, -8)
           CFI (cfiCond516) R14 Frame(CFA, -4)
-          CFI (cfiCond516) CFA R13+2064
-          CFI Block cfiCond517 Using cfiCommon0
-          CFI (cfiCond517) Function AppS2wCmd_Acmode
-          CFI (cfiCond517) Conditional ??CrossCallReturnLabel_535
-          CFI (cfiCond517) R4 Frame(CFA, -20)
-          CFI (cfiCond517) R5 Frame(CFA, -16)
-          CFI (cfiCond517) R6 Frame(CFA, -12)
-          CFI (cfiCond517) R7 Frame(CFA, -8)
-          CFI (cfiCond517) R14 Frame(CFA, -4)
-          CFI (cfiCond517) CFA R13+24
-          CFI Block cfiPicker518 Using cfiCommon1
-          CFI (cfiPicker518) NoFunction
-          CFI (cfiPicker518) Picker
+          CFI (cfiCond516) CFA R13+24
+          CFI Block cfiPicker517 Using cfiCommon1
+          CFI (cfiPicker517) NoFunction
+          CFI (cfiPicker517) Picker
         THUMB
 ?Subroutine107:
         LDR      R0,[R7, #+0]
-          CFI Block cfiCond519 Using cfiCommon0
-          CFI (cfiCond519) Function AppS2wCmd_Write
-          CFI (cfiCond519) Conditional ??CrossCallReturnLabel_534
-          CFI (cfiCond519) R4 Frame(CFA, -16)
-          CFI (cfiCond519) R5 Frame(CFA, -12)
-          CFI (cfiCond519) R6 Frame(CFA, -8)
-          CFI (cfiCond519) R14 Frame(CFA, -4)
-          CFI (cfiCond519) CFA R13+24
+          CFI Block cfiCond518 Using cfiCommon0
+          CFI (cfiCond518) Function AppS2wCmd_Write
+          CFI (cfiCond518) Conditional ??CrossCallReturnLabel_534
+          CFI (cfiCond518) R4 Frame(CFA, -16)
+          CFI (cfiCond518) R5 Frame(CFA, -12)
+          CFI (cfiCond518) R6 Frame(CFA, -8)
+          CFI (cfiCond518) R14 Frame(CFA, -4)
+          CFI (cfiCond518) CFA R13+24
 ??Subroutine107_0:
         MOVS     R1,#+1
         STRB     R1,[R6, R0]
@@ -24226,17 +24188,17 @@ AppS2wCmd_RegDomainSet:
           CFI FunCall AppS2wCmd_Acmode fsm_enterFS
           CFI FunCall AppS2wCmd_Write fsm_enterFS
         B.W      fsm_enterFS
+          CFI EndBlock cfiCond513
           CFI EndBlock cfiCond514
           CFI EndBlock cfiCond515
           CFI EndBlock cfiCond516
-          CFI EndBlock cfiCond517
-          CFI EndBlock cfiPicker518
-          CFI EndBlock cfiCond519
+          CFI EndBlock cfiPicker517
+          CFI EndBlock cfiCond518
 // 8902 
 // 8903 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock520 Using cfiCommon0
+          CFI Block cfiBlock519 Using cfiCommon0
           CFI Function AppS2wCmd_Wphymode
         THUMB
 // 8904 UINT8 AppS2wCmd_Wphymode(UINT8* ptr)
@@ -24311,12 +24273,12 @@ AppS2wCmd_Wphymode:
         MOVS     R0,#+0
 ??AppS2wCmd_Wphymode_2:
         POP      {R1-R3,PC}       ;; return
-          CFI EndBlock cfiBlock520
+          CFI EndBlock cfiBlock519
 // 8939     
 // 8940 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond521 Using cfiCommon0
+          CFI Block cfiCond520 Using cfiCommon0
           CFI Function AppS2wCmd_Wretry
           CFI NoCalls
           CFI NoCalls
@@ -24326,75 +24288,75 @@ AppS2wCmd_Wphymode:
           CFI Conditional ??CrossCallReturnLabel_436
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
+          CFI Block cfiCond521 Using cfiCommon0
+          CFI (cfiCond521) Function AppS2wCmd_TkipContrMsrStart
+          CFI (cfiCond521) NoCalls AppS2wCmd_TkipContrMsrStart
+          CFI (cfiCond521) NoCalls AppS2wCmd_Wphymode
+          CFI (cfiCond521) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiCond521) NoCalls AppS2wCmd_Wretry
+          CFI (cfiCond521) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond521) Conditional ??CrossCallReturnLabel_437
+          CFI (cfiCond521) R4 Frame(CFA, -8)
+          CFI (cfiCond521) R14 Frame(CFA, -4)
+          CFI (cfiCond521) CFA R13+16
           CFI Block cfiCond522 Using cfiCommon0
-          CFI (cfiCond522) Function AppS2wCmd_TkipContrMsrStart
-          CFI (cfiCond522) NoCalls AppS2wCmd_Wretry
-          CFI (cfiCond522) NoCalls AppS2wCmd_Wphymode
-          CFI (cfiCond522) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond522) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiCond522) Function AppS2wCmd_Wphymode
           CFI (cfiCond522) NoCalls AppS2wCmd_TkipContrMsrStart
-          CFI (cfiCond522) Conditional ??CrossCallReturnLabel_437
-          CFI (cfiCond522) R4 Frame(CFA, -8)
+          CFI (cfiCond522) NoCalls AppS2wCmd_Wphymode
+          CFI (cfiCond522) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiCond522) NoCalls AppS2wCmd_Wretry
+          CFI (cfiCond522) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond522) Conditional ??CrossCallReturnLabel_438
           CFI (cfiCond522) R14 Frame(CFA, -4)
           CFI (cfiCond522) CFA R13+16
           CFI Block cfiCond523 Using cfiCommon0
-          CFI (cfiCond523) Function AppS2wCmd_Wphymode
-          CFI (cfiCond523) NoCalls AppS2wCmd_Wretry
-          CFI (cfiCond523) NoCalls AppS2wCmd_Wphymode
-          CFI (cfiCond523) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond523) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiCond523) Function AppS2wCmd_NcmAuto
           CFI (cfiCond523) NoCalls AppS2wCmd_TkipContrMsrStart
-          CFI (cfiCond523) Conditional ??CrossCallReturnLabel_438
+          CFI (cfiCond523) NoCalls AppS2wCmd_Wphymode
+          CFI (cfiCond523) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiCond523) NoCalls AppS2wCmd_Wretry
+          CFI (cfiCond523) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond523) Conditional ??CrossCallReturnLabel_439
+          CFI (cfiCond523) R4 Frame(CFA, -36)
+          CFI (cfiCond523) R5 Frame(CFA, -32)
+          CFI (cfiCond523) R6 Frame(CFA, -28)
+          CFI (cfiCond523) R7 Frame(CFA, -24)
+          CFI (cfiCond523) R8 Frame(CFA, -20)
+          CFI (cfiCond523) R9 Frame(CFA, -16)
+          CFI (cfiCond523) R10 Frame(CFA, -12)
+          CFI (cfiCond523) R11 Frame(CFA, -8)
           CFI (cfiCond523) R14 Frame(CFA, -4)
-          CFI (cfiCond523) CFA R13+16
+          CFI (cfiCond523) CFA R13+1344
           CFI Block cfiCond524 Using cfiCommon0
-          CFI (cfiCond524) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond524) NoCalls AppS2wCmd_Wretry
-          CFI (cfiCond524) NoCalls AppS2wCmd_Wphymode
-          CFI (cfiCond524) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond524) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiCond524) Function AppS2wCmd_BaBitMapSet
           CFI (cfiCond524) NoCalls AppS2wCmd_TkipContrMsrStart
-          CFI (cfiCond524) Conditional ??CrossCallReturnLabel_439
-          CFI (cfiCond524) R4 Frame(CFA, -36)
-          CFI (cfiCond524) R5 Frame(CFA, -32)
-          CFI (cfiCond524) R6 Frame(CFA, -28)
-          CFI (cfiCond524) R7 Frame(CFA, -24)
-          CFI (cfiCond524) R8 Frame(CFA, -20)
-          CFI (cfiCond524) R9 Frame(CFA, -16)
-          CFI (cfiCond524) R10 Frame(CFA, -12)
-          CFI (cfiCond524) R11 Frame(CFA, -8)
+          CFI (cfiCond524) NoCalls AppS2wCmd_Wphymode
+          CFI (cfiCond524) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiCond524) NoCalls AppS2wCmd_Wretry
+          CFI (cfiCond524) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond524) Conditional ??CrossCallReturnLabel_440
           CFI (cfiCond524) R14 Frame(CFA, -4)
-          CFI (cfiCond524) CFA R13+1344
-          CFI Block cfiCond525 Using cfiCommon0
-          CFI (cfiCond525) Function AppS2wCmd_BaBitMapSet
-          CFI (cfiCond525) NoCalls AppS2wCmd_Wretry
-          CFI (cfiCond525) NoCalls AppS2wCmd_Wphymode
-          CFI (cfiCond525) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond525) NoCalls AppS2wCmd_BaBitMapSet
-          CFI (cfiCond525) NoCalls AppS2wCmd_TkipContrMsrStart
-          CFI (cfiCond525) Conditional ??CrossCallReturnLabel_440
-          CFI (cfiCond525) R14 Frame(CFA, -4)
-          CFI (cfiCond525) CFA R13+16
-          CFI Block cfiPicker526 Using cfiCommon1
-          CFI (cfiPicker526) NoFunction
-          CFI (cfiPicker526) NoCalls AppS2wCmd_Wretry
-          CFI (cfiPicker526) NoCalls AppS2wCmd_Wphymode
-          CFI (cfiPicker526) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiPicker526) NoCalls AppS2wCmd_BaBitMapSet
-          CFI (cfiPicker526) NoCalls AppS2wCmd_TkipContrMsrStart
-          CFI (cfiPicker526) Picker
+          CFI (cfiCond524) CFA R13+16
+          CFI Block cfiPicker525 Using cfiCommon1
+          CFI (cfiPicker525) NoFunction
+          CFI (cfiPicker525) NoCalls AppS2wCmd_TkipContrMsrStart
+          CFI (cfiPicker525) NoCalls AppS2wCmd_Wphymode
+          CFI (cfiPicker525) NoCalls AppS2wCmd_BaBitMapSet
+          CFI (cfiPicker525) NoCalls AppS2wCmd_Wretry
+          CFI (cfiPicker525) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiPicker525) Picker
         THUMB
 ?Subroutine74:
         LDR.W    R0,??DataTable464_1
         LDR      R0,[R0, #+0]
         ADD      R0,R0,#+3808
         BX       LR
+          CFI EndBlock cfiCond520
           CFI EndBlock cfiCond521
           CFI EndBlock cfiCond522
           CFI EndBlock cfiCond523
           CFI EndBlock cfiCond524
-          CFI EndBlock cfiCond525
-          CFI EndBlock cfiPicker526
+          CFI EndBlock cfiPicker525
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -24421,145 +24383,145 @@ AppS2wCmd_Wphymode:
         DC32     s2wCurrent+0x18C
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond527 Using cfiCommon0
+          CFI Block cfiCond526 Using cfiCommon0
           CFI Function AppS2wCmd_PowerSave
           CFI Conditional ??CrossCallReturnLabel_158
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
-          CFI Block cfiCond528 Using cfiCommon0
-          CFI (cfiCond528) Function AppS2wCmd_BaBitMapSet
-          CFI (cfiCond528) Conditional ??CrossCallReturnLabel_157
-          CFI (cfiCond528) R14 Frame(CFA, -4)
-          CFI (cfiCond528) CFA R13+16
-          CFI Block cfiPicker529 Using cfiCommon1
-          CFI (cfiPicker529) NoFunction
-          CFI (cfiPicker529) Picker
+          CFI Block cfiCond527 Using cfiCommon0
+          CFI (cfiCond527) Function AppS2wCmd_BaBitMapSet
+          CFI (cfiCond527) Conditional ??CrossCallReturnLabel_157
+          CFI (cfiCond527) R14 Frame(CFA, -4)
+          CFI (cfiCond527) CFA R13+16
+          CFI Block cfiPicker528 Using cfiCommon1
+          CFI (cfiPicker528) NoFunction
+          CFI (cfiPicker528) Picker
         THUMB
 ?Subroutine34:
         STR      R0,[SP, #+4]
+          CFI Block cfiCond529 Using cfiCommon0
+          CFI (cfiCond529) Function AppS2wCmd_HttpClientConfigDel
+          CFI (cfiCond529) Conditional ??CrossCallReturnLabel_156
+          CFI (cfiCond529) R4 Frame(CFA, -20)
+          CFI (cfiCond529) R5 Frame(CFA, -16)
+          CFI (cfiCond529) R6 Frame(CFA, -12)
+          CFI (cfiCond529) R7 Frame(CFA, -8)
+          CFI (cfiCond529) R14 Frame(CFA, -4)
+          CFI (cfiCond529) CFA R13+32
           CFI Block cfiCond530 Using cfiCommon0
-          CFI (cfiCond530) Function AppS2wCmd_HttpClientConfigDel
-          CFI (cfiCond530) Conditional ??CrossCallReturnLabel_156
-          CFI (cfiCond530) R4 Frame(CFA, -20)
-          CFI (cfiCond530) R5 Frame(CFA, -16)
-          CFI (cfiCond530) R6 Frame(CFA, -12)
-          CFI (cfiCond530) R7 Frame(CFA, -8)
+          CFI (cfiCond530) Function AppS2wCmd_PowerSave
+          CFI (cfiCond530) Conditional ??CrossCallReturnLabel_155
           CFI (cfiCond530) R14 Frame(CFA, -4)
-          CFI (cfiCond530) CFA R13+32
+          CFI (cfiCond530) CFA R13+16
           CFI Block cfiCond531 Using cfiCommon0
-          CFI (cfiCond531) Function AppS2wCmd_PowerSave
-          CFI (cfiCond531) Conditional ??CrossCallReturnLabel_155
+          CFI (cfiCond531) Function AppS2wCmd_UartFifoLevel
+          CFI (cfiCond531) Conditional ??CrossCallReturnLabel_154
+          CFI (cfiCond531) R4 Frame(CFA, -12)
+          CFI (cfiCond531) R5 Frame(CFA, -8)
           CFI (cfiCond531) R14 Frame(CFA, -4)
-          CFI (cfiCond531) CFA R13+16
+          CFI (cfiCond531) CFA R13+24
           CFI Block cfiCond532 Using cfiCommon0
           CFI (cfiCond532) Function AppS2wCmd_UartFifoLevel
-          CFI (cfiCond532) Conditional ??CrossCallReturnLabel_154
+          CFI (cfiCond532) Conditional ??CrossCallReturnLabel_153
           CFI (cfiCond532) R4 Frame(CFA, -12)
           CFI (cfiCond532) R5 Frame(CFA, -8)
           CFI (cfiCond532) R14 Frame(CFA, -4)
           CFI (cfiCond532) CFA R13+24
           CFI Block cfiCond533 Using cfiCommon0
-          CFI (cfiCond533) Function AppS2wCmd_UartFifoLevel
-          CFI (cfiCond533) Conditional ??CrossCallReturnLabel_153
-          CFI (cfiCond533) R4 Frame(CFA, -12)
-          CFI (cfiCond533) R5 Frame(CFA, -8)
+          CFI (cfiCond533) Function AppS2wCmd_AssocPSModeSet
+          CFI (cfiCond533) Conditional ??CrossCallReturnLabel_152
           CFI (cfiCond533) R14 Frame(CFA, -4)
-          CFI (cfiCond533) CFA R13+24
+          CFI (cfiCond533) CFA R13+16
           CFI Block cfiCond534 Using cfiCommon0
-          CFI (cfiCond534) Function AppS2wCmd_AssocPSModeSet
-          CFI (cfiCond534) Conditional ??CrossCallReturnLabel_152
+          CFI (cfiCond534) Function AppS2wCmd_BeaconMissThresholdSet
+          CFI (cfiCond534) Conditional ??CrossCallReturnLabel_151
           CFI (cfiCond534) R14 Frame(CFA, -4)
           CFI (cfiCond534) CFA R13+16
           CFI Block cfiCond535 Using cfiCommon0
-          CFI (cfiCond535) Function AppS2wCmd_BeaconMissThresholdSet
-          CFI (cfiCond535) Conditional ??CrossCallReturnLabel_151
+          CFI (cfiCond535) Function AppS2wCmd_WlanRecvFiltrSet
+          CFI (cfiCond535) Conditional ??CrossCallReturnLabel_150
           CFI (cfiCond535) R14 Frame(CFA, -4)
           CFI (cfiCond535) CFA R13+16
           CFI Block cfiCond536 Using cfiCommon0
-          CFI (cfiCond536) Function AppS2wCmd_WlanRecvFiltrSet
-          CFI (cfiCond536) Conditional ??CrossCallReturnLabel_150
+          CFI (cfiCond536) Function AppS2wCmd_RtsEnable
+          CFI (cfiCond536) Conditional ??CrossCallReturnLabel_149
           CFI (cfiCond536) R14 Frame(CFA, -4)
           CFI (cfiCond536) CFA R13+16
           CFI Block cfiCond537 Using cfiCommon0
           CFI (cfiCond537) Function AppS2wCmd_RtsEnable
-          CFI (cfiCond537) Conditional ??CrossCallReturnLabel_149
+          CFI (cfiCond537) Conditional ??CrossCallReturnLabel_148
           CFI (cfiCond537) R14 Frame(CFA, -4)
           CFI (cfiCond537) CFA R13+16
           CFI Block cfiCond538 Using cfiCommon0
-          CFI (cfiCond538) Function AppS2wCmd_RtsEnable
-          CFI (cfiCond538) Conditional ??CrossCallReturnLabel_148
+          CFI (cfiCond538) Function AppS2wCmd_FrameTxFailCntLmitSet
+          CFI (cfiCond538) Conditional ??CrossCallReturnLabel_147
           CFI (cfiCond538) R14 Frame(CFA, -4)
           CFI (cfiCond538) CFA R13+16
           CFI Block cfiCond539 Using cfiCommon0
-          CFI (cfiCond539) Function AppS2wCmd_FrameTxFailCntLmitSet
-          CFI (cfiCond539) Conditional ??CrossCallReturnLabel_147
+          CFI (cfiCond539) Function AppS2wCmd_Wphymode
+          CFI (cfiCond539) Conditional ??CrossCallReturnLabel_146
           CFI (cfiCond539) R14 Frame(CFA, -4)
           CFI (cfiCond539) CFA R13+16
           CFI Block cfiCond540 Using cfiCommon0
-          CFI (cfiCond540) Function AppS2wCmd_Wphymode
-          CFI (cfiCond540) Conditional ??CrossCallReturnLabel_146
+          CFI (cfiCond540) Function AppS2wCmd_IpMulticastJoin
+          CFI (cfiCond540) Conditional ??CrossCallReturnLabel_145
           CFI (cfiCond540) R14 Frame(CFA, -4)
           CFI (cfiCond540) CFA R13+16
           CFI Block cfiCond541 Using cfiCommon0
-          CFI (cfiCond541) Function AppS2wCmd_IpMulticastJoin
-          CFI (cfiCond541) Conditional ??CrossCallReturnLabel_145
+          CFI (cfiCond541) Function AppS2wCmd_IpMulticastLeave
+          CFI (cfiCond541) Conditional ??CrossCallReturnLabel_144
           CFI (cfiCond541) R14 Frame(CFA, -4)
           CFI (cfiCond541) CFA R13+16
           CFI Block cfiCond542 Using cfiCommon0
-          CFI (cfiCond542) Function AppS2wCmd_IpMulticastLeave
-          CFI (cfiCond542) Conditional ??CrossCallReturnLabel_144
+          CFI (cfiCond542) Function AppS2wCmd_AdcConf
+          CFI (cfiCond542) Conditional ??CrossCallReturnLabel_143
+          CFI (cfiCond542) R4 Frame(CFA, -12)
+          CFI (cfiCond542) R5 Frame(CFA, -8)
           CFI (cfiCond542) R14 Frame(CFA, -4)
-          CFI (cfiCond542) CFA R13+16
+          CFI (cfiCond542) CFA R13+24
           CFI Block cfiCond543 Using cfiCommon0
-          CFI (cfiCond543) Function AppS2wCmd_AdcConf
-          CFI (cfiCond543) Conditional ??CrossCallReturnLabel_143
+          CFI (cfiCond543) Function AppS2wCmd_CoapSetOption
+          CFI (cfiCond543) Conditional ??CrossCallReturnLabel_142
           CFI (cfiCond543) R4 Frame(CFA, -12)
           CFI (cfiCond543) R5 Frame(CFA, -8)
           CFI (cfiCond543) R14 Frame(CFA, -4)
           CFI (cfiCond543) CFA R13+24
           CFI Block cfiCond544 Using cfiCommon0
           CFI (cfiCond544) Function AppS2wCmd_CoapSetOption
-          CFI (cfiCond544) Conditional ??CrossCallReturnLabel_142
+          CFI (cfiCond544) Conditional ??CrossCallReturnLabel_141
           CFI (cfiCond544) R4 Frame(CFA, -12)
           CFI (cfiCond544) R5 Frame(CFA, -8)
           CFI (cfiCond544) R14 Frame(CFA, -4)
           CFI (cfiCond544) CFA R13+24
           CFI Block cfiCond545 Using cfiCommon0
-          CFI (cfiCond545) Function AppS2wCmd_CoapSetOption
-          CFI (cfiCond545) Conditional ??CrossCallReturnLabel_141
-          CFI (cfiCond545) R4 Frame(CFA, -12)
-          CFI (cfiCond545) R5 Frame(CFA, -8)
+          CFI (cfiCond545) Function AppS2wCmd_CoapRemoveOption
+          CFI (cfiCond545) Conditional ??CrossCallReturnLabel_140
+          CFI (cfiCond545) R4 Frame(CFA, -20)
+          CFI (cfiCond545) R5 Frame(CFA, -16)
+          CFI (cfiCond545) R6 Frame(CFA, -12)
+          CFI (cfiCond545) R7 Frame(CFA, -8)
           CFI (cfiCond545) R14 Frame(CFA, -4)
-          CFI (cfiCond545) CFA R13+24
+          CFI (cfiCond545) CFA R13+32
           CFI Block cfiCond546 Using cfiCommon0
-          CFI (cfiCond546) Function AppS2wCmd_CoapRemoveOption
-          CFI (cfiCond546) Conditional ??CrossCallReturnLabel_140
-          CFI (cfiCond546) R4 Frame(CFA, -20)
-          CFI (cfiCond546) R5 Frame(CFA, -16)
-          CFI (cfiCond546) R6 Frame(CFA, -12)
-          CFI (cfiCond546) R7 Frame(CFA, -8)
+          CFI (cfiCond546) Function AppS2wCmd_BaBitMapSet
+          CFI (cfiCond546) Conditional ??CrossCallReturnLabel_139
           CFI (cfiCond546) R14 Frame(CFA, -4)
-          CFI (cfiCond546) CFA R13+32
+          CFI (cfiCond546) CFA R13+16
           CFI Block cfiCond547 Using cfiCommon0
-          CFI (cfiCond547) Function AppS2wCmd_BaBitMapSet
-          CFI (cfiCond547) Conditional ??CrossCallReturnLabel_139
+          CFI (cfiCond547) Function AppS2wCmd_Hibernate
+          CFI (cfiCond547) Conditional ??CrossCallReturnLabel_138
           CFI (cfiCond547) R14 Frame(CFA, -4)
           CFI (cfiCond547) CFA R13+16
           CFI Block cfiCond548 Using cfiCommon0
           CFI (cfiCond548) Function AppS2wCmd_Hibernate
-          CFI (cfiCond548) Conditional ??CrossCallReturnLabel_138
+          CFI (cfiCond548) Conditional ??CrossCallReturnLabel_137
           CFI (cfiCond548) R14 Frame(CFA, -4)
           CFI (cfiCond548) CFA R13+16
           CFI Block cfiCond549 Using cfiCommon0
-          CFI (cfiCond549) Function AppS2wCmd_Hibernate
-          CFI (cfiCond549) Conditional ??CrossCallReturnLabel_137
+          CFI (cfiCond549) Function AppS2wCmd_TempGet
+          CFI (cfiCond549) Conditional ??CrossCallReturnLabel_136
           CFI (cfiCond549) R14 Frame(CFA, -4)
           CFI (cfiCond549) CFA R13+16
-          CFI Block cfiCond550 Using cfiCommon0
-          CFI (cfiCond550) Function AppS2wCmd_TempGet
-          CFI (cfiCond550) Conditional ??CrossCallReturnLabel_136
-          CFI (cfiCond550) R14 Frame(CFA, -4)
-          CFI (cfiCond550) CFA R13+16
 ??Subroutine34_0:
         ADD      R0,SP,#+8
           CFI FunCall AppS2wCmd_PowerSave AppS2wParse_NextParamGet
@@ -24586,9 +24548,10 @@ AppS2wCmd_Wphymode:
           CFI FunCall AppS2wCmd_Hibernate AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_TempGet AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond526
           CFI EndBlock cfiCond527
-          CFI EndBlock cfiCond528
-          CFI EndBlock cfiPicker529
+          CFI EndBlock cfiPicker528
+          CFI EndBlock cfiCond529
           CFI EndBlock cfiCond530
           CFI EndBlock cfiCond531
           CFI EndBlock cfiCond532
@@ -24609,7 +24572,6 @@ AppS2wCmd_Wphymode:
           CFI EndBlock cfiCond547
           CFI EndBlock cfiCond548
           CFI EndBlock cfiCond549
-          CFI EndBlock cfiCond550
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
 // 8941 
@@ -24645,7 +24607,7 @@ dhcpv6ClientStack:
         DS8 2048
 
         SECTION `.text`:CODE:NOROOT(2)
-          CFI Block cfiBlock551 Using cfiCommon0
+          CFI Block cfiBlock550 Using cfiCommon0
           CFI Function AppS2wCmd_OtaFwupConf
         THUMB
 // 8944 UINT8
@@ -25055,7 +25017,7 @@ AppS2wCmd_OtaFwupConf:
 ??AppS2wCmd_OtaFwupConf_13:
         MOVS     R0,#+2
         B.N      ??AppS2wCmd_OtaFwupConf_7
-          CFI EndBlock cfiBlock551
+          CFI EndBlock cfiBlock550
 // 9105 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -25078,7 +25040,7 @@ AppS2wCmd_OtaFwupConf:
         DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond552 Using cfiCommon0
+          CFI Block cfiCond551 Using cfiCommon0
           CFI Function AppS2wCmd_OtaFwupConf
           CFI Conditional ??CrossCallReturnLabel_432
           CFI R4 Frame(CFA, -16)
@@ -25086,46 +25048,46 @@ AppS2wCmd_OtaFwupConf:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+40
-          CFI Block cfiCond553 Using cfiCommon0
-          CFI (cfiCond553) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond553) Conditional ??CrossCallReturnLabel_431
-          CFI (cfiCond553) R4 Frame(CFA, -16)
-          CFI (cfiCond553) R5 Frame(CFA, -12)
-          CFI (cfiCond553) R6 Frame(CFA, -8)
-          CFI (cfiCond553) R14 Frame(CFA, -4)
-          CFI (cfiCond553) CFA R13+40
-          CFI Block cfiPicker554 Using cfiCommon1
-          CFI (cfiPicker554) NoFunction
-          CFI (cfiPicker554) Picker
+          CFI Block cfiCond552 Using cfiCommon0
+          CFI (cfiCond552) Function AppS2wCmd_OtaFwupConf
+          CFI (cfiCond552) Conditional ??CrossCallReturnLabel_431
+          CFI (cfiCond552) R4 Frame(CFA, -16)
+          CFI (cfiCond552) R5 Frame(CFA, -12)
+          CFI (cfiCond552) R6 Frame(CFA, -8)
+          CFI (cfiCond552) R14 Frame(CFA, -4)
+          CFI (cfiCond552) CFA R13+40
+          CFI Block cfiPicker553 Using cfiCommon1
+          CFI (cfiPicker553) NoFunction
+          CFI (cfiPicker553) Picker
         THUMB
 ?Subroutine72:
         MOV      R1,R5
-          CFI Block cfiCond555 Using cfiCommon0
-          CFI (cfiCond555) Function AppS2wCmd_HttpClientOpen
-          CFI (cfiCond555) Conditional ??CrossCallReturnLabel_430
-          CFI (cfiCond555) R4 Frame(CFA, -36)
-          CFI (cfiCond555) R5 Frame(CFA, -32)
-          CFI (cfiCond555) R6 Frame(CFA, -28)
-          CFI (cfiCond555) R7 Frame(CFA, -24)
-          CFI (cfiCond555) R8 Frame(CFA, -20)
-          CFI (cfiCond555) R9 Frame(CFA, -16)
-          CFI (cfiCond555) R10 Frame(CFA, -12)
-          CFI (cfiCond555) R11 Frame(CFA, -8)
-          CFI (cfiCond555) R14 Frame(CFA, -4)
-          CFI (cfiCond555) CFA R13+64
+          CFI Block cfiCond554 Using cfiCommon0
+          CFI (cfiCond554) Function AppS2wCmd_HttpClientOpen
+          CFI (cfiCond554) Conditional ??CrossCallReturnLabel_430
+          CFI (cfiCond554) R4 Frame(CFA, -36)
+          CFI (cfiCond554) R5 Frame(CFA, -32)
+          CFI (cfiCond554) R6 Frame(CFA, -28)
+          CFI (cfiCond554) R7 Frame(CFA, -24)
+          CFI (cfiCond554) R8 Frame(CFA, -20)
+          CFI (cfiCond554) R9 Frame(CFA, -16)
+          CFI (cfiCond554) R10 Frame(CFA, -12)
+          CFI (cfiCond554) R11 Frame(CFA, -8)
+          CFI (cfiCond554) R14 Frame(CFA, -4)
+          CFI (cfiCond554) CFA R13+64
 ??Subroutine72_0:
         MOVS     R0,#+3
           CFI FunCall AppS2wCmd_OtaFwupConf inet_pton
           CFI FunCall AppS2wCmd_OtaFwupConf inet_pton
           CFI FunCall AppS2wCmd_HttpClientOpen inet_pton
         B.W      inet_pton
+          CFI EndBlock cfiCond551
           CFI EndBlock cfiCond552
-          CFI EndBlock cfiCond553
-          CFI EndBlock cfiPicker554
-          CFI EndBlock cfiCond555
+          CFI EndBlock cfiPicker553
+          CFI EndBlock cfiCond554
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond556 Using cfiCommon0
+          CFI Block cfiCond555 Using cfiCommon0
           CFI Function AppS2wCmd_OtaFwupConf
           CFI Conditional ??CrossCallReturnLabel_429
           CFI R4 Frame(CFA, -16)
@@ -25133,46 +25095,46 @@ AppS2wCmd_OtaFwupConf:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+40
-          CFI Block cfiCond557 Using cfiCommon0
-          CFI (cfiCond557) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond557) Conditional ??CrossCallReturnLabel_428
-          CFI (cfiCond557) R4 Frame(CFA, -16)
-          CFI (cfiCond557) R5 Frame(CFA, -12)
-          CFI (cfiCond557) R6 Frame(CFA, -8)
-          CFI (cfiCond557) R14 Frame(CFA, -4)
-          CFI (cfiCond557) CFA R13+40
-          CFI Block cfiPicker558 Using cfiCommon1
-          CFI (cfiPicker558) NoFunction
-          CFI (cfiPicker558) Picker
+          CFI Block cfiCond556 Using cfiCommon0
+          CFI (cfiCond556) Function AppS2wCmd_OtaFwupConf
+          CFI (cfiCond556) Conditional ??CrossCallReturnLabel_428
+          CFI (cfiCond556) R4 Frame(CFA, -16)
+          CFI (cfiCond556) R5 Frame(CFA, -12)
+          CFI (cfiCond556) R6 Frame(CFA, -8)
+          CFI (cfiCond556) R14 Frame(CFA, -4)
+          CFI (cfiCond556) CFA R13+40
+          CFI Block cfiPicker557 Using cfiCommon1
+          CFI (cfiPicker557) NoFunction
+          CFI (cfiPicker557) Picker
         THUMB
 ?Subroutine71:
         MOV      R1,R5
-          CFI Block cfiCond559 Using cfiCommon0
-          CFI (cfiCond559) Function AppS2wCmd_HttpClientOpen
-          CFI (cfiCond559) Conditional ??CrossCallReturnLabel_427
-          CFI (cfiCond559) R4 Frame(CFA, -36)
-          CFI (cfiCond559) R5 Frame(CFA, -32)
-          CFI (cfiCond559) R6 Frame(CFA, -28)
-          CFI (cfiCond559) R7 Frame(CFA, -24)
-          CFI (cfiCond559) R8 Frame(CFA, -20)
-          CFI (cfiCond559) R9 Frame(CFA, -16)
-          CFI (cfiCond559) R10 Frame(CFA, -12)
-          CFI (cfiCond559) R11 Frame(CFA, -8)
-          CFI (cfiCond559) R14 Frame(CFA, -4)
-          CFI (cfiCond559) CFA R13+64
+          CFI Block cfiCond558 Using cfiCommon0
+          CFI (cfiCond558) Function AppS2wCmd_HttpClientOpen
+          CFI (cfiCond558) Conditional ??CrossCallReturnLabel_427
+          CFI (cfiCond558) R4 Frame(CFA, -36)
+          CFI (cfiCond558) R5 Frame(CFA, -32)
+          CFI (cfiCond558) R6 Frame(CFA, -28)
+          CFI (cfiCond558) R7 Frame(CFA, -24)
+          CFI (cfiCond558) R8 Frame(CFA, -20)
+          CFI (cfiCond558) R9 Frame(CFA, -16)
+          CFI (cfiCond558) R10 Frame(CFA, -12)
+          CFI (cfiCond558) R11 Frame(CFA, -8)
+          CFI (cfiCond558) R14 Frame(CFA, -4)
+          CFI (cfiCond558) CFA R13+64
 ??Subroutine71_0:
         MOVS     R0,#+2
           CFI FunCall AppS2wCmd_OtaFwupConf inet_pton
           CFI FunCall AppS2wCmd_OtaFwupConf inet_pton
           CFI FunCall AppS2wCmd_HttpClientOpen inet_pton
         B.W      inet_pton
+          CFI EndBlock cfiCond555
           CFI EndBlock cfiCond556
-          CFI EndBlock cfiCond557
-          CFI EndBlock cfiPicker558
-          CFI EndBlock cfiCond559
+          CFI EndBlock cfiPicker557
+          CFI EndBlock cfiCond558
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond560 Using cfiCommon0
+          CFI Block cfiCond559 Using cfiCommon0
           CFI Function AppS2wCmd_OtaFwupConf
           CFI Conditional ??CrossCallReturnLabel_415
           CFI R4 Frame(CFA, -16)
@@ -25180,9 +25142,17 @@ AppS2wCmd_OtaFwupConf:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+40
+          CFI Block cfiCond560 Using cfiCommon0
+          CFI (cfiCond560) Function AppS2wCmd_OtaFwupConf
+          CFI (cfiCond560) Conditional ??CrossCallReturnLabel_414
+          CFI (cfiCond560) R4 Frame(CFA, -16)
+          CFI (cfiCond560) R5 Frame(CFA, -12)
+          CFI (cfiCond560) R6 Frame(CFA, -8)
+          CFI (cfiCond560) R14 Frame(CFA, -4)
+          CFI (cfiCond560) CFA R13+40
           CFI Block cfiCond561 Using cfiCommon0
           CFI (cfiCond561) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond561) Conditional ??CrossCallReturnLabel_414
+          CFI (cfiCond561) Conditional ??CrossCallReturnLabel_413
           CFI (cfiCond561) R4 Frame(CFA, -16)
           CFI (cfiCond561) R5 Frame(CFA, -12)
           CFI (cfiCond561) R6 Frame(CFA, -8)
@@ -25190,7 +25160,7 @@ AppS2wCmd_OtaFwupConf:
           CFI (cfiCond561) CFA R13+40
           CFI Block cfiCond562 Using cfiCommon0
           CFI (cfiCond562) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond562) Conditional ??CrossCallReturnLabel_413
+          CFI (cfiCond562) Conditional ??CrossCallReturnLabel_412
           CFI (cfiCond562) R4 Frame(CFA, -16)
           CFI (cfiCond562) R5 Frame(CFA, -12)
           CFI (cfiCond562) R6 Frame(CFA, -8)
@@ -25198,7 +25168,7 @@ AppS2wCmd_OtaFwupConf:
           CFI (cfiCond562) CFA R13+40
           CFI Block cfiCond563 Using cfiCommon0
           CFI (cfiCond563) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond563) Conditional ??CrossCallReturnLabel_412
+          CFI (cfiCond563) Conditional ??CrossCallReturnLabel_411
           CFI (cfiCond563) R4 Frame(CFA, -16)
           CFI (cfiCond563) R5 Frame(CFA, -12)
           CFI (cfiCond563) R6 Frame(CFA, -8)
@@ -25206,7 +25176,7 @@ AppS2wCmd_OtaFwupConf:
           CFI (cfiCond563) CFA R13+40
           CFI Block cfiCond564 Using cfiCommon0
           CFI (cfiCond564) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond564) Conditional ??CrossCallReturnLabel_411
+          CFI (cfiCond564) Conditional ??CrossCallReturnLabel_410
           CFI (cfiCond564) R4 Frame(CFA, -16)
           CFI (cfiCond564) R5 Frame(CFA, -12)
           CFI (cfiCond564) R6 Frame(CFA, -8)
@@ -25214,7 +25184,7 @@ AppS2wCmd_OtaFwupConf:
           CFI (cfiCond564) CFA R13+40
           CFI Block cfiCond565 Using cfiCommon0
           CFI (cfiCond565) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond565) Conditional ??CrossCallReturnLabel_410
+          CFI (cfiCond565) Conditional ??CrossCallReturnLabel_409
           CFI (cfiCond565) R4 Frame(CFA, -16)
           CFI (cfiCond565) R5 Frame(CFA, -12)
           CFI (cfiCond565) R6 Frame(CFA, -8)
@@ -25222,7 +25192,7 @@ AppS2wCmd_OtaFwupConf:
           CFI (cfiCond565) CFA R13+40
           CFI Block cfiCond566 Using cfiCommon0
           CFI (cfiCond566) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond566) Conditional ??CrossCallReturnLabel_409
+          CFI (cfiCond566) Conditional ??CrossCallReturnLabel_408
           CFI (cfiCond566) R4 Frame(CFA, -16)
           CFI (cfiCond566) R5 Frame(CFA, -12)
           CFI (cfiCond566) R6 Frame(CFA, -8)
@@ -25230,23 +25200,15 @@ AppS2wCmd_OtaFwupConf:
           CFI (cfiCond566) CFA R13+40
           CFI Block cfiCond567 Using cfiCommon0
           CFI (cfiCond567) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond567) Conditional ??CrossCallReturnLabel_408
+          CFI (cfiCond567) Conditional ??CrossCallReturnLabel_407
           CFI (cfiCond567) R4 Frame(CFA, -16)
           CFI (cfiCond567) R5 Frame(CFA, -12)
           CFI (cfiCond567) R6 Frame(CFA, -8)
           CFI (cfiCond567) R14 Frame(CFA, -4)
           CFI (cfiCond567) CFA R13+40
-          CFI Block cfiCond568 Using cfiCommon0
-          CFI (cfiCond568) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond568) Conditional ??CrossCallReturnLabel_407
-          CFI (cfiCond568) R4 Frame(CFA, -16)
-          CFI (cfiCond568) R5 Frame(CFA, -12)
-          CFI (cfiCond568) R6 Frame(CFA, -8)
-          CFI (cfiCond568) R14 Frame(CFA, -4)
-          CFI (cfiCond568) CFA R13+40
-          CFI Block cfiPicker569 Using cfiCommon1
-          CFI (cfiPicker569) NoFunction
-          CFI (cfiPicker569) Picker
+          CFI Block cfiPicker568 Using cfiCommon1
+          CFI (cfiPicker568) NoFunction
+          CFI (cfiPicker568) Picker
         THUMB
 ?Subroutine68:
         MOV      R0,R5
@@ -25260,6 +25222,7 @@ AppS2wCmd_OtaFwupConf:
           CFI FunCall AppS2wCmd_OtaFwupConf strlen
           CFI FunCall AppS2wCmd_OtaFwupConf strlen
         B.W      strlen
+          CFI EndBlock cfiCond559
           CFI EndBlock cfiCond560
           CFI EndBlock cfiCond561
           CFI EndBlock cfiCond562
@@ -25268,11 +25231,10 @@ AppS2wCmd_OtaFwupConf:
           CFI EndBlock cfiCond565
           CFI EndBlock cfiCond566
           CFI EndBlock cfiCond567
-          CFI EndBlock cfiCond568
-          CFI EndBlock cfiPicker569
+          CFI EndBlock cfiPicker568
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond570 Using cfiCommon0
+          CFI Block cfiCond569 Using cfiCommon0
           CFI Function AppS2wCmd_OtaFwupConf
           CFI Conditional ??CrossCallReturnLabel_354
           CFI R4 Frame(CFA, -16)
@@ -25280,23 +25242,31 @@ AppS2wCmd_OtaFwupConf:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+40
-          CFI Block cfiCond571 Using cfiCommon0
-          CFI (cfiCond571) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond571) Conditional ??CrossCallReturnLabel_353
-          CFI (cfiCond571) R4 Frame(CFA, -16)
-          CFI (cfiCond571) R5 Frame(CFA, -12)
-          CFI (cfiCond571) R6 Frame(CFA, -8)
-          CFI (cfiCond571) R14 Frame(CFA, -4)
-          CFI (cfiCond571) CFA R13+40
-          CFI Block cfiPicker572 Using cfiCommon1
-          CFI (cfiPicker572) NoFunction
-          CFI (cfiPicker572) Picker
+          CFI Block cfiCond570 Using cfiCommon0
+          CFI (cfiCond570) Function AppS2wCmd_OtaFwupConf
+          CFI (cfiCond570) Conditional ??CrossCallReturnLabel_353
+          CFI (cfiCond570) R4 Frame(CFA, -16)
+          CFI (cfiCond570) R5 Frame(CFA, -12)
+          CFI (cfiCond570) R6 Frame(CFA, -8)
+          CFI (cfiCond570) R14 Frame(CFA, -4)
+          CFI (cfiCond570) CFA R13+40
+          CFI Block cfiPicker571 Using cfiCommon1
+          CFI (cfiPicker571) NoFunction
+          CFI (cfiPicker571) Picker
         THUMB
 ?Subroutine55:
         ADD      R1,SP,#+4
+          CFI Block cfiCond572 Using cfiCommon0
+          CFI (cfiCond572) Function AppS2wCmd_OtaFwupConf
+          CFI (cfiCond572) Conditional ??CrossCallReturnLabel_352
+          CFI (cfiCond572) R4 Frame(CFA, -16)
+          CFI (cfiCond572) R5 Frame(CFA, -12)
+          CFI (cfiCond572) R6 Frame(CFA, -8)
+          CFI (cfiCond572) R14 Frame(CFA, -4)
+          CFI (cfiCond572) CFA R13+40
           CFI Block cfiCond573 Using cfiCommon0
           CFI (cfiCond573) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond573) Conditional ??CrossCallReturnLabel_352
+          CFI (cfiCond573) Conditional ??CrossCallReturnLabel_351
           CFI (cfiCond573) R4 Frame(CFA, -16)
           CFI (cfiCond573) R5 Frame(CFA, -12)
           CFI (cfiCond573) R6 Frame(CFA, -8)
@@ -25304,20 +25274,12 @@ AppS2wCmd_OtaFwupConf:
           CFI (cfiCond573) CFA R13+40
           CFI Block cfiCond574 Using cfiCommon0
           CFI (cfiCond574) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond574) Conditional ??CrossCallReturnLabel_351
+          CFI (cfiCond574) Conditional ??CrossCallReturnLabel_350
           CFI (cfiCond574) R4 Frame(CFA, -16)
           CFI (cfiCond574) R5 Frame(CFA, -12)
           CFI (cfiCond574) R6 Frame(CFA, -8)
           CFI (cfiCond574) R14 Frame(CFA, -4)
           CFI (cfiCond574) CFA R13+40
-          CFI Block cfiCond575 Using cfiCommon0
-          CFI (cfiCond575) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond575) Conditional ??CrossCallReturnLabel_350
-          CFI (cfiCond575) R4 Frame(CFA, -16)
-          CFI (cfiCond575) R5 Frame(CFA, -12)
-          CFI (cfiCond575) R6 Frame(CFA, -8)
-          CFI (cfiCond575) R14 Frame(CFA, -4)
-          CFI (cfiCond575) CFA R13+40
 ??Subroutine55_0:
         MOV      R0,R5
           CFI FunCall AppS2wCmd_OtaFwupConf AppS2wParse_Int
@@ -25326,15 +25288,15 @@ AppS2wCmd_OtaFwupConf:
           CFI FunCall AppS2wCmd_OtaFwupConf AppS2wParse_Int
           CFI FunCall AppS2wCmd_OtaFwupConf AppS2wParse_Int
         B.W      AppS2wParse_Int
+          CFI EndBlock cfiCond569
           CFI EndBlock cfiCond570
-          CFI EndBlock cfiCond571
-          CFI EndBlock cfiPicker572
+          CFI EndBlock cfiPicker571
+          CFI EndBlock cfiCond572
           CFI EndBlock cfiCond573
           CFI EndBlock cfiCond574
-          CFI EndBlock cfiCond575
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond576 Using cfiCommon0
+          CFI Block cfiCond575 Using cfiCommon0
           CFI Function AppS2wCmd_HttpClientOpen
           CFI Conditional ??CrossCallReturnLabel_69
           CFI R4 Frame(CFA, -36)
@@ -25347,9 +25309,17 @@ AppS2wCmd_OtaFwupConf:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+64
+          CFI Block cfiCond576 Using cfiCommon0
+          CFI (cfiCond576) Function AppS2wCmd_OtaFwupConf
+          CFI (cfiCond576) Conditional ??CrossCallReturnLabel_68
+          CFI (cfiCond576) R4 Frame(CFA, -16)
+          CFI (cfiCond576) R5 Frame(CFA, -12)
+          CFI (cfiCond576) R6 Frame(CFA, -8)
+          CFI (cfiCond576) R14 Frame(CFA, -4)
+          CFI (cfiCond576) CFA R13+40
           CFI Block cfiCond577 Using cfiCommon0
           CFI (cfiCond577) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond577) Conditional ??CrossCallReturnLabel_68
+          CFI (cfiCond577) Conditional ??CrossCallReturnLabel_67
           CFI (cfiCond577) R4 Frame(CFA, -16)
           CFI (cfiCond577) R5 Frame(CFA, -12)
           CFI (cfiCond577) R6 Frame(CFA, -8)
@@ -25357,7 +25327,7 @@ AppS2wCmd_OtaFwupConf:
           CFI (cfiCond577) CFA R13+40
           CFI Block cfiCond578 Using cfiCommon0
           CFI (cfiCond578) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond578) Conditional ??CrossCallReturnLabel_67
+          CFI (cfiCond578) Conditional ??CrossCallReturnLabel_66
           CFI (cfiCond578) R4 Frame(CFA, -16)
           CFI (cfiCond578) R5 Frame(CFA, -12)
           CFI (cfiCond578) R6 Frame(CFA, -8)
@@ -25365,30 +25335,22 @@ AppS2wCmd_OtaFwupConf:
           CFI (cfiCond578) CFA R13+40
           CFI Block cfiCond579 Using cfiCommon0
           CFI (cfiCond579) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond579) Conditional ??CrossCallReturnLabel_66
+          CFI (cfiCond579) Conditional ??CrossCallReturnLabel_65
           CFI (cfiCond579) R4 Frame(CFA, -16)
           CFI (cfiCond579) R5 Frame(CFA, -12)
           CFI (cfiCond579) R6 Frame(CFA, -8)
           CFI (cfiCond579) R14 Frame(CFA, -4)
           CFI (cfiCond579) CFA R13+40
           CFI Block cfiCond580 Using cfiCommon0
-          CFI (cfiCond580) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond580) Conditional ??CrossCallReturnLabel_65
-          CFI (cfiCond580) R4 Frame(CFA, -16)
-          CFI (cfiCond580) R5 Frame(CFA, -12)
-          CFI (cfiCond580) R6 Frame(CFA, -8)
+          CFI (cfiCond580) Function AppS2wCmd_CoapSetOption
+          CFI (cfiCond580) Conditional ??CrossCallReturnLabel_64
+          CFI (cfiCond580) R4 Frame(CFA, -12)
+          CFI (cfiCond580) R5 Frame(CFA, -8)
           CFI (cfiCond580) R14 Frame(CFA, -4)
-          CFI (cfiCond580) CFA R13+40
-          CFI Block cfiCond581 Using cfiCommon0
-          CFI (cfiCond581) Function AppS2wCmd_CoapSetOption
-          CFI (cfiCond581) Conditional ??CrossCallReturnLabel_64
-          CFI (cfiCond581) R4 Frame(CFA, -12)
-          CFI (cfiCond581) R5 Frame(CFA, -8)
-          CFI (cfiCond581) R14 Frame(CFA, -4)
-          CFI (cfiCond581) CFA R13+24
-          CFI Block cfiPicker582 Using cfiCommon1
-          CFI (cfiPicker582) NoFunction
-          CFI (cfiPicker582) Picker
+          CFI (cfiCond580) CFA R13+24
+          CFI Block cfiPicker581 Using cfiCommon1
+          CFI (cfiPicker581) NoFunction
+          CFI (cfiPicker581) Picker
         THUMB
 ?Subroutine26:
         ADDS     R0,R0,#+1
@@ -25399,17 +25361,17 @@ AppS2wCmd_OtaFwupConf:
           CFI FunCall AppS2wCmd_OtaFwupConf GsnDynMemMgmt_Alloc
           CFI FunCall AppS2wCmd_CoapSetOption GsnDynMemMgmt_Alloc
         B.W      GsnDynMemMgmt_Alloc
+          CFI EndBlock cfiCond575
           CFI EndBlock cfiCond576
           CFI EndBlock cfiCond577
           CFI EndBlock cfiCond578
           CFI EndBlock cfiCond579
           CFI EndBlock cfiCond580
-          CFI EndBlock cfiCond581
-          CFI EndBlock cfiPicker582
+          CFI EndBlock cfiPicker581
 // 9106 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock583 Using cfiCommon0
+          CFI Block cfiBlock582 Using cfiCommon0
           CFI Function AppS2wCmd_OtaFwupExtFlashStart
         THUMB
 // 9107 UINT8
@@ -25585,7 +25547,7 @@ AppS2wCmd_OtaFwupExtFlashStart:
 // 9184         return S2W_SUCCESS;
 ??AppS2wCmd_OtaFwupExtFlashStart_2:
         POP      {R1,R4-R7,PC}    ;; return
-          CFI EndBlock cfiBlock583
+          CFI EndBlock cfiBlock582
 // 9185 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -25602,7 +25564,7 @@ AppS2wCmd_OtaFwupExtFlashStart:
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond584 Using cfiCommon0
+          CFI Block cfiCond583 Using cfiCommon0
           CFI Function AppS2wCmd_HttpClientOpen
           CFI Conditional ??CrossCallReturnLabel_506
           CFI R4 Frame(CFA, -36)
@@ -25615,18 +25577,18 @@ AppS2wCmd_OtaFwupExtFlashStart:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+64
-          CFI Block cfiCond585 Using cfiCommon0
-          CFI (cfiCond585) Function AppS2wCmd_OtaFwupExtFlashStart
-          CFI (cfiCond585) Conditional ??CrossCallReturnLabel_505
-          CFI (cfiCond585) R4 Frame(CFA, -20)
-          CFI (cfiCond585) R5 Frame(CFA, -16)
-          CFI (cfiCond585) R6 Frame(CFA, -12)
-          CFI (cfiCond585) R7 Frame(CFA, -8)
-          CFI (cfiCond585) R14 Frame(CFA, -4)
-          CFI (cfiCond585) CFA R13+24
-          CFI Block cfiPicker586 Using cfiCommon1
-          CFI (cfiPicker586) NoFunction
-          CFI (cfiPicker586) Picker
+          CFI Block cfiCond584 Using cfiCommon0
+          CFI (cfiCond584) Function AppS2wCmd_OtaFwupExtFlashStart
+          CFI (cfiCond584) Conditional ??CrossCallReturnLabel_505
+          CFI (cfiCond584) R4 Frame(CFA, -20)
+          CFI (cfiCond584) R5 Frame(CFA, -16)
+          CFI (cfiCond584) R6 Frame(CFA, -12)
+          CFI (cfiCond584) R7 Frame(CFA, -8)
+          CFI (cfiCond584) R14 Frame(CFA, -4)
+          CFI (cfiCond584) CFA R13+24
+          CFI Block cfiPicker585 Using cfiCommon1
+          CFI (cfiPicker585) NoFunction
+          CFI (cfiPicker585) Picker
         THUMB
 ?Subroutine96:
         MOVS     R2,#+14
@@ -25635,9 +25597,9 @@ AppS2wCmd_OtaFwupExtFlashStart:
           CFI FunCall AppS2wCmd_HttpClientOpen memcpy
           CFI FunCall AppS2wCmd_OtaFwupExtFlashStart memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond583
           CFI EndBlock cfiCond584
-          CFI EndBlock cfiCond585
-          CFI EndBlock cfiPicker586
+          CFI EndBlock cfiPicker585
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -25647,7 +25609,7 @@ AppS2wCmd_OtaFwupExtFlashStart:
         DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond587 Using cfiCommon0
+          CFI Block cfiCond586 Using cfiCommon0
           CFI Function AppS2wCmd_CoapOpen
           CFI Conditional ??CrossCallReturnLabel_39
           CFI R4 Frame(CFA, -16)
@@ -25655,26 +25617,39 @@ AppS2wCmd_OtaFwupExtFlashStart:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
-          CFI Block cfiCond588 Using cfiCommon0
-          CFI (cfiCond588) Function AppS2wCmd_CoapSend
-          CFI (cfiCond588) Conditional ??CrossCallReturnLabel_38
-          CFI (cfiCond588) R4 Frame(CFA, -24)
-          CFI (cfiCond588) R5 Frame(CFA, -20)
-          CFI (cfiCond588) R6 Frame(CFA, -16)
-          CFI (cfiCond588) R7 Frame(CFA, -12)
-          CFI (cfiCond588) R8 Frame(CFA, -8)
-          CFI (cfiCond588) R14 Frame(CFA, -4)
-          CFI (cfiCond588) CFA R13+1440
-          CFI Block cfiPicker589 Using cfiCommon1
-          CFI (cfiPicker589) NoFunction
-          CFI (cfiPicker589) Picker
+          CFI Block cfiCond587 Using cfiCommon0
+          CFI (cfiCond587) Function AppS2wCmd_CoapSend
+          CFI (cfiCond587) Conditional ??CrossCallReturnLabel_38
+          CFI (cfiCond587) R4 Frame(CFA, -24)
+          CFI (cfiCond587) R5 Frame(CFA, -20)
+          CFI (cfiCond587) R6 Frame(CFA, -16)
+          CFI (cfiCond587) R7 Frame(CFA, -12)
+          CFI (cfiCond587) R8 Frame(CFA, -8)
+          CFI (cfiCond587) R14 Frame(CFA, -4)
+          CFI (cfiCond587) CFA R13+1440
+          CFI Block cfiPicker588 Using cfiCommon1
+          CFI (cfiPicker588) NoFunction
+          CFI (cfiPicker588) Picker
         THUMB
 ?Subroutine18:
         MOV      R6,R0
         MOVS     R2,#+36
+          CFI Block cfiCond589 Using cfiCommon0
+          CFI (cfiCond589) Function AppS2wCmd_HttpClientOpen
+          CFI (cfiCond589) Conditional ??CrossCallReturnLabel_37
+          CFI (cfiCond589) R4 Frame(CFA, -36)
+          CFI (cfiCond589) R5 Frame(CFA, -32)
+          CFI (cfiCond589) R6 Frame(CFA, -28)
+          CFI (cfiCond589) R7 Frame(CFA, -24)
+          CFI (cfiCond589) R8 Frame(CFA, -20)
+          CFI (cfiCond589) R9 Frame(CFA, -16)
+          CFI (cfiCond589) R10 Frame(CFA, -12)
+          CFI (cfiCond589) R11 Frame(CFA, -8)
+          CFI (cfiCond589) R14 Frame(CFA, -4)
+          CFI (cfiCond589) CFA R13+64
           CFI Block cfiCond590 Using cfiCommon0
           CFI (cfiCond590) Function AppS2wCmd_HttpClientOpen
-          CFI (cfiCond590) Conditional ??CrossCallReturnLabel_37
+          CFI (cfiCond590) Conditional ??CrossCallReturnLabel_36
           CFI (cfiCond590) R4 Frame(CFA, -36)
           CFI (cfiCond590) R5 Frame(CFA, -32)
           CFI (cfiCond590) R6 Frame(CFA, -28)
@@ -25686,47 +25661,34 @@ AppS2wCmd_OtaFwupExtFlashStart:
           CFI (cfiCond590) R14 Frame(CFA, -4)
           CFI (cfiCond590) CFA R13+64
           CFI Block cfiCond591 Using cfiCommon0
-          CFI (cfiCond591) Function AppS2wCmd_HttpClientOpen
-          CFI (cfiCond591) Conditional ??CrossCallReturnLabel_36
-          CFI (cfiCond591) R4 Frame(CFA, -36)
-          CFI (cfiCond591) R5 Frame(CFA, -32)
-          CFI (cfiCond591) R6 Frame(CFA, -28)
-          CFI (cfiCond591) R7 Frame(CFA, -24)
-          CFI (cfiCond591) R8 Frame(CFA, -20)
-          CFI (cfiCond591) R9 Frame(CFA, -16)
-          CFI (cfiCond591) R10 Frame(CFA, -12)
-          CFI (cfiCond591) R11 Frame(CFA, -8)
+          CFI (cfiCond591) Function AppS2wCmd_HttpClientConfig
+          CFI (cfiCond591) Conditional ??CrossCallReturnLabel_35
+          CFI (cfiCond591) R4 Frame(CFA, -32)
+          CFI (cfiCond591) R5 Frame(CFA, -28)
+          CFI (cfiCond591) R6 Frame(CFA, -24)
+          CFI (cfiCond591) R7 Frame(CFA, -20)
+          CFI (cfiCond591) R8 Frame(CFA, -16)
+          CFI (cfiCond591) R9 Frame(CFA, -12)
+          CFI (cfiCond591) R10 Frame(CFA, -8)
           CFI (cfiCond591) R14 Frame(CFA, -4)
-          CFI (cfiCond591) CFA R13+64
+          CFI (cfiCond591) CFA R13+40
           CFI Block cfiCond592 Using cfiCommon0
-          CFI (cfiCond592) Function AppS2wCmd_HttpClientConfig
-          CFI (cfiCond592) Conditional ??CrossCallReturnLabel_35
-          CFI (cfiCond592) R4 Frame(CFA, -32)
-          CFI (cfiCond592) R5 Frame(CFA, -28)
-          CFI (cfiCond592) R6 Frame(CFA, -24)
-          CFI (cfiCond592) R7 Frame(CFA, -20)
-          CFI (cfiCond592) R8 Frame(CFA, -16)
-          CFI (cfiCond592) R9 Frame(CFA, -12)
-          CFI (cfiCond592) R10 Frame(CFA, -8)
+          CFI (cfiCond592) Function AppS2wCmd_OtaFwupConf
+          CFI (cfiCond592) Conditional ??CrossCallReturnLabel_34
+          CFI (cfiCond592) R4 Frame(CFA, -16)
+          CFI (cfiCond592) R5 Frame(CFA, -12)
+          CFI (cfiCond592) R6 Frame(CFA, -8)
           CFI (cfiCond592) R14 Frame(CFA, -4)
           CFI (cfiCond592) CFA R13+40
           CFI Block cfiCond593 Using cfiCommon0
-          CFI (cfiCond593) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond593) Conditional ??CrossCallReturnLabel_34
-          CFI (cfiCond593) R4 Frame(CFA, -16)
-          CFI (cfiCond593) R5 Frame(CFA, -12)
-          CFI (cfiCond593) R6 Frame(CFA, -8)
+          CFI (cfiCond593) Function AppS2wCmd_OtaFwupExtFlashStart
+          CFI (cfiCond593) Conditional ??CrossCallReturnLabel_33
+          CFI (cfiCond593) R4 Frame(CFA, -20)
+          CFI (cfiCond593) R5 Frame(CFA, -16)
+          CFI (cfiCond593) R6 Frame(CFA, -12)
+          CFI (cfiCond593) R7 Frame(CFA, -8)
           CFI (cfiCond593) R14 Frame(CFA, -4)
-          CFI (cfiCond593) CFA R13+40
-          CFI Block cfiCond594 Using cfiCommon0
-          CFI (cfiCond594) Function AppS2wCmd_OtaFwupExtFlashStart
-          CFI (cfiCond594) Conditional ??CrossCallReturnLabel_33
-          CFI (cfiCond594) R4 Frame(CFA, -20)
-          CFI (cfiCond594) R5 Frame(CFA, -16)
-          CFI (cfiCond594) R6 Frame(CFA, -12)
-          CFI (cfiCond594) R7 Frame(CFA, -8)
-          CFI (cfiCond594) R14 Frame(CFA, -4)
-          CFI (cfiCond594) CFA R13+24
+          CFI (cfiCond593) CFA R13+24
 ??Subroutine18_0:
         MOVS     R1,#+0
           CFI FunCall AppS2wCmd_CoapOpen memset
@@ -25737,20 +25699,20 @@ AppS2wCmd_OtaFwupExtFlashStart:
           CFI FunCall AppS2wCmd_OtaFwupConf memset
           CFI FunCall AppS2wCmd_OtaFwupExtFlashStart memset
         B.W      memset
+          CFI EndBlock cfiCond586
           CFI EndBlock cfiCond587
-          CFI EndBlock cfiCond588
-          CFI EndBlock cfiPicker589
+          CFI EndBlock cfiPicker588
+          CFI EndBlock cfiCond589
           CFI EndBlock cfiCond590
           CFI EndBlock cfiCond591
           CFI EndBlock cfiCond592
           CFI EndBlock cfiCond593
-          CFI EndBlock cfiCond594
 // 9186 #endif
 // 9187 
 // 9188 #ifdef S2W_DNS_CLIENT
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock595 Using cfiCommon0
+          CFI Block cfiBlock594 Using cfiCommon0
           CFI Function AppS2wCmd_DnsServerSet
         THUMB
 // 9189 UINT8
@@ -25907,9 +25869,9 @@ AppS2wCmd_DnsServerSet:
           CFI FunCall sprintf
         BL       sprintf
 // 9264       GsnDhcpSrvr_Stop(&dhcpSrvr);
-        BL       ?Subroutine136
+        BL       ?Subroutine137
 // 9265       dhcpServerFlags &= 0xfe;
-??CrossCallReturnLabel_624:
+??CrossCallReturnLabel_626:
         LDRB     R0,[R6, #+1]
         AND      R0,R0,#0xFE
         STRB     R0,[R6, #+1]
@@ -25931,7 +25893,7 @@ AppS2wCmd_DnsServerSet:
         ADD      SP,SP,#+16
           CFI CFA R13+24
         POP      {R4-R8,PC}       ;; return
-          CFI EndBlock cfiBlock595
+          CFI EndBlock cfiBlock594
 // 9273 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -25943,7 +25905,7 @@ AppS2wCmd_DnsServerSet:
 // 9275 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock596 Using cfiCommon0
+          CFI Block cfiBlock595 Using cfiCommon0
           CFI Function AppS2wCmd_DnsLookup
         THUMB
 // 9276 UINT8
@@ -26084,7 +26046,7 @@ AppS2wCmd_DnsLookup:
         ADD      SP,SP,#+28
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
-          CFI EndBlock cfiBlock596
+          CFI EndBlock cfiBlock595
 // 9331 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -26107,7 +26069,7 @@ AppS2wCmd_DnsLookup:
         DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond597 Using cfiCommon0
+          CFI Block cfiCond596 Using cfiCommon0
           CFI Function App2wCmd_Version
           CFI NoCalls
           CFI NoCalls
@@ -26117,20 +26079,20 @@ AppS2wCmd_DnsLookup:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+32
-          CFI Block cfiCond598 Using cfiCommon0
-          CFI (cfiCond598) Function AppS2wCmd_DnsLookup
-          CFI (cfiCond598) NoCalls AppS2wCmd_DnsLookup
-          CFI (cfiCond598) NoCalls App2wCmd_Version
-          CFI (cfiCond598) Conditional ??CrossCallReturnLabel_525
-          CFI (cfiCond598) R4 Frame(CFA, -12)
-          CFI (cfiCond598) R5 Frame(CFA, -8)
-          CFI (cfiCond598) R14 Frame(CFA, -4)
-          CFI (cfiCond598) CFA R13+40
-          CFI Block cfiPicker599 Using cfiCommon1
-          CFI (cfiPicker599) NoFunction
-          CFI (cfiPicker599) NoCalls AppS2wCmd_DnsLookup
-          CFI (cfiPicker599) NoCalls App2wCmd_Version
-          CFI (cfiPicker599) Picker
+          CFI Block cfiCond597 Using cfiCommon0
+          CFI (cfiCond597) Function AppS2wCmd_DnsLookup
+          CFI (cfiCond597) NoCalls App2wCmd_Version
+          CFI (cfiCond597) NoCalls AppS2wCmd_DnsLookup
+          CFI (cfiCond597) Conditional ??CrossCallReturnLabel_525
+          CFI (cfiCond597) R4 Frame(CFA, -12)
+          CFI (cfiCond597) R5 Frame(CFA, -8)
+          CFI (cfiCond597) R14 Frame(CFA, -4)
+          CFI (cfiCond597) CFA R13+40
+          CFI Block cfiPicker598 Using cfiCommon1
+          CFI (cfiPicker598) NoFunction
+          CFI (cfiPicker598) NoCalls App2wCmd_Version
+          CFI (cfiPicker598) NoCalls AppS2wCmd_DnsLookup
+          CFI (cfiPicker598) Picker
         THUMB
 ?Subroutine103:
         LDR      R0,[SP, #+4]
@@ -26138,12 +26100,12 @@ AppS2wCmd_DnsLookup:
         UBFX     R2,R0,#+16,#+8
         LSRS     R1,R0,#+24
         BX       LR
+          CFI EndBlock cfiCond596
           CFI EndBlock cfiCond597
-          CFI EndBlock cfiCond598
-          CFI EndBlock cfiPicker599
+          CFI EndBlock cfiPicker598
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond600 Using cfiCommon0
+          CFI Block cfiCond599 Using cfiCommon0
           CFI Function AppS2wCmd_HttpClientOpen
           CFI Conditional ??CrossCallReturnLabel_341
           CFI R4 Frame(CFA, -36)
@@ -26156,75 +26118,75 @@ AppS2wCmd_DnsLookup:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+64
+          CFI Block cfiCond600 Using cfiCommon0
+          CFI (cfiCond600) Function AppS2wCmd_SetSockOp
+          CFI (cfiCond600) Conditional ??CrossCallReturnLabel_340
+          CFI (cfiCond600) R14 Frame(CFA, -4)
+          CFI (cfiCond600) CFA R13+32
           CFI Block cfiCond601 Using cfiCommon0
-          CFI (cfiCond601) Function AppS2wCmd_SetSockOp
-          CFI (cfiCond601) Conditional ??CrossCallReturnLabel_340
+          CFI (cfiCond601) Function AppS2wCmd_Wmode
+          CFI (cfiCond601) Conditional ??CrossCallReturnLabel_339
+          CFI (cfiCond601) R4 Frame(CFA, -36)
+          CFI (cfiCond601) R5 Frame(CFA, -32)
+          CFI (cfiCond601) R6 Frame(CFA, -28)
+          CFI (cfiCond601) R7 Frame(CFA, -24)
+          CFI (cfiCond601) R8 Frame(CFA, -20)
+          CFI (cfiCond601) R9 Frame(CFA, -16)
+          CFI (cfiCond601) R10 Frame(CFA, -12)
+          CFI (cfiCond601) R11 Frame(CFA, -8)
           CFI (cfiCond601) R14 Frame(CFA, -4)
-          CFI (cfiCond601) CFA R13+32
+          CFI (cfiCond601) CFA R13+72
           CFI Block cfiCond602 Using cfiCommon0
-          CFI (cfiCond602) Function AppS2wCmd_Wmode
-          CFI (cfiCond602) Conditional ??CrossCallReturnLabel_339
-          CFI (cfiCond602) R4 Frame(CFA, -36)
-          CFI (cfiCond602) R5 Frame(CFA, -32)
-          CFI (cfiCond602) R6 Frame(CFA, -28)
-          CFI (cfiCond602) R7 Frame(CFA, -24)
-          CFI (cfiCond602) R8 Frame(CFA, -20)
-          CFI (cfiCond602) R9 Frame(CFA, -16)
-          CFI (cfiCond602) R10 Frame(CFA, -12)
-          CFI (cfiCond602) R11 Frame(CFA, -8)
+          CFI (cfiCond602) Function AppS2wCmd_OtaFwupConf
+          CFI (cfiCond602) Conditional ??CrossCallReturnLabel_338
+          CFI (cfiCond602) R4 Frame(CFA, -16)
+          CFI (cfiCond602) R5 Frame(CFA, -12)
+          CFI (cfiCond602) R6 Frame(CFA, -8)
           CFI (cfiCond602) R14 Frame(CFA, -4)
-          CFI (cfiCond602) CFA R13+72
+          CFI (cfiCond602) CFA R13+40
           CFI Block cfiCond603 Using cfiCommon0
-          CFI (cfiCond603) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond603) Conditional ??CrossCallReturnLabel_338
-          CFI (cfiCond603) R4 Frame(CFA, -16)
-          CFI (cfiCond603) R5 Frame(CFA, -12)
-          CFI (cfiCond603) R6 Frame(CFA, -8)
+          CFI (cfiCond603) Function AppS2wCmd_DnsLookup
+          CFI (cfiCond603) Conditional ??CrossCallReturnLabel_337
+          CFI (cfiCond603) R4 Frame(CFA, -12)
+          CFI (cfiCond603) R5 Frame(CFA, -8)
           CFI (cfiCond603) R14 Frame(CFA, -4)
           CFI (cfiCond603) CFA R13+40
           CFI Block cfiCond604 Using cfiCommon0
-          CFI (cfiCond604) Function AppS2wCmd_DnsLookup
-          CFI (cfiCond604) Conditional ??CrossCallReturnLabel_337
+          CFI (cfiCond604) Function AppS2wCmd_Nauto
+          CFI (cfiCond604) Conditional ??CrossCallReturnLabel_336
           CFI (cfiCond604) R4 Frame(CFA, -12)
           CFI (cfiCond604) R5 Frame(CFA, -8)
           CFI (cfiCond604) R14 Frame(CFA, -4)
-          CFI (cfiCond604) CFA R13+40
+          CFI (cfiCond604) CFA R13+96
           CFI Block cfiCond605 Using cfiCommon0
-          CFI (cfiCond605) Function AppS2wCmd_Nauto
-          CFI (cfiCond605) Conditional ??CrossCallReturnLabel_336
-          CFI (cfiCond605) R4 Frame(CFA, -12)
-          CFI (cfiCond605) R5 Frame(CFA, -8)
+          CFI (cfiCond605) Function AppS2wCmd_Ping
+          CFI (cfiCond605) Conditional ??CrossCallReturnLabel_335
+          CFI (cfiCond605) R4 Frame(CFA, -16)
+          CFI (cfiCond605) R5 Frame(CFA, -12)
+          CFI (cfiCond605) R6 Frame(CFA, -8)
           CFI (cfiCond605) R14 Frame(CFA, -4)
-          CFI (cfiCond605) CFA R13+96
+          CFI (cfiCond605) CFA R13+72
           CFI Block cfiCond606 Using cfiCommon0
-          CFI (cfiCond606) Function AppS2wCmd_Ping
-          CFI (cfiCond606) Conditional ??CrossCallReturnLabel_335
+          CFI (cfiCond606) Function AppS2wCmd_ExtFlashSpiConf
+          CFI (cfiCond606) Conditional ??CrossCallReturnLabel_334
           CFI (cfiCond606) R4 Frame(CFA, -16)
           CFI (cfiCond606) R5 Frame(CFA, -12)
           CFI (cfiCond606) R6 Frame(CFA, -8)
           CFI (cfiCond606) R14 Frame(CFA, -4)
-          CFI (cfiCond606) CFA R13+72
+          CFI (cfiCond606) CFA R13+40
           CFI Block cfiCond607 Using cfiCommon0
-          CFI (cfiCond607) Function AppS2wCmd_ExtFlashSpiConf
-          CFI (cfiCond607) Conditional ??CrossCallReturnLabel_334
-          CFI (cfiCond607) R4 Frame(CFA, -16)
-          CFI (cfiCond607) R5 Frame(CFA, -12)
-          CFI (cfiCond607) R6 Frame(CFA, -8)
+          CFI (cfiCond607) Function AppS2wCmd_ExtFlashRead
+          CFI (cfiCond607) Conditional ??CrossCallReturnLabel_333
+          CFI (cfiCond607) R4 Frame(CFA, -24)
+          CFI (cfiCond607) R5 Frame(CFA, -20)
+          CFI (cfiCond607) R6 Frame(CFA, -16)
+          CFI (cfiCond607) R7 Frame(CFA, -12)
+          CFI (cfiCond607) R8 Frame(CFA, -8)
           CFI (cfiCond607) R14 Frame(CFA, -4)
-          CFI (cfiCond607) CFA R13+40
-          CFI Block cfiCond608 Using cfiCommon0
-          CFI (cfiCond608) Function AppS2wCmd_ExtFlashRead
-          CFI (cfiCond608) Conditional ??CrossCallReturnLabel_333
-          CFI (cfiCond608) R4 Frame(CFA, -24)
-          CFI (cfiCond608) R5 Frame(CFA, -20)
-          CFI (cfiCond608) R6 Frame(CFA, -16)
-          CFI (cfiCond608) R7 Frame(CFA, -12)
-          CFI (cfiCond608) R8 Frame(CFA, -8)
-          CFI (cfiCond608) R14 Frame(CFA, -4)
-          CFI (cfiCond608) CFA R13+48
-          CFI Block cfiPicker609 Using cfiCommon1
-          CFI (cfiPicker609) NoFunction
-          CFI (cfiPicker609) Picker
+          CFI (cfiCond607) CFA R13+48
+          CFI Block cfiPicker608 Using cfiCommon1
+          CFI (cfiPicker608) NoFunction
+          CFI (cfiPicker608) Picker
         THUMB
 ?Subroutine53:
         ADD      R1,SP,#+12
@@ -26238,6 +26200,7 @@ AppS2wCmd_DnsLookup:
           CFI FunCall AppS2wCmd_ExtFlashSpiConf AppS2wParse_Int
           CFI FunCall AppS2wCmd_ExtFlashRead AppS2wParse_Int
         B.W      AppS2wParse_Int
+          CFI EndBlock cfiCond599
           CFI EndBlock cfiCond600
           CFI EndBlock cfiCond601
           CFI EndBlock cfiCond602
@@ -26246,68 +26209,67 @@ AppS2wCmd_DnsLookup:
           CFI EndBlock cfiCond605
           CFI EndBlock cfiCond606
           CFI EndBlock cfiCond607
-          CFI EndBlock cfiCond608
-          CFI EndBlock cfiPicker609
+          CFI EndBlock cfiPicker608
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond610 Using cfiCommon0
+          CFI Block cfiCond609 Using cfiCommon0
           CFI Function AppS2wCmd_PowerSaveDpsleep
           CFI Conditional ??CrossCallReturnLabel_262
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
+          CFI Block cfiCond610 Using cfiCommon0
+          CFI (cfiCond610) Function AppS2wCmd_scanTimeSet
+          CFI (cfiCond610) Conditional ??CrossCallReturnLabel_261
+          CFI (cfiCond610) R4 Frame(CFA, -12)
+          CFI (cfiCond610) R5 Frame(CFA, -8)
+          CFI (cfiCond610) R14 Frame(CFA, -4)
+          CFI (cfiCond610) CFA R13+32
           CFI Block cfiCond611 Using cfiCommon0
-          CFI (cfiCond611) Function AppS2wCmd_scanTimeSet
-          CFI (cfiCond611) Conditional ??CrossCallReturnLabel_261
-          CFI (cfiCond611) R4 Frame(CFA, -12)
-          CFI (cfiCond611) R5 Frame(CFA, -8)
+          CFI (cfiCond611) Function AppS2wCmd_Wmode
+          CFI (cfiCond611) Conditional ??CrossCallReturnLabel_260
+          CFI (cfiCond611) R4 Frame(CFA, -36)
+          CFI (cfiCond611) R5 Frame(CFA, -32)
+          CFI (cfiCond611) R6 Frame(CFA, -28)
+          CFI (cfiCond611) R7 Frame(CFA, -24)
+          CFI (cfiCond611) R8 Frame(CFA, -20)
+          CFI (cfiCond611) R9 Frame(CFA, -16)
+          CFI (cfiCond611) R10 Frame(CFA, -12)
+          CFI (cfiCond611) R11 Frame(CFA, -8)
           CFI (cfiCond611) R14 Frame(CFA, -4)
-          CFI (cfiCond611) CFA R13+32
+          CFI (cfiCond611) CFA R13+72
           CFI Block cfiCond612 Using cfiCommon0
-          CFI (cfiCond612) Function AppS2wCmd_Wmode
-          CFI (cfiCond612) Conditional ??CrossCallReturnLabel_260
-          CFI (cfiCond612) R4 Frame(CFA, -36)
-          CFI (cfiCond612) R5 Frame(CFA, -32)
-          CFI (cfiCond612) R6 Frame(CFA, -28)
-          CFI (cfiCond612) R7 Frame(CFA, -24)
-          CFI (cfiCond612) R8 Frame(CFA, -20)
-          CFI (cfiCond612) R9 Frame(CFA, -16)
-          CFI (cfiCond612) R10 Frame(CFA, -12)
-          CFI (cfiCond612) R11 Frame(CFA, -8)
+          CFI (cfiCond612) Function AppS2wCmd_DnsLookup
+          CFI (cfiCond612) Conditional ??CrossCallReturnLabel_259
+          CFI (cfiCond612) R4 Frame(CFA, -12)
+          CFI (cfiCond612) R5 Frame(CFA, -8)
           CFI (cfiCond612) R14 Frame(CFA, -4)
-          CFI (cfiCond612) CFA R13+72
+          CFI (cfiCond612) CFA R13+40
           CFI Block cfiCond613 Using cfiCommon0
-          CFI (cfiCond613) Function AppS2wCmd_DnsLookup
-          CFI (cfiCond613) Conditional ??CrossCallReturnLabel_259
-          CFI (cfiCond613) R4 Frame(CFA, -12)
-          CFI (cfiCond613) R5 Frame(CFA, -8)
+          CFI (cfiCond613) Function AppS2wCmd_Wwps
+          CFI (cfiCond613) Conditional ??CrossCallReturnLabel_258
+          CFI (cfiCond613) R4 Frame(CFA, -8)
           CFI (cfiCond613) R14 Frame(CFA, -4)
-          CFI (cfiCond613) CFA R13+40
+          CFI (cfiCond613) CFA R13+96
           CFI Block cfiCond614 Using cfiCommon0
-          CFI (cfiCond614) Function AppS2wCmd_Wwps
-          CFI (cfiCond614) Conditional ??CrossCallReturnLabel_258
-          CFI (cfiCond614) R4 Frame(CFA, -8)
+          CFI (cfiCond614) Function AppS2wCmd_AdcRead
+          CFI (cfiCond614) Conditional ??CrossCallReturnLabel_257
+          CFI (cfiCond614) R4 Frame(CFA, -20)
+          CFI (cfiCond614) R5 Frame(CFA, -16)
+          CFI (cfiCond614) R6 Frame(CFA, -12)
+          CFI (cfiCond614) R7 Frame(CFA, -8)
           CFI (cfiCond614) R14 Frame(CFA, -4)
-          CFI (cfiCond614) CFA R13+96
+          CFI (cfiCond614) CFA R13+40
           CFI Block cfiCond615 Using cfiCommon0
-          CFI (cfiCond615) Function AppS2wCmd_AdcRead
-          CFI (cfiCond615) Conditional ??CrossCallReturnLabel_257
-          CFI (cfiCond615) R4 Frame(CFA, -20)
-          CFI (cfiCond615) R5 Frame(CFA, -16)
-          CFI (cfiCond615) R6 Frame(CFA, -12)
-          CFI (cfiCond615) R7 Frame(CFA, -8)
+          CFI (cfiCond615) Function AppS2wCmd_ExtFlashSpiConf
+          CFI (cfiCond615) Conditional ??CrossCallReturnLabel_256
+          CFI (cfiCond615) R4 Frame(CFA, -16)
+          CFI (cfiCond615) R5 Frame(CFA, -12)
+          CFI (cfiCond615) R6 Frame(CFA, -8)
           CFI (cfiCond615) R14 Frame(CFA, -4)
           CFI (cfiCond615) CFA R13+40
-          CFI Block cfiCond616 Using cfiCommon0
-          CFI (cfiCond616) Function AppS2wCmd_ExtFlashSpiConf
-          CFI (cfiCond616) Conditional ??CrossCallReturnLabel_256
-          CFI (cfiCond616) R4 Frame(CFA, -16)
-          CFI (cfiCond616) R5 Frame(CFA, -12)
-          CFI (cfiCond616) R6 Frame(CFA, -8)
-          CFI (cfiCond616) R14 Frame(CFA, -4)
-          CFI (cfiCond616) CFA R13+40
-          CFI Block cfiPicker617 Using cfiCommon1
-          CFI (cfiPicker617) NoFunction
-          CFI (cfiPicker617) Picker
+          CFI Block cfiPicker616 Using cfiCommon1
+          CFI (cfiPicker616) NoFunction
+          CFI (cfiPicker616) Picker
         THUMB
 ?Subroutine50:
         ADD      R1,SP,#+8
@@ -26319,14 +26281,14 @@ AppS2wCmd_DnsLookup:
           CFI FunCall AppS2wCmd_AdcRead AppS2wParse_Int
           CFI FunCall AppS2wCmd_ExtFlashSpiConf AppS2wParse_Int
         B.W      AppS2wParse_Int
+          CFI EndBlock cfiCond609
           CFI EndBlock cfiCond610
           CFI EndBlock cfiCond611
           CFI EndBlock cfiCond612
           CFI EndBlock cfiCond613
           CFI EndBlock cfiCond614
           CFI EndBlock cfiCond615
-          CFI EndBlock cfiCond616
-          CFI EndBlock cfiPicker617
+          CFI EndBlock cfiPicker616
 // 9332 
 // 9333 
 // 9334 #ifdef S2W_IPv6_SUPPORT
@@ -26429,7 +26391,7 @@ AppS2wCmd_DnsLookup:
 // 9431 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock618 Using cfiCommon0
+          CFI Block cfiBlock617 Using cfiCommon0
           CFI Function AppS2wCmd_PowerSaveStby
         THUMB
 // 9432 UINT8
@@ -26574,29 +26536,29 @@ AppS2wCmd_PowerSaveStby:
         ADD      SP,SP,#+20
           CFI CFA R13+4
         POP      {PC}             ;; return
-          CFI EndBlock cfiBlock618
+          CFI EndBlock cfiBlock617
 // 9501 
 // 9502 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond619 Using cfiCommon0
+          CFI Block cfiCond618 Using cfiCommon0
           CFI Function AppS2wCmd_PowerSaveDpsleep
           CFI Conditional ??CrossCallReturnLabel_388
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
+          CFI Block cfiCond619 Using cfiCommon0
+          CFI (cfiCond619) Function AppS2wCmd_PowerSaveStby
+          CFI (cfiCond619) Conditional ??CrossCallReturnLabel_387
+          CFI (cfiCond619) R14 Frame(CFA, -4)
+          CFI (cfiCond619) CFA R13+24
           CFI Block cfiCond620 Using cfiCommon0
-          CFI (cfiCond620) Function AppS2wCmd_PowerSaveStby
-          CFI (cfiCond620) Conditional ??CrossCallReturnLabel_387
+          CFI (cfiCond620) Function AppS2wCmd_Hibernate
+          CFI (cfiCond620) Conditional ??CrossCallReturnLabel_386
           CFI (cfiCond620) R14 Frame(CFA, -4)
-          CFI (cfiCond620) CFA R13+24
-          CFI Block cfiCond621 Using cfiCommon0
-          CFI (cfiCond621) Function AppS2wCmd_Hibernate
-          CFI (cfiCond621) Conditional ??CrossCallReturnLabel_386
-          CFI (cfiCond621) R14 Frame(CFA, -4)
-          CFI (cfiCond621) CFA R13+16
-          CFI Block cfiPicker622 Using cfiCommon1
-          CFI (cfiPicker622) NoFunction
-          CFI (cfiPicker622) Picker
+          CFI (cfiCond620) CFA R13+16
+          CFI Block cfiPicker621 Using cfiCommon1
+          CFI (cfiPicker621) NoFunction
+          CFI (cfiPicker621) Picker
         THUMB
 ?Subroutine61:
         ADD      R1,SP,#+3
@@ -26604,40 +26566,40 @@ AppS2wCmd_PowerSaveStby:
           CFI FunCall AppS2wCmd_PowerSaveStby AppS2wParse_Boolean
           CFI FunCall AppS2wCmd_Hibernate AppS2wParse_Boolean
         B.W      AppS2wParse_Boolean
+          CFI EndBlock cfiCond618
           CFI EndBlock cfiCond619
           CFI EndBlock cfiCond620
-          CFI EndBlock cfiCond621
-          CFI EndBlock cfiPicker622
+          CFI EndBlock cfiPicker621
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond623 Using cfiCommon0
+          CFI Block cfiCond622 Using cfiCommon0
           CFI Function AppS2wCmd_PowerSaveDpsleep
           CFI Conditional ??CrossCallReturnLabel_369
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
+          CFI Block cfiCond623 Using cfiCommon0
+          CFI (cfiCond623) Function AppS2wCmd_DhcpSrvr
+          CFI (cfiCond623) Conditional ??CrossCallReturnLabel_368
+          CFI (cfiCond623) R4 Frame(CFA, -24)
+          CFI (cfiCond623) R5 Frame(CFA, -20)
+          CFI (cfiCond623) R6 Frame(CFA, -16)
+          CFI (cfiCond623) R7 Frame(CFA, -12)
+          CFI (cfiCond623) R8 Frame(CFA, -8)
+          CFI (cfiCond623) R14 Frame(CFA, -4)
+          CFI (cfiCond623) CFA R13+192
           CFI Block cfiCond624 Using cfiCommon0
-          CFI (cfiCond624) Function AppS2wCmd_DhcpSrvr
-          CFI (cfiCond624) Conditional ??CrossCallReturnLabel_368
-          CFI (cfiCond624) R4 Frame(CFA, -24)
-          CFI (cfiCond624) R5 Frame(CFA, -20)
-          CFI (cfiCond624) R6 Frame(CFA, -16)
-          CFI (cfiCond624) R7 Frame(CFA, -12)
-          CFI (cfiCond624) R8 Frame(CFA, -8)
+          CFI (cfiCond624) Function AppS2wCmd_PowerSaveStby
+          CFI (cfiCond624) Conditional ??CrossCallReturnLabel_367
           CFI (cfiCond624) R14 Frame(CFA, -4)
-          CFI (cfiCond624) CFA R13+192
+          CFI (cfiCond624) CFA R13+24
           CFI Block cfiCond625 Using cfiCommon0
-          CFI (cfiCond625) Function AppS2wCmd_PowerSaveStby
-          CFI (cfiCond625) Conditional ??CrossCallReturnLabel_367
+          CFI (cfiCond625) Function AppS2wCmd_Hibernate
+          CFI (cfiCond625) Conditional ??CrossCallReturnLabel_366
           CFI (cfiCond625) R14 Frame(CFA, -4)
-          CFI (cfiCond625) CFA R13+24
-          CFI Block cfiCond626 Using cfiCommon0
-          CFI (cfiCond626) Function AppS2wCmd_Hibernate
-          CFI (cfiCond626) Conditional ??CrossCallReturnLabel_366
-          CFI (cfiCond626) R14 Frame(CFA, -4)
-          CFI (cfiCond626) CFA R13+16
-          CFI Block cfiPicker627 Using cfiCommon1
-          CFI (cfiPicker627) NoFunction
-          CFI (cfiPicker627) Picker
+          CFI (cfiCond625) CFA R13+16
+          CFI Block cfiPicker626 Using cfiCommon1
+          CFI (cfiPicker626) NoFunction
+          CFI (cfiPicker626) Picker
         THUMB
 ?Subroutine59:
         ADD      R1,SP,#+1
@@ -26646,31 +26608,31 @@ AppS2wCmd_PowerSaveStby:
           CFI FunCall AppS2wCmd_PowerSaveStby AppS2wParse_Boolean
           CFI FunCall AppS2wCmd_Hibernate AppS2wParse_Boolean
         B.W      AppS2wParse_Boolean
+          CFI EndBlock cfiCond622
           CFI EndBlock cfiCond623
           CFI EndBlock cfiCond624
           CFI EndBlock cfiCond625
-          CFI EndBlock cfiCond626
-          CFI EndBlock cfiPicker627
+          CFI EndBlock cfiPicker626
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond628 Using cfiCommon0
+          CFI Block cfiCond627 Using cfiCommon0
           CFI Function AppS2wCmd_PowerSaveDpsleep
           CFI Conditional ??CrossCallReturnLabel_14
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
+          CFI Block cfiCond628 Using cfiCommon0
+          CFI (cfiCond628) Function AppS2wCmd_PowerSaveStby
+          CFI (cfiCond628) Conditional ??CrossCallReturnLabel_13
+          CFI (cfiCond628) R14 Frame(CFA, -4)
+          CFI (cfiCond628) CFA R13+24
           CFI Block cfiCond629 Using cfiCommon0
-          CFI (cfiCond629) Function AppS2wCmd_PowerSaveStby
-          CFI (cfiCond629) Conditional ??CrossCallReturnLabel_13
+          CFI (cfiCond629) Function AppS2wCmd_Hibernate
+          CFI (cfiCond629) Conditional ??CrossCallReturnLabel_12
           CFI (cfiCond629) R14 Frame(CFA, -4)
-          CFI (cfiCond629) CFA R13+24
-          CFI Block cfiCond630 Using cfiCommon0
-          CFI (cfiCond630) Function AppS2wCmd_Hibernate
-          CFI (cfiCond630) Conditional ??CrossCallReturnLabel_12
-          CFI (cfiCond630) R14 Frame(CFA, -4)
-          CFI (cfiCond630) CFA R13+16
-          CFI Block cfiPicker631 Using cfiCommon1
-          CFI (cfiPicker631) NoFunction
-          CFI (cfiPicker631) Picker
+          CFI (cfiCond629) CFA R13+16
+          CFI Block cfiPicker630 Using cfiCommon1
+          CFI (cfiPicker630) NoFunction
+          CFI (cfiPicker630) Picker
         THUMB
 ?Subroutine9:
         MOVS     R2,#+4
@@ -26680,10 +26642,10 @@ AppS2wCmd_PowerSaveStby:
           CFI FunCall AppS2wCmd_PowerSaveStby memset
           CFI FunCall AppS2wCmd_Hibernate memset
         B.W      memset
+          CFI EndBlock cfiCond627
           CFI EndBlock cfiCond628
           CFI EndBlock cfiCond629
-          CFI EndBlock cfiCond630
-          CFI EndBlock cfiPicker631
+          CFI EndBlock cfiPicker630
 // 9503 
 // 9504 
 // 9505 
@@ -26698,7 +26660,7 @@ AppS2wCmd_PowerSaveStby:
 // 9514  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock632 Using cfiCommon0
+          CFI Block cfiBlock631 Using cfiCommon0
           CFI Function AppS2wCmd_NwConnStore
         THUMB
 // 9515 PUBLIC UINT8
@@ -26714,7 +26676,7 @@ AppS2wCmd_NwConnStore:
 // 9519 		 return S2W_EINVAL;
         MOVS     R0,#+2
         BX       LR
-          CFI EndBlock cfiBlock632
+          CFI EndBlock cfiBlock631
 // 9520 	else 
 // 9521 		 return AppS2wHal_NwContextStore();
 // 9522 
@@ -26734,7 +26696,7 @@ AppS2wCmd_NwConnStore:
 // 9536  
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock633 Using cfiCommon0
+          CFI Block cfiBlock632 Using cfiCommon0
           CFI Function AppS2wCmd_NwConnRestore
         THUMB
 // 9537 PUBLIC UINT8
@@ -26750,7 +26712,7 @@ AppS2wCmd_NwConnRestore:
 // 9541 		 return S2W_EINVAL;
         MOVS     R0,#+2
         BX       LR
-          CFI EndBlock cfiBlock633
+          CFI EndBlock cfiBlock632
 // 9542 	 else
 // 9543 		 return AppS2wHal_NwContextRestore();
 // 9544 
@@ -26770,7 +26732,7 @@ ncmautoconnectcount:
         DS8 4
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock634 Using cfiCommon0
+          CFI Block cfiBlock633 Using cfiCommon0
           CFI Function AppS2w_NcmL3ConnProcess
         THUMB
 // 9552 VOID 
@@ -27058,10 +27020,10 @@ AppS2w_NcmL3ConnProcess:
         ADD      SP,SP,#+152
           CFI CFA R13+32
         POP      {R4-R10,PC}      ;; return
-          CFI EndBlock cfiBlock634
+          CFI EndBlock cfiBlock633
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond635 Using cfiCommon0
+          CFI Block cfiCond634 Using cfiCommon0
           CFI Function AppS2wCmd_Ndhcp
           CFI Conditional ??CrossCallReturnLabel_605
           CFI R4 Frame(CFA, -24)
@@ -27071,21 +27033,21 @@ AppS2w_NcmL3ConnProcess:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+72
-          CFI Block cfiCond636 Using cfiCommon0
-          CFI (cfiCond636) Function AppS2w_NcmL3ConnProcess
-          CFI (cfiCond636) Conditional ??CrossCallReturnLabel_604
-          CFI (cfiCond636) R4 Frame(CFA, -32)
-          CFI (cfiCond636) R5 Frame(CFA, -28)
-          CFI (cfiCond636) R6 Frame(CFA, -24)
-          CFI (cfiCond636) R7 Frame(CFA, -20)
-          CFI (cfiCond636) R8 Frame(CFA, -16)
-          CFI (cfiCond636) R9 Frame(CFA, -12)
-          CFI (cfiCond636) R10 Frame(CFA, -8)
-          CFI (cfiCond636) R14 Frame(CFA, -4)
-          CFI (cfiCond636) CFA R13+184
-          CFI Block cfiPicker637 Using cfiCommon1
-          CFI (cfiPicker637) NoFunction
-          CFI (cfiPicker637) Picker
+          CFI Block cfiCond635 Using cfiCommon0
+          CFI (cfiCond635) Function AppS2w_NcmL3ConnProcess
+          CFI (cfiCond635) Conditional ??CrossCallReturnLabel_604
+          CFI (cfiCond635) R4 Frame(CFA, -32)
+          CFI (cfiCond635) R5 Frame(CFA, -28)
+          CFI (cfiCond635) R6 Frame(CFA, -24)
+          CFI (cfiCond635) R7 Frame(CFA, -20)
+          CFI (cfiCond635) R8 Frame(CFA, -16)
+          CFI (cfiCond635) R9 Frame(CFA, -12)
+          CFI (cfiCond635) R10 Frame(CFA, -8)
+          CFI (cfiCond635) R14 Frame(CFA, -4)
+          CFI (cfiCond635) CFA R13+184
+          CFI Block cfiPicker636 Using cfiCommon1
+          CFI (cfiPicker636) NoFunction
+          CFI (cfiPicker636) Picker
         THUMB
 ?Subroutine130:
         LDR      R0,[R5, #+0]
@@ -27094,9 +27056,9 @@ AppS2w_NcmL3ConnProcess:
           CFI FunCall AppS2wCmd_Ndhcp _nxe_arp_gratuitous_send
           CFI FunCall AppS2w_NcmL3ConnProcess _nxe_arp_gratuitous_send
         B.W      _nxe_arp_gratuitous_send
+          CFI EndBlock cfiCond634
           CFI EndBlock cfiCond635
-          CFI EndBlock cfiCond636
-          CFI EndBlock cfiPicker637
+          CFI EndBlock cfiPicker636
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -27106,7 +27068,7 @@ AppS2w_NcmL3ConnProcess:
 // 9667 
 
         SECTION `.text`:CODE:NOROOT(2)
-          CFI Block cfiBlock638 Using cfiCommon0
+          CFI Block cfiBlock637 Using cfiCommon0
           CFI Function AppS2wNetConnMgr_Cb
         THUMB
 // 9668 VOID
@@ -27243,10 +27205,10 @@ AppS2wNetConnMgr_Cb:
 // 9727 			{
 // 9728 #ifdef S2W_DHCP_SERVER_ENABLE
 // 9729                 GsnDhcpSrvr_Stop(&dhcpSrvr);
-        BL       ?Subroutine136
+        BL       ?Subroutine137
 // 9730 #ifdef S2W_DNS_SERVER_ENABLE
 // 9731                 GsnDnsSrvr_Stop(&dnsServer);
-??CrossCallReturnLabel_623:
+??CrossCallReturnLabel_625:
         ADDW     R0,R11,#+1060
           CFI FunCall GsnDnsSrvr_Stop
         BL       GsnDnsSrvr_Stop
@@ -27520,12 +27482,12 @@ AppS2wNetConnMgr_Cb:
         ADD      SP,SP,#+156
           CFI CFA R13+36
         POP      {R4-R11,PC}      ;; return
-          CFI EndBlock cfiBlock638
+          CFI EndBlock cfiBlock637
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond639 Using cfiCommon0
+          CFI Block cfiCond638 Using cfiCommon0
           CFI Function AppS2wCmd_DnsServerSet
-          CFI Conditional ??CrossCallReturnLabel_624
+          CFI Conditional ??CrossCallReturnLabel_626
           CFI R4 Frame(CFA, -24)
           CFI R5 Frame(CFA, -20)
           CFI R6 Frame(CFA, -16)
@@ -27533,9 +27495,22 @@ AppS2wNetConnMgr_Cb:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+40
+          CFI Block cfiCond639 Using cfiCommon0
+          CFI (cfiCond639) Function AppS2wNetConnMgr_Cb
+          CFI (cfiCond639) Conditional ??CrossCallReturnLabel_625
+          CFI (cfiCond639) R4 Frame(CFA, -36)
+          CFI (cfiCond639) R5 Frame(CFA, -32)
+          CFI (cfiCond639) R6 Frame(CFA, -28)
+          CFI (cfiCond639) R7 Frame(CFA, -24)
+          CFI (cfiCond639) R8 Frame(CFA, -20)
+          CFI (cfiCond639) R9 Frame(CFA, -16)
+          CFI (cfiCond639) R10 Frame(CFA, -12)
+          CFI (cfiCond639) R11 Frame(CFA, -8)
+          CFI (cfiCond639) R14 Frame(CFA, -4)
+          CFI (cfiCond639) CFA R13+192
           CFI Block cfiCond640 Using cfiCommon0
-          CFI (cfiCond640) Function AppS2wNetConnMgr_Cb
-          CFI (cfiCond640) Conditional ??CrossCallReturnLabel_623
+          CFI (cfiCond640) Function AppS2wCmd_NcmAuto
+          CFI (cfiCond640) Conditional ??CrossCallReturnLabel_624
           CFI (cfiCond640) R4 Frame(CFA, -36)
           CFI (cfiCond640) R5 Frame(CFA, -32)
           CFI (cfiCond640) R6 Frame(CFA, -28)
@@ -27545,34 +27520,21 @@ AppS2wNetConnMgr_Cb:
           CFI (cfiCond640) R10 Frame(CFA, -12)
           CFI (cfiCond640) R11 Frame(CFA, -8)
           CFI (cfiCond640) R14 Frame(CFA, -4)
-          CFI (cfiCond640) CFA R13+192
-          CFI Block cfiCond641 Using cfiCommon0
-          CFI (cfiCond641) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond641) Conditional ??CrossCallReturnLabel_622
-          CFI (cfiCond641) R4 Frame(CFA, -36)
-          CFI (cfiCond641) R5 Frame(CFA, -32)
-          CFI (cfiCond641) R6 Frame(CFA, -28)
-          CFI (cfiCond641) R7 Frame(CFA, -24)
-          CFI (cfiCond641) R8 Frame(CFA, -20)
-          CFI (cfiCond641) R9 Frame(CFA, -16)
-          CFI (cfiCond641) R10 Frame(CFA, -12)
-          CFI (cfiCond641) R11 Frame(CFA, -8)
-          CFI (cfiCond641) R14 Frame(CFA, -4)
-          CFI (cfiCond641) CFA R13+1344
-          CFI Block cfiPicker642 Using cfiCommon1
-          CFI (cfiPicker642) NoFunction
-          CFI (cfiPicker642) Picker
+          CFI (cfiCond640) CFA R13+1344
+          CFI Block cfiPicker641 Using cfiCommon1
+          CFI (cfiPicker641) NoFunction
+          CFI (cfiPicker641) Picker
         THUMB
-?Subroutine136:
+?Subroutine137:
         LDR.W    R0,??DataTable477
           CFI FunCall AppS2wCmd_DnsServerSet GsnDhcpSrvr_Stop
           CFI FunCall AppS2wNetConnMgr_Cb GsnDhcpSrvr_Stop
           CFI FunCall AppS2wCmd_NcmAuto GsnDhcpSrvr_Stop
         B.W      GsnDhcpSrvr_Stop
+          CFI EndBlock cfiCond638
           CFI EndBlock cfiCond639
           CFI EndBlock cfiCond640
-          CFI EndBlock cfiCond641
-          CFI EndBlock cfiPicker642
+          CFI EndBlock cfiPicker641
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -27593,7 +27555,7 @@ AppS2wNetConnMgr_Cb:
         DC32     OtaFwupConfParam
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond643 Using cfiCommon0
+          CFI Block cfiCond642 Using cfiCommon0
           CFI Function DHCP_notify
           CFI Conditional ??CrossCallReturnLabel_447
           CFI R4 Frame(CFA, -20)
@@ -27602,22 +27564,22 @@ AppS2wNetConnMgr_Cb:
           CFI R7 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+176
-          CFI Block cfiCond644 Using cfiCommon0
-          CFI (cfiCond644) Function AppS2wNetConnMgr_Cb
-          CFI (cfiCond644) Conditional ??CrossCallReturnLabel_446
-          CFI (cfiCond644) R4 Frame(CFA, -36)
-          CFI (cfiCond644) R5 Frame(CFA, -32)
-          CFI (cfiCond644) R6 Frame(CFA, -28)
-          CFI (cfiCond644) R7 Frame(CFA, -24)
-          CFI (cfiCond644) R8 Frame(CFA, -20)
-          CFI (cfiCond644) R9 Frame(CFA, -16)
-          CFI (cfiCond644) R10 Frame(CFA, -12)
-          CFI (cfiCond644) R11 Frame(CFA, -8)
-          CFI (cfiCond644) R14 Frame(CFA, -4)
-          CFI (cfiCond644) CFA R13+192
-          CFI Block cfiPicker645 Using cfiCommon1
-          CFI (cfiPicker645) NoFunction
-          CFI (cfiPicker645) Picker
+          CFI Block cfiCond643 Using cfiCommon0
+          CFI (cfiCond643) Function AppS2wNetConnMgr_Cb
+          CFI (cfiCond643) Conditional ??CrossCallReturnLabel_446
+          CFI (cfiCond643) R4 Frame(CFA, -36)
+          CFI (cfiCond643) R5 Frame(CFA, -32)
+          CFI (cfiCond643) R6 Frame(CFA, -28)
+          CFI (cfiCond643) R7 Frame(CFA, -24)
+          CFI (cfiCond643) R8 Frame(CFA, -20)
+          CFI (cfiCond643) R9 Frame(CFA, -16)
+          CFI (cfiCond643) R10 Frame(CFA, -12)
+          CFI (cfiCond643) R11 Frame(CFA, -8)
+          CFI (cfiCond643) R14 Frame(CFA, -4)
+          CFI (cfiCond643) CFA R13+192
+          CFI Block cfiPicker644 Using cfiCommon1
+          CFI (cfiPicker644) NoFunction
+          CFI (cfiPicker644) Picker
         THUMB
 ?Subroutine77:
         ADD      R0,R0,#+5120
@@ -27626,12 +27588,12 @@ AppS2wNetConnMgr_Cb:
           CFI FunCall DHCP_notify GsnNwIf_IpConfigGet
           CFI FunCall AppS2wNetConnMgr_Cb GsnNwIf_IpConfigGet
         B.W      GsnNwIf_IpConfigGet
+          CFI EndBlock cfiCond642
           CFI EndBlock cfiCond643
-          CFI EndBlock cfiCond644
-          CFI EndBlock cfiPicker645
+          CFI EndBlock cfiPicker644
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock646 Using cfiCommon0
+          CFI Block cfiBlock645 Using cfiCommon0
           CFI Function AppS2wCmd_NcmAuto
         THUMB
 // 9897 UINT8
@@ -27843,10 +27805,10 @@ AppS2wCmd_NcmAuto:
 // 9973         {
 // 9974 #ifdef S2W_DHCP_SERVER_ENABLE
 // 9975             GsnDhcpSrvr_Stop(&dhcpSrvr);
-        BL       ?Subroutine136
+        BL       ?Subroutine137
 // 9976 #ifdef S2W_DNS_SERVER_ENABLE
 // 9977             GsnDnsSrvr_Stop(&dnsServer);
-??CrossCallReturnLabel_622:
+??CrossCallReturnLabel_624:
         ADDW     R0,R8,#+1060
           CFI FunCall GsnDnsSrvr_Stop
         BL       GsnDnsSrvr_Stop
@@ -28902,7 +28864,7 @@ AppS2wCmd_NcmAuto:
         ADDW     SP,SP,#+1308
           CFI CFA R13+36
         POP      {R4-R11,PC}      ;; return
-          CFI EndBlock cfiBlock646
+          CFI EndBlock cfiBlock645
 // 10478 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -28939,7 +28901,7 @@ AppS2wCmd_NcmAuto:
         DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond647 Using cfiCommon0
+          CFI Block cfiCond646 Using cfiCommon0
           CFI Function AppS2wCmd_NcmAuto
           CFI NoCalls
           CFI Conditional ??CrossCallReturnLabel_630
@@ -28953,10 +28915,24 @@ AppS2wCmd_NcmAuto:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+1344
+          CFI Block cfiCond647 Using cfiCommon0
+          CFI (cfiCond647) Function AppS2wCmd_NcmAuto
+          CFI (cfiCond647) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond647) Conditional ??CrossCallReturnLabel_631
+          CFI (cfiCond647) R4 Frame(CFA, -36)
+          CFI (cfiCond647) R5 Frame(CFA, -32)
+          CFI (cfiCond647) R6 Frame(CFA, -28)
+          CFI (cfiCond647) R7 Frame(CFA, -24)
+          CFI (cfiCond647) R8 Frame(CFA, -20)
+          CFI (cfiCond647) R9 Frame(CFA, -16)
+          CFI (cfiCond647) R10 Frame(CFA, -12)
+          CFI (cfiCond647) R11 Frame(CFA, -8)
+          CFI (cfiCond647) R14 Frame(CFA, -4)
+          CFI (cfiCond647) CFA R13+1344
           CFI Block cfiCond648 Using cfiCommon0
           CFI (cfiCond648) Function AppS2wCmd_NcmAuto
           CFI (cfiCond648) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond648) Conditional ??CrossCallReturnLabel_631
+          CFI (cfiCond648) Conditional ??CrossCallReturnLabel_632
           CFI (cfiCond648) R4 Frame(CFA, -36)
           CFI (cfiCond648) R5 Frame(CFA, -32)
           CFI (cfiCond648) R6 Frame(CFA, -28)
@@ -28967,24 +28943,10 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond648) R11 Frame(CFA, -8)
           CFI (cfiCond648) R14 Frame(CFA, -4)
           CFI (cfiCond648) CFA R13+1344
-          CFI Block cfiCond649 Using cfiCommon0
-          CFI (cfiCond649) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond649) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond649) Conditional ??CrossCallReturnLabel_632
-          CFI (cfiCond649) R4 Frame(CFA, -36)
-          CFI (cfiCond649) R5 Frame(CFA, -32)
-          CFI (cfiCond649) R6 Frame(CFA, -28)
-          CFI (cfiCond649) R7 Frame(CFA, -24)
-          CFI (cfiCond649) R8 Frame(CFA, -20)
-          CFI (cfiCond649) R9 Frame(CFA, -16)
-          CFI (cfiCond649) R10 Frame(CFA, -12)
-          CFI (cfiCond649) R11 Frame(CFA, -8)
-          CFI (cfiCond649) R14 Frame(CFA, -4)
-          CFI (cfiCond649) CFA R13+1344
-          CFI Block cfiPicker650 Using cfiCommon1
-          CFI (cfiPicker650) NoFunction
-          CFI (cfiPicker650) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiPicker650) Picker
+          CFI Block cfiPicker649 Using cfiCommon1
+          CFI (cfiPicker649) NoFunction
+          CFI (cfiPicker649) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiPicker649) Picker
         THUMB
 ?Subroutine139:
         LDR.W    R1,??DataTable488_1
@@ -28992,10 +28954,10 @@ AppS2wCmd_NcmAuto:
         LDR      R0,[R0, #+0]
         ADDS     R1,R0,#+2
         BX       LR
+          CFI EndBlock cfiCond646
           CFI EndBlock cfiCond647
           CFI EndBlock cfiCond648
-          CFI EndBlock cfiCond649
-          CFI EndBlock cfiPicker650
+          CFI EndBlock cfiPicker649
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -29004,7 +28966,7 @@ AppS2wCmd_NcmAuto:
         DC32     0x101a8c0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond651 Using cfiCommon0
+          CFI Block cfiCond650 Using cfiCommon0
           CFI Function AppS2wCmd_NcmAuto
           CFI Conditional ??CrossCallReturnLabel_557
           CFI R4 Frame(CFA, -36)
@@ -29017,9 +28979,22 @@ AppS2wCmd_NcmAuto:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+1344
+          CFI Block cfiCond651 Using cfiCommon0
+          CFI (cfiCond651) Function AppS2wCmd_NcmAuto
+          CFI (cfiCond651) Conditional ??CrossCallReturnLabel_556
+          CFI (cfiCond651) R4 Frame(CFA, -36)
+          CFI (cfiCond651) R5 Frame(CFA, -32)
+          CFI (cfiCond651) R6 Frame(CFA, -28)
+          CFI (cfiCond651) R7 Frame(CFA, -24)
+          CFI (cfiCond651) R8 Frame(CFA, -20)
+          CFI (cfiCond651) R9 Frame(CFA, -16)
+          CFI (cfiCond651) R10 Frame(CFA, -12)
+          CFI (cfiCond651) R11 Frame(CFA, -8)
+          CFI (cfiCond651) R14 Frame(CFA, -4)
+          CFI (cfiCond651) CFA R13+1344
           CFI Block cfiCond652 Using cfiCommon0
           CFI (cfiCond652) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond652) Conditional ??CrossCallReturnLabel_556
+          CFI (cfiCond652) Conditional ??CrossCallReturnLabel_555
           CFI (cfiCond652) R4 Frame(CFA, -36)
           CFI (cfiCond652) R5 Frame(CFA, -32)
           CFI (cfiCond652) R6 Frame(CFA, -28)
@@ -29030,22 +29005,9 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond652) R11 Frame(CFA, -8)
           CFI (cfiCond652) R14 Frame(CFA, -4)
           CFI (cfiCond652) CFA R13+1344
-          CFI Block cfiCond653 Using cfiCommon0
-          CFI (cfiCond653) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond653) Conditional ??CrossCallReturnLabel_555
-          CFI (cfiCond653) R4 Frame(CFA, -36)
-          CFI (cfiCond653) R5 Frame(CFA, -32)
-          CFI (cfiCond653) R6 Frame(CFA, -28)
-          CFI (cfiCond653) R7 Frame(CFA, -24)
-          CFI (cfiCond653) R8 Frame(CFA, -20)
-          CFI (cfiCond653) R9 Frame(CFA, -16)
-          CFI (cfiCond653) R10 Frame(CFA, -12)
-          CFI (cfiCond653) R11 Frame(CFA, -8)
-          CFI (cfiCond653) R14 Frame(CFA, -4)
-          CFI (cfiCond653) CFA R13+1344
-          CFI Block cfiPicker654 Using cfiCommon1
-          CFI (cfiPicker654) NoFunction
-          CFI (cfiPicker654) Picker
+          CFI Block cfiPicker653 Using cfiCommon1
+          CFI (cfiPicker653) NoFunction
+          CFI (cfiPicker653) Picker
         THUMB
 ?Subroutine115:
         ADD      R0,SP,#+81
@@ -29053,13 +29015,13 @@ AppS2wCmd_NcmAuto:
           CFI FunCall AppS2wCmd_NcmAuto memcpy
           CFI FunCall AppS2wCmd_NcmAuto memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond650
           CFI EndBlock cfiCond651
           CFI EndBlock cfiCond652
-          CFI EndBlock cfiCond653
-          CFI EndBlock cfiPicker654
+          CFI EndBlock cfiPicker653
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond655 Using cfiCommon0
+          CFI Block cfiCond654 Using cfiCommon0
           CFI Function AppS2wCmd_NcmAuto
           CFI Conditional ??CrossCallReturnLabel_552
           CFI R4 Frame(CFA, -36)
@@ -29072,45 +29034,45 @@ AppS2wCmd_NcmAuto:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+1344
-          CFI Block cfiCond656 Using cfiCommon0
-          CFI (cfiCond656) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond656) Conditional ??CrossCallReturnLabel_551
-          CFI (cfiCond656) R4 Frame(CFA, -36)
-          CFI (cfiCond656) R5 Frame(CFA, -32)
-          CFI (cfiCond656) R6 Frame(CFA, -28)
-          CFI (cfiCond656) R7 Frame(CFA, -24)
-          CFI (cfiCond656) R8 Frame(CFA, -20)
-          CFI (cfiCond656) R9 Frame(CFA, -16)
-          CFI (cfiCond656) R10 Frame(CFA, -12)
-          CFI (cfiCond656) R11 Frame(CFA, -8)
-          CFI (cfiCond656) R14 Frame(CFA, -4)
-          CFI (cfiCond656) CFA R13+1344
-          CFI Block cfiPicker657 Using cfiCommon1
-          CFI (cfiPicker657) NoFunction
-          CFI (cfiPicker657) Picker
+          CFI Block cfiCond655 Using cfiCommon0
+          CFI (cfiCond655) Function AppS2wCmd_NcmAuto
+          CFI (cfiCond655) Conditional ??CrossCallReturnLabel_551
+          CFI (cfiCond655) R4 Frame(CFA, -36)
+          CFI (cfiCond655) R5 Frame(CFA, -32)
+          CFI (cfiCond655) R6 Frame(CFA, -28)
+          CFI (cfiCond655) R7 Frame(CFA, -24)
+          CFI (cfiCond655) R8 Frame(CFA, -20)
+          CFI (cfiCond655) R9 Frame(CFA, -16)
+          CFI (cfiCond655) R10 Frame(CFA, -12)
+          CFI (cfiCond655) R11 Frame(CFA, -8)
+          CFI (cfiCond655) R14 Frame(CFA, -4)
+          CFI (cfiCond655) CFA R13+1344
+          CFI Block cfiPicker656 Using cfiCommon1
+          CFI (cfiPicker656) NoFunction
+          CFI (cfiPicker656) Picker
         THUMB
 ?Subroutine113:
         STRB     R0,[SP, #+48]
-          CFI Block cfiCond658 Using cfiCommon0
-          CFI (cfiCond658) Function AppS2wCmd_Nauto
-          CFI (cfiCond658) Conditional ??CrossCallReturnLabel_550
-          CFI (cfiCond658) R4 Frame(CFA, -12)
-          CFI (cfiCond658) R5 Frame(CFA, -8)
-          CFI (cfiCond658) R14 Frame(CFA, -4)
-          CFI (cfiCond658) CFA R13+96
+          CFI Block cfiCond657 Using cfiCommon0
+          CFI (cfiCond657) Function AppS2wCmd_Nauto
+          CFI (cfiCond657) Conditional ??CrossCallReturnLabel_550
+          CFI (cfiCond657) R4 Frame(CFA, -12)
+          CFI (cfiCond657) R5 Frame(CFA, -8)
+          CFI (cfiCond657) R14 Frame(CFA, -4)
+          CFI (cfiCond657) CFA R13+96
 ??Subroutine113_0:
         ADD      R0,SP,#+49
           CFI FunCall AppS2wCmd_NcmAuto memcpy
           CFI FunCall AppS2wCmd_NcmAuto memcpy
           CFI FunCall AppS2wCmd_Nauto memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond654
           CFI EndBlock cfiCond655
-          CFI EndBlock cfiCond656
-          CFI EndBlock cfiPicker657
-          CFI EndBlock cfiCond658
+          CFI EndBlock cfiPicker656
+          CFI EndBlock cfiCond657
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond659 Using cfiCommon0
+          CFI Block cfiCond658 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_483
           CFI R4 Frame(CFA, -36)
@@ -29123,9 +29085,22 @@ AppS2wCmd_NcmAuto:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
+          CFI Block cfiCond659 Using cfiCommon0
+          CFI (cfiCond659) Function AppS2wCmd_NcmAuto
+          CFI (cfiCond659) Conditional ??CrossCallReturnLabel_482
+          CFI (cfiCond659) R4 Frame(CFA, -36)
+          CFI (cfiCond659) R5 Frame(CFA, -32)
+          CFI (cfiCond659) R6 Frame(CFA, -28)
+          CFI (cfiCond659) R7 Frame(CFA, -24)
+          CFI (cfiCond659) R8 Frame(CFA, -20)
+          CFI (cfiCond659) R9 Frame(CFA, -16)
+          CFI (cfiCond659) R10 Frame(CFA, -12)
+          CFI (cfiCond659) R11 Frame(CFA, -8)
+          CFI (cfiCond659) R14 Frame(CFA, -4)
+          CFI (cfiCond659) CFA R13+1344
           CFI Block cfiCond660 Using cfiCommon0
-          CFI (cfiCond660) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond660) Conditional ??CrossCallReturnLabel_482
+          CFI (cfiCond660) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond660) Conditional ??CrossCallReturnLabel_481
           CFI (cfiCond660) R4 Frame(CFA, -36)
           CFI (cfiCond660) R5 Frame(CFA, -32)
           CFI (cfiCond660) R6 Frame(CFA, -28)
@@ -29135,23 +29110,10 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond660) R10 Frame(CFA, -12)
           CFI (cfiCond660) R11 Frame(CFA, -8)
           CFI (cfiCond660) R14 Frame(CFA, -4)
-          CFI (cfiCond660) CFA R13+1344
-          CFI Block cfiCond661 Using cfiCommon0
-          CFI (cfiCond661) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond661) Conditional ??CrossCallReturnLabel_481
-          CFI (cfiCond661) R4 Frame(CFA, -36)
-          CFI (cfiCond661) R5 Frame(CFA, -32)
-          CFI (cfiCond661) R6 Frame(CFA, -28)
-          CFI (cfiCond661) R7 Frame(CFA, -24)
-          CFI (cfiCond661) R8 Frame(CFA, -20)
-          CFI (cfiCond661) R9 Frame(CFA, -16)
-          CFI (cfiCond661) R10 Frame(CFA, -12)
-          CFI (cfiCond661) R11 Frame(CFA, -8)
-          CFI (cfiCond661) R14 Frame(CFA, -4)
-          CFI (cfiCond661) CFA R13+360
-          CFI Block cfiPicker662 Using cfiCommon1
-          CFI (cfiPicker662) NoFunction
-          CFI (cfiPicker662) Picker
+          CFI (cfiCond660) CFA R13+360
+          CFI Block cfiPicker661 Using cfiCommon1
+          CFI (cfiPicker661) NoFunction
+          CFI (cfiPicker661) Picker
         THUMB
 ?Subroutine90:
         LDR.W    R0,??DataTable484_1
@@ -29159,13 +29121,13 @@ AppS2wCmd_NcmAuto:
           CFI FunCall AppS2wCmd_NcmAuto S2wCert_SearchRamTable
           CFI FunCall AppS2wCmd_Wassoc_test S2wCert_SearchRamTable
         B.W      S2wCert_SearchRamTable
+          CFI EndBlock cfiCond658
           CFI EndBlock cfiCond659
           CFI EndBlock cfiCond660
-          CFI EndBlock cfiCond661
-          CFI EndBlock cfiPicker662
+          CFI EndBlock cfiPicker661
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond663 Using cfiCommon0
+          CFI Block cfiCond662 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_480
           CFI R4 Frame(CFA, -36)
@@ -29178,9 +29140,22 @@ AppS2wCmd_NcmAuto:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
+          CFI Block cfiCond663 Using cfiCommon0
+          CFI (cfiCond663) Function AppS2wCmd_NcmAuto
+          CFI (cfiCond663) Conditional ??CrossCallReturnLabel_479
+          CFI (cfiCond663) R4 Frame(CFA, -36)
+          CFI (cfiCond663) R5 Frame(CFA, -32)
+          CFI (cfiCond663) R6 Frame(CFA, -28)
+          CFI (cfiCond663) R7 Frame(CFA, -24)
+          CFI (cfiCond663) R8 Frame(CFA, -20)
+          CFI (cfiCond663) R9 Frame(CFA, -16)
+          CFI (cfiCond663) R10 Frame(CFA, -12)
+          CFI (cfiCond663) R11 Frame(CFA, -8)
+          CFI (cfiCond663) R14 Frame(CFA, -4)
+          CFI (cfiCond663) CFA R13+1344
           CFI Block cfiCond664 Using cfiCommon0
-          CFI (cfiCond664) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond664) Conditional ??CrossCallReturnLabel_479
+          CFI (cfiCond664) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond664) Conditional ??CrossCallReturnLabel_478
           CFI (cfiCond664) R4 Frame(CFA, -36)
           CFI (cfiCond664) R5 Frame(CFA, -32)
           CFI (cfiCond664) R6 Frame(CFA, -28)
@@ -29190,23 +29165,10 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond664) R10 Frame(CFA, -12)
           CFI (cfiCond664) R11 Frame(CFA, -8)
           CFI (cfiCond664) R14 Frame(CFA, -4)
-          CFI (cfiCond664) CFA R13+1344
-          CFI Block cfiCond665 Using cfiCommon0
-          CFI (cfiCond665) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond665) Conditional ??CrossCallReturnLabel_478
-          CFI (cfiCond665) R4 Frame(CFA, -36)
-          CFI (cfiCond665) R5 Frame(CFA, -32)
-          CFI (cfiCond665) R6 Frame(CFA, -28)
-          CFI (cfiCond665) R7 Frame(CFA, -24)
-          CFI (cfiCond665) R8 Frame(CFA, -20)
-          CFI (cfiCond665) R9 Frame(CFA, -16)
-          CFI (cfiCond665) R10 Frame(CFA, -12)
-          CFI (cfiCond665) R11 Frame(CFA, -8)
-          CFI (cfiCond665) R14 Frame(CFA, -4)
-          CFI (cfiCond665) CFA R13+360
-          CFI Block cfiPicker666 Using cfiCommon1
-          CFI (cfiPicker666) NoFunction
-          CFI (cfiPicker666) Picker
+          CFI (cfiCond664) CFA R13+360
+          CFI Block cfiPicker665 Using cfiCommon1
+          CFI (cfiPicker665) NoFunction
+          CFI (cfiPicker665) Picker
         THUMB
 ?Subroutine89:
         LDR.W    R0,??DataTable484
@@ -29214,10 +29176,10 @@ AppS2wCmd_NcmAuto:
           CFI FunCall AppS2wCmd_NcmAuto S2wCert_SearchRamTable
           CFI FunCall AppS2wCmd_Wassoc_test S2wCert_SearchRamTable
         B.W      S2wCert_SearchRamTable
+          CFI EndBlock cfiCond662
           CFI EndBlock cfiCond663
           CFI EndBlock cfiCond664
-          CFI EndBlock cfiCond665
-          CFI EndBlock cfiPicker666
+          CFI EndBlock cfiPicker665
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -29226,7 +29188,7 @@ AppS2wCmd_NcmAuto:
         DC32     httpConfAtCmd
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond667 Using cfiCommon0
+          CFI Block cfiCond666 Using cfiCommon0
           CFI Function AppS2wCommand_Process
           CFI NoCalls
           CFI NoCalls
@@ -29243,23 +29205,40 @@ AppS2wCmd_NcmAuto:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+40
+          CFI Block cfiCond667 Using cfiCommon0
+          CFI (cfiCond667) Function AppS2wCmd_TkipSeqNumGet
+          CFI (cfiCond667) NoCalls AppS2wCmd_TkipSeqNumGet
+          CFI (cfiCond667) NoCalls AppS2wCommand_Process
+          CFI (cfiCond667) NoCalls AppS2wExternalFlashData
+          CFI (cfiCond667) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond667) Conditional ??CrossCallReturnLabel_453
+          CFI (cfiCond667) R4 Frame(CFA, -8)
+          CFI (cfiCond667) R14 Frame(CFA, -4)
+          CFI (cfiCond667) CFA R13+24
           CFI Block cfiCond668 Using cfiCommon0
-          CFI (cfiCond668) Function AppS2wCmd_TkipSeqNumGet
-          CFI (cfiCond668) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond668) NoCalls AppS2wCommand_Process
+          CFI (cfiCond668) Function AppS2wCmd_NcmAuto
           CFI (cfiCond668) NoCalls AppS2wCmd_TkipSeqNumGet
+          CFI (cfiCond668) NoCalls AppS2wCommand_Process
           CFI (cfiCond668) NoCalls AppS2wExternalFlashData
-          CFI (cfiCond668) Conditional ??CrossCallReturnLabel_453
-          CFI (cfiCond668) R4 Frame(CFA, -8)
+          CFI (cfiCond668) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond668) Conditional ??CrossCallReturnLabel_454
+          CFI (cfiCond668) R4 Frame(CFA, -36)
+          CFI (cfiCond668) R5 Frame(CFA, -32)
+          CFI (cfiCond668) R6 Frame(CFA, -28)
+          CFI (cfiCond668) R7 Frame(CFA, -24)
+          CFI (cfiCond668) R8 Frame(CFA, -20)
+          CFI (cfiCond668) R9 Frame(CFA, -16)
+          CFI (cfiCond668) R10 Frame(CFA, -12)
+          CFI (cfiCond668) R11 Frame(CFA, -8)
           CFI (cfiCond668) R14 Frame(CFA, -4)
-          CFI (cfiCond668) CFA R13+24
+          CFI (cfiCond668) CFA R13+1344
           CFI Block cfiCond669 Using cfiCommon0
           CFI (cfiCond669) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond669) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond669) NoCalls AppS2wCommand_Process
           CFI (cfiCond669) NoCalls AppS2wCmd_TkipSeqNumGet
+          CFI (cfiCond669) NoCalls AppS2wCommand_Process
           CFI (cfiCond669) NoCalls AppS2wExternalFlashData
-          CFI (cfiCond669) Conditional ??CrossCallReturnLabel_454
+          CFI (cfiCond669) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond669) Conditional ??CrossCallReturnLabel_455
           CFI (cfiCond669) R4 Frame(CFA, -36)
           CFI (cfiCond669) R5 Frame(CFA, -32)
           CFI (cfiCond669) R6 Frame(CFA, -28)
@@ -29272,11 +29251,11 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond669) CFA R13+1344
           CFI Block cfiCond670 Using cfiCommon0
           CFI (cfiCond670) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond670) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond670) NoCalls AppS2wCommand_Process
           CFI (cfiCond670) NoCalls AppS2wCmd_TkipSeqNumGet
+          CFI (cfiCond670) NoCalls AppS2wCommand_Process
           CFI (cfiCond670) NoCalls AppS2wExternalFlashData
-          CFI (cfiCond670) Conditional ??CrossCallReturnLabel_455
+          CFI (cfiCond670) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond670) Conditional ??CrossCallReturnLabel_456
           CFI (cfiCond670) R4 Frame(CFA, -36)
           CFI (cfiCond670) R5 Frame(CFA, -32)
           CFI (cfiCond670) R6 Frame(CFA, -28)
@@ -29289,11 +29268,11 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond670) CFA R13+1344
           CFI Block cfiCond671 Using cfiCommon0
           CFI (cfiCond671) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond671) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond671) NoCalls AppS2wCommand_Process
           CFI (cfiCond671) NoCalls AppS2wCmd_TkipSeqNumGet
+          CFI (cfiCond671) NoCalls AppS2wCommand_Process
           CFI (cfiCond671) NoCalls AppS2wExternalFlashData
-          CFI (cfiCond671) Conditional ??CrossCallReturnLabel_456
+          CFI (cfiCond671) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond671) Conditional ??CrossCallReturnLabel_457
           CFI (cfiCond671) R4 Frame(CFA, -36)
           CFI (cfiCond671) R5 Frame(CFA, -32)
           CFI (cfiCond671) R6 Frame(CFA, -28)
@@ -29306,11 +29285,11 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond671) CFA R13+1344
           CFI Block cfiCond672 Using cfiCommon0
           CFI (cfiCond672) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond672) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond672) NoCalls AppS2wCommand_Process
           CFI (cfiCond672) NoCalls AppS2wCmd_TkipSeqNumGet
+          CFI (cfiCond672) NoCalls AppS2wCommand_Process
           CFI (cfiCond672) NoCalls AppS2wExternalFlashData
-          CFI (cfiCond672) Conditional ??CrossCallReturnLabel_457
+          CFI (cfiCond672) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond672) Conditional ??CrossCallReturnLabel_458
           CFI (cfiCond672) R4 Frame(CFA, -36)
           CFI (cfiCond672) R5 Frame(CFA, -32)
           CFI (cfiCond672) R6 Frame(CFA, -28)
@@ -29322,45 +29301,29 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond672) R14 Frame(CFA, -4)
           CFI (cfiCond672) CFA R13+1344
           CFI Block cfiCond673 Using cfiCommon0
-          CFI (cfiCond673) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond673) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond673) NoCalls AppS2wCommand_Process
+          CFI (cfiCond673) Function AppS2wExternalFlashData
           CFI (cfiCond673) NoCalls AppS2wCmd_TkipSeqNumGet
+          CFI (cfiCond673) NoCalls AppS2wCommand_Process
           CFI (cfiCond673) NoCalls AppS2wExternalFlashData
-          CFI (cfiCond673) Conditional ??CrossCallReturnLabel_458
-          CFI (cfiCond673) R4 Frame(CFA, -36)
-          CFI (cfiCond673) R5 Frame(CFA, -32)
-          CFI (cfiCond673) R6 Frame(CFA, -28)
-          CFI (cfiCond673) R7 Frame(CFA, -24)
-          CFI (cfiCond673) R8 Frame(CFA, -20)
-          CFI (cfiCond673) R9 Frame(CFA, -16)
-          CFI (cfiCond673) R10 Frame(CFA, -12)
-          CFI (cfiCond673) R11 Frame(CFA, -8)
+          CFI (cfiCond673) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiCond673) Conditional ??CrossCallReturnLabel_459
+          CFI (cfiCond673) R4 Frame(CFA, -12)
+          CFI (cfiCond673) R5 Frame(CFA, -8)
           CFI (cfiCond673) R14 Frame(CFA, -4)
-          CFI (cfiCond673) CFA R13+1344
-          CFI Block cfiCond674 Using cfiCommon0
-          CFI (cfiCond674) Function AppS2wExternalFlashData
-          CFI (cfiCond674) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiCond674) NoCalls AppS2wCommand_Process
-          CFI (cfiCond674) NoCalls AppS2wCmd_TkipSeqNumGet
-          CFI (cfiCond674) NoCalls AppS2wExternalFlashData
-          CFI (cfiCond674) Conditional ??CrossCallReturnLabel_459
-          CFI (cfiCond674) R4 Frame(CFA, -12)
-          CFI (cfiCond674) R5 Frame(CFA, -8)
-          CFI (cfiCond674) R14 Frame(CFA, -4)
-          CFI (cfiCond674) CFA R13+24
-          CFI Block cfiPicker675 Using cfiCommon1
-          CFI (cfiPicker675) NoFunction
-          CFI (cfiPicker675) NoCalls AppS2wCmd_NcmAuto
-          CFI (cfiPicker675) NoCalls AppS2wCommand_Process
-          CFI (cfiPicker675) NoCalls AppS2wCmd_TkipSeqNumGet
-          CFI (cfiPicker675) NoCalls AppS2wExternalFlashData
-          CFI (cfiPicker675) Picker
+          CFI (cfiCond673) CFA R13+24
+          CFI Block cfiPicker674 Using cfiCommon1
+          CFI (cfiPicker674) NoFunction
+          CFI (cfiPicker674) NoCalls AppS2wCmd_TkipSeqNumGet
+          CFI (cfiPicker674) NoCalls AppS2wCommand_Process
+          CFI (cfiPicker674) NoCalls AppS2wExternalFlashData
+          CFI (cfiPicker674) NoCalls AppS2wCmd_NcmAuto
+          CFI (cfiPicker674) Picker
         THUMB
 ?Subroutine80:
         LDR.N    R0,??DataTable470_2
         LDR      R0,[R0, #+0]
         BX       LR
+          CFI EndBlock cfiCond666
           CFI EndBlock cfiCond667
           CFI EndBlock cfiCond668
           CFI EndBlock cfiCond669
@@ -29368,8 +29331,7 @@ AppS2wCmd_NcmAuto:
           CFI EndBlock cfiCond671
           CFI EndBlock cfiCond672
           CFI EndBlock cfiCond673
-          CFI EndBlock cfiCond674
-          CFI EndBlock cfiPicker675
+          CFI EndBlock cfiPicker674
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -29378,7 +29340,7 @@ AppS2wCmd_NcmAuto:
         DC32     headerTypes
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond676 Using cfiCommon0
+          CFI Block cfiCond675 Using cfiCommon0
           CFI Function AppS2wCmd_NcmAuto
           CFI Conditional ??CrossCallReturnLabel_241
           CFI R4 Frame(CFA, -36)
@@ -29391,9 +29353,22 @@ AppS2wCmd_NcmAuto:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+1344
+          CFI Block cfiCond676 Using cfiCommon0
+          CFI (cfiCond676) Function AppS2wCmd_NcmAuto
+          CFI (cfiCond676) Conditional ??CrossCallReturnLabel_240
+          CFI (cfiCond676) R4 Frame(CFA, -36)
+          CFI (cfiCond676) R5 Frame(CFA, -32)
+          CFI (cfiCond676) R6 Frame(CFA, -28)
+          CFI (cfiCond676) R7 Frame(CFA, -24)
+          CFI (cfiCond676) R8 Frame(CFA, -20)
+          CFI (cfiCond676) R9 Frame(CFA, -16)
+          CFI (cfiCond676) R10 Frame(CFA, -12)
+          CFI (cfiCond676) R11 Frame(CFA, -8)
+          CFI (cfiCond676) R14 Frame(CFA, -4)
+          CFI (cfiCond676) CFA R13+1344
           CFI Block cfiCond677 Using cfiCommon0
           CFI (cfiCond677) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond677) Conditional ??CrossCallReturnLabel_240
+          CFI (cfiCond677) Conditional ??CrossCallReturnLabel_239
           CFI (cfiCond677) R4 Frame(CFA, -36)
           CFI (cfiCond677) R5 Frame(CFA, -32)
           CFI (cfiCond677) R6 Frame(CFA, -28)
@@ -29404,22 +29379,9 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond677) R11 Frame(CFA, -8)
           CFI (cfiCond677) R14 Frame(CFA, -4)
           CFI (cfiCond677) CFA R13+1344
-          CFI Block cfiCond678 Using cfiCommon0
-          CFI (cfiCond678) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond678) Conditional ??CrossCallReturnLabel_239
-          CFI (cfiCond678) R4 Frame(CFA, -36)
-          CFI (cfiCond678) R5 Frame(CFA, -32)
-          CFI (cfiCond678) R6 Frame(CFA, -28)
-          CFI (cfiCond678) R7 Frame(CFA, -24)
-          CFI (cfiCond678) R8 Frame(CFA, -20)
-          CFI (cfiCond678) R9 Frame(CFA, -16)
-          CFI (cfiCond678) R10 Frame(CFA, -12)
-          CFI (cfiCond678) R11 Frame(CFA, -8)
-          CFI (cfiCond678) R14 Frame(CFA, -4)
-          CFI (cfiCond678) CFA R13+1344
-          CFI Block cfiPicker679 Using cfiCommon1
-          CFI (cfiPicker679) NoFunction
-          CFI (cfiPicker679) Picker
+          CFI Block cfiPicker678 Using cfiCommon1
+          CFI (cfiPicker678) NoFunction
+          CFI (cfiPicker678) Picker
         THUMB
 ?Subroutine44:
         ADD      R0,SP,#+1304
@@ -29427,13 +29389,13 @@ AppS2wCmd_NcmAuto:
           CFI FunCall AppS2wCmd_NcmAuto AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_NcmAuto AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond675
           CFI EndBlock cfiCond676
           CFI EndBlock cfiCond677
-          CFI EndBlock cfiCond678
-          CFI EndBlock cfiPicker679
+          CFI EndBlock cfiPicker678
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond680 Using cfiCommon0
+          CFI Block cfiCond679 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_105
           CFI R4 Frame(CFA, -36)
@@ -29446,19 +29408,32 @@ AppS2wCmd_NcmAuto:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
+          CFI Block cfiCond680 Using cfiCommon0
+          CFI (cfiCond680) Function AppS2wCmd_Ndhcp
+          CFI (cfiCond680) Conditional ??CrossCallReturnLabel_104
+          CFI (cfiCond680) R4 Frame(CFA, -24)
+          CFI (cfiCond680) R5 Frame(CFA, -20)
+          CFI (cfiCond680) R6 Frame(CFA, -16)
+          CFI (cfiCond680) R7 Frame(CFA, -12)
+          CFI (cfiCond680) R8 Frame(CFA, -8)
+          CFI (cfiCond680) R14 Frame(CFA, -4)
+          CFI (cfiCond680) CFA R13+72
           CFI Block cfiCond681 Using cfiCommon0
-          CFI (cfiCond681) Function AppS2wCmd_Ndhcp
-          CFI (cfiCond681) Conditional ??CrossCallReturnLabel_104
-          CFI (cfiCond681) R4 Frame(CFA, -24)
-          CFI (cfiCond681) R5 Frame(CFA, -20)
-          CFI (cfiCond681) R6 Frame(CFA, -16)
-          CFI (cfiCond681) R7 Frame(CFA, -12)
-          CFI (cfiCond681) R8 Frame(CFA, -8)
+          CFI (cfiCond681) Function AppS2wCmd_NcmAuto
+          CFI (cfiCond681) Conditional ??CrossCallReturnLabel_103
+          CFI (cfiCond681) R4 Frame(CFA, -36)
+          CFI (cfiCond681) R5 Frame(CFA, -32)
+          CFI (cfiCond681) R6 Frame(CFA, -28)
+          CFI (cfiCond681) R7 Frame(CFA, -24)
+          CFI (cfiCond681) R8 Frame(CFA, -20)
+          CFI (cfiCond681) R9 Frame(CFA, -16)
+          CFI (cfiCond681) R10 Frame(CFA, -12)
+          CFI (cfiCond681) R11 Frame(CFA, -8)
           CFI (cfiCond681) R14 Frame(CFA, -4)
-          CFI (cfiCond681) CFA R13+72
+          CFI (cfiCond681) CFA R13+1344
           CFI Block cfiCond682 Using cfiCommon0
-          CFI (cfiCond682) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond682) Conditional ??CrossCallReturnLabel_103
+          CFI (cfiCond682) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond682) Conditional ??CrossCallReturnLabel_102
           CFI (cfiCond682) R4 Frame(CFA, -36)
           CFI (cfiCond682) R5 Frame(CFA, -32)
           CFI (cfiCond682) R6 Frame(CFA, -28)
@@ -29468,23 +29443,10 @@ AppS2wCmd_NcmAuto:
           CFI (cfiCond682) R10 Frame(CFA, -12)
           CFI (cfiCond682) R11 Frame(CFA, -8)
           CFI (cfiCond682) R14 Frame(CFA, -4)
-          CFI (cfiCond682) CFA R13+1344
-          CFI Block cfiCond683 Using cfiCommon0
-          CFI (cfiCond683) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond683) Conditional ??CrossCallReturnLabel_102
-          CFI (cfiCond683) R4 Frame(CFA, -36)
-          CFI (cfiCond683) R5 Frame(CFA, -32)
-          CFI (cfiCond683) R6 Frame(CFA, -28)
-          CFI (cfiCond683) R7 Frame(CFA, -24)
-          CFI (cfiCond683) R8 Frame(CFA, -20)
-          CFI (cfiCond683) R9 Frame(CFA, -16)
-          CFI (cfiCond683) R10 Frame(CFA, -12)
-          CFI (cfiCond683) R11 Frame(CFA, -8)
-          CFI (cfiCond683) R14 Frame(CFA, -4)
-          CFI (cfiCond683) CFA R13+360
-          CFI Block cfiPicker684 Using cfiCommon1
-          CFI (cfiPicker684) NoFunction
-          CFI (cfiPicker684) Picker
+          CFI (cfiCond682) CFA R13+360
+          CFI Block cfiPicker683 Using cfiCommon1
+          CFI (cfiPicker683) NoFunction
+          CFI (cfiPicker683) Picker
         THUMB
 ?Subroutine32:
         ADD      R0,SP,#+16
@@ -29493,14 +29455,14 @@ AppS2wCmd_NcmAuto:
           CFI FunCall AppS2wCmd_NcmAuto S2w_macAddrRTCGet
           CFI FunCall AppS2wCmd_Wassoc_test S2w_macAddrRTCGet
         B.W      S2w_macAddrRTCGet
+          CFI EndBlock cfiCond679
           CFI EndBlock cfiCond680
           CFI EndBlock cfiCond681
           CFI EndBlock cfiCond682
-          CFI EndBlock cfiCond683
-          CFI EndBlock cfiPicker684
+          CFI EndBlock cfiPicker683
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock685 Using cfiCommon0
+          CFI Block cfiBlock684 Using cfiCommon0
           CFI Function AppS2wCmd_NcmAutoConf
         THUMB
 // 10479 UINT8
@@ -29621,7 +29583,7 @@ AppS2wCmd_NcmAutoConf:
         ADD      SP,SP,#+16
           CFI CFA R13+8
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock685
+          CFI EndBlock cfiBlock684
 // 10540 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -29656,7 +29618,7 @@ AppS2wCmd_NcmAutoConf:
 // 10553  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock686 Using cfiCommon0
+          CFI Block cfiBlock685 Using cfiCommon0
           CFI Function AppS2wCmd_Wauto
         THUMB
 // 10554 PUBLIC UINT8
@@ -29741,11 +29703,11 @@ AppS2wCmd_Wauto:
         ADD      SP,SP,#+48
           CFI CFA R13+8
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock686
+          CFI EndBlock cfiBlock685
 // 10586 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond687 Using cfiCommon0
+          CFI Block cfiCond686 Using cfiCommon0
           CFI Function AppS2wCmd_WpaPsk
           CFI NoCalls
           CFI NoCalls
@@ -29754,19 +29716,19 @@ AppS2wCmd_Wauto:
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+152
-          CFI Block cfiCond688 Using cfiCommon0
-          CFI (cfiCond688) Function AppS2wCmd_Wauto
-          CFI (cfiCond688) NoCalls AppS2wCmd_WpaPsk
-          CFI (cfiCond688) NoCalls AppS2wCmd_Wauto
-          CFI (cfiCond688) Conditional ??CrossCallReturnLabel_445
-          CFI (cfiCond688) R4 Frame(CFA, -8)
-          CFI (cfiCond688) R14 Frame(CFA, -4)
-          CFI (cfiCond688) CFA R13+56
-          CFI Block cfiPicker689 Using cfiCommon1
-          CFI (cfiPicker689) NoFunction
-          CFI (cfiPicker689) NoCalls AppS2wCmd_WpaPsk
-          CFI (cfiPicker689) NoCalls AppS2wCmd_Wauto
-          CFI (cfiPicker689) Picker
+          CFI Block cfiCond687 Using cfiCommon0
+          CFI (cfiCond687) Function AppS2wCmd_Wauto
+          CFI (cfiCond687) NoCalls AppS2wCmd_WpaPsk
+          CFI (cfiCond687) NoCalls AppS2wCmd_Wauto
+          CFI (cfiCond687) Conditional ??CrossCallReturnLabel_445
+          CFI (cfiCond687) R4 Frame(CFA, -8)
+          CFI (cfiCond687) R14 Frame(CFA, -4)
+          CFI (cfiCond687) CFA R13+56
+          CFI Block cfiPicker688 Using cfiCommon1
+          CFI (cfiPicker688) NoFunction
+          CFI (cfiPicker688) NoCalls AppS2wCmd_WpaPsk
+          CFI (cfiPicker688) NoCalls AppS2wCmd_Wauto
+          CFI (cfiPicker688) Picker
         THUMB
 ?Subroutine76:
         LDR.W    R0,??DataTable490
@@ -29775,9 +29737,9 @@ AppS2wCmd_Wauto:
         ADD      R0,R0,#+30336
         LDRB     R0,[R0, #+0]
         BX       LR
+          CFI EndBlock cfiCond686
           CFI EndBlock cfiCond687
-          CFI EndBlock cfiCond688
-          CFI EndBlock cfiPicker689
+          CFI EndBlock cfiPicker688
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -29805,7 +29767,7 @@ AppS2wCmd_Wauto:
 // 10593  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock690 Using cfiCommon0
+          CFI Block cfiBlock689 Using cfiCommon0
           CFI Function AppS2wCmd_Wrate
         THUMB
 // 10594 PUBLIC UINT8
@@ -29966,7 +29928,7 @@ AppS2wCmd_Wrate:
         ADD      SP,SP,#+16
           CFI CFA R13+8
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock690
+          CFI EndBlock cfiBlock689
 // 10656 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -29989,85 +29951,85 @@ AppS2wCmd_Wrate:
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond691 Using cfiCommon0
+          CFI Block cfiCond690 Using cfiCommon0
           CFI Function AppS2wCmd_TkipSeqNumGet
           CFI Conditional ??CrossCallReturnLabel_212
           CFI R4 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
+          CFI Block cfiCond691 Using cfiCommon0
+          CFI (cfiCond691) Function AppS2wCmd_DnsServerSet
+          CFI (cfiCond691) Conditional ??CrossCallReturnLabel_211
+          CFI (cfiCond691) R4 Frame(CFA, -24)
+          CFI (cfiCond691) R5 Frame(CFA, -20)
+          CFI (cfiCond691) R6 Frame(CFA, -16)
+          CFI (cfiCond691) R7 Frame(CFA, -12)
+          CFI (cfiCond691) R8 Frame(CFA, -8)
+          CFI (cfiCond691) R14 Frame(CFA, -4)
+          CFI (cfiCond691) CFA R13+40
           CFI Block cfiCond692 Using cfiCommon0
-          CFI (cfiCond692) Function AppS2wCmd_DnsServerSet
-          CFI (cfiCond692) Conditional ??CrossCallReturnLabel_211
-          CFI (cfiCond692) R4 Frame(CFA, -24)
-          CFI (cfiCond692) R5 Frame(CFA, -20)
-          CFI (cfiCond692) R6 Frame(CFA, -16)
-          CFI (cfiCond692) R7 Frame(CFA, -12)
-          CFI (cfiCond692) R8 Frame(CFA, -8)
+          CFI (cfiCond692) Function AppS2wCmd_NcmAutoConf
+          CFI (cfiCond692) Conditional ??CrossCallReturnLabel_210
+          CFI (cfiCond692) R4 Frame(CFA, -8)
           CFI (cfiCond692) R14 Frame(CFA, -4)
-          CFI (cfiCond692) CFA R13+40
+          CFI (cfiCond692) CFA R13+24
           CFI Block cfiCond693 Using cfiCommon0
           CFI (cfiCond693) Function AppS2wCmd_NcmAutoConf
-          CFI (cfiCond693) Conditional ??CrossCallReturnLabel_210
+          CFI (cfiCond693) Conditional ??CrossCallReturnLabel_209
           CFI (cfiCond693) R4 Frame(CFA, -8)
           CFI (cfiCond693) R14 Frame(CFA, -4)
           CFI (cfiCond693) CFA R13+24
           CFI Block cfiCond694 Using cfiCommon0
-          CFI (cfiCond694) Function AppS2wCmd_NcmAutoConf
-          CFI (cfiCond694) Conditional ??CrossCallReturnLabel_209
+          CFI (cfiCond694) Function AppS2wCmd_Wrate
+          CFI (cfiCond694) Conditional ??CrossCallReturnLabel_208
           CFI (cfiCond694) R4 Frame(CFA, -8)
           CFI (cfiCond694) R14 Frame(CFA, -4)
           CFI (cfiCond694) CFA R13+24
           CFI Block cfiCond695 Using cfiCommon0
           CFI (cfiCond695) Function AppS2wCmd_Wrate
-          CFI (cfiCond695) Conditional ??CrossCallReturnLabel_208
+          CFI (cfiCond695) Conditional ??CrossCallReturnLabel_207
           CFI (cfiCond695) R4 Frame(CFA, -8)
           CFI (cfiCond695) R14 Frame(CFA, -4)
           CFI (cfiCond695) CFA R13+24
           CFI Block cfiCond696 Using cfiCommon0
           CFI (cfiCond696) Function AppS2wCmd_Wrate
-          CFI (cfiCond696) Conditional ??CrossCallReturnLabel_207
+          CFI (cfiCond696) Conditional ??CrossCallReturnLabel_206
           CFI (cfiCond696) R4 Frame(CFA, -8)
           CFI (cfiCond696) R14 Frame(CFA, -4)
           CFI (cfiCond696) CFA R13+24
           CFI Block cfiCond697 Using cfiCommon0
-          CFI (cfiCond697) Function AppS2wCmd_Wrate
-          CFI (cfiCond697) Conditional ??CrossCallReturnLabel_206
+          CFI (cfiCond697) Function AppS2wCmd_Dgpio
+          CFI (cfiCond697) Conditional ??CrossCallReturnLabel_205
           CFI (cfiCond697) R4 Frame(CFA, -8)
           CFI (cfiCond697) R14 Frame(CFA, -4)
           CFI (cfiCond697) CFA R13+24
           CFI Block cfiCond698 Using cfiCommon0
           CFI (cfiCond698) Function AppS2wCmd_Dgpio
-          CFI (cfiCond698) Conditional ??CrossCallReturnLabel_205
+          CFI (cfiCond698) Conditional ??CrossCallReturnLabel_204
           CFI (cfiCond698) R4 Frame(CFA, -8)
           CFI (cfiCond698) R14 Frame(CFA, -4)
           CFI (cfiCond698) CFA R13+24
           CFI Block cfiCond699 Using cfiCommon0
-          CFI (cfiCond699) Function AppS2wCmd_Dgpio
-          CFI (cfiCond699) Conditional ??CrossCallReturnLabel_204
+          CFI (cfiCond699) Function AppS2wCmd_ExtFlashErase
+          CFI (cfiCond699) Conditional ??CrossCallReturnLabel_203
           CFI (cfiCond699) R4 Frame(CFA, -8)
           CFI (cfiCond699) R14 Frame(CFA, -4)
           CFI (cfiCond699) CFA R13+24
           CFI Block cfiCond700 Using cfiCommon0
-          CFI (cfiCond700) Function AppS2wCmd_ExtFlashErase
-          CFI (cfiCond700) Conditional ??CrossCallReturnLabel_203
+          CFI (cfiCond700) Function AppS2wCmd_TempReadStart
+          CFI (cfiCond700) Conditional ??CrossCallReturnLabel_202
           CFI (cfiCond700) R4 Frame(CFA, -8)
           CFI (cfiCond700) R14 Frame(CFA, -4)
           CFI (cfiCond700) CFA R13+24
           CFI Block cfiCond701 Using cfiCommon0
           CFI (cfiCond701) Function AppS2wCmd_TempReadStart
-          CFI (cfiCond701) Conditional ??CrossCallReturnLabel_202
+          CFI (cfiCond701) Conditional ??CrossCallReturnLabel_201
           CFI (cfiCond701) R4 Frame(CFA, -8)
           CFI (cfiCond701) R14 Frame(CFA, -4)
           CFI (cfiCond701) CFA R13+24
-          CFI Block cfiCond702 Using cfiCommon0
-          CFI (cfiCond702) Function AppS2wCmd_TempReadStart
-          CFI (cfiCond702) Conditional ??CrossCallReturnLabel_201
-          CFI (cfiCond702) R4 Frame(CFA, -8)
-          CFI (cfiCond702) R14 Frame(CFA, -4)
-          CFI (cfiCond702) CFA R13+24
-          CFI Block cfiPicker703 Using cfiCommon1
-          CFI (cfiPicker703) NoFunction
-          CFI (cfiPicker703) Picker
+          CFI Block cfiPicker702 Using cfiCommon1
+          CFI (cfiPicker702) NoFunction
+          CFI (cfiPicker702) Picker
         THUMB
 ?Subroutine39:
         ADD      R0,SP,#+12
@@ -30084,6 +30046,7 @@ AppS2wCmd_Wrate:
           CFI FunCall AppS2wCmd_TempReadStart AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_TempReadStart AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond690
           CFI EndBlock cfiCond691
           CFI EndBlock cfiCond692
           CFI EndBlock cfiCond693
@@ -30095,8 +30058,7 @@ AppS2wCmd_Wrate:
           CFI EndBlock cfiCond699
           CFI EndBlock cfiCond700
           CFI EndBlock cfiCond701
-          CFI EndBlock cfiCond702
-          CFI EndBlock cfiPicker703
+          CFI EndBlock cfiPicker702
 // 10657 
 // 10658 /**
 // 10659  ******************************************************************
@@ -30110,7 +30072,7 @@ AppS2wCmd_Wrate:
 // 10667  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock704 Using cfiCommon0
+          CFI Block cfiBlock703 Using cfiCommon0
           CFI Function AppS2wCmd_Nauto
         THUMB
 // 10668 PUBLIC UINT8
@@ -30471,7 +30433,7 @@ AppS2wCmd_Nauto:
         ADD      SP,SP,#+84
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
-          CFI EndBlock cfiBlock704
+          CFI EndBlock cfiBlock703
 // 10828 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -30511,23 +30473,23 @@ AppS2wCmd_Nauto:
         DC8 255, 255, 255, 255
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond705 Using cfiCommon0
+          CFI Block cfiCond704 Using cfiCommon0
           CFI Function AppS2wCmd_DnsLookup
           CFI Conditional ??CrossCallReturnLabel_465
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+40
-          CFI Block cfiCond706 Using cfiCommon0
-          CFI (cfiCond706) Function AppS2wCmd_Nauto
-          CFI (cfiCond706) Conditional ??CrossCallReturnLabel_464
-          CFI (cfiCond706) R4 Frame(CFA, -12)
-          CFI (cfiCond706) R5 Frame(CFA, -8)
-          CFI (cfiCond706) R14 Frame(CFA, -4)
-          CFI (cfiCond706) CFA R13+96
-          CFI Block cfiPicker707 Using cfiCommon1
-          CFI (cfiPicker707) NoFunction
-          CFI (cfiPicker707) Picker
+          CFI Block cfiCond705 Using cfiCommon0
+          CFI (cfiCond705) Function AppS2wCmd_Nauto
+          CFI (cfiCond705) Conditional ??CrossCallReturnLabel_464
+          CFI (cfiCond705) R4 Frame(CFA, -12)
+          CFI (cfiCond705) R5 Frame(CFA, -8)
+          CFI (cfiCond705) R14 Frame(CFA, -4)
+          CFI (cfiCond705) CFA R13+96
+          CFI Block cfiPicker706 Using cfiCommon1
+          CFI (cfiPicker706) NoFunction
+          CFI (cfiPicker706) Picker
         THUMB
 ?Subroutine84:
         ADD      R2,SP,#+4
@@ -30536,12 +30498,12 @@ AppS2wCmd_Nauto:
           CFI FunCall AppS2wCmd_DnsLookup GsnNwIf_DnsHostByNameGet
           CFI FunCall AppS2wCmd_Nauto GsnNwIf_DnsHostByNameGet
         B.W      GsnNwIf_DnsHostByNameGet
+          CFI EndBlock cfiCond704
           CFI EndBlock cfiCond705
-          CFI EndBlock cfiCond706
-          CFI EndBlock cfiPicker707
+          CFI EndBlock cfiPicker706
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond708 Using cfiCommon0
+          CFI Block cfiCond707 Using cfiCommon0
           CFI Function AppS2wCmd_SystemTimeSet
           CFI Conditional ??CrossCallReturnLabel_426
           CFI R4 Frame(CFA, -16)
@@ -30549,39 +30511,39 @@ AppS2wCmd_Nauto:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+80
+          CFI Block cfiCond708 Using cfiCommon0
+          CFI (cfiCond708) Function AppS2wCmd_Dns
+          CFI (cfiCond708) Conditional ??CrossCallReturnLabel_425
+          CFI (cfiCond708) R4 Frame(CFA, -20)
+          CFI (cfiCond708) R5 Frame(CFA, -16)
+          CFI (cfiCond708) R6 Frame(CFA, -12)
+          CFI (cfiCond708) R7 Frame(CFA, -8)
+          CFI (cfiCond708) R14 Frame(CFA, -4)
+          CFI (cfiCond708) CFA R13+56
           CFI Block cfiCond709 Using cfiCommon0
-          CFI (cfiCond709) Function AppS2wCmd_Dns
-          CFI (cfiCond709) Conditional ??CrossCallReturnLabel_425
-          CFI (cfiCond709) R4 Frame(CFA, -20)
-          CFI (cfiCond709) R5 Frame(CFA, -16)
-          CFI (cfiCond709) R6 Frame(CFA, -12)
-          CFI (cfiCond709) R7 Frame(CFA, -8)
+          CFI (cfiCond709) Function AppS2wCmd_Nauto
+          CFI (cfiCond709) Conditional ??CrossCallReturnLabel_424
+          CFI (cfiCond709) R4 Frame(CFA, -12)
+          CFI (cfiCond709) R5 Frame(CFA, -8)
           CFI (cfiCond709) R14 Frame(CFA, -4)
-          CFI (cfiCond709) CFA R13+56
+          CFI (cfiCond709) CFA R13+96
           CFI Block cfiCond710 Using cfiCommon0
-          CFI (cfiCond710) Function AppS2wCmd_Nauto
-          CFI (cfiCond710) Conditional ??CrossCallReturnLabel_424
+          CFI (cfiCond710) Function AppS2wCmd_CoapSetOption
+          CFI (cfiCond710) Conditional ??CrossCallReturnLabel_423
           CFI (cfiCond710) R4 Frame(CFA, -12)
           CFI (cfiCond710) R5 Frame(CFA, -8)
           CFI (cfiCond710) R14 Frame(CFA, -4)
-          CFI (cfiCond710) CFA R13+96
+          CFI (cfiCond710) CFA R13+24
           CFI Block cfiCond711 Using cfiCommon0
           CFI (cfiCond711) Function AppS2wCmd_CoapSetOption
-          CFI (cfiCond711) Conditional ??CrossCallReturnLabel_423
+          CFI (cfiCond711) Conditional ??CrossCallReturnLabel_422
           CFI (cfiCond711) R4 Frame(CFA, -12)
           CFI (cfiCond711) R5 Frame(CFA, -8)
           CFI (cfiCond711) R14 Frame(CFA, -4)
           CFI (cfiCond711) CFA R13+24
-          CFI Block cfiCond712 Using cfiCommon0
-          CFI (cfiCond712) Function AppS2wCmd_CoapSetOption
-          CFI (cfiCond712) Conditional ??CrossCallReturnLabel_422
-          CFI (cfiCond712) R4 Frame(CFA, -12)
-          CFI (cfiCond712) R5 Frame(CFA, -8)
-          CFI (cfiCond712) R14 Frame(CFA, -4)
-          CFI (cfiCond712) CFA R13+24
-          CFI Block cfiPicker713 Using cfiCommon1
-          CFI (cfiPicker713) NoFunction
-          CFI (cfiPicker713) Picker
+          CFI Block cfiPicker712 Using cfiCommon1
+          CFI (cfiPicker712) NoFunction
+          CFI (cfiPicker712) Picker
         THUMB
 ?Subroutine70:
         MOV      R0,R4
@@ -30591,15 +30553,15 @@ AppS2wCmd_Nauto:
           CFI FunCall AppS2wCmd_CoapSetOption strlen
           CFI FunCall AppS2wCmd_CoapSetOption strlen
         B.W      strlen
+          CFI EndBlock cfiCond707
           CFI EndBlock cfiCond708
           CFI EndBlock cfiCond709
           CFI EndBlock cfiCond710
           CFI EndBlock cfiCond711
-          CFI EndBlock cfiCond712
-          CFI EndBlock cfiPicker713
+          CFI EndBlock cfiPicker712
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock714 Using cfiCommon0
+          CFI Block cfiBlock713 Using cfiCommon0
           CFI Function AppS2wCmd_IdOutput
         THUMB
 // 10829 UINT8
@@ -30669,7 +30631,7 @@ AppS2wCmd_IdOutput:
 ??AppS2wCmd_IdOutput_0:
         MOV      R0,R4
         POP      {R1,R2,R4,PC}    ;; return
-          CFI EndBlock cfiBlock714
+          CFI EndBlock cfiBlock713
 // 10861 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -30704,7 +30666,7 @@ AppS2wCmd_IdOutput:
 // 10864 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock715 Using cfiCommon0
+          CFI Block cfiBlock714 Using cfiCommon0
           CFI Function AppS2w_PingTaskNotify
         THUMB
 // 10865 PUBLIC VOID
@@ -30723,7 +30685,7 @@ AppS2w_PingTaskNotify:
         BL       _tx_queue_send
 // 10870 }
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock715
+          CFI EndBlock cfiBlock714
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -30733,7 +30695,7 @@ AppS2w_PingTaskNotify:
 // 10871 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock716 Using cfiCommon0
+          CFI Block cfiBlock715 Using cfiCommon0
           CFI Function AppS2w_PingThreadEntry
         THUMB
 // 10872 PRIVATE VOID
@@ -30777,14 +30739,14 @@ AppS2w_PingThreadEntry:
           CFI FunCall s2wPingStop
         BL       s2wPingStop
         B.N      ??AppS2w_PingThreadEntry_0
-          CFI EndBlock cfiBlock716
+          CFI EndBlock cfiBlock715
 // 10889 		}
 // 10890     }
 // 10891 	
 // 10892 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock717 Using cfiCommon0
+          CFI Block cfiBlock716 Using cfiCommon0
           CFI Function AppS2w_PingThreadCreate
         THUMB
 // 10893 VOID AppS2w_PingThreadCreate()
@@ -30842,7 +30804,7 @@ AppS2w_PingThreadCreate:
 // 10909 
 // 10910 }
         POP      {R0-R4,PC}       ;; return
-          CFI EndBlock cfiBlock717
+          CFI EndBlock cfiBlock716
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -30875,7 +30837,7 @@ AppS2w_PingThreadCreate:
         DC8 "Ping Thread"
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock718 Using cfiCommon0
+          CFI Block cfiBlock717 Using cfiCommon0
           CFI Function AppS2wCmd_Ping
         THUMB
 // 10911 UINT8
@@ -31207,7 +31169,7 @@ AppS2wCmd_Ping:
         ADD      SP,SP,#+56
           CFI CFA R13+16
         POP      {R4-R6,PC}       ;; return
-          CFI EndBlock cfiBlock718
+          CFI EndBlock cfiBlock717
 // 11049 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -31231,24 +31193,24 @@ AppS2wCmd_Ping:
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond719 Using cfiCommon0
+          CFI Block cfiCond718 Using cfiCommon0
           CFI Function AppS2wCmd_DnsLookup
           CFI Conditional ??CrossCallReturnLabel_607
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+40
-          CFI Block cfiCond720 Using cfiCommon0
-          CFI (cfiCond720) Function AppS2wCmd_Ping
-          CFI (cfiCond720) Conditional ??CrossCallReturnLabel_606
-          CFI (cfiCond720) R4 Frame(CFA, -16)
-          CFI (cfiCond720) R5 Frame(CFA, -12)
-          CFI (cfiCond720) R6 Frame(CFA, -8)
-          CFI (cfiCond720) R14 Frame(CFA, -4)
-          CFI (cfiCond720) CFA R13+72
-          CFI Block cfiPicker721 Using cfiCommon1
-          CFI (cfiPicker721) NoFunction
-          CFI (cfiPicker721) Picker
+          CFI Block cfiCond719 Using cfiCommon0
+          CFI (cfiCond719) Function AppS2wCmd_Ping
+          CFI (cfiCond719) Conditional ??CrossCallReturnLabel_606
+          CFI (cfiCond719) R4 Frame(CFA, -16)
+          CFI (cfiCond719) R5 Frame(CFA, -12)
+          CFI (cfiCond719) R6 Frame(CFA, -8)
+          CFI (cfiCond719) R14 Frame(CFA, -4)
+          CFI (cfiCond719) CFA R13+72
+          CFI Block cfiPicker720 Using cfiCommon1
+          CFI (cfiPicker720) NoFunction
+          CFI (cfiPicker720) Picker
         THUMB
 ?Subroutine131:
         LDR      R0,[R5, #+0]
@@ -31257,12 +31219,12 @@ AppS2wCmd_Ping:
           CFI FunCall AppS2wCmd_DnsLookup nx_dns_retry_count_set
           CFI FunCall AppS2wCmd_Ping nx_dns_retry_count_set
         B.W      nx_dns_retry_count_set
+          CFI EndBlock cfiCond718
           CFI EndBlock cfiCond719
-          CFI EndBlock cfiCond720
-          CFI EndBlock cfiPicker721
+          CFI EndBlock cfiPicker720
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond722 Using cfiCommon0
+          CFI Block cfiCond721 Using cfiCommon0
           CFI Function AppS2wCmd_Ping
           CFI Conditional ??CrossCallReturnLabel_227
           CFI R4 Frame(CFA, -16)
@@ -31270,9 +31232,17 @@ AppS2wCmd_Ping:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+72
+          CFI Block cfiCond722 Using cfiCommon0
+          CFI (cfiCond722) Function AppS2wCmd_Ping
+          CFI (cfiCond722) Conditional ??CrossCallReturnLabel_226
+          CFI (cfiCond722) R4 Frame(CFA, -16)
+          CFI (cfiCond722) R5 Frame(CFA, -12)
+          CFI (cfiCond722) R6 Frame(CFA, -8)
+          CFI (cfiCond722) R14 Frame(CFA, -4)
+          CFI (cfiCond722) CFA R13+72
           CFI Block cfiCond723 Using cfiCommon0
           CFI (cfiCond723) Function AppS2wCmd_Ping
-          CFI (cfiCond723) Conditional ??CrossCallReturnLabel_226
+          CFI (cfiCond723) Conditional ??CrossCallReturnLabel_225
           CFI (cfiCond723) R4 Frame(CFA, -16)
           CFI (cfiCond723) R5 Frame(CFA, -12)
           CFI (cfiCond723) R6 Frame(CFA, -8)
@@ -31280,7 +31250,7 @@ AppS2wCmd_Ping:
           CFI (cfiCond723) CFA R13+72
           CFI Block cfiCond724 Using cfiCommon0
           CFI (cfiCond724) Function AppS2wCmd_Ping
-          CFI (cfiCond724) Conditional ??CrossCallReturnLabel_225
+          CFI (cfiCond724) Conditional ??CrossCallReturnLabel_224
           CFI (cfiCond724) R4 Frame(CFA, -16)
           CFI (cfiCond724) R5 Frame(CFA, -12)
           CFI (cfiCond724) R6 Frame(CFA, -8)
@@ -31288,7 +31258,7 @@ AppS2wCmd_Ping:
           CFI (cfiCond724) CFA R13+72
           CFI Block cfiCond725 Using cfiCommon0
           CFI (cfiCond725) Function AppS2wCmd_Ping
-          CFI (cfiCond725) Conditional ??CrossCallReturnLabel_224
+          CFI (cfiCond725) Conditional ??CrossCallReturnLabel_223
           CFI (cfiCond725) R4 Frame(CFA, -16)
           CFI (cfiCond725) R5 Frame(CFA, -12)
           CFI (cfiCond725) R6 Frame(CFA, -8)
@@ -31296,7 +31266,7 @@ AppS2wCmd_Ping:
           CFI (cfiCond725) CFA R13+72
           CFI Block cfiCond726 Using cfiCommon0
           CFI (cfiCond726) Function AppS2wCmd_Ping
-          CFI (cfiCond726) Conditional ??CrossCallReturnLabel_223
+          CFI (cfiCond726) Conditional ??CrossCallReturnLabel_222
           CFI (cfiCond726) R4 Frame(CFA, -16)
           CFI (cfiCond726) R5 Frame(CFA, -12)
           CFI (cfiCond726) R6 Frame(CFA, -8)
@@ -31304,23 +31274,15 @@ AppS2wCmd_Ping:
           CFI (cfiCond726) CFA R13+72
           CFI Block cfiCond727 Using cfiCommon0
           CFI (cfiCond727) Function AppS2wCmd_Ping
-          CFI (cfiCond727) Conditional ??CrossCallReturnLabel_222
+          CFI (cfiCond727) Conditional ??CrossCallReturnLabel_221
           CFI (cfiCond727) R4 Frame(CFA, -16)
           CFI (cfiCond727) R5 Frame(CFA, -12)
           CFI (cfiCond727) R6 Frame(CFA, -8)
           CFI (cfiCond727) R14 Frame(CFA, -4)
           CFI (cfiCond727) CFA R13+72
-          CFI Block cfiCond728 Using cfiCommon0
-          CFI (cfiCond728) Function AppS2wCmd_Ping
-          CFI (cfiCond728) Conditional ??CrossCallReturnLabel_221
-          CFI (cfiCond728) R4 Frame(CFA, -16)
-          CFI (cfiCond728) R5 Frame(CFA, -12)
-          CFI (cfiCond728) R6 Frame(CFA, -8)
-          CFI (cfiCond728) R14 Frame(CFA, -4)
-          CFI (cfiCond728) CFA R13+72
-          CFI Block cfiPicker729 Using cfiCommon1
-          CFI (cfiPicker729) NoFunction
-          CFI (cfiPicker729) Picker
+          CFI Block cfiPicker728 Using cfiCommon1
+          CFI (cfiPicker728) NoFunction
+          CFI (cfiPicker728) Picker
         THUMB
 ?Subroutine41:
         ADD      R0,SP,#+52
@@ -31332,20 +31294,20 @@ AppS2wCmd_Ping:
           CFI FunCall AppS2wCmd_Ping AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_Ping AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond721
           CFI EndBlock cfiCond722
           CFI EndBlock cfiCond723
           CFI EndBlock cfiCond724
           CFI EndBlock cfiCond725
           CFI EndBlock cfiCond726
           CFI EndBlock cfiCond727
-          CFI EndBlock cfiCond728
-          CFI EndBlock cfiPicker729
+          CFI EndBlock cfiPicker728
 // 11050 
 // 11051 #endif //S2W_PING_TRACE
 // 11052 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock730 Using cfiCommon0
+          CFI Block cfiBlock729 Using cfiCommon0
           CFI Function AppS2wCmd_Acmode
         THUMB
 // 11053 UINT8
@@ -31423,7 +31385,7 @@ AppS2wCmd_Acmode:
         BL       S2w_SaveS2wProfileParams
 ??AppS2wCmd_Acmode_0:
         POP      {R1,R4-R7,PC}    ;; return
-          CFI EndBlock cfiBlock730
+          CFI EndBlock cfiBlock729
 // 11085 
 // 11086 }
 
@@ -31435,7 +31397,7 @@ AppS2wCmd_Acmode:
 // 11087 #ifdef  S2W_NCM_SUPPORT_ENABLE
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock731 Using cfiCommon0
+          CFI Block cfiBlock730 Using cfiCommon0
           CFI Function AppS2wCmd_AutoConnect
         THUMB
 // 11088 UINT8
@@ -31488,7 +31450,7 @@ AppS2wCmd_AutoConnect:
 // 11109 	return status;
 ??AppS2wCmd_AutoConnect_2:
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock731
+          CFI EndBlock cfiBlock730
 // 11110 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -31506,7 +31468,7 @@ AppS2wCmd_AutoConnect:
 // 11112 #endif
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock732 Using cfiCommon0
+          CFI Block cfiBlock731 Using cfiCommon0
           CFI Function AppS2wCmd_GoOnline
         THUMB
 // 11113 UINT8
@@ -31595,7 +31557,7 @@ AppS2wCmd_GoOnline:
 // 11147     return S2W_SUCCESS;
         MOVS     R0,#+0
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock732
+          CFI EndBlock cfiBlock731
 // 11148 }
 // 11149 
 // 11150 
@@ -31917,7 +31879,7 @@ AppS2wCmd_GoOnline:
 // 11466 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock733 Using cfiCommon0
+          CFI Block cfiBlock732 Using cfiCommon0
           CFI Function AppS2wCmd_IpMulticastJoin
         THUMB
 // 11467 PUBLIC UINT8
@@ -31967,12 +31929,12 @@ AppS2wCmd_IpMulticastJoin:
 // 11490    return S2W_SUCCESS;
 ??AppS2wCmd_IpMulticastJoin_1:
         POP      {R1-R3,PC}       ;; return
-          CFI EndBlock cfiBlock733
+          CFI EndBlock cfiBlock732
 // 11491 
 // 11492 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond734 Using cfiCommon0
+          CFI Block cfiCond733 Using cfiCommon0
           CFI Function AppS2wCmd_Nset
           CFI Conditional ??CrossCallReturnLabel_400
           CFI R4 Frame(CFA, -16)
@@ -31980,37 +31942,37 @@ AppS2wCmd_IpMulticastJoin:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+232
+          CFI Block cfiCond734 Using cfiCommon0
+          CFI (cfiCond734) Function AppS2wCmd_Nset
+          CFI (cfiCond734) Conditional ??CrossCallReturnLabel_399
+          CFI (cfiCond734) R4 Frame(CFA, -16)
+          CFI (cfiCond734) R5 Frame(CFA, -12)
+          CFI (cfiCond734) R6 Frame(CFA, -8)
+          CFI (cfiCond734) R14 Frame(CFA, -4)
+          CFI (cfiCond734) CFA R13+232
           CFI Block cfiCond735 Using cfiCommon0
-          CFI (cfiCond735) Function AppS2wCmd_Nset
-          CFI (cfiCond735) Conditional ??CrossCallReturnLabel_399
-          CFI (cfiCond735) R4 Frame(CFA, -16)
-          CFI (cfiCond735) R5 Frame(CFA, -12)
-          CFI (cfiCond735) R6 Frame(CFA, -8)
+          CFI (cfiCond735) Function AppS2wCmd_DnsServerSet
+          CFI (cfiCond735) Conditional ??CrossCallReturnLabel_398
+          CFI (cfiCond735) R4 Frame(CFA, -24)
+          CFI (cfiCond735) R5 Frame(CFA, -20)
+          CFI (cfiCond735) R6 Frame(CFA, -16)
+          CFI (cfiCond735) R7 Frame(CFA, -12)
+          CFI (cfiCond735) R8 Frame(CFA, -8)
           CFI (cfiCond735) R14 Frame(CFA, -4)
-          CFI (cfiCond735) CFA R13+232
+          CFI (cfiCond735) CFA R13+40
           CFI Block cfiCond736 Using cfiCommon0
-          CFI (cfiCond736) Function AppS2wCmd_DnsServerSet
-          CFI (cfiCond736) Conditional ??CrossCallReturnLabel_398
-          CFI (cfiCond736) R4 Frame(CFA, -24)
-          CFI (cfiCond736) R5 Frame(CFA, -20)
-          CFI (cfiCond736) R6 Frame(CFA, -16)
-          CFI (cfiCond736) R7 Frame(CFA, -12)
-          CFI (cfiCond736) R8 Frame(CFA, -8)
+          CFI (cfiCond736) Function AppS2wCmd_IpMulticastJoin
+          CFI (cfiCond736) Conditional ??CrossCallReturnLabel_397
           CFI (cfiCond736) R14 Frame(CFA, -4)
-          CFI (cfiCond736) CFA R13+40
+          CFI (cfiCond736) CFA R13+16
           CFI Block cfiCond737 Using cfiCommon0
-          CFI (cfiCond737) Function AppS2wCmd_IpMulticastJoin
-          CFI (cfiCond737) Conditional ??CrossCallReturnLabel_397
+          CFI (cfiCond737) Function AppS2wCmd_IpMulticastLeave
+          CFI (cfiCond737) Conditional ??CrossCallReturnLabel_396
           CFI (cfiCond737) R14 Frame(CFA, -4)
           CFI (cfiCond737) CFA R13+16
-          CFI Block cfiCond738 Using cfiCommon0
-          CFI (cfiCond738) Function AppS2wCmd_IpMulticastLeave
-          CFI (cfiCond738) Conditional ??CrossCallReturnLabel_396
-          CFI (cfiCond738) R14 Frame(CFA, -4)
-          CFI (cfiCond738) CFA R13+16
-          CFI Block cfiPicker739 Using cfiCommon1
-          CFI (cfiPicker739) NoFunction
-          CFI (cfiPicker739) Picker
+          CFI Block cfiPicker738 Using cfiCommon1
+          CFI (cfiPicker738) NoFunction
+          CFI (cfiPicker738) Picker
         THUMB
 ?Subroutine64:
         ADD      R1,SP,#+0
@@ -32020,16 +31982,16 @@ AppS2wCmd_IpMulticastJoin:
           CFI FunCall AppS2wCmd_IpMulticastJoin AppS2wParse_Ip
           CFI FunCall AppS2wCmd_IpMulticastLeave AppS2wParse_Ip
         B.W      AppS2wParse_Ip
+          CFI EndBlock cfiCond733
           CFI EndBlock cfiCond734
           CFI EndBlock cfiCond735
           CFI EndBlock cfiCond736
           CFI EndBlock cfiCond737
-          CFI EndBlock cfiCond738
-          CFI EndBlock cfiPicker739
+          CFI EndBlock cfiPicker738
 // 11493 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock740 Using cfiCommon0
+          CFI Block cfiBlock739 Using cfiCommon0
           CFI Function AppS2wCmd_IpMulticastLeave
         THUMB
 // 11494 PUBLIC UINT8
@@ -32080,29 +32042,29 @@ AppS2wCmd_IpMulticastLeave:
 // 11518    return S2W_SUCCESS;
 ??AppS2wCmd_IpMulticastLeave_1:
         POP      {R1-R3,PC}       ;; return
-          CFI EndBlock cfiBlock740
+          CFI EndBlock cfiBlock739
 // 11519 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond741 Using cfiCommon0
+          CFI Block cfiCond740 Using cfiCommon0
           CFI Function AppS2wCmd_IpMulticastJoin
           CFI NoCalls
           CFI NoCalls
           CFI Conditional ??CrossCallReturnLabel_460
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
-          CFI Block cfiCond742 Using cfiCommon0
-          CFI (cfiCond742) Function AppS2wCmd_IpMulticastLeave
-          CFI (cfiCond742) NoCalls AppS2wCmd_IpMulticastLeave
-          CFI (cfiCond742) NoCalls AppS2wCmd_IpMulticastJoin
-          CFI (cfiCond742) Conditional ??CrossCallReturnLabel_461
-          CFI (cfiCond742) R14 Frame(CFA, -4)
-          CFI (cfiCond742) CFA R13+16
-          CFI Block cfiPicker743 Using cfiCommon1
-          CFI (cfiPicker743) NoFunction
-          CFI (cfiPicker743) NoCalls AppS2wCmd_IpMulticastLeave
-          CFI (cfiPicker743) NoCalls AppS2wCmd_IpMulticastJoin
-          CFI (cfiPicker743) Picker
+          CFI Block cfiCond741 Using cfiCommon0
+          CFI (cfiCond741) Function AppS2wCmd_IpMulticastLeave
+          CFI (cfiCond741) NoCalls AppS2wCmd_IpMulticastJoin
+          CFI (cfiCond741) NoCalls AppS2wCmd_IpMulticastLeave
+          CFI (cfiCond741) Conditional ??CrossCallReturnLabel_461
+          CFI (cfiCond741) R14 Frame(CFA, -4)
+          CFI (cfiCond741) CFA R13+16
+          CFI Block cfiPicker742 Using cfiCommon1
+          CFI (cfiPicker742) NoFunction
+          CFI (cfiPicker742) NoCalls AppS2wCmd_IpMulticastJoin
+          CFI (cfiPicker742) NoCalls AppS2wCmd_IpMulticastLeave
+          CFI (cfiPicker742) Picker
         THUMB
 ?Subroutine81:
         LDR      R0,[SP, #+0]
@@ -32120,9 +32082,9 @@ AppS2wCmd_IpMulticastLeave:
         LDR      R0,[R0, #+0]
         ADD      R0,R0,#+5216
         BX       LR
+          CFI EndBlock cfiCond740
           CFI EndBlock cfiCond741
-          CFI EndBlock cfiCond742
-          CFI EndBlock cfiPicker743
+          CFI EndBlock cfiPicker742
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -32142,7 +32104,7 @@ AppS2wCmd_IpMulticastLeave:
 // 11530  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock744 Using cfiCommon0
+          CFI Block cfiBlock743 Using cfiCommon0
           CFI Function AppS2wCmd_Dgpio
         THUMB
 // 11531 PUBLIC UINT8
@@ -32311,7 +32273,7 @@ AppS2wCmd_Dgpio:
         ADD      SP,SP,#+16
           CFI CFA R13+8
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock744
+          CFI EndBlock cfiBlock743
 // 11599 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -32339,7 +32301,7 @@ AppS2wCmd_Dgpio:
 // 11614  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock745 Using cfiCommon0
+          CFI Block cfiBlock744 Using cfiCommon0
           CFI Function AppS2wCmd_Wwps
         THUMB
 // 11615 PRIVATE UINT8
@@ -32524,7 +32486,7 @@ AppS2wCmd_Wwps:
         ADD      SP,SP,#+88
           CFI CFA R13+8
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock745
+          CFI EndBlock cfiBlock744
 // 11713 
 // 11714 
 // 11715 #else
@@ -32625,39 +32587,39 @@ AppS2wCmd_Wwps:
 // 11810 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond746 Using cfiCommon0
+          CFI Block cfiCond745 Using cfiCommon0
           CFI Function AppS2wCmd_Wwps
           CFI Conditional ??CrossCallReturnLabel_246
           CFI R4 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+96
+          CFI Block cfiCond746 Using cfiCommon0
+          CFI (cfiCond746) Function AppS2wCmd_Wwps
+          CFI (cfiCond746) Conditional ??CrossCallReturnLabel_245
+          CFI (cfiCond746) R4 Frame(CFA, -8)
+          CFI (cfiCond746) R14 Frame(CFA, -4)
+          CFI (cfiCond746) CFA R13+96
           CFI Block cfiCond747 Using cfiCommon0
           CFI (cfiCond747) Function AppS2wCmd_Wwps
-          CFI (cfiCond747) Conditional ??CrossCallReturnLabel_245
+          CFI (cfiCond747) Conditional ??CrossCallReturnLabel_244
           CFI (cfiCond747) R4 Frame(CFA, -8)
           CFI (cfiCond747) R14 Frame(CFA, -4)
           CFI (cfiCond747) CFA R13+96
           CFI Block cfiCond748 Using cfiCommon0
           CFI (cfiCond748) Function AppS2wCmd_Wwps
-          CFI (cfiCond748) Conditional ??CrossCallReturnLabel_244
+          CFI (cfiCond748) Conditional ??CrossCallReturnLabel_243
           CFI (cfiCond748) R4 Frame(CFA, -8)
           CFI (cfiCond748) R14 Frame(CFA, -4)
           CFI (cfiCond748) CFA R13+96
           CFI Block cfiCond749 Using cfiCommon0
           CFI (cfiCond749) Function AppS2wCmd_Wwps
-          CFI (cfiCond749) Conditional ??CrossCallReturnLabel_243
+          CFI (cfiCond749) Conditional ??CrossCallReturnLabel_242
           CFI (cfiCond749) R4 Frame(CFA, -8)
           CFI (cfiCond749) R14 Frame(CFA, -4)
           CFI (cfiCond749) CFA R13+96
-          CFI Block cfiCond750 Using cfiCommon0
-          CFI (cfiCond750) Function AppS2wCmd_Wwps
-          CFI (cfiCond750) Conditional ??CrossCallReturnLabel_242
-          CFI (cfiCond750) R4 Frame(CFA, -8)
-          CFI (cfiCond750) R14 Frame(CFA, -4)
-          CFI (cfiCond750) CFA R13+96
-          CFI Block cfiPicker751 Using cfiCommon1
-          CFI (cfiPicker751) NoFunction
-          CFI (cfiPicker751) Picker
+          CFI Block cfiPicker750 Using cfiCommon1
+          CFI (cfiPicker750) NoFunction
+          CFI (cfiPicker750) Picker
         THUMB
 ?Subroutine45:
         ADD      R0,SP,#+84
@@ -32667,12 +32629,12 @@ AppS2wCmd_Wwps:
           CFI FunCall AppS2wCmd_Wwps AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_Wwps AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond745
           CFI EndBlock cfiCond746
           CFI EndBlock cfiCond747
           CFI EndBlock cfiCond748
           CFI EndBlock cfiCond749
-          CFI EndBlock cfiCond750
-          CFI EndBlock cfiPicker751
+          CFI EndBlock cfiPicker750
 // 11811 #endif /* GSN_SECURITY_WPS_ENABLE */
 // 11812 
 // 11813 #ifdef S2W_PERSISTENT_TMR_SUPPORT
@@ -34106,7 +34068,7 @@ app_adc_data:
 // 13237  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock752 Using cfiCommon0
+          CFI Block cfiBlock751 Using cfiCommon0
           CFI Function AppS2wCmd_AdcConf
           CFI NoCalls
         THUMB
@@ -34365,27 +34327,27 @@ AppS2wCmd_AdcConf:
 ??AppS2wCmd_AdcConf_3:
         MOVS     R0,#+1
         POP      {R1-R5,PC}
-          CFI EndBlock cfiBlock752
+          CFI EndBlock cfiBlock751
 // 13372 
 // 13373 
 // 13374 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond753 Using cfiCommon0
+          CFI Block cfiCond752 Using cfiCommon0
           CFI Function AppS2wCmd_BeaconMissThresholdSet
           CFI Conditional ??CrossCallReturnLabel_9
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
-          CFI Block cfiCond754 Using cfiCommon0
-          CFI (cfiCond754) Function AppS2wCmd_AdcConf
-          CFI (cfiCond754) Conditional ??CrossCallReturnLabel_8
-          CFI (cfiCond754) R4 Frame(CFA, -12)
-          CFI (cfiCond754) R5 Frame(CFA, -8)
-          CFI (cfiCond754) R14 Frame(CFA, -4)
-          CFI (cfiCond754) CFA R13+24
-          CFI Block cfiPicker755 Using cfiCommon1
-          CFI (cfiPicker755) NoFunction
-          CFI (cfiPicker755) Picker
+          CFI Block cfiCond753 Using cfiCommon0
+          CFI (cfiCond753) Function AppS2wCmd_AdcConf
+          CFI (cfiCond753) Conditional ??CrossCallReturnLabel_8
+          CFI (cfiCond753) R4 Frame(CFA, -12)
+          CFI (cfiCond753) R5 Frame(CFA, -8)
+          CFI (cfiCond753) R14 Frame(CFA, -4)
+          CFI (cfiCond753) CFA R13+24
+          CFI Block cfiPicker754 Using cfiCommon1
+          CFI (cfiPicker754) NoFunction
+          CFI (cfiPicker754) Picker
         THUMB
 ?Subroutine7:
         MOVS     R0,#+0
@@ -34395,9 +34357,9 @@ AppS2wCmd_AdcConf:
           CFI FunCall AppS2wCmd_BeaconMissThresholdSet AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_AdcConf AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond752
           CFI EndBlock cfiCond753
-          CFI EndBlock cfiCond754
-          CFI EndBlock cfiPicker755
+          CFI EndBlock cfiPicker754
 // 13375 
 // 13376 /**
 // 13377  ******************************************************************
@@ -34411,7 +34373,7 @@ AppS2wCmd_AdcConf:
 // 13385  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock756 Using cfiCommon0
+          CFI Block cfiBlock755 Using cfiCommon0
           CFI Function AppS2wCmd_AdcStart
         THUMB
 // 13386 PRIVATE UINT8
@@ -34444,7 +34406,7 @@ AppS2wCmd_AdcStart:
 ??AppS2wCmd_AdcStart_0:
         UXTB     R0,R0
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock756
+          CFI EndBlock cfiBlock755
 // 13397 
 // 13398 }
 
@@ -34479,7 +34441,7 @@ AppS2wCmd_AdcStart:
 // 13410  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock757 Using cfiCommon0
+          CFI Block cfiBlock756 Using cfiCommon0
           CFI Function AppS2wCmd_AdcRead
         THUMB
 // 13411 PRIVATE UINT8
@@ -34634,7 +34596,7 @@ AppS2wCmd_AdcRead:
         ADD      SP,SP,#+20
           CFI CFA R13+20
         POP      {R4-R7,PC}       ;; return
-          CFI EndBlock cfiBlock757
+          CFI EndBlock cfiBlock756
 // 13475 
 // 13476 }
 
@@ -34646,7 +34608,7 @@ AppS2wCmd_AdcRead:
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond758 Using cfiCommon0
+          CFI Block cfiCond757 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_492
           CFI R4 Frame(CFA, -36)
@@ -34659,84 +34621,84 @@ AppS2wCmd_AdcRead:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
+          CFI Block cfiCond758 Using cfiCommon0
+          CFI (cfiCond758) Function AppS2wProfile_Display
+          CFI (cfiCond758) Conditional ??CrossCallReturnLabel_491
+          CFI (cfiCond758) R4 Frame(CFA, -16)
+          CFI (cfiCond758) R5 Frame(CFA, -12)
+          CFI (cfiCond758) R6 Frame(CFA, -8)
+          CFI (cfiCond758) R14 Frame(CFA, -4)
+          CFI (cfiCond758) CFA R13+32
           CFI Block cfiCond759 Using cfiCommon0
-          CFI (cfiCond759) Function AppS2wProfile_Display
-          CFI (cfiCond759) Conditional ??CrossCallReturnLabel_491
-          CFI (cfiCond759) R4 Frame(CFA, -16)
-          CFI (cfiCond759) R5 Frame(CFA, -12)
-          CFI (cfiCond759) R6 Frame(CFA, -8)
+          CFI (cfiCond759) Function AppS2wCmd_ConfigOutput
+          CFI (cfiCond759) Conditional ??CrossCallReturnLabel_490
+          CFI (cfiCond759) R4 Frame(CFA, -8)
           CFI (cfiCond759) R14 Frame(CFA, -4)
-          CFI (cfiCond759) CFA R13+32
+          CFI (cfiCond759) CFA R13+8
           CFI Block cfiCond760 Using cfiCommon0
-          CFI (cfiCond760) Function AppS2wCmd_ConfigOutput
-          CFI (cfiCond760) Conditional ??CrossCallReturnLabel_490
-          CFI (cfiCond760) R4 Frame(CFA, -8)
+          CFI (cfiCond760) Function AppS2w_NcmL3ConnProcess
+          CFI (cfiCond760) Conditional ??CrossCallReturnLabel_489
+          CFI (cfiCond760) R4 Frame(CFA, -32)
+          CFI (cfiCond760) R5 Frame(CFA, -28)
+          CFI (cfiCond760) R6 Frame(CFA, -24)
+          CFI (cfiCond760) R7 Frame(CFA, -20)
+          CFI (cfiCond760) R8 Frame(CFA, -16)
+          CFI (cfiCond760) R9 Frame(CFA, -12)
+          CFI (cfiCond760) R10 Frame(CFA, -8)
           CFI (cfiCond760) R14 Frame(CFA, -4)
-          CFI (cfiCond760) CFA R13+8
+          CFI (cfiCond760) CFA R13+184
           CFI Block cfiCond761 Using cfiCommon0
-          CFI (cfiCond761) Function AppS2w_NcmL3ConnProcess
-          CFI (cfiCond761) Conditional ??CrossCallReturnLabel_489
-          CFI (cfiCond761) R4 Frame(CFA, -32)
-          CFI (cfiCond761) R5 Frame(CFA, -28)
-          CFI (cfiCond761) R6 Frame(CFA, -24)
-          CFI (cfiCond761) R7 Frame(CFA, -20)
-          CFI (cfiCond761) R8 Frame(CFA, -16)
-          CFI (cfiCond761) R9 Frame(CFA, -12)
-          CFI (cfiCond761) R10 Frame(CFA, -8)
+          CFI (cfiCond761) Function AppS2wCmd_AdcRead
+          CFI (cfiCond761) Conditional ??CrossCallReturnLabel_488
+          CFI (cfiCond761) R4 Frame(CFA, -20)
+          CFI (cfiCond761) R5 Frame(CFA, -16)
+          CFI (cfiCond761) R6 Frame(CFA, -12)
+          CFI (cfiCond761) R7 Frame(CFA, -8)
           CFI (cfiCond761) R14 Frame(CFA, -4)
-          CFI (cfiCond761) CFA R13+184
+          CFI (cfiCond761) CFA R13+40
           CFI Block cfiCond762 Using cfiCommon0
-          CFI (cfiCond762) Function AppS2wCmd_AdcRead
-          CFI (cfiCond762) Conditional ??CrossCallReturnLabel_488
-          CFI (cfiCond762) R4 Frame(CFA, -20)
-          CFI (cfiCond762) R5 Frame(CFA, -16)
-          CFI (cfiCond762) R6 Frame(CFA, -12)
-          CFI (cfiCond762) R7 Frame(CFA, -8)
+          CFI (cfiCond762) Function AppS2wCmd_ExtFlashRead
+          CFI (cfiCond762) Conditional ??CrossCallReturnLabel_487
+          CFI (cfiCond762) R4 Frame(CFA, -24)
+          CFI (cfiCond762) R5 Frame(CFA, -20)
+          CFI (cfiCond762) R6 Frame(CFA, -16)
+          CFI (cfiCond762) R7 Frame(CFA, -12)
+          CFI (cfiCond762) R8 Frame(CFA, -8)
           CFI (cfiCond762) R14 Frame(CFA, -4)
-          CFI (cfiCond762) CFA R13+40
+          CFI (cfiCond762) CFA R13+48
           CFI Block cfiCond763 Using cfiCommon0
-          CFI (cfiCond763) Function AppS2wCmd_ExtFlashRead
-          CFI (cfiCond763) Conditional ??CrossCallReturnLabel_487
+          CFI (cfiCond763) Function AppS2wCmd_CoapSend
+          CFI (cfiCond763) Conditional ??CrossCallReturnLabel_486
           CFI (cfiCond763) R4 Frame(CFA, -24)
           CFI (cfiCond763) R5 Frame(CFA, -20)
           CFI (cfiCond763) R6 Frame(CFA, -16)
           CFI (cfiCond763) R7 Frame(CFA, -12)
           CFI (cfiCond763) R8 Frame(CFA, -8)
           CFI (cfiCond763) R14 Frame(CFA, -4)
-          CFI (cfiCond763) CFA R13+48
+          CFI (cfiCond763) CFA R13+1440
           CFI Block cfiCond764 Using cfiCommon0
-          CFI (cfiCond764) Function AppS2wCmd_CoapSend
-          CFI (cfiCond764) Conditional ??CrossCallReturnLabel_486
-          CFI (cfiCond764) R4 Frame(CFA, -24)
-          CFI (cfiCond764) R5 Frame(CFA, -20)
-          CFI (cfiCond764) R6 Frame(CFA, -16)
-          CFI (cfiCond764) R7 Frame(CFA, -12)
-          CFI (cfiCond764) R8 Frame(CFA, -8)
+          CFI (cfiCond764) Function AppS2wHal_CoapContentDataGet
+          CFI (cfiCond764) Conditional ??CrossCallReturnLabel_485
+          CFI (cfiCond764) R4 Frame(CFA, -12)
+          CFI (cfiCond764) R5 Frame(CFA, -8)
           CFI (cfiCond764) R14 Frame(CFA, -4)
-          CFI (cfiCond764) CFA R13+1440
+          CFI (cfiCond764) CFA R13+2816
           CFI Block cfiCond765 Using cfiCommon0
-          CFI (cfiCond765) Function AppS2wHal_CoapContentDataGet
-          CFI (cfiCond765) Conditional ??CrossCallReturnLabel_485
-          CFI (cfiCond765) R4 Frame(CFA, -12)
-          CFI (cfiCond765) R5 Frame(CFA, -8)
+          CFI (cfiCond765) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond765) Conditional ??CrossCallReturnLabel_484
+          CFI (cfiCond765) R4 Frame(CFA, -36)
+          CFI (cfiCond765) R5 Frame(CFA, -32)
+          CFI (cfiCond765) R6 Frame(CFA, -28)
+          CFI (cfiCond765) R7 Frame(CFA, -24)
+          CFI (cfiCond765) R8 Frame(CFA, -20)
+          CFI (cfiCond765) R9 Frame(CFA, -16)
+          CFI (cfiCond765) R10 Frame(CFA, -12)
+          CFI (cfiCond765) R11 Frame(CFA, -8)
           CFI (cfiCond765) R14 Frame(CFA, -4)
-          CFI (cfiCond765) CFA R13+2816
-          CFI Block cfiCond766 Using cfiCommon0
-          CFI (cfiCond766) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond766) Conditional ??CrossCallReturnLabel_484
-          CFI (cfiCond766) R4 Frame(CFA, -36)
-          CFI (cfiCond766) R5 Frame(CFA, -32)
-          CFI (cfiCond766) R6 Frame(CFA, -28)
-          CFI (cfiCond766) R7 Frame(CFA, -24)
-          CFI (cfiCond766) R8 Frame(CFA, -20)
-          CFI (cfiCond766) R9 Frame(CFA, -16)
-          CFI (cfiCond766) R10 Frame(CFA, -12)
-          CFI (cfiCond766) R11 Frame(CFA, -8)
-          CFI (cfiCond766) R14 Frame(CFA, -4)
-          CFI (cfiCond766) CFA R13+360
-          CFI Block cfiPicker767 Using cfiCommon1
-          CFI (cfiPicker767) NoFunction
-          CFI (cfiPicker767) Picker
+          CFI (cfiCond765) CFA R13+360
+          CFI Block cfiPicker766 Using cfiCommon1
+          CFI (cfiPicker766) NoFunction
+          CFI (cfiPicker766) Picker
         THUMB
 ?Subroutine91:
         ADR.N    R0,??DataTable492_1  ;; 0x0D, 0x0A, 0x00, 0x00
@@ -34750,6 +34712,7 @@ AppS2wCmd_AdcRead:
           CFI FunCall AppS2wHal_CoapContentDataGet S2w_Printf
           CFI FunCall AppS2wCmd_Wassoc_test S2w_Printf
         B.W      S2w_Printf
+          CFI EndBlock cfiCond757
           CFI EndBlock cfiCond758
           CFI EndBlock cfiCond759
           CFI EndBlock cfiCond760
@@ -34758,8 +34721,7 @@ AppS2wCmd_AdcRead:
           CFI EndBlock cfiCond763
           CFI EndBlock cfiCond764
           CFI EndBlock cfiCond765
-          CFI EndBlock cfiCond766
-          CFI EndBlock cfiPicker767
+          CFI EndBlock cfiPicker766
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -34779,7 +34741,7 @@ AppS2wCmd_AdcRead:
 // 13487  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock768 Using cfiCommon0
+          CFI Block cfiBlock767 Using cfiCommon0
           CFI Function AppS2wCmd_AdcStop
         THUMB
 // 13488 PRIVATE UINT8
@@ -34810,7 +34772,7 @@ AppS2wCmd_AdcStop:
 ??AppS2wCmd_AdcStop_0:
         UXTB     R0,R0
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock768
+          CFI EndBlock cfiBlock767
 // 13499 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -35202,7 +35164,7 @@ AppS2wCmd_AdcStop:
 // 13869  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock769 Using cfiCommon0
+          CFI Block cfiBlock768 Using cfiCommon0
           CFI Function AppS2wCmd_WeapConf
         THUMB
 // 13870 PRIVATE UINT8
@@ -35426,7 +35388,7 @@ AppS2wCmd_WeapConf:
         MOVS     R0,#+0
 ??AppS2wCmd_WeapConf_5:
         POP      {R1,R2,R4-R8,PC}  ;; return
-          CFI EndBlock cfiBlock769
+          CFI EndBlock cfiBlock768
 // 13977 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -35442,7 +35404,7 @@ AppS2wCmd_WeapConf:
         DC32     s2w_ssl_cert_table
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond770 Using cfiCommon0
+          CFI Block cfiCond769 Using cfiCommon0
           CFI Function AppS2wCmd_WeapConf
           CFI Conditional ??CrossCallReturnLabel_508
           CFI R4 Frame(CFA, -24)
@@ -35452,19 +35414,19 @@ AppS2wCmd_WeapConf:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+32
-          CFI Block cfiCond771 Using cfiCommon0
-          CFI (cfiCond771) Function AppS2wCmd_WeapConf
-          CFI (cfiCond771) Conditional ??CrossCallReturnLabel_507
-          CFI (cfiCond771) R4 Frame(CFA, -24)
-          CFI (cfiCond771) R5 Frame(CFA, -20)
-          CFI (cfiCond771) R6 Frame(CFA, -16)
-          CFI (cfiCond771) R7 Frame(CFA, -12)
-          CFI (cfiCond771) R8 Frame(CFA, -8)
-          CFI (cfiCond771) R14 Frame(CFA, -4)
-          CFI (cfiCond771) CFA R13+32
-          CFI Block cfiPicker772 Using cfiCommon1
-          CFI (cfiPicker772) NoFunction
-          CFI (cfiPicker772) Picker
+          CFI Block cfiCond770 Using cfiCommon0
+          CFI (cfiCond770) Function AppS2wCmd_WeapConf
+          CFI (cfiCond770) Conditional ??CrossCallReturnLabel_507
+          CFI (cfiCond770) R4 Frame(CFA, -24)
+          CFI (cfiCond770) R5 Frame(CFA, -20)
+          CFI (cfiCond770) R6 Frame(CFA, -16)
+          CFI (cfiCond770) R7 Frame(CFA, -12)
+          CFI (cfiCond770) R8 Frame(CFA, -8)
+          CFI (cfiCond770) R14 Frame(CFA, -4)
+          CFI (cfiCond770) CFA R13+32
+          CFI Block cfiPicker771 Using cfiCommon1
+          CFI (cfiPicker771) NoFunction
+          CFI (cfiPicker771) Picker
         THUMB
 ?Subroutine97:
         MOV      R2,R7
@@ -35473,9 +35435,9 @@ AppS2wCmd_WeapConf:
           CFI FunCall AppS2wCmd_WeapConf memcpy
           CFI FunCall AppS2wCmd_WeapConf memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond769
           CFI EndBlock cfiCond770
-          CFI EndBlock cfiCond771
-          CFI EndBlock cfiPicker772
+          CFI EndBlock cfiPicker771
 // 13978 
 // 13979 
 // 13980 #ifdef S2W_EXTFLASH_DRIVER_TEST
@@ -35501,7 +35463,7 @@ extFlashGetDatabuf:
 // 13986 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock773 Using cfiCommon0
+          CFI Block cfiBlock772 Using cfiCommon0
           CFI Function AppS2wExternalFlashData
         THUMB
 // 13987 PUBLIC UINT32
@@ -35602,7 +35564,7 @@ AppS2wExternalFlashData:
 // 14025     return S2W_SUCCESS;
         MOVS     R0,#+0
         POP      {R1-R5,PC}       ;; return
-          CFI EndBlock cfiBlock773
+          CFI EndBlock cfiBlock772
 // 14026 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -35614,7 +35576,7 @@ AppS2wExternalFlashData:
 // 14027 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock774 Using cfiCommon0
+          CFI Block cfiBlock773 Using cfiCommon0
           CFI Function AppS2wCmd_ExtFlashInit
         THUMB
 // 14028 UINT8
@@ -35667,7 +35629,7 @@ AppS2wCmd_ExtFlashInit:
 ??AppS2wCmd_ExtFlashInit_0:
         MOV      R0,R4
         POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock774
+          CFI EndBlock cfiBlock773
 // 14049 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -35677,7 +35639,7 @@ AppS2wCmd_ExtFlashInit:
         DC32     s2wappMainTaskCtxt
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond775 Using cfiCommon0
+          CFI Block cfiCond774 Using cfiCommon0
           CFI Function AppS2wCmd_SslCertificateDelete
           CFI Conditional ??CrossCallReturnLabel_63
           CFI R4 Frame(CFA, -20)
@@ -35686,65 +35648,65 @@ AppS2wCmd_ExtFlashInit:
           CFI R7 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
+          CFI Block cfiCond775 Using cfiCommon0
+          CFI (cfiCond775) Function AppS2wCmd_Nauto
+          CFI (cfiCond775) Conditional ??CrossCallReturnLabel_62
+          CFI (cfiCond775) R4 Frame(CFA, -12)
+          CFI (cfiCond775) R5 Frame(CFA, -8)
+          CFI (cfiCond775) R14 Frame(CFA, -4)
+          CFI (cfiCond775) CFA R13+96
           CFI Block cfiCond776 Using cfiCommon0
           CFI (cfiCond776) Function AppS2wCmd_Nauto
-          CFI (cfiCond776) Conditional ??CrossCallReturnLabel_62
+          CFI (cfiCond776) Conditional ??CrossCallReturnLabel_61
           CFI (cfiCond776) R4 Frame(CFA, -12)
           CFI (cfiCond776) R5 Frame(CFA, -8)
           CFI (cfiCond776) R14 Frame(CFA, -4)
           CFI (cfiCond776) CFA R13+96
           CFI Block cfiCond777 Using cfiCommon0
           CFI (cfiCond777) Function AppS2wCmd_Nauto
-          CFI (cfiCond777) Conditional ??CrossCallReturnLabel_61
+          CFI (cfiCond777) Conditional ??CrossCallReturnLabel_60
           CFI (cfiCond777) R4 Frame(CFA, -12)
           CFI (cfiCond777) R5 Frame(CFA, -8)
           CFI (cfiCond777) R14 Frame(CFA, -4)
           CFI (cfiCond777) CFA R13+96
           CFI Block cfiCond778 Using cfiCommon0
           CFI (cfiCond778) Function AppS2wCmd_Nauto
-          CFI (cfiCond778) Conditional ??CrossCallReturnLabel_60
+          CFI (cfiCond778) Conditional ??CrossCallReturnLabel_59
           CFI (cfiCond778) R4 Frame(CFA, -12)
           CFI (cfiCond778) R5 Frame(CFA, -8)
           CFI (cfiCond778) R14 Frame(CFA, -4)
           CFI (cfiCond778) CFA R13+96
           CFI Block cfiCond779 Using cfiCommon0
           CFI (cfiCond779) Function AppS2wCmd_Nauto
-          CFI (cfiCond779) Conditional ??CrossCallReturnLabel_59
+          CFI (cfiCond779) Conditional ??CrossCallReturnLabel_58
           CFI (cfiCond779) R4 Frame(CFA, -12)
           CFI (cfiCond779) R5 Frame(CFA, -8)
           CFI (cfiCond779) R14 Frame(CFA, -4)
           CFI (cfiCond779) CFA R13+96
           CFI Block cfiCond780 Using cfiCommon0
-          CFI (cfiCond780) Function AppS2wCmd_Nauto
-          CFI (cfiCond780) Conditional ??CrossCallReturnLabel_58
+          CFI (cfiCond780) Function AppS2wCmd_ExtFlashInit
+          CFI (cfiCond780) Conditional ??CrossCallReturnLabel_57
           CFI (cfiCond780) R4 Frame(CFA, -12)
           CFI (cfiCond780) R5 Frame(CFA, -8)
           CFI (cfiCond780) R14 Frame(CFA, -4)
-          CFI (cfiCond780) CFA R13+96
+          CFI (cfiCond780) CFA R13+16
           CFI Block cfiCond781 Using cfiCommon0
-          CFI (cfiCond781) Function AppS2wCmd_ExtFlashInit
-          CFI (cfiCond781) Conditional ??CrossCallReturnLabel_57
+          CFI (cfiCond781) Function AppS2wCmd_ExtFlashWrite
+          CFI (cfiCond781) Conditional ??CrossCallReturnLabel_56
           CFI (cfiCond781) R4 Frame(CFA, -12)
           CFI (cfiCond781) R5 Frame(CFA, -8)
           CFI (cfiCond781) R14 Frame(CFA, -4)
           CFI (cfiCond781) CFA R13+16
           CFI Block cfiCond782 Using cfiCommon0
           CFI (cfiCond782) Function AppS2wCmd_ExtFlashWrite
-          CFI (cfiCond782) Conditional ??CrossCallReturnLabel_56
+          CFI (cfiCond782) Conditional ??CrossCallReturnLabel_55
           CFI (cfiCond782) R4 Frame(CFA, -12)
           CFI (cfiCond782) R5 Frame(CFA, -8)
           CFI (cfiCond782) R14 Frame(CFA, -4)
           CFI (cfiCond782) CFA R13+16
-          CFI Block cfiCond783 Using cfiCommon0
-          CFI (cfiCond783) Function AppS2wCmd_ExtFlashWrite
-          CFI (cfiCond783) Conditional ??CrossCallReturnLabel_55
-          CFI (cfiCond783) R4 Frame(CFA, -12)
-          CFI (cfiCond783) R5 Frame(CFA, -8)
-          CFI (cfiCond783) R14 Frame(CFA, -4)
-          CFI (cfiCond783) CFA R13+16
-          CFI Block cfiPicker784 Using cfiCommon1
-          CFI (cfiPicker784) NoFunction
-          CFI (cfiPicker784) Picker
+          CFI Block cfiPicker783 Using cfiCommon1
+          CFI (cfiPicker783) NoFunction
+          CFI (cfiPicker783) Picker
         THUMB
 ?Subroutine25:
         ADD      R0,SP,#+0
@@ -35758,6 +35720,7 @@ AppS2wCmd_ExtFlashInit:
           CFI FunCall AppS2wCmd_ExtFlashWrite AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_ExtFlashWrite AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond774
           CFI EndBlock cfiCond775
           CFI EndBlock cfiCond776
           CFI EndBlock cfiCond777
@@ -35766,12 +35729,11 @@ AppS2wCmd_ExtFlashInit:
           CFI EndBlock cfiCond780
           CFI EndBlock cfiCond781
           CFI EndBlock cfiCond782
-          CFI EndBlock cfiCond783
-          CFI EndBlock cfiPicker784
+          CFI EndBlock cfiPicker783
 // 14050 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock785 Using cfiCommon0
+          CFI Block cfiBlock784 Using cfiCommon0
           CFI Function AppS2wCmd_ExtFlashSpiConf
         THUMB
 // 14051 UINT8
@@ -35922,7 +35884,7 @@ AppS2wCmd_ExtFlashSpiConf:
         ORRS     R2,R3,R2
         STRB     R2,[R1, R0]
         B.N      ??AppS2wCmd_ExtFlashSpiConf_1
-          CFI EndBlock cfiBlock785
+          CFI EndBlock cfiBlock784
 // 14110 	return status;
 // 14111 }
 
@@ -35933,7 +35895,7 @@ AppS2wCmd_ExtFlashSpiConf:
         DC32     s2wCurrent
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond786 Using cfiCommon0
+          CFI Block cfiCond785 Using cfiCommon0
           CFI Function AppS2wCmd_OtaFwupConf
           CFI Conditional ??CrossCallReturnLabel_220
           CFI R4 Frame(CFA, -16)
@@ -35941,9 +35903,17 @@ AppS2wCmd_ExtFlashSpiConf:
           CFI R6 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+40
+          CFI Block cfiCond786 Using cfiCommon0
+          CFI (cfiCond786) Function AppS2wCmd_OtaFwupConf
+          CFI (cfiCond786) Conditional ??CrossCallReturnLabel_219
+          CFI (cfiCond786) R4 Frame(CFA, -16)
+          CFI (cfiCond786) R5 Frame(CFA, -12)
+          CFI (cfiCond786) R6 Frame(CFA, -8)
+          CFI (cfiCond786) R14 Frame(CFA, -4)
+          CFI (cfiCond786) CFA R13+40
           CFI Block cfiCond787 Using cfiCommon0
-          CFI (cfiCond787) Function AppS2wCmd_OtaFwupConf
-          CFI (cfiCond787) Conditional ??CrossCallReturnLabel_219
+          CFI (cfiCond787) Function AppS2wCmd_ExtFlashSpiConf
+          CFI (cfiCond787) Conditional ??CrossCallReturnLabel_218
           CFI (cfiCond787) R4 Frame(CFA, -16)
           CFI (cfiCond787) R5 Frame(CFA, -12)
           CFI (cfiCond787) R6 Frame(CFA, -8)
@@ -35951,7 +35921,7 @@ AppS2wCmd_ExtFlashSpiConf:
           CFI (cfiCond787) CFA R13+40
           CFI Block cfiCond788 Using cfiCommon0
           CFI (cfiCond788) Function AppS2wCmd_ExtFlashSpiConf
-          CFI (cfiCond788) Conditional ??CrossCallReturnLabel_218
+          CFI (cfiCond788) Conditional ??CrossCallReturnLabel_217
           CFI (cfiCond788) R4 Frame(CFA, -16)
           CFI (cfiCond788) R5 Frame(CFA, -12)
           CFI (cfiCond788) R6 Frame(CFA, -8)
@@ -35959,7 +35929,7 @@ AppS2wCmd_ExtFlashSpiConf:
           CFI (cfiCond788) CFA R13+40
           CFI Block cfiCond789 Using cfiCommon0
           CFI (cfiCond789) Function AppS2wCmd_ExtFlashSpiConf
-          CFI (cfiCond789) Conditional ??CrossCallReturnLabel_217
+          CFI (cfiCond789) Conditional ??CrossCallReturnLabel_216
           CFI (cfiCond789) R4 Frame(CFA, -16)
           CFI (cfiCond789) R5 Frame(CFA, -12)
           CFI (cfiCond789) R6 Frame(CFA, -8)
@@ -35967,23 +35937,25 @@ AppS2wCmd_ExtFlashSpiConf:
           CFI (cfiCond789) CFA R13+40
           CFI Block cfiCond790 Using cfiCommon0
           CFI (cfiCond790) Function AppS2wCmd_ExtFlashSpiConf
-          CFI (cfiCond790) Conditional ??CrossCallReturnLabel_216
+          CFI (cfiCond790) Conditional ??CrossCallReturnLabel_215
           CFI (cfiCond790) R4 Frame(CFA, -16)
           CFI (cfiCond790) R5 Frame(CFA, -12)
           CFI (cfiCond790) R6 Frame(CFA, -8)
           CFI (cfiCond790) R14 Frame(CFA, -4)
           CFI (cfiCond790) CFA R13+40
           CFI Block cfiCond791 Using cfiCommon0
-          CFI (cfiCond791) Function AppS2wCmd_ExtFlashSpiConf
-          CFI (cfiCond791) Conditional ??CrossCallReturnLabel_215
-          CFI (cfiCond791) R4 Frame(CFA, -16)
-          CFI (cfiCond791) R5 Frame(CFA, -12)
-          CFI (cfiCond791) R6 Frame(CFA, -8)
+          CFI (cfiCond791) Function AppS2wCmd_ExtFlashRead
+          CFI (cfiCond791) Conditional ??CrossCallReturnLabel_214
+          CFI (cfiCond791) R4 Frame(CFA, -24)
+          CFI (cfiCond791) R5 Frame(CFA, -20)
+          CFI (cfiCond791) R6 Frame(CFA, -16)
+          CFI (cfiCond791) R7 Frame(CFA, -12)
+          CFI (cfiCond791) R8 Frame(CFA, -8)
           CFI (cfiCond791) R14 Frame(CFA, -4)
-          CFI (cfiCond791) CFA R13+40
+          CFI (cfiCond791) CFA R13+48
           CFI Block cfiCond792 Using cfiCommon0
           CFI (cfiCond792) Function AppS2wCmd_ExtFlashRead
-          CFI (cfiCond792) Conditional ??CrossCallReturnLabel_214
+          CFI (cfiCond792) Conditional ??CrossCallReturnLabel_213
           CFI (cfiCond792) R4 Frame(CFA, -24)
           CFI (cfiCond792) R5 Frame(CFA, -20)
           CFI (cfiCond792) R6 Frame(CFA, -16)
@@ -35991,19 +35963,9 @@ AppS2wCmd_ExtFlashSpiConf:
           CFI (cfiCond792) R8 Frame(CFA, -8)
           CFI (cfiCond792) R14 Frame(CFA, -4)
           CFI (cfiCond792) CFA R13+48
-          CFI Block cfiCond793 Using cfiCommon0
-          CFI (cfiCond793) Function AppS2wCmd_ExtFlashRead
-          CFI (cfiCond793) Conditional ??CrossCallReturnLabel_213
-          CFI (cfiCond793) R4 Frame(CFA, -24)
-          CFI (cfiCond793) R5 Frame(CFA, -20)
-          CFI (cfiCond793) R6 Frame(CFA, -16)
-          CFI (cfiCond793) R7 Frame(CFA, -12)
-          CFI (cfiCond793) R8 Frame(CFA, -8)
-          CFI (cfiCond793) R14 Frame(CFA, -4)
-          CFI (cfiCond793) CFA R13+48
-          CFI Block cfiPicker794 Using cfiCommon1
-          CFI (cfiPicker794) NoFunction
-          CFI (cfiPicker794) Picker
+          CFI Block cfiPicker793 Using cfiCommon1
+          CFI (cfiPicker793) NoFunction
+          CFI (cfiPicker793) Picker
         THUMB
 ?Subroutine40:
         ADD      R0,SP,#+20
@@ -36016,6 +35978,7 @@ AppS2wCmd_ExtFlashSpiConf:
           CFI FunCall AppS2wCmd_ExtFlashRead AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_ExtFlashRead AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond785
           CFI EndBlock cfiCond786
           CFI EndBlock cfiCond787
           CFI EndBlock cfiCond788
@@ -36023,12 +35986,11 @@ AppS2wCmd_ExtFlashSpiConf:
           CFI EndBlock cfiCond790
           CFI EndBlock cfiCond791
           CFI EndBlock cfiCond792
-          CFI EndBlock cfiCond793
-          CFI EndBlock cfiPicker794
+          CFI EndBlock cfiPicker793
 // 14112 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock795 Using cfiCommon0
+          CFI Block cfiBlock794 Using cfiCommon0
           CFI Function AppS2wCmd_ExtFlashWrite
         THUMB
 // 14113 UINT8
@@ -36087,7 +36049,7 @@ AppS2wCmd_ExtFlashWrite:
 ??AppS2wCmd_ExtFlashWrite_1:
         MOV      R0,R4
         POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock795
+          CFI EndBlock cfiBlock794
 // 14141 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -36105,7 +36067,7 @@ AppS2wCmd_ExtFlashWrite:
 // 14143 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock796 Using cfiCommon0
+          CFI Block cfiBlock795 Using cfiCommon0
           CFI Function AppS2wCmd_ExtFlashRead
         THUMB
 // 14144 UINT8
@@ -36262,7 +36224,7 @@ AppS2wCmd_ExtFlashRead:
         ADD      SP,SP,#+24
           CFI CFA R13+24
         POP      {R4-R8,PC}       ;; return
-          CFI EndBlock cfiBlock796
+          CFI EndBlock cfiBlock795
 // 14215 
 // 14216 }
 
@@ -36273,7 +36235,7 @@ AppS2wCmd_ExtFlashRead:
         DC32     s2wCurrent
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond797 Using cfiCommon0
+          CFI Block cfiCond796 Using cfiCommon0
           CFI Function AppS2wCmd_Dns
           CFI Conditional ??CrossCallReturnLabel_43
           CFI R4 Frame(CFA, -20)
@@ -36282,41 +36244,41 @@ AppS2wCmd_ExtFlashRead:
           CFI R7 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+56
-          CFI Block cfiCond798 Using cfiCommon0
-          CFI (cfiCond798) Function AppS2wCmd_Dns
-          CFI (cfiCond798) Conditional ??CrossCallReturnLabel_42
-          CFI (cfiCond798) R4 Frame(CFA, -20)
-          CFI (cfiCond798) R5 Frame(CFA, -16)
-          CFI (cfiCond798) R6 Frame(CFA, -12)
-          CFI (cfiCond798) R7 Frame(CFA, -8)
-          CFI (cfiCond798) R14 Frame(CFA, -4)
-          CFI (cfiCond798) CFA R13+56
-          CFI Block cfiPicker799 Using cfiCommon1
-          CFI (cfiPicker799) NoFunction
-          CFI (cfiPicker799) Picker
+          CFI Block cfiCond797 Using cfiCommon0
+          CFI (cfiCond797) Function AppS2wCmd_Dns
+          CFI (cfiCond797) Conditional ??CrossCallReturnLabel_42
+          CFI (cfiCond797) R4 Frame(CFA, -20)
+          CFI (cfiCond797) R5 Frame(CFA, -16)
+          CFI (cfiCond797) R6 Frame(CFA, -12)
+          CFI (cfiCond797) R7 Frame(CFA, -8)
+          CFI (cfiCond797) R14 Frame(CFA, -4)
+          CFI (cfiCond797) CFA R13+56
+          CFI Block cfiPicker798 Using cfiCommon1
+          CFI (cfiPicker798) NoFunction
+          CFI (cfiPicker798) Picker
         THUMB
 ?Subroutine19:
         STRB     R0,[R5, #+672]
         MOVS     R2,#+64
+          CFI Block cfiCond799 Using cfiCommon0
+          CFI (cfiCond799) Function AppS2wCmd_OtaFwupExtFlashStart
+          CFI (cfiCond799) Conditional ??CrossCallReturnLabel_41
+          CFI (cfiCond799) R4 Frame(CFA, -20)
+          CFI (cfiCond799) R5 Frame(CFA, -16)
+          CFI (cfiCond799) R6 Frame(CFA, -12)
+          CFI (cfiCond799) R7 Frame(CFA, -8)
+          CFI (cfiCond799) R14 Frame(CFA, -4)
+          CFI (cfiCond799) CFA R13+24
           CFI Block cfiCond800 Using cfiCommon0
-          CFI (cfiCond800) Function AppS2wCmd_OtaFwupExtFlashStart
-          CFI (cfiCond800) Conditional ??CrossCallReturnLabel_41
-          CFI (cfiCond800) R4 Frame(CFA, -20)
-          CFI (cfiCond800) R5 Frame(CFA, -16)
-          CFI (cfiCond800) R6 Frame(CFA, -12)
-          CFI (cfiCond800) R7 Frame(CFA, -8)
+          CFI (cfiCond800) Function AppS2wCmd_ExtFlashRead
+          CFI (cfiCond800) Conditional ??CrossCallReturnLabel_40
+          CFI (cfiCond800) R4 Frame(CFA, -24)
+          CFI (cfiCond800) R5 Frame(CFA, -20)
+          CFI (cfiCond800) R6 Frame(CFA, -16)
+          CFI (cfiCond800) R7 Frame(CFA, -12)
+          CFI (cfiCond800) R8 Frame(CFA, -8)
           CFI (cfiCond800) R14 Frame(CFA, -4)
-          CFI (cfiCond800) CFA R13+24
-          CFI Block cfiCond801 Using cfiCommon0
-          CFI (cfiCond801) Function AppS2wCmd_ExtFlashRead
-          CFI (cfiCond801) Conditional ??CrossCallReturnLabel_40
-          CFI (cfiCond801) R4 Frame(CFA, -24)
-          CFI (cfiCond801) R5 Frame(CFA, -20)
-          CFI (cfiCond801) R6 Frame(CFA, -16)
-          CFI (cfiCond801) R7 Frame(CFA, -12)
-          CFI (cfiCond801) R8 Frame(CFA, -8)
-          CFI (cfiCond801) R14 Frame(CFA, -4)
-          CFI (cfiCond801) CFA R13+48
+          CFI (cfiCond800) CFA R13+48
 ??Subroutine19_0:
         MOVS     R1,#+0
         MOV      R0,R6
@@ -36325,15 +36287,15 @@ AppS2wCmd_ExtFlashRead:
           CFI FunCall AppS2wCmd_OtaFwupExtFlashStart memset
           CFI FunCall AppS2wCmd_ExtFlashRead memset
         B.W      memset
+          CFI EndBlock cfiCond796
           CFI EndBlock cfiCond797
-          CFI EndBlock cfiCond798
-          CFI EndBlock cfiPicker799
+          CFI EndBlock cfiPicker798
+          CFI EndBlock cfiCond799
           CFI EndBlock cfiCond800
-          CFI EndBlock cfiCond801
 // 14217 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock802 Using cfiCommon0
+          CFI Block cfiBlock801 Using cfiCommon0
           CFI Function AppS2wCmd_ExtFlashErase
         THUMB
 // 14218 UINT8
@@ -36409,11 +36371,11 @@ AppS2wCmd_ExtFlashErase:
         MOVS     R3,#+0
         MOVS     R2,#+1
         B.N      ??AppS2wCmd_ExtFlashErase_3
-          CFI EndBlock cfiBlock802
+          CFI EndBlock cfiBlock801
 // 14250 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond803 Using cfiCommon0
+          CFI Block cfiCond802 Using cfiCommon0
           CFI Function AppS2wCmd_ExtFlashRead
           CFI NoCalls
           CFI NoCalls
@@ -36426,29 +36388,29 @@ AppS2wCmd_ExtFlashErase:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+48
+          CFI Block cfiCond803 Using cfiCommon0
+          CFI (cfiCond803) Function AppS2wCmd_ExtFlashErase
+          CFI (cfiCond803) NoCalls AppS2wCmd_ExtFlashRead
+          CFI (cfiCond803) NoCalls AppS2wCmd_ExtFlashErase
+          CFI (cfiCond803) NoCalls AppS2wCmd_ExtFlashChipErase
+          CFI (cfiCond803) Conditional ??CrossCallReturnLabel_434
+          CFI (cfiCond803) R4 Frame(CFA, -8)
+          CFI (cfiCond803) R14 Frame(CFA, -4)
+          CFI (cfiCond803) CFA R13+24
           CFI Block cfiCond804 Using cfiCommon0
-          CFI (cfiCond804) Function AppS2wCmd_ExtFlashErase
-          CFI (cfiCond804) NoCalls AppS2wCmd_ExtFlashChipErase
-          CFI (cfiCond804) NoCalls AppS2wCmd_ExtFlashErase
+          CFI (cfiCond804) Function AppS2wCmd_ExtFlashChipErase
           CFI (cfiCond804) NoCalls AppS2wCmd_ExtFlashRead
-          CFI (cfiCond804) Conditional ??CrossCallReturnLabel_434
-          CFI (cfiCond804) R4 Frame(CFA, -8)
+          CFI (cfiCond804) NoCalls AppS2wCmd_ExtFlashErase
+          CFI (cfiCond804) NoCalls AppS2wCmd_ExtFlashChipErase
+          CFI (cfiCond804) Conditional ??CrossCallReturnLabel_435
           CFI (cfiCond804) R14 Frame(CFA, -4)
-          CFI (cfiCond804) CFA R13+24
-          CFI Block cfiCond805 Using cfiCommon0
-          CFI (cfiCond805) Function AppS2wCmd_ExtFlashChipErase
-          CFI (cfiCond805) NoCalls AppS2wCmd_ExtFlashChipErase
-          CFI (cfiCond805) NoCalls AppS2wCmd_ExtFlashErase
-          CFI (cfiCond805) NoCalls AppS2wCmd_ExtFlashRead
-          CFI (cfiCond805) Conditional ??CrossCallReturnLabel_435
-          CFI (cfiCond805) R14 Frame(CFA, -4)
-          CFI (cfiCond805) CFA R13+8
-          CFI Block cfiPicker806 Using cfiCommon1
-          CFI (cfiPicker806) NoFunction
-          CFI (cfiPicker806) NoCalls AppS2wCmd_ExtFlashChipErase
-          CFI (cfiPicker806) NoCalls AppS2wCmd_ExtFlashErase
-          CFI (cfiPicker806) NoCalls AppS2wCmd_ExtFlashRead
-          CFI (cfiPicker806) Picker
+          CFI (cfiCond804) CFA R13+8
+          CFI Block cfiPicker805 Using cfiCommon1
+          CFI (cfiPicker805) NoFunction
+          CFI (cfiPicker805) NoCalls AppS2wCmd_ExtFlashRead
+          CFI (cfiPicker805) NoCalls AppS2wCmd_ExtFlashErase
+          CFI (cfiPicker805) NoCalls AppS2wCmd_ExtFlashChipErase
+          CFI (cfiPicker805) Picker
         THUMB
 ?Subroutine73:
         LDR.W    R0,??DataTable508
@@ -36458,10 +36420,10 @@ AppS2wCmd_ExtFlashErase:
         ADD      R0,R0,#+30208
         ADDS     R0,R0,#+136
         BX       LR
+          CFI EndBlock cfiCond802
           CFI EndBlock cfiCond803
           CFI EndBlock cfiCond804
-          CFI EndBlock cfiCond805
-          CFI EndBlock cfiPicker806
+          CFI EndBlock cfiPicker805
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -36477,7 +36439,7 @@ AppS2wCmd_ExtFlashErase:
 // 14251 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock807 Using cfiCommon0
+          CFI Block cfiBlock806 Using cfiCommon0
           CFI Function AppS2wCmd_ExtFlashChipErase
         THUMB
 // 14252 UINT8
@@ -36516,14 +36478,14 @@ AppS2wCmd_ExtFlashChipErase:
 // 14268 	return status;
         MOVS     R0,#+0
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock807
+          CFI EndBlock cfiBlock806
 // 14269 }
 // 14270 #endif
 // 14271 
 // 14272 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock808 Using cfiCommon0
+          CFI Block cfiBlock807 Using cfiCommon0
           CFI Function S2wRateValidation
           CFI NoCalls
         THUMB
@@ -36588,13 +36550,13 @@ S2wRateValidation:
 ??S2wRateValidation_1:
         MOVS     R0,#+1
         BX       LR               ;; return
-          CFI EndBlock cfiBlock808
+          CFI EndBlock cfiBlock807
 // 14287 }
 // 14288 
 // 14289 #ifdef S2W_COAP_SUPPORT
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock809 Using cfiCommon0
+          CFI Block cfiBlock808 Using cfiCommon0
           CFI Function AppS2wCmd_CoapClose
         THUMB
 // 14290 PRIVATE UINT8
@@ -36676,12 +36638,12 @@ AppS2wCmd_CoapClose:
 ??AppS2wCmd_CoapClose_2:
         MOVS     R0,#+0
         POP      {R1,R2,R4-R6,PC}  ;; return
-          CFI EndBlock cfiBlock809
+          CFI EndBlock cfiBlock808
 // 14321 }
 // 14322 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock810 Using cfiCommon0
+          CFI Block cfiBlock809 Using cfiCommon0
           CFI Function AppS2wCmd_CoapOpen
         THUMB
 // 14323 PRIVATE UINT8
@@ -36795,7 +36757,7 @@ AppS2wCmd_CoapOpen:
 ??AppS2wCmd_CoapOpen_1:
         MOVS     R0,#+0
         POP      {R1,R2,R4-R6,PC}  ;; return
-          CFI EndBlock cfiBlock810
+          CFI EndBlock cfiBlock809
 // 14374 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -36844,7 +36806,7 @@ AppS2wCmd_CoapOpen:
 // 14376 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock811 Using cfiCommon0
+          CFI Block cfiBlock810 Using cfiCommon0
           CFI Function AppS2wCmd_CoapSend
         THUMB
 // 14377 PRIVATE UINT8
@@ -37174,7 +37136,7 @@ AppS2wCmd_CoapSend:
         ADD      SP,SP,#+1416
           CFI CFA R13+24
         POP      {R4-R8,PC}       ;; return
-          CFI EndBlock cfiBlock811
+          CFI EndBlock cfiBlock810
 // 14518 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -37191,7 +37153,7 @@ AppS2wCmd_CoapSend:
         DC8 0, 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond812 Using cfiCommon0
+          CFI Block cfiCond811 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_421
           CFI R4 Frame(CFA, -36)
@@ -37204,28 +37166,38 @@ AppS2wCmd_CoapSend:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond813 Using cfiCommon0
-          CFI (cfiCond813) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond813) Conditional ??CrossCallReturnLabel_420
-          CFI (cfiCond813) R4 Frame(CFA, -36)
-          CFI (cfiCond813) R5 Frame(CFA, -32)
-          CFI (cfiCond813) R6 Frame(CFA, -28)
-          CFI (cfiCond813) R7 Frame(CFA, -24)
-          CFI (cfiCond813) R8 Frame(CFA, -20)
-          CFI (cfiCond813) R9 Frame(CFA, -16)
-          CFI (cfiCond813) R10 Frame(CFA, -12)
-          CFI (cfiCond813) R11 Frame(CFA, -8)
-          CFI (cfiCond813) R14 Frame(CFA, -4)
-          CFI (cfiCond813) CFA R13+360
-          CFI Block cfiPicker814 Using cfiCommon1
-          CFI (cfiPicker814) NoFunction
-          CFI (cfiPicker814) Picker
+          CFI Block cfiCond812 Using cfiCommon0
+          CFI (cfiCond812) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond812) Conditional ??CrossCallReturnLabel_420
+          CFI (cfiCond812) R4 Frame(CFA, -36)
+          CFI (cfiCond812) R5 Frame(CFA, -32)
+          CFI (cfiCond812) R6 Frame(CFA, -28)
+          CFI (cfiCond812) R7 Frame(CFA, -24)
+          CFI (cfiCond812) R8 Frame(CFA, -20)
+          CFI (cfiCond812) R9 Frame(CFA, -16)
+          CFI (cfiCond812) R10 Frame(CFA, -12)
+          CFI (cfiCond812) R11 Frame(CFA, -8)
+          CFI (cfiCond812) R14 Frame(CFA, -4)
+          CFI (cfiCond812) CFA R13+360
+          CFI Block cfiPicker813 Using cfiCommon1
+          CFI (cfiPicker813) NoFunction
+          CFI (cfiPicker813) Picker
         THUMB
 ?Subroutine69:
         ADD      R7,R11,#+476
+          CFI Block cfiCond814 Using cfiCommon0
+          CFI (cfiCond814) Function AppS2wCmd_Ndhcp
+          CFI (cfiCond814) Conditional ??CrossCallReturnLabel_419
+          CFI (cfiCond814) R4 Frame(CFA, -24)
+          CFI (cfiCond814) R5 Frame(CFA, -20)
+          CFI (cfiCond814) R6 Frame(CFA, -16)
+          CFI (cfiCond814) R7 Frame(CFA, -12)
+          CFI (cfiCond814) R8 Frame(CFA, -8)
+          CFI (cfiCond814) R14 Frame(CFA, -4)
+          CFI (cfiCond814) CFA R13+72
           CFI Block cfiCond815 Using cfiCommon0
           CFI (cfiCond815) Function AppS2wCmd_Ndhcp
-          CFI (cfiCond815) Conditional ??CrossCallReturnLabel_419
+          CFI (cfiCond815) Conditional ??CrossCallReturnLabel_418
           CFI (cfiCond815) R4 Frame(CFA, -24)
           CFI (cfiCond815) R5 Frame(CFA, -20)
           CFI (cfiCond815) R6 Frame(CFA, -16)
@@ -37234,38 +37206,28 @@ AppS2wCmd_CoapSend:
           CFI (cfiCond815) R14 Frame(CFA, -4)
           CFI (cfiCond815) CFA R13+72
           CFI Block cfiCond816 Using cfiCommon0
-          CFI (cfiCond816) Function AppS2wCmd_Ndhcp
-          CFI (cfiCond816) Conditional ??CrossCallReturnLabel_418
-          CFI (cfiCond816) R4 Frame(CFA, -24)
-          CFI (cfiCond816) R5 Frame(CFA, -20)
-          CFI (cfiCond816) R6 Frame(CFA, -16)
-          CFI (cfiCond816) R7 Frame(CFA, -12)
-          CFI (cfiCond816) R8 Frame(CFA, -8)
+          CFI (cfiCond816) Function AppS2wCmd_NcmAuto
+          CFI (cfiCond816) Conditional ??CrossCallReturnLabel_417
+          CFI (cfiCond816) R4 Frame(CFA, -36)
+          CFI (cfiCond816) R5 Frame(CFA, -32)
+          CFI (cfiCond816) R6 Frame(CFA, -28)
+          CFI (cfiCond816) R7 Frame(CFA, -24)
+          CFI (cfiCond816) R8 Frame(CFA, -20)
+          CFI (cfiCond816) R9 Frame(CFA, -16)
+          CFI (cfiCond816) R10 Frame(CFA, -12)
+          CFI (cfiCond816) R11 Frame(CFA, -8)
           CFI (cfiCond816) R14 Frame(CFA, -4)
-          CFI (cfiCond816) CFA R13+72
+          CFI (cfiCond816) CFA R13+1344
           CFI Block cfiCond817 Using cfiCommon0
-          CFI (cfiCond817) Function AppS2wCmd_NcmAuto
-          CFI (cfiCond817) Conditional ??CrossCallReturnLabel_417
-          CFI (cfiCond817) R4 Frame(CFA, -36)
-          CFI (cfiCond817) R5 Frame(CFA, -32)
-          CFI (cfiCond817) R6 Frame(CFA, -28)
-          CFI (cfiCond817) R7 Frame(CFA, -24)
-          CFI (cfiCond817) R8 Frame(CFA, -20)
-          CFI (cfiCond817) R9 Frame(CFA, -16)
-          CFI (cfiCond817) R10 Frame(CFA, -12)
-          CFI (cfiCond817) R11 Frame(CFA, -8)
+          CFI (cfiCond817) Function AppS2wCmd_CoapSend
+          CFI (cfiCond817) Conditional ??CrossCallReturnLabel_416
+          CFI (cfiCond817) R4 Frame(CFA, -24)
+          CFI (cfiCond817) R5 Frame(CFA, -20)
+          CFI (cfiCond817) R6 Frame(CFA, -16)
+          CFI (cfiCond817) R7 Frame(CFA, -12)
+          CFI (cfiCond817) R8 Frame(CFA, -8)
           CFI (cfiCond817) R14 Frame(CFA, -4)
-          CFI (cfiCond817) CFA R13+1344
-          CFI Block cfiCond818 Using cfiCommon0
-          CFI (cfiCond818) Function AppS2wCmd_CoapSend
-          CFI (cfiCond818) Conditional ??CrossCallReturnLabel_416
-          CFI (cfiCond818) R4 Frame(CFA, -24)
-          CFI (cfiCond818) R5 Frame(CFA, -20)
-          CFI (cfiCond818) R6 Frame(CFA, -16)
-          CFI (cfiCond818) R7 Frame(CFA, -12)
-          CFI (cfiCond818) R8 Frame(CFA, -8)
-          CFI (cfiCond818) R14 Frame(CFA, -4)
-          CFI (cfiCond818) CFA R13+1440
+          CFI (cfiCond817) CFA R13+1440
 ??Subroutine69_0:
         MOV      R0,R7
           CFI FunCall AppS2wCmd_Wassoc strlen
@@ -37275,16 +37237,16 @@ AppS2wCmd_CoapSend:
           CFI FunCall AppS2wCmd_NcmAuto strlen
           CFI FunCall AppS2wCmd_CoapSend strlen
         B.W      strlen
+          CFI EndBlock cfiCond811
           CFI EndBlock cfiCond812
-          CFI EndBlock cfiCond813
-          CFI EndBlock cfiPicker814
+          CFI EndBlock cfiPicker813
+          CFI EndBlock cfiCond814
           CFI EndBlock cfiCond815
           CFI EndBlock cfiCond816
           CFI EndBlock cfiCond817
-          CFI EndBlock cfiCond818
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond819 Using cfiCommon0
+          CFI Block cfiCond818 Using cfiCommon0
           CFI Function AppS2wCmd_CoapSend
           CFI Conditional ??CrossCallReturnLabel_184
           CFI R4 Frame(CFA, -24)
@@ -37294,9 +37256,19 @@ AppS2wCmd_CoapSend:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+1440
+          CFI Block cfiCond819 Using cfiCommon0
+          CFI (cfiCond819) Function AppS2wCmd_CoapSend
+          CFI (cfiCond819) Conditional ??CrossCallReturnLabel_183
+          CFI (cfiCond819) R4 Frame(CFA, -24)
+          CFI (cfiCond819) R5 Frame(CFA, -20)
+          CFI (cfiCond819) R6 Frame(CFA, -16)
+          CFI (cfiCond819) R7 Frame(CFA, -12)
+          CFI (cfiCond819) R8 Frame(CFA, -8)
+          CFI (cfiCond819) R14 Frame(CFA, -4)
+          CFI (cfiCond819) CFA R13+1440
           CFI Block cfiCond820 Using cfiCommon0
           CFI (cfiCond820) Function AppS2wCmd_CoapSend
-          CFI (cfiCond820) Conditional ??CrossCallReturnLabel_183
+          CFI (cfiCond820) Conditional ??CrossCallReturnLabel_182
           CFI (cfiCond820) R4 Frame(CFA, -24)
           CFI (cfiCond820) R5 Frame(CFA, -20)
           CFI (cfiCond820) R6 Frame(CFA, -16)
@@ -37306,7 +37278,7 @@ AppS2wCmd_CoapSend:
           CFI (cfiCond820) CFA R13+1440
           CFI Block cfiCond821 Using cfiCommon0
           CFI (cfiCond821) Function AppS2wCmd_CoapSend
-          CFI (cfiCond821) Conditional ??CrossCallReturnLabel_182
+          CFI (cfiCond821) Conditional ??CrossCallReturnLabel_181
           CFI (cfiCond821) R4 Frame(CFA, -24)
           CFI (cfiCond821) R5 Frame(CFA, -20)
           CFI (cfiCond821) R6 Frame(CFA, -16)
@@ -37316,7 +37288,7 @@ AppS2wCmd_CoapSend:
           CFI (cfiCond821) CFA R13+1440
           CFI Block cfiCond822 Using cfiCommon0
           CFI (cfiCond822) Function AppS2wCmd_CoapSend
-          CFI (cfiCond822) Conditional ??CrossCallReturnLabel_181
+          CFI (cfiCond822) Conditional ??CrossCallReturnLabel_180
           CFI (cfiCond822) R4 Frame(CFA, -24)
           CFI (cfiCond822) R5 Frame(CFA, -20)
           CFI (cfiCond822) R6 Frame(CFA, -16)
@@ -37326,7 +37298,7 @@ AppS2wCmd_CoapSend:
           CFI (cfiCond822) CFA R13+1440
           CFI Block cfiCond823 Using cfiCommon0
           CFI (cfiCond823) Function AppS2wCmd_CoapSend
-          CFI (cfiCond823) Conditional ??CrossCallReturnLabel_180
+          CFI (cfiCond823) Conditional ??CrossCallReturnLabel_179
           CFI (cfiCond823) R4 Frame(CFA, -24)
           CFI (cfiCond823) R5 Frame(CFA, -20)
           CFI (cfiCond823) R6 Frame(CFA, -16)
@@ -37336,7 +37308,7 @@ AppS2wCmd_CoapSend:
           CFI (cfiCond823) CFA R13+1440
           CFI Block cfiCond824 Using cfiCommon0
           CFI (cfiCond824) Function AppS2wCmd_CoapSend
-          CFI (cfiCond824) Conditional ??CrossCallReturnLabel_179
+          CFI (cfiCond824) Conditional ??CrossCallReturnLabel_178
           CFI (cfiCond824) R4 Frame(CFA, -24)
           CFI (cfiCond824) R5 Frame(CFA, -20)
           CFI (cfiCond824) R6 Frame(CFA, -16)
@@ -37344,19 +37316,9 @@ AppS2wCmd_CoapSend:
           CFI (cfiCond824) R8 Frame(CFA, -8)
           CFI (cfiCond824) R14 Frame(CFA, -4)
           CFI (cfiCond824) CFA R13+1440
-          CFI Block cfiCond825 Using cfiCommon0
-          CFI (cfiCond825) Function AppS2wCmd_CoapSend
-          CFI (cfiCond825) Conditional ??CrossCallReturnLabel_178
-          CFI (cfiCond825) R4 Frame(CFA, -24)
-          CFI (cfiCond825) R5 Frame(CFA, -20)
-          CFI (cfiCond825) R6 Frame(CFA, -16)
-          CFI (cfiCond825) R7 Frame(CFA, -12)
-          CFI (cfiCond825) R8 Frame(CFA, -8)
-          CFI (cfiCond825) R14 Frame(CFA, -4)
-          CFI (cfiCond825) CFA R13+1440
-          CFI Block cfiPicker826 Using cfiCommon1
-          CFI (cfiPicker826) NoFunction
-          CFI (cfiPicker826) Picker
+          CFI Block cfiPicker825 Using cfiCommon1
+          CFI (cfiPicker825) NoFunction
+          CFI (cfiPicker825) Picker
         THUMB
 ?Subroutine36:
         ADD      R0,SP,#+1020
@@ -37370,18 +37332,18 @@ AppS2wCmd_CoapSend:
           CFI FunCall AppS2wCmd_CoapSend AppS2wParse_NextParamGet
           CFI FunCall AppS2wCmd_CoapSend AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond818
           CFI EndBlock cfiCond819
           CFI EndBlock cfiCond820
           CFI EndBlock cfiCond821
           CFI EndBlock cfiCond822
           CFI EndBlock cfiCond823
           CFI EndBlock cfiCond824
-          CFI EndBlock cfiCond825
-          CFI EndBlock cfiPicker826
+          CFI EndBlock cfiPicker825
 // 14519 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock827 Using cfiCommon0
+          CFI Block cfiBlock826 Using cfiCommon0
           CFI Function AppS2wCmd_CoapSetOption
         THUMB
 // 14520 PRIVATE UINT8
@@ -37533,7 +37495,7 @@ AppS2wCmd_CoapSetOption:
 ??AppS2wCmd_CoapSetOption_0:
         MOVS     R0,#+2
         POP      {R1-R5,PC}       ;; return
-          CFI EndBlock cfiBlock827
+          CFI EndBlock cfiBlock826
 // 14580 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -37550,7 +37512,7 @@ AppS2wCmd_CoapSetOption:
 // 14581 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock828 Using cfiCommon0
+          CFI Block cfiBlock827 Using cfiCommon0
           CFI Function AppS2wCmd_CoapRemoveOption
         THUMB
 // 14582 PRIVATE UINT8
@@ -37734,7 +37696,7 @@ AppS2wCmd_CoapRemoveOption:
         MOV      R6,R5
         LDR      R5,[R5, #+8]
         B.N      ??AppS2wCmd_CoapRemoveOption_4
-          CFI EndBlock cfiBlock828
+          CFI EndBlock cfiBlock827
 // 14664 
 // 14665 }
 // 14666 
@@ -37751,7 +37713,7 @@ AppS2wCmd_CoapRemoveOption:
 // 14677 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock829 Using cfiCommon0
+          CFI Block cfiBlock828 Using cfiCommon0
           CFI Function AppS2wHal_CoapContentDataGet
         THUMB
 // 14678 PUBLIC UINT8
@@ -37902,7 +37864,7 @@ AppS2wHal_CoapContentDataGet:
         ADDW     SP,SP,#+2804
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
-          CFI EndBlock cfiBlock829
+          CFI EndBlock cfiBlock828
 // 14746 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -37950,7 +37912,7 @@ AppS2wHal_CoapContentDataGet:
 // 14748 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock830 Using cfiCommon0
+          CFI Block cfiBlock829 Using cfiCommon0
           CFI Function AppS2wCmd_BaBitMapSet
         THUMB
 // 14749 UINT8
@@ -38021,7 +37983,7 @@ AppS2wCmd_BaBitMapSet:
 // 14781     return S2W_SUCCESS;
         MOVS     R0,#+0
         POP      {R1-R3,PC}       ;; return
-          CFI EndBlock cfiBlock830
+          CFI EndBlock cfiBlock829
 // 14782 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -38033,7 +37995,7 @@ AppS2wCmd_BaBitMapSet:
 // 14783 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock831 Using cfiCommon0
+          CFI Block cfiBlock830 Using cfiCommon0
           CFI Function AppS2wCmd_RadioStateGet
         THUMB
 // 14784 UINT8
@@ -38123,7 +38085,7 @@ AppS2wCmd_RadioStateGet:
         ADD      SP,SP,#+44
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
-          CFI EndBlock cfiBlock831
+          CFI EndBlock cfiBlock830
 // 14806 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -38197,7 +38159,7 @@ AppS2wCmd_RadioStateGet:
 // 14807 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock832 Using cfiCommon0
+          CFI Block cfiBlock831 Using cfiCommon0
           CFI Function App_ClkTuneCmd
         THUMB
 // 14808 UINT8 App_ClkTuneCmd(UINT8 *ptr)
@@ -38310,53 +38272,53 @@ App_ClkTuneCmd:
         ADD      SP,SP,#+32
           CFI CFA R13+16
         POP      {R4-R6,PC}       ;; return
-          CFI EndBlock cfiBlock832
+          CFI EndBlock cfiBlock831
 // 14847 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond833 Using cfiCommon0
+          CFI Block cfiCond832 Using cfiCommon0
           CFI Function AppS2wCmd_BaudRate
           CFI Conditional ??CrossCallReturnLabel_233
           CFI R4 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+40
+          CFI Block cfiCond833 Using cfiCommon0
+          CFI (cfiCond833) Function AppS2wCmd_BaudRate
+          CFI (cfiCond833) Conditional ??CrossCallReturnLabel_232
+          CFI (cfiCond833) R4 Frame(CFA, -8)
+          CFI (cfiCond833) R14 Frame(CFA, -4)
+          CFI (cfiCond833) CFA R13+40
           CFI Block cfiCond834 Using cfiCommon0
           CFI (cfiCond834) Function AppS2wCmd_BaudRate
-          CFI (cfiCond834) Conditional ??CrossCallReturnLabel_232
+          CFI (cfiCond834) Conditional ??CrossCallReturnLabel_231
           CFI (cfiCond834) R4 Frame(CFA, -8)
           CFI (cfiCond834) R14 Frame(CFA, -4)
           CFI (cfiCond834) CFA R13+40
           CFI Block cfiCond835 Using cfiCommon0
           CFI (cfiCond835) Function AppS2wCmd_BaudRate
-          CFI (cfiCond835) Conditional ??CrossCallReturnLabel_231
+          CFI (cfiCond835) Conditional ??CrossCallReturnLabel_230
           CFI (cfiCond835) R4 Frame(CFA, -8)
           CFI (cfiCond835) R14 Frame(CFA, -4)
           CFI (cfiCond835) CFA R13+40
           CFI Block cfiCond836 Using cfiCommon0
-          CFI (cfiCond836) Function AppS2wCmd_BaudRate
-          CFI (cfiCond836) Conditional ??CrossCallReturnLabel_230
-          CFI (cfiCond836) R4 Frame(CFA, -8)
+          CFI (cfiCond836) Function App_ClkTuneCmd
+          CFI (cfiCond836) Conditional ??CrossCallReturnLabel_229
+          CFI (cfiCond836) R4 Frame(CFA, -16)
+          CFI (cfiCond836) R5 Frame(CFA, -12)
+          CFI (cfiCond836) R6 Frame(CFA, -8)
           CFI (cfiCond836) R14 Frame(CFA, -4)
-          CFI (cfiCond836) CFA R13+40
+          CFI (cfiCond836) CFA R13+48
           CFI Block cfiCond837 Using cfiCommon0
           CFI (cfiCond837) Function App_ClkTuneCmd
-          CFI (cfiCond837) Conditional ??CrossCallReturnLabel_229
+          CFI (cfiCond837) Conditional ??CrossCallReturnLabel_228
           CFI (cfiCond837) R4 Frame(CFA, -16)
           CFI (cfiCond837) R5 Frame(CFA, -12)
           CFI (cfiCond837) R6 Frame(CFA, -8)
           CFI (cfiCond837) R14 Frame(CFA, -4)
           CFI (cfiCond837) CFA R13+48
-          CFI Block cfiCond838 Using cfiCommon0
-          CFI (cfiCond838) Function App_ClkTuneCmd
-          CFI (cfiCond838) Conditional ??CrossCallReturnLabel_228
-          CFI (cfiCond838) R4 Frame(CFA, -16)
-          CFI (cfiCond838) R5 Frame(CFA, -12)
-          CFI (cfiCond838) R6 Frame(CFA, -8)
-          CFI (cfiCond838) R14 Frame(CFA, -4)
-          CFI (cfiCond838) CFA R13+48
-          CFI Block cfiPicker839 Using cfiCommon1
-          CFI (cfiPicker839) NoFunction
-          CFI (cfiPicker839) Picker
+          CFI Block cfiPicker838 Using cfiCommon1
+          CFI (cfiPicker838) NoFunction
+          CFI (cfiPicker838) Picker
         THUMB
 ?Subroutine42:
         ADD      R0,SP,#+28
@@ -38367,18 +38329,18 @@ App_ClkTuneCmd:
           CFI FunCall App_ClkTuneCmd AppS2wParse_NextParamGet
           CFI FunCall App_ClkTuneCmd AppS2wParse_NextParamGet
         B.W      AppS2wParse_NextParamGet
+          CFI EndBlock cfiCond832
           CFI EndBlock cfiCond833
           CFI EndBlock cfiCond834
           CFI EndBlock cfiCond835
           CFI EndBlock cfiCond836
           CFI EndBlock cfiCond837
-          CFI EndBlock cfiCond838
-          CFI EndBlock cfiPicker839
+          CFI EndBlock cfiPicker838
 // 14848 
 // 14849 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock840 Using cfiCommon0
+          CFI Block cfiBlock839 Using cfiCommon0
           CFI Function AppS2wCmd_Hibernate
         THUMB
 // 14850 UINT8
@@ -38459,14 +38421,14 @@ AppS2wCmd_Hibernate:
         MOVS     R0,#+0
 ??AppS2wCmd_Hibernate_2:
         POP      {R1-R3,PC}       ;; return
-          CFI EndBlock cfiBlock840
+          CFI EndBlock cfiBlock839
 // 14887 
 // 14888 }
 // 14889 
 // 14890 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock841 Using cfiCommon0
+          CFI Block cfiBlock840 Using cfiCommon0
           CFI Function AppS2wCmd_TempGet
         THUMB
 // 14891 UINT8 
@@ -38531,7 +38493,7 @@ AppS2wCmd_TempGet:
         MOVS     R0,#+0
 ??AppS2wCmd_TempGet_1:
         POP      {R1-R3,PC}       ;; return
-          CFI EndBlock cfiBlock841
+          CFI EndBlock cfiBlock840
 // 14918 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -38562,7 +38524,7 @@ AppS2wCmd_TempGet:
 // 14919 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock842 Using cfiCommon0
+          CFI Block cfiBlock841 Using cfiCommon0
           CFI Function AppS2wCmd_TempReadStart
         THUMB
 // 14920 UINT8 
@@ -38643,7 +38605,7 @@ AppS2wCmd_TempReadStart:
         ADD      SP,SP,#+16
           CFI CFA R13+8
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock842
+          CFI EndBlock cfiBlock841
 // 14957 }
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -38660,7 +38622,7 @@ AppS2wCmd_TempReadStart:
 // 14958 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock843 Using cfiCommon0
+          CFI Block cfiBlock842 Using cfiCommon0
           CFI Function AppS2wCmd_OtaFwupRollBack
         THUMB
 // 14959 UINT8
@@ -38684,7 +38646,7 @@ AppS2wCmd_OtaFwupRollBack:
 ??AppS2wCmd_OtaFwupRollBack_0:
         MOVS     R0,#+1
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock843
+          CFI EndBlock cfiBlock842
 // 14969     }
 // 14970     return S2W_SUCCESS;
 // 14971 }
@@ -38693,7 +38655,7 @@ AppS2wCmd_OtaFwupRollBack:
 // 14974 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock844 Using cfiCommon0
+          CFI Block cfiBlock843 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc_test
         THUMB
 // 14975 UINT8
@@ -39358,7 +39320,7 @@ AppS2wCmd_Wassoc_test:
 // 15346           return S2W_FAILURE;
 ??AppS2wCmd_Wassoc_test_18:
         MOVS     R0,#+1
-          CFI EndBlock cfiBlock844
+          CFI EndBlock cfiBlock843
 // 15347         }
 ??AppS2wCmd_Wassoc_test_0:
         REQUIRE ?Subroutine0
@@ -39368,10 +39330,10 @@ AppS2wCmd_Wassoc_test:
 // 15350 }
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock845 Using cfiCommon0
+          CFI Block cfiBlock844 Using cfiCommon0
           CFI NoFunction
-          CFI NoCalls AppS2wCmd_Wassoc_test
           CFI NoCalls AppS2wCmd_Wassoc
+          CFI NoCalls AppS2wCmd_Wassoc_test
           CFI CFA R13+360
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
@@ -39387,7 +39349,7 @@ AppS2wCmd_Wassoc_test:
         ADD      SP,SP,#+324
           CFI CFA R13+36
         POP      {R4-R11,PC}      ;; return
-          CFI EndBlock cfiBlock845
+          CFI EndBlock cfiBlock844
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -39404,7 +39366,7 @@ AppS2wCmd_Wassoc_test:
         DC8 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond846 Using cfiCommon0
+          CFI Block cfiCond845 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI NoCalls
           CFI NoCalls
@@ -39419,26 +39381,26 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond847 Using cfiCommon0
-          CFI (cfiCond847) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond847) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiCond847) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiCond847) Conditional ??CrossCallReturnLabel_603
-          CFI (cfiCond847) R4 Frame(CFA, -36)
-          CFI (cfiCond847) R5 Frame(CFA, -32)
-          CFI (cfiCond847) R6 Frame(CFA, -28)
-          CFI (cfiCond847) R7 Frame(CFA, -24)
-          CFI (cfiCond847) R8 Frame(CFA, -20)
-          CFI (cfiCond847) R9 Frame(CFA, -16)
-          CFI (cfiCond847) R10 Frame(CFA, -12)
-          CFI (cfiCond847) R11 Frame(CFA, -8)
-          CFI (cfiCond847) R14 Frame(CFA, -4)
-          CFI (cfiCond847) CFA R13+360
-          CFI Block cfiPicker848 Using cfiCommon1
-          CFI (cfiPicker848) NoFunction
-          CFI (cfiPicker848) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiPicker848) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiPicker848) Picker
+          CFI Block cfiCond846 Using cfiCommon0
+          CFI (cfiCond846) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond846) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiCond846) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond846) Conditional ??CrossCallReturnLabel_603
+          CFI (cfiCond846) R4 Frame(CFA, -36)
+          CFI (cfiCond846) R5 Frame(CFA, -32)
+          CFI (cfiCond846) R6 Frame(CFA, -28)
+          CFI (cfiCond846) R7 Frame(CFA, -24)
+          CFI (cfiCond846) R8 Frame(CFA, -20)
+          CFI (cfiCond846) R9 Frame(CFA, -16)
+          CFI (cfiCond846) R10 Frame(CFA, -12)
+          CFI (cfiCond846) R11 Frame(CFA, -8)
+          CFI (cfiCond846) R14 Frame(CFA, -4)
+          CFI (cfiCond846) CFA R13+360
+          CFI Block cfiPicker847 Using cfiCommon1
+          CFI (cfiPicker847) NoFunction
+          CFI (cfiPicker847) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiPicker847) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiPicker847) Picker
         THUMB
 ?Subroutine129:
         STRB     R0,[R11, #+1016]
@@ -39446,12 +39408,12 @@ AppS2wCmd_Wassoc_test:
         ADD      R9,R11,#+424
         CMP      R7,#+0
         BX       LR
+          CFI EndBlock cfiCond845
           CFI EndBlock cfiCond846
-          CFI EndBlock cfiCond847
-          CFI EndBlock cfiPicker848
+          CFI EndBlock cfiPicker847
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond849 Using cfiCommon0
+          CFI Block cfiCond848 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_593
           CFI R4 Frame(CFA, -36)
@@ -39464,22 +39426,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond850 Using cfiCommon0
-          CFI (cfiCond850) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond850) Conditional ??CrossCallReturnLabel_592
-          CFI (cfiCond850) R4 Frame(CFA, -36)
-          CFI (cfiCond850) R5 Frame(CFA, -32)
-          CFI (cfiCond850) R6 Frame(CFA, -28)
-          CFI (cfiCond850) R7 Frame(CFA, -24)
-          CFI (cfiCond850) R8 Frame(CFA, -20)
-          CFI (cfiCond850) R9 Frame(CFA, -16)
-          CFI (cfiCond850) R10 Frame(CFA, -12)
-          CFI (cfiCond850) R11 Frame(CFA, -8)
-          CFI (cfiCond850) R14 Frame(CFA, -4)
-          CFI (cfiCond850) CFA R13+360
-          CFI Block cfiPicker851 Using cfiCommon1
-          CFI (cfiPicker851) NoFunction
-          CFI (cfiPicker851) Picker
+          CFI Block cfiCond849 Using cfiCommon0
+          CFI (cfiCond849) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond849) Conditional ??CrossCallReturnLabel_592
+          CFI (cfiCond849) R4 Frame(CFA, -36)
+          CFI (cfiCond849) R5 Frame(CFA, -32)
+          CFI (cfiCond849) R6 Frame(CFA, -28)
+          CFI (cfiCond849) R7 Frame(CFA, -24)
+          CFI (cfiCond849) R8 Frame(CFA, -20)
+          CFI (cfiCond849) R9 Frame(CFA, -16)
+          CFI (cfiCond849) R10 Frame(CFA, -12)
+          CFI (cfiCond849) R11 Frame(CFA, -8)
+          CFI (cfiCond849) R14 Frame(CFA, -4)
+          CFI (cfiCond849) CFA R13+360
+          CFI Block cfiPicker850 Using cfiCommon1
+          CFI (cfiPicker850) NoFunction
+          CFI (cfiPicker850) Picker
         THUMB
 ?Subroutine125:
         LDR      R0,[R6, #+0]
@@ -39488,12 +39450,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc _nxe_arp_gratuitous_send
           CFI FunCall AppS2wCmd_Wassoc_test _nxe_arp_gratuitous_send
         B.W      _nxe_arp_gratuitous_send
+          CFI EndBlock cfiCond848
           CFI EndBlock cfiCond849
-          CFI EndBlock cfiCond850
-          CFI EndBlock cfiPicker851
+          CFI EndBlock cfiPicker850
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond852 Using cfiCommon0
+          CFI Block cfiCond851 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI NoCalls
           CFI NoCalls
@@ -39508,26 +39470,26 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond853 Using cfiCommon0
-          CFI (cfiCond853) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond853) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiCond853) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiCond853) Conditional ??CrossCallReturnLabel_591
-          CFI (cfiCond853) R4 Frame(CFA, -36)
-          CFI (cfiCond853) R5 Frame(CFA, -32)
-          CFI (cfiCond853) R6 Frame(CFA, -28)
-          CFI (cfiCond853) R7 Frame(CFA, -24)
-          CFI (cfiCond853) R8 Frame(CFA, -20)
-          CFI (cfiCond853) R9 Frame(CFA, -16)
-          CFI (cfiCond853) R10 Frame(CFA, -12)
-          CFI (cfiCond853) R11 Frame(CFA, -8)
-          CFI (cfiCond853) R14 Frame(CFA, -4)
-          CFI (cfiCond853) CFA R13+360
-          CFI Block cfiPicker854 Using cfiCommon1
-          CFI (cfiPicker854) NoFunction
-          CFI (cfiPicker854) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiPicker854) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiPicker854) Picker
+          CFI Block cfiCond852 Using cfiCommon0
+          CFI (cfiCond852) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond852) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiCond852) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond852) Conditional ??CrossCallReturnLabel_591
+          CFI (cfiCond852) R4 Frame(CFA, -36)
+          CFI (cfiCond852) R5 Frame(CFA, -32)
+          CFI (cfiCond852) R6 Frame(CFA, -28)
+          CFI (cfiCond852) R7 Frame(CFA, -24)
+          CFI (cfiCond852) R8 Frame(CFA, -20)
+          CFI (cfiCond852) R9 Frame(CFA, -16)
+          CFI (cfiCond852) R10 Frame(CFA, -12)
+          CFI (cfiCond852) R11 Frame(CFA, -8)
+          CFI (cfiCond852) R14 Frame(CFA, -4)
+          CFI (cfiCond852) CFA R13+360
+          CFI Block cfiPicker853 Using cfiCommon1
+          CFI (cfiPicker853) NoFunction
+          CFI (cfiPicker853) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiPicker853) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiPicker853) Picker
         THUMB
 ?Subroutine124:
         LDRH     R1,[R11, #+650]
@@ -39548,12 +39510,12 @@ AppS2wCmd_Wassoc_test:
         LDRB     R0,[R11, #+120]
         CMP      R0,#+2
         BX       LR
+          CFI EndBlock cfiCond851
           CFI EndBlock cfiCond852
-          CFI EndBlock cfiCond853
-          CFI EndBlock cfiPicker854
+          CFI EndBlock cfiPicker853
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond855 Using cfiCommon0
+          CFI Block cfiCond854 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_589
           CFI R4 Frame(CFA, -36)
@@ -39566,9 +39528,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
+          CFI Block cfiCond855 Using cfiCommon0
+          CFI (cfiCond855) Function AppS2wCmd_Wassoc
+          CFI (cfiCond855) Conditional ??CrossCallReturnLabel_588
+          CFI (cfiCond855) R4 Frame(CFA, -36)
+          CFI (cfiCond855) R5 Frame(CFA, -32)
+          CFI (cfiCond855) R6 Frame(CFA, -28)
+          CFI (cfiCond855) R7 Frame(CFA, -24)
+          CFI (cfiCond855) R8 Frame(CFA, -20)
+          CFI (cfiCond855) R9 Frame(CFA, -16)
+          CFI (cfiCond855) R10 Frame(CFA, -12)
+          CFI (cfiCond855) R11 Frame(CFA, -8)
+          CFI (cfiCond855) R14 Frame(CFA, -4)
+          CFI (cfiCond855) CFA R13+360
           CFI Block cfiCond856 Using cfiCommon0
           CFI (cfiCond856) Function AppS2wCmd_Wassoc
-          CFI (cfiCond856) Conditional ??CrossCallReturnLabel_588
+          CFI (cfiCond856) Conditional ??CrossCallReturnLabel_587
           CFI (cfiCond856) R4 Frame(CFA, -36)
           CFI (cfiCond856) R5 Frame(CFA, -32)
           CFI (cfiCond856) R6 Frame(CFA, -28)
@@ -39580,8 +39555,8 @@ AppS2wCmd_Wassoc_test:
           CFI (cfiCond856) R14 Frame(CFA, -4)
           CFI (cfiCond856) CFA R13+360
           CFI Block cfiCond857 Using cfiCommon0
-          CFI (cfiCond857) Function AppS2wCmd_Wassoc
-          CFI (cfiCond857) Conditional ??CrossCallReturnLabel_587
+          CFI (cfiCond857) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond857) Conditional ??CrossCallReturnLabel_586
           CFI (cfiCond857) R4 Frame(CFA, -36)
           CFI (cfiCond857) R5 Frame(CFA, -32)
           CFI (cfiCond857) R6 Frame(CFA, -28)
@@ -39594,7 +39569,7 @@ AppS2wCmd_Wassoc_test:
           CFI (cfiCond857) CFA R13+360
           CFI Block cfiCond858 Using cfiCommon0
           CFI (cfiCond858) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond858) Conditional ??CrossCallReturnLabel_586
+          CFI (cfiCond858) Conditional ??CrossCallReturnLabel_585
           CFI (cfiCond858) R4 Frame(CFA, -36)
           CFI (cfiCond858) R5 Frame(CFA, -32)
           CFI (cfiCond858) R6 Frame(CFA, -28)
@@ -39607,7 +39582,7 @@ AppS2wCmd_Wassoc_test:
           CFI (cfiCond858) CFA R13+360
           CFI Block cfiCond859 Using cfiCommon0
           CFI (cfiCond859) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond859) Conditional ??CrossCallReturnLabel_585
+          CFI (cfiCond859) Conditional ??CrossCallReturnLabel_584
           CFI (cfiCond859) R4 Frame(CFA, -36)
           CFI (cfiCond859) R5 Frame(CFA, -32)
           CFI (cfiCond859) R6 Frame(CFA, -28)
@@ -39618,22 +39593,9 @@ AppS2wCmd_Wassoc_test:
           CFI (cfiCond859) R11 Frame(CFA, -8)
           CFI (cfiCond859) R14 Frame(CFA, -4)
           CFI (cfiCond859) CFA R13+360
-          CFI Block cfiCond860 Using cfiCommon0
-          CFI (cfiCond860) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond860) Conditional ??CrossCallReturnLabel_584
-          CFI (cfiCond860) R4 Frame(CFA, -36)
-          CFI (cfiCond860) R5 Frame(CFA, -32)
-          CFI (cfiCond860) R6 Frame(CFA, -28)
-          CFI (cfiCond860) R7 Frame(CFA, -24)
-          CFI (cfiCond860) R8 Frame(CFA, -20)
-          CFI (cfiCond860) R9 Frame(CFA, -16)
-          CFI (cfiCond860) R10 Frame(CFA, -12)
-          CFI (cfiCond860) R11 Frame(CFA, -8)
-          CFI (cfiCond860) R14 Frame(CFA, -4)
-          CFI (cfiCond860) CFA R13+360
-          CFI Block cfiPicker861 Using cfiCommon1
-          CFI (cfiPicker861) NoFunction
-          CFI (cfiPicker861) Picker
+          CFI Block cfiPicker860 Using cfiCommon1
+          CFI (cfiPicker860) NoFunction
+          CFI (cfiPicker860) Picker
         THUMB
 ?Subroutine123:
         LDR      R0,[R6, #+0]
@@ -39645,16 +39607,16 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc_test GsnNwIf_Close
           CFI FunCall AppS2wCmd_Wassoc_test GsnNwIf_Close
         B.W      GsnNwIf_Close
+          CFI EndBlock cfiCond854
           CFI EndBlock cfiCond855
           CFI EndBlock cfiCond856
           CFI EndBlock cfiCond857
           CFI EndBlock cfiCond858
           CFI EndBlock cfiCond859
-          CFI EndBlock cfiCond860
-          CFI EndBlock cfiPicker861
+          CFI EndBlock cfiPicker860
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond862 Using cfiCommon0
+          CFI Block cfiCond861 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_581
           CFI R4 Frame(CFA, -36)
@@ -39667,22 +39629,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond863 Using cfiCommon0
-          CFI (cfiCond863) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond863) Conditional ??CrossCallReturnLabel_580
-          CFI (cfiCond863) R4 Frame(CFA, -36)
-          CFI (cfiCond863) R5 Frame(CFA, -32)
-          CFI (cfiCond863) R6 Frame(CFA, -28)
-          CFI (cfiCond863) R7 Frame(CFA, -24)
-          CFI (cfiCond863) R8 Frame(CFA, -20)
-          CFI (cfiCond863) R9 Frame(CFA, -16)
-          CFI (cfiCond863) R10 Frame(CFA, -12)
-          CFI (cfiCond863) R11 Frame(CFA, -8)
-          CFI (cfiCond863) R14 Frame(CFA, -4)
-          CFI (cfiCond863) CFA R13+360
-          CFI Block cfiPicker864 Using cfiCommon1
-          CFI (cfiPicker864) NoFunction
-          CFI (cfiPicker864) Picker
+          CFI Block cfiCond862 Using cfiCommon0
+          CFI (cfiCond862) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond862) Conditional ??CrossCallReturnLabel_580
+          CFI (cfiCond862) R4 Frame(CFA, -36)
+          CFI (cfiCond862) R5 Frame(CFA, -32)
+          CFI (cfiCond862) R6 Frame(CFA, -28)
+          CFI (cfiCond862) R7 Frame(CFA, -24)
+          CFI (cfiCond862) R8 Frame(CFA, -20)
+          CFI (cfiCond862) R9 Frame(CFA, -16)
+          CFI (cfiCond862) R10 Frame(CFA, -12)
+          CFI (cfiCond862) R11 Frame(CFA, -8)
+          CFI (cfiCond862) R14 Frame(CFA, -4)
+          CFI (cfiCond862) CFA R13+360
+          CFI Block cfiPicker863 Using cfiCommon1
+          CFI (cfiPicker863) NoFunction
+          CFI (cfiPicker863) Picker
         THUMB
 ?Subroutine121:
         LDR      R2,[R6, #+0]
@@ -39692,12 +39654,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc AppS2wHal_Disassociate
           CFI FunCall AppS2wCmd_Wassoc_test AppS2wHal_Disassociate
         B.W      AppS2wHal_Disassociate
+          CFI EndBlock cfiCond861
           CFI EndBlock cfiCond862
-          CFI EndBlock cfiCond863
-          CFI EndBlock cfiPicker864
+          CFI EndBlock cfiPicker863
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond865 Using cfiCommon0
+          CFI Block cfiCond864 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_559
           CFI R4 Frame(CFA, -36)
@@ -39710,22 +39672,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond866 Using cfiCommon0
-          CFI (cfiCond866) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond866) Conditional ??CrossCallReturnLabel_558
-          CFI (cfiCond866) R4 Frame(CFA, -36)
-          CFI (cfiCond866) R5 Frame(CFA, -32)
-          CFI (cfiCond866) R6 Frame(CFA, -28)
-          CFI (cfiCond866) R7 Frame(CFA, -24)
-          CFI (cfiCond866) R8 Frame(CFA, -20)
-          CFI (cfiCond866) R9 Frame(CFA, -16)
-          CFI (cfiCond866) R10 Frame(CFA, -12)
-          CFI (cfiCond866) R11 Frame(CFA, -8)
-          CFI (cfiCond866) R14 Frame(CFA, -4)
-          CFI (cfiCond866) CFA R13+360
-          CFI Block cfiPicker867 Using cfiCommon1
-          CFI (cfiPicker867) NoFunction
-          CFI (cfiPicker867) Picker
+          CFI Block cfiCond865 Using cfiCommon0
+          CFI (cfiCond865) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond865) Conditional ??CrossCallReturnLabel_558
+          CFI (cfiCond865) R4 Frame(CFA, -36)
+          CFI (cfiCond865) R5 Frame(CFA, -32)
+          CFI (cfiCond865) R6 Frame(CFA, -28)
+          CFI (cfiCond865) R7 Frame(CFA, -24)
+          CFI (cfiCond865) R8 Frame(CFA, -20)
+          CFI (cfiCond865) R9 Frame(CFA, -16)
+          CFI (cfiCond865) R10 Frame(CFA, -12)
+          CFI (cfiCond865) R11 Frame(CFA, -8)
+          CFI (cfiCond865) R14 Frame(CFA, -4)
+          CFI (cfiCond865) CFA R13+360
+          CFI Block cfiPicker866 Using cfiCommon1
+          CFI (cfiPicker866) NoFunction
+          CFI (cfiPicker866) Picker
         THUMB
 ?Subroutine116:
         MOVS     R2,#+16
@@ -39734,12 +39696,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memcpy
           CFI FunCall AppS2wCmd_Wassoc_test memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond864
           CFI EndBlock cfiCond865
-          CFI EndBlock cfiCond866
-          CFI EndBlock cfiPicker867
+          CFI EndBlock cfiPicker866
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond868 Using cfiCommon0
+          CFI Block cfiCond867 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_554
           CFI R4 Frame(CFA, -36)
@@ -39752,22 +39714,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond869 Using cfiCommon0
-          CFI (cfiCond869) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond869) Conditional ??CrossCallReturnLabel_553
-          CFI (cfiCond869) R4 Frame(CFA, -36)
-          CFI (cfiCond869) R5 Frame(CFA, -32)
-          CFI (cfiCond869) R6 Frame(CFA, -28)
-          CFI (cfiCond869) R7 Frame(CFA, -24)
-          CFI (cfiCond869) R8 Frame(CFA, -20)
-          CFI (cfiCond869) R9 Frame(CFA, -16)
-          CFI (cfiCond869) R10 Frame(CFA, -12)
-          CFI (cfiCond869) R11 Frame(CFA, -8)
-          CFI (cfiCond869) R14 Frame(CFA, -4)
-          CFI (cfiCond869) CFA R13+360
-          CFI Block cfiPicker870 Using cfiCommon1
-          CFI (cfiPicker870) NoFunction
-          CFI (cfiPicker870) Picker
+          CFI Block cfiCond868 Using cfiCommon0
+          CFI (cfiCond868) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond868) Conditional ??CrossCallReturnLabel_553
+          CFI (cfiCond868) R4 Frame(CFA, -36)
+          CFI (cfiCond868) R5 Frame(CFA, -32)
+          CFI (cfiCond868) R6 Frame(CFA, -28)
+          CFI (cfiCond868) R7 Frame(CFA, -24)
+          CFI (cfiCond868) R8 Frame(CFA, -20)
+          CFI (cfiCond868) R9 Frame(CFA, -16)
+          CFI (cfiCond868) R10 Frame(CFA, -12)
+          CFI (cfiCond868) R11 Frame(CFA, -8)
+          CFI (cfiCond868) R14 Frame(CFA, -4)
+          CFI (cfiCond868) CFA R13+360
+          CFI Block cfiPicker869 Using cfiCommon1
+          CFI (cfiPicker869) NoFunction
+          CFI (cfiPicker869) Picker
         THUMB
 ?Subroutine114:
         MOVS     R2,#+6
@@ -39776,12 +39738,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memcpy
           CFI FunCall AppS2wCmd_Wassoc_test memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond867
           CFI EndBlock cfiCond868
-          CFI EndBlock cfiCond869
-          CFI EndBlock cfiPicker870
+          CFI EndBlock cfiPicker869
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond871 Using cfiCommon0
+          CFI Block cfiCond870 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_549
           CFI R4 Frame(CFA, -36)
@@ -39794,22 +39756,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond872 Using cfiCommon0
-          CFI (cfiCond872) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond872) Conditional ??CrossCallReturnLabel_548
-          CFI (cfiCond872) R4 Frame(CFA, -36)
-          CFI (cfiCond872) R5 Frame(CFA, -32)
-          CFI (cfiCond872) R6 Frame(CFA, -28)
-          CFI (cfiCond872) R7 Frame(CFA, -24)
-          CFI (cfiCond872) R8 Frame(CFA, -20)
-          CFI (cfiCond872) R9 Frame(CFA, -16)
-          CFI (cfiCond872) R10 Frame(CFA, -12)
-          CFI (cfiCond872) R11 Frame(CFA, -8)
-          CFI (cfiCond872) R14 Frame(CFA, -4)
-          CFI (cfiCond872) CFA R13+360
-          CFI Block cfiPicker873 Using cfiCommon1
-          CFI (cfiPicker873) NoFunction
-          CFI (cfiPicker873) Picker
+          CFI Block cfiCond871 Using cfiCommon0
+          CFI (cfiCond871) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond871) Conditional ??CrossCallReturnLabel_548
+          CFI (cfiCond871) R4 Frame(CFA, -36)
+          CFI (cfiCond871) R5 Frame(CFA, -32)
+          CFI (cfiCond871) R6 Frame(CFA, -28)
+          CFI (cfiCond871) R7 Frame(CFA, -24)
+          CFI (cfiCond871) R8 Frame(CFA, -20)
+          CFI (cfiCond871) R9 Frame(CFA, -16)
+          CFI (cfiCond871) R10 Frame(CFA, -12)
+          CFI (cfiCond871) R11 Frame(CFA, -8)
+          CFI (cfiCond871) R14 Frame(CFA, -4)
+          CFI (cfiCond871) CFA R13+360
+          CFI Block cfiPicker872 Using cfiCommon1
+          CFI (cfiPicker872) NoFunction
+          CFI (cfiPicker872) Picker
         THUMB
 ?Subroutine112:
         LDRB     R2,[SP, #+54]
@@ -39819,12 +39781,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memcpy
           CFI FunCall AppS2wCmd_Wassoc_test memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond870
           CFI EndBlock cfiCond871
-          CFI EndBlock cfiCond872
-          CFI EndBlock cfiPicker873
+          CFI EndBlock cfiPicker872
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond874 Using cfiCommon0
+          CFI Block cfiCond873 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_547
           CFI R4 Frame(CFA, -36)
@@ -39837,22 +39799,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond875 Using cfiCommon0
-          CFI (cfiCond875) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond875) Conditional ??CrossCallReturnLabel_546
-          CFI (cfiCond875) R4 Frame(CFA, -36)
-          CFI (cfiCond875) R5 Frame(CFA, -32)
-          CFI (cfiCond875) R6 Frame(CFA, -28)
-          CFI (cfiCond875) R7 Frame(CFA, -24)
-          CFI (cfiCond875) R8 Frame(CFA, -20)
-          CFI (cfiCond875) R9 Frame(CFA, -16)
-          CFI (cfiCond875) R10 Frame(CFA, -12)
-          CFI (cfiCond875) R11 Frame(CFA, -8)
-          CFI (cfiCond875) R14 Frame(CFA, -4)
-          CFI (cfiCond875) CFA R13+360
-          CFI Block cfiPicker876 Using cfiCommon1
-          CFI (cfiPicker876) NoFunction
-          CFI (cfiPicker876) Picker
+          CFI Block cfiCond874 Using cfiCommon0
+          CFI (cfiCond874) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond874) Conditional ??CrossCallReturnLabel_546
+          CFI (cfiCond874) R4 Frame(CFA, -36)
+          CFI (cfiCond874) R5 Frame(CFA, -32)
+          CFI (cfiCond874) R6 Frame(CFA, -28)
+          CFI (cfiCond874) R7 Frame(CFA, -24)
+          CFI (cfiCond874) R8 Frame(CFA, -20)
+          CFI (cfiCond874) R9 Frame(CFA, -16)
+          CFI (cfiCond874) R10 Frame(CFA, -12)
+          CFI (cfiCond874) R11 Frame(CFA, -8)
+          CFI (cfiCond874) R14 Frame(CFA, -4)
+          CFI (cfiCond874) CFA R13+360
+          CFI Block cfiPicker875 Using cfiCommon1
+          CFI (cfiPicker875) NoFunction
+          CFI (cfiPicker875) Picker
         THUMB
 ?Subroutine111:
         MOV      R2,R0
@@ -39861,12 +39823,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memcpy
           CFI FunCall AppS2wCmd_Wassoc_test memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond873
           CFI EndBlock cfiCond874
-          CFI EndBlock cfiCond875
-          CFI EndBlock cfiPicker876
+          CFI EndBlock cfiPicker875
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond877 Using cfiCommon0
+          CFI Block cfiCond876 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_542
           CFI R4 Frame(CFA, -36)
@@ -39879,22 +39841,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond878 Using cfiCommon0
-          CFI (cfiCond878) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond878) Conditional ??CrossCallReturnLabel_541
-          CFI (cfiCond878) R4 Frame(CFA, -36)
-          CFI (cfiCond878) R5 Frame(CFA, -32)
-          CFI (cfiCond878) R6 Frame(CFA, -28)
-          CFI (cfiCond878) R7 Frame(CFA, -24)
-          CFI (cfiCond878) R8 Frame(CFA, -20)
-          CFI (cfiCond878) R9 Frame(CFA, -16)
-          CFI (cfiCond878) R10 Frame(CFA, -12)
-          CFI (cfiCond878) R11 Frame(CFA, -8)
-          CFI (cfiCond878) R14 Frame(CFA, -4)
-          CFI (cfiCond878) CFA R13+360
-          CFI Block cfiPicker879 Using cfiCommon1
-          CFI (cfiPicker879) NoFunction
-          CFI (cfiPicker879) Picker
+          CFI Block cfiCond877 Using cfiCommon0
+          CFI (cfiCond877) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond877) Conditional ??CrossCallReturnLabel_541
+          CFI (cfiCond877) R4 Frame(CFA, -36)
+          CFI (cfiCond877) R5 Frame(CFA, -32)
+          CFI (cfiCond877) R6 Frame(CFA, -28)
+          CFI (cfiCond877) R7 Frame(CFA, -24)
+          CFI (cfiCond877) R8 Frame(CFA, -20)
+          CFI (cfiCond877) R9 Frame(CFA, -16)
+          CFI (cfiCond877) R10 Frame(CFA, -12)
+          CFI (cfiCond877) R11 Frame(CFA, -8)
+          CFI (cfiCond877) R14 Frame(CFA, -4)
+          CFI (cfiCond877) CFA R13+360
+          CFI Block cfiPicker878 Using cfiCommon1
+          CFI (cfiPicker878) NoFunction
+          CFI (cfiPicker878) Picker
         THUMB
 ?Subroutine109:
         LDR      R0,[R6, #+0]
@@ -39904,12 +39866,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc GsnNwif_DnsServerGet
           CFI FunCall AppS2wCmd_Wassoc_test GsnNwif_DnsServerGet
         B.W      GsnNwif_DnsServerGet
+          CFI EndBlock cfiCond876
           CFI EndBlock cfiCond877
-          CFI EndBlock cfiCond878
-          CFI EndBlock cfiPicker879
+          CFI EndBlock cfiPicker878
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond880 Using cfiCommon0
+          CFI Block cfiCond879 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_540
           CFI R4 Frame(CFA, -36)
@@ -39922,22 +39884,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond881 Using cfiCommon0
-          CFI (cfiCond881) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond881) Conditional ??CrossCallReturnLabel_539
-          CFI (cfiCond881) R4 Frame(CFA, -36)
-          CFI (cfiCond881) R5 Frame(CFA, -32)
-          CFI (cfiCond881) R6 Frame(CFA, -28)
-          CFI (cfiCond881) R7 Frame(CFA, -24)
-          CFI (cfiCond881) R8 Frame(CFA, -20)
-          CFI (cfiCond881) R9 Frame(CFA, -16)
-          CFI (cfiCond881) R10 Frame(CFA, -12)
-          CFI (cfiCond881) R11 Frame(CFA, -8)
-          CFI (cfiCond881) R14 Frame(CFA, -4)
-          CFI (cfiCond881) CFA R13+360
-          CFI Block cfiPicker882 Using cfiCommon1
-          CFI (cfiPicker882) NoFunction
-          CFI (cfiPicker882) Picker
+          CFI Block cfiCond880 Using cfiCommon0
+          CFI (cfiCond880) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond880) Conditional ??CrossCallReturnLabel_539
+          CFI (cfiCond880) R4 Frame(CFA, -36)
+          CFI (cfiCond880) R5 Frame(CFA, -32)
+          CFI (cfiCond880) R6 Frame(CFA, -28)
+          CFI (cfiCond880) R7 Frame(CFA, -24)
+          CFI (cfiCond880) R8 Frame(CFA, -20)
+          CFI (cfiCond880) R9 Frame(CFA, -16)
+          CFI (cfiCond880) R10 Frame(CFA, -12)
+          CFI (cfiCond880) R11 Frame(CFA, -8)
+          CFI (cfiCond880) R14 Frame(CFA, -4)
+          CFI (cfiCond880) CFA R13+360
+          CFI Block cfiPicker881 Using cfiCommon1
+          CFI (cfiPicker881) NoFunction
+          CFI (cfiPicker881) Picker
         THUMB
 ?Subroutine108:
         MOVS     R1,#+5
@@ -39958,12 +39920,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc GsnNwIf_Open
           CFI FunCall AppS2wCmd_Wassoc_test GsnNwIf_Open
         B.W      GsnNwIf_Open
+          CFI EndBlock cfiCond879
           CFI EndBlock cfiCond880
-          CFI EndBlock cfiCond881
-          CFI EndBlock cfiPicker882
+          CFI EndBlock cfiPicker881
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond883 Using cfiCommon0
+          CFI Block cfiCond882 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_533
           CFI R4 Frame(CFA, -36)
@@ -39976,9 +39938,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
+          CFI Block cfiCond883 Using cfiCommon0
+          CFI (cfiCond883) Function AppS2wCmd_Wassoc
+          CFI (cfiCond883) Conditional ??CrossCallReturnLabel_532
+          CFI (cfiCond883) R4 Frame(CFA, -36)
+          CFI (cfiCond883) R5 Frame(CFA, -32)
+          CFI (cfiCond883) R6 Frame(CFA, -28)
+          CFI (cfiCond883) R7 Frame(CFA, -24)
+          CFI (cfiCond883) R8 Frame(CFA, -20)
+          CFI (cfiCond883) R9 Frame(CFA, -16)
+          CFI (cfiCond883) R10 Frame(CFA, -12)
+          CFI (cfiCond883) R11 Frame(CFA, -8)
+          CFI (cfiCond883) R14 Frame(CFA, -4)
+          CFI (cfiCond883) CFA R13+360
           CFI Block cfiCond884 Using cfiCommon0
-          CFI (cfiCond884) Function AppS2wCmd_Wassoc
-          CFI (cfiCond884) Conditional ??CrossCallReturnLabel_532
+          CFI (cfiCond884) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond884) Conditional ??CrossCallReturnLabel_531
           CFI (cfiCond884) R4 Frame(CFA, -36)
           CFI (cfiCond884) R5 Frame(CFA, -32)
           CFI (cfiCond884) R6 Frame(CFA, -28)
@@ -39991,7 +39966,7 @@ AppS2wCmd_Wassoc_test:
           CFI (cfiCond884) CFA R13+360
           CFI Block cfiCond885 Using cfiCommon0
           CFI (cfiCond885) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond885) Conditional ??CrossCallReturnLabel_531
+          CFI (cfiCond885) Conditional ??CrossCallReturnLabel_530
           CFI (cfiCond885) R4 Frame(CFA, -36)
           CFI (cfiCond885) R5 Frame(CFA, -32)
           CFI (cfiCond885) R6 Frame(CFA, -28)
@@ -40002,22 +39977,9 @@ AppS2wCmd_Wassoc_test:
           CFI (cfiCond885) R11 Frame(CFA, -8)
           CFI (cfiCond885) R14 Frame(CFA, -4)
           CFI (cfiCond885) CFA R13+360
-          CFI Block cfiCond886 Using cfiCommon0
-          CFI (cfiCond886) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond886) Conditional ??CrossCallReturnLabel_530
-          CFI (cfiCond886) R4 Frame(CFA, -36)
-          CFI (cfiCond886) R5 Frame(CFA, -32)
-          CFI (cfiCond886) R6 Frame(CFA, -28)
-          CFI (cfiCond886) R7 Frame(CFA, -24)
-          CFI (cfiCond886) R8 Frame(CFA, -20)
-          CFI (cfiCond886) R9 Frame(CFA, -16)
-          CFI (cfiCond886) R10 Frame(CFA, -12)
-          CFI (cfiCond886) R11 Frame(CFA, -8)
-          CFI (cfiCond886) R14 Frame(CFA, -4)
-          CFI (cfiCond886) CFA R13+360
-          CFI Block cfiPicker887 Using cfiCommon1
-          CFI (cfiPicker887) NoFunction
-          CFI (cfiPicker887) Picker
+          CFI Block cfiPicker886 Using cfiCommon1
+          CFI (cfiPicker886) NoFunction
+          CFI (cfiPicker886) Picker
         THUMB
 ?Subroutine106:
         MOV      R1,#-1
@@ -40027,14 +39989,14 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc_test GsnOsal_SemAcquire
           CFI FunCall AppS2wCmd_Wassoc_test GsnOsal_SemAcquire
         B.W      GsnOsal_SemAcquire
+          CFI EndBlock cfiCond882
           CFI EndBlock cfiCond883
           CFI EndBlock cfiCond884
           CFI EndBlock cfiCond885
-          CFI EndBlock cfiCond886
-          CFI EndBlock cfiPicker887
+          CFI EndBlock cfiPicker886
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond888 Using cfiCommon0
+          CFI Block cfiCond887 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_527
           CFI R4 Frame(CFA, -36)
@@ -40047,22 +40009,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond889 Using cfiCommon0
-          CFI (cfiCond889) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond889) Conditional ??CrossCallReturnLabel_526
-          CFI (cfiCond889) R4 Frame(CFA, -36)
-          CFI (cfiCond889) R5 Frame(CFA, -32)
-          CFI (cfiCond889) R6 Frame(CFA, -28)
-          CFI (cfiCond889) R7 Frame(CFA, -24)
-          CFI (cfiCond889) R8 Frame(CFA, -20)
-          CFI (cfiCond889) R9 Frame(CFA, -16)
-          CFI (cfiCond889) R10 Frame(CFA, -12)
-          CFI (cfiCond889) R11 Frame(CFA, -8)
-          CFI (cfiCond889) R14 Frame(CFA, -4)
-          CFI (cfiCond889) CFA R13+360
-          CFI Block cfiPicker890 Using cfiCommon1
-          CFI (cfiPicker890) NoFunction
-          CFI (cfiPicker890) Picker
+          CFI Block cfiCond888 Using cfiCommon0
+          CFI (cfiCond888) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond888) Conditional ??CrossCallReturnLabel_526
+          CFI (cfiCond888) R4 Frame(CFA, -36)
+          CFI (cfiCond888) R5 Frame(CFA, -32)
+          CFI (cfiCond888) R6 Frame(CFA, -28)
+          CFI (cfiCond888) R7 Frame(CFA, -24)
+          CFI (cfiCond888) R8 Frame(CFA, -20)
+          CFI (cfiCond888) R9 Frame(CFA, -16)
+          CFI (cfiCond888) R10 Frame(CFA, -12)
+          CFI (cfiCond888) R11 Frame(CFA, -8)
+          CFI (cfiCond888) R14 Frame(CFA, -4)
+          CFI (cfiCond888) CFA R13+360
+          CFI Block cfiPicker889 Using cfiCommon1
+          CFI (cfiPicker889) NoFunction
+          CFI (cfiPicker889) Picker
         THUMB
 ?Subroutine104:
         LDR      R0,[R6, #+0]
@@ -40071,12 +40033,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc GsnWdd_ErrorGet
           CFI FunCall AppS2wCmd_Wassoc_test GsnWdd_ErrorGet
         B.W      GsnWdd_ErrorGet
+          CFI EndBlock cfiCond887
           CFI EndBlock cfiCond888
-          CFI EndBlock cfiCond889
-          CFI EndBlock cfiPicker890
+          CFI EndBlock cfiPicker889
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond891 Using cfiCommon0
+          CFI Block cfiCond890 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI NoCalls
           CFI NoCalls
@@ -40091,11 +40053,26 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
+          CFI Block cfiCond891 Using cfiCommon0
+          CFI (cfiCond891) Function AppS2wCmd_Wassoc
+          CFI (cfiCond891) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiCond891) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond891) Conditional ??CrossCallReturnLabel_520
+          CFI (cfiCond891) R4 Frame(CFA, -36)
+          CFI (cfiCond891) R5 Frame(CFA, -32)
+          CFI (cfiCond891) R6 Frame(CFA, -28)
+          CFI (cfiCond891) R7 Frame(CFA, -24)
+          CFI (cfiCond891) R8 Frame(CFA, -20)
+          CFI (cfiCond891) R9 Frame(CFA, -16)
+          CFI (cfiCond891) R10 Frame(CFA, -12)
+          CFI (cfiCond891) R11 Frame(CFA, -8)
+          CFI (cfiCond891) R14 Frame(CFA, -4)
+          CFI (cfiCond891) CFA R13+360
           CFI Block cfiCond892 Using cfiCommon0
-          CFI (cfiCond892) Function AppS2wCmd_Wassoc
-          CFI (cfiCond892) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond892) Function AppS2wCmd_Wassoc_test
           CFI (cfiCond892) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiCond892) Conditional ??CrossCallReturnLabel_520
+          CFI (cfiCond892) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond892) Conditional ??CrossCallReturnLabel_523
           CFI (cfiCond892) R4 Frame(CFA, -36)
           CFI (cfiCond892) R5 Frame(CFA, -32)
           CFI (cfiCond892) R6 Frame(CFA, -28)
@@ -40108,9 +40085,9 @@ AppS2wCmd_Wassoc_test:
           CFI (cfiCond892) CFA R13+360
           CFI Block cfiCond893 Using cfiCommon0
           CFI (cfiCond893) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond893) NoCalls AppS2wCmd_Wassoc_test
           CFI (cfiCond893) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiCond893) Conditional ??CrossCallReturnLabel_523
+          CFI (cfiCond893) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond893) Conditional ??CrossCallReturnLabel_521
           CFI (cfiCond893) R4 Frame(CFA, -36)
           CFI (cfiCond893) R5 Frame(CFA, -32)
           CFI (cfiCond893) R6 Frame(CFA, -28)
@@ -40121,40 +40098,25 @@ AppS2wCmd_Wassoc_test:
           CFI (cfiCond893) R11 Frame(CFA, -8)
           CFI (cfiCond893) R14 Frame(CFA, -4)
           CFI (cfiCond893) CFA R13+360
-          CFI Block cfiCond894 Using cfiCommon0
-          CFI (cfiCond894) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond894) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiCond894) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiCond894) Conditional ??CrossCallReturnLabel_521
-          CFI (cfiCond894) R4 Frame(CFA, -36)
-          CFI (cfiCond894) R5 Frame(CFA, -32)
-          CFI (cfiCond894) R6 Frame(CFA, -28)
-          CFI (cfiCond894) R7 Frame(CFA, -24)
-          CFI (cfiCond894) R8 Frame(CFA, -20)
-          CFI (cfiCond894) R9 Frame(CFA, -16)
-          CFI (cfiCond894) R10 Frame(CFA, -12)
-          CFI (cfiCond894) R11 Frame(CFA, -8)
-          CFI (cfiCond894) R14 Frame(CFA, -4)
-          CFI (cfiCond894) CFA R13+360
-          CFI Block cfiPicker895 Using cfiCommon1
-          CFI (cfiPicker895) NoFunction
-          CFI (cfiPicker895) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiPicker895) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiPicker895) Picker
+          CFI Block cfiPicker894 Using cfiCommon1
+          CFI (cfiPicker894) NoFunction
+          CFI (cfiPicker894) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiPicker894) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiPicker894) Picker
         THUMB
 ?Subroutine102:
         MOV      R7,R0
         LDR.N    R0,??DataTable515_11  ;; 0x80000001
         CMP      R7,R0
         BX       LR
+          CFI EndBlock cfiCond890
           CFI EndBlock cfiCond891
           CFI EndBlock cfiCond892
           CFI EndBlock cfiCond893
-          CFI EndBlock cfiCond894
-          CFI EndBlock cfiPicker895
+          CFI EndBlock cfiPicker894
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond896 Using cfiCommon0
+          CFI Block cfiCond895 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_512
           CFI R4 Frame(CFA, -36)
@@ -40167,22 +40129,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond897 Using cfiCommon0
-          CFI (cfiCond897) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond897) Conditional ??CrossCallReturnLabel_511
-          CFI (cfiCond897) R4 Frame(CFA, -36)
-          CFI (cfiCond897) R5 Frame(CFA, -32)
-          CFI (cfiCond897) R6 Frame(CFA, -28)
-          CFI (cfiCond897) R7 Frame(CFA, -24)
-          CFI (cfiCond897) R8 Frame(CFA, -20)
-          CFI (cfiCond897) R9 Frame(CFA, -16)
-          CFI (cfiCond897) R10 Frame(CFA, -12)
-          CFI (cfiCond897) R11 Frame(CFA, -8)
-          CFI (cfiCond897) R14 Frame(CFA, -4)
-          CFI (cfiCond897) CFA R13+360
-          CFI Block cfiPicker898 Using cfiCommon1
-          CFI (cfiPicker898) NoFunction
-          CFI (cfiPicker898) Picker
+          CFI Block cfiCond896 Using cfiCommon0
+          CFI (cfiCond896) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond896) Conditional ??CrossCallReturnLabel_511
+          CFI (cfiCond896) R4 Frame(CFA, -36)
+          CFI (cfiCond896) R5 Frame(CFA, -32)
+          CFI (cfiCond896) R6 Frame(CFA, -28)
+          CFI (cfiCond896) R7 Frame(CFA, -24)
+          CFI (cfiCond896) R8 Frame(CFA, -20)
+          CFI (cfiCond896) R9 Frame(CFA, -16)
+          CFI (cfiCond896) R10 Frame(CFA, -12)
+          CFI (cfiCond896) R11 Frame(CFA, -8)
+          CFI (cfiCond896) R14 Frame(CFA, -4)
+          CFI (cfiCond896) CFA R13+360
+          CFI Block cfiPicker897 Using cfiCommon1
+          CFI (cfiPicker897) NoFunction
+          CFI (cfiPicker897) Picker
         THUMB
 ?Subroutine99:
         MOV      R1,R0
@@ -40196,9 +40158,9 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc AppS2wParse_Wcmd
           CFI FunCall AppS2wCmd_Wassoc_test AppS2wParse_Wcmd
         B.W      AppS2wParse_Wcmd
+          CFI EndBlock cfiCond895
           CFI EndBlock cfiCond896
-          CFI EndBlock cfiCond897
-          CFI EndBlock cfiPicker898
+          CFI EndBlock cfiPicker897
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -40207,7 +40169,7 @@ AppS2wCmd_Wassoc_test:
         DC32     s2wappMainTaskCtxt
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond899 Using cfiCommon0
+          CFI Block cfiCond898 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_496
           CFI R4 Frame(CFA, -36)
@@ -40220,22 +40182,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond900 Using cfiCommon0
-          CFI (cfiCond900) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond900) Conditional ??CrossCallReturnLabel_495
-          CFI (cfiCond900) R4 Frame(CFA, -36)
-          CFI (cfiCond900) R5 Frame(CFA, -32)
-          CFI (cfiCond900) R6 Frame(CFA, -28)
-          CFI (cfiCond900) R7 Frame(CFA, -24)
-          CFI (cfiCond900) R8 Frame(CFA, -20)
-          CFI (cfiCond900) R9 Frame(CFA, -16)
-          CFI (cfiCond900) R10 Frame(CFA, -12)
-          CFI (cfiCond900) R11 Frame(CFA, -8)
-          CFI (cfiCond900) R14 Frame(CFA, -4)
-          CFI (cfiCond900) CFA R13+360
-          CFI Block cfiPicker901 Using cfiCommon1
-          CFI (cfiPicker901) NoFunction
-          CFI (cfiPicker901) Picker
+          CFI Block cfiCond899 Using cfiCommon0
+          CFI (cfiCond899) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond899) Conditional ??CrossCallReturnLabel_495
+          CFI (cfiCond899) R4 Frame(CFA, -36)
+          CFI (cfiCond899) R5 Frame(CFA, -32)
+          CFI (cfiCond899) R6 Frame(CFA, -28)
+          CFI (cfiCond899) R7 Frame(CFA, -24)
+          CFI (cfiCond899) R8 Frame(CFA, -20)
+          CFI (cfiCond899) R9 Frame(CFA, -16)
+          CFI (cfiCond899) R10 Frame(CFA, -12)
+          CFI (cfiCond899) R11 Frame(CFA, -8)
+          CFI (cfiCond899) R14 Frame(CFA, -4)
+          CFI (cfiCond899) CFA R13+360
+          CFI Block cfiPicker900 Using cfiCommon1
+          CFI (cfiPicker900) NoFunction
+          CFI (cfiPicker900) Picker
         THUMB
 ?Subroutine93:
         LDR      R0,[SP, #+0]
@@ -40247,12 +40209,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memcpy
           CFI FunCall AppS2wCmd_Wassoc_test memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond898
           CFI EndBlock cfiCond899
-          CFI EndBlock cfiCond900
-          CFI EndBlock cfiPicker901
+          CFI EndBlock cfiPicker900
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond902 Using cfiCommon0
+          CFI Block cfiCond901 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_494
           CFI R4 Frame(CFA, -36)
@@ -40265,22 +40227,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond903 Using cfiCommon0
-          CFI (cfiCond903) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond903) Conditional ??CrossCallReturnLabel_493
-          CFI (cfiCond903) R4 Frame(CFA, -36)
-          CFI (cfiCond903) R5 Frame(CFA, -32)
-          CFI (cfiCond903) R6 Frame(CFA, -28)
-          CFI (cfiCond903) R7 Frame(CFA, -24)
-          CFI (cfiCond903) R8 Frame(CFA, -20)
-          CFI (cfiCond903) R9 Frame(CFA, -16)
-          CFI (cfiCond903) R10 Frame(CFA, -12)
-          CFI (cfiCond903) R11 Frame(CFA, -8)
-          CFI (cfiCond903) R14 Frame(CFA, -4)
-          CFI (cfiCond903) CFA R13+360
-          CFI Block cfiPicker904 Using cfiCommon1
-          CFI (cfiPicker904) NoFunction
-          CFI (cfiPicker904) Picker
+          CFI Block cfiCond902 Using cfiCommon0
+          CFI (cfiCond902) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond902) Conditional ??CrossCallReturnLabel_493
+          CFI (cfiCond902) R4 Frame(CFA, -36)
+          CFI (cfiCond902) R5 Frame(CFA, -32)
+          CFI (cfiCond902) R6 Frame(CFA, -28)
+          CFI (cfiCond902) R7 Frame(CFA, -24)
+          CFI (cfiCond902) R8 Frame(CFA, -20)
+          CFI (cfiCond902) R9 Frame(CFA, -16)
+          CFI (cfiCond902) R10 Frame(CFA, -12)
+          CFI (cfiCond902) R11 Frame(CFA, -8)
+          CFI (cfiCond902) R14 Frame(CFA, -4)
+          CFI (cfiCond902) CFA R13+360
+          CFI Block cfiPicker903 Using cfiCommon1
+          CFI (cfiPicker903) NoFunction
+          CFI (cfiPicker903) Picker
         THUMB
 ?Subroutine92:
         ADD      R0,R4,R5, LSL #+2
@@ -40288,12 +40250,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc S2w_Printf
           CFI FunCall AppS2wCmd_Wassoc_test S2w_Printf
         B.W      S2w_Printf
+          CFI EndBlock cfiCond901
           CFI EndBlock cfiCond902
-          CFI EndBlock cfiCond903
-          CFI EndBlock cfiPicker904
+          CFI EndBlock cfiPicker903
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond905 Using cfiCommon0
+          CFI Block cfiCond904 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI NoCalls
           CFI NoCalls
@@ -40308,26 +40270,26 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond906 Using cfiCommon0
-          CFI (cfiCond906) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond906) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiCond906) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiCond906) Conditional ??CrossCallReturnLabel_469
-          CFI (cfiCond906) R4 Frame(CFA, -36)
-          CFI (cfiCond906) R5 Frame(CFA, -32)
-          CFI (cfiCond906) R6 Frame(CFA, -28)
-          CFI (cfiCond906) R7 Frame(CFA, -24)
-          CFI (cfiCond906) R8 Frame(CFA, -20)
-          CFI (cfiCond906) R9 Frame(CFA, -16)
-          CFI (cfiCond906) R10 Frame(CFA, -12)
-          CFI (cfiCond906) R11 Frame(CFA, -8)
-          CFI (cfiCond906) R14 Frame(CFA, -4)
-          CFI (cfiCond906) CFA R13+360
-          CFI Block cfiPicker907 Using cfiCommon1
-          CFI (cfiPicker907) NoFunction
-          CFI (cfiPicker907) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiPicker907) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiPicker907) Picker
+          CFI Block cfiCond905 Using cfiCommon0
+          CFI (cfiCond905) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond905) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiCond905) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond905) Conditional ??CrossCallReturnLabel_469
+          CFI (cfiCond905) R4 Frame(CFA, -36)
+          CFI (cfiCond905) R5 Frame(CFA, -32)
+          CFI (cfiCond905) R6 Frame(CFA, -28)
+          CFI (cfiCond905) R7 Frame(CFA, -24)
+          CFI (cfiCond905) R8 Frame(CFA, -20)
+          CFI (cfiCond905) R9 Frame(CFA, -16)
+          CFI (cfiCond905) R10 Frame(CFA, -12)
+          CFI (cfiCond905) R11 Frame(CFA, -8)
+          CFI (cfiCond905) R14 Frame(CFA, -4)
+          CFI (cfiCond905) CFA R13+360
+          CFI Block cfiPicker906 Using cfiCommon1
+          CFI (cfiPicker906) NoFunction
+          CFI (cfiPicker906) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiPicker906) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiPicker906) Picker
         THUMB
 ?Subroutine86:
         MOVS     R1,#+12
@@ -40339,12 +40301,12 @@ AppS2wCmd_Wassoc_test:
         LDRH     R0,[R0, #+0]
         STR      R0,[R8, #+284]
         BX       LR
+          CFI EndBlock cfiCond904
           CFI EndBlock cfiCond905
-          CFI EndBlock cfiCond906
-          CFI EndBlock cfiPicker907
+          CFI EndBlock cfiPicker906
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond908 Using cfiCommon0
+          CFI Block cfiCond907 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_463
           CFI R4 Frame(CFA, -36)
@@ -40357,22 +40319,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond909 Using cfiCommon0
-          CFI (cfiCond909) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond909) Conditional ??CrossCallReturnLabel_462
-          CFI (cfiCond909) R4 Frame(CFA, -36)
-          CFI (cfiCond909) R5 Frame(CFA, -32)
-          CFI (cfiCond909) R6 Frame(CFA, -28)
-          CFI (cfiCond909) R7 Frame(CFA, -24)
-          CFI (cfiCond909) R8 Frame(CFA, -20)
-          CFI (cfiCond909) R9 Frame(CFA, -16)
-          CFI (cfiCond909) R10 Frame(CFA, -12)
-          CFI (cfiCond909) R11 Frame(CFA, -8)
-          CFI (cfiCond909) R14 Frame(CFA, -4)
-          CFI (cfiCond909) CFA R13+360
-          CFI Block cfiPicker910 Using cfiCommon1
-          CFI (cfiPicker910) NoFunction
-          CFI (cfiPicker910) Picker
+          CFI Block cfiCond908 Using cfiCommon0
+          CFI (cfiCond908) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond908) Conditional ??CrossCallReturnLabel_462
+          CFI (cfiCond908) R4 Frame(CFA, -36)
+          CFI (cfiCond908) R5 Frame(CFA, -32)
+          CFI (cfiCond908) R6 Frame(CFA, -28)
+          CFI (cfiCond908) R7 Frame(CFA, -24)
+          CFI (cfiCond908) R8 Frame(CFA, -20)
+          CFI (cfiCond908) R9 Frame(CFA, -16)
+          CFI (cfiCond908) R10 Frame(CFA, -12)
+          CFI (cfiCond908) R11 Frame(CFA, -8)
+          CFI (cfiCond908) R14 Frame(CFA, -4)
+          CFI (cfiCond908) CFA R13+360
+          CFI Block cfiPicker909 Using cfiCommon1
+          CFI (cfiPicker909) NoFunction
+          CFI (cfiPicker909) Picker
         THUMB
 ?Subroutine83:
         LDR      R0,[R6, #+0]
@@ -40386,12 +40348,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc GsnWdd_Connect
           CFI FunCall AppS2wCmd_Wassoc_test GsnWdd_Connect
         B.W      GsnWdd_Connect
+          CFI EndBlock cfiCond907
           CFI EndBlock cfiCond908
-          CFI EndBlock cfiCond909
-          CFI EndBlock cfiPicker910
+          CFI EndBlock cfiPicker909
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond911 Using cfiCommon0
+          CFI Block cfiCond910 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_404
           CFI R4 Frame(CFA, -36)
@@ -40404,22 +40366,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond912 Using cfiCommon0
-          CFI (cfiCond912) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond912) Conditional ??CrossCallReturnLabel_403
-          CFI (cfiCond912) R4 Frame(CFA, -36)
-          CFI (cfiCond912) R5 Frame(CFA, -32)
-          CFI (cfiCond912) R6 Frame(CFA, -28)
-          CFI (cfiCond912) R7 Frame(CFA, -24)
-          CFI (cfiCond912) R8 Frame(CFA, -20)
-          CFI (cfiCond912) R9 Frame(CFA, -16)
-          CFI (cfiCond912) R10 Frame(CFA, -12)
-          CFI (cfiCond912) R11 Frame(CFA, -8)
-          CFI (cfiCond912) R14 Frame(CFA, -4)
-          CFI (cfiCond912) CFA R13+360
-          CFI Block cfiPicker913 Using cfiCommon1
-          CFI (cfiPicker913) NoFunction
-          CFI (cfiPicker913) Picker
+          CFI Block cfiCond911 Using cfiCommon0
+          CFI (cfiCond911) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond911) Conditional ??CrossCallReturnLabel_403
+          CFI (cfiCond911) R4 Frame(CFA, -36)
+          CFI (cfiCond911) R5 Frame(CFA, -32)
+          CFI (cfiCond911) R6 Frame(CFA, -28)
+          CFI (cfiCond911) R7 Frame(CFA, -24)
+          CFI (cfiCond911) R8 Frame(CFA, -20)
+          CFI (cfiCond911) R9 Frame(CFA, -16)
+          CFI (cfiCond911) R10 Frame(CFA, -12)
+          CFI (cfiCond911) R11 Frame(CFA, -8)
+          CFI (cfiCond911) R14 Frame(CFA, -4)
+          CFI (cfiCond911) CFA R13+360
+          CFI Block cfiPicker912 Using cfiCommon1
+          CFI (cfiPicker912) NoFunction
+          CFI (cfiPicker912) Picker
         THUMB
 ?Subroutine66:
         LDR      R0,[R6, #+0]
@@ -40429,12 +40391,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc GsnNwif_DnsServerGet
           CFI FunCall AppS2wCmd_Wassoc_test GsnNwif_DnsServerGet
         B.W      GsnNwif_DnsServerGet
+          CFI EndBlock cfiCond910
           CFI EndBlock cfiCond911
-          CFI EndBlock cfiCond912
-          CFI EndBlock cfiPicker913
+          CFI EndBlock cfiPicker912
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond914 Using cfiCommon0
+          CFI Block cfiCond913 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI NoCalls
           CFI NoCalls
@@ -40449,26 +40411,26 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond915 Using cfiCommon0
-          CFI (cfiCond915) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond915) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiCond915) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiCond915) Conditional ??CrossCallReturnLabel_395
-          CFI (cfiCond915) R4 Frame(CFA, -36)
-          CFI (cfiCond915) R5 Frame(CFA, -32)
-          CFI (cfiCond915) R6 Frame(CFA, -28)
-          CFI (cfiCond915) R7 Frame(CFA, -24)
-          CFI (cfiCond915) R8 Frame(CFA, -20)
-          CFI (cfiCond915) R9 Frame(CFA, -16)
-          CFI (cfiCond915) R10 Frame(CFA, -12)
-          CFI (cfiCond915) R11 Frame(CFA, -8)
-          CFI (cfiCond915) R14 Frame(CFA, -4)
-          CFI (cfiCond915) CFA R13+360
-          CFI Block cfiPicker916 Using cfiCommon1
-          CFI (cfiPicker916) NoFunction
-          CFI (cfiPicker916) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiPicker916) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiPicker916) Picker
+          CFI Block cfiCond914 Using cfiCommon0
+          CFI (cfiCond914) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond914) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiCond914) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond914) Conditional ??CrossCallReturnLabel_395
+          CFI (cfiCond914) R4 Frame(CFA, -36)
+          CFI (cfiCond914) R5 Frame(CFA, -32)
+          CFI (cfiCond914) R6 Frame(CFA, -28)
+          CFI (cfiCond914) R7 Frame(CFA, -24)
+          CFI (cfiCond914) R8 Frame(CFA, -20)
+          CFI (cfiCond914) R9 Frame(CFA, -16)
+          CFI (cfiCond914) R10 Frame(CFA, -12)
+          CFI (cfiCond914) R11 Frame(CFA, -8)
+          CFI (cfiCond914) R14 Frame(CFA, -4)
+          CFI (cfiCond914) CFA R13+360
+          CFI Block cfiPicker915 Using cfiCommon1
+          CFI (cfiPicker915) NoFunction
+          CFI (cfiPicker915) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiPicker915) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiPicker915) Picker
         THUMB
 ?Subroutine63:
         MOVS     R0,#+1
@@ -40479,12 +40441,12 @@ AppS2wCmd_Wassoc_test:
         LSRS     R0,R0,#+31
         STR      R0,[SP, #+112]
         BX       LR
+          CFI EndBlock cfiCond913
           CFI EndBlock cfiCond914
-          CFI EndBlock cfiCond915
-          CFI EndBlock cfiPicker916
+          CFI EndBlock cfiPicker915
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond917 Using cfiCommon0
+          CFI Block cfiCond916 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI NoCalls
           CFI NoCalls
@@ -40499,26 +40461,26 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond918 Using cfiCommon0
-          CFI (cfiCond918) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond918) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiCond918) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiCond918) Conditional ??CrossCallReturnLabel_365
-          CFI (cfiCond918) R4 Frame(CFA, -36)
-          CFI (cfiCond918) R5 Frame(CFA, -32)
-          CFI (cfiCond918) R6 Frame(CFA, -28)
-          CFI (cfiCond918) R7 Frame(CFA, -24)
-          CFI (cfiCond918) R8 Frame(CFA, -20)
-          CFI (cfiCond918) R9 Frame(CFA, -16)
-          CFI (cfiCond918) R10 Frame(CFA, -12)
-          CFI (cfiCond918) R11 Frame(CFA, -8)
-          CFI (cfiCond918) R14 Frame(CFA, -4)
-          CFI (cfiCond918) CFA R13+360
-          CFI Block cfiPicker919 Using cfiCommon1
-          CFI (cfiPicker919) NoFunction
-          CFI (cfiPicker919) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiPicker919) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiPicker919) Picker
+          CFI Block cfiCond917 Using cfiCommon0
+          CFI (cfiCond917) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond917) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiCond917) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond917) Conditional ??CrossCallReturnLabel_365
+          CFI (cfiCond917) R4 Frame(CFA, -36)
+          CFI (cfiCond917) R5 Frame(CFA, -32)
+          CFI (cfiCond917) R6 Frame(CFA, -28)
+          CFI (cfiCond917) R7 Frame(CFA, -24)
+          CFI (cfiCond917) R8 Frame(CFA, -20)
+          CFI (cfiCond917) R9 Frame(CFA, -16)
+          CFI (cfiCond917) R10 Frame(CFA, -12)
+          CFI (cfiCond917) R11 Frame(CFA, -8)
+          CFI (cfiCond917) R14 Frame(CFA, -4)
+          CFI (cfiCond917) CFA R13+360
+          CFI Block cfiPicker918 Using cfiCommon1
+          CFI (cfiPicker918) NoFunction
+          CFI (cfiPicker918) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiPicker918) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiPicker918) Picker
         THUMB
 ?Subroutine58:
         LDRB     R0,[R11, #+354]
@@ -40533,9 +40495,9 @@ AppS2wCmd_Wassoc_test:
         LDR.N    R7,??DataTable515_14
         LDRB     R0,[R0, #+8]
         BX       LR
+          CFI EndBlock cfiCond916
           CFI EndBlock cfiCond917
-          CFI EndBlock cfiCond918
-          CFI EndBlock cfiPicker919
+          CFI EndBlock cfiPicker918
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -40544,7 +40506,7 @@ AppS2wCmd_Wassoc_test:
         DC32     readBuffer
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond920 Using cfiCommon0
+          CFI Block cfiCond919 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI NoCalls
           CFI NoCalls
@@ -40559,26 +40521,26 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond921 Using cfiCommon0
-          CFI (cfiCond921) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond921) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiCond921) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiCond921) Conditional ??CrossCallReturnLabel_252
-          CFI (cfiCond921) R4 Frame(CFA, -36)
-          CFI (cfiCond921) R5 Frame(CFA, -32)
-          CFI (cfiCond921) R6 Frame(CFA, -28)
-          CFI (cfiCond921) R7 Frame(CFA, -24)
-          CFI (cfiCond921) R8 Frame(CFA, -20)
-          CFI (cfiCond921) R9 Frame(CFA, -16)
-          CFI (cfiCond921) R10 Frame(CFA, -12)
-          CFI (cfiCond921) R11 Frame(CFA, -8)
-          CFI (cfiCond921) R14 Frame(CFA, -4)
-          CFI (cfiCond921) CFA R13+360
-          CFI Block cfiPicker922 Using cfiCommon1
-          CFI (cfiPicker922) NoFunction
-          CFI (cfiPicker922) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiPicker922) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiPicker922) Picker
+          CFI Block cfiCond920 Using cfiCommon0
+          CFI (cfiCond920) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond920) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiCond920) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond920) Conditional ??CrossCallReturnLabel_252
+          CFI (cfiCond920) R4 Frame(CFA, -36)
+          CFI (cfiCond920) R5 Frame(CFA, -32)
+          CFI (cfiCond920) R6 Frame(CFA, -28)
+          CFI (cfiCond920) R7 Frame(CFA, -24)
+          CFI (cfiCond920) R8 Frame(CFA, -20)
+          CFI (cfiCond920) R9 Frame(CFA, -16)
+          CFI (cfiCond920) R10 Frame(CFA, -12)
+          CFI (cfiCond920) R11 Frame(CFA, -8)
+          CFI (cfiCond920) R14 Frame(CFA, -4)
+          CFI (cfiCond920) CFA R13+360
+          CFI Block cfiPicker921 Using cfiCommon1
+          CFI (cfiPicker921) NoFunction
+          CFI (cfiPicker921) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiPicker921) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiPicker921) Picker
         THUMB
 ?Subroutine48:
         CMN      R0,#+1
@@ -40593,12 +40555,12 @@ AppS2wCmd_Wassoc_test:
         STR      R0,[R8, #+268]
 ??Subroutine48_0:
         BX       LR
+          CFI EndBlock cfiCond919
           CFI EndBlock cfiCond920
-          CFI EndBlock cfiCond921
-          CFI EndBlock cfiPicker922
+          CFI EndBlock cfiPicker921
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond923 Using cfiCommon0
+          CFI Block cfiCond922 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_250
           CFI R4 Frame(CFA, -36)
@@ -40611,22 +40573,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond924 Using cfiCommon0
-          CFI (cfiCond924) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond924) Conditional ??CrossCallReturnLabel_249
-          CFI (cfiCond924) R4 Frame(CFA, -36)
-          CFI (cfiCond924) R5 Frame(CFA, -32)
-          CFI (cfiCond924) R6 Frame(CFA, -28)
-          CFI (cfiCond924) R7 Frame(CFA, -24)
-          CFI (cfiCond924) R8 Frame(CFA, -20)
-          CFI (cfiCond924) R9 Frame(CFA, -16)
-          CFI (cfiCond924) R10 Frame(CFA, -12)
-          CFI (cfiCond924) R11 Frame(CFA, -8)
-          CFI (cfiCond924) R14 Frame(CFA, -4)
-          CFI (cfiCond924) CFA R13+360
-          CFI Block cfiPicker925 Using cfiCommon1
-          CFI (cfiPicker925) NoFunction
-          CFI (cfiPicker925) Picker
+          CFI Block cfiCond923 Using cfiCommon0
+          CFI (cfiCond923) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond923) Conditional ??CrossCallReturnLabel_249
+          CFI (cfiCond923) R4 Frame(CFA, -36)
+          CFI (cfiCond923) R5 Frame(CFA, -32)
+          CFI (cfiCond923) R6 Frame(CFA, -28)
+          CFI (cfiCond923) R7 Frame(CFA, -24)
+          CFI (cfiCond923) R8 Frame(CFA, -20)
+          CFI (cfiCond923) R9 Frame(CFA, -16)
+          CFI (cfiCond923) R10 Frame(CFA, -12)
+          CFI (cfiCond923) R11 Frame(CFA, -8)
+          CFI (cfiCond923) R14 Frame(CFA, -4)
+          CFI (cfiCond923) CFA R13+360
+          CFI Block cfiPicker924 Using cfiCommon1
+          CFI (cfiPicker924) NoFunction
+          CFI (cfiPicker924) Picker
         THUMB
 ?Subroutine47:
         CMN      R0,#+1
@@ -40644,9 +40606,9 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc S2wCert_SearchRamTable
           CFI FunCall AppS2wCmd_Wassoc_test S2wCert_SearchRamTable
         B.W      S2wCert_SearchRamTable
+          CFI EndBlock cfiCond922
           CFI EndBlock cfiCond923
-          CFI EndBlock cfiCond924
-          CFI EndBlock cfiPicker925
+          CFI EndBlock cfiPicker924
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -40655,7 +40617,7 @@ AppS2wCmd_Wassoc_test:
         DC8 "TLS_KEY"
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond926 Using cfiCommon0
+          CFI Block cfiCond925 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI NoCalls
           CFI NoCalls
@@ -40670,26 +40632,26 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond927 Using cfiCommon0
-          CFI (cfiCond927) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond927) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiCond927) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiCond927) Conditional ??CrossCallReturnLabel_248
-          CFI (cfiCond927) R4 Frame(CFA, -36)
-          CFI (cfiCond927) R5 Frame(CFA, -32)
-          CFI (cfiCond927) R6 Frame(CFA, -28)
-          CFI (cfiCond927) R7 Frame(CFA, -24)
-          CFI (cfiCond927) R8 Frame(CFA, -20)
-          CFI (cfiCond927) R9 Frame(CFA, -16)
-          CFI (cfiCond927) R10 Frame(CFA, -12)
-          CFI (cfiCond927) R11 Frame(CFA, -8)
-          CFI (cfiCond927) R14 Frame(CFA, -4)
-          CFI (cfiCond927) CFA R13+360
-          CFI Block cfiPicker928 Using cfiCommon1
-          CFI (cfiPicker928) NoFunction
-          CFI (cfiPicker928) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiPicker928) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiPicker928) Picker
+          CFI Block cfiCond926 Using cfiCommon0
+          CFI (cfiCond926) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond926) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiCond926) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond926) Conditional ??CrossCallReturnLabel_248
+          CFI (cfiCond926) R4 Frame(CFA, -36)
+          CFI (cfiCond926) R5 Frame(CFA, -32)
+          CFI (cfiCond926) R6 Frame(CFA, -28)
+          CFI (cfiCond926) R7 Frame(CFA, -24)
+          CFI (cfiCond926) R8 Frame(CFA, -20)
+          CFI (cfiCond926) R9 Frame(CFA, -16)
+          CFI (cfiCond926) R10 Frame(CFA, -12)
+          CFI (cfiCond926) R11 Frame(CFA, -8)
+          CFI (cfiCond926) R14 Frame(CFA, -4)
+          CFI (cfiCond926) CFA R13+360
+          CFI Block cfiPicker927 Using cfiCommon1
+          CFI (cfiPicker927) NoFunction
+          CFI (cfiPicker927) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiPicker927) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiPicker927) Picker
         THUMB
 ?Subroutine46:
         MOVS     R0,#+1
@@ -40740,12 +40702,12 @@ AppS2wCmd_Wassoc_test:
         STRB     R9,[R8, #+50]
 ??Subroutine46_3:
         BX       LR
+          CFI EndBlock cfiCond925
           CFI EndBlock cfiCond926
-          CFI EndBlock cfiCond927
-          CFI EndBlock cfiPicker928
+          CFI EndBlock cfiPicker927
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond929 Using cfiCommon0
+          CFI Block cfiCond928 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_101
           CFI R4 Frame(CFA, -36)
@@ -40758,22 +40720,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond930 Using cfiCommon0
-          CFI (cfiCond930) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond930) Conditional ??CrossCallReturnLabel_100
-          CFI (cfiCond930) R4 Frame(CFA, -36)
-          CFI (cfiCond930) R5 Frame(CFA, -32)
-          CFI (cfiCond930) R6 Frame(CFA, -28)
-          CFI (cfiCond930) R7 Frame(CFA, -24)
-          CFI (cfiCond930) R8 Frame(CFA, -20)
-          CFI (cfiCond930) R9 Frame(CFA, -16)
-          CFI (cfiCond930) R10 Frame(CFA, -12)
-          CFI (cfiCond930) R11 Frame(CFA, -8)
-          CFI (cfiCond930) R14 Frame(CFA, -4)
-          CFI (cfiCond930) CFA R13+360
-          CFI Block cfiPicker931 Using cfiCommon1
-          CFI (cfiPicker931) NoFunction
-          CFI (cfiPicker931) Picker
+          CFI Block cfiCond929 Using cfiCommon0
+          CFI (cfiCond929) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond929) Conditional ??CrossCallReturnLabel_100
+          CFI (cfiCond929) R4 Frame(CFA, -36)
+          CFI (cfiCond929) R5 Frame(CFA, -32)
+          CFI (cfiCond929) R6 Frame(CFA, -28)
+          CFI (cfiCond929) R7 Frame(CFA, -24)
+          CFI (cfiCond929) R8 Frame(CFA, -20)
+          CFI (cfiCond929) R9 Frame(CFA, -16)
+          CFI (cfiCond929) R10 Frame(CFA, -12)
+          CFI (cfiCond929) R11 Frame(CFA, -8)
+          CFI (cfiCond929) R14 Frame(CFA, -4)
+          CFI (cfiCond929) CFA R13+360
+          CFI Block cfiPicker930 Using cfiCommon1
+          CFI (cfiPicker930) NoFunction
+          CFI (cfiPicker930) Picker
         THUMB
 ?Subroutine31:
         ADD      R0,SP,#+16
@@ -40788,9 +40750,9 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc sprintf
           CFI FunCall AppS2wCmd_Wassoc_test sprintf
         B.W      sprintf
+          CFI EndBlock cfiCond928
           CFI EndBlock cfiCond929
-          CFI EndBlock cfiCond930
-          CFI EndBlock cfiPicker931
+          CFI EndBlock cfiPicker930
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -40800,7 +40762,7 @@ AppS2wCmd_Wassoc_test:
         DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond932 Using cfiCommon0
+          CFI Block cfiCond931 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_77
           CFI R4 Frame(CFA, -36)
@@ -40813,22 +40775,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond933 Using cfiCommon0
-          CFI (cfiCond933) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond933) Conditional ??CrossCallReturnLabel_76
-          CFI (cfiCond933) R4 Frame(CFA, -36)
-          CFI (cfiCond933) R5 Frame(CFA, -32)
-          CFI (cfiCond933) R6 Frame(CFA, -28)
-          CFI (cfiCond933) R7 Frame(CFA, -24)
-          CFI (cfiCond933) R8 Frame(CFA, -20)
-          CFI (cfiCond933) R9 Frame(CFA, -16)
-          CFI (cfiCond933) R10 Frame(CFA, -12)
-          CFI (cfiCond933) R11 Frame(CFA, -8)
-          CFI (cfiCond933) R14 Frame(CFA, -4)
-          CFI (cfiCond933) CFA R13+360
-          CFI Block cfiPicker934 Using cfiCommon1
-          CFI (cfiPicker934) NoFunction
-          CFI (cfiPicker934) Picker
+          CFI Block cfiCond932 Using cfiCommon0
+          CFI (cfiCond932) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond932) Conditional ??CrossCallReturnLabel_76
+          CFI (cfiCond932) R4 Frame(CFA, -36)
+          CFI (cfiCond932) R5 Frame(CFA, -32)
+          CFI (cfiCond932) R6 Frame(CFA, -28)
+          CFI (cfiCond932) R7 Frame(CFA, -24)
+          CFI (cfiCond932) R8 Frame(CFA, -20)
+          CFI (cfiCond932) R9 Frame(CFA, -16)
+          CFI (cfiCond932) R10 Frame(CFA, -12)
+          CFI (cfiCond932) R11 Frame(CFA, -8)
+          CFI (cfiCond932) R14 Frame(CFA, -4)
+          CFI (cfiCond932) CFA R13+360
+          CFI Block cfiPicker933 Using cfiCommon1
+          CFI (cfiPicker933) NoFunction
+          CFI (cfiPicker933) Picker
         THUMB
 ?Subroutine29:
         MOVS     R2,#+152
@@ -40837,12 +40799,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memset
           CFI FunCall AppS2wCmd_Wassoc_test memset
         B.W      memset
+          CFI EndBlock cfiCond931
           CFI EndBlock cfiCond932
-          CFI EndBlock cfiCond933
-          CFI EndBlock cfiPicker934
+          CFI EndBlock cfiPicker933
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond935 Using cfiCommon0
+          CFI Block cfiCond934 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_75
           CFI R4 Frame(CFA, -36)
@@ -40855,22 +40817,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond936 Using cfiCommon0
-          CFI (cfiCond936) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond936) Conditional ??CrossCallReturnLabel_74
-          CFI (cfiCond936) R4 Frame(CFA, -36)
-          CFI (cfiCond936) R5 Frame(CFA, -32)
-          CFI (cfiCond936) R6 Frame(CFA, -28)
-          CFI (cfiCond936) R7 Frame(CFA, -24)
-          CFI (cfiCond936) R8 Frame(CFA, -20)
-          CFI (cfiCond936) R9 Frame(CFA, -16)
-          CFI (cfiCond936) R10 Frame(CFA, -12)
-          CFI (cfiCond936) R11 Frame(CFA, -8)
-          CFI (cfiCond936) R14 Frame(CFA, -4)
-          CFI (cfiCond936) CFA R13+360
-          CFI Block cfiPicker937 Using cfiCommon1
-          CFI (cfiPicker937) NoFunction
-          CFI (cfiPicker937) Picker
+          CFI Block cfiCond935 Using cfiCommon0
+          CFI (cfiCond935) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond935) Conditional ??CrossCallReturnLabel_74
+          CFI (cfiCond935) R4 Frame(CFA, -36)
+          CFI (cfiCond935) R5 Frame(CFA, -32)
+          CFI (cfiCond935) R6 Frame(CFA, -28)
+          CFI (cfiCond935) R7 Frame(CFA, -24)
+          CFI (cfiCond935) R8 Frame(CFA, -20)
+          CFI (cfiCond935) R9 Frame(CFA, -16)
+          CFI (cfiCond935) R10 Frame(CFA, -12)
+          CFI (cfiCond935) R11 Frame(CFA, -8)
+          CFI (cfiCond935) R14 Frame(CFA, -4)
+          CFI (cfiCond935) CFA R13+360
+          CFI Block cfiPicker936 Using cfiCommon1
+          CFI (cfiPicker936) NoFunction
+          CFI (cfiPicker936) Picker
         THUMB
 ?Subroutine28:
         MOV      R5,R0
@@ -40882,12 +40844,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memset
           CFI FunCall AppS2wCmd_Wassoc_test memset
         B.W      memset
+          CFI EndBlock cfiCond934
           CFI EndBlock cfiCond935
-          CFI EndBlock cfiCond936
-          CFI EndBlock cfiPicker937
+          CFI EndBlock cfiPicker936
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond938 Using cfiCommon0
+          CFI Block cfiCond937 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_54
           CFI R4 Frame(CFA, -36)
@@ -40900,22 +40862,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond939 Using cfiCommon0
-          CFI (cfiCond939) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond939) Conditional ??CrossCallReturnLabel_53
-          CFI (cfiCond939) R4 Frame(CFA, -36)
-          CFI (cfiCond939) R5 Frame(CFA, -32)
-          CFI (cfiCond939) R6 Frame(CFA, -28)
-          CFI (cfiCond939) R7 Frame(CFA, -24)
-          CFI (cfiCond939) R8 Frame(CFA, -20)
-          CFI (cfiCond939) R9 Frame(CFA, -16)
-          CFI (cfiCond939) R10 Frame(CFA, -12)
-          CFI (cfiCond939) R11 Frame(CFA, -8)
-          CFI (cfiCond939) R14 Frame(CFA, -4)
-          CFI (cfiCond939) CFA R13+360
-          CFI Block cfiPicker940 Using cfiCommon1
-          CFI (cfiPicker940) NoFunction
-          CFI (cfiPicker940) Picker
+          CFI Block cfiCond938 Using cfiCommon0
+          CFI (cfiCond938) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond938) Conditional ??CrossCallReturnLabel_53
+          CFI (cfiCond938) R4 Frame(CFA, -36)
+          CFI (cfiCond938) R5 Frame(CFA, -32)
+          CFI (cfiCond938) R6 Frame(CFA, -28)
+          CFI (cfiCond938) R7 Frame(CFA, -24)
+          CFI (cfiCond938) R8 Frame(CFA, -20)
+          CFI (cfiCond938) R9 Frame(CFA, -16)
+          CFI (cfiCond938) R10 Frame(CFA, -12)
+          CFI (cfiCond938) R11 Frame(CFA, -8)
+          CFI (cfiCond938) R14 Frame(CFA, -4)
+          CFI (cfiCond938) CFA R13+360
+          CFI Block cfiPicker939 Using cfiCommon1
+          CFI (cfiPicker939) NoFunction
+          CFI (cfiPicker939) Picker
         THUMB
 ?Subroutine24:
         LDR      R1,[R6, #+0]
@@ -40928,12 +40890,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memset
           CFI FunCall AppS2wCmd_Wassoc_test memset
         B.W      memset
+          CFI EndBlock cfiCond937
           CFI EndBlock cfiCond938
-          CFI EndBlock cfiCond939
-          CFI EndBlock cfiPicker940
+          CFI EndBlock cfiPicker939
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond941 Using cfiCommon0
+          CFI Block cfiCond940 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI NoCalls
           CFI NoCalls
@@ -40948,26 +40910,26 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond942 Using cfiCommon0
-          CFI (cfiCond942) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond942) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiCond942) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiCond942) Conditional ??CrossCallReturnLabel_45
-          CFI (cfiCond942) R4 Frame(CFA, -36)
-          CFI (cfiCond942) R5 Frame(CFA, -32)
-          CFI (cfiCond942) R6 Frame(CFA, -28)
-          CFI (cfiCond942) R7 Frame(CFA, -24)
-          CFI (cfiCond942) R8 Frame(CFA, -20)
-          CFI (cfiCond942) R9 Frame(CFA, -16)
-          CFI (cfiCond942) R10 Frame(CFA, -12)
-          CFI (cfiCond942) R11 Frame(CFA, -8)
-          CFI (cfiCond942) R14 Frame(CFA, -4)
-          CFI (cfiCond942) CFA R13+360
-          CFI Block cfiPicker943 Using cfiCommon1
-          CFI (cfiPicker943) NoFunction
-          CFI (cfiPicker943) NoCalls AppS2wCmd_Wassoc_test
-          CFI (cfiPicker943) NoCalls AppS2wCmd_Wassoc
-          CFI (cfiPicker943) Picker
+          CFI Block cfiCond941 Using cfiCommon0
+          CFI (cfiCond941) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond941) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiCond941) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiCond941) Conditional ??CrossCallReturnLabel_45
+          CFI (cfiCond941) R4 Frame(CFA, -36)
+          CFI (cfiCond941) R5 Frame(CFA, -32)
+          CFI (cfiCond941) R6 Frame(CFA, -28)
+          CFI (cfiCond941) R7 Frame(CFA, -24)
+          CFI (cfiCond941) R8 Frame(CFA, -20)
+          CFI (cfiCond941) R9 Frame(CFA, -16)
+          CFI (cfiCond941) R10 Frame(CFA, -12)
+          CFI (cfiCond941) R11 Frame(CFA, -8)
+          CFI (cfiCond941) R14 Frame(CFA, -4)
+          CFI (cfiCond941) CFA R13+360
+          CFI Block cfiPicker942 Using cfiCommon1
+          CFI (cfiPicker942) NoFunction
+          CFI (cfiPicker942) NoCalls AppS2wCmd_Wassoc
+          CFI (cfiPicker942) NoCalls AppS2wCmd_Wassoc_test
+          CFI (cfiPicker942) Picker
         THUMB
 ?Subroutine20:
         LDR.N    R0,??DataTable515_16
@@ -40978,12 +40940,12 @@ AppS2wCmd_Wassoc_test:
         LDR.N    R0,??DataTable515_8
         LDRB     R0,[R0, #+0]
         BX       LR
+          CFI EndBlock cfiCond940
           CFI EndBlock cfiCond941
-          CFI EndBlock cfiCond942
-          CFI EndBlock cfiPicker943
+          CFI EndBlock cfiPicker942
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond944 Using cfiCommon0
+          CFI Block cfiCond943 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_26
           CFI R4 Frame(CFA, -36)
@@ -40996,22 +40958,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond945 Using cfiCommon0
-          CFI (cfiCond945) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond945) Conditional ??CrossCallReturnLabel_25
-          CFI (cfiCond945) R4 Frame(CFA, -36)
-          CFI (cfiCond945) R5 Frame(CFA, -32)
-          CFI (cfiCond945) R6 Frame(CFA, -28)
-          CFI (cfiCond945) R7 Frame(CFA, -24)
-          CFI (cfiCond945) R8 Frame(CFA, -20)
-          CFI (cfiCond945) R9 Frame(CFA, -16)
-          CFI (cfiCond945) R10 Frame(CFA, -12)
-          CFI (cfiCond945) R11 Frame(CFA, -8)
-          CFI (cfiCond945) R14 Frame(CFA, -4)
-          CFI (cfiCond945) CFA R13+360
-          CFI Block cfiPicker946 Using cfiCommon1
-          CFI (cfiPicker946) NoFunction
-          CFI (cfiPicker946) Picker
+          CFI Block cfiCond944 Using cfiCommon0
+          CFI (cfiCond944) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond944) Conditional ??CrossCallReturnLabel_25
+          CFI (cfiCond944) R4 Frame(CFA, -36)
+          CFI (cfiCond944) R5 Frame(CFA, -32)
+          CFI (cfiCond944) R6 Frame(CFA, -28)
+          CFI (cfiCond944) R7 Frame(CFA, -24)
+          CFI (cfiCond944) R8 Frame(CFA, -20)
+          CFI (cfiCond944) R9 Frame(CFA, -16)
+          CFI (cfiCond944) R10 Frame(CFA, -12)
+          CFI (cfiCond944) R11 Frame(CFA, -8)
+          CFI (cfiCond944) R14 Frame(CFA, -4)
+          CFI (cfiCond944) CFA R13+360
+          CFI Block cfiPicker945 Using cfiCommon1
+          CFI (cfiPicker945) NoFunction
+          CFI (cfiPicker945) Picker
         THUMB
 ?Subroutine15:
         MOVS     R2,#+4
@@ -41020,12 +40982,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memcpy
           CFI FunCall AppS2wCmd_Wassoc_test memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond943
           CFI EndBlock cfiCond944
-          CFI EndBlock cfiCond945
-          CFI EndBlock cfiPicker946
+          CFI EndBlock cfiPicker945
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond947 Using cfiCommon0
+          CFI Block cfiCond946 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_24
           CFI R4 Frame(CFA, -36)
@@ -41038,22 +41000,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond948 Using cfiCommon0
-          CFI (cfiCond948) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond948) Conditional ??CrossCallReturnLabel_23
-          CFI (cfiCond948) R4 Frame(CFA, -36)
-          CFI (cfiCond948) R5 Frame(CFA, -32)
-          CFI (cfiCond948) R6 Frame(CFA, -28)
-          CFI (cfiCond948) R7 Frame(CFA, -24)
-          CFI (cfiCond948) R8 Frame(CFA, -20)
-          CFI (cfiCond948) R9 Frame(CFA, -16)
-          CFI (cfiCond948) R10 Frame(CFA, -12)
-          CFI (cfiCond948) R11 Frame(CFA, -8)
-          CFI (cfiCond948) R14 Frame(CFA, -4)
-          CFI (cfiCond948) CFA R13+360
-          CFI Block cfiPicker949 Using cfiCommon1
-          CFI (cfiPicker949) NoFunction
-          CFI (cfiPicker949) Picker
+          CFI Block cfiCond947 Using cfiCommon0
+          CFI (cfiCond947) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond947) Conditional ??CrossCallReturnLabel_23
+          CFI (cfiCond947) R4 Frame(CFA, -36)
+          CFI (cfiCond947) R5 Frame(CFA, -32)
+          CFI (cfiCond947) R6 Frame(CFA, -28)
+          CFI (cfiCond947) R7 Frame(CFA, -24)
+          CFI (cfiCond947) R8 Frame(CFA, -20)
+          CFI (cfiCond947) R9 Frame(CFA, -16)
+          CFI (cfiCond947) R10 Frame(CFA, -12)
+          CFI (cfiCond947) R11 Frame(CFA, -8)
+          CFI (cfiCond947) R14 Frame(CFA, -4)
+          CFI (cfiCond947) CFA R13+360
+          CFI Block cfiPicker948 Using cfiCommon1
+          CFI (cfiPicker948) NoFunction
+          CFI (cfiPicker948) Picker
         THUMB
 ?Subroutine14:
         MOVS     R2,#+4
@@ -41062,12 +41024,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memcpy
           CFI FunCall AppS2wCmd_Wassoc_test memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond946
           CFI EndBlock cfiCond947
-          CFI EndBlock cfiCond948
-          CFI EndBlock cfiPicker949
+          CFI EndBlock cfiPicker948
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond950 Using cfiCommon0
+          CFI Block cfiCond949 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_22
           CFI R4 Frame(CFA, -36)
@@ -41080,22 +41042,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond951 Using cfiCommon0
-          CFI (cfiCond951) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond951) Conditional ??CrossCallReturnLabel_21
-          CFI (cfiCond951) R4 Frame(CFA, -36)
-          CFI (cfiCond951) R5 Frame(CFA, -32)
-          CFI (cfiCond951) R6 Frame(CFA, -28)
-          CFI (cfiCond951) R7 Frame(CFA, -24)
-          CFI (cfiCond951) R8 Frame(CFA, -20)
-          CFI (cfiCond951) R9 Frame(CFA, -16)
-          CFI (cfiCond951) R10 Frame(CFA, -12)
-          CFI (cfiCond951) R11 Frame(CFA, -8)
-          CFI (cfiCond951) R14 Frame(CFA, -4)
-          CFI (cfiCond951) CFA R13+360
-          CFI Block cfiPicker952 Using cfiCommon1
-          CFI (cfiPicker952) NoFunction
-          CFI (cfiPicker952) Picker
+          CFI Block cfiCond950 Using cfiCommon0
+          CFI (cfiCond950) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond950) Conditional ??CrossCallReturnLabel_21
+          CFI (cfiCond950) R4 Frame(CFA, -36)
+          CFI (cfiCond950) R5 Frame(CFA, -32)
+          CFI (cfiCond950) R6 Frame(CFA, -28)
+          CFI (cfiCond950) R7 Frame(CFA, -24)
+          CFI (cfiCond950) R8 Frame(CFA, -20)
+          CFI (cfiCond950) R9 Frame(CFA, -16)
+          CFI (cfiCond950) R10 Frame(CFA, -12)
+          CFI (cfiCond950) R11 Frame(CFA, -8)
+          CFI (cfiCond950) R14 Frame(CFA, -4)
+          CFI (cfiCond950) CFA R13+360
+          CFI Block cfiPicker951 Using cfiCommon1
+          CFI (cfiPicker951) NoFunction
+          CFI (cfiPicker951) Picker
         THUMB
 ?Subroutine13:
         MOVS     R2,#+4
@@ -41104,12 +41066,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memcpy
           CFI FunCall AppS2wCmd_Wassoc_test memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond949
           CFI EndBlock cfiCond950
-          CFI EndBlock cfiCond951
-          CFI EndBlock cfiPicker952
+          CFI EndBlock cfiPicker951
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond953 Using cfiCommon0
+          CFI Block cfiCond952 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_20
           CFI R4 Frame(CFA, -36)
@@ -41122,22 +41084,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond954 Using cfiCommon0
-          CFI (cfiCond954) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond954) Conditional ??CrossCallReturnLabel_19
-          CFI (cfiCond954) R4 Frame(CFA, -36)
-          CFI (cfiCond954) R5 Frame(CFA, -32)
-          CFI (cfiCond954) R6 Frame(CFA, -28)
-          CFI (cfiCond954) R7 Frame(CFA, -24)
-          CFI (cfiCond954) R8 Frame(CFA, -20)
-          CFI (cfiCond954) R9 Frame(CFA, -16)
-          CFI (cfiCond954) R10 Frame(CFA, -12)
-          CFI (cfiCond954) R11 Frame(CFA, -8)
-          CFI (cfiCond954) R14 Frame(CFA, -4)
-          CFI (cfiCond954) CFA R13+360
-          CFI Block cfiPicker955 Using cfiCommon1
-          CFI (cfiPicker955) NoFunction
-          CFI (cfiPicker955) Picker
+          CFI Block cfiCond953 Using cfiCommon0
+          CFI (cfiCond953) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond953) Conditional ??CrossCallReturnLabel_19
+          CFI (cfiCond953) R4 Frame(CFA, -36)
+          CFI (cfiCond953) R5 Frame(CFA, -32)
+          CFI (cfiCond953) R6 Frame(CFA, -28)
+          CFI (cfiCond953) R7 Frame(CFA, -24)
+          CFI (cfiCond953) R8 Frame(CFA, -20)
+          CFI (cfiCond953) R9 Frame(CFA, -16)
+          CFI (cfiCond953) R10 Frame(CFA, -12)
+          CFI (cfiCond953) R11 Frame(CFA, -8)
+          CFI (cfiCond953) R14 Frame(CFA, -4)
+          CFI (cfiCond953) CFA R13+360
+          CFI Block cfiPicker954 Using cfiCommon1
+          CFI (cfiPicker954) NoFunction
+          CFI (cfiPicker954) Picker
         THUMB
 ?Subroutine12:
         MOVS     R2,#+4
@@ -41146,12 +41108,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memcpy
           CFI FunCall AppS2wCmd_Wassoc_test memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond952
           CFI EndBlock cfiCond953
-          CFI EndBlock cfiCond954
-          CFI EndBlock cfiPicker955
+          CFI EndBlock cfiPicker954
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond956 Using cfiCommon0
+          CFI Block cfiCond955 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_18
           CFI R4 Frame(CFA, -36)
@@ -41164,22 +41126,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond957 Using cfiCommon0
-          CFI (cfiCond957) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond957) Conditional ??CrossCallReturnLabel_17
-          CFI (cfiCond957) R4 Frame(CFA, -36)
-          CFI (cfiCond957) R5 Frame(CFA, -32)
-          CFI (cfiCond957) R6 Frame(CFA, -28)
-          CFI (cfiCond957) R7 Frame(CFA, -24)
-          CFI (cfiCond957) R8 Frame(CFA, -20)
-          CFI (cfiCond957) R9 Frame(CFA, -16)
-          CFI (cfiCond957) R10 Frame(CFA, -12)
-          CFI (cfiCond957) R11 Frame(CFA, -8)
-          CFI (cfiCond957) R14 Frame(CFA, -4)
-          CFI (cfiCond957) CFA R13+360
-          CFI Block cfiPicker958 Using cfiCommon1
-          CFI (cfiPicker958) NoFunction
-          CFI (cfiPicker958) Picker
+          CFI Block cfiCond956 Using cfiCommon0
+          CFI (cfiCond956) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond956) Conditional ??CrossCallReturnLabel_17
+          CFI (cfiCond956) R4 Frame(CFA, -36)
+          CFI (cfiCond956) R5 Frame(CFA, -32)
+          CFI (cfiCond956) R6 Frame(CFA, -28)
+          CFI (cfiCond956) R7 Frame(CFA, -24)
+          CFI (cfiCond956) R8 Frame(CFA, -20)
+          CFI (cfiCond956) R9 Frame(CFA, -16)
+          CFI (cfiCond956) R10 Frame(CFA, -12)
+          CFI (cfiCond956) R11 Frame(CFA, -8)
+          CFI (cfiCond956) R14 Frame(CFA, -4)
+          CFI (cfiCond956) CFA R13+360
+          CFI Block cfiPicker957 Using cfiCommon1
+          CFI (cfiPicker957) NoFunction
+          CFI (cfiPicker957) Picker
         THUMB
 ?Subroutine11:
         MOVS     R2,#+4
@@ -41188,12 +41150,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memcpy
           CFI FunCall AppS2wCmd_Wassoc_test memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond955
           CFI EndBlock cfiCond956
-          CFI EndBlock cfiCond957
-          CFI EndBlock cfiPicker958
+          CFI EndBlock cfiPicker957
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond959 Using cfiCommon0
+          CFI Block cfiCond958 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_5
           CFI R4 Frame(CFA, -36)
@@ -41206,22 +41168,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond960 Using cfiCommon0
-          CFI (cfiCond960) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond960) Conditional ??CrossCallReturnLabel_4
-          CFI (cfiCond960) R4 Frame(CFA, -36)
-          CFI (cfiCond960) R5 Frame(CFA, -32)
-          CFI (cfiCond960) R6 Frame(CFA, -28)
-          CFI (cfiCond960) R7 Frame(CFA, -24)
-          CFI (cfiCond960) R8 Frame(CFA, -20)
-          CFI (cfiCond960) R9 Frame(CFA, -16)
-          CFI (cfiCond960) R10 Frame(CFA, -12)
-          CFI (cfiCond960) R11 Frame(CFA, -8)
-          CFI (cfiCond960) R14 Frame(CFA, -4)
-          CFI (cfiCond960) CFA R13+360
-          CFI Block cfiPicker961 Using cfiCommon1
-          CFI (cfiPicker961) NoFunction
-          CFI (cfiPicker961) Picker
+          CFI Block cfiCond959 Using cfiCommon0
+          CFI (cfiCond959) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond959) Conditional ??CrossCallReturnLabel_4
+          CFI (cfiCond959) R4 Frame(CFA, -36)
+          CFI (cfiCond959) R5 Frame(CFA, -32)
+          CFI (cfiCond959) R6 Frame(CFA, -28)
+          CFI (cfiCond959) R7 Frame(CFA, -24)
+          CFI (cfiCond959) R8 Frame(CFA, -20)
+          CFI (cfiCond959) R9 Frame(CFA, -16)
+          CFI (cfiCond959) R10 Frame(CFA, -12)
+          CFI (cfiCond959) R11 Frame(CFA, -8)
+          CFI (cfiCond959) R14 Frame(CFA, -4)
+          CFI (cfiCond959) CFA R13+360
+          CFI Block cfiPicker960 Using cfiCommon1
+          CFI (cfiPicker960) NoFunction
+          CFI (cfiPicker960) Picker
         THUMB
 ?Subroutine5:
         MOVS     R0,#+0
@@ -41239,12 +41201,12 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc GsnSoftTmr_Start
           CFI FunCall AppS2wCmd_Wassoc_test GsnSoftTmr_Start
         B.W      GsnSoftTmr_Start
+          CFI EndBlock cfiCond958
           CFI EndBlock cfiCond959
-          CFI EndBlock cfiCond960
-          CFI EndBlock cfiPicker961
+          CFI EndBlock cfiPicker960
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond962 Using cfiCommon0
+          CFI Block cfiCond961 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_3
           CFI R4 Frame(CFA, -36)
@@ -41257,22 +41219,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond963 Using cfiCommon0
-          CFI (cfiCond963) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond963) Conditional ??CrossCallReturnLabel_2
-          CFI (cfiCond963) R4 Frame(CFA, -36)
-          CFI (cfiCond963) R5 Frame(CFA, -32)
-          CFI (cfiCond963) R6 Frame(CFA, -28)
-          CFI (cfiCond963) R7 Frame(CFA, -24)
-          CFI (cfiCond963) R8 Frame(CFA, -20)
-          CFI (cfiCond963) R9 Frame(CFA, -16)
-          CFI (cfiCond963) R10 Frame(CFA, -12)
-          CFI (cfiCond963) R11 Frame(CFA, -8)
-          CFI (cfiCond963) R14 Frame(CFA, -4)
-          CFI (cfiCond963) CFA R13+360
-          CFI Block cfiPicker964 Using cfiCommon1
-          CFI (cfiPicker964) NoFunction
-          CFI (cfiPicker964) Picker
+          CFI Block cfiCond962 Using cfiCommon0
+          CFI (cfiCond962) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond962) Conditional ??CrossCallReturnLabel_2
+          CFI (cfiCond962) R4 Frame(CFA, -36)
+          CFI (cfiCond962) R5 Frame(CFA, -32)
+          CFI (cfiCond962) R6 Frame(CFA, -28)
+          CFI (cfiCond962) R7 Frame(CFA, -24)
+          CFI (cfiCond962) R8 Frame(CFA, -20)
+          CFI (cfiCond962) R9 Frame(CFA, -16)
+          CFI (cfiCond962) R10 Frame(CFA, -12)
+          CFI (cfiCond962) R11 Frame(CFA, -8)
+          CFI (cfiCond962) R14 Frame(CFA, -4)
+          CFI (cfiCond962) CFA R13+360
+          CFI Block cfiPicker963 Using cfiCommon1
+          CFI (cfiPicker963) NoFunction
+          CFI (cfiPicker963) Picker
         THUMB
 ?Subroutine4:
         MOVS     R0,#+0
@@ -41290,9 +41252,9 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc GsnSoftTmr_Start
           CFI FunCall AppS2wCmd_Wassoc_test GsnSoftTmr_Start
         B.W      GsnSoftTmr_Start
+          CFI EndBlock cfiCond961
           CFI EndBlock cfiCond962
-          CFI EndBlock cfiCond963
-          CFI EndBlock cfiPicker964
+          CFI EndBlock cfiPicker963
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -41403,7 +41365,7 @@ AppS2wCmd_Wassoc_test:
         DC32     AppS2w_WlanRespTmrCb
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond965 Using cfiCommon0
+          CFI Block cfiCond964 Using cfiCommon0
           CFI Function AppS2wCmd_Wassoc
           CFI Conditional ??CrossCallReturnLabel_1
           CFI R4 Frame(CFA, -36)
@@ -41416,22 +41378,22 @@ AppS2wCmd_Wassoc_test:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+360
-          CFI Block cfiCond966 Using cfiCommon0
-          CFI (cfiCond966) Function AppS2wCmd_Wassoc_test
-          CFI (cfiCond966) Conditional ??CrossCallReturnLabel_0
-          CFI (cfiCond966) R4 Frame(CFA, -36)
-          CFI (cfiCond966) R5 Frame(CFA, -32)
-          CFI (cfiCond966) R6 Frame(CFA, -28)
-          CFI (cfiCond966) R7 Frame(CFA, -24)
-          CFI (cfiCond966) R8 Frame(CFA, -20)
-          CFI (cfiCond966) R9 Frame(CFA, -16)
-          CFI (cfiCond966) R10 Frame(CFA, -12)
-          CFI (cfiCond966) R11 Frame(CFA, -8)
-          CFI (cfiCond966) R14 Frame(CFA, -4)
-          CFI (cfiCond966) CFA R13+360
-          CFI Block cfiPicker967 Using cfiCommon1
-          CFI (cfiPicker967) NoFunction
-          CFI (cfiPicker967) Picker
+          CFI Block cfiCond965 Using cfiCommon0
+          CFI (cfiCond965) Function AppS2wCmd_Wassoc_test
+          CFI (cfiCond965) Conditional ??CrossCallReturnLabel_0
+          CFI (cfiCond965) R4 Frame(CFA, -36)
+          CFI (cfiCond965) R5 Frame(CFA, -32)
+          CFI (cfiCond965) R6 Frame(CFA, -28)
+          CFI (cfiCond965) R7 Frame(CFA, -24)
+          CFI (cfiCond965) R8 Frame(CFA, -20)
+          CFI (cfiCond965) R9 Frame(CFA, -16)
+          CFI (cfiCond965) R10 Frame(CFA, -12)
+          CFI (cfiCond965) R11 Frame(CFA, -8)
+          CFI (cfiCond965) R14 Frame(CFA, -4)
+          CFI (cfiCond965) CFA R13+360
+          CFI Block cfiPicker966 Using cfiCommon1
+          CFI (cfiPicker966) NoFunction
+          CFI (cfiPicker966) Picker
         THUMB
 ?Subroutine3:
         MOVS     R0,#+0
@@ -41449,9 +41411,9 @@ AppS2wCmd_Wassoc_test:
           CFI FunCall AppS2wCmd_Wassoc memcpy
           CFI FunCall AppS2wCmd_Wassoc_test memcpy
         B.W      memcpy
+          CFI EndBlock cfiCond964
           CFI EndBlock cfiCond965
-          CFI EndBlock cfiCond966
-          CFI EndBlock cfiPicker967
+          CFI EndBlock cfiPicker966
 // 15351 
 // 15352 
 // 15353 
@@ -41577,7 +41539,7 @@ AppS2wCmd_Wassoc_test:
 // 15473 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock968 Using cfiCommon0
+          CFI Block cfiBlock967 Using cfiCommon0
           CFI Function App2wCmd_mqtt_publish
         THUMB
 // 15474 UINT8
@@ -41593,7 +41555,7 @@ App2wCmd_mqtt_publish:
 // 15478   return 0;
         MOVS     R0,#+0
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock968
+          CFI EndBlock cfiBlock967
 // 15479 }
 
         SECTION `.iar_vfe_header`:DATA:REORDER:NOALLOC:NOROOT(2)
@@ -42865,9 +42827,9 @@ App2wCmd_mqtt_publish:
 //     48 bytes in section .data
 //  3 324 bytes in section .noinit
 //  2 445 bytes in section .rodata
-// 31 768 bytes in section .text
+// 31 718 bytes in section .text
 // 
-// 31 498 bytes of CODE  memory (+ 270 bytes shared)
+// 31 448 bytes of CODE  memory (+ 270 bytes shared)
 //  2 445 bytes of CONST memory
 //  9 438 bytes of DATA  memory
 //

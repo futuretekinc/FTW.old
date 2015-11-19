@@ -72,6 +72,8 @@
 #ifdef S2W_IPv6_SUPPORT
 #include "Nx_icmp.h"
 #endif
+
+#include "mqtt_main/mqtt_main.h"
 /**
  ******************************************************************************
  * @file s2w_net_gainspan.c
@@ -653,7 +655,6 @@ AppS2wHal_NetTcpClient(S2W_NETDATA_T *peerData, UINT8 *cidNo)
 
     /* get  a valid cid */
     cid = AppS2wHal_CidGet();
-    S2w_Printf("\r\n CID value in NetTcpClient func 1 : %d",cid);
     if (cid == INVALID_CID)
     {
 	    S2w_Printf("\r\n error 1");
@@ -721,8 +722,6 @@ AppS2wHal_NetTcpClient(S2W_NETDATA_T *peerData, UINT8 *cidNo)
         return S2W_FAILURE;
     }
     *cidNo = cid;
-	S2w_Printf("\r\n CID value in NetTcpClient func 2 : %d",cid);
-	S2w_Printf("\r\n cidNo value in NetTcpClient func : %d", *cidNo);
 	s2wCidList[cid].conMode = S2W_NETDATA_MODE_CLIENT;
     s2wCidList[cid].sslflag = FALSE;
 	 s2wCidList[cid].serverCid = INVALID_CID;
@@ -1610,7 +1609,6 @@ AppS2wHal_NetRecvTask(UINT32 ctx)
 #endif
     UINT8 socketRecvLoopCount=0;
 	
-	UINT8* mqtt_temp;
     while (1)
 
     {
@@ -1781,13 +1779,18 @@ AppS2wHal_NetRecvTask(UINT32 ctx)
                                                          &rxDataBuf,
                                                          (UINT32 *)&dataLen,
                                                          sslDataRxTimeout);
-                                                         
-                                
-								/*if(rxDataBuf[0] == 0x20 || rxDataBuf[0] == 0x40 || rxDataBuf[0] == 0x50 || rxDataBuf[0] == 0x70 || rxDataBuf[0] == 0xC0 || rxDataBuf[0] == 0xE0)						 
+                                                   
+#ifdef THINGPLUS
+								if(rxDataBuf[0] == 0x20 || rxDataBuf[0] == 0x40 || rxDataBuf[0] == 0x50 || rxDataBuf[0] == 0x70 || rxDataBuf[0] == 0x90 || rxDataBuf[0] == 0xB0 || rxDataBuf[0] == 0xD0)
 								{
-                                  S2w_Printf("\r\nSSL Data Receive in receive task : %X %X %X %X",rxDataBuf[0],rxDataBuf[1],rxDataBuf[2],rxDataBuf[3]);
-								  status = tx_queue_send(&MQTT_RECEIVE_QUEUE,rxDataBuf,TX_NO_WAIT);
-								}*/
+                                 
+		
+								  S2w_Printf("\r\n Receive Data rxDataBuf : %x %x %x %x",rxDataBuf[0],rxDataBuf[1],rxDataBuf[2],rxDataBuf[3]);
+								  S2w_Printf("\r\n QUEUE COUNT 1 : %d",MQTT_RECEIVE_QUEUE.tx_queue_available_storage);
+								  status = tx_queue_send(&MQTT_RECEIVE_QUEUE, rxDataBuf, TX_NO_WAIT);
+								  
+								}
+#endif
 								if(0 == sslDataRxTimeout)
 								{
 									/*restore back to blocking*/
@@ -1840,13 +1843,7 @@ AppS2wHal_NetRecvTask(UINT32 ctx)
                           else
 #endif //S2W_IPv6_SUPPORT 
 						  {
-                            dataLen = recv(recvMsg.rData.dataSock, (char *)s2wRxBuf,
-                                      sizeof(s2wRxBuf), 0);
-							/*if(s2wRxBuf[0] == 0x20 || s2wRxBuf[0] == 0x40 || s2wRxBuf[0] == 0x50 || s2wRxBuf[0] == 0x70 || s2wRxBuf[0] == 0xC0 || s2wRxBuf[0] == 0xE0)						 
-							{
-                                  S2w_Printf("\r\nData Receive in receive task 1 : %X %X %X %X",s2wRxBuf[0],s2wRxBuf[1],s2wRxBuf[2],s2wRxBuf[3]);
-								  status = tx_queue_send(&MQTT_RECEIVE_QUEUE,s2wRxBuf,TX_NO_WAIT);
-							}*/
+                            dataLen = recv(recvMsg.rData.dataSock, (char *)s2wRxBuf, sizeof(s2wRxBuf), 0);
 						  }
                         }
 #endif
@@ -1886,6 +1883,13 @@ AppS2wHal_NetRecvTask(UINT32 ctx)
 #endif
                         else
                         {
+#ifdef LOCAL
+							if(s2wRxBuf[0] == 0x20 || s2wRxBuf[0] == 0x40 || s2wRxBuf[0] == 0x50 || s2wRxBuf[0] == 0x70 || s2wRxBuf[0] == 0x90 || s2wRxBuf[0] == 0xB0 || s2wRxBuf[0] == 0xD0)
+							{
+                                  S2w_Printf("\r\n Receive Data s2wRxBuf : %x %x %x %x",s2wRxBuf[0],s2wRxBuf[1],s2wRxBuf[2],s2wRxBuf[3]);
+								  status = tx_queue_send(&MQTT_RECEIVE_QUEUE, s2wRxBuf, TX_NO_WAIT);
+							}
+#endif
 #ifdef S2W_THROUGHPUT_TEST                       
                         	if(s2wCidList[cid].tpTestInProgress == 0)	
                         	{
@@ -1897,18 +1901,6 @@ AppS2wHal_NetRecvTask(UINT32 ctx)
 						  
 #endif
 						  {
-							if(s2wRxBuf[0] == 0x20 || s2wRxBuf[0] == 0x40 || s2wRxBuf[0] == 0x50 || s2wRxBuf[0] == 0x70 || s2wRxBuf[0] == 0xC0 || s2wRxBuf[0] == 0xE0)						 
-							{
-                                 
-								  mqtt_temp = malloc(4);
-								  memset(mqtt_temp,0,4);
-								  memcpy(mqtt_temp,s2wRxBuf,4);
-								  //status = tx_queue_send(&MQTT_RECEIVE_QUEUE, s2wRxBuf, TX_NO_WAIT);
-								  status = tx_queue_send(&MQTT_RECEIVE_QUEUE, mqtt_temp, TX_NO_WAIT);
-								  S2w_Printf("\r\nData Receive in receive task s2wRxBuf : %X %X %X %X",s2wRxBuf[0],s2wRxBuf[1],s2wRxBuf[2],s2wRxBuf[3]);
-								  S2w_Printf("\r\nData Receive in receive task mqtt_temp : %X %X %X %X",mqtt_temp[0],mqtt_temp[1],mqtt_temp[2],mqtt_temp[3]);
-								  free(mqtt_temp);
-							}
                             AppS2wProcess_NetRx(cid, s2wRxBuf, dataLen, (UINT8*)ip, port);
 						  }
 #ifdef S2W_THROUGHPUT_TEST                       

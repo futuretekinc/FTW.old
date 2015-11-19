@@ -14,6 +14,4 @@ void initial_list(Node* Node);
 Node *makeNode(MSG_TYPE* msg_list);
 UINT8 list_put(Node *head, MSG_TYPE* msg_list);
 UINT8 list_get(Node *head, MSG_TYPE** msg_type);
-void list_Printf(Node* node);
-void delectList(Node* head, int msg_id);
 UINT8 list_count(Node* node);

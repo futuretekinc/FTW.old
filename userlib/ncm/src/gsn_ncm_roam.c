@@ -458,7 +458,7 @@ GsnNcm_RoamReInit(GSN_NCM_CTX_T* ctx)
 	ctx->roamingParams.roamingTriggered = 0;
 	ctx->roamingParams.roamScanRetryCount=0;
 	
-	GsnSoftTmr_Start(&ctx->roamingParams.rssiLevelChkTmr, GSN_SOFT_TMR_ONESHOT,0, (ULONG64)(ctx->config.roamingCfgParams.rssiLevelChkInterval),
+	at+GsnSoftTmr_Start(&ctx->roamingParams.rssiLevelChkTmr, GSN_SOFT_TMR_ONESHOT,0, (ULONG64)(ctx->config.roamingCfgParams.rssiLevelChkInterval),
 					  ( GSN_SOFT_TMR_CBR_T )GsnNcm_RoamScanTmrCb, ctx );
 }
 

@@ -176,7 +176,7 @@ UINT16 mqtt_parse_publish_msg(const UINT8* buf, UINT8* msg);
 */ 
 UINT16 mqtt_parse_pub_msg_ptr(const UINT8* buf, const UINT8** msg_ptr); 
 
- 
+
 
  
 typedef struct { 
@@ -323,7 +323,7 @@ int mqtt_unsubscribe(mqtt_broker_handle_t* broker, const char* topic, UINT16* me
 */ 
 int mqtt_ping(mqtt_broker_handle_t* broker); 
 
- 
+UINT8 mqtt_publish_retry_dup(mqtt_broker_handle_t* broker, const char* topic, const char* msg, UINT8 DUP, UINT8 qos, UINT16 message_id);
 
  
 #endif // __LIBEMQTT_H__ 

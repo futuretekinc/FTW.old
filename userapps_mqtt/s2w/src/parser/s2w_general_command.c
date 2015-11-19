@@ -7232,7 +7232,7 @@ AppS2wCmd_SSLOpen(UINT8 *ptr)
         return S2W_EBADCID;
 }
 
-UINT8
+/*UINT8
 AppS2wCmd_SSLOpen_test(UINT8 CID)
 {
     UINT8 status = S2W_EINVAL;
@@ -7267,7 +7267,7 @@ AppS2wCmd_SSLOpen_test(UINT8 CID)
     }
     else
         return S2W_EBADCID;
-}
+}*/
 
 
 

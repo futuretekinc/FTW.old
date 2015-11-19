@@ -1,14 +1,14 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     30/Oct/2015  09:58:00 /
+// IAR ANSI C/C++ Compiler V6.50.6.4896/W32 for ARM     19/Nov/2015  14:30:49 /
 // Copyright 1999-2013 IAR Systems AB.                                        /
 //                                                                            /
 //    Cpu mode     =  thumb                                                   /
 //    Endian       =  little                                                  /
 //    Source file  =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\src\parser\s2w_process.c                    /
+//                    ps_mqtt_QoS2\s2w\src\parser\s2w_process.c               /
 //    Command line =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\src\parser\s2w_process.c -D                 /
+//                    ps_mqtt_QoS2\s2w\src\parser\s2w_process.c -D            /
 //                    TX_ENABLE_IAR_LIBRARY_SUPPORT -D IAR -D                 /
 //                    FIXED_ROM_BUILD -D RUN_ALL_FROM_FLASH -D TM_USE_HTTPD   /
 //                    -D S2W_DNS_CLIENT -D NX_INCLUDE_USER_DEFINE_FILE -D     /
@@ -40,83 +40,87 @@
 //                    S2W_SSL_SERVER_SUPPORT -D ADK_PROV_CONFIG_CLIENT -D     /
 //                    S2W_DEFAULT_UART_BITS_PER_CHAR=3 -D S2W_MDNS_ENABLE     /
 //                    -lC E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\us /
-//                    erapps_mqtt\s2w\build\Debug\List\ -lA                   /
+//                    erapps_mqtt_QoS2\s2w\build\Debug\List\ -lA              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\ --diag_suppress           /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\ --diag_suppress      /
 //                    Pa050,Pe231,Pe177 -o E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
-//                    tlslp_5.1.5_GA\userapps_mqtt\s2w\build\Debug\Obj\       /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\Debug\Obj\  /
 //                    --debug --endian=little --cpu=Cortex-M3 -e --fpu=None   /
 //                    --dlib_config "C:\Program Files (x86)\IAR               /
 //                    Systems\Embedded Workbench                              /
 //                    6.5\arm\INC\c\DLib_Config_Full.h" -I                    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\ -I                 /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\ -I            /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\core\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\core\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\drivers\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\drivers\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\modules\ -I         /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\modules\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\rtos\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\rtos\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\netx\netx_bsd_layer /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\netx\netx_bsd_ /
+//                    layer\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\main /
 //                    \ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\u /
-//                    serapps_mqtt\s2w\build\..\..\..\geps\inc\main\ -I       /
+//                    serapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\ -I    /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\ -I              /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\fs\hcc\src\    /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security\sr /
+//                    c\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\ /
+//                    userapps_mqtt_QoS2\s2w\build\..\..\..\geps\inc\security /
+//                    \hw_engine_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tls /
+//                    lp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\geps\ /
+//                    inc\security\wpa_if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_t /
+//                    ls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\.. /
+//                    \userlib\ncm\inc\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_ /
+//                    tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\build\..\..\..\us /
+//                    erlib\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5 /
+//                    _GA\userapps_mqtt_QoS2\s2w\build\..\inc\ctx\ -I         /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\fs\hcc\src\ -I      /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\src\ -I    /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\main\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\geps\inc\security\hw_engine_ /
-//                    if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA /
-//                    \userapps_mqtt\s2w\build\..\..\..\geps\inc\security\wpa /
-//                    _if\ -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_G /
-//                    A\userapps_mqtt\s2w\build\..\..\..\userlib\ncm\inc\ -I  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\hal\ -I                   /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\userlib\ -I                  /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\parser\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ctx\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\config\ -I                /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\ -I                       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\main\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\otafu\inc\ -I       /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\hal\ -I                        /
+//                    ps_mqtt_QoS2\s2w\build\..\..\..\adk\provisioning\inc\   /
+//                    -I E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\use /
+//                    rapps_mqtt_QoS2\s2w\build\..\inc\mqtt\ -I               /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\parser\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt\ -I                  /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\config\ -I                     /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\ -I                            /
+//                    ps_mqtt_QoS2\s2w\build\..\src\one_wire\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\otafu\inc\ -I            /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\..\..\adk\provisioning\inc\ -I     /
+//                    ps_mqtt_QoS2\s2w\build\..\src\linked_list\ -I           /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt\ -I                       /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_main\ -I             /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\one_wire\ -I                   /
+//                    ps_mqtt_QoS2\s2w\build\..\inc\mqtt_log\ -I              /
 //                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\one_wire\ -I                   /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\linked_list\ -I                /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\inc\mqtt_main\ -I                  /
-//                    E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\..\src\mqtt_main\ -Ohz                /
+//                    ps_mqtt_QoS2\s2w\build\..\src\mqtt_log\ -Ohz            /
 //                    --use_c++_inline -I "C:\Program Files (x86)\IAR         /
 //                    Systems\Embedded Workbench 6.5\arm\CMSIS\Include\"      /
 //    List file    =  E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userap /
-//                    ps_mqtt\s2w\build\Debug\List\s2w_process.s              /
+//                    ps_mqtt_QoS2\s2w\build\Debug\List\s2w_process.s         /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -174,6 +178,7 @@
         EXTERN AppS2w_ClkCalibCb
         EXTERN AppS2w_ExitDpSleep
         EXTERN AppS2w_XmlDataProcess
+        EXTERN App_RtcDump
         EXTERN DHCP_notify
         EXTERN GsnDhcpSrvr_Stop
         EXTERN GsnGpio_Init
@@ -339,7 +344,7 @@
           CFI R14 SameValue
           CFI EndCommon cfiCommon1
         
-// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt\s2w\src\parser\s2w_process.c
+// E:\Gainspan\gs2011mxx_SDK_s2w_tls_tlslp_5.1.5_GA\userapps_mqtt_QoS2\s2w\src\parser\s2w_process.c
 //    1 /*****************************************************************
 //    2  *
 //    3 *               COPYRIGHT (c) 2009-2010 GainSpan Corporation
@@ -881,7 +886,7 @@ S2w_Printf:
 //  421 
 //  422     va_start(args, format);
 //  423     len = AppS2w_VPrintf(format, args);
-        LDR.W    R4,??DataTable114_1
+        LDR.W    R4,??DataTable116_1
         MOV      R2,R0
         ADD      R3,SP,#+12
         MOV      R1,#+256
@@ -964,8 +969,8 @@ AppS2w_AcTimeoutHandler:
 //  464     UINT32 message = APP_EVENT_NCM_L4CONNECT;
 //  465     (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
 AppS2w_AcNcmTimeoutHandler:
-        LDR.W    R0,??DataTable114_2
-        LDR.W    R2,??DataTable114_3
+        LDR.W    R0,??DataTable116_2
+        LDR.W    R2,??DataTable116_3
         LDR      R1,[R0, #+0]
         LDR      R2,[R2, #+0]
         MOVS     R0,#+24
@@ -1007,7 +1012,7 @@ AppS2w_SetWlanDfltParams:
 //  485 
 //  486     /* disassociate if connected */
 //  487     if (s2wLinkState == S2W_LINK_STATE_CONNECTED)
-        LDR.W    R0,??DataTable114_5
+        LDR.W    R0,??DataTable116_4
         LDRB     R0,[R0, #+1]
         CMP      R0,#+1
         ITT      EQ 
@@ -1019,10 +1024,10 @@ AppS2w_SetWlanDfltParams:
 //  490     }
 //  491 
 //  492     bootReason = GSN_BOOT_REASON_GET();
-        LDR.W    R0,??DataTable114_6  ;; 0x41010004
+        LDR.W    R0,??DataTable116_5  ;; 0x41010004
 //  493     
 //  494     if(s2wCurrent.mode == S2W_WLANDATA_MODE_INFRA)
-        LDR.W    R4,??DataTable114_7
+        LDR.W    R4,??DataTable116_6
         LDR      R6,[R0, #+0]
         LDRB     R0,[R4, #+4]
         CMP      R0,#+1
@@ -1058,7 +1063,7 @@ AppS2w_SetWlanDfltParams:
 //  506 	//!( defined S2W_ISOTX_SUPPORT  && defined S2W_15DOT4_SUPPORT ))
 //  507 	{
 //  508     	if(bootReason != GSN_WIF_SYS_BOOT_NORMAL_BOOT)
-        LDR.W    R5,??DataTable114_2
+        LDR.W    R5,??DataTable116_2
         CMP      R6,#+1
         BEQ.N    ??AppS2w_SetWlanDfltParams_3
 //  509     	{
@@ -1202,7 +1207,7 @@ AppS2wProcess_LoadProfile:
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
 //  568     S2W_PROFILE_T *profile = &s2wFlashParams->profile[profileNum];
-        LDR.W    R1,??DataTable114_5
+        LDR.W    R1,??DataTable116_4
         LDR      R3,[R1, #+40]
         MOV      R2,#+1016
         MLA      R4,R2,R0,R3
@@ -1219,7 +1224,7 @@ AppS2wProcess_LoadProfile:
 //  575 
 //  576     memcpy(&s2wCurrent, profile, sizeof(s2wCurrent));
         MOV      R2,#+1016
-        LDR.W    R5,??DataTable114_7
+        LDR.W    R5,??DataTable116_6
         MOV      R1,R4
         MOV      R0,R5
           CFI FunCall memcpy
@@ -1384,7 +1389,7 @@ AppS2wProcess_DefaulConfigtLoad:
         ADD      R1,SP,#+0
         MOVS     R0,#+8
         STRH     R0,[R9, #+2]
-        LDR.W    R0,??DataTable114_8  ;; 0x101a8c0
+        LDR.W    R0,??DataTable116_8  ;; 0x101a8c0
         STR      R0,[SP, #+0]
         ADD      R0,R9,#+4
           CFI FunCall memcpy
@@ -1444,7 +1449,7 @@ AppS2wProcess_DefaulConfigtLoad:
 //  679    memcpy(sec->eap.usrName,S2W_DEFAULT_EAP_USERNAME,sec->eap.usrNameLen);
 ??CrossCallReturnLabel_18:
         LDRB     R2,[R5, #+201]
-        ADR.N    R1,??DataTable104  ;; "gsn"
+        ADR.N    R1,??DataTable106  ;; "gsn"
         MOV      R0,R9
           CFI FunCall memcpy
         BL       memcpy
@@ -1490,7 +1495,7 @@ AppS2wProcess_DefaulConfigtLoad:
         STRB     R0,[R4, #+8]
         MOVS     R0,#+1
         STRB     R0,[R8, #+0]
-        LDR.W    R0,??DataTable114_9  ;; 0xc0a80163
+        LDR.W    R0,??DataTable116_9  ;; 0xc0a80163
         STR      R0,[SP, #+0]
         ADD      R0,R8,#+4
           CFI FunCall memcpy
@@ -1513,7 +1518,7 @@ AppS2wProcess_DefaulConfigtLoad:
 //  707     if (S2W_DEFAULT_GATEWAY)
 //  708     {
 //  709         temp = S2W_DEFAULT_GATEWAY;
-        LDR.W    R0,??DataTable114_10  ;; 0xc0a80101
+        LDR.W    R0,??DataTable116_10  ;; 0xc0a80101
         STR      R0,[SP, #+0]
 //  710         memcpy(&netconf->gateway, &temp, sizeof(netconf->gateway));
         MOVS     R2,#+4
@@ -1684,8 +1689,8 @@ AppS2wProcess_DefaulConfigtLoad:
 //  807 		memcpy(profile->lmtdApConf.wepKeyConfig.Key, S2W_DEFAULT_AP_WEP_KEY,
 //  808 			   S2W_DEFAULT_AP_WEP_KEY_LEN);
         MOVS     R2,#+5
-        LDR.W    R0,??DataTable114_11  ;; 0xc0a8f002
-        LDR.W    R6,??DataTable114_12  ;; 0xc0a8f001
+        LDR.W    R0,??DataTable116_11  ;; 0xc0a8f002
+        LDR.W    R6,??DataTable116_12  ;; 0xc0a8f001
         ADR.W    R1,S2W_DEFAULT_AP_WEP_KEY
         STR      R0,[R4, #+668]
         MOVS     R0,#+64
@@ -1693,7 +1698,7 @@ AppS2wProcess_DefaulConfigtLoad:
         STR      R6,[R4, #+652]
         STR      R5,[R4, #+656]
         STR      R6,[R4, #+660]
-        LDR.W    R0,??DataTable114_13  ;; 0x80510100
+        LDR.W    R0,??DataTable116_13  ;; 0x80510100
         STR      R0,[R4, #+740]
         MOVS     R0,#+1
         STRB     R0,[R4, #+599]
@@ -1825,7 +1830,7 @@ AppS2wProcess_DefaulConfigtLoad:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable104:
+??DataTable106:
         DC8      "gsn"
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -1974,40 +1979,40 @@ AppS2wProcess_StatusNotify:
           CFI R5 Frame(CFA, -24)
           CFI R4 Frame(CFA, -28)
           CFI CFA R13+32
-        MOV      R5,R0
+        MOV      R4,R0
         MOV      R8,R1
 //  868     const char *msg;
 //  869 
 //  870     if (status == S2W_CMD_INPROCESS)
-        CMP      R5,#+50
+        CMP      R4,#+50
         BEQ.N    ??AppS2wProcess_StatusNotify_0
 //  871     {
 //  872         return;
 //  873     }
 //  874 
 //  875     if (status == S2W_LINK_LOST_EVT)
-        MOVS     R4,#+255
-        LDR.W    R10,??DataTable114_7
-        LDR.W    R6,??DataTable114_5
-        CMP      R5,#+9
+        MOVS     R6,#+255
+        LDR.W    R7,??DataTable116_6
+        LDR.W    R5,??DataTable116_4
+        CMP      R4,#+9
         BNE.N    ??AppS2wProcess_StatusNotify_1
 //  876     {
 //  877         s2wIsAutoconnected = 0;
         MOVS     R0,#+0
-        STRB     R0,[R6, #+3]
+        STRB     R0,[R5, #+3]
 //  878         AppS2wHal_NetCloseAll(1);
         MOVS     R0,#+1
           CFI FunCall AppS2wHal_NetCloseAll
         BL       AppS2wHal_NetCloseAll
 //  879         curCid = INVALID_CID;
-        STRB     R4,[R6, #+5]
+        STRB     R6,[R5, #+5]
 //  880 
 //  881         if (s2wState == S2W_STATE_DATA_AUTO)
-        LDRB     R0,[R6, #+0]
+        LDRB     R0,[R5, #+0]
         CMP      R0,#+13
         BNE.N    ??AppS2wProcess_StatusNotify_2
         MOVS     R0,#+0
-        STRB     R0,[R6, #+0]
+        STRB     R0,[R5, #+0]
         B.N      ??AppS2wProcess_StatusNotify_2
 //  882         {
 //  883             s2wState = S2W_STATE_CMD;
@@ -2017,36 +2022,36 @@ AppS2wProcess_StatusNotify:
 //  887     if ((status == S2W_ECIDCLOSE || status == S2W_SOCKFAILURE)
 //  888          && s2wIsAutoconnected && curCid == arg)
 ??AppS2wProcess_StatusNotify_1:
-        CMP      R5,#+8
+        CMP      R4,#+8
         IT       NE 
-        CMPNE    R5,#+3
+        CMPNE    R4,#+3
         BNE.N    ??AppS2wProcess_StatusNotify_2
-        LDRB     R0,[R6, #+3]
+        LDRB     R0,[R5, #+3]
         CBZ.N    R0,??AppS2wProcess_StatusNotify_2
-        LDRB     R0,[R6, #+5]
+        LDRB     R0,[R5, #+5]
         CMP      R0,R8
         BNE.N    ??AppS2wProcess_StatusNotify_2
 //  889     {
 //  890         curCid = INVALID_CID;
-        STRB     R4,[R6, #+5]
+        STRB     R6,[R5, #+5]
 //  891 
 //  892         /* Drop to command mode if the auto connected network
 //  893          * connection is closed, except if running as a TCP server
 //  894          */
 //  895          if (!(s2wCurrent.autoNetdata.proto == S2W_NETDATA_PROTO_TCP
 //  896              && s2wCurrent.autoNetdata.mode == S2W_NETDATA_MODE_SERVER))
-        LDRB     R0,[R10, #+61]
+        LDRB     R0,[R7, #+61]
         CMP      R0,#+1
         ITT      EQ 
-        LDRBEQ   R0,[R10, #+60]
+        LDRBEQ   R0,[R7, #+60]
         CMPEQ    R0,#+1
         BEQ.N    ??AppS2wProcess_StatusNotify_2
 //  897          {
 //  898              s2wState = S2W_STATE_CMD;
         MOVS     R0,#+0
-        STRB     R0,[R6, #+0]
+        STRB     R0,[R5, #+0]
 //  899              s2wIsAutoconnected = 0;
-        STRB     R0,[R6, #+3]
+        STRB     R0,[R5, #+3]
 //  900          }
 //  901     }
 //  902 
@@ -2054,28 +2059,28 @@ AppS2wProcess_StatusNotify:
 //  904      */
 //  905     if (status > S_STATUS_TBL - 1)
 ??AppS2wProcess_StatusNotify_2:
-        CMP      R5,#+34
+        CMP      R4,#+34
         BCS.W    ??AppS2wProcess_StatusNotify_3
 //  906     {
 //  907         //S2w_Debug("unknown error: %d\r\n", status);
 //  908         return;
-        MOVW     R4,#+27384
-        LDRB     R1,[R6, #+0]
-        LDR.W    R7,??DataTable114_2
-        CMP      R1,#+2
+        MOVW     R6,#+27384
+        LDRB     R0,[R5, #+0]
+        LDR.W    R10,??DataTable116_2
+        CMP      R0,#+2
         IT       NE 
-        CMPNE    R1,#+4
+        CMPNE    R0,#+4
         BEQ.N    ??AppS2wProcess_StatusNotify_4
-        CMP      R1,#+11
+        CMP      R0,#+11
         BNE.N    ??AppS2wProcess_StatusNotify_5
-        MOVS     R0,#+1
+        MOVS     R1,#+1
 ??AppS2wProcess_StatusNotify_6:
         MOVS     R2,#+0
 ??AppS2wProcess_StatusNotify_7:
-        ORRS     R0,R2,R0
+        ORRS     R1,R2,R1
         BEQ.N    ??AppS2wProcess_StatusNotify_8
 ??AppS2wProcess_StatusNotify_4:
-        CMP      R5,#+8
+        CMP      R4,#+8
         BEQ.N    ??AppS2wProcess_StatusNotify_8
 //  909     }
 //  910 
@@ -2086,14 +2091,14 @@ AppS2wProcess_StatusNotify:
 //  915         | s2wState == S2W_STATE_PORT_STRING) && (status != S2W_ECIDCLOSE))
 //  916     {
 //  917         S2w_Printf("%c%c", S2W_ESC, status == S2W_SUCCESS ? 'O' : 'F');
-        CMP      R5,#+0
+        CMP      R4,#+0
         ITE      EQ 
         MOVEQ    R2,#+79
         MOVNE    R2,#+70
         B.N      ??AppS2wProcess_StatusNotify_9
 ??AppS2wProcess_StatusNotify_5:
-        MOVS     R0,#+0
-        CMP      R1,#+12
+        MOVS     R1,#+0
+        CMP      R0,#+12
         BNE.N    ??AppS2wProcess_StatusNotify_6
         MOVS     R2,#+1
         B.N      ??AppS2wProcess_StatusNotify_7
@@ -2103,8 +2108,8 @@ AppS2wProcess_StatusNotify:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
 //  918         if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
-        LDR      R0,[R7, #+0]
-        LDRB     R0,[R4, R0]
+        LDR      R0,[R10, #+0]
+        LDRB     R0,[R6, R0]
         CMP      R0,#+2
         BNE.N    ??AppS2wProcess_StatusNotify_3
 //  919         {
@@ -2121,23 +2126,24 @@ AppS2wProcess_StatusNotify:
 //  929 
 //  930    if (s2wCurrent.serialPortConf.commonConf.verbose)
 ??AppS2wProcess_StatusNotify_8:
-        LDRB     R0,[R10, #+433]
-        CBZ.N    R0,??AppS2wProcess_StatusNotify_11
+        LDRB     R1,[R7, #+433]
+        CMP      R1,#+0
+        BEQ.N    ??AppS2wProcess_StatusNotify_11
 //  931     {
 //  932         msg = S2W_StatusList[status];
-        ADD      R0,R6,R5, LSL #+2
-        LDR      R0,[R0, #+56]
+        ADD      R1,R5,R4, LSL #+2
+        LDR      R7,[R1, #+56]
 //  933         if (!msg)
-        CMP      R0,#+0
+        CMP      R7,#+0
 ??AppS2wProcess_StatusNotify_0:
         BEQ.N    ??AppS2wProcess_StatusNotify_3
 //  934         {
 //  935             return;
 //  936         }
 //  937         if (status == S2W_SUCCESS && s2wState == S2W_STATE_DATA)
-        CMP      R5,#+0
+        CMP      R4,#+0
         IT       EQ 
-        CMPEQ    R1,#+1
+        CMPEQ    R0,#+1
         BNE.N    ??AppS2wProcess_StatusNotify_12
 //  938         {
 //  939             S2w_Printf("%cOK", S2W_ESC);
@@ -2148,9 +2154,9 @@ AppS2wProcess_StatusNotify:
 //  941         else if (status == S2W_CON_SUCCESS || ((status == S2W_ECIDCLOSE)
 //  942                                                &&(!s2wIsAutoconnected)))
 ??AppS2wProcess_StatusNotify_12:
-        CMP      R5,#+7
+        CMP      R4,#+7
         IT       NE 
-        CMPNE    R5,#+8
+        CMPNE    R4,#+8
         BEQ.N    ??AppS2wProcess_StatusNotify_14
 //  943         {
 //  944             S2w_Printf(msg, arg);
@@ -2161,7 +2167,7 @@ AppS2wProcess_StatusNotify:
 //  949             }
 //  950         }
 //  951         else if ((status == S2W_SOCKFAILURE) &&(!s2wIsAutoconnected))
-        CMP      R5,#+3
+        CMP      R4,#+3
         BEQ.N    ??AppS2wProcess_StatusNotify_15
 //  952         {
 //  953             S2w_Printf("\r\nERROR: SOCKET FAILURE %x\r\n",arg);
@@ -2169,17 +2175,17 @@ AppS2wProcess_StatusNotify:
 //  955             //dataIndex = 0;
 //  956         }
 //  957 		else if ((status == S2W_MDNS_REG_FAILED_ID) || (status == S2W_MDNS_REG_SUCESS_ID))
-        CMP      R5,#+32
+        CMP      R4,#+32
         IT       NE 
-        CMPNE    R5,#+33
+        CMPNE    R4,#+33
         BNE.N    ??AppS2wProcess_StatusNotify_16
 //  958         {
 //  959         	UINT8 *str;
 //  960 			str = (UINT8 *)arg;
 //  961 			S2w_Printf("%s%s\r\n",msg,str);
-        MOV      R1,R0
-        MOV      R2,R8
         ADR.W    R0,`?<Constant "%s%s\\r\\n">`
+        MOV      R2,R8
+        MOV      R1,R7
         B.N      ??AppS2wProcess_StatusNotify_17
 //  962 		}
 //  963         else
@@ -2189,108 +2195,119 @@ AppS2wProcess_StatusNotify:
 //  967                 S2w_Printf(msg, arg);
 ??AppS2wProcess_StatusNotify_14:
         MOV      R1,R8
+        MOV      R0,R7
         B.N      ??AppS2wProcess_StatusNotify_13
 //  968             }
 //  969             else if(status == S2W_BOOT_RST_APP_SW)
 ??AppS2wProcess_StatusNotify_16:
-        CMP      R5,#+23
-        MOV      R1,R0
+        CMP      R4,#+23
         BNE.N    ??AppS2wProcess_StatusNotify_18
-//  970                 S2w_Printf("\n\r%s\r\n", msg);				
+//  970 			{
+//  971 			    S2w_Printf("\r\n RESET PRINT 01");
+        ADR.W    R0,`?<Constant "\\r\\n RESET PRINT 01">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+//  972 				App_RtcDump();
+          CFI FunCall App_RtcDump
+        BL       App_RtcDump
+//  973                 S2w_Printf("\n\r%s\r\n", msg);				
+        MOV      R1,R7
         ADR.W    R0,`?<Constant "\\n\\r%s\\r\\n">`
         B.N      ??AppS2wProcess_StatusNotify_13
-//  971             else if((status == S2W_SOCKFAILURE) &&(s2wIsAutoconnected))
-//  972             {
-//  973                 S2w_Printf("\r\nERROR: SOCKET FAILURE %x\r\n",arg);
-??AppS2wProcess_StatusNotify_15:
-        MOV      R1,R8
-        ADR.W    R0,`?<Constant "\\r\\nERROR: SOCKET FAILU...">`
-        B.N      ??AppS2wProcess_StatusNotify_13
-//  974             }
-//  975             else
+//  974 			}
+//  975             else if((status == S2W_SOCKFAILURE) &&(s2wIsAutoconnected))
 //  976             {
-//  977 
-//  978                 S2w_Printf("\r\n%s\r\n", msg);
+//  977                 S2w_Printf("\r\nERROR: SOCKET FAILURE %x\r\n",arg);
+??AppS2wProcess_StatusNotify_15:
+        ADR.W    R0,`?<Constant "\\r\\nERROR: SOCKET FAILU...">`
+        MOV      R1,R8
+        B.N      ??AppS2wProcess_StatusNotify_13
+//  978             }
+//  979             else
+//  980             {
+//  981 
+//  982                 S2w_Printf("\r\n%s\r\n", msg);
 ??AppS2wProcess_StatusNotify_18:
+        MOV      R1,R7
         ADR.W    R0,`?<Constant "\\r\\n%s\\r\\n">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-//  979                 if(status == S2W_EBADCID)
-        CMP      R5,#+5
+//  983                 if(status == S2W_EBADCID)
+        CMP      R4,#+5
         BNE.N    ??AppS2wProcess_StatusNotify_19
-//  980                 {
-//  981                     s2wState = S2W_STATE_CMD;
+//  984                 {
+//  985                     s2wState = S2W_STATE_CMD;
         MOVS     R0,#+0
-        STRB     R0,[R6, #+0]
-//  982                     dataIndex = 0;
-        STR      R0,[R6, #+44]
+        STRB     R0,[R5, #+0]
+//  986                     dataIndex = 0;
+        STR      R0,[R5, #+44]
         B.N      ??AppS2wProcess_StatusNotify_19
-//  983                 }
-//  984             }
-//  985         }
-//  986     }
-//  987     else if ((status == S2W_CON_SUCCESS) || (status == S2W_ECIDCLOSE)
-//  988              || (status == S2W_SOCKFAILURE))
+//  987                 }
+//  988             }
+//  989         }
+//  990     }
+//  991     else if ((status == S2W_CON_SUCCESS) || (status == S2W_ECIDCLOSE)
+//  992              || (status == S2W_SOCKFAILURE))
 ??AppS2wProcess_StatusNotify_11:
-        CMP      R5,#+7
+        CMP      R4,#+7
         ITT      NE 
-        CMPNE    R5,#+8
-        CMPNE    R5,#+3
+        CMPNE    R4,#+8
+        CMPNE    R4,#+3
         BNE.N    ??AppS2wProcess_StatusNotify_20
-//  989     {
-//  990         S2w_Printf("\r\n%d %x\r\n", status, arg);
+//  993     {
+//  994         S2w_Printf("\r\n%d %x\r\n", status, arg);
         MOV      R2,R8
-        MOV      R1,R5
+        MOV      R1,R4
         ADR.W    R0,`?<Constant "\\r\\n%d %x\\r\\n">`
         B.N      ??AppS2wProcess_StatusNotify_17
-//  991         //if((status == S2W_ECIDCLOSE) || (status == S2W_SOCKFAILURE))
-//  992         {
-//  993             //s2wState = S2W_STATE_CMD;
-//  994             //dataIndex = 0;
-//  995         }
-//  996     }
-//  997     else if (s2wState == S2W_STATE_DATA)
+//  995         //if((status == S2W_ECIDCLOSE) || (status == S2W_SOCKFAILURE))
+//  996         {
+//  997             //s2wState = S2W_STATE_CMD;
+//  998             //dataIndex = 0;
+//  999         }
+// 1000     }
+// 1001     else if (s2wState == S2W_STATE_DATA)
 ??AppS2wProcess_StatusNotify_20:
-        CMP      R1,#+1
+        CMP      R0,#+1
         BNE.N    ??AppS2wProcess_StatusNotify_21
-//  998     {
-//  999         S2w_Printf("%c%d", S2W_ESC, status);
+// 1002     {
+// 1003         S2w_Printf("%c%d", S2W_ESC, status);
         ADR.W    R0,`?<Constant "%c%d">`
-        MOV      R2,R5
+        MOV      R2,R4
         MOVS     R1,#+27
 ??AppS2wProcess_StatusNotify_17:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
         B.N      ??AppS2wProcess_StatusNotify_19
-// 1000     }
-// 1001     else if(status == S2W_EXTPA_INITIAL_BOOT_MSG)
+// 1004     }
+// 1005     else if(status == S2W_EXTPA_INITIAL_BOOT_MSG)
 ??AppS2wProcess_StatusNotify_21:
         ADR.W    R0,`?<Constant "\\r\\n%d\\r\\n">`
-        CMP      R5,#+17
+        CMP      R4,#+17
         ITE      EQ 
         MOVEQ    R1,#+17
-        MOVNE    R1,R5
-// 1002     {
-// 1003          //status =  status -1;
-// 1004          S2w_Printf("\r\n%d\r\n", status);
-// 1005     }
-// 1006     else
-// 1007     {
-// 1008         S2w_Printf("\r\n%d\r\n", status);
+        MOVNE    R1,R4
+// 1006     {
+// 1007          //status =  status -1;
+// 1008          S2w_Printf("\r\n%d\r\n", status);
+// 1009     }
+// 1010     else
+// 1011     {
+// 1012         S2w_Printf("\r\n%d\r\n", status);
 ??AppS2wProcess_StatusNotify_13:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 1009     }
-// 1010     if((s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)&&(S2W_CON_SUCCESS != status))
+// 1013     }
+// 1014     if((s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)&&(S2W_CON_SUCCESS != status))
 ??AppS2wProcess_StatusNotify_19:
-        LDR      R0,[R7, #+0]
-        LDRB     R0,[R4, R0]
+        LDR      R0,[R10, #+0]
+        LDRB     R0,[R6, R0]
         CMP      R0,#+2
         BNE.N    ??AppS2wProcess_StatusNotify_3
-        CMP      R5,#+7
+        CMP      R4,#+7
         BEQ.N    ??AppS2wProcess_StatusNotify_3
-// 1011     {
-// 1012         s2wSpiFs_Flush();
+// 1015     {
+// 1016         s2wSpiFs_Flush();
 ??AppS2wProcess_StatusNotify_10:
         POP      {R0,R4-R8,R10,LR}
           CFI R4 SameValue
@@ -2311,8 +2328,8 @@ AppS2wProcess_StatusNotify:
           CFI R10 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+32
-// 1013     }
-// 1014 }
+// 1017     }
+// 1018 }
 ??AppS2wProcess_StatusNotify_3:
         POP      {R0,R4-R8,R10,PC}  ;; return
           CFI EndBlock cfiBlock14
@@ -2337,6 +2354,13 @@ AppS2wProcess_StatusNotify:
 `?<Constant "%s%s\\r\\n">`:
         DC8 "%s%s\015\012"
         DC8 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n RESET PRINT 01">`:
+        DC8 "\015\012 RESET PRINT 01"
+        DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -2379,117 +2403,117 @@ AppS2wProcess_StatusNotify:
 `?<Constant "\\r\\n%d\\r\\n">`:
         DC8 "\015\012%d\015\012"
         DC8 0
-// 1015 
-// 1016 
-// 1017 /**
-// 1018  ************************************************************************
-// 1019  * @ingroup S2w-Application
-// 1020  * @brief Notify the status of an event.
-// 1021  *   This function is getting called once any asynchronous
-// 1022  *   events(disassociation) happened.
-// 1023  * @retval VOID - none.
-// 1024  ************************************************************************/
-// 1025 
+// 1019 
+// 1020 
+// 1021 /**
+// 1022  ************************************************************************
+// 1023  * @ingroup S2w-Application
+// 1024  * @brief Notify the status of an event.
+// 1025  *   This function is getting called once any asynchronous
+// 1026  *   events(disassociation) happened.
+// 1027  * @retval VOID - none.
+// 1028  ************************************************************************/
+// 1029 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock15 Using cfiCommon0
           CFI Function AppS2wProcess_EventNotify
         THUMB
-// 1026 PUBLIC VOID
-// 1027 AppS2wProcess_EventNotify(UINT8 flag)
-// 1028 {
+// 1030 PUBLIC VOID
+// 1031 AppS2wProcess_EventNotify(UINT8 flag)
+// 1032 {
 AppS2wProcess_EventNotify:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-// 1029 
-// 1030 
-// 1031     if(flag)
-        LDR.W    R4,??DataTable114_5
+// 1033 
+// 1034 
+// 1035     if(flag)
+        LDR.W    R4,??DataTable116_4
         CBZ.N    R0,??AppS2wProcess_EventNotify_0
-// 1032     {
-// 1033         AppS2wHal_Disassociate(flag);
+// 1036     {
+// 1037         AppS2wHal_Disassociate(flag);
           CFI FunCall AppS2wHal_Disassociate
         BL       AppS2wHal_Disassociate
         B.N      ??AppS2wProcess_EventNotify_1
-// 1034     }
-// 1035 	else
-// 1036 	{
-// 1037     /* close all cids opened
-// 1038      */
-// 1039 #ifndef S2W_IP2WIFI_SUPPORT
-// 1040 		AppS2wHal_HttpdClose(1);
+// 1038     }
+// 1039 	else
+// 1040 	{
+// 1041     /* close all cids opened
+// 1042      */
+// 1043 #ifndef S2W_IP2WIFI_SUPPORT
+// 1044 		AppS2wHal_HttpdClose(1);
 ??AppS2wProcess_EventNotify_0:
         MOVS     R0,#+1
           CFI FunCall AppS2wHal_HttpdClose
         BL       AppS2wHal_HttpdClose
-// 1041 #ifdef GSN_MDNS_ENABLE     
-// 1042 		AppS2wHal_MdnsDeInit(parentTask);
-// 1043 #endif	
-// 1044     AppS2wHal_NetCloseAll(1);
+// 1045 #ifdef GSN_MDNS_ENABLE     
+// 1046 		AppS2wHal_MdnsDeInit(parentTask);
+// 1047 #endif	
+// 1048     AppS2wHal_NetCloseAll(1);
         MOVS     R0,#+1
           CFI FunCall AppS2wHal_NetCloseAll
         BL       AppS2wHal_NetCloseAll
-// 1045 #ifdef S2W_DHCP_SERVER_ENABLE        
-// 1046 	if(dhcpServerFlags & S2W_DHCP_SRVR_ENABLED)
-        LDR.W    R5,??DataTable120
+// 1049 #ifdef S2W_DHCP_SERVER_ENABLE        
+// 1050 	if(dhcpServerFlags & S2W_DHCP_SRVR_ENABLED)
+        LDR.W    R5,??DataTable122
         LDRB     R0,[R5, #+0]
         LSLS     R0,R0,#+31
         BPL.N    ??AppS2wProcess_EventNotify_2
-// 1047 	{
-// 1048 		GsnDhcpSrvr_Stop(&dhcpSrvr);
-        LDR.W    R0,??DataTable120_1
+// 1051 	{
+// 1052 		GsnDhcpSrvr_Stop(&dhcpSrvr);
+        LDR.W    R0,??DataTable122_1
           CFI FunCall GsnDhcpSrvr_Stop
         BL       GsnDhcpSrvr_Stop
-// 1049 		dhcpServerFlags &= 0xfe;
+// 1053 		dhcpServerFlags &= 0xfe;
         LDRB     R0,[R5, #+0]
         AND      R0,R0,#0xFE
         STRB     R0,[R5, #+0]
-// 1050 	}
-// 1051 #endif   
-// 1052     curCid = INVALID_CID;
+// 1054 	}
+// 1055 #endif   
+// 1056     curCid = INVALID_CID;
 ??AppS2wProcess_EventNotify_2:
         MOVS     R0,#+255
         STRB     R0,[R4, #+5]
-// 1053     
-// 1054     GsnNwIf_Close(&s2wappMainTaskCtxt->if0.nwifCtx);
-        LDR.W    R0,??DataTable114_2
+// 1057     
+// 1058     GsnNwIf_Close(&s2wappMainTaskCtxt->if0.nwifCtx);
+        LDR.W    R0,??DataTable116_2
         LDR      R0,[R0, #+0]
         ADD      R0,R0,#+5120
         ADDS     R0,R0,#+80
           CFI FunCall GsnNwIf_Close
         BL       GsnNwIf_Close
-// 1055     /* Release L3 connect semaphore if dhcp process is going on */
-// 1056     if(S2wL3Wait)
-        LDR.W    R0,??DataTable121
+// 1059     /* Release L3 connect semaphore if dhcp process is going on */
+// 1060     if(S2wL3Wait)
+        LDR.W    R0,??DataTable123
         LDR      R0,[R0, #+0]
         CBZ.N    R0,??AppS2wProcess_EventNotify_1
-// 1057       DHCP_notify(GSN_FAILURE,NULL);
+// 1061       DHCP_notify(GSN_FAILURE,NULL);
         MOVS     R1,#+0
         MOV      R0,#-2147483648
           CFI FunCall DHCP_notify
         BL       DHCP_notify
-// 1058 #endif
-// 1059 	}
-// 1060         /* make s2w associate state disconnected
-// 1061          */
-// 1062      s2wLinkState = S2W_LINK_STATE_DISCONNECTED;
+// 1062 #endif
+// 1063 	}
+// 1064         /* make s2w associate state disconnected
+// 1065          */
+// 1066      s2wLinkState = S2W_LINK_STATE_DISCONNECTED;
 ??AppS2wProcess_EventNotify_1:
         MOVS     R0,#+0
         STRB     R0,[R4, #+1]
-// 1063 
-// 1064     /* call the status notification function
-// 1065      */
-// 1066     dataIndex = 0;
+// 1067 
+// 1068     /* call the status notification function
+// 1069      */
+// 1070     dataIndex = 0;
         STR      R0,[R4, #+44]
-// 1067     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1071     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
         MOV      R1,#-1
-        LDR.W    R5,??DataTable122
+        LDR.W    R5,??DataTable124
         BL       ??Subroutine23_0
-// 1068 //    AppS2wProcess_StatusNotify(S2W_DISASSO_EVT, 0);
-// 1069     if((!s2wAutoConnState ) ||(( s2wState == S2W_STATE_CMD) && (s2wIsAutoconnected)))
+// 1072 //    AppS2wProcess_StatusNotify(S2W_DISASSO_EVT, 0);
+// 1073     if((!s2wAutoConnState ) ||(( s2wState == S2W_STATE_CMD) && (s2wIsAutoconnected)))
 ??CrossCallReturnLabel_62:
         LDRB     R0,[R4, #+4]
         CBZ.N    R0,??AppS2wProcess_EventNotify_3
@@ -2497,131 +2521,131 @@ AppS2wProcess_EventNotify:
         CBNZ.N   R0,??AppS2wProcess_EventNotify_4
         LDRB     R0,[R4, #+3]
         CBZ.N    R0,??AppS2wProcess_EventNotify_4
-// 1070     {
-// 1071 #ifdef S2W_ASYNC_MSG
-// 1072 	if(s2wCurrent.asyncMsgFormat)
+// 1074     {
+// 1075 #ifdef S2W_ASYNC_MSG
+// 1076 	if(s2wCurrent.asyncMsgFormat)
 ??AppS2wProcess_EventNotify_3:
-        BL       ?Subroutine16
-??CrossCallReturnLabel_43:
+        BL       ?Subroutine20
+??CrossCallReturnLabel_54:
         CBZ.N    R0,??AppS2wProcess_EventNotify_5
-// 1073 	{
-// 1074 		AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_DISASSO_EVT, 0);
+// 1077 	{
+// 1078 		AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_DISASSO_EVT, 0);
         MOVS     R1,#+0
         MOVS     R0,#+3
           CFI FunCall AppS2wProcess_AsyncStatusNotify
         BL       AppS2wProcess_AsyncStatusNotify
         B.N      ??AppS2wProcess_EventNotify_4
-// 1075 
-// 1076 	}
-// 1077 	else
-// 1078 #endif
-// 1079 	{
-// 1080 		AppS2wProcess_StatusNotify(S2W_DISASSO_EVT, 0);
+// 1079 
+// 1080 	}
+// 1081 	else
+// 1082 #endif
+// 1083 	{
+// 1084 		AppS2wProcess_StatusNotify(S2W_DISASSO_EVT, 0);
 ??AppS2wProcess_EventNotify_5:
         MOVS     R1,#+0
         MOVS     R0,#+10
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 1081 	}
-// 1082     }
-// 1083     GsnOsal_SemRelease(&s2wSyncSemID);
+// 1085 	}
+// 1086     }
+// 1087     GsnOsal_SemRelease(&s2wSyncSemID);
 ??AppS2wProcess_EventNotify_4:
         MOV      R0,R5
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 1084     s2wState = S2W_STATE_CMD;
+// 1088     s2wState = S2W_STATE_CMD;
         MOVS     R0,#+0
         STRB     R0,[R4, #+0]
-// 1085     s2wIsAutoconnected = 0;
+// 1089     s2wIsAutoconnected = 0;
         STRB     R0,[R4, #+3]
-// 1086 }
+// 1090 }
         POP      {R0,R4,R5,PC}    ;; return
           CFI EndBlock cfiBlock15
-// 1087 
-// 1088 
-// 1089 /**
-// 1090  ************************************************************************
-// 1091  * @ingroup S2w-Application
-// 1092  * @brief Notify the status of dhcp fail event.
-// 1093  *   This function sends the status information of dhcp fail event
-// 1094  *   to the serial interface.
-// 1095  * @param none.
-// 1096  * @retval VOID  - none.
-// 1097  ************************************************************************/
-// 1098 
+// 1091 
+// 1092 
+// 1093 /**
+// 1094  ************************************************************************
+// 1095  * @ingroup S2w-Application
+// 1096  * @brief Notify the status of dhcp fail event.
+// 1097  *   This function sends the status information of dhcp fail event
+// 1098  *   to the serial interface.
+// 1099  * @param none.
+// 1100  * @retval VOID  - none.
+// 1101  ************************************************************************/
+// 1102 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock16 Using cfiCommon0
           CFI Function AppS2wProcess_DhcpFailNotify
         THUMB
-// 1099 PUBLIC VOID
-// 1100 AppS2wProcess_DhcpFailNotify()
-// 1101 {
+// 1103 PUBLIC VOID
+// 1104 AppS2wProcess_DhcpFailNotify()
+// 1105 {
 AppS2wProcess_DhcpFailNotify:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-// 1102      s2wIsAutoconnected = 0;
+// 1106      s2wIsAutoconnected = 0;
         BL       ?Subroutine2
-// 1103      /* close all cids opened
-// 1104       */
-// 1105 #ifndef S2W_IP2WIFI_SUPPORT
-// 1106      AppS2wHal_NetCloseAll(1);
-// 1107      curCid = INVALID_CID;
+// 1107      /* close all cids opened
+// 1108       */
+// 1109 #ifndef S2W_IP2WIFI_SUPPORT
+// 1110      AppS2wHal_NetCloseAll(1);
+// 1111      curCid = INVALID_CID;
 ??CrossCallReturnLabel_6:
         MOVS     R0,#+255
         STRB     R0,[R4, #+5]
-// 1108      s2wState = S2W_STATE_CMD;
+// 1112      s2wState = S2W_STATE_CMD;
         MOVS     R0,#+0
-// 1109 
-// 1110 #endif
-// 1111      dataIndex = 0;
-// 1112 	 if(s2wappMainTaskCtxt->dpSleep )
-        LDR.W    R1,??DataTable114_2
+// 1113 
+// 1114 #endif
+// 1115      dataIndex = 0;
+// 1116 	 if(s2wappMainTaskCtxt->dpSleep )
+        LDR.W    R1,??DataTable116_2
         STRB     R0,[R4, #+0]
         STR      R0,[R4, #+44]
         MOVW     R0,#+27388
         LDR      R1,[R1, #+0]
         LDR      R0,[R0, R1]
         CBZ.N    R0,??AppS2wProcess_DhcpFailNotify_0
-// 1113 	 {
-// 1114 	 	AppS2w_ExitDpSleep();
+// 1117 	 {
+// 1118 	 	AppS2w_ExitDpSleep();
           CFI FunCall AppS2w_ExitDpSleep
         BL       AppS2w_ExitDpSleep
-// 1115 	 }
-// 1116      GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1119 	 }
+// 1120      GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
 ??AppS2wProcess_DhcpFailNotify_0:
         BL       ?Subroutine6
-// 1117     if(!s2wAutoConnState )
+// 1121     if(!s2wAutoConnState )
 ??CrossCallReturnLabel_67:
         LDRB     R0,[R4, #+4]
         CBNZ.N   R0,??AppS2wProcess_DhcpFailNotify_1
-// 1118     {
-// 1119      if(s2wCurrent.asyncMsgFormat)
-        BL       ?Subroutine16
-??CrossCallReturnLabel_44:
+// 1122     {
+// 1123      if(s2wCurrent.asyncMsgFormat)
+        BL       ?Subroutine20
+??CrossCallReturnLabel_55:
         CBZ.N    R0,??AppS2wProcess_DhcpFailNotify_2
-// 1120      {
-// 1121          AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_DHCP_FAIL_EVT, 0);
+// 1124      {
+// 1125          AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_DHCP_FAIL_EVT, 0);
         MOVS     R1,#+0
         MOVS     R0,#+8
           CFI FunCall AppS2wProcess_AsyncStatusNotify
         BL       AppS2wProcess_AsyncStatusNotify
         B.N      ??AppS2wProcess_DhcpFailNotify_1
-// 1122      }
-// 1123      else
-// 1124     {
-// 1125         AppS2wProcess_StatusNotify(S2W_ENOIP, 0);
+// 1126      }
+// 1127      else
+// 1128     {
+// 1129         AppS2wProcess_StatusNotify(S2W_ENOIP, 0);
 ??AppS2wProcess_DhcpFailNotify_2:
         MOVS     R1,#+0
         MOVS     R0,#+15
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 1126     }
-// 1127 	}
-// 1128     GsnOsal_SemRelease(&s2wSyncSemID);
+// 1130     }
+// 1131 	}
+// 1132     GsnOsal_SemRelease(&s2wSyncSemID);
 ??AppS2wProcess_DhcpFailNotify_1:
         MOV      R0,R5
         POP      {R1,R4,R5,LR}
@@ -2632,7 +2656,7 @@ AppS2wProcess_DhcpFailNotify:
           CFI FunCall GsnOsal_SemRelease
         B.W      GsnOsal_SemRelease
           CFI EndBlock cfiBlock16
-// 1129 }
+// 1133 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond17 Using cfiCommon0
@@ -2675,7 +2699,7 @@ AppS2wProcess_DhcpFailNotify:
           CFI (cfiPicker20) Picker
         THUMB
 ?Subroutine6:
-        LDR.W    R5,??DataTable122
+        LDR.W    R5,??DataTable124
           CFI Block cfiCond21 Using cfiCommon0
           CFI (cfiCond21) Function AppS2w_DataCharProcess
           CFI (cfiCond21) NoCalls AppS2wProcess_DhcpFailNotify
@@ -2780,16 +2804,16 @@ AppS2wProcess_DhcpFailNotify:
           CFI EndBlock cfiCond27
           CFI EndBlock cfiCond28
           CFI EndBlock cfiPicker29
-// 1130 
-// 1131 
+// 1134 
+// 1135 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock30 Using cfiCommon0
           CFI Function AppS2wProcess_DhcpIpChangeNotify
         THUMB
-// 1132 PUBLIC VOID
-// 1133 AppS2wProcess_DhcpIpChangeNotify()
-// 1134 {
+// 1136 PUBLIC VOID
+// 1137 AppS2wProcess_DhcpIpChangeNotify()
+// 1138 {
 AppS2wProcess_DhcpIpChangeNotify:
         PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
@@ -2797,72 +2821,72 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI R5 Frame(CFA, -12)
           CFI R4 Frame(CFA, -16)
           CFI CFA R13+16
-// 1135 
-// 1136      s2wIsAutoconnected = 0;
-        BL       ?Subroutine2
-// 1137      /* close all cids opened
-// 1138       */
 // 1139 
-// 1140      AppS2wHal_NetCloseAll(1);
-// 1141      curCid = INVALID_CID;
+// 1140      s2wIsAutoconnected = 0;
+        BL       ?Subroutine2
+// 1141      /* close all cids opened
+// 1142       */
+// 1143 
+// 1144      AppS2wHal_NetCloseAll(1);
+// 1145      curCid = INVALID_CID;
 ??CrossCallReturnLabel_5:
         MOVS     R0,#+255
         STRB     R0,[R4, #+5]
-// 1142      s2wState = S2W_STATE_CMD;
+// 1146      s2wState = S2W_STATE_CMD;
         MOVS     R0,#+0
-// 1143      dataIndex = 0;
-// 1144 	 if(s2wappMainTaskCtxt->dpSleep )
-        LDR.N    R5,??DataTable114_2
+// 1147      dataIndex = 0;
+// 1148 	 if(s2wappMainTaskCtxt->dpSleep )
+        LDR.N    R5,??DataTable116_2
         STRB     R0,[R4, #+0]
         STR      R0,[R4, #+44]
         MOVW     R0,#+27388
         LDR      R1,[R5, #+0]
         LDR      R0,[R0, R1]
         CBZ.N    R0,??AppS2wProcess_DhcpIpChangeNotify_0
-// 1145 	 {
-// 1146 	 	AppS2w_ExitDpSleep();
+// 1149 	 {
+// 1150 	 	AppS2w_ExitDpSleep();
           CFI FunCall AppS2w_ExitDpSleep
         BL       AppS2w_ExitDpSleep
-// 1147 	 }
-// 1148      GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1151 	 }
+// 1152      GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
 ??AppS2wProcess_DhcpIpChangeNotify_0:
         BL       ?Subroutine17
-// 1149      if(!s2wAutoConnState )
-??CrossCallReturnLabel_48:
+// 1153      if(!s2wAutoConnState )
+??CrossCallReturnLabel_49:
         LDRB     R0,[R4, #+4]
         CBNZ.N   R0,??AppS2wProcess_DhcpIpChangeNotify_1
-// 1150      {
-// 1151     if(s2wCurrent.asyncMsgFormat)
-        BL       ?Subroutine16
-??CrossCallReturnLabel_45:
+// 1154      {
+// 1155     if(s2wCurrent.asyncMsgFormat)
+        BL       ?Subroutine20
+??CrossCallReturnLabel_56:
         CBZ.N    R0,??AppS2wProcess_DhcpIpChangeNotify_2
-// 1152     {
-// 1153         AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_DHCP_NEW_IP, 0);
+// 1156     {
+// 1157         AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_DHCP_NEW_IP, 0);
         MOVS     R1,#+0
         MOVS     R0,#+13
           CFI FunCall AppS2wProcess_AsyncStatusNotify
         BL       AppS2wProcess_AsyncStatusNotify
         B.N      ??AppS2wProcess_DhcpIpChangeNotify_3
-// 1154 
-// 1155     }
-// 1156     else
-// 1157     {
-// 1158         AppS2wProcess_StatusNotify(S2W_ENEWIP, 0);
+// 1158 
+// 1159     }
+// 1160     else
+// 1161     {
+// 1162         AppS2wProcess_StatusNotify(S2W_ENEWIP, 0);
 ??AppS2wProcess_DhcpIpChangeNotify_2:
         MOVS     R1,#+0
         MOVS     R0,#+19
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 1159 }
-// 1160     AppS2wHdrAndIpv4_Print();
+// 1163 }
+// 1164     AppS2wHdrAndIpv4_Print();
 ??AppS2wProcess_DhcpIpChangeNotify_3:
           CFI FunCall AppS2wHdrAndIpv4_Print
         BL       AppS2wHdrAndIpv4_Print
-// 1161     S2w_Printf("\r\n");
-        ADR.N    R0,??DataTable114  ;; 0x0D, 0x0A, 0x00, 0x00
+// 1165     S2w_Printf("\r\n");
+        ADR.N    R0,??DataTable116  ;; 0x0D, 0x0A, 0x00, 0x00
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 1162     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 1166     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
         LDR      R1,[R5, #+0]
         MOVW     R0,#+27384
         LDRB     R0,[R0, R1]
@@ -2870,11 +2894,11 @@ AppS2wProcess_DhcpIpChangeNotify:
         IT       EQ 
           CFI FunCall s2wSpiFs_Flush
         BLEQ     s2wSpiFs_Flush
-// 1163     {
-// 1164         s2wSpiFs_Flush();
-// 1165     }
-// 1166     }
-// 1167     GsnOsal_SemRelease(&s2wSyncSemID);
+// 1167     {
+// 1168         s2wSpiFs_Flush();
+// 1169     }
+// 1170     }
+// 1171     GsnOsal_SemRelease(&s2wSyncSemID);
 ??AppS2wProcess_DhcpIpChangeNotify_1:
         MOV      R0,R6
         POP      {R4-R6,LR}
@@ -2886,7 +2910,7 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI FunCall GsnOsal_SemRelease
         B.W      GsnOsal_SemRelease
           CFI EndBlock cfiBlock30
-// 1168 }
+// 1172 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond31 Using cfiCommon0
@@ -2895,7 +2919,7 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI NoCalls
           CFI NoCalls
           CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_43
+          CFI Conditional ??CrossCallReturnLabel_54
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
@@ -2903,10 +2927,10 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI Block cfiCond32 Using cfiCommon0
           CFI (cfiCond32) Function AppS2wProcess_DhcpFailNotify
           CFI (cfiCond32) NoCalls AppS2wProcess_EventNotify
-          CFI (cfiCond32) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiCond32) NoCalls AppS2wProcess_DhcpFailNotify
+          CFI (cfiCond32) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiCond32) NoCalls AppS2wRoam_SatusNotify
-          CFI (cfiCond32) Conditional ??CrossCallReturnLabel_44
+          CFI (cfiCond32) Conditional ??CrossCallReturnLabel_55
           CFI (cfiCond32) R4 Frame(CFA, -12)
           CFI (cfiCond32) R5 Frame(CFA, -8)
           CFI (cfiCond32) R14 Frame(CFA, -4)
@@ -2914,10 +2938,10 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI Block cfiCond33 Using cfiCommon0
           CFI (cfiCond33) Function AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiCond33) NoCalls AppS2wProcess_EventNotify
-          CFI (cfiCond33) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiCond33) NoCalls AppS2wProcess_DhcpFailNotify
+          CFI (cfiCond33) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiCond33) NoCalls AppS2wRoam_SatusNotify
-          CFI (cfiCond33) Conditional ??CrossCallReturnLabel_45
+          CFI (cfiCond33) Conditional ??CrossCallReturnLabel_56
           CFI (cfiCond33) R4 Frame(CFA, -16)
           CFI (cfiCond33) R5 Frame(CFA, -12)
           CFI (cfiCond33) R6 Frame(CFA, -8)
@@ -2926,10 +2950,10 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI Block cfiCond34 Using cfiCommon0
           CFI (cfiCond34) Function AppS2wRoam_SatusNotify
           CFI (cfiCond34) NoCalls AppS2wProcess_EventNotify
-          CFI (cfiCond34) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiCond34) NoCalls AppS2wProcess_DhcpFailNotify
+          CFI (cfiCond34) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiCond34) NoCalls AppS2wRoam_SatusNotify
-          CFI (cfiCond34) Conditional ??CrossCallReturnLabel_46
+          CFI (cfiCond34) Conditional ??CrossCallReturnLabel_57
           CFI (cfiCond34) R4 Frame(CFA, -16)
           CFI (cfiCond34) R5 Frame(CFA, -12)
           CFI (cfiCond34) R6 Frame(CFA, -8)
@@ -2938,13 +2962,13 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI Block cfiPicker35 Using cfiCommon1
           CFI (cfiPicker35) NoFunction
           CFI (cfiPicker35) NoCalls AppS2wProcess_EventNotify
-          CFI (cfiPicker35) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiPicker35) NoCalls AppS2wProcess_DhcpFailNotify
+          CFI (cfiPicker35) NoCalls AppS2wProcess_DhcpIpChangeNotify
           CFI (cfiPicker35) NoCalls AppS2wRoam_SatusNotify
           CFI (cfiPicker35) Picker
         THUMB
-?Subroutine16:
-        LDR.N    R0,??DataTable114_7
+?Subroutine20:
+        LDR.N    R0,??DataTable116_6
         LDRB     R0,[R0, #+472]
         BX       LR
           CFI EndBlock cfiCond31
@@ -2974,7 +2998,7 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI (cfiPicker38) Picker
         THUMB
 ?Subroutine2:
-        LDR.N    R4,??DataTable114_5
+        LDR.N    R4,??DataTable116_4
         MOVS     R0,#+0
         STRB     R0,[R4, #+3]
         MOVS     R0,#+1
@@ -2984,121 +3008,121 @@ AppS2wProcess_DhcpIpChangeNotify:
           CFI EndBlock cfiCond36
           CFI EndBlock cfiCond37
           CFI EndBlock cfiPicker38
-// 1169 
-// 1170 
+// 1173 
+// 1174 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock39 Using cfiCommon0
           CFI Function AppS2wProcess_DhcpStop
         THUMB
-// 1171  PUBLIC VOID
-// 1172  AppS2wProcess_DhcpStop()
-// 1173  {
-// 1174    GsnNwIf_DhcpStop(&s2wappMainTaskCtxt->if0.nwifCtx);
+// 1175  PUBLIC VOID
+// 1176  AppS2wProcess_DhcpStop()
+// 1177  {
+// 1178    GsnNwIf_DhcpStop(&s2wappMainTaskCtxt->if0.nwifCtx);
 AppS2wProcess_DhcpStop:
-        LDR.N    R0,??DataTable114_2
+        LDR.N    R0,??DataTable116_2
         LDR      R0,[R0, #+0]
         ADD      R0,R0,#+5120
         ADDS     R0,R0,#+80
           CFI FunCall GsnNwIf_DhcpStop
         B.W      GsnNwIf_DhcpStop
           CFI EndBlock cfiBlock39
-// 1175  }
-// 1176 
-// 1177  
+// 1179  }
+// 1180 
+// 1181  
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock40 Using cfiCommon0
           CFI Function AppS2wProcess_IpConflict
         THUMB
-// 1178 PUBLIC VOID
-// 1179 AppS2wProcess_IpConflict()
-// 1180  {
+// 1182 PUBLIC VOID
+// 1183 AppS2wProcess_IpConflict()
+// 1184  {
 AppS2wProcess_IpConflict:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-// 1181 	UINT8 status;
-// 1182     
-// 1183     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1185 	UINT8 status;
+// 1186     
+// 1187     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
         BL       ?Subroutine18
-// 1184      if(s2wCurrent.asyncMsgFormat)
-??CrossCallReturnLabel_50:
-        LDR.N    R5,??DataTable114_7
+// 1188      if(s2wCurrent.asyncMsgFormat)
+??CrossCallReturnLabel_51:
+        LDR.N    R5,??DataTable116_6
         LDRB     R0,[R5, #+472]
         CBZ.N    R0,??AppS2wProcess_IpConflict_0
-// 1185     {
-// 1186         AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_DHCP_IP_CONFLICT, 0);
+// 1189     {
+// 1190         AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_DHCP_IP_CONFLICT, 0);
         MOVS     R1,#+0
         MOVS     R0,#+25
           CFI FunCall AppS2wProcess_AsyncStatusNotify
         BL       AppS2wProcess_AsyncStatusNotify
         B.N      ??AppS2wProcess_IpConflict_1
-// 1187 
-// 1188     }
-// 1189     else
-// 1190     {
-// 1191         AppS2wProcess_StatusNotify(S2W_DHCP_IP_CONFLICT, 0);
+// 1191 
+// 1192     }
+// 1193     else
+// 1194     {
+// 1195         AppS2wProcess_StatusNotify(S2W_DHCP_IP_CONFLICT, 0);
 ??AppS2wProcess_IpConflict_0:
         MOVS     R1,#+0
         MOVS     R0,#+31
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 1192     }
-// 1193     GsnOsal_SemRelease(&s2wSyncSemID);
+// 1196     }
+// 1197     GsnOsal_SemRelease(&s2wSyncSemID);
 ??AppS2wProcess_IpConflict_1:
         MOV      R0,R4
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 1194     
-// 1195      s2wCurrent.netConf.dhcp = 0;
+// 1198     
+// 1199      s2wCurrent.netConf.dhcp = 0;
         MOVS     R0,#+0
         STRB     R0,[R5, #+392]
-// 1196      status = AppS2wHal_NetworkConfig(&s2wCurrent.netConf);
-// 1197     if((status == S2W_SUCCESS) )
+// 1200      status = AppS2wHal_NetworkConfig(&s2wCurrent.netConf);
+// 1201     if((status == S2W_SUCCESS) )
         ADD      R0,R5,#+392
           CFI FunCall AppS2wHal_NetworkConfig
         BL       AppS2wHal_NetworkConfig
         CBNZ.N   R0,??AppS2wProcess_IpConflict_2
-// 1198       {
-// 1199          nx_arp_gratuitous_send(&s2wappMainTaskCtxt->if0.nwifCtx.ipHndl,NULL);
-        LDR.N    R0,??DataTable114_2
+// 1202       {
+// 1203          nx_arp_gratuitous_send(&s2wappMainTaskCtxt->if0.nwifCtx.ipHndl,NULL);
+        LDR.N    R0,??DataTable116_2
         LDR      R0,[R0, #+0]
         MOVS     R1,#+0
         ADD      R0,R0,#+5216
           CFI FunCall _nxe_arp_gratuitous_send
         BL       _nxe_arp_gratuitous_send
-// 1200       }
-// 1201      S2wL3Wait = FALSE;
+// 1204       }
+// 1205      S2wL3Wait = FALSE;
 ??AppS2wProcess_IpConflict_2:
-        LDR.W    R0,??DataTable121
+        LDR.W    R0,??DataTable123
         MOVS     R1,#+0
         STR      R1,[R0, #+0]
-// 1202  }
+// 1206  }
         POP      {R0,R4,R5,PC}    ;; return
           CFI EndBlock cfiBlock40
-// 1203  
-// 1204 /**
-// 1205  ************************************************************************
-// 1206  * @ingroup S2w-Application
-// 1207  * @brief Accept a new connection for a TCP server
-// 1208  * @param serverCid - IN connection identifier of the server
-// 1209  * @param newCid    - IN connection identifier of the new connection
-// 1210  * @param ip        - IN IP address (only for new connection notification)
-// 1211  * @param port      - IN Port (only for new connection notification)
-// 1212  * @return S2W_SUCCESS on success.  If any other status, the connection must be
-// 1213  *                                   closed.
-// 1214  ************************************************************************/
+// 1207  
+// 1208 /**
+// 1209  ************************************************************************
+// 1210  * @ingroup S2w-Application
+// 1211  * @brief Accept a new connection for a TCP server
+// 1212  * @param serverCid - IN connection identifier of the server
+// 1213  * @param newCid    - IN connection identifier of the new connection
+// 1214  * @param ip        - IN IP address (only for new connection notification)
+// 1215  * @param port      - IN Port (only for new connection notification)
+// 1216  * @return S2W_SUCCESS on success.  If any other status, the connection must be
+// 1217  *                                   closed.
+// 1218  ************************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock41 Using cfiCommon0
           CFI Function AppS2wProcess_NetAccept
         THUMB
-// 1215 PUBLIC UINT8
-// 1216 AppS2wProcess_NetAccept(UINT8 serverCid, UINT8 newCid, UINT8 *ip,UINT16 port)
-// 1217 {
+// 1219 PUBLIC UINT8
+// 1220 AppS2wProcess_NetAccept(UINT8 serverCid, UINT8 newCid, UINT8 *ip,UINT16 port)
+// 1221 {
 AppS2wProcess_NetAccept:
         PUSH     {R4-R11,LR}
           CFI R14 Frame(CFA, -4)
@@ -3111,8 +3135,8 @@ AppS2wProcess_NetAccept:
           CFI R5 Frame(CFA, -32)
           CFI R4 Frame(CFA, -36)
           CFI CFA R13+36
-// 1218     if (s2wIsAutoconnected)
-        LDR.N    R5,??DataTable114_5
+// 1222     if (s2wIsAutoconnected)
+        LDR.N    R5,??DataTable116_4
         SUB      SP,SP,#+76
           CFI CFA R13+112
         MOV      R11,R0
@@ -3121,46 +3145,46 @@ AppS2wProcess_NetAccept:
         MOV      R4,R2
         MOV      R7,R3
         CBZ.N    R0,??AppS2wProcess_NetAccept_0
-// 1219     {
-// 1220         /* TCP server already has a client, reject this one */
-// 1221         if (curCid != INVALID_CID)
+// 1223     {
+// 1224         /* TCP server already has a client, reject this one */
+// 1225         if (curCid != INVALID_CID)
         LDRB     R0,[R5, #+5]
         CMP      R0,#+255
         IT       NE 
         MOVNE    R0,#+1
-// 1222         {
-// 1223             return S2W_FAILURE;
+// 1226         {
+// 1227             return S2W_FAILURE;
         BNE.N    ??AppS2wProcess_NetAccept_1
-// 1224         }
-// 1225 
-// 1226         curCid = newCid;
+// 1228         }
+// 1229 
+// 1230         curCid = newCid;
         STRB     R8,[R5, #+5]
-// 1227     }
-// 1228 
-// 1229    GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1231     }
+// 1232 
+// 1233    GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
 ??AppS2wProcess_NetAccept_0:
-        LDR.W    R9,??DataTable122
+        LDR.W    R9,??DataTable124
         BL       ?Subroutine11
 ??CrossCallReturnLabel_32:
-        LDR.W    R0,??DataTable127_1
+        LDR.W    R0,??DataTable129_1
         LDRB     R1,[R5, #+4]
         LDRB     R0,[R0, #+4]
         CMP      R1,#+0
         IT       EQ 
         CMPEQ    R0,#+0
         BNE.N    ??AppS2wProcess_NetAccept_2
-// 1230     if((!s2wAutoConnState ) && (!profile_params.autoConnect))
-// 1231     {
-// 1232 #ifdef S2W_ASYNC_MSG
-// 1233 	if(s2wCurrent.asyncMsgFormat)
-        LDR.W    R10,??DataTable114_7
+// 1234     if((!s2wAutoConnState ) && (!profile_params.autoConnect))
+// 1235     {
+// 1236 #ifdef S2W_ASYNC_MSG
+// 1237 	if(s2wCurrent.asyncMsgFormat)
+        LDR.W    R10,??DataTable116_6
         ADR.W    R5,`?<Constant " %x %x %d.%d.%d.%d %d\\r\\n">`
         LDRB     R0,[R10, #+472]
         CBZ.N    R0,??AppS2wProcess_NetAccept_3
-// 1234 	{
-// 1235 	   UINT32 argLen=0;
-// 1236 	   INT8 arr[50];
-// 1237 	   argLen = sprintf(arr," %x %x %d.%d.%d.%d %d\r\n",serverCid, newCid, ip[0], ip[1],ip[2], ip[3], port);
+// 1238 	{
+// 1239 	   UINT32 argLen=0;
+// 1240 	   INT8 arr[50];
+// 1241 	   argLen = sprintf(arr," %x %x %d.%d.%d.%d %d\r\n",serverCid, newCid, ip[0], ip[1],ip[2], ip[3], port);
         STR      R7,[SP, #+16]
         MOV      R3,R8
         LDRB     R0,[R4, #+3]
@@ -3177,72 +3201,72 @@ AppS2wProcess_NetAccept:
           CFI FunCall sprintf
         BL       sprintf
         MOV      R6,R0
-// 1238 	   S2w_Printf("%c%c%x", S2W_ESC,'A',S2W_ASYNC_CON_SUCCESS);
+// 1242 	   S2w_Printf("%c%c%x", S2W_ESC,'A',S2W_ASYNC_CON_SUCCESS);
         MOVS     R3,#+1
-        BL       ?Subroutine14
-// 1239 	   const char* msg = S2W_AsyncStatusList[S2W_ASYNC_CON_SUCCESS];
-// 1240 
-// 1241 	   if (s2wCurrent.serialPortConf.commonConf.verbose)
-??CrossCallReturnLabel_40:
+        BL       ?Subroutine15
+// 1243 	   const char* msg = S2W_AsyncStatusList[S2W_ASYNC_CON_SUCCESS];
+// 1244 
+// 1245 	   if (s2wCurrent.serialPortConf.commonConf.verbose)
+??CrossCallReturnLabel_45:
         LDRB     R0,[R10, #+433]
         CBZ.N    R0,??AppS2wProcess_NetAccept_4
-// 1242 	   {
-// 1243 	       S2w_Printf("%02x%s",(strlen(msg) + argLen),msg);
+// 1246 	   {
+// 1247 	       S2w_Printf("%02x%s",(strlen(msg) + argLen),msg);
         ADR.W    R2,`?<Constant "CONNECT">`
-        LDR.W    R0,??DataTable127_2
+        LDR.W    R0,??DataTable129_2
         ADDS     R1,R6,#+7
         B.N      ??AppS2wProcess_NetAccept_5
-// 1244 	   }
-// 1245 	   else
-// 1246 	   {
-// 1247 	       S2w_Printf("%02x%d",(argLen + 1),S2W_ASYNC_CON_SUCCESS );
+// 1248 	   }
+// 1249 	   else
+// 1250 	   {
+// 1251 	       S2w_Printf("%02x%d",(argLen + 1),S2W_ASYNC_CON_SUCCESS );
 ??AppS2wProcess_NetAccept_4:
         MOVS     R2,#+1
         ADDS     R1,R6,#+1
-        LDR.W    R0,??DataTable127_3
+        LDR.W    R0,??DataTable129_3
 ??AppS2wProcess_NetAccept_5:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
         B.N      ??AppS2wProcess_NetAccept_6
-// 1248        }
-// 1249 	   //AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_CON_SUCCESS, argLen,S2W_INVALID_INTERFACE);
-// 1250 	}
-// 1251 	else
-// 1252 #endif
-// 1253 
-// 1254     {
-// 1255         if (s2wCurrent.serialPortConf.commonConf.verbose)
+// 1252        }
+// 1253 	   //AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_CON_SUCCESS, argLen,S2W_INVALID_INTERFACE);
+// 1254 	}
+// 1255 	else
+// 1256 #endif
+// 1257 
+// 1258     {
+// 1259         if (s2wCurrent.serialPortConf.commonConf.verbose)
 ??AppS2wProcess_NetAccept_3:
         LDRB     R0,[R10, #+433]
         CBZ.N    R0,??AppS2wProcess_NetAccept_7
-// 1256         {
-// 1257             S2w_Printf("\r\nCONNECT");
+// 1260         {
+// 1261             S2w_Printf("\r\nCONNECT");
         ADR.W    R0,`?<Constant "\\r\\nCONNECT">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
         B.N      ??AppS2wProcess_NetAccept_6
-// 1258         }
-// 1259         else
-// 1260         {
-// 1261             S2w_Printf("\r\n%x", S2W_CON_SUCCESS);
+// 1262         }
+// 1263         else
+// 1264         {
+// 1265             S2w_Printf("\r\n%x", S2W_CON_SUCCESS);
 ??AppS2wProcess_NetAccept_7:
         ADR.W    R0,`?<Constant "\\r\\n%x">`
         MOVS     R1,#+7
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 1262         }
-// 1263     }
-// 1264 #ifdef S2W_IPv6_SUPPORT
-// 1265             if(s2wCidList[serverCid].addrType & ADDR_TYPE_IPv6)
-// 1266             {
-// 1267 
-// 1268               INT8 ipv6str[INET6_ADDRSTRLEN];
-// 1269               S2w_ntop((ULONG*)ip,ipv6str);
-// 1270               S2w_Printf("%x %x %s %d\r\n", serverCid, newCid,ipv6str,port );  
-// 1271             }
-// 1272             else
-// 1273 #endif 
-// 1274     S2w_Printf(" %x %x %d.%d.%d.%d %d\r\n",serverCid, newCid,ip[3], ip[2], ip[1], ip[0],port) ;
+// 1266         }
+// 1267     }
+// 1268 #ifdef S2W_IPv6_SUPPORT
+// 1269             if(s2wCidList[serverCid].addrType & ADDR_TYPE_IPv6)
+// 1270             {
+// 1271 
+// 1272               INT8 ipv6str[INET6_ADDRSTRLEN];
+// 1273               S2w_ntop((ULONG*)ip,ipv6str);
+// 1274               S2w_Printf("%x %x %s %d\r\n", serverCid, newCid,ipv6str,port );  
+// 1275             }
+// 1276             else
+// 1277 #endif 
+// 1278     S2w_Printf(" %x %x %d.%d.%d.%d %d\r\n",serverCid, newCid,ip[3], ip[2], ip[1], ip[0],port) ;
 ??AppS2wProcess_NetAccept_6:
         STR      R7,[SP, #+12]
         MOV      R2,R8
@@ -3257,57 +3281,57 @@ AppS2wProcess_NetAccept:
         LDRB     R3,[R4, #+3]
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 1275         if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
-        BL       ?Subroutine20
-??CrossCallReturnLabel_53:
+// 1279         if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+        BL       ?Subroutine21
+??CrossCallReturnLabel_58:
         CMP      R0,#+2
         BNE.N    ??CrossCallReturnLabel_16
-// 1276         {
-// 1277              s2wSpiFs_Flush();
+// 1280         {
+// 1281              s2wSpiFs_Flush();
           CFI FunCall s2wSpiFs_Flush
         BL       s2wSpiFs_Flush
         B.N      ??CrossCallReturnLabel_16
-// 1278 	    }
-// 1279 	}
-// 1280 	else // auto mode
-// 1281 	{
-// 1282         if(profile_params.autoConnect)
+// 1282 	    }
+// 1283 	}
+// 1284 	else // auto mode
+// 1285 	{
+// 1286         if(profile_params.autoConnect)
 ??AppS2wProcess_NetAccept_2:
         CBZ.N    R0,??CrossCallReturnLabel_16
-// 1283 		{
-// 1284 			s2wState = S2W_STATE_DATA_AUTO;
+// 1287 		{
+// 1288 			s2wState = S2W_STATE_DATA_AUTO;
         MOVS     R0,#+13
         STRB     R0,[R5, #+0]
-// 1285 			s2wIsAutoconnected = 1;
+// 1289 			s2wIsAutoconnected = 1;
         MOVS     R0,#+1
         STRB     R0,[R5, #+3]
-// 1286 			s2wAutoConnState = S2W_AUTO_CONN_DATA_PIPE;
+// 1290 			s2wAutoConnState = S2W_AUTO_CONN_DATA_PIPE;
         STRB     R0,[R5, #+4]
-// 1287 			S2w_AsyncMsgGpioInit(); // make the async gpio as  high to indicate that the data mode ready
+// 1291 			S2w_AsyncMsgGpioInit(); // make the async gpio as  high to indicate that the data mode ready
           CFI FunCall S2w_AsyncMsgGpioInit
         BL       S2w_AsyncMsgGpioInit
-// 1288 			S2w_AsyncMsgGpioOp(1);
+// 1292 			S2w_AsyncMsgGpioOp(1);
         MOVS     R0,#+1
           CFI FunCall S2w_AsyncMsgGpioOp
         BL       S2w_AsyncMsgGpioOp
-// 1289 					// start a gpio cb for auto mode exit
-// 1290 			GsnGpio_Init(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP , APP_S2W_AUTO_EXIT_GPIO_BIT_MAP );
+// 1293 					// start a gpio cb for auto mode exit
+// 1294 			GsnGpio_Init(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP , APP_S2W_AUTO_EXIT_GPIO_BIT_MAP );
         BL       ?Subroutine5
-// 1291 			/* register callback for GPIO interrupt */
-// 1292 			GsnGpio_IntCbRegister(APP_S2W_AUTO_EXIT_GPIO_NUM,s2wAutoExit_CB,NULL);
+// 1295 			/* register callback for GPIO interrupt */
+// 1296 			GsnGpio_IntCbRegister(APP_S2W_AUTO_EXIT_GPIO_NUM,s2wAutoExit_CB,NULL);
 ??CrossCallReturnLabel_12:
-        BL       ?Subroutine21
-// 1293 			/*enable interrupt*/
-// 1294 			GsnGpio_NEIntEnable(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP);
-??CrossCallReturnLabel_56:
+        BL       ?Subroutine22
+// 1297 			/*enable interrupt*/
+// 1298 			GsnGpio_NEIntEnable(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP);
+??CrossCallReturnLabel_61:
         BL       ?Subroutine8
-// 1295 		}
-// 1296 
-// 1297 	}
-// 1298     GsnOsal_SemRelease(&s2wSyncSemID);
+// 1299 		}
+// 1300 
+// 1301 	}
+// 1302     GsnOsal_SemRelease(&s2wSyncSemID);
 ??CrossCallReturnLabel_16:
         BL       ?Subroutine10
-// 1299     return S2W_SUCCESS;
+// 1303     return S2W_SUCCESS;
 ??CrossCallReturnLabel_26:
         MOVS     R0,#+0
 ??AppS2wProcess_NetAccept_1:
@@ -3315,7 +3339,7 @@ AppS2wProcess_NetAccept:
           CFI CFA R13+36
         POP      {R4-R11,PC}      ;; return
           CFI EndBlock cfiBlock41
-// 1300 }
+// 1304 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -3342,30 +3366,30 @@ AppS2wProcess_NetAccept:
 `?<Constant "\\r\\n%x">`:
         DC8 "\015\012%x"
         DC8 0, 0, 0
-// 1301 
-// 1302 
-// 1303 /**
-// 1304  ************************************************************************
-// 1305  * @ingroup S2w-Application.
-// 1306  * @brief Receive data from a network connection.
-// 1307  * @param cid - IN connection identifier on which the data is received.
-// 1308  * @param buf - IN Pointer to data buffer.
-// 1309  * @param len - IN Total number of bytes.
-// 1310  * @param ip  - IN IP address of the client from which the data was received
-// 1311  *                    (only for UDP servers)
-// 1312  * @param port- IN Port of the client from which the data was received (only
-// 1313  *                 for UDP servers)
-// 1314  * @retval VOID - none.
-// 1315  ************************************************************************/
+// 1305 
+// 1306 
+// 1307 /**
+// 1308  ************************************************************************
+// 1309  * @ingroup S2w-Application.
+// 1310  * @brief Receive data from a network connection.
+// 1311  * @param cid - IN connection identifier on which the data is received.
+// 1312  * @param buf - IN Pointer to data buffer.
+// 1313  * @param len - IN Total number of bytes.
+// 1314  * @param ip  - IN IP address of the client from which the data was received
+// 1315  *                    (only for UDP servers)
+// 1316  * @param port- IN Port of the client from which the data was received (only
+// 1317  *                 for UDP servers)
+// 1318  * @retval VOID - none.
+// 1319  ************************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock42 Using cfiCommon0
           CFI Function AppS2wProcess_NetRx
         THUMB
-// 1316 PUBLIC VOID
-// 1317 AppS2wProcess_NetRx(UINT8 cid, void *buf, UINT32 len, UINT8 *ip,
-// 1318                     UINT16 port)
-// 1319 {
+// 1320 PUBLIC VOID
+// 1321 AppS2wProcess_NetRx(UINT8 cid, void *buf, UINT32 len, UINT8 *ip,
+// 1322                     UINT16 port)
+// 1323 {
 AppS2wProcess_NetRx:
         PUSH     {R4-R11,LR}
           CFI R14 Frame(CFA, -4)
@@ -3378,14 +3402,14 @@ AppS2wProcess_NetRx:
           CFI R5 Frame(CFA, -32)
           CFI R4 Frame(CFA, -36)
           CFI CFA R13+36
-// 1320 #ifdef S2W_IPv6_SUPPORT
-// 1321     INT8 ipv6str[INET6_ADDRSTRLEN];
-// 1322 #endif
-// 1323     UINT8 *p = (UINT8 *) buf;
-// 1324     s2wRxBytes += len;
-        LDR.N    R4,??DataTable114_5
-// 1325     if (s2wState == S2W_STATE_DATA_AUTO)
-        LDR.W    R9,??DataTable114_2
+// 1324 #ifdef S2W_IPv6_SUPPORT
+// 1325     INT8 ipv6str[INET6_ADDRSTRLEN];
+// 1326 #endif
+// 1327     UINT8 *p = (UINT8 *) buf;
+// 1328     s2wRxBytes += len;
+        LDR.N    R4,??DataTable116_4
+// 1329     if (s2wState == S2W_STATE_DATA_AUTO)
+        LDR.W    R9,??DataTable116_2
         MOV      R8,R1
         LDR      R1,[R4, #+36]
         MOV      R11,R2
@@ -3399,33 +3423,33 @@ AppS2wProcess_NetRx:
         MOVW     R6,#+27384
         CMP      R1,#+13
         BNE.N    ??AppS2wProcess_NetRx_0
-// 1326     {
-// 1327         if (port)
+// 1330     {
+// 1331         if (port)
         UXTH     R5,R5
         CBZ.N    R5,??AppS2wProcess_NetRx_1
-// 1328         {
-// 1329             /*
-// 1330              * In UDP server auto-connect mode, any data received
-// 1331              * on the serial port is transmitted to the host/port
-// 1332              * from which data was last received.
-// 1333              */
-// 1334 
-// 1335             curCid = cid;
+// 1332         {
+// 1333             /*
+// 1334              * In UDP server auto-connect mode, any data received
+// 1335              * on the serial port is transmitted to the host/port
+// 1336              * from which data was last received.
+// 1337              */
+// 1338 
+// 1339             curCid = cid;
         STRB     R0,[R4, #+5]
-// 1336 #ifdef S2W_IPv6_SUPPORT
-// 1337             if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
-// 1338               memcpy(destIpv6Addr,ip,sizeof(destIpv6Addr));
-// 1339 #endif //S2W_IPv6_SUPPORT
-// 1340             memcpy(destAddr, ip, sizeof(destAddr));
+// 1340 #ifdef S2W_IPv6_SUPPORT
+// 1341             if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
+// 1342               memcpy(destIpv6Addr,ip,sizeof(destIpv6Addr));
+// 1343 #endif //S2W_IPv6_SUPPORT
+// 1344             memcpy(destAddr, ip, sizeof(destAddr));
         MOVS     R2,#+4
         MOV      R1,R7
         ADD      R0,R4,#+12
           CFI FunCall memcpy
         BL       memcpy
-// 1341             // put it network order
-// 1342             *(ULONG*)destAddr = ntohl(*(ULONG*)destAddr);
+// 1345             // put it network order
+// 1346             *(ULONG*)destAddr = ntohl(*(ULONG*)destAddr);
         LDR      R0,[R4, #+12]
-// 1343             destPort = port;
+// 1347             destPort = port;
         STRH     R5,[R4, #+30]
         LSRS     R1,R0,#+8
         AND      R1,R1,#0xFF00
@@ -3436,21 +3460,21 @@ AppS2wProcess_NetRx:
         LDR      R1,[R4, #+12]
         ORR      R0,R0,R1, LSL #+24
         STR      R0,[R4, #+12]
-// 1344         }
-// 1345 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1346         AppS2wHal_CharNPut(p, len);
+// 1348         }
+// 1349 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1350         AppS2wHal_CharNPut(p, len);
 ??AppS2wProcess_NetRx_1:
         MOV      R1,R11
         MOV      R0,R8
           CFI FunCall AppS2wHal_CharNPut
         BL       AppS2wHal_CharNPut
-// 1347         if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 1351         if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
         LDR      R0,[R9, #+0]
         LDRB     R0,[R6, R0]
         CMP      R0,#+2
         BNE.N    ??AppS2wProcess_NetRx_2
-// 1348         {
-// 1349             s2wSpiFs_Flush();
+// 1352         {
+// 1353             s2wSpiFs_Flush();
         ADD      SP,SP,#+20
           CFI CFA R13+36
         POP      {R4-R11,LR}
@@ -3476,45 +3500,45 @@ AppS2wProcess_NetRx:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+56
-// 1350           }
-// 1351 #else
-// 1352         AppS2wHal_CharNPut1(p, len);
-// 1353        if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
-// 1354        {
-// 1355            s2wSpiFs_Flush1();
-// 1356        }
-// 1357 #endif
-// 1358         return;
-// 1359     }
-// 1360     if(s2wCidList[cid].sd != CID_NOTINUSE) // if the cid is closed in between by nclose command(fix for issue no:5537 )
+// 1354           }
+// 1355 #else
+// 1356         AppS2wHal_CharNPut1(p, len);
+// 1357        if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
+// 1358        {
+// 1359            s2wSpiFs_Flush1();
+// 1360        }
+// 1361 #endif
+// 1362         return;
+// 1363     }
+// 1364     if(s2wCidList[cid].sd != CID_NOTINUSE) // if the cid is closed in between by nclose command(fix for issue no:5537 )
 ??AppS2wProcess_NetRx_0:
         MOV      R4,R0
         MOV      R0,#+296
-        LDR.W    R1,??DataTable128
+        LDR.W    R1,??DataTable130
         MLA      R0,R0,R4,R1
         LDR      R0,[R0, #+28]
         CMN      R0,#+1
         BEQ.N    ??AppS2wProcess_NetRx_2
         MOV      R1,#-1
-        LDR.W    R0,??DataTable122
-// 1361 	{
-// 1362 
-// 1363 
-// 1364 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1365     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+        LDR.W    R0,??DataTable124
+// 1365 	{
+// 1366 
+// 1367 
+// 1368 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1369     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
           CFI FunCall GsnOsal_SemAcquire
         BL       GsnOsal_SemAcquire
-// 1366 #else
-// 1367     GsnOsal_SemAcquire(&s2wSyncSemID1, GSN_OSAL_WAIT_FOREVER);
-// 1368 #endif
-// 1369 
-// 1370     if (port)
-        LDR.W    R10,??DataTable114_7
+// 1370 #else
+// 1371     GsnOsal_SemAcquire(&s2wSyncSemID1, GSN_OSAL_WAIT_FOREVER);
+// 1372 #endif
+// 1373 
+// 1374     if (port)
+        LDR.W    R10,??DataTable116_6
         LDRB     R0,[R10, #+468]
         UXTH     R5,R5
         CBZ.N    R5,??AppS2wProcess_NetRx_3
-// 1371     {
-// 1372         if(!s2wCurrent.bulkTxEnable)
+// 1375     {
+// 1376         if(!s2wCurrent.bulkTxEnable)
         LDRB     R3,[R7, #+3]
         LDRB     R1,[R7, #+2]
         LDRB     R2,[R7, #+1]
@@ -3530,62 +3554,62 @@ AppS2wProcess_NetRx:
         ADREQ.W  R0,`?<Constant "%cu%x%d.%d.%d.%d %d\\t">`
         MOVNE    R1,#+27
         ADRNE.W  R0,`?<Constant "%cy%x%d.%d.%d.%d %d\\t">`
-// 1373         {
-// 1374 #ifdef S2W_IPv6_SUPPORT
-// 1375             if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
-// 1376             {
-// 1377             S2w_ntop((ULONG*)ip,ipv6str);
-// 1378 
-// 1379 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1380             S2w_Printf("%cu%x %s %d\t", S2W_ESC, cid,ipv6str,port );  
-// 1381 #else
-// 1382                 S2w_Printf1("%cu%x %s %d\t", S2W_ESC, cid,ipv6str,port );
-// 1383 #endif
-// 1384             }
-// 1385             else
-// 1386 #endif //S2W_IPv6_SUPPORT
-// 1387             {
-// 1388 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1389             S2w_Printf("%cu%x%d.%d.%d.%d %d\t", S2W_ESC, cid,
-// 1390                     ip[3], ip[2], ip[1], ip[0], port);
-// 1391 #else
-// 1392                 S2w_Printf1("%cu%x%d.%d.%d.%d %d\t", S2W_ESC, cid,
-// 1393                     ip[3], ip[2], ip[1], ip[0], port);
-// 1394 #endif
-// 1395             }
-// 1396         }
-// 1397         else
-// 1398         {
-// 1399 #ifdef S2W_IPv6_SUPPORT
-// 1400             if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
-// 1401             {
-// 1402             S2w_ntop((ULONG*)ip,ipv6str);
-// 1403 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1404             S2w_Printf("%cy%x %s %d\t", S2W_ESC, cid,ipv6str,port);  
-// 1405 #else
-// 1406                 S2w_Printf1("%cy%x %s %d\t", S2W_ESC, cid,ipv6str,port);
-// 1407 #endif
-// 1408             }
-// 1409             else
-// 1410 #endif //S2W_IPv6_SUPPORT
-// 1411             {
-// 1412 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1413             S2w_Printf("%cy%x%d.%d.%d.%d %d\t", S2W_ESC, cid,
-// 1414                                ip[3], ip[2], ip[1], ip[0],port );
+// 1377         {
+// 1378 #ifdef S2W_IPv6_SUPPORT
+// 1379             if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
+// 1380             {
+// 1381             S2w_ntop((ULONG*)ip,ipv6str);
+// 1382 
+// 1383 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1384             S2w_Printf("%cu%x %s %d\t", S2W_ESC, cid,ipv6str,port );  
+// 1385 #else
+// 1386                 S2w_Printf1("%cu%x %s %d\t", S2W_ESC, cid,ipv6str,port );
+// 1387 #endif
+// 1388             }
+// 1389             else
+// 1390 #endif //S2W_IPv6_SUPPORT
+// 1391             {
+// 1392 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1393             S2w_Printf("%cu%x%d.%d.%d.%d %d\t", S2W_ESC, cid,
+// 1394                     ip[3], ip[2], ip[1], ip[0], port);
+// 1395 #else
+// 1396                 S2w_Printf1("%cu%x%d.%d.%d.%d %d\t", S2W_ESC, cid,
+// 1397                     ip[3], ip[2], ip[1], ip[0], port);
+// 1398 #endif
+// 1399             }
+// 1400         }
+// 1401         else
+// 1402         {
+// 1403 #ifdef S2W_IPv6_SUPPORT
+// 1404             if(s2wCidList[cid].addrType & ADDR_TYPE_IPv6)
+// 1405             {
+// 1406             S2w_ntop((ULONG*)ip,ipv6str);
+// 1407 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1408             S2w_Printf("%cy%x %s %d\t", S2W_ESC, cid,ipv6str,port);  
+// 1409 #else
+// 1410                 S2w_Printf1("%cy%x %s %d\t", S2W_ESC, cid,ipv6str,port);
+// 1411 #endif
+// 1412             }
+// 1413             else
+// 1414 #endif //S2W_IPv6_SUPPORT
+// 1415             {
+// 1416 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1417             S2w_Printf("%cy%x%d.%d.%d.%d %d\t", S2W_ESC, cid,
+// 1418                                ip[3], ip[2], ip[1], ip[0],port );
           CFI FunCall S2w_Printf
         BL       S2w_Printf
         B.N      ??AppS2wProcess_NetRx_4
-// 1415 #else
-// 1416                  S2w_Printf1("%cy%x%d.%d.%d.%d %d\t", S2W_ESC, cid,
-// 1417 				             ip[3], ip[2], ip[1], ip[0],port );
-// 1418 #endif
-// 1419             }
-// 1420         }
-// 1421     }
-// 1422     else
-// 1423     {
-// 1424 
-// 1425         if(!s2wCurrent.bulkTxEnable)
+// 1419 #else
+// 1420                  S2w_Printf1("%cy%x%d.%d.%d.%d %d\t", S2W_ESC, cid,
+// 1421 				             ip[3], ip[2], ip[1], ip[0],port );
+// 1422 #endif
+// 1423             }
+// 1424         }
+// 1425     }
+// 1426     else
+// 1427     {
+// 1428 
+// 1429         if(!s2wCurrent.bulkTxEnable)
 ??AppS2wProcess_NetRx_3:
         CMP      R0,#+0
         MOV      R2,R4
@@ -3594,63 +3618,63 @@ AppS2wProcess_NetRx:
         ADREQ.W  R0,`?<Constant "%cS%x">`
         MOVNE    R1,#+27
         ADRNE.W  R0,`?<Constant "%cZ%x">`
-// 1426 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1427             S2w_Printf("%cS%x", S2W_ESC, cid);
-// 1428 #else
-// 1429             S2w_Printf1("%cS%x", S2W_ESC, cid);
-// 1430 #endif
-// 1431         else
-// 1432 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1433             S2w_Printf("%cZ%x", S2W_ESC, cid);
+// 1430 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1431             S2w_Printf("%cS%x", S2W_ESC, cid);
+// 1432 #else
+// 1433             S2w_Printf1("%cS%x", S2W_ESC, cid);
+// 1434 #endif
+// 1435         else
+// 1436 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1437             S2w_Printf("%cZ%x", S2W_ESC, cid);
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 1434 #else
-// 1435             S2w_Printf1("%cZ%x", S2W_ESC, cid);
-// 1436 #endif
-// 1437     }
-// 1438 
-// 1439     if(s2wCurrent.bulkTxEnable)
+// 1438 #else
+// 1439             S2w_Printf1("%cZ%x", S2W_ESC, cid);
+// 1440 #endif
+// 1441     }
+// 1442 
+// 1443     if(s2wCurrent.bulkTxEnable)
 ??AppS2wProcess_NetRx_4:
         LDRB     R0,[R10, #+468]
         CBZ.N    R0,??AppS2wProcess_NetRx_5
-// 1440     {
-// 1441 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1442         S2w_Printf("%04d", len);
+// 1444     {
+// 1445 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1446         S2w_Printf("%04d", len);
         MOV      R1,R11
         ADR.W    R0,`?<Constant "%04d">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 1443 #else
-// 1444         S2w_Printf1("%04d", len);
-// 1445 #endif
-// 1446     }
-// 1447 
-// 1448 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1449     AppS2wHal_CharNPut(p, len);
+// 1447 #else
+// 1448         S2w_Printf1("%04d", len);
+// 1449 #endif
+// 1450     }
+// 1451 
+// 1452 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1453     AppS2wHal_CharNPut(p, len);
 ??AppS2wProcess_NetRx_5:
         MOV      R1,R11
         MOV      R0,R8
           CFI FunCall AppS2wHal_CharNPut
         BL       AppS2wHal_CharNPut
-// 1450 #else
-// 1451     AppS2wHal_CharNPut1(p, len);
-// 1452 #endif
-// 1453 
-// 1454     if(!s2wCurrent.bulkTxEnable)
+// 1454 #else
+// 1455     AppS2wHal_CharNPut1(p, len);
+// 1456 #endif
+// 1457 
+// 1458     if(!s2wCurrent.bulkTxEnable)
         LDRB     R0,[R10, #+468]
         CBNZ.N   R0,??AppS2wProcess_NetRx_6
-// 1455 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1456         S2w_Printf("%cE", S2W_ESC);
+// 1459 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1460         S2w_Printf("%cE", S2W_ESC);
         MOVS     R1,#+27
-        ADR.N    R0,??DataTable114_4  ;; "%cE"
+        ADR.N    R0,??DataTable116_7  ;; "%cE"
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 1457 #else
-// 1458         S2w_Printf1("%cE", S2W_ESC);
-// 1459 #endif
-// 1460 
-// 1461 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1462        if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 1461 #else
+// 1462         S2w_Printf1("%cE", S2W_ESC);
+// 1463 #endif
+// 1464 
+// 1465 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1466        if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
 ??AppS2wProcess_NetRx_6:
         LDR      R0,[R9, #+0]
         LDRB     R0,[R6, R0]
@@ -3658,19 +3682,19 @@ AppS2wProcess_NetRx:
         IT       EQ 
           CFI FunCall s2wSpiFs_Flush
         BLEQ     s2wSpiFs_Flush
-// 1463        {
-// 1464            s2wSpiFs_Flush();
-// 1465        }
-// 1466 
-// 1467 #else
-// 1468        if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
-// 1469        {
-// 1470            s2wSpiFs_Flush1();
-// 1471        }
-// 1472 #endif
-// 1473 
-// 1474 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1475     GsnOsal_SemRelease(&s2wSyncSemID);
+// 1467        {
+// 1468            s2wSpiFs_Flush();
+// 1469        }
+// 1470 
+// 1471 #else
+// 1472        if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
+// 1473        {
+// 1474            s2wSpiFs_Flush1();
+// 1475        }
+// 1476 #endif
+// 1477 
+// 1478 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1479     GsnOsal_SemRelease(&s2wSyncSemID);
         ADD      SP,SP,#+20
           CFI CFA R13+36
         POP      {R4-R11,LR}
@@ -3684,7 +3708,7 @@ AppS2wProcess_NetRx:
           CFI R11 SameValue
           CFI R14 SameValue
           CFI CFA R13+0
-        LDR.W    R0,??DataTable122
+        LDR.W    R0,??DataTable124
           CFI FunCall GsnOsal_SemRelease
         B.W      GsnOsal_SemRelease
           CFI R4 Frame(CFA, -36)
@@ -3697,11 +3721,11 @@ AppS2wProcess_NetRx:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+56
-// 1476 #else
-// 1477     GsnOsal_SemRelease(&s2wSyncSemID1);
-// 1478 #endif
-// 1479 }
-// 1480 }
+// 1480 #else
+// 1481     GsnOsal_SemRelease(&s2wSyncSemID1);
+// 1482 #endif
+// 1483 }
+// 1484 }
 ??AppS2wProcess_NetRx_2:
         ADD      SP,SP,#+20
           CFI CFA R13+36
@@ -3711,85 +3735,85 @@ AppS2wProcess_NetRx:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114:
+??DataTable116:
         DC8      0x0D, 0x0A, 0x00, 0x00
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_1:
+??DataTable116_1:
         DC32     ??buf
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_2:
+??DataTable116_2:
         DC32     s2wappMainTaskCtxt
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_3:
+??DataTable116_3:
         DC32     s2wappMainTaskNotifier
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_4:
-        DC8      "%cE"
-
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable114_5:
+??DataTable116_4:
         DC32     s2wState
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_6:
+??DataTable116_5:
         DC32     0x41010004
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_7:
+??DataTable116_6:
         DC32     s2wCurrent
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_8:
+??DataTable116_7:
+        DC8      "%cE"
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable116_8:
         DC32     0x101a8c0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_9:
+??DataTable116_9:
         DC32     0xc0a80163
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_10:
+??DataTable116_10:
         DC32     0xc0a80101
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_11:
+??DataTable116_11:
         DC32     0xc0a8f002
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_12:
+??DataTable116_12:
         DC32     0xc0a8f001
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable114_13:
+??DataTable116_13:
         DC32     0x80510100
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -3826,31 +3850,31 @@ AppS2wProcess_NetRx:
 `?<Constant "%04d">`:
         DC8 "%04d"
         DC8 0, 0, 0
-// 1481 
-// 1482 
-// 1483 
-// 1484 
 // 1485 
-// 1486 UINT8 auto_esc;
-// 1487 extern PUBLIC GSN_OSAL_QUEUE_T s2wSerialInputTaskQueue;
-// 1488 /**
-// 1489  ************************************************************************
-// 1490  * @ingroup S2w-Application.
-// 1491  * @brief Process the serial data from the host.
-// 1492  *    This function continuously polls the serial port, classifies the incoming
-// 1493  *    characters into Serial2WiFi data and command based on the serial data
-// 1494  *    encoding.
-// 1495  *    This function should be called from serial input-output handler thread each
-// 1496  *    time when a character arrives on serial interface.
-// 1497  ************************************************************************/
+// 1486 
+// 1487 
+// 1488 
+// 1489 
+// 1490 UINT8 auto_esc;
+// 1491 extern PUBLIC GSN_OSAL_QUEUE_T s2wSerialInputTaskQueue;
+// 1492 /**
+// 1493  ************************************************************************
+// 1494  * @ingroup S2w-Application.
+// 1495  * @brief Process the serial data from the host.
+// 1496  *    This function continuously polls the serial port, classifies the incoming
+// 1497  *    characters into Serial2WiFi data and command based on the serial data
+// 1498  *    encoding.
+// 1499  *    This function should be called from serial input-output handler thread each
+// 1500  *    time when a character arrives on serial interface.
+// 1501  ************************************************************************/
 
         SECTION `.text`:CODE:NOROOT(2)
           CFI Block cfiBlock43 Using cfiCommon0
           CFI Function AppS2wProcess_SerialInput
         THUMB
-// 1498 PUBLIC VOID
-// 1499 AppS2wProcess_SerialInput(VOID)
-// 1500 {
+// 1502 PUBLIC VOID
+// 1503 AppS2wProcess_SerialInput(VOID)
+// 1504 {
 AppS2wProcess_SerialInput:
         PUSH     {R4-R9,R11,LR}
           CFI R14 Frame(CFA, -4)
@@ -3864,127 +3888,127 @@ AppS2wProcess_SerialInput:
           CFI CFA R13+32
         SUB      SP,SP,#+40
           CFI CFA R13+72
-// 1501 	static char esc[4] = { '+', '+', '+', '+' };
-// 1502     static UINT8 ipnum;
-// 1503     static char atoibuf[6];
-// 1504     static UINT8 digits;
-// 1505     UINT8 status;
-// 1506     static UINT8 prev = 0;
-// 1507     static UINT8 prevprev = 0;
-// 1508     UINT8 ch,softFlow;
-// 1509   
-// 1510 	UINT8 respTimeOut=0;
+// 1505 	static char esc[4] = { '+', '+', '+', '+' };
+// 1506     static UINT8 ipnum;
+// 1507     static char atoibuf[6];
+// 1508     static UINT8 digits;
+// 1509     UINT8 status;
+// 1510     static UINT8 prev = 0;
+// 1511     static UINT8 prevprev = 0;
+// 1512     UINT8 ch,softFlow;
+// 1513   
+// 1514 	UINT8 respTimeOut=0;
         MOV      R8,#+0
-        LDR.W    R5,??DataTable132
-        LDR.W    R9,??DataTable122
-        LDR.W    R7,??DataTable132_1
-        LDR.W    R11,??DataTable130
+        LDR.W    R5,??DataTable134
+        LDR.W    R9,??DataTable124
+        LDR.W    R7,??DataTable134_1
+        LDR.W    R11,??DataTable132
         B.N      ??AppS2wProcess_SerialInput_1
-// 1511     UINT32 elementType;
-// 1512 #ifdef S2W_DUAL_INTERFACE_SUPPORT
-// 1513     UINT32 msg = 0;
-// 1514 #endif
-// 1515 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 1516     while (AppS2wHal_CharGet(&ch) == 1)
-// 1517     {
-// 1518 #else  // for dual interface use non blocking call
-// 1519     while(1)
-// 1520     {
-// 1521         AppS2wHal_CharGet(&ch);
-// 1522         // pend on a message queue
-// 1523         GsnOsal_QueueGet(&s2wSerialInputTaskQueue, (UINT8 *)&msg, GSN_OSAL_WAIT_FOREVER);
-// 1524 
-// 1525 #endif
-// 1526 
-// 1527 
-// 1528         if ((s2wCurrent.serialPortConf.commonConf.echo) && (s2wState == S2W_STATE_CMD))
-// 1529         {
-// 1530             if (ch != S2W_ESC)
-// 1531             {
-// 1532                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 1533                 S2w_PutChar(ch);
-// 1534                 GsnOsal_SemRelease(&s2wSyncSemID);
-// 1535             }
-// 1536         }
-// 1537         // switch to differnt state depends on the previous byte
-// 1538         switch (s2wState)
-// 1539         {
-// 1540             /* special command comes with the length */
-// 1541 
-// 1542             case S2W_STATE_BULK_DATA:
-// 1543                 /* we must read 4 byte ascii lenth
-// 1544                 and then convert it to binary value */
-// 1545             {
-// 1546                 //UINT8 *dataBufferPointer;
-// 1547                 lengthConvertIndex++;
-// 1548                 /* next after cid  char 2 to 5 */
-// 1549                 lengthSpecialCmd *= 10;
-// 1550                 lengthSpecialCmd += (ch - '0'); /* assuming number will come*/
-// 1551                 if(lengthConvertIndex == 4)
-// 1552                 {
-// 1553                     AppS2wHal_CharNGet(dataBuffer, lengthSpecialCmd);
-// 1554                     dataIndex = lengthSpecialCmd;
-// 1555 
-// 1556                     AppS2w_DataTransmit(dataBuffer);
-// 1557                     s2wState =  S2W_STATE_CMD;
-// 1558                 }
-// 1559             }
-// 1560             break;
-// 1561             case S2W_STATE_DATA_AUTO:
-// 1562             {
-// 1563                 if (ch == '+' && auto_esc < 3 && 
-// 1564 					(s2wCurrent.autoExitTimeout))
-// 1565 		        {
-// 1566 		             auto_esc++;
-// 1567 		             AppS2wHal_TimerStop(&nagleTimer);
-// 1568 
-// 1569 		             AppS2wHal_TimerStart(&auto_esc_timer,
-// 1570 		               s2wCurrent.autoExitTimeout);
-// 1571 
-// 1572 		        }
-// 1573 		        else if (auto_esc && s2wCurrent.autoExitTimeout)
-// 1574 		        {
-// 1575 		             UINT8   i;
-// 1576 		             AppS2wHal_TimerStop(&auto_esc_timer);
-// 1577 
-// 1578 		             esc[auto_esc] = ch;
-// 1579 		             i = 0;
-// 1580 		             AppS2wHal_TimerStart(&nagleTimer,
-// 1581 		                    s2wCurrent.registers[S2W_REG_NAGLE_WAIT_TIME]);
-// 1582 		             while (i <= auto_esc)
-// 1583 		             {
-// 1584 		                 AppS2w_DataCharProcess(esc[i++]);
-// 1585 		             }
-// 1586 
-// 1587 		             esc[auto_esc] = '+';
-// 1588 		             auto_esc = 0;
-// 1589 		        }
-// 1590 		        else
-// 1591 			    {
+// 1515     UINT32 elementType;
+// 1516 #ifdef S2W_DUAL_INTERFACE_SUPPORT
+// 1517     UINT32 msg = 0;
+// 1518 #endif
+// 1519 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 1520     while (AppS2wHal_CharGet(&ch) == 1)
+// 1521     {
+// 1522 #else  // for dual interface use non blocking call
+// 1523     while(1)
+// 1524     {
+// 1525         AppS2wHal_CharGet(&ch);
+// 1526         // pend on a message queue
+// 1527         GsnOsal_QueueGet(&s2wSerialInputTaskQueue, (UINT8 *)&msg, GSN_OSAL_WAIT_FOREVER);
+// 1528 
+// 1529 #endif
+// 1530 
+// 1531 
+// 1532         if ((s2wCurrent.serialPortConf.commonConf.echo) && (s2wState == S2W_STATE_CMD))
+// 1533         {
+// 1534             if (ch != S2W_ESC)
+// 1535             {
+// 1536                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1537                 S2w_PutChar(ch);
+// 1538                 GsnOsal_SemRelease(&s2wSyncSemID);
+// 1539             }
+// 1540         }
+// 1541         // switch to differnt state depends on the previous byte
+// 1542         switch (s2wState)
+// 1543         {
+// 1544             /* special command comes with the length */
+// 1545 
+// 1546             case S2W_STATE_BULK_DATA:
+// 1547                 /* we must read 4 byte ascii lenth
+// 1548                 and then convert it to binary value */
+// 1549             {
+// 1550                 //UINT8 *dataBufferPointer;
+// 1551                 lengthConvertIndex++;
+// 1552                 /* next after cid  char 2 to 5 */
+// 1553                 lengthSpecialCmd *= 10;
+// 1554                 lengthSpecialCmd += (ch - '0'); /* assuming number will come*/
+// 1555                 if(lengthConvertIndex == 4)
+// 1556                 {
+// 1557                     AppS2wHal_CharNGet(dataBuffer, lengthSpecialCmd);
+// 1558                     dataIndex = lengthSpecialCmd;
+// 1559 
+// 1560                     AppS2w_DataTransmit(dataBuffer);
+// 1561                     s2wState =  S2W_STATE_CMD;
+// 1562                 }
+// 1563             }
+// 1564             break;
+// 1565             case S2W_STATE_DATA_AUTO:
+// 1566             {
+// 1567                 if (ch == '+' && auto_esc < 3 && 
+// 1568 					(s2wCurrent.autoExitTimeout))
+// 1569 		        {
+// 1570 		             auto_esc++;
+// 1571 		             AppS2wHal_TimerStop(&nagleTimer);
+// 1572 
+// 1573 		             AppS2wHal_TimerStart(&auto_esc_timer,
+// 1574 		               s2wCurrent.autoExitTimeout);
+// 1575 
+// 1576 		        }
+// 1577 		        else if (auto_esc && s2wCurrent.autoExitTimeout)
+// 1578 		        {
+// 1579 		             UINT8   i;
+// 1580 		             AppS2wHal_TimerStop(&auto_esc_timer);
+// 1581 
+// 1582 		             esc[auto_esc] = ch;
+// 1583 		             i = 0;
+// 1584 		             AppS2wHal_TimerStart(&nagleTimer,
+// 1585 		                    s2wCurrent.registers[S2W_REG_NAGLE_WAIT_TIME]);
+// 1586 		             while (i <= auto_esc)
+// 1587 		             {
+// 1588 		                 AppS2w_DataCharProcess(esc[i++]);
+// 1589 		             }
+// 1590 
+// 1591 		             esc[auto_esc] = '+';
 // 1592 		             auto_esc = 0;
-// 1593 		             AppS2w_DataCharProcess(ch);
-// 1594 
-// 1595 		        }
-// 1596 
-// 1597 			}
-// 1598 			break;
-// 1599             case S2W_STATE_CMD:
-// 1600                 if (ch == S2W_ESC)
-// 1601                 {
-// 1602                     s2wState = S2W_STATE_CMD_ESC;
+// 1593 		        }
+// 1594 		        else
+// 1595 			    {
+// 1596 		             auto_esc = 0;
+// 1597 		             AppS2w_DataCharProcess(ch);
+// 1598 
+// 1599 		        }
+// 1600 
+// 1601 			}
+// 1602 			break;
+// 1603             case S2W_STATE_CMD:
+// 1604                 if (ch == S2W_ESC)
+// 1605                 {
+// 1606                     s2wState = S2W_STATE_CMD_ESC;
 ??AppS2wProcess_SerialInput_2:
         MOVS     R0,#+3
 ??AppS2wProcess_SerialInput_3:
         STRB     R0,[R7, #+0]
-// 1603                     continue;
-// 1604                 }
+// 1607                     continue;
+// 1608                 }
 ??AppS2wProcess_SerialInput_1:
         ADD      R0,SP,#+4
           CFI FunCall AppS2wHal_CharGet
         BL       AppS2wHal_CharGet
         CMP      R0,#+1
         BNE.W    ??AppS2wProcess_SerialInput_4
-        LDR.W    R0,??DataTable132_2
+        LDR.W    R0,??DataTable134_2
         LDRB     R0,[R0, #+432]
         CBZ.N    R0,??CrossCallReturnLabel_25
         LDRB     R0,[R7, #+0]
@@ -4030,12 +4054,12 @@ AppS2wProcess_SerialInput:
         CMP      R0,#+4
         BNE.N    ??AppS2wProcess_SerialInput_5
         UXTH     R1,R1
-        LDR.W    R0,??DataTable132_3
+        LDR.W    R0,??DataTable134_3
           CFI FunCall AppS2wHal_CharNGet
         BL       AppS2wHal_CharNGet
         LDRH     R0,[R7, #+28]
         STR      R0,[R7, #+44]
-        LDR.W    R0,??DataTable132_3
+        LDR.W    R0,??DataTable134_3
           CFI FunCall AppS2w_DataTransmit
         BL       AppS2w_DataTransmit
         B.N      ??AppS2wProcess_SerialInput_7
@@ -4047,7 +4071,7 @@ AppS2wProcess_SerialInput:
         BNE.N    ??AppS2wProcess_SerialInput_9
         CMP      R1,#+3
         BGE.N    ??AppS2wProcess_SerialInput_9
-        LDR.W    R0,??DataTable132_2
+        LDR.W    R0,??DataTable134_2
         LDR      R0,[R0, #+964]
         CBZ.N    R0,??AppS2wProcess_SerialInput_10
         ADDS     R0,R1,#+1
@@ -4055,7 +4079,7 @@ AppS2wProcess_SerialInput:
         MOV      R0,R4
           CFI FunCall AppS2wHal_TimerStop
         BL       AppS2wHal_TimerStop
-        LDR.W    R0,??DataTable132_2
+        LDR.W    R0,??DataTable134_2
         LDR      R1,[R0, #+964]
         MOV      R0,R6
           CFI FunCall AppS2wHal_TimerStart
@@ -4065,7 +4089,7 @@ AppS2wProcess_SerialInput:
 ??AppS2wProcess_SerialInput_9:
         CMP      R1,#+0
         ITTT     NE 
-        LDRNE.W  R0,??DataTable132_2
+        LDRNE.W  R0,??DataTable134_2
         LDRNE    R0,[R0, #+964]
         CMPNE    R0,#+0
         BEQ.N    ??AppS2wProcess_SerialInput_10
@@ -4107,26 +4131,26 @@ AppS2wProcess_SerialInput:
 ??AppS2wProcess_SerialInput_15:
         CMP      R0,#+27
         BEQ.W    ??AppS2wProcess_SerialInput_2
-// 1605                 AppS2w_CommandCharProcess(ch);
+// 1609                 AppS2w_CommandCharProcess(ch);
         B.N      ??AppS2wProcess_SerialInput_16
-// 1606             break;
-// 1607 
-// 1608             case S2W_STATE_CMD_ESC:
-// 1609                 if (ch == 'S' || ch == 'u' || ch == 'U')
+// 1610             break;
+// 1611 
+// 1612             case S2W_STATE_CMD_ESC:
+// 1613                 if (ch == 'S' || ch == 'u' || ch == 'U')
 ??AppS2wProcess_SerialInput_17:
         CMP      R0,#+83
         ITT      NE 
         CMPNE    R0,#+117
         CMPNE    R0,#+85
         BNE.N    ??AppS2wProcess_SerialInput_18
-// 1610                 {
-// 1611                     s2wState = S2W_STATE_CID;
+// 1614                 {
+// 1615                     s2wState = S2W_STATE_CID;
         MOVS     R0,#+4
 ??AppS2wProcess_SerialInput_19:
         B.N      ??AppS2wProcess_SerialInput_20
-// 1612                 }
-// 1613 #if defined(S2W_GSLINK) && defined(S2W_GSLINK_XML)
-// 1614                 else if(((ch == 'G')  || (ch == 'g'))&& s2wappMainTaskCtxt->xmlParseEn == 1 )
+// 1616                 }
+// 1617 #if defined(S2W_GSLINK) && defined(S2W_GSLINK_XML)
+// 1618                 else if(((ch == 'G')  || (ch == 'g'))&& s2wappMainTaskCtxt->xmlParseEn == 1 )
 ??AppS2wProcess_SerialInput_18:
         CMP      R0,#+71
         IT       NE 
@@ -4137,98 +4161,98 @@ AppS2wProcess_SerialInput:
         LDRBEQ   R2,[R2, R1]
         CMPEQ    R2,#+1
         BNE.N    ??AppS2wProcess_SerialInput_21
-// 1615                 {
-// 1616                     rawLen=0;
+// 1619                 {
+// 1620                     rawLen=0;
         MOVS     R0,#+0
         STR      R0,[R7, #+52]
-// 1617                     rawLenIndex=0;
+// 1621                     rawLenIndex=0;
         STR      R0,[R7, #+48]
-// 1618                     s2wState = S2W_STATE_GET_CID;
+// 1622                     s2wState = S2W_STATE_GET_CID;
         MOVS     R0,#+22
         B.N      ??AppS2wProcess_SerialInput_22
-// 1619 #ifdef S2W_WEB_SERVER			
-// 1620 					if(s2wappMainTaskCtxt->respTimeOut !=0 && s2wappMainTaskCtxt->responseInprogress == 1)
-// 1621 					{
-// 1622 						 if (GSN_SUCCESS != GsnSoftTmr_Stop(s2wappMainTaskCtxt->respTimeOutTmrHndl))
-// 1623 							 respTimeOut = 1;					
-// 1624 					}	
-// 1625 					s2wappMainTaskCtxt->responseInprogress = 0;
-// 1626  #endif			
-// 1627                 }
-// 1628 #endif
-// 1629                 else if((ch == 'Z') || (ch == 'Y'))
+// 1623 #ifdef S2W_WEB_SERVER			
+// 1624 					if(s2wappMainTaskCtxt->respTimeOut !=0 && s2wappMainTaskCtxt->responseInprogress == 1)
+// 1625 					{
+// 1626 						 if (GSN_SUCCESS != GsnSoftTmr_Stop(s2wappMainTaskCtxt->respTimeOutTmrHndl))
+// 1627 							 respTimeOut = 1;					
+// 1628 					}	
+// 1629 					s2wappMainTaskCtxt->responseInprogress = 0;
+// 1630  #endif			
+// 1631                 }
+// 1632 #endif
+// 1633                 else if((ch == 'Z') || (ch == 'Y'))
 ??AppS2wProcess_SerialInput_21:
         CMP      R0,#+90
         IT       NE 
         CMPNE    R0,#+89
         BNE.N    ??AppS2wProcess_SerialInput_23
-// 1630                 {
-// 1631                     s2wState = S2W_STATE_CID;
+// 1634                 {
+// 1635                     s2wState = S2W_STATE_CID;
         MOVS     R0,#+4
         STRB     R0,[R7, #+0]
-// 1632                     lengthSpecialCmd = 0;
+// 1636                     lengthSpecialCmd = 0;
         MOVS     R0,#+0
         STRH     R0,[R7, #+28]
-// 1633                     lengthConvertIndex = 0;
+// 1637                     lengthConvertIndex = 0;
         STRB     R0,[R7, #+6]
         B.N      ??AppS2wProcess_SerialInput_11
-// 1634                 }
-// 1635 #ifdef S2W_IP2WIFI_SUPPORT
-// 1636                 else if (ch == 'R' || ch == 'r')
-// 1637                 {
-// 1638                     {
-// 1639 						rawLen=0;
-// 1640                         rawLenIndex=0;
-// 1641                         s2wState = S2W_STATE_RAW;
-// 1642                     }
-// 1643                 }
-// 1644 #endif
-// 1645                 else if ((ch == 'c')|| (ch == 'C'))
+// 1638                 }
+// 1639 #ifdef S2W_IP2WIFI_SUPPORT
+// 1640                 else if (ch == 'R' || ch == 'r')
+// 1641                 {
+// 1642                     {
+// 1643 						rawLen=0;
+// 1644                         rawLenIndex=0;
+// 1645                         s2wState = S2W_STATE_RAW;
+// 1646                     }
+// 1647                 }
+// 1648 #endif
+// 1649                 else if ((ch == 'c')|| (ch == 'C'))
 ??AppS2wProcess_SerialInput_23:
         CMP      R0,#+99
         IT       NE 
         CMPNE    R0,#+67
         BNE.N    ??AppS2wProcess_SerialInput_24
-// 1646                 {
-// 1647 #ifndef S2W_IP2WIFI_SUPPORT
-// 1648 #ifdef S2W_PING_TRACE
-// 1649                     if(s2wPingStarted)
-        LDR.W    R0,??DataTable132_5
+// 1650                 {
+// 1651 #ifndef S2W_IP2WIFI_SUPPORT
+// 1652 #ifdef S2W_PING_TRACE
+// 1653                     if(s2wPingStarted)
+        LDR.W    R0,??DataTable134_5
         LDR      R0,[R0, #+0]
         CMP      R0,#+0
         BEQ.N    ??AppS2wProcess_SerialInput_25
-// 1650                     {
-// 1651                         AppS2wHal_PingClose();
+// 1654                     {
+// 1655                         AppS2wHal_PingClose();
           CFI FunCall AppS2wHal_PingClose
         BL       AppS2wHal_PingClose
-// 1652                     }
-// 1653                     if(s2wTrcStarted)
-// 1654                     {
-// 1655                       //  AppS2wHal_TraceRouteClose();
-// 1656                       //  s2wTrcStarted = 0;
-// 1657                     }
-// 1658 #endif
-// 1659 #endif
-// 1660                     s2wState = S2W_STATE_CMD;
+// 1656                     }
+// 1657                     if(s2wTrcStarted)
+// 1658                     {
+// 1659                       //  AppS2wHal_TraceRouteClose();
+// 1660                       //  s2wTrcStarted = 0;
+// 1661                     }
+// 1662 #endif
+// 1663 #endif
+// 1664                     s2wState = S2W_STATE_CMD;
 ??AppS2wProcess_SerialInput_25:
         B.N      ??AppS2wProcess_SerialInput_7
-// 1661                 }
-// 1662                 else if ((ch == 'w')|| (ch == 'W'))
+// 1665                 }
+// 1666                 else if ((ch == 'w')|| (ch == 'W'))
 ??AppS2wProcess_SerialInput_24:
         CMP      R0,#+119
         IT       NE 
         CMPNE    R0,#+87
         BNE.N    ??AppS2wProcess_SerialInput_26
-// 1663 		        {
-// 1664 		             s2wState = S2W_STATE_CERT;
+// 1667 		        {
+// 1668 		             s2wState = S2W_STATE_CERT;
         MOVS     R0,#+14
         STRB     R0,[R7, #+0]
-// 1665 		             status = AppS2wCertificateData(ch);
+// 1669 		             status = AppS2wCertificateData(ch);
         LDRB     R0,[SP, #+4]
           CFI FunCall AppS2wCertificateData
         BL       AppS2wCertificateData
-// 1666 		             // flush the data for spi-dma interface
-// 1667 					 if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 1670 		             // flush the data for spi-dma interface
+// 1671 					 if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
         LDR      R1,[R5, #+0]
         MOV      R4,R0
         MOVW     R0,#+27384
@@ -4237,62 +4261,62 @@ AppS2wProcess_SerialInput:
         IT       EQ 
           CFI FunCall s2wSpiFs_Flush
         BLEQ     s2wSpiFs_Flush
-// 1668 					 {
-// 1669 					     s2wSpiFs_Flush();
-// 1670                      }
-// 1671 		                if((status == S2W_SUCCESS) || (status == S2W_FAILURE))
+// 1672 					 {
+// 1673 					     s2wSpiFs_Flush();
+// 1674                      }
+// 1675 		                if((status == S2W_SUCCESS) || (status == S2W_FAILURE))
         UXTB     R0,R4
         B.N      ??AppS2wProcess_SerialInput_27
-// 1672 		                    s2wState = S2W_STATE_CMD;
-// 1673 		        }
-// 1674 #ifdef S2W_EXTFLASH_DRIVER_TEST
-// 1675 				else if ((ch == 'v')|| (ch == 'V'))
+// 1676 		                    s2wState = S2W_STATE_CMD;
+// 1677 		        }
+// 1678 #ifdef S2W_EXTFLASH_DRIVER_TEST
+// 1679 				else if ((ch == 'v')|| (ch == 'V'))
 ??AppS2wProcess_SerialInput_26:
         CMP      R0,#+118
         IT       NE 
         CMPNE    R0,#+86
         BNE.N    ??AppS2wProcess_SerialInput_28
-// 1676 		        {
-// 1677 		             s2wState = S2W_STATE_EXTFLASH;
+// 1680 		        {
+// 1681 		             s2wState = S2W_STATE_EXTFLASH;
         MOVS     R0,#+26
         STRB     R0,[R7, #+0]
-// 1678 		             status = AppS2wExternalFlashData(ch);
+// 1682 		             status = AppS2wExternalFlashData(ch);
         LDRB     R0,[SP, #+4]
           CFI FunCall AppS2wExternalFlashData
         BL       AppS2wExternalFlashData
-// 1679 		                if((status == S2W_SUCCESS) || (status == S2W_FAILURE))
+// 1683 		                if((status == S2W_SUCCESS) || (status == S2W_FAILURE))
         UXTB     R0,R0
 ??AppS2wProcess_SerialInput_27:
         CMP      R0,#+0
         BEQ.N    ??AppS2wProcess_SerialInput_29
         CMP      R0,#+1
         BNE.N    ??AppS2wProcess_SerialInput_30
-// 1680 		                    s2wState = S2W_STATE_CMD;
+// 1684 		                    s2wState = S2W_STATE_CMD;
 ??AppS2wProcess_SerialInput_29:
         B.N      ??AppS2wProcess_SerialInput_7
-// 1681 		        }
-// 1682 #endif
-// 1683 #ifdef S2W_EXT_FLASH_FS_SUPPORT
-// 1684 				else if((ch == 'f') || (ch == 'F'))
-// 1685 				{
-// 1686 					s2wState = S2W_STATE_FWRITE; 
-// 1687 					status = AppS2wHal_FileWriteDataGet(s2wappMainTaskCtxt->appExtFsCtx.fileInfo.fd, s2wappMainTaskCtxt->appExtFsCtx.fileInfo.size);
-// 1688 					if((status == S2W_SUCCESS) || (status == S2W_FAILURE))
-// 1689 					s2wState = S2W_STATE_CMD;
-// 1690 				}
-// 1691 #endif
-// 1692 
-// 1693 		        else if ((ch == 'H')|| (ch == 'h'))
+// 1685 		        }
+// 1686 #endif
+// 1687 #ifdef S2W_EXT_FLASH_FS_SUPPORT
+// 1688 				else if((ch == 'f') || (ch == 'F'))
+// 1689 				{
+// 1690 					s2wState = S2W_STATE_FWRITE; 
+// 1691 					status = AppS2wHal_FileWriteDataGet(s2wappMainTaskCtxt->appExtFsCtx.fileInfo.fd, s2wappMainTaskCtxt->appExtFsCtx.fileInfo.size);
+// 1692 					if((status == S2W_SUCCESS) || (status == S2W_FAILURE))
+// 1693 					s2wState = S2W_STATE_CMD;
+// 1694 				}
+// 1695 #endif
+// 1696 
+// 1697 		        else if ((ch == 'H')|| (ch == 'h'))
 ??AppS2wProcess_SerialInput_28:
         CMP      R0,#+72
         IT       NE 
         CMPNE    R0,#+104
         BNE.N    ??AppS2wProcess_SerialInput_31
-// 1694 	            {
-// 1695 	                s2wState = S2W_STATE_HTTP_CONTENT_CID;
+// 1698 	            {
+// 1699 	                s2wState = S2W_STATE_HTTP_CONTENT_CID;
         MOVS     R0,#+16
-// 1696 #if defined(S2W_WEB_SERVER) && defined(S2W_GSLINK_RAW)				
-// 1697 					if(s2wappMainTaskCtxt->respTimeOut !=0 && s2wappMainTaskCtxt->responseInprogress == 1)
+// 1700 #if defined(S2W_WEB_SERVER) && defined(S2W_GSLINK_RAW)				
+// 1701 					if(s2wappMainTaskCtxt->respTimeOut !=0 && s2wappMainTaskCtxt->responseInprogress == 1)
         LDR      R1,[R5, #+0]
 ??AppS2wProcess_SerialInput_22:
         STRB     R0,[R7, #+0]
@@ -4304,16 +4328,16 @@ AppS2wProcess_SerialInput:
         LDRB     R1,[R2, R1]
         CMP      R1,#+1
         BNE.N    ??AppS2wProcess_SerialInput_32
-// 1698 					{
-// 1699 						 if (GSN_SUCCESS != GsnSoftTmr_Stop(s2wappMainTaskCtxt->respTimeOutTmrHndl))
+// 1702 					{
+// 1703 						 if (GSN_SUCCESS != GsnSoftTmr_Stop(s2wappMainTaskCtxt->respTimeOutTmrHndl))
         LDR      R0,[R0, #+44]
           CFI FunCall GsnSoftTmr_Stop
         BL       GsnSoftTmr_Stop
         CBZ.N    R0,??AppS2wProcess_SerialInput_32
-// 1700 							 respTimeOut = 1;					
+// 1704 							 respTimeOut = 1;					
         MOV      R8,#+1
-// 1701 					}
-// 1702 					s2wappMainTaskCtxt->responseInprogress = 0;
+// 1705 					}
+// 1706 					s2wappMainTaskCtxt->responseInprogress = 0;
 ??AppS2wProcess_SerialInput_32:
         LDR      R1,[R5, #+0]
         MOVW     R0,#+27580
@@ -4321,128 +4345,128 @@ AppS2wProcess_SerialInput:
         STRB     R2,[R0, R1]
 ??AppS2wProcess_SerialInput_30:
         B.N      ??AppS2wProcess_SerialInput_11
-// 1703 #endif			
-// 1704 		        }
-// 1705 		        else if ((ch == 'P')|| (ch == 'p'))
+// 1707 #endif			
+// 1708 		        }
+// 1709 		        else if ((ch == 'P')|| (ch == 'p'))
 ??AppS2wProcess_SerialInput_31:
         CMP      R0,#+80
         ITE      NE 
         CMPNE    R0,#+112
         MOVEQ    R0,#+17
-// 1706 	            {
-// 1707 	                s2wState = S2W_STATE_COAP_CONTENT_CID;
+// 1710 	            {
+// 1711 	                s2wState = S2W_STATE_COAP_CONTENT_CID;
         BEQ.N    ??AppS2wProcess_SerialInput_19
-// 1708 	            }
-// 1709 #ifdef S2W_UNASSOC_TXRX_SUPPORT
-// 1710                 else if ((((ch == 'D')|| (ch == 'd')) && (s2wLinkState == S2W_LINK_STATE_DISCONNECTED)))
+// 1712 	            }
+// 1713 #ifdef S2W_UNASSOC_TXRX_SUPPORT
+// 1714                 else if ((((ch == 'D')|| (ch == 'd')) && (s2wLinkState == S2W_LINK_STATE_DISCONNECTED)))
         CMP      R0,#+68
         IT       NE 
         CMPNE    R0,#+100
         BNE.N    ??AppS2wProcess_SerialInput_33
         LDRB     R0,[R7, #+1]
         CBNZ.N   R0,??AppS2wProcess_SerialInput_33
-// 1711                 {
-// 1712                     s2wState = S2W_STATE_UNSOLICITED_DATA;
+// 1715                 {
+// 1716                     s2wState = S2W_STATE_UNSOLICITED_DATA;
         MOVS     R0,#+9
         STRB     R0,[R7, #+0]
-// 1713                     dataIndex = 0;
+// 1717                     dataIndex = 0;
         MOVS     R0,#+0
         STR      R0,[R7, #+44]
         B.N      ??AppS2wProcess_SerialInput_11
-// 1714                 }
-// 1715 #endif
-// 1716                 else
-// 1717                 {
-// 1718                     s2wState = S2W_STATE_CMD;
+// 1718                 }
+// 1719 #endif
+// 1720                 else
+// 1721                 {
+// 1722                     s2wState = S2W_STATE_CMD;
 ??AppS2wProcess_SerialInput_33:
         MOVS     R0,#+0
         STRB     R0,[R7, #+0]
-// 1719                     AppS2w_CommandCharProcess(S2W_ESC);
+// 1723                     AppS2w_CommandCharProcess(S2W_ESC);
         MOVS     R0,#+27
           CFI FunCall AppS2w_CommandCharProcess
         BL       AppS2w_CommandCharProcess
-// 1720                     AppS2w_CommandCharProcess(ch);
+// 1724                     AppS2w_CommandCharProcess(ch);
         LDRB     R0,[SP, #+4]
 ??AppS2wProcess_SerialInput_16:
           CFI FunCall AppS2w_CommandCharProcess
         BL       AppS2w_CommandCharProcess
         B.N      ??AppS2wProcess_SerialInput_11
-// 1721             }
-// 1722             break;
-// 1723 #ifdef S2W_UNASSOC_TXRX_SUPPORT
-// 1724             case S2W_STATE_UNSOLICITED_DATA:
-// 1725                     dataBuffer[0]= ch;
+// 1725             }
+// 1726             break;
+// 1727 #ifdef S2W_UNASSOC_TXRX_SUPPORT
+// 1728             case S2W_STATE_UNSOLICITED_DATA:
+// 1729                     dataBuffer[0]= ch;
 ??AppS2wProcess_SerialInput_34:
-        LDR.W    R0,??DataTable132_3
+        LDR.W    R0,??DataTable134_3
         STRB     R1,[R0, #+0]
-// 1726                     if(s2wappMainTaskCtxt->frame.macFrameLen)
+// 1730                     if(s2wappMainTaskCtxt->frame.macFrameLen)
         MOVW     R4,#+30124
         LDR      R1,[R5, #+0]
         LDRH     R0,[R4, R1]
         CMP      R0,#+0
         BEQ.N    ??AppS2wProcess_SerialInput_29
-// 1727                     {
-// 1728                         AppS2wHal_CharNGet(&dataBuffer[1], s2wappMainTaskCtxt->frame.macFrameLen-1);
+// 1731                     {
+// 1732                         AppS2wHal_CharNGet(&dataBuffer[1], s2wappMainTaskCtxt->frame.macFrameLen-1);
         SUBS     R1,R0,#+1
-        LDR.W    R0,??DataTable132_6
+        LDR.W    R0,??DataTable134_6
           CFI FunCall AppS2wHal_CharNGet
         BL       AppS2wHal_CharNGet
-// 1729                         dataIndex = s2wappMainTaskCtxt->frame.macFrameLen;
+// 1733                         dataIndex = s2wappMainTaskCtxt->frame.macFrameLen;
         LDR      R0,[R5, #+0]
         LDRH     R1,[R4, R0]
         STR      R1,[R7, #+44]
-// 1730                         // first start the mode
-// 1731 
-// 1732 						GSN_WDD_UAM_START_RESP_T resp;
-// 1733                         status= GsnWdd_UAMStart(&(s2wappMainTaskCtxt->if0.wddCtx), 0, &resp);
+// 1734                         // first start the mode
+// 1735 
+// 1736 						GSN_WDD_UAM_START_RESP_T resp;
+// 1737                         status= GsnWdd_UAMStart(&(s2wappMainTaskCtxt->if0.wddCtx), 0, &resp);
         ADD      R2,SP,#+28
         MOVS     R1,#+0
         ADD      R0,R0,#+3808
           CFI FunCall GsnWdd_UAMStart
         BL       GsnWdd_UAMStart
-// 1734                         if(status != GSN_SUCCESS)
+// 1738                         if(status != GSN_SUCCESS)
         UXTB     R2,R0
         CBZ.N    R2,??AppS2wProcess_SerialInput_35
-// 1735                         {
-// 1736 							AppS2wProcess_StatusNotify(status, 0);
+// 1739                         {
+// 1740 							AppS2wProcess_StatusNotify(status, 0);
         MOVS     R1,#+0
         MOV      R0,R2
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 1737 						}
-// 1738 						// configure the rx if it is requetsed
-// 1739 						if(s2wappMainTaskCtxt->frame.rxWaitTime)
+// 1741 						}
+// 1742 						// configure the rx if it is requetsed
+// 1743 						if(s2wappMainTaskCtxt->frame.rxWaitTime)
 ??AppS2wProcess_SerialInput_35:
         LDR      R0,[R5, #+0]
         MOVW     R4,#+30152
         LDR      R0,[R4, R0]
         CBZ.N    R0,??AppS2wProcess_SerialInput_36
-// 1740 						{
-// 1741 							s2wUamRx_Init();
+// 1744 						{
+// 1745 							s2wUamRx_Init();
           CFI FunCall s2wUamRx_Init
         BL       s2wUamRx_Init
-// 1742 							// first configure the rx
-// 1743 							status= GsnWdd_UAMDataRxConfig(&(s2wappMainTaskCtxt->if0.wddCtx), &s2wappMainTaskCtxt->RxParam);
+// 1746 							// first configure the rx
+// 1747 							status= GsnWdd_UAMDataRxConfig(&(s2wappMainTaskCtxt->if0.wddCtx), &s2wappMainTaskCtxt->RxParam);
         LDR      R0,[R5, #+0]
         ADD      R1,R0,#+29952
         ADDS     R1,R1,#+216
         ADD      R0,R0,#+3808
           CFI FunCall GsnWdd_UAMDataRxConfig
         BL       GsnWdd_UAMDataRxConfig
-// 1744 
-// 1745                             // register the callback
-// 1746                             GsnWdd_DataIndCbReg(&(s2wappMainTaskCtxt->if0.wddCtx), S2W_UnassocDataIndCB, s2wappMainTaskCtxt);
+// 1748 
+// 1749                             // register the callback
+// 1750                             GsnWdd_DataIndCbReg(&(s2wappMainTaskCtxt->if0.wddCtx), S2W_UnassocDataIndCB, s2wappMainTaskCtxt);
         LDR      R0,[R5, #+0]
-        LDR.W    R2,??DataTable132_7
+        LDR.W    R2,??DataTable134_7
         ADDW     R1,R0,#+3808
         STR      R2,[R1, #+116]
         STR      R0,[R1, #+120]
-// 1747 						}
-// 1748 						{
-// 1749 
-// 1750 						    GSN_WDD_UAM_CCA_SET_RESP_T respCCa;
-// 1751 						    GsnWdd_UamCcaConfigSet(&(s2wappMainTaskCtxt->if0.wddCtx),0,s2wappMainTaskCtxt->ccaThr,
-// 1752                                              (UINT16)s2wappMainTaskCtxt->ccaTimeout,&respCCa);
+// 1751 						}
+// 1752 						{
+// 1753 
+// 1754 						    GSN_WDD_UAM_CCA_SET_RESP_T respCCa;
+// 1755 						    GsnWdd_UamCcaConfigSet(&(s2wappMainTaskCtxt->if0.wddCtx),0,s2wappMainTaskCtxt->ccaThr,
+// 1756                                              (UINT16)s2wappMainTaskCtxt->ccaTimeout,&respCCa);
 ??AppS2wProcess_SerialInput_36:
         ADD      R1,SP,#+20
         LDR      R0,[R5, #+0]
@@ -4457,40 +4481,40 @@ AppS2wProcess_SerialInput:
         ADD      R0,R0,#+3808
           CFI FunCall GsnWdd_UamCcaConfigSet
         BL       GsnWdd_UamCcaConfigSet
-// 1753 						}
-// 1754 						GSN_WIF_WLAN_UNASSOCIATED_DATACFM_T wStatus;
-// 1755                         GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1757 						}
+// 1758 						GSN_WIF_WLAN_UNASSOCIATED_DATACFM_T wStatus;
+// 1759                         GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
         BL       ?Subroutine11
-// 1756                         status = GsnWdd_UamDataSend_Patch(&(s2wappMainTaskCtxt->if0.wddCtx),&s2wappMainTaskCtxt->frame,
-// 1757                                            dataBuffer, dataIndex,&wStatus);
+// 1760                         status = GsnWdd_UamDataSend_Patch(&(s2wappMainTaskCtxt->if0.wddCtx),&s2wappMainTaskCtxt->frame,
+// 1761                                            dataBuffer, dataIndex,&wStatus);
 ??CrossCallReturnLabel_30:
         ADD      R1,SP,#+12
         LDR      R0,[R5, #+0]
         LDR      R3,[R7, #+44]
-        LDR.W    R2,??DataTable132_3
+        LDR.W    R2,??DataTable134_3
         STR      R1,[SP, #+0]
         ADD      R1,R0,#+29952
         ADDS     R1,R1,#+160
         ADD      R0,R0,#+3808
           CFI FunCall GsnWdd_UamDataSend_Patch
         BL       GsnWdd_UamDataSend_Patch
-// 1758                         // if the option enabled then send back the time stamp
-// 1759 
-// 1760                         if((wStatus.status) && (s2wappMainTaskCtxt->uamTimeStampReturn))
+// 1762                         // if the option enabled then send back the time stamp
+// 1763 
+// 1764                         if((wStatus.status) && (s2wappMainTaskCtxt->uamTimeStampReturn))
         LDRH     R0,[SP, #+12]
         CBZ.N    R0,??AppS2wProcess_SerialInput_37
         LDR      R1,[R5, #+0]
         MOVW     R0,#+30164
         LDRB     R0,[R0, R1]
         CBZ.N    R0,??AppS2wProcess_SerialInput_38
-// 1761                         {
-// 1762 							S2w_Printf("\r\nTS:%x",wStatus.timeStamp);
+// 1765                         {
+// 1766 							S2w_Printf("\r\nTS:%x",wStatus.timeStamp);
         LDR      R1,[SP, #+16]
         ADR.W    R0,`?<Constant "\\r\\nTS:%x">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 1763 						}
-// 1764                         AppS2wProcess_StatusNotify(!wStatus.status, 0);
+// 1767 						}
+// 1768                         AppS2wProcess_StatusNotify(!wStatus.status, 0);
         LDRH     R1,[SP, #+12]
         SUBS     R0,R1,#+1
         SBCS     R0,R0,R0
@@ -4502,22 +4526,22 @@ AppS2wProcess_SerialInput:
         MOVS     R1,#+0
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 1765                         GsnOsal_SemRelease(&s2wSyncSemID);
+// 1769                         GsnOsal_SemRelease(&s2wSyncSemID);
         BL       ?Subroutine10
 ??CrossCallReturnLabel_24:
         LDR      R0,[R5, #+0]
         LDR      R0,[R4, R0]
         CBZ.N    R0,??AppS2wProcess_SerialInput_39
-// 1766                         // wait for the rx to complete the stop the mode
-// 1767                         if(s2wappMainTaskCtxt->frame.rxWaitTime)
-// 1768 						{
-// 1769 							GsnTaskSleep(s2wappMainTaskCtxt->frame.rxWaitTime);
+// 1770                         // wait for the rx to complete the stop the mode
+// 1771                         if(s2wappMainTaskCtxt->frame.rxWaitTime)
+// 1772 						{
+// 1773 							GsnTaskSleep(s2wappMainTaskCtxt->frame.rxWaitTime);
           CFI FunCall GsnTaskSleep
         BL       GsnTaskSleep
-// 1770 						}
-// 1771                         // stop the mode
-// 1772                         GSN_WDD_UAM_STOP_RESP_T resp1;
-// 1773                         GsnWdd_UAMStop(&(s2wappMainTaskCtxt->if0.wddCtx), 0, &resp1);
+// 1774 						}
+// 1775                         // stop the mode
+// 1776                         GSN_WDD_UAM_STOP_RESP_T resp1;
+// 1777                         GsnWdd_UAMStop(&(s2wappMainTaskCtxt->if0.wddCtx), 0, &resp1);
 ??AppS2wProcess_SerialInput_39:
         LDR      R0,[R5, #+0]
         ADD      R2,SP,#+20
@@ -4525,32 +4549,32 @@ AppS2wProcess_SerialInput:
         ADD      R0,R0,#+3808
           CFI FunCall GsnWdd_UAMStop
         BL       GsnWdd_UAMStop
-// 1774 
-// 1775 					}
-// 1776 					s2wState = S2W_STATE_CMD;
+// 1778 
+// 1779 					}
+// 1780 					s2wState = S2W_STATE_CMD;
         B.N      ??AppS2wProcess_SerialInput_7
-// 1777             break;
-// 1778 #endif
-// 1779             case S2W_STATE_DATA:
-// 1780                 if (ch == S2W_ESC)
+// 1781             break;
+// 1782 #endif
+// 1783             case S2W_STATE_DATA:
+// 1784                 if (ch == S2W_ESC)
 ??AppS2wProcess_SerialInput_40:
         CMP      R0,#+27
         IT       EQ 
         MOVEQ    R0,#+2
-// 1781                 {
-// 1782                     s2wState = S2W_STATE_DATA_ESC;
+// 1785                 {
+// 1786                     s2wState = S2W_STATE_DATA_ESC;
         BEQ.W    ??AppS2wProcess_SerialInput_3
-// 1783                     continue;
-// 1784                 }
-// 1785                 AppS2w_DataCharProcess(ch);
+// 1787                     continue;
+// 1788                 }
+// 1789                 AppS2w_DataCharProcess(ch);
 ??AppS2wProcess_SerialInput_14:
           CFI FunCall AppS2w_DataCharProcess
         BL       AppS2w_DataCharProcess
-// 1786             break;
+// 1790             break;
         B.N      ??AppS2wProcess_SerialInput_11
-// 1787 
-// 1788             case S2W_STATE_DATA_ESC:
-// 1789                 if(APP_S2W_GET_SERIAL_DEVICE_ID())
+// 1791 
+// 1792             case S2W_STATE_DATA_ESC:
+// 1793                 if(APP_S2W_GET_SERIAL_DEVICE_ID())
 ??AppS2wProcess_SerialInput_41:
         LDR      R2,[R5, #+0]
         MOVW     R1,#+27384
@@ -4560,24 +4584,24 @@ AppS2wProcess_SerialInput:
         MOVNE    R1,#+0
         LDREQ    R1,[R11, #+4]
         UBFXEQ   R1,R1,#+6,#+1
-// 1790                 {//Note: Is it not applicable for SPI interface - since we already apply stuffing  at lower layer
-// 1791                     softFlow = 0x00;
-// 1792                 }
-// 1793                 else
-// 1794                 {
-// 1795                     softFlow = s2wCurrent.serialPortConf.conf.uart.softflow;
+// 1794                 {//Note: Is it not applicable for SPI interface - since we already apply stuffing  at lower layer
+// 1795                     softFlow = 0x00;
 // 1796                 }
-// 1797                 if (ch == S2W_ESC)
+// 1797                 else
+// 1798                 {
+// 1799                     softFlow = s2wCurrent.serialPortConf.conf.uart.softflow;
+// 1800                 }
+// 1801                 if (ch == S2W_ESC)
         CMP      R0,#+27
         BNE.N    ??AppS2wProcess_SerialInput_42
-// 1798                 {
-// 1799                     AppS2w_DataCharProcess(ch);
+// 1802                 {
+// 1803                     AppS2w_DataCharProcess(ch);
           CFI FunCall AppS2w_DataCharProcess
         BL       AppS2w_DataCharProcess
-// 1800                     s2wState = S2W_STATE_DATA;
+// 1804                     s2wState = S2W_STATE_DATA;
         B.N      ??AppS2wProcess_SerialInput_43
-// 1801                 }
-// 1802                 else if (ch == 'E' || ch == 'S' || ch == 'u' || ch == 'U')
+// 1805                 }
+// 1806                 else if (ch == 'E' || ch == 'S' || ch == 'u' || ch == 'U')
 ??AppS2wProcess_SerialInput_42:
         CMP      R0,#+69
         IT       NE 
@@ -4587,212 +4611,212 @@ AppS2wProcess_SerialInput:
         IT       NE 
         CMPNE    R0,#+85
         BNE.N    ??AppS2wProcess_SerialInput_45
-// 1803                 {
-// 1804                     status = AppS2w_DataBufferTransmit();
+// 1807                 {
+// 1808                     status = AppS2w_DataBufferTransmit();
 ??AppS2wProcess_SerialInput_44:
           CFI FunCall AppS2w_DataBufferTransmit
         BL       AppS2w_DataBufferTransmit
         BL       ?Subroutine7
-// 1805                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 1806                     AppS2wProcess_StatusNotify(status, 0);
+// 1809                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1810                     AppS2wProcess_StatusNotify(status, 0);
 ??CrossCallReturnLabel_14:
         BL       ?Subroutine1
-// 1807                     GsnOsal_SemRelease(&s2wSyncSemID);
+// 1811                     GsnOsal_SemRelease(&s2wSyncSemID);
 ??CrossCallReturnLabel_4:
         BL       ?Subroutine10
-// 1808                     curCid = INVALID_CID;
+// 1812                     curCid = INVALID_CID;
 ??CrossCallReturnLabel_23:
         MOVS     R0,#+255
         STRB     R0,[R7, #+5]
-// 1809                     s2wState = ch == 'E' ? S2W_STATE_CMD : S2W_STATE_CID;
+// 1813                     s2wState = ch == 'E' ? S2W_STATE_CMD : S2W_STATE_CID;
         LDRB     R0,[SP, #+4]
         CMP      R0,#+69
         ITE      NE 
         MOVNE    R0,#+4
         MOVEQ    R0,#+0
         B.N      ??AppS2wProcess_SerialInput_20
-// 1810                 }
-// 1811                 else if (ch == 'C')
+// 1814                 }
+// 1815                 else if (ch == 'C')
 ??AppS2wProcess_SerialInput_45:
         CMP      R0,#+67
         BNE.N    ??AppS2wProcess_SerialInput_46
-// 1812                 {
-// 1813                     status = AppS2w_DataBufferTransmit();
+// 1816                 {
+// 1817                     status = AppS2w_DataBufferTransmit();
           CFI FunCall AppS2w_DataBufferTransmit
         BL       AppS2w_DataBufferTransmit
         BL       ?Subroutine7
-// 1814                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 1815                     AppS2wProcess_StatusNotify(status, 0);
+// 1818                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1819                     AppS2wProcess_StatusNotify(status, 0);
 ??CrossCallReturnLabel_13:
         BL       ?Subroutine1
-// 1816                     GsnOsal_SemRelease(&s2wSyncSemID);
+// 1820                     GsnOsal_SemRelease(&s2wSyncSemID);
 ??CrossCallReturnLabel_3:
         BL       ?Subroutine10
-// 1817                     AppS2wHal_NetClose(curCid);
+// 1821                     AppS2wHal_NetClose(curCid);
 ??CrossCallReturnLabel_22:
         LDRB     R0,[R7, #+5]
           CFI FunCall AppS2wHal_NetClose
         BL       AppS2wHal_NetClose
-// 1818                     s2wState = S2W_STATE_CMD;
+// 1822                     s2wState = S2W_STATE_CMD;
         B.N      ??AppS2wProcess_SerialInput_7
-// 1819                 }
-// 1820                 else if ((ch == 'Q' || ch == 'T')
-// 1821                           && (softFlow))
+// 1823                 }
+// 1824                 else if ((ch == 'Q' || ch == 'T')
+// 1825                           && (softFlow))
 ??AppS2wProcess_SerialInput_46:
         CMP      R0,#+81
         IT       NE 
         CMPNE    R0,#+84
         BNE.N    ??AppS2wProcess_SerialInput_47
         CBZ.N    R1,??AppS2wProcess_SerialInput_48
-// 1822                 {
-// 1823                     AppS2w_DataCharProcess(ch == 'Q' ? S2W_XON : S2W_XOFF);
+// 1826                 {
+// 1827                     AppS2w_DataCharProcess(ch == 'Q' ? S2W_XON : S2W_XOFF);
         CMP      R0,#+81
         ITE      EQ 
         MOVEQ    R0,#+17
         MOVNE    R0,#+19
           CFI FunCall AppS2w_DataCharProcess
         BL       AppS2w_DataCharProcess
-// 1824                     s2wState = S2W_STATE_DATA;
+// 1828                     s2wState = S2W_STATE_DATA;
 ??AppS2wProcess_SerialInput_47:
         B.N      ??AppS2wProcess_SerialInput_43
-// 1825                 }
-// 1826                 else
-// 1827                 {
-// 1828                     s2wState = S2W_STATE_DATA;
+// 1829                 }
+// 1830                 else
+// 1831                 {
+// 1832                     s2wState = S2W_STATE_DATA;
 ??AppS2wProcess_SerialInput_48:
         B.N      ??AppS2wProcess_SerialInput_43
-// 1829                 }
-// 1830             break;
-// 1831 
-// 1832             case S2W_STATE_CID:
-// 1833                 curCid = AppS2w_CidValidate(ch);
+// 1833                 }
+// 1834             break;
+// 1835 
+// 1836             case S2W_STATE_CID:
+// 1837                 curCid = AppS2w_CidValidate(ch);
 ??AppS2wProcess_SerialInput_49:
           CFI FunCall AppS2w_CidValidate
         BL       AppS2w_CidValidate
         STRB     R0,[R7, #+5]
-// 1834                 if (curCid == INVALID_CID)
+// 1838                 if (curCid == INVALID_CID)
         CMP      R0,#+255
         BEQ.N    ??AppS2wProcess_SerialInput_50
-// 1835                 {
-// 1836                     AppS2w_FailEscParse();
-// 1837                 }
-// 1838                 else
 // 1839                 {
-// 1840                     digits = 0;
+// 1840                     AppS2w_FailEscParse();
+// 1841                 }
+// 1842                 else
+// 1843                 {
+// 1844                     digits = 0;
         MOVS     R0,#+0
         STRB     R0,[R7, #+9]
-// 1841                     ipnum = 0;
+// 1845                     ipnum = 0;
         STRB     R0,[R7, #+8]
-// 1842 #if  defined(S2W_FS_SPI_HI_ENABLE) || defined(S2W_SDIO_ENABLE)
-// 1843 #else
-// 1844 
-// 1845                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1846 #if  defined(S2W_FS_SPI_HI_ENABLE) || defined(S2W_SDIO_ENABLE)
+// 1847 #else
+// 1848 
+// 1849                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
         BL       ?Subroutine11
-// 1846                     AppS2wProcess_StatusNotify(S2W_SUCCESS, 0);
+// 1850                     AppS2wProcess_StatusNotify(S2W_SUCCESS, 0);
 ??CrossCallReturnLabel_29:
         MOVS     R1,#+0
         MOVS     R0,#+0
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 1847                     GsnOsal_SemRelease(&s2wSyncSemID);
+// 1851                     GsnOsal_SemRelease(&s2wSyncSemID);
         BL       ?Subroutine10
-// 1848 #endif
-// 1849                     if (prev == 'S')
+// 1852 #endif
+// 1853                     if (prev == 'S')
 ??CrossCallReturnLabel_21:
         LDRB     R0,[R7, #+10]
         CMP      R0,#+83
         IT       EQ 
         MOVEQ    R0,#+1
-// 1850                         s2wState = S2W_STATE_DATA;
+// 1854                         s2wState = S2W_STATE_DATA;
         BEQ.N    ??AppS2wProcess_SerialInput_51
-// 1851                     else if (prev == 'u')
+// 1855                     else if (prev == 'u')
         CMP      R0,#+117
         IT       EQ 
         MOVEQ    R0,#+10
-// 1852                         s2wState = S2W_STATE_IPPORT;
+// 1856                         s2wState = S2W_STATE_IPPORT;
         BEQ.N    ??AppS2wProcess_SerialInput_51
-// 1853                     else if (prev == 'U')
+// 1857                     else if (prev == 'U')
         CMP      R0,#+85
         IT       EQ 
         MOVEQ    R0,#+11
-// 1854                         s2wState = S2W_STATE_IP_STRING;
+// 1858                         s2wState = S2W_STATE_IP_STRING;
         BEQ.N    ??AppS2wProcess_SerialInput_51
-// 1855                     else if (prev == 'Z')
+// 1859                     else if (prev == 'Z')
         CMP      R0,#+90
         IT       EQ 
         MOVEQ    R0,#+19
-// 1856                         s2wState = S2W_STATE_BULK_DATA;
+// 1860                         s2wState = S2W_STATE_BULK_DATA;
         BEQ.N    ??AppS2wProcess_SerialInput_51
-// 1857                     else if(prev == 'Y')
+// 1861                     else if(prev == 'Y')
         CMP      R0,#+89
         BNE.N    ??AppS2wProcess_SerialInput_52
-// 1858                     {
-// 1859                         prevprev = prev;
+// 1862                     {
+// 1863                         prevprev = prev;
         STRB     R0,[R7, #+11]
-// 1860                         s2wState = S2W_STATE_IP_STRING;
+// 1864                         s2wState = S2W_STATE_IP_STRING;
         MOVS     R0,#+11
 ??AppS2wProcess_SerialInput_51:
         B.N      ??AppS2wProcess_SerialInput_20
-// 1861                     }
-// 1862                 }
-// 1863             break;
-// 1864 
-// 1865             case S2W_STATE_IPPORT:
-// 1866                 if (ipnum < 4)
+// 1865                     }
+// 1866                 }
+// 1867             break;
+// 1868 
+// 1869             case S2W_STATE_IPPORT:
+// 1870                 if (ipnum < 4)
 ??AppS2wProcess_SerialInput_53:
         CMP      R4,#+4
         BGE.N    ??AppS2wProcess_SerialInput_54
-// 1867                 {
-// 1868                     destAddr[ipnum] = ch;
+// 1871                 {
+// 1872                     destAddr[ipnum] = ch;
         ADDS     R0,R4,R7
         STRB     R1,[R0, #+12]
         B.N      ??AppS2wProcess_SerialInput_55
-// 1869                 }
-// 1870                 else if (ipnum == 4)
+// 1873                 }
+// 1874                 else if (ipnum == 4)
 ??AppS2wProcess_SerialInput_54:
         BNE.N    ??AppS2wProcess_SerialInput_56
-// 1871                 {
-// 1872                     destPort = (UINT16) ch << 8;
+// 1875                 {
+// 1876                     destPort = (UINT16) ch << 8;
         LSLS     R0,R1,#+8
         STRH     R0,[R7, #+30]
         B.N      ??AppS2wProcess_SerialInput_55
-// 1873                 }
-// 1874                 else if (ipnum == 5)
+// 1877                 }
+// 1878                 else if (ipnum == 5)
 ??AppS2wProcess_SerialInput_56:
         CMP      R4,#+5
         BNE.N    ??AppS2wProcess_SerialInput_55
-// 1875                 {
-// 1876                     destPort |= ch;
+// 1879                 {
+// 1880                     destPort |= ch;
         LDRH     R0,[R7, #+30]
         ORRS     R0,R1,R0
         STRH     R0,[R7, #+30]
-// 1877                     s2wState = S2W_STATE_DATA;
+// 1881                     s2wState = S2W_STATE_DATA;
         MOVS     R0,#+1
         STRB     R0,[R7, #+0]
-// 1878                 }
-// 1879                 ipnum++;
+// 1882                 }
+// 1883                 ipnum++;
 ??AppS2wProcess_SerialInput_55:
         ADDS     R0,R2,#+1
         STRB     R0,[R7, #+8]
-// 1880             break;
+// 1884             break;
 ??AppS2wProcess_SerialInput_52:
         B.N      ??AppS2wProcess_SerialInput_11
-// 1881 
-// 1882             case S2W_STATE_IP_STRING:
-// 1883                 if (digits < 3 && isdigit(ch))
+// 1885 
+// 1886             case S2W_STATE_IP_STRING:
+// 1887                 if (digits < 3 && isdigit(ch))
 ??AppS2wProcess_SerialInput_57:
         CMP      R6,#+3
         BGE.N    ??AppS2wProcess_SerialInput_58
           CFI FunCall isdigit
         BL       isdigit
         CBNZ.N   R0,??AppS2wProcess_SerialInput_59
-// 1884                 {
-// 1885                     atoibuf[digits] = ch;
-// 1886                     digits++;
-// 1887                 }
-// 1888                 else if (digits
-// 1889                      && ((ipnum < 3 && ch == '.')
-// 1890                      || (ipnum == 3 && ch == ':')))
+// 1888                 {
+// 1889                     atoibuf[digits] = ch;
+// 1890                     digits++;
+// 1891                 }
+// 1892                 else if (digits
+// 1893                      && ((ipnum < 3 && ch == '.')
+// 1894                      || (ipnum == 3 && ch == ':')))
 ??AppS2wProcess_SerialInput_58:
         CMP      R6,#+0
 ??AppS2wProcess_SerialInput_50:
@@ -4807,163 +4831,163 @@ AppS2wProcess_SerialInput:
         IT       EQ 
         CMPEQ    R0,#+58
         BNE.N    ??AppS2wProcess_SerialInput_60
-// 1891                 {
-// 1892                     long temp;
-// 1893                     atoibuf[digits] = '\0';
+// 1895                 {
+// 1896                     long temp;
+// 1897                     atoibuf[digits] = '\0';
 ??AppS2wProcess_SerialInput_62:
         BL       ?Subroutine3
-// 1894                     temp = atol(atoibuf);
-// 1895                     if (temp < 0 || temp > 255)
+// 1898                     temp = atol(atoibuf);
+// 1899                     if (temp < 0 || temp > 255)
 ??CrossCallReturnLabel_8:
         CMP      R0,#+255
         BHI.N    ??AppS2wProcess_SerialInput_63
-// 1896                     {
-// 1897                         AppS2w_FailEscParse();
-// 1898                         continue;
-// 1899                     }
-// 1900                     destAddr[ipnum] = temp;
+// 1900                     {
+// 1901                         AppS2w_FailEscParse();
+// 1902                         continue;
+// 1903                     }
+// 1904                     destAddr[ipnum] = temp;
         LDRB     R1,[R7, #+8]
         ADDS     R2,R1,R7
         STRB     R0,[R2, #+12]
-// 1901                     digits = 0;
+// 1905                     digits = 0;
         MOVS     R0,#+0
         STRB     R0,[R7, #+9]
-// 1902                     ipnum++;
+// 1906                     ipnum++;
         ADDS     R0,R1,#+1
         STRB     R0,[R7, #+8]
-// 1903                     if (ipnum == 4)
+// 1907                     if (ipnum == 4)
         UXTB     R0,R0
         CMP      R0,#+4
         BNE.N    ??AppS2wProcess_SerialInput_64
-// 1904                     {
-// 1905                         ipnum = 0;
+// 1908                     {
+// 1909                         ipnum = 0;
         MOVS     R0,#+0
         STRB     R0,[R7, #+8]
-// 1906                         s2wState = S2W_STATE_PORT_STRING;
+// 1910                         s2wState = S2W_STATE_PORT_STRING;
         MOVS     R0,#+12
         B.N      ??AppS2wProcess_SerialInput_20
-// 1907                     }
-// 1908                 }
-// 1909                 else
-// 1910                 {
-// 1911                     AppS2w_FailEscParse();
+// 1911                     }
 // 1912                 }
-// 1913             break;
-// 1914 
-// 1915             case S2W_STATE_PORT_STRING:
-// 1916                 if (digits < 5 && isdigit(ch))
+// 1913                 else
+// 1914                 {
+// 1915                     AppS2w_FailEscParse();
+// 1916                 }
+// 1917             break;
+// 1918 
+// 1919             case S2W_STATE_PORT_STRING:
+// 1920                 if (digits < 5 && isdigit(ch))
 ??AppS2wProcess_SerialInput_65:
         CMP      R6,#+5
         BGE.N    ??AppS2wProcess_SerialInput_66
           CFI FunCall isdigit
         BL       isdigit
         CBZ.N    R0,??AppS2wProcess_SerialInput_66
-// 1917                 {
-// 1918                     atoibuf[digits] = ch;
+// 1921                 {
+// 1922                     atoibuf[digits] = ch;
 ??AppS2wProcess_SerialInput_59:
         ADDS     R0,R6,R7
         LDRB     R1,[SP, #+4]
         STRB     R1,[R0, #+20]
-// 1919                     digits++;
+// 1923                     digits++;
         ADDS     R0,R6,#+1
         STRB     R0,[R7, #+9]
 ??AppS2wProcess_SerialInput_64:
         B.N      ??AppS2wProcess_SerialInput_11
-// 1920                 }
-// 1921                 else if (digits && ch == ':')
+// 1924                 }
+// 1925                 else if (digits && ch == ':')
 ??AppS2wProcess_SerialInput_66:
         CBZ.N    R6,??AppS2wProcess_SerialInput_60
         LDRB     R0,[SP, #+4]
         CMP      R0,#+58
         BNE.N    ??AppS2wProcess_SerialInput_60
-// 1922                 {
-// 1923                     long    temp;
-// 1924                     atoibuf[digits] = '\0';
+// 1926                 {
+// 1927                     long    temp;
+// 1928                     atoibuf[digits] = '\0';
         BL       ?Subroutine3
-// 1925                     temp = atol(atoibuf);
-// 1926                     if (temp < 0 || temp > 65535)
+// 1929                     temp = atol(atoibuf);
+// 1930                     if (temp < 0 || temp > 65535)
 ??CrossCallReturnLabel_7:
         CMP      R0,#+65536
         BCC.N    ??AppS2wProcess_SerialInput_67
-// 1927                     {
-// 1928                         AppS2w_FailEscParse();
+// 1931                     {
+// 1932                         AppS2w_FailEscParse();
 ??AppS2wProcess_SerialInput_63:
           CFI FunCall AppS2w_FailEscParse
         BL       AppS2w_FailEscParse
-// 1929                         continue;
+// 1933                         continue;
         B.N      ??AppS2wProcess_SerialInput_1
-// 1930                     }
-// 1931                     destPort = temp;
+// 1934                     }
+// 1935                     destPort = temp;
 ??AppS2wProcess_SerialInput_67:
         STRH     R0,[R7, #+30]
-// 1932                     if(prevprev == 'Y')
+// 1936                     if(prevprev == 'Y')
         LDRB     R0,[R7, #+11]
         CMP      R0,#+89
         BNE.N    ??AppS2wProcess_SerialInput_43
-// 1933                     {
-// 1934                         s2wState = S2W_STATE_BULK_DATA;
+// 1937                     {
+// 1938                         s2wState = S2W_STATE_BULK_DATA;
         MOVS     R0,#+19
         STRB     R0,[R7, #+0]
-// 1935                         prevprev = 0;
+// 1939                         prevprev = 0;
         MOVS     R0,#+0
         STRB     R0,[R7, #+11]
         B.N      ??AppS2wProcess_SerialInput_11
-// 1936                     }
-// 1937                     else
-// 1938                     {
-// 1939                         s2wState = S2W_STATE_DATA;
+// 1940                     }
+// 1941                     else
+// 1942                     {
+// 1943                         s2wState = S2W_STATE_DATA;
 ??AppS2wProcess_SerialInput_43:
         MOVS     R0,#+1
         B.N      ??AppS2wProcess_SerialInput_20
-// 1940                     }
-// 1941                 }
-// 1942                 else
-// 1943                 {
-// 1944                      AppS2w_FailEscParse();
+// 1944                     }
+// 1945                 }
+// 1946                 else
+// 1947                 {
+// 1948                      AppS2w_FailEscParse();
 ??AppS2wProcess_SerialInput_60:
           CFI FunCall AppS2w_FailEscParse
         BL       AppS2w_FailEscParse
         B.N      ??AppS2wProcess_SerialInput_11
-// 1945                 }
-// 1946             break;
-// 1947           
-// 1948             case S2W_STATE_HTTP_CONTENT_CID:
-// 1949             {
-// 1950                 hCid = AppS2w_CidValidate(ch);
+// 1949                 }
+// 1950             break;
+// 1951           
+// 1952             case S2W_STATE_HTTP_CONTENT_CID:
+// 1953             {
+// 1954                 hCid = AppS2w_CidValidate(ch);
 ??AppS2wProcess_SerialInput_68:
           CFI FunCall AppS2w_CidValidate
         BL       AppS2w_CidValidate
         STRB     R0,[R7, #+2]
-// 1951                 if(( hCid != INVALID_CID )/* && ( AppS2w_ConnHttpStateGet(hCid) == 1)*/)
+// 1955                 if(( hCid != INVALID_CID )/* && ( AppS2w_ConnHttpStateGet(hCid) == 1)*/)
         CMP      R0,#+255
         BEQ.N    ??AppS2wProcess_SerialInput_69
-// 1952                 {
-// 1953                     UINT8 status=S2W_FAILURE;
-// 1954 #if defined (S2W_HTTPS_SUPPORT) || (S2W_HTTPC_SUPPORT)			
-// 1955                   if((httpConfInfo.reqMethod == GSN_HTTP_METHOD_POST) || (httpConfInfo.reqMethod == GSN_HTTP_METHOD_PUT))
-        LDR.W    R1,??DataTable136_1
+// 1956                 {
+// 1957                     UINT8 status=S2W_FAILURE;
+// 1958 #if defined (S2W_HTTPS_SUPPORT) || (S2W_HTTPC_SUPPORT)			
+// 1959                   if((httpConfInfo.reqMethod == GSN_HTTP_METHOD_POST) || (httpConfInfo.reqMethod == GSN_HTTP_METHOD_PUT))
+        LDR.W    R1,??DataTable138_1
         LDRB     R1,[R1, #+1]
         MOVS     R4,#+1
         CMP      R1,#+3
         IT       NE 
         CMPNE    R1,#+4
         BNE.N    ??AppS2wProcess_SerialInput_70
-// 1956                   {
-// 1957                       status = AppS2wHal_httpContentDataGet(httpConfInfo.reqBodyTotalLen, hCid);
+// 1960                   {
+// 1961                       status = AppS2wHal_httpContentDataGet(httpConfInfo.reqBodyTotalLen, hCid);
         MOV      R1,R0
-        LDR.W    R0,??DataTable136_1
+        LDR.W    R0,??DataTable138_1
         LDR      R0,[R0, #+28]
           CFI FunCall AppS2wHal_httpContentDataGet
         BL       AppS2wHal_httpContentDataGet
         MOV      R4,R0
-// 1958                   }
-// 1959 #endif
-// 1960 #if defined(S2W_GSLINK) &&  defined(S2W_GSLINK_RAW) && defined(S2W_WEB_SERVER)
-// 1961 				  if((s2wCidList[(hCid)].httpdCtx.method == GSN_HTTP_METHOD_GETRESP) ||  \ 
-// 1962 					 (s2wCidList[(hCid)].httpdCtx.method == GSN_HTTP_METHOD_POSTRESP))
+// 1962                   }
+// 1963 #endif
+// 1964 #if defined(S2W_GSLINK) &&  defined(S2W_GSLINK_RAW) && defined(S2W_WEB_SERVER)
+// 1965 				  if((s2wCidList[(hCid)].httpdCtx.method == GSN_HTTP_METHOD_GETRESP) ||  \ 
+// 1966 					 (s2wCidList[(hCid)].httpdCtx.method == GSN_HTTP_METHOD_POSTRESP))
 ??AppS2wProcess_SerialInput_70:
         LDRB     R1,[R7, #+2]
-        LDR.W    R2,??DataTable128
+        LDR.W    R2,??DataTable130
         MOV      R0,#+296
         MLA      R0,R0,R1,R2
         ADD      R2,R0,#+220
@@ -4972,130 +4996,130 @@ AppS2wProcess_SerialInput:
         ITE      NE 
         CMPNE    R2,#+9
         CMPEQ    R8,#+0
-// 1963                   {
-// 1964 					  if(respTimeOut == 0 )
+// 1967                   {
+// 1968 					  if(respTimeOut == 0 )
         BNE.N    ??AppS2wProcess_SerialInput_71
-// 1965 					 	 status = AppS2wHal_RawhttpContentGet(s2wCidList[hCid].httpdCtx.reqBodyLen, hCid); 	  
+// 1969 					 	 status = AppS2wHal_RawhttpContentGet(s2wCidList[hCid].httpdCtx.reqBodyLen, hCid); 	  
         LDR      R0,[R0, #+220]
           CFI FunCall AppS2wHal_RawhttpContentGet
         BL       AppS2wHal_RawhttpContentGet
         MOV      R4,R0
-// 1966                   }                                                           
-// 1967 #endif
-// 1968                   s2wState = S2W_STATE_CMD;
+// 1970                   }                                                           
+// 1971 #endif
+// 1972                   s2wState = S2W_STATE_CMD;
 ??AppS2wProcess_SerialInput_71:
         MOVS     R0,#+0
         STRB     R0,[R7, #+0]
-// 1969 				  	GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1973 				  	GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
         BL       ?Subroutine11
-// 1970                   AppS2wProcess_StatusNotify(status, 0);
+// 1974                   AppS2wProcess_StatusNotify(status, 0);
 ??CrossCallReturnLabel_28:
         BL       ?Subroutine1
-// 1971 				  	GsnOsal_SemRelease(&s2wSyncSemID);
+// 1975 				  	GsnOsal_SemRelease(&s2wSyncSemID);
 ??CrossCallReturnLabel_2:
         BL       ?Subroutine10
-// 1972              }
-// 1973              else
-// 1974              {
-// 1975                  AppS2w_CommandCharProcess(ch);
-// 1976                  s2wState = S2W_STATE_CMD;
-// 1977              }
-// 1978         }
+// 1976              }
+// 1977              else
+// 1978              {
+// 1979                  AppS2w_CommandCharProcess(ch);
+// 1980                  s2wState = S2W_STATE_CMD;
+// 1981              }
+// 1982         }
 ??CrossCallReturnLabel_20:
         B.N      ??AppS2wProcess_SerialInput_11
-// 1979         break;
-// 1980             case S2W_STATE_COAP_CONTENT_CID:
-// 1981 
-// 1982             	hCid = AppS2w_CidValidate(ch);
+// 1983         break;
+// 1984             case S2W_STATE_COAP_CONTENT_CID:
+// 1985 
+// 1986             	hCid = AppS2w_CidValidate(ch);
 ??AppS2wProcess_SerialInput_72:
           CFI FunCall AppS2w_CidValidate
         BL       AppS2w_CidValidate
         STRB     R0,[R7, #+2]
-// 1983                 if( hCid != INVALID_CID )
+// 1987                 if( hCid != INVALID_CID )
         CMP      R0,#+255
         BEQ.N    ??AppS2wProcess_SerialInput_69
-// 1984                 {
-// 1985                 	UINT8 status=S2W_FAILURE;
-// 1986 
-// 1987                 	GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 1988                 {
+// 1989                 	UINT8 status=S2W_FAILURE;
+// 1990 
+// 1991                 	GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
         BL       ?Subroutine11
-// 1988 				#ifdef S2W_COAP_SUPPORT
-// 1989                 	status = AppS2wHal_CoapContentDataGet( hCid);
+// 1992 				#ifdef S2W_COAP_SUPPORT
+// 1993                 	status = AppS2wHal_CoapContentDataGet( hCid);
 ??CrossCallReturnLabel_27:
         LDRB     R0,[R7, #+2]
           CFI FunCall AppS2wHal_CoapContentDataGet
         BL       AppS2wHal_CoapContentDataGet
         MOV      R4,R0
-// 1990 				#endif
-// 1991                 	GsnOsal_SemRelease(&s2wSyncSemID);
+// 1994 				#endif
+// 1995                 	GsnOsal_SemRelease(&s2wSyncSemID);
         BL       ?Subroutine10
-// 1992                     s2wState = S2W_STATE_CMD;
+// 1996                     s2wState = S2W_STATE_CMD;
 ??CrossCallReturnLabel_19:
         MOVS     R0,#+0
         STRB     R0,[R7, #+0]
-// 1993                     AppS2wProcess_StatusNotify(status, 0);
+// 1997                     AppS2wProcess_StatusNotify(status, 0);
         BL       ?Subroutine1
-// 1994                 }
+// 1998                 }
 ??CrossCallReturnLabel_1:
         B.N      ??AppS2wProcess_SerialInput_11
-// 1995                 else
-// 1996                 {
-// 1997                     AppS2w_CommandCharProcess(ch);
+// 1999                 else
+// 2000                 {
+// 2001                     AppS2w_CommandCharProcess(ch);
 ??AppS2wProcess_SerialInput_69:
         LDRB     R0,[SP, #+4]
           CFI FunCall AppS2w_CommandCharProcess
         BL       AppS2w_CommandCharProcess
-// 1998                     s2wState = S2W_STATE_CMD;
+// 2002                     s2wState = S2W_STATE_CMD;
 ??AppS2wProcess_SerialInput_7:
         MOVS     R0,#+0
 ??AppS2wProcess_SerialInput_20:
         STRB     R0,[R7, #+0]
         B.N      ??AppS2wProcess_SerialInput_11
-// 1999                 }
-// 2000             break;
-// 2001 
-// 2002 #if defined(S2W_GSLINK) && defined(S2W_GSLINK_XML)  
-// 2003 		 case S2W_STATE_GET_CID:   
-// 2004 			curCid = AppS2w_CidValidate(ch);
+// 2003                 }
+// 2004             break;
+// 2005 
+// 2006 #if defined(S2W_GSLINK) && defined(S2W_GSLINK_XML)  
+// 2007 		 case S2W_STATE_GET_CID:   
+// 2008 			curCid = AppS2w_CidValidate(ch);
 ??AppS2wProcess_SerialInput_73:
           CFI FunCall AppS2w_CidValidate
         BL       AppS2w_CidValidate
         STRB     R0,[R7, #+5]
-// 2005         	if (curCid == INVALID_CID)
+// 2009         	if (curCid == INVALID_CID)
         CMP      R0,#+255
         BNE.N    ??AppS2wProcess_SerialInput_74
-// 2006    	    	{
-// 2007            		 AppS2w_FailEscParse();
+// 2010    	    	{
+// 2011            		 AppS2w_FailEscParse();
           CFI FunCall AppS2w_FailEscParse
         BL       AppS2w_FailEscParse
         B.N      ??AppS2wProcess_SerialInput_75
-// 2008        		}
-// 2009 			else				
-// 2010 				s2wState =  S2W_STATE_XML_LEN;		
+// 2012        		}
+// 2013 			else				
+// 2014 				s2wState =  S2W_STATE_XML_LEN;		
 ??AppS2wProcess_SerialInput_74:
         MOVS     R0,#+23
         STRB     R0,[R7, #+0]
-// 2011 				elementType=1;
+// 2015 				elementType=1;
 ??AppS2wProcess_SerialInput_75:
         MOVS     R0,#+1
         STR      R0,[SP, #+8]
-// 2012 
-// 2013 			break;
+// 2016 
+// 2017 			break;
         B.N      ??AppS2wProcess_SerialInput_11
-// 2014 		 case S2W_STATE_XML_LEN :	/* XML data  length*/
-// 2015 	 		S2w_RawLenCharProcess(ch);
+// 2018 		 case S2W_STATE_XML_LEN :	/* XML data  length*/
+// 2019 	 		S2w_RawLenCharProcess(ch);
 ??AppS2wProcess_SerialInput_76:
         LDR      R0,[R7, #+48]
-        LDR.W    R1,??DataTable136_2
+        LDR.W    R1,??DataTable138_2
         LDRB     R2,[SP, #+4]
         STRB     R2,[R0, R1]
         ADDS     R0,R0,#+1
         STR      R0,[R7, #+48]
-// 2016  			if(rawLenIndex == 4 )
+// 2020  			if(rawLenIndex == 4 )
         CMP      R0,#+4
         BNE.N    ??AppS2wProcess_SerialInput_11
-// 2017 			{
-// 2018 				rawLen = S2w_RawLenCalculate();
+// 2021 			{
+// 2022 				rawLen = S2w_RawLenCalculate();
         MOVS     R0,#+0
         STR      R0,[SP, #+0]
         MOV      R0,R1
@@ -5108,8 +5132,8 @@ AppS2wProcess_SerialInput:
         STR      R0,[R7, #+48]
         LDR      R0,[SP, #+0]
         STR      R0,[R7, #+52]
-// 2019 				rawLenIndex = 0;
-// 2020 				if(rawLen ==	S2W_XML_ATTRIBUTE_ID || rawLen == S2W_XML_COMPLEX_TAG_START_ID )
+// 2023 				rawLenIndex = 0;
+// 2024 				if(rawLen ==	S2W_XML_ATTRIBUTE_ID || rawLen == S2W_XML_COMPLEX_TAG_START_ID )
         MOV      R1,R0
         MOVW     R0,#+9996
         CMP      R1,R0
@@ -5117,119 +5141,119 @@ AppS2wProcess_SerialInput:
         MOVWNE   R0,#+9998
         CMPNE    R1,R0
         STREQ    R1,[SP, #+8]
-// 2021 				{
-// 2022 					elementType=rawLen;					
-// 2023 					break;
+// 2025 				{
+// 2026 					elementType=rawLen;					
+// 2027 					break;
         BEQ.N    ??AppS2wProcess_SerialInput_11
-// 2024 				}
-// 2025 				else if(rawLen == 0 || rawLen == S2W_XML_COMPLEX_TAG_END_ID)										
+// 2028 				}
+// 2029 				else if(rawLen == 0 || rawLen == S2W_XML_COMPLEX_TAG_END_ID)										
         CMP      R1,#+0
         ITT      NE 
         MOVWNE   R0,#+9997
         CMPNE    R1,R0
         ITEE     EQ 
         STREQ    R1,[SP, #+8]
-        LDRNE.W  R0,??DataTable132_3
+        LDRNE.W  R0,??DataTable134_3
           CFI FunCall AppS2wHal_CharNGet
         BLNE     AppS2wHal_CharNGet
-// 2026 					elementType=rawLen;
-// 2027 #ifdef S2W_HTTP_CUSTOM_SUPPORT
-// 2028                 else if((S2W_HTTP_RESPONSE_LINE == rawLen) || (S2W_HTTP_HEADER == rawLen))
-// 2029                 {
-// 2030                     elementType = rawLen;
-// 2031                     break;
-// 2032                 }
-// 2033 #endif
-// 2034 				else			
-// 2035 					/* Start receiving the tags*/
-// 2036 					AppS2wHal_CharNGet(dataBuffer, rawLen);
-// 2037 #ifdef S2W_WEB_SERVER					
-// 2038                 if(respTimeOut == 0 )
+// 2030 					elementType=rawLen;
+// 2031 #ifdef S2W_HTTP_CUSTOM_SUPPORT
+// 2032                 else if((S2W_HTTP_RESPONSE_LINE == rawLen) || (S2W_HTTP_HEADER == rawLen))
+// 2033                 {
+// 2034                     elementType = rawLen;
+// 2035                     break;
+// 2036                 }
+// 2037 #endif
+// 2038 				else			
+// 2039 					/* Start receiving the tags*/
+// 2040 					AppS2wHal_CharNGet(dataBuffer, rawLen);
+// 2041 #ifdef S2W_WEB_SERVER					
+// 2042                 if(respTimeOut == 0 )
         CMP      R8,#+0
         BNE.N    ??AppS2wProcess_SerialInput_77
-// 2039                 {
-// 2040 #endif
-// 2041 #ifdef S2W_HTTP_CUSTOM_SUPPORT
-// 2042                     if((S2W_HTTP_RESPONSE_LINE == elementType) || (S2W_HTTP_HEADER == elementType))
-// 2043                     {
-// 2044                         AppS2w_HttpDataProcess(curCid, dataBuffer, rawLen, elementType);
-// 2045                     }
-// 2046                     else
-// 2047 #endif
-// 2048 					{	
-// 2049                         AppS2w_XmlDataProcess(curCid,dataBuffer,rawLen,elementType);
+// 2043                 {
+// 2044 #endif
+// 2045 #ifdef S2W_HTTP_CUSTOM_SUPPORT
+// 2046                     if((S2W_HTTP_RESPONSE_LINE == elementType) || (S2W_HTTP_HEADER == elementType))
+// 2047                     {
+// 2048                         AppS2w_HttpDataProcess(curCid, dataBuffer, rawLen, elementType);
+// 2049                     }
+// 2050                     else
+// 2051 #endif
+// 2052 					{	
+// 2053                         AppS2w_XmlDataProcess(curCid,dataBuffer,rawLen,elementType);
         LDR      R3,[SP, #+8]
         LDR      R2,[R7, #+52]
         LDRB     R0,[R7, #+5]
-        LDR.W    R1,??DataTable132_3
+        LDR.W    R1,??DataTable134_3
           CFI FunCall AppS2w_XmlDataProcess
         BL       AppS2w_XmlDataProcess
-// 2050 					}
-// 2051 #ifdef S2W_WEB_SERVER
-// 2052                 }
-// 2053                 respTimeOut =0;
+// 2054 					}
+// 2055 #ifdef S2W_WEB_SERVER
+// 2056                 }
+// 2057                 respTimeOut =0;
 ??AppS2wProcess_SerialInput_77:
         MOV      R8,#+0
-// 2054 #endif				
-// 2055 #if 0
-// 2056 					rawTotalIndex = 0;			   
-// 2057 #endif
-// 2058 					s2wState = S2W_STATE_CMD;
+// 2058 #endif				
+// 2059 #if 0
+// 2060 					rawTotalIndex = 0;			   
+// 2061 #endif
+// 2062 					s2wState = S2W_STATE_CMD;
         STRB     R8,[R7, #+0]
-// 2059 					rawLen =0;				
+// 2063 					rawLen =0;				
         STR      R8,[R7, #+52]
-// 2060 					rawLenIndex=0;
+// 2064 					rawLenIndex=0;
         STR      R8,[R7, #+48]
-// 2061 				}
-// 2062 				//else
-// 2063 					//s2wState = S2W_STATE_CMD;	
-// 2064 
-// 2065 			break; 
-// 2066 #endif		
-// 2067 #ifdef S2W_IP2WIFI_SUPPORT
-// 2068         case S2W_STATE_RAW:
-// 2069 
-// 2070             if(ch == S2W_COLON)
-// 2071 					{
-// 2072                 if(rawColon == 0)
-// 2073 						{
-// 2074                    rawColon = 1;
-// 2075 							}
-// 2076                 else
-// 2077 							{
-// 2078                    rawLen = S2w_RawLenCalculate();
-// 2079                    if(rawLen > 1560)
-// 2080 							{
-// 2081                        S2w_Printf("\r\nERROR:INVALID LENGTH\r\n");
-// 2082 							s2wState = S2W_STATE_CMD;
-// 2083 						}
-// 2084 						else
-// 2085 						{
-// 2086   			           AppS2wHal_CharNGet(dataBuffer, rawLen);
-// 2087 		  		       dataIndex=rawLen;
-// 2088 		  		       S2w_RawDataBufferTransmit();
-// 2089 							s2wState = S2W_STATE_CMD;
-// 2090 	                   rawTotalIndex = 0;
-// 2091 	                   rawLen = 0;
-// 2092 					}
-// 2093                    rawColon = 0;
-// 2094 					}
-// 2095 				 }
-// 2096             else
-// 2097             {
-// 2098                 S2w_RawLenCharProcess(ch);
-// 2099 
-// 2100 				 }
-// 2101 				 break;
-// 2102 #endif
-// 2103         }
-// 2104         prev = ch;
+// 2065 				}
+// 2066 				//else
+// 2067 					//s2wState = S2W_STATE_CMD;	
+// 2068 
+// 2069 			break; 
+// 2070 #endif		
+// 2071 #ifdef S2W_IP2WIFI_SUPPORT
+// 2072         case S2W_STATE_RAW:
+// 2073 
+// 2074             if(ch == S2W_COLON)
+// 2075 					{
+// 2076                 if(rawColon == 0)
+// 2077 						{
+// 2078                    rawColon = 1;
+// 2079 							}
+// 2080                 else
+// 2081 							{
+// 2082                    rawLen = S2w_RawLenCalculate();
+// 2083                    if(rawLen > 1560)
+// 2084 							{
+// 2085                        S2w_Printf("\r\nERROR:INVALID LENGTH\r\n");
+// 2086 							s2wState = S2W_STATE_CMD;
+// 2087 						}
+// 2088 						else
+// 2089 						{
+// 2090   			           AppS2wHal_CharNGet(dataBuffer, rawLen);
+// 2091 		  		       dataIndex=rawLen;
+// 2092 		  		       S2w_RawDataBufferTransmit();
+// 2093 							s2wState = S2W_STATE_CMD;
+// 2094 	                   rawTotalIndex = 0;
+// 2095 	                   rawLen = 0;
+// 2096 					}
+// 2097                    rawColon = 0;
+// 2098 					}
+// 2099 				 }
+// 2100             else
+// 2101             {
+// 2102                 S2w_RawLenCharProcess(ch);
+// 2103 
+// 2104 				 }
+// 2105 				 break;
+// 2106 #endif
+// 2107         }
+// 2108         prev = ch;
 ??AppS2wProcess_SerialInput_11:
         LDRB     R0,[SP, #+4]
         STRB     R0,[R7, #+10]
         B.N      ??AppS2wProcess_SerialInput_1
-// 2105     }
-// 2106 }
+// 2109     }
+// 2110 }
 ??AppS2wProcess_SerialInput_4:
         ADD      SP,SP,#+40
           CFI CFA R13+32
@@ -5658,569 +5682,569 @@ S2W_AsyncStatusList:
         DC32 `?<Constant "IP Conflict Detected">`
         DC32 `?<Constant " Registration Failed ...">`
         DC32 `?<Constant " Registration Success...">`
-// 2107 #ifdef S2W_DUAL_INTERFACE_SUPPORT
-// 2108 extern GSN_OSAL_QUEUE_T s2wSerial2InputTaskQueue;
-// 2109 extern GSN_UART_HANDLE_T ptUartHandle1;
-// 2110 
-// 2111 VOID AppS2wProcess_Serial2Input()
-// 2112 {
-// 2113     static char esc1[4] = { '+', '+', '+', '+' };
-// 2114     static UINT8 ipnum1;
-// 2115     static char atoibuf1[6];
-// 2116     static UINT8 digits1;
-// 2117     static UINT8 prev1 = 0;
-// 2118     static UINT8 prevprev1 = 0;
-// 2119 	UINT8 ch, softFlow;
-// 2120     UINT32 msg=0;
-// 2121     UINT8 status;
-// 2122     UINT8 respTimeOut=0;
-// 2123     UINT32 elementType;
-// 2124     while(1){
-// 2125     //AppS2wHal_UartCharGetNB1(&ch);
-// 2126     AppS2wHal_CharGet1(&ch);
-// 2127     // pend on a message queue
-// 2128     GsnOsal_QueueGet(&s2wSerial2InputTaskQueue, (UINT8 *)&msg, GSN_OSAL_WAIT_FOREVER);
-// 2129 
-// 2130     // expect only data so no echo
-// 2131         switch (s2wState)
-// 2132         {
-// 2133             /* special command comes with the length */
-// 2134 			;
-// 2135             case S2W_STATE_CMD:
-// 2136                 if (ch == S2W_ESC)
-// 2137                 {
-// 2138                     s2wState = S2W_STATE_CMD_ESC;
-// 2139                     continue;
-// 2140                 }
-// 2141                 //AppS2w_CommandCharProcess(ch);
-// 2142             break;
-// 2143             case S2W_STATE_BULK_DATA:
-// 2144                 /* we must read 4 byte ascii lenth
-// 2145                 and then convert it to binary value */
-// 2146             {
-// 2147                 //UINT8 *dataBufferPointer;
-// 2148                 lengthConvertIndex++;
-// 2149                 /* next after cid  char 2 to 5 */
-// 2150                 lengthSpecialCmd *= 10;
-// 2151                 lengthSpecialCmd += (ch - '0'); /* assuming number will come*/
-// 2152                 if(lengthConvertIndex == 4)
-// 2153                 {
-// 2154                     AppS2wHal_CharNGet1(dataBuffer, lengthSpecialCmd);
-// 2155                     dataIndex = lengthSpecialCmd;
-// 2156 
-// 2157                     AppS2w_DataTransmit(dataBuffer);
-// 2158                     s2wState =  S2W_STATE_CMD;
-// 2159                 }
-// 2160             }
-// 2161             break;
-// 2162             case S2W_STATE_DATA_AUTO:
-// 2163             {
-// 2164                 if (ch == '+' && auto_esc < 3)
-// 2165 		        {
-// 2166 		             auto_esc++;
-// 2167 		             AppS2wHal_TimerStop(&nagleTimer);
-// 2168 					 if(s2wCurrent.autoExitTimeout)
-// 2169                      {
-// 2170 		             	AppS2wHal_TimerStart(&auto_esc_timer,s2wCurrent.autoExitTimeout);
-// 2171 					 }
-// 2172 		        }
-// 2173 		        else if (auto_esc)
-// 2174 		        {
-// 2175 		             UINT8   i;
-// 2176 		             AppS2wHal_TimerStop(&auto_esc_timer);
-// 2177 
-// 2178 		             esc1[auto_esc] = ch;
-// 2179 		             i = 0;
-// 2180 		             AppS2wHal_TimerStart(&nagleTimer,
-// 2181 		                    s2wCurrent.registers[S2W_REG_NAGLE_WAIT_TIME]);
-// 2182 		             while (i <= auto_esc)
-// 2183 		             {
-// 2184 		                 AppS2w_DataCharProcess(esc1[i++]);
-// 2185 		             }
-// 2186 
-// 2187 		             esc1[auto_esc] = '+';
-// 2188 		             auto_esc = 0;
-// 2189 		        }
-// 2190 		        else
-// 2191 			    {
+// 2111 #ifdef S2W_DUAL_INTERFACE_SUPPORT
+// 2112 extern GSN_OSAL_QUEUE_T s2wSerial2InputTaskQueue;
+// 2113 extern GSN_UART_HANDLE_T ptUartHandle1;
+// 2114 
+// 2115 VOID AppS2wProcess_Serial2Input()
+// 2116 {
+// 2117     static char esc1[4] = { '+', '+', '+', '+' };
+// 2118     static UINT8 ipnum1;
+// 2119     static char atoibuf1[6];
+// 2120     static UINT8 digits1;
+// 2121     static UINT8 prev1 = 0;
+// 2122     static UINT8 prevprev1 = 0;
+// 2123 	UINT8 ch, softFlow;
+// 2124     UINT32 msg=0;
+// 2125     UINT8 status;
+// 2126     UINT8 respTimeOut=0;
+// 2127     UINT32 elementType;
+// 2128     while(1){
+// 2129     //AppS2wHal_UartCharGetNB1(&ch);
+// 2130     AppS2wHal_CharGet1(&ch);
+// 2131     // pend on a message queue
+// 2132     GsnOsal_QueueGet(&s2wSerial2InputTaskQueue, (UINT8 *)&msg, GSN_OSAL_WAIT_FOREVER);
+// 2133 
+// 2134     // expect only data so no echo
+// 2135         switch (s2wState)
+// 2136         {
+// 2137             /* special command comes with the length */
+// 2138 			;
+// 2139             case S2W_STATE_CMD:
+// 2140                 if (ch == S2W_ESC)
+// 2141                 {
+// 2142                     s2wState = S2W_STATE_CMD_ESC;
+// 2143                     continue;
+// 2144                 }
+// 2145                 //AppS2w_CommandCharProcess(ch);
+// 2146             break;
+// 2147             case S2W_STATE_BULK_DATA:
+// 2148                 /* we must read 4 byte ascii lenth
+// 2149                 and then convert it to binary value */
+// 2150             {
+// 2151                 //UINT8 *dataBufferPointer;
+// 2152                 lengthConvertIndex++;
+// 2153                 /* next after cid  char 2 to 5 */
+// 2154                 lengthSpecialCmd *= 10;
+// 2155                 lengthSpecialCmd += (ch - '0'); /* assuming number will come*/
+// 2156                 if(lengthConvertIndex == 4)
+// 2157                 {
+// 2158                     AppS2wHal_CharNGet1(dataBuffer, lengthSpecialCmd);
+// 2159                     dataIndex = lengthSpecialCmd;
+// 2160 
+// 2161                     AppS2w_DataTransmit(dataBuffer);
+// 2162                     s2wState =  S2W_STATE_CMD;
+// 2163                 }
+// 2164             }
+// 2165             break;
+// 2166             case S2W_STATE_DATA_AUTO:
+// 2167             {
+// 2168                 if (ch == '+' && auto_esc < 3)
+// 2169 		        {
+// 2170 		             auto_esc++;
+// 2171 		             AppS2wHal_TimerStop(&nagleTimer);
+// 2172 					 if(s2wCurrent.autoExitTimeout)
+// 2173                      {
+// 2174 		             	AppS2wHal_TimerStart(&auto_esc_timer,s2wCurrent.autoExitTimeout);
+// 2175 					 }
+// 2176 		        }
+// 2177 		        else if (auto_esc)
+// 2178 		        {
+// 2179 		             UINT8   i;
+// 2180 		             AppS2wHal_TimerStop(&auto_esc_timer);
+// 2181 
+// 2182 		             esc1[auto_esc] = ch;
+// 2183 		             i = 0;
+// 2184 		             AppS2wHal_TimerStart(&nagleTimer,
+// 2185 		                    s2wCurrent.registers[S2W_REG_NAGLE_WAIT_TIME]);
+// 2186 		             while (i <= auto_esc)
+// 2187 		             {
+// 2188 		                 AppS2w_DataCharProcess(esc1[i++]);
+// 2189 		             }
+// 2190 
+// 2191 		             esc1[auto_esc] = '+';
 // 2192 		             auto_esc = 0;
-// 2193 		             AppS2w_DataCharProcess(ch);
-// 2194 
-// 2195 		        }
-// 2196 
-// 2197 			}
-// 2198 			break;
-// 2199             case S2W_STATE_DATA:
-// 2200                 if (ch == S2W_ESC)
-// 2201                 {
-// 2202                     s2wState = S2W_STATE_DATA_ESC;
-// 2203                     continue;
-// 2204                 }
-// 2205                 AppS2w_DataCharProcess(ch);
-// 2206             break;
-// 2207 
-// 2208             case S2W_STATE_DATA_ESC:
-// 2209                 if(APP_S2W_GET_SERIAL_DEVICE_ID())
-// 2210                 {//Note: Is it not applicable for SPI interface - since we already apply stuffing  at lower layer
-// 2211                     softFlow = 0x00;
-// 2212                 }
-// 2213                 else
-// 2214                 {
-// 2215                     softFlow = s2wCurrent.serialPortConf.conf.uart.softflow;
+// 2193 		        }
+// 2194 		        else
+// 2195 			    {
+// 2196 		             auto_esc = 0;
+// 2197 		             AppS2w_DataCharProcess(ch);
+// 2198 
+// 2199 		        }
+// 2200 
+// 2201 			}
+// 2202 			break;
+// 2203             case S2W_STATE_DATA:
+// 2204                 if (ch == S2W_ESC)
+// 2205                 {
+// 2206                     s2wState = S2W_STATE_DATA_ESC;
+// 2207                     continue;
+// 2208                 }
+// 2209                 AppS2w_DataCharProcess(ch);
+// 2210             break;
+// 2211 
+// 2212             case S2W_STATE_DATA_ESC:
+// 2213                 if(APP_S2W_GET_SERIAL_DEVICE_ID())
+// 2214                 {//Note: Is it not applicable for SPI interface - since we already apply stuffing  at lower layer
+// 2215                     softFlow = 0x00;
 // 2216                 }
-// 2217                 if (ch == S2W_ESC)
+// 2217                 else
 // 2218                 {
-// 2219                     AppS2w_DataCharProcess(ch);
-// 2220                     s2wState = S2W_STATE_DATA;
-// 2221                 }
-// 2222                 else if (ch == 'E' || ch == 'S' || ch == 'u' || ch == 'U')
-// 2223                 {
-// 2224                     status = AppS2w_DataBufferTransmit();
-// 2225                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 2226                     AppS2wProcess_StatusNotify(status, 0);
-// 2227                     GsnOsal_SemRelease(&s2wSyncSemID);
-// 2228                     curCid = INVALID_CID;
-// 2229                     s2wState = ch == 'E' ? S2W_STATE_CMD : S2W_STATE_CID;
-// 2230                 }
-// 2231                 else if (ch == 'C')
-// 2232                 {
-// 2233                     status = AppS2w_DataBufferTransmit();
-// 2234                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 2235                     AppS2wProcess_StatusNotify(status, 0);
-// 2236                     GsnOsal_SemRelease(&s2wSyncSemID);
-// 2237                     AppS2wHal_NetClose(curCid);
-// 2238                     s2wState = S2W_STATE_CMD;
-// 2239                 }
-// 2240                 else if ((ch == 'Q' || ch == 'T')
-// 2241                           && (softFlow))
-// 2242                 {
-// 2243                     AppS2w_DataCharProcess(ch == 'Q' ? S2W_XON : S2W_XOFF);
-// 2244                     s2wState = S2W_STATE_DATA;
-// 2245                 }
-// 2246                 else
-// 2247                 {
+// 2219                     softFlow = s2wCurrent.serialPortConf.conf.uart.softflow;
+// 2220                 }
+// 2221                 if (ch == S2W_ESC)
+// 2222                 {
+// 2223                     AppS2w_DataCharProcess(ch);
+// 2224                     s2wState = S2W_STATE_DATA;
+// 2225                 }
+// 2226                 else if (ch == 'E' || ch == 'S' || ch == 'u' || ch == 'U')
+// 2227                 {
+// 2228                     status = AppS2w_DataBufferTransmit();
+// 2229                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 2230                     AppS2wProcess_StatusNotify(status, 0);
+// 2231                     GsnOsal_SemRelease(&s2wSyncSemID);
+// 2232                     curCid = INVALID_CID;
+// 2233                     s2wState = ch == 'E' ? S2W_STATE_CMD : S2W_STATE_CID;
+// 2234                 }
+// 2235                 else if (ch == 'C')
+// 2236                 {
+// 2237                     status = AppS2w_DataBufferTransmit();
+// 2238                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 2239                     AppS2wProcess_StatusNotify(status, 0);
+// 2240                     GsnOsal_SemRelease(&s2wSyncSemID);
+// 2241                     AppS2wHal_NetClose(curCid);
+// 2242                     s2wState = S2W_STATE_CMD;
+// 2243                 }
+// 2244                 else if ((ch == 'Q' || ch == 'T')
+// 2245                           && (softFlow))
+// 2246                 {
+// 2247                     AppS2w_DataCharProcess(ch == 'Q' ? S2W_XON : S2W_XOFF);
 // 2248                     s2wState = S2W_STATE_DATA;
 // 2249                 }
-// 2250             break;
-// 2251 
-// 2252             case S2W_STATE_CID:
-// 2253                 curCid = AppS2w_CidValidate(ch);
-// 2254                 if (curCid == INVALID_CID)
-// 2255                 {
-// 2256                     AppS2w_FailEscParse();
-// 2257                 }
-// 2258                 else
+// 2250                 else
+// 2251                 {
+// 2252                     s2wState = S2W_STATE_DATA;
+// 2253                 }
+// 2254             break;
+// 2255 
+// 2256             case S2W_STATE_CID:
+// 2257                 curCid = AppS2w_CidValidate(ch);
+// 2258                 if (curCid == INVALID_CID)
 // 2259                 {
-// 2260                     digits1 = 0;
-// 2261                     ipnum1 = 0;
-// 2262 #if  defined(S2W_FS_SPI_HI_ENABLE_1) || defined(S2W_SDIO_ENABLE_1)
-// 2263 #else
-// 2264                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 2265                     AppS2wProcess_StatusNotify(S2W_SUCCESS, 0);
-// 2266                     GsnOsal_SemRelease(&s2wSyncSemID);
-// 2267 #endif
-// 2268                     if (prev1 == 'S')
-// 2269                         s2wState = S2W_STATE_DATA;
-// 2270                     else if (prev1 == 'u')
-// 2271                         s2wState = S2W_STATE_IPPORT;
-// 2272                     else if (prev1 == 'U')
-// 2273                         s2wState = S2W_STATE_IP_STRING;
-// 2274                     else if (prev1 == 'Z')
-// 2275                         s2wState = S2W_STATE_BULK_DATA;
-// 2276                     else if(prev1 == 'Y')
-// 2277                     {
-// 2278                         prevprev1 = prev1;
-// 2279                         s2wState = S2W_STATE_IP_STRING;
-// 2280                     }
-// 2281                 }
-// 2282             break;
-// 2283 
-// 2284             case S2W_STATE_IPPORT:
-// 2285                 if (ipnum1 < 4)
-// 2286                 {
-// 2287                     destAddr[ipnum1] = ch;
-// 2288                 }
-// 2289                 else if (ipnum1 == 4)
+// 2260                     AppS2w_FailEscParse();
+// 2261                 }
+// 2262                 else
+// 2263                 {
+// 2264                     digits1 = 0;
+// 2265                     ipnum1 = 0;
+// 2266 #if  defined(S2W_FS_SPI_HI_ENABLE_1) || defined(S2W_SDIO_ENABLE_1)
+// 2267 #else
+// 2268                     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 2269                     AppS2wProcess_StatusNotify(S2W_SUCCESS, 0);
+// 2270                     GsnOsal_SemRelease(&s2wSyncSemID);
+// 2271 #endif
+// 2272                     if (prev1 == 'S')
+// 2273                         s2wState = S2W_STATE_DATA;
+// 2274                     else if (prev1 == 'u')
+// 2275                         s2wState = S2W_STATE_IPPORT;
+// 2276                     else if (prev1 == 'U')
+// 2277                         s2wState = S2W_STATE_IP_STRING;
+// 2278                     else if (prev1 == 'Z')
+// 2279                         s2wState = S2W_STATE_BULK_DATA;
+// 2280                     else if(prev1 == 'Y')
+// 2281                     {
+// 2282                         prevprev1 = prev1;
+// 2283                         s2wState = S2W_STATE_IP_STRING;
+// 2284                     }
+// 2285                 }
+// 2286             break;
+// 2287 
+// 2288             case S2W_STATE_IPPORT:
+// 2289                 if (ipnum1 < 4)
 // 2290                 {
-// 2291                     destPort = (UINT16) ch << 8;
+// 2291                     destAddr[ipnum1] = ch;
 // 2292                 }
-// 2293                 else if (ipnum1 == 5)
+// 2293                 else if (ipnum1 == 4)
 // 2294                 {
-// 2295                     destPort |= ch;
-// 2296                     s2wState = S2W_STATE_DATA;
-// 2297                 }
-// 2298                 ipnum1++;
-// 2299             break;
-// 2300 
-// 2301             case S2W_STATE_IP_STRING:
-// 2302                 if (digits1 < 3 && isdigit(ch))
-// 2303                 {
-// 2304                     atoibuf1[digits1] = ch;
-// 2305                     digits1++;
-// 2306                 }
-// 2307                 else if (digits1
-// 2308                      && ((ipnum1 < 3 && ch == '.')
-// 2309                      || (ipnum1 == 3 && ch == ':')))
-// 2310                 {
-// 2311                     long temp;
-// 2312                     atoibuf1[digits1] = '\0';
-// 2313                     temp = atol(atoibuf1);
-// 2314                     if (temp < 0 || temp > 255)
-// 2315                     {
-// 2316                         AppS2w_FailEscParse();
-// 2317                         continue;
-// 2318                     }
-// 2319                     destAddr[ipnum1] = temp;
-// 2320                     digits1 = 0;
-// 2321                     ipnum1++;
-// 2322                     if (ipnum1 == 4)
-// 2323                     {
-// 2324                         ipnum1 = 0;
-// 2325                         s2wState = S2W_STATE_PORT_STRING;
-// 2326                     }
-// 2327                 }
-// 2328                 else
-// 2329                 {
-// 2330                     AppS2w_FailEscParse();
+// 2295                     destPort = (UINT16) ch << 8;
+// 2296                 }
+// 2297                 else if (ipnum1 == 5)
+// 2298                 {
+// 2299                     destPort |= ch;
+// 2300                     s2wState = S2W_STATE_DATA;
+// 2301                 }
+// 2302                 ipnum1++;
+// 2303             break;
+// 2304 
+// 2305             case S2W_STATE_IP_STRING:
+// 2306                 if (digits1 < 3 && isdigit(ch))
+// 2307                 {
+// 2308                     atoibuf1[digits1] = ch;
+// 2309                     digits1++;
+// 2310                 }
+// 2311                 else if (digits1
+// 2312                      && ((ipnum1 < 3 && ch == '.')
+// 2313                      || (ipnum1 == 3 && ch == ':')))
+// 2314                 {
+// 2315                     long temp;
+// 2316                     atoibuf1[digits1] = '\0';
+// 2317                     temp = atol(atoibuf1);
+// 2318                     if (temp < 0 || temp > 255)
+// 2319                     {
+// 2320                         AppS2w_FailEscParse();
+// 2321                         continue;
+// 2322                     }
+// 2323                     destAddr[ipnum1] = temp;
+// 2324                     digits1 = 0;
+// 2325                     ipnum1++;
+// 2326                     if (ipnum1 == 4)
+// 2327                     {
+// 2328                         ipnum1 = 0;
+// 2329                         s2wState = S2W_STATE_PORT_STRING;
+// 2330                     }
 // 2331                 }
-// 2332             break;
-// 2333 
-// 2334             case S2W_STATE_PORT_STRING:
-// 2335                 if (digits1 < 5 && isdigit(ch))
-// 2336                 {
-// 2337                     atoibuf1[digits1] = ch;
-// 2338                     digits1++;
-// 2339                 }
-// 2340                 else if (digits1 && ch == ':')
-// 2341                 {
-// 2342                     long    temp;
-// 2343                     atoibuf1[digits1] = '\0';
-// 2344                     temp = atol(atoibuf1);
-// 2345                     if (temp < 0 || temp > 65535)
-// 2346                     {
-// 2347                         AppS2w_FailEscParse();
-// 2348                         continue;
-// 2349                     }
-// 2350                     destPort = temp;
-// 2351                     if(prevprev1 == 'Y')
-// 2352                     {
-// 2353                         s2wState = S2W_STATE_BULK_DATA;
-// 2354                         prevprev1 = 0;
-// 2355                     }
-// 2356                     else
-// 2357                     {
-// 2358                         s2wState = S2W_STATE_DATA;
+// 2332                 else
+// 2333                 {
+// 2334                     AppS2w_FailEscParse();
+// 2335                 }
+// 2336             break;
+// 2337 
+// 2338             case S2W_STATE_PORT_STRING:
+// 2339                 if (digits1 < 5 && isdigit(ch))
+// 2340                 {
+// 2341                     atoibuf1[digits1] = ch;
+// 2342                     digits1++;
+// 2343                 }
+// 2344                 else if (digits1 && ch == ':')
+// 2345                 {
+// 2346                     long    temp;
+// 2347                     atoibuf1[digits1] = '\0';
+// 2348                     temp = atol(atoibuf1);
+// 2349                     if (temp < 0 || temp > 65535)
+// 2350                     {
+// 2351                         AppS2w_FailEscParse();
+// 2352                         continue;
+// 2353                     }
+// 2354                     destPort = temp;
+// 2355                     if(prevprev1 == 'Y')
+// 2356                     {
+// 2357                         s2wState = S2W_STATE_BULK_DATA;
+// 2358                         prevprev1 = 0;
 // 2359                     }
-// 2360                 }
-// 2361                 else
-// 2362                 {
-// 2363                      AppS2w_FailEscParse();
+// 2360                     else
+// 2361                     {
+// 2362                         s2wState = S2W_STATE_DATA;
+// 2363                     }
 // 2364                 }
-// 2365             break;
-// 2366             case S2W_STATE_CMD_ESC:
-// 2367                 if (ch == 'S' || ch == 'u' || ch == 'U')
-// 2368                 {
-// 2369                     s2wState = S2W_STATE_CID;
-// 2370                 }
-// 2371 #if defined(S2W_GSLINK) && defined(S2W_GSLINK_XML)
-// 2372                 else if(((ch == 'G')  || (ch == 'g'))&& s2wappMainTaskCtxt->xmlParseEn == 1 )
-// 2373                 {
-// 2374                     rawLen=0;
-// 2375                     rawLenIndex=0;
-// 2376                     s2wState = S2W_STATE_GET_CID;
-// 2377 #ifdef S2W_WEB_SERVER
-// 2378 					if(s2wappMainTaskCtxt->respTimeOut !=0 && s2wappMainTaskCtxt->responseInprogress == 1)
-// 2379 					{
-// 2380 						 if (GSN_SUCCESS != GsnSoftTmr_Stop(s2wappMainTaskCtxt->respTimeOutTmrHndl))
-// 2381 							 respTimeOut = 1;
-// 2382 					}
-// 2383 					s2wappMainTaskCtxt->responseInprogress = 0;
-// 2384  #endif
-// 2385                 }
-// 2386 #endif
-// 2387                 else if((ch == 'Z') || (ch == 'Y'))
-// 2388                 {
-// 2389                     s2wState = S2W_STATE_CID;
-// 2390                     lengthSpecialCmd = 0;
-// 2391                     lengthConvertIndex = 0;
-// 2392                 }
-// 2393 #ifdef S2W_IP2WIFI_SUPPORT
-// 2394                 else if (ch == 'R' || ch == 'r')
-// 2395                 {
-// 2396                     {
-// 2397 						rawLen=0;
-// 2398                         rawLenIndex=0;
-// 2399                         s2wState = S2W_STATE_RAW;
-// 2400                     }
-// 2401                 }
-// 2402 #endif
-// 2403                 else if ((ch == 'c')|| (ch == 'C'))
-// 2404                 {
-// 2405                    s2wState = S2W_STATE_CMD;
-// 2406                 }
-// 2407                 else if ((ch == 'w')|| (ch == 'W'))
-// 2408 		        {
-// 2409 		             s2wState = S2W_STATE_CERT;
-// 2410 		             status = AppS2wCertificateData(ch);
-// 2411 					 if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
-// 2412 					 {
-// 2413 					     s2wSpiFs_Flush();
-// 2414                      }
-// 2415 		                if((status == S2W_SUCCESS) || (status == S2W_FAILURE))
-// 2416 		                    s2wState = S2W_STATE_CMD;
-// 2417 		        }
-// 2418 
-// 2419 #ifdef S2W_FILE_SYS
-// 2420 				else if((ch == 'f') || (ch == 'F'))
-// 2421 				{
-// 2422 					s2wState = S2W_STATE_FWRITE;
-// 2423 					status = AppS2wHal_FileWriteDataGet(s2wappMainTaskCtxt->appExtFsCtx.fileInfo.fd, s2wappMainTaskCtxt->appExtFsCtx.fileInfo.size);
-// 2424 					if((status == S2W_SUCCESS) || (status == S2W_FAILURE))
-// 2425 					s2wState = S2W_STATE_CMD;
-// 2426 				}
-// 2427 #endif
-// 2428 
-// 2429 		        else if ((ch == 'H')|| (ch == 'h'))
-// 2430 	            {
-// 2431 	                s2wState = S2W_STATE_HTTP_CONTENT_CID;
-// 2432 #if defined(S2W_WEB_SERVER) && defined(S2W_GSLINK_RAW)
-// 2433 					if(s2wappMainTaskCtxt->respTimeOut !=0 && s2wappMainTaskCtxt->responseInprogress == 1)
-// 2434 					{
-// 2435 						 if (GSN_SUCCESS != GsnSoftTmr_Stop(s2wappMainTaskCtxt->respTimeOutTmrHndl))
-// 2436 							 respTimeOut = 1;
-// 2437 					}
-// 2438 					s2wappMainTaskCtxt->responseInprogress = 0;
-// 2439 #endif
-// 2440 		        }
-// 2441 #ifdef S2W_UNASSOC_TXRX_SUPPORT
-// 2442                 else if ((((ch == 'D')|| (ch == 'd')) && (s2wLinkState == S2W_LINK_STATE_DISCONNECTED)))
-// 2443                 {
-// 2444                     s2wState = S2W_STATE_UNSOLICITED_DATA;
-// 2445                     dataIndex = 0;
-// 2446                 }
-// 2447 #endif
-// 2448                 else
-// 2449                 {
-// 2450                     s2wState = S2W_STATE_CMD;
-// 2451                     AppS2w_CommandCharProcess(S2W_ESC);
-// 2452                     AppS2w_CommandCharProcess(ch);
-// 2453             }
-// 2454             break;
-// 2455 #ifdef S2W_UNASSOC_TXRX_SUPPORT
-// 2456             case S2W_STATE_UNSOLICITED_DATA:
-// 2457                     dataBuffer[0]= ch;
-// 2458                     if(s2wappMainTaskCtxt->frame.macFrameLen)
-// 2459                     {
-// 2460                         AppS2wHal_CharNGet1(&dataBuffer[1], s2wappMainTaskCtxt->frame.macFrameLen-1);
-// 2461                         dataIndex = s2wappMainTaskCtxt->frame.macFrameLen;
-// 2462                         // first start the mode
-// 2463 
-// 2464 						GSN_WDD_UAM_START_RESP_T resp;
-// 2465                         status= GsnWdd_UAMStart(&(s2wappMainTaskCtxt->if0.wddCtx), 0, &resp);
-// 2466                         if(status != GSN_SUCCESS)
-// 2467                         {
-// 2468 							AppS2wProcess_StatusNotify(status, 0);
-// 2469 						}
-// 2470                         status = GsnWdd_UamDataSend(&(s2wappMainTaskCtxt->if0.wddCtx),&s2wappMainTaskCtxt->frame,
-// 2471                                            dataBuffer, dataIndex);
-// 2472 
-// 2473                         AppS2wProcess_StatusNotify(status, 0);
-// 2474                         // stop the mode
-// 2475                         GSN_WDD_UAM_STOP_RESP_T resp1;
-// 2476                         GsnWdd_UAMStop(&(s2wappMainTaskCtxt->if0.wddCtx), 0, &resp1);
-// 2477 
-// 2478 					}
-// 2479 					s2wState = S2W_STATE_CMD;
-// 2480             break;
-// 2481 #endif
-// 2482 #ifdef S2W_IP2WIFI_SUPPORT
-// 2483         case S2W_STATE_RAW:
-// 2484 
-// 2485             if(ch == S2W_COLON)
-// 2486 			{
-// 2487                 if(rawColon == 0)
-// 2488 				{
-// 2489                    rawColon = 1;
-// 2490 				}
-// 2491                 else
+// 2365                 else
+// 2366                 {
+// 2367                      AppS2w_FailEscParse();
+// 2368                 }
+// 2369             break;
+// 2370             case S2W_STATE_CMD_ESC:
+// 2371                 if (ch == 'S' || ch == 'u' || ch == 'U')
+// 2372                 {
+// 2373                     s2wState = S2W_STATE_CID;
+// 2374                 }
+// 2375 #if defined(S2W_GSLINK) && defined(S2W_GSLINK_XML)
+// 2376                 else if(((ch == 'G')  || (ch == 'g'))&& s2wappMainTaskCtxt->xmlParseEn == 1 )
+// 2377                 {
+// 2378                     rawLen=0;
+// 2379                     rawLenIndex=0;
+// 2380                     s2wState = S2W_STATE_GET_CID;
+// 2381 #ifdef S2W_WEB_SERVER
+// 2382 					if(s2wappMainTaskCtxt->respTimeOut !=0 && s2wappMainTaskCtxt->responseInprogress == 1)
+// 2383 					{
+// 2384 						 if (GSN_SUCCESS != GsnSoftTmr_Stop(s2wappMainTaskCtxt->respTimeOutTmrHndl))
+// 2385 							 respTimeOut = 1;
+// 2386 					}
+// 2387 					s2wappMainTaskCtxt->responseInprogress = 0;
+// 2388  #endif
+// 2389                 }
+// 2390 #endif
+// 2391                 else if((ch == 'Z') || (ch == 'Y'))
+// 2392                 {
+// 2393                     s2wState = S2W_STATE_CID;
+// 2394                     lengthSpecialCmd = 0;
+// 2395                     lengthConvertIndex = 0;
+// 2396                 }
+// 2397 #ifdef S2W_IP2WIFI_SUPPORT
+// 2398                 else if (ch == 'R' || ch == 'r')
+// 2399                 {
+// 2400                     {
+// 2401 						rawLen=0;
+// 2402                         rawLenIndex=0;
+// 2403                         s2wState = S2W_STATE_RAW;
+// 2404                     }
+// 2405                 }
+// 2406 #endif
+// 2407                 else if ((ch == 'c')|| (ch == 'C'))
+// 2408                 {
+// 2409                    s2wState = S2W_STATE_CMD;
+// 2410                 }
+// 2411                 else if ((ch == 'w')|| (ch == 'W'))
+// 2412 		        {
+// 2413 		             s2wState = S2W_STATE_CERT;
+// 2414 		             status = AppS2wCertificateData(ch);
+// 2415 					 if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 2416 					 {
+// 2417 					     s2wSpiFs_Flush();
+// 2418                      }
+// 2419 		                if((status == S2W_SUCCESS) || (status == S2W_FAILURE))
+// 2420 		                    s2wState = S2W_STATE_CMD;
+// 2421 		        }
+// 2422 
+// 2423 #ifdef S2W_FILE_SYS
+// 2424 				else if((ch == 'f') || (ch == 'F'))
+// 2425 				{
+// 2426 					s2wState = S2W_STATE_FWRITE;
+// 2427 					status = AppS2wHal_FileWriteDataGet(s2wappMainTaskCtxt->appExtFsCtx.fileInfo.fd, s2wappMainTaskCtxt->appExtFsCtx.fileInfo.size);
+// 2428 					if((status == S2W_SUCCESS) || (status == S2W_FAILURE))
+// 2429 					s2wState = S2W_STATE_CMD;
+// 2430 				}
+// 2431 #endif
+// 2432 
+// 2433 		        else if ((ch == 'H')|| (ch == 'h'))
+// 2434 	            {
+// 2435 	                s2wState = S2W_STATE_HTTP_CONTENT_CID;
+// 2436 #if defined(S2W_WEB_SERVER) && defined(S2W_GSLINK_RAW)
+// 2437 					if(s2wappMainTaskCtxt->respTimeOut !=0 && s2wappMainTaskCtxt->responseInprogress == 1)
+// 2438 					{
+// 2439 						 if (GSN_SUCCESS != GsnSoftTmr_Stop(s2wappMainTaskCtxt->respTimeOutTmrHndl))
+// 2440 							 respTimeOut = 1;
+// 2441 					}
+// 2442 					s2wappMainTaskCtxt->responseInprogress = 0;
+// 2443 #endif
+// 2444 		        }
+// 2445 #ifdef S2W_UNASSOC_TXRX_SUPPORT
+// 2446                 else if ((((ch == 'D')|| (ch == 'd')) && (s2wLinkState == S2W_LINK_STATE_DISCONNECTED)))
+// 2447                 {
+// 2448                     s2wState = S2W_STATE_UNSOLICITED_DATA;
+// 2449                     dataIndex = 0;
+// 2450                 }
+// 2451 #endif
+// 2452                 else
+// 2453                 {
+// 2454                     s2wState = S2W_STATE_CMD;
+// 2455                     AppS2w_CommandCharProcess(S2W_ESC);
+// 2456                     AppS2w_CommandCharProcess(ch);
+// 2457             }
+// 2458             break;
+// 2459 #ifdef S2W_UNASSOC_TXRX_SUPPORT
+// 2460             case S2W_STATE_UNSOLICITED_DATA:
+// 2461                     dataBuffer[0]= ch;
+// 2462                     if(s2wappMainTaskCtxt->frame.macFrameLen)
+// 2463                     {
+// 2464                         AppS2wHal_CharNGet1(&dataBuffer[1], s2wappMainTaskCtxt->frame.macFrameLen-1);
+// 2465                         dataIndex = s2wappMainTaskCtxt->frame.macFrameLen;
+// 2466                         // first start the mode
+// 2467 
+// 2468 						GSN_WDD_UAM_START_RESP_T resp;
+// 2469                         status= GsnWdd_UAMStart(&(s2wappMainTaskCtxt->if0.wddCtx), 0, &resp);
+// 2470                         if(status != GSN_SUCCESS)
+// 2471                         {
+// 2472 							AppS2wProcess_StatusNotify(status, 0);
+// 2473 						}
+// 2474                         status = GsnWdd_UamDataSend(&(s2wappMainTaskCtxt->if0.wddCtx),&s2wappMainTaskCtxt->frame,
+// 2475                                            dataBuffer, dataIndex);
+// 2476 
+// 2477                         AppS2wProcess_StatusNotify(status, 0);
+// 2478                         // stop the mode
+// 2479                         GSN_WDD_UAM_STOP_RESP_T resp1;
+// 2480                         GsnWdd_UAMStop(&(s2wappMainTaskCtxt->if0.wddCtx), 0, &resp1);
+// 2481 
+// 2482 					}
+// 2483 					s2wState = S2W_STATE_CMD;
+// 2484             break;
+// 2485 #endif
+// 2486 #ifdef S2W_IP2WIFI_SUPPORT
+// 2487         case S2W_STATE_RAW:
+// 2488 
+// 2489             if(ch == S2W_COLON)
+// 2490 			{
+// 2491                 if(rawColon == 0)
 // 2492 				{
-// 2493                    rawLen = S2w_RawLenCalculate();
-// 2494                    if(rawLen > 1560)
-// 2495 				   {
-// 2496                        S2w_Printf("\r\nERROR:INVALID LENGTH\r\n");
-// 2497 					   s2wState = S2W_STATE_CMD;
-// 2498 				   }
-// 2499 					else
-// 2500 					{
-// 2501   			           AppS2wHal_CharNGet1(dataBuffer, rawLen);
-// 2502 		  		       dataIndex=rawLen;
-// 2503 		  		       S2w_RawDataBufferTransmit();
-// 2504 					   s2wState = S2W_STATE_CMD;
-// 2505 	                   rawTotalIndex = 0;
-// 2506 	                   rawLen = 0;
-// 2507 					}
-// 2508                        rawColon = 0;
-// 2509 				}
-// 2510 		    }
-// 2511             else
-// 2512             {
-// 2513                 S2w_RawLenCharProcess(ch);
-// 2514 
-// 2515 			 }
-// 2516 			 break;
-// 2517 #endif
+// 2493                    rawColon = 1;
+// 2494 				}
+// 2495                 else
+// 2496 				{
+// 2497                    rawLen = S2w_RawLenCalculate();
+// 2498                    if(rawLen > 1560)
+// 2499 				   {
+// 2500                        S2w_Printf("\r\nERROR:INVALID LENGTH\r\n");
+// 2501 					   s2wState = S2W_STATE_CMD;
+// 2502 				   }
+// 2503 					else
+// 2504 					{
+// 2505   			           AppS2wHal_CharNGet1(dataBuffer, rawLen);
+// 2506 		  		       dataIndex=rawLen;
+// 2507 		  		       S2w_RawDataBufferTransmit();
+// 2508 					   s2wState = S2W_STATE_CMD;
+// 2509 	                   rawTotalIndex = 0;
+// 2510 	                   rawLen = 0;
+// 2511 					}
+// 2512                        rawColon = 0;
+// 2513 				}
+// 2514 		    }
+// 2515             else
+// 2516             {
+// 2517                 S2w_RawLenCharProcess(ch);
 // 2518 
-// 2519             case S2W_STATE_HTTP_CONTENT_CID:
-// 2520             {
-// 2521                 hCid = AppS2w_CidValidate(ch);
-// 2522                 if(( hCid != INVALID_CID )/* && ( AppS2w_ConnHttpStateGet(hCid) == 1)*/)
-// 2523                 {
-// 2524                     UINT8 status=S2W_FAILURE;
-// 2525                    GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 2526 #if defined (S2W_HTTPS_SUPPORT) || (S2W_HTTPC_SUPPORT)
-// 2527                   if((httpConfInfo.reqMethod == GSN_HTTP_METHOD_POST) || (httpConfInfo.reqMethod == GSN_HTTP_METHOD_PUT))
-// 2528                   {
-// 2529                       status = AppS2wHal_httpContentDataGet(httpConfInfo.reqBodyTotalLen, hCid);
-// 2530                   }
-// 2531 #endif
-// 2532 #if defined(S2W_GSLINK) &&  defined(S2W_GSLINK_RAW) && defined(S2W_WEB_SERVER)
-// 2533 				  if((s2wCidList[(hCid)].httpdCtx.method == GSN_HTTP_METHOD_GETRESP) ||  \ 
-// 2534 					 (s2wCidList[(hCid)].httpdCtx.method == GSN_HTTP_METHOD_POSTRESP))
-// 2535                   {
-// 2536 					  if(respTimeOut == 0 )
-// 2537 					 	 status = AppS2wHal_RawhttpContentGet(s2wCidList[hCid].httpdCtx.reqBodyLen, hCid);
-// 2538                   }
-// 2539 #endif
-// 2540                   GsnOsal_SemRelease(&s2wSyncSemID);
-// 2541                   s2wState = S2W_STATE_CMD;
-// 2542                   AppS2wProcess_StatusNotify(status, 0);
-// 2543              }
-// 2544              else
-// 2545              {
-// 2546                  AppS2w_CommandCharProcess(ch);
-// 2547                  s2wState = S2W_STATE_CMD;
-// 2548              }
-// 2549         }
-// 2550         break;
-// 2551 #if defined(S2W_GSLINK) && defined(S2W_GSLINK_XML)
-// 2552 		 case S2W_STATE_GET_CID:
-// 2553 			curCid = AppS2w_CidValidate(ch);
-// 2554         	if (curCid == INVALID_CID)
-// 2555    	    	{
-// 2556            		 AppS2w_FailEscParse();
-// 2557        		}
-// 2558 			else
-// 2559 				s2wState =  S2W_STATE_XML_LEN;
-// 2560 				elementType=1;
-// 2561 
-// 2562 			break;
-// 2563 		 case S2W_STATE_XML_LEN :	/* XML data  length*/
-// 2564 	 		S2w_RawLenCharProcess(ch);
-// 2565  			if(rawLenIndex == 4 )
-// 2566 			{
-// 2567 				rawLen = S2w_RawLenCalculate();
-// 2568 				rawLenIndex = 0;
-// 2569 				if(rawLen ==	S2W_XML_ATTRIBUTE_ID || rawLen == S2W_XML_COMPLEX_TAG_START_ID )
-// 2570 				{
-// 2571 					elementType=rawLen;
-// 2572 					break;
-// 2573 				}
-// 2574 				else if(rawLen == 0 || rawLen == S2W_XML_COMPLEX_TAG_END_ID)
+// 2519 			 }
+// 2520 			 break;
+// 2521 #endif
+// 2522 
+// 2523             case S2W_STATE_HTTP_CONTENT_CID:
+// 2524             {
+// 2525                 hCid = AppS2w_CidValidate(ch);
+// 2526                 if(( hCid != INVALID_CID )/* && ( AppS2w_ConnHttpStateGet(hCid) == 1)*/)
+// 2527                 {
+// 2528                     UINT8 status=S2W_FAILURE;
+// 2529                    GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 2530 #if defined (S2W_HTTPS_SUPPORT) || (S2W_HTTPC_SUPPORT)
+// 2531                   if((httpConfInfo.reqMethod == GSN_HTTP_METHOD_POST) || (httpConfInfo.reqMethod == GSN_HTTP_METHOD_PUT))
+// 2532                   {
+// 2533                       status = AppS2wHal_httpContentDataGet(httpConfInfo.reqBodyTotalLen, hCid);
+// 2534                   }
+// 2535 #endif
+// 2536 #if defined(S2W_GSLINK) &&  defined(S2W_GSLINK_RAW) && defined(S2W_WEB_SERVER)
+// 2537 				  if((s2wCidList[(hCid)].httpdCtx.method == GSN_HTTP_METHOD_GETRESP) ||  \ 
+// 2538 					 (s2wCidList[(hCid)].httpdCtx.method == GSN_HTTP_METHOD_POSTRESP))
+// 2539                   {
+// 2540 					  if(respTimeOut == 0 )
+// 2541 					 	 status = AppS2wHal_RawhttpContentGet(s2wCidList[hCid].httpdCtx.reqBodyLen, hCid);
+// 2542                   }
+// 2543 #endif
+// 2544                   GsnOsal_SemRelease(&s2wSyncSemID);
+// 2545                   s2wState = S2W_STATE_CMD;
+// 2546                   AppS2wProcess_StatusNotify(status, 0);
+// 2547              }
+// 2548              else
+// 2549              {
+// 2550                  AppS2w_CommandCharProcess(ch);
+// 2551                  s2wState = S2W_STATE_CMD;
+// 2552              }
+// 2553         }
+// 2554         break;
+// 2555 #if defined(S2W_GSLINK) && defined(S2W_GSLINK_XML)
+// 2556 		 case S2W_STATE_GET_CID:
+// 2557 			curCid = AppS2w_CidValidate(ch);
+// 2558         	if (curCid == INVALID_CID)
+// 2559    	    	{
+// 2560            		 AppS2w_FailEscParse();
+// 2561        		}
+// 2562 			else
+// 2563 				s2wState =  S2W_STATE_XML_LEN;
+// 2564 				elementType=1;
+// 2565 
+// 2566 			break;
+// 2567 		 case S2W_STATE_XML_LEN :	/* XML data  length*/
+// 2568 	 		S2w_RawLenCharProcess(ch);
+// 2569  			if(rawLenIndex == 4 )
+// 2570 			{
+// 2571 				rawLen = S2w_RawLenCalculate();
+// 2572 				rawLenIndex = 0;
+// 2573 				if(rawLen ==	S2W_XML_ATTRIBUTE_ID || rawLen == S2W_XML_COMPLEX_TAG_START_ID )
+// 2574 				{
 // 2575 					elementType=rawLen;
-// 2576 #ifdef S2W_HTTP_CUSTOM_SUPPORT
-// 2577                 else if((S2W_HTTP_RESPONSE_LINE == rawLen) || (S2W_HTTP_HEADER == rawLen))
-// 2578                 {
-// 2579                     elementType = rawLen;
-// 2580                     break;
-// 2581                 }
-// 2582 #endif
-// 2583 				else
-// 2584 					/* Start receiving the tags*/
-// 2585 					AppS2wHal_CharNGet1(dataBuffer, rawLen);
-// 2586 #ifdef S2W_WEB_SERVER
-// 2587                 if(respTimeOut == 0 )
-// 2588                 {
-// 2589 #endif
-// 2590 #ifdef S2W_HTTP_CUSTOM_SUPPORT
-// 2591                     if((S2W_HTTP_RESPONSE_LINE == elementType) || (S2W_HTTP_HEADER == elementType))
-// 2592                     {
-// 2593                         AppS2w_HttpDataProcess(curCid, dataBuffer, rawLen, elementType);
-// 2594                     }
-// 2595                     else
-// 2596 #endif
-// 2597                         AppS2w_XmlDataProcess(curCid,dataBuffer,rawLen,elementType);
-// 2598 #ifdef S2W_WEB_SERVER
-// 2599                 }
-// 2600                 respTimeOut =0;
-// 2601 #endif
-// 2602 #if 0
-// 2603 					rawTotalIndex = 0;
-// 2604 #endif
-// 2605 					s2wState = S2W_STATE_CMD;
-// 2606 					rawLen =0;
-// 2607 					rawLenIndex=0;
-// 2608 				}
-// 2609 				//else
-// 2610 					//s2wState = S2W_STATE_CMD;
-// 2611 
-// 2612 			break;
-// 2613 #endif
-// 2614 
+// 2576 					break;
+// 2577 				}
+// 2578 				else if(rawLen == 0 || rawLen == S2W_XML_COMPLEX_TAG_END_ID)
+// 2579 					elementType=rawLen;
+// 2580 #ifdef S2W_HTTP_CUSTOM_SUPPORT
+// 2581                 else if((S2W_HTTP_RESPONSE_LINE == rawLen) || (S2W_HTTP_HEADER == rawLen))
+// 2582                 {
+// 2583                     elementType = rawLen;
+// 2584                     break;
+// 2585                 }
+// 2586 #endif
+// 2587 				else
+// 2588 					/* Start receiving the tags*/
+// 2589 					AppS2wHal_CharNGet1(dataBuffer, rawLen);
+// 2590 #ifdef S2W_WEB_SERVER
+// 2591                 if(respTimeOut == 0 )
+// 2592                 {
+// 2593 #endif
+// 2594 #ifdef S2W_HTTP_CUSTOM_SUPPORT
+// 2595                     if((S2W_HTTP_RESPONSE_LINE == elementType) || (S2W_HTTP_HEADER == elementType))
+// 2596                     {
+// 2597                         AppS2w_HttpDataProcess(curCid, dataBuffer, rawLen, elementType);
+// 2598                     }
+// 2599                     else
+// 2600 #endif
+// 2601                         AppS2w_XmlDataProcess(curCid,dataBuffer,rawLen,elementType);
+// 2602 #ifdef S2W_WEB_SERVER
+// 2603                 }
+// 2604                 respTimeOut =0;
+// 2605 #endif
+// 2606 #if 0
+// 2607 					rawTotalIndex = 0;
+// 2608 #endif
+// 2609 					s2wState = S2W_STATE_CMD;
+// 2610 					rawLen =0;
+// 2611 					rawLenIndex=0;
+// 2612 				}
+// 2613 				//else
+// 2614 					//s2wState = S2W_STATE_CMD;
 // 2615 
-// 2616 
-// 2617 		}
-// 2618 		prev1 = ch;
-// 2619 	}
+// 2616 			break;
+// 2617 #endif
+// 2618 
+// 2619 
 // 2620 
-// 2621 
-// 2622 }
-// 2623 
+// 2621 		}
+// 2622 		prev1 = ch;
+// 2623 	}
 // 2624 
-// 2625 #endif
-// 2626 
+// 2625 
+// 2626 }
+// 2627 
+// 2628 
+// 2629 #endif
+// 2630 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock66 Using cfiCommon0
           CFI Function AppS2w_ProfileInit
         THUMB
-// 2627 PUBLIC VOID
-// 2628 AppS2w_ProfileInit(VOID)
-// 2629 {
+// 2631 PUBLIC VOID
+// 2632 AppS2w_ProfileInit(VOID)
+// 2633 {
 AppS2w_ProfileInit:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-// 2630 	UINT32 bootReason;
-// 2631 	bootReason = GSN_BOOT_REASON_GET();
-// 2632 	//bootInfo =  GSN_BOOT_INFO_GET();
-// 2633 	// if the boot is stby/wakeup(normal) read from rtc else from flash
-// 2634 	if( (bootReason == GSN_WIF_SYS_BOOT_NORMAL_BOOT))
-        LDR.W    R0,??DataTable136_3  ;; 0x41010004
-        LDR.W    R4,??DataTable132_1
+// 2634 	UINT32 bootReason;
+// 2635 	bootReason = GSN_BOOT_REASON_GET();
+// 2636 	//bootInfo =  GSN_BOOT_INFO_GET();
+// 2637 	// if the boot is stby/wakeup(normal) read from rtc else from flash
+// 2638 	if( (bootReason == GSN_WIF_SYS_BOOT_NORMAL_BOOT))
+        LDR.W    R0,??DataTable138_3  ;; 0x41010004
+        LDR.W    R4,??DataTable134_1
         LDR      R0,[R0, #+0]
         CMP      R0,#+1
         BNE.N    ??AppS2w_ProfileInit_0
-// 2635 	{
-// 2636         AppS2wHal_RTCRead();// this function reads data s2wFlashParams
+// 2639 	{
+// 2640         AppS2wHal_RTCRead();// this function reads data s2wFlashParams
           CFI FunCall AppS2wHal_RTCRead
         BL       AppS2wHal_RTCRead
         B.N      ??AppS2w_ProfileInit_1
-// 2637 	}
-// 2638     else
-// 2639     {
-// 2640         s2wFlashParams = AppS2wHal_FlashRead();
+// 2641 	}
+// 2642     else
+// 2643     {
+// 2644         s2wFlashParams = AppS2wHal_FlashRead();
 ??AppS2w_ProfileInit_0:
           CFI FunCall AppS2wHal_FlashRead
         BL       AppS2wHal_FlashRead
         STR      R0,[R4, #+40]
-// 2641 	}
-// 2642 
-// 2643     {
-// 2644         S2W_PROFILE_T *profile = &s2wFlashParams->profile[profile_params.defaultProfile];
-// 2645         memcpy(&s2wCurrent, profile, sizeof(s2wCurrent));
+// 2645 	}
+// 2646 
+// 2647     {
+// 2648         S2W_PROFILE_T *profile = &s2wFlashParams->profile[profile_params.defaultProfile];
+// 2649         memcpy(&s2wCurrent, profile, sizeof(s2wCurrent));
 ??AppS2w_ProfileInit_1:
-        LDR.N    R0,??DataTable127_1
+        LDR.N    R0,??DataTable129_1
         LDR      R3,[R4, #+40]
         LDRB     R0,[R0, #+5]
         MOV      R2,#+1016
@@ -6230,222 +6254,222 @@ AppS2w_ProfileInit:
           CFI R14 SameValue
           CFI CFA R13+0
         MLA      R1,R1,R0,R3
-        LDR.W    R0,??DataTable132_2
+        LDR.W    R0,??DataTable134_2
           CFI FunCall memcpy
         B.W      memcpy
           CFI EndBlock cfiBlock66
-// 2646  	}
-// 2647 }
-// 2648 
-// 2649 
-// 2650 
-// 2651 /**
-// 2652  ************************************************************************
-// 2653  * @ingroup S2w-Application.
-// 2654  * @brief Initialize the Serial2WiFi stack.
-// 2655  *
-// 2656  * This should be called once from the command handler thread,
-// 2657  * immediately after initializing all the threads.
-// 2658  ************************************************************************/
+// 2650  	}
+// 2651 }
+// 2652 
+// 2653 
+// 2654 
+// 2655 /**
+// 2656  ************************************************************************
+// 2657  * @ingroup S2w-Application.
+// 2658  * @brief Initialize the Serial2WiFi stack.
+// 2659  *
+// 2660  * This should be called once from the command handler thread,
+// 2661  * immediately after initializing all the threads.
+// 2662  ************************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock67 Using cfiCommon0
           CFI Function AppS2w_Init
         THUMB
-// 2659 PUBLIC VOID
-// 2660 AppS2w_Init(VOID)
-// 2661 {
+// 2663 PUBLIC VOID
+// 2664 AppS2w_Init(VOID)
+// 2665 {
 AppS2w_Init:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-// 2662 #ifdef S2W_DEFAULT_NODE_TIME_SET  
-// 2663 	UINT32 bootReason;
-// 2664 	bootReason = GSN_BOOT_REASON_GET();
-// 2665 #endif
-// 2666 
-// 2667     AppS2wHal_TimerInit(&acTimer, AppS2w_AcTimeoutHandler, NULL);
-        LDR.W    R4,??DataTable132_1
-        LDR.W    R1,??DataTable136_4
+// 2666 #ifdef S2W_DEFAULT_NODE_TIME_SET  
+// 2667 	UINT32 bootReason;
+// 2668 	bootReason = GSN_BOOT_REASON_GET();
+// 2669 #endif
+// 2670 
+// 2671     AppS2wHal_TimerInit(&acTimer, AppS2w_AcTimeoutHandler, NULL);
+        LDR.W    R4,??DataTable134_1
+        LDR.W    R1,??DataTable138_4
         MOVS     R2,#+0
         ADD      R0,R4,#+336
           CFI FunCall AppS2wHal_TimerInit
         BL       AppS2wHal_TimerInit
-// 2668 #ifdef S2W_NCM_SUPPORT_ENABLE
-// 2669     AppS2wHal_TimerInit(&acNcmTimer, AppS2w_AcNcmTimeoutHandler, NULL);
+// 2672 #ifdef S2W_NCM_SUPPORT_ENABLE
+// 2673     AppS2wHal_TimerInit(&acNcmTimer, AppS2w_AcNcmTimeoutHandler, NULL);
         MOVS     R2,#+0
-        LDR.W    R1,??DataTable136_5
+        LDR.W    R1,??DataTable138_5
         ADD      R0,R4,#+392
           CFI FunCall AppS2wHal_TimerInit
         BL       AppS2wHal_TimerInit
-// 2670     AppS2wHal_TimerInit(&nagleTimer, AppS2w_NagleExpiry, NULL);
+// 2674     AppS2wHal_TimerInit(&nagleTimer, AppS2w_NagleExpiry, NULL);
         MOVS     R2,#+0
         ADR.W    R1,AppS2w_NagleExpiry
         ADD      R0,R4,#+224
           CFI FunCall AppS2wHal_TimerInit
         BL       AppS2wHal_TimerInit
-// 2671     AppS2wHal_TimerInit(&auto_esc_timer, AppS2w_AutoEscTimeout, &auto_esc);
+// 2675     AppS2wHal_TimerInit(&auto_esc_timer, AppS2w_AutoEscTimeout, &auto_esc);
         ADDS     R2,R4,#+7
         ADR.W    R1,AppS2w_AutoEscTimeout
         ADD      R0,R4,#+280
           CFI FunCall AppS2wHal_TimerInit
         BL       AppS2wHal_TimerInit
-// 2672 #endif //NCM_SUPPORT_ENABLE
-// 2673 
-// 2674     AppS2wHal_NetInit();
+// 2676 #endif //NCM_SUPPORT_ENABLE
+// 2677 
+// 2678     AppS2wHal_NetInit();
           CFI FunCall AppS2wHal_NetInit
         BL       AppS2wHal_NetInit
-// 2675     // create a semaphore for data transmit in sequential
-// 2676     GsnOsal_SemCreate  (&dSendSem,1);
+// 2679     // create a semaphore for data transmit in sequential
+// 2680     GsnOsal_SemCreate  (&dSendSem,1);
         MOVS     R2,#+1
         MOVS     R1,#+0
         ADD      R0,R4,#+192
           CFI FunCall _tx_semaphore_create
         BL       _tx_semaphore_create
-// 2677 
-// 2678     AppS2wProcess_LoadProfile(profile_params.defaultProfile);
-        LDR.W    R0,??DataTable136_6
+// 2681 
+// 2682     AppS2wProcess_LoadProfile(profile_params.defaultProfile);
+        LDR.W    R0,??DataTable138_6
         LDRB     R0,[R0, #+5]
           CFI FunCall AppS2wProcess_LoadProfile
         BL       AppS2wProcess_LoadProfile
-// 2679 
-// 2680     s2wState = S2W_STATE_CMD;
+// 2683 
+// 2684     s2wState = S2W_STATE_CMD;
         MOVS     R0,#+0
         STRB     R0,[R4, #+0]
-// 2681 #ifdef S2W_DEFAULT_NODE_TIME_SET
-// 2682   if( (bootReason == GSN_WIF_SYS_BOOT_FIRST_BOOT))
-// 2683 	  AppS2w_SetTime((ULONG64)S2W_DEFAULT_NODE_TIME);
-// 2684 #endif 
-// 2685 }
+// 2685 #ifdef S2W_DEFAULT_NODE_TIME_SET
+// 2686   if( (bootReason == GSN_WIF_SYS_BOOT_FIRST_BOOT))
+// 2687 	  AppS2w_SetTime((ULONG64)S2W_DEFAULT_NODE_TIME);
+// 2688 #endif 
+// 2689 }
         POP      {R4,PC}          ;; return
           CFI EndBlock cfiBlock67
-// 2686 
-// 2687 
-// 2688 /**
-// 2689  ************************************************************************
-// 2690  * @ingroup S2w-Application.
-// 2691  * @brief Vprintf function
-// 2692  *
-// 2693  * @retval integer.
-// 2694  ************************************************************************/
-// 2695 PRIVATE INLINE INT32
-// 2696 AppS2w_VPrintf(const char *format, va_list ap)
-// 2697 {
+// 2690 
+// 2691 
+// 2692 /**
+// 2693  ************************************************************************
+// 2694  * @ingroup S2w-Application.
+// 2695  * @brief Vprintf function
+// 2696  *
+// 2697  * @retval integer.
+// 2698  ************************************************************************/
+// 2699 PRIVATE INLINE INT32
+// 2700 AppS2w_VPrintf(const char *format, va_list ap)
+// 2701 {
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
-// 2698     static char buf[S2W_MAX_PRINT_LEN];
+// 2702     static char buf[S2W_MAX_PRINT_LEN];
 ??buf:
         DS8 256
-// 2699     int len;
-// 2700 
-// 2701     len = vsnprintf(buf, sizeof(buf), format, ap);
-// 2702     if (len < 0)
-// 2703         return -1;
+// 2703     int len;
 // 2704 
-// 2705     if (len >= sizeof(buf))
-// 2706     {
-// 2707         S2W_ASSERT(0);
-// 2708         len = sizeof(buf) - 1;
-// 2709     }
-// 2710 
-// 2711     AppS2wHal_CharNPut(buf, len);
-// 2712 
-// 2713     return len;
-// 2714 }
-// 2715 #ifdef S2W_DUAL_INTERFACE_SUPPORT
-// 2716 PRIVATE INLINE INT32
-// 2717 AppS2w_VPrintf1(const char *format, va_list ap)
-// 2718 {
-// 2719     static char buf1[S2W_MAX_PRINT_LEN];
-// 2720     int len;
-// 2721 
-// 2722     len = vsnprintf(buf1, sizeof(buf1), format, ap);
-// 2723     if (len < 0)
-// 2724         return -1;
+// 2705     len = vsnprintf(buf, sizeof(buf), format, ap);
+// 2706     if (len < 0)
+// 2707         return -1;
+// 2708 
+// 2709     if (len >= sizeof(buf))
+// 2710     {
+// 2711         S2W_ASSERT(0);
+// 2712         len = sizeof(buf) - 1;
+// 2713     }
+// 2714 
+// 2715     AppS2wHal_CharNPut(buf, len);
+// 2716 
+// 2717     return len;
+// 2718 }
+// 2719 #ifdef S2W_DUAL_INTERFACE_SUPPORT
+// 2720 PRIVATE INLINE INT32
+// 2721 AppS2w_VPrintf1(const char *format, va_list ap)
+// 2722 {
+// 2723     static char buf1[S2W_MAX_PRINT_LEN];
+// 2724     int len;
 // 2725 
-// 2726     if (len >= sizeof(buf1))
-// 2727     {
-// 2728         S2W_ASSERT(0);
-// 2729         len = sizeof(buf1) - 1;
-// 2730     }
-// 2731 
-// 2732     AppS2wHal_CharNPut1(buf1, len);
-// 2733 
-// 2734     return len;
-// 2735 }
-// 2736 #endif
+// 2726     len = vsnprintf(buf1, sizeof(buf1), format, ap);
+// 2727     if (len < 0)
+// 2728         return -1;
+// 2729 
+// 2730     if (len >= sizeof(buf1))
+// 2731     {
+// 2732         S2W_ASSERT(0);
+// 2733         len = sizeof(buf1) - 1;
+// 2734     }
+// 2735 
+// 2736     AppS2wHal_CharNPut1(buf1, len);
 // 2737 
-// 2738 
-// 2739 /**
-// 2740  *************************************************************************
-// 2741  * @ingroup S2w-Application.
-// 2742  * @brief Perform the network auto connect operation.
-// 2743  *
-// 2744  * It will create the client or server of type TCP/UDP.
-// 2745  *
-// 2746  * @param  peer_data- IN Pointer to structure that contains
-// 2747  *         mode, type, IP address and Port number.
-// 2748  * @param  cid - IN Pointer to connection identifier.
-// 2749  * @return Status of the operation. Possible status are S2W_SUCCESS (0) on
-// 2750  *     success, S2W_FAILURE (1) on failure, S2W_ENCID (6) when Cid list is
-// 2751  *     full, S2W_SOCKFAILURE (4) on failure of any socket system call,
-// 2752  *         S2W_CMD_INPROCESS (8) when command response is not ready.
-// 2753  **************************************************************************/
-// 2754 #if 0
-// 2755 PRIVATE UINT8
-// 2756 AppS2w_Connect(S2W_NETDATA_T *peer_data, UINT8 *cid)
-// 2757 {
-// 2758     UINT8 status = S2W_EINVAL;
-// 2759 
-// 2760     if (peer_data->mode == S2W_NETDATA_MODE_SERVER)
-// 2761     {
-// 2762         if (peer_data->proto == S2W_NETDATA_PROTO_UDP)
-// 2763         {
-// 2764             status = AppS2wHal_NetUdpServer(peer_data, cid);
-// 2765         }
-// 2766         else if (peer_data->proto == S2W_NETDATA_PROTO_TCP)
+// 2738     return len;
+// 2739 }
+// 2740 #endif
+// 2741 
+// 2742 
+// 2743 /**
+// 2744  *************************************************************************
+// 2745  * @ingroup S2w-Application.
+// 2746  * @brief Perform the network auto connect operation.
+// 2747  *
+// 2748  * It will create the client or server of type TCP/UDP.
+// 2749  *
+// 2750  * @param  peer_data- IN Pointer to structure that contains
+// 2751  *         mode, type, IP address and Port number.
+// 2752  * @param  cid - IN Pointer to connection identifier.
+// 2753  * @return Status of the operation. Possible status are S2W_SUCCESS (0) on
+// 2754  *     success, S2W_FAILURE (1) on failure, S2W_ENCID (6) when Cid list is
+// 2755  *     full, S2W_SOCKFAILURE (4) on failure of any socket system call,
+// 2756  *         S2W_CMD_INPROCESS (8) when command response is not ready.
+// 2757  **************************************************************************/
+// 2758 #if 0
+// 2759 PRIVATE UINT8
+// 2760 AppS2w_Connect(S2W_NETDATA_T *peer_data, UINT8 *cid)
+// 2761 {
+// 2762     UINT8 status = S2W_EINVAL;
+// 2763 
+// 2764     if (peer_data->mode == S2W_NETDATA_MODE_SERVER)
+// 2765     {
+// 2766         if (peer_data->proto == S2W_NETDATA_PROTO_UDP)
 // 2767         {
-// 2768             status = AppS2wHal_NetTcpServer(peer_data, cid);
-// 2769             *cid = INVALID_CID;
-// 2770         }
-// 2771     }
-// 2772     else if (peer_data->mode == S2W_NETDATA_MODE_CLIENT)
-// 2773     {
-// 2774         if (peer_data->proto == S2W_NETDATA_PROTO_TCP)
-// 2775         {
-// 2776             status = AppS2wHal_NetTcpClient(peer_data, cid);
-// 2777         }
-// 2778         else if (peer_data->proto == S2W_NETDATA_PROTO_UDP)
+// 2768             status = AppS2wHal_NetUdpServer(peer_data, cid);
+// 2769         }
+// 2770         else if (peer_data->proto == S2W_NETDATA_PROTO_TCP)
+// 2771         {
+// 2772             status = AppS2wHal_NetTcpServer(peer_data, cid);
+// 2773             *cid = INVALID_CID;
+// 2774         }
+// 2775     }
+// 2776     else if (peer_data->mode == S2W_NETDATA_MODE_CLIENT)
+// 2777     {
+// 2778         if (peer_data->proto == S2W_NETDATA_PROTO_TCP)
 // 2779         {
-// 2780             status = AppS2wHal_NetUdpClient(peer_data, cid,0);
+// 2780             status = AppS2wHal_NetTcpClient(peer_data, cid);
 // 2781         }
-// 2782     }
-// 2783 
-// 2784     return status;
-// 2785 }
-// 2786 #endif
+// 2782         else if (peer_data->proto == S2W_NETDATA_PROTO_UDP)
+// 2783         {
+// 2784             status = AppS2wHal_NetUdpClient(peer_data, cid,0);
+// 2785         }
+// 2786     }
 // 2787 
-// 2788 
-// 2789 /**
-// 2790  *************************************************************************
-// 2791  * @ingroup S2w-Application.
-// 2792  * @brief Process the incoming command characters.
-// 2793  *
-// 2794  * It will store the command characters to the command buffer. On receiving
-// 2795  * 'end of command' character it will process the command.
-// 2796  * @param ch Command character
-// 2797  * @reval none.
-// 2798  ***************************************************************************/
-// 2799 #ifndef IOT_APP_ENABLE
+// 2788     return status;
+// 2789 }
+// 2790 #endif
+// 2791 
+// 2792 
+// 2793 /**
+// 2794  *************************************************************************
+// 2795  * @ingroup S2w-Application.
+// 2796  * @brief Process the incoming command characters.
+// 2797  *
+// 2798  * It will store the command characters to the command buffer. On receiving
+// 2799  * 'end of command' character it will process the command.
+// 2800  * @param ch Command character
+// 2801  * @reval none.
+// 2802  ***************************************************************************/
+// 2803 #ifndef IOT_APP_ENABLE
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock68 Using cfiCommon0
           CFI Function AppS2w_CommandCharProcess
         THUMB
-// 2800 PRIVATE VOID
-// 2801 AppS2w_CommandCharProcess(UINT8 ch)
-// 2802 {
+// 2804 PRIVATE VOID
+// 2805 AppS2w_CommandCharProcess(UINT8 ch)
+// 2806 {
 AppS2w_CommandCharProcess:
         PUSH     {R4-R8,LR}
           CFI R14 Frame(CFA, -4)
@@ -6455,12 +6479,12 @@ AppS2w_CommandCharProcess:
           CFI R5 Frame(CFA, -20)
           CFI R4 Frame(CFA, -24)
           CFI CFA R13+24
-// 2803     static UINT8 prevBuf[S2W_CMDBUF_SIZE];
-// 2804     static UINT8 buf[S2W_CMDBUF_SIZE];
-// 2805     static UINT32 index;
-// 2806 
-// 2807     if ((ch == S2W_CR) ||(ch == S2W_LF) || (index == (sizeof(buf) - 1)))
-        LDR.W    R4,??DataTable136_7
+// 2807     static UINT8 prevBuf[S2W_CMDBUF_SIZE];
+// 2808     static UINT8 buf[S2W_CMDBUF_SIZE];
+// 2809     static UINT32 index;
+// 2810 
+// 2811     if ((ch == S2W_CR) ||(ch == S2W_LF) || (index == (sizeof(buf) - 1)))
+        LDR.W    R4,??DataTable138_7
         LDR      R5,[R4, #+512]
         MOV      R6,R0
         ADD      R7,R4,#+516
@@ -6471,59 +6495,59 @@ AppS2w_CommandCharProcess:
         MOVW     R8,#+511
         CMP      R5,R8
         BNE.N    ??AppS2w_CommandCharProcess_1
-// 2808     {
-// 2809         if (index == 0)
-// 2810         {
-// 2811          if (s2wCurrent.serialPortConf.commonConf.echo)
-// 2812           {
-// 2813                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 2814                 S2w_Printf("\r\n");
-// 2815                 GsnOsal_SemRelease (&s2wSyncSemID);
-// 2816             }
-// 2817             /* Skip LF or CR after LF or CR.
-// 2818              */
-// 2819             return;
-// 2820         }
-// 2821         /* End of command; Call function to process the command.
-// 2822          */
-// 2823         buf[index] = '\0';
+// 2812     {
+// 2813         if (index == 0)
+// 2814         {
+// 2815          if (s2wCurrent.serialPortConf.commonConf.echo)
+// 2816           {
+// 2817                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 2818                 S2w_Printf("\r\n");
+// 2819                 GsnOsal_SemRelease (&s2wSyncSemID);
+// 2820             }
+// 2821             /* Skip LF or CR after LF or CR.
+// 2822              */
+// 2823             return;
+// 2824         }
+// 2825         /* End of command; Call function to process the command.
+// 2826          */
+// 2827         buf[index] = '\0';
 ??AppS2w_CommandCharProcess_2:
         MOVS     R0,#+0
         STRB     R0,[R5, R4]
-// 2824         memcpy(prevBuf, buf, index + 1);
+// 2828         memcpy(prevBuf, buf, index + 1);
         ADDS     R2,R5,#+1
         MOV      R1,R4
         MOV      R0,R7
           CFI FunCall memcpy
         BL       memcpy
-// 2825         if((s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_SDIO) && (index >256 ))
-        BL       ?Subroutine20
-??CrossCallReturnLabel_54:
+// 2829         if((s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_SDIO) && (index >256 ))
+        BL       ?Subroutine21
+??CrossCallReturnLabel_59:
         CMP      R0,#+3
         BNE.N    ??AppS2w_CommandCharProcess_3
         CMP      R5,#+256
         BLS.N    ??AppS2w_CommandCharProcess_3
-// 2826         {
-// 2827 			index =0;
+// 2830         {
+// 2831 			index =0;
         MOVS     R0,#+0
         STR      R0,[R4, #+512]
-// 2828             UINT32 msg = APP_EVENT_S2W_EINVAL;
-// 2829 		    AppMainCtx_TaskNotify(msg);
+// 2832             UINT32 msg = APP_EVENT_S2W_EINVAL;
+// 2833 		    AppMainCtx_TaskNotify(msg);
         MOVS     R0,#+46
           CFI FunCall AppMainCtx_TaskNotify
         BL       AppMainCtx_TaskNotify
         B.N      ??AppS2w_CommandCharProcess_4
-// 2830 		}
+// 2834 		}
 ??AppS2w_CommandCharProcess_0:
         CMP      R5,#+0
         BNE.N    ??AppS2w_CommandCharProcess_2
-        LDR.W    R0,??DataTable132_2
+        LDR.W    R0,??DataTable134_2
         LDRB     R0,[R0, #+432]
         CMP      R0,#+0
         BEQ.N    ??AppS2w_CommandCharProcess_5
         BL       ?Subroutine18
-??CrossCallReturnLabel_49:
-        ADR.N    R0,??DataTable127  ;; 0x0D, 0x0A, 0x00, 0x00
+??CrossCallReturnLabel_50:
+        ADR.N    R0,??DataTable129  ;; 0x0D, 0x0A, 0x00, 0x00
           CFI FunCall S2w_Printf
         BL       S2w_Printf
         MOV      R0,R4
@@ -6544,18 +6568,18 @@ AppS2w_CommandCharProcess:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
-// 2831 		else
-// 2832 		{
-// 2833         index = 0;
+// 2835 		else
+// 2836 		{
+// 2837         index = 0;
 ??AppS2w_CommandCharProcess_3:
         MOVS     R0,#+0
         STR      R0,[R4, #+512]
-// 2834         AppS2wCommand_Process(buf);
+// 2838         AppS2wCommand_Process(buf);
         MOV      R0,R4
           CFI FunCall AppS2wCommand_Process
         BL       AppS2wCommand_Process
-// 2835 	    }
-// 2836         memset (buf, 0, S2W_CMDBUF_SIZE);
+// 2839 	    }
+// 2840         memset (buf, 0, S2W_CMDBUF_SIZE);
 ??AppS2w_CommandCharProcess_4:
         MOV      R0,R4
         POP      {R4-R8,LR}
@@ -6577,22 +6601,22 @@ AppS2w_CommandCharProcess:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
-// 2837 
-// 2838         /* Store the command characters in the command buffer and also
-// 2839          * handle the backspaces.
-// 2840          */
-// 2841     }
-// 2842     else if (ch == S2W_BACKSPC)
+// 2841 
+// 2842         /* Store the command characters in the command buffer and also
+// 2843          * handle the backspaces.
+// 2844          */
+// 2845     }
+// 2846     else if (ch == S2W_BACKSPC)
 ??AppS2w_CommandCharProcess_1:
         CMP      R0,#+8
         BNE.N    ??AppS2w_CommandCharProcess_6
-// 2843     {
-// 2844         index = index ? (index - 1) : 0;
+// 2847     {
+// 2848         index = index ? (index - 1) : 0;
         CBZ.N    R5,??AppS2w_CommandCharProcess_5
         SUBS     R0,R5,#+1
         B.N      ??AppS2w_CommandCharProcess_7
-// 2845     }
-// 2846     else if (index == 1 && ch == '/' && toupper(buf[0]) == 'A')
+// 2849     }
+// 2850     else if (index == 1 && ch == '/' && toupper(buf[0]) == 'A')
 ??AppS2w_CommandCharProcess_6:
         CMP      R5,#+1
         BNE.N    ??AppS2w_CommandCharProcess_8
@@ -6603,17 +6627,17 @@ AppS2w_CommandCharProcess:
         BL       toupper
         CMP      R0,#+65
         BNE.N    ??AppS2w_CommandCharProcess_8
-// 2847     {
-// 2848         index = 0;
+// 2851     {
+// 2852         index = 0;
         MOVS     R0,#+0
         STR      R0,[R4, #+512]
-// 2849 
-// 2850         strcpy((char *)buf, (const char *)prevBuf);
+// 2853 
+// 2854         strcpy((char *)buf, (const char *)prevBuf);
         MOV      R1,R7
         MOV      R0,R4
           CFI FunCall strcpy
         BL       strcpy
-// 2851         AppS2wCommand_Process(buf);
+// 2855         AppS2wCommand_Process(buf);
         MOV      R0,R4
         POP      {R4-R8,LR}
           CFI R4 SameValue
@@ -6632,22 +6656,22 @@ AppS2w_CommandCharProcess:
           CFI R8 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
-// 2852     }
-// 2853     else if (index < sizeof(buf) - 1)
+// 2856     }
+// 2857     else if (index < sizeof(buf) - 1)
 ??AppS2w_CommandCharProcess_8:
         LDR      R0,[R4, #+512]
         CMP      R0,R8
         BCS.N    ??AppS2w_CommandCharProcess_5
-// 2854     {
-// 2855         buf[index++] = ch;
+// 2858     {
+// 2859         buf[index++] = ch;
 ??AppS2w_CommandCharProcess_9:
         LDR      R0,[R4, #+512]
         STRB     R6,[R0, R4]
         ADDS     R0,R0,#+1
 ??AppS2w_CommandCharProcess_7:
         STR      R0,[R4, #+512]
-// 2856     }
-// 2857 }
+// 2860     }
+// 2861 }
 ??AppS2w_CommandCharProcess_5:
         POP      {R4-R8,PC}       ;; return
           CFI EndBlock cfiBlock68
@@ -6657,7 +6681,7 @@ AppS2w_CommandCharProcess:
           CFI Function AppS2wProcess_NetAccept
           CFI NoCalls
           CFI NoCalls
-          CFI Conditional ??CrossCallReturnLabel_53
+          CFI Conditional ??CrossCallReturnLabel_58
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -6672,7 +6696,7 @@ AppS2w_CommandCharProcess:
           CFI (cfiCond70) Function AppS2w_CommandCharProcess
           CFI (cfiCond70) NoCalls AppS2w_CommandCharProcess
           CFI (cfiCond70) NoCalls AppS2wProcess_NetAccept
-          CFI (cfiCond70) Conditional ??CrossCallReturnLabel_54
+          CFI (cfiCond70) Conditional ??CrossCallReturnLabel_59
           CFI (cfiCond70) R4 Frame(CFA, -24)
           CFI (cfiCond70) R5 Frame(CFA, -20)
           CFI (cfiCond70) R6 Frame(CFA, -16)
@@ -6686,8 +6710,8 @@ AppS2w_CommandCharProcess:
           CFI (cfiPicker71) NoCalls AppS2wProcess_NetAccept
           CFI (cfiPicker71) Picker
         THUMB
-?Subroutine20:
-        LDR.W    R1,??DataTable132
+?Subroutine21:
+        LDR.W    R1,??DataTable134
         LDR      R1,[R1, #+0]
         MOVW     R0,#+27384
         LDRB     R0,[R0, R1]
@@ -6699,14 +6723,14 @@ AppS2w_CommandCharProcess:
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond72 Using cfiCommon0
           CFI Function AppS2wProcess_IpConflict
-          CFI Conditional ??CrossCallReturnLabel_50
+          CFI Conditional ??CrossCallReturnLabel_51
           CFI R4 Frame(CFA, -12)
           CFI R5 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+16
           CFI Block cfiCond73 Using cfiCommon0
           CFI (cfiCond73) Function AppS2w_CommandCharProcess
-          CFI (cfiCond73) Conditional ??CrossCallReturnLabel_49
+          CFI (cfiCond73) Conditional ??CrossCallReturnLabel_50
           CFI (cfiCond73) R4 Frame(CFA, -24)
           CFI (cfiCond73) R5 Frame(CFA, -20)
           CFI (cfiCond73) R6 Frame(CFA, -16)
@@ -6719,7 +6743,7 @@ AppS2w_CommandCharProcess:
           CFI (cfiPicker74) Picker
         THUMB
 ?Subroutine18:
-        LDR.N    R4,??DataTable122
+        LDR.N    R4,??DataTable124
         MOV      R1,#-1
         MOV      R0,R4
           CFI FunCall AppS2wProcess_IpConflict GsnOsal_SemAcquire
@@ -6732,13 +6756,13 @@ AppS2w_CommandCharProcess:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable120:
+??DataTable122:
         DC32     dhcpServerFlags
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable120_1:
+??DataTable122_1:
         DC32     dhcpSrvr
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
@@ -6746,135 +6770,135 @@ AppS2w_CommandCharProcess:
         DS8 512
         DS8 4
         DS8 512
-// 2858 #endif /* IOT_APP_ENABLE */
-// 2859 /**
-// 2860  * @brief Transmit the raw data to the specified L2 connection when the data
-// 2861  *        is completely received or when the data buffer is full.
-// 2862  */
-// 2863 
-// 2864 
-// 2865 /**
-// 2866  **************************************************************************
-// 2867  * @ingroup S2w-Application.
-// 2868  * @brief Transmit the data to the specified TCP/UDP connection when the data
-// 2869  *        is completely received or when the data buffer is full.
-// 2870  * @reval none.
-// 2871  ***************************************************************************/
+// 2862 #endif /* IOT_APP_ENABLE */
+// 2863 /**
+// 2864  * @brief Transmit the raw data to the specified L2 connection when the data
+// 2865  *        is completely received or when the data buffer is full.
+// 2866  */
+// 2867 
+// 2868 
+// 2869 /**
+// 2870  **************************************************************************
+// 2871  * @ingroup S2w-Application.
+// 2872  * @brief Transmit the data to the specified TCP/UDP connection when the data
+// 2873  *        is completely received or when the data buffer is full.
+// 2874  * @reval none.
+// 2875  ***************************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock75 Using cfiCommon0
           CFI Function AppS2w_DataBufferTransmit
         THUMB
-// 2872 PUBLIC UINT8
-// 2873 AppS2w_DataBufferTransmit(VOID)
-// 2874 {
+// 2876 PUBLIC UINT8
+// 2877 AppS2w_DataBufferTransmit(VOID)
+// 2878 {
 AppS2w_DataBufferTransmit:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-// 2875     UINT8 status;
-// 2876     //INT32 intrStatus;
-// 2877     if (!dataIndex)
-        LDR.W    R4,??DataTable132_1
+// 2879     UINT8 status;
+// 2880     //INT32 intrStatus;
+// 2881     if (!dataIndex)
+        LDR.W    R4,??DataTable134_1
         LDR      R0,[R4, #+44]
         SUB      SP,SP,#+8
           CFI CFA R13+16
         CBZ.N    R0,??AppS2w_DataBufferTransmit_0
-// 2878     {
-// 2879         return S2W_SUCCESS;
-// 2880     }
-// 2881 
-// 2882     status = AppS2wHal_NetTx(curCid, destAddr, destPort, dataBuffer,
-// 2883                 dataIndex);
+// 2882     {
+// 2883         return S2W_SUCCESS;
+// 2884     }
+// 2885 
+// 2886     status = AppS2wHal_NetTx(curCid, destAddr, destPort, dataBuffer,
+// 2887                 dataIndex);
         BL       ?Subroutine13
 ??CrossCallReturnLabel_37:
-        LDR.W    R3,??DataTable132_3
+        LDR.W    R3,??DataTable134_3
           CFI FunCall AppS2wHal_NetTx
         BL       AppS2wHal_NetTx
-// 2884     if (status == S2W_SUCCESS)
+// 2888     if (status == S2W_SUCCESS)
         CBNZ.N   R0,??AppS2w_DataBufferTransmit_1
-// 2885     {
-// 2886         s2wTxBytes += dataIndex;
+// 2889     {
+// 2890         s2wTxBytes += dataIndex;
         LDR      R1,[R4, #+32]
         LDR      R2,[R4, #+44]
         ADDS     R1,R2,R1
         STR      R1,[R4, #+32]
-// 2887     }
-// 2888 
-// 2889     dataIndex = 0;
+// 2891     }
+// 2892 
+// 2893     dataIndex = 0;
 ??AppS2w_DataBufferTransmit_1:
         MOVS     R1,#+0
         STR      R1,[R4, #+44]
-// 2890     return status;
+// 2894     return status;
 ??AppS2w_DataBufferTransmit_0:
         POP      {R1,R2,R4,PC}    ;; return
           CFI EndBlock cfiBlock75
-// 2891 }
+// 2895 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable121:
+??DataTable123:
         DC32     S2wL3Wait
-// 2892 
+// 2896 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock76 Using cfiCommon0
           CFI Function AppS2w_DataTransmit
         THUMB
-// 2893 PUBLIC UINT8
-// 2894 AppS2w_DataTransmit(UINT8 *data)
-// 2895 {
+// 2897 PUBLIC UINT8
+// 2898 AppS2w_DataTransmit(UINT8 *data)
+// 2899 {
 AppS2w_DataTransmit:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-// 2896     UINT8 status;
-// 2897     //INT32 intrStatus;
-// 2898     if (!dataIndex)
-        LDR.W    R4,??DataTable132_1
+// 2900     UINT8 status;
+// 2901     //INT32 intrStatus;
+// 2902     if (!dataIndex)
+        LDR.W    R4,??DataTable134_1
         MOV      R3,R0
         LDR      R0,[R4, #+44]
         SUB      SP,SP,#+8
           CFI CFA R13+16
         CBZ.N    R0,??AppS2w_DataTransmit_0
-// 2899     {
-// 2900         return S2W_SUCCESS;
-// 2901     }
-// 2902 
-// 2903 
-// 2904     status = AppS2wHal_NetTx(curCid, destAddr, destPort, data, //dataBuffer,
-// 2905                 dataIndex);
+// 2903     {
+// 2904         return S2W_SUCCESS;
+// 2905     }
+// 2906 
+// 2907 
+// 2908     status = AppS2wHal_NetTx(curCid, destAddr, destPort, data, //dataBuffer,
+// 2909                 dataIndex);
         BL       ?Subroutine13
 ??CrossCallReturnLabel_38:
           CFI FunCall AppS2wHal_NetTx
         BL       AppS2wHal_NetTx
-// 2906     if (status == S2W_SUCCESS)
+// 2910     if (status == S2W_SUCCESS)
         CBNZ.N   R0,??AppS2w_DataTransmit_1
-// 2907     {
-// 2908         s2wTxBytes += dataIndex;
+// 2911     {
+// 2912         s2wTxBytes += dataIndex;
         LDR      R1,[R4, #+32]
         LDR      R2,[R4, #+44]
         ADDS     R1,R2,R1
         STR      R1,[R4, #+32]
-// 2909     }
-// 2910 
-// 2911     dataIndex = 0;
+// 2913     }
+// 2914 
+// 2915     dataIndex = 0;
 ??AppS2w_DataTransmit_1:
         MOVS     R1,#+0
         STR      R1,[R4, #+44]
-// 2912     return status;
+// 2916     return status;
 ??AppS2w_DataTransmit_0:
         POP      {R1,R2,R4,PC}    ;; return
           CFI EndBlock cfiBlock76
-// 2913 }
+// 2917 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable122:
+??DataTable124:
         DC32     s2wSyncSemID
 
         SECTION `.text`:CODE:NOROOT(1)
@@ -6909,27 +6933,27 @@ AppS2w_DataTransmit:
           CFI EndBlock cfiCond77
           CFI EndBlock cfiCond78
           CFI EndBlock cfiPicker79
-// 2914 
-// 2915 
-// 2916 
-// 2917 /**
-// 2918  ************************************************************************
-// 2919  * @ingroup S2w-Application.
-// 2920  * @brief Process the incoming data character.
-// 2921  *   This function store the data to the data buffer, increment the index,
-// 2922  *   start the nagle timer for auto connection and send the data out if the
-// 2923  *   data buffer become full.
-// 2924  * @param ch - IN incoming data character
-// 2925  * @retval none.
-// 2926  *************************************************************************/
+// 2918 
+// 2919 
+// 2920 
+// 2921 /**
+// 2922  ************************************************************************
+// 2923  * @ingroup S2w-Application.
+// 2924  * @brief Process the incoming data character.
+// 2925  *   This function store the data to the data buffer, increment the index,
+// 2926  *   start the nagle timer for auto connection and send the data out if the
+// 2927  *   data buffer become full.
+// 2928  * @param ch - IN incoming data character
+// 2929  * @retval none.
+// 2930  *************************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock80 Using cfiCommon0
           CFI Function AppS2w_DataCharProcess
         THUMB
-// 2927 PRIVATE VOID
-// 2928 AppS2w_DataCharProcess(UINT8 ch)
-// 2929 {
+// 2931 PRIVATE VOID
+// 2932 AppS2w_DataCharProcess(UINT8 ch)
+// 2933 {
 AppS2w_DataCharProcess:
         PUSH     {R3-R7,LR}
           CFI R14 Frame(CFA, -4)
@@ -6938,46 +6962,46 @@ AppS2w_DataCharProcess:
           CFI R5 Frame(CFA, -16)
           CFI R4 Frame(CFA, -20)
           CFI CFA R13+24
-// 2930     UINT8 status;
-// 2931 
-// 2932     if (s2wState == S2W_STATE_DATA_AUTO)
-        LDR.W    R4,??DataTable132_1
-        LDR.W    R7,??DataTable132_3
+// 2934     UINT8 status;
+// 2935 
+// 2936     if (s2wState == S2W_STATE_DATA_AUTO)
+        LDR.W    R4,??DataTable134_1
+        LDR.W    R7,??DataTable134_3
         MOV      R6,R0
         LDRB     R0,[R4, #+0]
         CMP      R0,#+13
         BNE.N    ??AppS2w_DataCharProcess_0
-// 2933     {
-// 2934         /* TCP server without a connection
-// 2935          */
-// 2936         if (curCid == INVALID_CID)
+// 2937     {
+// 2938         /* TCP server without a connection
+// 2939          */
+// 2940         if (curCid == INVALID_CID)
         LDRB     R0,[R4, #+5]
         CMP      R0,#+255
         BEQ.N    ??AppS2w_DataCharProcess_1
-// 2937         {
-// 2938             return;
-// 2939         }
-// 2940 
-// 2941         /* Locking to avoid race with expiry timer and send task
-// 2942          */
-// 2943 
-// 2944         GsnOsal_SemAcquire ( &dSendSem,
-// 2945                              GSN_OSAL_WAIT_FOREVER );
+// 2941         {
+// 2942             return;
+// 2943         }
+// 2944 
+// 2945         /* Locking to avoid race with expiry timer and send task
+// 2946          */
+// 2947 
+// 2948         GsnOsal_SemAcquire ( &dSendSem,
+// 2949                              GSN_OSAL_WAIT_FOREVER );
         ADD      R5,R4,#+192
         BL       ??Subroutine6_0
-// 2946         dataBuffer[dataIndex] = ch;
+// 2950         dataBuffer[dataIndex] = ch;
 ??CrossCallReturnLabel_64:
         LDR      R0,[R4, #+44]
         STRB     R6,[R0, R7]
-// 2947         dataIndex++;
+// 2951         dataIndex++;
         ADDS     R0,R0,#+1
         STR      R0,[R4, #+44]
-// 2948         GsnOsal_SemRelease(&dSendSem);
+// 2952         GsnOsal_SemRelease(&dSendSem);
         MOV      R0,R5
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 2949 
-// 2950         if ((dataIndex == 1)|| ((dataIndex % 100) == 0))
+// 2953 
+// 2954         if ((dataIndex == 1)|| ((dataIndex % 100) == 0))
         LDR      R0,[R4, #+44]
         ADD      R6,R4,#+224
         CMP      R0,#+1
@@ -6987,71 +7011,71 @@ AppS2w_DataCharProcess:
         MOVS     R2,#+100
         MLS      R0,R2,R1,R0
         CBNZ.N   R0,??AppS2w_DataCharProcess_3
-// 2951         {
-// 2952             AppS2wHal_TimerStart(&nagleTimer,
-// 2953                     s2wCurrent.registers[S2W_REG_NAGLE_WAIT_TIME]);
+// 2955         {
+// 2956             AppS2wHal_TimerStart(&nagleTimer,
+// 2957                     s2wCurrent.registers[S2W_REG_NAGLE_WAIT_TIME]);
 ??AppS2w_DataCharProcess_2:
-        LDR.W    R0,??DataTable132_2
+        LDR.W    R0,??DataTable134_2
         LDRH     R1,[R0, #+460]
         MOV      R0,R6
           CFI FunCall AppS2wHal_TimerStart
         BL       AppS2wHal_TimerStart
-// 2954         }
-// 2955 
-// 2956         if (dataIndex >= sizeof(dataBuffer))
+// 2958         }
+// 2959 
+// 2960         if (dataIndex >= sizeof(dataBuffer))
 ??AppS2w_DataCharProcess_3:
         LDR      R0,[R4, #+44]
         CMP      R0,#+1400
         BCC.N    ??AppS2w_DataCharProcess_1
-// 2957         {
-// 2958             /* Don't need the timer since we're transmitting it
-// 2959              * ourselves */
-// 2960             AppS2wHal_TimerStop(&nagleTimer);
+// 2961         {
+// 2962             /* Don't need the timer since we're transmitting it
+// 2963              * ourselves */
+// 2964             AppS2wHal_TimerStop(&nagleTimer);
         MOV      R0,R6
           CFI FunCall AppS2wHal_TimerStop
         BL       AppS2wHal_TimerStop
-// 2961             GsnOsal_SemAcquire ( &dSendSem,
-// 2962             GSN_OSAL_WAIT_FOREVER );
+// 2965             GsnOsal_SemAcquire ( &dSendSem,
+// 2966             GSN_OSAL_WAIT_FOREVER );
         BL       ??Subroutine6_0
-// 2963             status = AppS2w_DataBufferTransmit();
+// 2967             status = AppS2w_DataBufferTransmit();
 ??CrossCallReturnLabel_63:
           CFI FunCall AppS2w_DataBufferTransmit
         BL       AppS2w_DataBufferTransmit
-// 2964             GsnOsal_SemRelease(&dSendSem);
+// 2968             GsnOsal_SemRelease(&dSendSem);
         B.N      ??CrossCallReturnLabel_0
-// 2965 
-// 2966         }
-// 2967 
-// 2968     }
-// 2969     else
-// 2970     {
-// 2971         dataBuffer[dataIndex] = ch;
+// 2969 
+// 2970         }
+// 2971 
+// 2972     }
+// 2973     else
+// 2974     {
+// 2975         dataBuffer[dataIndex] = ch;
 ??AppS2w_DataCharProcess_0:
         LDR      R0,[R4, #+44]
         STRB     R6,[R0, R7]
-// 2972         dataIndex++;
+// 2976         dataIndex++;
         ADDS     R0,R0,#+1
         STR      R0,[R4, #+44]
-// 2973 
-// 2974         /* if data buffer is full transmit the data to the peer
-// 2975          */
-// 2976         if (dataIndex >= sizeof(dataBuffer))
+// 2977 
+// 2978         /* if data buffer is full transmit the data to the peer
+// 2979          */
+// 2980         if (dataIndex >= sizeof(dataBuffer))
         CMP      R0,#+1400
         BCC.N    ??AppS2w_DataCharProcess_1
-// 2977         {
-// 2978             status = AppS2w_DataBufferTransmit();
+// 2981         {
+// 2982             status = AppS2w_DataBufferTransmit();
           CFI FunCall AppS2w_DataBufferTransmit
         BL       AppS2w_DataBufferTransmit
         MOVS     R4,R0
-// 2979             if (status != S2W_SUCCESS)
+// 2983             if (status != S2W_SUCCESS)
         BEQ.N    ??AppS2w_DataCharProcess_1
-// 2980             {
-// 2981                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 2984             {
+// 2985                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
         BL       ?Subroutine6
-// 2982                 AppS2wProcess_StatusNotify(status, 0);
+// 2986                 AppS2wProcess_StatusNotify(status, 0);
 ??CrossCallReturnLabel_66:
         BL       ?Subroutine1
-// 2983                 GsnOsal_SemRelease(&s2wSyncSemID);
+// 2987                 GsnOsal_SemRelease(&s2wSyncSemID);
 ??CrossCallReturnLabel_0:
         MOV      R0,R5
         POP      {R1,R4-R7,LR}
@@ -7069,10 +7093,10 @@ AppS2w_DataCharProcess:
           CFI R7 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+24
-// 2984             }
-// 2985         }
-// 2986     }
-// 2987 }
+// 2988             }
+// 2989         }
+// 2990     }
+// 2991 }
 ??AppS2w_DataCharProcess_1:
         POP      {R0,R4-R7,PC}    ;; return
           CFI EndBlock cfiBlock80
@@ -7154,28 +7178,28 @@ AppS2w_DataCharProcess:
           CFI EndBlock cfiCond84
           CFI EndBlock cfiCond85
           CFI EndBlock cfiPicker86
-// 2988 
-// 2989 
-// 2990 
-// 2991 /**
-// 2992  ************************************************************************
-// 2993  * @ingroup S2w-Application.
-// 2994  * @brief Handles the auto connect mode data timeout.
-// 2995  *   This function is the timeout handler for auto connection escape sequence
-// 2996      (+++).This function changes the mode to command mode.
-// 2997  * @param data - IN data Pointer to the buffer which contains the timeout handler
-// 2998  *                  data.
-// 2999  * @retval none.
-// 3000  ************************************************************************/
-// 3001 
+// 2992 
+// 2993 
+// 2994 
+// 2995 /**
+// 2996  ************************************************************************
+// 2997  * @ingroup S2w-Application.
+// 2998  * @brief Handles the auto connect mode data timeout.
+// 2999  *   This function is the timeout handler for auto connection escape sequence
+// 3000      (+++).This function changes the mode to command mode.
+// 3001  * @param data - IN data Pointer to the buffer which contains the timeout handler
+// 3002  *                  data.
+// 3003  * @retval none.
+// 3004  ************************************************************************/
+// 3005 
 
         SECTION `.text`:CODE:NOROOT(2)
           CFI Block cfiBlock87 Using cfiCommon0
           CFI Function AppS2w_AutoEscTimeout
         THUMB
-// 3002 PRIVATE VOID
-// 3003 AppS2w_AutoEscTimeout(VOID *data)
-// 3004 {
+// 3006 PRIVATE VOID
+// 3007 AppS2w_AutoEscTimeout(VOID *data)
+// 3008 {
 AppS2w_AutoEscTimeout:
         PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
@@ -7186,130 +7210,130 @@ AppS2w_AutoEscTimeout:
         MOV      R4,R0
         SUB      SP,SP,#+8
           CFI CFA R13+24
-// 3005     UINT8 *autoEsc = data;
-// 3006 
-// 3007     /* Check any data came after escape sequence. */
-// 3008     if (*autoEsc == 3)
+// 3009     UINT8 *autoEsc = data;
+// 3010 
+// 3011     /* Check any data came after escape sequence. */
+// 3012     if (*autoEsc == 3)
         LDRB     R0,[R4, #+0]
-        LDR.W    R5,??DataTable136_8
+        LDR.W    R5,??DataTable138_8
         CMP      R0,#+3
         BNE.N    ??AppS2w_AutoEscTimeout_0
-// 3009     {
-// 3010         UINT32 message = APP_NOTIFICATION_AUTO_SEND;
-// 3011         /* If no data came, flush any remaining data and switch to the
-// 3012          * command mode */
-// 3013 
-// 3014         AppS2wHal_TimerStop(&nagleTimer);
+// 3013     {
+// 3014         UINT32 message = APP_NOTIFICATION_AUTO_SEND;
+// 3015         /* If no data came, flush any remaining data and switch to the
+// 3016          * command mode */
+// 3017 
+// 3018         AppS2wHal_TimerStop(&nagleTimer);
         ADD      R0,R5,#+224
           CFI FunCall AppS2wHal_TimerStop
         BL       AppS2wHal_TimerStop
-// 3015 
-// 3016         //GsnOsal_MailboxPut(&s2wSendQueue, NULL);
-// 3017 
-// 3018         (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
-        BL       ?Subroutine15
 // 3019 
-// 3020         s2wState = S2W_STATE_CMD;
-??CrossCallReturnLabel_42:
+// 3020         //GsnOsal_MailboxPut(&s2wSendQueue, NULL);
+// 3021 
+// 3022         (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
+        BL       ?Subroutine16
+// 3023 
+// 3024         s2wState = S2W_STATE_CMD;
+??CrossCallReturnLabel_47:
         MOVS     R0,#+0
         STRB     R0,[R5, #+0]
-// 3021         *autoEsc = 0;
+// 3025         *autoEsc = 0;
         BL       ?Subroutine4
-// 3022         // disable the auto mode exit gpio interrupt
-// 3023         GsnGpio_NEIntDisable_Patch(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP); //Disable auto mode exit gpio interrupt
-// 3024         // make the data ready gpio as low..
-// 3025         S2w_AsyncMsgGpioOp(0);
+// 3026         // disable the auto mode exit gpio interrupt
+// 3027         GsnGpio_NEIntDisable_Patch(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP); //Disable auto mode exit gpio interrupt
+// 3028         // make the data ready gpio as low..
+// 3029         S2w_AsyncMsgGpioOp(0);
 ??CrossCallReturnLabel_10:
         MOVS     R0,#+0
           CFI FunCall S2w_AsyncMsgGpioOp
         BL       S2w_AsyncMsgGpioOp
         POP      {R0,R1,R4-R6,PC}
-// 3026     }
-// 3027     else
-// 3028     {
-// 3029         char esc1[4] = { '+', '+', '+', '+' };
+// 3030     }
+// 3031     else
+// 3032     {
+// 3033         char esc1[4] = { '+', '+', '+', '+' };
 ??AppS2w_AutoEscTimeout_0:
         ADR.W    R1,`?<Constant {43, 43, 43, 43}>`
         LDR      R2,[R1, #0]
         ADD      R0,SP,#+0
-// 3030         UINT8   i=0;
+// 3034         UINT8   i=0;
         MOVS     R6,#+0
         STR      R2,[R0, #+0]
         B.N      ??AppS2w_AutoEscTimeout_1
-// 3031         //AppS2wHal_TimerStart(&nagleTimer,
-// 3032         //                     s2wCurrent.registers[S2W_REG_NAGLE_WAIT_TIME]);
-// 3033         while (i < *autoEsc)
-// 3034         {
-// 3035             AppS2w_DataCharProcess(esc1[i++]);
+// 3035         //AppS2wHal_TimerStart(&nagleTimer,
+// 3036         //                     s2wCurrent.registers[S2W_REG_NAGLE_WAIT_TIME]);
+// 3037         while (i < *autoEsc)
+// 3038         {
+// 3039             AppS2w_DataCharProcess(esc1[i++]);
 ??AppS2w_AutoEscTimeout_2:
         ADD      R0,SP,#+0
         LDRB     R0,[R6, R0]
           CFI FunCall AppS2w_DataCharProcess
         BL       AppS2w_DataCharProcess
         ADDS     R6,R6,#+1
-// 3036         }
+// 3040         }
 ??AppS2w_AutoEscTimeout_1:
         LDRB     R0,[R4, #+0]
         UXTB     R6,R6
         CMP      R6,R0
         BCC.N    ??AppS2w_AutoEscTimeout_2
-// 3037 
-// 3038         auto_esc = 0;
+// 3041 
+// 3042         auto_esc = 0;
         MOVS     R0,#+0
         STRB     R0,[R5, #+7]
-// 3039     }
-// 3040 }
+// 3043     }
+// 3044 }
         POP      {R0,R1,R4-R6,PC}  ;; return
           CFI EndBlock cfiBlock87
-// 3041 
-// 3042 
-// 3043 
-// 3044 /**
-// 3045  ************************************************************************
-// 3046  * @ingroup S2w-Application.
-// 3047  * @brief Convert the input character to the connection identifier and
-// 3048  *        validate the connection identifier.
-// 3049  * @param ch - IN Input character.
-// 3050  *
-// 3051  * @retval UINT8 - valid cid.
-// 3052  ************************************************************************/
+// 3045 
+// 3046 
+// 3047 
+// 3048 /**
+// 3049  ************************************************************************
+// 3050  * @ingroup S2w-Application.
+// 3051  * @brief Convert the input character to the connection identifier and
+// 3052  *        validate the connection identifier.
+// 3053  * @param ch - IN Input character.
+// 3054  *
+// 3055  * @retval UINT8 - valid cid.
+// 3056  ************************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock88 Using cfiCommon0
           CFI Function AppS2w_CidValidate
         THUMB
-// 3053 PUBLIC UINT8
-// 3054 AppS2w_CidValidate(UINT8 ch)
-// 3055 {
+// 3057 PUBLIC UINT8
+// 3058 AppS2w_CidValidate(UINT8 ch)
+// 3059 {
 AppS2w_CidValidate:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-// 3056     UINT8 cid;
-// 3057 
-// 3058     /* Validate the input character, convert it to hexadecimal value. */
-// 3059     if (ch >= '0' && ch <= '9')
+// 3060     UINT8 cid;
+// 3061 
+// 3062     /* Validate the input character, convert it to hexadecimal value. */
+// 3063     if (ch >= '0' && ch <= '9')
         SUB      R2,R0,#+48
         CMP      R2,#+10
         BCS.N    ??AppS2w_CidValidate_0
-// 3060     {
-// 3061         cid = ch - '0';
-        SUB      R4,R0,#+48
-// 3062     }
-// 3063     else if (ch >= 'A' && ch <= 'F')
 // 3064     {
-// 3065         cid = ch - 'A' + 10;
+// 3065         cid = ch - '0';
+        SUB      R4,R0,#+48
 // 3066     }
-// 3067     else if (ch >= 'a' && ch <= 'f')
+// 3067     else if (ch >= 'A' && ch <= 'F')
 // 3068     {
-// 3069         cid = ch - 'a' + 10;
+// 3069         cid = ch - 'A' + 10;
 // 3070     }
-// 3071     else
+// 3071     else if (ch >= 'a' && ch <= 'f')
 // 3072     {
-// 3073         return INVALID_CID;
+// 3073         cid = ch - 'a' + 10;
 // 3074     }
-// 3075     return AppS2wHal_NetIsCidOpen(cid) ? cid : INVALID_CID;
+// 3075     else
+// 3076     {
+// 3077         return INVALID_CID;
+// 3078     }
+// 3079     return AppS2wHal_NetIsCidOpen(cid) ? cid : INVALID_CID;
 ??AppS2w_CidValidate_1:
         UXTB     R0,R4
           CFI FunCall AppS2wHal_NetIsCidOpen
@@ -7335,36 +7359,36 @@ AppS2w_CidValidate:
         UXTB     R0,R4
         POP      {R4,PC}          ;; return
           CFI EndBlock cfiBlock88
-// 3076 }
-// 3077 
-// 3078 /**
-// 3079  ************************************************************************
-// 3080  * @ingroup S2w-Application.
-// 3081  * @ingroup S2w-Application.
-// 3082  * @brief parse Esc fail.
-// 3083  *   This function notify the application with failure indication and
-// 3084  *   change the mode to command.
-// 3085  * @retval VOID - none.
-// 3086  ************************************************************************/
+// 3080 }
+// 3081 
+// 3082 /**
+// 3083  ************************************************************************
+// 3084  * @ingroup S2w-Application.
+// 3085  * @ingroup S2w-Application.
+// 3086  * @brief parse Esc fail.
+// 3087  *   This function notify the application with failure indication and
+// 3088  *   change the mode to command.
+// 3089  * @retval VOID - none.
+// 3090  ************************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock89 Using cfiCommon0
           CFI Function AppS2w_FailEscParse
         THUMB
-// 3087 PRIVATE VOID
-// 3088 AppS2w_FailEscParse(VOID)
-// 3089 {
+// 3091 PRIVATE VOID
+// 3092 AppS2w_FailEscParse(VOID)
+// 3093 {
 AppS2w_FailEscParse:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-// 3090     dataIndex = 0;
-        LDR.N    R4,??DataTable132_1
-// 3091     curCid = INVALID_CID;
-// 3092     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_SDIO)
-        LDR.N    R1,??DataTable132
+// 3094     dataIndex = 0;
+        LDR.N    R4,??DataTable134_1
+// 3095     curCid = INVALID_CID;
+// 3096     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_SDIO)
+        LDR.N    R1,??DataTable134
         LDR      R1,[R1, #+0]
         MOVS     R0,#+0
         STR      R0,[R4, #+44]
@@ -7374,76 +7398,76 @@ AppS2w_FailEscParse:
         LDRB     R0,[R0, R1]
         CMP      R0,#+3
         BNE.N    ??AppS2w_FailEscParse_0
-// 3093     {
-// 3094 		UINT32 msg = APP_EVENT_CID_FAILURE;
-// 3095 		AppMainCtx_TaskNotify(msg);
+// 3097     {
+// 3098 		UINT32 msg = APP_EVENT_CID_FAILURE;
+// 3099 		AppMainCtx_TaskNotify(msg);
         MOVS     R0,#+44
           CFI FunCall AppMainCtx_TaskNotify
         BL       AppMainCtx_TaskNotify
         B.N      ??AppS2w_FailEscParse_1
-// 3096 	}
-// 3097 	else
-// 3098 	{
-// 3099     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 3100 	}
+// 3101 	else
+// 3102 	{
+// 3103     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
 ??AppS2w_FailEscParse_0:
         BL       ?Subroutine6
-// 3100     AppS2wProcess_StatusNotify(S2W_FAILURE, 0);
+// 3104     AppS2wProcess_StatusNotify(S2W_FAILURE, 0);
 ??CrossCallReturnLabel_65:
         MOVS     R1,#+0
         MOVS     R0,#+1
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 3101     GsnOsal_SemRelease(&s2wSyncSemID);
+// 3105     GsnOsal_SemRelease(&s2wSyncSemID);
         MOV      R0,R5
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 3102 	}
-// 3103     s2wState = S2W_STATE_CMD;
+// 3106 	}
+// 3107     s2wState = S2W_STATE_CMD;
 ??AppS2w_FailEscParse_1:
         MOVS     R0,#+0
         STRB     R0,[R4, #+0]
-// 3104 }
+// 3108 }
         POP      {R0,R4,R5,PC}    ;; return
           CFI EndBlock cfiBlock89
-// 3105 
-// 3106 
+// 3109 
+// 3110 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock90 Using cfiCommon0
           CFI Function s2wAutoExit_CB
         THUMB
-// 3107 VOID
-// 3108 s2wAutoExit_CB(UINT8 status, VOID* ctxt)
-// 3109 {
+// 3111 VOID
+// 3112 s2wAutoExit_CB(UINT8 status, VOID* ctxt)
+// 3113 {
 s2wAutoExit_CB:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-// 3110     UINT32 message = APP_NOTIFICATION_AUTO_SEND;
-// 3111     /* If no data came, flush any remaining data and switch to the
-// 3112     * command mode */
-// 3113     GsnGpio_NEIntDisable_Patch(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP); //Disable auto mode exit gpio interrupt
+// 3114     UINT32 message = APP_NOTIFICATION_AUTO_SEND;
+// 3115     /* If no data came, flush any remaining data and switch to the
+// 3116     * command mode */
+// 3117     GsnGpio_NEIntDisable_Patch(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP); //Disable auto mode exit gpio interrupt
         MOV      R0,#+256
         MOVS     R1,#+0
           CFI FunCall GsnGpio_NEIntDisable_Patch
         BL       GsnGpio_NEIntDisable_Patch
-// 3114 
-// 3115     AppS2wHal_TimerStop(&nagleTimer);
-        LDR.W    R4,??DataTable136_8
+// 3118 
+// 3119     AppS2wHal_TimerStop(&nagleTimer);
+        LDR.W    R4,??DataTable138_8
         ADD      R0,R4,#+224
           CFI FunCall AppS2wHal_TimerStop
         BL       AppS2wHal_TimerStop
-// 3116 
-// 3117     (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
-        BL       ?Subroutine15
-// 3118 
-// 3119     s2wState = S2W_STATE_CMD;
-??CrossCallReturnLabel_41:
+// 3120 
+// 3121     (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
+        BL       ?Subroutine16
+// 3122 
+// 3123     s2wState = S2W_STATE_CMD;
+??CrossCallReturnLabel_46:
         MOVS     R0,#+0
         STRB     R0,[R4, #+0]
-// 3120     // make the data ready gpio as low..
-// 3121     S2w_AsyncMsgGpioOp(0);
+// 3124     // make the data ready gpio as low..
+// 3125     S2w_AsyncMsgGpioOp(0);
         POP      {R4,LR}
           CFI R4 SameValue
           CFI R14 SameValue
@@ -7451,13 +7475,13 @@ s2wAutoExit_CB:
           CFI FunCall S2w_AsyncMsgGpioOp
         B.W      S2w_AsyncMsgGpioOp
           CFI EndBlock cfiBlock90
-// 3122 
-// 3123 }
+// 3126 
+// 3127 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond91 Using cfiCommon0
           CFI Function AppS2w_AutoEscTimeout
-          CFI Conditional ??CrossCallReturnLabel_42
+          CFI Conditional ??CrossCallReturnLabel_47
           CFI R4 Frame(CFA, -16)
           CFI R5 Frame(CFA, -12)
           CFI R6 Frame(CFA, -8)
@@ -7465,7 +7489,7 @@ s2wAutoExit_CB:
           CFI CFA R13+24
           CFI Block cfiCond92 Using cfiCommon0
           CFI (cfiCond92) Function s2wAutoExit_CB
-          CFI (cfiCond92) Conditional ??CrossCallReturnLabel_41
+          CFI (cfiCond92) Conditional ??CrossCallReturnLabel_46
           CFI (cfiCond92) R4 Frame(CFA, -8)
           CFI (cfiCond92) R14 Frame(CFA, -4)
           CFI (cfiCond92) CFA R13+8
@@ -7473,9 +7497,9 @@ s2wAutoExit_CB:
           CFI (cfiPicker93) NoFunction
           CFI (cfiPicker93) Picker
         THUMB
-?Subroutine15:
-        LDR.N    R0,??DataTable132
-        LDR.W    R2,??DataTable136_9
+?Subroutine16:
+        LDR.N    R0,??DataTable134
+        LDR.W    R2,??DataTable138_9
         LDR      R1,[R0, #+0]
         LDR      R2,[R2, #+0]
         MOVS     R0,#+17
@@ -7490,48 +7514,48 @@ s2wAutoExit_CB:
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable127:
+??DataTable129:
         DC8      0x0D, 0x0A, 0x00, 0x00
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable127_1:
+??DataTable129_1:
         DC32     profile_params
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable127_2:
+??DataTable129_2:
         DC32     `?<Constant "%02x%s">`
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable127_3:
+??DataTable129_3:
         DC32     `?<Constant "%02x%d">`
-// 3124 
-// 3125 
-// 3126 
-// 3127 
-// 3128 /**
-// 3129  ************************************************************************
-// 3130  * @ingroup S2w-Application
-// 3131  * @brief Notify the status of an asynchronous event.
-// 3132  *   This function sends the status information of each asynchronous event
-// 3133  *   to the serial interface.
-// 3134  * @param status - IN the status value.
-// 3135  * @param arg    - IN the arg passed with status
-// 3136  * @retval VOID  - none.
-// 3137  ************************************************************************/
+// 3128 
+// 3129 
+// 3130 
+// 3131 
+// 3132 /**
+// 3133  ************************************************************************
+// 3134  * @ingroup S2w-Application
+// 3135  * @brief Notify the status of an asynchronous event.
+// 3136  *   This function sends the status information of each asynchronous event
+// 3137  *   to the serial interface.
+// 3138  * @param status - IN the status value.
+// 3139  * @param arg    - IN the arg passed with status
+// 3140  * @retval VOID  - none.
+// 3141  ************************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock94 Using cfiCommon0
           CFI Function AppS2wProcess_AsyncStatusNotify
         THUMB
-// 3138 PUBLIC VOID
-// 3139 AppS2wProcess_AsyncStatusNotify(UINT8 status, UINT32 arg)
-// 3140 {
+// 3142 PUBLIC VOID
+// 3143 AppS2wProcess_AsyncStatusNotify(UINT8 status, UINT32 arg)
+// 3144 {
 AppS2wProcess_AsyncStatusNotify:
         PUSH     {R4-R7,LR}
           CFI R14 Frame(CFA, -4)
@@ -7544,79 +7568,86 @@ AppS2wProcess_AsyncStatusNotify:
         SUB      SP,SP,#+12
           CFI CFA R13+32
         MOV      R4,R1
-// 3141     const char *msg;
-// 3142 
-// 3143     S2w_AsyncMsgGpioOp(1);
+// 3145     const char *msg;
+// 3146 
+// 3147     S2w_AsyncMsgGpioOp(1);
         MOVS     R0,#+1
           CFI FunCall S2w_AsyncMsgGpioOp
         BL       S2w_AsyncMsgGpioOp
-// 3144     if(status< 15)
+// 3148     if(status< 15)
         MOV      R6,R5
-        LDR.N    R7,??DataTable132_2
+        LDR.N    R7,??DataTable134_2
         CMP      R6,#+15
         BGE.N    ??AppS2wProcess_AsyncStatusNotify_0
-// 3145     {
-// 3146         S2w_Printf("%c%c%x", S2W_ESC,'A',status);// for status  <15 put as a single char
+// 3149     {
+// 3150         S2w_Printf("%c%c%x", S2W_ESC,'A',status);// for status  <15 put as a single char
         MOV      R3,R6
-        BL       ?Subroutine14
-// 3147 	}
-// 3148 	else
-// 3149 	{
-// 3150         UINT32 firstByteLimit=0x0F;
-// 3151 		S2w_Printf("%c%c%x%x", S2W_ESC,'A',firstByteLimit,(status-firstByteLimit)); //for status >=15  put as F<status>
-// 3152 	}
-// 3153 
-// 3154 
-// 3155     if ((status == S2W_ASYNC_ECIDCLOSE || status == S2W_ASYNC_SOCKFAILURE)
-// 3156          && s2wIsAutoconnected && curCid == arg)
-??CrossCallReturnLabel_39:
+        BL       ?Subroutine15
+// 3151 	}
+// 3152 	else
+// 3153 	{
+// 3154         UINT32 firstByteLimit=0x0F;
+// 3155 		S2w_Printf("%c%c%x%x", S2W_ESC,'A',firstByteLimit,(status-firstByteLimit)); //for status >=15  put as F<status>
+// 3156 	}
+// 3157 
+// 3158 
+// 3159     if ((status == S2W_ASYNC_ECIDCLOSE || status == S2W_ASYNC_SOCKFAILURE)
+// 3160          && s2wIsAutoconnected && curCid == arg)
+??CrossCallReturnLabel_44:
         CMP      R6,#+2
         IT       NE 
         CMPNE    R5,#+0
         BNE.N    ??AppS2wProcess_AsyncStatusNotify_1
-        LDR.N    R0,??DataTable132_1
+        LDR.N    R0,??DataTable134_1
         LDRB     R1,[R0, #+3]
         CBZ.N    R1,??AppS2wProcess_AsyncStatusNotify_1
         LDRB     R1,[R0, #+5]
         CMP      R1,R4
         BNE.N    ??AppS2wProcess_AsyncStatusNotify_1
-// 3157     {
-// 3158         curCid = INVALID_CID;
+// 3161     {
+// 3162         curCid = INVALID_CID;
         MOVS     R1,#+255
         STRB     R1,[R0, #+5]
-// 3159         if (!(s2wCurrent.autoNetdata.proto == S2W_NETDATA_PROTO_TCP
-// 3160                  && s2wCurrent.autoNetdata.mode == S2W_NETDATA_MODE_SERVER))
+// 3163         if (!(s2wCurrent.autoNetdata.proto == S2W_NETDATA_PROTO_TCP
+// 3164                  && s2wCurrent.autoNetdata.mode == S2W_NETDATA_MODE_SERVER))
         LDRB     R1,[R7, #+61]
         CMP      R1,#+1
         ITT      EQ 
         LDRBEQ   R1,[R7, #+60]
         CMPEQ    R1,#+1
         BEQ.N    ??AppS2wProcess_AsyncStatusNotify_1
-// 3161         {
-// 3162             s2wState = S2W_STATE_CMD;
+// 3165         {
+// 3166             s2wState = S2W_STATE_CMD;
         MOVS     R1,#+0
         STRB     R1,[R0, #+0]
-// 3163             dataIndex = 0;
+// 3167             dataIndex = 0;
         STR      R1,[R0, #+44]
-// 3164             s2wIsAutoconnected = 0;
+// 3168             s2wIsAutoconnected = 0;
         STRB     R1,[R0, #+3]
-// 3165          }
-// 3166     }
-// 3167     if (s2wCurrent.serialPortConf.commonConf.verbose)
+// 3169          }
+// 3170     }
+// 3171     if (s2wCurrent.serialPortConf.commonConf.verbose)
 ??AppS2wProcess_AsyncStatusNotify_1:
         LDRB     R0,[R7, #+433]
         CMP      R0,#+0
         BEQ.N    ??AppS2wProcess_AsyncStatusNotify_2
-// 3168     {
-// 3169         msg = S2W_AsyncStatusList[status];
-        LDR.W    R0,??DataTable136_10
+// 3172     {
+// 3173         msg = S2W_AsyncStatusList[status];
+        LDR.W    R0,??DataTable138_10
         LDR      R7,[R0, R6, LSL #+2]
-// 3170         if (!msg)
+// 3174 		S2w_Printf("\r\n RESET PRINT 02");
+        ADR.W    R0,`?<Constant "\\r\\n RESET PRINT 02">`
+          CFI FunCall S2w_Printf
+        BL       S2w_Printf
+// 3175 		App_RtcDump();
+          CFI FunCall App_RtcDump
+        BL       App_RtcDump
+// 3176         if (!msg)
         CBNZ.N   R7,??AppS2wProcess_AsyncStatusNotify_3
-// 3171         {
-// 3172             return;
+// 3177         {
+// 3178             return;
         POP      {R0-R2,R4-R7,PC}
-// 3173         }
+// 3179         }
 ??AppS2wProcess_AsyncStatusNotify_0:
         SUB      R0,R5,#+15
         STR      R0,[SP, #+0]
@@ -7627,61 +7658,61 @@ AppS2wProcess_AsyncStatusNotify:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
         B.N      ??AppS2wProcess_AsyncStatusNotify_1
-// 3174         if (status == S2W_ASYNC_ECIDCLOSE)
+// 3180         if (status == S2W_ASYNC_ECIDCLOSE)
 ??AppS2wProcess_AsyncStatusNotify_3:
         CMP      R6,#+2
         BNE.N    ??AppS2wProcess_AsyncStatusNotify_4
-// 3175         {
-// 3176              S2w_Printf("%02xDISCONNECT %x\r\n",(strlen(msg) + 4),arg);
-        BL       ?Subroutine22
-// 3177             // s2wState = S2W_STATE_CMD;
-// 3178             // dataIndex = 0;
-// 3179         }
-??CrossCallReturnLabel_61:
+// 3181         {
+// 3182              S2w_Printf("%02xDISCONNECT %x\r\n",(strlen(msg) + 4),arg);
+        BL       ?Subroutine14
+// 3183             // s2wState = S2W_STATE_CMD;
+// 3184             // dataIndex = 0;
+// 3185         }
+??CrossCallReturnLabel_43:
         ADDS     R1,R0,#+4
         MOV      R2,R4
         ADR.W    R0,`?<Constant "%02xDISCONNECT %x\\r\\n">`
         B.N      ??AppS2wProcess_AsyncStatusNotify_5
-// 3180         else if(status == S2W_ASYNC_CON_SUCCESS)
+// 3186         else if(status == S2W_ASYNC_CON_SUCCESS)
 ??AppS2wProcess_AsyncStatusNotify_4:
         CMP      R6,#+1
         BNE.N    ??AppS2wProcess_AsyncStatusNotify_6
-// 3181         {
-// 3182             S2w_Printf("%02x%s",(strlen(msg) + arg),msg);
-        BL       ?Subroutine22
-// 3183         }
-??CrossCallReturnLabel_60:
+// 3187         {
+// 3188             S2w_Printf("%02x%s",(strlen(msg) + arg),msg);
+        BL       ?Subroutine14
+// 3189         }
+??CrossCallReturnLabel_42:
         ADDS     R1,R4,R0
         MOV      R2,R7
         ADR.W    R0,`?<Constant "%02x%s">`
         B.N      ??AppS2wProcess_AsyncStatusNotify_5
-// 3184         else if (status == S2W_ASYNC_SOCKFAILURE)
+// 3190         else if (status == S2W_ASYNC_SOCKFAILURE)
 ??AppS2wProcess_AsyncStatusNotify_6:
         CBNZ.N   R5,??AppS2wProcess_AsyncStatusNotify_7
-// 3185         {
-// 3186             S2w_Printf("%02xERROR: SOCKET FAILURE %x\r\n",(strlen(msg)+4),arg);
-        BL       ?Subroutine22
-// 3187            // s2wState = S2W_STATE_CMD;
-// 3188            // dataIndex = 0;
-// 3189         }
-??CrossCallReturnLabel_59:
+// 3191         {
+// 3192             S2w_Printf("%02xERROR: SOCKET FAILURE %x\r\n",(strlen(msg)+4),arg);
+        BL       ?Subroutine14
+// 3193            // s2wState = S2W_STATE_CMD;
+// 3194            // dataIndex = 0;
+// 3195         }
+??CrossCallReturnLabel_41:
         ADDS     R1,R0,#+4
         MOV      R2,R4
         ADR.W    R0,`?<Constant "%02xERROR: SOCKET FAI...">`
         B.N      ??AppS2wProcess_AsyncStatusNotify_5
-// 3190 		else if ((status == S2W_ASYNC_MDNS_REG_FAILED_ID) || (status == S2W_ASYNC_MDNS_REG_SUCESS_ID))
+// 3196 		else if ((status == S2W_ASYNC_MDNS_REG_FAILED_ID) || (status == S2W_ASYNC_MDNS_REG_SUCESS_ID))
 ??AppS2wProcess_AsyncStatusNotify_7:
         CMP      R6,#+26
         IT       NE 
         CMPNE    R6,#+27
         BNE.N    ??AppS2wProcess_AsyncStatusNotify_8
-// 3191         {
-// 3192         	UINT8 *str;
-// 3193 			str = (UINT8 *)arg;
-// 3194 			S2w_Printf("%02x%s%s\r\n",(strlen(msg)+strlen((const char *)str)),msg,str);
-        BL       ?Subroutine22
-// 3195 		}
-??CrossCallReturnLabel_58:
+// 3197         {
+// 3198         	UINT8 *str;
+// 3199 			str = (UINT8 *)arg;
+// 3200 			S2w_Printf("%02x%s%s\r\n",(strlen(msg)+strlen((const char *)str)),msg,str);
+        BL       ?Subroutine14
+// 3201 		}
+??CrossCallReturnLabel_40:
         MOV      R5,R0
         MOV      R0,R4
           CFI FunCall strlen
@@ -7691,47 +7722,47 @@ AppS2wProcess_AsyncStatusNotify:
         MOV      R2,R7
         ADR.W    R0,`?<Constant "%02x%s%s\\r\\n">`
         B.N      ??AppS2wProcess_AsyncStatusNotify_9
-// 3196         else
-// 3197         {
-// 3198             S2w_Printf("%02x%s\r\n",strlen(msg),msg);
+// 3202         else
+// 3203         {
+// 3204             S2w_Printf("%02x%s\r\n",strlen(msg),msg);
 ??AppS2wProcess_AsyncStatusNotify_8:
-        BL       ?Subroutine22
-// 3199         }
-// 3200     }
-??CrossCallReturnLabel_57:
+        BL       ?Subroutine14
+// 3205         }
+// 3206     }
+??CrossCallReturnLabel_39:
         MOV      R1,R0
         MOV      R2,R7
         ADR.W    R0,`?<Constant "%02x%s\\r\\n">`
         B.N      ??AppS2wProcess_AsyncStatusNotify_5
-// 3201     else
-// 3202     {
-// 3203 		UINT8 buff[8],len;
-// 3204 		len = sprintf((char*)buff,"%x",status);
+// 3207     else
+// 3208     {
+// 3209 		UINT8 buff[8],len;
+// 3210 		len = sprintf((char*)buff,"%x",status);
 ??AppS2wProcess_AsyncStatusNotify_2:
         MOV      R2,R6
-        ADR.N    R1,??DataTable132_4  ;; 0x25, 0x78, 0x00, 0x00
+        ADR.N    R1,??DataTable134_4  ;; 0x25, 0x78, 0x00, 0x00
         ADD      R0,SP,#+0
           CFI FunCall sprintf
         BL       sprintf
         UXTB     R1,R0
-// 3205         if(status == S2W_ASYNC_CON_SUCCESS)
+// 3211         if(status == S2W_ASYNC_CON_SUCCESS)
         CMP      R6,#+1
         BNE.N    ??AppS2wProcess_AsyncStatusNotify_10
-// 3206         {
-// 3207             S2w_Printf("%02x%d",(arg + 1),status );
+// 3212         {
+// 3213             S2w_Printf("%02x%d",(arg + 1),status );
         MOVS     R2,#+1
         ADDS     R1,R4,#+1
         ADR.W    R0,`?<Constant "%02x%d">`
         B.N      ??AppS2wProcess_AsyncStatusNotify_5
-// 3208         }
-// 3209         else if ((status == S2W_ASYNC_ECIDCLOSE) || (status == S2W_ASYNC_SOCKFAILURE) )
+// 3214         }
+// 3215         else if ((status == S2W_ASYNC_ECIDCLOSE) || (status == S2W_ASYNC_SOCKFAILURE) )
 ??AppS2wProcess_AsyncStatusNotify_10:
         CMP      R6,#+2
         IT       NE 
         CMPNE    R5,#+0
         BNE.N    ??AppS2wProcess_AsyncStatusNotify_11
-// 3210         {
-// 3211             S2w_Printf("%02x%d %x\r\n",5,status, arg); // verbose only 1 char
+// 3216         {
+// 3217             S2w_Printf("%02x%d %x\r\n",5,status, arg); // verbose only 1 char
         ADR.W    R0,`?<Constant "%02x%d %x\\r\\n">`
         MOV      R3,R4
         MOV      R2,R6
@@ -7740,27 +7771,27 @@ AppS2wProcess_AsyncStatusNotify:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
         B.N      ??AppS2wProcess_AsyncStatusNotify_12
-// 3212             //s2wState = S2W_STATE_CMD;
-// 3213             //dataIndex = 0;
-// 3214         }
-// 3215         else if (status == S2W_EXTPA_ASYNC_INITIAL_BOOT_MSG)
-// 3216         {
-// 3217             S2w_Printf("%02x%x\r\n",len,status);
-// 3218         }
-// 3219         else
-// 3220         {
-// 3221             S2w_Printf("%02x%x\r\n",len,status);
+// 3218             //s2wState = S2W_STATE_CMD;
+// 3219             //dataIndex = 0;
+// 3220         }
+// 3221         else if (status == S2W_EXTPA_ASYNC_INITIAL_BOOT_MSG)
+// 3222         {
+// 3223             S2w_Printf("%02x%x\r\n",len,status);
+// 3224         }
+// 3225         else
+// 3226         {
+// 3227             S2w_Printf("%02x%x\r\n",len,status);
 ??AppS2wProcess_AsyncStatusNotify_11:
         MOV      R2,R6
         ADR.W    R0,`?<Constant "%02x%x\\r\\n">`
 ??AppS2wProcess_AsyncStatusNotify_5:
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3222         }
-// 3223     }
-// 3224     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 3228         }
+// 3229     }
+// 3230     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
 ??AppS2wProcess_AsyncStatusNotify_12:
-        LDR.W    R1,??DataTable136_11
+        LDR.W    R1,??DataTable138_11
         LDR      R1,[R1, #+0]
         MOVW     R0,#+27384
         LDRB     R0,[R0, R1]
@@ -7768,93 +7799,28 @@ AppS2wProcess_AsyncStatusNotify:
         IT       EQ 
           CFI FunCall s2wSpiFs_Flush
         BLEQ     s2wSpiFs_Flush
-// 3225     {
-// 3226         s2wSpiFs_Flush();
-// 3227     }
-// 3228 
-// 3229     S2w_AsyncMsgGpioOp(0);
+// 3231     {
+// 3232         s2wSpiFs_Flush();
+// 3233     }
+// 3234 
+// 3235     S2w_AsyncMsgGpioOp(0);
         MOVS     R0,#+0
           CFI FunCall S2w_AsyncMsgGpioOp
         BL       S2w_AsyncMsgGpioOp
-// 3230 }
+// 3236 }
         POP      {R0-R2,R4-R7,PC}  ;; return
           CFI EndBlock cfiBlock94
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable128:
+??DataTable130:
         DC32     s2wCidList
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond95 Using cfiCommon0
-          CFI Function AppS2wProcess_AsyncStatusNotify
-          CFI Conditional ??CrossCallReturnLabel_61
-          CFI R4 Frame(CFA, -20)
-          CFI R5 Frame(CFA, -16)
-          CFI R6 Frame(CFA, -12)
-          CFI R7 Frame(CFA, -8)
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+32
-          CFI Block cfiCond96 Using cfiCommon0
-          CFI (cfiCond96) Function AppS2wProcess_AsyncStatusNotify
-          CFI (cfiCond96) Conditional ??CrossCallReturnLabel_60
-          CFI (cfiCond96) R4 Frame(CFA, -20)
-          CFI (cfiCond96) R5 Frame(CFA, -16)
-          CFI (cfiCond96) R6 Frame(CFA, -12)
-          CFI (cfiCond96) R7 Frame(CFA, -8)
-          CFI (cfiCond96) R14 Frame(CFA, -4)
-          CFI (cfiCond96) CFA R13+32
-          CFI Block cfiCond97 Using cfiCommon0
-          CFI (cfiCond97) Function AppS2wProcess_AsyncStatusNotify
-          CFI (cfiCond97) Conditional ??CrossCallReturnLabel_59
-          CFI (cfiCond97) R4 Frame(CFA, -20)
-          CFI (cfiCond97) R5 Frame(CFA, -16)
-          CFI (cfiCond97) R6 Frame(CFA, -12)
-          CFI (cfiCond97) R7 Frame(CFA, -8)
-          CFI (cfiCond97) R14 Frame(CFA, -4)
-          CFI (cfiCond97) CFA R13+32
-          CFI Block cfiCond98 Using cfiCommon0
-          CFI (cfiCond98) Function AppS2wProcess_AsyncStatusNotify
-          CFI (cfiCond98) Conditional ??CrossCallReturnLabel_58
-          CFI (cfiCond98) R4 Frame(CFA, -20)
-          CFI (cfiCond98) R5 Frame(CFA, -16)
-          CFI (cfiCond98) R6 Frame(CFA, -12)
-          CFI (cfiCond98) R7 Frame(CFA, -8)
-          CFI (cfiCond98) R14 Frame(CFA, -4)
-          CFI (cfiCond98) CFA R13+32
-          CFI Block cfiCond99 Using cfiCommon0
-          CFI (cfiCond99) Function AppS2wProcess_AsyncStatusNotify
-          CFI (cfiCond99) Conditional ??CrossCallReturnLabel_57
-          CFI (cfiCond99) R4 Frame(CFA, -20)
-          CFI (cfiCond99) R5 Frame(CFA, -16)
-          CFI (cfiCond99) R6 Frame(CFA, -12)
-          CFI (cfiCond99) R7 Frame(CFA, -8)
-          CFI (cfiCond99) R14 Frame(CFA, -4)
-          CFI (cfiCond99) CFA R13+32
-          CFI Block cfiPicker100 Using cfiCommon1
-          CFI (cfiPicker100) NoFunction
-          CFI (cfiPicker100) Picker
-        THUMB
-?Subroutine22:
-        MOV      R0,R7
-          CFI FunCall AppS2wProcess_AsyncStatusNotify strlen
-          CFI FunCall AppS2wProcess_AsyncStatusNotify strlen
-          CFI FunCall AppS2wProcess_AsyncStatusNotify strlen
-          CFI FunCall AppS2wProcess_AsyncStatusNotify strlen
-          CFI FunCall AppS2wProcess_AsyncStatusNotify strlen
-        B.W      strlen
-          CFI EndBlock cfiCond95
-          CFI EndBlock cfiCond96
-          CFI EndBlock cfiCond97
-          CFI EndBlock cfiCond98
-          CFI EndBlock cfiCond99
-          CFI EndBlock cfiPicker100
-
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiCond101 Using cfiCommon0
           CFI Function AppS2wProcess_NetAccept
-          CFI Conditional ??CrossCallReturnLabel_40
+          CFI Conditional ??CrossCallReturnLabel_45
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -7865,6 +7831,67 @@ AppS2wProcess_AsyncStatusNotify:
           CFI R11 Frame(CFA, -8)
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+112
+          CFI Block cfiCond96 Using cfiCommon0
+          CFI (cfiCond96) Function AppS2wProcess_AsyncStatusNotify
+          CFI (cfiCond96) Conditional ??CrossCallReturnLabel_44
+          CFI (cfiCond96) R4 Frame(CFA, -20)
+          CFI (cfiCond96) R5 Frame(CFA, -16)
+          CFI (cfiCond96) R6 Frame(CFA, -12)
+          CFI (cfiCond96) R7 Frame(CFA, -8)
+          CFI (cfiCond96) R14 Frame(CFA, -4)
+          CFI (cfiCond96) CFA R13+32
+          CFI Block cfiPicker97 Using cfiCommon1
+          CFI (cfiPicker97) NoFunction
+          CFI (cfiPicker97) Picker
+        THUMB
+?Subroutine15:
+        MOVS     R2,#+65
+        MOVS     R1,#+27
+        ADR.W    R0,`?<Constant "%c%c%x">`
+          CFI FunCall AppS2wProcess_NetAccept S2w_Printf
+          CFI FunCall AppS2wProcess_AsyncStatusNotify S2w_Printf
+        B.W      S2w_Printf
+          CFI EndBlock cfiCond95
+          CFI EndBlock cfiCond96
+          CFI EndBlock cfiPicker97
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiCond98 Using cfiCommon0
+          CFI Function AppS2wProcess_AsyncStatusNotify
+          CFI Conditional ??CrossCallReturnLabel_43
+          CFI R4 Frame(CFA, -20)
+          CFI R5 Frame(CFA, -16)
+          CFI R6 Frame(CFA, -12)
+          CFI R7 Frame(CFA, -8)
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+32
+          CFI Block cfiCond99 Using cfiCommon0
+          CFI (cfiCond99) Function AppS2wProcess_AsyncStatusNotify
+          CFI (cfiCond99) Conditional ??CrossCallReturnLabel_42
+          CFI (cfiCond99) R4 Frame(CFA, -20)
+          CFI (cfiCond99) R5 Frame(CFA, -16)
+          CFI (cfiCond99) R6 Frame(CFA, -12)
+          CFI (cfiCond99) R7 Frame(CFA, -8)
+          CFI (cfiCond99) R14 Frame(CFA, -4)
+          CFI (cfiCond99) CFA R13+32
+          CFI Block cfiCond100 Using cfiCommon0
+          CFI (cfiCond100) Function AppS2wProcess_AsyncStatusNotify
+          CFI (cfiCond100) Conditional ??CrossCallReturnLabel_41
+          CFI (cfiCond100) R4 Frame(CFA, -20)
+          CFI (cfiCond100) R5 Frame(CFA, -16)
+          CFI (cfiCond100) R6 Frame(CFA, -12)
+          CFI (cfiCond100) R7 Frame(CFA, -8)
+          CFI (cfiCond100) R14 Frame(CFA, -4)
+          CFI (cfiCond100) CFA R13+32
+          CFI Block cfiCond101 Using cfiCommon0
+          CFI (cfiCond101) Function AppS2wProcess_AsyncStatusNotify
+          CFI (cfiCond101) Conditional ??CrossCallReturnLabel_40
+          CFI (cfiCond101) R4 Frame(CFA, -20)
+          CFI (cfiCond101) R5 Frame(CFA, -16)
+          CFI (cfiCond101) R6 Frame(CFA, -12)
+          CFI (cfiCond101) R7 Frame(CFA, -8)
+          CFI (cfiCond101) R14 Frame(CFA, -4)
+          CFI (cfiCond101) CFA R13+32
           CFI Block cfiCond102 Using cfiCommon0
           CFI (cfiCond102) Function AppS2wProcess_AsyncStatusNotify
           CFI (cfiCond102) Conditional ??CrossCallReturnLabel_39
@@ -7879,24 +7906,28 @@ AppS2wProcess_AsyncStatusNotify:
           CFI (cfiPicker103) Picker
         THUMB
 ?Subroutine14:
-        MOVS     R2,#+65
-        MOVS     R1,#+27
-        ADR.W    R0,`?<Constant "%c%c%x">`
-          CFI FunCall AppS2wProcess_NetAccept S2w_Printf
-          CFI FunCall AppS2wProcess_AsyncStatusNotify S2w_Printf
-        B.W      S2w_Printf
+        MOV      R0,R7
+          CFI FunCall AppS2wProcess_AsyncStatusNotify strlen
+          CFI FunCall AppS2wProcess_AsyncStatusNotify strlen
+          CFI FunCall AppS2wProcess_AsyncStatusNotify strlen
+          CFI FunCall AppS2wProcess_AsyncStatusNotify strlen
+          CFI FunCall AppS2wProcess_AsyncStatusNotify strlen
+        B.W      strlen
+          CFI EndBlock cfiCond98
+          CFI EndBlock cfiCond99
+          CFI EndBlock cfiCond100
           CFI EndBlock cfiCond101
           CFI EndBlock cfiCond102
           CFI EndBlock cfiPicker103
-// 3231 
+// 3237 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock104 Using cfiCommon0
           CFI Function AppS2wRoam_SatusNotify
         THUMB
-// 3232 VOID
-// 3233 AppS2wRoam_SatusNotify(UINT32 statusMsg, UINT32 asycStatusMsg)  
-// 3234  {
+// 3238 VOID
+// 3239 AppS2wRoam_SatusNotify(UINT32 statusMsg, UINT32 asycStatusMsg)  
+// 3240  {
 AppS2wRoam_SatusNotify:
         PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
@@ -7906,75 +7937,75 @@ AppS2wRoam_SatusNotify:
           CFI CFA R13+16
         MOV      R4,R0
         MOV      R5,R1
-// 3235 #ifdef	S2W_UART_ENABLE
-// 3236 		while(S2wUart_TxStatusGet());
+// 3241 #ifdef	S2W_UART_ENABLE
+// 3242 		while(S2wUart_TxStatusGet());
 ??AppS2wRoam_SatusNotify_0:
           CFI FunCall S2wUart_TxStatusGet
         BL       S2wUart_TxStatusGet
         CMP      R0,#+0
         BNE.N    ??AppS2wRoam_SatusNotify_0
-// 3237 #endif
-// 3238 	 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 3243 #endif
+// 3244 	 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
         BL       ?Subroutine17
-// 3239 
-// 3240 	 /* Print ip header if msg is new ip*/
-// 3241 	 if(statusMsg == S2W_ENEWIP)
-??CrossCallReturnLabel_47:
+// 3245 
+// 3246 	 /* Print ip header if msg is new ip*/
+// 3247 	 if(statusMsg == S2W_ENEWIP)
+??CrossCallReturnLabel_48:
         CMP      R4,#+19
         IT       EQ 
           CFI FunCall AppS2wHdrAndIpv4_Print
         BLEQ     AppS2wHdrAndIpv4_Print
-// 3242  	 {
-// 3243 		 AppS2wHdrAndIpv4_Print();
-// 3244  	 }
-// 3245  
-// 3246 #ifdef S2W_ASYNC_MSG
-// 3247 	 if(s2wCurrent.asyncMsgFormat)
-        BL       ?Subroutine16
-??CrossCallReturnLabel_46:
+// 3248  	 {
+// 3249 		 AppS2wHdrAndIpv4_Print();
+// 3250  	 }
+// 3251  
+// 3252 #ifdef S2W_ASYNC_MSG
+// 3253 	 if(s2wCurrent.asyncMsgFormat)
+        BL       ?Subroutine20
+??CrossCallReturnLabel_57:
         CBZ.N    R0,??AppS2wRoam_SatusNotify_1
-// 3248 	 {
-// 3249 		 AppS2wProcess_AsyncStatusNotify(asycStatusMsg, 0);
+// 3254 	 {
+// 3255 		 AppS2wProcess_AsyncStatusNotify(asycStatusMsg, 0);
         MOVS     R1,#+0
         UXTB     R0,R5
           CFI FunCall AppS2wProcess_AsyncStatusNotify
         BL       AppS2wProcess_AsyncStatusNotify
         B.N      ??AppS2wRoam_SatusNotify_2
-// 3250 	 }
-// 3251 	 else
-// 3252 #endif
-// 3253 	 {
-// 3254 		 AppS2wProcess_StatusNotify(statusMsg, 0);
+// 3256 	 }
+// 3257 	 else
+// 3258 #endif
+// 3259 	 {
+// 3260 		 AppS2wProcess_StatusNotify(statusMsg, 0);
 ??AppS2wRoam_SatusNotify_1:
         MOVS     R1,#+0
         UXTB     R0,R4
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 3255 	 }
-// 3256 	 GsnOsal_SemRelease(&s2wSyncSemID);
+// 3261 	 }
+// 3262 	 GsnOsal_SemRelease(&s2wSyncSemID);
 ??AppS2wRoam_SatusNotify_2:
         MOV      R0,R6
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 3257 
-// 3258 #ifdef	S2W_UART_ENABLE
-// 3259 		while(S2wUart_TxStatusGet());
+// 3263 
+// 3264 #ifdef	S2W_UART_ENABLE
+// 3265 		while(S2wUart_TxStatusGet());
 ??AppS2wRoam_SatusNotify_3:
           CFI FunCall S2wUart_TxStatusGet
         BL       S2wUart_TxStatusGet
         CMP      R0,#+0
         BNE.N    ??AppS2wRoam_SatusNotify_3
-// 3260 #endif
-// 3261 	 /* Print ip header if msg is new ip*/
-// 3262  
-// 3263  }
+// 3266 #endif
+// 3267 	 /* Print ip header if msg is new ip*/
+// 3268  
+// 3269  }
         POP      {R4-R6,PC}       ;; return
           CFI EndBlock cfiBlock104
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond105 Using cfiCommon0
           CFI Function AppS2wProcess_DhcpIpChangeNotify
-          CFI Conditional ??CrossCallReturnLabel_48
+          CFI Conditional ??CrossCallReturnLabel_49
           CFI R4 Frame(CFA, -16)
           CFI R5 Frame(CFA, -12)
           CFI R6 Frame(CFA, -8)
@@ -7982,7 +8013,7 @@ AppS2wRoam_SatusNotify:
           CFI CFA R13+16
           CFI Block cfiCond106 Using cfiCommon0
           CFI (cfiCond106) Function AppS2wRoam_SatusNotify
-          CFI (cfiCond106) Conditional ??CrossCallReturnLabel_47
+          CFI (cfiCond106) Conditional ??CrossCallReturnLabel_48
           CFI (cfiCond106) R4 Frame(CFA, -16)
           CFI (cfiCond106) R5 Frame(CFA, -12)
           CFI (cfiCond106) R6 Frame(CFA, -8)
@@ -7993,7 +8024,7 @@ AppS2wRoam_SatusNotify:
           CFI (cfiPicker107) Picker
         THUMB
 ?Subroutine17:
-        LDR.W    R6,??DataTable136_12
+        LDR.W    R6,??DataTable138_12
         MOV      R1,#-1
         MOV      R0,R6
           CFI FunCall AppS2wProcess_DhcpIpChangeNotify GsnOsal_SemAcquire
@@ -8007,8 +8038,8 @@ AppS2wRoam_SatusNotify:
           CFI Block cfiBlock108 Using cfiCommon0
           CFI Function AppS2w_NwConnRestore
         THUMB
-// 3264  void AppS2w_NwConnRestore()
-// 3265  {
+// 3270  void AppS2w_NwConnRestore()
+// 3271  {
 AppS2w_NwConnRestore:
         PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
@@ -8016,18 +8047,18 @@ AppS2w_NwConnRestore:
           CFI R5 Frame(CFA, -12)
           CFI R4 Frame(CFA, -16)
           CFI CFA R13+16
-// 3266         APP_RTC_LATCH_MEM_INFO_T *pAppRtcLtchInfo = App_RtcLatchMemInfoPtrGet();
-// 3267 	//APP_RTC_SECNDRY_MEM_INFO_T *pAppRtcSecMemInfo = App_RtcSecMemInfoPtrGet();
-// 3268         GSN_WDD_WLAN_CFG_T *pWddConf;
-// 3269         
-// 3270 	/* Set L2 Configuration */
-// 3271 	pWddConf = GsnWdd_WlanConfigPtrGet(&s2wappMainTaskCtxt->if0.wddCtx);
-        LDR.N    R0,??DataTable132
-// 3272 	//memset(&WddConf,0,sizeof(GSN_WDD_WLAN_CFG_T));
-// 3273 	//s2wappMainTaskCtxt->if0.wddCtx.assocStatus = pAppRtcLtchInfo->AssocStatus;
-// 3274 	////s2wLinkState = s2wappMainTaskCtxt->if0.wddCtx.assocStatus;
-// 3275 	memcpy(&pWddConf->bssid, &pAppRtcLtchInfo->bssid, sizeof(GSN_WLAN_MAC_ADDR_T));
-        LDR.W    R5,??DataTable136_13  ;; 0x41010159
+// 3272         APP_RTC_LATCH_MEM_INFO_T *pAppRtcLtchInfo = App_RtcLatchMemInfoPtrGet();
+// 3273 	//APP_RTC_SECNDRY_MEM_INFO_T *pAppRtcSecMemInfo = App_RtcSecMemInfoPtrGet();
+// 3274         GSN_WDD_WLAN_CFG_T *pWddConf;
+// 3275         
+// 3276 	/* Set L2 Configuration */
+// 3277 	pWddConf = GsnWdd_WlanConfigPtrGet(&s2wappMainTaskCtxt->if0.wddCtx);
+        LDR.N    R0,??DataTable134
+// 3278 	//memset(&WddConf,0,sizeof(GSN_WDD_WLAN_CFG_T));
+// 3279 	//s2wappMainTaskCtxt->if0.wddCtx.assocStatus = pAppRtcLtchInfo->AssocStatus;
+// 3280 	////s2wLinkState = s2wappMainTaskCtxt->if0.wddCtx.assocStatus;
+// 3281 	memcpy(&pWddConf->bssid, &pAppRtcLtchInfo->bssid, sizeof(GSN_WLAN_MAC_ADDR_T));
+        LDR.W    R5,??DataTable138_13  ;; 0x41010159
         LDR      R0,[R0, #+0]
         ADDW     R4,R0,#+3988
         MOVS     R2,#+6
@@ -8035,21 +8066,21 @@ AppS2w_NwConnRestore:
         ADD      R0,R4,#+33
           CFI FunCall memcpy
         BL       memcpy
-// 3276 	memcpy(&pWddConf->ssid, &pAppRtcLtchInfo->ssid, sizeof(GSN_WLAN_MAC_SSID_T));
+// 3282 	memcpy(&pWddConf->ssid, &pAppRtcLtchInfo->ssid, sizeof(GSN_WLAN_MAC_SSID_T));
         MOVS     R2,#+33
-        LDR.W    R1,??DataTable136_14  ;; 0x41010138
+        LDR.W    R1,??DataTable138_14  ;; 0x41010138
         MOV      R0,R4
           CFI FunCall memcpy
         BL       memcpy
-// 3277 	pWddConf->securityCfg.mode = pAppRtcLtchInfo->wsec;
+// 3283 	pWddConf->securityCfg.mode = pAppRtcLtchInfo->wsec;
         LDRB     R0,[R5, #+6]
-// 3278 	pWddConf->channel[0] = pAppRtcLtchInfo->channel;
-// 3279         current_wlan_info.mode = pAppRtcLtchInfo->wmode;
-        LDR.W    R6,??DataTable136_15
+// 3284 	pWddConf->channel[0] = pAppRtcLtchInfo->channel;
+// 3285         current_wlan_info.mode = pAppRtcLtchInfo->wmode;
+        LDR.W    R6,??DataTable138_15
         STRB     R0,[R4, #+64]
-// 3280 	current_wlan_info.authMode = pWddConf->securityCfg.mode;
-// 3281 	current_wlan_info.channel = pWddConf->channel[0];
-// 3282 	memcpy(current_wlan_info.ssid, pWddConf->ssid.array, pWddConf->ssid.length);
+// 3286 	current_wlan_info.authMode = pWddConf->securityCfg.mode;
+// 3287 	current_wlan_info.channel = pWddConf->channel[0];
+// 3288 	memcpy(current_wlan_info.ssid, pWddConf->ssid.array, pWddConf->ssid.length);
         ADDS     R1,R4,#+1
         LDRB     R0,[R5, #+8]
         STRB     R0,[R4, #+39]
@@ -8063,28 +8094,28 @@ AppS2w_NwConnRestore:
         LDRB     R2,[R4, #+0]
           CFI FunCall memcpy
         BL       memcpy
-// 3283 	current_wlan_info.ssidLen = pWddConf->ssid.length;
+// 3289 	current_wlan_info.ssidLen = pWddConf->ssid.length;
         LDRB     R0,[R4, #+0]
         STRB     R0,[R6, #+2]
-// 3284         
-// 3285 }
+// 3290         
+// 3291 }
         POP      {R4-R6,PC}       ;; return
           CFI EndBlock cfiBlock108
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable130:
+??DataTable132:
         DC32     s2wCurrent+0x1B0
-// 3286 
+// 3292 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock109 Using cfiCommon0
           CFI Function AppS2wProcess_AutoStart
         THUMB
-// 3287 PUBLIC VOID
-// 3288 AppS2wProcess_AutoStart(VOID)
-// 3289 {
+// 3293 PUBLIC VOID
+// 3294 AppS2wProcess_AutoStart(VOID)
+// 3295 {
 AppS2wProcess_AutoStart:
         PUSH     {R4,R5,LR}
           CFI R14 Frame(CFA, -4)
@@ -8093,28 +8124,28 @@ AppS2wProcess_AutoStart:
           CFI CFA R13+12
         SUB      SP,SP,#+28
           CFI CFA R13+40
-// 3290 	UINT32 bootReason,bootInfo;
-// 3291     UINT8 buff[8]={0}, len=0;
+// 3296 	UINT32 bootReason,bootInfo;
+// 3297     UINT8 buff[8]={0}, len=0;
         ADD      R0,SP,#+16
         MOVS     R1,#+0
         MOVS     R2,#+0
         STM      R0!,{R1,R2}
-// 3292 #ifdef  S2W_NCM_SUPPORT_ENABLE
-// 3293    if(s2wCurrent.ncmAutoMgr)
-        LDR.N    R4,??DataTable132_2
+// 3298 #ifdef  S2W_NCM_SUPPORT_ENABLE
+// 3299    if(s2wCurrent.ncmAutoMgr)
+        LDR.N    R4,??DataTable134_2
         ADR.W    R1,`?<Constant "%d,%d,%d">`
         LDRB     R3,[R4, #+810]
         ADD      R5,SP,#+16
         CBZ.N    R3,??AppS2wProcess_AutoStart_0
-// 3294    {
-// 3295         
-// 3296         len = sprintf((char*)buff,"%d,%d,%d",((s2wCurrent.mode == 1) ? 0: 1) ,
-// 3297               s2wCurrent.ncmAutoMgr,s2wCurrent.ncmAutoLvl);
+// 3300    {
+// 3301         
+// 3302         len = sprintf((char*)buff,"%d,%d,%d",((s2wCurrent.mode == 1) ? 0: 1) ,
+// 3303               s2wCurrent.ncmAutoMgr,s2wCurrent.ncmAutoLvl);
         LDRB     R0,[R4, #+4]
         CMP      R0,#+1
         IT       NE 
         MOVNE    R2,#+1
-// 3298         buff[len]='\0';
+// 3304         buff[len]='\0';
         LDRB     R0,[R4, #+811]
         STR      R0,[SP, #+0]
         ADD      R0,SP,#+16
@@ -8123,12 +8154,12 @@ AppS2wProcess_AutoStart:
         UXTB     R0,R0
         MOVS     R1,#+0
         STRB     R1,[R0, R5]
-// 3299 	 	bootReason = GSN_BOOT_REASON_GET();		
-// 3300 		bootInfo =  GSN_BOOT_INFO_GET();
-        LDR.W    R0,??DataTable136_3  ;; 0x41010004
+// 3305 	 	bootReason = GSN_BOOT_REASON_GET();		
+// 3306 		bootInfo =  GSN_BOOT_INFO_GET();
+        LDR.W    R0,??DataTable138_3  ;; 0x41010004
         LDR      R1,[R0, #+4]
-// 3301 		if( (bootReason == GSN_WIF_SYS_BOOT_NORMAL_BOOT) && ((GSN_WIF_SYS_BOOTINFO_NORMALBOOT_RTC == bootInfo) || 
-// 3302 		                     (GSN_WIF_SYS_BOOTINFO_NORMALBOOT_ALARM == bootInfo)))
+// 3307 		if( (bootReason == GSN_WIF_SYS_BOOT_NORMAL_BOOT) && ((GSN_WIF_SYS_BOOTINFO_NORMALBOOT_RTC == bootInfo) || 
+// 3308 		                     (GSN_WIF_SYS_BOOTINFO_NORMALBOOT_ALARM == bootInfo)))
         LDR      R0,[R0, #+0]
         CMP      R0,#+1
         BNE.N    ??AppS2wProcess_AutoStart_1
@@ -8136,27 +8167,27 @@ AppS2wProcess_AutoStart:
         IT       NE 
         CMPNE    R1,#+1
         BNE.N    ??AppS2wProcess_AutoStart_1
-// 3303 	        AppS2w_NwConnRestore();
+// 3309 	        AppS2w_NwConnRestore();
           CFI FunCall AppS2w_NwConnRestore
         BL       AppS2w_NwConnRestore
-// 3304         AppS2wCmd_NcmAuto(buff);
+// 3310         AppS2wCmd_NcmAuto(buff);
         B.N      ??AppS2wProcess_AutoStart_1
-// 3305 
-// 3306         
-// 3307    }
-// 3308     else if(profile_params.autoConnect)
+// 3311 
+// 3312         
+// 3313    }
+// 3314     else if(profile_params.autoConnect)
 ??AppS2wProcess_AutoStart_0:
-        LDR.W    R0,??DataTable136_6
+        LDR.W    R0,??DataTable138_6
         LDRB     R0,[R0, #+4]
         CBZ.N    R0,??AppS2wProcess_AutoStart_2
-// 3309     {
-// 3310         len = sprintf((char*)buff,"%d,%d,%d",((s2wCurrent.autoWlandata.mode == 2) ? 1: 0) ,
-// 3311               1,1);
+// 3315     {
+// 3316         len = sprintf((char*)buff,"%d,%d,%d",((s2wCurrent.autoWlandata.mode == 2) ? 1: 0) ,
+// 3317               1,1);
         LDRB     R0,[R4, #+12]
         CMP      R0,#+2
         IT       EQ 
         MOVEQ    R2,#+1
-// 3312         buff[len]='\0';
+// 3318         buff[len]='\0';
         MOVS     R0,#+1
         STR      R0,[SP, #+0]
         MOVS     R3,#+1
@@ -8166,25 +8197,25 @@ AppS2wProcess_AutoStart:
         UXTB     R0,R0
         MOVS     R1,#+0
         STRB     R1,[R0, R5]
-// 3313         AppS2wCmd_NcmAuto(buff);
+// 3319         AppS2wCmd_NcmAuto(buff);
 ??AppS2wProcess_AutoStart_1:
         ADD      R0,SP,#+16
           CFI FunCall AppS2wCmd_NcmAuto
         BL       AppS2wCmd_NcmAuto
-// 3314     }
-// 3315 #endif
-// 3316 #ifdef S2W_ADC_SUPPORT
-// 3317     if(s2wCurrent.clkCalibEn)
+// 3320     }
+// 3321 #endif
+// 3322 #ifdef S2W_ADC_SUPPORT
+// 3323     if(s2wCurrent.clkCalibEn)
 ??AppS2wProcess_AutoStart_2:
         LDRB     R0,[R4, #+937]
         CBZ.N    R0,??AppS2wProcess_AutoStart_3
-// 3318     {
-// 3319         appCtx.clkCaibTmrHndl = GsnSoftTmr_Start(&appCtx.clkCaibTmr, GSN_SOFT_TMR_PERIODIC, 0, SEC_TO_SYSTIME(s2wCurrent.clkCalibPeriod), AppS2w_ClkCalibCb, NULL);
+// 3324     {
+// 3325         appCtx.clkCaibTmrHndl = GsnSoftTmr_Start(&appCtx.clkCaibTmr, GSN_SOFT_TMR_PERIODIC, 0, SEC_TO_SYSTIME(s2wCurrent.clkCalibPeriod), AppS2w_ClkCalibCb, NULL);
         MOVS     R0,#+0
         STR      R0,[SP, #+12]
         MOVS     R1,#+0
-        LDR.W    R0,??DataTable136_16
-        LDR.W    R5,??DataTable136_17
+        LDR.W    R0,??DataTable138_16
+        LDR.W    R5,??DataTable138_17
         STR      R0,[SP, #+8]
         MOV      R3,R1
         LDR      R0,[R4, #+940]
@@ -8198,33 +8229,33 @@ AppS2wProcess_AutoStart:
         BL       GsnSoftTmr_Start
         MOVW     R1,#+33176
         STR      R0,[R1, R5]
-// 3320     }
-// 3321 #endif    
-// 3322 }
+// 3326     }
+// 3327 #endif    
+// 3328 }
 ??AppS2wProcess_AutoStart_3:
         ADD      SP,SP,#+28
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
           CFI EndBlock cfiBlock109
-// 3323 
-// 3324 #ifdef  S2W_NCM_SUPPORT_ENABLE
+// 3329 
+// 3330 #ifdef  S2W_NCM_SUPPORT_ENABLE
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock110 Using cfiCommon0
           CFI Function AppS2wProcess_AutoConnectStart
         THUMB
-// 3325 PUBLIC UINT8
-// 3326 AppS2wProcess_AutoConnectStart(S2W_PROFILE_T *profile)
-// 3327 {
+// 3331 PUBLIC UINT8
+// 3332 AppS2wProcess_AutoConnectStart(S2W_PROFILE_T *profile)
+// 3333 {
 AppS2wProcess_AutoConnectStart:
         PUSH     {LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+4
-// 3328     UINT8 status = S2W_FAILURE;
-// 3329     UINT8 buff[16],len;
-// 3330     len = sprintf((char*)buff,"%d,%d,%d",((s2wCurrent.autoWlandata.mode == 2) ? 1: 0) ,
-// 3331               1,1);
-        LDR.N    R0,??DataTable136_18
+// 3334     UINT8 status = S2W_FAILURE;
+// 3335     UINT8 buff[16],len;
+// 3336     len = sprintf((char*)buff,"%d,%d,%d",((s2wCurrent.autoWlandata.mode == 2) ? 1: 0) ,
+// 3337               1,1);
+        LDR.N    R0,??DataTable138_18
         LDRB     R0,[R0, #+12]
         SUB      SP,SP,#+20
           CFI CFA R13+24
@@ -8232,7 +8263,7 @@ AppS2wProcess_AutoConnectStart:
         ITE      EQ 
         MOVEQ    R2,#+1
         MOVNE    R2,#+0
-// 3332     buff[len]='\0';
+// 3338     buff[len]='\0';
         MOVS     R0,#+1
         STR      R0,[SP, #+0]
         MOVS     R3,#+1
@@ -8244,78 +8275,78 @@ AppS2wProcess_AutoConnectStart:
         ADD      R1,SP,#+4
         MOVS     R2,#+0
         STRB     R2,[R0, R1]
-// 3333     status = AppS2wCmd_NcmAuto(buff);
-// 3334     return status;
+// 3339     status = AppS2wCmd_NcmAuto(buff);
+// 3340     return status;
         ADD      R0,SP,#+4
         B.N      ?Subroutine0
           CFI EndBlock cfiBlock110
-// 3335 }
+// 3341 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable132:
+??DataTable134:
         DC32     s2wappMainTaskCtxt
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable132_1:
+??DataTable134_1:
         DC32     s2wState
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable132_2:
+??DataTable134_2:
         DC32     s2wCurrent
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable132_3:
+??DataTable134_3:
         DC32     dataBuffer
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable132_4:
+??DataTable134_4:
         DC8      0x25, 0x78, 0x00, 0x00
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable132_5:
+??DataTable134_5:
         DC32     s2wPingStarted
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable132_6:
+??DataTable134_6:
         DC32     dataBuffer+0x1
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable132_7:
+??DataTable134_7:
         DC32     S2W_UnassocDataIndCB
-// 3336 
+// 3342 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock111 Using cfiCommon0
           CFI Function AppS2wProcess_AutoConnectStop
         THUMB
-// 3337 PUBLIC UINT8
-// 3338 AppS2wProcess_AutoConnectStop(S2W_PROFILE_T *profile)
-// 3339 {
+// 3343 PUBLIC UINT8
+// 3344 AppS2wProcess_AutoConnectStop(S2W_PROFILE_T *profile)
+// 3345 {
 AppS2wProcess_AutoConnectStop:
         PUSH     {LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+4
-// 3340     UINT8 status = S2W_FAILURE;
-// 3341     UINT8 buff[16],len;
-// 3342     len = sprintf((char*)buff,"%d,%d",((s2wCurrent.autoWlandata.mode == 2) ? 1: 0) ,
-// 3343               0);
-        LDR.N    R0,??DataTable136_18
+// 3346     UINT8 status = S2W_FAILURE;
+// 3347     UINT8 buff[16],len;
+// 3348     len = sprintf((char*)buff,"%d,%d",((s2wCurrent.autoWlandata.mode == 2) ? 1: 0) ,
+// 3349               0);
+        LDR.N    R0,??DataTable138_18
         LDRB     R0,[R0, #+12]
         SUB      SP,SP,#+20
           CFI CFA R13+24
@@ -8323,7 +8354,7 @@ AppS2wProcess_AutoConnectStop:
         ITE      EQ 
         MOVEQ    R2,#+1
         MOVNE    R2,#+0
-// 3344     buff[len]='\0';
+// 3350     buff[len]='\0';
         MOVS     R3,#+0
         ADR.W    R1,`?<Constant "%d,%d">`
         ADD      R0,SP,#+0
@@ -8333,13 +8364,13 @@ AppS2wProcess_AutoConnectStop:
         ADD      R1,SP,#+0
         MOVS     R2,#+0
         STRB     R2,[R0, R1]
-// 3345     status = AppS2wCmd_NcmAuto(buff);
-// 3346     return status;
+// 3351     status = AppS2wCmd_NcmAuto(buff);
+// 3352     return status;
         ADD      R0,SP,#+0
           CFI EndBlock cfiBlock111
         REQUIRE ?Subroutine0
         ;; // Fall through to label ?Subroutine0
-// 3347 }
+// 3353 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock112 Using cfiCommon0
@@ -8355,71 +8386,71 @@ AppS2wProcess_AutoConnectStop:
           CFI CFA R13+4
         POP      {PC}             ;; return
           CFI EndBlock cfiBlock112
-// 3348 #endif
-// 3349 /**
-// 3350  *************************************************************************
-// 3351  * @ingroup S2w-Application.
-// 3352  * @brief Perform the network auto connect operation.
-// 3353  *
-// 3354  * It will create the client or server of type TCP/UDP.
-// 3355  *
-// 3356  * @param  peer_data- IN Pointer to structure that contains
-// 3357  *         mode, type, IP address and Port number.
-// 3358  * @param  cid - IN Pointer to connection identifier.
-// 3359  * @return Status of the operation. Possible status are S2W_SUCCESS (0) on
-// 3360  *     success, S2W_FAILURE (1) on failure, S2W_ENCID (6) when Cid list is
-// 3361  *     full, S2W_SOCKFAILURE (4) on failure of any socket system call,
-// 3362  *         S2W_CMD_INPROCESS (8) when command response is not ready.
-// 3363  **************************************************************************/
-// 3364 PRIVATE UINT8
-// 3365 AppS2w_Connect(S2W_NETDATA_T *peer_data, UINT16 udpSrcPort, UINT8 *cid)
-// 3366 {
-// 3367     UINT8 status = S2W_EINVAL;
-// 3368 
-// 3369     if (peer_data->mode == S2W_NETDATA_MODE_SERVER)
-// 3370     {
-// 3371         if (peer_data->proto == S2W_NETDATA_PROTO_UDP)
-// 3372         {
-// 3373             status = AppS2wHal_NetUdpServer(peer_data, cid);
-// 3374         }
-// 3375         else if (peer_data->proto == S2W_NETDATA_PROTO_TCP)
-// 3376         {
-// 3377             status = AppS2wHal_NetTcpServer(peer_data, cid);
-// 3378             *cid = INVALID_CID;
-// 3379         }
-// 3380     }
-// 3381     else if (peer_data->mode == S2W_NETDATA_MODE_CLIENT)
-// 3382     {
-// 3383         if (peer_data->proto == S2W_NETDATA_PROTO_TCP)
-// 3384         {
-// 3385             status = AppS2wHal_NetTcpClient(peer_data, cid);
-// 3386         }
-// 3387         else if (peer_data->proto == S2W_NETDATA_PROTO_UDP)
-// 3388         {
-// 3389             status = AppS2wHal_NetUdpClient(peer_data,cid,udpSrcPort);
-// 3390         }
-// 3391     }
-// 3392 
-// 3393     return status;
-// 3394 }
-// 3395 
-// 3396 
-// 3397 
+// 3354 #endif
+// 3355 /**
+// 3356  *************************************************************************
+// 3357  * @ingroup S2w-Application.
+// 3358  * @brief Perform the network auto connect operation.
+// 3359  *
+// 3360  * It will create the client or server of type TCP/UDP.
+// 3361  *
+// 3362  * @param  peer_data- IN Pointer to structure that contains
+// 3363  *         mode, type, IP address and Port number.
+// 3364  * @param  cid - IN Pointer to connection identifier.
+// 3365  * @return Status of the operation. Possible status are S2W_SUCCESS (0) on
+// 3366  *     success, S2W_FAILURE (1) on failure, S2W_ENCID (6) when Cid list is
+// 3367  *     full, S2W_SOCKFAILURE (4) on failure of any socket system call,
+// 3368  *         S2W_CMD_INPROCESS (8) when command response is not ready.
+// 3369  **************************************************************************/
+// 3370 PRIVATE UINT8
+// 3371 AppS2w_Connect(S2W_NETDATA_T *peer_data, UINT16 udpSrcPort, UINT8 *cid)
+// 3372 {
+// 3373     UINT8 status = S2W_EINVAL;
+// 3374 
+// 3375     if (peer_data->mode == S2W_NETDATA_MODE_SERVER)
+// 3376     {
+// 3377         if (peer_data->proto == S2W_NETDATA_PROTO_UDP)
+// 3378         {
+// 3379             status = AppS2wHal_NetUdpServer(peer_data, cid);
+// 3380         }
+// 3381         else if (peer_data->proto == S2W_NETDATA_PROTO_TCP)
+// 3382         {
+// 3383             status = AppS2wHal_NetTcpServer(peer_data, cid);
+// 3384             *cid = INVALID_CID;
+// 3385         }
+// 3386     }
+// 3387     else if (peer_data->mode == S2W_NETDATA_MODE_CLIENT)
+// 3388     {
+// 3389         if (peer_data->proto == S2W_NETDATA_PROTO_TCP)
+// 3390         {
+// 3391             status = AppS2wHal_NetTcpClient(peer_data, cid);
+// 3392         }
+// 3393         else if (peer_data->proto == S2W_NETDATA_PROTO_UDP)
+// 3394         {
+// 3395             status = AppS2wHal_NetUdpClient(peer_data,cid,udpSrcPort);
+// 3396         }
+// 3397     }
 // 3398 
-// 3399 #ifdef S2W_NCM_SUPPORT_ENABLE
-// 3400 extern UINT32 ncmautoconnectcount;
+// 3399     return status;
+// 3400 }
 // 3401 
 // 3402 
 // 3403 
 // 3404 
+// 3405 #ifdef S2W_NCM_SUPPORT_ENABLE
+// 3406 extern UINT32 ncmautoconnectcount;
+// 3407 
+// 3408 
+// 3409 
+// 3410 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock113 Using cfiCommon0
           CFI Function AppS2wProcess_NcmAutoConnectL4Connect
         THUMB
-// 3405 UINT8
-// 3406 AppS2wProcess_NcmAutoConnectL4Connect()
-// 3407 {
+// 3411 UINT8
+// 3412 AppS2wProcess_NcmAutoConnectL4Connect()
+// 3413 {
 AppS2wProcess_NcmAutoConnectL4Connect:
         PUSH     {R4-R11,LR}
           CFI R14 Frame(CFA, -4)
@@ -8434,84 +8465,54 @@ AppS2wProcess_NcmAutoConnectL4Connect:
           CFI CFA R13+36
         SUB      SP,SP,#+12
           CFI CFA R13+48
-// 3408     UINT8 status = S2W_FAILURE;
+// 3414     UINT8 status = S2W_FAILURE;
         MOVS     R0,#+1
         STRB     R0,[SP, #+1]
-// 3409 	GSN_STATUS ret=GSN_FAILURE;
-        LDR.N    R4,??DataTable136_8
-        LDR.W    R9,??DataTable136_18
+// 3415 	GSN_STATUS ret=GSN_FAILURE;
+        LDR.N    R4,??DataTable138_8
+        LDR.W    R9,??DataTable138_18
         LDRB     R0,[R4, #+3]
         CBZ.N    R0,??AppS2wProcess_NcmAutoConnectL4Connect_0
         LDRB     R0,[R9, #+60]
         CMP      R0,#+1
         BNE.N    ??AppS2wProcess_NcmAutoConnectL4Connect_0
-// 3410     UINT8 cid;
-// 3411 	ULONG ipaddr;
-// 3412     //acTimedOut = 0;
-// 3413     // auto connection and L4 as tcp/udp server no need to connect it back
-// 3414        if((s2wIsAutoconnected ) &&(s2wCurrent.autoNetdata.mode == S2W_NETDATA_MODE_SERVER))
-// 3415        {
-// 3416 		   curCid= INVALID_CID;
+// 3416     UINT8 cid;
+// 3417 	ULONG ipaddr;
+// 3418     //acTimedOut = 0;
+// 3419     // auto connection and L4 as tcp/udp server no need to connect it back
+// 3420        if((s2wIsAutoconnected ) &&(s2wCurrent.autoNetdata.mode == S2W_NETDATA_MODE_SERVER))
+// 3421        {
+// 3422 		   curCid= INVALID_CID;
         MOVS     R0,#+255
         STRB     R0,[R4, #+5]
-// 3417 		   return 0;
+// 3423 		   return 0;
         B.N      ??CrossCallReturnLabel_15
-// 3418 	   }
-// 3419         //AppS2wHal_TimerStart(&acTimer,s2wCurrent.registers[S2W_REG_NET_CONNECTION_TIMEOUT]);
-// 3420 
-// 3421         //while (!acTimedOut)
-// 3422         //{
-// 3423 
-// 3424         if(s2wCurrent.autoNetdata.isFqdn)
+// 3424 	   }
+// 3425         //AppS2wHal_TimerStart(&acTimer,s2wCurrent.registers[S2W_REG_NET_CONNECTION_TIMEOUT]);
+// 3426 
+// 3427         //while (!acTimedOut)
+// 3428         //{
+// 3429 
+// 3430         if(s2wCurrent.autoNetdata.isFqdn)
 ??AppS2wProcess_NcmAutoConnectL4Connect_0:
         ADD      R7,R9,#+60
         ADD      R6,R9,#+464
         LDRB     R0,[R7, #+24]
-        LDR.W    R10,??DataTable136_6
-        LDR.W    R8,??DataTable136_12
-        LDR.N    R5,??DataTable136_19
+        LDR.W    R10,??DataTable138_6
+        LDR.W    R8,??DataTable138_12
+        LDR.N    R5,??DataTable138_19
         CMP      R0,#+0
         BEQ.N    ??AppS2wProcess_NcmAutoConnectL4Connect_1
-// 3425         {
-// 3426         GsnNwIf_DnsRetryCountSet(&s2wappMainTaskCtxt->if0.nwifCtx.dnsCliHndl,3);
-        LDR.W    R11,??DataTable136_11
+// 3431         {
+// 3432         GsnNwIf_DnsRetryCountSet(&s2wappMainTaskCtxt->if0.nwifCtx.dnsCliHndl,3);
+        LDR.W    R11,??DataTable138_11
         LDR      R0,[R11, #+0]
         ADD      R0,R0,#+14848
         MOVS     R1,#+3
         ADDS     R0,R0,#+60
           CFI FunCall nx_dns_retry_count_set
         BL       nx_dns_retry_count_set
-// 3427 		/* change  sysqual time to 200 sec*/		   
-// 3428 		GsnSq_TaskMonitorStop(APP_CFG_SQ_MAIN_TASK_ID);
-        MOVS     R0,#+8
-          CFI FunCall GsnSq_TaskMonitorStop
-        BL       GsnSq_TaskMonitorStop
-// 3429 		GsnSq_TaskMonitorDeregister(APP_CFG_SQ_MAIN_TASK_ID);
-        MOVS     R0,#+8
-          CFI FunCall GsnSq_TaskMonitorDeregister
-        BL       GsnSq_TaskMonitorDeregister
-// 3430 		GsnSq_TaskMonitorRegister(APP_CFG_SQ_MAIN_TASK_ID,NULL,APP_CFG_SQ_TICKS_FOR_MAIN_TASK_DNSRESOLVE);
-        MOVS     R2,#+200
-        MOVS     R1,#+0
-        MOVS     R0,#+8
-          CFI FunCall GsnSq_TaskMonitorRegister
-        BL       GsnSq_TaskMonitorRegister
-// 3431 		GsnSq_TaskMonitorStart(APP_CFG_SQ_MAIN_TASK_ID,0);
-        MOVS     R1,#+0
-        MOVS     R0,#+8
-          CFI FunCall GsnSq_TaskMonitorStart
-        BL       GsnSq_TaskMonitorStart
-// 3432         ret = GsnNwIf_DnsHostByNameGet(&s2wappMainTaskCtxt->if0.nwifCtx,(UINT8*)s2wCurrent.autoNetdata.fqdn,&ipaddr,5);
-        LDR      R0,[R11, #+0]
-        ADD      R0,R0,#+5120
-        MOVS     R3,#+5
-        ADD      R2,SP,#+4
-        ADD      R1,R9,#+85
-        ADDS     R0,R0,#+80
-          CFI FunCall GsnNwIf_DnsHostByNameGet
-        BL       GsnNwIf_DnsHostByNameGet
-        MOV      R11,R0
-// 3433 		/* change  sysqual time back to 30 sec*/		
+// 3433 		/* change  sysqual time to 200 sec*/		   
 // 3434 		GsnSq_TaskMonitorStop(APP_CFG_SQ_MAIN_TASK_ID);
         MOVS     R0,#+8
           CFI FunCall GsnSq_TaskMonitorStop
@@ -8520,8 +8521,8 @@ AppS2wProcess_NcmAutoConnectL4Connect:
         MOVS     R0,#+8
           CFI FunCall GsnSq_TaskMonitorDeregister
         BL       GsnSq_TaskMonitorDeregister
-// 3436 		GsnSq_TaskMonitorRegister(APP_CFG_SQ_MAIN_TASK_ID,NULL,APP_CFG_SQ_TICKS_FOR_MAIN_TASK);
-        MOVS     R2,#+90
+// 3436 		GsnSq_TaskMonitorRegister(APP_CFG_SQ_MAIN_TASK_ID,NULL,APP_CFG_SQ_TICKS_FOR_MAIN_TASK_DNSRESOLVE);
+        MOVS     R2,#+200
         MOVS     R1,#+0
         MOVS     R0,#+8
           CFI FunCall GsnSq_TaskMonitorRegister
@@ -8531,7 +8532,37 @@ AppS2wProcess_NcmAutoConnectL4Connect:
         MOVS     R0,#+8
           CFI FunCall GsnSq_TaskMonitorStart
         BL       GsnSq_TaskMonitorStart
-// 3438             if(ret == GSN_FAILURE || ipaddr == 0)
+// 3438         ret = GsnNwIf_DnsHostByNameGet(&s2wappMainTaskCtxt->if0.nwifCtx,(UINT8*)s2wCurrent.autoNetdata.fqdn,&ipaddr,5);
+        LDR      R0,[R11, #+0]
+        ADD      R0,R0,#+5120
+        MOVS     R3,#+5
+        ADD      R2,SP,#+4
+        ADD      R1,R9,#+85
+        ADDS     R0,R0,#+80
+          CFI FunCall GsnNwIf_DnsHostByNameGet
+        BL       GsnNwIf_DnsHostByNameGet
+        MOV      R11,R0
+// 3439 		/* change  sysqual time back to 30 sec*/		
+// 3440 		GsnSq_TaskMonitorStop(APP_CFG_SQ_MAIN_TASK_ID);
+        MOVS     R0,#+8
+          CFI FunCall GsnSq_TaskMonitorStop
+        BL       GsnSq_TaskMonitorStop
+// 3441 		GsnSq_TaskMonitorDeregister(APP_CFG_SQ_MAIN_TASK_ID);
+        MOVS     R0,#+8
+          CFI FunCall GsnSq_TaskMonitorDeregister
+        BL       GsnSq_TaskMonitorDeregister
+// 3442 		GsnSq_TaskMonitorRegister(APP_CFG_SQ_MAIN_TASK_ID,NULL,APP_CFG_SQ_TICKS_FOR_MAIN_TASK);
+        MOVS     R2,#+90
+        MOVS     R1,#+0
+        MOVS     R0,#+8
+          CFI FunCall GsnSq_TaskMonitorRegister
+        BL       GsnSq_TaskMonitorRegister
+// 3443 		GsnSq_TaskMonitorStart(APP_CFG_SQ_MAIN_TASK_ID,0);
+        MOVS     R1,#+0
+        MOVS     R0,#+8
+          CFI FunCall GsnSq_TaskMonitorStart
+        BL       GsnSq_TaskMonitorStart
+// 3444             if(ret == GSN_FAILURE || ipaddr == 0)
         CMN      R11,#-2147483648
         BNE.N    ??AppS2wProcess_NcmAutoConnectL4Connect_2
 ??AppS2wProcess_NcmAutoConnectL4Connect_3:
@@ -8543,31 +8574,31 @@ AppS2wProcess_NcmAutoConnectL4Connect:
         LDR      R0,[SP, #+4]
         CMP      R0,#+0
         BEQ.N    ??AppS2wProcess_NcmAutoConnectL4Connect_3
-// 3439             {
-// 3440             	/* Not able to resolve the host name , then skip the  connect call.
-// 3441 				    set status to failure and reset the connect retry count
-// 3442 				*/
-// 3443             	status = S2W_FAILURE;	
-// 3444 			//ncmautoconnectcount=0;
-// 3445 				goto SkipConnect;
-// 3446             }
-// 3447 			s2wCurrent.autoNetdata.ipAddr[0] = (ipaddr & 0xff000000)>>24 ;			
+// 3445             {
+// 3446             	/* Not able to resolve the host name , then skip the  connect call.
+// 3447 				    set status to failure and reset the connect retry count
+// 3448 				*/
+// 3449             	status = S2W_FAILURE;	
+// 3450 			//ncmautoconnectcount=0;
+// 3451 				goto SkipConnect;
+// 3452             }
+// 3453 			s2wCurrent.autoNetdata.ipAddr[0] = (ipaddr & 0xff000000)>>24 ;			
         LSRS     R0,R0,#+24
         STRB     R0,[R7, #+4]
-// 3448 			s2wCurrent.autoNetdata.ipAddr[1] = (ipaddr & 0x00ff0000)>>16;
+// 3454 			s2wCurrent.autoNetdata.ipAddr[1] = (ipaddr & 0x00ff0000)>>16;
         LDR      R0,[SP, #+4]
         LSRS     R0,R0,#+16
         STRB     R0,[R7, #+5]
-// 3449 			s2wCurrent.autoNetdata.ipAddr[2] = (ipaddr & 0x0000ff00)>>8;
+// 3455 			s2wCurrent.autoNetdata.ipAddr[2] = (ipaddr & 0x0000ff00)>>8;
         LDR      R0,[SP, #+4]
         LSRS     R0,R0,#+8
         STRB     R0,[R7, #+6]
-// 3450 			s2wCurrent.autoNetdata.ipAddr[3] = (ipaddr & 0x000000ff);
+// 3456 			s2wCurrent.autoNetdata.ipAddr[3] = (ipaddr & 0x000000ff);
         LDR      R0,[SP, #+4]
         STRB     R0,[R7, #+7]
-// 3451 			
-// 3452         }
-// 3453         status = AppS2w_Connect(&s2wCurrent.autoNetdata,s2wCurrent.udpSrcPort,&cid);
+// 3457 			
+// 3458         }
+// 3459         status = AppS2w_Connect(&s2wCurrent.autoNetdata,s2wCurrent.udpSrcPort,&cid);
 ??AppS2wProcess_NcmAutoConnectL4Connect_1:
         MOVS     R0,#+2
         LDRB     R1,[R9, #+60]
@@ -8609,247 +8640,247 @@ AppS2wProcess_NcmAutoConnectL4Connect:
         BL       AppS2wHal_NetUdpClient
 ??AppS2wProcess_NcmAutoConnectL4Connect_7:
         STRB     R0,[SP, #+1]
-// 3454 	
-// 3455 SkipConnect:
-// 3456 	
-// 3457 		/*
-// 3458 			 Bug FIX 5511 - Enhanced Auto connection: L4 timeout gives ERROR message to the MCU
-// 3459 			 Made auto connection l4 connection retey count to infinite  and never decremts the counter
 // 3460 	
-// 3461 		*/
-// 3462 		if(S2W_AUTO_CONCT_L4RETRY_INFINITE != ncmautoconnectcount);
-// 3463     ncmautoconnectcount--;
+// 3461 SkipConnect:
+// 3462 	
+// 3463 		/*
+// 3464 			 Bug FIX 5511 - Enhanced Auto connection: L4 timeout gives ERROR message to the MCU
+// 3465 			 Made auto connection l4 connection retey count to infinite  and never decremts the counter
+// 3466 	
+// 3467 		*/
+// 3468 		if(S2W_AUTO_CONCT_L4RETRY_INFINITE != ncmautoconnectcount);
+// 3469     ncmautoconnectcount--;
         LDR      R0,[R5, #+0]
         SUBS     R0,R0,#+1
         STR      R0,[R5, #+0]
-// 3464         if (status != S2W_SUCCESS)
+// 3470         if (status != S2W_SUCCESS)
         LDRB     R0,[SP, #+1]
         CMP      R0,#+0
         BEQ.N    ??AppS2wProcess_NcmAutoConnectL4Connect_9
-// 3465         {
-// 3466            if(ncmautoconnectcount)
+// 3471         {
+// 3472            if(ncmautoconnectcount)
 ??AppS2wProcess_NcmAutoConnectL4Connect_4:
         LDR      R0,[R5, #+0]
         CBZ.N    R0,??AppS2wProcess_NcmAutoConnectL4Connect_10
-// 3467            {
-// 3468                AppS2wHal_TimerStart(&acNcmTimer,
-// 3469                    s2wCurrent.registers[S2W_NCM_AUTO_L4_TIME]);
+// 3473            {
+// 3474                AppS2wHal_TimerStart(&acNcmTimer,
+// 3475                    s2wCurrent.registers[S2W_NCM_AUTO_L4_TIME]);
         LDRH     R1,[R9, #+464]
         ADD      R0,R4,#+392
           CFI FunCall AppS2wHal_TimerStart
         BL       AppS2wHal_TimerStart
-// 3470                return status;
+// 3476                return status;
         LDRB     R0,[SP, #+1]
         B.N      ??AppS2wProcess_NcmAutoConnectL4Connect_11
-// 3471             }
-// 3472             else
-// 3473             {
-// 3474 				if(s2wLinkState != S2W_LINK_STATE_DISCONNECTED)
+// 3477             }
+// 3478             else
+// 3479             {
+// 3480 				if(s2wLinkState != S2W_LINK_STATE_DISCONNECTED)
 ??AppS2wProcess_NcmAutoConnectL4Connect_10:
         LDRB     R0,[R4, #+1]
         CMP      R0,#+0
         BEQ.N    ??CrossCallReturnLabel_15
-// 3475 				{
-// 3476                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 3481 				{
+// 3482                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
         BL       ?Subroutine19
-// 3477 #ifdef S2W_ASYNC_MSG
-// 3478                 if(s2wCurrent.asyncMsgFormat)
-??CrossCallReturnLabel_52:
+// 3483 #ifdef S2W_ASYNC_MSG
+// 3484                 if(s2wCurrent.asyncMsgFormat)
+??CrossCallReturnLabel_53:
         LDRB     R0,[R6, #+8]
         CBZ.N    R0,??AppS2wProcess_NcmAutoConnectL4Connect_12
-// 3479                 {
-// 3480                      AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_ERROR_MSG, 0);
+// 3485                 {
+// 3486                      AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_ERROR_MSG, 0);
         MOVS     R1,#+0
         MOVS     R0,#+11
           CFI FunCall AppS2wProcess_AsyncStatusNotify
         BL       AppS2wProcess_AsyncStatusNotify
         B.N      ??AppS2wProcess_NcmAutoConnectL4Connect_13
-// 3481                 }
-// 3482                 else
-// 3483 #endif
-// 3484                 {
-// 3485                      AppS2wProcess_StatusNotify(S2W_FAILURE, 0);
+// 3487                 }
+// 3488                 else
+// 3489 #endif
+// 3490                 {
+// 3491                      AppS2wProcess_StatusNotify(S2W_FAILURE, 0);
 ??AppS2wProcess_NcmAutoConnectL4Connect_12:
         MOVS     R1,#+0
         MOVS     R0,#+1
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 3486                 }
-// 3487                  GsnOsal_SemRelease(&s2wSyncSemID);
+// 3492                 }
+// 3493                  GsnOsal_SemRelease(&s2wSyncSemID);
 ??AppS2wProcess_NcmAutoConnectL4Connect_13:
         MOV      R0,R8
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 3488                 curCid = cid;
+// 3494                 curCid = cid;
         LDRB     R0,[SP, #+0]
         STRB     R0,[R4, #+5]
-// 3489 				if(0 == profile_params.autoConnect)
+// 3495 				if(0 == profile_params.autoConnect)
         LDRB     R0,[R10, #+4]
         CBNZ.N   R0,??AppS2wProcess_NcmAutoConnectL4Connect_14
         LDRH     R0,[R6, #+2]
         STR      R0,[R5, #+0]
         B.N      ??CrossCallReturnLabel_15
-// 3490 				{
-// 3491 					ncmautoconnectcount = s2wCurrent.registers[S2W_NCM_AUTO_L4_RETRY];
-// 3492 				}
-// 3493                 // if it is auto connection then go back to command mode
-// 3494                 if(profile_params.autoConnect)
-// 3495                 {
-// 3496 					s2wState =S2W_STATE_CMD;
+// 3496 				{
+// 3497 					ncmautoconnectcount = s2wCurrent.registers[S2W_NCM_AUTO_L4_RETRY];
+// 3498 				}
+// 3499                 // if it is auto connection then go back to command mode
+// 3500                 if(profile_params.autoConnect)
+// 3501                 {
+// 3502 					s2wState =S2W_STATE_CMD;
 ??AppS2wProcess_NcmAutoConnectL4Connect_14:
         MOVS     R0,#+0
         BL       ?Subroutine4
-// 3497                     GsnGpio_NEIntDisable_Patch(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP); //Disable auto mode exit gpio interrupt
-// 3498                     AppS2wHal_TimerStop(&nagleTimer);
+// 3503                     GsnGpio_NEIntDisable_Patch(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP); //Disable auto mode exit gpio interrupt
+// 3504                     AppS2wHal_TimerStop(&nagleTimer);
 ??CrossCallReturnLabel_9:
         ADD      R0,R4,#+224
           CFI FunCall AppS2wHal_TimerStop
         BL       AppS2wHal_TimerStop
-// 3499                     // make the data ready gpio as low..
-// 3500                     S2w_AsyncMsgGpioOp(0);
+// 3505                     // make the data ready gpio as low..
+// 3506                     S2w_AsyncMsgGpioOp(0);
         MOVS     R0,#+0
           CFI FunCall S2w_AsyncMsgGpioOp
         BL       S2w_AsyncMsgGpioOp
-// 3501                     s2wIsAutoconnected = 0;
+// 3507                     s2wIsAutoconnected = 0;
         MOVS     R0,#+0
         STRB     R0,[R4, #+3]
         B.N      ??CrossCallReturnLabel_15
-// 3502 				}
-// 3503             }
-// 3504         }
-// 3505         }
-// 3506         else
-// 3507         {
-// 3508             if (cid != INVALID_CID)
+// 3508 				}
+// 3509             }
+// 3510         }
+// 3511         }
+// 3512         else
+// 3513         {
+// 3514             if (cid != INVALID_CID)
 ??AppS2wProcess_NcmAutoConnectL4Connect_9:
         LDRB     R0,[SP, #+0]
         CMP      R0,#+255
         BEQ.N    ??AppS2wProcess_NcmAutoConnectL4Connect_15
-// 3509             {
-// 3510                 // reset the count
-// 3511 				if(0 == profile_params.autoConnect)
+// 3515             {
+// 3516                 // reset the count
+// 3517 				if(0 == profile_params.autoConnect)
         LDRB     R0,[R10, #+4]
         CBNZ.N   R0,??AppS2wProcess_NcmAutoConnectL4Connect_16
-// 3512 				{                
-// 3513                 ncmautoconnectcount = s2wCurrent.registers[S2W_NCM_AUTO_L4_RETRY];
+// 3518 				{                
+// 3519                 ncmautoconnectcount = s2wCurrent.registers[S2W_NCM_AUTO_L4_RETRY];
         LDRH     R0,[R6, #+2]
         STR      R0,[R5, #+0]
-// 3514 				}
-// 3515                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 3520 				}
+// 3521                 GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
 ??AppS2wProcess_NcmAutoConnectL4Connect_16:
         BL       ?Subroutine19
-// 3516                 if((!s2wAutoConnState ) && (!profile_params.autoConnect))
-??CrossCallReturnLabel_51:
+// 3522                 if((!s2wAutoConnState ) && (!profile_params.autoConnect))
+??CrossCallReturnLabel_52:
         LDRB     R0,[R4, #+4]
         CMP      R0,#+0
         ITT      EQ 
         LDRBEQ   R0,[R10, #+4]
         CMPEQ    R0,#+0
         BNE.N    ??AppS2wProcess_NcmAutoConnectL4Connect_17
-// 3517                 {// old auto connection
-// 3518 #ifdef S2W_ASYNC_MSG
-// 3519                 if(s2wCurrent.asyncMsgFormat)
+// 3523                 {// old auto connection
+// 3524 #ifdef S2W_ASYNC_MSG
+// 3525                 if(s2wCurrent.asyncMsgFormat)
         LDRB     R0,[R6, #+8]
         CBZ.N    R0,??AppS2wProcess_NcmAutoConnectL4Connect_18
-// 3520                 {
-// 3521                      UINT32 arglen = 2;
-// 3522                      S2w_Printf("\r\n");
-        ADR.N    R0,??DataTable136  ;; 0x0D, 0x0A, 0x00, 0x00
+// 3526                 {
+// 3527                      UINT32 arglen = 2;
+// 3528                      S2w_Printf("\r\n");
+        ADR.N    R0,??DataTable138  ;; 0x0D, 0x0A, 0x00, 0x00
           CFI FunCall S2w_Printf
         BL       S2w_Printf
-// 3523                      AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_CON_SUCCESS, arglen);
+// 3529                      AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_CON_SUCCESS, arglen);
         MOVS     R1,#+2
         MOVS     R0,#+1
           CFI FunCall AppS2wProcess_AsyncStatusNotify
         BL       AppS2wProcess_AsyncStatusNotify
-// 3524                      S2w_Printf(" %x\r\n", cid);
+// 3530                      S2w_Printf(" %x\r\n", cid);
         LDRB     R1,[SP, #+0]
         ADR.W    R0,`?<Constant " %x\\r\\n">`
           CFI FunCall S2w_Printf
         BL       S2w_Printf
         B.N      ??AppS2wProcess_NcmAutoConnectL4Connect_17
-// 3525                 }
-// 3526                 else
-// 3527 #endif
-// 3528                 {
-// 3529                     AppS2wProcess_StatusNotify(S2W_CON_SUCCESS, cid);
+// 3531                 }
+// 3532                 else
+// 3533 #endif
+// 3534                 {
+// 3535                     AppS2wProcess_StatusNotify(S2W_CON_SUCCESS, cid);
 ??AppS2wProcess_NcmAutoConnectL4Connect_18:
         LDRB     R1,[SP, #+0]
         MOVS     R0,#+7
           CFI FunCall AppS2wProcess_StatusNotify
         BL       AppS2wProcess_StatusNotify
-// 3530                 }
-// 3531 			    }
-// 3532                  GsnOsal_SemRelease(&s2wSyncSemID);
+// 3536                 }
+// 3537 			    }
+// 3538                  GsnOsal_SemRelease(&s2wSyncSemID);
 ??AppS2wProcess_NcmAutoConnectL4Connect_17:
         MOV      R0,R8
           CFI FunCall GsnOsal_SemRelease
         BL       GsnOsal_SemRelease
-// 3533                 curCid = cid;
+// 3539                 curCid = cid;
         LDRB     R0,[SP, #+0]
         STRB     R0,[R4, #+5]
-// 3534 				s2wCurrent.ncmAutoCid = cid;
+// 3540 				s2wCurrent.ncmAutoCid = cid;
         LDRB     R0,[SP, #+0]
         STRB     R0,[R9, #+916]
-// 3535 
-// 3536             }
-// 3537 				// if the old auto mode is enabled then start it...
-// 3538 				if(profile_params.autoConnect)
+// 3541 
+// 3542             }
+// 3543 				// if the old auto mode is enabled then start it...
+// 3544 				if(profile_params.autoConnect)
 ??AppS2wProcess_NcmAutoConnectL4Connect_15:
         LDRB     R0,[R10, #+4]
         CBZ.N    R0,??CrossCallReturnLabel_15
-// 3539 				{
-// 3540 					s2wState = S2W_STATE_DATA_AUTO;
+// 3545 				{
+// 3546 					s2wState = S2W_STATE_DATA_AUTO;
         MOVS     R0,#+13
         STRB     R0,[R4, #+0]
-// 3541 					s2wIsAutoconnected = 1;
+// 3547 					s2wIsAutoconnected = 1;
         MOVS     R0,#+1
         STRB     R0,[R4, #+3]
-// 3542 					s2wAutoConnState = S2W_AUTO_CONN_DATA_PIPE;
+// 3548 					s2wAutoConnState = S2W_AUTO_CONN_DATA_PIPE;
         STRB     R0,[R4, #+4]
-// 3543 
-// 3544 					if(cid != INVALID_CID)// tcp server case, make gpio high once the client get connected.
+// 3549 
+// 3550 					if(cid != INVALID_CID)// tcp server case, make gpio high once the client get connected.
         LDRB     R0,[SP, #+0]
         CMP      R0,#+255
         BEQ.N    ??AppS2wProcess_NcmAutoConnectL4Connect_19
-// 3545 					{
-// 3546 					S2w_AsyncMsgGpioInit(); // make the async gpio as  high to indicate that the data mode ready
+// 3551 					{
+// 3552 					S2w_AsyncMsgGpioInit(); // make the async gpio as  high to indicate that the data mode ready
           CFI FunCall S2w_AsyncMsgGpioInit
         BL       S2w_AsyncMsgGpioInit
-// 3547 					S2w_AsyncMsgGpioOp(1);
+// 3553 					S2w_AsyncMsgGpioOp(1);
         MOVS     R0,#+1
           CFI FunCall S2w_AsyncMsgGpioOp
         BL       S2w_AsyncMsgGpioOp
-// 3548 				   	}
-// 3549 					// start a gpio cb for auto mode exit
-// 3550 					GsnGpio_Init(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP , APP_S2W_AUTO_EXIT_GPIO_BIT_MAP );
+// 3554 				   	}
+// 3555 					// start a gpio cb for auto mode exit
+// 3556 					GsnGpio_Init(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP , APP_S2W_AUTO_EXIT_GPIO_BIT_MAP );
 ??AppS2wProcess_NcmAutoConnectL4Connect_19:
         BL       ?Subroutine5
-// 3551 					/* register callback for GPIO interrupt */
-// 3552 					GsnGpio_IntCbRegister(APP_S2W_AUTO_EXIT_GPIO_NUM,s2wAutoExit_CB,NULL);
+// 3557 					/* register callback for GPIO interrupt */
+// 3558 					GsnGpio_IntCbRegister(APP_S2W_AUTO_EXIT_GPIO_NUM,s2wAutoExit_CB,NULL);
 ??CrossCallReturnLabel_11:
-        BL       ?Subroutine21
-// 3553 					/*enable interrupt*/
-// 3554 					GsnGpio_NEIntEnable(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP);
-??CrossCallReturnLabel_55:
+        BL       ?Subroutine22
+// 3559 					/*enable interrupt*/
+// 3560 					GsnGpio_NEIntEnable(APP_S2W_AUTO_EXIT_GPIO_BIT_MAP);
+??CrossCallReturnLabel_60:
         BL       ?Subroutine8
-// 3555 				}
-// 3556         
-// 3557 
-// 3558     }
-// 3559     return S2W_SUCCESS;
+// 3561 				}
+// 3562         
+// 3563 
+// 3564     }
+// 3565     return S2W_SUCCESS;
 ??CrossCallReturnLabel_15:
         MOVS     R0,#+0
 ??AppS2wProcess_NcmAutoConnectL4Connect_11:
         POP      {R1-R11,PC}      ;; return
           CFI EndBlock cfiBlock113
-// 3560 
-// 3561 }
+// 3566 
+// 3567 }
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond114 Using cfiCommon0
           CFI Function AppS2wProcess_NetAccept
-          CFI Conditional ??CrossCallReturnLabel_56
+          CFI Conditional ??CrossCallReturnLabel_61
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -8862,7 +8893,7 @@ AppS2wProcess_NcmAutoConnectL4Connect:
           CFI CFA R13+112
           CFI Block cfiCond115 Using cfiCommon0
           CFI (cfiCond115) Function AppS2wProcess_NcmAutoConnectL4Connect
-          CFI (cfiCond115) Conditional ??CrossCallReturnLabel_55
+          CFI (cfiCond115) Conditional ??CrossCallReturnLabel_60
           CFI (cfiCond115) R4 Frame(CFA, -36)
           CFI (cfiCond115) R5 Frame(CFA, -32)
           CFI (cfiCond115) R6 Frame(CFA, -28)
@@ -8877,9 +8908,9 @@ AppS2wProcess_NcmAutoConnectL4Connect:
           CFI (cfiPicker116) NoFunction
           CFI (cfiPicker116) Picker
         THUMB
-?Subroutine21:
+?Subroutine22:
         MOVS     R2,#+0
-        LDR.N    R1,??DataTable136_20
+        LDR.N    R1,??DataTable138_20
         MOVS     R0,#+8
           CFI FunCall AppS2wProcess_NetAccept GsnGpio_IntCbRegister
           CFI FunCall AppS2wProcess_NcmAutoConnectL4Connect GsnGpio_IntCbRegister
@@ -8891,7 +8922,7 @@ AppS2wProcess_NcmAutoConnectL4Connect:
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiCond117 Using cfiCommon0
           CFI Function AppS2wProcess_NcmAutoConnectL4Connect
-          CFI Conditional ??CrossCallReturnLabel_52
+          CFI Conditional ??CrossCallReturnLabel_53
           CFI R4 Frame(CFA, -36)
           CFI R5 Frame(CFA, -32)
           CFI R6 Frame(CFA, -28)
@@ -8904,7 +8935,7 @@ AppS2wProcess_NcmAutoConnectL4Connect:
           CFI CFA R13+48
           CFI Block cfiCond118 Using cfiCommon0
           CFI (cfiCond118) Function AppS2wProcess_NcmAutoConnectL4Connect
-          CFI (cfiCond118) Conditional ??CrossCallReturnLabel_51
+          CFI (cfiCond118) Conditional ??CrossCallReturnLabel_52
           CFI (cfiCond118) R4 Frame(CFA, -36)
           CFI (cfiCond118) R5 Frame(CFA, -32)
           CFI (cfiCond118) R6 Frame(CFA, -28)
@@ -9121,79 +9152,79 @@ AppS2wProcess_NcmAutoConnectL4Connect:
           CFI EndBlock cfiCond131
           CFI EndBlock cfiCond132
           CFI EndBlock cfiPicker133
-// 3562 
-// 3563 #endif
-// 3564 
-// 3565 /**
-// 3566  ************************************************************************
-// 3567  * @ingroup S2w-Application.
-// 3568  * @brief Handle deep sleep wake-up
-// 3569  *    This function is called once the node come out of deep-sleep state.
-// 3570   * @param  - NONE
-// 3571  * @retval VOID - none.
-// 3572  ************************************************************************/
+// 3568 
+// 3569 #endif
+// 3570 
+// 3571 /**
+// 3572  ************************************************************************
+// 3573  * @ingroup S2w-Application.
+// 3574  * @brief Handle deep sleep wake-up
+// 3575  *    This function is called once the node come out of deep-sleep state.
+// 3576   * @param  - NONE
+// 3577  * @retval VOID - none.
+// 3578  ************************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock134 Using cfiCommon0
           CFI Function AppS2w_DeepSleepHandler
         THUMB
-// 3573 PUBLIC VOID
-// 3574 AppS2w_DeepSleepHandler(VOID)
-// 3575 {
-// 3576    #ifdef  S2W_FS_SPI_ENABLE
-// 3577    if(S2W_PORT_SPI == APP_S2W_GET_SERIAL_DEVICE_ID())
-// 3578    {//SPI interface is currently   selected
-// 3579       /*In case of SPI interface, after waking up from deep-sleep, its required to clean up the FIFO */
-// 3580       //AppS2w_FsReset();
-// 3581    }
-// 3582    #endif
-// 3583 
-// 3584    s2wappMainTaskCtxt->dpSleep = 0;
+// 3579 PUBLIC VOID
+// 3580 AppS2w_DeepSleepHandler(VOID)
+// 3581 {
+// 3582    #ifdef  S2W_FS_SPI_ENABLE
+// 3583    if(S2W_PORT_SPI == APP_S2W_GET_SERIAL_DEVICE_ID())
+// 3584    {//SPI interface is currently   selected
+// 3585       /*In case of SPI interface, after waking up from deep-sleep, its required to clean up the FIFO */
+// 3586       //AppS2w_FsReset();
+// 3587    }
+// 3588    #endif
+// 3589 
+// 3590    s2wappMainTaskCtxt->dpSleep = 0;
 AppS2w_DeepSleepHandler:
-        LDR.N    R1,??DataTable136_11
+        LDR.N    R1,??DataTable138_11
         LDR      R1,[R1, #+0]
         MOVW     R0,#+27388
         MOVS     R2,#+0
         STR      R2,[R0, R1]
-// 3585 #ifdef S2W_ASYNC_MSG
-// 3586    if(s2wCurrent.asyncMsgFormat)
+// 3591 #ifdef S2W_ASYNC_MSG
+// 3592    if(s2wCurrent.asyncMsgFormat)
         MOV      R1,R2
-        LDR.N    R0,??DataTable136_18
+        LDR.N    R0,??DataTable138_18
         LDRB     R0,[R0, #+472]
         CMP      R0,#+0
         ITT      NE 
         MOVNE    R0,#+6
           CFI FunCall AppS2wProcess_AsyncStatusNotify
         BNE.W    AppS2wProcess_AsyncStatusNotify
-// 3587    {
-// 3588        AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_DPSLEEP_EVT, 0);
-// 3589    }
-// 3590 
-// 3591    else
-// 3592  #endif
 // 3593    {
-// 3594        AppS2wProcess_StatusNotify(S2W_DPSLEEP_EVT,0);
+// 3594        AppS2wProcess_AsyncStatusNotify(S2W_ASYNC_DPSLEEP_EVT, 0);
+// 3595    }
+// 3596 
+// 3597    else
+// 3598  #endif
+// 3599    {
+// 3600        AppS2wProcess_StatusNotify(S2W_DPSLEEP_EVT,0);
         MOVS     R0,#+13
           CFI FunCall AppS2wProcess_StatusNotify
         B.W      AppS2wProcess_StatusNotify
           CFI EndBlock cfiBlock134
-// 3595    }
-// 3596 }
-// 3597 
-// 3598 
+// 3601    }
+// 3602 }
+// 3603 
+// 3604 
 
         SECTION `.text`:CODE:NOROOT(2)
           CFI Block cfiBlock135 Using cfiCommon0
           CFI Function AppS2w_NagleExpiry
         THUMB
-// 3599 PRIVATE VOID
-// 3600 AppS2w_NagleExpiry(VOID *data)
-// 3601 {
-// 3602      UINT32 message = APP_NOTIFICATION_AUTO_SEND;
-// 3603     (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
+// 3605 PRIVATE VOID
+// 3606 AppS2w_NagleExpiry(VOID *data)
+// 3607 {
+// 3608      UINT32 message = APP_NOTIFICATION_AUTO_SEND;
+// 3609     (s2wappMainTaskNotifier)(message, s2wappMainTaskCtxt);
 AppS2w_NagleExpiry:
-        LDR.N    R0,??DataTable136_11
-        LDR.N    R2,??DataTable136_9
+        LDR.N    R0,??DataTable138_11
+        LDR.N    R2,??DataTable138_9
         LDR      R1,[R0, #+0]
         LDR      R2,[R2, #+0]
         MOVS     R0,#+17
@@ -9201,234 +9232,234 @@ AppS2w_NagleExpiry:
         ANOTE "tailcall"
         BX       R2
           CFI EndBlock cfiBlock135
-// 3604 }
+// 3610 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136:
+??DataTable138:
         DC8      0x0D, 0x0A, 0x00, 0x00
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_1:
+??DataTable138_1:
         DC32     httpConfInfo
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_2:
+??DataTable138_2:
         DC32     rawLenBuff
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_3:
+??DataTable138_3:
         DC32     0x41010004
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_4:
+??DataTable138_4:
         DC32     AppS2w_AcTimeoutHandler
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_5:
+??DataTable138_5:
         DC32     AppS2w_AcNcmTimeoutHandler
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_6:
+??DataTable138_6:
         DC32     profile_params
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_7:
+??DataTable138_7:
         DC32     ??buf_1
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_8:
+??DataTable138_8:
         DC32     s2wState
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_9:
+??DataTable138_9:
         DC32     s2wappMainTaskNotifier
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_10:
+??DataTable138_10:
         DC32     S2W_AsyncStatusList
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_11:
+??DataTable138_11:
         DC32     s2wappMainTaskCtxt
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_12:
+??DataTable138_12:
         DC32     s2wSyncSemID
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_13:
+??DataTable138_13:
         DC32     0x41010159
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_14:
+??DataTable138_14:
         DC32     0x41010138
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_15:
+??DataTable138_15:
         DC32     current_wlan_info
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_16:
+??DataTable138_16:
         DC32     AppS2w_ClkCalibCb
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_17:
+??DataTable138_17:
         DC32     appCtx
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_18:
+??DataTable138_18:
         DC32     s2wCurrent
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_19:
+??DataTable138_19:
         DC32     ncmautoconnectcount
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
-??DataTable136_20:
+??DataTable138_20:
         DC32     s2wAutoExit_CB
-// 3605 
-// 3606 
-// 3607 #ifdef S2W_IP2WIFI_SUPPORT
-// 3608 VOID
-// 3609 S2w_RawNetRx(void *buf, INT16 len)
-// 3610 {
-// 3611     UINT8 *p = (UINT8 *) buf;
+// 3611 
 // 3612 
-// 3613     S2W_L2_DEV_T *ps2wL2Dev = &s2wappMainTaskCtxt->s2wL2Dev;
-// 3614 
-// 3615     INT32 InterruptEnableStatus;
-// 3616 
-// 3617     s2wRxBytes += len;
-// 3618 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 3619     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
-// 3620     S2w_Printf("%cR", S2W_ESC);
-// 3621     S2w_Printf (":");
-// 3622     S2w_Printf ("%d", len);
-// 3623     S2w_Printf (":");
-// 3624 #else
-// 3625     GsnOsal_SemAcquire(&s2wSyncSemID1, GSN_OSAL_WAIT_FOREVER);
-// 3626     S2w_Printf1("%cR", S2W_ESC);
-// 3627     S2w_Printf1 (":");
-// 3628     S2w_Printf1 ("%d", len);
-// 3629     S2w_Printf1 (":");
-// 3630 #endif
-// 3631 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 3632     AppS2wHal_CharNPut(p, len);
-// 3633     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
-// 3634     {
-// 3635     	s2wSpiFs_Flush();
-// 3636     }
-// 3637 #else
-// 3638     AppS2wHal_CharNPut1(p, len);
-// 3639        if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
-// 3640        {
-// 3641            s2wSpiFs_Flush1();
-// 3642        }
-// 3643 #endif
-// 3644 
-// 3645 #ifndef S2W_DUAL_INTERFACE_SUPPORT
-// 3646     GsnOsal_SemRelease(&s2wSyncSemID);
-// 3647 #else
-// 3648     GsnOsal_SemRelease(&s2wSyncSemID1);
+// 3613 #ifdef S2W_IP2WIFI_SUPPORT
+// 3614 VOID
+// 3615 S2w_RawNetRx(void *buf, INT16 len)
+// 3616 {
+// 3617     UINT8 *p = (UINT8 *) buf;
+// 3618 
+// 3619     S2W_L2_DEV_T *ps2wL2Dev = &s2wappMainTaskCtxt->s2wL2Dev;
+// 3620 
+// 3621     INT32 InterruptEnableStatus;
+// 3622 
+// 3623     s2wRxBytes += len;
+// 3624 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 3625     GsnOsal_SemAcquire(&s2wSyncSemID, GSN_OSAL_WAIT_FOREVER);
+// 3626     S2w_Printf("%cR", S2W_ESC);
+// 3627     S2w_Printf (":");
+// 3628     S2w_Printf ("%d", len);
+// 3629     S2w_Printf (":");
+// 3630 #else
+// 3631     GsnOsal_SemAcquire(&s2wSyncSemID1, GSN_OSAL_WAIT_FOREVER);
+// 3632     S2w_Printf1("%cR", S2W_ESC);
+// 3633     S2w_Printf1 (":");
+// 3634     S2w_Printf1 ("%d", len);
+// 3635     S2w_Printf1 (":");
+// 3636 #endif
+// 3637 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 3638     AppS2wHal_CharNPut(p, len);
+// 3639     if(s2wappMainTaskCtxt->serialDeviceId == S2W_PORT_FS_SPI)
+// 3640     {
+// 3641     	s2wSpiFs_Flush();
+// 3642     }
+// 3643 #else
+// 3644     AppS2wHal_CharNPut1(p, len);
+// 3645        if(s2wappMainTaskCtxt->serialDeviceId1 == S2W_PORT_FS_SPI)
+// 3646        {
+// 3647            s2wSpiFs_Flush1();
+// 3648        }
 // 3649 #endif
 // 3650 
-// 3651 
-// 3652 
-// 3653     InterruptEnableStatus = GsnOsal_IntrDisable();
-// 3654 
-// 3655         /*Now free the buffer*/
-// 3656     GsnRingBuf_Put(&ps2wL2Dev->s2wRawBufQ, &buf);
+// 3651 #ifndef S2W_DUAL_INTERFACE_SUPPORT
+// 3652     GsnOsal_SemRelease(&s2wSyncSemID);
+// 3653 #else
+// 3654     GsnOsal_SemRelease(&s2wSyncSemID1);
+// 3655 #endif
+// 3656 
 // 3657 
-// 3658         /**< Reenable the interrupts */
-// 3659     GsnOsal_IntrEnable( InterruptEnableStatus );
+// 3658 
+// 3659     InterruptEnableStatus = GsnOsal_IntrDisable();
 // 3660 
-// 3661 
-// 3662 }
+// 3661         /*Now free the buffer*/
+// 3662     GsnRingBuf_Put(&ps2wL2Dev->s2wRawBufQ, &buf);
 // 3663 
-// 3664 /**
-// 3665  * @brief Transmit the raw data to the specified L2 connection when the data
-// 3666  *        is completely received or when the data buffer is full.
-// 3667  */
-// 3668 PRIVATE UINT8
-// 3669 S2w_RawDataBufferTransmit(VOID)
-// 3670 {
-// 3671     GSN_STATUS_T status = GSN_SUCCESS;
-// 3672 #ifndef S2W_IP2WIFI_SUPPORT
-// 3673     GSN_NWIF_CTX_T *pNwIf = &s2wappMainTaskCtxt->if0.nwifCtx;
-// 3674 #endif
-// 3675     if (!dataIndex)
-// 3676     {
-// 3677         return S2W_FAILURE;
-// 3678     }
-// 3679 
-// 3680 #ifndef S2W_IP2WIFI_SUPPORT
-// 3681     pNwIf->pL2Dev->send (
-// 3682         pNwIf->pL2Dev, (GSN_ETHERNET_FRAME_T *)&dataBuffer, dataIndex);
-// 3683 #else
-// 3684     status = s2wL2Dev_Send((GSN_L2_DEV_T *)&(s2wappMainTaskCtxt->s2wL2Dev),(GSN_ETHERNET_FRAME_T *)dataBuffer, dataIndex );
-// 3685 #endif
-// 3686 
-// 3687     rawTotalIndex += dataIndex;
-// 3688     dataIndex = 0;
-// 3689     return (UINT8)status;
-// 3690 }
-// 3691 
-// 3692 #endif
-// 3693 
-// 3694 
-// 3695 // mac address read API
-// 3696 #define OTP_MAC_LEN_MASK 0x7
-// 3697 #define OTP_MAC_LEN 0x8
+// 3664         /**< Reenable the interrupts */
+// 3665     GsnOsal_IntrEnable( InterruptEnableStatus );
+// 3666 
+// 3667 
+// 3668 }
+// 3669 
+// 3670 /**
+// 3671  * @brief Transmit the raw data to the specified L2 connection when the data
+// 3672  *        is completely received or when the data buffer is full.
+// 3673  */
+// 3674 PRIVATE UINT8
+// 3675 S2w_RawDataBufferTransmit(VOID)
+// 3676 {
+// 3677     GSN_STATUS_T status = GSN_SUCCESS;
+// 3678 #ifndef S2W_IP2WIFI_SUPPORT
+// 3679     GSN_NWIF_CTX_T *pNwIf = &s2wappMainTaskCtxt->if0.nwifCtx;
+// 3680 #endif
+// 3681     if (!dataIndex)
+// 3682     {
+// 3683         return S2W_FAILURE;
+// 3684     }
+// 3685 
+// 3686 #ifndef S2W_IP2WIFI_SUPPORT
+// 3687     pNwIf->pL2Dev->send (
+// 3688         pNwIf->pL2Dev, (GSN_ETHERNET_FRAME_T *)&dataBuffer, dataIndex);
+// 3689 #else
+// 3690     status = s2wL2Dev_Send((GSN_L2_DEV_T *)&(s2wappMainTaskCtxt->s2wL2Dev),(GSN_ETHERNET_FRAME_T *)dataBuffer, dataIndex );
+// 3691 #endif
+// 3692 
+// 3693     rawTotalIndex += dataIndex;
+// 3694     dataIndex = 0;
+// 3695     return (UINT8)status;
+// 3696 }
+// 3697 
+// 3698 #endif
+// 3699 
+// 3700 
+// 3701 // mac address read API
+// 3702 #define OTP_MAC_LEN_MASK 0x7
+// 3703 #define OTP_MAC_LEN 0x8
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock136 Using cfiCommon0
           CFI Function otpMac_Read
         THUMB
-// 3698 UINT8
-// 3699 otpMac_Read(UINT8* mac, UINT8 id)
-// 3700 {
+// 3704 UINT8
+// 3705 otpMac_Read(UINT8* mac, UINT8 id)
+// 3706 {
 otpMac_Read:
         PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
@@ -9440,20 +9471,20 @@ otpMac_Read:
         SUB      SP,SP,#+24
           CFI CFA R13+40
         MOV      R0,R1
-// 3701     UINT8 otpGrpId, otpGrpVer;
-// 3702     UINT8 data[OTP_MAC_LEN] ={0},data1[OTP_MAC_LEN];
+// 3707     UINT8 otpGrpId, otpGrpVer;
+// 3708     UINT8 data[OTP_MAC_LEN] ={0},data1[OTP_MAC_LEN];
         ADD      R1,SP,#+4
         MOVS     R2,#+0
         MOVS     R3,#+0
         STM      R1!,{R2,R3}
-// 3703     UINT16 dataLen=0,i=0, macLen = 6;
+// 3709     UINT16 dataLen=0,i=0, macLen = 6;
         MOV      R1,R2
         MOVS     R5,#+6
-// 3704 
-// 3705 	// mac0 at F8, mac1 at F9 mac2 at FA
-// 3706     // read mac0
-// 3707     //memset(mac,0,sizeof(GSN_OTP_MM_MAC_T));
-// 3708     if((id == 0xF8) || (id == 0xF9) || (id == 0xFA))
+// 3710 
+// 3711 	// mac0 at F8, mac1 at F9 mac2 at FA
+// 3712     // read mac0
+// 3713     //memset(mac,0,sizeof(GSN_OTP_MM_MAC_T));
+// 3714     if((id == 0xF8) || (id == 0xF9) || (id == 0xFA))
         MOV      R6,R0
         STRH     R1,[SP, #+0]
         CMP      R6,#+248
@@ -9461,27 +9492,27 @@ otpMac_Read:
         CMPNE    R6,#+249
         CMPNE    R6,#+250
         BNE.N    ??otpMac_Read_0
-// 3709     {
-// 3710         otpGrpVer =0;
-// 3711         otpGrpId = id;
-// 3712         if(GSN_SUCCESS != GsnOtpMm_Read(otpGrpId,otpGrpVer,
-// 3713 	                  &dataLen, data))
+// 3715     {
+// 3716         otpGrpVer =0;
+// 3717         otpGrpId = id;
+// 3718         if(GSN_SUCCESS != GsnOtpMm_Read(otpGrpId,otpGrpVer,
+// 3719 	                  &dataLen, data))
         ADD      R3,SP,#+4
         ADD      R2,SP,#+0
           CFI FunCall GsnOtpMm_Read
         BL       GsnOtpMm_Read
         CBNZ.N   R0,??otpMac_Read_0
-// 3714         {
-// 3715 	        return S2W_FAILURE;
-// 3716         }
-// 3717         if(dataLen ) // since mac is comming in reverse manner so reverse the string and use it
+// 3720         {
+// 3721 	        return S2W_FAILURE;
+// 3722         }
+// 3723         if(dataLen ) // since mac is comming in reverse manner so reverse the string and use it
         LDRH     R0,[SP, #+0]
         CBZ.N    R0,??otpMac_Read_1
-// 3718         {
-// 3719 			for(i=0;i<OTP_MAC_LEN;i++)
+// 3724         {
+// 3725 			for(i=0;i<OTP_MAC_LEN;i++)
         MOVS     R0,#+0
-// 3720 			{
-// 3721 				data1[i] = data[OTP_MAC_LEN_MASK - i];
+// 3726 			{
+// 3727 				data1[i] = data[OTP_MAC_LEN_MASK - i];
 ??otpMac_Read_2:
         RSBS     R1,R0,#+0
         ADD      R2,SP,#+4
@@ -9489,27 +9520,27 @@ otpMac_Read:
         ADD      R2,SP,#+12
         LDRB     R1,[R1, #+7]
         STRB     R1,[R0, R2]
-// 3722 			}
+// 3728 			}
         ADDS     R0,R0,#+1
         CMP      R0,#+8
         BLT.N    ??otpMac_Read_2
-// 3723             if(id == 0xFA)macLen = 8;
+// 3729             if(id == 0xFA)macLen = 8;
         CMP      R6,#+250
         IT       EQ 
         MOVEQ    R5,#+8
-// 3724             memcpy(mac,data1,macLen);
+// 3730             memcpy(mac,data1,macLen);
         MOV      R2,R5
         ADD      R1,SP,#+12
         MOV      R0,R4
           CFI FunCall memcpy
         BL       memcpy
-// 3725         }
-// 3726 	}
-// 3727 	else
-// 3728 	{
-// 3729 		return S2W_FAILURE;
-// 3730 	}
-// 3731 	return S2W_SUCCESS;
+// 3731         }
+// 3732 	}
+// 3733 	else
+// 3734 	{
+// 3735 		return S2W_FAILURE;
+// 3736 	}
+// 3737 	return S2W_SUCCESS;
 ??otpMac_Read_1:
         MOVS     R0,#+0
         B.N      ??otpMac_Read_3
@@ -9520,35 +9551,35 @@ otpMac_Read:
           CFI CFA R13+16
         POP      {R4-R6,PC}       ;; return
           CFI EndBlock cfiBlock136
-// 3732 }
-// 3733 
-// 3734 /**
-// 3735  ******************************************************************
-// 3736  * @ingroup S2w-Application
-// 3737  * @brief Process sets time. 
-// 3738  *   This function sets time
-// 3739   * @param iptime   input time
-// 3740  * @return None.
-// 3741  ******************************************************************/
+// 3738 }
+// 3739 
+// 3740 /**
+// 3741  ******************************************************************
+// 3742  * @ingroup S2w-Application
+// 3743  * @brief Process sets time. 
+// 3744  *   This function sets time
+// 3745   * @param iptime   input time
+// 3746  * @return None.
+// 3747  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock137 Using cfiCommon0
           CFI Function AppS2w_SetTime
         THUMB
-// 3742 PUBLIC VOID
-// 3743 AppS2w_SetTime(ULONG64 iptime)
-// 3744 {
+// 3748 PUBLIC VOID
+// 3749 AppS2w_SetTime(ULONG64 iptime)
+// 3750 {
 AppS2w_SetTime:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-// 3745     BOOL diffNegative;
-// 3746     GSN_SYSTEM_TIME_T currentTime, newTime, timeDifference;
-// 3747 
-// 3748 	newTime = iptime/1000;
-// 3749 	newTime = (newTime << 15);	  //time in ticks
+// 3751     BOOL diffNegative;
+// 3752     GSN_SYSTEM_TIME_T currentTime, newTime, timeDifference;
+// 3753 
+// 3754 	newTime = iptime/1000;
+// 3755 	newTime = (newTime << 15);	  //time in ticks
         MOV      R2,#+1000
         MOVS     R3,#+0
           CFI FunCall __aeabi_uldivmod
@@ -9556,35 +9587,35 @@ AppS2w_SetTime:
         LSLS     R5,R1,#+15
         ORR      R5,R5,R0, LSR #+17
         LSLS     R4,R0,#+15
-// 3750 	currentTime = GsnTod_Get();
+// 3756 	currentTime = GsnTod_Get();
           CFI FunCall GsnTod_Get
         BL       GsnTod_Get
         MOV      R3,R1
         MOV      R2,R0
-// 3751 	if (currentTime > newTime)
+// 3757 	if (currentTime > newTime)
         CMP      R5,R3
         BHI.N    ??AppS2w_SetTime_0
         IT       CS 
         CMPCS    R4,R2
         BCS.N    ??AppS2w_SetTime_0
-// 3752 	{
-// 3753 		diffNegative = TRUE;
+// 3758 	{
+// 3759 		diffNegative = TRUE;
         MOVS     R0,#+1
-// 3754 		timeDifference = currentTime - newTime;
+// 3760 		timeDifference = currentTime - newTime;
         SUBS     R2,R2,R4
         SBCS     R3,R3,R5
         B.N      ??AppS2w_SetTime_1
-// 3755 	}
-// 3756 	else
-// 3757 	{
-// 3758 		diffNegative = FALSE;
+// 3761 	}
+// 3762 	else
+// 3763 	{
+// 3764 		diffNegative = FALSE;
 ??AppS2w_SetTime_0:
         MOVS     R0,#+0
-// 3759 		timeDifference = newTime - currentTime;
+// 3765 		timeDifference = newTime - currentTime;
         SUBS     R2,R4,R2
         SBC      R3,R5,R3
-// 3760 	}
-// 3761 	GsnTod_AdjustOffset(diffNegative,timeDifference);
+// 3766 	}
+// 3767 	GsnTod_AdjustOffset(diffNegative,timeDifference);
 ??AppS2w_SetTime_1:
         POP      {R1,R4,R5,LR}
           CFI R4 SameValue
@@ -9594,32 +9625,32 @@ AppS2w_SetTime:
           CFI FunCall GsnTod_AdjustOffset
         B.W      GsnTod_AdjustOffset
           CFI EndBlock cfiBlock137
-// 3762 }
-// 3763 /**
-// 3764  ******************************************************************
-// 3765  * @ingroup S2w-Application
-// 3766  * @brief Process get time. 
-// 3767  *   This function Get time. 
-// 3768  * @return  time in milliseconds
-// 3769  ******************************************************************/
+// 3768 }
+// 3769 /**
+// 3770  ******************************************************************
+// 3771  * @ingroup S2w-Application
+// 3772  * @brief Process get time. 
+// 3773  *   This function Get time. 
+// 3774  * @return  time in milliseconds
+// 3775  ******************************************************************/
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock138 Using cfiCommon0
           CFI Function AppS2w_GetTime
         THUMB
-// 3770 PUBLIC ULONG64
-// 3771 AppS2w_GetTime()
-// 3772 {
+// 3776 PUBLIC ULONG64
+// 3777 AppS2w_GetTime()
+// 3778 {
 AppS2w_GetTime:
         PUSH     {R2-R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+16
-// 3773 	 GSN_SYSTEM_TIME_T currentTime;
-// 3774 	 GSN_SYSTEM_TIME_T mSeconds=0;
-// 3775 	 currentTime = GsnTod_Get();
-// 3776 	 mSeconds= SYSTIME_TO_MSEC(currentTime);	 
-// 3777 	 return mSeconds;
+// 3779 	 GSN_SYSTEM_TIME_T currentTime;
+// 3780 	 GSN_SYSTEM_TIME_T mSeconds=0;
+// 3781 	 currentTime = GsnTod_Get();
+// 3782 	 mSeconds= SYSTIME_TO_MSEC(currentTime);	 
+// 3783 	 return mSeconds;
           CFI FunCall GsnTod_Get
         BL       GsnTod_Get
         MOV      R2,R0
@@ -9632,7 +9663,7 @@ AppS2w_GetTime:
         LSRS     R1,R1,#+15
         POP      {R2-R4,PC}       ;; return
           CFI EndBlock cfiBlock138
-// 3778 }
+// 3784 }
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -9667,6 +9698,13 @@ AppS2w_GetTime:
 `?<Constant "%c%c%x%x">`:
         DC8 "%c%c%x%x"
         DC8 0, 0, 0
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+`?<Constant "\\r\\n RESET PRINT 02">`:
+        DC8 "\015\012 RESET PRINT 02"
+        DC8 0, 0
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -10064,15 +10102,15 @@ AppS2w_GetTime:
         DC8 0, 0, 0, 0, 0, 0, 0, 0
 
         END
-// 3779 
+// 3785 
 // 
 // 1 285 bytes in section .bss
 //   560 bytes in section .data
 // 1 420 bytes in section .noinit
 // 1 212 bytes in section .rodata
-// 7 470 bytes in section .text
+// 7 544 bytes in section .text
 // 
-// 7 392 bytes of CODE  memory (+ 78 bytes shared)
+// 7 466 bytes of CODE  memory (+ 78 bytes shared)
 // 1 212 bytes of CONST memory
 // 3 265 bytes of DATA  memory
 //
